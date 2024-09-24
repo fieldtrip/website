@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39290842'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110802
+- idtype: pmcid
+  value: PMC11407023
+authors:
+- authtype: Author
+  name: Markiewicz R
+- authtype: Author
+  name: Segaert K
+- authtype: Author
+  name: Mazaheri A
+epubdate: 2024 Aug 23
+fulljournalname: iScience
+issue: '9'
+pages: '110802'
+pmclivedate: 2024/09/17
+printpubdate: ''
+pubdate: 2024 Aug 23
+sortdate: 2024/08/23 00:00
+source: iScience
+title: Brain-to-brain coupling forecasts future joint action outcomes
+uid: '11407023'
+volume: '27'

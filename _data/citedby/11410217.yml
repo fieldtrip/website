@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '39241107'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002774
+- idtype: pmcid
+  value: PMC11410217
+authors:
+- authtype: Author
+  name: Cleary DR
+- authtype: Author
+  name: Tchoe Y
+- authtype: Author
+  name: Bourhis A
+- authtype: Author
+  name: Dickey CW
+- authtype: Author
+  name: Stedelin B
+- authtype: Author
+  name: Ganji M
+- authtype: Author
+  name: Lee SH
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Siler DA
+- authtype: Author
+  name: Brown EC
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Kaestner E
+- authtype: Author
+  name: Yang JC
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Han SJ
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Raslan AM
+- authtype: Author
+  name: Dayeh SA
+- authtype: Author
+  name: Halgren E
+epubdate: 2024 Sep 6
+fulljournalname: PLOS Biology
+issue: '9'
+pages: e3002774
+pmclivedate: 2024/09/18
+printpubdate: ''
+pubdate: 2024 Sep 6
+sortdate: 2024/09/06 00:00
+source: PLoS Biol
+title: Syllable processing is organized in discrete subregions of the human superior
+  temporal gyrus
+uid: '11410217'
+volume: '22'

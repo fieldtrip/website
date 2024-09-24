@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39290840'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110738
+- idtype: pmcid
+  value: PMC11406071
+authors:
+- authtype: Author
+  name: Sajovic J
+- authtype: Author
+  name: Drevenšek G
+- authtype: Author
+  name: Plut A
+- authtype: Author
+  name: Eberlinc A
+- authtype: Author
+  name: Kosmač Vrabec M
+- authtype: Author
+  name: Setnikar Lesjak A
+- authtype: Author
+  name: Selič Zupančič P
+- authtype: Author
+  name: Drevenšek M
+epubdate: 2024 Aug 21
+fulljournalname: iScience
+issue: '9'
+pages: '110738'
+pmclivedate: 2024/09/17
+printpubdate: ''
+pubdate: 2024 Aug 21
+sortdate: 2024/08/21 00:00
+source: iScience
+title: 'Beyond the face: An interdisciplinary evaluation of satisfaction with appearance
+  in young people with orofacial clefts'
+uid: '11406071'
+volume: '27'

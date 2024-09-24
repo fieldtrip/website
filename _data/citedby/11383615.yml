@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38842507'
+- idtype: doi
+  value: 10.1152/jn.00264.2023
+- idtype: pmcid
+  value: PMC11383615
+authors:
+- authtype: Author
+  name: Hoffman SJ
+- authtype: Author
+  name: Dotson NM
+- authtype: Author
+  name: Lima V
+- authtype: Author
+  name: Gray CM
+epubdate: 2024 Jun 6
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 206-225
+pmclivedate: ''
+printpubdate: 2024 Jul 1
+pubdate: 2024 Jun 6
+sortdate: 2024/06/06 00:00
+source: J Neurophysiol
+title: The primate cortical LFP exhibits multiple spectral and temporal gradients
+  and widespread task dependence during visual short-term memory
+uid: '11383615'
+volume: '132'

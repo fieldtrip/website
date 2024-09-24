@@ -177,9 +177,8 @@ For detecting jump artifacts, begin with the following parameter
     % jump
     cfg = [];
     cfg.trl = trl;
-    cfg.datafile = 'ArtifactMEG.ds';
-    cfg.headerfile = 'ArtifactMEG.ds';
-    cfg.continuous = 'yes';
+    cfg.dataset = 'ArtifactMEG.ds';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
 
     % channel selection, cutoff and padding
     cfg.artfctdef.zvalue.channel = 'MEG';
@@ -226,9 +225,8 @@ The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used 
     % muscle
     cfg            = [];
     cfg.trl        = trl;
-    cfg.datafile   = 'ArtifactMEG.ds';
-    cfg.headerfile = 'ArtifactMEG.ds';
-    cfg.continuous = 'yes';
+    cfg.dataset    = 'ArtifactMEG.ds';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
 
     % channel selection, cutoff and padding
     cfg.artfctdef.zvalue.channel      = 'MRT*';
@@ -262,9 +260,8 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
      % EOG
      cfg            = [];
      cfg.trl        = trl;
-     cfg.datafile   = 'ArtifactMEG.ds';
-     cfg.headerfile = 'ArtifactMEG.ds';
-     cfg.continuous = 'yes';
+     cfg.dataset    = 'ArtifactMEG.ds';
+     cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
 
      % channel selection, cutoff and padding
      cfg.artfctdef.zvalue.channel     = 'EOG';

@@ -102,7 +102,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
     cfg.trialdef.eventvalue = 4;
     cfg.trialdef.prestim = 0.2;
     cfg.trialdef.poststim = 0.3;
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     cfg = ft_definetrial(cfg);
 
    % preprocess the MEG data
@@ -128,7 +128,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
     cfg.trialdef.eventvalue = 4;
     cfg.trialdef.prestim = 0.2;
     cfg.trialdef.poststim = 0.3;
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     cfg = ft_definetrial(cfg);
 
     % preprocess the headposition data

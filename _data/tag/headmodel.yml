@@ -19,6 +19,9 @@
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
 
+- name:  Fitting a template MRI to the MEG Polhemus head shape
+  link:  /example/sphere_fitting
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 

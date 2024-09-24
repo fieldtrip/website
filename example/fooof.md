@@ -1,5 +1,5 @@
 ---
-title: Fitting oscillations and one-over-F (FOOOF).
+title: Fitting oscillations and one-over-F (FOOOF)
 tags: [example, fooof]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Convert the EEG language dataset for sharing in BIDS
-tags: [bids, eeg-language, cuttingeeg2021]
+tags: [cuttingeeg2021, bids, eeg-language]
 ---
 
 # Convert the EEG sedation dataset for sharing in BIDS

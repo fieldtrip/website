@@ -7,6 +7,9 @@
 - name:  How do I construct a layout file for the plotting functions?
   link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
 
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
+
 - name:  What is the format of the layout file which is used for plotting?
   link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
 

@@ -71,7 +71,7 @@ This is the control script from which the relevant analysis scripts and function
 
     % the EOG channel has a different name in the different datasets
     cfg.channel = {'MEG' eogchannel};
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     data = ft_preprocessing(cfg);
 
     %%
