@@ -1,5 +1,6 @@
 ---
 title: How can I distribute a batch of jobs?
+tags: [faq, distcomp]
 ---
 
 # How can I distribute a batch of jobs?

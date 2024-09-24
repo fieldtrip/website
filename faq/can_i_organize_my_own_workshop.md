@@ -1,6 +1,6 @@
 ---
 title: Can I organize my own FieldTrip workshop?
-tags: [workshop]
+tags: [faq, workshop]
 ---
 
 # Can I organize my own FieldTrip workshop?
