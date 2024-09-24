@@ -4,6 +4,9 @@
 - name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
+- name:  BIDS - the brain imaging data structure
+  link:  /example/bids
+
 - name:  Converting an example audio dataset for sharing in BIDS
   link:  /example/bids_audio
 
@@ -190,6 +193,9 @@
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset
 
+- name:  Find the orientation of planar gradiometers
+  link:  /example/planar_orientation
+
 - name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
 
@@ -213,6 +219,9 @@
 
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
+
+- name:  Fitting a template MRI to the MEG Polhemus head shape
+  link:  /example/sphere_fitting
 
 - name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/ssvep
