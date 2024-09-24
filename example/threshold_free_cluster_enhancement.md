@@ -1,6 +1,7 @@
 ---
 title: Using threshold-free cluster enhancement for cluster statistics
-tags: [example, statistics]
+category: example
+tags: [statistics]
 ---
 
 # Using threshold-free cluster enhancement for cluster statistics

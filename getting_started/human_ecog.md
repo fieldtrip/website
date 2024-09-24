@@ -1,5 +1,6 @@
 ---
 title: Getting started with human ECoG data
+category: getting_started
 tags: [ieeg, ecog, seeg]
 ---
 

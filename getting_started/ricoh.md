@@ -1,5 +1,6 @@
 ---
 title: Getting started with Ricoh data
+category: getting_started
 tags: [dataformat, ricoh, meg]
 ---
 

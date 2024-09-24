@@ -1,6 +1,7 @@
 ---
 title: Speeding up your analysis using distributed computing with parfor
-tags: [tutorial, matlab, script, parfor, distcomp, meg-language]
+category: tutorial
+tags: [matlab, script, parfor, distcomp, meg-language]
 ---
 
 # Speeding up your analysis using distributed computing with parfor

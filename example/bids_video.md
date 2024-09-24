@@ -1,6 +1,7 @@
 ---
 title: Converting an example video dataset for sharing in BIDS
-tags: [example, bids, sharing, video]
+category: example
+tags: [bids, sharing, video]
 ---
 
 # Converting an example video dataset for sharing in BIDS

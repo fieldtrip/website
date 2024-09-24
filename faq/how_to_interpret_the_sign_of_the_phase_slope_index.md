@@ -1,6 +1,7 @@
 ---
 title: How to interpret the sign of the phase slope index?
-tags: [faq, coherence]
+category: faq
+tags: [coherence]
 ---
 
 # How to interpret the sign of the phase slope index?

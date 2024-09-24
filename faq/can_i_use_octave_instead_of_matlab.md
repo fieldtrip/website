@@ -1,6 +1,7 @@
 ---
 title: Can I use Octave instead of MATLAB?
-tags: [faq, octave]
+category: faq
+tags: [octave]
 ---
 
 # Can I use Octave instead of MATLAB?

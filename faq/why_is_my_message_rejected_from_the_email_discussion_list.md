@@ -1,6 +1,7 @@
 ---
 title: Why is my message rejected from the email discussion list?
-tags: [faq, email]
+category: faq
+tags: [email]
 ---
 
 # Why is my message rejected from the email discussion list?

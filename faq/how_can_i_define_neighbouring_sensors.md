@@ -1,6 +1,7 @@
 ---
 title: How can I define neighbouring sensors?
-tags: [faq, statistics, cluster, plotting]
+category: faq
+tags: [statistics, cluster, plotting]
 redirect_from:
   - /faq/how_can_i_define_my_own_neighbourhood_template/
 ---

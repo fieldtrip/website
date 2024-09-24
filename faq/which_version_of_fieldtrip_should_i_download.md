@@ -1,6 +1,7 @@
 ---
 title: Which version of FieldTrip should I download?
-tags: [faq, download, release]
+category: faq
+tags: [download, release]
 redirect_from:
   - /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server/
 ---

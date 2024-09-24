@@ -1,6 +1,7 @@
 ---
 title: What is the plotting convention for anatomical MRIs?
-tags: [faq, anatomical, mri]
+category: faq
+tags: [anatomical, mri]
 ---
 
 # What is the plotting convention for anatomical MRIs?

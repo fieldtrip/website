@@ -1,5 +1,6 @@
 ---
 title: Getting started with Plexon data
+category: getting_started
 tags: [dataformat, plexon, lfp, spike]
 ---
 

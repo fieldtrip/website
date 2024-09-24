@@ -1,6 +1,7 @@
 ---
 title: How does a difference in trial numbers per condition affect my statistical test
-tags: [faq, statistics]
+category: faq
+tags: [statistics]
 ---
 
 {% include markup/red %}

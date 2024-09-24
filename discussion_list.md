@@ -23,6 +23,6 @@ You can browse the archived contributions to the discussion list [here](http://m
 
 {% include searchlistarchive %}
 
-## See also
+## See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="email" %}
+{% include seealso category="faq" tag1="email" %}

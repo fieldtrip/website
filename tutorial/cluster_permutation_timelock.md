@@ -1,6 +1,7 @@
 ---
 title: Cluster-based permutation tests on event-related fields
-tags: [tutorial, statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
+category: tutorial
+tags: [statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
 ---
 
 # Cluster-based permutation tests on event-related fields
@@ -532,7 +533,7 @@ With the output, we can now create the plots
 
 _Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs with the prominent clusters highlighted._
 
-## Summary and suggested further readings
+## Summary and suggested further reading
 
 In this tutorial, it was shown how to do non-parametric statistics on axial and planar ERFs in a between-trials and in within-subjects design. It was also shown how to plot the results.
 
@@ -540,12 +541,12 @@ If you are interested in parametric tests in FieldTrip, you can read the [Parame
 
 If you would like to read more about statistical analysis, you can look at the following FAQs:
 
-{% include seealso tag1="faq" tag2="statistics" %}
-{% include seealso tag1="faq" tag2="cluster"    %}
-{% include seealso tag1="faq" tag2="neighbour"  %}
+{% include seealso category="faq" tag1="statistics" %}
+{% include seealso category="faq" tag1="cluster"    %}
+{% include seealso category="faq" tag1="neighbour"  %}
 
 and example scripts:
 
-{% include seealso tag1="example" tag2="statistics" %}
-{% include seealso tag1="example" tag2="cluster"    %}
-{% include seealso tag1="example" tag2="neighbour"  %}
+{% include seealso category="example" tag1="statistics" %}
+{% include seealso category="example" tag1="cluster"    %}
+{% include seealso category="example" tag1="neighbour"  %}

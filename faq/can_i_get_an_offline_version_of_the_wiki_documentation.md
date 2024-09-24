@@ -1,6 +1,7 @@
 ---
 title: Can I get an offline version of the documentation on the website?
-tags: [faq, documentation]
+category: faq
+tags: [documentation]
 ---
 
 # Can I get an offline version of the documentation on the website?

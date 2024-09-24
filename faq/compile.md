@@ -1,6 +1,7 @@
 ---
 title: How can I compile the mex files and command-line executable?
-tags: [faq, mex, compile]
+category: faq
+tags: [mex, compile]
 ---
 
 # How can I compile the mex files and command-line executable?

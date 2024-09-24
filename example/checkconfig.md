@@ -1,6 +1,7 @@
 ---
 title: How to use ft_checkconfig
-tags: [example, cfg]
+category: example
+tags: [cfg]
 ---
 
 # How to use ft_checkconfig

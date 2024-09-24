@@ -1,6 +1,7 @@
 ---
 title: I have problems reading in neuroscan .cnt files. How can I fix this?
-tags: [faq, raw, neuroscan, eeg, dataformat, preprocessing]
+category: faq
+tags: [raw, neuroscan, eeg, dataformat, preprocessing]
 ---
 
 # I have problems reading in neuroscan .cnt files. How can I fix this?

@@ -1,5 +1,6 @@
 ---
 title: Getting started with BESA data
+category: getting_started
 tags: [dataformat, besa]
 ---
 

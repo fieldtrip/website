@@ -769,8 +769,10 @@ Beamforming source analysis in the time domain with DICS on EEG and MEG data has
 
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/workshop/natmeg2014/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
-See also the following FAQs:
-{% include seealso tag1="source" tag2="faq" %}
+### See also these frequently asked questions
 
-See also the following example scripts:
-{% include seealso tag1="source" tag2="example" %}
+{% include seealso category="faq" tag1="source" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="source" %}

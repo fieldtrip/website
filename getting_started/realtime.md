@@ -1,6 +1,7 @@
 ---
 title: Getting started with real-time analysis for BCI/neurofeedback
-tags: [realtime, example]
+category: getting_started
+tags: [realtime]
 ---
 
 # Getting started with real-time analysis for BCI/neurofeedback

@@ -1,6 +1,7 @@
 ---
 title: My MRI is upside down, is this a problem?
-tags: [faq, mri, volume, coordinate]
+category: faq
+tags: [mri, volume, coordinate]
 ---
 
 # My MRI is upside down, is this a problem?

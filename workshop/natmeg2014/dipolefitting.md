@@ -929,7 +929,7 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
 How does this fit compare to the previous? Can you explain the difference?
 {% include markup/end %}
 
-## Summary and conclusion
+## Summary and suggested further reading
 
 We demonstrated how to use dipole fitting to estimate the location and timecourse of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.
 
@@ -937,13 +937,14 @@ This tutorial demonstrates how you can use different assumptions to get stable a
 
 More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
 
-## Suggested further reading
+### See also these tutorials
 
-Tutorials:
-{% include seealso tag1="source" tag2="headmodel" tag3="tutorial" %}
+{% include seealso category="tutorial" tag1="source" tag2="headmodel" %}
 
-FAQs:
-{% include seealso tag1="source" tag2="headmodel" tag3="faq" %}
+### See also these frequently asked questions
 
-Example scripts:
-{% include seealso tag1="source" tag2="headmodel" tag3="example" %}
+{% include seealso category="faq" tag1="source" tag2="headmodel" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="source" tag2="headmodel" %}

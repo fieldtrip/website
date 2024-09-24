@@ -1,6 +1,7 @@
 ---
 title: What kind of filters can I apply to my data?
-tags: [faq, preprocessing, timelock, freq, artifact, filter]
+category: faq
+tags: [preprocessing, timelock, freq, artifact, filter]
 ---
 
 # What kind of filters can I apply to my data?

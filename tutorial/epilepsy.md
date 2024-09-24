@@ -1,6 +1,7 @@
 ---
 title: Virtual channel analysis of epilepsy MEG data
-tags: [tutorial, meg-epilepsy, anywave, mricro]
+category: tutorial
+tags: [meg-epilepsy, anywave, mricro]
 ---
 
 # Virtual channel analysis of epilepsy MEG data
@@ -700,7 +701,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
 {% include image src="/assets/img/tutorial/epilepsy/figure17.png" width="700" %}
 
 
-## Summary and Conclusions
+## Summary and conclusion
 
 This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip.  Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clinical interpretation of the data.
 

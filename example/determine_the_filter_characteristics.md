@@ -1,6 +1,7 @@
 ---
 title: Determine the filter characteristics
-tags: [example, preprocessing, filter]
+category: example
+tags: [preprocessing, filter]
 ---
 
 # Determine the filter characteristics

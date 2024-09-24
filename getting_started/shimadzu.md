@@ -1,5 +1,6 @@
 ---
 title: Getting started with Shimadzu NIRS data
+category: getting_started
 tags: [dataformat, nirs, shimadzu]
 ---
 

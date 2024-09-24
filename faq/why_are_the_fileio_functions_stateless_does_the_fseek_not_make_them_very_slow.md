@@ -1,6 +1,7 @@
 ---
 title: Why are the fileio functions stateless, does the fseek not make them very slow?
-tags: [faq, memory, matlab]
+category: faq
+tags: [memory, matlab]
 ---
 
 # Why are the fileio functions stateless, does the fseek not make them very slow?

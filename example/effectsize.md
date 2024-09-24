@@ -1,6 +1,7 @@
 ---
 title: Computing and reporting the effect size
-tags: [example, statistics, cluster, meg-language]
+category: example
+tags: [statistics, cluster, meg-language]
 ---
 
 # Computing and reporting the effect size

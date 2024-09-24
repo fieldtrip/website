@@ -1,6 +1,7 @@
 ---
 title: Cross-frequency analysis
-tags: [example, freq]
+category: example
+tags: [freq]
 ---
 
 # Cross-frequency analysis

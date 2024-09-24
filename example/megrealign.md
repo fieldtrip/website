@@ -1,6 +1,7 @@
 ---
 title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-tags: [example, meg, ctf]
+category: example
+tags: [meg, ctf]
 ---
 
 # Interpolating data from the CTF151 to the CTF275 sensor array using megrealign

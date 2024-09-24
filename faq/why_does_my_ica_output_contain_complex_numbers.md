@@ -1,6 +1,7 @@
 ---
 title: Why does my ICA output contain complex numbers?
-tags: [faq, ica]
+category: faq
+tags: [ica]
 ---
 
 # Why does my ICA output contain complex numbers?

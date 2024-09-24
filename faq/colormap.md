@@ -1,6 +1,7 @@
 ---
 title: Which colormaps are supported?
-tags: [faq, plotting]
+category: faq
+tags: [plotting]
 ---
 
 # Which colormaps are supported?

@@ -348,11 +348,13 @@ A final more detailed note on what multitapering actually does. While the fundam
 
 Here are links to other documentation that deals with frequency and time-frequency analysis.
 
-Frequently asked questions:
-{% include seealso tag1="faq" tag2="freq" %}
+### Frequently asked questions
 
-Example scripts:
-{% include seealso tag1="example" tag2="freq" %}
+{% include seealso category="faq" tag1="freq" %}
+
+### Examples
+
+{% include seealso category="example" tag1="freq" %}
 
 ## References
 

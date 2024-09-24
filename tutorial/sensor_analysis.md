@@ -1,6 +1,7 @@
 ---
 title: Sensor-level ERF, TFR and connectivity analyses
-tags: [tutorial, meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
+category: tutorial
+tags: [meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
 ---
 
 # Sensor-level ERF, TFR and connectivity analyses
@@ -325,12 +326,12 @@ This tutorial gave an overview of some options available in FieldTrip for doing 
 
 After having finished this tutorial, you might want to read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction or, for details on statistics, one of the statistics [tutorials](/tutorial).
 
-Furthermore, you can explore relevant example scripts:
+### See also these frequently asked questions
 
-{% include seealso tag1="example" tag2="preprocessing" tag3="timelock" %}
-{% include seealso tag1="example" tag2="preprocessing" tag3="freq" %}
+{% include seealso category="faq" tag1="preprocessing" tag3="timelock" %}
+{% include seealso category="faq" tag1="preprocessing" tag3="freq" %}
 
-and frequently asked questions:
+### See also these examples
 
-{% include seealso tag1="faq" tag2="preprocessing" tag3="timelock" %}
-{% include seealso tag1="faq" tag2="preprocessing" tag3="freq" %}
+{% include seealso category="example" tag1="preprocessing" tag3="timelock" %}
+{% include seealso category="example" tag1="preprocessing" tag3="freq" %}

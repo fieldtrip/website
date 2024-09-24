@@ -1,6 +1,7 @@
 ---
 title: Cleaning artifacts using ICA
-tags: [tutorial, artifact, meg, raw, preprocessing, meg-artifact]
+category: tutorial
+tags: [artifact, meg, raw, preprocessing, meg-artifact]
 ---
 
 # Cleaning artifacts using ICA
@@ -258,8 +259,8 @@ More information on dealing with artifacts can also be found in some example scr
 
 #### Example scripts
 
-{% include seealso tag1="artifact" tag2="example" %}
+{% include seealso category="example" tag1="artifact" %}
 
 #### Frequently asked questions
 
-{% include seealso tag1="artifact" tag2="faq" %}
+{% include seealso category="faq" tag1="artifact" %}

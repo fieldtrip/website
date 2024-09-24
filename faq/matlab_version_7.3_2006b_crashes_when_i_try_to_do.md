@@ -1,6 +1,7 @@
 ---
 title: MATLAB version 7.3 (2006b) crashes when I try to do ...
-tags: [faq, matlab]
+category: faq
+tags: [matlab]
 ---
 
 # MATLAB version 7.3 (2006b) crashes when I try to do ...

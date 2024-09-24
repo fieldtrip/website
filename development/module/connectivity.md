@@ -66,4 +66,4 @@ The literature references to the implemented methods are given [here](/reference
 
 See also these tutorials:
 
-{% include seealso tag1="tutorial" tag2="connectivity" %}
+{% include seealso category="tutorial" tag1="connectivity" %}

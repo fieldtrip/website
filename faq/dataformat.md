@@ -1,6 +1,7 @@
 ---
 title: What dataformats are supported?
-tags: [faq, dataformat, preprocessing, raw]
+category: faq
+tags: [dataformat, preprocessing, raw]
 ---
 
 # What dataformats are supported?
@@ -88,4 +89,4 @@ The following surface and volume mesh formats are supported by **[ft_read_headsh
 
 ## See also
 
-{% include seealso tag1="faq" tag2="dataformat" %}
+{% include seealso category="faq" tag1="dataformat" %}

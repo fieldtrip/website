@@ -1,5 +1,6 @@
 ---
 title: Getting started with video data
+category: getting_started
 tags: [dataformat, video]
 ---
 

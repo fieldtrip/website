@@ -214,17 +214,17 @@ Changing parameters of the forward model influences the Inverse solutions. Play 
 
 In this tutorial, we learned how to solve the inverse problem. For this, we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different parameters for EEG and MEG.
 
-Here are some related FAQs
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="electrode" %}
-{% include seealso tag1="faq" tag2="headmodel" tag3="eeg" %}
+{% include seealso category="faq" tag1="electrode" %}
+{% include seealso category="faq" tag1="headmodel" tag3="eeg" %}
 
-and some related examples:
+### See also these examples
 
-{% include seealso tag1="example" tag2="electrode" %}
-{% include seealso tag1="example" tag2="headmodel" tag3="eeg" %}
+{% include seealso category="example" tag1="electrode" %}
+{% include seealso category="example" tag1="headmodel" tag3="eeg" %}
 
-and other tutorials
+### See also these tutorials
 
-{% include seealso tag1="tutorial" tag2="electrode" %}
-{% include seealso tag1="tutorial" tag2="headmodel" tag3="eeg" %}
+{% include seealso category="tutorial" tag1="electrode" %}
+{% include seealso category="tutorial" tag1="headmodel" tag3="eeg" %}

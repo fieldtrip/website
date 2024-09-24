@@ -1,5 +1,6 @@
 ---
 title: Getting started with TMSi data
+category: getting_started
 tags: [dataformat, tmsi, eeg]
 ---
 

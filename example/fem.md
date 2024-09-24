@@ -1,6 +1,7 @@
 ---
 title: Compute EEG leadfields using a FEM headmodel
-tags: [example, eeg, fem, leadfield, headmodel]
+category: example
+tags: [eeg, fem, leadfield, headmodel]
 ---
 
 # Compute EEG leadfields using a FEM headmodel

@@ -1,6 +1,7 @@
 ---
 title: How do I construct a layout file for the plotting functions?
-tags: [faq, layout, plotting]
+category: faq
+tags: [layout, plotting]
 ---
 
 # How do I construct a layout file for the plotting functions?

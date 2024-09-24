@@ -1,6 +1,6 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
-tags: [example, freq, coherence, eeg, meg, fixme]
+tags: [fixme]
 ---
 
 {% include markup/yellow %}

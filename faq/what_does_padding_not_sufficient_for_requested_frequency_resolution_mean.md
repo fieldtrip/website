@@ -1,6 +1,7 @@
 ---
 title: What does "padding not sufficient for requested frequency resolution" mean?
-tags: [faq, freq]
+category: faq
+tags: [freq]
 ---
 
 # What does "padding not sufficient for requested frequency resolution" mean?

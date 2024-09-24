@@ -1,5 +1,6 @@
 ---
 title: Getting started with BabySQUID data
+category: getting_started
 tags: [dataformat, babysquid, meg]
 ---
 

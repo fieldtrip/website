@@ -1,6 +1,7 @@
 ---
 title: Why was FieldTrip maintained in SVN and not in Git?
-tags: [faq, development, cvs, svn, git]
+category: faq
+tags: [development, cvs, svn, git]
 ---
 
 # Why was FieldTrip maintained in SVN and not in Git?

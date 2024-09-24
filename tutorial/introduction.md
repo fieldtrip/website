@@ -1,6 +1,7 @@
 ---
 title: Introduction to the FieldTrip toolbox
-tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
+category: tutorial
+tags: [meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
 ---
 
 # Introduction to the FieldTrip toolbox
@@ -149,10 +150,10 @@ If you would like to have an introduction about scripting in MATLAB, it is sugge
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
-Here are the [frequently asked questions](/faq) that are MATLAB specific:
+### See also these frequently asked questions
 
-{% include seealso tag1="matlab" tag2="faq" %}
+{% include seealso category="faq" tag1="matlab" %}
 
-Here are the [example scripts](/example) that are MATLAB specific:
+### See also these examples
 
-{% include seealso tag1="matlab" tag2="example" %}
+{% include seealso category="example" tag1="matlab" %}

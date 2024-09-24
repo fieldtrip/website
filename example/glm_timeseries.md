@@ -1,6 +1,7 @@
 ---
 title: Using General Linear Modeling on time series data
-tags: [example, glm, statistics, eeg-language]
+category: example
+tags: [glm, statistics, eeg-language]
 ---
 
 # Using General Linear Modeling on time series data

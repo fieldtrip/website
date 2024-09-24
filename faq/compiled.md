@@ -1,6 +1,7 @@
 ---
 title: Can I use FieldTrip without MATLAB license?
-tags: [faq, matlab, mex, compile]
+category: faq
+tags: [matlab, mex, compile]
 ---
 
 # Can I use FieldTrip without MATLAB license?

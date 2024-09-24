@@ -1,6 +1,7 @@
 ---
 title: Analysis of monkey ECoG recordings
-tags: [tutorial, ieeg, ecog, neurotycho, animal]
+category: tutorial
+tags: [ieeg, ecog, neurotycho, animal]
 ---
 
 # Analysis of monkey ECoG recordings
@@ -311,12 +312,12 @@ Here is also a list of related documentation:
 
 ### FAQs on connectivity
 
-{% include seealso tag1="connectivity" tag2="faq" %}
+{% include seealso category="faq" tag1="connectivity" %}
 
 ### FAQs on frequency analysis
 
-{% include seealso tag1="freq" tag2="faq" %}
+{% include seealso category="faq" tag1="freq" %}
 
 ### FAQs on data formats
 
-{% include seealso tag1="dataformat" tag2="faq" %}
+{% include seealso category="faq" tag1="dataformat" %}

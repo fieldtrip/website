@@ -8,7 +8,7 @@ title: Check the consistency between the documentation and the implementations
 
 ## Objectives
 
-- the reference documentation should be included in the m-files (i.e. "help function_name")
+- the reference documentation should be included in the m-files (i.e., `help functionname`)
 - the documentation should be complete w.r.t. the underlying implementation
 - the documentation should be up-to-date, and should be easily kept up-to-date
 - the structure between the functions should become more transparent

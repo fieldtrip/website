@@ -1,6 +1,7 @@
 ---
 title: How to ask good questions to the community?
-tags: [faq, support, email]
+category: faq
+tags: [support, email]
 ---
 
 # How to ask good questions to the community?

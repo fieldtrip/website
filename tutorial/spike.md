@@ -1,6 +1,7 @@
 ---
 title: Preprocessing and analysis of spike-train data
-tags: [tutorial, spike, animal, spike-placefield, spike-attention]
+category: tutorial
+tags: [spike, animal, spike-placefield, spike-attention]
 ---
 
 # Preprocessing and analysis of spike-train data

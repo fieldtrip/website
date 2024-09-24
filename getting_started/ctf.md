@@ -1,5 +1,6 @@
 ---
 title: Getting started with CTF data
+category: getting_started
 tags: [dataformat, ctf, meg]
 ---
 

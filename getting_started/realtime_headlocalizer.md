@@ -1,5 +1,6 @@
 ---
 title: Getting started with real-time head localization in MEG
+category: getting_started
 tags: [realtime, meg]
 ---
 

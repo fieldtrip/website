@@ -1,6 +1,7 @@
 ---
 title: Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis
-tags: [faq, freq]
+category: faq
+tags: [freq]
 ---
 
 # Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis

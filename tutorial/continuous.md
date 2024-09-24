@@ -1,6 +1,7 @@
 ---
 title: Preprocessing - Reading continuous EEG and MEG data
-tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, meg-language, eeg-language]
+category: tutorial
+tags: [preprocessing, continuous, eeg, raw, brainvision, memory, meg-language, eeg-language]
 ---
 
 # Preprocessing - Reading continuous EEG and MEG data
@@ -253,10 +254,10 @@ The following example shows how to first read the data as a single continuous se
 
 After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/preprocessing_erp), with the [event-related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing, you can also read the following FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="preprocessing" %}
+{% include seealso category="faq" tag1="preprocessing" %}
 
-Or you can also read the example scripts:
+### See also these examples
 
-{% include seealso tag1="example" tag2="preprocessing" %}
+{% include seealso category="example" tag1="preprocessing" %}

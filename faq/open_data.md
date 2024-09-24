@@ -1,6 +1,7 @@
 ---
 title: Where can I find open access MEG/EEG data?
-tags: [faq, dataset, sharing]
+category: faq
+tags: [dataset, sharing]
 ---
 
 # Where can I find open access MEG/EEG data?

@@ -1,6 +1,7 @@
 ---
 title: I am getting strange artifacts in figures that use opacity
-tags: [faq, plotting, artifact]
+category: faq
+tags: [plotting, artifact]
 ---
 
 # I am getting strange artifacts in figures that use opacity

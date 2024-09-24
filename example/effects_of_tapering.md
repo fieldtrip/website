@@ -1,6 +1,7 @@
 ---
 title: Effects of tapering for power estimates
-tags: [example, freq, simulation]
+category: example
+tags: [freq, simulation]
 redirect_from:
    - /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/
 ---

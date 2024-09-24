@@ -1,5 +1,6 @@
 ---
 title: Getting started with XSens motion capture data
+category: getting_started
 tags: [dataformat, xsens, motion]
 ---
 

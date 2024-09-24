@@ -1,5 +1,6 @@
 ---
 title: Getting started with Cerca OPM data
+category: getting_started
 tags: [dataformat, meg, opm, cerca, bids]
 ---
 

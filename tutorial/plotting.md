@@ -1,6 +1,7 @@
 ---
 title: Plotting data at the channel and source level
-tags: [tutorial, plotting, layout]
+category: tutorial
+tags: [plotting, layout]
 ---
 
 # Plotting data at the channel and source level
@@ -587,8 +588,10 @@ More general approaches for visualisation of data are
 
 Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/layout) explains how this mapping is constructed.
 
-Frequently asked question
-{% include seealso tag1="plotting" tag2="faq" %}
+### See also these frequently asked questions
 
-Example script
-{% include seealso tag1="plotting" tag2="example" %}
+{% include seealso category="faq" tag1="plotting" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="plotting" %}

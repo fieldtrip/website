@@ -1,6 +1,7 @@
 ---
 title: Preprocessing of EEG data and computing ERPs
-tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
+category: tutorial
+tags: [eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
 ---
 
 # Preprocessing of EEG data and computing ERPs
@@ -354,12 +355,12 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
 After having finished this tutorial on EEG data, you can look at the [event-related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing or ERP analysis, you can also read the following FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag3="preprocessing" %}
-{% include seealso tag1="faq" tag3="timelock" %}
+{% include seealso category="faq" tag1="preprocessing" %}
+{% include seealso category="faq" tag1="timelock" %}
 
-Or you can also read the examples:
+### See also these examples
 
-{% include seealso tag1="example" tag3="preprocessing" %}
-{% include seealso tag1="example" tag3="timelock" %}
+{% include seealso category="example" tag1="preprocessing" %}
+{% include seealso category="example" tag1="timelock" %}

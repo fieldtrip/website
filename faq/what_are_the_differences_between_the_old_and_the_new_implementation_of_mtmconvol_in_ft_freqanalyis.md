@@ -1,6 +1,7 @@
 ---
 title: What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?
-tags: [faq, freq, mtmconvol]
+category: faq
+tags: [freq, mtmconvol]
 ---
 
 # What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?

@@ -1,6 +1,7 @@
 ---
 title: Converting an example motion tracking dataset for sharing in BIDS
-tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
+category: example
+tags: [bids, sharing, motion, qualisys, optotrak, xsens]
 ---
 
 # Converting an example motion tracking dataset for sharing in BIDS

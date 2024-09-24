@@ -1,6 +1,7 @@
 ---
 title: I am having problems printing figures that use opacity
-tags: [faq, plotting]
+category: faq
+tags: [plotting]
 ---
 
 # I am having problems printing figures that use opacity

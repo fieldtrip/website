@@ -1,6 +1,7 @@
 ---
 title: Why are so many of the interesting functions in the private directories?
-tags: [faq, function, matlab]
+category: faq
+tags: [function, matlab]
 ---
 
 # Why are so many of the interesting functions in the private directories?

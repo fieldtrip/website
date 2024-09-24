@@ -1,6 +1,7 @@
 ---
 title: Which version of FieldTrip should I download?
-tags: [faq, download, release]
+category: faq
+tags: [download, release]
 ---
 
 Our [download server](https://download.fieldtriptoolbox.org/) holds recent versions of the FieldTrip toolbox code, corresponding to [tagged versions](https://github.com/fieldtrip/fieldtrip/tags) on GitHub. In general we also archive the latest released version of every year on <https://download.fieldtriptoolbox.org/historical/>, which correspond to the persistently archived versions on [Zenodo](https://zenodo.org/records/10495308). 

@@ -1,6 +1,7 @@
 ---
 title: How to incorporate head movements in MEG analysis
-tags: [example, artifact, meg, glm, regression, confound]
+category: example
+tags: [artifact, meg, glm, regression, confound]
 redirect_from:
    - /example/how_to_incorporate_head_movements_in_meg_analysis/
 ---

@@ -1,17 +1,18 @@
 ---
-title: Make leadfields using different headmodels
-tags: [example, meg, headmodel, source]
+title: Make MEG leadfields using different headmodels
+category: example
+tags: [meg, headmodel, source]
 ---
 
-# Make leadfields using different headmodels
+# Make MEG leadfields using different headmodels
 
 ## Introduction
 
-These scripts demonstrate how to compute and compare some different MEG headmodels that are available in FieldTrip.
+These scripts demonstrate how to compute and compare leadfields using some different MEG headmodels that are available in FieldTrip.
 
-For all functions used, you can type 'help _function_' in MATLAB for more information.
+For all functions used, you can type `help functionname` in MATLAB for more information.
 
-The MEG dataset that is used in this demo is available from <https://download.fieldtriptoolbox.org/tutorial/> and is named Subject01.zip.
+The MEG dataset Subject01.zip used in this demo is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
 
 If you download this data into a folder named 'testdata', the directory should look like this:
 

@@ -1,6 +1,7 @@
 ---
 title: Align EEG electrode positions to BEM headmodel
-tags: [example, eeg, mri, source, headmodel]
+category: example
+tags: [eeg, mri, source, headmodel]
 redirect_from:
    - /example/align_eeg_electrode_positions_to_bem_headmodel/
 ---

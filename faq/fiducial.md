@@ -1,6 +1,7 @@
 ---
 title: How should I specify the fiducials for electrode realignment?
-tags: [faq, electrode, eeg, fiducial]
+category: faq
+tags: [electrode, eeg, fiducial]
 ---
 
 # How should I specify the fiducials for electrode realignment?

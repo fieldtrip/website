@@ -1,6 +1,7 @@
 ---
 title: Why am I not getting integer frequencies?
-tags: [faq, preprocessing, freq]
+category: faq
+tags: [preprocessing, freq]
 ---
 
 # Why am I not getting integer frequencies?

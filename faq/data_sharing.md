@@ -1,6 +1,7 @@
 ---
 title: How can I share my MEG data?
-tags: [faq, dataset, sharing]
+category: faq
+tags: [dataset, sharing]
 ---
 
 # How can I share my MEG data?
@@ -61,4 +62,4 @@ There is not per se a perfect format for sharing the dataset, so you have to **b
 
 BIDS is an active project; the [specification](https://bids-specification.readthedocs.io/en/stable/) is still expanding through so-called BIDS extension proposals (BEPs). Also tools to create and work with BIDS datasets are under active development. FieldTrip includes the **[data2bids](/reference/data2bids)** function to help you organize your data in BIDS. Under the examples section you can find multiple example scripts:
 
-{% include seealso tag1="example" tag2="bids" %}
+{% include seealso category="example" tag1="bids" %}

@@ -1,6 +1,7 @@
 ---
 title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
-tags: [tutorial, meg, raw, preprocessing, meg-language]
+category: tutorial
+tags: [meg, raw, preprocessing, meg-language]
 ---
 
 # Preprocessing - Segmenting and reading trial-based EEG and MEG data
@@ -173,10 +174,10 @@ More on the `trialinfo` field can be found in the [faq](/faq/is_it_possible_to_k
 
 After having finished this tutorial on preprocessing, you can continue with the [event-related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing, you can also read the following FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="preprocessing" tag2="faq" %}
+{% include seealso category="faq" tag1="preprocessing" %}
 
-and example scripts:
+### See also these examples
 
-{% include seealso tag1="preprocessing" tag2="example" %}
+{% include seealso category="example" tag1="preprocessing" %}

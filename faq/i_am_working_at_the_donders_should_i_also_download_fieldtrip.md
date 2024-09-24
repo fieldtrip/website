@@ -1,6 +1,7 @@
 ---
 title: I am working at the Donders, should I also download FieldTrip?
-tags: [faq, path, download]
+category: faq
+tags: [path, download]
 ---
 
 # I am working at the Donders, should I also download FieldTrip?

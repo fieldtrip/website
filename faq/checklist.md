@@ -1,6 +1,7 @@
 ---
 title: Which methodological details should I report in an EEG/MEG manuscript?
-tags: [faq, sharing]
+category: faq
+tags: [sharing]
 ---
 
 # Which methodological details should I report in an EEG/MEG manuscript?

@@ -1,6 +1,7 @@
 ---
 title: How should I refer to FieldTrip in my publication?
-tags: [faq, reference]
+category: faq
+tags: [reference]
 ---
 
 # How should I refer to FieldTrip in my publication?

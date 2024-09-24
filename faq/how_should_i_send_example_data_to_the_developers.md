@@ -1,6 +1,7 @@
 ---
 title: How should I share example data with the email list or developers?
-tags: [faq, email, development, git]
+category: faq
+tags: [email, development, git]
 ---
 
 # How should I share example data with the email list or developers?

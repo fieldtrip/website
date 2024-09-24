@@ -1,6 +1,7 @@
 ---
 title: How can I fine-tune my BEM volume conduction model?
-tags: [faq, source, headmodel]
+category: faq
+tags: [source, headmodel]
 ---
 
 # How can I fine-tune my BEM volume conduction model?

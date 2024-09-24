@@ -1,6 +1,7 @@
 ---
 title: Compute forward simulated data and apply a beamformer scan
-tags: [example, meg, source, dipole]
+category: example
+tags: [meg, source, dipole]
 ---
 
 # Compute forward simulated data and apply a beamformer scan

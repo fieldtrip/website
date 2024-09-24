@@ -1,6 +1,7 @@
 ---
 title: Source reconstruction of event-related fields using minimum-norm estimation
-tags: [tutorial, timelock, source, meg, headmodel, mri, plotting, meg-language]
+category: tutorial
+tags: [timelock, source, meg, headmodel, mri, plotting, meg-language]
 ---
 
 # Source reconstruction of event-related fields using minimum-norm estimation
@@ -174,8 +175,10 @@ In this tutorial we showed how to do MNE source reconstruction method on a singl
 
 Functions and tutorial pages that show how to average, and how to analyze statistically source reconstructions across subjects or how to compare those to a template brain are still under development.
 
-FAQ
-{% include seealso tag1="source" tag2="faq" %}
+See also these FAQs:
 
-Example script
-{% include seealso tag1="source" tag2="example" %}
+{% include seealso category="faq" tag1="source" %}
+
+See also these example scripts:
+
+{% include seealso category="example" tag1="source" %}

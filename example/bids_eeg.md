@@ -1,6 +1,7 @@
 ---
 title: Converting an example EEG dataset for sharing in BIDS
-tags: [example, bids, sharing]
+category: example
+tags: [bids, sharing]
 ---
 
 # Converting an example EEG dataset for sharing in BIDS

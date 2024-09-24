@@ -1,5 +1,6 @@
 ---
 title: Getting started with BioImage Suite
+category: getting_started
 tags: [dataformat, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
 ---
 
@@ -116,4 +117,4 @@ Once the `.mgrid` file is created, it can be loaded into the BioImage Suite Elec
 
 ## Suggested further reading
 
-{% include seealso tag1="tutorial" tag2="ieeg" %}
+{% include seealso category="tutorial" tag1="ieeg" %}

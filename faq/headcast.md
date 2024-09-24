@@ -1,6 +1,7 @@
 ---
 title: What material is used for the flexible MEG headcasts?
-tags: [faq, meg]
+category: faq
+tags: [meg]
 ---
 
 # What material is used for the flexible MEG headcasts?

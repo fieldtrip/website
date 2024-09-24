@@ -398,17 +398,18 @@ Again we can visualize the results of the statistical comparison. Since we have 
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.
 {% include markup/end %}
 
-## Summary and conclusion
+## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip. It addresses multiple ways of dealing with the multiple comparison problem. Furthermore, it demonstrated how to plot the part of the data that show the significant effect.
 
-## Suggested further reading
+### See also these tutorials
 
-Tutorials:
-{% include seealso tag1="statistics" tag2="tutorial" %}
+{% include seealso category="tutorial" tag1="statistics" %}
 
-FAQs:
-{% include seealso tag1="statistics" tag2="faq" %}
+### See also these frequently asked questions
 
-Example scripts:
-{% include seealso tag1="statistics" tag2="example" %}
+{% include seealso category="faq" tag1="statistics" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="statistics" %}
