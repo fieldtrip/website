@@ -320,6 +320,7 @@ ChannelSelection
 Charité
 Chatrian
 Chaumon
+Chauvet
 CheckReg
 Checkcode
 Cheng
@@ -1434,12 +1435,15 @@ RSA
 Rig
 Sofie
 Spotify
+Stephani
 TRFs
+Tilman
 Viktor
 appenddim
 appendsource
 attL
 attR
+baddata
 biopac
 contrastLR
 csdlabel
