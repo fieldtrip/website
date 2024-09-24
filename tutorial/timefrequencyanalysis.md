@@ -1,6 +1,7 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-tags: [tutorial, freq, meg, eeg, plotting, meg-language]
+category: tutorial
+tags: [freq, meg, eeg, plotting, meg-language]
 ---
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
@@ -362,8 +363,10 @@ This tutorial showed how to do time-frequency analysis on a single's subject MEG
 
 After having finished this tutorial on time-frequency analysis, you can continue with the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
 
-Frequently asked question
-{% include seealso tag1="faq" tag2="freq" %}
+### See also these frequently asked questions
 
-Example script
-{% include seealso tag1="example" tag2="freq" %}
+{% include seealso category="faq" tag1="freq" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="freq" %}

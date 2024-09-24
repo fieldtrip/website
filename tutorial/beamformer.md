@@ -1,6 +1,7 @@
 ---
 title: Localizing oscillatory sources using beamformer techniques
-tags: [tutorial, meg, freq, source, headmodel, mri, plotting, meg-language]
+category: tutorial
+tags: [meg, freq, source, headmodel, mri, plotting, meg-language]
 ---
 
 # Localizing oscillatory sources using beamformer techniques
@@ -453,8 +454,10 @@ Beamforming source analysis in the frequency domain with DICS has been demonstra
 Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
-FAQs:
-{% include seealso tag1="source" tag2="faq" %}
+### See also these frequently asked questions
 
-Example scripts:
-{% include seealso tag1="source" tag2="example" %}
+{% include seealso category="faq" tag1="source" %}
+
+### See also these example scripts
+
+{% include seealso category="example" tag1="source" %}

@@ -1,6 +1,7 @@
 ---
 title: Using reproducescript on a full study
-tags: [example, reproducescript]
+category: example
+tags: [reproducescript]
 ---
 
 # Using reproducescript on a full study

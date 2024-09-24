@@ -1,8 +1,9 @@
 ---
 title: Plotting the result of source reconstruction on a cortical mesh
-tags: [example, plotting, source]
+category: example
+tags: [plotting, source]
 redirect_from:
-   - /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh/
+  - /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh/
 ---
 
 # Plotting the result of source reconstruction on a cortical mesh

@@ -1,6 +1,7 @@
 ---
 title: Cluster-based permutation tests on time-frequency data
-tags: [tutorial, statistics, eeg, meg, raw, freq, meg-language, neighbours]
+category: tutorial
+tags: [statistics, eeg, meg, raw, freq, meg-language, neighbours]
 ---
 
 # Cluster-based permutation tests on time-frequency data
@@ -429,7 +430,7 @@ _Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradie
 Try calling clusterplot with cfg.alpha = 0.05;
 {% include markup/end %}
 
-## Summary and suggested further readings
+## Summary and suggested further reading
 
 In this tutorial, we showed how to do non-parametric statistical test, cluster-based permutation test on planar TFR's with between-trials, with within-trials and with within-subjects experimental designs. It was also shown how to plot the results.
 
@@ -437,12 +438,12 @@ If you are interested in parametric tests, you can read the [Parametric and non-
 
 If you would like to read more about statistical analysis, you can look at the following FAQs:
 
-{% include seealso tag1="faq" tag2="statistics" %}
-{% include seealso tag1="faq" tag2="cluster"    %}
-{% include seealso tag1="faq" tag2="neighbour"  %}
+{% include seealso category="faq" tag1="statistics" %}
+{% include seealso category="faq" tag1="cluster"    %}
+{% include seealso category="faq" tag1="neighbour"  %}
 
 and example scripts:
 
-{% include seealso tag1="example" tag2="statistics" %}
-{% include seealso tag1="example" tag2="cluster"    %}
-{% include seealso tag1="example" tag2="neighbour"  %}
+{% include seealso category="example" tag1="statistics" %}
+{% include seealso category="example" tag1="cluster"    %}
+{% include seealso category="example" tag1="neighbour"  %}

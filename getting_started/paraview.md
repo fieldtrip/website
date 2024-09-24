@@ -1,5 +1,6 @@
 ---
 title: Getting started with ParaView
+category: getting_started
 tags: [mesh, segmentation, volume, headmodel, paraview]
 ---
 

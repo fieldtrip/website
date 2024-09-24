@@ -166,14 +166,14 @@ The forward module functions are written such that they operate correctly if all
 
 The literature references to the implemented methods are given [here](/references_to_implemented_methods).
 
-### Frequently asked questions about forward and inverse modeling:
+### Frequently asked questions on forward and inverse modeling
 
-{% include seealso tag1="faq" tag2="source" %}
+{% include seealso category="faq" tag1="source" %}
 
-### Example material for forward and inverse modeling:
+### Example material on forward and inverse modeling
 
-{% include seealso tag1="example" tag2="source" %}
+{% include seealso category="example" tag1="source" %}
 
-### Tutorial material for forward and inverse modeling:
+### Tutorial material on forward and inverse modeling
 
-{% include seealso tag1="tutorial" tag2="source" %}
+{% include seealso category="tutorial" tag1="source" %}

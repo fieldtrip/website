@@ -1,5 +1,6 @@
 <ul>
   {% for p in site.pages %}
+  {% if include.category  == nil or include.category  == "" or p.category contains include.category  %}
   {% if include.tag  == nil or include.tag  == "" or p.tags contains include.tag  %}
   {% if include.tag1 == nil or include.tag1 == "" or p.tags contains include.tag1 %}
   {% if include.tag2 == nil or include.tag2 == "" or p.tags contains include.tag2 %}
@@ -11,6 +12,7 @@
   {% if include.tag8 == nil or include.tag8 == "" or p.tags contains include.tag8 %}
   {% if include.tag9 == nil or include.tag9 == "" or p.tags contains include.tag9 %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
   {% endif %}
   {% endif %}
   {% endif %}

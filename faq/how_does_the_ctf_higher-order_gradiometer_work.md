@@ -1,6 +1,7 @@
 ---
 title: How does the CTF higher-order gradiometer work?
-tags: [faq, ctf]
+category: faq
+tags: [ctf]
 ---
 
 # How does the CTF higher-order gradiometer work?

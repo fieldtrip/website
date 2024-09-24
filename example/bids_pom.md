@@ -1,6 +1,7 @@
 ---
 title: Combining simultaneous recordings in BIDS
-tags: [example, bids, sharing]
+category: example
+tags: [bids, sharing]
 ---
 
 # Combining simultaneous recordings in BIDS

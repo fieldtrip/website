@@ -1,6 +1,7 @@
 ---
 title: Example real-time power estimate
-tags: [example, realtime]
+category: example
+tags: [realtime]
 ---
 
 # Example real-time power estimate

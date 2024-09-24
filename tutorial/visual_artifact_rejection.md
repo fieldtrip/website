@@ -1,6 +1,7 @@
 ---
 title: Visual or manual artifact rejection
-tags: [tutorial, artifact, meg, raw, preprocessing, meg-language]
+category: tutorial
+tags: [artifact, meg, raw, preprocessing, meg-language]
 ---
 
 # Visual or manual artifact rejection
@@ -222,8 +223,8 @@ More information on dealing with artifacts can also be found in some example scr
 
 #### Example scripts
 
-{% include seealso tag1="artifact" tag2="example" %}
+{% include seealso category="example" tag1="artifact" %}
 
 #### Frequently asked questions
 
-{% include seealso tag1="artifact" tag2="faq" %}
+{% include seealso category="faq" tag1="artifact" %}

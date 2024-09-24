@@ -1,6 +1,7 @@
 ---
 title: What does the coilaccuracy parameter do?
-tags: [faq, meg]
+category: faq
+tags: [meg]
 ---
 
 # What does the coilaccuracy parameter do?

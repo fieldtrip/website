@@ -1,6 +1,7 @@
 ---
 title: What are the units of the data and of the derived results?
-tags: [faq]
+category: faq
+tags: [units]
 ---
 
 # What are the units of the data and of the derived results?

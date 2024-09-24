@@ -1,6 +1,7 @@
 ---
 title: How can I preprocess a dataset that is too large to fit into memory?
-tags: [faq, preprocessing, memory]
+category: faq
+tags: [preprocessing, memory]
 ---
 
 # How can I preprocess a dataset that is too large to fit into memory?

@@ -1,6 +1,7 @@
 ---
 title: Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
-tags: [faq, freq]
+category: faq
+tags: [freq]
 ---
 
 # Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?

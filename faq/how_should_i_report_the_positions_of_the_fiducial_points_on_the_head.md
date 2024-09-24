@@ -1,6 +1,7 @@
 ---
 title: How should I report the positions of the fiducial points on the head?
-tags: [faq, electrode, fiducial, polhemus, coordinate]
+category: faq
+tags: [electrode, fiducial, polhemus, coordinate]
 ---
 
 # How should I report the positions of the fiducial points on the head?

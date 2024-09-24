@@ -1,6 +1,7 @@
 ---
 title: What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
-tags: [faq, freq, mtmfft]
+category: faq
+tags: [freq, mtmfft]
 ---
 
 # What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?

@@ -455,6 +455,10 @@ Beamforming source analysis in the frequency domain with DICS on EEG and MEG dat
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
-Related documentation:
-{% include seealso tag1="source" tag2="faq" %}
-{% include seealso tag1="source" tag2="example" %}
+### See also these frequently asked questions
+
+{% include seealso category="faq" tag1="source" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="source" %}

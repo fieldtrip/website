@@ -1,6 +1,7 @@
 ---
 title: Effect of SNR on Coherence
-tags: [example, freq, coherence]
+category: example
+tags: [freq, coherence]
 ---
 
 # Effect of SNR on Coherence

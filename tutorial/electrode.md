@@ -1,6 +1,7 @@
 ---
 title: Localizing electrodes using a 3D-scanner
-tags: [tutorial, source, electrode, fiducial, coordinate]
+category: tutorial
+tags: [source, electrode, fiducial, coordinate]
 ---
 
 # Localizing electrodes using a 3D-scanner
@@ -190,4 +191,4 @@ We suggest you read the frequently asked question about [coordinate systems](/fa
 
 Frequently asked questions that relate to electrodes are:
 
-{% include seealso tag1="electrode" tag2="faq" %}
+{% include seealso category="faq" tag1="electrode" %}

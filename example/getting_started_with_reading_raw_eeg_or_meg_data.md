@@ -1,6 +1,7 @@
 ---
 title: Getting started with reading raw EEG or MEG data
-tags: [example, eeg, meg, raw, preprocessing, trialdef]
+category: example
+tags: [eeg, meg, raw, preprocessing, trialdef]
 ---
 
 # Getting started with reading raw EEG or MEG data

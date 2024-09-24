@@ -1,6 +1,7 @@
 ---
 title: How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-tags: [faq, source, headmodel, inverse, warning]
+category: faq
+tags: [source, headmodel, inverse, warning]
 ---
 
 # How can I visualize the different geometrical objects that are needed for forward and inverse computations?

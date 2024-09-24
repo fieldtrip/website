@@ -1,6 +1,7 @@
 ---
 title: Speeding up your analysis using distributed computing with qsub
-tags: [tutorial, matlab, script, qsub, distcomp, meg-language]
+category: tutorial
+tags: [matlab, script, qsub, distcomp, meg-language]
 ---
 
 # Speeding up your analysis using distributed computing with qsub
@@ -275,7 +276,7 @@ This way you can distribute your custom function (e.g., see below) along with th
 This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis to compute event-related fields, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, you can distribute any form of analysis.
 
 FAQs related to issues in this tutorial:
-{% include seealso tag1="faq" tag2="qsub"       %}
-{% include seealso tag1="faq" tag2="peer"       %}
-{% include seealso tag1="faq" tag2="engine"     %}
-{% include seealso tag1="faq" tag2="distcomp"   %}
+{% include seealso category="faq" tag1="qsub"       %}
+{% include seealso category="faq" tag1="peer"       %}
+{% include seealso category="faq" tag1="engine"     %}
+{% include seealso category="faq" tag1="distcomp"   %}

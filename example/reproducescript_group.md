@@ -1,6 +1,7 @@
 ---
 title: Using reproducescript for a group analysis
-tags: [example, reproducescript]
+category: example
+tags: [reproducescript]
 ---
 
 # Using reproducescript for a group analysis

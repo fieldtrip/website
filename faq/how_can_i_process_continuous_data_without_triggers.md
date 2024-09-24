@@ -1,6 +1,7 @@
 ---
 title: How can I process continuous data without triggers?
-tags: [preprocessing, continuous, raw, faq]
+category: faq
+tags: [preprocessing, continuous, raw]
 ---
 
 # How can I process continuous data without triggers?

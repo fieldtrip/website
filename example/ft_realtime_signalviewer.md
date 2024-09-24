@@ -1,6 +1,7 @@
 ---
 title: Example real-time signal viewer
-tags: [example, realtime]
+category: example
+tags: [realtime]
 ---
 
 # Example real-time signal viewer

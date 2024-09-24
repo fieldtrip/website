@@ -1,5 +1,6 @@
 ---
 title: Getting started with Homer
+category: getting_started
 tags: [dataformat, homer, nirs]
 ---
 

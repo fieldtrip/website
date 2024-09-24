@@ -17,4 +17,4 @@ This toolbox has been developed as part of the FieldTrip toolbox, but can be use
 
 ## Frequently asked questions about distributed computing using this toolbox
 
-{% include seealso tag1="faq" tag2="qsub" %}
+{% include seealso category="faq" tag1="qsub" %}

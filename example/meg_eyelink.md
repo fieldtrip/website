@@ -1,6 +1,7 @@
 ---
 title: Combine MEG with Eyelink eyetracker data
-tags: [example, artifact, preprocessing, eyelink, eog]
+category: example
+tags: [artifact, preprocessing, eyelink, eog]
 ---
 
 # Combine MEG with Eyelink eyetracker data

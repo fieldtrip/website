@@ -1,6 +1,7 @@
 ---
 title: What is the relation between "events" (such as triggers) and "trials"?
-tags: [faq, preprocessing, trialfun]
+category: faq
+tags: [preprocessing, trialfun]
 ---
 
 # What is the relation between "events" (such as triggers) and "trials"?

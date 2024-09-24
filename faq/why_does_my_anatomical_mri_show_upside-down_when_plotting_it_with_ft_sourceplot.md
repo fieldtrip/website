@@ -1,6 +1,7 @@
 ---
 title: Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-tags: [faq, anatomical, mri]
+category: faq
+tags: [anatomical, mri]
 ---
 
 # Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?

@@ -463,14 +463,14 @@ the information, which might make it more difficult later in your analysis to
 figure out what you exactly did to your data.
 {% include markup/end %}
 
-## See also
+## Suggested further reading
 
-Frequently asked questions:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag3="preprocessing" %}
-{% include seealso tag1="faq" tag3="timelock" %}
+{% include seealso category="faq" tag1="preprocessing" %}
+{% include seealso category="faq" tag1="timelock" %}
 
-Examples:
+### See also these examples
 
-{% include seealso tag1="example" tag3="preprocessing" %}
-{% include seealso tag1="example" tag3="timelock" %}
+{% include seealso category="example" tag1="preprocessing" %}
+{% include seealso category="example" tag1="timelock" %}

@@ -1,6 +1,7 @@
 ---
 title: Parametric and non-parametric statistics on event-related fields
-tags: [tutorial, statistics, meg, eeg, timelock, freq, meg-language, neighbours]
+category: tutorial
+tags: [statistics, meg, eeg, timelock, freq, meg-language, neighbours]
 ---
 
 # Parametric and non-parametric statistics on event-related fields

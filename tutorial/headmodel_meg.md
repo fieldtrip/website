@@ -1,6 +1,7 @@
 ---
 title: Creating a volume conduction model of the head for source reconstruction of MEG data
-tags: [tutorial, source, meg, headmodel, mri, plotting, meg-language]
+category: tutorial
+tags: [source, meg, headmodel, mri, plotting, meg-language]
 ---
 
 # Creating a volume conduction model of the head for source reconstruction of MEG data
@@ -199,10 +200,10 @@ In this tutorial, it was explained how to build a volume conduction model of the
 
 You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="headmodel" tag3="meg" %}
+{% include seealso category="faq" tag1="headmodel" tag2="meg" %}
 
-and the related examples:
+### See also these examples
 
-{% include seealso tag1="example" tag2="headmodel" tag3="meg" %}
+{% include seealso category="example" tag1="headmodel" tag2="meg" %}

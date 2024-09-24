@@ -1,6 +1,7 @@
 ---
 title: Localizing the sources underlying the difference in event-related fields
-tags: [example, source, erf]
+category: example
+tags: [source, erf]
 ---
 
 # Localizing the sources underlying the difference in event-related fields

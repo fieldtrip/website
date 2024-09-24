@@ -1,6 +1,7 @@
 ---
 title: How can I determine the anatomical label of a source or electrode?
-tags: [faq, source]
+category: faq
+tags: [source]
 ---
 
 # How can I determine the anatomical label of a source or electrode?

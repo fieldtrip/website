@@ -1,6 +1,7 @@
 ---
 title: Source statistics
-tags: [example, meg, source, statistics]
+category: example
+tags: [meg, source, statistics]
 ---
 
 # Source statistics

@@ -1,6 +1,7 @@
 ---
 title: Converting an example EMG dataset for sharing in BIDS
-tags: [example, bids, sharing, emg]
+category: example
+tags: [bids, sharing, emg]
 ---
 
 # Converting an example EMG dataset for sharing in BIDS

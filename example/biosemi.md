@@ -1,6 +1,7 @@
 ---
 title: Example analysis pipeline for Biosemi data
-tags: [example, eeg, dataformat, biosemi, bdf]
+category: example
+tags: [eeg, dataformat, biosemi, bdf]
 ---
 
 # Example analysis pipeline for Biosemi data

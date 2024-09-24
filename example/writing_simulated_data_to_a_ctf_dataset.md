@@ -1,6 +1,7 @@
 ---
 title: Can I create an artificial CTF dataset using MATLAB?
-tags: [example, dataformat, ctf, meg]
+category: example
+tags: [dataformat, ctf, meg]
 ---
 
 {% include markup/red %}

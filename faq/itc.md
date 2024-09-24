@@ -1,6 +1,7 @@
 ---
 title: How can I compute inter-trial coherence?
-tags: [faq, coherence]
+category: faq
+tags: [coherence]
 ---
 
 # How can I compute inter-trial coherence?

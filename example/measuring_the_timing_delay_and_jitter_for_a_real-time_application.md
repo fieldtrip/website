@@ -1,6 +1,7 @@
 ---
 title: Measuring the timing delay and jitter for a real-time application
-tags: [example, realtime]
+category: example
+tags: [realtime]
 ---
 
 # Measuring the timing delay and jitter for a real-time application

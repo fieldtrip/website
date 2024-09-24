@@ -1,6 +1,7 @@
 ---
 title: Fixing a missing channel
-tags: [example, meg, preprocessing, ctf, neighbours]
+category: example
+tags: [meg, preprocessing, ctf, neighbours]
 ---
 
 # Fixing a missing channel

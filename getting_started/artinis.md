@@ -1,5 +1,6 @@
 ---
 title: Getting started with Artinis NIRS data
+category: getting_started
 tags: [dataformat, nirs, artinis]
 ---
 

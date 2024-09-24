@@ -1,6 +1,7 @@
 ---
 title: Fitting a template MRI to the MEG Polhemus head shape
-tags: [example, headmodel, meg]
+category: example
+tags: [headmodel, meg]
 redirect_from:
    - /example/sphere_fitting_and_scaling_of_the_template_colin_27_mri_to_the_meg_polhemus_headshape/
 ---

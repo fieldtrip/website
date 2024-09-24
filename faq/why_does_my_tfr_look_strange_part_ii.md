@@ -1,6 +1,7 @@
 ---
 title: Why does my TFR look strange (part II, detrending)?
-tags: [faq, mtmconvol, freq, preprocessing, artifact, filter]
+category: faq
+tags: [mtmconvol, freq, preprocessing, artifact, filter]
 ---
 
 # Why does my TFR look strange (part II, detrending)?

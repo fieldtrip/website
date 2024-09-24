@@ -1,6 +1,7 @@
 ---
 title: How to create a head model if you do not have an individual MRI
-tags: [example, source]
+category: example
+tags: [source]
 ---
 
 # How to create a head model if you do not have an individual MRI

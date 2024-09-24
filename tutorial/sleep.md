@@ -1,6 +1,7 @@
 ---
 title: Extracting the brain state and events from continuous sleep EEG
-tags: [tutorial, sleep, edf, eeg, emg, ecg, artifacts, continuous]
+category: tutorial
+tags: [sleep, edf, eeg, emg, ecg, artifacts, continuous]
 ---
 
 # Extracting the brain state and events from continuous sleep EEG
@@ -866,7 +867,7 @@ Interesting to continue the analysis if you want to go further:
 - Practicing or trying to automatically find different kind of events, e.g., rapid eye movements and blinks (in the first derivative of a filtered EOG signal), epileptic spikes have similar properties to slow waves (but have different amplitudes and shapes) ...
 - find the timelocking/co-occurrence between different events (e.g., spindles that occur at the same time as slow waves.) and only look at the ones that occur together or the ones that do not.
 
-Suggested tutorials for further reading:
+### See also these tutorials
 
 - [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
 - [Getting started with EDF (European Data Format) data](/getting_started/edf)
@@ -874,6 +875,6 @@ Suggested tutorials for further reading:
 - [Time-frequency analysis](/tutorial/timefrequencyanalysis)
 - [Time-frequency analysis of combined MEG/EEG data](/workshop/natmeg2014/timefrequency)
 
-Suggested frequently asked questions:
+### See also these frequently asked questions
 
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)

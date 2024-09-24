@@ -1,6 +1,7 @@
 ---
 title: Why am I not allowed to post to the discussion list?
-tags: [faq, email]
+category: faq
+tags: [email]
 ---
 
 # Why am I not allowed to post to the discussion list?

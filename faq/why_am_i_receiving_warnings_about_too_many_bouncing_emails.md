@@ -1,6 +1,7 @@
 ---
 title: Why am I receiving warnings about too many bouncing emails?
-tags: [faq, email]
+category: faq
+tags: [email]
 ---
 
 # Why am I receiving warnings about too many bouncing emails?

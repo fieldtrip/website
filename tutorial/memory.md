@@ -1,6 +1,7 @@
 ---
 title: Making a memory efficient analysis pipeline
-tags: [tutorial, matlab, script, memory]
+category: tutorial
+tags: [matlab, script, memory]
 ---
 
 # Making a memory efficient analysis pipeline
@@ -119,10 +120,10 @@ When you are working with a very large data set repeatedly or interactively, cle
     clear a
     a = rand(100e6,1)              % New 800 MB array
 
-## Summary and suggested further readings
+## Summary and suggested further reading
 
 This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the tutorial on distributed computing using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_parfor).
 
 These are FAQs that are related to memory issues:
 
-{% include seealso tag1="faq" tag2="memory" %}
+{% include seealso category="faq" tag1="memory" %}

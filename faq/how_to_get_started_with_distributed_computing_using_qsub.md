@@ -1,6 +1,7 @@
 ---
 title: How to get started with distributed computing using qsub?
-tags: [faq, qsub]
+category: faq
+tags: [qsub]
 ---
 
 # How to get started with distributed computing using qsub?

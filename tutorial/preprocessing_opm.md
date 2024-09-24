@@ -1,6 +1,7 @@
 ---
 title: Preprocessing of Optically Pumped Magnetometer (OPM) data
-tags: [tutorial, opm, fieldline, opm-mediannerve]
+category: tutorial
+tags: [opm, fieldline, opm-mediannerve]
 ---
 
 # Preprocessing of Optically Pumped Magnetometer (OPM) data
@@ -574,10 +575,10 @@ This tutorial gave an introduction on processing OPM data, specifically dealing 
 
 You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you could have a look at the tutorial about [coregistration of OPM data](/tutorial/coregistration_opm).
 
-Furthermore, you can explore example scripts that deal with OPMs:
+### See also these frequently asked questions
 
-{% include seealso tag1="example" tag2="opm" %}
+{% include seealso category="faq" tag1="opm" %}
 
-and frequently asked questions:
+### See also these examples
 
-{% include seealso tag1="opm" %}
+{% include seealso category="example" tag1="opm" %}

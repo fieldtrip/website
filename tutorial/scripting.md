@@ -1,6 +1,7 @@
 ---
 title: Creating a clean analysis pipeline
-tags: [tutorial, matlab, script]
+category: tutorial
+tags: [matlab, script]
 ---
 
 # Creating a clean analysis pipeline
@@ -222,16 +223,16 @@ Large datasets often require quite some processing time, hence it is convenient 
 
 The steps that do not require user interaction can even be executed in parallel to speed up the processing. This is explained in the [parfor](/tutorial/distributedcomputing_parfor) and [qsub](/tutorial/distributedcomputing_qsub) tutorials.
 
-## Summary and suggested further readings
+## Summary and suggested further reading
 
 This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and the tutorials on distributed computing using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_parfor) tutorial.
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
-Here are the [frequently asked questions](/faq) that are MATLAB specific:
+### See also these frequently asked questions
 
-{% include seealso tag1="matlab" tag2="faq" %}
+{% include seealso category="faq" tag1="matlab" %}
 
-Here are the [example scripts](/example) that are MATLAB specific:
+### See also these examples
 
-{% include seealso tag1="matlab" tag2="example" %}
+{% include seealso category="example" tag1="matlab" %}

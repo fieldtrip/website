@@ -1,6 +1,7 @@
 ---
 title: How does MTMCONVOL work?
-tags: [faq, freq]
+category: faq
+tags: [freq]
 ---
 
 # How does MTMCONVOL work?

@@ -1,5 +1,6 @@
 ---
 title: Getting started with animal electrophysiology data, including spikes
+category: getting_started
 tags: [spike, lfp]
 ---
 

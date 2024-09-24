@@ -90,7 +90,6 @@ The purpose of this device is to demonstrate that something can be controlled. I
 It is based on a ~~[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)~~ [5V Arduino Mini](http://arduino.cc/en/Main/ArduinoBoardMini).
 
 - SPI: 10 (SS), 11 (MOSI), 12 (MISO), 13 (SCK)
-
 - External Interrupts: 2 and 3 (?)
 
 Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module and uses this [library](http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html).
@@ -100,5 +99,4 @@ Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/product
 ## See also
 
 - [development/realtime/modulareeg](/development/realtime/modulareeg) for the bluetooth OpenEEG interface
-
 - [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/realtime/src/arduino) for the Arduino specific source code

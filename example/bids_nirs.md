@@ -1,6 +1,7 @@
 ---
 title: Converting an example NIRS dataset for sharing in BIDS
-tags: [example, bids, sharing, nirs, artinis, homer, snirf]
+category: example
+tags: [bids, sharing, nirs, artinis, homer, snirf]
 ---
 
 # Converting an example NIRS dataset for sharing in BIDS

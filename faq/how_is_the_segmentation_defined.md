@@ -1,6 +1,7 @@
 ---
 title: How is the segmentation defined?
-tags: [faq, datatype, segmentation, eeg, meg, headmodel]
+category: faq
+tags: [datatype, segmentation, eeg, meg, headmodel]
 ---
 
 # How is the segmentation defined?

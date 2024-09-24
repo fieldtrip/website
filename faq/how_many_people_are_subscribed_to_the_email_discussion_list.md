@@ -1,6 +1,7 @@
 ---
 title: How many people are subscribed to the email discussion list?
-tags: [faq, email]
+category: faq
+tags: [email]
 ---
 
 # How many people are subscribed to the email discussion list?

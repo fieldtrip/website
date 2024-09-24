@@ -15,7 +15,7 @@ The following steps have been don
 - test and start to use svn (done)
 - add functions (done)
 - check code duplication (done)
-- check reference doc, i.e. "help functionname" (done)
+- check reference doc, i.e., `help functionname` (done)
 - move to fieldtrip/contrib/spike
 
 The following steps still need some wor

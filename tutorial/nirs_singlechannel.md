@@ -1,6 +1,7 @@
 ---
 title: Preprocessing and averaging of single-channel NIRS data
-tags: [tutorial, nirs, preprocessing, nirs-singlechannel]
+category: tutorial
+tags: [nirs, preprocessing, nirs-singlechannel]
 ---
 
 # Preprocessing and averaging of single-channel NIRS data

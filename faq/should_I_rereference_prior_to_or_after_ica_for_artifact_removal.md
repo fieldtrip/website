@@ -1,6 +1,7 @@
 ---
 title: Should I rereference prior to or after ICA for artifact removal?
-tags: [faq, ica]
+category: faq
+tags: [ica]
 ---
 
 # Should I rereference prior to or after ICA for artifact removal?

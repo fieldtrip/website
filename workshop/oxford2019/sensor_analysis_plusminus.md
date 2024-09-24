@@ -321,12 +321,14 @@ The tutorial on which this one was based contains an extra section on how to per
 
 Alternatively, or additionally, you could read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction (potentially the [extended beamforming tutorial](/tutorial/beamformingextended) on the same data set as the present one) or, for details on statistics, one of the statistics [tutorials](/tutorial).
 
-FAQ:
-{% include seealso tag1="faq" tag2="preprocessing" %}
-{% include seealso tag1="faq" tag2="timelock" %}
-{% include seealso tag1="faq" tag2="freq" %}
+### See also these frequently asked questions
 
-Example scripts:
-{% include seealso tag1="example" tag2="preprocessing" %}
-{% include seealso tag1="example" tag2="timelock" %}
-{% include seealso tag1="example" tag2="freq" %}
+{% include seealso category="faq" tag1="preprocessing" %}
+{% include seealso category="faq" tag1="timelock" %}
+{% include seealso category="faq" tag1="freq" %}
+
+### See also these examples
+
+{% include seealso category="example" tag1="preprocessing" %}
+{% include seealso category="example" tag1="timelock" %}
+{% include seealso category="example" tag1="freq" %}

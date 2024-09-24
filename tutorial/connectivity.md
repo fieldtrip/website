@@ -1,6 +1,7 @@
 ---
 title: Analysis of sensor- and source-level connectivity
-tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
+category: tutorial
+tags: [freq, connectivity, coherence, granger, dtf, pdc]
 ---
 
 # Analysis of sensor- and source-level connectivity
@@ -251,11 +252,11 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g., interaction
 
 This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence tutorial](/tutorial/coherence).
 
-FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="coherence" %}
+{% include seealso category="faq" tag1="coherence" %}
 
-Example scripts:
+### See also these examples
 
-{% include seealso tag1="example" tag2="connectivity" %}
-{% include seealso tag1="example" tag2="coherence" %}
+{% include seealso category="example" tag1="connectivity" %}
+{% include seealso category="example" tag1="coherence" %}

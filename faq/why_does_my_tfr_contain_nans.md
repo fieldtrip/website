@@ -1,6 +1,7 @@
 ---
 title: Why does my TFR contain NaNs?
-tags: [faq, freq]
+category: faq
+tags: [freq]
 ---
 
 # Why does my TFR contain NaNs?

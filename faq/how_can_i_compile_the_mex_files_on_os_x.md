@@ -1,6 +1,7 @@
 ---
 title: How can I compile the mex files on macOS?
-tags: [faq, mex]
+category: faq
+tags: [mex]
 ---
 
 # How can I compile the mex files on macOS?

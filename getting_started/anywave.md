@@ -1,5 +1,6 @@
 ---
 title: Getting started with AnyWave
+category: getting_started
 tags: [dataformat, anywave]
 ---
 

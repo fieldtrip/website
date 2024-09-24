@@ -9,7 +9,7 @@ This page links to the reference documentation for the most important FieldTrip 
 
 A complete overview with all configuration options is available in the [configuration index](/configuration).
 
-Note that this reference documentation is identical to the help text that is displayed in MATLAB when you type "help functionname".
+Note that this reference documentation is identical to the help text that is displayed in MATLAB when you type `help functionname`.
 
 ## Description of the data structures
 

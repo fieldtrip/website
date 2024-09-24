@@ -1,6 +1,7 @@
 ---
 title: Creating a source model for source reconstruction of MEG or EEG data
-tags: [tutorial, source, meg, sourcemodel, mri, plotting, meg-language]
+category: tutorial
+tags: [source, meg, sourcemodel, mri, plotting, meg-language]
 ---
 
 # Creating a source model for source reconstruction of MEG or EEG data

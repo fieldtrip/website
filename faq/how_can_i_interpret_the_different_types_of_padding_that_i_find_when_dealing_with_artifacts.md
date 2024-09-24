@@ -1,6 +1,7 @@
 ---
 title: How can I interpret the different types of padding in FieldTrip?
-tags: [faq, preprocessing, artifact, filter]
+category: faq
+tags: [preprocessing, artifact, filter]
 ---
 
 # How can I interpret the different types of padding in FieldTrip?

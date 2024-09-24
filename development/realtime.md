@@ -19,11 +19,11 @@ The page [scratchpad](/development/realtime/scratchpad) contains some loose ends
 
 ### Frequently asked questions
 
-{% include seealso tag1="faq" tag2="realtime" %}
+{% include seealso category="faq" tag1="realtime" %}
 
 ### Example scripts
 
-{% include seealso tag1="example" tag2="realtime" %}
+{% include seealso category="example" tag1="realtime" %}
 
 ### General tips and tricks
 

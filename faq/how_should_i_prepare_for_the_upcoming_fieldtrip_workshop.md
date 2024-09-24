@@ -1,6 +1,7 @@
 ---
 title: How should I prepare for the upcoming FieldTrip workshop?
-tags: [faq, workshop]
+category: faq
+tags: [workshop]
 ---
 
 # How should I prepare for the upcoming FieldTrip workshop?

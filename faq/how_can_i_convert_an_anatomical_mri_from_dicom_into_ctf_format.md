@@ -1,6 +1,7 @@
 ---
 title: How can I convert an anatomical MRI from DICOM into CTF format?
-tags: [faq, mri, meg, ctf, dataformat, coordinate]
+category: faq
+tags: [mri, meg, ctf, dataformat, coordinate]
 ---
 
 # How can I convert an anatomical MRI from DICOM into CTF format?

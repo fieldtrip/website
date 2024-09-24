@@ -1,5 +1,6 @@
 ---
 title: Getting started with SNIRF data
+category: getting_started
 tags: [dataformat, snirf, nirs]
 ---
 

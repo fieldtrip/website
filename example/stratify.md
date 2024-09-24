@@ -1,6 +1,7 @@
 ---
 title: Stratify the distribution of one variable that differs in two conditions
-tags: [example, statistics]
+category: example
+tags: [statistics]
 ---
 
 # Stratify the distribution of one variable that differs in two conditions

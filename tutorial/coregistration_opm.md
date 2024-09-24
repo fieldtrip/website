@@ -1,6 +1,7 @@
 ---
 title: Coregistration of Optically Pumped Magnetometer (OPM) data
-tags: [tutorial, opm, fieldline, coordsys, polhemus]
+category: tutorial
+tags: [opm, fieldline, coordsys, polhemus]
 ---
 
 # Coregistration of Optically Pumped Magnetometer (OPM) data

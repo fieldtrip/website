@@ -1,6 +1,7 @@
 ---
 title: Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-language]
+category: tutorial
+tags: [eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-language]
 ---
 
 # Creating a FEM volume conduction model of the head for source reconstruction of EEG data
@@ -9,7 +10,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-lan
 
 This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
-In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
+In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence towards the end we will demonstrate how to align the template electrodes with the model.
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
@@ -374,10 +375,10 @@ This tutorial explained how to build a volume conduction model of the head using
 
 You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related FAQs:
+### See also these frequently asked questions
 
-{% include seealso tag1="faq" tag2="headmodel" tag3="eeg" %}
+{% include seealso category="faq" tag1="headmodel" tag2="eeg" %}
 
-and the related examples:
+### See also these examples
 
-{% include seealso tag1="example" tag2="headmodel" tag3="eeg" %}
+{% include seealso category="example" tag1="headmodel" tag2="eeg" %}

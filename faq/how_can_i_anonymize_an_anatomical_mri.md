@@ -1,6 +1,7 @@
 ---
 title: How can I anonymize or deidentify an anatomical MRI?
-tags: [faq, mri, anonymize, sharing]
+category: faq
+tags: [mri, anonymize, sharing]
 ---
 
 # How can I anonymize or deidentify an anatomical MRI?

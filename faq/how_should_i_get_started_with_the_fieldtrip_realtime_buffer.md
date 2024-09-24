@@ -1,6 +1,7 @@
 ---
 title: How should I get started with the FieldTrip realtime buffer?
-tags: [realtime, faq]
+category: faq
+tags: [realtime]
 ---
 
 # How should I get started with the FieldTrip realtime buffer?

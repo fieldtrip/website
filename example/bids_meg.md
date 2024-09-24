@@ -1,6 +1,7 @@
 ---
 title: Converting an example MEG dataset for sharing in BIDS
-tags: [example, bids, sharing, meg, ctf]
+category: example
+tags: [bids, sharing, meg, ctf]
 ---
 
 # Converting an example MEG dataset for sharing in BIDS

@@ -1,6 +1,7 @@
 ---
 title: How can I determine the onset of an effect?
-tags: [faq, statistics]
+category: faq
+tags: [statistics]
 ---
 
 # How can I determine the onset of an effect?

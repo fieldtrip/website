@@ -1,6 +1,7 @@
 ---
 title: How can I use the databrowser?
-tags: [faq, databrowser, plotting, artifact]
+category: faq
+tags: [databrowser, plotting, artifact]
 ---
 
 # How can I use the databrowser?

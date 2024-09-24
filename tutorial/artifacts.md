@@ -1,6 +1,7 @@
 ---
 title: Introduction on dealing with artifacts
-tags: [tutorial, artifact, preprocessing, eeg, meg]
+category: tutorial
+tags: [artifact, preprocessing, eeg, meg]
 ---
 
 # Introduction on dealing with artifacts
@@ -113,10 +114,10 @@ The following example scripts explain how to use ICA to detect and remove [EOG](
 
 Following this short introduction on dealing with artifacts in FieldTrip, you can continue with the [visual artifact rejection](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorials. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is frequently discussed on the [email discussion list](/discussion_list).
 
-#### Example scripts
+### Example scripts
 
-{% include seealso tag1="artifact" tag2="example" %}
+{% include seealso category="example" tag1="artifact" %}
 
-#### Frequently asked questions
+### Frequently asked questions
 
-{% include seealso tag1="artifact" tag2="faq" %}
+{% include seealso category="faq" tag1="artifact" %}

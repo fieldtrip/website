@@ -1,5 +1,6 @@
 ---
 title: Getting started with BIDS
+category: getting_started
 tags: [dataformat, bids]
 ---
 
@@ -53,7 +54,7 @@ Using the **[data2bids](/reference/data2bids)** function you can organize your d
 
 There are various examples that show how to convert different types of data:
 
-{% include seealso tag1="example" tag2="bids" %}
+{% include seealso category="example" tag1="bids" %}
 
 ## See also
 

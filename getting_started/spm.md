@@ -1,5 +1,6 @@
 ---
 title: Getting started with SPM
+category: getting_started
 tags: [spm]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: MATLAB does not see the functions in the "private" directory
-tags: [faq, function, matlab]
+category: faq
+tags: [function, matlab]
 ---
 
 # MATLAB does not see the functions in the "private" directory

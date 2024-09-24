@@ -1,6 +1,7 @@
 ---
 title: How do homogenous coordinate transformation matrices work?
-tags: [faq, coordinate]
+category: faq
+tags: [coordinate]
 ---
 
 # How do homogenous coordinate transformation matrices work? Or how do I get the coordinates for a specific voxel?

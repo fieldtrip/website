@@ -1,6 +1,7 @@
 ---
 title: Example real-time selective average
-tags: [example, realtime]
+category: example
+tags: [realtime]
 ---
 
 # Example real-time selective average

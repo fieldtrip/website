@@ -1,6 +1,7 @@
 ---
 title: Use denoising source separation (DSS) to remove ECG artifacts
-tags: [example, artifact, preprocessing, ica, meg-removal]
+category: example
+tags: [artifact, preprocessing, ica, meg-removal]
 ---
 
 # Use denoising source separation (DSS) to remove ECG artifacts
