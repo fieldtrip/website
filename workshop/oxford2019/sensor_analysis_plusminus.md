@@ -1,6 +1,6 @@
 ---
 title: Reading in data and performing sensor-level ERF and TFR analyses
-tags: [oxford2019, tutorial, meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
+tags: [oxford2019, meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
 ---
 
 # Reading in data and performing sensor-level ERF and TFR analyses

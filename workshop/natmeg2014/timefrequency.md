@@ -1,6 +1,7 @@
 ---
 title: Time-frequency analysis of combined MEG/EEG data
-tags: [tutorial, natmeg2014, meg+eeg, frequency, meg-audodd]
+category: tutorial
+tags: [natmeg2014, meg+eeg, frequency, meg-audodd]
 redirect_from:
   - /workshop/natmeg/timefrequency/
 ---
