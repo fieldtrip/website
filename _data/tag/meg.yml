@@ -34,7 +34,7 @@
 - name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
-- name:  Make leadfields using different headmodels
+- name:  Make MEG leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
@@ -171,9 +171,6 @@
 
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
-
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
 
 - name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem

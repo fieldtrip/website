@@ -106,9 +106,6 @@
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
 
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
-
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 

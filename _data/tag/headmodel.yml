@@ -13,7 +13,7 @@
 - name:  Compute EEG leadfields using a FEM headmodel
   link:  /example/fem
 
-- name:  Make leadfields using different headmodels
+- name:  Make MEG leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
 - name:  Create MNI-aligned grids in individual head-space
