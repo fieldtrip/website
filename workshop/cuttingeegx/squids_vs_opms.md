@@ -1,6 +1,6 @@
 ---
 title: SQUIDs versus OPMs
-tags: cuttingeegx
+tags: [cuttingeegx]
 ---
 
 # SQUIDs versus OPMs
