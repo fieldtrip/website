@@ -31,9 +31,6 @@
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
-
 - name:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti2015/simulation
 

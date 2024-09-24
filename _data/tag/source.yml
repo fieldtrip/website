@@ -34,7 +34,7 @@
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
 
-- name:  Make leadfields using different headmodels
+- name:  Make MEG leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
 - name:  Plotting the result of source reconstruction on a cortical mesh

@@ -13,6 +13,9 @@
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
+- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
+  link:  /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call
+
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
