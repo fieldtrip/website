@@ -16,6 +16,9 @@
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
+- name:  How many lines of code does FieldTrip consist of?
+  link:  /faq/how_many_lines_of_code_does_fieldtrip_consist_of
+
 - name:  Installation and setting up the path
   link:  /faq/installation
 

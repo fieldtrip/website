@@ -40,6 +40,9 @@
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
 
+- name:  What is meant by time-frequency trade off?
+  link:  /faq/timefreqtradeoff
+
 - name:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?
   link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmconvol_in_ft_freqanalyis
 

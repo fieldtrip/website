@@ -31,6 +31,12 @@
 - name:  I am having problems printing figures that use opacity
   link:  /faq/i_am_having_problems_printing_figures_that_use_opacity
 
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
+
+- name:  What is a good way to save images for later processing in other software?
+  link:  /faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software
+
 - name:  What is the format of the layout file which is used for plotting?
   link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
 
