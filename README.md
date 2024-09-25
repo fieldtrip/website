@@ -1,13 +1,27 @@
 # FieldTrip website
 
-This repository contains the FieldTrip documentation hosted on <https://www.fieldtriptoolbox.org>.
+This repository contains the FieldTrip documentation that is hosted on <https://www.fieldtriptoolbox.org>.
 
 Feel free to contribute by doing edits here and sending a pull request. See <https://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <https://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
 
+## House prose style
+
+- UK English spelling
+- No Oxford commas
+- Spellings
+  - "FieldTrip", not "Fieldtrip"
+  - "open source", not "open-source"
+  - "website", not "web site"
+  - "MATLAB", not "Matlab"
+- Sentence case (not "Title Case") for section headings
+- Use en- or em-dashes where appropriate
+
 ## Technical notes
 
-- The website is rebuilt after every pushed commit; this can take up to 5 minutes.
+- The website is rebuilt after every merged commit; this can take up to 5 minutes.
 - File names should not contain spaces or other special characters.
+- Files should be saved in UNIX format, not in DOS format.
+- the tags and authors in the frontmatter should be lists, the category should have a single value.
 - Pages that contain tags must have a title.
 - Tags should be in lower case.
 - All tags should appear on a single line.
@@ -30,24 +44,13 @@ Most of the Markdown formatting will show up nicely here on GitHub, but there ar
 
 ## Evaluating the website locally
 
-If you make changes that you want to evaluate prior to publishing them, you have to install Ruby, Bundler, Jekyll, etc. Subsequently you can do
+If you make changes that you want to evaluate prior to publishing them, you have to install Ruby, Bundler and Jekyll. Subsequently you can do
 
     bundle exec jekyll serve --incremental --livereload
 
-which will convert the Markdown into HTML and serve the complete website on <http://localhost:4000>.
+which will convert the Markdown into HTML and serve your local copy of the website on <http://localhost:4000>.
 
 ## Checking for broken links and missing images
 
     wget --spider -r -nd -nv -o spider.log http://localhost:4000
     grep -B1 'broken link!' spider.log  | grep http > broken.log
-
-## House prose style
-
-* UK English spelling
-* No Oxford commas
-* Spellings
-  * "open source", not "open-source"
-  * "website", not "web site"
-  * "MATLAB", not "Matlab"
-* Sentence case (not "Title Case") for section headings
-* Use en- or em-dashes where appropriate

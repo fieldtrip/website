@@ -1,6 +1,6 @@
 ---
 title: 20 November 2020 - video of fNIRS signals and artifacts during motion
-categories: [news]
+category: news
 tweet: fNIRS is often used in freely moving subjects and in motion research. This movie demonstrates NIRS signals and artifacts synchronously with video data during walking, turning, frowning, head movements and jumping. https://www.youtube.com/watch?v=k1OB-vTWCys
 ---
 

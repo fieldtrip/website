@@ -1,6 +1,6 @@
 ---
 title: 6 March 2018 - Springet Nature policies
-categories: [news]
+category: news
 ---
 
 ### 6 March 2018

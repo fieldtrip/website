@@ -1,6 +1,6 @@
 ---
 title: 1 February 2024 - EEG100 Image Competition
-categories: [news]
+category: news
 tweet: EEG Image Competition - $500 USD Prize. See http://www.fieldtriptoolbox.org/#1-february-2024
 ---
 

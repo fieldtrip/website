@@ -1,6 +1,6 @@
 ---
 title: 09 October 2018 - FieldTrip made easy
-categories: [news]
+category: news
 ---
 
 ### 09 October 2018

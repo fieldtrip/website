@@ -1,6 +1,6 @@
 ---
 title: 5 December 2018 - New website ready
-categories: [news]
+category: news
 ---
 
 ### 5 December 2018

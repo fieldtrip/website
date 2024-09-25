@@ -1,6 +1,6 @@
 ---
 title: 25 June 2019 - EEG and iEEG BIDS published
-categories: [news]
+category: news
 ---
 
 ### 25 June 2019

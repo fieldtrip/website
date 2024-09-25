@@ -1,6 +1,6 @@
 ---
 title: 09 July 2018 - Intracranial protocol
-categories: [news]
+category: news
 ---
 
 ### 09 July 2018

@@ -18,9 +18,9 @@ With each of these we reach out to a specific group FieldTrip stakeholders but -
 
 These are to be announced on the website and on Mastodon.
 
-To add a news item to the website, please file a pull request adding a new file to the [\_posts folder on the website](https://github.com/fieldtrip/website/tree/master/_posts). See example files there for how these (markdown) files should be structured. The latest files flagged as `categories: [news]` will, when merged, appear on the homepage.
+To add a news item to the website, please file a pull request adding a new file to the [\_posts folder on the website](https://github.com/fieldtrip/website/tree/master/_posts). See example files there for how these (markdown) files should be structured. The latest files flagged as `category: news` will, when merged, appear on the homepage.
 
-Whenever a new release is made following automatic code [testing](/development/testing), a news item is automatically made that is flagged as `categories: [release]` in the header, and sent as pull request to the [website repository](https://github.com/fieldtrip/website/pulls). This PR has to be reviewed and summarized for human readability by one of the website editors. If merged, the "latest release" section on the homepage will automatically be updated to reflect this.
+Whenever a new release is made following automatic code [testing](/development/testing), a news item is automatically made that is flagged as `category: release` in the header, and sent as pull request to the [website repository](https://github.com/fieldtrip/website/pulls). This PR has to be reviewed and summarized for human readability by one of the website editors. If merged, the "latest release" section on the homepage will automatically be updated to reflect this.
 
 All news items (both "manually created" and those corresponding to new releases) can contain a `tweet` element in the header. This can contain up to 280 characters for the tweet/toot that is automatically sent once the news item is merged with the website repository. At that moment the news item appears on the website, and a tweet/toot is sent out.
 

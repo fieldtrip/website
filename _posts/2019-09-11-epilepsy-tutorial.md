@@ -1,6 +1,6 @@
 ---
 title: 11 September 2019 - Tutorial on analyzing MEG epilepsy data
-categories: [news]
+category: news
 ---
 
 ### 11 September 2019

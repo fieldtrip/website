@@ -26,7 +26,7 @@ _The latest code developments can be tracked in detail on [GitHub](/development/
 
 {% assign counter = 0%}
 {% for post in site.posts %}
-{% if post.categories contains 'release' %}
+{% if post.category == 'release' %}
 
 {% if counter == 0 %}
 {% assign counter = counter | plus: 1 %}
@@ -45,7 +45,6 @@ _The latest code developments can be tracked in detail on [GitHub](/development/
 ## Recent citations
 
 _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357), you can find a more complete list on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
-
 
 {% assign sortlist = "" %}
 {% for item in site.data.citedby %}
@@ -107,7 +106,7 @@ _You can also follow us on [Mastodon](https://fosstodon.org/@fieldtriptoolbox)._
 
 {% assign counter = 0%}
 {% for post in site.posts %}
-{% if post.categories contains 'news' %}
+{% if post.category == 'news' %}
 
 {% if counter < 7 %}
 {% assign counter = counter | plus: 1 %}

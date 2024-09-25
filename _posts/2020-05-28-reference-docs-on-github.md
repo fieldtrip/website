@@ -1,6 +1,6 @@
 ---
 title: 28 May 2020 - Reference docs now on GitHub
-categories: [news]
+category: news
 ---
 
 ### 28 May 2020

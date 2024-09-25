@@ -1,6 +1,6 @@
 ---
 title: 24 June 2020 - Bug in precomputed leadfields
-categories: [news]
+category: news
 ---
 
 ### 24 June 2020
