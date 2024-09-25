@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.7717/peerj-cs.2256
+- idtype: pmcid
+  value: PMC11419606
+authors:
+- authtype: Author
+  name: Cisotto G
+- authtype: Author
+  name: Chicco D
+epubdate: 2024 Sep 3
+fulljournalname: PeerJ Computer Science
+issue: ''
+pages: e2256
+pmclivedate: 2024/09/23
+printpubdate: ''
+pubdate: 2024 Sep 3
+sortdate: 2024/09/03 00:00
+source: PeerJ Comput Sci
+title: Ten quick tips for clinical electroencephalographic (EEG) data acquisition
+  and signal processing
+uid: '11419606'
+volume: '10'
