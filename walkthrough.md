@@ -1,6 +1,7 @@
 ---
 title: FieldTrip Walkthrough
 tags: [meg, eeg, raw, freq, cfg, trialfun, trialdef]
+authors: [Stephen Whitmarsh]
 ---
 
 # FieldTrip Walkthrough
@@ -257,7 +258,7 @@ This brings us to a slightly different use of ft_preprocessing where we supply i
     data_lp = ft_preprocessing(cfg,data_manual);
 
 {% include markup/green %}
-Want to know exactly how digital filters work? Want to intuitively grasp the FFT? You might enjoy reading the great “The Scientist and Engineers's Guide to Digital Signal Processing”, free on www.dspguide.com
+Want to know exactly how digital filters work? Want to intuitively grasp the FFT? You might enjoy reading [The Scientist and Engineers's Guide to Digital Signal Processing](http://www.dspguide.com).
 {% include markup/end %}
 
 ## Frequency analysis
