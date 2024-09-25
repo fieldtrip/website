@@ -17,14 +17,6 @@ TAGFILE=`mktemp`
 # this constructs a list of all tags
 find . -name \*.md | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | sort -u > $TAGFILE
 
-# this constructs an overview page for each tag
-for TAG in `cat ${TAGFILE}` ; do
-  echo '---'        >  tag/$TAG.md
-  echo layout: tag  >> tag/$TAG.md
-  echo tag: $TAG    >> tag/$TAG.md
-  echo '---'        >> tag/$TAG.md
-done
-
 # this constructs a list of pages that have a certain tag
 for TAG in `cat ${TAGFILE}` ; do
   FILELIST=`find . -name \*.md | xargs grep -wl ^tags:.*${TAG} | sort | uniq `
@@ -35,4 +27,12 @@ for TAG in `cat ${TAGFILE}` ; do
     echo '  link: ' $LINK  >> _data/tag/$TAG.yml
     echo ''                >> _data/tag/$TAG.yml
   done
+done
+
+# this constructs an overview page for each tag
+for TAG in `cat ${TAGFILE}` ; do
+  echo '---'        >  tag/$TAG.md
+  echo layout: tag  >> tag/$TAG.md
+  echo tag: $TAG    >> tag/$TAG.md
+  echo '---'        >> tag/$TAG.md
 done

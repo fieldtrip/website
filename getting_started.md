@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+category: getting_started
 ---
 
 # Getting Started

@@ -1,6 +1,6 @@
 ---
 title: Example MATLAB scripts
-tags: [example]
+category: example
 ---
 
 # Example MATLAB scripts

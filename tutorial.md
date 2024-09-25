@@ -1,6 +1,6 @@
 ---
 title: Overview of all tutorials
-tags: [tutorial]
+category: tutorial
 ---
 
 # Overview of all tutorials

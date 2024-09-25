@@ -4,6 +4,8 @@
   {{ content | toc_only }}
 {% endif %}
 
+{% include category %}
+
 {% include tags %}
 
 </div>
