@@ -495,7 +495,7 @@ We demonstrated how to apply the DICS beamformer algorithm in the frequency doma
 Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/virtual_sensors).
 
-## See also these frequenty asked questions
+## See also these frequently asked questions
 
 {% include seealso category="faq" tag1="source" %}
 {% include seealso category="faq" tag1="connectivity" %}
