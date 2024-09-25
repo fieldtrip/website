@@ -1,6 +1,6 @@
 ---
 title: 27 January 2022 - Website privacy improvements
-categories: [news]
+category: news
 tweet: We have improved the FieldTrip website privacy by implementing @DuckDuckGo as search engine and @PlausibleHQ for statistics. No more cookies to count visitors! See http://www.fieldtriptoolbox.org/#27-january-2022 for some background.
 ---
 

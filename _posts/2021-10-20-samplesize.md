@@ -1,6 +1,6 @@
 ---
 title: 20 October 2021 - Sample size for interaction effects
-categories: [news]
+category: news
 tweet: The example page for estimating the sample size to get the desired statistical power for a cluster-based permutation test has been updated and now also includes 2xN interaction effects. See http://fieldtriptoolbox.org/example/samplesize/
 ---
 

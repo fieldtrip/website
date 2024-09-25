@@ -1,6 +1,6 @@
 ---
 title: 19 December 2021 - Download form working again
-categories: [news]
+category: news
 ---
 
 ### 19 December 2021

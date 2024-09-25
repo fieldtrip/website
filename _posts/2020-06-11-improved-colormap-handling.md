@@ -1,6 +1,6 @@
 ---
 title: 11 June 2020 - Improved colormap handling
-categories: [news]
+category: news
 ---
 
 ### 11 June 2020

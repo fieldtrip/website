@@ -1,6 +1,6 @@
 ---
 title: 29 March 2021 - Sample size
-categories: [news]
+category: news
 tweet: Have you (or reviewer #2) ever wondered how to determine the number of subjects that you need to power your cluster-based permutation test 🤓? Well, Dr. Cheng Wang has just created this very helpful FieldTrip example page (with own code) that shows you how to do that! See https://www.fieldtriptoolbox.org/#29-march-2021
 ---
 

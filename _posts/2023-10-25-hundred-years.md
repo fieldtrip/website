@@ -1,6 +1,6 @@
 ---
 title: 25 October 2023 - Hundred years of human EEG
-categories: [news]
+category: news
 tweet: Your input is needed! After hundred years of human EEG, we invite you to share your thoughts on the past and future of EEG. Thanks for your time to take the survey on http://tinyurl.com/EEG100 #neuroscience #EEG #HansBerger
 ---
 

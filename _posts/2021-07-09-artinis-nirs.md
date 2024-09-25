@@ -1,6 +1,6 @@
 ---
 title: 9 July 2021 - Artinis fNIRS analysis toolbox series – FieldTrip
-categories: [news]
+category: news
 tweet: Artinis made a blog post on using FieldTrip for fNIRS analysis, see https://www.artinis.com/blogpost-all/2021/fnirs-analysis-toolbox-series-fieldtrip
 ---
 

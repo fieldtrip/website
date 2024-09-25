@@ -1,6 +1,6 @@
 ---
 title: 17 September 2020 - Improved communication strategy
-categories: [news]
+category: news
 tweet: We are changing gears on Twitter! Instead of tweeting on every commit, we'll send less frequent but more interesting tweets about important releases, new features, and other contributions! Make sure to check https://github.com/fieldtrip & http://www.fieldtriptoolbox.org/discussion_list.
 ---
 

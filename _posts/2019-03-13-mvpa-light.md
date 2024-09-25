@@ -1,6 +1,6 @@
 ---
 title: 13 March 2019 - MVPA light
-categories: [news]
+category: news
 ---
 
 ### 13 March 2019

@@ -1,6 +1,6 @@
 ---
 title: 01 July 2020 - Cleaned up the inverse module
-categories: [news]
+category: news
 ---
 
 ### 01 July 2020

@@ -1,6 +1,6 @@
 ---
 title: 5 June 2024 - FieldTrip Cheatsheet
-categories: [news]
+category: news
 tweet: Jim McKay has created a Cheatsheet for FieldTrip in PDF format. It is free for everyone that signed up for the https://www.thefunnipages.com newsletter.
 ---
 
