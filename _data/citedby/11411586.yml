@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39107058'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0224-24.2024
+- idtype: pmcid
+  value: PMC11411586
+authors:
+- authtype: Author
+  name: Moerel D
+- authtype: Author
+  name: Rich AN
+- authtype: Author
+  name: Woolgar A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '38'
+pages: e0224242024
+pmclivedate: ''
+printpubdate: 2024 Sep 18
+pubdate: 2024 Sep 18
+sortdate: 2024/09/18 00:00
+source: J Neurosci
+title: Selective Attention and Decision-Making Have Separable Neural Bases in Space
+  and Time
+uid: '11411586'
+volume: '44'

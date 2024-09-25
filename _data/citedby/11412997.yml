@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '39300141'
+- idtype: doi
+  value: 10.1038/s41467-024-52541-w
+- idtype: pmcid
+  value: PMC11412997
+authors:
+- authtype: Author
+  name: Pacheco-Estefan D
+- authtype: Author
+  name: Fellner MC
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Reinacher P
+- authtype: Author
+  name: Roy C
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Yang L
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Xue G
+- authtype: Author
+  name: Axmacher N
+epubdate: 2024 Sep 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '8234'
+pmclivedate: 2024/09/20
+printpubdate: ''
+pubdate: 2024 Sep 19
+sortdate: 2024/09/19 00:00
+source: Nat Commun
+title: Maintenance and transformation of representational formats during working memory
+  prioritization
+uid: '11412997'
+volume: '15'
