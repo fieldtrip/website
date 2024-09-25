@@ -21,7 +21,7 @@ Feel free to contribute by doing edits here and sending a pull request. See <htt
 - The website is rebuilt after every merged commit; this can take up to 5 minutes.
 - File names should not contain spaces or other special characters.
 - Files should be saved in UNIX format, not in DOS format.
-- the tags and authors in the frontmatter should be lists, the category should have a single value.
+- The tags and authors in the front matter should be lists, the category should have a single value.
 - Pages that contain tags must have a title.
 - Tags should be in lower case.
 - All tags should appear on a single line.

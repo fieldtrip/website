@@ -206,7 +206,7 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_specest_hilbert](/reference/specest/ft_specest_hilbert)
 - [ft_specest_irasa](/reference/specest/ft_specest_irasa)
 
-### ... for distributed computing on a Torque or SGE cluster
+### ... for distributed computing on a Torque, Slurm or SGE cluster
 
 - [qsubcellfun](/reference/qsub/qsubcellfun)
 - [qsubfeval](/reference/qsub/qsubfeval)
