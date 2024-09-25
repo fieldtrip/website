@@ -273,9 +273,10 @@ This way you can distribute your custom function (e.g., see below) along with th
 
 ## Summary and suggested further reading
 
-This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis to compute event-related fields, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, you can distribute any form of analysis.
+This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque, Slurm or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis to compute event-related fields, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, you can distribute any form of analysis.
 
-FAQs related to issues in this tutorial:
+### See also these frequently asked questions
+
 {% include seealso category="faq" tag1="qsub"       %}
 {% include seealso category="faq" tag1="peer"       %}
 {% include seealso category="faq" tag1="engine"     %}

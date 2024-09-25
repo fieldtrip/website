@@ -6,7 +6,7 @@ tags: [qsub]
 
 # How to get started with distributed computing using qsub?
 
-The [FieldTrip qsub toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/qsub) is a small stand-alone toolbox to facilitate distributed computing. The idea of the qsub toolbox is to provide you with an easy MATLAB interface to distribute your jobs and not have to go to the Linux command-line to use the qsub command from there. Besides the Torque cluster (which we have at the Donders in Nijmegen) it also supports Linux clusters with other PBS versions, Sun Grid Engine (SGE), Oracle Grid Engine, SLURM and LSF as batch queueing systems.
+The [FieldTrip qsub toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/qsub) is a small stand-alone toolbox to facilitate distributed computing. The idea of the qsub toolbox is to provide you with an easy MATLAB interface to distribute your jobs and not have to go to the Linux command-line to use the qsub command from there. Besides the Torque cluster (which we have at the Donders in Nijmegen) it also supports Linux clusters with other PBS versions, Sun Grid Engine (SGE), Oracle Grid Engine, Slurm and LSF as batch queueing systems.
 
 You should start by adding the qsub toolbox to your MATLAB path:
 
