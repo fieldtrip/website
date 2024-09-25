@@ -1,8 +1,10 @@
 {% if page.tags != nill and page.tags != "" %}
+  <p>
   Tags:
   {% for t in page.tags %}
     <a href="/tag/{{ t }}/">{{ t }}</a>
   {% endfor %}
+  </p>
 {% else %}
   &nbsp;
 {% endif %}

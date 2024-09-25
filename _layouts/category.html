@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head %}
+    {% include favicon %}
+    {% include plausible %}
+  </head>
+
+  <body>
+    {% include navigation %}
+
+    <div class="container">
+     <div class="row">
+
+        <div class="col-sm-1">
+          {% include left %}
+        </div>
+        <div class="col-sm-8 main-page-content">
+          <h1>Pages in the category "{{ page.category }}"</h1>
+          {% if site.data.category[page.category] != nill %}
+            <ul>
+              {% assign list = site.data.category[page.category] | sort_natural: "name" %}
+              {% for item in list %}
+                <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+                  {{ item.name }}
+                </a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="col-sm-3">
+          {% include right %}
+        </div>
+      </div>
+    </div>
+
+    {% include footer %}
+  </body>
+</html>

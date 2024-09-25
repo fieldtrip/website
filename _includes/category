@@ -1,0 +1,7 @@
+{% if page.category != nill and page.category != "" %}
+  <p>
+  Category: <a href="/category/{{ page.category }}/">{{ page.category }}</a>
+  </p>
+{% else %}
+  &nbsp;
+{% endif %}

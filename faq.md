@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-tags: [faq]
+category: faq
 ---
 
 # Frequently Asked Questions
