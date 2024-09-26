@@ -57,7 +57,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What kind of filters can I apply to my data?](/faq/what_kind_of_filters_can_i_apply_to_my_data)
 - [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter)
 - [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
-- [Why does my ICA output contain complex numbers?](/faq/why_does_my_ica_output_contain_complex_numbers)
+- [Why does my ICA output contain complex numbers?](/faq/ica_complexvalues)
 - [How can I consistently represent artifacts in my data?](/faq/how_can_i_consistently_represent_artifacts_in_my_data)
 - [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
