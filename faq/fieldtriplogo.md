@@ -2,6 +2,9 @@
 title: Can I use the FieldTrip logo on my poster?
 category: faq
 tags: [logo]
+redirect_from:
+    - /faq/can_i_use_the_fieldtrip_logo_on_my_poster/
+
 ---
 
 # Can I use the FieldTrip logo on my poster or elsewhere?

@@ -85,9 +85,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Source reconstruction
 
-- [Can I do combined EEG and MEG source reconstruction?](/faq/can_i_do_combined_eeg_and_meg_source_reconstruction)
-- [Can I restrict the source reconstruction to the grey matter?](/faq/can_i_restrict_the_source_reconstruction_to_the_grey_matter)
-- [How are electrodes, magnetometers or gradiometers described?](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)
+- [Can I do combined EEG and MEG source reconstruction?](/faq/sourcerecon_meeg)
+- [Can I restrict the source reconstruction to the grey matter?](/faq/sourcerecon_greymatter)
+- [How are electrodes, magnetometers or gradiometers described?](/faq/sensors_definition)
 - [How are the LPA and RPA points defined?](/faq/how_are_the_lpa_and_rpa_points_defined)
 - [How are the different head and MRI coordinate systems defined?](/faq/coordsys)
 - [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer)
@@ -120,7 +120,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Statistical analysis
 
 - [How NOT to interpret results from a cluster-based permutation test?](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test)
-- [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
+- [How can I define neighbouring sensors?](/faq/sensors_neighbours)
 - [How can I determine the onset of an effect?](/faq/how_can_i_determine_the_onset_of_an_effect)
 - [How can I test an interaction effect using cluster-based permutation tests?](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
 - [Should I use t or F values for cluster-based permutation tests?](/faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests)
@@ -180,8 +180,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I use FieldTrip without MATLAB license?](/faq/compiled)
 - [Can I use Octave instead of MATLAB?](/faq/can_i_use_octave_instead_of_matlab)
 - [How can I compile the mex files and command-line programs?](/faq/compile)
-- [How can I compile the mex files on 64-bit Windows?](/faq/how_can_i_compile_the_mex_files_on_64_bit_windows)
-- [How can I compile the mex files on macOS?](/faq/how_can_i_compile_the_mex_files_on_os_x)
+- [How can I compile the mex files on 64-bit Windows?](/faq/compile_windows)
+- [How can I compile the mex files on macOS?](/faq/compile_osx)
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do)
@@ -205,7 +205,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Organizational questions
 
 - [Can I get an offline version of the website documentation?](/faq/can_i_get_an_offline_version_of_the_wiki_documentation)
-- [Can I use the FieldTrip logo on my poster?](/faq/can_i_use_the_fieldtrip_logo_on_my_poster)
+- [Can I use the FieldTrip logo on my poster?](/faq/fieldtriplogo)
 - [How many people are subscribed to the email discussion list?](/faq/how_many_people_are_subscribed_to_the_email_discussion_list)
 - [How should I refer to FieldTrip in my publication?](/faq/how_should_i_refer_to_fieldtrip_in_my_publication)
 - [How should I send example data to the developers?](/faq/how_should_i_send_example_data_to_the_developers)
