@@ -2,6 +2,8 @@
 title: What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
 category: faq
 tags: [freq, wavelet]
+redirect_from:
+    - /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_wavelet_formerly_wltconvol_in_ft_freqanalysis/
 ---
 
 # What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?

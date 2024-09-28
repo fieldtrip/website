@@ -156,7 +156,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Realtime data streaming and analysis
 
-- [Does the FieldTrip realtime buffer only work with MATLAB?](/faq/does_the_fieldtrip_realtime_buffer_only_work_with_matlab)
+- [Does the FieldTrip realtime buffer only work with MATLAB?](/faq/fieldtripbuffer)
 - [How fast is the FieldTrip buffer for realtime data streaming?](/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming)
 - [How should I get started with the FieldTrip realtime buffer?](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer)
 
@@ -176,9 +176,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## MATLAB questions
 
 - [Installation and setting up the path](/faq/installation)
-- [Can I prevent "external" toolboxes from being added to my MATLAB path?](/faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path)
+- [Can I prevent "external" toolboxes from being added to my MATLAB path?](/faq/toolboxes_legacyvsexternal)
 - [Can I use FieldTrip without MATLAB license?](/faq/compiled)
-- [Can I use Octave instead of MATLAB?](/faq/can_i_use_octave_instead_of_matlab)
+- [Can I use Octave instead of MATLAB?](/faq/octave)
 - [How can I compile the mex files and command-line programs?](/faq/compile)
 - [How can I compile the mex files on 64-bit Windows?](/faq/compile_windows)
 - [How can I compile the mex files on macOS?](/faq/compile_osx)
@@ -204,7 +204,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Organizational questions
 
-- [Can I get an offline version of the website documentation?](/faq/can_i_get_an_offline_version_of_the_wiki_documentation)
+- [Can I get an offline version of the website documentation?](/faq/documentation_offline)
 - [Can I use the FieldTrip logo on my poster?](/faq/fieldtriplogo)
 - [How many people are subscribed to the email discussion list?](/faq/how_many_people_are_subscribed_to_the_email_discussion_list)
 - [How should I refer to FieldTrip in my publication?](/faq/how_should_i_refer_to_fieldtrip_in_my_publication)
@@ -223,7 +223,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [Are the FieldTrip lectures available on video?](/faq/video)
 - [Can I map different electrode position layouts?](/faq/capmapping)
-- [Can I organize my own FieldTrip workshop?](/faq/can_i_organize_my_own_workshop)
+- [Can I organize my own FieldTrip workshop?](/faq/workshop)
 - [How can I anonymize DICOM files?](/faq/how_can_i_anonymize_dicom_files)
 - [How can I anonymize a CTF dataset?](/faq/how_can_i_anonymize_a_ctf_dataset)
 - [How can I anonymize data processed in FieldTrip?](/faq/how_can_i_anonymize_fieldtrip_data)

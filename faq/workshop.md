@@ -2,6 +2,8 @@
 title: Can I organize my own FieldTrip workshop?
 category: faq
 tags: [workshop]
+redirect_from:
+    - /faq/can_i_organize_my_own_workshop/
 ---
 
 # Can I organize my own FieldTrip workshop?
