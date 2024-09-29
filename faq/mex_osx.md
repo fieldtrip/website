@@ -15,7 +15,7 @@ When you try to use FieldTrip on macOS Catalina or later, you may get an error l
 macOS cannot verify that this app is free from malware.
 ```
 
-{% include image src="/assets/img/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified/screenshot.png" width="400" %}
+{% include image src="/assets/img/faq/mex_osx/screenshot.png" width="400" %}
 
 or a similar error for another mex file that is included with FieldTrip.
 

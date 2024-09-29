@@ -44,9 +44,9 @@ The conversion involves two steps, both using the CTF-program MRIViewer: First, 
 
 The earphone of the MRI scanner has a large (~1 cm) vitamine E marker built in on the right side. Make sure to check that this marker is visible on the right side.
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/vitamine_marker1.png" width="150" %}
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/vitamine_marker2.png" width="150" %}
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/vitamine_marker3.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/vitamine_marker1.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/vitamine_marker2.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/vitamine_marker3.png" width="150" %}
 
 ### Directory structure
 
@@ -87,9 +87,9 @@ While still in MRIViewer, perform the following action
 
 At the DCCN we use ear-molds that come in a variety of sizes to position the MEG head localiser coils just outside the left and right ear . For the MRI we use the same ear-molds, but now with small MRI markers.
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_1.jpg" width="400" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_1.jpg" width="400" %}
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_2.jpg" width="400" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_2.jpg" width="400" %}
 
 {% include markup/red %}
 Note that the photo above is incorrect and misleading: it shows one of the markers plugged into the earmold on the _inside_, whereas in reality they are plugged into the mold on the _outside_, facing away from the ear. The markers would actually also be too big to fit in the ear canal.
@@ -99,9 +99,9 @@ In the MRI below you can see the small dot (the marker) with the yellow arrow ho
 
 On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/fiducials1.png" width="150" %}
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/fiducials2.png" width="150" %}
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/fiducials3.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials1.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials2.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials3.png" width="150" %}
 
 The most elegant way to identify the markers would include:
 

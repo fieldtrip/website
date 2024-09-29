@@ -26,7 +26,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
 - [How can I extend the reading functions with a new dataformat?](/faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
-- [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow)
+- [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/fileio_stateless)
 - [How can I import my own dataformat?](/faq/how_can_i_import_my_own_dataformat)
 - [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
 - [How can I fix a corrupt CTF meg4 data file?](/faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file)
@@ -115,7 +115,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed)
 - [Why is the source model deformed or incorrectly aligned after warping template?](/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template)
 - [Why should I use an average reference for EEG source reconstruction?](/faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction)
-- [Why does my EEG headmodel look funny?](/faq/why_does_my_eegheadmodel_look_funny)
+- [Why does my EEG headmodel look funny?](/faq/headmodel_meshingproblem)
 
 ## Statistical analysis
 
