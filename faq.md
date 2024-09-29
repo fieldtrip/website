@@ -54,7 +54,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ### Artifacts
 
-- [What kind of filters can I apply to my data?](/faq/what_kind_of_filters_can_i_apply_to_my_data)
+- [What kind of filters can I apply to my data?](/faq/preproc_filtertypes)
 - [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter)
 - [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
 - [Why does my ICA output contain complex numbers?](/faq/ica_complexvalues)
@@ -73,7 +73,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/freqanalysis_phasedefinition)
 - [What does "padding not sufficient for requested frequency resolution" mean?](/faq/freqanalysis_paddinginsufficient)
 - [What is the difference between coherence and coherency?](/faq/coherence_coherency)
-- [Why am I not getting exact integer frequencies?](/faq/why_am_i_not_getting_exact_integer_frequencies)
+- [Why am I not getting exact integer frequencies?](/faq/freqanalysis_foinoninteger)
 - [Why does my TFR contain NaNs?](/faq/why_does_my_tfr_contain_nans)
 - [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange)
 - [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)
@@ -109,7 +109,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/conductvitiy_defaults)
 - [What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?](/faq/acpc)
 - [What material is used for the flexible MEG headcasts?](/faq/headcast)
-- [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
+- [What kind of volume conduction models are implemented?](/faq/datatype_headmodel)
 - [Where can I find the dipoli command-line executable?](/faq/dipoli_filelocation)
 - [Where is the anterior commissure?](/faq/anterior_commissure)
 - [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed)
@@ -190,9 +190,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_crash73)
 - [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/databrowser_crash)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
-- [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
+- [What is the relation between "events" (such as_triggers) and "trials"?](/faq/eventsversustrials)
 - [Which external toolboxes are used by FieldTrip?](/faq/external)
-- [Why are so many of the interesting functions in the private directories?](/faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories)
+- [Why are so many of the interesting functions in the private directories?](/faq/privatefunctions_why)
 
 ## Code and development questions
 
@@ -212,10 +212,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How to ask good questions to the community?](/faq/how_to_ask_good_questions_to_the_community)
 - [I am having problems downloading](/faq/i_am_having_problems_downloading)
 - [I am working at the Donders, should I also download FieldTrip?](/faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip)
-- [Which version of FieldTrip should I download?](/faq/which_version_of_fieldtrip_should_i_download)
-- [Why am I not allowed to post to the discussion list?](/faq/why_am_i_not_allowed_to_post_to_the_discussion_list)
-- [Why am I not receiving emails from the discussion list?](/faq/why_am_i_not_receiving_emails_from_the_discussion_list)
-- [Why am I receiving warnings about too many bouncing emails?](/faq/why_am_i_receiving_warnings_about_too_many_bouncing_emails)
+- [Which version of FieldTrip should I download?](/faq/fieldtrip_downloadversion)
+- [Why am I not allowed to post to the discussion list?](/faq/emaillist_nopost)
+- [Why am I not receiving emails from the discussion list?](/faq/emaillist_noreceive)
+- [Why am I receiving warnings about too many bouncing emails?](/faq/emaillist_bounces)
 - [Why is FieldTrip developed separately from EEGLAB?](/faq/why_is_fieldtrip_developed_separately_from_eeglab)
 - [Why is my message rejected from the email discussion list?](/faq/why_is_my_message_rejected_from_the_email_discussion_list)
 

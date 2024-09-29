@@ -2,6 +2,8 @@
 title: What kind of volume conduction models of the head (head models) are implemented?
 category: faq
 tags: [headmodel, source]
+redirect-from:
+    - /faq/what_kind_of_volume_conduction_models_are_implemented/
 ---
 
 # What kind of volume conduction models of the head (head models) are implemented?

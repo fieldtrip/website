@@ -2,6 +2,8 @@
 title: Why am I not receiving emails from the discussion list?
 category: faq
 tags: [email]
+redirect-from:
+    - /faq/why_am_i_not_receiving_emails_from_the_discussion_list/
 ---
 
 # Why am I not receiving emails from the discussion list?
