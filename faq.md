@@ -13,7 +13,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Reading and preprocessing data
 
-- [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
+- [How can I use the databrowser?](/faq/databrowser)
 - [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
@@ -70,9 +70,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How does mtmconvol work?](/faq/mtmconvol)
 - [How to interpret the sign of the phase slope index?](/faq/how_to_interpret_the_sign_of_the_phase_slope_index)
 - [In what way can frequency domain data be represented in FieldTrip?](/faq/datatype_freq)
-- [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft)
-- [What does "padding not sufficient for requested frequency resolution" mean?](/faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean)
-- [What is the difference between coherence and coherency?](/faq/what_is_the_difference_between_coherence_and_coherency)
+- [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/freqanalysis_phasedefinition)
+- [What does "padding not sufficient for requested frequency resolution" mean?](/faq/freqanalysis_paddinginsufficient)
+- [What is the difference between coherence and coherency?](/faq/coherence_coherency)
 - [Why am I not getting exact integer frequencies?](/faq/why_am_i_not_getting_exact_integer_frequencies)
 - [Why does my TFR contain NaNs?](/faq/why_does_my_tfr_contain_nans)
 - [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange)
@@ -128,7 +128,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I test whether a behavioral measure is phasic?](/faq/how_can_i_test_whether_a_behavioral_measure_is_phasic)
 - [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
-- [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
+- [What is the idea behind statistical inference at the second-level?](/faq/statistics_secondlevel)
 - [Why are there multiple neighbour templates for the NeuroMag306 system?](/faq/neighbours_neuromag)
 - [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
 
@@ -140,9 +140,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [I am getting strange artifacts in figures that use opacity](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity)
 - [I am having problems printing figures that use opacity](/faq/i_am_having_problems_printing_figures_that_use_opacity)
 - [What are the different Neuromag and Yokogawa layouts good for?](/faq/layout_magandgrad)
-- [What is a good way to save images for later processing in other software?](/faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software)
-- [What is the format of the layout file, which is used for plotting?](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting)
-- [What is the plotting convention for anatomical MRIs?](/faq/what_is_the_plotting_convention_for_anatomical_mris)
+- [What is a good way to save images for later processing in other software?](/faq/figure_export)
+- [What is the format of the layout file, which is used for plotting?](/faq/layout_fileformat)
+- [What is the plotting convention for anatomical MRIs?](/faq/anat_plottingconvention)
 - [Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot)
 - [Which colormaps are supported?](/faq/colormap)
 
@@ -188,7 +188,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mex_osx)
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_privatefunctions)
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_crash73)
-- [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
+- [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/databrowser_crash)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
 - [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
 - [Which external toolboxes are used by FieldTrip?](/faq/external)
@@ -199,7 +199,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How are the various data structures defined?](/faq/datatype)
 - [How can I debug my analysis script if a FieldTrip function gives an error?](/faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error)
 - [How can I keep track of the changes to the code?](/faq/how_can_i_keep_track_of_the_changes_to_the_code)
-- [What does a typical call to a FieldTrip function look like?](/faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like)
+- [What does a typical call to a FieldTrip function look like?](/faq/fieldtrip_functioncall)
 - [Why is FieldTrip maintained in SVN and not in git?](/faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git)
 
 ## Organizational questions

@@ -2,6 +2,8 @@
 title: What is the difference between coherence and coherency?
 category: faq
 tags: [coherence]
+redirect-from:
+    - /faq/what_is_the_difference_between_coherence_and_coherency/
 ---
 
 # What is the difference between coherence and coherency?

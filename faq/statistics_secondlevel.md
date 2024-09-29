@@ -2,6 +2,8 @@
 title: What is the idea behind statistical inference at the second-level?
 category: faq
 tags: [statistics, cluster]
+redirect-from:
+    -/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level/
 ---
 
 # What is the idea behind statistical inference at the second-level?
