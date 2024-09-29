@@ -15,7 +15,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
 - [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
-- [Should I rereference my EEG data prior to, or after ICA?](/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal)
+- [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
 - [Why should I set continuous to yes for CTF data?](/faq/continuous)
 
@@ -36,7 +36,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ### Data handling
 
-- [Reading is slow, can I write my raw data to a more efficient file format?](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format)
+- [Reading is slow, can I write my raw data to a more efficient file format?](/faq/writedata_matbin)
 - [What dataformats are supported?](/faq/dataformat)
 - [How can I append the files of two separate recordings?](/faq/append_files)
 - [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
@@ -69,7 +69,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I do time-frequency analysis on continuous data?](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data)
 - [How does mtmconvol work?](/faq/mtmconvol)
 - [How to interpret the sign of the phase slope index?](/faq/how_to_interpret_the_sign_of_the_phase_slope_index)
-- [In what way can frequency domain data be represented in FieldTrip?](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
+- [In what way can frequency domain data be represented in FieldTrip?](/faq/datatype_freq)
 - [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft)
 - [What does "padding not sufficient for requested frequency resolution" mean?](/faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean)
 - [What is the difference between coherence and coherency?](/faq/what_is_the_difference_between_coherence_and_coherency)
@@ -104,7 +104,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How to coregister an anatomical MRI with the gradiometer or electrode positions?](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions)
 - [Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?](/faq/sourcerecon_outside)
 - [Is it important to have accurate measurements of electrode locations for EEG source reconstruction?](/faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction)
-- [My MRI is upside down, is this a problem?](/faq/my_mri_is_upside_down_is_this_a_problem)
+- [My MRI is upside down, is this a problem?](/faq/anat_upsidedown)
 - [Should I use a Polhemus or a Structure Sensor to record electrode positions?](/faq/structuresensor)
 - [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/conductvitiy_defaults)
 - [What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?](/faq/acpc)
@@ -129,7 +129,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 - [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
-- [Why are there multiple neighbour templates for the NeuroMag306 system?](/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
+- [Why are there multiple neighbour templates for the NeuroMag306 system?](/faq/neighbours_neuromag)
 - [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
 
 ## Plotting and visualization
@@ -139,7 +139,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How do I construct a layout file for the plotting functions?](/faq/how_do_i_construct_a_layout_file_for_the_plotting_functions)
 - [I am getting strange artifacts in figures that use opacity](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity)
 - [I am having problems printing figures that use opacity](/faq/i_am_having_problems_printing_figures_that_use_opacity)
-- [What are the different Neuromag and Yokogawa layouts good for?](/faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for)
+- [What are the different Neuromag and Yokogawa layouts good for?](/faq/layout_magandgrad)
 - [What is a good way to save images for later processing in other software?](/faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software)
 - [What is the format of the layout file, which is used for plotting?](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting)
 - [What is the plotting convention for anatomical MRIs?](/faq/what_is_the_plotting_convention_for_anatomical_mris)
@@ -162,7 +162,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Distributed computing
 
-- [What are the different approaches I can take for distributed computing?](/faq/what_are_the_different_approaches_i_can_take_for_distributed_computing)
+- [What are the different approaches I can take for distributed computing?](/faq/distributed_computing)
 
 ### Distributed computing with the MATLAB distributed computing toolbox
 
@@ -184,10 +184,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compile the mex files on macOS?](/faq/compile_osx)
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
-- [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do)
-- [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified)
-- [MATLAB does not see the functions in the "private" directory](/faq/matlab_does_not_see_the_functions_in_the_private_directory)
-- [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
+- [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_mexinvalid)
+- [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mex_osx)
+- [MATLAB does not see the functions in the "private" directory](/faq/matlab_privatefunctions)
+- [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_crash73)
 - [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
 - [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)

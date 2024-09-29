@@ -2,6 +2,8 @@
 title: MATLAB complains about a missing or invalid mex file, what should I do?
 category: faq
 tags: [matlab, mex]
+redirect-from:
+    - /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do/
 ---
 
 # MATLAB complains about a missing or invalid mex file, what should I do?
