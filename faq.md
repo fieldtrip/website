@@ -50,7 +50,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I find out what eventvalues and eventtypes there are in my data?](/faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data)
 - [How can I process continuous data without triggers?](/faq/how_can_i_process_continuous_data_without_triggers)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
-- [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline)
+- [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/trialinfo)
 
 ### Artifacts
 
@@ -58,7 +58,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter)
 - [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
 - [Why does my ICA output contain complex numbers?](/faq/ica_complexvalues)
-- [How can I consistently represent artifacts in my data?](/faq/how_can_i_consistently_represent_artifacts_in_my_data)
+- [How can I consistently represent artifacts in my data?](/faq/artifact_representation)
 - [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
 - [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
@@ -88,10 +88,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I do combined EEG and MEG source reconstruction?](/faq/sourcerecon_meeg)
 - [Can I restrict the source reconstruction to the grey matter?](/faq/sourcerecon_greymatter)
 - [How are electrodes, magnetometers or gradiometers described?](/faq/sensors_definition)
-- [How are the LPA and RPA points defined?](/faq/how_are_the_lpa_and_rpa_points_defined)
+- [How are the LPA and RPA points defined?](/faq/anat_landmarks)
 - [How are the different head and MRI coordinate systems defined?](/faq/coordsys)
-- [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer)
-- [How can I convert an anatomical mri from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
+- [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/sourcrecon_checkalignment)
+- [How can I convert an anatomical mri from DICOM into CTF format?](/faq/anat_dicom2ctf)
 - [How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
 - [How can I fine-tune my BEM volume conduction model?](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
@@ -103,7 +103,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How to change the MRI orientation, the voxel size or the field-of-view?](/faq/how_change_mri_orientation_size_fov)
 - [How to coregister an anatomical MRI with the gradiometer or electrode positions?](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions)
 - [Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?](/faq/sourcerecon_outside)
-- [Is it important to have accurate measurements of electrode locations for EEG source reconstruction?](/faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction)
+- [Is it important to have accurate measurements of electrode locations for EEG source reconstruction?](/faq/sensors_accuracy)
 - [My MRI is upside down, is this a problem?](/faq/anat_upsidedown)
 - [Should I use a Polhemus or a Structure Sensor to record electrode positions?](/faq/structuresensor)
 - [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/conductvitiy_defaults)
@@ -148,7 +148,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Experimental questions
 
-- [How can I change the head localization in a CTF dataset?](/faq/how_can_i_change_the_head_localization_in_a_ctf_dataset)
+- [How can I change the head localization in a CTF dataset?](/faq/ctf_changeheadloc)
 - [How can I monitor a subject's head position during a MEG session?](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
 - [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
 - [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
@@ -196,7 +196,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Code and development questions
 
-- [How are the various data structures defined?](/faq/how_are_the_various_data_structures_defined)
+- [How are the various data structures defined?](/faq/datatype)
 - [How can I debug my analysis script if a FieldTrip function gives an error?](/faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error)
 - [How can I keep track of the changes to the code?](/faq/how_can_i_keep_track_of_the_changes_to_the_code)
 - [What does a typical call to a FieldTrip function look like?](/faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like)
@@ -224,10 +224,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Are the FieldTrip lectures available on video?](/faq/video)
 - [Can I map different electrode position layouts?](/faq/capmapping)
 - [Can I organize my own FieldTrip workshop?](/faq/workshop)
-- [How can I anonymize DICOM files?](/faq/how_can_i_anonymize_dicom_files)
+- [How can I anonymize DICOM files?](/faq/anonymization_dicom)
 - [How can I anonymize a CTF dataset?](/faq/anonymization_ctf)
 - [How can I anonymize a brainvisino dataset?](/faq/anonymization_vrainvision)
-- [How can I anonymize data processed in FieldTrip?](/faq/how_can_i_anonymize_fieldtrip_data)
+- [How can I anonymize data processed in FieldTrip?](/faq/anonymization_fieldtripdata)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/anonymization_anatomical)
 - [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
 - [How can I share my MEG data?](/faq/data_sharing)

@@ -2,6 +2,8 @@
 title: How can I consistently represent artifacts in my data?
 category: faq
 tags: [preprocessing, artifact]
+redirect-from:
+    - /faq/how_can_i_consistently_represent_artifacts_in_my_data/
 ---
 
 # How can I consistently represent artifacts in my data?
