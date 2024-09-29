@@ -143,7 +143,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What is a good way to save images for later processing in other software?](/faq/figure_export)
 - [What is the format of the layout file, which is used for plotting?](/faq/layout_fileformat)
 - [What is the plotting convention for anatomical MRIs?](/faq/anat_plottingconvention)
-- [Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot)
+- [Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?](/faq/anat_upsidedownplotting)
 - [Which colormaps are supported?](/faq/colormap)
 
 ## Experimental questions

@@ -19,11 +19,11 @@ You can deface an anatomical MRI using the FieldTrip **[ft_defacevolume](/refere
     cfg = [];
     mri_anon = ft_defacevolume(cfg, mri);
 
-{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume2.png" width="400" %}
+{% include image src="/assets/img/faq/anonymization_anatomical/defacevolume2.png" width="400" %}
 
 You can use the standard MATLAB figure rotate button to look at the MRI from different angles.
 
-{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume1.png" width="400" %}
+{% include image src="/assets/img/faq/anonymization_anatomical/defacevolume1.png" width="400" %}
 
 Once you are happy with the size and position of the box, you close the figure and the function returns the defaced anatomical MRI.
 
@@ -34,7 +34,7 @@ It is good practice to review the result of the defacing procedure using
     cfg = [];
     ft_sourceplot(cfg, mri_anon);
 
-{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume3.png" width="400" %}
+{% include image src="/assets/img/faq/anonymization_anatomical/defacevolume3.png" width="400" %}
 
 Subsequently you can save it to a MATLAB file or to a NIFTI file using
 
