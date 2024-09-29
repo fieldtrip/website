@@ -78,9 +78,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange)
 - [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)
 - [Why is the largest peak in the spectrum at the frequency which is 1/segment length?](/faq/why_largest_peak_spectrum)
-- [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis)
-- [Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmfft_in_ft_freqanalyis)
-- [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis)
+- [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?](/faq/freqanalysis_foimismatchmtmconvol)
+- [Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis?](/faq/freqanalysis_foimismatchmtmfft)
+- [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?](/faq/freqanalysis_foimismatchwavelet)
 - [Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?](/faq/evoked_vs_induced)
 
 ## Source reconstruction
@@ -211,13 +211,13 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How should I send example data to the developers?](/faq/how_should_i_send_example_data_to_the_developers)
 - [How to ask good questions to the community?](/faq/how_to_ask_good_questions_to_the_community)
 - [I am having problems downloading](/faq/i_am_having_problems_downloading)
-- [I am working at the Donders, should I also download FieldTrip?](/faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip)
+- [I am working at the Donders, should I also download FieldTrip?](/faq/download_donders)
 - [Which version of FieldTrip should I download?](/faq/fieldtrip_downloadversion)
 - [Why am I not allowed to post to the discussion list?](/faq/emaillist_nopost)
 - [Why am I not receiving emails from the discussion list?](/faq/emaillist_noreceive)
 - [Why am I receiving warnings about too many bouncing emails?](/faq/emaillist_bounces)
 - [Why is FieldTrip developed separately from EEGLAB?](/faq/why_is_fieldtrip_developed_separately_from_eeglab)
-- [Why is my message rejected from the email discussion list?](/faq/why_is_my_message_rejected_from_the_email_discussion_list)
+- [Why is my message rejected from the email discussion list?](/faq/emaillist_rejected)
 
 ## Various other questions
 
