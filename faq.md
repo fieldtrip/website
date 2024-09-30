@@ -29,10 +29,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/fileio_stateless)
 - [How can I import my own dataformat?](/faq/how_can_i_import_my_own_dataformat)
 - [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
-- [How can I fix a corrupt CTF meg4 data file?](/faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file)
-- [How can I fix a corrupt CTF res4 header file?](/faq/how_can_i_fix_a_corrupt_ctf_res4_header_file)
+- [How can I fix a corrupt CTF meg4 data file?](/faq/ctf_fixmeg4)
+- [How can I fix a corrupt CTF res4 header file?](/faq/ctf_fixres4)
 - [How can I read corrupted (unsaved) CTF data?](/faq/how_can_i_read_corrupted_unsaved_ctf_data)
-- [I am having problems reading the CTF .hc headcoordinates file](/faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file)
+- [I am having problems reading the CTF .hc headcoordinates file](/faq/ctf_fixhc)
 
 ### Data handling
 

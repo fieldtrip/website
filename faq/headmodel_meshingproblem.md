@@ -2,6 +2,8 @@
 title: Why does my EEG headmodel look funny?
 category: faq
 tags: [headmodel]
+redirect-from:
+    - /faq/why_does_my_eegheadmodel_look_funny/
 ---
 
 # Why does my EEG headmodel look funny?
@@ -28,7 +30,7 @@ The image on disk has an ugly aliasing artifact at the top, causing the standard
     ft_plot_mesh(bnd0(3), 'facecolor',[0.4 0.4 0.4]);
     view([0 0]);
 
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd0.png" width="350" %}
+{% include image src="/assets/img/faq/headmodel_meshingproblem/bnd0.png" width="350" %}
 
 _Figure 1. Aliasing artifact at the top leads to horns_
 
@@ -49,7 +51,7 @@ Adjusting the settings for the segmentation is helpful in this case, but will no
     ft_plot_mesh(bnd(3), 'facecolor',[0.4 0.4 0.4]);
     view([0 0]);
 
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd1.png" width="350" %}
+{% include image src="/assets/img/faq/headmodel_meshingproblem/bnd1.png" width="350" %}
 
 _Figure 2. Adjustment of segmentation parameters gets rid of the aliasing artifact_
 
@@ -82,7 +84,7 @@ that we don't need to account for that anymore.
     mri2.anatomy = mri2.anatomy.*blob;
     ft_sourceplot([], mri2);
 
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/inhomogeneity.png" width="350" %}
+{% include image src="/assets/img/faq/headmodel_meshingproblem/inhomogeneity.png" width="350" %}
 
 _Figure 3. Inhomogeneous anatomical image_
 
@@ -102,7 +104,7 @@ The above already throws a warning that the segmentation is not star-shaped, whi
     ft_plot_mesh(bnd2(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
 
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd2.png" width="350" %}
+{% include image src="/assets/img/faq/headmodel_meshingproblem/bnd2.png" width="350" %}
 
 _Figure 4. Failed headmodel_
 
@@ -124,6 +126,6 @@ As mentioned above, the bias in the image can be corrected as follows:
     ft_plot_mesh(bnd3(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
     
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd3.png" width="350" %}
+{% include image src="/assets/img/faq/headmodel_meshingproblem/bnd3.png" width="350" %}
 
 _Figure 4. Headmodel after inhomogeneity correction_
