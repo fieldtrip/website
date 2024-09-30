@@ -2,6 +2,8 @@
 title: How can I do time-frequency analysis on continuous data?
 category: faq
 tags: [continuous, freq]
+redirect-from:
+    - /faq/how_can_i_do_time-frequency_analysis_on_continuous_data/
 ---
 
 # How can I do time-frequency analysis on continuous data?

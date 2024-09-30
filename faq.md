@@ -16,7 +16,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I use the databrowser?](/faq/databrowser)
 - [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
-- [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
+- [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/trialinfo_trl)
 - [Why should I set continuous to yes for CTF data?](/faq/continuous)
 
 ### Specific data formats
@@ -56,17 +56,17 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [What kind of filters can I apply to my data?](/faq/preproc_filtertypes)
 - [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter)
-- [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
+- [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/ica_crash)
 - [Why does my ICA output contain complex numbers?](/faq/ica_complexvalues)
 - [How can I consistently represent artifacts in my data?](/faq/artifact_representation)
-- [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts)
+- [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/artifact_padding)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
 - [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
 
 ## Spectral analysis
 
 - [How can I compute inter-trial coherence?](/faq/itc)
-- [How can I do time-frequency analysis on continuous data?](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data)
+- [How can I do time-frequency analysis on continuous data?](/faq/tfr_continuous)
 - [How does mtmconvol work?](/faq/mtmconvol)
 - [How to interpret the sign of the phase slope index?](/faq/how_to_interpret_the_sign_of_the_phase_slope_index)
 - [In what way can frequency domain data be represented in FieldTrip?](/faq/datatype_freq)
@@ -122,21 +122,21 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How NOT to interpret results from a cluster-based permutation test?](/faq/clusterstats_interpretation)
 - [How can I define neighbouring sensors?](/faq/sensors_neighbours)
 - [How can I determine the onset of an effect?](/faq/how_can_i_determine_the_onset_of_an_effect)
-- [How can I test an interaction effect using cluster-based permutation tests?](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
+- [How can I test an interaction effect using cluster-based permutation tests?](/faq/clusterstats_interaction)
 - [Should I use t or F values for cluster-based permutation tests?](/faq/clusterstats_teststatistic)
 - [How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)
 - [How can I test whether a behavioral measure is phasic?](/faq/how_can_i_test_whether_a_behavioral_measure_is_phasic)
-- [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations)
+- [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/clusterstats_iuwcvar)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 - [What is the idea behind statistical inference at the second-level?](/faq/statistics_secondlevel)
 - [Why are there multiple neighbour templates for the NeuroMag306 system?](/faq/neighbours_neuromag)
-- [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
+- [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/clusterstats_correcttail)
 
 ## Plotting and visualization
 
 - [How can I play back EEG/MEG and synchronous audio or video?](/faq/audiovideo)
 - [How can I visualize a 'localspheres' volume conductor model?](/faq/how_can_i_visualize_a_localspheres_volume_conductor_model)
-- [How do I construct a layout file for the plotting functions?](/faq/how_do_i_construct_a_layout_file_for_the_plotting_functions)
+- [How do I construct a layout file for the plotting functions?](/faq/layout_creation)
 - [I am getting strange artifacts in figures that use opacity](/faq/opacityrendering)
 - [I am having problems printing figures that use opacity](/faq/i_am_having_problems_printing_figures_that_use_opacity)
 - [What are the different Neuromag and Yokogawa layouts good for?](/faq/layout_magandgrad)
