@@ -2,6 +2,8 @@
 title: Why does my TFR contain NaNs?
 category: faq
 tags: [freq]
+redirect-from:
+    - /faq/why_does_my_tfr_contain_nans/
 ---
 
 # Why does my TFR contain NaNs?
