@@ -2,6 +2,8 @@
 title: How can I debug my analysis script if a FieldTrip function gives an error?
 category: faq
 tags: [debug]
+redirect-from:
+    - /faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error/
 ---
 
 # How can I debug my analysis script if a FieldTrip function gives an error?

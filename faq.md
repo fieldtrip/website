@@ -39,7 +39,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Reading is slow, can I write my raw data to a more efficient file format?](/faq/writedata_matbin)
 - [What dataformats are supported?](/faq/dataformat)
 - [How can I append the files of two separate recordings?](/faq/append_files)
-- [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
+- [How can I convert one dataformat into another?](/faq/convert_dataformat)
 - [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers)
 - [How can I preprocess a dataset that is too large to fit into memory?](/faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory)
 - [How can I rename channels in my data structure?](/faq?rename_channels)
@@ -197,10 +197,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Code and development questions
 
 - [How are the various data structures defined?](/faq/datatype)
-- [How can I debug my analysis script if a FieldTrip function gives an error?](/faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error)
+- [How can I debug my analysis script if a FieldTrip function gives an error?](/faq/matlab_debugging)
 - [How can I keep track of the changes to the code?](/faq/how_can_i_keep_track_of_the_changes_to_the_code)
 - [What does a typical call to a FieldTrip function look like?](/faq/fieldtrip_functioncall)
-- [Why is FieldTrip maintained in SVN and not in git?](/faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git)
+- [Why is FieldTrip maintained in SVN and not in git?](/faq/svnversusgit)
 
 ## Organizational questions
 
@@ -216,7 +216,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why am I not allowed to post to the discussion list?](/faq/emaillist_nopost)
 - [Why am I not receiving emails from the discussion list?](/faq/emaillist_noreceive)
 - [Why am I receiving warnings about too many bouncing emails?](/faq/emaillist_bounces)
-- [Why is FieldTrip developed separately from EEGLAB?](/faq/why_is_fieldtrip_developed_separately_from_eeglab)
+- [Why is FieldTrip developed separately from EEGLAB?](/faq/fieldtrip_eeglab)
 - [Why is my message rejected from the email discussion list?](/faq/emaillist_rejected)
 
 ## Various other questions
