@@ -61,7 +61,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I consistently represent artifacts in my data?](/faq/artifact_representation)
 - [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/artifact_padding)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
-- [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
+- [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/dftfilter_residual)
 
 ## Spectral analysis
 
@@ -113,7 +113,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Where can I find the dipoli command-line executable?](/faq/dipoli_filelocation)
 - [Where is the anterior commissure?](/faq/anterior_commissure)
 - [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed)
-- [Why is the source model deformed or incorrectly aligned after warping template?](/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template)
+- [Why is the source model deformed or incorrectly aligned after warping template?](/faq/sourcemodel_deformation)
 - [Why should I use an average reference for EEG source reconstruction?](/faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction)
 - [Why does my EEG headmodel look funny?](/faq/headmodel_meshingproblem)
 

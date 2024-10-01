@@ -2,6 +2,8 @@
 title: Why is the source model deformed or incorrectly aligned after warping template?
 category: faq
 tags: [sourcemodel, mri, normalization]
+redirect-from:
+    - /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/
 ---
 
 # Why is the source model deformed or incorrectly aligned after warping template?
@@ -15,13 +17,13 @@ The procedure requires estimating a transformation between the subject's anatomy
     ft_plot_headmodel(headmodel, 'edgecolor', 'none', 'facealpha', 0.4,'facecolor', 'b');
     ft_plot_mesh(sourcespace.pos(sourcespace.inside,:));
 
-{% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/sourcespace.png" %}
+{% include image src="/assets/img/faq/sourcemodel_deformation/sourcespace.png" %}
 
 You can see that the source points are not well contained withing the head model. As a consequence, activity will be estimated outside the subject's head. Be aware that - once the source model coordinates are set back to the template coordinates - it will look as if there are no errors. The template source model will align perfectly with the template anatomy, it is just the estimated activity that will appear on the wrong place.
 
 The error stems from the warping of the template MRI to the individual subject's MRI. To transform the template to the subject's anatomy, **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** first does a normalization of the individual subject's MRI to the template, this gives a transformation matrix. It then inverts this transformation and applies it to the template grid. Therefore, if the normalization goes wrong, or finds a sub-optimal solution, it will create a bad inverted transformation and apply it to the template source model. We have seen this happening due to from sub-optimal anatomical MRIs, e.g., without proper contrast normalization, or with MRI scans where parts of the head are outside the field of view. An example is shown below:
 
-{% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/bad_mri.png" %}
+{% include image src="/assets/img/faq/sourcemodel_deformation/bad_mri.png" %}
 
 When you observe a inverse warped template grid that is weird, you can do a "manual" normalization with **[ft_volumenormalise](/reference/ft_volumenormalise)** to see if it is due to normalization errors.
 
@@ -36,7 +38,7 @@ When you observe a inverse warped template grid that is weird, you can do a "man
     cfg.paramter = 'anatomy';
     ft_sourceplot(cfg, mri_spm8)
 
-{% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/Cronenberg.png" %}
+{% include image src="/assets/img/faq/sourcemodel_deformation/Cronenberg.png" %}
 
 {% include markup/skyblue %}
 In early 2020 we switched the default SPM version used by FieldTrip from SPM8 to SPM12.
@@ -58,7 +60,7 @@ The solution is to normalize MRIs with `cfg.spmversion = 'spm12'` and add `cfg.s
     cfg.paramter = 'anatomy';
     ft_sourceplot(cfg, mri_spm12)
 
-{% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/fixed_mri.png" %}
+{% include image src="/assets/img/faq/sourcemodel_deformation/fixed_mri.png" %}
 
 You should add these configuration options to the `cfg` structure when calling **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. These options will be passed on to **[ft_volumenormalise](/reference/ft_volumenormalise)**. Do note that the new SPM12 method is much slower than the old method.
 
@@ -81,6 +83,6 @@ Inspect the warped source model as before:
     ft_plot_headmodel(headmodel, 'edgecolor', 'none', 'facealpha', 0.4,'facecolor','b');
     ft_plot_mesh(sourcespace.pos(sourcespace.inside,:));
 
-{% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/sourcespace_fixed.png" %}
+{% include image src="/assets/img/faq/sourcemodel_deformation/sourcespace_fixed.png" %}
 
 As an alternative you can consider using **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)**.
