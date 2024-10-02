@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38989954'
+- idtype: doi
+  value: 10.4103/NRR.NRR-D-23-01240
+- idtype: pmcid
+  value: PMC11438323
+authors:
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Bi Y
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Wen H
+- authtype: Author
+  name: Zhou M
+- authtype: Author
+  name: Luo M
+- authtype: Author
+  name: Zhang W
+epubdate: 2024 Mar 1
+fulljournalname: Neural Regeneration Research
+issue: '4'
+pages: 1164-1177
+pmclivedate: 2024/09/29
+printpubdate: ''
+pubdate: 2024 Mar 1
+sortdate: 2024/03/01 00:00
+source: Neural Regen Res
+title: Cortico-striatal gamma oscillations are modulated by dopamine D3 receptors
+  in dyskinetic rats
+uid: '11438323'
+volume: '20'

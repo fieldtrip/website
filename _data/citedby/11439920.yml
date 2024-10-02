@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/cercor/bhae353
+- idtype: pmcid
+  value: PMC11439920
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Kluge A
+- authtype: Author
+  name: Hameiri B
+- authtype: Author
+  name: Lankinen K
+- authtype: Author
+  name: Bar-Tal D
+- authtype: Author
+  name: Halperin E
+epubdate: 2024 Sep 28
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: bhae353
+pmclivedate: 2024/09/30
+printpubdate: ''
+pubdate: 2024 Sep 28
+sortdate: 2024/09/28 00:00
+source: Cereb Cortex
+title: 'The paradoxical brain: paradoxes impact conflict perspectives through increased
+  neural alignment'
+uid: '11439920'
+volume: '34'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39335567'
+- idtype: doi
+  value: 10.3390/biomedicines12092054
+- idtype: pmcid
+  value: PMC11428598
+authors:
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Cinti A
+- authtype: Author
+  name: Serbina A
+- authtype: Author
+  name: Luciani A
+- authtype: Author
+  name: D’Urso G
+- authtype: Author
+  name: Cacciola A
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2024 Sep 10
+fulljournalname: Biomedicines
+issue: '9'
+pages: '2054'
+pmclivedate: 2024/09/28
+printpubdate: ''
+pubdate: 2024 Sep 10
+sortdate: 2024/09/10 00:00
+source: Biomedicines
+title: Resting-State EEG Alterations of Practice-Related Spectral Activity and Connectivity
+  Patterns in Depression
+uid: '11428598'
+volume: '12'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39335400'
+- idtype: doi
+  value: 10.3390/brainsci14090905
+- idtype: pmcid
+  value: PMC11430514
+authors:
+- authtype: Author
+  name: Hestad KA
+- authtype: Author
+  name: Aaseth JO
+- authtype: Author
+  name: Kropotov JD
+epubdate: 2024 Sep 6
+fulljournalname: Brain Sciences
+issue: '9'
+pages: '905'
+pmclivedate: 2024/09/28
+printpubdate: ''
+pubdate: 2024 Sep 6
+sortdate: 2024/09/06 00:00
+source: Brain Sci
+title: Neuropsychological Characteristics and Quantitative Electroencephalography
+  in Skogholt’s Disease—A Rare Neurodegenerative Disease in a Norwegian Family
+uid: '11430514'
+volume: '14'
