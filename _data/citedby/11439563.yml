@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39288997'
+- idtype: doi
+  value: 10.1523/ENEURO.0047-24.2024
+- idtype: pmcid
+  value: PMC11439563
+authors:
+- authtype: Author
+  name: Chambellant F
+- authtype: Author
+  name: Falaki A
+- authtype: Author
+  name: Moreau-Debord I
+- authtype: Author
+  name: French R
+- authtype: Author
+  name: Serrano E
+- authtype: Author
+  name: Quessy S
+- authtype: Author
+  name: Dancause N
+- authtype: Author
+  name: Thomas E
+epubdate: 2024 Sep 26
+fulljournalname: eNeuro
+issue: '9'
+pages: ENEURO.0047-24.2024
+pmclivedate: 2024/09/30
+printpubdate: ''
+pubdate: 2024 Sep 26
+sortdate: 2024/09/26 00:00
+source: eNeuro
+title: Variations in Clustering of Multielectrode Local Field Potentials in the Motor
+  Cortex of Macaque Monkeys during a Reach-and-Grasp Task
+uid: '11439563'
+volume: '11'

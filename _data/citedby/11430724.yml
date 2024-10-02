@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39335391'
+- idtype: doi
+  value: 10.3390/brainsci14090895
+- idtype: pmcid
+  value: PMC11430724
+authors:
+- authtype: Author
+  name: Comstock L
+- authtype: Author
+  name: Carvalho VR
+- authtype: Author
+  name: Lainscsek C
+- authtype: Author
+  name: Fallah A
+- authtype: Author
+  name: Sejnowski TJ
+epubdate: 2024 Sep 2
+fulljournalname: Brain Sciences
+issue: '9'
+pages: '895'
+pmclivedate: 2024/09/28
+printpubdate: ''
+pubdate: 2024 Sep 2
+sortdate: 2024/09/02 00:00
+source: Brain Sci
+title: Transcranial Magnetic Stimulation Facilitates Neural Speech Decoding
+uid: '11430724'
+volume: '14'

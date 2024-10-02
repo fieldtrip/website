@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103671
+- idtype: pmcid
+  value: PMC11439566
+authors:
+- authtype: Author
+  name: Perry A
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Adams NE
+- authtype: Author
+  name: Naessens M
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Rouse MA
+- authtype: Author
+  name: Murley AG
+- authtype: Author
+  name: Street D
+- authtype: Author
+  name: Jones PS
+- authtype: Author
+  name: Rowe JB
+epubdate: 2024 Sep 10
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103671'
+pmclivedate: 2024/09/30
+printpubdate: ''
+pubdate: 2024 Sep 10
+sortdate: 2024/09/10 00:00
+source: Neuroimage Clin
+title: Frontotemporal lobar degeneration changes neuronal beta-frequency dynamics
+  during the mismatch negativity response
+uid: '11439566'
+volume: '44'
