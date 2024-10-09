@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1372909
+- idtype: pmcid
+  value: PMC11456458
+authors:
+- authtype: Author
+  name: Dekydtspotter L
+- authtype: Author
+  name: Miller AK
+- authtype: Author
+  name: Swanson K
+- authtype: Author
+  name: Cha JH
+- authtype: Author
+  name: Xiong Y
+- authtype: Author
+  name: Ahn JH
+- authtype: Author
+  name: Gilbert JA
+- authtype: Author
+  name: Pope D
+- authtype: Author
+  name: Iverson M
+- authtype: Author
+  name: Meinert K
+epubdate: 2024 Sep 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1372909'
+pmclivedate: 2024/10/07
+printpubdate: ''
+pubdate: 2024 Sep 23
+sortdate: 2024/09/23 00:00
+source: Front Hum Neurosci
+title: Hierarchical neural processing in γ oscillations for syntactic and semantic
+  operations accounts for first- and second-language epistemology
+uid: '11456458'
+volume: '18'

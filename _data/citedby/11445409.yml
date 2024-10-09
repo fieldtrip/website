@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '39354050'
+- idtype: doi
+  value: 10.1038/s42003-024-06941-9
+- idtype: pmcid
+  value: PMC11445409
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Tang C
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Ren P
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Yi L
+- authtype: Author
+  name: Liu Q
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Li K
+- authtype: Author
+  name: Ding W
+- authtype: Author
+  name: Bao H
+- authtype: Author
+  name: Yao L
+- authtype: Author
+  name: Na M
+- authtype: Author
+  name: Luan G
+- authtype: Author
+  name: Liang X
+epubdate: 2024 Oct 1
+fulljournalname: Communications Biology
+issue: ''
+pages: '1236'
+pmclivedate: 2024/10/02
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: Commun Biol
+title: Coordinated NREM sleep oscillations among hippocampal subfields modulate synaptic
+  plasticity in humans
+uid: '11445409'
+volume: '7'
