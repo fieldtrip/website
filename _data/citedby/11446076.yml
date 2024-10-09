@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39354549'
+- idtype: doi
+  value: 10.1186/s13041-024-01142-1
+- idtype: pmcid
+  value: PMC11446076
+authors:
+- authtype: Author
+  name: Al Qasem W
+- authtype: Author
+  name: Abubaker M
+- authtype: Author
+  name: Pilátová K
+- authtype: Author
+  name: Ježdík P
+- authtype: Author
+  name: Kvašňák E
+epubdate: 2024 Oct 1
+fulljournalname: Molecular Brain
+issue: ''
+pages: '72'
+pmclivedate: 2024/10/02
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: Mol Brain
+title: Improving working memory by electrical stimulation and cross-frequency coupling
+uid: '11446076'
+volume: '17'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39367155'
+- idtype: doi
+  value: 10.1007/s10548-024-01081-z
+- idtype: pmcid
+  value: PMC11452474
+authors:
+- authtype: Author
+  name: Malekmohammadi A
+- authtype: Author
+  name: Cheng G
+epubdate: 2024 Oct 4
+fulljournalname: Brain Topography
+issue: '1'
+pages: '2'
+pmclivedate: 2024/10/06
+printpubdate: '2025'
+pubdate: 2024 Oct 4
+sortdate: 2024/10/04 00:00
+source: Brain Topogr
+title: Music Familiarization Elicits Functional Connectivity Between Right Frontal/Temporal
+  and Parietal Areas in the Theta and Alpha Bands
+uid: '11452474'
+volume: '38'

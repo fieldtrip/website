@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39349466'
+- idtype: doi
+  value: 10.1038/s41467-024-52814-4
+- idtype: pmcid
+  value: PMC11442513
+authors:
+- authtype: Author
+  name: Lofredi R
+- authtype: Author
+  name: Feldmann LK
+- authtype: Author
+  name: Krause P
+- authtype: Author
+  name: Scheller U
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Krauss JK
+- authtype: Author
+  name: Saryyeva A
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Faust K
+- authtype: Author
+  name: Sander T
+- authtype: Author
+  name: Kühn AA
+epubdate: 2024 Oct 1
+fulljournalname: Nature Communications
+issue: ''
+pages: '8475'
+pmclivedate: 2024/10/01
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: Nat Commun
+title: Striato-pallidal oscillatory connectivity correlates with symptom severity
+  in dystonia patients
+uid: '11442513'
+volume: '15'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39349588'
+- idtype: doi
+  value: 10.1038/s41598-024-73967-8
+- idtype: pmcid
+  value: PMC11442441
+authors:
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Haendel BF
+epubdate: 2024 Sep 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22687'
+pmclivedate: 2024/10/01
+printpubdate: ''
+pubdate: 2024 Sep 30
+sortdate: 2024/09/30 00:00
+source: Sci Rep
+title: Right visual field advantage in orientation discrimination is influenced by
+  biased suppression
+uid: '11442441'
+volume: '14'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39352912'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002789
+- idtype: pmcid
+  value: PMC11444399
+authors:
+- authtype: Author
+  name: Déaux EC
+- authtype: Author
+  name: Piette T
+- authtype: Author
+  name: Gaunet F
+- authtype: Author
+  name: Legou T
+- authtype: Author
+  name: Arnal L
+- authtype: Author
+  name: Giraud AL
+epubdate: 2024 Oct 1
+fulljournalname: PLOS Biology
+issue: '10'
+pages: e3002789
+pmclivedate: 2024/10/02
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: PLoS Biol
+title: Dog–human vocal interactions match dogs’ sensory-motor tuning
+uid: '11444399'
+volume: '22'

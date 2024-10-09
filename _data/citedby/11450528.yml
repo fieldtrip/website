@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '39168653'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2308-23.2024
+- idtype: pmcid
+  value: PMC11450528
+authors:
+- authtype: Author
+  name: Deodato M
+- authtype: Author
+  name: Melcher D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: e2308232024
+pmclivedate: 2024/10/05
+printpubdate: 2024 Oct 2
+pubdate: 2024 Oct 2
+sortdate: 2024/10/02 00:00
+source: J Neurosci
+title: Aperiodic EEG Predicts Variability of Visual Temporal Processing
+uid: '11450528'
+volume: '44'
