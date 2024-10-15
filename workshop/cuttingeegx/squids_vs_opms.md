@@ -18,7 +18,7 @@ OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive
 Unlike SQUID systems, which have standard coregistration procedures, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet (Zetter et al., 2019).
 
 
-This tutorial does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, other denoising techniques (a separate FieldTrip tutorial is in progress), or alternative coregistration methods, that are covered in the tutorial on [Coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
+This tutorial does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
 
 ## Background
 
@@ -57,9 +57,135 @@ For the OPMs we will take the following steps:
 - Append sensors from the six recordings using **[ft_appendsens](/reference/ft_appendsens)**
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
+## Practicalities - Taken from Donders Toolkit 2024
+
+This will be an in-person event with no possibilities for hybrid or online attendance.
+
+### Wifi access
+
+If you need wifi access and you don't have a eduroam account through your institution, it is possible to get a visitor access. This needs to be renewed each day. Please follow the instructions on [this intranet page](https://intranet.donders.ru.nl/index.php?id=eva).
+
+### Test your installation in advance
+
+For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2024/test_installation), and download the data that we will need during the hands-on sessions. Before running this test, we recommend that you prepare your laptop as per the instructions in the next section, which explains in some more detail what needs to be downloaded in advance, as well as how you can easily obtain (and install) a copy of FieldTrip on your computer.
+
+## Getting started with the hands-on sessions
+
+For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, >= 2019a/b).
+
+To ensure that everything runs smoothly, we recommend that you set up your computer with a clean and well-tested version of FieldTrip, and download the data that are needed for the hands-on sessions in advance.
+
+{% include markup/red %}
+You can either 'click around' using web browsers and/or explorer windows to grab the data that are needed, or instead (less work, at least if it works) execute the MATLAB code below.
+{% include markup/end %}
+
+To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20240417), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window. 
+
+```
+% create a folder that will contain the code and the data, and change directory
+mkdir('toolkit2024');
+cd('toolkit2024');
+
+% download and unzip fieldtrip into the newly created folder
+url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20240417.zip';
+unzip(url_fieldtrip);
+```
+
+Upon completion of this step, the folder structure should look something like this: 
+
+```bash
+fieldtrip-20240417/
+|-- bin
+|-- compat
+|-- connectivity
+|-- contrib
+|-- external
+|-- fileio
+|-- forward
+|-- inverse
+|-- plotting
+|-- preproc
+|-- private
+|-- qsub
+|-- realtime
+|-- specest
+|-- src
+|-- statfun
+|-- template
+|-- test
+|-- trialfun
+`-- utilities
+```
+
+{% include markup/red %}
+If you have downloaded and unzipped by hand, it could be that there's an 'extra folder layer' in your directory structure. We recommend that you remove this extra layer, i.e. move all content one level up.
+{% include markup/end %}
+
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download-server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2024``` folder, which you created in the previous step.
+
+```
+% create a folder (within toolkit2024) that will contain the data, to keep a clean structure
+mkdir('data');
+cd('data');
+
+% create a folder and download the SQUID and OPM dataset
+mkdir('opm_vs_squid');
+cd('opm_vs_squid');
+url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/opm_vs_squid';
+fnames = {''};
+for k = 1:numel(fnames)
+  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+end
+cd('../../');
+```
+At this stage, you ideally have a directory structure that looks like the following one:
+```bash
+.
+|-- data
+|   `-- opm_vs_squid
+`-- fieldtrip-20240417
+    |-- bin
+    |-- compat
+    |-- connectivity
+    |-- contrib
+    |-- external
+    |-- fileio
+    |-- forward
+    |-- inverse
+    |-- plotting
+    |-- preproc
+    |-- private
+    |-- qsub
+    |-- realtime
+    |-- specest
+    |-- src
+    |-- statfun
+    |-- template
+    |-- test
+    |-- trialfun
+    `-- utilities
+```
+So, if you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
+
+```
+% change into the 'toolkit2024' folder and then do the following
+restoredefaultpath
+addpath('fieldtrip-20240417');
+addpath(genpath('data'));
+ft_defaults;
+```
+
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20240417` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
+
+{% include markup/red %}
+In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI. You can find more information about startup files in the MATLAB documentation.
+
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation).
+{% include markup/end %}
 
 ## SQUID
 ### Preprocessing
+
 ### Coregistration
 
 
