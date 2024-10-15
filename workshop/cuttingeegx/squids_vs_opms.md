@@ -36,26 +36,27 @@ The dataset can be downloaded from our download server.
 
 ## Procedure 
 In this tutorial for the SQUIDs we will take the following steps:
-- Define trials and read the data using ft_definetrial and ft_preprocessing
-- Removing artifacts using ft_rejectvisual
-- Compute the averaged ERFs using ft_timelockanalysis
-- Visualize the results for all the channels with ft_multiplotER
-- Plot the 2D sensor topography for a specified latency with ft_topoplotER
-- Coregister MRI with SQUIDs using ft_volumerealign 
-- Plot the 3D sensor topography for a specified latency with ft_plot_topo3d
+- Define trials and read the data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Removing artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Visualize the results for all the channels with **[ft_multiplotER](/reference/ft_multiplotER)**
+- Plot the 2D sensor topography for a specified latency with **[ft_topoplotER](/reference/ft_topoplotER)**
+- Coregister MRI with SQUIDs using **[ft_volumerealign](/reference/ft_volumerealign)**
+- Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
 For the OPMs we will take the following steps:
-- Define trials and read the data using ft_definetrial and ft_preprocessing
-- Removing artifacts using ft_denoise_hfc and ft_rejectvisual
-- Compute the averaged ERFs using ft_timelockanalysis
+- Define trials and read the data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Removing artifacts using **[ft_denoise_hfc](/reference/ft_denoise_hfc)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Renaming duplicate channels
-- Concatenate the data over the six recordings using ft_appendtimelock
+- Concatenate the data over the six recordings using **[ft_appendtimelock](/reference/ft_appendtimelock)**
 - Add NaNs to the missing channels
-- Visualize the results for all the channels with ft_multiplotER
-- Plot the 2D sensor topography for a specified latency with ft_topoplotER
-- Coregister MRI with OPMs using an optical 3D scanner. For this several functions are used: ft_volumerealign, ft_read_headshape, ft_meshrealign, ft_defacemesh and ft_transform_geometry. 
-- Append sensors from the six recordings using ft_appendsens
-- Plot the 3D sensor topography for a specified latency with ft_plot_topo3d
+- Visualize the results for all the channels with **[ft_multiplotER](/reference/ft_multiplotER)**
+- Plot the 2D sensor topography for a specified latency with **[ft_topoplotER](/reference/ft_topoplotER)**
+- Coregister MRI with OPMs using an optical 3D scanner. For this several functions are used: **[ft_volumerealign](/reference/ft_volumerealign)**, **[ft_read_headshape](/reference/fileio/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)**, **[ft_defacemesh](/reference/ft_defacemesh)**, and **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)**.
+- Append sensors from the six recordings using **[ft_appendsens](/reference/ft_appendsens)**
+- Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
+
 
 ## SQUID
 ### Preprocessing
