@@ -187,9 +187,53 @@ save mri_realigned2 mri_realigned2
 
 
 ### 3D sensor topography
+Let's plot the sensor topography in 3D using **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**. This will help us visualize where the sensors are positioned relative to the head. To make this clearer, we'll also display the scalp and brain surfaces.
+
+First, we'll prepare the surface mesh of the scalp and brain:
+
+```
+load mri_realigned2 mri_realigned2
+
+cfg                = [];
+cfg.output         = {'brain', 'scalp'};
+mri_segmented          = ft_volumesegment(cfg, mri_realigned2);
+
+cfg                = [];
+cfg.tissue         = {'brain'};
+mesh_brain         = ft_prepare_mesh(cfg, mri_segmented);
+
+cfg                = [];
+cfg.tissue         = {'scalp'};
+mesh_scalp         = ft_prepare_mesh(cfg, mri_segmented);
+
+save mesh_brain mesh_brain
+save mesh_scalp mesh_scalp
+```
+Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seconds, along with the brain and scalp:
+
+```
+sampling_rate = 1200; % in Hz
+prestim = 0.2;
+
+I1 = (prestim+0.035)*sampling_rate; 
+I2 = (prestim+0.050)*sampling_rate;
+
+selected_avg = mean(avg_stim.avg(:, I1:I2), 2);
+
+figure;
+ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none', 'edgecolor', 'skin' )
+hold on
+ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none');
+hold on
+ft_plot_topo3d(pos275,selected_avg, 'facealpha', 0.9)
+camlight
+view([360 0])
 
 
+print -dpng M:\Documents\cuttingeegx-workshop\code\figures\squid\cuttingeegx_topo3d_squid.png
+```
 
+The SQUID sensors are located 1.5-2.0 cm from the scalp, resulting in a less focal sensor topography.
 
 ## OPM
 ### Preprocessing
