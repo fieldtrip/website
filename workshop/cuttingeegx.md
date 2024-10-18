@@ -14,6 +14,9 @@ Alongside the [CuttingEEG X](https://cuttingeegx.org) conference we will be orga
 - Where: Nijmegen
 - See <https://cuttingeegx.org/registration/#Nijmegen> for more details
 
+## The tutorial
+
+We will run a tutorial on [preprocessing and coregistration of SQUID-based and OPM-based data](/workshop/cuttingeegx/squids_vs_opms). We will explore the differences in data analysis between the two systems. 
 
 ## Getting started with the hands-on session
 
