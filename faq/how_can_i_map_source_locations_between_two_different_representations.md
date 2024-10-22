@@ -1,7 +1,9 @@
 ---
 title: How can I map source locations onto an anatomical label in an atlas?
 category: faq
-tags: [source, interpolate, atlas, label]
+redirect-from:
+    - /faq/how_can_i_map_source_locations_between_two_different_representations/
+
 ---
 
 # How can I map source locations onto an anatomical label in an atlas?
