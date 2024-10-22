@@ -2,6 +2,8 @@
 title: How can I visualize the neuromag head position indicator coils?
 category: faq
 tags: [neuromag, head, localization]
+redirect-from:
+    - /faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils/
 ---
 
 # How can I visualize the neuromag head position indicator coils?

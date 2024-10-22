@@ -2,6 +2,8 @@
 title: How can I test whether a behavioral measure is phasic?
 category: faq
 tags: [statistics, freq]
+redirect-from:
+    - /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic/
 ---
 
 # How can I test whether a behavioral measure is phasic?

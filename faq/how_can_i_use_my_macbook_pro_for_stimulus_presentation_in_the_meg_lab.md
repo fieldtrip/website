@@ -2,6 +2,8 @@
 title: How can I use my MacBook Pro for stimulus presentation in the MEG lab?
 category: faq
 tags: [matlab]
+redirect-from:
+    - /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab/
 ---
 
 # How can I use my MacBook Pro for stimulus presentation in the MEG lab?

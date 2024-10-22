@@ -2,6 +2,8 @@
 title: How should I share example data with the email list or developers?
 category: faq
 tags: [email, development, git]
+redirect-from:
+    - /faq/how_should_i_send_example_data_to_the_developers/
 ---
 
 # How should I share example data with the email list or developers?
