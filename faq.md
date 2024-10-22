@@ -14,7 +14,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Reading and preprocessing data
 
 - [How can I use the databrowser?](/faq/databrowser)
-- [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
+- [How can I inspect the electrode impedances of my data?](/faq/impedancecheck)
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/trialinfo_trl)
 - [Why should I set continuous to yes for CTF data?](/faq/continuous)
@@ -27,7 +27,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I extend the reading functions with a new dataformat?](/faq/fileio_dataformat)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/fileio_stateless)
-- [How can I import my own dataformat?](/faq/how_can_i_import_my_own_dataformat)
+- [How can I import my own dataformat?](/faq/dataformat_own)
 - [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
 - [How can I fix a corrupt CTF meg4 data file?](/faq/ctf_fixmeg4)
 - [How can I fix a corrupt CTF res4 header file?](/faq/ctf_fixres4)
@@ -47,7 +47,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ### Trials, triggers and events
 
 - [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
-- [How can I find out what eventvalues and eventtypes there are in my data?](/faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data)
+- [How can I find out what eventvalues and eventtypes there are in my data?](/faq/inspect_events)
 - [How can I process continuous data without triggers?](/faq/how_can_i_process_continuous_data_without_triggers)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
 - [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/trialinfo)
@@ -93,7 +93,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/sourcrecon_checkalignment)
 - [How can I convert an anatomical mri from DICOM into CTF format?](/faq/anat_dicom2ctf)
 - [How can I determine the anatomical label of a source or electrode?](/faq/label_lookup)
-- [How can I fine-tune my BEM volume conduction model?](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model)
+- [How can I fine-tune my BEM volume conduction model?](/faq/bem_finetune)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations)
 - [How do I install the OpenMEEG binaries?](/faq/how_do_i_install_the_openmeeg_binaries)
@@ -198,7 +198,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [How are the various data structures defined?](/faq/datatype)
 - [How can I debug my analysis script if a FieldTrip function gives an error?](/faq/matlab_debugging)
-- [How can I keep track of the changes to the code?](/faq/how_can_i_keep_track_of_the_changes_to_the_code)
+- [How can I keep track of the changes to the code?](/faq/trackchanges)
 - [What does a typical call to a FieldTrip function look like?](/faq/fieldtrip_functioncall)
 - [Why is FieldTrip maintained in SVN and not in git?](/faq/svnversusgit)
 

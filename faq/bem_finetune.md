@@ -2,6 +2,8 @@
 title: How can I fine-tune my BEM volume conduction model?
 category: faq
 tags: [source, headmodel]
+redirect-from:
+    - /faq/how_can_i_fine-tune_my_bem_volume_conduction_model/
 ---
 
 # How can I fine-tune my BEM volume conduction model?
@@ -46,7 +48,7 @@ The MATLAB image processing toolbox includes a number of morphological operation
 
 In particular imdilate can be used to augment the volume of a closed surface (e.g., the inner skull) in order to render the other surrounding tissues (e.g., the outer skull). An example is shown below:
 
-{% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki12.png" width="300" %}
+{% include image src="/assets/img/faq/bem_finetune/wiki12.png" width="300" %}
 
 The code used to generate the figure is:
 
@@ -56,7 +58,7 @@ The code used to generate the figure is:
 
 An example of the imfill function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for triangulation, as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
-{% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki34.png" width="300" %}
+{% include image src="/assets/img/faq/bem_finetune/wiki34.png" width="300" %}
 
 The code used to generate the figure is:
 
