@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39332107'
+- idtype: doi
+  value: 10.1016/j.dcn.2024.101445
+- idtype: pmcid
+  value: PMC11460477
+authors:
+- authtype: Author
+  name: Hofstee M
+- authtype: Author
+  name: Endendijk J
+- authtype: Author
+  name: Huijding J
+- authtype: Author
+  name: van der Velde B
+- authtype: Author
+  name: Vidal J
+- authtype: Author
+  name: Deković M
+epubdate: 2024 Sep 19
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101445'
+pmclivedate: 2024/10/09
+printpubdate: ''
+pubdate: 2024 Sep 19
+sortdate: 2024/09/19 00:00
+source: Dev Cogn Neurosci
+title: Maturational changes in frontal EEG alpha and theta activity from infancy into
+  early childhood and the relation with self-regulation in boys and girls
+uid: '11460477'
+volume: '70'

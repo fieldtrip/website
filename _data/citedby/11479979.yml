@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39416684'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1441380
+- idtype: pmcid
+  value: PMC11479979
+authors:
+- authtype: Author
+  name: Takahashi N
+- authtype: Author
+  name: Sawayama M
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Motomura Y
+- authtype: Author
+  name: Takeichi H
+- authtype: Author
+  name: Miyauchi S
+- authtype: Author
+  name: Hiramatsu C
+epubdate: 2024 Oct 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1441380'
+pmclivedate: 2024/10/16
+printpubdate: ''
+pubdate: 2024 Oct 2
+sortdate: 2024/10/02 00:00
+source: Front Hum Neurosci
+title: Temporal and spatial analysis of event-related potentials in response to color
+  saliency differences among various color vision types
+uid: '11479979'
+volume: '18'

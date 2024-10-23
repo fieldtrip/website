@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39187378'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0171-24.2024
+- idtype: pmcid
+  value: PMC11484545
+authors:
+- authtype: Author
+  name: Lendner JD
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Helfrich RF
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '42'
+pages: e0171242024
+pmclivedate: ''
+printpubdate: 2024 Oct 16
+pubdate: 2024 Oct 16
+sortdate: 2024/10/16 00:00
+source: J Neurosci
+title: Multiple Intrinsic Timescales Govern Distinct Brain States in Human Sleep
+uid: '11484545'
+volume: '44'

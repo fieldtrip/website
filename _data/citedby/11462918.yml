@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39385281'
+- idtype: doi
+  value: 10.1186/s13195-024-01576-8
+- idtype: pmcid
+  value: PMC11462918
+authors:
+- authtype: Author
+  name: Taguas I
+- authtype: Author
+  name: Doval S
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: López-Sanz D
+epubdate: 2024 Oct 9
+fulljournalname: Alzheimer's Research & Therapy
+issue: ''
+pages: '216'
+pmclivedate: 2024/10/09
+printpubdate: ''
+pubdate: 2024 Oct 9
+sortdate: 2024/10/09 00:00
+source: Alzheimers Res Ther
+title: 'Toward a more comprehensive understanding of network centrality disruption
+  in amnestic mild cognitive impairment: a MEG multilayer approach'
+uid: '11462918'
+volume: '16'

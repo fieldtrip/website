@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39419974'
+- idtype: doi
+  value: 10.1038/s41467-024-53257-7
+- idtype: pmcid
+  value: PMC11486900
+authors:
+- authtype: Author
+  name: Liljefors J
+- authtype: Author
+  name: Almeida R
+- authtype: Author
+  name: Rane G
+- authtype: Author
+  name: Lundström JN
+- authtype: Author
+  name: Herman P
+- authtype: Author
+  name: Lundqvist M
+epubdate: 2024 Oct 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '8950'
+pmclivedate: 2024/10/18
+printpubdate: ''
+pubdate: 2024 Oct 17
+sortdate: 2024/10/17 00:00
+source: Nat Commun
+title: Distinct functions for beta and alpha bursts in gating of human working memory
+uid: '11486900'
+volume: '15'

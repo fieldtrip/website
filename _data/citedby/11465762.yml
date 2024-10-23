@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38626372'
+- idtype: doi
+  value: 10.1097/GME.0000000000002347
+- idtype: pmcid
+  value: PMC11465762
+authors:
+- authtype: Author
+  name: Nakamura K
+- authtype: Author
+  name: Hoshi H
+- authtype: Author
+  name: Kobayashi M
+- authtype: Author
+  name: Fukasawa K
+- authtype: Author
+  name: Ichikawa S
+- authtype: Author
+  name: Shigihara Y
+epubdate: 2024 Apr 15
+fulljournalname: Menopause (New York, N.y.)
+issue: '5'
+pages: 399-407
+pmclivedate: 2024/10/10
+printpubdate: 2024 May
+pubdate: 2024 Apr 15
+sortdate: 2024/04/15 00:00
+source: Menopause
+title: Dorsal brain activity reflects the severity of menopausal symptoms
+uid: '11465762'
+volume: '31'
