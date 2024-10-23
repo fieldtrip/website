@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39385026'
+- idtype: doi
+  value: 10.1038/s41586-024-08016-5
+- idtype: pmcid
+  value: PMC11485236
+authors:
+- authtype: Author
+  name: Kehl MS
+- authtype: Author
+  name: Mackay S
+- authtype: Author
+  name: Ohla K
+- authtype: Author
+  name: Schneider M
+- authtype: Author
+  name: Borger V
+- authtype: Author
+  name: Surges R
+- authtype: Author
+  name: Spehr M
+- authtype: Author
+  name: Mormann F
+epubdate: 2024 Oct 9
+fulljournalname: Nature
+issue: '8034'
+pages: 626-634
+pmclivedate: 2024/10/18
+printpubdate: '2024'
+pubdate: 2024 Oct 9
+sortdate: 2024/10/09 00:00
+source: Nature
+title: Single-neuron representations of odours in the human brain
+uid: '11485236'
+volume: '634'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38924105'
+- idtype: doi
+  value: 10.1111/psyp.14627
+- idtype: pmcid
+  value: PMC11473237
+- idtype: MID
+  value: NIHMS2001176
+authors:
+- authtype: Author
+  name: Guha A
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Bartholomew ME
+- authtype: Author
+  name: Reed AC
+- authtype: Author
+  name: Diehl CK
+- authtype: Author
+  name: Subotnik K
+- authtype: Author
+  name: Ventura J
+- authtype: Author
+  name: Nuechterlein KH
+- authtype: Author
+  name: Miller GA
+- authtype: Author
+  name: Yee CM
+epubdate: 2024 Jun 24
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e14627
+pmclivedate: ''
+printpubdate: 2024 Oct
+pubdate: 2024 Jun 24
+sortdate: 2024/06/24 00:00
+source: Psychophysiology
+title: Task-based default mode network connectivity predicts cognitive impairment
+  and negative symptoms in first-episode schizophrenia
+uid: '11473237'
+volume: '61'
