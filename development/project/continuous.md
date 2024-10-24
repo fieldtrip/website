@@ -55,16 +55,14 @@ for i=1:size(trl,1)
 count(trl(i,1):trl(i,2)) = count(trl(i,1):trl(i,2))+1;
 end
 
-added by Esther 22 april 08
+added by Esther 22 April 2008
 
 Done:
 
 After preprocessing without a trl (by which all data are preprocessed as 1 trial) redefinetrial can now segment these data based on a trl.
 
-To d
+To do:
 
 - list all artifact functions
-
 - study out how they work
-
 - adapt the artifact functions so they can handle the described output of redefinetrial

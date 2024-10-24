@@ -59,6 +59,7 @@ For the OPMs we will take the following steps:
 
 
 ## SQUID
+
 ### Preprocessing & trial definition
 
 We begin by loading the SQUID data and defining trials. In the experiment, the inter-trial interval ranged from 800-1200 ms. We select a 200 ms prestimulus and 400 ms poststimulus window. We then select trials where left median nerve stimulation occurred (trigger code = 1).
@@ -119,7 +120,7 @@ cfg.layout = 'CTF275_helmet';
 ft_multiplotER(cfg, avg_stim); % use interactive
 ```
 
-We are now going to use the interactive feature of **[ft_multiplotER](/reference/ft_multiplotER)** to find our activity of interest. We select the sensors that are on top of the right primary somatosensory area since that is where we expect our activity to be localised. We see a negative peak around 20 ms (more specifically 35-50 ms) post-stimulation. We can select this time window to see the topography. The dipolar pattern the right primary somatosensory area is now visible. We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topoplotER)**.
+We are now going to use the interactive feature of **[ft_multiplotER](/reference/ft_multiplotER)** to find our activity of interest. We select the sensors that are on top of the right primary somatosensory area since that is where we expect our activity to be localized. We see a negative peak around 20 ms (more specifically 35-50 ms) post-stimulation. We can select this time window to see the topography. The dipolar pattern the right primary somatosensory area is now visible. We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topoplotER)**.
 
 ```
 % plot the activity at [0.035 0.050]
