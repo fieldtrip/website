@@ -9,7 +9,7 @@ CuttingEEG is turning 10 years old! This milestone calls for a special edition, 
 
 Alongside the [CuttingEEG X](https://cuttingeegx.org) conference we will be organizing some local workshops in the morning.
 
-- Who: Konstantinos Tsilimparis, Robert Oostenveld. Jan-Mathijs Schoffelen
+- Who: Konstantinos Tsilimparis, Robert Oostenveld, Jan-Mathijs Schoffelen
 - When: 31 October 2024
 - Where: Nijmegen
 - See <https://cuttingeegx.org/registration/#Nijmegen> for more details
@@ -86,9 +86,9 @@ To have a smooth experience - and to avoid having to spend precious debugging ti
 
 ## The data used in this tutorial
 
-Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download-server](https://download.fieldtriptoolbox.org/workshop/cuttingeegx). You can either ‘click around’ using web browsers and/or explorer windows to grab the data that are needed, or instead (less work, at least if it works) execute the MATLAB code below.
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions are stored on the FieldTrip [download-server](https://download.fieldtriptoolbox.org/workshop/cuttingeegx). The data are approximately 1.3 Gb. You can either ‘click around’ using web browsers and/or explorer windows to grab the data that are needed, or instead (less work) execute the MATLAB code below.
 
-Please ensure that your present working directory is the ``'cuttingeegx'`` folder, which you created in the previous step. Open a new .m file in the text editor and run the following (Note: do not use the command line window):
+Please ensure that your present working directory is the ``'cuttingeegx'``, which you created in the previous step. Open a new .m file in the editor, copy the following code and run the whole script (Note: To properly run the function ``'recursive_download'``, do not use the command line window and do not run the code line-by-line):
 
 ```
 % create a folder (within cuttingeegx) that will contain the data
