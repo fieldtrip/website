@@ -24,7 +24,7 @@ To get started, head over to the [getting started](/getting_started) documentati
 
 _The latest code developments can be tracked in detail on [GitHub](/development/git)._
 
-{% assign counter = 0%}
+{% assign counter = 0 %}
 {% for post in site.posts %}
 {% if post.category == 'release' %}
 
