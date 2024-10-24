@@ -85,7 +85,6 @@ We can plot the results with the MATLAB plot command to get a first impression
 
 We can additionally explore the spatiotemporal dynamics using FieldTrip interactive plotting function
 
-
     % view the results
     cfg        = [];
     cfg.layout = 'CTF275_helmet.mat';
@@ -93,7 +92,6 @@ We can additionally explore the spatiotemporal dynamics using FieldTrip interact
     ft_topoplotER(cfg, timelock);
 
 {% include image src="/assets/img/tutorial/beamformer_lcmv/figure2.png" width="400" %}
-
 
 ### Visualize the sensor level results (planar gradients)
 
@@ -127,7 +125,6 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
     cfg.xlim   = [0.045 0.050];
     ft_topoplotER(cfg, timelock_planarcomb);
 
-
 ## The forward model and lead field matrix
 
 ### Head model
@@ -153,7 +150,6 @@ The first step in constructing the forward model is to find the brain surface fr
 
 Now prepare the head model from the segmented brain surface:
 
-
     % compute the subject's headmodel/volume conductor model
     cfg                = [];
     cfg.method         = 'singleshell';
@@ -171,7 +167,6 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 ### Source model
 
 Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/sourcemodel_aligned2mni). In this tutorial, we continue with non-normalized grid points:
-
 
     % create the subject specific grid
     grad = ft_read_sens('SubjectSEF.ds', 'senstype', 'meg');
