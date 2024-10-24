@@ -3,7 +3,7 @@ title: Should I use t or F values for cluster-based permutation tests?
 category: faq
 tags: [statistics]
 authors: [Christoph Huber-Huber]
-date: 2023-05-12
+created: 2023-05-12
 ---
 
 # Should I use t or F values for cluster-based permutation tests?
