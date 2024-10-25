@@ -337,7 +337,7 @@ TODO: Plot topo without nans and tell us how the topo can deceive you due to the
 We are now going to coregister the anatomical MRI to the SQUID coordinate system. We read the MRI, SQUID channels and the Polhemus headshape in memory. We recommend converting all quantities to SI units to ensure consistent units throughout your pipeline.
 
 ```
-%% Loading files % converting to SI units
+%% Loading files & converting to SI units
 
 mri    = ft_read_mri('M:\Documents\cuttingeegx-workshop\data\dicoms\00001_1.3.12.2.1107.5.2.19.45416.2022110716263882460203497.IMA');
 ctf275 = ft_read_sens('M:\Documents\cuttingeegx-workshop\data\squid\subj001ses002_3031000.01_20231208_01.ds', 'senstype', 'meg');
@@ -352,7 +352,7 @@ save ctf275 ctf275
 save shape shape
 ```
 
-We co-register the MRI with the SQUIDs by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defining the MRI coordinate system are aligned to the same three fiducials defining the SQUID coordinate system.
+We co-register the SQUIDs with the MRI by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defining the MRI coordinate system are aligned to the same three fiducials defining the SQUID coordinate system.
 
 ```
 %% Co-registering the anatomical MRI to the SQUID coordinate system
@@ -363,7 +363,7 @@ load ctf275 ctf275
 % assign the 'ctf' coordinate system to the MRI 
 cfg          = [];
 cfg.method   = 'interactive';
-cfg.coordsys = 'ctf';
+cfg.coordsys = 'ctf'; % ALS coordinate system
 mri_realigned1 = ft_volumerealign(cfg, mri);
 
 save mri_realigned1 mri_realigned1
@@ -447,3 +447,119 @@ The SQUID sensors are located 1.5-2.0 cm from the scalp, resulting in a less foc
 
 ### OPM
 
+We will coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet. First we read and plot the optical scan:
+
+```
+%% Loading files
+
+scan      = ft_read_headshape('sub-01-ses-01_opticalscan.obj');
+scan.unit = 'm'; % assign the correct unit
+
+figure; hold on;
+ft_plot_headshape(scan);
+ft_plot_axes(scan);
+lighting gouraud
+material dull
+light
+```
+
+We assign the RAS coordinate system to the scan.
+
+```
+%% Assign coordinate system
+
+cfg          = [];
+cfg.method   = 'fiducial';
+cfg.coordsys = 'neuromag'; 
+scan_aligned = ft_meshrealign(cfg, scan); 
+
+figure; hold on;
+ft_plot_headshape(scan_aligned);
+ft_plot_axes(scan_aligned);
+view([125 10]);
+lighting gouraud
+material dull
+light
+
+save scan_aligned scan_aligned
+```
+
+We remove irrelevant parts such as the body and cables. We use the **[ft_defacemesh](/reference/ft_defacemesh)** function with a bounding box to keep only the desired head area.
+
+```
+%% Remove Body and Cables
+
+cfg           = [];
+cfg.method    = 'box';
+cfg.selection = 'inside';
+scan_head     = ft_defacemesh(cfg, scan_aligned); 
+
+figure; hold on;
+ft_plot_headshape(scan_head);
+ft_plot_axes(scan_head);
+view([125 10]);
+lighting gouraud
+material dull
+light
+
+save scan_head scan_head
+```
+
+We isolate the face region from the 3D scan using a bounding box. We will later align this face with the face extracted from the MRI.
+
+```
+%% Isolate face
+
+cfg           = [];
+cfg.method    = 'box';
+cfg.selection = 'inside';
+scan_face     = ft_defacemesh(cfg, scan_head);
+
+figure; hold on;
+ft_plot_headshape(scan_face);
+ft_plot_axes(scan_face);
+view([125 10]);
+lighting gouraud
+material dull
+light
+
+save scan_face scan_face
+```
+
+
+Next, we isolate the helmet region from the 3D scan using a bounding box. We will later align this helmet with the reference helmet (i.e., the 3D model of the actual FieldLine helmet).
+
+```
+%% Isolate helmet
+cfg           = [];
+cfg.method    = 'box';
+cfg.selection = 'outside';
+scan_helmet   = ft_defacemesh(cfg, scan_head);  
+
+figure; hold on;
+ft_plot_headshape(scan_helmet);
+ft_plot_axes(scan_helmet);
+view([125 10]);
+lighting gouraud
+material dull
+light
+
+save scan_helmet scan_helmet
+```
+
+We load the MRI. As the same participant took part in both SQUID and OPM recordings, we can reuse his/her segmented MRI from the SQUID analysis to save time: 
+
+```
+load mri_segmented mri_segmented % from the SQUID analysis
+```
+
+```
+%% Aligning the face from the 3D scan with the face extracted from the MRI
+```
+```
+%% Aligning the helmet from the 3D scan with the reference helmet
+```
+
+```
+%% Coregistration
+```
