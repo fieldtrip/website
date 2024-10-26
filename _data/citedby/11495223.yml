@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39440300'
+- idtype: doi
+  value: 10.1093/braincomms/fcae348
+- idtype: pmcid
+  value: PMC11495223
+authors:
+- authtype: Author
+  name: Solar KG
+- authtype: Author
+  name: Ventresca M
+- authtype: Author
+  name: Zamyadi R
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Jetly R
+- authtype: Author
+  name: Vartanian O
+- authtype: Author
+  name: Rhind SG
+- authtype: Author
+  name: Dunkley BT
+epubdate: 2024 Oct 8
+fulljournalname: Brain Communications
+issue: '5'
+pages: fcae348
+pmclivedate: 2024/10/22
+printpubdate: ''
+pubdate: 2024 Oct 8
+sortdate: 2024/10/08 00:00
+source: Brain Commun
+title: Repetitive subconcussion results in disrupted neural activity independent of
+  concussion history
+uid: '11495223'
+volume: '6'

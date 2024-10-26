@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39416099'
+- idtype: doi
+  value: 10.1101/2024.09.29.615736
+- idtype: pmcid
+  value: PMC11482766
+authors:
+- authtype: Author
+  name: Ritz H
+- authtype: Author
+  name: Jha A
+- authtype: Author
+  name: Pillow J
+- authtype: Author
+  name: Daw ND
+- authtype: Author
+  name: Cohen JD
+epubdate: 2024 Oct 13
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.09.29.615736
+pmclivedate: 2024/10/17
+printpubdate: ''
+pubdate: 2024 Oct 13
+sortdate: 2024/10/13 00:00
+source: bioRxiv
+title: Humans actively reconfigure neural task states
+uid: '11482766'
+volume: ''

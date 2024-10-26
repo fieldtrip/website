@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38744792'
+- idtype: doi
+  value: 10.1007/s11357-024-01195-z
+- idtype: pmcid
+  value: PMC11493878
+authors:
+- authtype: Author
+  name: Zeller CJ
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Wicki K
+- authtype: Author
+  name: Teunissen CE
+- authtype: Author
+  name: Nissen C
+- authtype: Author
+  name: Züst MA
+- authtype: Author
+  name: Klöppel S
+epubdate: 2024 May 14
+fulljournalname: GeroScience
+issue: '6'
+pages: 6157-6172
+pmclivedate: 2024/10/23
+printpubdate: ''
+pubdate: 2024 May 14
+sortdate: 2024/05/14 00:00
+source: GeroScience
+title: Multi-night acoustic stimulation is associated with better sleep, amyloid dynamics,
+  and memory in older adults with cognitive impairment
+uid: '11493878'
+volume: '46'

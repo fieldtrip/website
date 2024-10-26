@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '39424927'
+- idtype: doi
+  value: 10.1038/s42003-024-07058-9
+- idtype: pmcid
+  value: PMC11489726
+authors:
+- authtype: Author
+  name: Song P
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Ye H
+- authtype: Author
+  name: Du X
+- authtype: Author
+  name: Zhai Y
+- authtype: Author
+  name: Bao X
+- authtype: Author
+  name: Mehmood I
+- authtype: Author
+  name: Tanigawa H
+- authtype: Author
+  name: Niu W
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Chen P
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Yu X
+epubdate: 2024 Oct 18
+fulljournalname: Communications Biology
+issue: ''
+pages: '1350'
+pmclivedate: 2024/10/19
+printpubdate: ''
+pubdate: 2024 Oct 18
+sortdate: 2024/10/18 00:00
+source: Commun Biol
+title: 'A new function of offset response in the primate auditory cortex: marker of
+  temporal integration'
+uid: '11489726'
+volume: '7'

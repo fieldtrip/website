@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '39378092'
+- idtype: doi
+  value: 10.1073/pnas.2320805121
+- idtype: pmcid
+  value: PMC11494299
+authors:
+- authtype: Author
+  name: del Cerro-León A
+- authtype: Author
+  name: Fernando Antón-Toro L
+- authtype: Author
+  name: Shpakivska-Bilan D
+- authtype: Author
+  name: Uceta M
+- authtype: Author
+  name: Santos-Mayo A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: García-Moreno LM
+- authtype: Author
+  name: Maestú F
+epubdate: 2024 Oct 8
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '42'
+pages: e2320805121
+pmclivedate: ''
+printpubdate: 2024 Oct 15
+pubdate: 2024 Oct 8
+sortdate: 2024/10/08 00:00
+source: Proc Natl Acad Sci U S A
+title: Adolescent alcohol consumption predicted by differences in electrophysiological
+  functional connectivity and neuroanatomy
+uid: '11494299'
+volume: '121'

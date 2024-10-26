@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39438653'
+- idtype: doi
+  value: 10.1038/s44271-024-00149-7
+- idtype: pmcid
+  value: PMC11496105
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Alexopoulou ZS
+- authtype: Author
+  name: van Ede F
+epubdate: 2024 Oct 22
+fulljournalname: Communications Psychology
+issue: ''
+pages: '97'
+pmclivedate: 2024/10/23
+printpubdate: ''
+pubdate: 2024 Oct 22
+sortdate: 2024/10/22 00:00
+source: Commun Psychol
+title: Attentional shifts bias microsaccade direction but do not cause new microsaccades
+uid: '11496105'
+volume: '2'
