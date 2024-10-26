@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39433743'
+- idtype: doi
+  value: 10.1038/s41467-024-53406-y
+- idtype: pmcid
+  value: PMC11494016
+authors:
+- authtype: Author
+  name: Denison RN
+- authtype: Author
+  name: Tian KJ
+- authtype: Author
+  name: Heeger DJ
+- authtype: Author
+  name: Carrasco M
+epubdate: 2024 Oct 21
+fulljournalname: Nature Communications
+issue: ''
+pages: '9061'
+pmclivedate: 2024/10/22
+printpubdate: ''
+pubdate: 2024 Oct 21
+sortdate: 2024/10/21 00:00
+source: Nat Commun
+title: Anticipatory and evoked visual cortical dynamics of voluntary temporal attention
+uid: '11494016'
+volume: '15'
