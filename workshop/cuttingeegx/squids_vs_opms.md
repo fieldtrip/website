@@ -30,7 +30,7 @@ To acquire a measurement for each of the 144 helmet slots, we divided the experi
 ### The dataset used in this tutorial
 The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field. 
 
-We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory (S1) area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)). 
+We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)). 
 
 The dataset can be downloaded from our [download-server](https://download.fieldtriptoolbox.org/workshop/cuttingeegx).
 
@@ -98,7 +98,11 @@ save data_squid_clean data_squid_clean
 ```
 
 
-We start by removing trials that have higher variance than 8e-25 Tesla-squared, then assess the channels. Removing trials also reduces channel variance, so no need to reject any channels. We then calculate the ERFs: 
+We start by removing trials that have higher variance than 8e-25 Tesla-squared, then assess the channels. Removing trials also reduces channel variance, so no need to reject any channels. 
+
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_ft_rejectvisual.png" width="500" %}
+
+We then calculate the ERFs: 
 
 ```
 %% Computing ERFs
@@ -123,7 +127,11 @@ cfg.layout = 'CTF275_helmet';
 ft_multiplotER(cfg, avg_squid); % use interactively
 ```
 
-We are now going to use the interactive feature of **[ft_multiplotER](/reference/ft_multiplotER)** to find our activity of interest. We select the sensors that are on top of the right primary somatosensory area since that is where we expect our activity to be localised. We see a negative peak around 20 ms (more specifically 35-50 ms) post-stimulation. We can select this time window to see the topography. The dipolar pattern the right primary somatosensory area is now visible. We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topoplotER)**.
+{% include markup/skyblue %}
+Interactive mode: Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the ‘multiplot’ and the resulting ‘singleplots’ and ‘topoplots’. Can you find the time window that the dipolar activity at the right primary somatosensory area appears?
+{% include markup/end %}
+
+We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topoplotER)**.
 
 ```
 %% Plotting the topography
@@ -135,7 +143,7 @@ ft_topoplotER(cfg, avg_squid);
 
 print -dpng cuttingeegx_topo_squid.png
 ```
-
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo_squid.png" width="500" %}
 ### OPM
 
 ```
@@ -181,7 +189,11 @@ end
 save data_opm_hfc data_opm_hfc
 ```
 
-We will now manually remove trials with high variance. For the SQUID-based recordings, we removed trials with variance above 8e-25 Tesla-squared. However, due to the higher intrinsic and environmental noise levels, our OPM sensors exhibit variance around two orders of magnitude higher the SQUID sensors. Interestingly, although an OPM sensor captures a stronger signal by being closer to the scalp, it also experiences more noise. For each of the 6 runs We remove the trials that "stick out" with high variance (these are the trials with variance above 3e-23 Tesla-squared) and then compute the ERFs for each of the 6 runs.
+We will now manually remove trials with high variance. 
+
+{% include markup/skyblue %}
+For the SQUID-based recordings, we removed trials with variance above the threshold of 8e-25 Tesla-squared. Is it possible to use the same threshold for the OPMs? If not, why and does this affect the quality of the OPM signal? Remember that (i) OPMs are magnetometers, and (ii) they are placed closer to the scalp than the SQUIDs.
+{% include markup/end %}
 
 ```
 %% Removing artifacts manually
@@ -191,7 +203,7 @@ load data_opm_hfc data_opm_hfc
 for i=1:6
     cfg                   = [];
     cfg.method            = 'summary';
-    data_opm_hfc_clean(i) = ft_rejectvisual(cfg, data_opm_hfc(i)); % ft_rejectvisual: reject all trials that have more than 5*10^-23 T^2 variance VS ft_rejectvisual + HFC: reject all trials that "stick out" (~ 5*10^-23 T^2 variance)   
+    data_opm_hfc_clean(i) = ft_rejectvisual(cfg, data_opm_hfc(i));
 end
 
 save data_opm_hfc_clean data_opm_hfc_clean
@@ -328,8 +340,12 @@ ft_topoplotER(cfg, append_opm_nan);
 
 print -dpng cuttingeegx_topo_no-interp_opm.png
 ```
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo_no-interp_opm.png" width="500" %}
 
-TODO: Plot topo without nans and tell us how the topo can deceive you due to the interpolation
+
+{% include markup/skyblue %}
+Plot the topography including NaNs, then compare it with the topography where you excluded NaNs.
+{% include markup/end %}
 
 ## Coregistration 
 
@@ -339,11 +355,11 @@ We are now going to coregister the anatomical MRI to the SQUID coordinate system
 ```
 %% Loading files & converting to SI units
 
-mri    = ft_read_mri('M:\Documents\cuttingeegx-workshop\data\dicoms\00001_1.3.12.2.1107.5.2.19.45416.2022110716263882460203497.IMA');
-ctf275 = ft_read_sens('M:\Documents\cuttingeegx-workshop\data\squid\subj001ses002_3031000.01_20231208_01.ds', 'senstype', 'meg');
-shape  = ft_read_headshape('M:\Documents\cuttingeegx-workshop\data\squid\subj001ses001ses002.pos');
+mri    = ft_read_mri('sub-01_acq-mprage_T1w.nii');
+ctf275 = ft_read_sens('sub-01_ses-01_task-MedianNervesStim_squid.ds', 'senstype', 'meg');
+shape  = ft_read_headshape('sub-01_ses-01_headshape.pos');
 
-mri = ft_convert_units(mri, 'm');
+mri    = ft_convert_units(mri, 'm');
 ctf275 = ft_convert_units(ctf275, 'm');
 shape  = ft_convert_units(shape, 'm');
 
@@ -351,6 +367,9 @@ save mri mri
 save ctf275 ctf275
 save shape shape
 ```
+{% include markup/skyblue %}
+To understand coregistration, you first need to know what [coordinate systems](faq/coordsys.md) are. Coregistration is about aligning these coordinate systems. Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see their coordinate systems. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
+{% include markup/end %}
 
 We co-register the SQUIDs with the MRI by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defining the MRI coordinate system are aligned to the same three fiducials defining the SQUID coordinate system.
 
@@ -386,7 +405,7 @@ cfg = [];
 cfg.method = 'headshape';
 cfg.headshape.headshape = shape;
 cfg.headshape.icp = 'no';
-ft_volumerealign(cfg, mri_realigned2); % takes too long
+ft_volumerealign(cfg, mri_realigned2); 
 
 save mri_realigned2 mri_realigned2
 ```
@@ -422,6 +441,7 @@ Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seco
 ```
 %% Plotting the 3D sensor topography
 
+% average the activity of interest in the time window [0.035 0.050] sec
 sampling_rate = 1200; % in Hz
 prestim = 0.2;
 
@@ -430,6 +450,7 @@ I2 = (prestim+0.050)*sampling_rate;
 
 selected_avg = mean(avg_stim.avg(:, I1:I2), 2);
 
+% Plot
 figure;
 ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none', 'edgecolor', 'skin' )
 hold on
@@ -439,11 +460,9 @@ ft_plot_topo3d(pos275,selected_avg, 'facealpha', 0.9)
 camlight
 view([360 0])
 
-
-print -dpng M:\Documents\cuttingeegx-workshop\code\figures\squid\cuttingeegx_topo3d_squid.png
+print -dpng cuttingeegx_topo3d_squid.png
 ```
-
-The SQUID sensors are located 1.5-2.0 cm from the scalp, resulting in a less focal sensor topography.
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo3d_squid.png" width="500" %}
 
 ### OPM
 
@@ -553,13 +572,150 @@ We load the MRI. As the same participant took part in both SQUID and OPM recordi
 load mri_segmented mri_segmented % from the SQUID analysis
 ```
 
-```
-%% Aligning the face from the 3D scan with the face extracted from the MRI
-```
-```
-%% Aligning the helmet from the 3D scan with the reference helmet
-```
+We align face from the 3D scan with the face extracted from the MRI.
 
 ```
-%% Coregistration
+%% Aligning the face from the 3D scan with the face extracted from the MRI
+
+% create a mesh for the scalp
+cfg             = [];
+cfg.tissue      = 'scalp';
+cfg.numvertices = 10000;
+mri_face        = ft_prepare_mesh(cfg, mri_segmented);
+
+save scan_face_aligned scan_face_aligned
+
+% alignment
+cfg               = [];
+cfg.method        = 'interactive';
+cfg.headshape     = mri_face;
+cfg.meshstyle     = {'edgecolor', 'k', 'facecolor', 'skin'};
+scan_face_aligned = ft_meshrealign(cfg, scan_face);
+
+figure; hold on;
+ft_plot_headshape(mri_face, 'facealpha', 0.4);
+ft_plot_mesh(scan_face_aligned, 'facecolor','skin');
+view([125 10]);
+lighting gouraud
+material dull
+light
 ```
+
+We align the helmet from the 3D scan with the reference helmet. For this we use the 3D model of the actual FieldLine helmet. The reference helmet only contains the rim around the face.
+```
+%% Aligning the helmet from the 3D scan with the reference helmet
+
+helmet_rim = ft_read_headshape('fieldlinebeta2_helmet_rim.mat');
+
+cfg                 = [];
+cfg.method          = 'interactive';
+cfg.headshape       = helmet_rim;
+cfg.meshstyle       = {'edgecolor', 'none', 'facecolor', [1 0.5 0.5]};
+scan_helmet_aligned = ft_meshrealign(cfg, scan_helmet);
+
+save scan_helmet_aligned scan_helmet_aligned
+
+figure; hold on;
+ft_plot_mesh(helmet_rim, 'edgecolor', 'none', 'facecolor', [0.5 0.5 1], 'facealpha', 0.4);
+ft_plot_mesh(scan_helmet_aligned, 'edgecolor', 'none', 'facecolor', [1 0.5 0.5], 'facealpha', 0.4);
+view([145 10]);
+lighting gouraud
+material dull
+light
+```
+
+The three objects (the optical 3D scan, the face from the MRI and the template helmet) are initially all expressed in different coordinate systems. In the previous steps we have determined two pairwise transformations, which can be combined and used to align each of the objects to any other object.
+
+Now we can use the transformation that aligns the face from the 3D scan with the face from the anatomical MRI and the transformation that aligns the helmet from the 3D scan with the reference helmet to calculate the transformation that aligns the reference helmet with the anatomical MRI.
+```
+%% Calculate transformation matrix
+
+transform_scan2helmet = scan_helmet_aligned.cfg.transform;
+transform_scan2face   = scan_face_aligned.cfg.transform;
+transform_helmet2face = transform_scan2face/transform_scan2helmet; 
+```
+
+The transformation matrix ```'transform_helmet2face'``` can now be used to coregister the the OPM sensors with the MRI, which aligns the OPM sensors with head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor file. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet. 
+
+```
+%% Read the sensors
+
+f = dir('*.fif'); % add the whole path to your .fif files
+f = struct2cell(f);
+sens = struct();
+
+for i=1:6
+    sensfile = fullfile(f{2,i},f{1,i});
+    sens(i) = ft_read_sens(sensfile);
+end
+
+save sens sens
+
+cfg      = [];
+sens_combined = ft_appendsens(cfg, sens(1), sens(2), sens(3), sens(4), sens(5), sens(6)); % removes the duplicate channels
+
+save sens_combined sens_combined
+```
+
+We apply the transformation to align the OPM sensors with head-based coordinate system
+```
+%% Apply transformation matrix
+
+fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, sens_combined);
+
+save fieldlinebeta2_head fieldlinebeta2_head
+
+figure; hold on;
+ft_plot_sens(fieldlinebeta2_head, 'label', 'on');
+ft_plot_headshape(mri_face, 'facecolor', [0.5 0.5 1], 'facealpha', 0.4, 'edgecolor', 'none');
+view([125 10]);
+lighting gouraud
+material dull
+light
+```
+
+Lastly, we plot the 3D sensor topography for the time window [0.035, 0.050] seconds, along with the scalp:
+
+```
+%% Plotting the 3D sensor topography
+
+load mesh_brain mesh_brain % from the SQUID analysis
+load mesh_scalp mesh_scalp % from the SQUID analysis
+load fieldlinebeta2_head fieldlinebeta2_head
+load append_opm append_opm
+
+% find the indices of append_opm.label that match the ones in fieldlinebeta2_head.label
+i_avg = ismember(append_opm.label, fieldlinebeta2_head.label);
+
+% 'R603_bz', 'R105_bz' were duplicate sensors, so they need to be omitted
+i_sens = ~ismember(fieldlinebeta2_head.label, {'R603_bz', 'R105_bz'}); 
+
+% average the activity of interest in the time window [0.035 0.050] sec
+sampling_rate = 5000; % in Hz
+prestim = 0.2;
+
+I1 = (prestim+0.035)*sampling_rate; 
+I2 = (prestim+0.050)*sampling_rate;
+
+selected_avg = mean(append_opm.avg(:, I1:I2), 2);
+
+% Plot
+figure;
+ft_plot_mesh(mesh_scalp, 'facealpha', 0.05, 'facecolor', 'skin', 'edgecolor', 'none', 'edgecolor', 'skin' )
+hold on
+ft_plot_topo3d(fieldlinebeta2_head.chanpos(i_sens,:), selected_avg(i_avg), 'facealpha', 1)
+camlight
+view([360 0])
+
+print -dpng cuttingeegx_topo3d_no-interp_opm.png
+```
+
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo3d_no-interp_opm.png" width="500" %}
+
+{% include markup/skyblue %}
+Why do you think there’s a gap on the right side of the topography? Hint: Interpolation.
+{% include markup/end %}
+
+{% include markup/skyblue %}
+How do the 3D sensor topographies of OPMs and SQUIDs differ, and what causes these differences?
+{% include markup/end %}
