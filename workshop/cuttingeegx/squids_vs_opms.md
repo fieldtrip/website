@@ -41,7 +41,7 @@ In this tutorial for the SQUIDs we will take the following steps:
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Visualize the results for all the channels with **[ft_multiplotER](/reference/ft_multiplotER)**
 - Plot the 2D sensor topography for a specified latency with **[ft_topoplotER](/reference/ft_topoplotER)**
-- Coregister MRI with SQUIDs using **[ft_volumerealign](/reference/ft_volumerealign)**
+- Coregister MRI with SQUIDs using HPI coils and the Polhemus headshape with **[ft_volumerealign](/reference/ft_volumerealign)**
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
 For the OPMs we will take the following steps:
@@ -57,7 +57,7 @@ For the OPMs we will take the following steps:
 - Append sensors from the six recordings using **[ft_appendsens](/reference/ft_appendsens)**
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
-
+{% include image src="/assets/img/workshop/cuttingeegx/flow_chart.png" width="500" %}
 
 ## Preprocessing & computing ERFs
 ### SQUID
