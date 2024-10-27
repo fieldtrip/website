@@ -13,9 +13,9 @@ Even though, both SQUID and OPM system detect the brain's magnetic fields, their
 
 OPMs are flexible in their placement allowing for new recording strategies. These new recording strategies lead to new data analysis strategies. For example, in this tutorial we use a small number of OPMs (32 sensors) and do sequential recordings in which we position them over different places over the scalp.
 
-OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive to environmental noise than gradiometers, which most SQUID systems have. Several data analysis algorithms to remove environmental noise have been proposed (see [Seymour et al (2022)](https://www.sciencedirect.com/science/article/pii/S1053811921011058?via%3Dihub) for more details). In this tutorial, we apply homogeneous field correction (HFC). HFC works better with a large number of sensors (more than 32).
+OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive to environmental noise than gradiometers, which most SQUID systems have. Several data analysis algorithms to remove environmental noise have been proposed (see [Seymour et al (2022)](https://www.sciencedirect.com/science/article/pii/S1053811921011058?via%3Dihub) for more details). In this tutorial, we apply homogeneous field correction (HFC). HFC works better with a large number of sensors.
 
-Unlike SQUID systems, which have standard coregistration procedures, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
+Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
 
 This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
@@ -25,7 +25,7 @@ This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pu
 
 In this tutorial we will use recordings made with 32 OPM sensors placed in an adult-sized “smart” helmet with a total of 144 slots. This helmet is called “smart” as each slot allows the sensor to slide in until it touches the head surface, regardless of the head size and shape. To limit head movements we mounted the helmet on a wooden plate.
 
-To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs while maintaining the participant's head in a fixed position. We kept 9 sensors around the participant’s head fixed for all the recordings. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
+To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs. To maintain the participant's head fixed between runs, we kept 9 sensors around the participant’s head fixed for all the runs. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
 
 ### The dataset used in this tutorial
 The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field. 
@@ -49,15 +49,15 @@ For the OPMs we will take the following steps:
 - Removing artifacts using **[ft_denoise_hfc](/reference/ft_denoise_hfc)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Renaming duplicate channels
-- Append the data over the six recordings using **[ft_appendtimelock](/reference/ft_appendtimelock)**
+- Append the data over the six runs using **[ft_appendtimelock](/reference/ft_appendtimelock)**
 - Add NaNs to the missing channels
 - Visualize the results for all the channels with **[ft_multiplotER](/reference/ft_multiplotER)**
 - Plot the 2D sensor topography for a specified latency with **[ft_topoplotER](/reference/ft_topoplotER)**
 - Coregister MRI with OPMs using an optical 3D scanner. For this several functions are used: **[ft_volumerealign](/reference/ft_volumerealign)**, **[ft_read_headshape](/reference/fileio/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)**, **[ft_defacemesh](/reference/ft_defacemesh)**, and **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)**.
-- Append sensors from the six recordings using **[ft_appendsens](/reference/ft_appendsens)**
+- Append sensors from the six runs using **[ft_appendsens](/reference/ft_appendsens)**
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
-{% include image src="/assets/img/workshop/cuttingeegx/flow_chart.png" width="500" %}
+{% include image src="/assets/img/workshop/cuttingeegx/flow_chart.png" width="800" height="1000" %}
 
 ## Preprocessing & computing ERFs
 ### SQUID
@@ -246,7 +246,7 @@ for k = 6 % 6th run
     end
 end
 
-% Researcher's errors
+% Researchers' errors
 for k = 2 % 2nd run 
     index = find(ismember(avg_opm_rename(k).label, {'L214_bz'})); % rename 'L214_bz'
     for i = 1:length(index)
@@ -524,6 +524,9 @@ light
 save scan_head scan_head
 ```
 
+{% include image src="/assets/img/workshop/cuttingeegx/scan_head.png" width="500" %}
+
+
 We isolate the face region from the 3D scan using a bounding box. We will later align this face with the face extracted from the MRI.
 
 ```
@@ -545,6 +548,8 @@ light
 save scan_face scan_face
 ```
 
+{% include image src="/assets/img/workshop/cuttingeegx/scan_face.png" width="500" %}
+
 
 Next, we isolate the helmet region from the 3D scan using a bounding box. We will later align this helmet with the reference helmet (i.e., the 3D model of the actual FieldLine helmet).
 
@@ -565,6 +570,9 @@ light
 
 save scan_helmet scan_helmet
 ```
+
+{% include image src="/assets/img/workshop/cuttingeegx/scan_helmet.png" width="500" %}
+
 
 We load the MRI. As the same participant took part in both SQUID and OPM recordings, we can reuse his/her segmented MRI from the SQUID analysis to save time: 
 
@@ -601,6 +609,9 @@ material dull
 light
 ```
 
+{% include image src="/assets/img/workshop/cuttingeegx/scan_face_aligned.png" width="500" %}
+
+
 We align the helmet from the 3D scan with the reference helmet. For this we use the 3D model of the actual FieldLine helmet. The reference helmet only contains the rim around the face.
 ```
 %% Aligning the helmet from the 3D scan with the reference helmet
@@ -623,6 +634,8 @@ lighting gouraud
 material dull
 light
 ```
+
+{% include image src="/assets/img/workshop/cuttingeegx/scan_helmet_aligned.png" width="500" %}
 
 The three objects (the optical 3D scan, the face from the MRI and the template helmet) are initially all expressed in different coordinate systems. In the previous steps we have determined two pairwise transformations, which can be combined and used to align each of the objects to any other object.
 
@@ -666,13 +679,15 @@ fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, sens_combined
 save fieldlinebeta2_head fieldlinebeta2_head
 
 figure; hold on;
-ft_plot_sens(fieldlinebeta2_head, 'label', 'on');
+ft_plot_sens(fieldlinebeta2_head, 'label', 'off');
 ft_plot_headshape(mri_face, 'facecolor', [0.5 0.5 1], 'facealpha', 0.4, 'edgecolor', 'none');
 view([125 10]);
 lighting gouraud
 material dull
 light
 ```
+
+{% include image src="/assets/img/workshop/cuttingeegx/fieldlinebeta2_head.png" width="500" %}
 
 Lastly, we plot the 3D sensor topography for the time window [0.035, 0.050] seconds, along with the scalp:
 
