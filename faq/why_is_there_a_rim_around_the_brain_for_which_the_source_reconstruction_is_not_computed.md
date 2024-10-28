@@ -12,7 +12,7 @@ Depending on the resolution of your 3-D grid, there will be points in the grid t
 
 {% include image src="/assets/img/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed/grid_resolution_high.png" %}
 
-If you have a low grid resolution, the rim will apear to be wider (see figure below).
+If you have a low grid resolution, the rim will appear to be wider (see figure below).
 
 {% include image src="/assets/img/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed/grid_resolution_low.png" %}
 

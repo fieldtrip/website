@@ -4,3 +4,6 @@
 - name:  SQUIDs versus OPMs
   link:  /workshop/cuttingeegx/squids_vs_opms
 
+- name:  Test your MATLAB and FieldTrip installation in advance
+  link:  /workshop/cuttingeegx/test_installation
+

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39401929'
+- idtype: doi
+  value: 10.1523/ENEURO.0214-24.2024
+- idtype: pmcid
+  value: PMC11493493
+authors:
+- authtype: Author
+  name: Scartozzi AC
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Bush CT
+- authtype: Author
+  name: Kasdan AV
+- authtype: Author
+  name: Fram NR
+- authtype: Author
+  name: Woynaroski T
+- authtype: Author
+  name: Lense MD
+- authtype: Author
+  name: Gordon RL
+- authtype: Author
+  name: Ladányi E
+epubdate: 2024 Oct 17
+fulljournalname: eNeuro
+issue: '10'
+pages: ENEURO.0214-24.2024
+pmclivedate: 2024/10/22
+printpubdate: ''
+pubdate: 2024 Oct 17
+sortdate: 2024/10/17 00:00
+source: eNeuro
+title: The Neural Correlates of Spontaneous Beat Processing and Its Relationship with
+  Music-Related Characteristics of the Individual
+uid: '11493493'
+volume: '11'

@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '38954651'
+- idtype: doi
+  value: 10.1093/brain/awae219
+- idtype: pmcid
+  value: PMC11449126
+authors:
+- authtype: Author
+  name: Köhler RM
+- authtype: Author
+  name: Binns TS
+- authtype: Author
+  name: Merk T
+- authtype: Author
+  name: Zhu G
+- authtype: Author
+  name: Yin Z
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Chikermane M
+- authtype: Author
+  name: Vanhoecke J
+- authtype: Author
+  name: Busch JL
+- authtype: Author
+  name: Habets JG
+- authtype: Author
+  name: Faust K
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Cavallo A
+- authtype: Author
+  name: Haufe S
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Haynes JD
+- authtype: Author
+  name: Neumann WJ
+epubdate: 2024 Jul 2
+fulljournalname: Brain
+issue: '10'
+pages: 3358-3369
+pmclivedate: 2024/10/04
+printpubdate: ''
+pubdate: 2024 Jul 2
+sortdate: 2024/07/02 00:00
+source: Brain
+title: Dopamine and deep brain stimulation accelerate the neural dynamics of volitional
+  action in Parkinson's disease
+uid: '11449126'
+volume: '147'
