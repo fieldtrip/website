@@ -30,7 +30,7 @@ For the hands-on sessions we assume that you have a computer with a relatively r
 
 ### FieldTrip
 
-To get the most recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20240916), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you can do the following in the MATLAB command window (less work and more robust):
+To get the most recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20241025), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you can do the following in the MATLAB command window (less work and more robust):
 
 ```
 % create a folder that will contain the code and the data, and change directory
@@ -38,7 +38,7 @@ mkdir('cuttingeegx');
 cd('cuttingeegx');
 
 % download and unzip fieldtrip into the newly created folder
-url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20240916.zip';
+url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20241025.zip';
 unzip(url_fieldtrip);
 ```
 
@@ -46,7 +46,7 @@ Upon completion of this step, the folder structure should look something like th
 
 ```bash
 cuttingeegx/
-└── fieldtrip-20240916
+└── fieldtrip-20241025
     ├── bin
     ├── compat
     ├── connectivity
@@ -74,7 +74,7 @@ Downloading and unzipping can take up to ~10 minutes, so please download and unz
 {% include markup/end %}
 
 {% include markup/red %}
-If you have downloaded and unzipped by hand on a Windows computer, it could be that there's an 'extra folder layer' in your directory structure and that it appears as `fieldtrip-20240916/fieldtrip-20240916`. We recommend that you remove this extra layer, i.e., move all content one level up.
+If you have downloaded and unzipped by hand on a Windows computer, it could be that there's an 'extra folder layer' in your directory structure and that it appears as `fieldtrip-20241025/fieldtrip-20241025`. We recommend that you remove this extra layer, i.e., move all content one level up.
 {% include markup/end %}
 
 ### Test your installation in advance
@@ -170,7 +170,7 @@ cuttingeegx/data/
 │   └── meg
 │       ├── opm
 │       └── squid
-└── fieldtrip-20240916
+└── fieldtrip-20241025
     ├── bin
     ├── compat
     ├── connectivity
@@ -198,7 +198,7 @@ Whenever starting a fresh MATLAB session, to configure the right FieldTrip paths
 ```
 % change into the 'cuttingeegx' folder and then do the following
 restoredefaultpath
-addpath('fieldtrip-20240916')
+addpath('fieldtrip-20241025')
 addpath(genpath('data'))
 ft_defaults
 ```
