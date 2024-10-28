@@ -17,17 +17,16 @@ OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive
 
 Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
-
-This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
+This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](/tutorial/preprocessing_opm) and [coregistration of Optically Pumped Magnetometer (OPM) data](/tutorial/coregistration_opm). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](/tutorial/coregistration_opm/).
 
 ## Background
-
 
 In this tutorial we will use recordings made with 32 OPM sensors placed in an adult-sized “smart” helmet with a total of 144 slots. This helmet is called “smart” as each slot allows the sensor to slide in until it touches the head surface, regardless of the head size and shape. To limit head movements we mounted the helmet on a wooden plate.
 
 To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs. To maintain the participant's head fixed between runs, we kept 9 sensors around the participant’s head fixed for all the runs. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
 
 ### The dataset used in this tutorial
+
 The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field. 
 
 We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)). 
@@ -374,7 +373,7 @@ save ctf275 ctf275
 save shape shape
 ```
 {% include markup/skyblue %}
-To understand coregistration, you first need to know what [coordinate systems](faq/coordsys.md) are. Coregistration is about aligning these coordinate systems. Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see their coordinate systems. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
+To understand coregistration, you first need to know what [coordinate systems](/faq/coordsys) are. Coregistration is about aligning these coordinate systems. Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see their coordinate systems. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
 {% include markup/end %}
 
 We co-register the SQUIDs with the MRI by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defining the MRI coordinate system are aligned to the same three fiducials defining the SQUID coordinate system.
