@@ -3,13 +3,14 @@ title: SQUIDs versus OPMs
 tags: [cuttingeegx]
 ---
 _This page is still under construction_
+
 # SQUIDs versus OPMs
 
 ## Introduction
 
 Traditional MEG systems use superconducting quantum interference devices (SQUIDs), which require expensive cryogenic cooling with liquid helium and involve placing the sensors 1.5-2 cm from the scalp. Optically pumped magnetometers (OPMs), a new generation of MEG, eliminate the need for cryogenic cooling, allowing sensors to be placed closer to the scalp. OPMs are small individual sensors that allow the researcher to choose where to place them over the head. These sensors are held in place by 3D-printed helmets, which can be customized for each subject.
 
-Even though, both SQUID and OPM system detect the brain's magnetic fields, their data analysis steps differ a bit. In this tutorial we explore the differences in preprocessing and coregistration between the two systems.
+Even though both SQUID and OPM system detect the brain's magnetic fields, their data analysis steps differ a bit. In this tutorial we explore the differences in preprocessing and coregistration between the two systems.
 
 OPMs are flexible in their placement allowing for new recording strategies. These new recording strategies lead to new data analysis strategies. For example, in this tutorial we use a small number of OPMs (32 sensors) and do sequential recordings in which we position them over different places over the scalp.
 
@@ -17,25 +18,26 @@ OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive
 
 Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
-
 This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
 
 ## Background
-
 
 In this tutorial we will use recordings made with 32 OPM sensors placed in an adult-sized “smart” helmet with a total of 144 slots. This helmet is called “smart” as each slot allows the sensor to slide in until it touches the head surface, regardless of the head size and shape. To limit head movements we mounted the helmet on a wooden plate.
 
 To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs. To maintain the participant's head fixed between runs, we kept 9 sensors around the participant’s head fixed for all the runs. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
 
 ### The dataset used in this tutorial
+
 The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field. 
 
-We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)). 
+We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)).
 
-The dataset can be downloaded from our [download-server](https://download.fieldtriptoolbox.org/workshop/cuttingeegx).
+The dataset can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/cuttingeegx).
 
-## Procedure 
+## Procedure
+
 In this tutorial for the SQUIDs we will take the following steps:
+
 - Define trials and read the data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Removing artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
@@ -45,6 +47,7 @@ In this tutorial for the SQUIDs we will take the following steps:
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
 For the OPMs we will take the following steps:
+
 - Define trials and read the data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Removing artifacts using **[ft_denoise_hfc](/reference/ft_denoise_hfc)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
@@ -84,7 +87,7 @@ data_squid         = ft_preprocessing(cfg);
 save data_squid data_squid
 ```
 
-The summary method in **[ft_rejectvisual](/reference/ft_rejectvisual)** allows to manually remove trials and/or channels that have high variance. 
+The summary method in **[ft_rejectvisual](/reference/ft_rejectvisual)** allows to manually remove trials and/or channels that have high variance.
 
 ```
 %% Removing artifacts manually
@@ -98,12 +101,11 @@ data_squid_clean = ft_rejectvisual(cfg, data_squid);
 save data_squid_clean data_squid_clean
 ```
 
-
 We start by removing trials that have higher variance than 8e-25 Tesla-squared, then assess the channels. Removing trials also reduces channel variance, so no need to reject any channels. 
 
 {% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_ft_rejectvisual.png" width="500" %}
 
-We then calculate the ERFs: 
+We then calculate the ERFs:
 
 ```
 %% Computing ERFs
@@ -144,7 +146,9 @@ ft_topoplotER(cfg, avg_squid);
 
 print -dpng cuttingeegx_topo_squid.png
 ```
+
 {% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo_squid.png" width="500" %}
+
 ### OPM
 
 ```
@@ -222,6 +226,7 @@ end
 
 save avg_opm avg_opm
 ```
+
 Before concatenating the six runs, we need to rename duplicate channels. Duplicates arise for three reasons: (i) 9 sensors were fixed across all runs, (ii) some sensors in the sixth run were in the same slot as the fifth run due to limited remaining free slots, and (iii) errors by the researcher placing a sensor in same slot between runs. During the recording an excel sheet was used to keep track in which slot each sensor was placed. We use that information to rename the channels.
 
 ```
@@ -341,8 +346,8 @@ ft_topoplotER(cfg, append_opm_nan);
 
 print -dpng cuttingeegx_topo_no-interp_opm.png
 ```
-{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo_no-interp_opm.png" width="500" %}
 
+{% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo_no-interp_opm.png" width="500" %}
 
 {% include markup/skyblue %}
 Plot the topography including NaNs, then compare it with the topography where you excluded NaNs.
@@ -368,6 +373,7 @@ save mri mri
 save ctf275 ctf275
 save shape shape
 ```
+
 {% include markup/skyblue %}
 To understand coregistration, you first need to know what [coordinate systems](faq/coordsys.md) are. Coregistration is about aligning these coordinate systems. Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see their coordinate systems. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
 {% include markup/end %}
@@ -463,6 +469,7 @@ view([360 0])
 
 print -dpng cuttingeegx_topo3d_squid.png
 ```
+
 {% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_topo3d_squid.png" width="500" %}
 
 ### OPM
@@ -527,7 +534,6 @@ save scan_head scan_head
 
 {% include image src="/assets/img/workshop/cuttingeegx/scan_head.png" width="500" %}
 
-
 We isolate the face region from the 3D scan using a bounding box. We will later align this face with the face extracted from the MRI.
 
 ```
@@ -550,7 +556,6 @@ save scan_face scan_face
 ```
 
 {% include image src="/assets/img/workshop/cuttingeegx/scan_face.png" width="500" %}
-
 
 Next, we isolate the helmet region from the 3D scan using a bounding box. We will later align this helmet with the reference helmet (i.e., the 3D model of the actual FieldLine helmet).
 
@@ -612,8 +617,8 @@ light
 
 {% include image src="/assets/img/workshop/cuttingeegx/scan_face_aligned.png" width="500" %}
 
-
 We align the helmet from the 3D scan with the reference helmet. For this we use the 3D model of the actual FieldLine helmet. The reference helmet only contains the rim around the face.
+
 ```
 %% Aligning the helmet from the 3D scan with the reference helmet
 
@@ -641,6 +646,7 @@ light
 The three objects (the optical 3D scan, the face from the MRI and the template helmet) are initially all expressed in different coordinate systems. In the previous steps we have determined two pairwise transformations, which can be combined and used to align each of the objects to any other object.
 
 Now we can use the transformation that aligns the face from the 3D scan with the face from the anatomical MRI and the transformation that aligns the helmet from the 3D scan with the reference helmet to calculate the transformation that aligns the reference helmet with the anatomical MRI.
+
 ```
 %% Calculate transformation matrix
 
@@ -671,7 +677,8 @@ sens_combined = ft_appendsens(cfg, sens(1), sens(2), sens(3), sens(4), sens(5), 
 save sens_combined sens_combined
 ```
 
-We apply the transformation to align the OPM sensors with head-based coordinate system
+We apply the transformation to align the OPM sensors with head-based coordinate system.
+
 ```
 %% Apply transformation matrix
 
