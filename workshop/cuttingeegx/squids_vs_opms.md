@@ -2,6 +2,7 @@
 title: SQUIDs versus OPMs
 tags: [cuttingeegx]
 ---
+
 _This page is still under construction_
 
 # SQUIDs versus OPMs
@@ -16,13 +17,13 @@ OPMs are flexible in their placement allowing for new recording strategies. Thes
 
 OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive to environmental noise than gradiometers, which most SQUID systems have. Several data analysis algorithms to remove environmental noise have been proposed (see [Seymour et al (2022)](https://www.sciencedirect.com/science/article/pii/S1053811921011058?via%3Dihub) for more details). In this tutorial, we apply homogeneous field correction (HFC). HFC works better with a large number of sensors.
 
-Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
+Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single coregistration standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
 This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
 
 ## Background
 
-In this tutorial we will use recordings made with 32 OPM sensors placed in an adult-sized “smart” helmet with a total of 144 slots. This helmet is called “smart” as each slot allows the sensor to slide in until it touches the head surface, regardless of the head size and shape. To limit head movements we mounted the helmet on a wooden plate.
+In this tutorial we will use recordings made with 32 OPM sensors placed in an adult-sized “smart” helmet with a total of 144 slots. This helmet is called “smart” as each slot allows the sensor to slide in until it touches the head surface, regardless of the head size and shape. To limit head movements we mounted the helmet on a wooden plate located behind the subject chair.
 
 To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs. To maintain the participant's head fixed between runs, we kept 9 sensors around the participant’s head fixed for all the runs. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
 
@@ -375,10 +376,12 @@ save shape shape
 ```
 
 {% include markup/skyblue %}
-To understand coregistration, you first need to know what [coordinate systems](faq/coordsys.md) are. Coregistration is about aligning these coordinate systems. Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see their coordinate systems. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
+To understand coregistration, you first need to know what [coordinate systems](/faq/coordsys.md) are. Coregistration is about aligning data that is initially expressed in different coordinate systems into a single coordinate system.
+
+Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see in which coordinate systems these are expressed. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
 {% include markup/end %}
 
-We co-register the SQUIDs with the MRI by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defining the MRI coordinate system are aligned to the same three fiducials defining the SQUID coordinate system.
+We co-register the MRI to the SQUIDs by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (Nasion, LPA and RPA) defined in the MRI coordinate system become aligned to the same three fiducials defined in the SQUID coordinate system.
 
 ```
 %% Co-registering the anatomical MRI to the SQUID coordinate system
