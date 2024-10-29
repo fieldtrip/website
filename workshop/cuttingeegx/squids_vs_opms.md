@@ -64,7 +64,7 @@ For the OPMs we will take the following steps:
 ### SQUID
 
 
-We begin by loading the SQUID data and defining trials. In the experiment, the inter-trial interval ranged from 800-1200 ms. We select a 200 ms prestimulus and 400 ms poststimulus window. We then select trials where left median nerve stimulation occurred (trigger code = 1).
+We begin by loading the SQUID data and defining trials. We select trials in which left median nerve stimulation occurred (trigger code = 1). In the experiment, the inter-trial interval ranged from 800-1200 ms, so it makes sense to select a 200 ms prestimulus and 400 ms poststimulus window.
 
 ```
 %% Preprocessing & trial definition
@@ -77,7 +77,7 @@ cfg.trialdef.prestim    = 0.2;
 cfg.trialdef.poststim   = 0.4;
 cfg                     = ft_definetrial(cfg);
 
-cfg.demean         = 'yes';  
+cfg.demean         = 'yes'; % apply baseline correction
 cfg.baselinewindow = [-Inf 0]; 
 cfg.channel        = 'MEG';
 cfg.continuous     = 'yes';
@@ -91,7 +91,7 @@ The summary method in **[ft_rejectvisual](/reference/ft_rejectvisual)** allows t
 ```
 %% Removing artifacts manually
 
-load data_stim data_stim
+load data_squid data_squid
 
 cfg              = [];
 cfg.method       = 'summary';
@@ -101,7 +101,7 @@ save data_squid_clean data_squid_clean
 ```
 
 
-We start by removing trials that have higher variance than 8e-25 Tesla-squared, then assess the channels. Removing trials also reduces channel variance, so no need to reject any channels. 
+We start by removing trials that have higher variance (bottom-left plot). Based on our data, a reasonable threshold to choose is 8e-25 Tesla-squared. Next, we assess the channel variance (top-right plot). Removing trials with high variance resulted in reducing the channel variance too, so no need to reject any channels. 
 
 {% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_ft_rejectvisual.png" width="500" %}
 
@@ -167,7 +167,7 @@ f = struct2cell(f);
     cfg.trialdef.poststim   = 0.4;
     cfg                     = ft_definetrial(cfg);
     
-    cfg.demean         = 'yes';  
+    cfg.demean         = 'yes'; % apply baseline correction
     cfg.baselinewindow = [-Inf 0];
     cfg.channel        = {'all', '-ai61'};
     data_opm(i)        = ft_preprocessing(cfg);
@@ -177,7 +177,7 @@ f = struct2cell(f);
 save data_opm data_opm
 ```
 
-OPM are magnetometers which are more sensitive to the environmental noise than the SQUID gradiometers. To remove some of the environmental noise, we can apply a denoising technique called homogeneous field correction (HFC) to clean the data.
+OPM are magnetometers which are more sensitive to the environmental noise than the SQUID gradiometers. To remove some of the environmental noise, several algorithmic denoising techniques have been proposed ([Seymour et al., 2022](https://www.sciencedirect.com/science/article/pii/S1053811921011058)). In this tutorial we will apply homogeneous field correction (HFC) ([Tierney et al., 2021](https://www.sciencedirect.com/science/article/pii/S1053811921007576)).
 
 ```
 %% HFC
@@ -196,10 +196,6 @@ save data_opm_hfc data_opm_hfc
 
 We will now manually remove trials with high variance. 
 
-{% include markup/skyblue %}
-For the SQUID-based recordings, we removed trials with variance above the threshold of 8e-25 Tesla-squared. Is it possible to use the same threshold for the OPMs? If not, why and does this affect the quality of the OPM signal? Remember that (i) OPMs are magnetometers, and (ii) they are placed closer to the scalp than the SQUIDs.
-{% include markup/end %}
-
 ```
 %% Removing artifacts manually
 
@@ -213,6 +209,10 @@ end
 
 save data_opm_hfc_clean data_opm_hfc_clean
 ```
+
+{% include markup/skyblue %}
+For the SQUID-based recordings, we removed trials with variance above the threshold of 8e-25 Tesla-squared. Is it possible to use the same threshold for the OPMs? If not, why and does this affect the quality of the OPM signal? Remember that (i) OPMs are magnetometers, and (ii) they are placed closer to the scalp than the SQUIDs.
+{% include markup/end %}
 
 ```
 %% Computing ERFs
