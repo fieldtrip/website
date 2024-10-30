@@ -147,7 +147,7 @@ fieldtrip-20240417/
 If you have downloaded and unzipped by hand, it could be that there's an 'extra folder layer' in your directory structure. We recommend that you remove this extra layer, i.e. move all content one level up.
 {% include markup/end %}
 
-Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download-server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2024``` folder, which you created in the previous step.
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2024``` folder, which you created in the previous step.
 
 ```
 % create a folder (within toolkit2024) that will contain the data, to keep a clean structure
