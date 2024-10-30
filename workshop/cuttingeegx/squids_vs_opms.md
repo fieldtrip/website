@@ -456,14 +456,23 @@ Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seco
 ```
 %% Plotting the 3D sensor topography
 
+load mesh_brain mesh_brain
+load mesh_scalp mesh_scalp
+load avg_squid avg_squid
+load ctf275 ctf275
+
+% do not select the reference sensors
+index  = startsWith(ctf275.label,'M');
+pos275 = ctf275.chanpos(index,:);
+
 % average the activity of interest in the time window [0.035 0.050] sec
 sampling_rate = 1200; % in Hz
 prestim = 0.2;
 
-I1 = (prestim+0.035)*sampling_rate; 
-I2 = (prestim+0.050)*sampling_rate;
+I1 = (prestim + 0.035) * sampling_rate; 
+I2 = (prestim + 0.050) * sampling_rate;
 
-selected_avg = mean(avg_stim.avg(:, I1:I2), 2);
+selected_avg = mean(avg_squid.avg(:, I1:I2), 2);
 
 % Plot
 figure;
@@ -471,7 +480,7 @@ ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'no
 hold on
 ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none');
 hold on
-ft_plot_topo3d(pos275,selected_avg, 'facealpha', 0.9)
+ft_plot_topo3d(pos275, selected_avg, 'facealpha', 0.9)
 camlight
 view([360 0])
 
