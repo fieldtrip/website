@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39444375'
+- idtype: doi
+  value: 10.1177/23312165241287622
+- idtype: pmcid
+  value: PMC11520018
+authors:
+- authtype: Author
+  name: Frei V
+- authtype: Author
+  name: Schmitt R
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Giroud N
+epubdate: 2024 Oct 24
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165241287622'
+pmclivedate: 2024/10/29
+printpubdate: ''
+pubdate: 2024 Oct 24
+sortdate: 2024/10/24 00:00
+source: Trends Hear
+title: Processing of Visual Speech Cues in Speech-in-Noise Comprehension Depends on
+  Working Memory Capacity and Enhances Neural Speech Tracking in Older Adults With
+  Hearing Impairment
+uid: '11520018'
+volume: '28'

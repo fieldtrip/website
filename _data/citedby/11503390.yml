@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39449315'
+- idtype: doi
+  value: 10.3390/clockssleep6040041
+- idtype: pmcid
+  value: PMC11503390
+authors:
+- authtype: Author
+  name: Benkirane O
+- authtype: Author
+  name: Simor P
+- authtype: Author
+  name: Mairesse O
+- authtype: Author
+  name: Peigneux P
+epubdate: 2024 Oct 22
+fulljournalname: Clocks & Sleep
+issue: '4'
+pages: 602-618
+pmclivedate: 2024/10/26
+printpubdate: ''
+pubdate: 2024 Oct 22
+sortdate: 2024/10/22 00:00
+source: Clocks Sleep
+title: Sleep Fragmentation Modulates the Neurophysiological Correlates of Cognitive
+  Fatigue
+uid: '11503390'
+volume: '6'

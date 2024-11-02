@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39451342'
+- idtype: doi
+  value: 10.3390/bioengineering11100967
+- idtype: pmcid
+  value: PMC11504048
+authors:
+- authtype: Author
+  name: Kaviri SM
+- authtype: Author
+  name: Vinjamuri R
+epubdate: 2024 Sep 27
+fulljournalname: Bioengineering
+issue: '10'
+pages: '967'
+pmclivedate: 2024/10/26
+printpubdate: ''
+pubdate: 2024 Sep 27
+sortdate: 2024/09/27 00:00
+source: Bioengineering (Basel)
+title: Integrating Electroencephalography Source Localization and Residual Convolutional
+  Neural Network for Advanced Stroke Rehabilitation
+uid: '11504048'
+volume: '11'

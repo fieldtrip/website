@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39451984'
+- idtype: doi
+  value: 10.3390/brainsci14100970
+- idtype: pmcid
+  value: PMC11505688
+authors:
+- authtype: Author
+  name: Rhodes E
+- authtype: Author
+  name: Gaetz W
+- authtype: Author
+  name: Marsden J
+- authtype: Author
+  name: Hall SD
+epubdate: 2024 Sep 26
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '970'
+pmclivedate: 2024/10/26
+printpubdate: ''
+pubdate: 2024 Sep 26
+sortdate: 2024/09/26 00:00
+source: Brain Sci
+title: Post-Movement Beta Synchrony Inhibits Cortical Excitability
+uid: '11505688'
+volume: '14'

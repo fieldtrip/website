@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39401242'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002849
+- idtype: pmcid
+  value: PMC11501019
+authors:
+- authtype: Author
+  name: Nordén F
+- authtype: Author
+  name: Iravani B
+- authtype: Author
+  name: Schaefer M
+- authtype: Author
+  name: Winter AL
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Arshamian A
+- authtype: Author
+  name: Lundström JN
+epubdate: 2024 Oct 14
+fulljournalname: PLOS Biology
+issue: '10'
+pages: e3002849
+pmclivedate: 2024/10/24
+printpubdate: ''
+pubdate: 2024 Oct 14
+sortdate: 2024/10/14 00:00
+source: PLoS Biol
+title: The human olfactory bulb communicates perceived odor valence to the piriform
+  cortex in the gamma band and receives a refined representation back in the beta
+  band
+uid: '11501019'
+volume: '22'

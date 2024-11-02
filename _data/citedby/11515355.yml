@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39449097'
+- idtype: doi
+  value: 10.1186/s13195-024-01582-w
+- idtype: pmcid
+  value: PMC11515355
+authors:
+- authtype: Author
+  name: Chetty CA
+- authtype: Author
+  name: Bhardwaj H
+- authtype: Author
+  name: Kumar GP
+- authtype: Author
+  name: Devanand T
+- authtype: Author
+  name: Sekhar CS
+- authtype: Author
+  name: Aktürk T
+- authtype: Author
+  name: Kiyi I
+- authtype: Author
+  name: Yener G
+- authtype: Author
+  name: Güntekin B
+- authtype: Author
+  name: Joseph J
+- authtype: Author
+  name: Adaikkan C
+epubdate: 2024 Oct 24
+fulljournalname: Alzheimer's Research & Therapy
+issue: ''
+pages: '236'
+pmclivedate: 2024/10/28
+printpubdate: ''
+pubdate: 2024 Oct 24
+sortdate: 2024/10/24 00:00
+source: Alzheimers Res Ther
+title: 'EEG biomarkers in Alzheimer’s and prodromal Alzheimer’s: a comprehensive analysis
+  of spectral and connectivity features'
+uid: '11515355'
+volume: '16'
