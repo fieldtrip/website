@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39461964'
+- idtype: doi
+  value: 10.1038/s41531-024-00812-0
+- idtype: pmcid
+  value: PMC11513109
+authors:
+- authtype: Author
+  name: Gharabaghi A
+- authtype: Author
+  name: Cebi I
+- authtype: Author
+  name: Leavitt D
+- authtype: Author
+  name: Scherer M
+- authtype: Author
+  name: Bookjans P
+- authtype: Author
+  name: Brunnett B
+- authtype: Author
+  name: Milosevic L
+- authtype: Author
+  name: Weiss D
+epubdate: 2024 Oct 26
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '204'
+pmclivedate: 2024/10/27
+printpubdate: ''
+pubdate: 2024 Oct 26
+sortdate: 2024/10/26 00:00
+source: NPJ Parkinsons Dis
+title: Randomized crossover trial on motor and non-motor outcome of directional deep
+  brain stimulation in Parkinson’s disease
+uid: '11513109'
+volume: '10'

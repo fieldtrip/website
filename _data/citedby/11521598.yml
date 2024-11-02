@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39479243'
+- idtype: doi
+  value: 10.1098/rsos.240048
+- idtype: pmcid
+  value: PMC11521598
+authors:
+- authtype: Author
+  name: Chung V
+- authtype: Author
+  name: Mennella R
+- authtype: Author
+  name: Pacherie E
+- authtype: Author
+  name: Grezes J
+epubdate: 2024 Oct 30
+fulljournalname: Royal Society Open Science
+issue: '10'
+pages: '240048'
+pmclivedate: 2024/10/30
+printpubdate: ''
+pubdate: 2024 Oct 30
+sortdate: 2024/10/30 00:00
+source: R Soc Open Sci
+title: 'Social bonding through shared experiences: the role of emotional intensity'
+uid: '11521598'
+volume: '11'

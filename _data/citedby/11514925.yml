@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39152615'
+- idtype: doi
+  value: 10.1002/acn3.52177
+- idtype: pmcid
+  value: PMC11514925
+authors:
+- authtype: Author
+  name: Cai N
+- authtype: Author
+  name: Shi W
+- authtype: Author
+  name: Chen R
+- authtype: Author
+  name: Chen B
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Wang N
+epubdate: 2024 Aug 16
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '10'
+pages: 2633-2644
+pmclivedate: 2024/10/29
+printpubdate: ''
+pubdate: 2024 Aug 16
+sortdate: 2024/08/16 00:00
+source: Ann Clin Transl Neurol
+title: Cerebral‐Cerebellar Cortical Activity and Connectivity Underlying Sensory Trick
+  in Cervical Dystonia
+uid: '11514925'
+volume: '11'
