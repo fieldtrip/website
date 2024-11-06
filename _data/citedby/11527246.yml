@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '39480757'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002828
+- idtype: pmcid
+  value: PMC11527246
+authors:
+- authtype: Author
+  name: Nierula B
+- authtype: Author
+  name: Stephani T
+- authtype: Author
+  name: Bailey E
+- authtype: Author
+  name: Kaptan M
+- authtype: Author
+  name: Pohle LM
+- authtype: Author
+  name: Horn U
+- authtype: Author
+  name: Mouraux A
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Curio G
+- authtype: Author
+  name: Nikulin VV
+- authtype: Author
+  name: Eippert F
+epubdate: 2024 Oct 31
+fulljournalname: PLOS Biology
+issue: '10'
+pages: e3002828
+pmclivedate: 2024/10/31
+printpubdate: ''
+pubdate: 2024 Oct 31
+sortdate: 2024/10/31 00:00
+source: PLoS Biol
+title: A multichannel electrophysiological approach to noninvasively and precisely
+  record human spinal cord activity
+uid: '11527246'
+volume: '22'
