@@ -1102,7 +1102,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.features** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
-**cfg.feedback** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_badchannel](/reference/ft_badchannel), [ft_baddata](/reference/ft_baddata), [ft_badsegment](/reference/ft_badsegment), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_denoise_hfc](/reference/ft_denoise_hfc), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/realtime/example/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_resampledata](/reference/ft_resampledata), [ft_respiration](/reference/ft_respiration), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spikesorting](/reference/contrib/spike/ft_spikesorting), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_topoplotCC](/reference/ft_topoplotCC)  
+**cfg.feedback** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_badchannel](/reference/ft_badchannel), [ft_baddata](/reference/ft_baddata), [ft_badsegment](/reference/ft_badsegment), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_denoise_hfc](/reference/ft_denoise_hfc), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_headcircumference](/reference/ft_headcircumference), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/realtime/example/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_resampledata](/reference/ft_resampledata), [ft_respiration](/reference/ft_respiration), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spikesorting](/reference/contrib/spike/ft_spikesorting), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.fiducial** - [ft_electroderealign](/reference/ft_electroderealign)  
@@ -1114,22 +1114,22 @@ A detailed description of each function is available in the [reference documenta
 **cfg.fiducial.bregma** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.fiducial.ini** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
+**cfg.fiducial.ini** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_headcircumference](/reference/ft_headcircumference)  
 
 
 **cfg.fiducial.lambda** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.fiducial.lpa** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
+**cfg.fiducial.lpa** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_headcircumference](/reference/ft_headcircumference), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
-**cfg.fiducial.nas** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
+**cfg.fiducial.nas** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_headcircumference](/reference/ft_headcircumference), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
 **cfg.fiducial.pc** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.fiducial.rpa** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
+**cfg.fiducial.rpa** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_headcircumference](/reference/ft_headcircumference), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
 **cfg.fiducial.xzpoint** - [ft_volumerealign](/reference/ft_volumerealign)  
