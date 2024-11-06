@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39478090'
+- idtype: doi
+  value: 10.1038/s41598-024-76059-9
+- idtype: pmcid
+  value: PMC11525714
+authors:
+- authtype: Author
+  name: Fan Z
+- authtype: Author
+  name: Zhu Y
+- authtype: Author
+  name: Suzuki C
+- authtype: Author
+  name: Suzuki Y
+- authtype: Author
+  name: Watanabe Y
+- authtype: Author
+  name: Watanabe T
+- authtype: Author
+  name: Abe T
+epubdate: 2024 Oct 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '26062'
+pmclivedate: 2024/10/31
+printpubdate: ''
+pubdate: 2024 Oct 30
+sortdate: 2024/10/30 00:00
+source: Sci Rep
+title: Binaural beats at 0.25 Hz shorten the latency to slow-wave sleep during daytime
+  naps
+uid: '11525714'
+volume: '14'

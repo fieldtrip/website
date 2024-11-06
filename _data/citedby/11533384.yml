@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/imag_a_00283
+- idtype: pmcid
+  value: PMC11533384
+authors:
+- authtype: Author
+  name: Schofield H
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Feys O
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Bobela D
+- authtype: Author
+  name: Corvilain P
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Ferez M
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Coleman S
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Tanner Z
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: de Tiège X
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 Sep 25
+fulljournalname: Imaging Neuroscience (Cambridge, Mass.)
+issue: ''
+pages: 1-22
+pmclivedate: 2024/11/05
+printpubdate: ''
+pubdate: 2024 Sep 25
+sortdate: 2024/09/25 00:00
+source: Imaging Neurosci (Camb)
+title: A novel, robust, and portable platform for magnetoencephalography using optically-pumped
+  magnetometers
+uid: '11533384'
+volume: '2'
