@@ -372,6 +372,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.artifact** - [ft_removetemplateartifact](/reference/ft_removetemplateartifact)  
 
 
+**cfg.artifactcolor** - [ft_databrowser](/reference/ft_databrowser)  
+
+
 **cfg.aseo.initcomp** - [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis)  
 
 
@@ -996,6 +999,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.eta** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
+
+
+**cfg.eventcolor** - [ft_databrowser](/reference/ft_databrowser)  
 
 
 **cfg.eventfile** - [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/online_meg/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/online_eeg/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/online_eeg/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography)  
