@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39507280'
+- idtype: doi
+  value: 10.3389/fpsyt.2024.1472332
+- idtype: pmcid
+  value: PMC11538027
+authors:
+- authtype: Author
+  name: Trucharte A
+- authtype: Author
+  name: Carmen V
+- authtype: Author
+  name: Pacios J
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Espinosa R
+- authtype: Author
+  name: Peinado V
+- authtype: Author
+  name: Pascual T
+- authtype: Author
+  name: Martinez AP
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Bentall RP
+epubdate: 2024 Oct 23
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1472332'
+pmclivedate: 2024/11/06
+printpubdate: ''
+pubdate: 2024 Oct 23
+sortdate: 2024/10/23 00:00
+source: Front Psychiatry
+title: Could an evaluative conditioning intervention ameliorate paranoid beliefs?
+  Self-reported and neurophysiological evidence from a brief intervention focused
+  on improving self-esteem
+uid: '11538027'
+volume: '15'
