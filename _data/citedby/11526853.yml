@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39484390'
+- idtype: doi
+  value: 10.1101/2024.10.10.617540
+- idtype: pmcid
+  value: PMC11526853
+authors:
+- authtype: Author
+  name: Shekara A
+- authtype: Author
+  name: Ross A
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Shear PK
+- authtype: Author
+  name: Sheehy JP
+- authtype: Author
+  name: Basu I
+epubdate: 2024 Oct 24
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.10.10.617540
+pmclivedate: 2024/11/01
+printpubdate: ''
+pubdate: 2024 Oct 24
+sortdate: 2024/10/24 00:00
+source: bioRxiv
+title: Anxious/depressed individuals exhibit disrupted frontotemporal synchrony during
+  cognitive conflict encoding
+uid: '11526853'
+volume: ''

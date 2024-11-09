@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39496589'
+- idtype: doi
+  value: 10.1038/s41467-024-53521-w
+- idtype: pmcid
+  value: PMC11535001
+authors:
+- authtype: Author
+  name: Manssuer L
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Feng Y
+- authtype: Author
+  name: Yang R
+- authtype: Author
+  name: Liu W
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Voon V
+epubdate: 2024 Nov 4
+fulljournalname: Nature Communications
+issue: ''
+pages: '9518'
+pmclivedate: 2024/11/05
+printpubdate: ''
+pubdate: 2024 Nov 4
+sortdate: 2024/11/04 00:00
+source: Nat Commun
+title: Reward recalibrates rule representations in human amygdala and hippocampus
+  intracranial recordings
+uid: '11535001'
+volume: '15'
