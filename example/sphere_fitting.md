@@ -96,9 +96,9 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     % scale the template MRI
     scale = headshape_sphere.r/scalp_sphere.r;
 
-    T2 = [1 0 0 scalp_sphere.o(1);
-          0 1 0 scalp_sphere.o(2);
-          0 0 1 scalp_sphere.o(3);
+    T2 = [1 0 0 headshape_sphere.o(1);
+          0 1 0 headshape_sphere.o(2);
+          0 0 1 headshape_sphere.o(3);
           0 0 0 1                ];
 
     T1 = [1 0 0 -scalp_sphere.o(1);
