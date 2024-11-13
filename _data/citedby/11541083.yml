@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38071152'
+- idtype: doi
+  value: 10.1016/j.bja.2023.11.014
+- idtype: pmcid
+  value: PMC11541083
+authors:
+- authtype: Author
+  name: Silverstein BH
+- authtype: Author
+  name: Parkar A
+- authtype: Author
+  name: Groenhout T
+- authtype: Author
+  name: Fracz Z
+- authtype: Author
+  name: Fryzel AM
+- authtype: Author
+  name: Fields CW
+- authtype: Author
+  name: Nelson A
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Vanini G
+- authtype: Author
+  name: Mashour GA
+- authtype: Author
+  name: Pal D
+epubdate: 2023 Dec 8
+fulljournalname: 'BJA: British Journal of Anaesthesia'
+issue: '6'
+pages: 1248-1259
+pmclivedate: 2024/11/07
+printpubdate: 2024 Jun
+pubdate: 2023 Dec 8
+sortdate: 2023/12/08 00:00
+source: Br J Anaesth
+title: Effect of prolonged sedation with dexmedetomidine, midazolam, propofol, and
+  sevoflurane on sleep homeostasis in rats
+uid: '11541083'
+volume: '132'

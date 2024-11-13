@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39484568'
+- idtype: doi
+  value: 10.1101/2024.10.22.619634
+- idtype: pmcid
+  value: PMC11526946
+authors:
+- authtype: Author
+  name: Hendrix CM
+- authtype: Author
+  name: Baker HE
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Schneck DD
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Johnson LA
+- authtype: Author
+  name: Vitek JL
+epubdate: 2024 Oct 22
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.10.22.619634
+pmclivedate: 2024/11/01
+printpubdate: ''
+pubdate: 2024 Oct 22
+sortdate: 2024/10/22 00:00
+source: bioRxiv
+title: Parkinsonism disrupts neuronal modulation in the pre-supplementary motor area
+  during movement preparation
+uid: '11526946'
+volume: ''
