@@ -111,7 +111,7 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
          0 0 scale 0;
          0 0 0 1 ];
 
-    TRANSFORM = T1*S*T2;
+    TRANSFORM = T2*S*T1;
 
     segmentedmri.transform = TRANSFORM*T_neuromag;
 
