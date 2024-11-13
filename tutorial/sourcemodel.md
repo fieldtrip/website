@@ -356,7 +356,7 @@ It is not required to create a volume conduction model of the head in order to c
 
     % create the subject specific grid, using the template grid that has just been created
     cfg           = [];
-    cfg.warpmni   = 'yes';
+    cfg.method    = 'basedonmni';
     cfg.template  = template_grid;
     cfg.nonlinear = 'yes';
     cfg.mri       = mri;
