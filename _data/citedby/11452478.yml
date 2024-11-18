@@ -1,0 +1,75 @@
+articleids:
+- idtype: pmid
+  value: '39367160'
+- idtype: doi
+  value: 10.1007/s10548-024-01078-8
+- idtype: pmcid
+  value: PMC11452478
+authors:
+- authtype: Author
+  name: Metzger M
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: McMackin R
+- authtype: Author
+  name: Giglia E
+- authtype: Author
+  name: Mitchell M
+- authtype: Author
+  name: Bista S
+- authtype: Author
+  name: Costello E
+- authtype: Author
+  name: Peelo C
+- authtype: Author
+  name: Tadjine Y
+- authtype: Author
+  name: Sirenko V
+- authtype: Author
+  name: McManus L
+- authtype: Author
+  name: Buxo T
+- authtype: Author
+  name: Fasano A
+- authtype: Author
+  name: Chipika R
+- authtype: Author
+  name: Pinto-Grau M
+- authtype: Author
+  name: Schuster C
+- authtype: Author
+  name: Heverin M
+- authtype: Author
+  name: Coffey A
+- authtype: Author
+  name: Broderick M
+- authtype: Author
+  name: Iyer PM
+- authtype: Author
+  name: Mohr K
+- authtype: Author
+  name: Gavin B
+- authtype: Author
+  name: Pender N
+- authtype: Author
+  name: Bede P
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: Nasseroleslami B
+epubdate: 2024 Oct 4
+fulljournalname: Brain Topography
+issue: '1'
+pages: '3'
+pmclivedate: 2024/10/06
+printpubdate: '2025'
+pubdate: 2024 Oct 4
+sortdate: 2024/10/04 00:00
+source: Brain Topogr
+title: Distinct Longitudinal Changes in EEG Measures Reflecting Functional Network
+  Disruption in ALS Cognitive Phenotypes
+uid: '11452478'
+volume: '38'

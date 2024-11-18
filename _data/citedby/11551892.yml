@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39214706'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0717-24.2024
+- idtype: pmcid
+  value: PMC11551892
+authors:
+- authtype: Author
+  name: Zhao C
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Zeng J
+- authtype: Author
+  name: Luo X
+- authtype: Author
+  name: Sun W
+- authtype: Author
+  name: Luan G
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Shi G
+- authtype: Author
+  name: Guan Y
+- authtype: Author
+  name: Han Z
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: e0717242024
+pmclivedate: 2024/11/12
+printpubdate: 2024 Nov 6
+pubdate: 2024 Nov 6
+sortdate: 2024/11/06 00:00
+source: J Neurosci
+title: 'Spatiotemporal Neural Network for Sublexical Information Processing: An Intracranial
+  SEEG Study'
+uid: '11551892'
+volume: '44'

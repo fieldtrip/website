@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39484571'
+- idtype: doi
+  value: 10.1101/2024.10.23.619408
+- idtype: pmcid
+  value: PMC11526945
+authors:
+- authtype: Author
+  name: Paulson AL
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Prichard AM
+- authtype: Author
+  name: Singer AC
+epubdate: 2024 Oct 23
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.10.23.619408
+pmclivedate: 2024/11/01
+printpubdate: ''
+pubdate: 2024 Oct 23
+sortdate: 2024/10/23 00:00
+source: bioRxiv
+title: 40 Hz sensory stimulation enhances CA3-CA1 coordination and prospective coding
+  during navigation in a mouse model of Alzheimer’s disease
+uid: '11526945'
+volume: ''

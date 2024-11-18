@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39261007'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0589-24.2024
+- idtype: pmcid
+  value: PMC11529814
+authors:
+- authtype: Author
+  name: Kraus F
+- authtype: Author
+  name: Ross B
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: e0589242024
+pmclivedate: ''
+printpubdate: 2024 Oct 30
+pubdate: 2024 Oct 30
+sortdate: 2024/10/30 00:00
+source: J Neurosci
+title: 'Neurophysiology of Effortful Listening: Decoupling Motivational Modulation
+  from Task Demands'
+uid: '11529814'
+volume: '44'

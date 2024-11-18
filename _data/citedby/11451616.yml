@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39372765'
+- idtype: doi
+  value: 10.1101/2024.08.27.609816
+- idtype: pmcid
+  value: PMC11451616
+authors:
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Ford TC
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Lum JA
+- authtype: Author
+  name: Bigelow FJ
+- authtype: Author
+  name: Oberman LM
+- authtype: Author
+  name: Enticott PG
+epubdate: 2024 Aug 28
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.08.27.609816
+pmclivedate: 2024/10/05
+printpubdate: ''
+pubdate: 2024 Aug 28
+sortdate: 2024/08/28 00:00
+source: bioRxiv
+title: EEG During Dynamic Facial Emotion Processing Reveals Neural Activity Patterns
+  Associated with Autistic Traits in Children
+uid: '11451616'
+volume: ''

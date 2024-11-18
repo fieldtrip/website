@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39438704'
+- idtype: doi
+  value: 10.1038/s42003-024-06791-5
+- idtype: pmcid
+  value: PMC11496808
+authors:
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Wu H
+- authtype: Author
+  name: Hu X
+epubdate: 2024 Oct 22
+fulljournalname: Communications Biology
+issue: ''
+pages: '1369'
+pmclivedate: 2024/10/23
+printpubdate: ''
+pubdate: 2024 Oct 22
+sortdate: 2024/10/22 00:00
+source: Commun Biol
+title: Social conformity updates the neural representation of facial attractiveness
+uid: '11496808'
+volume: '7'

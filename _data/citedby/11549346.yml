@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-024-54032-4
+- idtype: pmcid
+  value: PMC11549346
+authors:
+- authtype: Author
+  name: Greco A
+- authtype: Author
+  name: Moser J
+- authtype: Author
+  name: Preissl H
+- authtype: Author
+  name: Siegel M
+epubdate: 2024 Nov 8
+fulljournalname: Nature Communications
+issue: ''
+pages: '9670'
+pmclivedate: 2024/11/09
+printpubdate: ''
+pubdate: 2024 Nov 8
+sortdate: 2024/11/08 00:00
+source: Nat Commun
+title: Predictive learning shapes the representational geometry of the human brain
+uid: '11549346'
+volume: '15'

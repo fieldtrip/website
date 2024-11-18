@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39357471'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103678
+- idtype: pmcid
+  value: PMC11474185
+authors:
+- authtype: Author
+  name: Al Dahhan NZ
+- authtype: Author
+  name: Powanwe AS
+- authtype: Author
+  name: Ismail M
+- authtype: Author
+  name: Cox E
+- authtype: Author
+  name: Tseng J
+- authtype: Author
+  name: de Medeiros C
+- authtype: Author
+  name: Laughlin S
+- authtype: Author
+  name: Bouffet E
+- authtype: Author
+  name: Lefebvre J
+- authtype: Author
+  name: Mabbott DJ
+epubdate: 2024 Sep 27
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103678'
+pmclivedate: 2024/10/15
+printpubdate: ''
+pubdate: 2024 Sep 27
+sortdate: 2024/09/27 00:00
+source: Neuroimage Clin
+title: 'Network connectivity underlying information processing speed in children:
+  Application of a pediatric brain tumor survivor injury model'
+uid: '11474185'
+volume: '44'

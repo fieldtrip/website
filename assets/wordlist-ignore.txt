@@ -236,6 +236,7 @@ Brody
 Broek
 Bruña
 Bruns
+Buchner
 Buender
 Bullmore
 Bundler
@@ -1236,6 +1237,7 @@ Megis
 Meij
 Melle
 Mellinger
+Mellor
 Mendeley
 MeshLab
 Meulen
@@ -2271,18 +2273,15 @@ anonymizedata
 anonymizing
 anr
 anterio
-antomical
 anywave
 aparc
-apear
-apecific
 api
 appenddata
 appendfreq
 appendlayout
+appendsens
 appendspike
 appendtimelock
-april
 ar
 arXiv
 arduino
@@ -2299,7 +2298,6 @@ articleids
 artif
 artifactrejection
 artifactual
-artifially
 artinis
 asa
 asaproxy
@@ -2307,7 +2305,6 @@ asc
 ascii
 asion
 asm
-asround
 assignin
 asynchronies
 asynchrony

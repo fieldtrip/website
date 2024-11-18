@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39471220'
+- idtype: doi
+  value: 10.1073/pnas.2313304121
+- idtype: pmcid
+  value: PMC11551340
+authors:
+- authtype: Author
+  name: Yang X
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Kastner S
+epubdate: 2024 Oct 29
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '45'
+pages: e2313304121
+pmclivedate: ''
+printpubdate: 2024 Nov 5
+pubdate: 2024 Oct 29
+sortdate: 2024/10/29 00:00
+source: Proc Natl Acad Sci U S A
+title: Differential neural mechanisms underlie cortical gating of visual spatial attention
+  mediated by alpha-band oscillations
+uid: '11551340'
+volume: '121'

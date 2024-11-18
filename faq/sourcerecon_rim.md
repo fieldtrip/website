@@ -14,7 +14,7 @@ Depending on the resolution of your 3-D grid, there will be points in the grid t
 
 {% include image src="/assets/img/faq/sourcerecon_rim/grid_resolution_high.png" %}
 
-If you have a low grid resolution, the rim will apear to be wider (see figure below).
+If you have a low grid resolution, the rim will appear to be wider (see figure below).
 
 {% include image src="/assets/img/faq/sourcerecon_rim/grid_resolution_low.png" %}
 

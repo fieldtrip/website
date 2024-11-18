@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39257367'
+- idtype: doi
+  value: 10.1002/advs.202402493
+- idtype: pmcid
+  value: PMC11538694
+authors:
+- authtype: Author
+  name: Ren W
+- authtype: Author
+  name: Yu S
+- authtype: Author
+  name: Guo K
+- authtype: Author
+  name: Lu C
+- authtype: Author
+  name: Zhang YQ
+epubdate: 2024 Sep 11
+fulljournalname: Advanced Science
+issue: '41'
+pages: '2402493'
+pmclivedate: 2024/11/07
+printpubdate: ''
+pubdate: 2024 Sep 11
+sortdate: 2024/09/11 00:00
+source: Adv Sci (Weinh)
+title: Disrupted Human–Dog Interbrain Neural Coupling in Autism‐Associated Shank3
+  Mutant Dogs
+uid: '11538694'
+volume: '11'

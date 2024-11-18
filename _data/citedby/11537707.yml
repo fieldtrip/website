@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39502794'
+- idtype: doi
+  value: 10.1063/5.0226457
+- idtype: pmcid
+  value: PMC11537707
+authors:
+- authtype: Author
+  name: Yokoyama H
+- authtype: Author
+  name: Kaneko N
+- authtype: Author
+  name: Usuda N
+- authtype: Author
+  name: Kato T
+- authtype: Author
+  name: Khoo HM
+- authtype: Author
+  name: Fukuma R
+- authtype: Author
+  name: Oshino S
+- authtype: Author
+  name: Tani N
+- authtype: Author
+  name: Kishima H
+- authtype: Author
+  name: Yanagisawa T
+- authtype: Author
+  name: Nakazawa K
+epubdate: 2024 Oct 28
+fulljournalname: APL Bioengineering
+issue: '4'
+pages: '046104'
+pmclivedate: 2024/11/05
+printpubdate: ''
+pubdate: 2024 Oct 28
+sortdate: 2024/10/28 00:00
+source: APL Bioeng
+title: M/EEG source localization for both subcortical and cortical sources using a
+  convolutional neural network with a realistic head conductivity model
+uid: '11537707'
+volume: '8'

@@ -116,7 +116,7 @@ which results in the coordinate system being updated to RAS. This means that the
 We could in principle now continue with further coregistration, using either one (or a combination) of these
 
 1.  coregister the OPM sensor positions to anatomical landmarks on the head
-2.  coregister the OPM positions to an antomical MRI
+2.  coregister the OPM positions to an anatomical MRI
 3.  coregister an anatomical MRI to the OPM positions
 4.  coregister the OPM sensor positions and the anatomical MRI to anatomical landmarks on the head
 

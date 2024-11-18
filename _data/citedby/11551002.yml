@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38197162'
+- idtype: doi
+  value: 10.1152/jn.00369.2023
+- idtype: pmcid
+  value: PMC11551002
+authors:
+- authtype: Author
+  name: Holmes NP
+- authtype: Author
+  name: Di Chiaro NV
+- authtype: Author
+  name: Crowe EM
+- authtype: Author
+  name: Marson B
+- authtype: Author
+  name: Göbel K
+- authtype: Author
+  name: Gaigalas D
+- authtype: Author
+  name: Jay T
+- authtype: Author
+  name: Lockett AV
+- authtype: Author
+  name: Powell ES
+- authtype: Author
+  name: Zeni S
+- authtype: Author
+  name: Reader AT
+epubdate: 2024 Jan 10
+fulljournalname: Journal of Neurophysiology
+issue: '2'
+pages: 360-378
+pmclivedate: 2024/11/11
+printpubdate: 2024 Feb 1
+pubdate: 2024 Jan 10
+sortdate: 2024/01/10 00:00
+source: J Neurophysiol
+title: 'Transcranial magnetic stimulation over supramarginal gyrus stimulates primary
+  motor cortex directly and impairs manual dexterity: implications for TMS focality'
+uid: '11551002'
+volume: '131'

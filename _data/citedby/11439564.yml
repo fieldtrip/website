@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39242212'
+- idtype: doi
+  value: 10.1523/ENEURO.0091-24.2024
+- idtype: pmcid
+  value: PMC11439564
+authors:
+- authtype: Author
+  name: Lifanov-Carr J
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Linde-Domingo J
+- authtype: Author
+  name: Ferreira CS
+- authtype: Author
+  name: Wilson M
+- authtype: Author
+  name: Mayhew SD
+- authtype: Author
+  name: Charest I
+- authtype: Author
+  name: Wimber M
+epubdate: 2024 Sep 26
+fulljournalname: eNeuro
+issue: '9'
+pages: ENEURO.0091-24.2024
+pmclivedate: 2024/09/30
+printpubdate: ''
+pubdate: 2024 Sep 26
+sortdate: 2024/09/26 00:00
+source: eNeuro
+title: Reconstructing Spatiotemporal Trajectories of Visual Object Memories in the
+  Human Brain
+uid: '11439564'
+volume: '11'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39333151'
+- idtype: doi
+  value: 10.1038/s41467-024-52664-0
+- idtype: pmcid
+  value: PMC11437063
+authors:
+- authtype: Author
+  name: Sridhar S
+- authtype: Author
+  name: Lowet E
+- authtype: Author
+  name: Gritton HJ
+- authtype: Author
+  name: Freire J
+- authtype: Author
+  name: Zhou C
+- authtype: Author
+  name: Liang F
+- authtype: Author
+  name: Han X
+epubdate: 2024 Sep 27
+fulljournalname: Nature Communications
+issue: ''
+pages: '8336'
+pmclivedate: 2024/09/28
+printpubdate: ''
+pubdate: 2024 Sep 27
+sortdate: 2024/09/27 00:00
+source: Nat Commun
+title: Beta-frequency sensory stimulation enhances gait rhythmicity through strengthened
+  coupling between striatal networks and stepping movement
+uid: '11437063'
+volume: '15'

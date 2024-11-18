@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39444757'
+- idtype: doi
+  value: 10.1080/23273798.2023.2223783
+- idtype: pmcid
+  value: PMC11495849
+- idtype: MID
+  value: NIHMS1912093
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2023 Jun 12
+fulljournalname: Language, cognition and neuroscience
+issue: '8'
+pages: 991-1019
+pmclivedate: ''
+printpubdate: '2024'
+pubdate: 2023 Jun 12
+sortdate: 2023/06/12 00:00
+source: Lang Cogn Neurosci
+title: 'Better Together: Integrating Multivariate with Univariate Methods, and MEG
+  with EEG to Study Language Comprehension'
+uid: '11495849'
+volume: '39'
