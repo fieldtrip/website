@@ -40,15 +40,15 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What dataformats are supported?](/faq/dataformat)
 - [How can I append the files of two separate recordings?](/faq/append_files)
 - [How can I convert one dataformat into another?](/faq/convert_dataformat)
-- [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers)
-- [How can I preprocess a dataset that is too large to fit into memory?](/faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory)
+- [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/mergedata)
+- [How can I preprocess a dataset that is too large to fit into memory?](/faq/preproc_downsample)
 - [How can I rename channels in my data structure?](/faq?rename_channels)
 
 ### Trials, triggers and events
 
 - [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
 - [How can I find out what eventvalues and eventtypes there are in my data?](/faq/inspect_events)
-- [How can I process continuous data without triggers?](/faq/how_can_i_process_continuous_data_without_triggers)
+- [How can I process continuous data without triggers?](/faq/preproc_continuous)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
 - [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/trialinfo)
 
@@ -94,7 +94,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I convert an anatomical mri from DICOM into CTF format?](/faq/anat_dicom2ctf)
 - [How can I determine the anatomical label of a source or electrode?](/faq/label_lookup)
 - [How can I fine-tune my BEM volume conduction model?](/faq/bem_finetune)
-- [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
+- [How can I map source locations onto an anatomical label in an atlas?](/faq/sourcerecon_atlas)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations)
 - [How do I install the OpenMEEG binaries?](/faq/how_do_i_install_the_openmeeg_binaries)
 - [How do homogenous coordinate transformation matrices work?](/faq/homogenous)
@@ -149,7 +149,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Experimental questions
 
 - [How can I change the head localization in a CTF dataset?](/faq/ctf_changeheadloc)
-- [How can I monitor a subject's head position during a MEG session?](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
+- [How can I monitor a subject's head position during a MEG session?](/faq/headlocalizer)
 - [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
 - [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
 - [How can I visualize the Neuromag head position indicator coils?](/faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils)
