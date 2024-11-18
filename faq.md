@@ -23,7 +23,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [How can I read EGI mff data without the JVM?](/faq/how_can_i_read_egi_mff_data_without_the_jvm)
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
-- [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
+- [How does the CTF higher-order gradiometer work?](/faq/ctf_syntheticgradient)
 - [How can I extend the reading functions with a new dataformat?](/faq/fileio_dataformat)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/neuroscan)
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/fileio_stateless)
@@ -49,7 +49,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
 - [How can I find out what eventvalues and eventtypes there are in my data?](/faq/inspect_events)
 - [How can I process continuous data without triggers?](/faq/preproc_continuous)
-- [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
+- [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/trialfun_bit2decimal)
 - [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/trialinfo)
 
 ### Artifacts
@@ -95,8 +95,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I determine the anatomical label of a source or electrode?](/faq/label_lookup)
 - [How can I fine-tune my BEM volume conduction model?](/faq/bem_finetune)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/sourcerecon_atlas)
-- [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations)
-- [How do I install the OpenMEEG binaries?](/faq/how_do_i_install_the_openmeeg_binaries)
+- [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/inspect_geometries)
+- [How do I install the OpenMEEG binaries?](/faq/openmeeg)
 - [How do homogenous coordinate transformation matrices work?](/faq/homogenous)
 - [How is anatomical, functional or statistical "volume data" described?](/faq/how_is_anatomical_functional_or_statistical_volume_data_described)
 - [How should I specify the fiducials?](/faq/fiducial)
@@ -124,10 +124,10 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I determine the onset of an effect?](/faq/effectonset)
 - [How can I test an interaction effect using cluster-based permutation tests?](/faq/clusterstats_interaction)
 - [Should I use t or F values for cluster-based permutation tests?](/faq/clusterstats_teststatistic)
-- [How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)
-- [How can I test whether a behavioral measure is phasic?](/faq/how_can_i_test_whether_a_behavioral_measure_is_phasic)
+- [How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?](/faq/behavior_signalcorrelation)
+- [How can I test whether a behavioral measure is phasic?](/faq/behavior_cosinefit)
 - [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/clusterstats_iuwcvar)
-- [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
+- [How does ft_prepare_neighbours work?](/faq/neighbours_prepare)
 - [What is the idea behind statistical inference at the second-level?](/faq/statistics_secondlevel)
 - [Why are there multiple neighbour templates for the NeuroMag306 system?](/faq/neighbours_neuromag)
 - [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/clusterstats_correcttail)
@@ -135,7 +135,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Plotting and visualization
 
 - [How can I play back EEG/MEG and synchronous audio or video?](/faq/audiovideo)
-- [How can I visualize a 'localspheres' volume conductor model?](/faq/how_can_i_visualize_a_localspheres_volume_conductor_model)
+- [How can I visualize a 'localspheres' volume conductor model?](/faq/headmodel_localspheres)
 - [How do I construct a layout file for the plotting functions?](/faq/layout_creation)
 - [I am getting strange artifacts in figures that use opacity](/faq/opacityrendering)
 - [I am having problems printing figures that use opacity](/faq/figure_opacity)
@@ -152,13 +152,13 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I monitor a subject's head position during a MEG session?](/faq/headlocalizer)
 - [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
 - [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
-- [How can I visualize the Neuromag head position indicator coils?](/faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils)
+- [How can I visualize the Neuromag head position indicator coils?](/faq/neuromag_hpi)
 
 ## Realtime data streaming and analysis
 
 - [Does the FieldTrip realtime buffer only work with MATLAB?](/faq/fieldtripbuffer)
-- [How fast is the FieldTrip buffer for realtime data streaming?](/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming)
-- [How should I get started with the FieldTrip realtime buffer?](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer)
+- [How fast is the FieldTrip buffer for realtime data streaming?](/faq/fieldtripbuffer_speed)
+- [How should I get started with the FieldTrip realtime buffer?](/faq/fieldtripbuffer_gettingstarted)
 
 ## Distributed computing
 
@@ -182,7 +182,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compile the mex files and command-line programs?](/faq/compile)
 - [How can I compile the mex files on 64-bit Windows?](/faq/compile_windows)
 - [How can I compile the mex files on macOS?](/faq/compile_osx)
-- [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
+- [How many lines of code does FieldTrip consist of?](/faq/fieldtrip_codelines)
 - [How to select the correct SPM toolbox?](/faq/spmversion)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_mexinvalid)
 - [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mex_osx)
@@ -229,9 +229,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I anonymize a brainvisino dataset?](/faq/anonymization_vrainvision)
 - [How can I anonymize data processed in FieldTrip?](/faq/anonymization_fieldtripdata)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/anonymization_anatomical)
-- [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
+- [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/anat_dicom2ctf)
 - [How can I share my MEG data?](/faq/data_sharing)
-- [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call)
+- [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/showcallinfo)
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)
 - [What are the units of the data and of the derived results?](/faq/units)

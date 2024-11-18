@@ -77,7 +77,7 @@ This can be achieved by marking the head position indicator (HPI) coil positions
 
 You can reposition to i.e. to a previous recording session by specifying cfg.template. Either by pointing to another dataset; e.g., cfg.template = 'subject01xxx.ds' (CTF275 systems only), or by pointing to a text file created by clicking the Update button during a previous recording session; e.g., cfg.template = '29-Apr-2013-xxx.txt' (CTF275 and Neuromag systems).
 
-{% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}
+{% include image src="/assets/img/faq/headlocalizer/anims1.gif" width="600" %}
 
 _Figure 1: Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both auricular points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation._
 
