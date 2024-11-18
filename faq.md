@@ -68,7 +68,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compute inter-trial coherence?](/faq/itc)
 - [How can I do time-frequency analysis on continuous data?](/faq/tfr_continuous)
 - [How does mtmconvol work?](/faq/mtmconvol)
-- [How to interpret the sign of the phase slope index?](/faq/how_to_interpret_the_sign_of_the_phase_slope_index)
+- [How to interpret the sign of the phase slope index?](/faq/phaseslopeindex)
 - [In what way can frequency domain data be represented in FieldTrip?](/faq/datatype_freq)
 - [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/freqanalysis_phasedefinition)
 - [What does "padding not sufficient for requested frequency resolution" mean?](/faq/freqanalysis_paddinginsufficient)
@@ -101,7 +101,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How is anatomical, functional or statistical "volume data" described?](/faq/how_is_anatomical_functional_or_statistical_volume_data_described)
 - [How should I specify the fiducials?](/faq/fiducial)
 - [How to change the MRI orientation, the voxel size or the field-of-view?](/faq/how_change_mri_orientation_size_fov)
-- [How to coregister an anatomical MRI with the gradiometer or electrode positions?](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions)
+- [How to coregister an anatomical MRI with the gradiometer or electrode positions?](/faq/anat_coreg)
 - [Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?](/faq/sourcerecon_outside)
 - [Is it important to have accurate measurements of electrode locations for EEG source reconstruction?](/faq/sensors_accuracy)
 - [My MRI is upside down, is this a problem?](/faq/anat_upsidedown)
@@ -138,7 +138,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I visualize a 'localspheres' volume conductor model?](/faq/how_can_i_visualize_a_localspheres_volume_conductor_model)
 - [How do I construct a layout file for the plotting functions?](/faq/layout_creation)
 - [I am getting strange artifacts in figures that use opacity](/faq/opacityrendering)
-- [I am having problems printing figures that use opacity](/faq/i_am_having_problems_printing_figures_that_use_opacity)
+- [I am having problems printing figures that use opacity](/faq/figure_opacity)
 - [What are the different Neuromag and Yokogawa layouts good for?](/faq/layout_magandgrad)
 - [What is a good way to save images for later processing in other software?](/faq/figure_export)
 - [What is the format of the layout file, which is used for plotting?](/faq/layout_fileformat)
@@ -166,12 +166,12 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ### Distributed computing with the MATLAB distributed computing toolbox
 
-- [How to get started with the MATLAB distributed computing toolbox?](/faq/how_to_get_started_with_the_matlab_distributed_computing_toolbox)
+- [How to get started with the MATLAB distributed computing toolbox?](/faq/distributed_matlab)
 
 ### Distributed computing with fieldtrip/qsub on a HPC cluster
 
-- [How to compile MATLAB code into stand-alone executables?](/faq/how_to_compile_matlab_code_into_stand-alone_executables)
-- [How to get started with distributed computing using qsub?](/faq/how_to_get_started_with_distributed_computing_using_qsub)
+- [How to compile MATLAB code into stand-alone executables?](/faq/matlab_compile)
+- [How to get started with distributed computing using qsub?](/faq/distributed_qsub)
 
 ## MATLAB questions
 
@@ -183,7 +183,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compile the mex files on 64-bit Windows?](/faq/compile_windows)
 - [How can I compile the mex files on macOS?](/faq/compile_osx)
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
-- [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
+- [How to select the correct SPM toolbox?](/faq/spmversion)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_mexinvalid)
 - [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mex_osx)
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_privatefunctions)
