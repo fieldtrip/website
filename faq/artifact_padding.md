@@ -23,9 +23,9 @@ There are different purposes for padding in the artifact detection functions:
 - filter padding (fig 1): zero padding **with**, to extend the data segment to prevent edge artifacts due to filtering.
 - artifact padding (fig 2): data padding **with**, to extend the length of a detected artifact, for example if you also want to exclude data from being analyzed in a time window following some artifact.
 
-{% include image src="/assets/img/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts/padding_fig1.png" %}
+{% include image src="/assets/img/faq/artifact_padding/padding_fig1.png" %}
 
-{% include image src="/assets/img/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts/padding_fig2.png" %}
+{% include image src="/assets/img/faq/artifact_padding/padding_fig2.png" %}
 
 See also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection) for more details on the filter padding, trial padding and artifact padding.
 

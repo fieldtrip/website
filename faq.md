@@ -21,8 +21,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ### Specific data formats
 
-- [How can I read EGI mff data without the JVM?](/faq/how_can_i_read_egi_mff_data_without_the_jvm)
-- [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
+- [How can I read EGI mff data without the JVM?](/faq/egi_nojvm)
+- [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/edf2fieldtrip)
 - [How does the CTF higher-order gradiometer work?](/faq/ctf_syntheticgradient)
 - [How can I extend the reading functions with a new dataformat?](/faq/fileio_dataformat)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/neuroscan)
@@ -31,7 +31,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
 - [How can I fix a corrupt CTF meg4 data file?](/faq/ctf_fixmeg4)
 - [How can I fix a corrupt CTF res4 header file?](/faq/ctf_fixres4)
-- [How can I read corrupted (unsaved) CTF data?](/faq/how_can_i_read_corrupted_unsaved_ctf_data)
+- [How can I read corrupted (unsaved) CTF data?](/faq/ctf_readcorrupted)
 - [I am having problems reading the CTF .hc headcoordinates file](/faq/ctf_fixhc)
 
 ### Data handling
@@ -60,7 +60,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why does my ICA output contain complex numbers?](/faq/ica_complexvalues)
 - [How can I consistently represent artifacts in my data?](/faq/artifact_representation)
 - [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/artifact_padding)
-- [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
+- [How does the filter padding in preprocessing work?](/faq/preproc_padding)
 - [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/dftfilter_residual)
 
 ## Spectral analysis
@@ -98,7 +98,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/inspect_geometries)
 - [How do I install the OpenMEEG binaries?](/faq/openmeeg)
 - [How do homogenous coordinate transformation matrices work?](/faq/homogenous)
-- [How is anatomical, functional or statistical "volume data" described?](/faq/how_is_anatomical_functional_or_statistical_volume_data_described)
+- [How is anatomical, functional or statistical "volume data" described?](/faq/datatype_volume)
 - [How should I specify the fiducials?](/faq/fiducial)
 - [How to change the MRI orientation, the voxel size or the field-of-view?](/faq/how_change_mri_orientation_size_fov)
 - [How to coregister an anatomical MRI with the gradiometer or electrode positions?](/faq/anat_coreg)
@@ -112,9 +112,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What kind of volume conduction models are implemented?](/faq/datatype_headmodel)
 - [Where can I find the dipoli command-line executable?](/faq/dipoli_filelocation)
 - [Where is the anterior commissure?](/faq/anterior_commissure)
-- [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed)
+- [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/sourcerecon_rim)
 - [Why is the source model deformed or incorrectly aligned after warping template?](/faq/sourcemodel_deformation)
-- [Why should I use an average reference for EEG source reconstruction?](/faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction)
+- [Why should I use an average reference for EEG source reconstruction?](/faq/sourcerecon_avgref)
 - [Why does my EEG headmodel look funny?](/faq/headmodel_meshingproblem)
 
 ## Statistical analysis
@@ -150,8 +150,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 - [How can I change the head localization in a CTF dataset?](/faq/ctf_changeheadloc)
 - [How can I monitor a subject's head position during a MEG session?](/faq/headlocalizer)
-- [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
-- [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
+- [How can I test the serial port connection between two computers?](/faq/serialport)
+- [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/psychtoolbox_macbook)
 - [How can I visualize the Neuromag head position indicator coils?](/faq/neuromag_hpi)
 
 ## Realtime data streaming and analysis
@@ -207,8 +207,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I get an offline version of the website documentation?](/faq/documentation_offline)
 - [Can I use the FieldTrip logo on my poster?](/faq/fieldtriplogo)
 - [How many people are subscribed to the email discussion list?](/faq/emaillist_subscribers)
-- [How should I refer to FieldTrip in my publication?](/faq/how_should_i_refer_to_fieldtrip_in_my_publication)
-- [How should I send example data to the developers?](/faq/how_should_i_send_example_data_to_the_developers)
+- [How should I refer to FieldTrip in my publication?](/faq/fieldtrip_reference)
+- [How should I send example data to the developers?](/faq/datasharing)
 - [How to ask good questions to the community?](/faq/how_to_ask_good_questions_to_the_community)
 - [I am having problems downloading](/faq/download_ftpproblem)
 - [I am working at the Donders, should I also download FieldTrip?](/faq/download_donders)
@@ -232,7 +232,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/anat_dicom2ctf)
 - [How can I share my MEG data?](/faq/data_sharing)
 - [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/showcallinfo)
-- [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
+- [How should I prepare for the upcoming FieldTrip workshop?](/faq/workshop_preparation)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)
 - [What are the units of the data and of the derived results?](/faq/units)
 - [Which datasets are used in the documentation and where are they used?](/faq/datasets)
