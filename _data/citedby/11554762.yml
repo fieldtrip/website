@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39534724'
+- idtype: doi
+  value: 10.1093/braincomms/fcae353
+- idtype: pmcid
+  value: PMC11554762
+authors:
+- authtype: Author
+  name: Al Dahhan NZ
+- authtype: Author
+  name: Tseng J
+- authtype: Author
+  name: de Medeiros C
+- authtype: Author
+  name: Narayanan S
+- authtype: Author
+  name: Arnold DL
+- authtype: Author
+  name: Coe BC
+- authtype: Author
+  name: Munoz DP
+- authtype: Author
+  name: Yeh EA
+- authtype: Author
+  name: Mabbott DJ
+epubdate: 2024 Nov 12
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcae353
+pmclivedate: 2024/11/12
+printpubdate: ''
+pubdate: 2024 Nov 12
+sortdate: 2024/11/12 00:00
+source: Brain Commun
+title: 'Compensatory mechanisms amidst demyelinating disorders: insights into cognitive
+  preservation'
+uid: '11554762'
+volume: '6'

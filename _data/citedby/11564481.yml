@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39555251'
+- idtype: doi
+  value: 10.1007/s11571-024-10093-1
+- idtype: pmcid
+  value: PMC11564481
+authors:
+- authtype: Author
+  name: Honcamp H
+- authtype: Author
+  name: Duggirala SX
+- authtype: Author
+  name: Rodiño Climent J
+- authtype: Author
+  name: Astudillo A
+- authtype: Author
+  name: Trujillo-Barreto NJ
+- authtype: Author
+  name: Schwartze M
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: van Amelsvoort TA
+- authtype: Author
+  name: El-Deredy W
+- authtype: Author
+  name: Kotz SA
+epubdate: 2024 Mar 22
+fulljournalname: Cognitive Neurodynamics
+issue: '5'
+pages: 2405-2417
+pmclivedate: 2024/11/16
+printpubdate: 2024 Oct
+pubdate: 2024 Mar 22
+sortdate: 2024/03/22 00:00
+source: Cogn Neurodyn
+title: EEG resting state alpha dynamics predict an individual’s vulnerability to auditory
+  hallucinations
+uid: '11564481'
+volume: '18'

@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '39316444'
+- idtype: doi
+  value: 10.1172/JCI181095
+- idtype: pmcid
+  value: PMC11563685
+authors:
+- authtype: Author
+  name: Lin ZJ
+- authtype: Author
+  name: Gu X
+- authtype: Author
+  name: Gong WK
+- authtype: Author
+  name: Wang M
+- authtype: Author
+  name: Wu YJ
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Wu XR
+- authtype: Author
+  name: Zhao XY
+- authtype: Author
+  name: Zhu MX
+- authtype: Author
+  name: Wang LY
+- authtype: Author
+  name: Liu Q
+- authtype: Author
+  name: Yuan TF
+- authtype: Author
+  name: Li WG
+- authtype: Author
+  name: Xu TL
+epubdate: 2024 Sep 24
+fulljournalname: The Journal of Clinical Investigation
+issue: '22'
+pages: e181095
+pmclivedate: 2024/11/15
+printpubdate: ''
+pubdate: 2024 Sep 24
+sortdate: 2024/09/24 00:00
+source: J Clin Invest
+title: Stimulation of an entorhinal-hippocampal extinction circuit facilitates fear
+  extinction in a post-traumatic stress disorder model
+uid: '11563685'
+volume: '134'

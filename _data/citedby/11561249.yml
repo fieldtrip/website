@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39537677'
+- idtype: doi
+  value: 10.1038/s41598-024-77693-z
+- idtype: pmcid
+  value: PMC11561249
+authors:
+- authtype: Author
+  name: Wolf MI
+- authtype: Author
+  name: Wittkamp CA
+- authtype: Author
+  name: Rose M
+epubdate: 2024 Nov 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '27874'
+pmclivedate: 2024/11/14
+printpubdate: ''
+pubdate: 2024 Nov 13
+sortdate: 2024/11/13 00:00
+source: Sci Rep
+title: Differential neural activity predicts the long-term stability of the effects
+  of positive and negative expectations on pain
+uid: '11561249'
+volume: '14'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39555283'
+- idtype: doi
+  value: 10.1007/s11571-024-10084-2
+- idtype: pmcid
+  value: PMC11564500
+authors:
+- authtype: Author
+  name: Braunsmann L
+- authtype: Author
+  name: Beermann F
+- authtype: Author
+  name: Strüder HK
+- authtype: Author
+  name: Abeln V
+epubdate: 2024 Mar 1
+fulljournalname: Cognitive Neurodynamics
+issue: '5'
+pages: 2221-2241
+pmclivedate: 2024/11/16
+printpubdate: 2024 Oct
+pubdate: 2024 Mar 1
+sortdate: 2024/03/01 00:00
+source: Cogn Neurodyn
+title: Self-selected versus imposed running intensity and the acute effects on mood,
+  cognition, and (a)periodic brain activity
+uid: '11564500'
+volume: '18'
