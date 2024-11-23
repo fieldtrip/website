@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39561183'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002855
+- idtype: pmcid
+  value: PMC11575773
+authors:
+- authtype: Author
+  name: Dickey CW
+- authtype: Author
+  name: Verzhbinsky IA
+- authtype: Author
+  name: Kajfez S
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Gonzalez CE
+- authtype: Author
+  name: Chauvel PY
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Pati S
+- authtype: Author
+  name: Halgren E
+epubdate: 2024 Nov 19
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3002855
+pmclivedate: 2024/11/19
+printpubdate: ''
+pubdate: 2024 Nov 19
+sortdate: 2024/11/19 00:00
+source: PLoS Biol
+title: Thalamic spindles and Up states coordinate cortical and hippocampal co-ripples
+  in humans
+uid: '11575773'
+volume: '22'

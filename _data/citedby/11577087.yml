@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39568547'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1438017
+- idtype: pmcid
+  value: PMC11577087
+authors:
+- authtype: Author
+  name: Szaszkó B
+- authtype: Author
+  name: Schmid RR
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Maiworm M
+- authtype: Author
+  name: Laiber S
+- authtype: Author
+  name: Lange MJ
+- authtype: Author
+  name: Tschenett H
+- authtype: Author
+  name: Nater UM
+- authtype: Author
+  name: Ansorge U
+epubdate: 2024 Nov 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1438017'
+pmclivedate: 2024/11/20
+printpubdate: ''
+pubdate: 2024 Nov 5
+sortdate: 2024/11/05 00:00
+source: Front Hum Neurosci
+title: 'Testing the impact of hatha yoga on task switching: a randomized controlled
+  trial'
+uid: '11577087'
+volume: '18'

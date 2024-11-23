@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39568665'
+- idtype: doi
+  value: 10.3389/fnins.2024.1441799
+- idtype: pmcid
+  value: PMC11576458
+authors:
+- authtype: Author
+  name: Ehrhardt NM
+- authtype: Author
+  name: Niehoff C
+- authtype: Author
+  name: Oßwald AC
+- authtype: Author
+  name: Antonenko D
+- authtype: Author
+  name: Lucchese G
+- authtype: Author
+  name: Fleischmann R
+epubdate: 2024 Nov 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1441799'
+pmclivedate: 2024/11/20
+printpubdate: ''
+pubdate: 2024 Nov 6
+sortdate: 2024/11/06 00:00
+source: Front Neurosci
+title: Comparison of dry and wet electroencephalography for the assessment of cognitive
+  evoked potentials and sensor-level connectivity
+uid: '11576458'
+volume: '18'
