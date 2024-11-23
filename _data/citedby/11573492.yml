@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39528303'
+- idtype: doi
+  value: 10.1523/ENEURO.0086-24.2024
+- idtype: pmcid
+  value: PMC11573492
+authors:
+- authtype: Author
+  name: Zebarjadi N
+- authtype: Author
+  name: Kluge A
+- authtype: Author
+  name: Adler E
+- authtype: Author
+  name: Levy J
+epubdate: 2024 Nov 15
+fulljournalname: eNeuro
+issue: '11'
+pages: ENEURO.0086-24.2024
+pmclivedate: 2024/11/19
+printpubdate: ''
+pubdate: 2024 Nov 15
+sortdate: 2024/11/15 00:00
+source: eNeuro
+title: New Vistas for the Relationship between Empathy and Political Ideology
+uid: '11573492'
+volume: '11'
