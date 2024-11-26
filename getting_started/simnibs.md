@@ -43,7 +43,7 @@ We will need `Subject01.mri` which you can get [here](https://download.fieldtrip
 
 ### Generating the head model
 
-In order to create a (realistic) head model, we will need a subject-specific MR image. If a single image is used, this will often be T1-weighted as this provides great contrast between cortical tissues. However, SimNIBS offers the possibility to supply an additional contrast to improve the anatomical accuracy of the resulting model. We usually recommend a T2-weighted scan as this provides a nice contrast between bone and cerebrospinal flud (CSF). If possible, supplying both a T1- and a T2-weighted image is highly recommended. However, for this particular subject, we only have a T1-weighted scan. SimNIBS also needs a subject ID for its data. Here, we will simply use `Subject01`.
+In order to create a (realistic) head model, we will need a subject-specific MR image. If a single image is used, this will often be T1-weighted as this provides great contrast between cortical tissues. However, SimNIBS offers the possibility to supply an additional contrast to improve the anatomical accuracy of the resulting model. We usually recommend a T2-weighted scan as this provides a nice contrast between bone and cerebrospinal fluid (CSF). If possible, supplying both a T1- and a T2-weighted image is highly recommended. However, for this particular subject, we only have a T1-weighted scan. SimNIBS also needs a subject ID for its data. Here, we will simply use `Subject01`.
 
 The segmentation and meshing tool in SimNIBS is called [charm](https://simnibs.github.io/simnibs/build/html/documentation/command_line/charm.htmls). Running this will create a folder called `m2m_Subject01` in the directory from which the command is executed.
 
@@ -56,7 +56,7 @@ It is always advised to visually check the accuracy of the results before contin
 
 {% include image src="/assets/img/getting_started/simnibs/segmentation.png" width="600" %}
 
-_Figure. Segmentation (borders) overlaid on the T1-weighted image. This MR image has a rather low resolution (1.25 mm isovoxel), however, the skull (compact and spongy bone) is still captured reasonably well._
+_Figure. Segmentation (borders) overlaid on the T1-weighted image. This MR image has a rather low resolution (1.25 mm isotropic voxels), however, the skull (compact and spongy bone) is still captured reasonably well._
 
 {% include image src="/assets/img/getting_started/simnibs/headmodel_sagittal.png" width="600" %}
 {% include image src="/assets/img/getting_started/simnibs/headmodel_coronal_connectivity.png" width="600" %}
