@@ -404,6 +404,9 @@ DICOM
 DICOMs
 DICS
 DIPFIT
+DK
+DKTatlas
+DL
 DLL
 DLLs
 DMA
@@ -598,6 +601,7 @@ FIXME's
 FIl
 FLTK
 FLxx
+FMRIB
 FNS
 FOOOF
 FOV
@@ -668,6 +672,7 @@ Freitas
 Friston
 Frontpanel
 Fs
+FsAverage
 FtBuffer
 Fz
 GAKL
@@ -862,6 +867,7 @@ IPv
 IRASA
 IRQ
 IRRAD
+Irv
 ISFINITE
 ISI
 ISOTRAK
@@ -1401,6 +1407,7 @@ OFA
 OGE
 OHBM
 OOP
+
 OPM
 OPMEG
 OPMs
@@ -1591,6 +1598,7 @@ RHJ
 RHS
 RIKEN
 RITMO
+RK
 RL
 RLTB
 RNet
@@ -2201,6 +2209,7 @@ anatonical
 andusing
 anims
 annd
+annot
 annnouncement
 anonimized
 anonimizing
@@ -2212,6 +2221,7 @@ anr
 anterio
 antomical
 anywave
+aparc
 apear
 apecific
 api
@@ -3250,7 +3260,9 @@ ftcolors
 ftgrid
 ftimwin
 ftmriN
+ftpath
 ftplotmesh
+ftver
 ftwiki
 ftx
 fuPpes
@@ -4255,6 +4267,7 @@ paramters
 paraview
 parcellated
 parcellation
+parcellations
 parfor
 paris
 parlour

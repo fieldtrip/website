@@ -474,7 +474,7 @@ To facilitate later processing, we will assign a better defined coordinate syste
 _Figure: 3D scan with a coordinate system relating to the head and helmet._
 
 {% include markup/info %}
-As the ears are not visible, you have to click on dummy locations that appropriate the LPA and RPA points. Consequently, your coarse coregistration will be somewhat different from the one here in the tuturioal. In the subsequent code we will use some parameters (rotations, transloations) that depend on this initial coarse coregistration. To make sure that your subsequent results match what is presented here, you should download [example3_face_helmet_aligned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_face_helmet_aligned.mat) and load it in MATLAB.
+As the ears are not visible, you have to click on dummy locations that appropriate the LPA and RPA points. Consequently, your coarse coregistration will be somewhat different from the one here in the tutorial. In the subsequent code we will use some parameters (rotations, translations) that depend on this initial coarse coregistration. To make sure that your subsequent results match what is presented here, you should download [example3_face_helmet_aligned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_face_helmet_aligned.mat) and load it in MATLAB.
 
     load example3_face_helmet_aligned.mat  % this contains the aligned scan
 {% include markup/end %}

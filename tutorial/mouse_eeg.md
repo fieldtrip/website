@@ -314,7 +314,7 @@ FIXME insert figure (6 layout plot)
 
 If you think that some outlines (nose, eyes, head, whiskers and ears) are not necessary, you can pass without assigning any outline. Next step is zero point calibration for the bregma point. If you, however, use customized layout for single subject, you don't need to carry out next step.
 
-Coinsidering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on the layout that we constructed in the previous step.
+Considering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on acquired layout from previous step.
 
     bregma = [382, 280];
     layout.pos = layout.pos - repmat(bregma, size(layout.pos, 1), 1);
@@ -344,7 +344,7 @@ If you are satisfied with the result, you should save it to a MATLAB file. Howev
 
 ### Deal with differences in animal size
 
-The polyimide film from which the high-density EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use the distance between bregma and lambda and a reference scale of 4.2 mm. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
+The polyimide film from which the EEG array is made is not stretchable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use the distance between bregma and lambda and a reference scale of 4.2 mm. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size are very comparable to those adopted in the Talairach-Tournoux anatomical atlas of the human brain.
 
 For example for a mouse with a bregma-lambda distance of 3.8, you can do the following.
 
@@ -405,7 +405,7 @@ Rather than plotting all ERPs on top of each other, we can also plot them accord
 
 FIXME insert figure (9 timelock plot)
 
-When you specify `cfg.interactive = 'no'` you can use the MATLAB zoom buttons. With `cfg.interactive = 'yes'` the zoom buttonsd don't work properly, but you can make a selection of channels and click in the selection, which causes them to be averaged and displayed in a single plot. In the single plot, you can again make a selection of time, which is subsequently averaged (for all channels) and shown as the interpolated topographic distribution of the potential.
+When you specify `cfg.interactive = 'no'` you can use the MATLAB zoom buttons. With `cfg.interactive = 'yes'` the zoom buttons don't work properly, but you can make a selection of channels and click in the selection, which causes them to be averaged and displayed in a single plot. In the single plot, you can again make a selection of time, which is subsequently averaged (for all channels) and shown as the interpolated topographic distribution of the potential.
 
 FIXME insert figure (singleplot)
 
@@ -454,7 +454,7 @@ The results of the time-frequency analysis can be plotted with **[ft_multiplotTF
 FIXME insert figure (10 ft_multiplotTFR)
 FIXME insert figure (11 ft_topoplotTFR)
 
-Again with `cfg.interactive = 'yes'`, which is the default, you can select one or multiple channels, click on them and get an average TFR over those channels,. In that average you can make a time and frequency selection, click in it, and get a spatial topopgraphy of the relative power over all channels in that fime-frequency range.
+Again with `cfg.interactive = 'yes'`, which is the default, you can select one or multiple channels, click on them and get an average TFR over those channels,. In that average you can make a time and frequency selection, click in it, and get a spatial topopgraphy of the relative power over all channels in that time-frequency range.
 
 If you did not construct a layout, you can visualize the TFRs sequentially over all channels. An advantage of this is that in contrast to the previous figure, channel VMP is now also plotted. There is no location for that channel in the layout contained in the `mouse_layout.mat` file.
 
