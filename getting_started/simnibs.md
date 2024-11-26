@@ -160,7 +160,6 @@ which will write three MAT files (to `fem_Subject01`) with the following endings
 
 - `-fwd.mat` the forward solution (leadfield matrix).
 - `-src.mat` the source space.
-- `-morph.mat` two sparse matrices (one for each hemisphere) which, when applied to the current source space, transform it to *fsaverage* (of the chosen order).
 
 Let us load these into MATLAB
 
