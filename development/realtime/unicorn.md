@@ -21,7 +21,7 @@ The **[ft_realtime_unicornproxy](/reference/realtime/example/ft_realtime_unicorn
 
 ### Windows and LSL
 
-The Unicorn system comes with a Windows-only software suite, which uncludes the UnicornLSL application that streams data directly to [LabStreamingLayer (LSL)](https://labstreaminglayer.readthedocs.io). Since LSL is compatible with MATLAB, Python and C/C++, you can use this. This is a robust solution, but requires a Windows data acquisition computer.
+The Unicorn system comes with a Windows-only software suite, which includes the UnicornLSL application that streams data directly to [LabStreamingLayer (LSL)](https://labstreaminglayer.readthedocs.io). Since LSL is compatible with MATLAB, Python and C/C++, you can use this. This is a robust solution, but requires a Windows data acquisition computer.
 
 ### BrainFlow
 

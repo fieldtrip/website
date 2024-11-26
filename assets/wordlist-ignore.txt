@@ -490,6 +490,7 @@ DtbIPw
 Dubarry
 DuckDuckGo
 Duneuro
+DUNEuro
 Dvoretskii
 DynamicTableRegion
 EASYCAP
@@ -1618,6 +1619,8 @@ Pubmed
 Putamen
 PyCorder
 Pz
+PARDISO
+PETSc
 QIpnMgJ
 QLvsa
 QRS
@@ -5205,6 +5208,7 @@ uilayout
 uint
 uk
 un
+unclipped
 uncludes
 undefind
 underdetermined
