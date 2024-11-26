@@ -165,10 +165,9 @@ which will write three MAT files (to `fem_Subject01`) with the following endings
 Let us load these into MATLAB
 
     % matlab
-    fwd = load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-fwd.mat;
-    src = load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-src.mat;
-    morph = load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-morph.mat;
-
+    load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-fwd.mat;
+    load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-src.mat;
+   
 and see what they contain
 
     % matlab
