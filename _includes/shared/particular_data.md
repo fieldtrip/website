@@ -74,6 +74,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
 - [Getting started with data from Homer](/getting_started/homer)
 - [Getting started with MNE(-python)](/getting_started/mne)
+- [Getting started with Simnibs](/getting_started/simnibs)
 
 ## Getting started with real-time data analysis
 
