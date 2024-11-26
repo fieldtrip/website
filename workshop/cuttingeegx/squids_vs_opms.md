@@ -61,6 +61,7 @@ For the OPMs we will take the following steps:
 
 ## Preprocessing & computing ERFs
 ### SQUID
+
 We begin by loading the SQUID data and defining trials. In the experiment, the inter-trial interval ranged from 800-1200 ms. We select a 200 ms prestimulus and 400 ms poststimulus window. We then select trials where left median nerve stimulation occurred (trigger code = 1).
 
 ```
