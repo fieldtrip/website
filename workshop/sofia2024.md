@@ -5,7 +5,7 @@ tags: sofia2024
 
 # FieldTrip workshop Sofia 07-10.02.2024
 
-[The Institute of Neurobiology](https://inb.bas.bg/index-en.html) at  the [Bulgarian Academy of Science](https://www.bas.bg/?lang=en) is organizing a FieldTrip worshop in Sofia.
+[The Institute of Neurobiology](https://inb.bas.bg/index-en.html) at  the [Bulgarian Academy of Science](https://www.bas.bg/?lang=en) is organizing a FieldTrip workshop in Sofia.
 
 # Where
 
@@ -13,7 +13,7 @@ The workshop will take place at **[заседателната зала на Ин
 
 # Who
 
-Tzvetan Popov with local organizers and the generous hardware support by [MBrainTrain](https://mbraintrain.com/). 
+Tzvetan Popov with local organizers and the generous hardware support by [MBrainTrain](https://mbraintrain.com/).
 
 ## Program
 
@@ -38,7 +38,7 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 
 **Session III**
 
-- **9:00 – 10:45** **_Hyperscanning Demo_**: Demonstration and data aquistion of multiple participants in social cognition context [Ivan Gligorijevic](https://rs.linkedin.com/in/ivan-gligorijevic) from  [MBrainTrain](https://mbraintrain.com/)
+- **9:00 – 10:45** **_Hyperscanning Demo_**: Demonstration and data acquistion of multiple participants in social cognition context [Ivan Gligorijevic](https://rs.linkedin.com/in/ivan-gligorijevic) from  [MBrainTrain](https://mbraintrain.com/)
 - **10:45 – 11:00** Coffee break
 - **11:00 – 12:30** **_Hyperscanning Demo_**: Continued
 - **12:30 – 13:30** Lunch
@@ -75,20 +75,22 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions you have to start MATLAB. Make sure you 
-have downloaded the hands-on data prior to the start of the workshop as 
-it is quite a large download. A recent version of FieldTrip can be 
-downloaded [here](https://cloud.uni-konstanz.de/index.php/s/EkqPeQ9sxYqpCcB), and the tutorial data can be downloaded [here](https://www.dropbox.com/scl/fo/29r037lr39mbfzvgrcjmn/h?rlkey=skpwe3ggpx6jeava7udrej4h5&dl=0).
+For the hands-on sessions you have to start MATLAB. Make sure you
+have downloaded the hands-on data prior to the start of the workshop as
+it is quite a large download. A recent version of FieldTrip can be
+downloaded [here](https://cloud.uni-konstanz.de/index.php/s/EkqPeQ9sxYqpCcB),
+and the tutorial data can be downloaded
+[here](https://www.dropbox.com/scl/fo/29r037lr39mbfzvgrcjmn/h?rlkey=skpwe3ggpx6jeava7udrej4h5&dl=0).
 
-Depending on the unzip program you are using (e.g., Winrar), the 
-name of the zip file might also appear as directory, resulting in 
-path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the 
-FieldTrip directory in a FieldTrip directory. Please fix that by moving 
+Depending on the unzip program you are using (e.g., Winrar), the
+name of the zip file might also appear as directory, resulting in
+path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
+FieldTrip directory in a FieldTrip directory. Please fix that by moving
 all files one level up.
 
-After copying all files to your computer and unzipping then, you 
+After copying all files to your computer and unzipping then, you
 start MATLAB. To ensure that the right version of FieldTrip is used, and
- not another version (such as the one included in SPM or EEGLAB), you 
+ not another version (such as the one included in SPM or EEGLAB), you
 type in the MATLAB command window
 
 ```matlab
@@ -98,9 +100,9 @@ addpath(pwd)
 ft_defaults
 ```
 
-Please do NOT use the graphical path management tool from MATLAB. 
-In this hands-on session we’ll manage the path from the command line, 
-but in general you are much better off using a startup.m file than the 
+Please do NOT use the graphical path management tool from MATLAB.
+In this hands-on session we’ll manage the path from the command line,
+but in general you are much better off using a startup.m file than the
 path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories
