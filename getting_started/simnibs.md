@@ -160,7 +160,6 @@ which will write three MAT files (to `fem_Subject01`) with the following endings
 
 - `-fwd.mat` the forward solution (leadfield matrix).
 - `-src.mat` the source space.
-- `-morph.mat` two sparse matrices (one for each hemisphere) which, when applied to the current source space, transform it to *fsaverage* (of the chosen order).
 
 Let us load these into MATLAB
 
@@ -199,14 +198,6 @@ and see what they contain
         brainstructurelabel: {'CORTEX_LEFT'  'CORTEX_RIGHT'}
                     normals: [20000×3 double]
 
-    >> morph
-
-    morph =
-
-    struct with fields:
-
-        lh: [10242×10000 double]
-        rh: [10242×10000 double]
 
 You should be able to use `fwd` as if it had been obtained from `ft_prepare_leadfield` and `src` as if obtained from `ft_prepare_sourcemodel` (with `method = 'basedoncortex'`), e.g., something like
 
