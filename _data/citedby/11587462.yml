@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/neurolint16060116
+- idtype: pmcid
+  value: PMC11587462
+authors:
+- authtype: Author
+  name: Jefferis T
+- authtype: Author
+  name: Dogan C
+- authtype: Author
+  name: Miller CE
+- authtype: Author
+  name: Karathanou M
+- authtype: Author
+  name: Tempesta A
+- authtype: Author
+  name: Schofield AJ
+- authtype: Author
+  name: Bowman H
+epubdate: 2024 Nov 21
+fulljournalname: Neurology International
+issue: '6'
+pages: 1585-1610
+pmclivedate: 2024/11/25
+printpubdate: ''
+pubdate: 2024 Nov 21
+sortdate: 2024/11/21 00:00
+source: Neurol Int
+title: Sensitization and Habituation of Hyper-Excitation to Constant Presentation
+  of Pattern-Glare Stimuli
+uid: '11587462'
+volume: '16'

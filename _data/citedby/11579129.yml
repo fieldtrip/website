@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39384692'
+- idtype: doi
+  value: 10.1007/s12021-024-09689-z
+- idtype: pmcid
+  value: PMC11579129
+authors:
+- authtype: Author
+  name: Geukes SH
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Bekius A
+- authtype: Author
+  name: Berezutskaya J
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2024 Oct 9
+fulljournalname: Neuroinformatics
+issue: '4'
+pages: 707-717
+pmclivedate: 2024/11/22
+printpubdate: '2024'
+pubdate: 2024 Oct 9
+sortdate: 2024/10/09 00:00
+source: Neuroinformatics
+title: Effect of Electrode Distance and Size on Electrocorticographic Recordings in
+  Human Sensorimotor Cortex
+uid: '11579129'
+volume: '22'

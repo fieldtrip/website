@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '39304439'
+- idtype: doi
+  value: 10.1016/j.neurot.2024.e00451
+- idtype: pmcid
+  value: PMC11585887
+authors:
+- authtype: Author
+  name: Tan B
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Lin Q
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Shi S
+- authtype: Author
+  name: Ye Y
+- authtype: Author
+  name: Che X
+epubdate: 2024 Sep 19
+fulljournalname: Neurotherapeutics
+issue: '6'
+pages: e00451
+pmclivedate: 2024/11/25
+printpubdate: ''
+pubdate: 2024 Sep 19
+sortdate: 2024/09/19 00:00
+source: Neurotherapeutics
+title: 'Differential analgesic effects of high-frequency or accelerated intermittent
+  theta burst stimulation of M1 on experimental tonic pain: Correlations with cortical
+  activity changes assessed by TMS-EEG'
+uid: '11585887'
+volume: '21'

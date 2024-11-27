@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39379154'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1173-24.2024
+- idtype: pmcid
+  value: PMC11580776
+authors:
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Keitel C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '47'
+pages: e1173242024
+pmclivedate: 2024/11/22
+printpubdate: 2024 Nov 20
+pubdate: 2024 Nov 20
+sortdate: 2024/11/20 00:00
+source: J Neurosci
+title: A Dynamic Link between Respiration and Arousal
+uid: '11580776'
+volume: '44'

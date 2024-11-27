@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39576251'
+- idtype: doi
+  value: 10.1002/brb3.70157
+- idtype: pmcid
+  value: PMC11583822
+authors:
+- authtype: Author
+  name: Uceta M
+- authtype: Author
+  name: del Cerro‐León A
+- authtype: Author
+  name: Shpakivska‐Bilán D
+- authtype: Author
+  name: García‐Moreno LM
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Antón‐Toro LF
+epubdate: 2024 Nov 22
+fulljournalname: Brain and Behavior
+issue: '11'
+pages: e70157
+pmclivedate: 2024/11/22
+printpubdate: ''
+pubdate: 2024 Nov 22
+sortdate: 2024/11/22 00:00
+source: Brain Behav
+title: 'Clustering Electrophysiological Predisposition to Binge Drinking: An Unsupervised
+  Machine Learning Analysis'
+uid: '11583822'
+volume: '14'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39522271'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103700
+- idtype: pmcid
+  value: PMC11585792
+authors:
+- authtype: Author
+  name: Tsuchimine S
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Komatsu J
+- authtype: Author
+  name: Shibata S
+- authtype: Author
+  name: Kitagawa S
+- authtype: Author
+  name: Misaka Y
+- authtype: Author
+  name: Noguchi-Shinohara M
+- authtype: Author
+  name: Ono K
+- authtype: Author
+  name: Morise H
+- authtype: Author
+  name: Asakawa T
+epubdate: 2024 Nov 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103700'
+pmclivedate: 2024/11/24
+printpubdate: ''
+pubdate: 2024 Nov 4
+sortdate: 2024/11/04 00:00
+source: Neuroimage Clin
+title: Magnetoencephalographic brain activity evoked by the optic-flow task is correlated
+  with β-amyloid burden and parahippocampal atrophy
+uid: '11585792'
+volume: '44'

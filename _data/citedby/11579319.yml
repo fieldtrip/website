@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39567522'
+- idtype: doi
+  value: 10.1038/s41539-024-00280-4
+- idtype: pmcid
+  value: PMC11579319
+authors:
+- authtype: Author
+  name: Zheng Z
+- authtype: Author
+  name: Wang J
+epubdate: 2024 Nov 20
+fulljournalname: NPJ Science of Learning
+issue: ''
+pages: '68'
+pmclivedate: 2024/11/21
+printpubdate: ''
+pubdate: 2024 Nov 20
+sortdate: 2024/11/20 00:00
+source: NPJ Sci Learn
+title: Interbrain neural correlates of self and other integration in joint statistical
+  learning
+uid: '11579319'
+volume: '9'

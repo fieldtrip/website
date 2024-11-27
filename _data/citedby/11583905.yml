@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39583107'
+- idtype: doi
+  value: 10.7717/peerj.18477
+- idtype: pmcid
+  value: PMC11583905
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: Mendoza G
+- authtype: Author
+  name: Merchant H
+- authtype: Author
+  name: Haegens S
+epubdate: 2024 Nov 19
+fulljournalname: PeerJ
+issue: ''
+pages: e18477
+pmclivedate: 2024/11/22
+printpubdate: ''
+pubdate: 2024 Nov 19
+sortdate: 2024/11/19 00:00
+source: PeerJ
+title: Common neural mechanisms supporting time judgements in humans and monkeys
+uid: '11583905'
+volume: '12'

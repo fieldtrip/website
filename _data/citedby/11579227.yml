@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39210245'
+- idtype: doi
+  value: 10.1111/psyp.14678
+- idtype: pmcid
+  value: PMC11579227
+authors:
+- authtype: Author
+  name: Liegel N
+- authtype: Author
+  name: Schneider D
+- authtype: Author
+  name: Wascher E
+- authtype: Author
+  name: Klatt L
+- authtype: Author
+  name: Arnau S
+epubdate: 2024 Aug 29
+fulljournalname: Psychophysiology
+issue: '12'
+pages: e14678
+pmclivedate: 2024/11/22
+printpubdate: 2024 Dec
+pubdate: 2024 Aug 29
+sortdate: 2024/08/29 00:00
+source: Psychophysiology
+title: The effect of performance contingent reward prospects flexibly adapts to more
+  versus less specific task goals
+uid: '11579227'
+volume: '61'
