@@ -2,7 +2,7 @@
 title: How can I read corrupted (unsaved) CTF data?
 category: faq
 tags: [raw, corrupt, preprocessing, ctf]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_read_corrupted_unsaved_ctf_data/
 ---
 

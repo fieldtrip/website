@@ -2,7 +2,7 @@
 title: How to interpret the sign of the phase slope index?
 category: faq
 tags: [coherence]
-redirect-from:
+redirect_from:
     - /faq/how_to_interpret_the_sign_of_the_phase_slope_index/
 ---
 

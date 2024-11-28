@@ -2,7 +2,7 @@
 title: Why are there multiple neighbour templates for the Neuromag306 system?
 category: faq
 tags: [neuromag, template, warning]
-redirect-from:
+redirect_from:
     - /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system/
 ---
 

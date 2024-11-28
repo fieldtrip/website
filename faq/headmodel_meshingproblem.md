@@ -2,7 +2,7 @@
 title: Why does my EEG headmodel look funny?
 category: faq
 tags: [headmodel]
-redirect-from:
+redirect_from:
     - /faq/why_does_my_eegheadmodel_look_funny/
 ---
 

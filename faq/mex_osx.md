@@ -2,7 +2,7 @@
 title: MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
 category: faq
 tags: [matlab, mex]
-redirect-from:
+redirect_from:
     - /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified/
 ---
 

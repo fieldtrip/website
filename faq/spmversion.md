@@ -2,7 +2,7 @@
 title: How to select the correct SPM toolbox?
 category: faq
 tags: [spm, mex, toolbox, path]
-redirect-from:
+redirect_from:
     - /faq/how_to_select_the_correct_spm_toolbox/
 ---
 

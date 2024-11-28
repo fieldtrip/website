@@ -2,7 +2,7 @@
 title: How can I fix a corrupt CTF res4 header file?
 category: faq
 tags: [corrupt, ctf, raw]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file/
 ---
 

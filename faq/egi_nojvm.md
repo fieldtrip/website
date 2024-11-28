@@ -2,7 +2,7 @@
 title: How can I read EGI mff data without the JVM?
 category: faq
 tags: [egi]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_read_egi_mff_data_without_the_jvm/
 ---
 

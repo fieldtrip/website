@@ -2,7 +2,7 @@
 title: Why am I not getting integer frequencies?
 category: faq
 tags: [preprocessing, freq]
-redirect-from:
+redirect_from:
     - /faq/why_am_i_not_getting_exact_integer_frequencies/
 ---
 

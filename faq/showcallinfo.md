@@ -2,7 +2,7 @@
 title: How do I prevent FieldTrip from printing the time and memory after each function call?
 category: faq
 tags: [matlab]
-redirect-from:
+redirect_from:
     - /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call/
 ---
 

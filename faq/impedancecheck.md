@@ -2,7 +2,7 @@
 title: How can I inspect the electrode impedances of my data?
 category: faq
 tags: [eeg, electrode]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_inspect_the_electrode_impedances_of_my_data/
 ---
 

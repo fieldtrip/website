@@ -2,13 +2,13 @@
 title: How can I import my own data format?
 category: faq
 tags: [dataformat, preprocessing]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_import_my_own_dataformat/
 ---
 
 # How can I import my own data format?
 
-There are two approaches for importing data from an unsupported format: you can extend FieldTrip with new code, or you can circumvent the import procedure.
+There are two approaches for importing data from an unsupported format: you can either extend FieldTrip with new code, or you can circumvent the import procedure.
 
 ## Extend the FieldTrip reading functions
 

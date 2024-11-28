@@ -2,7 +2,7 @@
 title: How can I convert one dataformat into an other?
 category: faq
 tags: [dataformat, preprocessing]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_convert_one_dataformat_into_an_other/
 ---
 

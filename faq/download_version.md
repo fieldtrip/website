@@ -2,7 +2,7 @@
 title: Which version of FieldTrip should I download?
 category: faq
 tags: [download, release]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_download_a_specific_version/
 ---
 

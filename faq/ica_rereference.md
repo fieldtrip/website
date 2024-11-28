@@ -2,7 +2,7 @@
 title: Should I rereference prior to or after ICA for artifact removal?
 category: faq
 tags: [ica]
-redirect-from:
+redirect_from:
     - /faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal/
 ---
 

@@ -2,7 +2,7 @@
 title: Where can I find the dipoli command-line executable?
 category: faq
 tags: [headmodel, source, matlab]
-redirect-from:
+redirect_from:
     - /faq/where_can_i_find_the_dipoli_command-line_executable/
 ---
 

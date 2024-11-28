@@ -4,7 +4,7 @@ category: faq
 tags: [statistics]
 authors: [Christoph Huber-Huber]
 date: 2023-05-12
-redirect-from:
+redirect_from:
     - /faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests/
 ---
 

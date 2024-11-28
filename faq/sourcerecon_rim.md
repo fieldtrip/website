@@ -2,7 +2,7 @@
 title: Why is there a rim around the brain for which the source reconstruction is not computed?
 category: faq
 tags: [source]
-redirect-from:
+redirect_from:
     - /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed/
 ---
 

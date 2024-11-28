@@ -2,7 +2,7 @@
 title: Why are so many of the interesting functions in the private directories?
 category: faq
 tags: [function, matlab]
-redirect-from:
+redirect_from:
     - /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories/
 ---
 

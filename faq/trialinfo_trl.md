@@ -2,7 +2,7 @@
 title: I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
 category: faq
 tags: [trialinfo, trialdef, trialfun]
-redirect-from:
+redirect_from:
     - /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore/
 ---
 

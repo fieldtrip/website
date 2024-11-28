@@ -2,7 +2,7 @@
 title: How should I refer to FieldTrip in my publication?
 category: faq
 tags: [reference]
-redirect-from:
+redirect_from:
     - /faq/how_should_i_refer_to_fieldtrip_in_my_publication/
 ---
 

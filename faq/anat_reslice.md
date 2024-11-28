@@ -2,7 +2,7 @@
 title: How to change the MRI orientation, the voxel size or the field-of-view?
 category: faq
 tags: [mri, volume, coordinate]
-redirect-from:
+redirect_from:
     - /faq/how_change_mri_orientation_size_fov/
 ---
 

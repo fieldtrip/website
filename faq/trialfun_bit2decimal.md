@@ -2,7 +2,7 @@
 title: How can I transform trigger values from bits to decimal representation with a trialfun?
 category: faq
 tags: [trialfun]
-redirect-from:
+redirect_from:
     - /faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun/
 ---
 

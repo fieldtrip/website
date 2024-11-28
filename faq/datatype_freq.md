@@ -2,7 +2,7 @@
 title: In what way can frequency domain data be represented in FieldTrip?
 category: faq
 tags: [freq, connectivity, coherence]
-redirect-from:
+redirect_from:
     - /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip/
 ---
 

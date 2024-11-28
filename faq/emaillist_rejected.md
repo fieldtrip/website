@@ -2,7 +2,7 @@
 title: Why is my message rejected from the email discussion list?
 category: faq
 tags: [email]
-redirect-from:
+redirect_from:
     - /faq/why_is_my_message_rejected_from_the_email_discussion_list/
 ---
 
