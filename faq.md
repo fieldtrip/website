@@ -78,9 +78,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why does my TFR look strange (part I, demeaning)?](/faq/tfr_strangedemean)
 - [Why does my TFR look strange (part II, detrending)?](/faq/tfr_strangedetrend)
 - [Why is the largest peak in the spectrum at the frequency which is 1/segment length?](/faq/why_largest_peak_spectrum)
-- [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?](/faq/freqanalysis_foimismatchmtmconvol)
-- [Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis?](/faq/freqanalysis_foimismatchmtmfft)
-- [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?](/faq/freqanalysis_foimismatchwavelet)
+- [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?](/faq/freqanalysis_foimismatchmtmconvol)
+- [Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis?](/faq/freqanalysis_foimismatchmtmfft)
+- [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?](/faq/freqanalysis_foimismatchwavelet)
 - [Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?](/faq/evoked_vs_induced)
 
 ## Source reconstruction

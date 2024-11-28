@@ -48,10 +48,10 @@ This is a custom 64-channel arrangement for the Max Planck Institute for Psychol
 
 ##### acticap-64ch-standard2.mat
 
-This is the standard 64-channel actiCAP arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the EasyCap electrode caps. This particular layout was created using the [easycapM1 layout](/assets/img/template/layout/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two electrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
+This is the standard 64-channel actiCAP arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the EasyCap electrode caps. This particular layout was created from the EasyCap M1 layout and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in this cap. Furthermore, two electrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
 
 {% include image src="/assets/img/template/layout/original/acticap-64-channel-standard-2.jpg" width="200" %}
-{% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.mat.jpg" width="200" %}
+{% include image src="/assets/img/template/layout/acticap-64ch-standard2.mat.png" width="200" %}
 
 ##### BrainProducts R-Net
 

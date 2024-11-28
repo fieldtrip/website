@@ -23,7 +23,7 @@ The data also contains response events for the subjects' responses to the task c
 
 _Figure 1. Experimental stimuli and conditions_
 
-Continuous EEG was registered using a 64 channel ActiCap system (Brain Products GmbH) filtered at 0.2–200 Hz and sampled at 500 Hz with the BrainVision Recorder Professional software (Brain Products GmbH). An [equidistant electrode cap](/assets/img/template/layout/easycapm10.png) was used to position 60 electrodes on the scalp as follows:
+Continuous EEG was registered using a 64 channel ActiCap system (Brain Products GmbH) filtered at 0.2–200 Hz and sampled at 500 Hz with the BrainVision Recorder Professional software (Brain Products GmbH). An [M10 equidistant electrode cap](/assets/img/template/layout/easycapm10.mat.png) was used to position 60 electrodes on the scalp as follows:
 
 {% include image src="/assets/img/workshop/madrid2019/datasets/simanova_fig2.png" width="400" %}
 

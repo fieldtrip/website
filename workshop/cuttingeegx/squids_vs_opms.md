@@ -20,7 +20,7 @@ OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive
 
 Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single coregistration standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
-This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](tutorial/coregistration_opm/).
+This tutorial combines the FieldTrip tutorials on [preprocessing of Optically Pumped Magnetometer (OPM) data](/tutorial/preprocessing_opm/) and [coregistration of Optically Pumped Magnetometer (OPM) data](/tutorial/coregistration_opm/). It does not cover follow-up analyses (like source reconstruction) which in principle should not differ from the SQUID follow-up analyses, or alternative coregistration methods which are covered in the tutorial on [coregistration of Optically Pumped Magnetometer (OPM) data](/tutorial/coregistration_opm/).
 
 ## Background
 
@@ -382,7 +382,7 @@ save shape shape
 
 To understand coregistration, you first need to know what [coordinate systems](/faq/coordsys) are. Coregistration is about aligning data that is initially expressed in different coordinate systems into a single coordinate system.
 
-Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see in which coordinate systems these are expressed. You can use **[ft_determine_coordsys](/utilities/ft_determine_coordsys)** for that.
+Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see in which coordinate systems these are expressed. You can use **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** for that.
 
 {% include markup/end %}
 

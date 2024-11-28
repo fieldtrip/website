@@ -471,7 +471,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Interactive plotting
 
-**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen, see also the [layout tutorial](tutorial/layout).
+**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen, see also the [layout tutorial](/tutorial/layout).
 
 The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
 
