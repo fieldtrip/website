@@ -1,35 +1,38 @@
-- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
-  link:  /faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path
+- name:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/compile_windows
 
 - name:  Can I use FieldTrip without MATLAB license?
   link:  /faq/compiled
 
+- name:  Where can I find the dipoli command-line executable?
+  link:  /faq/dipoli_filelocation
+
+- name:  What are the different approaches I can take for distributed computing?
+  link:  /faq/distributed_computing
+
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
 
-- name:  How can I compile the mex files on 64-bit Windows?
-  link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
-
-- name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
-  link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
-
-- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
-  link:  /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call
+- name:  How many lines of code does FieldTrip consist of?
+  link:  /faq/fieldtrip_codelines
 
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
+  link:  /faq/fieldtripbuffer_speed
 
-- name:  How many lines of code does FieldTrip consist of?
-  link:  /faq/how_many_lines_of_code_does_fieldtrip_consist_of
+- name:  Why are the fileio functions stateless, does the fseek not make them very slow?
+  link:  /faq/fileio_stateless
 
 - name:  Installation and setting up the path
   link:  /faq/installation
 
+- name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
+  link:  /faq/matlab_crash73
+
 - name:  MATLAB complains about a missing or invalid mex file, what should I do?
-  link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
+  link:  /faq/matlab_mexinvalid
 
 - name:  MATLAB does not see the functions in the "private" directory
-  link:  /faq/matlab_does_not_see_the_functions_in_the_private_directory
+  link:  /faq/matlab_privatefunctions
 
 - name:  Replacements for functions from MathWorks toolboxes
   link:  /faq/matlab_replacements
@@ -37,26 +40,23 @@
 - name:  What are the MATLAB requirements for using FieldTrip?
   link:  /faq/matlab_requirements
 
-- name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
-  link:  /faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do
-
 - name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
-  link:  /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified
+  link:  /faq/mex_osx
+
+- name:  Why are so many of the interesting functions in the private directories?
+  link:  /faq/privatefunctions_why
+
+- name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
+  link:  /faq/psychtoolbox_macbook
 
 - name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
 
-- name:  What are the different approaches I can take for distributed computing?
-  link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
+- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
+  link:  /faq/showcallinfo
 
-- name:  Where can I find the dipoli command-line executable?
-  link:  /faq/where_can_i_find_the_dipoli_command-line_executable
-
-- name:  Why are so many of the interesting functions in the private directories?
-  link:  /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories
-
-- name:  Why are the fileio functions stateless, does the fseek not make them very slow?
-  link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
+- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/toolboxes_legacyvsexternal
 
 - name:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/distributedcomputing_parfor

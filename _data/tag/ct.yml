@@ -13,35 +13,35 @@
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
+- name:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/artifact_padding
+
+- name:  How can I consistently represent artifacts in my data?
+  link:  /faq/artifact_representation
+
+- name:  How can I use the databrowser?
+  link:  /faq/databrowser
+
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
-- name:  How can I consistently represent artifacts in my data?
-  link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
-
-- name:  How can I interpret the different types of padding in FieldTrip?
-  link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
-
-- name:  How can I use the databrowser?
-  link:  /faq/how_can_i_use_the_databrowser
-
-- name:  How does the filter padding in preprocessing work?
-  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/dftfilter_residual
 
 - name:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
+  link:  /faq/opacityrendering
 
 - name:  What kind of filters can I apply to my data?
-  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+  link:  /faq/preproc_filtertypes
+
+- name:  How does the filter padding in preprocessing work?
+  link:  /faq/preproc_padding
 
 - name:  Why does my TFR look strange (part I, demeaning)?
-  link:  /faq/why_does_my_tfr_look_strange
+  link:  /faq/tfr_strangedemean
 
 - name:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/why_does_my_tfr_look_strange_part_ii
-
-- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
+  link:  /faq/tfr_strangedetrend
 
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts

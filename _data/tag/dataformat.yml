@@ -10,35 +10,35 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
+- name:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/anat_dicom2ctf
+
 - name:  How can I append the files of two separate recordings?
   link:  /faq/append_files
+
+- name:  How can I convert one dataformat into an other?
+  link:  /faq/convert_dataformat
 
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
+- name:  How can I import my own data format?
+  link:  /faq/dataformat_own
+
 - name:  How are the various MATLAB data structures defined?
-  link:  /faq/how_are_the_various_data_structures_defined
-
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
-
-- name:  How can I convert one dataformat into an other?
-  link:  /faq/how_can_i_convert_one_dataformat_into_an_other
+  link:  /faq/datatype
 
 - name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
-
-- name:  How can I import my own data format?
-  link:  /faq/how_can_i_import_my_own_dataformat
+  link:  /faq/fileio_dataformat
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
+  link:  /faq/mergedata
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
+  link:  /faq/neuroscan
 
 - name:  Reading is slow, can I write my raw data to a more efficient file format?
-  link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
+  link:  /faq/writedata_matbin
 
 - name:  Getting started with ANT-Neuro, ASA and EEProbe data
   link:  /getting_started/antneuro

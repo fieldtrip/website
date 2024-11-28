@@ -2,7 +2,7 @@
   link:  /example/dipolefit_somatosensory_erf
 
 - name:  What kind of filters can I apply to my data?
-  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+  link:  /faq/preproc_filtertypes
 
 - name:  Reference documentation
   link:  /reference

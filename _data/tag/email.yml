@@ -1,21 +1,21 @@
-- name:  How many people are subscribed to the email discussion list?
-  link:  /faq/how_many_people_are_subscribed_to_the_email_discussion_list
-
 - name:  How should I share example data with the email list or developers?
-  link:  /faq/how_should_i_send_example_data_to_the_developers
-
-- name:  How to ask good questions to the community?
-  link:  /faq/how_to_ask_good_questions_to_the_community
-
-- name:  Why am I not allowed to post to the discussion list?
-  link:  /faq/why_am_i_not_allowed_to_post_to_the_discussion_list
-
-- name:  Why am I not receiving emails from the discussion list?
-  link:  /faq/why_am_i_not_receiving_emails_from_the_discussion_list
+  link:  /faq/datasharing
 
 - name:  Why am I receiving warnings about too many bouncing emails?
-  link:  /faq/why_am_i_receiving_warnings_about_too_many_bouncing_emails
+  link:  /faq/emaillist_bounces
+
+- name:  How to ask good questions to the community?
+  link:  /faq/emaillist_howtoask
+
+- name:  Why am I not allowed to post to the discussion list?
+  link:  /faq/emaillist_nopost
+
+- name:  Why am I not receiving emails from the discussion list?
+  link:  /faq/emaillist_noreceive
 
 - name:  Why is my message rejected from the email discussion list?
-  link:  /faq/why_is_my_message_rejected_from_the_email_discussion_list
+  link:  /faq/emaillist_rejected
+
+- name:  How many people are subscribed to the email discussion list?
+  link:  /faq/emaillist_subscribers
 

@@ -1,5 +1,5 @@
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
+  link:  /faq/inspect_events
 
 - name:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/triggers

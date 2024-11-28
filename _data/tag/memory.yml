@@ -1,11 +1,11 @@
-- name:  How can I preprocess a dataset that is too large to fit into memory?
-  link:  /faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory
-
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
+  link:  /faq/fieldtripbuffer_speed
 
 - name:  Why are the fileio functions stateless, does the fseek not make them very slow?
-  link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
+  link:  /faq/fileio_stateless
+
+- name:  How can I preprocess a dataset that is too large to fit into memory?
+  link:  /faq/preproc_downsample
 
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous

@@ -1,12 +1,12 @@
-- name:  How can I deal with a discontinuous Neuralynx LFP recording?
-  link:  /faq/discontinuous_neuralynx
-
 - name:  How can I fix a corrupt CTF meg4 file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
+  link:  /faq/ctf_fixmeg4
 
 - name:  How can I fix a corrupt CTF res4 header file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
+  link:  /faq/ctf_fixres4
 
 - name:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
+  link:  /faq/ctf_readcorrupted
+
+- name:  How can I deal with a discontinuous Neuralynx LFP recording?
+  link:  /faq/discontinuous_neuralynx
 

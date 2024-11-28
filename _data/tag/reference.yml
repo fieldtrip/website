@@ -1,6 +1,6 @@
 - name:  How should I refer to FieldTrip in my publication?
-  link:  /faq/how_should_i_refer_to_fieldtrip_in_my_publication
+  link:  /faq/fieldtrip_reference
 
 - name:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
+  link:  /faq/sourcerecon_avgref
 

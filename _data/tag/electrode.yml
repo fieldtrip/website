@@ -4,14 +4,14 @@
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
+- name:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/fiducials_definition
 
 - name:  How can I inspect the electrode impedances of my data?
-  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
+  link:  /faq/impedancecheck
 
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/sensors_definition
 
 - name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
   link:  /faq/structuresensor

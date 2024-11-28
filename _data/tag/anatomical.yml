@@ -1,6 +1,6 @@
 - name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/what_is_the_plotting_convention_for_anatomical_mris
+  link:  /faq/anat_plottingconvention
 
 - name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot
+  link:  /faq/anat_upsidedownplotting
 

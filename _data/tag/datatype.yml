@@ -1,12 +1,12 @@
 - name:  How are the various MATLAB data structures defined?
-  link:  /faq/how_are_the_various_data_structures_defined
-
-- name:  How is anatomical, functional or statistical "volume data" described?
-  link:  /faq/how_is_anatomical_functional_or_statistical_volume_data_described
+  link:  /faq/datatype
 
 - name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
+  link:  /faq/datatype_segmentation
+
+- name:  How is anatomical, functional or statistical "volume data" described?
+  link:  /faq/datatype_volume
 
 - name:  What does a typical call to a FieldTrip function look like?
-  link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
+  link:  /faq/fieldtrip_functioncall
 
