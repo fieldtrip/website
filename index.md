@@ -25,7 +25,8 @@ To get started, head over to the [getting started](/getting_started) documentati
 _The latest code developments can be tracked in detail on [GitHub](/development/git)._
 
 {% assign counter = 0 %}
-{% for post in site.posts %}
+{% assign posts = site.posts | sort | reverse %}
+{% for post in posts %}
 {% if post.category == 'release' %}
 
 {% if counter == 0 %}
@@ -105,7 +106,8 @@ _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357
 _You can also follow us on [Mastodon](https://fosstodon.org/@fieldtriptoolbox)._
 
 {% assign counter = 0%}
-{% for post in site.posts %}
+{% assign posts = site.posts | sort | reverse %}
+{% for post in posts %}
 {% if post.category == 'news' %}
 
 {% if counter < 7 %}
