@@ -117,8 +117,8 @@ For example, let's say you made a modification to the **[ft_preprocessing](/refe
     % continue with the ones that specify the WALLTIME, MEG, DATA and DEPENDENCY
     filtered_test = test(~skip,:);
 
-You can then select the tests that for example depend on **[ft_preprocessing](/ft_preprocessing)**.
-    
+You can then select the tests that for example depend on **[ft_preprocessing](/reference/ft_preprocessing)**.
+
     keepRows = contains(filtered_test.dependency, 'ft_preprocessing');
     filtered_test = filtered_test(keepRows, :);
 
@@ -171,7 +171,7 @@ To link related scripts to background information on issues, please first file a
 
 **Method C**: If that is also not possible, the result of the algorithm on a particular real-world dataset has to be interpreted as being correct, and that solution should be reused as reference solution (i.e. regression testing). For example, if a function calculates the [forward solution](https://www.fieldtriptoolbox.org/tutorial/headmodel_meg/) for a certain subject then it should be tested against a reference solution, which could be the forward solution of a subject in MNI coordinates.
 
-Tests that need to load test data should include **[dccnpath](/utilities/dccnpath)** to ensure that every user has the correct path to the test data. This function takes as _input_ the path to where the file is located on DCCN central storage and compute cluster; the _output_ is the corresponding path to the file on your local computer. Publicly available data is downloaded automatically from the [download server](https://download.fieldtriptoolbox.org/).
+Tests that need to load test data should include **[dccnpath](/reference/utilities/dccnpath)** to ensure that every user has the correct path to the test data. This function takes as _input_ the path to where the file is located on DCCN central storage and compute cluster; the _output_ is the corresponding path to the file on your local computer. Publicly available data is downloaded automatically from the [download server](https://download.fieldtriptoolbox.org/).
 
 When you create a new test script, you should always include a _list of requirements and dependencies_ at the beginning of the script. For instance:
 

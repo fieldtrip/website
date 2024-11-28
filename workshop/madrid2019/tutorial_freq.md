@@ -39,7 +39,7 @@ at each frequency, and multiplying that with a Gaussian taper. The width of the
 Gaussian taper is scaled with the frequency, such that there are always a fixed
 number of cycles in the wavelet, for example 3 or 5.
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrtiles.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/tfrtiles.png" width="600" %}
 
 _Figure: Time and frequency smoothing. (a) For a fixed length time window
 the time and frequency smoothing remains fixed. (b) For time windows that
@@ -63,7 +63,7 @@ perform the following steps:
 - Compute the power spectra using **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Visualize the results for all channels and for selected channels. You can make time-frequency plots using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**, **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. For power spectra without time dimension, you can use **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/tfr_pipelinenew.png" width="200" %}
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 

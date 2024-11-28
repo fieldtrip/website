@@ -2,6 +2,8 @@
 title: Why is the largest peak in the spectrum at the frequency which is 1/segment length?
 category: faq
 tags: [mtmfft, freq, demean]
+redirect_from:
+    - /faq/why_largest_peak_spectrum/
 ---
 
 # Why is the largest peak in the spectrum at the frequency which is 1/segment length?
