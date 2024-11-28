@@ -226,7 +226,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I organize my own FieldTrip workshop?](/faq/workshop)
 - [How can I anonymize DICOM files?](/faq/anonymization_dicom)
 - [How can I anonymize a CTF dataset?](/faq/anonymization_ctf)
-- [How can I anonymize a brainvisino dataset?](/faq/anonymization_brainvision)
+- [How can I anonymize a BrainVision dataset?](/faq/anonymization_brainvision)
 - [How can I anonymize data processed in FieldTrip?](/faq/anonymization_fieldtripdata)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/anonymization_anatomical)
 - [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/anat_dicom2ctf)

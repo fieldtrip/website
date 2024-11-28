@@ -14,7 +14,7 @@ The 5th line in the file is
 
 '' stadard left ear coil position relative to dewar (cm):''
 
-but should be
+but that has a typo and should be
 
 '' standard left ear coil position relative to dewar (cm):''
 
