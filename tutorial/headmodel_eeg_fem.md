@@ -182,7 +182,7 @@ To improve how the mesh approximates the head shape, a node-shift can be applied
 The mesh contains the following field
 
 - **pos** : The position of the vertices.
-- **hex** : Each row defines 8 corners of a hexahedron (row numbers of the **pnt** field).
+- **hex** : Each row defines 8 corners of a hexahedron (row numbers of the **pos** field).
 - **unit**: Units in which the vertices are expressed.
 - **tissue**: Each hexahedron (in **hex**) is indexed with a value from 1...N. These values represent the tissue-types and are assigned to each type according to the order in **tissuelabel**.
 - **tissuelabel**: Names of tissue-types.
