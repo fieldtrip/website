@@ -295,29 +295,31 @@ Using the MRI fiducial positions expressed in [head coordinates](/faq/coordsys),
 Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
 
     % add the fiducials (expressed in dewar coordinates) to the gradiometer definition
-    grad.fid.pnt(1,:) = fid1_dewarcoordinates;
-    grad.fid.pnt(2,:) = fid2_dewarcoordinates;
-    grad.fid.pnt(3,:) = fid3_dewarcoordinates;
+    grad.fid.pos(1,:) = fid1_dewarcoordinates;
+    grad.fid.pos(2,:) = fid2_dewarcoordinates;
+    grad.fid.pos(3,:) = fid3_dewarcoordinates;
 
     grad.fid.label{1} = 'fid1_label';
     grad.fid.label{2} = 'fid2_label';
     grad.fid.label{3} = 'fid3_label';
 
+    target.fid.pos(1,:) = fid1_headcoordinates;
+    target.fid.pos(2,:) = fid1_headcoordinates;
+    target.fid.pos(3,:) = fid1_headcoordinates;
+
+    target.fid.label{1} = 'fid1_label';
+    target.fid.label{2} = 'fid2_label';
+    target.fid.label{3} = 'fid3_label'; 
+
     % the configuration for FT_SENSORREALIGN should specify the three fiducials in
     % head coordinates as obtained from the aligned MRI using FT_SOURCEPLOT
     cfg = [];
-    cfg.method = 'fiducial';
-    cfg.template.pnt = [
-      fid1_headcoordinates
-      fid2_headcoordinates
-      fid3_headcoordinates
-      ];
-    cfg.template.label = {
-      'fid1_label'
-      'fid2_label'
-      'fid3_label'
-      };
-    grad_aligned = ft_sensorrealign(cfg, grad);
+    cfg.method = 'template';
+    cfg.target =  target.fid;
+    cfg.elec   = grad.fid;
+    grad_aligned = ft_electroderealign(cfg);
+
+    grad_head = ft_transform_geometry(grad_aligned.rigidbody, grad, 'rigidbody');
 
 ## Example: Sourceanalysis
 
