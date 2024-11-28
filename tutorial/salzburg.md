@@ -348,7 +348,7 @@ For this step the individual volume is required, which can be downloaded [here](
 
 ### Compute the leadfield
 
-We first create the leadfield using [**reference: ft_prepare_leadfield](/\*\*reference/ ft_prepare_leadfield) using the individual head model from the previous step, the sensor array and the sourcemodel.
+We first create the leadfield using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** using the individual head model from the previous step, the sensor array and the sourcemodel.
 
     cfg                 = [];
     cfg.channel         = dataica.label; % ensure that rejected sensors are not present
@@ -358,7 +358,7 @@ We first create the leadfield using [**reference: ft_prepare_leadfield](/\*\*ref
     cfg.grid = sourcemodel;
     [grid] = ft_prepare_leadfield(cfg);
 
-We want to reconstruct the locations of the M100 component. In the present case this component is maximal around 50 to 180ms post stimulus onset. Therefore we segment the data around this interval using [**reference: ft_redefinetrial](/\*\*reference/ ft_redefinetrial). Furthermore we would contrast the source solution against a prestimulus baseline of equal length.
+We want to reconstruct the locations of the M100 component. In the present case this component is maximal around 50 to 180ms post stimulus onset. Therefore we segment the data around this interval using **[ft_redefinetrial](/reference/ft_redefinetrial)**. Furthermore we would contrast the source solution against a prestimulus baseline of equal length.
 
     cfg = [];
     cfg.toilim = [-.18 -.05];
@@ -368,7 +368,7 @@ We want to reconstruct the locations of the M100 component. In the present case 
 
 ### Compute data covariance
 
-The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to [**reference: ft_timelockanalysis](/**reference/ ft_timelockanalysis) with the ** cfg.covariance = 'yes';** and ** cfg.covariancewindow = [xx yy];\*\*. These configuration will ensure the covariance matrix to be present in the output structure.
+The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to **[ft_timelockanalysis](/reference/ ft_timelockanalysis)** with `cfg.covariance = 'yes'` and `cfg.covariancewindow = [xx yy]`. These configuration options will ensure the covariance matrix to be present in the output structure.
 
     cfg = [];
     cfg.covariance='yes';
@@ -380,7 +380,7 @@ The spatial filters are computed on the basis of the covariance matrix obtained 
     avgpre = ft_timelockanalysis(cfg,datapre);
     avgpst = ft_timelockanalysis(cfg,datapost);
 
-Now we make a first call to [** reference: ft_sourceanalysis](/\*\* reference/ ft_sourceanalysis) in order to compute the spatial filters on the basis of the entire data and keep them in the output for a later use.
+Now we make a first call to **[ft_sourceanalysis](/reference/ft_sourceanalysis)** in order to compute the spatial filters on the basis of the entire data and keep them in the output for a later use.
 
     cfg=[];
     cfg.method='lcmv';
@@ -409,7 +409,7 @@ Now we can subtract the two conditions, normalize by the power in the pre stimul
     cfg.operation = '((x1-x2)./x2)*100';
     S1bl=ft_math(cfg,sourcepstS1,sourcepreS1);
 
-The result is then interpolated on the template mri after the individual dipole locations are set back to be equal with the template_grid locations. This is done with [**reference: ft_sourceinterpolate](/\*\*reference/ ft_sourceinterpolate).
+The result is then interpolated on the template mri after the individual dipole locations are set back to be equal with the template_grid locations. This is done with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
     if isunix
       templatefile = '~fieldtrip/template/anatomy/single_subj_T1.nii';
@@ -424,7 +424,7 @@ The result is then interpolated on the template mri after the individual dipole 
     cfg.interpmethod = 'nearest';
     source_int  = ft_sourceinterpolate(cfg, S1bl, template_mri);
 
-Finally, we can plot the result using [**reference: ft_sourceplot](/\*\*reference/ ft_sourceplot).
+Finally, we can plot the result using **[ft_sourceplot](/reference/ft_sourceplot)**.
 
     cfg               = [];
     cfg.method        = 'ortho';
@@ -437,7 +437,7 @@ Finally, we can plot the result using [**reference: ft_sourceplot](/\*\*referenc
 
 ### Plot the result in parceled brain space
 
-It is now possible to integrate the result over the brain parcels using the brain atlas and [**reference: ft_sourceparcellate](/**reference/ ft_sourceparcellate). First, we load the template mri corresponding to the brain atlas located in the spm8/templates directory and interpolate the result on this template once more. Subsequently we call [**reference: ft_sourceparcellate](/\*\*reference/ ft_sourceparcellate) with this sourceinterpolated structure and the brain atlas.
+It is now possible to integrate the result over the brain parcels using the brain atlas and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. First, we load the template mri corresponding to the brain atlas located in the spm8/templates directory and interpolate the result on this template once more. Subsequently we call **[ft_sourceparcellate](/reference/ft_sourceparcellate)** with this sourceinterpolated structure and the brain atlas.
 
     templatefile = '~fieldtrip/external/spm8/templates/T1.nii';
     template_mri = ft_read_mri(templatefile);
@@ -618,7 +618,7 @@ We repeat the steps from above and plot the result in parceled brain space.
 
 {% include image src="/assets/img/tutorial/salzburg/figure12.png" %}
 
-The two different thresholds (80% of maximum vs. permutation statistics) seem to convey slightly different results. While a predominant activation in the left heschl gyrus was observed as a maximal difference between pre and post stimulus interval, the statistical evaluation suggest right temporal activation together with distributed activity in prefrontal areas. At first this appears somewhat puzzling yet evaluating the spatial extend of the activity in the left heschl gyrus suggest a very focal circumscribed source likely involving very few voxels. On the other hand during the call to [**reference: ft_sourcestatistics](/\*\*reference/ ft_sourcestatistics) we used a particular configuration for the clusterstatistics- 'maxsum'. Using this option only voxel clusters with largest summed activity are considered during the sampling of the distribution. The right temporal area is characterized by rather broad spatial homogeneity that leads to greater statistical sensitivity. Instead of 'maxsum' it is also possible to use 'max' values during the montercarlo sampling of the distribution. When we do so it becomes apparent that on the basis of the activity in the left heschl gyrus we can reject H0 too.
+The two different thresholds (80% of maximum vs. permutation statistics) seem to convey slightly different results. While a predominant activation in the left heschl gyrus was observed as a maximal difference between pre and post stimulus interval, the statistical evaluation suggest right temporal activation together with distributed activity in prefrontal areas. At first this appears somewhat puzzling yet evaluating the spatial extend of the activity in the left heschl gyrus suggest a very focal circumscribed source likely involving very few voxels. On the other hand during the call to **[ft_sourcestatistics](/reference/ft_sourcestatistics)** we used a particular configuration for the clusterstatistics- 'maxsum'. Using this option only voxel clusters with largest summed activity are considered during the sampling of the distribution. The right temporal area is characterized by rather broad spatial homogeneity that leads to greater statistical sensitivity. Instead of 'maxsum' it is also possible to use 'max' values during the montercarlo sampling of the distribution. When we do so it becomes apparent that on the basis of the activity in the left heschl gyrus we can reject H0 too.
 
 {% include image src="/assets/img/tutorial/salzburg/figure13.png" width="800" %}
 
@@ -761,7 +761,7 @@ Now we compute the source wave forms, plot and evaluate the result.
 
 One of various and equally valid methods of assessing connectivity is the concept of coherence. By using this metric we want to evaluate the presence of a temporal relationship between the nodes as a function of frequency. This can be done for the entire time interval of interest or by applying sliding window approach and represent the result as function of time and frequency. The latter is applied below.
 
-First, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** much in the same way as demonstrated above. The only difference is that the phase information is kept in the output by the configuration option **cfg.output = 'powandcsd'**.
+First, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** much in the same way as demonstrated above. The only difference is that the phase information is kept in the output by the configuration option `cfg.output = 'powandcsd'`.
 
     cfg         = [];
     cfg.method       = 'mtmconvol';
@@ -789,6 +789,7 @@ Now we can plot and evaluate the result of the power estimates essentially confi
 {% include image src="/assets/img/tutorial/salzburg/figure15.png" width="600" %}
 
 The slow frequency increases in energy are likely related to the evoked components in the data. In addition an increase in amplitude around 10-14Hz is also observed. In the next step we would like to evaluate to what extend this patterns represent a temporal relationship between the nodes.
+
 First we compute coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
 
     cfg = [];
@@ -928,5 +929,3 @@ Now we plot the results of the original and the flipped version of the same data
     figure; ft_connectivityplot(cfg,granger,grangerflip);
 
 {% include image src="/assets/img/tutorial/salzburg/figure19.png" %}
-
-## Summary and conclusion
