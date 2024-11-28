@@ -1,11 +1,5 @@
-- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
-  link:  /faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path
-
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
-
-- name:  How to select the correct SPM toolbox?
-  link:  /faq/how_to_select_the_correct_spm_toolbox
 
 - name:  Replacements for functions from MathWorks toolboxes
   link:  /faq/matlab_replacements
@@ -15,4 +9,10 @@
 
 - name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
+
+- name:  How to select the correct SPM toolbox?
+  link:  /faq/spmversion
+
+- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/toolboxes_legacyvsexternal
 

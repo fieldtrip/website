@@ -7,41 +7,41 @@
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/trialfun
 
+- name:  How can I anonymize or deidentify a BrainVision dataset?
+  link:  /faq/anonymization_brainvision
+
+- name:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/anonymization_ctf
+
+- name:  I am having problems reading the CTF .hc headcoordinates file
+  link:  /faq/ctf_fixhc
+
+- name:  How can I fix a corrupt CTF meg4 file?
+  link:  /faq/ctf_fixmeg4
+
+- name:  How can I fix a corrupt CTF res4 header file?
+  link:  /faq/ctf_fixres4
+
+- name:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/ctf_readcorrupted
+
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I anonymize or deidentify a BrainVision dataset?
-  link:  /faq/how_can_i_anonymize_a_brainvision_dataset
-
-- name:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/how_can_i_anonymize_a_ctf_dataset
-
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
-
-- name:  How can I fix a corrupt CTF meg4 file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
-
-- name:  How can I fix a corrupt CTF res4 header file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
+  link:  /faq/inspect_events
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  How can I process continuous data without triggers?
-  link:  /faq/how_can_i_process_continuous_data_without_triggers
-
-- name:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
-
-- name:  I am having problems reading the CTF .hc headcoordinates file
-  link:  /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file
+  link:  /faq/mergedata
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
+  link:  /faq/neuroscan
+
+- name:  How can I process continuous data without triggers?
+  link:  /faq/preproc_continuous
 
 - name:  Reading is slow, can I write my raw data to a more efficient file format?
-  link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
+  link:  /faq/writedata_matbin
 
 - name:  Importing your data
   link:  /reading_data

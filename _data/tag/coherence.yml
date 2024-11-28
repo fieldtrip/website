@@ -4,17 +4,17 @@
 - name:  Correlation analysis of fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
-- name:  How to interpret the sign of the phase slope index?
-  link:  /faq/how_to_interpret_the_sign_of_the_phase_slope_index
+- name:  What is the difference between coherence and coherency?
+  link:  /faq/coherence_coherency
 
 - name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+  link:  /faq/datatype_freq
 
 - name:  How can I compute inter-trial coherence?
   link:  /faq/itc
 
-- name:  What is the difference between coherence and coherency?
-  link:  /faq/what_is_the_difference_between_coherence_and_coherency
+- name:  How to interpret the sign of the phase slope index?
+  link:  /faq/phaseslopeindex
 
 - name:  References to implemented methods
   link:  /references_to_implemented_methods

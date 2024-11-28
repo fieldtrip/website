@@ -7,17 +7,17 @@
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
-
-- name:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal
-
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
+  link:  /faq/databrowser_crash
 
 - name:  Why does my ICA output contain complex numbers?
-  link:  /faq/why_does_my_ica_output_contain_complex_numbers
+  link:  /faq/ica_complexvalues
+
+- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/ica_crash
+
+- name:  Should I rereference prior to or after ICA for artifact removal?
+  link:  /faq/ica_rereference
 
 - name:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts

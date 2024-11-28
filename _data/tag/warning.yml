@@ -1,9 +1,9 @@
 - name:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-  link:  /faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations
+  link:  /faq/inspect_geometries
 
 - name:  Installation and setting up the path
   link:  /faq/installation
 
 - name:  Why are there multiple neighbour templates for the Neuromag306 system?
-  link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
+  link:  /faq/neighbours_neuromag
 

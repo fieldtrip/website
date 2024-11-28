@@ -1,17 +1,17 @@
 - name:  Creating a layout for plotting NIRS optodes and channels
   link:  /example/nirs_layout
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
 - name:  How do I construct a layout file for the plotting functions?
-  link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
-
-- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-  link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
+  link:  /faq/layout_creation
 
 - name:  What is the format of the layout file which is used for plotting?
-  link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
+  link:  /faq/layout_fileformat
+
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/layout_magandgrad
+
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/sensors_definition
 
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020

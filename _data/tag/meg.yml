@@ -55,8 +55,11 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
-- name:  Can I do combined EEG and MEG source reconstruction?
-  link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
+- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/anat_coreg
+
+- name:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/anat_dicom2ctf
 
 - name:  What does the coilaccuracy parameter do?
   link:  /faq/coilaccuracy
@@ -64,26 +67,23 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
+- name:  How is the segmentation defined?
+  link:  /faq/datatype_segmentation
+
 - name:  What material is used for the flexible MEG headcasts?
   link:  /faq/headcast
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
+- name:  How can I monitor a subject's head position during a MEG session?
+  link:  /faq/headlocalizer
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
+  link:  /faq/mergedata
 
-- name:  How can I monitor a subject's head position during a MEG session?
-  link:  /faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/sensors_definition
 
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
+- name:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/sourcerecon_meeg
 
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid

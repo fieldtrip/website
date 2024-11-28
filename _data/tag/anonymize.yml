@@ -1,18 +1,18 @@
 - name:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
   link:  /example/bids_mous
 
+- name:  How can I anonymize or deidentify an anatomical MRI?
+  link:  /faq/anonymization_anatomical
+
 - name:  How can I anonymize or deidentify a BrainVision dataset?
-  link:  /faq/how_can_i_anonymize_a_brainvision_dataset
+  link:  /faq/anonymization_brainvision
 
 - name:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/how_can_i_anonymize_a_ctf_dataset
-
-- name:  How can I anonymize or deidentify an anatomical MRI?
-  link:  /faq/how_can_i_anonymize_an_anatomical_mri
+  link:  /faq/anonymization_ctf
 
 - name:  How can I anonymize or deidentify DICOM files?
-  link:  /faq/how_can_i_anonymize_dicom_files
+  link:  /faq/anonymization_dicom
 
 - name:  How can I anonymize data processed in FieldTrip?
-  link:  /faq/how_can_i_anonymize_fieldtrip_data
+  link:  /faq/anonymization_fieldtripdata
 

@@ -1,9 +1,9 @@
-- name:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
-  link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_wavelet_formerly_wltconvol_in_ft_freqanalyis
+- name:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/freqanalysis_foimismatchwavelet
 
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
-  link:  /faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft
+  link:  /faq/freqanalysis_phasedefinition
 
-- name:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
-  link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis
+- name:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/freqanalysis_wavelet_new
 

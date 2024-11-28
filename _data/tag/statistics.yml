@@ -31,41 +31,41 @@
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics
 
-- name:  How can I define neighbouring sensors?
-  link:  /faq/how_can_i_define_neighbouring_sensors
-
-- name:  How can I determine the onset of an effect?
-  link:  /faq/how_can_i_determine_the_onset_of_an_effect
-
-- name:  How to test an interaction effect using cluster-based permutation tests?
-  link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
+- name:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/behavior_cosinefit
 
 - name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
-  link:  /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables
-
-- name:  How can I test whether a behavioral measure is phasic?
-  link:  /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic
-
-- name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
-  link:  /faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations
-
-- name:  How does a difference in trial numbers per condition affect my statistical test
-  link:  /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test
-
-- name:  How does ft_prepare_neighbours work?
-  link:  /faq/how_does_ft_prepare_neighbours_work
-
-- name:  How NOT to interpret results from a cluster-based permutation test
-  link:  /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test
-
-- name:  Should I use t or F values for cluster-based permutation tests?
-  link:  /faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests
-
-- name:  What is the idea behind statistical inference at the second-level?
-  link:  /faq/what_is_the_idea_behind_statistical_inference_at_the_second-level
+  link:  /faq/behavior_signalcorrelation
 
 - name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
-  link:  /faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo
+  link:  /faq/clusterstats_correcttail
+
+- name:  How to test an interaction effect using cluster-based permutation tests?
+  link:  /faq/clusterstats_interaction
+
+- name:  How NOT to interpret results from a cluster-based permutation test
+  link:  /faq/clusterstats_interpretation
+
+- name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
+  link:  /faq/clusterstats_iuwcvar
+
+- name:  Should I use t or F values for cluster-based permutation tests?
+  link:  /faq/clusterstats_teststatistic
+
+- name:  How can I determine the onset of an effect?
+  link:  /faq/effectonset
+
+- name:  How does ft_prepare_neighbours work?
+  link:  /faq/neighbours_prepare
+
+- name:  How can I define neighbouring sensors?
+  link:  /faq/sensors_neighbours
+
+- name:  How does a difference in trial numbers per condition affect my statistical test
+  link:  /faq/statistics_ntrials
+
+- name:  What is the idea behind statistical inference at the second-level?
+  link:  /faq/statistics_secondlevel
 
 - name:  Getting started with LIMO MEEG
   link:  /getting_started/limo

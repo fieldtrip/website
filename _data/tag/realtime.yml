@@ -131,19 +131,19 @@
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
 
 - name:  Does the FieldTrip realtime buffer only work with MATLAB?
-  link:  /faq/does_the_fieldtrip_realtime_buffer_only_work_with_matlab
-
-- name:  How can I monitor a subject's head position during a MEG session?
-  link:  /faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session
-
-- name:  What kind of cable do I need for a serial port connection between two computers?
-  link:  /faq/how_can_i_test_the_serial_port_connection_between_two_computers
-
-- name:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
+  link:  /faq/fieldtripbuffer
 
 - name:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer
+  link:  /faq/fieldtripbuffer_gettingstarted
+
+- name:  How fast is the FieldTrip buffer for realtime data streaming?
+  link:  /faq/fieldtripbuffer_speed
+
+- name:  How can I monitor a subject's head position during a MEG session?
+  link:  /faq/headlocalizer
+
+- name:  What kind of cable do I need for a serial port connection between two computers?
+  link:  /faq/serialport
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime

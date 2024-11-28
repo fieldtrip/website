@@ -1,8 +1,8 @@
+- name:  Why is the source model deformed or incorrectly aligned after warping template?
+  link:  /faq/sourcemodel_deformation
+
 - name:  Is it OK for vertices/dipoles to stick out of the volume conductor?
   link:  /faq/sticking_out
-
-- name:  Why is the source model deformed or incorrectly aligned after warping template?
-  link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
 
 - name:  Template models for source reconstruction
   link:  /template/sourcemodel

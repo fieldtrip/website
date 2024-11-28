@@ -55,59 +55,56 @@
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
 
+- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/anat_coreg
+
+- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/anat_landmarks
+
 - name:  Where is the anterior commissure?
   link:  /faq/anterior_commissure
 
-- name:  Can I do combined EEG and MEG source reconstruction?
-  link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
+- name:  How can I fine-tune my BEM volume conduction model?
+  link:  /faq/bem_finetune
 
-- name:  Can I restrict the source reconstruction to the grey matter?
-  link:  /faq/can_i_restrict_the_source_reconstruction_to_the_grey_matter
+- name:  What is the conductivity of the brain, CSF, skull and skin tissue?
+  link:  /faq/conductivity_defaults
 
 - name:  How are the different head and MRI coordinate systems defined?
   link:  /faq/coordsys
 
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/how_are_the_lpa_and_rpa_points_defined
-
-- name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
-  link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
-
-- name:  How can I determine the anatomical label of a source or electrode?
-  link:  /faq/how_can_i_determine_the_anatomical_label_of_a_source
-
-- name:  How can I fine-tune my BEM volume conduction model?
-  link:  /faq/how_can_i_fine-tune_my_bem_volume_conduction_model
-
-- name:  How can I map source locations onto an anatomical label in an atlas?
-  link:  /faq/how_can_i_map_source_locations_between_two_different_representations
-
-- name:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-  link:  /faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations
-
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
-
-- name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
-  link:  /faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed
-
-- name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
-  link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
-
-- name:  What is the conductivity of the brain, CSF, skull and skin tissue?
-  link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
-
 - name:  What kind of volume conduction models of the head (head models) are implemented?
-  link:  /faq/what_kind_of_volume_conduction_models_are_implemented
+  link:  /faq/datatype_headmodel
 
 - name:  Where can I find the dipoli command-line executable?
-  link:  /faq/where_can_i_find_the_dipoli_command-line_executable
+  link:  /faq/dipoli_filelocation
 
-- name:  Why is there a rim around the brain for which the source reconstruction is not computed?
-  link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed
+- name:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
+  link:  /faq/inspect_geometries
+
+- name:  How can I determine the anatomical label of a source or electrode?
+  link:  /faq/label_lookup
+
+- name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+  link:  /faq/sensors_accuracy
 
 - name:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
+  link:  /faq/sourcerecon_avgref
+
+- name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
+  link:  /faq/sourcerecon_checkalignment
+
+- name:  Can I restrict the source reconstruction to the grey matter?
+  link:  /faq/sourcerecon_greymatter
+
+- name:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/sourcerecon_meeg
+
+- name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
+  link:  /faq/sourcerecon_outside
+
+- name:  Why is there a rim around the brain for which the source reconstruction is not computed?
+  link:  /faq/sourcerecon_rim
 
 - name:  Reference documentation
   link:  /reference

@@ -1,11 +1,11 @@
 - name:  How can I distribute a batch of jobs?
-  link:  /faq/how_can_i_distribute_a_batch_of_jobs
-
-- name:  How to get started with the MATLAB distributed computing toolbox?
-  link:  /faq/how_to_get_started_with_the_matlab_distributed_computing_toolbox
+  link:  /faq/distributed_batch
 
 - name:  What are the different approaches I can take for distributed computing?
-  link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
+  link:  /faq/distributed_computing
+
+- name:  How to get started with the MATLAB distributed computing toolbox?
+  link:  /faq/distributed_matlab
 
 - name:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/distributedcomputing_parfor

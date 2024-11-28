@@ -13,15 +13,15 @@
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics
 
-- name:  How can I define neighbouring sensors?
-  link:  /faq/how_can_i_define_neighbouring_sensors
+- name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
+  link:  /faq/clusterstats_correcttail
 
 - name:  How does ft_prepare_neighbours work?
-  link:  /faq/how_does_ft_prepare_neighbours_work
+  link:  /faq/neighbours_prepare
+
+- name:  How can I define neighbouring sensors?
+  link:  /faq/sensors_neighbours
 
 - name:  What is the idea behind statistical inference at the second-level?
-  link:  /faq/what_is_the_idea_behind_statistical_inference_at_the_second-level
-
-- name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
-  link:  /faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo
+  link:  /faq/statistics_secondlevel
 

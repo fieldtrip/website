@@ -46,8 +46,8 @@
 - name:  Making a synchronous movie of EEG or NIRS combined with video recordings
   link:  /example/video_eeg
 
-- name:  Can I do combined EEG and MEG source reconstruction?
-  link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
+- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/anat_coreg
 
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
@@ -55,35 +55,35 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
+- name:  How is the segmentation defined?
+  link:  /faq/datatype_segmentation
+
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
 - name:  How can I inspect the electrode impedances of my data?
-  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
+  link:  /faq/impedancecheck
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  How do I install the OpenMEEG binaries
-  link:  /faq/how_do_i_install_the_openmeeg_binaries
-
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
+  link:  /faq/mergedata
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
+  link:  /faq/neuroscan
+
+- name:  How do I install the OpenMEEG binaries
+  link:  /faq/openmeeg
 
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
-  link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
+  link:  /faq/sensors_accuracy
+
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/sensors_definition
 
 - name:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
+  link:  /faq/sourcerecon_avgref
+
+- name:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/sourcerecon_meeg
 
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020

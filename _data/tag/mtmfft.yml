@@ -1,8 +1,8 @@
-- name:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
-  link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmfft_in_ft_freqanalyis
+- name:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
+  link:  /faq/freqanalysis_mtmfft_new
 
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
-  link:  /faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft
+  link:  /faq/freqanalysis_phasedefinition
 
 - name:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
   link:  /faq/why_largest_peak_spectrum

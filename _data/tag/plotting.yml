@@ -16,29 +16,29 @@
 - name:  Which colormaps are supported?
   link:  /faq/colormap
 
-- name:  How can I define neighbouring sensors?
-  link:  /faq/how_can_i_define_neighbouring_sensors
-
 - name:  How can I use the databrowser?
-  link:  /faq/how_can_i_use_the_databrowser
-
-- name:  How do I construct a layout file for the plotting functions?
-  link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
-
-- name:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
-
-- name:  I am having problems printing figures that use opacity
-  link:  /faq/i_am_having_problems_printing_figures_that_use_opacity
-
-- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-  link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
+  link:  /faq/databrowser
 
 - name:  What is a good way to save images for later processing in other software?
-  link:  /faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software
+  link:  /faq/figure_export
+
+- name:  I am having problems printing figures that use opacity
+  link:  /faq/figure_opacity
+
+- name:  How do I construct a layout file for the plotting functions?
+  link:  /faq/layout_creation
 
 - name:  What is the format of the layout file which is used for plotting?
-  link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
+  link:  /faq/layout_fileformat
+
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/layout_magandgrad
+
+- name:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/opacityrendering
+
+- name:  How can I define neighbouring sensors?
+  link:  /faq/sensors_neighbours
 
 - name:  Reference documentation
   link:  /reference

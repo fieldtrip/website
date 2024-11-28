@@ -7,11 +7,11 @@
 - name:  Find the orientation of planar gradiometers
   link:  /example/planar_orientation
 
-- name:  How can I visualize the neuromag head position indicator coils?
-  link:  /faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils
-
 - name:  Why are there multiple neighbour templates for the Neuromag306 system?
-  link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
+  link:  /faq/neighbours_neuromag
+
+- name:  How can I visualize the neuromag head position indicator coils?
+  link:  /faq/neuromag_hpi
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
