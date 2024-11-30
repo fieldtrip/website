@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39595026'
+- idtype: doi
+  value: 10.3390/biomedicines12112460
+- idtype: pmcid
+  value: PMC11591636
+authors:
+- authtype: Author
+  name: Oeur A
+- authtype: Author
+  name: Torp WH
+- authtype: Author
+  name: Margulies SS
+epubdate: 2024 Oct 26
+fulljournalname: Biomedicines
+issue: '11'
+pages: '2460'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Oct 26
+sortdate: 2024/10/26 00:00
+source: Biomedicines
+title: Transient Increases in Alpha Power Relative to Healthy Reference Ranges in
+  Awake Piglets After Repeated Rapid Head Rotations
+uid: '11591636'
+volume: '12'

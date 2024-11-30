@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39542735'
+- idtype: doi
+  value: 10.1523/ENEURO.0450-24.2024
+- idtype: pmcid
+  value: PMC11595597
+authors:
+- authtype: Author
+  name: Perera ND
+- authtype: Author
+  name: Wischnewski M
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Opitz A
+epubdate: 2024 Nov 26
+fulljournalname: eNeuro
+issue: '11'
+pages: ENEURO.0450-24.2024
+pmclivedate: 2024/11/26
+printpubdate: ''
+pubdate: 2024 Nov 26
+sortdate: 2024/11/26 00:00
+source: eNeuro
+title: State-Dependent Motor Cortex Stimulation Reveals Distinct Mechanisms for Corticospinal
+  Excitability and Cortical Responses
+uid: '11595597'
+volume: '11'

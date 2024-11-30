@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38467353'
+- idtype: doi
+  value: 10.1111/jsr.14179
+- idtype: pmcid
+  value: PMC11597015
+authors:
+- authtype: Author
+  name: Dudysová D
+- authtype: Author
+  name: Janků K
+- authtype: Author
+  name: Piorecký M
+- authtype: Author
+  name: Hantáková V
+- authtype: Author
+  name: Orendáčová M
+- authtype: Author
+  name: Piorecká V
+- authtype: Author
+  name: Štrobl J
+- authtype: Author
+  name: Kliková M
+- authtype: Author
+  name: Ngo HV
+- authtype: Author
+  name: Kopřivová J
+epubdate: 2024 Mar 11
+fulljournalname: Journal of Sleep Research
+issue: '6'
+pages: e14179
+pmclivedate: 2024/11/27
+printpubdate: 2024 Dec
+pubdate: 2024 Mar 11
+sortdate: 2024/03/11 00:00
+source: J Sleep Res
+title: 'Closed‐loop auditory stimulation of slow‐wave sleep in chronic insomnia: a
+  pilot study'
+uid: '11597015'
+volume: '33'

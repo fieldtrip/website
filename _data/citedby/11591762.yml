@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '39595811'
+- idtype: doi
+  value: 10.3390/brainsci14111047
+- idtype: pmcid
+  value: PMC11591762
+authors:
+- authtype: Author
+  name: Kumar Govindaiah P
+- authtype: Author
+  name: Adarsh A
+- authtype: Author
+  name: Panda R
+- authtype: Author
+  name: Gosseries O
+- authtype: Author
+  name: Malaise N
+- authtype: Author
+  name: Salamun I
+- authtype: Author
+  name: Tshibanda L
+- authtype: Author
+  name: Laureys S
+- authtype: Author
+  name: Bonhomme V
+- authtype: Author
+  name: Faymonville ME
+- authtype: Author
+  name: Vanhaudenhuyse A
+- authtype: Author
+  name: Bicego A
+epubdate: 2024 Oct 23
+fulljournalname: Brain Sciences
+issue: '11'
+pages: '1047'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Oct 23
+sortdate: 2024/10/23 00:00
+source: Brain Sci
+title: Exploring Electrophysiological Responses to Hypnosis in Patients with Fibromyalgia
+uid: '11591762'
+volume: '14'

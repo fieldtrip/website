@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39605794'
+- idtype: doi
+  value: 10.3389/fnins.2024.1422085
+- idtype: pmcid
+  value: PMC11599215
+authors:
+- authtype: Author
+  name: Stylianou O
+- authtype: Author
+  name: Susi G
+- authtype: Author
+  name: Hoffmann M
+- authtype: Author
+  name: Suárez-Méndez I
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Schirner M
+- authtype: Author
+  name: Ritter P
+epubdate: 2024 Nov 13
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1422085'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Nov 13
+sortdate: 2024/11/13 00:00
+source: Front Neurosci
+title: 'Multiscale detrended cross-correlation coefficient: estimating coupling in
+  non-stationary neurophysiological signals'
+uid: '11599215'
+volume: '18'

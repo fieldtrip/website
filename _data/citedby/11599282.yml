@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39592816'
+- idtype: doi
+  value: 10.1038/s42003-024-07129-x
+- idtype: pmcid
+  value: PMC11599282
+authors:
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Liu Z
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Jin R
+- authtype: Author
+  name: Lou W
+- authtype: Author
+  name: Peng W
+epubdate: 2024 Nov 26
+fulljournalname: Communications Biology
+issue: ''
+pages: '1573'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Nov 26
+sortdate: 2024/11/26 00:00
+source: Commun Biol
+title: Analgesic effects of high-frequency rTMS on pain anticipation and perception
+uid: '11599282'
+volume: '7'

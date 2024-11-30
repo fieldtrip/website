@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39592826'
+- idtype: doi
+  value: 10.1038/s42003-024-07297-w
+- idtype: pmcid
+  value: PMC11599602
+authors:
+- authtype: Author
+  name: López-Madrona VJ
+- authtype: Author
+  name: Trébuchon A
+- authtype: Author
+  name: Bénar CG
+- authtype: Author
+  name: Schön D
+- authtype: Author
+  name: Morillon B
+epubdate: 2024 Nov 26
+fulljournalname: Communications Biology
+issue: ''
+pages: '1570'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Nov 26
+sortdate: 2024/11/26 00:00
+source: Commun Biol
+title: Different sustained and induced alpha oscillations emerge in the human auditory
+  cortex during sound processing
+uid: '11599602'
+volume: '7'

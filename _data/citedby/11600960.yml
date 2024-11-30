@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39605970'
+- idtype: doi
+  value: 10.1093/braincomms/fcae385
+- idtype: pmcid
+  value: PMC11600960
+authors:
+- authtype: Author
+  name: May HG
+- authtype: Author
+  name: Tsikonofilos K
+- authtype: Author
+  name: Donat CK
+- authtype: Author
+  name: Sastre M
+- authtype: Author
+  name: Kozlov AS
+- authtype: Author
+  name: Sharp DJ
+- authtype: Author
+  name: Bruyns-Haylett M
+epubdate: 2024 Nov 27
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcae385
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Nov 27
+sortdate: 2024/11/27 00:00
+source: Brain Commun
+title: EEG hyperexcitability and hyperconnectivity linked to GABAergic inhibitory
+  interneuron loss following traumatic brain injury
+uid: '11600960'
+volume: '6'

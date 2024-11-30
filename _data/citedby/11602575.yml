@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103695
+- idtype: pmcid
+  value: PMC11602575
+authors:
+- authtype: Author
+  name: Grent-’t-Jong T
+- authtype: Author
+  name: Dheerendra P
+- authtype: Author
+  name: Fusar-Poli P
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Gumley AI
+- authtype: Author
+  name: Krishnadas R
+- authtype: Author
+  name: Muckli LF
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2024 Oct 28
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103695'
+pmclivedate: 2024/11/28
+printpubdate: ''
+pubdate: 2024 Oct 28
+sortdate: 2024/10/28 00:00
+source: Neuroimage Clin
+title: Entrainment of neural oscillations during language processing in Early-Stage
+  schizophrenia
+uid: '11602575'
+volume: '44'

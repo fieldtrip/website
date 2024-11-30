@@ -1,0 +1,82 @@
+articleids:
+- idtype: pmid
+  value: '39574667'
+- idtype: doi
+  value: 10.1101/2024.11.08.622714
+- idtype: pmcid
+  value: PMC11581045
+authors:
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Gray SM
+- authtype: Author
+  name: Dede AJ
+- authtype: Author
+  name: Rivera YM
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Vahidi P
+- authtype: Author
+  name: Rau EM
+- authtype: Author
+  name: Cyr C
+- authtype: Author
+  name: Holubecki AM
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: McManus OK
+- authtype: Author
+  name: Sattar S
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Girgis F
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Weber PB
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Wu JY
+- authtype: Author
+  name: Lam SK
+- authtype: Author
+  name: Raskin JS
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Shaikhouni A
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Roland JL
+- authtype: Author
+  name: Braga RM
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Ofen N
+- authtype: Author
+  name: Johnson EL
+epubdate: 2024 Nov 9
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.11.08.622714
+pmclivedate: 2024/11/22
+printpubdate: ''
+pubdate: 2024 Nov 9
+sortdate: 2024/11/09 00:00
+source: bioRxiv
+title: The development of aperiodic neural activity in the human brain
+uid: '11581045'
+volume: ''
