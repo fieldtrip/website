@@ -48,12 +48,12 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 - [Align EEG electrode positions to BEM headmodel](/example/electrodes2bem)
 - [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
-- [Combined EEG and MEG source reconstruction](/example/combined_eeg_and_meg_source_reconstruction)
+- [Combined EEG and MEG source reconstruction](/example/sourcerecon_meeg)
 - [Common filters in beamforming](/example/common_filters_in_beamforming)
 - [Compute EEG leadfields using a FEM headmodel](/example/fem)
-- [Compute forward simulated data and apply a beamformer scan](/example/compute_forward_simulated_data_and_apply_a_beamformer_scan)
-- [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
-- [Compute forward simulated data using ft_dipolesimulation](/example/compute_forward_simulated_data)
+- [Compute forward simulated data and apply a beamformer scan](/example/simulateddata_beamformer)
+- [Compute forward simulated data and apply a dipole fit](/example/simulateddata_dipolefit)
+- [Compute forward simulated data using ft_dipolesimulation](/example/simulateddata)
 - [Compute forward simulated data with the low-level ft_compute_leadfield](/example/compute_leadfield)
 - [Create MNI-aligned grids in individual head-space](/example/sourcemodel_aligned2mni)
 - [Determine the filter characteristics](/example/determine_the_filter_characteristics)
@@ -68,7 +68,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Statistical analysis
 
-- [Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
+- [Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA](/example/stats_besa)
 - [Computing and reporting the effect size](/example/effectsize)
 - [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
 - [Source statistics](/example/source_statistics)
