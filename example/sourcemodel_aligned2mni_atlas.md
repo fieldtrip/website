@@ -53,7 +53,7 @@ Now we determine all indices of the binary mask to be considered as inside the h
     figure;
     ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
-{% include image src="/assets/img/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space/atlasbasedmnigrid.png" width="600" %}
+{% include image src="/assets/img/example/sourcemodel_aligned2mni_atlas/atlasbasedmnigrid.png" width="600" %}
 
 Load the subject-specific MRI from [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/mri.mat) and inverse-warp the subject specific grid to the template grid.
 

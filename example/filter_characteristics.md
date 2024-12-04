@@ -2,6 +2,8 @@
 title: Determine the filter characteristics
 category: example
 tags: [preprocessing, filter]
+redirect_from:
+    - /example/determine_the_filter_characteristics/
 ---
 
 # Determine the filter characteristics
@@ -27,7 +29,7 @@ The following script demonstrates how you can determine the filter characteristi
 
     print -dpng fig1.png
 
-{% include image src="/assets/img/example/determine_the_filter_characteristics/fig1.png" width="600" %}
+{% include image src="/assets/img/example/filter_characteristics/fig1.png" width="600" %}
 
       str = 'compare different filter orders (Butterworth)';
     clear f
@@ -44,7 +46,7 @@ The following script demonstrates how you can determine the filter characteristi
 
     print -dpng fig2.png
 
-{% include image src="/assets/img/example/determine_the_filter_characteristics/fig2.png" width="600" %}
+{% include image src="/assets/img/example/filter_characteristics/fig2.png" width="600" %}
 
     str = 'compare Butterworth and FIR';
     clear f
@@ -61,7 +63,7 @@ The following script demonstrates how you can determine the filter characteristi
 
     print -dpng fig3.png
 
-{% include image src="/assets/img/example/determine_the_filter_characteristics/fig3.png" width="600" %}
+{% include image src="/assets/img/example/filter_characteristics/fig3.png" width="600" %}
 
     str = 'compare filter direction';
     clear f
@@ -78,6 +80,6 @@ The following script demonstrates how you can determine the filter characteristi
 
     print -dpng fig4.png
 
-{% include image src="/assets/img/example/determine_the_filter_characteristics/fig4.png" width="600" %}
+{% include image src="/assets/img/example/filter_characteristics/fig4.png" width="600" %}
 
 Note that the two-pass filter characteristic drops off twice as fast as the forward and reverse filter, even though the specified filter order is the same.

@@ -2,6 +2,8 @@
 title: Correlation analysis of fMRI data
 category: example
 tags: [fmri, raw, freq, coherence]
+redirect_from:
+    - /example/correlation_analysis_in_fmri_data/
 ---
 
 # Correlation analysis of fMRI data
