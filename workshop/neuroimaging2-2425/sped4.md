@@ -1,11 +1,9 @@
 ---
-title: (SPED4) Time-frequency analysis in practice using FieldTrip
-tags: [ni2]
-redirect_from:
-  - /workshop/ni2_timefrequencyanalysis/
+title: SPED4 - Time-frequency analysis in practice using FieldTrip
+tags: [neuroimaging2-2425]
 ---
 
-# (SPED4) Time-frequency analysis in practice using FieldTrip
+# SPED4 - Time-frequency analysis in practice using FieldTrip
 
 ## Introduction
 
@@ -33,7 +31,7 @@ Oscillatory components contained in the ongoing EEG or MEG signal often show pow
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/figure1.png" width="600" %}
+{% include image src="/assets/img/workshop/neuroimaging2-2425/sped4/figure1.png" width="600" %}
 
 _Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
@@ -49,7 +47,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/figure2.png" width="200" %}
+{% include image src="/assets/img/workshop/neuroimaging2-2425/sped4/figure2.png" width="200" %}
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
@@ -308,7 +306,7 @@ where K is required to be larger than 0. K is the number of tapers applied; the 
 
 These settings result in the following characteristics as a function of the frequencies of interest:
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/figure7.png" width="400" %}
+{% include image src="/assets/img/workshop/neuroimaging2-2425/sped4/figure7.png" width="400" %}
 
 _Figure: a) The characteristics of the TFRs settings using multitapers in terms of time and frequency resolution of the settings applied in the example. b) Examples of the time-frequency tiles resulting from the settings._
 
