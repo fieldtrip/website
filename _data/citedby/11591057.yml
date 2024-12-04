@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39593731'
+- idtype: doi
+  value: 10.3390/bioengineering11111071
+- idtype: pmcid
+  value: PMC11591057
+authors:
+- authtype: Author
+  name: Nuñez Ponasso G
+- authtype: Author
+  name: Wartman WA
+- authtype: Author
+  name: McSweeney RC
+- authtype: Author
+  name: Lai P
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Weise K
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Raij T
+- authtype: Author
+  name: Makaroff SN
+epubdate: 2024 Oct 26
+fulljournalname: Bioengineering
+issue: '11'
+pages: '1071'
+pmclivedate: 2024/11/27
+printpubdate: ''
+pubdate: 2024 Oct 26
+sortdate: 2024/10/26 00:00
+source: Bioengineering (Basel)
+title: 'Improving EEG Forward Modeling Using High-Resolution Five-Layer BEM-FMM Head
+  Models: Effect on Source Reconstruction Accuracy'
+uid: '11591057'
+volume: '11'

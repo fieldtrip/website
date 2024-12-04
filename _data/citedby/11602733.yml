@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39556944'
+- idtype: doi
+  value: 10.1088/1741-2552/ad9406
+- idtype: pmcid
+  value: PMC11602733
+authors:
+- authtype: Author
+  name: Yu K
+- authtype: Author
+  name: Schmitt S
+- authtype: Author
+  name: Ni Y
+- authtype: Author
+  name: Crane EC
+- authtype: Author
+  name: Smith MA
+- authtype: Author
+  name: He B
+epubdate: 2024 Nov 28
+fulljournalname: Journal of Neural Engineering
+issue: '6'
+pages: 066018
+pmclivedate: 2024/11/29
+printpubdate: 2024 Dec 1
+pubdate: 2024 Nov 28
+sortdate: 2024/11/28 00:00
+source: J Neural Eng
+title: Transcranial focused ultrasound remotely modulates extrastriate visual cortex
+  by stimulating frontal eye field with subregion specificity
+uid: '11602733'
+volume: '21'

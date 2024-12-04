@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38759641'
+- idtype: doi
+  value: 10.1016/j.neuron.2024.04.020
+- idtype: pmcid
+  value: PMC7616856
+- idtype: MID
+  value: EMS200280
+authors:
+- authtype: Author
+  name: Spyropoulos G
+- authtype: Author
+  name: Schneider M
+- authtype: Author
+  name: van Kempen J
+- authtype: Author
+  name: Gieselmann MA
+- authtype: Author
+  name: Thiele A
+- authtype: Author
+  name: Vinck M
+epubdate: 2024 May 16
+fulljournalname: Neuron
+issue: '14'
+pages: 2423-2434.e7
+pmclivedate: 2024/11/26
+printpubdate: 2024 Jul 17
+pubdate: 2024 May 16
+sortdate: 2024/05/16 00:00
+source: Neuron
+title: Distinct feedforward and feedback pathways for cell-type specific attention
+  effects
+uid: '7616856'
+volume: '112'
