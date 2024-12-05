@@ -1,6 +1,8 @@
 ---
 title: References to implemented methods
 tags: [literature, eeg, meg, source, headmodel, freq, statistics, coherence]
+redirect_from:
+    - /references_to_implemented_methods/
 ---
 
 # References to implemented methods

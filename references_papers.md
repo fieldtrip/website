@@ -1,6 +1,8 @@
 ---
 title: References to review papers and teaching material
 tags: [literature]
+redirect_from:
+    /references_to_review_papers_and_teaching_material/
 ---
 
 # References to review papers and teaching material

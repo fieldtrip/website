@@ -2,6 +2,8 @@
 title: Measuring the timing delay and jitter for a real-time application
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/
 ---
 
 # Measuring the timing delay and jitter for a real-time application
@@ -183,7 +185,7 @@ We can just plot the trigger channel:
 
 This then looks a bit like this figure.
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/sent_and_received_triggers_head_localization_off.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/sent_and_received_triggers_head_localization_off.jpg" %}
 
 i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the incoming and detected events;
 
@@ -211,11 +213,11 @@ i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the
 
 The data I obtained (at a sampling rate of 1200) after sending about 3000 triggers looks like this:
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/picture_3.png" %}
+{% include image src="/assets/img/example/realtime_evaluation/picture_3.png" %}
 
 This is rather consistent with a uniform distribution between 100-250ms
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/picture_2.png" %}
+{% include image src="/assets/img/example/realtime_evaluation/picture_2.png" %}
 
 ## Timing of a closed system using the FT buffer to do the online streaming
 
@@ -451,17 +453,17 @@ Below follow the results of the testing in the DCCN for continuous head localiza
 
 NOTE: this is a configuration previously considered as buggy, which is now working
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist._1200hz.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/delay_hist._1200hz.jpg" %}
 
 We now also plot the sample number of the echo against the sample number of the trigger that preceded i
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/trigger_smp_vs_echo_smp.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/trigger_smp_vs_echo_smp.jpg" %}
 
 This shows no samples missing and no accumulative delays
 
 ### CHL off, Fs=1200, Nchans=311
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist._1200hz_hl_off.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/delay_hist._1200hz_hl_off.jpg" %}
 
 We note that the delays are smaller when the continuous HL is off. This is probably to do with an additional data granularity related to the time required to fit a dipole while doing continuous localization- more details on this will follow soon...
 
@@ -471,7 +473,7 @@ Here we increase the sampling rate to Fs=4000Hz
 
 ### CHL on, Fs=4KHz, Nchans=341
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist_hl_on_fs_4khz.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/delay_hist_hl_on_fs_4khz.jpg" %}
 
 Comparing Figure 3 to Figure 1a, we see that the delays have decreased.
 
@@ -481,11 +483,11 @@ We now use the 2nd option for detecting events: using ft_read_event. Note that t
 
 The events were detected with `ft_read_event`.
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/trigger_smp_vs_echo_smp_4khz_read_ev.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/trigger_smp_vs_echo_smp_4khz_read_ev.jpg" %}
 
 This shows no events missing and no accumulative delays.The delay distribution is in Figure 5.
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg" %}
 
 Although, here we only have 200 delays (compared to 2000 before), we see that the detection of triggers with read*event is not faster than with the online flank detection, although we might be able to squeeze out a bit more performance (reduce latency) once we use a clever scheme for only reading \_new* events. This also depends on whether **acq2ftx** first writes the events or the samples to the buffer.
 
@@ -601,4 +603,4 @@ The code below will give you a sense for the distribution of time delays associa
 
 A typical distribution of access times is below:
 
-{% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_read_header_acq_buffer.jpg" %}
+{% include image src="/assets/img/example/realtime_evaluation/delay_read_header_acq_buffer.jpg" %}

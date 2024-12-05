@@ -2,6 +2,8 @@
 title: Use simulated ERPs to explore cluster statistics
 category: example
 tags: [statistics, cluster, simulation]
+redirect_from:
+    - /example/use_simulated_erps_to_explore_cluster_statistics/
 ---
 
 # Use simulated ERPs to explore cluster statistics

@@ -2,6 +2,8 @@
 title: Compute forward simulated data and apply a beamformer scan
 category: example
 tags: [meg, source, dipole]
+redirect_from:
+    - /example/compute_forward_simulated_data_and_apply_a_beamformer_scan/
 ---
 
 # Compute forward simulated data and apply a beamformer scan
@@ -63,4 +65,4 @@ This example script shows you how to create some simulated channel-level MEG dat
     cfg.funcolorlim = [1.4 1.5];  % the voxel in the center of the volume conductor messes up the autoscaling
     ft_sourceplot(cfg, source_nai);
 
-{% include image src="/assets/img/example/compute_forward_simulated_data_and_apply_a_beamformer_scan/example_beamforming.png" %}
+{% include image src="/assets/img/example/simulateddata_beamformer/example_beamforming.png" %}
