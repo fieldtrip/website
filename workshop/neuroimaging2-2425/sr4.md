@@ -94,8 +94,8 @@ By analogy, you may remember from high school geometry, that equations with
 are not parallel) intersect in a line. This line represents all valid solutions
 to the linear system of equations.
 
-In this toy example, it is very straightforward to parametrize the solution.
-Let’s call the value that we take for s(3) the value `a`. Using this substition,
+In this toy example, it is very straightforward to parameterize the solution.
+Let’s call the value that we take for s(3) the value `a`. Using this substitution,
 and applying it to the equations above, we get:
 
 the variable a can be anything, so let's give it a random value
@@ -247,7 +247,7 @@ matrix that, when multiplied with the original in the correct order, gives back
 the identity matrix. It happens to be a solution to the underdetermined linear
 system of equations that yields the minimum norm.
 
-The proof for this can be derived by first showing that it is a particilar
+The proof for this can be derived by first showing that it is a particular
 solution; subsequently we show that there is no other solution that has a norm
 smaller than the one derived using the pseudoinverse.
 

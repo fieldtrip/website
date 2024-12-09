@@ -1334,6 +1334,7 @@ Natus
 Nbeliy
 Nchan
 Nchancmb
+Nchannels
 Nchans
 Ncoils
 Ncs
@@ -1430,53 +1431,6 @@ OFA
 OGE
 OHBM
 OOP
-RIA
-RSA
-Rig
-Sofie
-Spotify
-Stephani
-TRFs
-Tilman
-Viktor
-anonymization
-appenddim
-appendsource
-attL
-attR
-baddata
-biopac
-contrastLR
-csdlabel
-cuttingEEGX
-eetbar
-emaillist
-eventsversustrials
-fieldname
-fieldtripbuffer
-finetune
-gettingstarted
-howtoask
-impedancecheck
-jvm
-macbook
-meshingproblem
-mris
-nonsym
-osx
-paxinos
-scandip
-serialport
-sourcerecon
-stadard
-strangedemean
-strangedetrend
-sym
-symposia
-triaxial
-uncor
-upsidedown
-upsidedownplotting
 OPM
 OPMEG
 OPMs
@@ -1499,12 +1453,12 @@ Oosterom
 OpenBCI
 OpenEEG
 OpenFMRI
-OpenScience
 OpenGL
 OpenMEEG
 OpenMP
 OpenNeuro
 OpenPose
+OpenScience
 OpenWallnut
 OpenfMRI
 Optimising
@@ -1516,10 +1470,12 @@ Ou
 OxySoft
 Oxymon
 Oxysoft
+PARDISO
 PCA
 PCC
 PDFs
 PECR
+PETSc
 PEs
 PIB
 PIs
@@ -1636,8 +1592,6 @@ Pubmed
 Putamen
 PyCorder
 Pz
-PARDISO
-PETSc
 QIpnMgJ
 QLvsa
 QRS
@@ -1668,6 +1622,7 @@ RHEL
 RHH
 RHJ
 RHS
+RIA
 RIKEN
 RITMO
 RK
@@ -1678,6 +1633,7 @@ ROI
 ROIs
 RPA
 RPF
+RSA
 RSP
 RTG
 RTH
@@ -1713,6 +1669,7 @@ Reslicing
 Rhodri
 Ricoh
 Ricoh's
+Rig
 Riitta
 Rijen
 Rik
@@ -1859,6 +1816,7 @@ SmoG
 Smoller
 Sociedad
 Sofía
+Sofie
 Soldevilla
 Solidworks
 Sónia
@@ -1872,6 +1830,7 @@ SpeedMode
 Sphynx
 Spieser
 Sporns
+Spotify
 Springer
 Springet
 Sqdproject
@@ -1886,6 +1845,7 @@ Stefano
 Stegeman
 Steina
 Stenroos
+Stephani
 Stereotaxic
 StimBreakStim
 Stolk
@@ -1945,6 +1905,7 @@ TODO
 TP
 TPM
 TRF
+TRFs
 TSV
 TT
 TTL
@@ -1979,6 +1940,7 @@ TiborAuer
 Tieges
 Tierney
 Tikhonov
+Tilman
 TimeStampPerSample
 Timelocked
 Timmer
@@ -2088,6 +2050,7 @@ VgSKb
 Viasys
 VideoMEG
 Videowriter
+Viktor
 Vimeo
 Vinck
 Vinding
@@ -2284,10 +2247,11 @@ anatonical
 andusing
 anims
 annd
-annot
 annnouncement
+annot
 anonimized
 anonimizing
+anonymization
 anonymize
 anonymized
 anonymizedata
@@ -2298,9 +2262,11 @@ anywave
 aparc
 api
 appenddata
+appenddim
 appendfreq
 appendlayout
 appendsens
+appendsource
 appendspike
 appendtimelock
 ar
@@ -2331,6 +2297,8 @@ asynchronies
 asynchrony
 atlasbasedmnigrid
 atlascoordinates
+attL
+attR
 aud
 audc
 audiovideo
@@ -2368,6 +2336,7 @@ backprojecting
 backprojection
 badchan
 badchannel
+baddata
 badsegment
 baillet
 balert
@@ -2439,6 +2408,7 @@ bioimage
 bioimagesuite
 biomag
 biomechanics
+biopac
 biophysically
 biosemi
 biosig
@@ -2709,6 +2679,7 @@ contidion
 contine
 contournum
 contralateral
+contrastLR
 contrib
 controleren
 contrsting
@@ -2755,6 +2726,7 @@ covariancewindow
 covariate
 covariates
 covarinace
+covary
 covatt
 covid
 cplusplus
@@ -2779,6 +2751,7 @@ cryocooling
 csc
 csd
 csddimord
+csdlabel
 csf
 csv
 ctf
@@ -2794,6 +2767,7 @@ customisable
 customizable
 cutdat
 cuttingEEG
+cuttingEEGX
 cuttingeeg
 cuttingeegx
 cv
@@ -2927,11 +2901,14 @@ dimensionalities
 dimensionality
 dimord
 dipfit
+dipmom
 dipolar
 dipolefit
 dipolefitting
 dipolesimulation
 dipoli
+dippar
+dippos
 dir
 directionality
 disallowance
@@ -2952,9 +2929,6 @@ distracters
 distractor
 distractors
 distributedcomputing
-dipmom
-dippar
-dippos
 dll
 dlls
 dma
@@ -3035,6 +3009,7 @@ eegscale
 een
 eep
 eeprobe
+eetbar
 ef
 effectivly
 effector
@@ -3073,6 +3048,7 @@ elekta
 elp
 else's
 elseif
+emaillist
 emarker
 emarkersize
 emg
@@ -3128,6 +3104,7 @@ eventformat
 eventrelatedaveraging
 eventrelatedstatistics
 eventreltedaveraging
+eventsversustrials
 eventtype
 eventtypes
 eventvalue
@@ -3205,10 +3182,12 @@ fiducials
 fieldline
 fieldlinealpha
 fieldlinebeta
+fieldname
 fieldnames
 fieldtrip
 fieldtripSource
 fieldtripXXX
+fieldtripbuffer
 fieldtripdefs
 fieldtriplogo
 fieldtrippers
@@ -3239,6 +3218,7 @@ filtfilt
 financials
 findcluster
 findpeaksn
+finetune
 fingertapping
 fingertaps
 firewire
@@ -3384,6 +3364,7 @@ getopt
 getsubfield
 getter
 gettimeofday
+gettingstarted
 gif
 gifs
 gifti
@@ -3524,6 +3505,7 @@ homogenous
 hostname
 hotspot
 howto's
+howtoask
 hpfilter
 hpfreq
 hpi
@@ -3574,6 +3556,7 @@ imfill
 img
 immunities
 imopen
+impedancecheck
 impedances
 implemenations
 implementatie
@@ -3687,6 +3670,7 @@ json
 jsonlab
 judgement
 june
+jvm
 jyvaskyla
 kB
 kL
@@ -3813,6 +3797,7 @@ mAm
 mMSE
 mW
 macOS
+macbook
 maci
 madrid
 magmul
@@ -3892,6 +3877,7 @@ mentat
 mentats
 merchantability
 meshinfl
+meshingproblem
 meshlab
 meshorig
 meshrealign
@@ -4001,6 +3987,7 @@ mri
 mricro
 mripath
 mrirs
+mris
 mrk
 mrprot
 mrtrix
@@ -4161,10 +4148,10 @@ newDs
 newNum
 newshape
 nex
+ni
 nicolet
 niet
 nifti
-ni
 nii
 niix
 nirs
@@ -4189,6 +4176,7 @@ nongaussian
 nonlinearassociation
 nonoverlapping
 nonparametric
+nonsym
 nopain
 nopinv
 normalisation
@@ -4305,6 +4293,7 @@ orthographical
 os
 oslo
 oso
+osx
 ot
 othe
 ous
@@ -4351,6 +4340,7 @@ partialled
 parzenwin
 passcode
 pathname
+paxinos
 pc
 pca
 pcbi
@@ -4545,6 +4535,7 @@ radiological
 raintwoto
 ramining
 randcluster
+randn
 randomisation
 randomising
 ranksum
@@ -4703,12 +4694,14 @@ saveas
 savefig
 saveonerror
 saveonsuccess
+sbf
 sbin
 scalable
 scalings
 scalpcouplingindex
 scalpcurrentdensity
 scalponly
+scandip
 scd
 schoffelen
 sciencedirect
@@ -4750,6 +4743,7 @@ semiology
 sensGain
 sensType
 sensoranalysis
+sensordata
 sensorimotor
 sensorlocations
 sensorrealign
@@ -4760,6 +4754,7 @@ senstype
 sensys
 sentential
 sep
+serialport
 ses
 setno
 setpath
@@ -4827,6 +4822,7 @@ smi
 smp
 smr
 smri
+sn
 snirf
 snr
 sobel
@@ -4868,6 +4864,7 @@ sourceplotslice
 sourceplotsurf
 sourceplottstatunmasked
 sourcepstM
+sourcerecon
 sourcereconstruction
 sourcespace
 sourcestatistics
@@ -4913,6 +4910,7 @@ src
 ss
 sss
 ssvep
+stadard
 standardisation
 standardised
 startblokken
@@ -4942,6 +4940,8 @@ stl
 stockholm
 storages
 strace
+strangedemean
+strangedetrend
 strangetfr
 strcmp
 strenth
@@ -5013,6 +5013,8 @@ swf
 swich
 sx
 sychronization
+sym
+symposia
 symx
 synched
 synchronisation
@@ -5193,6 +5195,7 @@ trialstructure
 trialtime
 triang
 triangulations
+triaxial
 triggerable
 triginfo
 trigshift
@@ -5234,6 +5237,7 @@ uk
 un
 unclipped
 uncludes
+uncor
 undefind
 underdetermined
 underly
@@ -5261,6 +5265,8 @@ uperior
 upfirdn
 upsample
 upscaled
+upsidedown
+upsidedownplotting
 upsideup
 usalzburg
 usb
@@ -5345,6 +5351,7 @@ waveforms
 waveletstfrdelta
 waveletwidth
 wb
+wbf
 wcm
 wdq
 webdav
@@ -5396,6 +5403,7 @@ xxxstatistics
 xxxx
 xxxxxx
 xxxxxxxx
+xy
 xylazine
 xyz
 yc
