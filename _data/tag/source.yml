@@ -1,17 +1,11 @@
-- name:  Combined EEG and MEG source reconstruction
-  link:  /example/combined_eeg_and_meg_source_reconstruction
-
 - name:  Common filters in beamforming
-  link:  /example/common_filters_in_beamforming
+  link:  /example/beamformer_commonfilter
 
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/compute_forward_simulated_data
+- name:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/beamformer_ownforward
 
-- name:  Compute forward simulated data and apply a beamformer scan
-  link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
-
-- name:  Compute forward simulated data and apply a dipole fit
-  link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+- name:  Testing BEM created EEG lead fields
+  link:  /example/bem_evaluation
 
 - name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
@@ -31,14 +25,23 @@
 - name:  How to create a head model if you do not have an individual MRI
   link:  /example/fittemplate
 
+- name:  Make MEG leadfields using different headmodels
+  link:  /example/headmodel_various
+
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
 
-- name:  Make MEG leadfields using different headmodels
-  link:  /example/make_leadfields_using_different_headmodels
-
 - name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
+
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/simulateddata
+
+- name:  Compute forward simulated data and apply a beamformer scan
+  link:  /example/simulateddata_beamformer
+
+- name:  Compute forward simulated data and apply a dipole fit
+  link:  /example/simulateddata_dipolefit
 
 - name:  Source statistics
   link:  /example/source_statistics
@@ -46,14 +49,11 @@
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
 
+- name:  Combined EEG and MEG source reconstruction
+  link:  /example/sourcerecon_meeg
+
 - name:  Symmetric dipole pairs for beamforming
   link:  /example/symmetry
-
-- name:  Testing BEM created EEG lead fields
-  link:  /example/testing_bem_created_leadfields
-
-- name:  Use your own forward leadfield model in an inverse beamformer computation
-  link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
 
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/anat_coreg
@@ -110,7 +110,7 @@
   link:  /reference
 
 - name:  References to implemented methods
-  link:  /references_to_implemented_methods
+  link:  /references_methods
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer

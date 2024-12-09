@@ -2,7 +2,7 @@
   link:  /example/bids_emg
 
 - name:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition
+  link:  /example/trialdef_emg
 
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence

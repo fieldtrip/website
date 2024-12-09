@@ -1,17 +1,8 @@
-- name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
-  link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
+- name:  Common filters in beamforming
+  link:  /example/beamformer_commonfilter
 
 - name:  Effect of SNR on Coherence
   link:  /example/coherence_snr
-
-- name:  Common filters in beamforming
-  link:  /example/common_filters_in_beamforming
-
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
-
-- name:  Correlation analysis of fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Cross-frequency analysis
   link:  /example/crossfreq
@@ -19,11 +10,20 @@
 - name:  Effects of tapering for power estimates
   link:  /example/effects_of_tapering
 
+- name:  Correlation analysis of fMRI data
+  link:  /example/fmri_correlationanalysis
+
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/granger_conditional
+
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset
 
 - name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/ssvep
+
+- name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+  link:  /example/stats_besa
 
 - name:  How can I test whether a behavioral measure is phasic?
   link:  /faq/behavior_cosinefit
@@ -89,7 +89,7 @@
   link:  /reference
 
 - name:  References to implemented methods
-  link:  /references_to_implemented_methods
+  link:  /references_methods
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer

@@ -8,7 +8,7 @@
   link:  /example/biosemi
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/writing_simulated_data_to_a_ctf_dataset
+  link:  /example/simulateddata_ctf
 
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/anat_dicom2ctf

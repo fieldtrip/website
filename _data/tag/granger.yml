@@ -1,5 +1,5 @@
 - name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
+  link:  /example/granger_conditional
 
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity

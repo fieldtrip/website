@@ -1,20 +1,20 @@
 - name:  Streaming realtime fMRI from Siemens scanners
   link:  /development/realtime/fmri
 
+- name:  Testing BEM created EEG lead fields
+  link:  /example/bem_evaluation
+
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
-
-- name:  Correlation analysis of fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/electrodes2bem
 
+- name:  Correlation analysis of fMRI data
+  link:  /example/fmri_correlationanalysis
+
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
-
-- name:  Testing BEM created EEG lead fields
-  link:  /example/testing_bem_created_leadfields
 
 - name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
   link:  /faq/acpc

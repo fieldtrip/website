@@ -1,11 +1,11 @@
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/dss_ecg
+
 - name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
 - name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
-
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/databrowser_crash

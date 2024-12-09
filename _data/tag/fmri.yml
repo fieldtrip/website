@@ -2,7 +2,7 @@
   link:  /development/realtime/fmri
 
 - name:  Correlation analysis of fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
+  link:  /example/fmri_correlationanalysis
 
 - name:  Getting started with fMRI timeseries data
   link:  /getting_started/fmri

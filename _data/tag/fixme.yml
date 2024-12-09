@@ -2,7 +2,7 @@
   link:  /development/guideline/code
 
 - name:  Common filters in beamforming
-  link:  /example/common_filters_in_beamforming
+  link:  /example/beamformer_commonfilter
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/dipolefit_somatosensory_erf

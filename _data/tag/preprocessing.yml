@@ -1,14 +1,11 @@
-- name:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/dss_ecg
 
 - name:  Determine the filter characteristics
-  link:  /example/determine_the_filter_characteristics
+  link:  /example/filter_characteristics
 
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
-
-- name:  Getting started with reading raw EEG or MEG data
-  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
 - name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
@@ -19,14 +16,17 @@
 - name:  Combine MEG with Eyelink eyetracker data
   link:  /example/meg_eyelink
 
+- name:  Getting started with reading raw EEG or MEG data
+  link:  /example/raw_meeg
+
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
 
+- name:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/trialdef_emg
+
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/trialfun
-
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  How can I append the files of two separate recordings?
   link:  /faq/append_files

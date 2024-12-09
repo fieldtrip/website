@@ -1,6 +1,3 @@
-- name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
-  link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
-
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
 
@@ -19,17 +16,20 @@
 - name:  Using simulations to estimate the sample size for cluster-based permutation test
   link:  /example/samplesize
 
+- name:  Use simulated ERPs to explore cluster statistics
+  link:  /example/simulateddata_clusterstats
+
 - name:  Source statistics
   link:  /example/source_statistics
+
+- name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+  link:  /example/stats_besa
 
 - name:  Stratify the distribution of one variable that differs in two conditions
   link:  /example/stratify
 
 - name:  Using threshold-free cluster enhancement for cluster statistics
-  link:  /example/threshold_free_cluster_enhancement
-
-- name:  Use simulated ERPs to explore cluster statistics
-  link:  /example/use_simulated_erps_to_explore_cluster_statistics
+  link:  /example/tfce
 
 - name:  How can I test whether a behavioral measure is phasic?
   link:  /faq/behavior_cosinefit
@@ -74,7 +74,7 @@
   link:  /reference
 
 - name:  References to implemented methods
-  link:  /references_to_implemented_methods
+  link:  /references_methods
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq

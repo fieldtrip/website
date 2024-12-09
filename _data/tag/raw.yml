@@ -1,8 +1,8 @@
 - name:  Correlation analysis of fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
+  link:  /example/fmri_correlationanalysis
 
 - name:  Getting started with reading raw EEG or MEG data
-  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
+  link:  /example/raw_meeg
 
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/trialfun

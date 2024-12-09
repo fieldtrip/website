@@ -1,20 +1,17 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
+- name:  Common filters in beamforming
+  link:  /example/beamformer_commonfilter
+
 - name:  Converting an example MEG dataset for sharing in BIDS
   link:  /example/bids_meg
 
-- name:  Combined EEG and MEG source reconstruction
-  link:  /example/combined_eeg_and_meg_source_reconstruction
-
-- name:  Common filters in beamforming
-  link:  /example/common_filters_in_beamforming
-
-- name:  Compute forward simulated data and apply a beamformer scan
-  link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
-
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/dipolefit_somatosensory_erf
+
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/dss_ecg
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
@@ -22,8 +19,8 @@
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
-- name:  Getting started with reading raw EEG or MEG data
-  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
+- name:  Make MEG leadfields using different headmodels
+  link:  /example/headmodel_various
 
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
@@ -34,11 +31,17 @@
 - name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
-- name:  Make MEG leadfields using different headmodels
-  link:  /example/make_leadfields_using_different_headmodels
-
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
+
+- name:  Getting started with reading raw EEG or MEG data
+  link:  /example/raw_meeg
+
+- name:  Compute forward simulated data and apply a beamformer scan
+  link:  /example/simulateddata_beamformer
+
+- name:  Can I create an artificial CTF dataset using MATLAB?
+  link:  /example/simulateddata_ctf
 
 - name:  Source statistics
   link:  /example/source_statistics
@@ -46,14 +49,11 @@
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
 
+- name:  Combined EEG and MEG source reconstruction
+  link:  /example/sourcerecon_meeg
+
 - name:  Fitting a template MRI to the MEG Polhemus head shape
   link:  /example/sphere_fitting
-
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
-
-- name:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/writing_simulated_data_to_a_ctf_dataset
 
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/anat_coreg
@@ -125,7 +125,7 @@
   link:  /reading_data
 
 - name:  References to implemented methods
-  link:  /references_to_implemented_methods
+  link:  /references_methods
 
 - name:  Template 2-D layouts for plotting
   link:  /template/layout

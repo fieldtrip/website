@@ -2,7 +2,7 @@
   link:  /example/coherence_snr
 
 - name:  Correlation analysis of fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
+  link:  /example/fmri_correlationanalysis
 
 - name:  What is the difference between coherence and coherency?
   link:  /faq/coherence_coherency
@@ -17,7 +17,7 @@
   link:  /faq/phaseslopeindex
 
 - name:  References to implemented methods
-  link:  /references_to_implemented_methods
+  link:  /references_methods
 
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended

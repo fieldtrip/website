@@ -1,3 +1,6 @@
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/dss_ecg
+
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
@@ -9,9 +12,6 @@
 
 - name:  Combine MEG with Eyelink eyetracker data
   link:  /example/meg_eyelink
-
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/artifact_padding

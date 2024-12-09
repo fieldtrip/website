@@ -128,7 +128,7 @@
   link:  /example/ft_realtime_signalviewer
 
 - name:  Measuring the timing delay and jitter for a real-time application
-  link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
+  link:  /example/realtime_evaluation
 
 - name:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/fieldtripbuffer
