@@ -1477,7 +1477,6 @@ triaxial
 uncor
 upsidedown
 upsidedownplotting
-
 OPM
 OPMEG
 OPMs
@@ -1979,6 +1978,7 @@ Tibor
 TiborAuer
 Tieges
 Tierney
+Tikhonov
 TimeStampPerSample
 Timelocked
 Timmer
@@ -2952,6 +2952,9 @@ distracters
 distractor
 distractors
 distributedcomputing
+dipmom
+dippar
+dippos
 dll
 dlls
 dma
@@ -3634,6 +3637,7 @@ inv
 inventorise
 inventorize
 inverseproblem
+invertible
 inwardshift
 io
 ioGain
@@ -4494,6 +4498,7 @@ projectnoise
 prolate
 propofol
 psd
+pseudoinverse
 pseudonimized
 pseudonomized
 pseudorandom
@@ -4986,6 +4991,7 @@ sulcus
 summarise
 summarising
 summerschool
+sumsq
 superclass
 superclassifier
 suprathreshold

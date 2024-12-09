@@ -89,7 +89,7 @@ With the trigger events aligned, based on the trigger values, we can estimate th
     y = smp_meg - offset_meg;
     slope = y/x; % this should be about 1.2 (1kHz vs. 1.2kHz)
 
-    % plot the residuals between the MEG samples and the 'modelled' MEG samples
+    % plot the residuals between the MEG samples and the 'modeled' MEG samples
     res = smp_meg - offset_meg - slope.*(smp_asc - offset_asc); % conclusion: it is anywhere between -1.5 of 1.5 sample
     figure;histogram(res);
 

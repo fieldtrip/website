@@ -451,7 +451,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
 
 You can see that the dipoles have moved a little bit from their original location and that they are not symmetric any more.
 
-Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear='no' and cfg.gridsearch='no'.
+Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the time course of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear='no' and cfg.gridsearch='no'.
 
     cfg = [];
     cfg.latency = 'all';
@@ -499,7 +499,7 @@ The orientation and strength of each dipole is represented as a 3\*Ntime matrix,
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_timeseries.png" width="500" %}
 
-Besides comparing the timecourse of the activity between the two conditions, we could also ask whether the activity is at a different location.
+Besides comparing the time course of the activity between the two conditions, we could also ask whether the activity is at a different location.
 
     cfg = [];
     cfg.numdipoles = 2;
@@ -932,7 +932,7 @@ How does this fit compare to the previous? Can you explain the difference?
 
 ## Summary and suggested further reading
 
-We demonstrated how to use dipole fitting to estimate the location and timecourse of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.
+We demonstrated how to use dipole fitting to estimate the location and time course of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.
 
 This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
 

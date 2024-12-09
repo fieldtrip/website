@@ -27,7 +27,7 @@ All of the low-level preprocessing functions require data to be represented as a
 - **[ft_preproc_baselinecorrect](/reference/preproc/ft_preproc_baselinecorrect)** performs a baseline correction
 - **[ft_preproc_detrend](/reference/preproc/ft_preproc_detrend)** removes linear or higher order polynomial trends
 - **[ft_preproc_polyremoval](/reference/preproc/ft_preproc_polyremoval)** removes polynomial trends
-- **[ft_preproc_denoise](/reference/preproc/ft_preproc_denoise)** regresses out noise with a known timecourse
+- **[ft_preproc_denoise](/reference/preproc/ft_preproc_denoise)** regresses out noise with a known time course
 - **[ft_preproc_derivative](/reference/preproc/ft_preproc_derivative)** computes the temporal Nth order derivative
 - **[ft_preproc_hilbert](/reference/preproc/ft_preproc_hilbert)** computes the Hilbert transpose of the data
 - **[ft_preproc_rectify](/reference/preproc/ft_preproc_rectify)** rectifies the data, useful for EMG

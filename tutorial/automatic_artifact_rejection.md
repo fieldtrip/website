@@ -66,7 +66,7 @@ The automatic artifact detection approach used here is based on three characteri
 3.  Per channel/electrode every timepoint is z-normalized (mean subtracted and divided by standard deviation)
 4.  Per timepoint these z-values are averaged. Since an artifact might occur on any and often on more than one electrode (think of eyeblinks and muscle artifacts), averaging z-values over channels/electrodes allows evidence for an artifact to accumulate.
 
-_This results in one timecourse representing standardized deviations from the mean of all channels._
+_This results in one time course representing standardized deviations from the mean of all channels._
 
 The formulas for calculating the z-scores are:
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure2.png" width="120" %}

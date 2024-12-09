@@ -41,10 +41,10 @@ redirect_from:
     cfg.fsample = 250;          % Hz
     raw1 = ft_dipolesimulation(cfg);
     avg1 = ft_timelockanalysis([], raw1);
-    plot(avg1.time, avg1.avg);  % plot the timecourse
+    plot(avg1.time, avg1.avg);  % plot the time course
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %% create a dipole simulation with one dipole and a custom timecourse
+    %% create a dipole simulation with one dipole and a custom time course
     cfg      = [];
     cfg.headmodel = vol;          % see above
     cfg.elec = elec;              % see above
@@ -56,10 +56,10 @@ redirect_from:
     cfg.dip.signal = {signal, signal, signal};  % three trials
     raw2 = ft_dipolesimulation(cfg);
     avg2 = ft_timelockanalysis([], raw2);
-    plot(avg2.time, avg2.avg);    % plot the timecourse
+    plot(avg2.time, avg2.avg);    % plot the time course
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %% create a dipole simulation with two dipoles and a custom timecourse
+    %% create a dipole simulation with two dipoles and a custom time course
     cfg      = [];
     cfg.headmodel = vol;   % see above
     cfg.elec = elec;       % see above

@@ -198,7 +198,7 @@ Then the MEG case:
     sensorsmeg = ni2_sensors('type', 'meg');
     leadfieldmeg = ni2_leadfield(sensorsmeg, headmodelmeg, dippar);
 
-Again, the topography can be ploted with:
+Again, the topography can be plotted with:
 
     ni2_topoplot(sensorsmeg, leadfieldmeg);
 
@@ -299,7 +299,7 @@ options in the "cfg" argument to show the channel numbers:
 
     ni2_topoplot(sensors, sensordata(:, 485), cfg); colorbar
 
-Re-referencing is nothing else than subracting two signals. This can be easily
+Re-referencing is nothing else than subtracting two signals. This can be easily
 done in MATLAB:
 
 channel 74 is an occipital channel

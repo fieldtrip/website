@@ -502,7 +502,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
     cfg.location = source.dip.pos(2,:);
     figure; ft_sourceplot(cfg, mri);
 
-    % use dipole positions to extract timecourse of whole trial
+    % use dipole positions to extract time course of whole trial
     cfg = source.cfg;
     cfg.dip.pos = source.dip.pos;
     cfg.gridsearch = 'no';

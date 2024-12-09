@@ -112,7 +112,7 @@ equations when a=0._**
 **_Q7.1.1 - Show that this solution for `s` satisfies the linear system of
 equations when a=100._**
 
-We will use this parametrization in the next section.
+We will use this parameterization in the next section.
 
 ### 7.2 The 'best’ solution based on additional constraints: minimize norm.
 
@@ -146,12 +146,12 @@ The source power (L2 norm) can be computed in a variety of ways in MATLAB:
 **_Q7.2.1 - Compute and write down the L2-norm_**
 
 Rather than trying out random values for `a` to find the solution that yields
-the lowest source norm, we can use the parametrization that we defined in the
+the lowest source norm, we can use the parameterization that we defined in the
 previous section:
 
     snorm = sqrt(s(1)^2+s(2)^2+s(3)^2)
 
-Filling in the parametrization we obtained in section 2.1, we get:
+Filling in the parameterization we obtained in section 2.1, we get:
 
     snorm = sqrt((2-a)^2+(1-a)^2+a^2);
 
@@ -244,7 +244,7 @@ inv function) of matrix L?_**
 
 The pseudo-inverse is not only a clever mathematical way of computing a new
 matrix that, when multiplied with the original in the correct order, gives back
-the identity matrix. It happens to be a solution to the undertermined linear
+the identity matrix. It happens to be a solution to the underdetermined linear
 system of equations that yields the minimum norm.
 
 The proof for this can be derived by first showing that it is a particilar
@@ -264,7 +264,7 @@ Remember from section 2.2 that the norm of the solution can be computed from
 the amplitude, and sums across sources. To actually get the norm, we would also
 have to take the square root of the result, but let’s not do this for now, and
 look at the squared norm. Likewise, we can do `(Sx-Sm)'*Sm`, where we compute
-for each of the sources the product between the amplitude modelled in `Sm` and
+for each of the sources the product between the amplitude modeled in `Sm` and
 the amplitude difference between `Sx` and `Sm`, and sum this across sources.
 Substituting `L'*(L*L')^-1 * y` for the second `Sm` in the equation, we get:
 
@@ -402,7 +402,7 @@ which represents the squared amplitude for each time point.
 
 The initial time point of which the spatial topography is plotted is t=0,
 and at that moment there is no activity at all, hence the completely green distribution.
-Click on the source timecourse in the lower right to select a time point at
+Click on the source time course in the lower right to select a time point at
 which the activity in grid location 2352 peaks.
 
 **_Q7.5.4 - What happens with the spatial distribution of the source power

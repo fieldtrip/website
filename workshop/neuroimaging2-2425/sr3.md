@@ -47,7 +47,7 @@ spatial topography of the observed activity for a given time point. We will
 start by modeling the data that is observed at a single time point. Then, we
 need to make an assumption about the number of dipoles (and thus the number
 of parameters) that we believe underly the observed data. Here, we start with
-assuming that the data can be modelled with just a single dipole.
+assuming that the data can be modeled with just a single dipole.
 
 After doing these exercises
 
@@ -127,36 +127,36 @@ We can compute the least-squares optimal solution for dipmom using
 
     dipmom = leadfield \ topo_observed;
 
-The modelled data can now easily be obtained by multiplying the leadfield
+The modeled data can now easily be obtained by multiplying the leadfield
 with the estimated dipole moment.
 
-    topo_modelled = leadfield * dipmom;
+    topo_modeled = leadfield * dipmom;
 
-**_Q6.1.5 - Plot the topography of the modelled dipole and compare it to the
+**_Q6.1.5 - Plot the topography of the modeled dipole and compare it to the
 previously plotted observed topography. Describe the difference._**
 
-Now we can quantify the difference between the observed and modelled data,
+Now we can quantify the difference between the observed and modeled data,
 by summing the squared differences, and relating this number to the sum of the
 squared data values. The smaller this number, the better the fit.
 
-    topo_residual = topo_observed-topo_modelled;
+    topo_residual = topo_observed-topo_modeled;
     sumsq = sum(topo_residual.^2) ./ sum(topo_observed.^2);
 
 The value we have obtained for sumsq does not yet mean that much, unless it
 is compared to the sumsq obtained for a fitted model with different parameters,
 i.e., a dipole at another location.
 
-**_Q6.1.6 - Make a scatter plot of the values in topo_modelled (along x) and
+**_Q6.1.6 - Make a scatter plot of the values in topo_modeled (along x) and
 topo_observed (along y)._**
 
 **_Q6.1.7 - Compare the sumsq value to the correlation that you can observe
-(and compute) between the topo_modelled and topo_observed._**
+(and compute) between the topo_modeled and topo_observed._**
 
 ### 6.2 Finding the optimal model
 
 Now we know how to model the observed data using the leadfields created for
 one or more dipoles with a prespecified location, and we know how to quantify
-the goodness-of-fit between the modelled and observed data. Next, we need to
+the goodness-of-fit between the modeled and observed data. Next, we need to
 consider the strategies that can be used to find the optimal model. Since the
 leadfields are non-linear functions of the parameters, there is no easy analytic
 solution to this problem. Therefore, the implicit strategy is to sample the
@@ -219,7 +219,7 @@ cheating a bit here, because usually we don’t know this of course).
     pos = pos(sel,:);
 
 **_Q6.2.1 - How many source positions do we have remaining after selecting
-only the posiitons inside the head, and only for this slice?_**
+only the positions inside the head, and only for this slice?_**
 
 Now, what we can do is repeat the steps in the previous section for each of
 these points, i.e., we will model for each of the positions a dipole that optimally
@@ -234,8 +234,8 @@ easily solved with a for-loop.
       disp(k)
       leadfield = ni2_leadfield(sensors, headmodel, pos(k,:));
       dipmom = leadfield \ topo_observed;
-      topo_modelled = leadfield * dipmom;
-      topo_residual = topo_observed-topo_modelled;
+      topo_modeled = leadfield * dipmom;
+      topo_residual = topo_observed-topo_modeled;
       sumsq(k) = sum(topo_residual.^2) ./ sum(topo_observed.^2);
     end
 
@@ -288,8 +288,8 @@ Now we can very quickly compute the goodness-of-fit for all locations in the
       disp(k)
       ik = (k-1)*3+(1:3); % select the three columns corresponding to one position
       dipmom = leadfield(:, ik) \ topo_observed;
-      topo_modelled = leadfield(:, ik) * dipmom;
-      topo_residual = topo_observed-topo_modelled;
+      topo_modeled = leadfield(:, ik) * dipmom;
+      topo_residual = topo_observed-topo_modeled;
       sumsq(k) = sum(topo_residual.^2) ./ sum(topo_observed(:).^2);
     end
 
@@ -336,8 +336,8 @@ will not compute the leadfields on the fly, but load the pre-computed leadfields
       disp(k)
       ik=(k-1)*3+(1:3);
       dipmom = leadfield(:, ik) \ topo_observed;
-      topo_modelled = leadfield(:, ik) * dipmom;
-      topo_residual = topo_observed-topo_modelled;
+      topo_modeled = leadfield(:, ik) * dipmom;
+      topo_residual = topo_observed-topo_modeled;
       sumsq(k) = sum(topo_residual(:).^2)./sum(topo_observed(:).^2);
     end
     [m, ix] = min(sumsq)
@@ -402,7 +402,7 @@ Now we can call the function:
 
 The output variable to `ft_dipolefitting` has a field `dip` containing information
 about the optimal model. In particular, have a look at `dip.dip.pos`, and `dip.dip.mom`.
-We can also visualize the modelled topography, and compare this to the observed
+We can also visualize the modeled topography, and compare this to the observed
 topography. These are represented in `dip.Vmodel` and `dip.Vdata`, respectively.
 
 **_Q6.4.1 - Using the output of ft_dipolefitting, plot a topography of the
@@ -459,8 +459,8 @@ time point for the observed topography:
       disp(k)
       ik=(k-1)*3+(1:3);
       dipmom = leadfield(:, ik) \ topo_observed;
-      topo_modelled = leadfield(:, ik)*dipmom;
-      sumsq(k)= sum((topo_observed(:)-topo_modelled(:)).^2) ./ sum(topo_observed(:).^2);
+      topo_modeled = leadfield(:, ik)*dipmom;
+      sumsq(k)= sum((topo_observed(:)-topo_modeled(:)).^2) ./ sum(topo_observed(:).^2);
     end
 
 Now we are going to use the FieldTrip `ft_dipolefitting` function to fit a
@@ -483,7 +483,7 @@ single dipole:
     dip = ft_dipolefitting(cfg, data);
 
 **_Q6.5.3 - Where did the fitted dipole end up and how does that compare to
-the initial poisition of dipole 1 and dipole 2?_**
+the initial position of dipole 1 and dipole 2?_**
 
 We can also fit a model with two dipoles, this can be easily achieved by changing
 the `cfg.numdipoles` option into 2.

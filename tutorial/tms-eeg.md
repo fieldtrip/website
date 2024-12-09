@@ -462,7 +462,7 @@ After having run the ICA we are left with a structure similar to our data_tms_se
 
 Instead of channels by time matrices, our data is now represented in component by time matrices, one for each trial (or segment in our case). The added fields `.topo`, `.unmixing`, and `.topolabel` contain the information necessary to back-project the components to the channel level.
 
-We are now going to have a look at the timecourse of the components to identify the ones to be rejected. We will also look at a topographical representation of the components to see if they reflect spatial distributions indicating them to be an artifact (dipole, close to the site of stimulation). As we know that all our TMS-EEG artifacts are time-locked to the onset of the TMS-pulse, we can simplify the visual inspection by looking at the time-locked average representation of the components.
+We are now going to have a look at the time course of the components to identify the ones to be rejected. We will also look at a topographical representation of the components to see if they reflect spatial distributions indicating them to be an artifact (dipole, close to the site of stimulation). As we know that all our TMS-EEG artifacts are time-locked to the onset of the TMS-pulse, we can simplify the visual inspection by looking at the time-locked average representation of the components.
 
     cfg = [];
     comp_tms_avg = ft_timelockanalysis(cfg, comp_tms);

@@ -26,7 +26,7 @@ of EEG/MEG data that is discussed in this course._
 
 _As a brief recapitulation, the *first strategy* is the dipole fitting approach,
 where the underlying assumption is that the pattern in the observed data can
-be explained by a limited number of neural sources that are modelled as equivalent
+be explained by a limited number of neural sources that are modeled as equivalent
 current dipoles. The goal is now to find the parameters for the model that optimally
 explains the observed sensor-level topography. These parameters pertain to the
 number, location and orientation of the dipoles, and the optimal model is determined
@@ -54,7 +54,7 @@ moment at this location?’ It turns out, that if we assume the underlying sourc
 to be uncorrelated over time we can get quite good estimates of our sources’
 activation time courses using beamforming._
 
-_The 'best estimate’ in the previous question is more specifically operationalised
+_The 'best estimate’ in the previous question is more specifically operationalized
 as the estimate that best captures the activity that can originate from that
 location while optimally suppressing interference from sources at other locations.
 When we use so-called adaptive beamformers for this, we need not only the biophysically
@@ -422,7 +422,7 @@ covariance. We do that using Tikhonov regularization, also used in Ridge regress
 (see https://en.wikipedia.org/wiki/Ridge_regression). For that we add a certain
 amount of "identity matrix" to the covariance matrix prior to taking the inverse.
 The amount of regularization can be determined from the plot of the eigenvalues
-(or singluar values) of the covariance, also known as the scree plot (see https://en.wikipedia.org/wiki/Scree_plot).
+(or singular values) of the covariance, also known as the scree plot (see https://en.wikipedia.org/wiki/Scree_plot).
 
     iCr = inv(C + 1e-18*eye(301));
 
@@ -536,7 +536,7 @@ The idea is that the features in the data that are the same across conditions
 (such as the depth bias) will cancel each other when making the contrast.
 
 We will use the variables `sensordata`, `sourcemodel` and `L` that we also
-used in section 3. We also need the leadfields and source timecourses that we
+used in section 3. We also need the leadfields and source time courses that we
 used for the simulations. If you don’t have these variables anymore in MATLAB
 memory, you should re-create them.
 
@@ -637,7 +637,7 @@ it is significant:
 
 **_Q8.7.1 - What is the correlation?_**
 
-**_Q8.7.2 - Plot the source timecourse s1 and s2 in a single figure._**
+**_Q8.7.2 - Plot the source time course s1 and s2 in a single figure._**
 
 We can make a scree plot of the eigenvalues of the sensor covariance. It reveals
 that there is largely only one source component contributing to the data

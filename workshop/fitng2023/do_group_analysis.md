@@ -489,10 +489,10 @@ fprintf('\n')
 % SKIP Save the data
 % save(fullfile(output_dir, 'EffectSize.mat'), 'Neg', 'Pos');
 ```
-### 3.4.4 Plot ERP timecourse of the channels with the maximal effect size
+### 3.4.4 Plot ERP time course of the channels with the maximal effect size
 
 ```matlab
-%% 3.4.4 Plot ERP timecourse of the channels with the maximal effect size
+%% 3.4.4 Plot ERP time course of the channels with the maximal effect size
 
 % Determine variability between participants
 se_grandavg_standard = squeeze(nanstd(grandavg_standard_all.individual/sqrt(length(subjectlist_new))));

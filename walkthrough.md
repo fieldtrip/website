@@ -207,7 +207,7 @@ First we need to decompose the data into independent components. The only thing 
     cfg.channel = 'EEG';
     ic_data = ft_componentanalysis(cfg, cleandata);
 
-The ICA will return as many components as you put channels in. Each component consists of a component timecourse for every trial (ic_data.trial) together with a single topography (ic_data.topo
+The ICA will return as many components as you put channels in. Each component consists of a component time course for every trial (ic_data.trial) together with a single topography (ic_data.topo
 
 {% include image src="/assets/img/walkthrough/figure7.png" width="600" %}
 

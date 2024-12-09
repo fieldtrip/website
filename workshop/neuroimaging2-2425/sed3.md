@@ -5,4 +5,4 @@ tags: [neuroimaging2-2425]
 
 # SED3 - Statistical testing of electrophysiological data
 
-Please look at [BrightSpace](https://brightspace.ru.nl/d2l/home/502448) for the assignment.
+Please look at [Brightspace](https://brightspace.ru.nl/d2l/home/502448) for the assignment.

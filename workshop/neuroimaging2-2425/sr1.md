@@ -21,13 +21,13 @@ clicking buttons is not sufficient to achieve what comes to your mind. As a
 consequence, the novice user may experience some difficulties in getting the
 most out of the toolbox. Fortunately, there is an excellent website that provides
 a wealth of information. For the exercises in this course, no detailed knowledge
-about FieldTrip is required. Howver, if you have some time to spare and feel
+about FieldTrip is required. However, if you have some time to spare and feel
 adventurous, there is a large quantity of [tutorials](/tutorial) that can be followed.
 
 ### 1.1 Getting started: setting up the MATLAB environment
 
 As a first step, you need to install the required toolboxes on your computer.
-These can be obtained from Brightspace or githib. We advise you to create a
+These can be obtained from Brightspace or GitHub. We advise you to create a
 separate folder that will contain the material for this course. For example,
 on Windows, you could create a folder in 'My Documents' called 'neuroimaging2',
 with a subfolder called 'matlab'. You have to download the two zip-files `fieldtrip.zip`
@@ -108,7 +108,7 @@ the figure.
 of the time course, by specifying different values for the frequency, ncycle,
 latency and phase._**
 
-We can apply a very simple instantaneous mixing to the two sources' timecourses
+We can apply a very simple instantaneous mixing to the two sources' time courses
 by just summing the two. This procedure is equivalent to taking a weighted combination,
 where the weight for each source is 1:
 
@@ -130,7 +130,7 @@ adjust the phase of the signal._**
 Next, we will verify that a (weighted) combination of two (or more) activation
 time courses can be easily achieved by means of a matrix multiplication. To
 this end we first concatenate the original source activations into a single
-matrix (each of the original timecourses will be a row in the resulting matrix):
+matrix (each of the original time courses will be a row in the resulting matrix):
 
 make sure that the `sourceactivity2` is what it should be, not the one you have been playing with
 
@@ -141,7 +141,7 @@ concatenate the two vectors in a matrix
     sourcecombined = [sourceactivity; sourceactivity2];
     size(sourcecombined)
 
-Note that it is now very easy to plot both timecourses with a single plotting
+Note that it is now very easy to plot both time courses with a single plotting
 command:
 
     figure

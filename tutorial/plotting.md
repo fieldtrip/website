@@ -557,7 +557,7 @@ To interactively explore higher-dimensional data (such as TFR data) on the surfa
 
 #### Higher dimensional source-level data
 
-Since source-level function data requires three dimensions for "space" and uses the color dimension for "strength", there is no graphical dimension in which the temporal evolution or the spectral distribution can be visualized in full detail. The **[ft_sourceplot](/reference/ft_sourceplot)** function allows you with method=ortho to use the lower right corner of the figure to show the timecourse or spectrum of the functional activity at a specific location (the one you click). The ft_sourcemovie function allows you to use time (as in a movie) to explore the changes of cortical activity over time and/or frequency.
+Since source-level function data requires three dimensions for "space" and uses the color dimension for "strength", there is no graphical dimension in which the temporal evolution or the spectral distribution can be visualized in full detail. The **[ft_sourceplot](/reference/ft_sourceplot)** function allows you with method=ortho to use the lower right corner of the figure to show the time course or spectrum of the functional activity at a specific location (the one you click). The ft_sourcemovie function allows you to use time (as in a movie) to explore the changes of cortical activity over time and/or frequency.
 
 ## Using external tools
 

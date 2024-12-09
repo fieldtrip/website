@@ -39,7 +39,7 @@ FIXME in the following section the simulated data should consist of two dipoles 
     % not put the dipole on a position that will not be covered by a grid
     % location later
 
-    % create a dipole simulation with two dipoles and a custom timecourse
+    % create a dipole simulation with two dipoles and a custom time course
     cfg      = [];
     cfg.headmodel = vol; % see above
     cfg.grad = grad;     % see above
@@ -101,4 +101,4 @@ FIMXE insert subsequent code, based on prepare_leadfield, sourceanalysis with me
 
 ## Beaming cortico-muscular coherence with a two-dipole source model
 
-FIXME extend with refchan, e.g., repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.
+FIXME extend with refchan, e.g., repeat dipolesimulation and add the time course of a nice signal to an additional channel in the data.
