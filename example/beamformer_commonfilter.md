@@ -2,6 +2,8 @@
 title: Common filters in beamforming
 category: example
 tags: [meg, freq, source, fixme]
+redirect_from:
+    - /example/common_filters_in_beamforming/
 ---
 
 # Common filters in beamforming

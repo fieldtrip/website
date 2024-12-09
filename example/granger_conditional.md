@@ -2,6 +2,8 @@
 title: Conditional Granger causality in the frequency domain
 category: example
 tags: [freq, connectivity, granger]
+redirect_from:
+    - /example/connectivity_conditional_granger/
 ---
 
 # Conditional Granger causality in the frequency domain
