@@ -2,6 +2,8 @@
 title: Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
 category: example
 tags: [statistics, freq, cluster]
+redirect_from:
+    /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa/
 ---
 
 # Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA

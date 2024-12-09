@@ -2,6 +2,8 @@
 title: Testing BEM created EEG lead fields
 category: example
 tags: [eeg, mri, headmodel, source, simulation]
+redirect_from:
+    - /example/testing_bem_created_leadfields/
 ---
 
 # Testing BEM created EEG lead fields
@@ -44,7 +46,7 @@ For the simplest case, the BEM and the theoretical solutions for EEG lead field 
     cfg.elec = elec;
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
-{% include image src="/assets/img/example/testing_bem_created_leadfields/bemtesting1.png" width="400" %}
+{% include image src="/assets/img/example/bem_evaluation/bemtesting1.png" width="400" %}
 _Figure; BEM model consisting of single sphere, including electrodes_
 
 ## Building the geometrical head model with BEM
@@ -94,6 +96,6 @@ The dipole positions are defined in the variable `sourcemodel`, the headmodels a
 
 ## Result
 
-{% include image src="/assets/img/example/testing_bem_created_leadfields/bemtesting2.png" %}
+{% include image src="/assets/img/example/bem_evaluation/bemtesting2.png" %}
 
 The pinky arrow describes the correlation curves of meshes with increasing number of triangles. The last mesh (2000 vertices) has a flat correlation curve at value y=1.
