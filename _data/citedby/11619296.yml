@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39415245'
+- idtype: doi
+  value: 10.1186/s13041-024-01149-8
+- idtype: pmcid
+  value: PMC11619296
+authors:
+- authtype: Author
+  name: Abubaker M
+- authtype: Author
+  name: Al Qasem W
+- authtype: Author
+  name: Pilátová K
+- authtype: Author
+  name: Ježdík P
+- authtype: Author
+  name: Kvašňák E
+epubdate: 2024 Oct 16
+fulljournalname: Molecular Brain
+issue: ''
+pages: '74'
+pmclivedate: 2024/12/05
+printpubdate: ''
+pubdate: 2024 Oct 16
+sortdate: 2024/10/16 00:00
+source: Mol Brain
+title: Theta-gamma-coupling as predictor of working memory performance in young and
+  elderly healthy people
+uid: '11619296'
+volume: '17'

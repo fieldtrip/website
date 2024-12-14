@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39660110'
+- idtype: doi
+  value: 10.1093/sleepadvances/zpae084
+- idtype: pmcid
+  value: PMC11630081
+authors:
+- authtype: Author
+  name: Kurz EM
+- authtype: Author
+  name: Bastian L
+- authtype: Author
+  name: Mölle M
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Friedrich M
+epubdate: 2024 Nov 16
+fulljournalname: 'Sleep Advances: A Journal of the Sleep Research Society'
+issue: '1'
+pages: zpae084
+pmclivedate: 2024/12/10
+printpubdate: ''
+pubdate: 2024 Nov 16
+sortdate: 2024/11/16 00:00
+source: Sleep Adv
+title: Development of slow oscillation–spindle coupling from infancy to toddlerhood
+uid: '11630081'
+volume: '5'

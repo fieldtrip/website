@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39620899'
+- idtype: doi
+  value: 10.7554/eLife.97793
+- idtype: pmcid
+  value: PMC11616993
+authors:
+- authtype: Author
+  name: Wittkamp CA
+- authtype: Author
+  name: Wolf MI
+- authtype: Author
+  name: Rose M
+epubdate: 2024 Dec 2
+fulljournalname: eLife
+issue: ''
+pages: RP97793
+pmclivedate: 2024/12/04
+printpubdate: ''
+pubdate: 2024 Dec 2
+sortdate: 2024/12/02 00:00
+source: eLife
+title: The neural dynamics of positive and negative expectations of pain
+uid: '11616993'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39660067'
+- idtype: doi
+  value: 10.1093/pnasnexus/pgae535
+- idtype: pmcid
+  value: PMC11631134
+authors:
+- authtype: Author
+  name: Zhu J
+- authtype: Author
+  name: Tian KJ
+- authtype: Author
+  name: Carrasco M
+- authtype: Author
+  name: Denison RN
+epubdate: 2024 Nov 29
+fulljournalname: PNAS Nexus
+issue: '12'
+pages: pgae535
+pmclivedate: 2024/12/10
+printpubdate: ''
+pubdate: 2024 Nov 29
+sortdate: 2024/11/29 00:00
+source: PNAS Nexus
+title: Temporal attention amplifies stimulus information in fronto-cingulate cortex
+  at an intermediate processing stage
+uid: '11631134'
+volume: '3'

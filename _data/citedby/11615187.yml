@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39635122'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110995
+- idtype: pmcid
+  value: PMC11615187
+authors:
+- authtype: Author
+  name: Talebi N
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Frings C
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Beste C
+epubdate: 2024 Sep 20
+fulljournalname: iScience
+issue: '10'
+pages: '110995'
+pmclivedate: 2024/12/04
+printpubdate: ''
+pubdate: 2024 Sep 20
+sortdate: 2024/09/20 00:00
+source: iScience
+title: 'Neural mechanisms of adaptive behavior: Dissociating local cortical modulations
+  and interregional communication patterns'
+uid: '11615187'
+volume: '27'

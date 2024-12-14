@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39469882'
+- idtype: doi
+  value: 10.1111/ejn.16581
+- idtype: pmcid
+  value: PMC11612851
+authors:
+- authtype: Author
+  name: Galeano‐Otálvaro J
+- authtype: Author
+  name: Martorell J
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Titone L
+epubdate: 2024 Oct 29
+fulljournalname: The European Journal of Neuroscience
+issue: '11'
+pages: 6734-6749
+pmclivedate: 2024/12/04
+printpubdate: 2024 Dec
+pubdate: 2024 Oct 29
+sortdate: 2024/10/29 00:00
+source: Eur J Neurosci
+title: Neural encoding of melodic expectations in music across EEG frequency bands
+uid: '11612851'
+volume: '60'

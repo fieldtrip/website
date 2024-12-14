@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38748232'
+- idtype: doi
+  value: 10.1007/s00429-024-02801-8
+- idtype: pmcid
+  value: PMC11611976
+authors:
+- authtype: Author
+  name: Roos NM
+- authtype: Author
+  name: Chauvet J
+- authtype: Author
+  name: Piai V
+epubdate: 2024 May 15
+fulljournalname: Brain Structure & Function
+issue: '9'
+pages: 2097-2113
+pmclivedate: 2024/12/04
+printpubdate: '2024'
+pubdate: 2024 May 15
+sortdate: 2024/05/15 00:00
+source: Brain Struct Funct
+title: 'The Concise Language Paradigm (CLaP), a framework for studying the intersection
+  of comprehension and production: electrophysiological properties'
+uid: '11611976'
+volume: '229'

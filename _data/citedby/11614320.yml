@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39625951'
+- idtype: doi
+  value: 10.1111/cogs.70023
+- idtype: pmcid
+  value: PMC11614320
+authors:
+- authtype: Author
+  name: Nakamura M
+- authtype: Author
+  name: Momma S
+- authtype: Author
+  name: Sakai H
+- authtype: Author
+  name: Phillips C
+epubdate: 2024 Dec 3
+fulljournalname: Cognitive Science
+issue: '12'
+pages: e70023
+pmclivedate: 2024/12/04
+printpubdate: 2024 Dec
+pubdate: 2024 Dec 3
+sortdate: 2024/12/03 00:00
+source: Cogn Sci
+title: 'Task and Timing Effects in Argument Role Sensitivity: Evidence From Production,
+  EEG, and Computational Modeling'
+uid: '11614320'
+volume: '48'

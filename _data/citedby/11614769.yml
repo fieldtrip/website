@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39635648'
+- idtype: doi
+  value: 10.3389/fninf.2024.1448161
+- idtype: pmcid
+  value: PMC11614769
+authors:
+- authtype: Author
+  name: Mönke G
+- authtype: Author
+  name: Schäfer T
+- authtype: Author
+  name: Parto-Dezfouli M
+- authtype: Author
+  name: Kajal DS
+- authtype: Author
+  name: Fürtinger S
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Fries P
+epubdate: 2024 Nov 20
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '1448161'
+pmclivedate: 2024/12/04
+printpubdate: ''
+pubdate: 2024 Nov 20
+sortdate: 2024/11/20 00:00
+source: Front Neuroinform
+title: 'Systems Neuroscience Computing in Python (SyNCoPy): a python package for large-scale
+  analysis of electrophysiological data'
+uid: '11614769'
+volume: '18'

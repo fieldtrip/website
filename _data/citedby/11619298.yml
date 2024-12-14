@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '39633420'
+- idtype: doi
+  value: 10.1186/s12984-024-01516-5
+- idtype: pmcid
+  value: PMC11619298
+authors:
+- authtype: Author
+  name: Mao L
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Zhao Y
+- authtype: Author
+  name: Zou L
+- authtype: Author
+  name: Wei S
+- authtype: Author
+  name: Pan S
+- authtype: Author
+  name: Guo D
+- authtype: Author
+  name: Zhu X
+- authtype: Author
+  name: Hu D
+- authtype: Author
+  name: Yang X
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Wang D
+epubdate: 2024 Dec 4
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '212'
+pmclivedate: 2024/12/05
+printpubdate: ''
+pubdate: 2024 Dec 4
+sortdate: 2024/12/04 00:00
+source: J Neuroeng Rehabil
+title: Sub-acute stroke demonstrates altered beta oscillation and connectivity pattern
+  in working memory
+uid: '11619298'
+volume: '21'
