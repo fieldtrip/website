@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39472063'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1018-23.2024
+- idtype: pmcid
+  value: PMC11638814
+authors:
+- authtype: Author
+  name: Ma L
+- authtype: Author
+  name: Katyare N
+- authtype: Author
+  name: Johnston K
+- authtype: Author
+  name: Everling S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: e1018232024
+pmclivedate: ''
+printpubdate: 2024 Dec 11
+pubdate: 2024 Dec 11
+sortdate: 2024/12/11 00:00
+source: J Neurosci
+title: Effects of Ketamine on Frontoparietal Interactions in a Rule-Based Antisaccade
+  Task in Macaque Monkeys
+uid: '11638814'
+volume: '44'
