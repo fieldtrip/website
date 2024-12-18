@@ -53,9 +53,9 @@ Nature has a [Reporting Checklist For Life Sciences Articles](http://www.nature.
 
 ## Programming
 
-MathWorks provides [online tutorials](https://www.mathworks.com/help/matlab/getting-started-with-matlab.html) to help you get started with the desktop and programming environment.
+MathWorks provides [online documentation](https://www.mathworks.com/help/matlab/getting-started-with-matlab.html) and provides an [interactive course](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted) to help you get started with the desktop and programming environment.
 
-For an introduction to MATLAB have a look at the excellent tutorial and exercises in [MATLAB for Psychologists](http://www.antoniahamilton.com/matlab.html).
+For another introduction to MATLAB have a look at the tutorial and exercises in [MATLAB for Psychologists](http://www.antoniahamilton.com/matlab.html).
 
 Mike X. Cohen, [MATLAB for Brain and Cognitive Scientists](https://www.amazon.com/MATLAB-Brain-Cognitive-Scientists-Press/dp/0262035820/ref=la_B00EWB0HO2_1_1?s=books&ie=UTF8&qid=1496819058&sr=1-1), MIT Press, 2017.
 
