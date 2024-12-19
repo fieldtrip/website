@@ -58,7 +58,45 @@ For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is
 
 ### Creating a layout from sensor positions
 
-Customized MEG layouts can be useful to avoid the distortion due to the projection of sensors in 3D space. For example if you present auditory stimuli to both ears and want to compare the AEF responses on the left and right, you can use the following code to make a layout.
+A relatively standard layout for MEG channels can be made using the following code, which projects the 3D sensor positions on a 2D plane. This will look similar to the template `CTF151.lay`, except that the one constructed here is not perfectly symmetric over left and right as the subject was not seated perfectly symmetric in the helmet.
+
+    cfg = [];
+    cfg.grad = grad;
+    cfg.channel = 'M*'; % skip the reference channels
+    cfg.skipscale = 'yes';
+    cfg.skipcomnt = 'yes';
+    cfg.projection = 'polar';
+    cfg.width  = 0.2; % the projected sensor positions are dimensionless, this requires some trial and error
+    cfg.height = 0.15;
+    layout_polar = ft_prepare_layout(cfg);
+
+    % increase the spacing of the channels and shift them a bit
+    layout_polar.pos(:,1) = layout_polar.pos(:,1) * 1.0;
+    layout_polar.pos(:,2) = layout_polar.pos(:,2) * 1.2 + 0.02;
+
+    figure
+    ft_plot_layout(layout_polar)
+
+{% include image src="/assets/img/tutorial/layout/figure1a.png" width="400" %}
+
+A geometrically more accurate layout can be constructed using an [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection), but note that data plotted this way is more difficult to interpret since the MEG sensors along the sides and back of the helmet can hardly be seen.
+
+    cfg = [];
+    cfg.grad = grad;
+    cfg.channel = 'M*'; % skip the reference channels
+    cfg.skipscale = 'yes';
+    cfg.skipcomnt = 'yes';
+    cfg.projection = 'orthographic';
+    cfg.width  = 2.0; % the 3D sensor positions are in cm
+    cfg.height = 1.5;
+    layout_orthographic = ft_prepare_layout(cfg);
+
+    figure
+    ft_plot_layout(layout_orthographic)
+
+{% include image src="/assets/img/tutorial/layout/figure1b.png" width="400" %}
+
+More specifically customized MEG layouts can be useful to avoid the distortion due to the projection of sensors in 3D space. For example, if you present auditory stimuli to both ears and want to compare the AEF responses on the left and right, you could use the following layout that splits the left and right side of the MEG sensors.
 
     grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
 
@@ -80,11 +118,14 @@ Customized MEG layouts can be useful to avoid the distortion due to the projecti
     cfg.distance = 3; % the 3D sensor positions are in cm
     layoutLR = ft_appendlayout(cfg, layoutL, layoutR);
 
-{% include image src="/assets/img/tutorial/layout/figure1.png" width="400" %}
+    figure
+    ft_plot_layout(layoutLR)
+
+{% include image src="/assets/img/tutorial/layout/figure2.png" width="400" %}
 
 In a similar way you can make a layout that combines a left, right, top, front and back view of the MEG sensors in a fold-out arrangement.
 
-For the Neuromag/Elekta/Megin MEG system - which consists of sensor-triplets with a combination of planar gradiometers in the horizontal direction, planar gradiometers in the vertical direction, and magnetometers - you can make a layout that separates the different channel types.
+For the Neuromag/Elekta/Megin MEG system - which consists of sensor-triplets with a combination of planar gradiometers in the horizontal direction, planar gradiometers in the vertical direction, and magnetometers - you can also make a layout that separates the different channel types.
 
     grad = ft_read_sens('oddball1_mc_downsampled.fif', 'senstype', 'meg');
 
@@ -106,9 +147,12 @@ For the Neuromag/Elekta/Megin MEG system - which consists of sensor-triplets wit
     cfg.distance = 0.3; % the layouts are approximately scaled to fit a unit sphere
     layout123 = ft_appendlayout(cfg, layout1, layout2, layout3);
 
-{% include image src="/assets/img/tutorial/layout/figure2.png" width="400" %}
+    figure
+    ft_plot_layout(layout123)
 
-Since the magnetometers and planar gradiometers have different units (T and T/m), the magnitude of the channel level data is quite different. Combined plotting therefore requires that you scale the channels to a similar magnitude. FIXME
+{% include image src="/assets/img/tutorial/layout/figure3.png" width="400" %}
+
+Since the magnetometers and planar gradiometers have different units (T and T/m), the magnitude of the channel level data is quite different. Combined plotting therefore requires that you scale the channels to a similar magnitude using the `cfg.magscale` and `cfg.gradscale` options.
 
 ## Making a layout for EEG electrodes
 
@@ -124,7 +168,7 @@ If you have recorded electrode positions, you can use the **[ft_prepare_layout](
 
 You can also make a layout based on a bitmap image with the electrode arrangement. For example, the following image from the [EasyCap](http://www.easycap.de) website shows the equidistant M10 electrode arrangement.
 
-{% include image src="/assets/img/tutorial/layout/figure3.gif" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure4.gif" width="400" %}
 
 You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the nose and ears and optionally some lines representing other important landmarks). Finally you will have to specify the mask for the topographic interpolation, this is the same circle around the head (without ears and nose).
 
@@ -148,7 +192,7 @@ The procedure for anatomical coregistration and subsequent localizing of the ele
 
 The placement of iEEG electrodes differs from one patient to the next patient. It is common that the neurosurgeon makes a sketch (on paper) of the electrode placement in relation to anatomical landmarks, such as the central sulcus. Or sometimes a surgical photo is taken of the EGoC grid that was just placed on the cortex (see for example [Dalal et al. in Journal of Neuroscience Methods 174 (2008) 106–115)](http://www.ncbi.nlm.nih.gov/pubmed/18657573)).
 
-{% include image src="/assets/img/tutorial/layout/figure4.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure5.png" width="400" %}
 
 As in the EEG case, you can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. Instead of specifying the complete outline of the head as we usually do in EEG (as a circle), you may want to identify other important landmarks such as the major sulci and the outline of the trepanation.
 
@@ -164,7 +208,7 @@ After creating the layout, you should check and/or manually assign the correct n
     cfg.layout = layout_ecog;   % this is the layout structure that you created before
     ft_layoutplot(cfg);
 
-{% include image src="/assets/img/tutorial/layout/figure5.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure6.png" width="400" %}
 
 or including the original photo as black-and-white background image like this
 
@@ -173,7 +217,7 @@ or including the original photo as black-and-white background image like this
     cfg.layout = layout_ecog;         % this is the manually created layout structure
     ft_layoutplot(cfg);
 
-{% include image src="/assets/img/tutorial/layout/figure6.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure7.png" width="400" %}
 
 Once you are happy with the result, you can save it to a MATLAB file like this:
 
@@ -239,7 +283,7 @@ In the same way you can make layouts for all other shafts
     figure;
     ft_plot_layout(layoutLAM)
 
-{% include image src="/assets/img/tutorial/layout/figure7.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure8.png" width="400" %}
 
 You can combine the layouts using **[ft_appendlayout](/reference/ft_appendlayout)** like this
 
@@ -252,7 +296,7 @@ You can combine the layouts using **[ft_appendlayout](/reference/ft_appendlayout
     figure;
     ft_plot_layout(layoutL);
 
-{% include image src="/assets/img/tutorial/layout/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure9.png" width="400" %}
 
 And subsequently combine the left- and right-hemisphere layouts for the sEEG shafts with
 
@@ -265,13 +309,13 @@ And subsequently combine the left- and right-hemisphere layouts for the sEEG sha
     figure;
     ft_plot_layout(layoutShafts);
 
-{% include image src="/assets/img/tutorial/layout/figure9.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure10.png" width="400" %}
 
 #### Creating a schematic layout for the ECoG grids
 
 The example dataset includes an 8x8 ECoG grid over the left parietal cortex, and a 4x8 grid over the left temporal cortex, as displayed in this schematic drawing provided by the neurosurgeon.
 
-{% include image src="/assets/img/tutorial/layout/figure10.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure11.png" width="400" %}
 
 You can construct a layout for these ECoG grids by specifying 'ordered' and the number of rows and columns. The channel numbering starts in the upper right corner, hence we specify the direction 'RLTB' for right-left-top-bottom.
 
@@ -287,7 +331,7 @@ You can construct a layout for these ECoG grids by specifying 'ordered' and the 
     figure;
     ft_plot_layout(layoutLPG);
 
-{% include image src="/assets/img/tutorial/layout/figure11.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure12.png" width="400" %}
 
     cfg.rows = 4;
     cfg.columns = 8;
@@ -298,7 +342,7 @@ You can construct a layout for these ECoG grids by specifying 'ordered' and the 
     figure;
     ft_plot_layout(layoutLTG);
 
-{% include image src="/assets/img/tutorial/layout/figure12.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure13.png" width="400" %}
 
 #### Combine the ECoG and sEEG layouts
 
@@ -319,7 +363,7 @@ ECoG grids with the layout of the sEEG shafts.
 
     layoutAll = ft_appendlayout(cfg, layoutGrids, layoutShafts);
 
-{% include image src="/assets/img/tutorial/layout/figure13.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure14.png" width="400" %}
 
 Subsequently you can use the combined layout of the shafts and grids to visualize the results of the ERP or TFR analysis.
 
@@ -329,7 +373,7 @@ Subsequently you can use the combined layout of the shafts and grids to visualiz
     cfg.layout = layoutAll;
     ft_multiplotTFR(cfg, freq);
 
-{% include image src="/assets/img/tutorial/layout/figure14.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/figure15.png" width="400" %}
 
 The figure created like this is interactive, like all multiplot figures, and you can make a selection of channels using your mouse and subsequently select a time-frequency range for which a topopgraphy is shown. Please be aware that the topoplot function will interpolate all channels as if they form a continuum. The interpolated values will only be shown withing the masked regions (the dashed lines in the layout plots) around each grid or shaft, but the interpolation will actually cause the values of one shaft to spill over to the next.
 
