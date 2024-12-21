@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '39687759'
+- idtype: doi
+  value: 10.1016/j.csbj.2024.10.040
+- idtype: pmcid
+  value: PMC11647244
+authors:
+- authtype: Author
+  name: Balkenhol J
+- authtype: Author
+  name: Händel B
+- authtype: Author
+  name: Biswas S
+- authtype: Author
+  name: Grohmann J
+- authtype: Author
+  name: Kistowski JV
+- authtype: Author
+  name: Prada J
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Ehrenreich H
+- authtype: Author
+  name: Wojcik SM
+- authtype: Author
+  name: Kounev S
+- authtype: Author
+  name: Blum R
+- authtype: Author
+  name: Dandekar T
+epubdate: 2024 Nov 13
+fulljournalname: Computational and Structural Biotechnology Journal
+issue: ''
+pages: 4288-4305
+pmclivedate: 2024/12/16
+printpubdate: ''
+pubdate: 2024 Nov 13
+sortdate: 2024/11/13 00:00
+source: Comput Struct Biotechnol J
+title: Beyond-local neural information processing in neuronal networks
+uid: '11647244'
+volume: '23'

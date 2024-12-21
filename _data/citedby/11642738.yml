@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39677684'
+- idtype: doi
+  value: 10.1101/2024.11.29.626048
+- idtype: pmcid
+  value: PMC11642738
+authors:
+- authtype: Author
+  name: Potash RM
+- authtype: Author
+  name: van Mil SD
+- authtype: Author
+  name: Estarellas M
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Sacchet MD
+epubdate: 2024 Dec 2
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.11.29.626048
+pmclivedate: 2024/12/14
+printpubdate: ''
+pubdate: 2024 Dec 2
+sortdate: 2024/12/02 00:00
+source: bioRxiv
+title: Integrated phenomenology and brain connectivity demonstrate changes in nonlinear
+  processing in Jhana advanced meditation
+uid: '11642738'
+volume: ''

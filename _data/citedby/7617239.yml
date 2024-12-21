@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37195864'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112492
+- idtype: pmcid
+  value: PMC7617239
+- idtype: MID
+  value: EMS200285
+authors:
+- authtype: Author
+  name: Schneider M
+- authtype: Author
+  name: Tzanou A
+- authtype: Author
+  name: Uran C
+- authtype: Author
+  name: Vinck M
+epubdate: 2023 May 16
+fulljournalname: Cell reports
+issue: '5'
+pages: '112492'
+pmclivedate: 2024/12/16
+printpubdate: 2023 May 30
+pubdate: 2023 May 16
+sortdate: 2023/05/16 00:00
+source: Cell Rep
+title: Cell-type-specific propagation of visual flicker
+uid: '7617239'
+volume: '42'

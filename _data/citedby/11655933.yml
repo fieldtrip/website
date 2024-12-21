@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-024-10171-4
+- idtype: pmcid
+  value: PMC11655933
+authors:
+- authtype: Author
+  name: Peng Z
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Lian J
+- authtype: Author
+  name: An X
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Shao Y
+- authtype: Author
+  name: Jiao F
+- authtype: Author
+  name: Lv J
+epubdate: 2024 Sep 13
+fulljournalname: Cognitive Neurodynamics
+issue: '6'
+pages: 3951-3961
+pmclivedate: ''
+printpubdate: 2024 Dec
+pubdate: 2024 Sep 13
+sortdate: 2024/09/13 00:00
+source: Cogn Neurodyn
+title: 'Perceptual information processing in table tennis players: based on top-down
+  hierarchical predictive coding'
+uid: '11655933'
+volume: '18'

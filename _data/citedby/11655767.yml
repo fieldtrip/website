@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-024-10174-1
+- idtype: pmcid
+  value: PMC11655767
+authors:
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Lin L
+- authtype: Author
+  name: Zhan L
+- authtype: Author
+  name: Sun X
+- authtype: Author
+  name: Huang Z
+- authtype: Author
+  name: Zhang L
+epubdate: 2024 Oct 3
+fulljournalname: Cognitive Neurodynamics
+issue: '6'
+pages: 3995-4007
+pmclivedate: ''
+printpubdate: 2024 Dec
+pubdate: 2024 Oct 3
+sortdate: 2024/10/03 00:00
+source: Cogn Neurodyn
+title: 'Resting state EEG delta-beta amplitude-amplitude coupling: a neural predictor
+  of cortisol response under stress'
+uid: '11655767'
+volume: '18'
