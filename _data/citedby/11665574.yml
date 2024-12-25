@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103720
+- idtype: pmcid
+  value: PMC11665574
+authors:
+- authtype: Author
+  name: Santoni A
+- authtype: Author
+  name: Di Dona G
+- authtype: Author
+  name: Melcher D
+- authtype: Author
+  name: Franchin L
+- authtype: Author
+  name: Ronconi L
+epubdate: 2024 Dec 1
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103720'
+pmclivedate: 2024/12/23
+printpubdate: ''
+pubdate: 2024 Dec 1
+sortdate: 2024/12/01 00:00
+source: Neuroimage Clin
+title: Atypical oscillatory and aperiodic signatures of visual sampling in developmental
+  dyslexia
+uid: '11665574'
+volume: '45'

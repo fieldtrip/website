@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39696501'
+- idtype: doi
+  value: 10.1186/s40359-024-02257-9
+- idtype: pmcid
+  value: PMC11658250
+authors:
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Guo Y
+epubdate: 2024 Dec 18
+fulljournalname: BMC Psychology
+issue: ''
+pages: '758'
+pmclivedate: 2024/12/19
+printpubdate: ''
+pubdate: 2024 Dec 18
+sortdate: 2024/12/18 00:00
+source: BMC Psychol
+title: 'The neural basis of self-ambivalence: an ERP study'
+uid: '11658250'
+volume: '12'

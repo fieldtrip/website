@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '39363119'
+- idtype: doi
+  value: 10.1038/s41562-024-01983-9
+- idtype: pmcid
+  value: PMC11659172
+authors:
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Yebra M
+- authtype: Author
+  name: Schjetnan AG
+- authtype: Author
+  name: Patel K
+- authtype: Author
+  name: Katz CN
+- authtype: Author
+  name: Kyzar M
+- authtype: Author
+  name: Mosher CP
+- authtype: Author
+  name: Kalia SK
+- authtype: Author
+  name: Chung JM
+- authtype: Author
+  name: Reed CM
+- authtype: Author
+  name: Valiante TA
+- authtype: Author
+  name: Mamelak AN
+- authtype: Author
+  name: Kreiman G
+- authtype: Author
+  name: Rutishauser U
+epubdate: 2024 Oct 3
+fulljournalname: Nature Human Behaviour
+issue: '12'
+pages: 2423-2436
+pmclivedate: 2024/12/21
+printpubdate: '2024'
+pubdate: 2024 Oct 3
+sortdate: 2024/10/03 00:00
+source: Nat Hum Behav
+title: Theta phase precession supports memory formation and retrieval of naturalistic
+  experience in humans
+uid: '11659172'
+volume: '8'

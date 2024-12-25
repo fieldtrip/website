@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39714917'
+- idtype: doi
+  value: 10.7554/eLife.97083
+- idtype: pmcid
+  value: PMC11666235
+authors:
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Steingräber N
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Gross J
+epubdate: 2024 Dec 23
+fulljournalname: eLife
+issue: ''
+pages: RP97083
+pmclivedate: 2024/12/23
+printpubdate: ''
+pubdate: 2024 Dec 23
+sortdate: 2024/12/23 00:00
+source: eLife
+title: Frequency-specific cortico-subcortical interaction in continuous speaking and
+  listening
+uid: '11666235'
+volume: '13'
