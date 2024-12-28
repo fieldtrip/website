@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39395687'
+- idtype: doi
+  value: 10.1016/j.brs.2024.10.003
+- idtype: pmcid
+  value: PMC11670816
+- idtype: MID
+  value: NIHMS2043425
+authors:
+- authtype: Author
+  name: Murphy DL
+- authtype: Author
+  name: Koponen LM
+- authtype: Author
+  name: Wood E
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Bukhari-Parlakturk N
+- authtype: Author
+  name: Goetz SM
+- authtype: Author
+  name: Peterchev AV
+epubdate: 2024 Oct 10
+fulljournalname: Brain stimulation
+issue: '6'
+pages: 1197-1207
+pmclivedate: 2024/12/26
+printpubdate: 2024 Nov-Dec
+pubdate: 2024 Oct 10
+sortdate: 2024/10/10 00:00
+source: Brain Stimul
+title: Reduced auditory perception and brain response with quiet TMS coil
+uid: '11670816'
+volume: '17'

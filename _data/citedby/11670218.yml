@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39680758'
+- idtype: doi
+  value: 10.1073/pnas.2405395121
+- idtype: pmcid
+  value: PMC11670218
+authors:
+- authtype: Author
+  name: Sheriff A
+- authtype: Author
+  name: Zhou G
+- authtype: Author
+  name: Sagar V
+- authtype: Author
+  name: Morgenthaler JB
+- authtype: Author
+  name: Cyr C
+- authtype: Author
+  name: Hauner KK
+- authtype: Author
+  name: Omidbeigi M
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Lane G
+- authtype: Author
+  name: Zelano C
+epubdate: 2024 Dec 16
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '52'
+pages: e2405395121
+pmclivedate: ''
+printpubdate: 2024 Dec 24
+pubdate: 2024 Dec 16
+sortdate: 2024/12/16 00:00
+source: Proc Natl Acad Sci U S A
+title: Breathing orchestrates synchronization of sleep oscillations in the human hippocampus
+uid: '11670218'
+volume: '121'

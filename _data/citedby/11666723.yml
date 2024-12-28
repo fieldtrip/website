@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39715747'
+- idtype: doi
+  value: 10.1038/s41467-024-55416-2
+- idtype: pmcid
+  value: PMC11666723
+authors:
+- authtype: Author
+  name: Kosciessa JQ
+- authtype: Author
+  name: Mayr U
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Garrett DD
+epubdate: 2024 Dec 23
+fulljournalname: Nature Communications
+issue: ''
+pages: '10717'
+pmclivedate: 2024/12/24
+printpubdate: ''
+pubdate: 2024 Dec 23
+sortdate: 2024/12/23 00:00
+source: Nat Commun
+title: Broadscale dampening of uncertainty adjustment in the aging brain
+uid: '11666723'
+volume: '15'

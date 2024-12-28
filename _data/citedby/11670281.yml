@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '39617724'
+- idtype: doi
+  value: 10.1111/ejn.16618
+- idtype: pmcid
+  value: PMC11670281
+authors:
+- authtype: Author
+  name: Rousselet GA
+epubdate: 2024 Dec 1
+fulljournalname: The European Journal of Neuroscience
+issue: '1'
+pages: e16618
+pmclivedate: 2024/12/27
+printpubdate: 2025 Jan
+pubdate: 2024 Dec 1
+sortdate: 2024/12/01 00:00
+source: Eur J Neurosci
+title: 'Using cluster‐based permutation tests to estimate MEG/EEG onsets: How bad
+  is it?'
+uid: '11670281'
+volume: '61'
