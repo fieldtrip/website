@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.7554/eLife.99757
+- idtype: pmcid
+  value: PMC11684784
+authors:
+- authtype: Author
+  name: Reisinger L
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Sedley W
+- authtype: Author
+  name: Partyka M
+- authtype: Author
+  name: Schubert J
+- authtype: Author
+  name: Gehmacher Q
+- authtype: Author
+  name: Roesch S
+- authtype: Author
+  name: Suess N
+- authtype: Author
+  name: Trinka E
+- authtype: Author
+  name: Schlee W
+- authtype: Author
+  name: Weisz N
+epubdate: 2024 Dec 30
+fulljournalname: eLife
+issue: ''
+pages: RP99757
+pmclivedate: 2024/12/30
+printpubdate: ''
+pubdate: 2024 Dec 30
+sortdate: 2024/12/30 00:00
+source: eLife
+title: Aberrant auditory prediction patterns robustly characterize tinnitus
+uid: '11684784'
+volume: '13'

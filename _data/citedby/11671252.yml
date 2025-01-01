@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39735387'
+- idtype: doi
+  value: 10.3389/fnbeh.2024.1478439
+- idtype: pmcid
+  value: PMC11671252
+authors:
+- authtype: Author
+  name: Ichwansyah R
+- authtype: Author
+  name: Onda K
+- authtype: Author
+  name: Egawa J
+- authtype: Author
+  name: Matsuo T
+- authtype: Author
+  name: Suzuki T
+- authtype: Author
+  name: Someya T
+- authtype: Author
+  name: Hasegawa I
+- authtype: Author
+  name: Kawasaki K
+epubdate: 2024 Dec 13
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '1478439'
+pmclivedate: 2024/12/27
+printpubdate: ''
+pubdate: 2024 Dec 13
+sortdate: 2024/12/13 00:00
+source: Front Behav Neurosci
+title: Animacy processing by distributed and interconnected networks in the temporal
+  cortex of monkeys
+uid: '11671252'
+volume: '18'

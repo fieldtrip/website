@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39726001'
+- idtype: doi
+  value: 10.1186/s12984-024-01533-4
+- idtype: pmcid
+  value: PMC11673893
+authors:
+- authtype: Author
+  name: Sun Q
+- authtype: Author
+  name: Merino EC
+- authtype: Author
+  name: Yang L
+- authtype: Author
+  name: Van Hulle MM
+epubdate: 2024 Dec 26
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '228'
+pmclivedate: 2024/12/27
+printpubdate: ''
+pubdate: 2024 Dec 26
+sortdate: 2024/12/26 00:00
+source: J Neuroeng Rehabil
+title: 'Unraveling EEG correlates of unimanual finger movements: insights from non-repetitive
+  flexion and extension tasks'
+uid: '11673893'
+volume: '21'

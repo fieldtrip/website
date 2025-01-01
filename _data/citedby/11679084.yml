@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/s24247961
+- idtype: pmcid
+  value: PMC11679084
+authors:
+- authtype: Author
+  name: Hayes HB
+- authtype: Author
+  name: Magne C
+epubdate: 2024 Dec 13
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '24'
+pages: '7961'
+pmclivedate: 2024/12/27
+printpubdate: ''
+pubdate: 2024 Dec 13
+sortdate: 2024/12/13 00:00
+source: Sensors (Basel)
+title: 'Exploring the Utility of the Muse Headset for Capturing the N400: Dependability
+  and Single-Trial Analysis'
+uid: '11679084'
+volume: '24'

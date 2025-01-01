@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci14121181
+- idtype: pmcid
+  value: PMC11674705
+authors:
+- authtype: Author
+  name: Schweitzer Y
+- authtype: Author
+  name: Trautwein FM
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Nave O
+- authtype: Author
+  name: David J
+- authtype: Author
+  name: Fulder S
+- authtype: Author
+  name: Berkovich-Ohana A
+epubdate: 2024 Nov 26
+fulljournalname: Brain Sciences
+issue: '12'
+pages: '1181'
+pmclivedate: 2024/12/28
+printpubdate: ''
+pubdate: 2024 Nov 26
+sortdate: 2024/11/26 00:00
+source: Brain Sci
+title: 'Meditation-Induced Self-Boundary Flexibility and Prosociality: A MEG and Behavioral
+  Measures Study'
+uid: '11674705'
+volume: '14'
