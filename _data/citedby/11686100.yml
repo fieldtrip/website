@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39738230'
+- idtype: doi
+  value: 10.1038/s41598-024-80634-5
+- idtype: pmcid
+  value: PMC11686100
+authors:
+- authtype: Author
+  name: Chari A
+- authtype: Author
+  name: Hernan AE
+- authtype: Author
+  name: Mahoney JM
+- authtype: Author
+  name: Thornton R
+- authtype: Author
+  name: Tahir MZ
+- authtype: Author
+  name: Tisdall MM
+- authtype: Author
+  name: Scott RC
+epubdate: 2024 Dec 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '31654'
+pmclivedate: 2024/12/31
+printpubdate: ''
+pubdate: 2024 Dec 30
+sortdate: 2024/12/30 00:00
+source: Sci Rep
+title: Single unit-derived connectivity networks in tuberous sclerosis complex reveal
+  propensity for network hypersynchrony driven by tuber-tuber interactions
+uid: '11686100'
+volume: '14'

@@ -1,0 +1,62 @@
+articleids:
+- idtype: pmid
+  value: '38959536'
+- idtype: doi
+  value: 10.1016/j.clinph.2024.05.015
+- idtype: pmcid
+  value: PMC11684857
+- idtype: MID
+  value: NIHMS2041167
+authors:
+- authtype: Author
+  name: Dickinson A
+- authtype: Author
+  name: Ryan D
+- authtype: Author
+  name: McNaughton G
+- authtype: Author
+  name: Levin A
+- authtype: Author
+  name: Naples A
+- authtype: Author
+  name: Borland H
+- authtype: Author
+  name: Bernier R
+- authtype: Author
+  name: Chawarska K
+- authtype: Author
+  name: Dawson G
+- authtype: Author
+  name: Dziura J
+- authtype: Author
+  name: Faja S
+- authtype: Author
+  name: Kleinhans N
+- authtype: Author
+  name: Sugar C
+- authtype: Author
+  name: Senturk D
+- authtype: Author
+  name: Shic F
+- authtype: Author
+  name: Webb SJ
+- authtype: Author
+  name: McPartland JC
+- authtype: Author
+  name: Jeste S
+- authtype: CollectiveName
+  name: Autism Biomarkers Consortium for Clinical Trials
+epubdate: 2024 Jun 8
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 55-63
+pmclivedate: ''
+printpubdate: 2024 Sep
+pubdate: 2024 Jun 8
+sortdate: 2024/06/08 00:00
+source: Clin Neurophysiol
+title: 'Parsing Evoked and Induced Gamma Response Differences in Autism: A Visual
+  Evoked Potential Study'
+uid: '11684857'
+volume: '165'

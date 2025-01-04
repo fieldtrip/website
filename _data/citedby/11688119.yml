@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39740795'
+- idtype: doi
+  value: 10.1002/brb3.70249
+- idtype: pmcid
+  value: PMC11688119
+authors:
+- authtype: Author
+  name: Plank JR
+- authtype: Author
+  name: Chen JC
+- authtype: Author
+  name: Sundram F
+- authtype: Author
+  name: Hoeh N
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Lin JC
+epubdate: 2024 Dec 31
+fulljournalname: Brain and Behavior
+issue: '1'
+pages: e70249
+pmclivedate: 2025/01/01
+printpubdate: ''
+pubdate: 2024 Dec 31
+sortdate: 2024/12/31 00:00
+source: Brain Behav
+title: The Effects of Neuroinflammation Induced by Typhoid Vaccine on Resting and
+  Task‐Based Electroencephalography
+uid: '11688119'
+volume: '15'
