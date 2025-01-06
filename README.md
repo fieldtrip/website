@@ -46,6 +46,8 @@ Most of the Markdown formatting will show up nicely here on GitHub, but there ar
 
 If you make changes that you want to evaluate prior to publishing them, you have to install Ruby, Bundler and Jekyll. Subsequently you can do
 
+    bundle config set path '.bundle'
+    bundle install
     bundle exec jekyll serve --incremental --livereload
 
 which will convert the Markdown into HTML and serve your local copy of the website on <http://localhost:4000>.

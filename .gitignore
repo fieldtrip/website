@@ -1,10 +1,10 @@
 .DS_Store
-Gemfile.lock
-.jekyll-cache/*
+.jekyll-cache
 .jekyll-metadata
-.sass-cache/*
+.sass-cache
+.bundle
+Gemfile.lock
 _site
-_site/*
 assets/pdf
 assets/root
 assets/coverage
