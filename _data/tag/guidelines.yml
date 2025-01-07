@@ -1,3 +1,6 @@
+- name:  Guidelines
+  link:  /development/guideline
+
 - name:  Code guidelines
   link:  /development/guideline/code
 
@@ -6,9 +9,6 @@
 
 - name:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
-
-- name:  Guidelines
-  link:  /development/guideline
 
 - name:  Template guidelines
   link:  /development/guideline/templates
