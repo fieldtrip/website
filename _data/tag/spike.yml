@@ -13,11 +13,11 @@
 - name:  Getting started with Cyberkinetics data
   link:  /getting_started/cyberkinetics
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
-
 - name:  Getting started with Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
+
+- name:  Getting started with Neuralynx data
+  link:  /getting_started/neuralynx
 
 - name:  Getting started with Neurodata Without Borders (NWB) data
   link:  /getting_started/nwb
@@ -31,9 +31,9 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Preprocessing and analysis of spike-train data
-  link:  /tutorial/spike
-
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
+
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
 

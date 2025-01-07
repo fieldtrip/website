@@ -1,8 +1,8 @@
-- name:  Advanced MEG/EEG toolkit at the Donders
-  link:  /workshop/toolkit2023
-
 - name:  Code of Conduct
   link:  /workshop/toolkit2023/code_of_conduct
+
+- name:  Advanced MEG/EEG toolkit at the Donders
+  link:  /workshop/toolkit2023
 
 - name:  Test your MATLAB and FieldTrip installation in advance
   link:  /workshop/toolkit2023/test_installation

@@ -1,8 +1,8 @@
-- name:  How can I compile the mex files on 64-bit Windows?
-  link:  /faq/compile_windows
-
 - name:  Can I use FieldTrip without MATLAB license?
   link:  /faq/compiled
+
+- name:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/compile_windows
 
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/dipoli_filelocation
@@ -13,11 +13,11 @@
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
 
-- name:  How many lines of code does FieldTrip consist of?
-  link:  /faq/fieldtrip_codelines
-
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/fieldtripbuffer_speed
+
+- name:  How many lines of code does FieldTrip consist of?
+  link:  /faq/fieldtrip_codelines
 
 - name:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/fileio_stateless

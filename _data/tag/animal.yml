@@ -4,9 +4,9 @@
 - name:  Channel and source analysis of mouse EEG
   link:  /tutorial/mouse_eeg
 
-- name:  Preprocessing and analysis of spike-train data
-  link:  /tutorial/spike
-
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
+
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
 
