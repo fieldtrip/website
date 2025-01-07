@@ -1,3 +1,6 @@
+- name:  Overview of all tutorials
+  link:  /tutorial
+
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
@@ -19,11 +22,11 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
 
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
@@ -70,9 +73,6 @@
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
-- name:  Overview of all tutorials
-  link:  /tutorial
-
 - name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 
@@ -89,10 +89,10 @@
   link:  /tutorial/mvpa_light
 
 - name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_eeg
+  link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
+  link:  /tutorial/networkanalysis_eeg
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
@@ -106,11 +106,11 @@
 - name:  Plotting data at the channel and source level
   link:  /tutorial/plotting
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
 - name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
   link:  /tutorial/preprocessing_opm
@@ -127,11 +127,11 @@
 - name:  Creating a source model for source reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
-
 - name:  Preprocessing and analysis of spike-train data
   link:  /tutorial/spike
+
+- name:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/spikefield
 
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /tutorial/timefrequencyanalysis
