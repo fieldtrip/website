@@ -4,9 +4,9 @@
 - name:  How can I deal with a discontinuous Neuralynx LFP recording?
   link:  /faq/discontinuous_neuralynx
 
-- name:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
+
+- name:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
 
