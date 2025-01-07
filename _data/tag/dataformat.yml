@@ -52,11 +52,11 @@
 - name:  Getting started with audio data
   link:  /getting_started/audio
 
-- name:  Getting started with BabySQUID data
-  link:  /getting_started/babysquid
-
 - name:  Getting started with ABM's B-Alert EEG data
   link:  /getting_started/b_alert
+
+- name:  Getting started with BabySQUID data
+  link:  /getting_started/babysquid
 
 - name:  Getting started with BESA data
   link:  /getting_started/besa
@@ -118,11 +118,11 @@
 - name:  Getting started with MNE(-python)
   link:  /getting_started/mne
 
-- name:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
+
+- name:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag

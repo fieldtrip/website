@@ -34,23 +34,23 @@
 - name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/simulateddata
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/simulateddata_beamformer
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/simulateddata_dipolefit
 
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/simulateddata
+- name:  Source statistics
+  link:  /example/source_statistics
 
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/sourcemodel_aligned2mni
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/sourcerecon_meeg
-
-- name:  Source statistics
-  link:  /example/source_statistics
 
 - name:  Symmetric dipole pairs for beamforming
   link:  /example/symmetry
