@@ -16,21 +16,3 @@
 - name:  Time-frequency analysis of EEG data
   link:  /workshop/oslo2019/timefrequency
 
-- name:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
-
-- name:  Forward modeling for EEG source reconstruction
-  link:  /workshop/oslo2019/forward_modeling
-
-- name:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
-
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
-- name:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/oslo2019/statistics
-
-- name:  Time-frequency analysis of EEG data
-  link:  /workshop/oslo2019/timefrequency
-

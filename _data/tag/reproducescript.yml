@@ -7,12 +7,3 @@
 - name:  Using reproducescript for a group analysis
   link:  /example/reproducescript_group
 
-- name:  Using reproducescript on a full study
-  link:  /example/reproducescript_andersen
-
-- name:  Using reproducescript for a group analysis
-  link:  /example/reproducescript_group
-
-- name:  Making your analysis pipeline reproducible using reproducescript
-  link:  /example/reproducescript
-

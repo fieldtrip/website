@@ -19,24 +19,3 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg2014/timefrequency
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg2014/beamforming
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg2014/dipolefitting
-
-- name:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg2014
-
-- name:  Details of the auditory oddball combined MEG/EEG dataset
-  link:  /workshop/natmeg2014/meg_audodd
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg2014/preprocessing
-
-- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg2014/statistics
-
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg2014/timefrequency
-
