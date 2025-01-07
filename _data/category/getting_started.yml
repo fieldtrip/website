@@ -1,3 +1,6 @@
+- name:  Getting Started
+  link:  /getting_started
+
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020
 
@@ -16,11 +19,11 @@
 - name:  Getting started with audio data
   link:  /getting_started/audio
 
-- name:  Getting started with BabySQUID data
-  link:  /getting_started/babysquid
-
 - name:  Getting started with ABM's B-Alert EEG data
   link:  /getting_started/b_alert
+
+- name:  Getting started with BabySQUID data
+  link:  /getting_started/babysquid
 
 - name:  Getting started with BESA data
   link:  /getting_started/besa
@@ -85,20 +88,17 @@
 - name:  Getting started with LORETA
   link:  /getting_started/loreta
 
-- name:  Getting Started
-  link:  /getting_started
-
 - name:  Getting started with MeshLab
   link:  /getting_started/meshlab
 
 - name:  Getting started with MNE(-python)
   link:  /getting_started/mne
 
-- name:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
+
+- name:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
@@ -121,11 +121,11 @@
 - name:  Getting started with Plexon data
   link:  /getting_started/plexon
 
-- name:  Getting started with real-time head localization in MEG
-  link:  /getting_started/realtime_headlocalizer
-
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
+
+- name:  Getting started with real-time head localization in MEG
+  link:  /getting_started/realtime_headlocalizer
 
 - name:  Getting started with Ricoh data
   link:  /getting_started/ricoh
