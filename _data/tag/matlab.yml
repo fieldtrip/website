@@ -73,3 +73,78 @@
 - name:  Creating a clean analysis pipeline
   link:  /tutorial/scripting
 
+- name:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/compiled
+
+- name:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/compile_windows
+
+- name:  Where can I find the dipoli command-line executable?
+  link:  /faq/dipoli_filelocation
+
+- name:  What are the different approaches I can take for distributed computing?
+  link:  /faq/distributed_computing
+
+- name:  Which external toolboxes are used by FieldTrip?
+  link:  /faq/external
+
+- name:  How fast is the FieldTrip buffer for realtime data streaming?
+  link:  /faq/fieldtripbuffer_speed
+
+- name:  How many lines of code does FieldTrip consist of?
+  link:  /faq/fieldtrip_codelines
+
+- name:  Why are the fileio functions stateless, does the fseek not make them very slow?
+  link:  /faq/fileio_stateless
+
+- name:  Installation and setting up the path
+  link:  /faq/installation
+
+- name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
+  link:  /faq/matlab_crash73
+
+- name:  MATLAB complains about a missing or invalid mex file, what should I do?
+  link:  /faq/matlab_mexinvalid
+
+- name:  MATLAB does not see the functions in the "private" directory
+  link:  /faq/matlab_privatefunctions
+
+- name:  Replacements for functions from MathWorks toolboxes
+  link:  /faq/matlab_replacements
+
+- name:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab_requirements
+
+- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/mex_osx
+
+- name:  Why are so many of the interesting functions in the private directories?
+  link:  /faq/privatefunctions_why
+
+- name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
+  link:  /faq/psychtoolbox_macbook
+
+- name:  What are the MATLAB and external requirements?
+  link:  /faq/requirements
+
+- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
+  link:  /faq/showcallinfo
+
+- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/toolboxes_legacyvsexternal
+
+- name:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/distributedcomputing_parfor
+
+- name:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/distributedcomputing_qsub
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  Making a memory efficient analysis pipeline
+  link:  /tutorial/memory
+
+- name:  Creating a clean analysis pipeline
+  link:  /tutorial/scripting
+

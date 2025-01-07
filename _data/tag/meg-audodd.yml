@@ -31,3 +31,36 @@
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
+- name:  FieldTrip workshop in Aarhus
+  link:  /workshop/aarhus2015
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
+
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /workshop/natmeg2014/beamforming
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /workshop/natmeg2014/dipolefitting
+
+- name:  FieldTrip course at the NatMEG in Stockholm
+  link:  /workshop/natmeg2014
+
+- name:  Details of the auditory oddball combined MEG/EEG dataset
+  link:  /workshop/natmeg2014/meg_audodd
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg2014/preprocessing
+
+- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+  link:  /workshop/natmeg2014/statistics
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg2014/timefrequency
+
+- name:  Beamforming oscillatory responses in MEG data
+  link:  /workshop/oslo2019/beamforming
+
