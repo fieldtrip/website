@@ -22,3 +22,27 @@
 - name:  Instructions for the USB stick
   link:  /workshop/paris2019/usb_instructions
 
+- name:  Multimodal faces dataset
+  link:  /workshop/paris2019/dataset
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
+- name:  Group analysis
+  link:  /workshop/paris2019/handson_groupanalysis
+
+- name:  From raw data to ERP
+  link:  /workshop/paris2019/handson_raw2erp
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/paris2019/handson_sensoranalysis
+
+- name:  Reconstructing source activity using beamformers
+  link:  /workshop/paris2019/handson_sourceanalysis
+
+- name:  PracticalMEEG workshop at ICM in Paris
+  link:  /workshop/paris2019
+
+- name:  Instructions for the USB stick
+  link:  /workshop/paris2019/usb_instructions
+
