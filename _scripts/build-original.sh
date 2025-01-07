@@ -11,12 +11,14 @@ export GEM_HOME="$HOME/.rvm/gems/ruby-2.5.3"
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-rvm use ruby-2.5.3
+rvm use ruby-3.0
 
 # this runs from a cron-job, so paths are not set as in an interactive terminal
 GIT=/usr/bin/git
 CP=/usr/bin/cp
 BUNDLE=$HOME/.rvm/gems/ruby-2.5.3/bin/bundle
+
+cd $HOME/website
 
 LOCKFILE=$HOME/website.lock
 LOGFILE=$HOME/website.log
@@ -36,8 +38,6 @@ done
 # make sure that these exist
 [ -e $LOGFILE  ] || touch $LOGFILE
 [ -e $LOCKFILE ] || touch $LOCKFILE
-
-cd $HOME/website
 
 # ensure that we have the latest version of the repository
 # let's hope there are no conflicts with the reference documentation
