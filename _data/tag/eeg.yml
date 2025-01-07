@@ -34,11 +34,11 @@
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
 
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/simulateddata
-
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/simulateddata_dipolefit
+
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/simulateddata
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/sourcerecon_meeg
@@ -199,14 +199,14 @@
 - name:  Time-frequency analysis on short and long timescales
   link:  /workshop/cuttingeeg2021/tutorial_freq
 
-- name:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
 - name:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 
 - name:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_sedation
+
+- name:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
 
 - name:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
@@ -238,14 +238,14 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg2014/timefrequency
 
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
 - name:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
 - name:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
+
+- name:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
 
 - name:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics
