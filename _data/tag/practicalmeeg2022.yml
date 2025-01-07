@@ -22,3 +22,27 @@
 - name:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 
+- name:  Multimodal faces dataset
+  link:  /workshop/practicalmeeg2022/dataset
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/practicalmeeg2022/handson_anatomy
+
+- name:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- name:  Group-level statistics with parametric and non-parametric methods
+  link:  /workshop/practicalmeeg2022/handson_groupanalysis
+
+- name:  Preprocessing raw data and computing ERPs/ERFs
+  link:  /workshop/practicalmeeg2022/handson_raw2erp
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
+
+- name:  Reconstructing source activity using beamformers
+  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
+
+- name:  PracticalMEEG workshop in Aix-en-Provence
+  link:  /workshop/practicalmeeg2022
+

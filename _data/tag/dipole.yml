@@ -4,14 +4,14 @@
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/dipolefit_somatosensory_erf
 
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/simulateddata
-
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/simulateddata_beamformer
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/simulateddata_dipolefit
+
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/simulateddata
 
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /workshop/natmeg2014/dipolefitting

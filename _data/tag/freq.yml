@@ -97,11 +97,11 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
+
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
 
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics

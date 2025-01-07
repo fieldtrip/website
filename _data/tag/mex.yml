@@ -19,3 +19,24 @@
 - name:  How to select the correct SPM toolbox?
   link:  /faq/spmversion
 
+- name:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/compiled
+
+- name:  How can I compile the mex files and command-line executable?
+  link:  /faq/compile
+
+- name:  How can I compile the mex files on macOS?
+  link:  /faq/compile_osx
+
+- name:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/compile_windows
+
+- name:  MATLAB complains about a missing or invalid mex file, what should I do?
+  link:  /faq/matlab_mexinvalid
+
+- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/mex_osx
+
+- name:  How to select the correct SPM toolbox?
+  link:  /faq/spmversion
+

@@ -1,20 +1,20 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus/beamformingerf
-
 - name:  FieldTrip workshop in Aarhus
   link:  /workshop/aarhus2015
 
-- name:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg2014
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /workshop/natmeg2014/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /workshop/natmeg2014/dipolefitting
+
+- name:  FieldTrip course at the NatMEG in Stockholm
+  link:  /workshop/natmeg2014
 
 - name:  Details of the auditory oddball combined MEG/EEG dataset
   link:  /workshop/natmeg2014/meg_audodd
