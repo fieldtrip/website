@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39753579'
+- idtype: doi
+  value: 10.1038/s41531-024-00866-0
+- idtype: pmcid
+  value: PMC11699216
+authors:
+- authtype: Author
+  name: Sosnik R
+- authtype: Author
+  name: Fahoum F
+- authtype: Author
+  name: Katzir Z
+- authtype: Author
+  name: Mirelman A
+- authtype: Author
+  name: Maidan I
+epubdate: 2025 Jan 3
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '2'
+pmclivedate: 2025/01/04
+printpubdate: ''
+pubdate: 2025 Jan 3
+sortdate: 2025/01/03 00:00
+source: NPJ Parkinsons Dis
+title: Key shifts in frontoparietal network activity in Parkinson’s disease
+uid: '11699216'
+volume: '11'

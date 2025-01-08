@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39758399'
+- idtype: doi
+  value: 10.1016/j.heliyon.2024.e41164
+- idtype: pmcid
+  value: PMC11699334
+authors:
+- authtype: Author
+  name: Alyan E
+- authtype: Author
+  name: Arnau S
+- authtype: Author
+  name: Getzmann S
+- authtype: Author
+  name: Reiser JE
+- authtype: Author
+  name: Karthaus M
+- authtype: Author
+  name: Wascher E
+epubdate: 2024 Dec 14
+fulljournalname: Heliyon
+issue: '1'
+pages: e41164
+pmclivedate: 2025/01/05
+printpubdate: ''
+pubdate: 2024 Dec 14
+sortdate: 2024/12/14 00:00
+source: Heliyon
+title: Age-related differences in eye blink-related neural activity and functional
+  connectivity during driving
+uid: '11699334'
+volume: '11'
