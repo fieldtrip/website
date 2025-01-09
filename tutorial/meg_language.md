@@ -1,5 +1,6 @@
 ---
 title: Details of the MEG language dataset
+nav_exclude: true
 tags: [meg-language]
 ---
 

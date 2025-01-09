@@ -1,5 +1,6 @@
 ---
 title: Whole brain connectivity and network analysis
+parent: Connectivity analysis
 category: tutorial
 tags: [connectivity]
 ---

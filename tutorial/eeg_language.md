@@ -1,5 +1,6 @@
 ---
 title: Details on the EEG language dataset
+nav_exclude: true
 tags: [eeg-language]
 ---
 

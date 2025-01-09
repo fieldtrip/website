@@ -1,5 +1,6 @@
 ---
 title: Cleaning artifacts using ICA
+parent: Reading and preprocessing data
 category: tutorial
 tags: [artifact, meg, raw, preprocessing, meg-artifact]
 ---

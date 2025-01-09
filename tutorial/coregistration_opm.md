@@ -1,5 +1,6 @@
 ---
 title: Coregistration of Optically Pumped Magnetometer (OPM) data
+parent: Source reconstruction
 category: tutorial
 tags: [opm, fieldline, coordsys, polhemus]
 ---

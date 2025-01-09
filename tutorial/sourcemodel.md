@@ -1,5 +1,6 @@
 ---
 title: Creating a source model for source reconstruction of MEG or EEG data
+parent: Source reconstruction
 category: tutorial
 tags: [source, meg, sourcemodel, mri, plotting, meg-language]
 ---
@@ -92,7 +93,6 @@ If you have additionally used the Polhemus to record the headshape and the locat
 Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
 {% include markup/end %}
 
-
 #### 4. Preparation of the anatomical MRI: reslicing
 
 This step reslices the anatomical volume in a way that voxels will be isotropic. We use 1 mm resolution and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. Note that this will also affect the transformation matrix, which is why we save it to file only after the reslicing.
@@ -106,7 +106,6 @@ For later use, we also save the transformation matrix.
 
   transform_vox2ctf = mri.transform;
   save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
-
 
 #### 5. Preparation of the anatomical MRI: save to disk
 

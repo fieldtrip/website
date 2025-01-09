@@ -1,5 +1,6 @@
 ---
 title: Analysis of auditory evoked fields in sensor and source space
+nav_exclude: true
 tags: [fixme]
 ---
 

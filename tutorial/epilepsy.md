@@ -1,5 +1,6 @@
 ---
 title: Virtual channel analysis of epilepsy MEG data
+parent: Source reconstruction
 category: tutorial
 tags: [meg-epilepsy, anywave, mricro]
 ---
@@ -699,7 +700,6 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     fclose(fid);
 
 {% include image src="/assets/img/tutorial/epilepsy/figure17.png" width="700" %}
-
 
 ## Summary and conclusion
 

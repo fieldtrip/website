@@ -1,5 +1,6 @@
 ---
 title: Plotting data at the channel and source level
+parent: Plotting and visualization
 category: tutorial
 tags: [plotting, layout]
 ---

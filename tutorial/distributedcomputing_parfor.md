@@ -1,5 +1,6 @@
 ---
 title: Speeding up your analysis using distributed computing with parfor
+parent: Making your analyses more efficient
 category: tutorial
 tags: [matlab, script, parfor, distcomp, meg-language]
 ---
@@ -228,7 +229,6 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
     cfg.figure      = figure; % Create a fresh figure
     ft_multiplotER(cfg, grandavgFIC)
 
-
 {% include markup/skyblue %}
 Saving data and figures to disk can be done using the MATLAB [save](https://www.mathworks.com/help/matlab/ref/save.html) and [savefig](https://www.mathworks.com/help/matlab/ref/savefig.html) or [saveas](https://www.mathworks.com/help/matlab/ref/saveas.html) commands. Since you want to distinguish the data from different subjects, you can use  [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html) to construct a unique filenames.
 
@@ -263,7 +263,6 @@ and
     cfg.outputfile = filename;
     ft_multiplotER(cfg, avgFIC);
 {% include markup/end %}
-
 
 ## Multi-subject, parfor loop
 

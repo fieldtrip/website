@@ -1,5 +1,6 @@
 ---
 title: Channel and source analysis of mouse EEG
+parent: Analysis of intracranial data
 category: tutorial
 tags: [source, ieeg, ecog, animal]
 ---

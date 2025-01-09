@@ -1,5 +1,6 @@
 ---
 title: Details on the multimodal faces dataset
+nav_exclude: true
 tags: [mmfaces]
 ---
 

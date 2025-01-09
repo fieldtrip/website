@@ -1,5 +1,6 @@
 ---
 title: Preprocessing of EEG data and computing ERPs
+parent: Sensor-level analyses
 category: tutorial
 tags: [eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
 ---
@@ -142,7 +143,6 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
     cfg.implicitref  = []; % this is the default, we mention it here to be explicit
     cfg.refchannel   = {'53'};
     eogv             = ft_preprocessing(cfg, data);
-
 
     % only keep one channel, and rename to eogv
     cfg              = [];

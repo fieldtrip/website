@@ -1,5 +1,6 @@
 ---
 title: Whole brain connectivity and network analysis
+parent: Connectivity analysis
 category: tutorial
 tags: [connectivity]
 ---
@@ -144,7 +145,6 @@ In Figure 3 it is apparent that the electrodes do not align with the scalp surfa
     % make sure the aligned electrodes are updated
     dataseg.elec  = elec_aligned;
 
-
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure4.png" width="400" %}
 
 _Figure 4: Headmodel and electrode array aligned correctly._
@@ -185,7 +185,6 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
     cfg.headmodel = headmodel_eeg;                      % volume conduction model
     leadfield     = ft_prepare_leadfield(cfg);
 
-
 ## Source reconstruction and comparison of trials with high and low alpha power
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
@@ -216,7 +215,6 @@ Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' a
     cfg.elec              = elec_aligned;
     source = ft_sourceanalysis(cfg, freq);
     source = ft_sourcedescriptives([], source); % to get the neural-activity-index
-
 
 ### Visualization of the neural-activity-index
 
@@ -396,8 +394,6 @@ Next, we will call **[ft_connectivityanalysis](/reference/ft_connectivityanalysi
     cfg.complex = 'absimag';
     source_conn = ft_connectivityanalysis(cfg, source);
 
-
-
 We can now make a, rather uninformative, visualization of the connectome, plotting the full weighted graph, between all pairs of nodes.
 
     figure(9);imagesc(source_conn.cohspctrm);
@@ -405,7 +401,6 @@ We can now make a, rather uninformative, visualization of the connectome, plotti
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure9.png" width="300" %}
 
 _Figure 9: connectivity matrix between all pairs of dipole locations_
-
 
 ### Parcellation and network analysis
 
@@ -447,7 +442,6 @@ Re-compute the node degree based on some other threshold(s), and inspect the eff
 
 Re-compute the parcellated connectome using cfg.method = 'max', and inspect the effect of this parameter on the result.
 {% include markup/end %}
-
 
 {% include markup/skyblue %}
 Invoke the function and explore the data.

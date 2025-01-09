@@ -1,5 +1,6 @@
 ---
 title: Preprocessing and averaging of multi-channel NIRS data
+parent: Analysis of fNIRS data
 category: tutorial
 tags: [nirs, preprocessing, nirs-multichannel]
 ---

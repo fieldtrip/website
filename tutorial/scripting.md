@@ -1,5 +1,6 @@
 ---
 title: Creating a clean analysis pipeline
+parent: Introduction to FieldTrip and MATLAB
 category: tutorial
 tags: [matlab, script]
 ---
@@ -150,7 +151,7 @@ For example
     save(outputfile, 'data_raw')
 {% include markup/end %}
 
-Saving a single variable per file makes it possible to easily read only what is necessary. You can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice a bug in your analysis script 😁 and you have to rerun some analyses.
+Saving a single variable per file makes it possible to easily read only what is necessary. You can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice a bug in your analysis script  and you have to rerun some analyses.
 
 The file and folder organization on disk could then look something like this:
 

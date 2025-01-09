@@ -1,5 +1,6 @@
 ---
 title: Analysis of sensor- and source-level connectivity
+parent: Connectivity analysis
 category: tutorial
 tags: [freq, connectivity, coherence, granger, dtf, pdc]
 ---

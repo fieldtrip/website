@@ -1,5 +1,6 @@
 ---
 title: Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+parent: Source reconstruction
 category: tutorial
 tags: [eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-language]
 ---

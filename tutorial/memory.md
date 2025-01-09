@@ -1,5 +1,6 @@
 ---
 title: Making a memory efficient analysis pipeline
+parent: Making your analyses more efficient
 category: tutorial
 tags: [matlab, script, memory]
 ---

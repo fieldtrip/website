@@ -1,5 +1,6 @@
 ---
 title: Localizing sources using beamformer techniques
+nav_exclude: true
 tags: [fixme]
 ---
 

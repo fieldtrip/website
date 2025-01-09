@@ -1,5 +1,6 @@
 ---
 title: Cluster-based permutation tests on event-related fields
+parent: Statistical analysis
 category: tutorial
 tags: [statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
 ---

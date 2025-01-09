@@ -1,5 +1,6 @@
 ---
 title: Analysis of corticomuscular coherence
+parent: Connectivity analysis
 category: tutorial
 tags: [coherence, meg, emg, plotting, source, connectivity, meg-visuomotor151]
 ---

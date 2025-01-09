@@ -1,5 +1,6 @@
 ---
 title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+parent: Sensor-level analyses
 category: tutorial
 tags: [opm, fieldline, opm-mediannerve]
 ---

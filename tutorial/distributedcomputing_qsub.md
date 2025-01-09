@@ -1,5 +1,6 @@
 ---
 title: Speeding up your analysis using distributed computing with qsub
+parent: Making your analyses more efficient
 category: tutorial
 tags: [matlab, script, qsub, distcomp, meg-language]
 ---

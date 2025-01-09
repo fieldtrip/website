@@ -1,5 +1,6 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
+nav_exclude: true
 tags: [fixme]
 ---
 

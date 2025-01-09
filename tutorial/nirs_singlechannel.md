@@ -1,5 +1,6 @@
 ---
 title: Preprocessing and averaging of single-channel NIRS data
+parent: Analysis of fNIRS data
 category: tutorial
 tags: [nirs, preprocessing, nirs-singlechannel]
 ---

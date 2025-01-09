@@ -1,5 +1,6 @@
 ---
 title: Introduction to the FieldTrip toolbox
+parent: Introduction to FieldTrip and MATLAB
 category: tutorial
 tags: [meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
 ---
