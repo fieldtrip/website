@@ -1,6 +1,8 @@
 ---
 title: Realtime MEG BCI hands-on session in Nijmegen
 tags: [realtime]
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Realtime MEG BCI hands-on session in Nijmegen

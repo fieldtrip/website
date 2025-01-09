@@ -1,5 +1,7 @@
 ---
 title: Toolkit of Cognitive Neuroscience - EEG/MEG
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Toolkit of Cognitive Neuroscience: EEG/MEG

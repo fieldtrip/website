@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in London, UK
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip Workshop in London, UK

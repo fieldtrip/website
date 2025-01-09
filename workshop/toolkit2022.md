@@ -1,5 +1,7 @@
 ---
 title: Advanced MEG/EEG toolkit at the Donders
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [toolkit2022]
 ---
 

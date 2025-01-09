@@ -1,5 +1,7 @@
 ---
 title: Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Neuroimaging Group
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [fitng2023]
 ---
 

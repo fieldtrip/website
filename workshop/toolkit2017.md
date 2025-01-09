@@ -1,5 +1,7 @@
 ---
 title: Advanced analysis and source modeling of EEG and MEG data
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Advanced analysis and source modeling of EEG and MEG data

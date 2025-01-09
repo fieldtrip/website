@@ -1,5 +1,7 @@
 ---
 title: PracticalMEEG workshop in Aix-en-Provence
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [practicalmeeg2022]
 ---
 

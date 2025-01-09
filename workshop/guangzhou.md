@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Guangzhou, China
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip Workshop in Guangzhou, China

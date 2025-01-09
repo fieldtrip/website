@@ -1,5 +1,7 @@
 ---
 title: PracticalMEEG workshop at ICM in Paris
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [paris2019]
 ---
 

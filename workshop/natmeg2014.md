@@ -1,5 +1,7 @@
 ---
 title: FieldTrip course at the NatMEG in Stockholm
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [natmeg2014, meg-audodd]
 redirect_from:
   - /workshop/natmeg/

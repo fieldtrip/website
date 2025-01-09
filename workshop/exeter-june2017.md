@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Exeter, UK
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip Workshop in Exeter, UK

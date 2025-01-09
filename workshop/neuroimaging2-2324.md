@@ -1,5 +1,7 @@
 ---
 title: Neuroimaging II - Electrophysiological Methods
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [neuroimaging2-2324]
 ---
 

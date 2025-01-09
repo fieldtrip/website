@@ -1,5 +1,7 @@
 ---
 title: Workshop on analyzing intracranial data - spikes and fields
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Workshop on analyzing intracranial data: spikes and fields

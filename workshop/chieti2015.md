@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Chieti
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [chieti]
 ---
 

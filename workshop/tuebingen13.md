@@ -1,5 +1,7 @@
 ---
 title: Workshop on FieldTrip, nonparametric statistics and connectivity
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 ## Workshop on FieldTrip, nonparametric statistics and connectivity

@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Aarhus
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [aarhus, meg-audodd]
 ---
 

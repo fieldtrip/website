@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Tübingen, Germany
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip Workshop in Tübingen, Germany

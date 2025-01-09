@@ -1,5 +1,7 @@
 ---
 title: Chengdu, China
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Chengdu, China

@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop at ESI/MPI Frankfurt, Germany
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop at ESI/MPI Frankfurt, Germany

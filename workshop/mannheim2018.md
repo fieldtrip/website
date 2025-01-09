@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Mannheim
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Mannheim

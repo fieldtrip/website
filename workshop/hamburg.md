@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Hamburg in 2012
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Hamburg in 2012

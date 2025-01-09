@@ -1,12 +1,14 @@
 ---
-title: FieldTrip workshop Donostia
+title: FieldTrip workshop in Donostia-San Sebastián
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
-## FieldTrip workshop Donostia
+## FieldTrip workshop in Donostia-San Sebastián
 
 ### Where
 
-BCBL, San Sebastian, Spain.
+BCBL, Donostia-San Sebastián, Spain.
 
 ### When
 

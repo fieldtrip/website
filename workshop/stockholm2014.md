@@ -1,5 +1,7 @@
 ---
 title: Joint FieldTrip/MNE course at the NatMEG in Stockholm
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Joint FieldTrip/MNE course at the NatMEG in Stockholm

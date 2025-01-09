@@ -1,5 +1,7 @@
 ---
 title: CuttingEEG X workshop at the Donders
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [cuttingeegx]
 ---
 

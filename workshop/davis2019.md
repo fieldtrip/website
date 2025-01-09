@@ -1,5 +1,7 @@
 ---
 title: ECoG/sEEG FieldTrip bootcamp at UC Davis
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [davis2019]
 ---
 

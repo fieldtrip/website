@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Madrid
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [madrid2019, eeg-sedation, eeg-language]
 ---
 

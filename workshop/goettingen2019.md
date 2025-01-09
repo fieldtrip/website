@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Göttingen in 2019
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Göttingen in 2019

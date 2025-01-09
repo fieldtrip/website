@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop at Washington University, St Louis
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop at Washington University, St Louis

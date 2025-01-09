@@ -1,5 +1,7 @@
 ---
 title: ChildBrain pre-conference workshop in Leuven, Belgium
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # ChildBrain pre-conference workshop in Leuven, Belgium
@@ -291,7 +293,3 @@ For head model creation we also suggest following tutorials:
 
 For source model creation we also suggest following tutorials:
 {% include seealso tag1="sourcemodel" %}
-
----
-
-This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10 and MATLAB 2018a.

@@ -1,5 +1,7 @@
 ---
 title: M/EEG analysis workshop in Jyväskylä, Finland
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # M/EEG analysis workshop in Jyväskylä, Finland

@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Salzburg, Austria
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Salzburg, Austria

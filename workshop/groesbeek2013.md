@@ -1,5 +1,7 @@
 ---
 title: Summerschool on brain networks
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 ## Summerschool on brain networks

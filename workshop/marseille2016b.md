@@ -1,5 +1,7 @@
 ---
 title: FieldTrip Workshop in Marseille in November 2016
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip Workshop in Marseille in November 2016

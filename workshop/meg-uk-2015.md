@@ -1,5 +1,7 @@
 ---
 title: MEG-UK 2015 meeting
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [meg-uk-2015, mmfaces]
 ---
 

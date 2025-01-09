@@ -1,5 +1,7 @@
 ---
 title: Biomag 2016 satellite meeting - Seoul, Korea
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # Biomag 2016 satellite meeting - Seoul, Korea

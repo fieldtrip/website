@@ -1,5 +1,7 @@
 ---
 title: MRC Partnership Grant FieldTrip workshop in Birmingham
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # MRC Partnership Grant FieldTrip workshop in Birmingham

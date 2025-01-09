@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop at Universidad Católica del Maule, Chile
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [chile2020]
 ---
 

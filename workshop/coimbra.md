@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Coimbra, Portugal
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Coimbra, Portugal

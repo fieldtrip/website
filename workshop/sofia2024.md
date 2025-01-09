@@ -1,6 +1,8 @@
 ---
 title: FieldTrip workshop in Sofia, Bulgaria
-tags: sofia2024
+parent: FieldTrip courses and workshops
+category: workshop
+tags: [sofia2024]
 ---
 
 # FieldTrip workshop Sofia 07-10.02.2024

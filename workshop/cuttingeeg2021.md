@@ -1,5 +1,7 @@
 ---
 title: FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
+parent: FieldTrip courses and workshops
+category: workshop
 tags: [cuttingeeg2021]
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: FieldTrip workshop in Göttingen in 2014
+parent: FieldTrip courses and workshops
+category: workshop
 ---
 
 # FieldTrip workshop in Göttingen in 2014

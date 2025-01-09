@@ -1,6 +1,8 @@
 ---
 title: FieldTrip tutorial at WIRED 2024 in Paris
-tags: wired2024
+parent: FieldTrip courses and workshops
+category: workshop
+tags: [wired2024]
 ---
 
 # FieldTrip tutorial at WIRED 2024 in Paris
