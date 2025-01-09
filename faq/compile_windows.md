@@ -1,5 +1,6 @@
 ---
 title: How can I compile the mex files on 64-bit Windows?
+parent: MATLAB questions
 category: faq
 tags: [mex, matlab]
 redirect_from:

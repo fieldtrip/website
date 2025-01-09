@@ -1,5 +1,6 @@
 ---
 title: Which colormaps are supported?
+parent: Plotting and visualization
 category: faq
 tags: [plotting]
 ---

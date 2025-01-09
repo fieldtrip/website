@@ -1,5 +1,6 @@
 ---
 title: How can I use my MacBook Pro for stimulus presentation in the MEG lab?
+parent: Experimental questions
 category: faq
 tags: [matlab]
 redirect_from:

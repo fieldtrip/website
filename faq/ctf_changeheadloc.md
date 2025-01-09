@@ -1,5 +1,6 @@
 ---
 title: How can I change the head localization in a CTF dataset?
+parent: Experimental questions
 category: faq
 tags: [ctf]
 redirect_from:

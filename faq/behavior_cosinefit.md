@@ -1,5 +1,6 @@
 ---
 title: How can I test whether a behavioral measure is phasic?
+parent: Statistical analysis
 category: faq
 tags: [statistics, freq]
 redirect_from:
@@ -23,7 +24,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     A   = rand(nchan,1).*0.4; % amplitude
     phi = 2.*pi.*rand(nchan,1); % phase shift
 
-
     % create some data, consisting of 0's and 1's
     n = 500;
     ix = 2.*pi.*rand(1,nobs);
@@ -31,7 +31,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     x = exp(1i.*ix);
     xshift = exp(1i.*(ix+phi));
     y = round(rand(nchan,nobs)+A.*real(xshift));
-
 
     % bin the data, this is not efficient, but does the trick
     nbin     = 20;
@@ -66,7 +65,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
 
     figure;plot(x_binned,y_binned, 'o');
 
-
     s = ft_statfun_cosinefit([], y_binned, x_binned);
 
     s_unbinned = ft_statfun_cosinefit([], y, angle(x));
@@ -76,7 +74,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     xlabel = 'actual';
     ylabel = 'estimate';
     legend({'unbinned';'binned'});
-
 
 The relevant function that computes the cosine fit is provided below:
 

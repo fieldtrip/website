@@ -1,5 +1,6 @@
 ---
 title: How can I compute inter-trial coherence?
+parent: Spectral analysis
 category: faq
 tags: [coherence]
 ---
@@ -28,7 +29,6 @@ You can use cfg.method='mtmfft', 'mtmconvol' or 'wavelet, but in either case you
     itc.time      = freq.time;
     itc.dimord    = 'chan_freq_time';
 
-
     F = freq.fourierspctrm;   % copy the Fourier spectrum
     N = size(F,1);           % number of trials
 
@@ -54,7 +54,6 @@ Finally we can plot it, just like a regular time-frequency representation
     imagesc(itc.time, itc.freq, squeeze(itc.itlc(1,:,:)));
     axis xy
     title('inter-trial linear coherence');
-
 
 For interpretation of the ITC metric, we recommend the following paper for caveats: van Diepen, R. M., & Mazaheri, A. (2018). _The caveats of observing inter-trial phase-coherence in cognitive neuroscience._ Scientific reports, 8(1), 1-9. 
 

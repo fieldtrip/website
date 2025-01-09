@@ -1,5 +1,6 @@
 ---
 title: How should I report the positions of the fiducial points on the head?
+parent: Source reconstruction
 category: faq
 tags: [electrode, fiducial, polhemus, coordinate]
 redirect_from:

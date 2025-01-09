@@ -1,5 +1,6 @@
 ---
 title: Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+parent: Spectral analysis
 category: faq
 tags: [freq]
 ---
@@ -66,7 +67,6 @@ Figure 1: simulated data on 4 channels, each with a slightly different transient
     
     tlck = ft_timelockanalysis([], data);
     figure;plot(tlck.time, tlck.avg); legend(tlck.label);
-
 
 Figure 2: ERP 
 

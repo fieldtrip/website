@@ -1,5 +1,6 @@
 ---
 title: I am having problems reading the CTF .hc headcoordinates file
+parent: Specific data formats
 category: faq
 tags: [ctf, raw]
 redirect_from:

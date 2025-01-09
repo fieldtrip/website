@@ -1,5 +1,6 @@
 ---
 title: What kind of cable do I need for a serial port connection between two computers?
+parent: Experimental questions
 category: faq
 tags: [realtime]
 redirect_from:
@@ -59,7 +60,6 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
       break
     end
     end
-
 
     figure
     plot(tlop*1000,'.');

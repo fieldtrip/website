@@ -1,5 +1,6 @@
 ---
 title: What material is used for the flexible MEG headcasts?
+parent: Source reconstruction
 category: faq
 tags: [meg]
 ---

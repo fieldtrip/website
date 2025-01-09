@@ -1,5 +1,6 @@
 ---
 title: How does MTMCONVOL work?
+parent: Spectral analysis
 category: faq
 tags: [freq]
 ---

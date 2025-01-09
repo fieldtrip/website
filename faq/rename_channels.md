@@ -1,5 +1,6 @@
 ---
 title: How can I rename channels in my data structure?
+parent: Data handling
 category: faq
 tags: [preprocessing, montage]
 ---

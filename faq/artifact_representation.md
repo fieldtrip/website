@@ -1,5 +1,6 @@
 ---
 title: How can I consistently represent artifacts in my data?
+parent: Artifacts
 category: faq
 tags: [preprocessing, artifact]
 redirect_from:

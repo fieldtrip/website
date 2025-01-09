@@ -1,5 +1,6 @@
 ---
 title: How does a difference in trial numbers per condition affect my statistical test
+parent: statistical analysis
 category: faq
 tags: [statistics]
 redirect_from:
@@ -62,7 +63,6 @@ Now that we have simulated the data for all subjects we are going to divide the 
     cfg_stats.uvar                = 2; % the 2nd row in cfg.design contains the subject number
 
     cfg = [];
-
 
     n_tests = 100;
 

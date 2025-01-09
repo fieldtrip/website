@@ -1,5 +1,6 @@
 ---
 title: What does "padding not sufficient for requested frequency resolution" mean?
+parent: Spectral analysis
 category: faq
 tags: [freq]
 redirect_from:

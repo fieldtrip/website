@@ -1,5 +1,6 @@
 ---
 title: How can I compile the mex files and command-line executable?
+parent: MATLAB questions
 category: faq
 tags: [mex, compile]
 ---

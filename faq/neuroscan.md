@@ -1,5 +1,6 @@
 ---
 title: I have problems reading in neuroscan .cnt files. How can I fix this?
+parent: Specific data formats
 category: faq
 tags: [raw, neuroscan, eeg, dataformat, preprocessing]
 redirect_from:

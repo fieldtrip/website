@@ -1,5 +1,6 @@
 ---
 title: How can I import my own data format?
+parent: Specific data formats
 category: faq
 tags: [dataformat, preprocessing]
 redirect_from:

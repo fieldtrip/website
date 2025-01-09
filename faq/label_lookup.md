@@ -1,5 +1,6 @@
 ---
 title: How can I determine the anatomical label of a source or electrode?
+parent: Source reconstruction
 category: faq
 tags: [source]
 redirect_from:
@@ -51,7 +52,6 @@ Next, look up the corresponding anatomical label of an electrode of interest, e.
 
     'ParaHippocampal_L'
 
-
 The function below represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table.
 
     function generate_electable_v3(filename, varargin)
@@ -82,7 +82,6 @@ The function below represents a tool that automatically overlays all channels in
     % This function is part of Stolk, Griffin et al., Integrated analysis
     % of anatomical and electrophysiological human intracranial data
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
     % get the optional input arguments
     elec_mni        = ft_getopt(varargin, 'elec_mni');

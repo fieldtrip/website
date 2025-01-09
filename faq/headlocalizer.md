@@ -1,5 +1,6 @@
 ---
 title: How can I monitor a subject's head position during a MEG session?
+parent: Experimental questions
 category: faq
 tags: [meg, realtime]
 redirect_from:

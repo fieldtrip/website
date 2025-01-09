@@ -1,5 +1,6 @@
 ---
 title: How should I get started with the FieldTrip realtime buffer?
+parent: Realtime data streaming and analysis
 category: faq
 tags: [realtime]
 redirect_from:

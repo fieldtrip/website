@@ -1,5 +1,6 @@
 ---
 title: I am working at the Donders, should I also download FieldTrip?
+parent: Organizational questions
 category: faq
 tags: [path, download]
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: How can I anonymize or deidentify an anatomical MRI?
+parent: Various other questions
 category: faq
 tags: [mri, anonymize, sharing]
 redirect_from:
@@ -74,7 +75,6 @@ You can also combine defacing with brain segmentation to ensure that you do not 
 
     cfg = [];
     ft_sourceplot(cfg, defaced_mri);
-
 
 See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 

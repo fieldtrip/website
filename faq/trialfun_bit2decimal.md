@@ -1,5 +1,6 @@
 ---
 title: How can I transform trigger values from bits to decimal representation with a trialfun?
+parent: Trials, triggers and events
 category: faq
 tags: [trialfun]
 redirect_from:

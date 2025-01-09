@@ -1,5 +1,6 @@
 ---
 title: How can I read corrupted (unsaved) CTF data?
+parent: Specific data formats
 category: faq
 tags: [raw, corrupt, preprocessing, ctf]
 redirect_from:
@@ -56,7 +57,6 @@ Now re-read the res4 file again and correct for the number of trials. Then read 
          hdr.nTrials = 75;
 
          data = read_ctf_meg4('/home/arjsto/MEG/subjectx/subjectx.meg4', hdr, 1, hdr.nTrials*12000);
-
 
 If you want to do the same with high-level FieldTrip functions, invoke the above mentioned low-level functions by specifying the 'ctf_old' header- and dataformat. In your trialfunction:
 

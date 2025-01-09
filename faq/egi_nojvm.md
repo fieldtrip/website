@@ -1,5 +1,6 @@
 ---
 title: How can I read EGI mff data without the JVM?
+parent: Specific data formats
 category: faq
 tags: [egi]
 redirect_from:

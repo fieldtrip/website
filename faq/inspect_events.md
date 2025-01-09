@@ -1,5 +1,6 @@
 ---
 title: How can I find out what eventvalues and eventtypes there are in my data?
+parent: Trials, triggers and events
 category: faq
 tags: [preprocessing, raw, trigger, event, values, type, eventvalue, eventtype]
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: How can I fine-tune my BEM volume conduction model?
+parent: Source reconstruction
 category: faq
 tags: [source, headmodel]
 redirect_from:

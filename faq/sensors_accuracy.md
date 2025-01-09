@@ -1,5 +1,6 @@
 ---
 title: Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+parent: Source reconstruction
 category: faq
 tags: [source, eeg]
 redirect_from:

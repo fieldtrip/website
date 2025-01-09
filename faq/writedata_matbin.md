@@ -1,5 +1,6 @@
 ---
 title: Reading is slow, can I write my raw data to a more efficient file format?
+parent: Data handling
 category: faq
 tags: [preprocessing, dataformat, raw]
 redirect_from:

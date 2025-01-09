@@ -1,5 +1,6 @@
 ---
 title: Should I rereference prior to or after ICA for artifact removal?
+parent: Reading and preprocessing data
 category: faq
 tags: [ica]
 redirect_from:
@@ -37,7 +38,6 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 {% include image src="/assets/img/faq/ica_rereference/multiplot.png" width="400" %}
 
 {% include image src="/assets/img/faq/ica_rereference/singleplot_FC1.png" width="400" %}
-
 
 ## Code
 

@@ -1,5 +1,6 @@
 ---
 title: Is it OK for vertices/dipoles to stick out of the volume conductor?
+parent: Source reconstruction
 category: faq
 tags: [sourcemodel, bem]
 ---

@@ -1,5 +1,6 @@
 ---
 title: How can I fix a corrupt CTF meg4 file?
+parent: Specific data formats
 category: faq
 tags: [corrupt, ctf, raw]
 redirect_from:
@@ -30,7 +31,6 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
     [path, file, ext] = fileparts(dataset);
     headerfile = fullfile(dataset, [file '.res4']);
     datafile   = fullfile(dataset, [file '.meg4']);
-
 
     hdr = ft_read_header(headerfile, 'headerformat', 'ctf_old');
 

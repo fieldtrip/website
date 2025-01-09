@@ -1,5 +1,6 @@
 ---
 title: How can I keep track of changes to the code?
+parent: Code and development questions
 category: faq
 tags: [download, development, cvs, svn, git]
 redirect_from:

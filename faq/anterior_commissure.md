@@ -1,5 +1,6 @@
 ---
 title: Where is the anterior commissure?
+parent: Source reconstruction
 category: faq
 tags: [source, fiducial]
 ---

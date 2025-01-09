@@ -1,5 +1,6 @@
 ---
 title: Why does my TFR look strange (part II, detrending)?
+parent: Spectral analysis
 category: faq
 tags: [mtmconvol, freq, preprocessing, artifact, filter]
 redirect_from:

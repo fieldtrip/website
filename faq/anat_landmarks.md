@@ -1,5 +1,6 @@
 ---
 title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+parent: Source reconstruction
 category: faq
 tags: [fiducial, mri, ctf, source, coordinate]
 redirect_from:

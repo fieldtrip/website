@@ -1,5 +1,6 @@
 ---
 title: Can I use Octave instead of MATLAB?
+parent: MATLAB questions
 category: faq
 tags: [octave]
 redirect_from:

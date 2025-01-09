@@ -1,5 +1,6 @@
 ---
 title: How to change the MRI orientation, the voxel size or the field-of-view?
+parent: Source reconstruction
 category: faq
 tags: [mri, volume, coordinate]
 redirect_from:

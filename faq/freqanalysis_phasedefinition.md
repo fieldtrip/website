@@ -1,5 +1,6 @@
 ---
 title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
+parent: Spectral analysis
 category: faq
 tags: [freq, mtmconvol, wavelet, mtmfft, phase]
 redirect_from:

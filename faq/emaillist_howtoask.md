@@ -1,5 +1,6 @@
 ---
 title: How to ask good questions to the community?
+parent: Organizational questions
 category: faq
 tags: [support, email]
 redirect_from:

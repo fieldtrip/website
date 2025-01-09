@@ -1,5 +1,6 @@
 ---
 title: What are the different approaches I can take for distributed computing?
+parent: Distributed computing
 category: faq
 tags: [qsub, parfor, distcomp, matlab]
 redirect_from:

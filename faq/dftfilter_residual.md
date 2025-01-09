@@ -1,5 +1,6 @@
 ---
 title: Why is there a residual 50Hz line-noise component after applying a DFT filter?
+parent: Artifacts
 category: faq
 tags: [artifact, filter, noise, preprocessing]
 redirect_from:

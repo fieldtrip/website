@@ -1,5 +1,6 @@
 ---
 title: Why does my EEG headmodel look funny?
+parent: Source reconstruction
 category: faq
 tags: [headmodel]
 redirect_from:

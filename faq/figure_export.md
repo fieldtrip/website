@@ -1,5 +1,6 @@
 ---
 title: What is a good way to save images for later processing in other software?
+parent: Plotting and visualization
 category: faq
 tags: [plotting]
 redirect_from:

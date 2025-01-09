@@ -1,5 +1,6 @@
 ---
 title: What is the relation between "events" (such as triggers) and "trials"?
+parent: MATLAB questions
 category: faq
 tags: [preprocessing, trialfun]
 redirect_from:

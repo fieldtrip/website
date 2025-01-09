@@ -1,5 +1,6 @@
 ---
 title: I am having problems printing figures that use opacity
+parent: Plotting and visualization
 category: faq
 tags: [plotting]
 redirect_from:

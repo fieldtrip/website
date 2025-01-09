@@ -1,5 +1,6 @@
 ---
 title: Installation and setting up the path
+parent: MATLAB questions
 category: faq
 tags: [matlab, path, warning]
 redirect_from:

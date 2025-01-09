@@ -1,5 +1,6 @@
 ---
 title: How does ft_prepare_neighbours work?
+parent: Statistical analysis
 category: faq
 tags: [statistics, cluster]
 redirect_from:

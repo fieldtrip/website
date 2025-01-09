@@ -1,5 +1,6 @@
 ---
 title: How can I process continuous data without triggers?
+parent: Trials, triggers and events
 category: faq
 tags: [preprocessing, continuous, raw]
 redirect_from:

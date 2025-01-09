@@ -1,5 +1,6 @@
 ---
 title: How should I specify the coordinate systems in a BIDS dataset?
+parent: Various other questions
 category: faq
 tags: [bids, sharing]
 ---

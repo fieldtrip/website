@@ -1,5 +1,6 @@
 ---
 title: What dataformats are supported?
+parent: Data handling
 category: faq
 tags: [dataformat, preprocessing, raw]
 ---

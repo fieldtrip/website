@@ -1,5 +1,6 @@
 ---
 title: How can I deal with a discontinuous Neuralynx LFP recording?
+parent: Specific data formats
 category: faq
 tags: [neuralynx, corrupt, preprocessing]
 ---

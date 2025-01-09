@@ -1,5 +1,6 @@
 ---
 title: I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+parent: Artifacts
 category: faq
 tags: [ica, data, crash]
 redirect_from:

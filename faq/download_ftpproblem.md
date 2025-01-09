@@ -1,5 +1,6 @@
 ---
 title: I am having problems downloading
+parent: Organizational questions
 category: faq
 tags: [download, release]
 redirect_from:

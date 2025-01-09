@@ -1,5 +1,6 @@
 ---
 title: How can I check or decipher the sequence of triggers in my data?
+parent: Trials, triggers and events
 category: faq
 tags: [trigger, trialfun, preprocessing]
 ---

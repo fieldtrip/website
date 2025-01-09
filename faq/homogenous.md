@@ -1,5 +1,6 @@
 ---
 title: How do homogenous coordinate transformation matrices work?
+parent: Source reconstruction
 category: faq
 tags: [coordinate]
 ---

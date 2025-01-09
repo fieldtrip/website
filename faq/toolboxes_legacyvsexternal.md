@@ -1,5 +1,6 @@
 ---
 title: Can I prevent "external" toolboxes from being added to my MATLAB path?
+parent: MATLAB questions
 category: faq
 tags: [matlab, toolbox, path]
 redirect_from:

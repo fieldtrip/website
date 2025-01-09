@@ -1,5 +1,6 @@
 ---
 title: My MRI is upside down, is this a problem?
+parent: Source reconstruction
 category: faq
 tags: [mri, volume, coordinate]
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: How can I anonymize or deidentify DICOM files?
+parent: Various other questions
 category: faq
 tags: [mri, anonymize, sharing]
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: What does a typical call to a FieldTrip function look like?
+parent: Code and development questions
 category: faq
 tags: [datatype, function]
 redirect_from:

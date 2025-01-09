@@ -1,5 +1,6 @@
 ---
 title: Can I organize my own FieldTrip workshop?
+parent: Various other questions
 category: faq
 tags: [workshop]
 redirect_from:

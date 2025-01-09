@@ -1,5 +1,6 @@
 ---
 title: What is the difference between coherence and coherency?
+parent: Spectral analysis
 category: faq
 tags: [coherence]
 redirect_from:

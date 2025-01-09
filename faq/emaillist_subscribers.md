@@ -1,5 +1,6 @@
 ---
 title: How many people are subscribed to the email discussion list?
+parent: Organizational questions
 category: faq
 tags: [email]
 redirect_from:

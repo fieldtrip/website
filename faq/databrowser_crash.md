@@ -1,5 +1,6 @@
 ---
 title: The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
+parent: MATLAB questions
 category: faq
 tags: [ica, data, crash, databrowser, surf, topoplot, topo]
 redirect_from:

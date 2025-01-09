@@ -1,5 +1,6 @@
 ---
 title: What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
+parent: Spectral analysis
 category: faq
 tags: [freq, mtmconvol]
 redirect_from:

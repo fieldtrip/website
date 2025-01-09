@@ -1,5 +1,6 @@
 ---
 title: How do I install the OpenMEEG binaries
+parent: Source reconstruction
 category: faq
 tags: [openmeeg, headmodel]
 redirect_from:

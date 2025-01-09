@@ -1,5 +1,6 @@
 ---
 title: What is the conductivity of the brain, CSF, skull and skin tissue?
+parent: Source reconstruction
 category: faq
 tags: [headmodel, source]
 redirect_from:

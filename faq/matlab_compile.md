@@ -1,5 +1,6 @@
 ---
 title: How to compile MATLAB code into stand-alone executables?
+parent: Distributed computing
 category: faq
 tags: [qsub]
 redirect_from:

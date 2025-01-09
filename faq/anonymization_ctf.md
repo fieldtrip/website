@@ -1,5 +1,6 @@
 ---
 title: How can I anonymize or deidentify a CTF dataset?
+parent: Various other questions
 category: faq
 tags: [ctf, raw, anonymize, sharing]
 redirect_from:
@@ -77,7 +78,6 @@ writeCTFds([output],hdr_anon,data,'fT');
 
 fprintf('COMPLETE\n');
 ```
-
 
 ## Using CTF command-line tools on Linux
 

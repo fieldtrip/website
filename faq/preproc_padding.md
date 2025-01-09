@@ -1,5 +1,6 @@
 ---
 title: How does the filter padding in preprocessing work?
+parent: Artifacts
 category: faq
 tags: [preprocessing, artifact, filter]
 redirect_from:

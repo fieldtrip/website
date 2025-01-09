@@ -1,5 +1,6 @@
 ---
 title: How to get started with the MATLAB distributed computing toolbox?
+parent: Distributed computing
 category: faq
 tags: [distcomp, parfor]
 redirect_from:
