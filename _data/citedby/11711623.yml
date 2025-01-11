@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39779908'
+- idtype: doi
+  value: 10.1038/s44184-024-00111-9
+- idtype: pmcid
+  value: PMC11711623
+authors:
+- authtype: Author
+  name: Bilan DS
+- authtype: Author
+  name: Chicchi Giglioli IA
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Cañadas E
+- authtype: Author
+  name: de Ramón I
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Alda J
+- authtype: Author
+  name: Ramos-Quiroga JA
+- authtype: Author
+  name: Herrera JA
+- authtype: Author
+  name: Amado A
+- authtype: Author
+  name: Quintero J
+epubdate: 2025 Jan 9
+fulljournalname: NPJ Mental Health Research
+issue: ''
+pages: '1'
+pmclivedate: 2025/01/10
+printpubdate: ''
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: Npj Ment Health Res
+title: 'Decreased impulsiveness and MEG normalization after AI-digital therapy in
+  ADHD children: a RCT'
+uid: '11711623'
+volume: '4'

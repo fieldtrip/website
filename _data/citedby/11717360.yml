@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '39784706'
+- idtype: doi
+  value: 10.7554/eLife.96784
+- idtype: pmcid
+  value: PMC11717360
+authors:
+- authtype: Author
+  name: Rosenblum Y
+- authtype: Author
+  name: Jafarzadeh Esfahani M
+- authtype: Author
+  name: Adelhöfer N
+- authtype: Author
+  name: Zerr P
+- authtype: Author
+  name: Furrer M
+- authtype: Author
+  name: Huber R
+- authtype: Author
+  name: Roest FF
+- authtype: Author
+  name: Steiger A
+- authtype: Author
+  name: Zeising M
+- authtype: Author
+  name: Horváth CG
+- authtype: Author
+  name: Schneider B
+- authtype: Author
+  name: Bódizs R
+- authtype: Author
+  name: Dresler M
+epubdate: 2025 Jan 9
+fulljournalname: eLife
+issue: ''
+pages: RP96784
+pmclivedate: 2025/01/09
+printpubdate: ''
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: eLife
+title: Fractal cycles of sleep, a new aperiodic activity-based definition of sleep
+  cycles
+uid: '11717360'
+volume: '13'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3934/Neuroscience.2024030
+- idtype: pmcid
+  value: PMC11712230
+authors:
+- authtype: Author
+  name: Ciaramella F
+- authtype: Author
+  name: Cipriano L
+- authtype: Author
+  name: Lopez ET
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Lucidi F
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2024 Dec 12
+fulljournalname: AIMS Neuroscience
+issue: '4'
+pages: 490-504
+pmclivedate: 2025/01/10
+printpubdate: ''
+pubdate: 2024 Dec 12
+sortdate: 2024/12/12 00:00
+source: AIMS Neurosci
+title: 'Brain dynamics and personality: a preliminary study'
+uid: '11712230'
+volume: '11'

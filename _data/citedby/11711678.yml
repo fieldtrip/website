@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '39725669'
+- idtype: doi
+  value: 10.1093/scan/nsae066
+- idtype: pmcid
+  value: PMC11711678
+authors:
+- authtype: Author
+  name: Amoruso L
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Castillo EM
+- authtype: Author
+  name: Kleineschay T
+- authtype: Author
+  name: Geng S
+- authtype: Author
+  name: Ibáñez A
+- authtype: Author
+  name: García AM
+epubdate: 2024 Dec 27
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsae066
+pmclivedate: 2025/01/10
+printpubdate: ''
+pubdate: 2024 Dec 27
+sortdate: 2024/12/27 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Neural dynamics of social verb processing: an MEG study'
+uid: '11711678'
+volume: '20'
