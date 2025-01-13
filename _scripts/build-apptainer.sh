@@ -66,6 +66,7 @@ $BUNDLE install           # > /dev/null 2>&1
 $BUNDLE exec jekyll build # > /dev/null 2>&1
 
 # copy the large assets that are not in the repository to the released site
+cd $HOME/fieldtrip/website
 $CP assets/root/* _site/
 
 fi
