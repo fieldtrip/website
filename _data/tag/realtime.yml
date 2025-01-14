@@ -61,9 +61,6 @@
 - name:  Streaming realtime data from Emotiv neuroheadset
   link:  /development/realtime/emotiv
 
-- name:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime_fmri
-
 - name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
   link:  /development/realtime/implementation
 
@@ -147,6 +144,9 @@
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
+
+- name:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime_fmri
 
 - name:  Getting started with real-time head localization in MEG
   link:  /getting_started/realtime_headlocalizer
