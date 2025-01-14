@@ -9,7 +9,7 @@ tags: [aarhus, meg+eeg, beamforming, erf, lcmv, meg-audodd]
 
 In this tutorial we will apply beaforming techniques to event-realted fields. The data used herein has been used and preprocessing procedures have been extensively explained in the Natmeg tutorial [dataset](/workshop/natmeg2014/meg_audodd). Below we will focus on motor-evoked fields associated with the right-hand button press. We will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)). Except, we will focus on motor responses rather than the preceding stimuli. Further, we will compare the measured topography and the corresponding source reconstruction. The quality of the topography often depends on the presence of super-positioned activity of no interest, i.e. ocular and cardiac artifacts. Thus, we will apply ICA in order to identify and subsequently remove such activity.
 
-In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/workshop/natmeg2014/beamforming).
+In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/tutorial/source/beamforming).
 
 {% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
@@ -162,7 +162,7 @@ Use your knowledge about the distribution of the ingoing and outgoing field.
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
-We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg2014/dipolefitting) which you can download to your working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat).
+We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/source/dipolefitting) which you can download to your working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat).
 
 Load the forward model using the following cod
 
@@ -272,14 +272,14 @@ The source data structure has the following fields:
 
 ### Plotting sources of response related evoked field
 
-The strategy around circumventing the noise bias towards the center of the head has been addressed and the bias itself has been illustrated [here](/workshop/natmeg2014/beamforming#plotting_sources_of_oscillatory_beta-band_activity). Here we will contrast the estimated source power of the response interval against the one from the pre-response.
+The strategy around circumventing the noise bias towards the center of the head has been addressed and the bias itself has been illustrated [here](/tutorial/source/beamforming#plotting_sources_of_oscillatory_beta-band_activity). Here we will contrast the estimated source power of the response interval against the one from the pre-response.
 
     M1=sourcepstM1;
     M1.avg.pow=(sourcepstM1.avg.pow-sourcepreM1.avg.pow)./sourcepreM1.avg.pow;
 
 The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
-First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg2014/dipolefitting) which can be downloaded to the working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
+First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/tutorial/source/dipolefitting) which can be downloaded to the working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
 
     load mri_segmented.mat
 
@@ -587,7 +587,7 @@ We will continue to analyze the EEG data according to a series of steps similar 
 
 ### EEG head model & data
 
-As before, we will use the head model calculated in the [dipole fitting tutorial](/workshop/natmeg2014/dipolefitting) and the preprocessed data in order to compute the leadfield.
+As before, we will use the head model calculated in the [dipole fitting tutorial](/tutorial/source/dipolefitting) and the preprocessed data in order to compute the leadfield.
 
 Load the EEG head model using the following code:
 
@@ -767,7 +767,7 @@ _Figure 6: Comparison of time course reconstruction of activity in the primary m
 
 Beamforming source analysis in the time domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as computing the covariance matrix on the basis of single trials vs. ERF/ERP. The results were plotted on an orthogonal view. Thresholding of the source maps was demonstrated on the basis of an arbitrary and statistical threshold. Finally, virtual sensor time-courses were extracted and compared between the imaging modalities.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/workshop/natmeg2014/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/tutorial/source/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
 ### See also these frequently asked questions
 

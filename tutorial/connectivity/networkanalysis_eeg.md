@@ -16,7 +16,7 @@ This tutorial will use metrics that are derived from graph theory and are implem
 
 ## Background
 
-We will analyze brain signals acquired during an Odd-ball task. This data has been previously used in this [tutorial](/workshop/natmeg2014/preprocessing/#preprocessing-and-averaging-eeg). For the purpose of this tutorial will we treat the data as if it was a continuous resting state recording. In contrast to an event-related analysis, where the data is segmented around some external events, we will analyze the entire continuous recording. We will compute connectomes that quantify the 'connectivity' between all pairs of pre defined regions, adopting a parcellation approach.
+We will analyze brain signals acquired during an Odd-ball task. This data has been previously used in this [tutorial](/tutorial/sensor/preprocessing/#preprocessing-and-averaging-eeg). For the purpose of this tutorial will we treat the data as if it was a continuous resting state recording. In contrast to an event-related analysis, where the data is segmented around some external events, we will analyze the entire continuous recording. We will compute connectomes that quantify the 'connectivity' between all pairs of pre defined regions, adopting a parcellation approach.
 
 Such connectomes are typically used for a subsequent graph analysis, to extract specific structure in the connections. We will illustrate this by visualizing the node degree.
 

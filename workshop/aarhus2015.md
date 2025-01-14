@@ -56,7 +56,7 @@ Also, make sure you have downloaded the hands-on data prior to the start of the 
 - **10:45- 12:15** Statistics on TFR and ERF [ERF hands on](/tutorial/cluster_permutation_timelock), [TFR hands on](/tutorial/cluster_permutation_freq)
 - **12:15- 13:00** Lunch
 - **13:00- 14:30** Source reconstruction using beamformers (lecture) **Luca Ambrogioni**
-- **14:30- 15:30** Identifying oscillatory sources using beamformers [hands on](/workshop/natmeg2014/beamforming)
+- **14:30- 15:30** Identifying oscillatory sources using beamformers [hands on](/tutorial/source/beamforming)
 - **15:30- 15:45** Coffe break
 - **15:45- 16:30** Source level statistics within the permutation framework [hands on](/workshop/aarhus/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
 - **16:30- 17:00** Wrap-up-the-day: special topics, general questions and answers
