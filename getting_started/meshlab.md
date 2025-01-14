@@ -2,6 +2,8 @@
 title: Getting started with MeshLab
 category: getting_started
 tags: [mesh, headmodel, meshlab]
+redirect_from:
+    - /getting_started/meshlab/
 ---
 
 # Getting started with MeshLab

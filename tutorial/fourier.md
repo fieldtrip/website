@@ -1,6 +1,8 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
 tags: [fixme]
+redirect_from:
+    - /tutorial/fourier/
 ---
 
 {% include markup/yellow %}

@@ -2,6 +2,8 @@
 title: Should I use a Polhemus or a Structure Sensor to record electrode positions?
 category: faq
 tags: [electrode, polhemus, structure-sensor]
+redirect_from:
+    - /faq/structuresensor/
 ---
 
 # Should I use a Polhemus or a Structure Sensor to record electrode positions?

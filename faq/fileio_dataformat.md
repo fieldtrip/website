@@ -4,6 +4,7 @@ category: faq
 tags: [dataformat, preprocessing]
 redirect_from:
     - /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat/
+    - /faq/fileio_dataformat/
 ---
 
 # How can I extend the reading functions with a new dataformat?

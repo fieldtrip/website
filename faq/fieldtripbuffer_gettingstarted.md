@@ -4,6 +4,7 @@ category: faq
 tags: [realtime]
 redirect_from:
     - /faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/
+    - /faq/fieldtripbuffer_gettingstarted/
 ---
 
 # How should I get started with the FieldTrip realtime buffer?

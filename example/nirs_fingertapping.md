@@ -2,6 +2,8 @@
 title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
 category: example
 tags: [nirs, shimadzu]
+redirect_from:
+    - /example/nirs_fingertapping/
 ---
 
 # Analyzing NIRS data recorded during unilateral finger- and foot-tapping

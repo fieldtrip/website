@@ -4,6 +4,7 @@ category: faq
 tags: [mtmconvol, freq, preprocessing, artifact]
 redirect_from:
     - /faq/why_does_my_tfr_look_strange/
+    - /faq/tfr_strangedemean/
 ---
 
 # Why does my TFR look strange (part I, demeaning)?

@@ -4,6 +4,7 @@ category: faq
 tags: [databrowser, plotting, artifact]
 redirect_from:
     - /faq/how_can_i_use_the_databrowser/
+    - /faq/databrowser/
 ---
 
 # How can I use the databrowser?

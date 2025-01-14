@@ -4,6 +4,7 @@ category: faq
 tags: [headmodel]
 redirect_from:
     - /faq/why_does_my_eegheadmodel_look_funny/
+    - /faq/headmodel_meshingproblem/
 ---
 
 # Why does my EEG headmodel look funny?

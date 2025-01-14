@@ -4,6 +4,7 @@ category: faq
 tags: [continuous, freq]
 redirect_from:
     - /faq/how_can_i_do_time-frequency_analysis_on_continuous_data/
+    - /faq/tfr_continuous/
 ---
 
 # How can I do time-frequency analysis on continuous data?

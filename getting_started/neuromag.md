@@ -2,6 +2,8 @@
 title: Getting started with Neuromag/Elekta/Megin data
 category: getting_started
 tags: [dataformat, neuromag, elekta, megin, meg]
+redirect_from:
+    - /getting_started/neuromag/
 ---
 
 # Getting started with Neuromag/Elekta/Megin data

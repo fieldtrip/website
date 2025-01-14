@@ -4,6 +4,7 @@ category: faq
 tags: [brainvision, raw, anonymize, sharing]
 redirect_from:
     - /faq/how_can_i_anonymize_a_brainvision_dataset/
+    - /faq/anonymization_brainvision/
 ---
 
 # How can I anonymize or deidentify a BrainVision dataset?

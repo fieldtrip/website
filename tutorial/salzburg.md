@@ -1,6 +1,8 @@
 ---
 title: Analysis of auditory evoked fields in sensor and source space
 tags: [fixme]
+redirect_from:
+    - /tutorial/salzburg/
 ---
 
 # Analysis of auditory evoked fields in sensor and source space

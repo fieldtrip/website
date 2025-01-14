@@ -2,6 +2,8 @@
 title: Getting started with EGI/Philips/Magstim data
 category: getting_started
 tags: [dataformat, egi, eeg]
+redirect_from:
+    - /getting_started/egi/
 ---
 
 # Getting started with EGI/Philips/Magstim data

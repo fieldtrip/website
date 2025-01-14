@@ -2,6 +2,8 @@
 title: How can I share my MEG data?
 category: faq
 tags: [dataset, sharing]
+redirect_from:
+    - /faq/data_sharing/
 ---
 
 # How can I share my MEG data?

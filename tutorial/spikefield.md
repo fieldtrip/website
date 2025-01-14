@@ -2,6 +2,8 @@
 title: Preprocessing and analysis of spike and local field potential data
 category: tutorial
 tags: [spike, animal, spike-attention]
+redirect_from:
+    - /tutorial/spikefield/
 ---
 
 # Preprocessing and analysis of spike and local field potential data

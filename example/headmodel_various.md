@@ -4,6 +4,7 @@ category: example
 tags: [meg, headmodel, source]
 redirect_from:
     - /example/make_leadfields_using_different_headmodels/
+    - /example/headmodel_various/
 ---
 
 # Make MEG leadfields using different headmodels

@@ -4,6 +4,7 @@ category: faq
 tags: [egi]
 redirect_from:
     - /faq/how_can_i_read_egi_mff_data_without_the_jvm/
+    - /faq/egi_nojvm/
 ---
 
 # How can I read EGI mff data without the JVM?

@@ -2,6 +2,8 @@
 title: Getting started with audio data
 category: getting_started
 tags: [dataformat, audio]
+redirect_from:
+    - /getting_started/audio/
 ---
 
 # Getting started with audio data

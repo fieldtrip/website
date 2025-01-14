@@ -4,6 +4,7 @@ category: example
 tags: [preprocessing, filter]
 redirect_from:
     - /example/determine_the_filter_characteristics/
+    - /example/filter_characteristics/
 ---
 
 # Determine the filter characteristics

@@ -4,6 +4,7 @@ category: faq
 tags: [mri, anonymize, sharing]
 redirect_from:
     - /faq/how_can_i_anonymize_an_anatomical_mri/
+    - /faq/anonymization_anatomical/
 ---
 
 # How can I anonymize or deidentify an anatomical MRI?

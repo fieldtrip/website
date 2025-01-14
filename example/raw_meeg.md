@@ -4,6 +4,7 @@ category: example
 tags: [eeg, meg, raw, preprocessing, trialdef]
 redirect_from:
     - /example/getting_started_with_reading_raw_eeg_or_meg_data/
+    - /example/raw_meeg/
 ---
 
 # Getting started with reading raw EEG or MEG data

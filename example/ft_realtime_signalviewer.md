@@ -2,6 +2,8 @@
 title: Example real-time signal viewer
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_signalviewer/
 ---
 
 # Example real-time signal viewer

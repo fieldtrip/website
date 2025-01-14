@@ -2,6 +2,8 @@
 title: Getting started with Cerca OPM data
 category: getting_started
 tags: [dataformat, meg, opm, cerca, bids]
+redirect_from:
+    - /getting_started/cerca/
 ---
 
 # Getting started with Cerca OPM data

@@ -4,6 +4,7 @@ category: faq
 tags: [mri, volume, coordinate]
 redirect_from:
   - /faq/my_mri_is_upside_down_is_this_a_problem/
+    - /faq/anat_upsidedown/
 ---
 
 # My MRI is upside down, is this a problem?

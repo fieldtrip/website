@@ -2,6 +2,8 @@
 title: Getting started with BIDS
 category: getting_started
 tags: [dataformat, bids]
+redirect_from:
+    - /getting_started/bids/
 ---
 
 # Getting started with BIDS

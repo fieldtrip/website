@@ -4,6 +4,7 @@ category: faq
 tags: [ica, data, crash, databrowser, surf, topoplot, topo]
 redirect_from:
     - /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this/
+    - /faq/databrowser_crash/
 ---
 
 # The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?

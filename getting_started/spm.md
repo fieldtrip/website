@@ -2,6 +2,8 @@
 title: Getting started with SPM
 category: getting_started
 tags: [spm]
+redirect_from:
+    - /getting_started/spm/
 ---
 
 # Getting started with SPM

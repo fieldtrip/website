@@ -4,6 +4,7 @@ category: faq
 tags: [workshop]
 redirect_from:
     - /faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop/
+    - /faq/workshop_preparation/
 ---
 
 # How should I prepare for the upcoming FieldTrip workshop?

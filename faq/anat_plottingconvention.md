@@ -4,6 +4,7 @@ category: faq
 tags: [anatomical, mri]
 redirect_from:
     - /faq/what_is_the_plotting_convention_for_anatomical_mris/
+    - /faq/anat_plottingconvention/
 ---
 
 # What is the plotting convention for anatomical MRIs?

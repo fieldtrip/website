@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, raw, dataformat, eeg, meg]
 redirect_from:
     - /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers/
+    - faq/mergedata/
 ---
 
 # How can I merge two datasets that were acquired simultaneously with different amplifiers?

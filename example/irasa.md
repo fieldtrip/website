@@ -2,6 +2,8 @@
 title: Irregular Resampling Auto-Spectral Analysis (IRASA)
 category: example
 tags: [irasa]
+redirect_from:
+    - /example/irasa/
 ---
 
 # Irregular Resampling Auto-Spectral Analysis (IRASA)

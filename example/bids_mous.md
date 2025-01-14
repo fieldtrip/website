@@ -2,6 +2,8 @@
 title: Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
 category: example
 tags: [bids, sharing, anonymize]
+redirect_from:
+    - /example/bids_mous/
 ---
 
 # Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS

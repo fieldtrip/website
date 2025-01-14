@@ -4,6 +4,7 @@ category: faq
 tags: [statistics]
 redirect_from:
     - /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test/
+    - /faq/statistics_ntrials/
 ---
 
 {% include markup/red %}

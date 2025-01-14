@@ -4,6 +4,7 @@ category: faq
 tags: [statistics, cluster]
 redirect_from:
     - /faq/what_is_the_idea_behind_statistical_inference_at_the_second-level/
+    - /faq/statistics_secondlevel/
 ---
 
 # What is the idea behind statistical inference at the second-level?

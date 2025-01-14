@@ -2,6 +2,8 @@
 title: Getting started with BioImage Suite
 category: getting_started
 tags: [dataformat, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
+redirect_from:
+    - /getting_started/bioimage/
 ---
 
 # Getting started with BioImage Suite

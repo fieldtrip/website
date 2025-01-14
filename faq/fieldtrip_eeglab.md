@@ -4,6 +4,7 @@ category: faq
 tags: [eeglab]
 redirect_from:
     - /faq/why_is_fieldtrip_developed_separately_from_eeglab/
+    - /faq/fieldtrip_eeglab/
 ---
 
 # Why is FieldTrip developed separately from EEGLAB?

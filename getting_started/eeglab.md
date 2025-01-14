@@ -2,6 +2,8 @@
 title: Getting started with EEGLAB
 category: getting_started
 tags: [dataformat, eeglab, eeg]
+redirect_from:
+    - /getting_started/eeglab/
 ---
 
 # Getting started with EEGLAB

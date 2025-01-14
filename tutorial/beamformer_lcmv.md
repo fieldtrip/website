@@ -1,6 +1,8 @@
 ---
 title: Localizing sources using beamformer techniques
 tags: [fixme]
+redirect_from:
+    - /tutorial/beamformer_lcmv/
 ---
 
 {% include markup/red %}

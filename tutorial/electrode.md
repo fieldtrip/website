@@ -2,6 +2,8 @@
 title: Localizing electrodes using a 3D-scanner
 category: tutorial
 tags: [source, electrode, fiducial, coordinate]
+redirect_from:
+    - /tutorial/electrode/
 ---
 
 # Localizing electrodes using a 3D-scanner

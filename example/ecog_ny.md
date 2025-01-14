@@ -2,6 +2,8 @@
 title: Analysis of high-gamma band signals in human ECoG
 category: example
 tags: [ieeg, eeg, ecog, ecog-visual]
+redirect_from:
+    - /example/ecog_ny/
 ---
 
 # Analysis of high-gamma band signals in human ECoG

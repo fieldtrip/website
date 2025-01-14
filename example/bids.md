@@ -2,6 +2,8 @@
 title: BIDS - the brain imaging data structure
 category: example
 tags: [bids, sharing]
+redirect_from:
+    - /example/bids/
 ---
 
 # BIDS - the brain imaging data structure

@@ -2,6 +2,8 @@
 title: Using reproducescript for a group analysis
 category: example
 tags: [reproducescript]
+redirect_from:
+    - /example/reproducescript_group/
 ---
 
 # Using reproducescript for a group analysis

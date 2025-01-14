@@ -4,6 +4,7 @@ category: faq
 tags: [openmeeg, headmodel]
 redirect_from:
     - /faq/how_do_i_install_the_openmeeg_binaries/
+    - /faq/openmeeg/
 ---
 
 # How do I install the OpenMEEG binaries

@@ -4,6 +4,7 @@ category: faq
 tags: [ctf, raw, anonymize, sharing]
 redirect_from:
     - /faq/how_can_i_anonymize_a_ctf_dataset/
+    - /faq/anonymization_ctf/
 ---
 
 # How can I anonymize or deidentify a CTF dataset?

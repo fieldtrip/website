@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, dataformat, raw]
 redirect_from:
     - /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format/
+    - /faq/writedata_matbin/
 ---
 
 # Reading is slow, can I write my raw data to a more efficient file format?

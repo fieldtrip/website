@@ -2,6 +2,8 @@
 title: How can I append the files of two separate recordings?
 category: faq
 tags: [dataformat, preprocessing]
+redirect_from:
+    - /faq/append_files/
 ---
 
 # How can I append the files of two separate recordings?

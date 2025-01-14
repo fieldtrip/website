@@ -4,6 +4,7 @@ category: example
 tags: [statistics, cluster, simulation]
 redirect_from:
     - /example/use_simulated_erps_to_explore_cluster_statistics/
+    - /example/simulateddata_clusterstats/
 ---
 
 # Use simulated ERPs to explore cluster statistics

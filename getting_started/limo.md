@@ -2,6 +2,8 @@
 title: Getting started with LIMO MEEG
 category: getting_started
 tags: [statistics, glm, limo, eeg, meg]
+redirect_from:
+    - /getting_started/limo/
 ---
 
 # Getting started with LIMO EEG

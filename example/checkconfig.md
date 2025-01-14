@@ -2,6 +2,8 @@
 title: How to use ft_checkconfig
 category: example
 tags: [cfg]
+redirect_from:
+    - /example/checkconfig/
 ---
 
 # How to use ft_checkconfig

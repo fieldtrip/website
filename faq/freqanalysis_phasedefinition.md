@@ -4,6 +4,7 @@ category: faq
 tags: [freq, mtmconvol, wavelet, mtmfft, phase]
 redirect_from:
     - /faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft/
+    - /faq/freqanalysis_phasedefinition/
 ---
 
 # What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?

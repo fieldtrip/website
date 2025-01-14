@@ -2,6 +2,8 @@
 title: Making a memory efficient analysis pipeline
 category: tutorial
 tags: [matlab, script, memory]
+redirect_from:
+    - /tutorial/memory/
 ---
 
 # Making a memory efficient analysis pipeline

@@ -2,6 +2,8 @@
 title: Example analysis pipeline for Biosemi data
 category: example
 tags: [eeg, dataformat, biosemi, bdf]
+redirect_from:
+    - /example/biosemi/
 ---
 
 # Example analysis pipeline for Biosemi data

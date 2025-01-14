@@ -4,6 +4,8 @@ category: faq
 tags: [matlab]
 redirect_from:
     - /faq/how_many_lines_of_code_does_fieldtrip_consist_of/    
+redirect_from:
+    - /faq/fieldtrip_codelines/
 ---
 
 # How many lines of code does FieldTrip consist of?

@@ -2,6 +2,8 @@
 title: How do homogenous coordinate transformation matrices work?
 category: faq
 tags: [coordinate]
+redirect_from:
+    - /faq/homogenous/
 ---
 
 # How do homogenous coordinate transformation matrices work? Or how do I get the coordinates for a specific voxel?

@@ -4,6 +4,7 @@ category: faq
 tags: [coherence]
 redirect_from:
     - /faq/what_is_the_difference_between_coherence_and_coherency/
+    - /faq/coherence_coherency/
 ---
 
 # What is the difference between coherence and coherency?
