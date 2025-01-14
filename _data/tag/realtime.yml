@@ -62,7 +62,7 @@
   link:  /development/realtime/emotiv
 
 - name:  Streaming realtime fMRI from Siemens scanners
-  link:  /development/realtime/fmri
+  link:  /getting_started/realtime_fmri
 
 - name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
   link:  /development/realtime/implementation

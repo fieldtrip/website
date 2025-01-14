@@ -80,4 +80,4 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 
 - [Getting started with real-time analysis for BCI and neurofeedback](/getting_started/realtime)
 - [Getting started with real-time MEG head localization](/getting_started/realtime_headlocalizer)
-- [Getting started with real-time fMRI analysis](/development/realtime/fmri)
+- [Getting started with real-time fMRI analysis](/getting_started/realtime_fmri)

@@ -25,7 +25,7 @@ There are essentially two steps involved for using this mechanism
 If the connection could be made, the color of the input fields will switch to green. You can now start scanning and have a look at the **gui_streamer** window
 to monitor the number of scans etc.
 
-{% include image src="/assets/img/development/realtime/fmri/siemens_gui_streamer.png" %}
+{% include image src="/assets/img/getting_started/realtime_fmri/siemens_gui_streamer.png" %}
 
 The input fields at the bottom of the dialog window are for setting up an extra mechanism that sends a simple "RESET" message as a UDP packet to the given address, each time a new protocol is read. This is only relevant for realtime fMRI experiments and is intended to help with synchronising the experiment. Usually this would be used in conjunction with a tool that runs on the presentation machine, and that turns incoming TTL pulses (indicating the start of a new scan) into FieldTrip buffer events. Listening for "RESET" messages allows this tool to reset its internal sample counter, so that the events it sends correctly correspond to the scans that are written to the buffer from the streaming tool or the pipeline.
 
@@ -44,13 +44,13 @@ Please see the documentation of **[ft_omri_quality](/reference/realtime/online_m
 
 For realtime fMRI experiments (e.g., involving neurofeedback), it is sometimes easier to separate standard preprocessing steps from more specialised analysis. This can easily achieved by using two FieldTrip buffers and MATLAB for the preprocessing. We provide a script **ft_omri_pipeline** that reads unprocessed scans from one buffer, carries out motion correction and slice-time correction, and writes the resulting volumes to a second buffer, which can then be read from by another script for further analysis.
 
-{% include image src="/assets/img/development/realtime/fmri/fmri_two_buffers_small.png" width="600" %}
+{% include image src="/assets/img/getting_started/realtime_fmri/fmri_two_buffers_small.png" width="600" %}
 
 ### Example setup
 
 Apart from motion correction and other pre-processing steps, it is necessary to have a good handle on the timing on the experiment. In contrast to EEG or MEG data, fMRI data arrives in the buffer at a much slower rate (typically at a sampling rate of 0.5 Hz). Moreover, there is a lag of more than 1 TR between the time when the acquisition of a scan starts (marked by a TTL pulse), and the time the data is available. The former is what you need to link your stimulus presentation and analysis to, and you can do so by [turning each TTL pulse into a FieldTrip buffer event](/development/realtime/serial_event), for which you then need to poll repeatedly.
 
-{% include image src="/assets/img/development/realtime/fmri/fmri_two_buffers_events.png" width="640" %}
+{% include image src="/assets/img/getting_started/realtime_fmri/fmri_two_buffers_events.png" width="640" %}
 
 #### Starting the various applications
 

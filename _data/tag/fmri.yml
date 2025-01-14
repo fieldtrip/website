@@ -1,5 +1,5 @@
 - name:  Streaming realtime fMRI from Siemens scanners
-  link:  /development/realtime/fmri
+  link:  /getting_started/realtime_fmri
 
 - name:  Correlation analysis of fMRI data
   link:  /example/fmri_correlationanalysis

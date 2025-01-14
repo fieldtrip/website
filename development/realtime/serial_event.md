@@ -9,7 +9,7 @@ This page describes the tool **serial2event**, which is located in the directory
 The user has the option to either only react on specific characters, and to write events with
 a fixed _type_ and _value_, or to forward the received character as the _value_ of the event.
 The _sample_ field of the event can be auto-incremented, and reset by sending the string "RESET"
-to the UDP port (default = 1990) on which the tool listens. The latter feature is used in the DCCN's MRI lab to reset the sample counter when a new sequence is started on the scanner host (which is then picked up by the [fMRI gui_streamer](/development/realtime/fmri) tool).
+to the UDP port (default = 1990) on which the tool listens. The latter feature is used in the DCCN's MRI lab to reset the sample counter when a new sequence is started on the scanner host (which is then picked up by the [fMRI gui_streamer](/getting_started/realtime_fmri) tool).
 
 The tool is started from the command line by typing
 
