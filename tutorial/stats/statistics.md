@@ -4,6 +4,7 @@ category: tutorial
 tags: [natmeg2014, meg+eeg, statistics, meg-audodd]
 redirect_from:
   - /workshop/natmeg/statistics/
+  - /workshop/natmeg2014/statistics/
 ---
 
 # Statistical analysis and multiple comparison correction for combined MEG/EEG data
@@ -13,7 +14,7 @@ redirect_from:
 The objective of this tutorial is to give an introduction to the statistical analysis of MEG data using different methods to control for the false alarm rate. The tutorial starts with sketching
 the background of cluster-based permutation tests. Subsequently it is shown how to use FieldTrip to perform statistical analysis (including cluster-based permutation tests) on the time-frequency response to a movement, and to the auditory mismatch negativity. The tutorial makes use of a between-trials (within-subject) design.
 
-In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/natmeg2014/preprocessing) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg2014/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessing and the computation of the ERFs/TFRs are already clear to the reader.
+In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/tutorial/sensor/preprocessing) and the [Time-frequency analysis of MEG and EEG](/tutorial/spectral/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessing and the computation of the ERFs/TFRs are already clear to the reader.
 
 This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event-related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
@@ -101,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
     cfg.channel = 'MEG*1';
     figure; ft_multiplotTFR(cfg, TFR_diff);
 
-{% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_tfrdiff.png" width="500" %}
+{% include image src="/assets/img/tutorial/stats/statistics/natmeg_stat_tfrdiff.png" width="500" %}
 
 ### Single-trial time-frequency responses
 
@@ -180,7 +181,7 @@ With time-frequency data we have three dimensions in which we can form clusters.
 
 The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as '[]', i.e. empty.
 
-{% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_neighbours.png" width="500" %}
+{% include image src="/assets/img/tutorial/stats/statistics/natmeg_stat_neighbours.png" width="500" %}
 
 ### Compute the statistics
 
@@ -245,7 +246,7 @@ We can visualize the results just like any other TFR structure. The _TFR_stat_ s
     figure; ft_multiplotTFR(cfg, TFR_stat3);
     figure; ft_multiplotTFR(cfg, TFR_stat4);
 
-{% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_tfrcluster.png" width="500" %}
+{% include image src="/assets/img/tutorial/stats/statistics/natmeg_stat_tfrcluster.png" width="500" %}
 
 ### Preprocessing the stimulus-locked data
 
@@ -305,7 +306,7 @@ The **[ft_selectdata](/reference/utilities/ft_selectdata)** function is a very h
     cfg.layout = 'neuromag306mag.lay';
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
 
-{% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_erf.png" width="500" %}
+{% include image src="/assets/img/tutorial/stats/statistics/natmeg_stat_erf.png" width="500" %}
 
 To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manually compute the [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test).
 
@@ -393,7 +394,7 @@ Again we can visualize the results of the statistical comparison. Since we have 
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
     title('cluster');
 
-{% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_erfcluster.png" width="500" %}
+{% include image src="/assets/img/tutorial/stats/statistics/natmeg_stat_erfcluster.png" width="500" %}
 
 {% include markup/skyblue %}
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.
