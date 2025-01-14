@@ -2,6 +2,8 @@
 title: Check the quality of the anatomical coregistration
 category: example
 tags: [source, mri, plotting]
+redirect_from:
+    - /example/coregistration_quality_control/
 ---
 
 # Check the quality of the anatomical coregistration

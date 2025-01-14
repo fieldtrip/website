@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, artifact]
 redirect_from:
     - /faq/how_can_i_consistently_represent_artifacts_in_my_data/
+    - /faq/artifact_representation/
 ---
 
 # How can I consistently represent artifacts in my data?

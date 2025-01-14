@@ -4,6 +4,7 @@ category: faq
 tags: [freq, connectivity, coherence]
 redirect_from:
     - /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip/
+    - /faq/datatype_freq/
 ---
 
 # In what way can frequency domain data be represented in FieldTrip?

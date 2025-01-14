@@ -2,6 +2,8 @@
 title: Creating a volume conduction model of the head for source reconstruction of MEG data
 category: tutorial
 tags: [source, meg, headmodel, mri, plotting, meg-language]
+redirect_from:
+    - /tutorial/headmodel_meg/
 ---
 
 # Creating a volume conduction model of the head for source reconstruction of MEG data

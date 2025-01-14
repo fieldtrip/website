@@ -4,6 +4,7 @@ category: faq
 tags: [source, headmodel]
 redirect_from:
     - /faq/how_can_i_fine-tune_my_bem_volume_conduction_model/
+    - /faq/bem_finetune/
 ---
 
 # How can I fine-tune my BEM volume conduction model?

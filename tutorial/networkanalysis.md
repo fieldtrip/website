@@ -2,6 +2,8 @@
 title: Whole brain connectivity and network analysis
 category: tutorial
 tags: [connectivity]
+redirect_from:
+    - /tutorial/networkanalysis/
 ---
 
 # Whole brain connectivity and network analysis

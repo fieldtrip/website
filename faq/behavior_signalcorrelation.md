@@ -4,6 +4,7 @@ category: faq
 tags: [statistics]
 redirect_from:
     - /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables/
+    - /faq/behavior_signalcorrelation/
 ---
 
 # How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?

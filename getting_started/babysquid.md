@@ -2,6 +2,8 @@
 title: Getting started with BabySQUID data
 category: getting_started
 tags: [dataformat, babysquid, meg]
+redirect_from:
+    - /getting_started/babysquid/
 ---
 
 # Getting started with BabySQUID data

@@ -4,6 +4,7 @@ category: faq
 tags: [fiducial, mri, ctf, source, coordinate]
 redirect_from:
     - /faq/how_are_the_lpa_and_rpa_points_defined/
+    - /faq/anat_landmarks/
 ---
 
 # How are the Left and Right Pre-Auricular (LPA and RPA) points defined?

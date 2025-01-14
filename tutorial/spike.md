@@ -2,6 +2,8 @@
 title: Preprocessing and analysis of spike-train data
 category: tutorial
 tags: [spike, animal, spike-placefield, spike-attention]
+redirect_from:
+    - /tutorial/spike/
 ---
 
 # Preprocessing and analysis of spike-train data

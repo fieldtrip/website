@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, continuous, raw]
 redirect_from:
     - /faq/how_can_i_process_continuous_data_without_triggers/
+    - /faq/preproc_continuous/
 ---
 
 # How can I process continuous data without triggers?

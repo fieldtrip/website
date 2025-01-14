@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, trialfun]
 redirect_from:
     - /faq/what_is_the_relation_between_events_such_as_triggers_and_trials/
+    - /faq/eventsversustrials/
 ---
 
 # What is the relation between "events" (such as triggers) and "trials"?

@@ -4,6 +4,7 @@ category: example
 tags: [raw, preprocessing, trialfun, trialdef]
 redirect_from:
     - /example/making_your_own_trialfun_for_conditional_trial_definition/
+    - /example/trialfun/
 ---
 
 # Making your own trialfun for conditional trial definition

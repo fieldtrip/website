@@ -2,6 +2,8 @@
 title: Getting started with BESA data
 category: getting_started
 tags: [dataformat, besa]
+redirect_from:
+    - /getting_started/besa/
 ---
 
 # Getting started with BESA data

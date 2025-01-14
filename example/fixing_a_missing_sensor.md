@@ -2,6 +2,8 @@
 title: Fixing a missing channel
 category: example
 tags: [meg, preprocessing, ctf, neighbours]
+redirect_from:
+    - /example/fixing_a_missing_sensor/
 ---
 
 # Fixing a missing channel

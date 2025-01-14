@@ -4,6 +4,7 @@ category: faq
 tags: [headmodel, source]
 redirect_from:
     - /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue/
+    - /faq/conductivity_defaults/
 ---
 
 # What is the conductivity of the brain, CSF, skull and skin tissue?

@@ -2,6 +2,8 @@
 title: Channel and source analysis of mouse EEG
 category: tutorial
 tags: [source, ieeg, ecog, animal]
+redirect_from:
+    - /tutorial/mouse_eeg/
 ---
 
 # Channel and source analysis of mouse EEG

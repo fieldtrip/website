@@ -4,6 +4,7 @@ category: faq
 tags: [electrode, eeg, meg, fiducial, layout]
 redirect_from:
     - /faq/how_are_electrodes_magnetometers_or_gradiometers_described/
+    - /faq/sensors_definition/
 ---
 
 # How are electrodes, magnetometers or gradiometers described?

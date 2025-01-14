@@ -4,6 +4,7 @@ category: faq
 tags: [freq]
 redirect_from:
     - /faq/why_does_my_tfr_contain_nans/
+    - /faq/tfr_nans/
 ---
 
 # Why does my TFR contain NaNs?

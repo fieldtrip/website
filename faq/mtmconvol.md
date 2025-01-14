@@ -2,6 +2,8 @@
 title: How does MTMCONVOL work?
 category: faq
 tags: [freq]
+redirect_from:
+    - /faq/mtmconvol/
 ---
 
 # How does MTMCONVOL work?

@@ -4,6 +4,7 @@ category: faq
 tags: [distcomp]
 redirect_from:
     - /faq/how_can_i_distribute_a_batch_of_jobs/
+    - /faq/distributed_batch/
 ---
 
 # How can I distribute a batch of jobs?

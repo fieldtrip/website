@@ -4,6 +4,7 @@ category: example
 tags: [artifact, preprocessing, ica, meg-artifact]
 redirect_from:
     - /example/use_independent_component_analysis_ica_to_remove_eog_artifacts/
+    - /example/ica_eog/
 ---
 
 # Independent component analysis (ICA) to remove EOG artifacts

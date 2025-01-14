@@ -4,6 +4,7 @@ category: example
 tags: [realtime]
 redirect_from:
     - /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/
+    - /example/realtime_evaluation/
 ---
 
 # Measuring the timing delay and jitter for a real-time application

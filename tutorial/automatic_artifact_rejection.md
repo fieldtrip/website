@@ -2,6 +2,8 @@
 title: Automatic artifact rejection
 category: tutorial
 tags: [artifact, meg, raw, preprocessing, meg-artifact]
+redirect_from:
+    - /tutorial/automatic_artifact_rejection/
 ---
 
 # Automatic artifact rejection

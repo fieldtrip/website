@@ -4,6 +4,7 @@ category: faq
 tags: [statistics, cluster]
 redirect_from:
     - /faq/how_does_ft_prepare_neighbours_work/
+    - /faq/neighbours_prepare/
 ---
 
 # How does ft_prepare_neighbours work?

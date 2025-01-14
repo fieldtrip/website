@@ -2,6 +2,8 @@
 title: Getting started with XSens motion capture data
 category: getting_started
 tags: [dataformat, xsens, motion]
+redirect_from:
+    - /getting_started/xsens/
 ---
 
 # Getting started with XSens motion tracking data

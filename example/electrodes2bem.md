@@ -4,6 +4,7 @@ category: example
 tags: [eeg, mri, source, headmodel]
 redirect_from:
    - /example/align_eeg_electrode_positions_to_bem_headmodel/
+    - /example/electrodes2bem/
 ---
 
 # Align EEG electrode positions to BEM headmodel

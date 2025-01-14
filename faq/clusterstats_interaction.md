@@ -4,6 +4,7 @@ category: faq
 tags: [statistics]
 redirect_from:
     - /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests/
+    - /faq/clusterstats_interaction/
 ---
 
 # How to test an interaction effect using cluster-based permutation tests?

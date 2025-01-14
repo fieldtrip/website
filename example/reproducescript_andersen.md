@@ -2,6 +2,8 @@
 title: Using reproducescript on a full study
 category: example
 tags: [reproducescript]
+redirect_from:
+    - /example/reproducescript_andersen/
 ---
 
 # Using reproducescript on a full study

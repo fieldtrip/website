@@ -2,6 +2,8 @@
 title: Getting started with BrainVision Analyzer and Easycap
 category: getting_started
 tags: [dataformat, brainvision, easycap, eeg, layout]
+redirect_from:
+    - /getting_started/brainvision/
 ---
 
 # Getting started with BrainVision Analyzer and Easycap

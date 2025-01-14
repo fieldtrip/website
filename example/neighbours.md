@@ -2,6 +2,8 @@
 title: Defining electrodes as neighbours for cluster-level statistics
 category: example
 tags: [statistics, cluster, neighbours]
+redirect_from:
+    - /example/neighbours/
 ---
 
 # Defining electrodes as neighbours for cluster-level statistics

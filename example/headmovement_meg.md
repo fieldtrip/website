@@ -5,6 +5,7 @@ tags: [artifact, meg, glm, regression, confound]
 redirect_from:
      - /example/how_to_incorporate_head_movements_in_meg_analysis/
      - /example/regressing_out_headposition_confounds_in_a_ctf275_dataset/
+    - /example/headmovement_meg/
 ---
 
 # How to incorporate head movements in MEG analysis

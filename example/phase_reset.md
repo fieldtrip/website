@@ -2,6 +2,8 @@
 title: Simulate an oscillatory signal with phase resetting
 category: example
 tags: [freq]
+redirect_from:
+    - /example/phase_reset/
 ---
 
 # Simulate an oscillatory signal with phase resetting

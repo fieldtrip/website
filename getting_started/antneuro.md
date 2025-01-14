@@ -2,6 +2,8 @@
 title: Getting started with ANT-Neuro, ASA and EEProbe data
 category: getting_started
 tags: [dataformat, eeg, ant, asa, eeprobe]
+redirect_from:
+    - /getting_started/antneuro/
 ---
 
 # Getting started with ASA and EEProbe

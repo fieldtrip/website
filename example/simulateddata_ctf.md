@@ -4,6 +4,7 @@ category: example
 tags: [dataformat, ctf, meg]
 redirect_from:
     - /example/writing_simulated_data_to_a_ctf_dataset/
+    - /example/simulateddata_ctf/
 ---
 
 {% include markup/red %}

@@ -2,6 +2,8 @@
 title: Extended analysis of sensor- and source-level connectivity
 category: tutorial
 tags: [freq, connectivity, coherence, granger, dtf, pdc, meg-visuomotor151]
+redirect_from:
+    - /tutorial/connectivityextended/
 ---
 
 # Extended analysis of sensor- and source-level connectivity

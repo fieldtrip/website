@@ -5,6 +5,7 @@ tags: [statistics]
 authors: [Christoph Huber-Huber]
 redirect_from:
     - /faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests/
+    - /faq/clusterstats_teststatistic/
 ---
 
 # Should I use t or F values for cluster-based permutation tests?

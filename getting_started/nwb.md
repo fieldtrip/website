@@ -2,6 +2,8 @@
 title: Getting started with Neurodata Without Borders (NWB) data
 category: getting_started
 tags: [dataformat, spike, nwb]
+redirect_from:
+    - /getting_started/nwb/
 ---
 
 # Getting started with Neurodata Without Borders (NWB) data

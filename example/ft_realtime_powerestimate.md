@@ -2,6 +2,8 @@
 title: Example real-time power estimate
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_powerestimate/
 ---
 
 # Example real-time power estimate

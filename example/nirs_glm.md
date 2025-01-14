@@ -2,6 +2,8 @@
 title: Using GLM to analyze NIRS timeseries data
 category: example
 tags: [nirs, glm, statistics]
+redirect_from:
+    - /example/nirs_glm/
 ---
 
 # Using GLM to analyze NIRS timeseries data

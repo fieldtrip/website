@@ -4,6 +4,7 @@ category: faq
 tags: [debug]
 redirect_from:
     - /faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error/
+    - /faq/matlab_debugging/
 ---
 
 # How can I debug my analysis script if a FieldTrip function gives an error?
@@ -32,11 +33,15 @@ For example, the following will result in an error because of the invalid input 
     >> cfg.debug = 'saveonerror'
     >> ft_timelockanalysis(cfg, [])
 
+redirect_from:
+    - /faq/matlab_debugging/
 ---
 
     An error was detected while executing ft_timelockanalysis
     Saving debug information to /private/tmp/ft_timelockanalysis_20140719T103549.mat
 
+redirect_from:
+    - /faq/matlab_debugging/
 ---
 
     Error using ft_checkdata (line 442)

@@ -2,6 +2,8 @@
 title: Preprocessing of Optically Pumped Magnetometer (OPM) data
 category: tutorial
 tags: [opm, fieldline, opm-mediannerve]
+redirect_from:
+    - /tutorial/preprocessing_opm/
 ---
 
 # Preprocessing of Optically Pumped Magnetometer (OPM) data

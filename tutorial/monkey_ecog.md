@@ -2,6 +2,8 @@
 title: Analysis of monkey ECoG recordings
 category: tutorial
 tags: [ieeg, ecog, neurotycho, animal]
+redirect_from:
+    - /tutorial/monkey_ecog/
 ---
 
 # Analysis of monkey ECoG recordings

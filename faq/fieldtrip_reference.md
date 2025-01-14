@@ -4,6 +4,7 @@ category: faq
 tags: [reference]
 redirect_from:
     - /faq/how_should_i_refer_to_fieldtrip_in_my_publication/
+    - /faq/fieldtrip_reference/
 ---
 
 # How should I refer to FieldTrip in my publication?

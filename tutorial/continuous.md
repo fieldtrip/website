@@ -2,6 +2,8 @@
 title: Preprocessing - Reading continuous EEG and MEG data
 category: tutorial
 tags: [preprocessing, continuous, eeg, raw, brainvision, memory, meg-language, eeg-language]
+redirect_from:
+    - /tutorial/continuous/
 ---
 
 # Preprocessing - Reading continuous EEG and MEG data

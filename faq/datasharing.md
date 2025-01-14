@@ -4,6 +4,7 @@ category: faq
 tags: [email, development, git]
 redirect_from:
     - /faq/how_should_i_send_example_data_to_the_developers/
+    - /faq/datasharing/
 ---
 
 # How should I share example data with the email list or developers?

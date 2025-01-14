@@ -3,6 +3,8 @@ title: Why should I set continuous to yes for CTF data?
 category: faq
 tags: [ctf, preprocessing, continuous]
 authors: [Konstantinos Tsilimparis, Robert Oostenveld]
+redirect_from:
+    - /faq/continuous/
 ---
 
 # Why should I set continuous to yes for CTF data?

@@ -4,6 +4,7 @@ category: faq
 tags: [mex, matlab]
 redirect_from:
     - /faq/how_can_i_compile_the_mex_files_on_64_bit_windows/
+    - /faq/compile_windows/
 ---
 
 # How can I compile the mex files on 64-bit Windows?

@@ -4,6 +4,7 @@ category: faq
 tags: [meg, realtime]
 redirect_from:
     - /faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/
+    - /faq/headlocalizer/
 ---
 
 # How can I monitor a subject's head position during a MEG session?

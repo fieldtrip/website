@@ -4,6 +4,7 @@ category: faq
 tags: [mex]
 redirect_from:
     - /faq/how_can_i_compile_the_mex_files_on_os_x/
+    - /faq/compile_osx/
 ---
 
 # How can I compile the mex files on macOS?

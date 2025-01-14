@@ -2,6 +2,8 @@
 title: What are the units of the data and of the derived results?
 category: faq
 tags: [units]
+redirect_from:
+    - /faq/units/
 ---
 
 # What are the units of the data and of the derived results?

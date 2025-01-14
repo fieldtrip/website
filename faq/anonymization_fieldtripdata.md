@@ -4,6 +4,7 @@ category: faq
 tags: [sharing, anonymize]
 redirect_from:
     - /faq/how_can_i_anonymize_fieldtrip_data/
+    - /faq/anonymization_fieldtripdata/
 ---
 
 # How can I anonymize data processed in FieldTrip?

@@ -2,6 +2,8 @@
 title: Converting an example behavioral dataset for sharing in BIDS
 category: example
 tags: [bids, sharing, behavioral]
+redirect_from:
+    - /example/bids_behavioral/
 ---
 
 # Converting an example behavioral dataset for sharing in BIDS

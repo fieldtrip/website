@@ -2,6 +2,8 @@
 title: Getting started with TMSi data
 category: getting_started
 tags: [dataformat, tmsi, eeg]
+redirect_from:
+    - /getting_started/tmsi/
 ---
 
 # Getting started with TMSi data

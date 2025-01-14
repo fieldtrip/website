@@ -4,6 +4,7 @@ category: example
 tags: [eeg, meg, headmodel, source]
 redirect_from:
     - /example/combined_eeg_and_meg_source_reconstruction/
+    - /example/sourcerecon_meeg/
 ---
 
 # Combined EEG and MEG source reconstruction

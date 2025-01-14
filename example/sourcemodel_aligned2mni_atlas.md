@@ -2,6 +2,7 @@
 title: Create brain atlas based MNI-aligned grids in individual head-space
 redirect_from:
    - /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space/
+    - /example/sourcemodel_aligned2mni_atlas/
 ---
 
 # Create brain atlas based MNI-aligned grids in individual head-space

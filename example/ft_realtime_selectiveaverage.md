@@ -2,6 +2,8 @@
 title: Example real-time selective average
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_selectiveaverage/
 ---
 
 # Example real-time selective average

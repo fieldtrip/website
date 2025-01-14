@@ -2,6 +2,8 @@
 title: Specifying the channel layout for plotting
 category: tutorial
 tags: [plotting, layout, eeg, meg, seeg, ecog, nirs]
+redirect_from:
+    - /tutorial/layout/
 ---
 
 # Specifying the channel layout for plotting

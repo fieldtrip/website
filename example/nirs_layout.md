@@ -2,6 +2,8 @@
 title: Creating a layout for plotting NIRS optodes and channels
 category: example
 tags: [nirs, layout, plotting]
+redirect_from:
+    - /example/nirs_layout/
 ---
 
 # Creating a layout for plotting NIRS optodes and channels

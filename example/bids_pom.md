@@ -2,6 +2,8 @@
 title: Combining simultaneous recordings in BIDS
 category: example
 tags: [bids, sharing]
+redirect_from:
+    - /example/bids_pom/
 ---
 
 # Combining simultaneous recordings in BIDS

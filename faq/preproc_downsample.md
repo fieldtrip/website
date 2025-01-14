@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, memory]
 redirect_from:
     - /faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory/
+    - /faq/preproc_downsample/
 ---
 
 # How can I preprocess a dataset that is too large to fit into memory?

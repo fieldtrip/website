@@ -4,6 +4,7 @@ category: faq
 tags: [function, matlab]
 redirect_from:
     - /faq/matlab_does_not_see_the_functions_in_the_private_directory/
+    - /faq/matlab_privatefunctions/
 ---
 
 # MATLAB does not see the functions in the "private" directory

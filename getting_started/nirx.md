@@ -2,6 +2,8 @@
 title: Getting started with NIRx NIRS data
 category: getting_started
 tags: [dataformat, nirs, nirx]
+redirect_from:
+    - /getting_started/nirx/
 ---
 
 # Getting started with NIRx NIRS data

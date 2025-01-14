@@ -2,6 +2,8 @@
 title: Getting started with Neuralynx data
 category: getting_started
 tags: [dataformat, neuralynx, lfp, spike]
+redirect_from:
+    - /getting_started/neuralynx/
 ---
 
 # Getting started with Neuralynx data

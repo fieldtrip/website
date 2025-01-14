@@ -4,6 +4,7 @@ category: faq
 tags: [source]
 redirect_from:
     - /faq/how_can_i_determine_the_anatomical_label_of_a_source/
+    - /faq/label_lookup/
 ---
 
 # How can I determine the anatomical label of a source or electrode?

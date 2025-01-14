@@ -2,6 +2,8 @@
 title: Source statistics
 category: example
 tags: [meg, source, statistics]
+redirect_from:
+    - /example/source_statistics/
 ---
 
 # Source statistics

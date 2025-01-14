@@ -4,6 +4,7 @@ category: example
 tags: [meg, mri, headmodel, source]
 redirect_from:
    - /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/
+    - /example/sourcemodel_aligned2mni/
 ---
 
 # Create MNI-aligned grids in individual head-space

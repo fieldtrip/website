@@ -4,6 +4,7 @@ category: faq
 tags: [realtime]
 redirect_from:
     - /faq/how_can_i_test_the_serial_port_connection_between_two_computers/
+    - /faq/serialport/
 ---
 
 # What kind of cable do I need for a serial port connection between two computers?

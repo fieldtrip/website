@@ -2,6 +2,8 @@
 title: Localizing visual gamma and cortico-muscular coherence using DICS
 category: tutorial
 tags: [meg, source, coherence, meg-visuomotor151-k]
+redirect_from:
+    - /tutorial/beamformingextended/
 ---
 
 # Localizing visual gamma and cortico-muscular coherence using DICS

@@ -2,6 +2,8 @@
 title: How can I check or decipher the sequence of triggers in my data?
 category: faq
 tags: [trigger, trialfun, preprocessing]
+redirect_from:
+    - /faq/triggers/
 ---
 
 # How can I check or decipher the sequence of triggers in my data?

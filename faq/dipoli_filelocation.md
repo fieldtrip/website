@@ -4,6 +4,7 @@ category: faq
 tags: [headmodel, source, matlab]
 redirect_from:
     - /faq/where_can_i_find_the_dipoli_command-line_executable/
+    - /faq/dipoli_filelocation/
 ---
 
 # Where can I find the dipoli command-line executable?

@@ -2,6 +2,8 @@
 title: Symmetric dipole pairs for beamforming
 category: example
 tags: [source, symmetry]
+redirect_from:
+    - /example/symmetry/
 ---
 
 # Symmetric dipole pairs for beamforming
@@ -55,8 +57,6 @@ Then, a 'normal' non-symmetric source model is defined, and the grid is plotted:
 
 {% include image src="/assets/img/example/symmetry/sourcemodel_normal.png" width="600" %}
 
----
-
 ### Un-correlated symmetric sources with non-symmetric source model
 
 Two conditions are defined with uncorrelated (i.e. phase shifted) symmetric 40 Hz signals of varying amplitude emulating a left and right lateral attention modulation. Note that the left dipole signal is defined by a sin while the right is defined by a cos.
@@ -103,8 +103,6 @@ Apply the beamformer based on the non-symmetric 'normal' source model, calculate
     figure; ft_sourceplot(cfg, contrastLR_attL_attR);
 
 {% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_nonsym_uncor.png" width="600" %}
-
----
 
 ### Correlated symmetric sources with non-symmetric source model
 
@@ -153,8 +151,6 @@ Compute the covariance and apply the beamformer still with the non-symmetric sou
 {% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_nonsym_cor.png" width="600" %}
 
 Due to the correlation between the spatially separated source signals, the LCMV estimator produces a sub-optimal spatial filter that is less sensitive to both sources.
-
----
 
 ### Correlated symmetric sources with symmetric source model
 
@@ -269,8 +265,6 @@ Compute the contrast between the conditions as before and plot the results
     figure; ft_sourceplot(cfg, contrastLR_attL_attR);
 
 {% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_sym_cor.png" width="600" %}
-
----
 
 ### Un-correlated symmetric sources with symmetric source model
 

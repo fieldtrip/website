@@ -2,6 +2,8 @@
 title: Getting started with EDF (European Data Format) data
 category: getting_started
 tags: [dataformat, edf, eeg]
+redirect_from:
+    - /getting_started/edf/
 ---
 
 # Getting started with EDF (European Data Format) data

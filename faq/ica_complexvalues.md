@@ -4,6 +4,8 @@ category: faq
 tags: [ica]
 redirect_from:
     - /faq/why_does_my_ica_output_contain_complex_numbers
+redirect_from:
+    - /faq/ica_complexvalues/
 ---
 
 # Why does my ICA output contain complex numbers?

@@ -2,6 +2,8 @@
 title: Example real-time classification
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_classification/
 ---
 
 # Example real-time classification

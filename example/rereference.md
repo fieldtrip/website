@@ -2,6 +2,8 @@
 title: Re-reference EEG and iEEG data
 category: example
 tags: [eeg, preprocessing, laplace, bipolar, montage]
+redirect_from:
+    - /example/rereference/
 ---
 
 # Re-reference EEG and iEEG data

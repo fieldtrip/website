@@ -4,6 +4,7 @@ category: faq
 tags: [plotting]
 redirect_from:
     - /faq/i_am_having_problems_printing_figures_that_use_opacity/
+    - /faq/figure_opacity/
 ---
 
 # I am having problems printing figures that use opacity

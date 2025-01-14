@@ -4,6 +4,7 @@ category: example
 tags: [artifact, preprocessing, ica, meg-removal]
 redirect_from:
     - /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts/
+    - /example/dss_ecg/
 ---
 
 # Use denoising source separation (DSS) to remove ECG artifacts

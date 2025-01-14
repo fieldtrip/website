@@ -4,6 +4,7 @@ category: faq
 tags: [ctf]
 redirect_from:
     - /faq/how_does_the_ctf_higher-order_gradiometer_work/
+    - /faq/ctf_syntheticgradient/
 ---
 
 # How does the CTF higher-order gradiometer work?

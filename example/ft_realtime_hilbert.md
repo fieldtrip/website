@@ -2,6 +2,8 @@
 title: Realtime neurofeedback application based on Hilbert phase estimation
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_hilbert/
 ---
 
 # Realtime neurofeedback application based on Hilbert phase estimation

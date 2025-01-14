@@ -4,6 +4,7 @@ category: faq
 tags: [preprocessing, timelock, freq, artifact, filter]
 redirect_from:
     - /faq/what_kind_of_filters_can_i_apply_to_my_data/
+    - /faq/preproc_filtertypes/
 ---
 
 # What kind of filters can I apply to my data?

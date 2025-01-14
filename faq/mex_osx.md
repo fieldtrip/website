@@ -4,6 +4,7 @@ category: faq
 tags: [matlab, mex]
 redirect_from:
     - /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified/
+    - /faq/mex_osx/
 ---
 
 # MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified

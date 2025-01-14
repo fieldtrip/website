@@ -4,6 +4,7 @@ category: faq
 tags: [statistics]
 redirect_from:
     - /faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations/
+    - /faq/clusterstats_iuwcvar/
 ---
 
 # How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?

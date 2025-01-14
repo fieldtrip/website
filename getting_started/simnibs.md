@@ -2,6 +2,8 @@
 title: Getting started with SimNIBS
 category: getting_started
 tags: [mesh, segmentation, volume, headmodel, simnibs]
+redirect_from:
+    - /getting_started/simnibs/
 ---
 
 # Getting started with SimNIBS
@@ -211,6 +213,8 @@ You should be able to use `fwd` as if it had been obtained from `ft_prepare_lead
 > **Note**
 There is currently one limitation to the use of leadfields generated with SimNIBS as they do not support nonlinear dipole fitting. Hence, this will need to be disabled when running `ft_dipolefitting`. However, you can simply compute the leadfield on the full resolution cortical surfaces instead.
 
+redirect_from:
+    - /getting_started/simnibs/
 ---
 
 ## Work in progress

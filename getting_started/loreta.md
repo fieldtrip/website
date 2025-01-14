@@ -2,6 +2,8 @@
 title: Getting started with LORETA
 category: getting_started
 tags: [dataformat, loreta]
+redirect_from:
+    - /getting_started/loreta/
 ---
 
 # Getting started with LORETA

@@ -4,6 +4,7 @@ category: example
 tags: [fmri, raw, freq, coherence]
 redirect_from:
     - /example/correlation_analysis_in_fmri_data/
+    - /example/fmri_correlationanalysis/
 ---
 
 # Correlation analysis of fMRI data

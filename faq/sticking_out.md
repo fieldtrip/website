@@ -2,6 +2,8 @@
 title: Is it OK for vertices/dipoles to stick out of the volume conductor?
 category: faq
 tags: [sourcemodel, bem]
+redirect_from:
+    - /faq/sticking_out/
 ---
 
 # Is it OK for vertices/dipoles to stick out of the volume conductor?

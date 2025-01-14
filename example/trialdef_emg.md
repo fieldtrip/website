@@ -4,6 +4,7 @@ category: example
 tags: [trialfun, emg, preprocessing]
 redirect_from:
     - /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition/
+    - /example/trialdef_emg/
 ---
 
 # Detect the muscle activity in an EMG channel and use that as trial definition

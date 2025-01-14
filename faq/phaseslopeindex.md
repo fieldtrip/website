@@ -4,6 +4,7 @@ category: faq
 tags: [coherence]
 redirect_from:
     - /faq/how_to_interpret_the_sign_of_the_phase_slope_index/
+    - /faq/phaseslopeindex/
 ---
 
 # How to interpret the sign of the phase slope index?

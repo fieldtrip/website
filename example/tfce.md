@@ -4,6 +4,7 @@ category: example
 tags: [statistics]
 redirect_from:
     - /example/threshold_free_cluster_enhancement/
+    - /example/tfce/
 ---
 
 # Using threshold-free cluster enhancement for cluster statistics

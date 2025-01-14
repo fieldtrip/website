@@ -4,6 +4,7 @@ category: faq
 tags: [statistics, freq]
 redirect_from:
     - /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic/
+    - /faq/behavior_cosinefit/
 ---
 
 # How can I test whether a behavioral measure is phasic?

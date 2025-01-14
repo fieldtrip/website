@@ -2,6 +2,8 @@
 title: Getting started with Homer
 category: getting_started
 tags: [dataformat, homer, nirs]
+redirect_from:
+    - /getting_started/homer/
 ---
 
 # Getting started with Homer

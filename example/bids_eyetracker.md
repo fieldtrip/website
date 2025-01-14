@@ -2,6 +2,8 @@
 title: Converting an example eyetracker dataset for sharing in BIDS
 category: example
 tags: [bids, sharing, eyelink, smi, tobii]
+redirect_from:
+    - /example/bids_eyetracker/
 ---
 
 # Converting an example eye tracker dataset for sharing in BIDS

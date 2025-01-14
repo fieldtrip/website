@@ -4,6 +4,7 @@ category: faq
 tags: [trialinfo, trialdef, trialfun]
 redirect_from:
     - /faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline/
+    - /faq/trialinfo/
 ---
 
 # Is it possible to keep track of trial-specific information in my analysis pipeline?

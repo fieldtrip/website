@@ -2,6 +2,8 @@
 title: Getting started with Neuralynx data recorded at the Donders Institute
 category: getting_started
 tags: [dataformat, neuralynx, lfp, spike]
+redirect_from:
+    - /getting_started/neuralynx_fcdc/
 ---
 
 # Getting started with Neuralynx data recorded at the Donders Institute

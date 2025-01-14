@@ -2,6 +2,8 @@
 title: Example real-time average
 category: example
 tags: [realtime]
+redirect_from:
+    - /example/ft_realtime_average/
 ---
 
 # Example real-time average

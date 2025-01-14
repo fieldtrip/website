@@ -2,6 +2,8 @@
 title: Introduction on dealing with artifacts
 category: tutorial
 tags: [artifact, preprocessing, eeg, meg]
+redirect_from:
+    - /tutorial/artifacts/
 ---
 
 # Introduction on dealing with artifacts

@@ -2,6 +2,8 @@
 title: Cross-frequency analysis
 category: example
 tags: [freq]
+redirect_from:
+    - /example/crossfreq/
 ---
 
 # Cross-frequency analysis

@@ -2,6 +2,8 @@
 title: How can I rename channels in my data structure?
 category: faq
 tags: [preprocessing, montage]
+redirect_from:
+    - /faq/rename_channels/
 ---
 
 # How can I rename channels in my data structure?

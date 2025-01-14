@@ -2,6 +2,8 @@
 title: Cleaning artifacts using ICA
 category: tutorial
 tags: [artifact, meg, raw, preprocessing, meg-artifact]
+redirect_from:
+    - /tutorial/ica_artifact_cleaning/
 ---
 
 # Cleaning artifacts using ICA
