@@ -1,5 +1,7 @@
 ---
 title: Computing and reporting the effect size
+parent: Statistical analysis
+grand_parent: Examples
 category: example
 tags: [statistics, cluster, meg-language]
 redirect_from:

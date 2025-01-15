@@ -1,5 +1,7 @@
 ---
 title: Using General Linear Modeling on time series data
+parent: Statistical analysis
+grand_parent: Examples
 category: example
 tags: [glm, statistics, eeg-language]
 redirect_from:

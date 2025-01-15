@@ -1,5 +1,7 @@
 ---
 title: Getting started with video data
+parent: Other data
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, video]
 redirect_from:

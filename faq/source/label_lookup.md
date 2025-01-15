@@ -1,5 +1,7 @@
 ---
 title: How can I determine the anatomical label of a source or electrode?
+parent: Source reconstruction
+grand_parent: Frequently asked questions
 category: faq
 tags: [source]
 redirect_from:

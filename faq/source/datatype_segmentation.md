@@ -1,5 +1,7 @@
 ---
 title: How is the segmentation defined?
+parent: Source reconstruction
+grand_parent: Frequently asked questions
 category: faq
 tags: [datatype, segmentation, eeg, meg, headmodel]
 redirect_from:

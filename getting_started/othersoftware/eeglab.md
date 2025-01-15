@@ -1,5 +1,7 @@
 ---
 title: Getting started with EEGLAB
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, eeglab, eeg]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Stratify the distribution of one variable that differs in two conditions
+parent: Statistical analysis
+grand_parent: Examples
 category: example
 tags: [statistics]
 redirect_from:

@@ -32,7 +32,7 @@ To prepare for the hands-on session, you should watch the following online video
 - [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
 - [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
 
-Also, make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/workshop/hands-on.rar).
+Also, make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/workshop/hands-on.rar).
 
 ## Program
 
@@ -58,11 +58,11 @@ Also, make sure you have downloaded the hands-on data prior to the start of the 
 - **13:00- 14:30** Source reconstruction using beamformers (lecture) **Luca Ambrogioni**
 - **14:30- 15:30** Identifying oscillatory sources using beamformers [hands on](/tutorial/source/beamforming)
 - **15:30- 15:45** Coffe break
-- **15:45- 16:30** Source level statistics within the permutation framework [hands on](/workshop/aarhus/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
+- **15:45- 16:30** Source level statistics within the permutation framework [hands on](/workshop/aarhus2015/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
 - **16:30- 17:00** Wrap-up-the-day: special topics, general questions and answers
 - **19:00- 21:30** Dinner- **not included in registration**
 
 ### Thursday 08 October 2015
 
 - **9:00 - 13:30** FieldTrip playground, bring your own data!
-- **9:00 - 13:30** Identifying evoked fields/potentials using beamformers [hands on](/workshop/aarhus/beamformingerf)
+- **9:00 - 13:30** Identifying evoked fields/potentials using beamformers [hands on](/workshop/aarhus2015/beamformingerf)

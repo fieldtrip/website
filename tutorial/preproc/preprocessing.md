@@ -1,5 +1,7 @@
 ---
 title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
+parent: Reading and preprocessing data
+grand_parent: Tutorials
 category: tutorial
 tags: [meg, raw, preprocessing, meg-language]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How can I do time-frequency analysis on continuous data?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [continuous, freq]
 redirect_from:

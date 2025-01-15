@@ -1,8 +1,7 @@
 ---
 title: Details on the multimodal faces dataset
 tags: [mmfaces]
-redirect_from:
-    - /tutorial/mmfaces/
+nav_exclude: true
 ---
 
 # Details on the multimodal faces dataset

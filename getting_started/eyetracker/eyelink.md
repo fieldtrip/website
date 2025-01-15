@@ -1,5 +1,7 @@
 ---
 title: Getting started with SR-Research EyeLink eye-tracker data
+parent: Eyetracker
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, eyelink]
 redirect_from:

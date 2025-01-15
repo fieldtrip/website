@@ -1,5 +1,7 @@
 ---
 title: Getting started with Cerca OPM data
+parent: MEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, meg, opm, cerca, bids]
 redirect_from:

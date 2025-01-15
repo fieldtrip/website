@@ -1,5 +1,7 @@
 ---
 title: Getting started with animal electrophysiology data, including spikes
+parent: Intracranial
+grand_parent: Getting started
 category: getting_started
 tags: [spike, lfp]
 redirect_from:

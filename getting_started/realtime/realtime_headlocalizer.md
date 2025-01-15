@@ -1,5 +1,7 @@
 ---
 title: Getting started with real-time head localization in MEG
+parent: Real-time analysis
+grand_parent: Getting started
 category: getting_started
 tags: [realtime, meg]
 redirect_from:

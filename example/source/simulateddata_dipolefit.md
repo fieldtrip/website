@@ -1,5 +1,7 @@
 ---
 title: Compute forward simulated data and apply a dipole fit
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [eeg, source, dipole]
 redirect_from:

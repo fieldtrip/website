@@ -1,5 +1,7 @@
 ---
 title: Phalow_freqhigh
+parent: Cross-frequency analysis
+grand_parent: Examples
 ---
 
 # Phalow_freqhigh

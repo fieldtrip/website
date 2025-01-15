@@ -1,5 +1,7 @@
 ---
 title: Localizing electrodes using a 3D-scanner
+parent: Source reconstruction
+grand_parent: Tutorials
 category: tutorial
 tags: [source, electrode, fiducial, coordinate]
 redirect_from:

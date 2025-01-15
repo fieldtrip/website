@@ -1,5 +1,7 @@
 ---
 title: What is the format of the layout file which is used for plotting?
+parent: Plotting and visualization
+grand_parent: Frequently asked questions
 category: faq
 tags: [layout, plotting]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Why does my TFR look strange (part I, demeaning)?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [mtmconvol, freq, preprocessing, artifact]
 redirect_from:

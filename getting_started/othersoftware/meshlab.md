@@ -1,5 +1,7 @@
 ---
 title: Getting started with MeshLab
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [mesh, headmodel, meshlab]
 redirect_from:

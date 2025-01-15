@@ -1,5 +1,7 @@
 ---
 title: Making your own trialfun for conditional trial definition
+parent: Reading and preprocessing data
+grand_parent: Examples
 category: example
 tags: [raw, preprocessing, trialfun, trialdef]
 redirect_from:

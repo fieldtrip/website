@@ -1,5 +1,7 @@
 ---
 title: Phalow_amphigh
+parent: Cross-frequency analysis
+grand_parent: Examples
 ---
 
 # Phalow_amphigh

@@ -1,5 +1,7 @@
 ---
 title: What is meant by time-frequency trade off?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [freq]
 redirect_from:

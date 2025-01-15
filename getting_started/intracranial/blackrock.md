@@ -1,5 +1,7 @@
 ---
 title: Getting started with Blackrock data
+parent: Intracranial
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, blackrock, lfp, spike]
 redirect_from:

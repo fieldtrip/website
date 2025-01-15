@@ -1,5 +1,7 @@
 ---
 title: Align EEG electrode positions to BEM headmodel
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [eeg, mri, source, headmodel]
 redirect_from:

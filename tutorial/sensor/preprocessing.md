@@ -1,5 +1,7 @@
 ---
 title: Preprocessing and event-related activity in combined MEG/EEG data
+parent: Sensor-level analyses
+grand_parent: Tutorials
 category: tutorial
 tags: [natmeg2014, meg+eeg, raw, preprocessing, meg-audodd]
 redirect_from:

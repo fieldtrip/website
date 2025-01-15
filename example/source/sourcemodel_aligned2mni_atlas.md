@@ -1,5 +1,9 @@
 ---
 title: Create brain atlas based MNI-aligned grids in individual head-space
+parent: Source reconstruction
+grand_parent: Examples
+category: example
+tags: [meg, mri, atlas, headmodel, source]
 redirect_from:
     - /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space/
     - /example/sourcemodel_aligned2mni_atlas/
@@ -56,9 +60,9 @@ Now we determine all indices of the binary mask to be considered as inside the h
 
 {% include image src="/assets/img/example/sourcemodel_aligned2mni_atlas/atlasbasedmnigrid.png" width="600" %}
 
-Load the subject-specific MRI from [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/mri.mat) and inverse-warp the subject specific grid to the template grid.
+Load the subject-specific MRI from [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/mri.mat) and inverse-warp the subject specific grid to the template grid.
 
-    mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/mri.mat'));
+    mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/aef_sensor_source/mri.mat'));
 
     cfg                = [];
     cfg.warpmni   = 'yes';
@@ -67,11 +71,11 @@ Load the subject-specific MRI from [here](https://download.fieldtriptoolbox.org/
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
-Finally, you can load the subject-specific headmodel from [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/hdm.mat) and check the result with the following code.
+Finally, you can load the subject-specific headmodel from [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/hdm.mat) and check the result with the following code.
 
     close all
 
-    hdm = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/hdm.mat'));
+    hdm = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/aef_sensor_source/hdm.mat'));
 
     hdm         = ft_convert_units(hdm, 'm');
     sourcemodel = ft_convert_units(sourcemodel, 'm');

@@ -1,5 +1,7 @@
 ---
 title: Getting started with Neuromag/Elekta/Megin data
+parent: MEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, neuromag, elekta, megin, meg]
 redirect_from:

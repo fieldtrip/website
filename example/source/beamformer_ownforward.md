@@ -1,5 +1,7 @@
 ---
 title: Use your own forward leadfield model in an inverse beamformer computation
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [eeg, source]
 redirect_from:

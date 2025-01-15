@@ -1,5 +1,7 @@
 ---
 title: Do I need to resample my data, and if so, how is this to be done?
+parent: Artifacts
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [preprocessing]
 redirect_from:

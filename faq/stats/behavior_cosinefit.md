@@ -1,5 +1,7 @@
 ---
 title: How can I test whether a behavioral measure is phasic?
+parent: Statistical analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [statistics, freq]
 redirect_from:

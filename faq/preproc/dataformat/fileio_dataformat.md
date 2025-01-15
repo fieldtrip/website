@@ -1,5 +1,7 @@
 ---
 title: How can I extend the reading functions with a new dataformat?
+parent: Specific data formats
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [dataformat, preprocessing]
 redirect_from:

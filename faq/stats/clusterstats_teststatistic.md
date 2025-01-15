@@ -1,5 +1,7 @@
 ---
 title: Should I use t or F values for cluster-based permutation tests?
+parent: Statistical analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [statistics]
 authors: [Christoph Huber-Huber]

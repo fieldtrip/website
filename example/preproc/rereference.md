@@ -1,5 +1,7 @@
 ---
 title: Re-reference EEG and iEEG data
+parent: Reading and preprocessing data
+grand_parent: Examples
 category: example
 tags: [eeg, preprocessing, laplace, bipolar, montage]
 redirect_from:

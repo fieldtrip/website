@@ -1,5 +1,7 @@
 ---
 title: Classification of event-related MEG data using MVPA-Light
+parent: Statistical analysis
+grand_parent: Tutorials
 category: tutorial
 tags: [eeg, meg, multivariate, timelock, freq]
 redirect_from:

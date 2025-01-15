@@ -1,5 +1,7 @@
 ---
 title: Getting started with Biosemi BDF data
+parent: EEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, eeg, biosemi, bdf]
 redirect_from:

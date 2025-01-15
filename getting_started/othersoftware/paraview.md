@@ -1,5 +1,7 @@
 ---
 title: Getting started with ParaView
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [mesh, segmentation, volume, headmodel, paraview]
 redirect_from:

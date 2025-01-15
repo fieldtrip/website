@@ -1,5 +1,7 @@
 ---
 title: Preprocessing and analysis of spike-train data
+parent: Analysis of intracranial data
+grand_parent: Tutorials
 category: tutorial
 tags: [spike, animal, spike-placefield, spike-attention]
 redirect_from:

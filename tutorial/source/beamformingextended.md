@@ -1,5 +1,7 @@
 ---
 title: Localizing visual gamma and cortico-muscular coherence using DICS
+parent: Source reconstruction
+grand_parent: Tutorials
 category: tutorial
 tags: [meg, source, coherence, meg-visuomotor151-k]
 redirect_from:

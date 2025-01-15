@@ -37,7 +37,7 @@ We will keep this page up to date and post new information here when available.
   - [Identifying oscillatory sources using beamformers ](/tutorial/beamformer)
 - 12:15 - 13:00 Lunch
 - 13:00 - 14:30 Hands-on 4:
-  - [Source level statistics within the permutation framework](/workshop/aarhus/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
+  - [Source level statistics within the permutation framework](/workshop/aarhus2015/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
 - 14:30 - 14:45 Coffee break
 - 14:45 - 17:00 FieldTrip playground (bring your own data!)
 - 17:00 - 17:30 Wrap up the event, questions and answers!

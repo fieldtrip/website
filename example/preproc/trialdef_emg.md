@@ -1,5 +1,7 @@
 ---
 title: Detect the muscle activity in an EMG channel and use that as trial definition
+parent: Reading and preprocessing data
+grand_parent: Examples
 category: example
 tags: [trialfun, emg, preprocessing]
 redirect_from:

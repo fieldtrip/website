@@ -1,5 +1,7 @@
 ---
 title: Plotting data at the channel and source level
+parent: Statistical analysis
+grand_parent: Tutorials
 category: tutorial
 tags: [plotting, layout]
 redirect_from:

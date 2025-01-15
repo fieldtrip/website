@@ -1,5 +1,7 @@
 ---
 title: Getting started with real-time analysis for BCI/neurofeedback
+parent: Real-time analysis
+grand_parent: Getting started
 category: getting_started
 tags: [realtime]
 redirect_from:

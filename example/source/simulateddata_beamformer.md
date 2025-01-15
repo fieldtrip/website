@@ -1,5 +1,7 @@
 ---
 title: Compute forward simulated data and apply a beamformer scan
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [meg, source, dipole]
 redirect_from:

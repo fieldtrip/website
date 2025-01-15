@@ -1,5 +1,7 @@
 ---
 title: Making your analysis pipeline reproducible using reproducescript
+parent: Various other examples
+grand_parent: Examples
 category: example
 tags: [reproducescript, script]
 redirect_from:

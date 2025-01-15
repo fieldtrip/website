@@ -1,5 +1,7 @@
 ---
 title: How do I prevent FieldTrip from printing the time and memory after each function call?
+parent: Various other questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [matlab]
 redirect_from:
