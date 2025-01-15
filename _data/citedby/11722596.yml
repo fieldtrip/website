@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39802358'
+- idtype: doi
+  value: 10.1016/j.ibneur.2024.12.001
+- idtype: pmcid
+  value: PMC11722596
+authors:
+- authtype: Author
+  name: Mohammadi A
+- authtype: Author
+  name: Seifzadeh S
+- authtype: Author
+  name: Torkamani F
+- authtype: Author
+  name: Salehi S
+epubdate: 2024 Dec 7
+fulljournalname: IBRO Neuroscience Reports
+issue: ''
+pages: 6-15
+pmclivedate: 2025/01/10
+printpubdate: ''
+pubdate: 2024 Dec 7
+sortdate: 2024/12/07 00:00
+source: IBRO Neurosci Rep
+title: An experimental EEG study of brain activities underlying the Autonomous Sensory
+  Meridian Response
+uid: '11722596'
+volume: '18'

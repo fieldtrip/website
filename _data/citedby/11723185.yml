@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39796973'
+- idtype: doi
+  value: 10.3390/s25010182
+- idtype: pmcid
+  value: PMC11723185
+authors:
+- authtype: Author
+  name: Orovas C
+- authtype: Author
+  name: Sapounidis T
+- authtype: Author
+  name: Volioti C
+- authtype: Author
+  name: Keramopoulos E
+epubdate: 2024 Dec 31
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '1'
+pages: '182'
+pmclivedate: 2025/01/11
+printpubdate: ''
+pubdate: 2024 Dec 31
+sortdate: 2024/12/31 00:00
+source: Sensors (Basel)
+title: 'EEG in Education: A Scoping Review of Hardware, Software, and Methodological
+  Aspects'
+uid: '11723185'
+volume: '25'

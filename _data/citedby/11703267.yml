@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39763715'
+- idtype: doi
+  value: 10.1101/2024.12.20.629857
+- idtype: pmcid
+  value: PMC11703267
+authors:
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Bruss J
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Jiang J
+epubdate: 2024 Dec 26
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.12.20.629857
+pmclivedate: 2025/01/07
+printpubdate: ''
+pubdate: 2024 Dec 26
+sortdate: 2024/12/26 00:00
+source: bioRxiv
+title: 'Dorsolateral prefrontal cortex TMS evokes responses in the subgenual anterior
+  cingulate cortex: Evidence from human intracranial EEG'
+uid: '11703267'
+volume: ''
