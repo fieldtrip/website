@@ -1,5 +1,7 @@
 ---
 title: How can I play back EEG/MEG and synchronous audio or video?
+parent: Plotting and visualization
+grand_parent: Frequently asked questions
 category: faq
 tags: [audio, video]
 redirect_from:

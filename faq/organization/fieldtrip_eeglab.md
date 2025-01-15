@@ -1,5 +1,7 @@
 ---
 title: Why is FieldTrip developed separately from EEGLAB?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [eeglab]
 redirect_from:

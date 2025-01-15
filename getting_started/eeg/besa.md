@@ -1,5 +1,7 @@
 ---
 title: Getting started with BESA data
+parent: EEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, besa]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Simulate an oscillatory signal with phase resetting
+parent: Spectral analysis
+grand_parent: Examples
 category: example
 tags: [freq]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
-title: FieldTrip workshop in Salzburg
+title: FieldTrip workshop in Salzburg, Austria
+redirect_from:
+    - /workshop/salzburg/
 ---
 
 # FieldTrip workshop in Salzburg
@@ -8,8 +10,8 @@ title: FieldTrip workshop in Salzburg
 
 The University of Salzburg, with support from the [TINNET-COST Action](http://tinnet.tinnitusresearch.net)
 
-{% include image src="/assets/img/workshop/salzburg/usalzburg.png" width="200" %}
-{% include image src="/assets/img/workshop/salzburg/tinnetcost.png" width="100" %}
+{% include image src="/assets/img/tutorial/aef_sensor_source/usalzburg.png" width="200" %}
+{% include image src="/assets/img/tutorial/aef_sensor_source/tinnetcost.png" width="100" %}
 
 #### When
 

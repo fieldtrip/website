@@ -1,5 +1,7 @@
 ---
 title: How are the various MATLAB data structures defined?
+parent: Code and development questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [datatype, dataformat]
 redirect_from:

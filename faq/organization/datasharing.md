@@ -1,5 +1,7 @@
 ---
 title: How should I share example data with the email list or developers?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [email, development, git]
 redirect_from:

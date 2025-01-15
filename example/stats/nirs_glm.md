@@ -1,5 +1,7 @@
 ---
 title: Using GLM to analyze NIRS timeseries data
+parent: Statistical analysis
+grand_parent: Examples
 category: example
 tags: [nirs, glm, statistics]
 redirect_from:

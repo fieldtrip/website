@@ -1,5 +1,7 @@
 ---
 title: Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [freq]
 redirect_from:

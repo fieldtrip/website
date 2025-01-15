@@ -1,15 +1,13 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
-tags: [fixme]
+parent: Spectral analysis
+grand_parent: Examples
+category: example
+tags: [freq]
 redirect_from:
     - /tutorial/fourier/
+    - /example/fourier/
 ---
-
-{% include markup/yellow %}
-This tutorial does not follow the structure of the "main" FieldTrip tutorials, but rather explains the lower-level MATLAB functions instead of **[ft_freqanalysis](/reference/ft_freqanalysis)**.
-
-Perhaps you are looking for the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis)?
-{% include markup/end %}
 
 # Fourier analysis of neuronal oscillations and synchronization
 
@@ -87,11 +85,11 @@ particularly important when we later compute the coherence spectrum between two 
     subplot(2,1,2);
     plot(imag(fftcos),'r');
 
-{% include image src="/assets/img/tutorial/fourier/figure1.png" %}
+{% include image src="/assets/img/example/fourier/figure1.png" %}
 
 _Figure: The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel)._
 
-{% include image src="/assets/img/tutorial/fourier/figure2.png" %}
+{% include image src="/assets/img/example/fourier/figure2.png" %}
 
 _Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel)._
 
@@ -130,7 +128,7 @@ _Figure: The Fourier transform of the cosine wave. The result of the Fourier tra
     figure;
     plot(wav);
 
-{% include image src="/assets/img/tutorial/fourier/figure3.png" %}
+{% include image src="/assets/img/example/fourier/figure3.png" %}
 
 _Figure: A 20 Hz cosine wave shifted 45 degrees._
 
@@ -142,7 +140,7 @@ _Figure: A 20 Hz cosine wave shifted 45 degrees._
     subplot(2,1,2);
     plot(imag(fftwav),'r');
 
-{% include image src="/assets/img/tutorial/fourier/figure4.png" %}
+{% include image src="/assets/img/example/fourier/figure4.png" %}
 
 _Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees._
 
@@ -215,7 +213,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
     hold on;
     plot(coswav,'r');
 
-{% include image src="/assets/img/tutorial/fourier/figure5.png" %}
+{% include image src="/assets/img/example/fourier/figure5.png" %}
 
 _Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz)._
 
@@ -242,7 +240,7 @@ _Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz)._
     figure('name','power cos');
     plot(psdcos);
 
-{% include image src="/assets/img/tutorial/fourier/figure6.png" %}
+{% include image src="/assets/img/example/fourier/figure6.png" %}
 
 _Figure: The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical._
 
@@ -328,7 +326,7 @@ constant phase difference.
     figure;
     plot(coh);
 
-{% include image src="/assets/img/tutorial/fourier/figure7.png" %}
+{% include image src="/assets/img/example/fourier/figure7.png" %}
 
 _Figure: Coherence spectrum for two 10 Hz signals with a random phase difference._
 
@@ -377,7 +375,7 @@ _Figure: Coherence spectrum for two 10 Hz signals with a random phase difference
     figure;
     plot(coh);
 
-{% include image src="/assets/img/tutorial/fourier/figure8.png" %}
+{% include image src="/assets/img/example/fourier/figure8.png" %}
 
 _Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference._
 

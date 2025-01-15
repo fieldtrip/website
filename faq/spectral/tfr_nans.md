@@ -1,5 +1,7 @@
 ---
 title: Why does my TFR contain NaNs?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [freq]
 redirect_from:

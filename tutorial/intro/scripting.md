@@ -1,5 +1,7 @@
 ---
 title: Creating a clean analysis pipeline
+parent: Introduction to FieldTrip and MATLAB
+grand_parent: Tutorials
 category: tutorial
 tags: [matlab, script]
 redirect_from:

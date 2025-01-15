@@ -1,5 +1,7 @@
 ---
 title: Preprocessing of EEG data and computing ERPs
+parent: Sensor-level analyses
+grand_parent: Tutorials
 category: tutorial
 tags: [eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
 redirect_from:

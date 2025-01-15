@@ -1,5 +1,7 @@
 ---
 title: Fit a dipole to the tactile ERF after mechanical stimulation
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [meg, timelock, source, dipole, fixme, meg-tactile]
 redirect_from:

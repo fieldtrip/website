@@ -1,5 +1,7 @@
 ---
 title: Getting started with Shimadzu NIRS data
+parent: NIRS
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, nirs, shimadzu]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Getting started with Homer
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, homer, nirs]
 redirect_from:

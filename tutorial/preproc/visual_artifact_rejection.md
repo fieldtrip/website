@@ -1,5 +1,7 @@
 ---
 title: Visual or manual artifact rejection
+parent: Reading and preprocessing data
+grand_parent: Tutorials
 category: tutorial
 tags: [artifact, meg, raw, preprocessing, meg-language]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Getting started with SNIRF data
+parent: NIRS
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, snirf, nirs]
 redirect_from:

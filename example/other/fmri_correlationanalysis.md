@@ -1,5 +1,7 @@
 ---
 title: Correlation analysis of fMRI data
+parent: Various other examples
+grand_parent: Examples
 category: example
 tags: [fmri, raw, freq, coherence]
 redirect_from:

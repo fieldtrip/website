@@ -1,5 +1,7 @@
 ---
 title: Virtual channel analysis of epilepsy MEG data
+parent: Source reconstruction
+grand_parent: Tutorials
 category: tutorial
 tags: [meg-epilepsy, anywave, mricro]
 redirect_from:

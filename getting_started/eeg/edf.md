@@ -1,5 +1,7 @@
 ---
 title: Getting started with EDF (European Data Format) data
+parent: EEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, edf, eeg]
 redirect_from:

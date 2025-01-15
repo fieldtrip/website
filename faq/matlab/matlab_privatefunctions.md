@@ -1,5 +1,7 @@
 ---
 title: MATLAB does not see the functions in the "private" directory
+parent: MATLAB questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [function, matlab]
 redirect_from:

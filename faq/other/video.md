@@ -1,5 +1,7 @@
 ---
 title: Are the FieldTrip lectures available on video?
+parent: Various other questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [video]
 redirect_from:

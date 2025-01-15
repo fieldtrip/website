@@ -1,5 +1,7 @@
 ---
 title: How should I specify the fiducials for electrode realignment?
+parent: Source reconstruction
+grand_parent: Frequently asked questions
 category: faq
 tags: [electrode, eeg, fiducial]
 redirect_from:

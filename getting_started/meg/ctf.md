@@ -1,5 +1,7 @@
 ---
 title: Getting started with CTF data
+parent: MEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, ctf, meg]
 redirect_from:

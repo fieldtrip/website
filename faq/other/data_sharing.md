@@ -1,5 +1,7 @@
 ---
 title: How can I share my MEG data?
+parent: Various other questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [dataset, sharing]
 redirect_from:

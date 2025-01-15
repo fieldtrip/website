@@ -1,5 +1,7 @@
 ---
 title: Getting started with human ECoG data
+parent: Intracranial
+grand_parent: Getting started
 category: getting_started
 tags: [ieeg, ecog, seeg]
 redirect_from:

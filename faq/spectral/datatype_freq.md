@@ -1,5 +1,7 @@
 ---
 title: In what way can frequency domain data be represented in FieldTrip?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [freq, connectivity, coherence]
 redirect_from:

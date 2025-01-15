@@ -1,9 +1,9 @@
 ---
-title: Example MATLAB scripts
+title: Examples
 category: example
 ---
 
-# Example MATLAB scripts
+# Examples
 
 Here you can find example MATLAB scripts together with documentation that show specific analyses done in FieldTrip or in MATLAB. The documentation here is often not as elaborate as the [tutorials](/tutorial), but goes more in detail into specific aspects of the data, code or analysis.
 
@@ -11,7 +11,7 @@ We invite you to [add your own](/contribute) example scripts or frequently asked
 
 See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
-### Reading and preprocessing data
+## Reading and preprocessing data
 
 - [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data)
 - [Making your own trialfun for conditional trial definition](/example/trialfun)
@@ -23,7 +23,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Fixing a missing sensor](/example/fixing_a_missing_sensor)
 - [Re-reference EEG and iEEG data](/example/rereference)
 
-### Sensor-level analysis
+## Sensor-level analysis
 
 - [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)
 - [Analyzing NIRS data recorded during listening to and repeating speech](/example/nirs_speech)
@@ -31,20 +31,20 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [How to incorporate head movements in MEG analysis](/example/headmovement_meg)
 - [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 
-### Spectral analysis
+## Spectral analysis
 
 - [Analysis of high-gamma band signals in human ECoG](/example/ecog_ny)
 - [Analyze Steady-State Visual Evoked Potentials (SSVEPs)](/example/ssvep)
 - [Cross-frequency analysis](/example/crossfreq)
 - [Effect of Signal-to-Noise Ratio on Coherence](/example/coherence_snr)
 - [Effects of tapering for power estimates](/example/effects_of_tapering)
-- [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
+- [Fourier analysis of oscillatory power and coherence](/example/fourier)
 - [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
 - [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
 - [Fitting oscillations and one-over-F (FOOOF)](/example/fooof)
 - [Conditional Granger causality in the frequency domain](/example/connectivity_conditional_granger)
 
-### Source reconstruction
+## Source reconstruction
 
 - [Align EEG electrode positions to BEM headmodel](/example/electrodes2bem)
 - [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
@@ -66,7 +66,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 
-### Statistical analysis
+## Statistical analysis
 
 - [Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Computing and reporting the effect size](/example/effectsize)
@@ -80,7 +80,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Using simulations to estimate the sample size for cluster-based permutation test](/example/samplesize)
 - [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
 
-### Real-time analysis
+## Real-time analysis
 
 - [Example real-time average](/example/ft_realtime_average)
 - [Example real-time classification](/example/ft_realtime_classification)

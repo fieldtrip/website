@@ -1,5 +1,7 @@
 ---
 title: Can I use the FieldTrip logo on my poster?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [logo]
 redirect_from:

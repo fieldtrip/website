@@ -1,5 +1,7 @@
 ---
 title: What kind of cable do I need for a serial port connection between two computers?
+parent: Experimental questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [realtime]
 redirect_from:

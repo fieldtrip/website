@@ -1,5 +1,7 @@
 ---
 title: Getting started with Neuralynx data
+parent: Intracranial
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, neuralynx, lfp, spike]
 redirect_from:

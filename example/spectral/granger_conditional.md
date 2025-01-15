@@ -1,5 +1,7 @@
 ---
 title: Conditional Granger causality in the frequency domain
+parent: Spectral analysis
+grand_parent: Examples
 category: example
 tags: [freq, connectivity, granger]
 redirect_from:

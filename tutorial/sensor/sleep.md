@@ -1,5 +1,7 @@
 ---
 title: Extracting the brain state and events from continuous sleep EEG
+parent: Sensor-level analyses
+grand_parent: Tutorials
 category: tutorial
 tags: [sleep, edf, eeg, emg, ecg, artifacts, continuous]
 redirect_from:

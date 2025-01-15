@@ -1,5 +1,7 @@
 ---
 title: How to use ft_checkconfig
+parent: Various other examples
+grand_parent: Examples
 category: example
 tags: [cfg]
 redirect_from:

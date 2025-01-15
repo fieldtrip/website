@@ -1,5 +1,7 @@
 ---
 title: Using reproducescript on a full study
+parent: Various other examples
+grand_parent: Examples
 category: example
 tags: [reproducescript]
 redirect_from:

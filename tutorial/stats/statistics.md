@@ -1,5 +1,7 @@
 ---
 title: Statistical analysis and multiple comparison correction for combined MEG/EEG data
+parent: Statistical analysis
+grand_parent: Tutorials
 category: tutorial
 tags: [natmeg2014, meg+eeg, statistics, meg-audodd]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How can I convert one dataformat into an other?
+parent: Data handling
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [dataformat, preprocessing]
 redirect_from:

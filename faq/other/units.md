@@ -1,5 +1,7 @@
 ---
 title: What are the units of the data and of the derived results?
+parent: Various other questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [units]
 redirect_from:

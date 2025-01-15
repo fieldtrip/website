@@ -1,5 +1,8 @@
 ---
 title: Streaming realtime fMRI from Siemens scanners
+parent: Real-time analysis
+grand_parent: Getting started
+category: getting_started
 tags: [realtime, siemens, fmri]
 redirect_from:
     - /getting_started/realtime_fmri/

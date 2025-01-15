@@ -1,5 +1,7 @@
 ---
 title: Source reconstruction of event-related fields using minimum-norm estimation
+parent: Source reconstruction
+grand_parent: Tutorials
 category: tutorial
 tags: [timelock, source, meg, headmodel, mri, plotting, meg-language]
 redirect_from:

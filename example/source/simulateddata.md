@@ -1,5 +1,7 @@
 ---
 title: Compute forward simulated data using ft_dipolesimulation
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [eeg, source, headmodel, dipole, simulation]
 redirect_from:

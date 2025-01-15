@@ -1,5 +1,7 @@
 ---
 title: Analyzing NIRS data recorded during listening to and repeating speech
+parent: Sensor-level analysis
+grand_parent: Examples
 category: example
 tags: [nirs]
 redirect_from:

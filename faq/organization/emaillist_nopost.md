@@ -1,5 +1,7 @@
 ---
 title: Why am I not allowed to post to the discussion list?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [email]
 redirect_from:

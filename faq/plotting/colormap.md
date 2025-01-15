@@ -1,5 +1,7 @@
 ---
 title: Which colormaps are supported?
+parent: Plotting and visualization
+grand_parent: Frequently asked questions
 category: faq
 tags: [plotting]
 redirect_from:

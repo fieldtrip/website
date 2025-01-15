@@ -1,5 +1,7 @@
 ---
 title: What is the relation between "events" (such as triggers) and "trials"?
+parent: Trials, triggers and events
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [preprocessing, trialfun]
 redirect_from:

@@ -42,7 +42,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/bf_pipeline.jpg" width="650" %}
 
 _Figure: An example of a pipeline to locate sources associated with evoked fields._
 
@@ -82,7 +82,7 @@ To run the following section of code you need the original dataset [oddball1_mc_
 
     data_meg_clean    = ft_preprocessing(cfg);
 
-The resulting epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/data_meg_clean.mat) and you can load it using the following command:
+The resulting epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/data_meg_clean.mat) and you can load it using the following command:
 
     load data_meg_clean
 
@@ -148,7 +148,7 @@ In the first step we re-segment the data into left and right hand responses usin
     cfg.xlim    = [-.2 1];
     subplot(2,2,2);ft_singleplotER(cfg,tlk);
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/topographyandtimecourseERF.png" width="600" %}
 
 _Figure 1: Topography and time course of the motor evoked response performed with the right hand._
 
@@ -162,7 +162,7 @@ Use your knowledge about the distribution of the ingoing and outgoing field.
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
-We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/source/dipolefitting) which you can download to your working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat).
+We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/source/dipolefitting) which you can download to your working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/headmodel_meg.mat).
 
 Load the forward model using the following cod
 
@@ -176,7 +176,7 @@ The next step is to discretize the brain volume into a grid. For each grid point
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 {% include markup/end %}
 
-We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/).
+We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/).
 
     dataset = 'oddball1_mc_downsampled.fif';
     grad    = ft_read_sens(dataset, 'senstype', 'meg');
@@ -279,7 +279,7 @@ The strategy around circumventing the noise bias towards the center of the head 
 
 The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
-First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/tutorial/source/dipolefitting) which can be downloaded to the working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
+First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/tutorial/source/dipolefitting) which can be downloaded to the working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/mri_segmented.mat).
 
     load mri_segmented.mat
 
@@ -302,7 +302,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
     cfg.funcolormap = 'jet';
     ft_sourceplot(cfg, source_int);
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
 _Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions._
 
@@ -342,7 +342,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
 
-If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat), [datapre.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/datapre.mat), [datapost.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/datapost.mat), [grid.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/grid.mat), [data_right.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/data_right.mat)
+If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg.mat](https://download.fieldtriptoolbox.org/workshop/aarhus2015/headmodel_meg.mat), [datapre.mat](https://download.fieldtriptoolbox.org/workshop/aarhus2015/datapre.mat), [datapost.mat](https://download.fieldtriptoolbox.org/workshop/aarhus2015/datapost.mat), [grid.mat](https://download.fieldtriptoolbox.org/workshop/aarhus2015/grid.mat), [data_right.mat](https://download.fieldtriptoolbox.org/workshop/aarhus2015/data_right.mat)
 
     % load the data
     load headmodel_meg
@@ -443,7 +443,7 @@ Finally, we plot the result. Instead of ratio the functional data is now represe
     cfg.funcolormap = 'jet';
     ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/sourceplottstatunmasked.png" width="600" %}
 
 _Figure 3: A source plot of the difference between the pre- and post-response conditions expressed in t-values._
 
@@ -544,7 +544,7 @@ Now we can plot the result.
       subplot(2,2,i+1); ft_singleplotTFR(cfg, tfrvcbl);
     end
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
 _Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right._
 
@@ -556,7 +556,7 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data. The data used in this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
+We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data. The data used in this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/mri_segmented.mat).
 
     load data_eeg_reref_ica
     %% sort into left and right hand response
@@ -665,7 +665,7 @@ Finally, we can plot the result using the same masking strategy as in the MEG se
     cfg.funcolormap = 'jet';
     ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/sourceplotm1_eeg.png" width="600" %}
 
 _Figure 5: Source plot of reconstructed activity using EEG._
 
@@ -757,10 +757,10 @@ We would like to compare the time course of activity reconstructed with MEG and 
       subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
     end
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 _Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG._
 
-{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus2015/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
 _Figure 6: Comparison of time course reconstruction of activity in the primary motor cortex using EEG (top row) and MEG (bottom row)._
 
 ## Summary and suggested further reading

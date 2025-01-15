@@ -1,5 +1,7 @@
 ---
 title: What is the idea behind statistical inference at the second-level?
+parent: Statistical analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [statistics, cluster]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Getting started with EGI/Philips/Magstim data
+parent: EEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, egi, eeg]
 redirect_from:

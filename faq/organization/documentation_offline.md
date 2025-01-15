@@ -1,5 +1,7 @@
 ---
 title: Can I get an offline version of the documentation on the website?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [documentation]
 redirect_from:

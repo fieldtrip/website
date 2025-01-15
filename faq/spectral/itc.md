@@ -1,5 +1,7 @@
 ---
 title: How can I compute inter-trial coherence?
+parent: Spectral analysis
+grand_parent: Frequently asked questions
 category: faq
 tags: [coherence]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How can I rename channels in my data structure?
+parent: Data handling
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [preprocessing, montage]
 redirect_from:

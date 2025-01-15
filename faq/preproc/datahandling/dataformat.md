@@ -1,5 +1,7 @@
 ---
 title: What dataformats are supported?
+parent: Data handling
+grand_parent: Reading and preprocessing data
 category: faq
 tags: [dataformat, preprocessing, raw]
 redirect_from:

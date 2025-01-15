@@ -1,5 +1,7 @@
 ---
 title: How can I anonymize data processed in FieldTrip?
+parent: Various other questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [sharing, anonymize]
 redirect_from:

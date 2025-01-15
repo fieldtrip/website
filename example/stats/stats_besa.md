@@ -1,5 +1,7 @@
 ---
 title: Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+parent: Statistical analysis
+grand_parent: Examples
 category: example
 tags: [statistics, freq, cluster]
 redirect_from:

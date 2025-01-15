@@ -1,5 +1,7 @@
 ---
 title: Example real-time power estimate
+parent: Real-time analysis
+grand_parent: Examples
 category: example
 tags: [realtime]
 redirect_from:

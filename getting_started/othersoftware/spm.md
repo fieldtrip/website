@@ -1,5 +1,7 @@
 ---
 title: Getting started with SPM
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [spm]
 redirect_from:

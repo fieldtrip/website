@@ -1,5 +1,7 @@
 ---
 title: Getting started with Nicolet data
+parent: EEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, nicolet, eeg]
 redirect_from:

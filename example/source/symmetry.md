@@ -1,5 +1,7 @@
 ---
 title: Symmetric dipole pairs for beamforming
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [source, symmetry]
 redirect_from:

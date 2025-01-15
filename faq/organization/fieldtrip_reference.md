@@ -1,5 +1,7 @@
 ---
 title: How should I refer to FieldTrip in my publication?
+parent: Organizational questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [reference]
 redirect_from:

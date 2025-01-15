@@ -1,9 +1,9 @@
 ---
-title: Overview of all tutorials
+title: Tutorials
 category: tutorial
 ---
 
-# Overview of all tutorials
+# Tutorials
 
 The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. The [frequently asked questions](/faq) and [example scripts](/example) are other forms of documentation.
 

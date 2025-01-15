@@ -1,5 +1,7 @@
 ---
 title: Getting started with AnyWave
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, anywave]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How can I compile the mex files on macOS?
+parent: MATLAB questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [mex]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How to incorporate head movements in MEG analysis
+parent: Sensor-level analysis
+grand_parent: Examples
 category: example
 tags: [artifact, meg, glm, regression, confound]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+parent: Sensor-level analysis
+grand_parent: Examples
 category: example
 tags: [nirs, shimadzu]
 redirect_from:

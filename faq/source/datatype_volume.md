@@ -1,5 +1,7 @@
 ---
 title: How is anatomical, functional or statistical "volume data" described?
+parent: Source reconstruction
+grand_parent: Frequently asked questions
 category: faq
 tags: [volume, datatype]
 redirect_from:

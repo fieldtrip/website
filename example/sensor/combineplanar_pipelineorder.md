@@ -1,5 +1,7 @@
 ---
 title: The correct pipeline order for combining planar MEG channels
+parent: Sensor-level analysis
+grand_parent: Examples
 category: example
 tags: [planar, gradient, combineplanar]
 redirect_from:

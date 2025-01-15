@@ -1,5 +1,7 @@
 ---
 title: Effect of SNR on Coherence
+parent: Spectral analysis
+grand_parent: Examples
 category: example
 tags: [freq, coherence]
 redirect_from:

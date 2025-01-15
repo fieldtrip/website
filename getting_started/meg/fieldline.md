@@ -1,5 +1,7 @@
 ---
 title: Getting started with FieldLine OPM data
+parent: MEG
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, meg, opm, opm-mediannerve, fieldline]
 redirect_from:

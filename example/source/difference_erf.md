@@ -1,5 +1,7 @@
 ---
 title: Localizing the sources underlying the difference in event-related fields
+parent: Source reconstruction
+grand_parent: Examples
 category: example
 tags: [source, erf]
 redirect_from:

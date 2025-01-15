@@ -1,5 +1,7 @@
 ---
 title: Getting started with BioImage Suite
+parent: Other software
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
 redirect_from:

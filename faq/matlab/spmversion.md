@@ -1,5 +1,7 @@
 ---
 title: How to select the correct SPM toolbox?
+parent: MATLAB questions
+grand_parent: Frequently asked questions
 category: faq
 tags: [spm, mex, toolbox, path]
 redirect_from:

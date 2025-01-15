@@ -1,5 +1,7 @@
 ---
 title: Getting started with Artinis NIRS data
+parent: NIRS
+grand_parent: Getting started
 category: getting_started
 tags: [dataformat, nirs, artinis]
 redirect_from:

@@ -1,5 +1,7 @@
 ---
 title: How are electrodes, magnetometers or gradiometers described?
+parent: Source reconstruction
+grand_parent: Frequently asked questions
 category: faq
 tags: [electrode, eeg, meg, fiducial, layout]
 redirect_from:
