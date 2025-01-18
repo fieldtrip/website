@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcae466
+- idtype: pmcid
+  value: PMC11735756
+authors:
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Cataldi J
+- authtype: Author
+  name: Zubler F
+- authtype: Author
+  name: Iten M
+- authtype: Author
+  name: Haenggi M
+- authtype: Author
+  name: Ben-Hamouda N
+- authtype: Author
+  name: Rossetti AO
+- authtype: Author
+  name: Tzovara A
+- authtype: Author
+  name: De Lucia M
+epubdate: 2024 Dec 21
+fulljournalname: Brain Communications
+issue: '1'
+pages: fcae466
+pmclivedate: 2025/01/16
+printpubdate: ''
+pubdate: 2024 Dec 21
+sortdate: 2024/12/21 00:00
+source: Brain Commun
+title: 'Complex auditory regularity processing across levels of consciousness in coma:
+  Stage 1 Registered Report'
+uid: '11735756'
+volume: '7'

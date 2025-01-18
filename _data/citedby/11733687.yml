@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39816191'
+- idtype: doi
+  value: 10.1093/braincomms/fcaf001
+- idtype: pmcid
+  value: PMC11733687
+authors:
+- authtype: Author
+  name: Chen YP
+- authtype: Author
+  name: Neff P
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Wong DD
+- authtype: Author
+  name: Peter N
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Kleinjung T
+- authtype: Author
+  name: Dimitrijevic A
+- authtype: Author
+  name: Dalal SS
+- authtype: Author
+  name: Weisz N
+epubdate: 2025 Jan 3
+fulljournalname: Brain Communications
+issue: '1'
+pages: fcaf001
+pmclivedate: 2025/01/15
+printpubdate: ''
+pubdate: 2025 Jan 3
+sortdate: 2025/01/03 00:00
+source: Brain Commun
+title: 'Cochlear implantation in adults with acquired single-sided deafness improves
+  cortical processing and comprehension of speech presented to the non-implanted ears:
+  a longitudinal EEG study'
+uid: '11733687'
+volume: '7'

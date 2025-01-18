@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39804154'
+- idtype: doi
+  value: 10.7554/eLife.101727
+- idtype: pmcid
+  value: PMC11729367
+authors:
+- authtype: Author
+  name: Gil Avila C
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Bott FS
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn V
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Zebhauser PT
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2025 Jan 13
+fulljournalname: eLife
+issue: ''
+pages: RP101727
+pmclivedate: 2025/01/14
+printpubdate: ''
+pubdate: 2025 Jan 13
+sortdate: 2025/01/13 00:00
+source: eLife
+title: Assessing the balance between excitation and inhibition in chronic pain through
+  the aperiodic component of EEG
+uid: '11729367'
+volume: '13'
