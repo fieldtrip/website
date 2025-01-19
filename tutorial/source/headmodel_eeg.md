@@ -1,5 +1,5 @@
 ---
-title:
+title: EEG headmodels
 redirect_from:
     - /tutorial/headmodel_eeg/
 ---

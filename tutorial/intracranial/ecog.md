@@ -1,5 +1,5 @@
 ---
-title:
+title: ECoG tutorials
 redirect_from:
     - /tutorial/ecog/
 ---
