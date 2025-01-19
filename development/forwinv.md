@@ -1,8 +1,8 @@
 ---
-title: Functions for forward and inverse computation of EEG/MEG data
+title: Forward and inverse computation of EEG/MEG data
 ---
 
-# Functions for forward and inverse computation of EEG/MEG data
+# Forward and inverse computation of EEG/MEG data
 
 The functions for forward computation of the leadfield have moved to the [fieldtrip/forward](/development/module/forward) directory.
 
