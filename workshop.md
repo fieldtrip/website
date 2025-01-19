@@ -1,6 +1,7 @@
 ---
 title: FieldTrip courses and workshops
 tags: [workshop]
+nav_exclude: true
 ---
 
 # FieldTrip courses and workshops

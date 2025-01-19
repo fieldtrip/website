@@ -1,6 +1,7 @@
 ---
 title: Project overview
 tags: [development]
+nav_exclude: true
 ---
 
 # Project overview
