@@ -82,7 +82,7 @@ We will first start with the magnetometer
 If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you have recorded your data in trials, specify _cfg.continuous = 'no'_
 {% include markup/end %}
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_databrowser1.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_databrowser1.png" width="650" %}
 
 _Figure: Raw plot from magnetometers using ft_databrowser_
 
@@ -115,7 +115,7 @@ Finally, we will look at the EEG channel
     set(gcf, 'Position',[1 1 1200 800])
     print -dpng natmeg_databrowser2.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_databrowser2.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_databrowser2.png" width="650" %}
 
 _Figure: Raw plot from EEG channels using ft_databrowser_
 
@@ -137,7 +137,7 @@ The following steps are taken in the MEG section of the tutorial:
 - Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](/reference/ft_combineplanar)**
 - Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_flowchart1.png" width="400" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_flowchart1.png" width="400" %}
 
 _Figure: A schematic overview of the steps in averaging of event-related fields_
 
@@ -200,7 +200,7 @@ The most important fields are data_MEG.trial containing the individual trials an
     plot(data_MEG.time{1}, data_MEG.trial{1}(130,:))
     print -dpng natmeg_preproc1.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf0.png" width="600" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf0.png" width="600" %}
 
 _Figure: A plot of a single trial of one channel_
 
@@ -218,7 +218,7 @@ This demonstrate how to extract trials from a dataset based on trigger informati
     cfg.channel = {'MEG*2','MEG*3'};
     data_MEG_clean    = ft_rejectvisual(cfg,data_MEG_clean);
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_rejectsummary.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_rejectsummary.png" width="650" %}
 
 _Figure: An overview of the data using ft_rejectvisual_
 
@@ -305,7 +305,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     set(gcf,'Position',[1 1 1239 945]);
     print -dpng natmeg_erf1.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf1.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf1.png" width="650" %}
 
 _Figure: A plot of the average of all conditions for all channels plotted using ft_multiplotER_
 
@@ -326,7 +326,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
     print -dpng natmeg_erf2.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf2.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf2.png" width="650" %}
 
 _Figure: A plot of the average of all conditions for channel MEG0211 plotted using ft_singleplotER_
 
@@ -359,7 +359,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
     print -dpng natmeg_erf3.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf3.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf3.png" width="650" %}
 
 _Figure: Topoplot of the data averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
@@ -396,7 +396,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     set(gcf,'Position',[1 1 1239 945]);
     print -dpng natmeg_erf4.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf4.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf4.png" width="650" %}
 
 _Figure: The event-related fields plotted using ft_multiplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
@@ -420,7 +420,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
     print -dpng natmeg_erf5.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf5.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf5.png" width="650" %}
 
 _Figure: The event-related field plotted using ft_singleplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
@@ -453,7 +453,7 @@ Now we are going to look at the topographical spread of the field by using
 
     print -dpng natmeg_erf6.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf6.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf6.png" width="650" %}
 
 _Figure: Topographic plot of the event-related fields obtained using ft_topoplotER_
 
@@ -478,7 +478,7 @@ The EEG section of this tutorial resembles the MEG section. We will take the fol
 - Visualize the results using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
 - Calculate scalp-current density with **[ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)**
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_flowchart2.png" width="400" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_flowchart2.png" width="400" %}
 
 _A schematic overview of the steps in averaging of event-related potentials_
 
@@ -606,7 +606,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     set(gcf,'Position',[1 1 1239 945]);
     print -dpng natmeg_erp1.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erp1.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erp1.png" width="650" %}
 
 _Figure: The event-related potentials plotted using ft_multiplotER. The event-related potentials were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
@@ -628,11 +628,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
     print -dpng natmeg_erp2.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erp2.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erp2.png" width="650" %}
 
 _Figure: The event-related potentials plotted for three conditions for channel EEG020 using ft_singleplotER_
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf2.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf2.png" width="650" %}
 
 _Figure: The event-related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
 
@@ -670,7 +670,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
     print -dpng natmeg_erp3.png
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erp3.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erp3.png" width="650" %}
 
 _Figure: Topographic plot of the event-related potentials obtained using ft_topoplotER_
 
@@ -678,7 +678,7 @@ _Figure: Topographic plot of the event-related potentials obtained using ft_topo
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
 {% include markup/end %}
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_erf6.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_erf6.png" width="650" %}
 
 _Figure: Topographic plot of the event-related fields (gradiometer) obtained using ft_topoplotER_
 
@@ -729,7 +729,7 @@ To plot the scalp current density results, use the following code
 
 Note that if you get plotting artifacts in these figures, such as colorbars that do not show completely, you can have a look at this [frequently asked question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
-{% include image src="/assets/img/tutorial/sensor/preprocessing/natmeg_scd1.png" width="650" %}
+{% include image src="/assets/img/tutorial/preprocessing/natmeg_scd1.png" width="650" %}
 
 _Figure: Topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
@@ -794,4 +794,4 @@ We now have the same amount of trials for each type of sensor.
 
 In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their time courses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
 
-If you are interested in a different analysis of your data that shows event-related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/spectral/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+If you are interested in a different analysis of your data that shows event-related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/sensor/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.

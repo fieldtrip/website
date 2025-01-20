@@ -5,7 +5,7 @@ grand_parent: Examples
 category: example
 tags: [statistics, freq, cluster]
 redirect_from:
-    /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa/
+    - /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa/
     - /example/stats_besa/
 ---
 

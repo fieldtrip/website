@@ -5,8 +5,8 @@ grand_parent: Frequently asked questions
 category: faq
 tags: [statistics, cluster, plotting]
 redirect_from:
-  - /faq/how_can_i_define_my_own_neighbourhood_template/
-  - /faq/how_can_i_define_neighbouring_sensors/
+    - /faq/how_can_i_define_my_own_neighbourhood_template/
+    - /faq/how_can_i_define_neighbouring_sensors/
     - /faq/sensors_neighbours/
 ---
 

@@ -21,7 +21,7 @@ Oscillatory components contained in the ongoing EEG or MEG signal often show pow
 
 Calculating time-frequency representations of power using Fourier analysis is done using a sliding time window. This time window can either have a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power, a taper is multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/assets/img/tutorial/spectral/timefrequency/tfrtiles.png" width="600" %}
+{% include image src="/assets/img/tutorial/timefrequency/tfrtiles.png" width="600" %}
 
 _Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
@@ -36,7 +36,7 @@ To calculate the time-frequency representation for the example dataset we will p
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
-{% include image src="/assets/img/tutorial/spectral/timefrequency/tfr_pipelinenew.png" width="200" %}
+{% include image src="/assets/img/tutorial/timefrequency/tfr_pipelinenew.png" width="200" %}
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 

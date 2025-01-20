@@ -5,7 +5,7 @@ grand_parent: Examples
 category: example
 tags: [plotting, source]
 redirect_from:
-  - /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh/
+    - /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh/
     - /example/plotting_source_surface/
 ---
 

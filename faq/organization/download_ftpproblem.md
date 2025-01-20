@@ -5,8 +5,8 @@ grand_parent: Frequently asked questions
 category: faq
 tags: [download, release]
 redirect_from:
-  - /faq/i_am_having_problems_downloading_from_the_ftp_server/
-  - /faq/i_am_having_problems_downloading/
+    - /faq/i_am_having_problems_downloading_from_the_ftp_server/
+    - /faq/i_am_having_problems_downloading/
     - /faq/download_ftpproblem/
 ---
 
@@ -35,5 +35,3 @@ To keep up to date with the latest release version, you would type
     git pull upstream release
     
 Although it is not required to just download the code, you could also make an account on GitHub and clone the FieldTrip repository there. That would allow you to contribute your suggestions and improvements back to the project as pull requests. See the [git tutorial](/development/git) for more details.
-
-    

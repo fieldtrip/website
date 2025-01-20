@@ -5,8 +5,8 @@ grand_parent: Frequently asked questions
 category: faq
 tags: [download, release]
 redirect_from:
-  - /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server/
-  - /faq/which_version_of_fieldtrip_should_i_download/
+    - /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server/
+    - /faq/which_version_of_fieldtrip_should_i_download/
     - /faq/fieldtrip_downloadversion/
 ---
 

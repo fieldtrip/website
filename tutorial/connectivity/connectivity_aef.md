@@ -374,7 +374,7 @@ We want to reconstruct the locations of the M100 component. In the present case 
 
 ### Compute data covariance
 
-The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to **[ft_timelockanalysis](/reference/ ft_timelockanalysis)** with `cfg.covariance = 'yes'` and `cfg.covariancewindow = [xx yy]`. These configuration options will ensure the covariance matrix to be present in the output structure.
+The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)** with `cfg.covariance = 'yes'` and `cfg.covariancewindow = [xx yy]`. These configuration options will ensure the covariance matrix to be present in the output structure.
 
     cfg = [];
     cfg.covariance='yes';
