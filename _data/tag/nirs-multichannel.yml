@@ -1,6 +1,6 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/nirs_multichannel
+- title:  Preprocessing and averaging of multi-channel NIRS data
+  link:  /tutorial/nirs/nirs_multichannel
 

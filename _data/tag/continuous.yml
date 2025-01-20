@@ -1,15 +1,15 @@
-- name:  Why should I set continuous to yes for CTF data?
-  link:  /faq/continuous
+- title:  Why should I set continuous to yes for CTF data?
+  link:  /faq/preproc/continuous
 
-- name:  How can I process continuous data without triggers?
-  link:  /faq/preproc_continuous
+- title:  How can I process continuous data without triggers?
+  link:  /faq/preproc/events/preproc_continuous
 
-- name:  How can I do time-frequency analysis on continuous data?
-  link:  /faq/tfr_continuous
+- title:  How can I do time-frequency analysis on continuous data?
+  link:  /faq/spectral/tfr_continuous
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
 
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
 

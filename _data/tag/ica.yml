@@ -1,24 +1,24 @@
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/dss_ecg
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
 
-- name:  Independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/ica_ecg
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
 
-- name:  Independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/ica_eog
+- title:  Independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/preproc/ica_eog
 
-- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/databrowser_crash
+- title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
+  link:  /faq/matlab/databrowser_crash
 
-- name:  Why does my ICA output contain complex numbers?
-  link:  /faq/ica_complexvalues
+- title:  Why does my ICA output contain complex numbers?
+  link:  /faq/preproc/artifact/ica_complexvalues
 
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/ica_crash
+- title:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/preproc/artifact/ica_crash
 
-- name:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/ica_rereference
+- title:  Should I rereference prior to or after ICA for artifact removal?
+  link:  /faq/preproc/ica_rereference
 
-- name:  Dealing with artifacts
+- title:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
 

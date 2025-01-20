@@ -1,12 +1,12 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Details of the tMEG Motor task dataset
+- title:  Details of the tMEG Motor task dataset
   link:  /tutorial/hcp_motort
 
-- name:  MEG virtual channels and seed-based connectivity
+- title:  MEG virtual channels and seed-based connectivity
   link:  /workshop/chieti2015/virtualchannel
 
-- name:  MEG whole-brain connectivity
+- title:  MEG whole-brain connectivity
   link:  /workshop/chieti2015/wholebrain
 

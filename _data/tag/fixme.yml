@@ -1,18 +1,12 @@
-- name:  Code guidelines
+- title:  Code guidelines
   link:  /development/guideline/code
 
-- name:  Common filters in beamforming
-  link:  /example/beamformer_commonfilter
+- title:  Common filters in beamforming
+  link:  /example/source/beamformer_commonfilter
 
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/dipolefit_somatosensory_erf
+- title:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/source/dipolefit_somatosensory_erf
 
-- name:  Localizing sources using beamformer techniques
-  link:  /tutorial/beamformer_lcmv
-
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
-
-- name:  Analysis of auditory evoked fields in sensor and source space
-  link:  /tutorial/salzburg
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
 

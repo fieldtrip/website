@@ -1,18 +1,18 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- title:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor/sensor_analysis
 
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
+- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/source/beamformingextended
 
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
+- title:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 

@@ -1,6 +1,6 @@
-- name:  Streaming realtime data from ANT NeuroSDK
+- title:  Streaming realtime data from ANT NeuroSDK
   link:  /development/realtime/neurosdk
 
-- name:  Getting started with ANT-Neuro, ASA and EEProbe data
-  link:  /getting_started/antneuro
+- title:  Getting started with ANT-Neuro, ASA and EEProbe data
+  link:  /getting_started/eeg/antneuro
 

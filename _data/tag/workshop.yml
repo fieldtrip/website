@@ -1,9 +1,9 @@
-- name:  Can I organize my own FieldTrip workshop?
-  link:  /faq/workshop
+- title:  Can I organize my own FieldTrip workshop?
+  link:  /faq/other/workshop
 
-- name:  How should I prepare for the upcoming FieldTrip workshop?
-  link:  /faq/workshop_preparation
+- title:  How should I prepare for the upcoming FieldTrip workshop?
+  link:  /faq/other/workshop_preparation
 
-- name:  FieldTrip courses and workshops
+- title:  FieldTrip courses and workshops
   link:  /workshop
 

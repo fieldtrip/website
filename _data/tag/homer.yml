@@ -1,6 +1,6 @@
-- name:  Converting an example NIRS dataset for sharing in BIDS
-  link:  /example/bids_nirs
+- title:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/other/bids_nirs
 
-- name:  Getting started with Homer
-  link:  /getting_started/homer
+- title:  Getting started with Homer
+  link:  /getting_started/othersoftware/homer
 

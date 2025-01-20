@@ -1,9 +1,9 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Getting started with FieldLine OPM data
-  link:  /getting_started/fieldline
+- title:  Getting started with FieldLine OPM data
+  link:  /getting_started/meg/fieldline
 
-- name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/preprocessing_opm
+- title:  Preprocessing of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/sensor/preprocessing_opm
 

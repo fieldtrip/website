@@ -1,6 +1,6 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/epilepsy
+- title:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/source/epilepsy
 

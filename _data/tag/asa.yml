@@ -1,6 +1,6 @@
-- name:  Irregular Resampling Auto-Spectral Analysis (IRASA)
-  link:  /example/irasa
+- title:  Irregular Resampling Auto-Spectral Analysis (IRASA)
+  link:  /example/spectral/irasa
 
-- name:  Getting started with ANT-Neuro, ASA and EEProbe data
-  link:  /getting_started/antneuro
+- title:  Getting started with ANT-Neuro, ASA and EEProbe data
+  link:  /getting_started/eeg/antneuro
 

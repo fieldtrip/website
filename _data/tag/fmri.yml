@@ -1,9 +1,9 @@
-- name:  Correlation analysis of fMRI data
-  link:  /example/fmri_correlationanalysis
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
 
-- name:  Getting started with fMRI timeseries data
-  link:  /getting_started/fmri
+- title:  Getting started with fMRI timeseries data
+  link:  /getting_started/otherdata/fmri
 
-- name:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime_fmri
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
 

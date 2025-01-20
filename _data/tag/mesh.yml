@@ -1,9 +1,9 @@
-- name:  Getting started with MeshLab
-  link:  /getting_started/meshlab
+- title:  Getting started with MeshLab
+  link:  /getting_started/othersoftware/meshlab
 
-- name:  Getting started with ParaView
-  link:  /getting_started/paraview
+- title:  Getting started with ParaView
+  link:  /getting_started/othersoftware/paraview
 
-- name:  Getting started with SimNIBS
-  link:  /getting_started/simnibs
+- title:  Getting started with SimNIBS
+  link:  /getting_started/othersoftware/simnibs
 

@@ -1,30 +1,33 @@
-- name:  Creating a layout for plotting NIRS optodes and channels
-  link:  /example/nirs_layout
+- title:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/plotting/nirs_layout
 
-- name:  How do I construct a layout file for the plotting functions?
-  link:  /faq/layout_creation
+- title:  How do I construct a layout file for the plotting functions?
+  link:  /faq/plotting/layout_creation
 
-- name:  What is the format of the layout file which is used for plotting?
-  link:  /faq/layout_fileformat
+- title:  What is the format of the layout file which is used for plotting?
+  link:  /faq/plotting/layout_fileformat
 
-- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-  link:  /faq/layout_magandgrad
+- title:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/plotting/layout_magandgrad
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/sensors_definition
+- title:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/source/sensors_definition
 
-- name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/1020
+- title:  Getting started with 20%, 10% and 5% electrode arrangements
+  link:  /getting_started/eeg/1020
 
-- name:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/brainvision
+- title:  Getting started with BrainVision Analyzer and Easycap
+  link:  /getting_started/eeg/brainvision
 
-- name:  Template 2-D layouts for plotting
+- title:  Template 2-D layouts for plotting
   link:  /template/layout
 
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
+- title:  Specifying the channel layout for plotting
+  link:  /tutorial/plotting/layout
 
-- name:  Plotting data at the channel and source level
-  link:  /tutorial/plotting
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/plotting/plotting_channel_source
+
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/stats/plotting
 

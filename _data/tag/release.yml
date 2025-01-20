@@ -1,15 +1,15 @@
-- name:  Release and quality control
+- title:  Release and quality control
   link:  /development/releasing
 
-- name:  Testing
+- title:  Testing
   link:  /development/testing
 
-- name:  I am having problems downloading
-  link:  /faq/download_ftpproblem
+- title:  I am having problems downloading
+  link:  /faq/organization/download_ftpproblem
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/download_version
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/organization/fieldtrip_downloadversion
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/fieldtrip_downloadversion
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/other/download_version
 

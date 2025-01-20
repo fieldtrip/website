@@ -1,6 +1,6 @@
-- name:  How to import data from MNE-Python and FreeSurfer
-  link:  /example/import_mne
+- title:  How to import data from MNE-Python and FreeSurfer
+  link:  /example/other/import_mne
 
-- name:  Getting started with MNE(-python)
-  link:  /getting_started/mne
+- title:  Getting started with MNE(-python)
+  link:  /getting_started/othersoftware/mne
 

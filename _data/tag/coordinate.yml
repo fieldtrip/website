@@ -1,33 +1,33 @@
-- name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
-  link:  /faq/acpc
+- title:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
+  link:  /faq/source/acpc
 
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/anat_coreg
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
 
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/anat_dicom2ctf
+- title:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/source/anat_dicom2ctf
 
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/anat_landmarks
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- name:  How to change the MRI orientation, the voxel size or the field-of-view?
-  link:  /faq/anat_reslice
+- title:  How to change the MRI orientation, the voxel size or the field-of-view?
+  link:  /faq/source/anat_reslice
 
-- name:  My MRI is upside down, is this a problem?
-  link:  /faq/anat_upsidedown
+- title:  My MRI is upside down, is this a problem?
+  link:  /faq/source/anat_upsidedown
 
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/coordsys
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/fiducials_definition
+- title:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/source/fiducials_definition
 
-- name:  How do homogenous coordinate transformation matrices work?
-  link:  /faq/homogenous
+- title:  How do homogenous coordinate transformation matrices work?
+  link:  /faq/source/homogenous
 
-- name:  Getting started with Yokogawa data
-  link:  /getting_started/yokogawa
+- title:  Getting started with Yokogawa data
+  link:  /getting_started/meg/yokogawa
 
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 

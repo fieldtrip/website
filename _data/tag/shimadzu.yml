@@ -1,6 +1,6 @@
-- name:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
-  link:  /example/nirs_fingertapping
+- title:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+  link:  /example/sensor/nirs_fingertapping
 
-- name:  Getting started with Shimadzu NIRS data
-  link:  /getting_started/shimadzu
+- title:  Getting started with Shimadzu NIRS data
+  link:  /getting_started/nirs/shimadzu
 

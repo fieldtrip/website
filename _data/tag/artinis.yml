@@ -1,9 +1,9 @@
-- name:  Streaming realtime data from Artinis Medical Systems
+- title:  Streaming realtime data from Artinis Medical Systems
   link:  /development/realtime/artinis
 
-- name:  Converting an example NIRS dataset for sharing in BIDS
-  link:  /example/bids_nirs
+- title:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/other/bids_nirs
 
-- name:  Getting started with Artinis NIRS data
-  link:  /getting_started/artinis
+- title:  Getting started with Artinis NIRS data
+  link:  /getting_started/nirs/artinis
 

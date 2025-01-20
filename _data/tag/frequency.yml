@@ -1,6 +1,6 @@
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg2014/timefrequency
+- title:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/sensor/timefrequency
 
-- name:  Time-frequency analysis of EEG data
+- title:  Time-frequency analysis of EEG data
   link:  /workshop/oslo2019/timefrequency
 

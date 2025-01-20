@@ -1,57 +1,57 @@
-- name:  Computing and reporting the effect size
-  link:  /example/effectsize
+- title:  Computing and reporting the effect size
+  link:  /example/stats/effectsize
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/beamformer
-
-- name:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/cluster_permutation_freq
-
-- name:  Cluster-based permutation tests on event-related fields
-  link:  /tutorial/cluster_permutation_timelock
-
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
-
-- name:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/distributedcomputing_parfor
-
-- name:  Speeding up your analysis using distributed computing with qsub
-  link:  /tutorial/distributedcomputing_qsub
-
-- name:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/eventrelatedaveraging
-
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
-
-- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
-
-- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
-- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
-
-- name:  Details of the MEG language dataset
+- title:  Details of the MEG language dataset
   link:  /tutorial/meg_language
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
 
-- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-  link:  /tutorial/preprocessing
+- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
+  link:  /tutorial/preproc/preprocessing
 
-- name:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/sourcemodel
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
 
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
 
-- name:  Visual or manual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
+
+- title:  Event-related averaging and MEG planar gradient
+  link:  /tutorial/sensor/eventrelatedaveraging
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
+
+- title:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/source/beamformer
+
+- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_bem
+
+- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_fem
+
+- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+  link:  /tutorial/source/headmodel_meg
+
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
+
+- title:  Creating a source model for source reconstruction of MEG or EEG data
+  link:  /tutorial/source/sourcemodel
+
+- title:  Cluster-based permutation tests on time-frequency data
+  link:  /tutorial/stats/cluster_permutation_freq
+
+- title:  Cluster-based permutation tests on event-related fields
+  link:  /tutorial/stats/cluster_permutation_timelock
+
+- title:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/stats/eventrelatedstatistics
 

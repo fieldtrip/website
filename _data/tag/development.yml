@@ -1,120 +1,120 @@
-- name:  Development
+- title:  Development
   link:  /development
 
-- name:  Toolbox architecture and organization of the source code
+- title:  Toolbox architecture and organization of the source code
   link:  /development/architecture
 
-- name:  Contribute
+- title:  Contribute
   link:  /development/contribute
 
-- name:  Accessing the FieldTrip source code through CVS
+- title:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- name:  Data structures used by FieldTrip
+- title:  Data structures used by FieldTrip
   link:  /development/datastructure
 
-- name:  Accessing the FieldTrip source code through Git
+- title:  Accessing the FieldTrip source code through Git
   link:  /development/git
 
-- name:  Code guidelines
+- title:  Code guidelines
   link:  /development/guideline/code
 
-- name:  Communication guidelines
+- title:  Communication guidelines
   link:  /development/guideline/communication
 
-- name:  Documentation guidelines this is the title, it should also be the first top-level heading
+- title:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
 
-- name:  Template guidelines
+- title:  Template guidelines
   link:  /development/guideline/templates
 
-- name:  Website syntax and formatting Website syntax and formatting New page title
+- title:  Website syntax and formatting Website syntax and formatting New page title
   link:  /development/guideline/website
 
-- name:  Reporting issues
+- title:  Reporting issues
   link:  /development/issues
 
-- name:  Meetings
+- title:  Meetings
   link:  /development/meeting
 
-- name:  Connectivity estimates for EEG/MEG time series data
+- title:  Connectivity estimates for EEG/MEG time series data
   link:  /development/module/connectivity
 
-- name:  Reading and writing of EEG/MEG time series data
+- title:  Reading and writing of EEG/MEG time series data
   link:  /development/module/fileio
 
-- name:  Forward computation of EEG/MEG source models
+- title:  Forward computation of EEG/MEG source models
   link:  /development/module/forward
 
-- name:  Inverse source parameter estimates from EEG/MEG data
+- title:  Inverse source parameter estimates from EEG/MEG data
   link:  /development/module/inverse
 
-- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+- title:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting
 
-- name:  Preprocessing of EEG/MEG time series data
+- title:  Preprocessing of EEG/MEG time series data
   link:  /development/module/preproc
 
-- name:  Distributed computing using a Linux compute cluster
+- title:  Distributed computing using a Linux compute cluster
   link:  /development/module/qsub
 
-- name:  Spectral estimation of of EEG/MEG time series data
+- title:  Spectral estimation of of EEG/MEG time series data
   link:  /development/module/specest
 
-- name:  Project overview
+- title:  Project overview
   link:  /development/project
 
-- name:  FieldTrip buffer C implementation
+- title:  FieldTrip buffer C implementation
   link:  /development/realtime/buffer_c
 
-- name:  FieldTrip buffer C++ implementation
+- title:  FieldTrip buffer C++ implementation
   link:  /development/realtime/buffer_cpp
 
-- name:  FieldTrip buffer Java interface
+- title:  FieldTrip buffer Java interface
   link:  /development/realtime/buffer_java
 
-- name:  FieldTrip buffer MATLAB interface
+- title:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/buffer_matlab
 
-- name:  FieldTrip buffer Python interface
+- title:  FieldTrip buffer Python interface
   link:  /development/realtime/buffer_python
 
-- name:  Suggested improvements for compatibility across versions
+- title:  Suggested improvements for compatibility across versions
   link:  /development/realtime/draft_compatability
 
-- name:  Suggested improvements for handling header and chunks
+- title:  Suggested improvements for handling header and chunks
   link:  /development/realtime/draft_header_chunks
 
-- name:  Suggested changes to the reference implementation
+- title:  Suggested changes to the reference implementation
   link:  /development/realtime/draft_implementation
 
-- name:  Suggested changes to the network protocol
+- title:  Suggested changes to the network protocol
   link:  /development/realtime/draft_network
 
-- name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
   link:  /development/realtime/implementation
 
-- name:  FieldTrip buffer reference implementation
+- title:  FieldTrip buffer reference implementation
   link:  /development/realtime/reference_implementation
 
-- name:  Scratchpad for the realtime buffer interface
+- title:  Scratchpad for the realtime buffer interface
   link:  /development/realtime/scratchpad
 
-- name:  Release and quality control
+- title:  Release and quality control
   link:  /development/releasing
 
-- name:  Accessing the FieldTrip source code through SVN
+- title:  Accessing the FieldTrip source code through SVN
   link:  /development/svn
 
-- name:  Testing
+- title:  Testing
   link:  /development/testing
 
-- name:  How should I share example data with the email list or developers?
-  link:  /faq/datasharing
+- title:  Why was FieldTrip maintained in SVN and not in Git?
+  link:  /faq/development/svnversusgit
 
-- name:  Why was FieldTrip maintained in SVN and not in Git?
-  link:  /faq/svnversusgit
+- title:  How can I keep track of changes to the code?
+  link:  /faq/development/trackchanges
 
-- name:  How can I keep track of changes to the code?
-  link:  /faq/trackchanges
+- title:  How should I share example data with the email list or developers?
+  link:  /faq/organization/datasharing
 

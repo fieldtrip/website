@@ -1,3 +1,6 @@
-- name:  Template anatomical atlases and parcellation schemes
+- title:  Create brain atlas based MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Template anatomical atlases and parcellation schemes
   link:  /template/atlas
 

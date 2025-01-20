@@ -1,81 +1,87 @@
-- name:  Testing BEM created EEG lead fields
-  link:  /example/bem_evaluation
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
 
-- name:  Check the quality of the anatomical coregistration
-  link:  /example/coregistration_quality_control
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
 
-- name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/electrodes2bem
+- title:  Check the quality of the anatomical coregistration
+  link:  /example/source/coregistration_quality_control
 
-- name:  Correlation analysis of fMRI data
-  link:  /example/fmri_correlationanalysis
+- title:  Align EEG electrode positions to BEM headmodel
+  link:  /example/source/electrodes2bem
 
-- name:  Create MNI-aligned grids in individual head-space
-  link:  /example/sourcemodel_aligned2mni
+- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+  link:  /example/source/neuromag_aligned2mni
 
-- name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
-  link:  /faq/acpc
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
 
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/anat_coreg
+- title:  Create brain atlas based MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni_atlas
 
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/anat_dicom2ctf
+- title:  How can I anonymize or deidentify an anatomical MRI?
+  link:  /faq/other/anonymization_anatomical
 
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/anat_landmarks
+- title:  How can I anonymize or deidentify DICOM files?
+  link:  /faq/other/anonymization_dicom
 
-- name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/anat_plottingconvention
+- title:  What is the plotting convention for anatomical MRIs?
+  link:  /faq/plotting/anat_plottingconvention
 
-- name:  How to change the MRI orientation, the voxel size or the field-of-view?
-  link:  /faq/anat_reslice
+- title:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
+  link:  /faq/plotting/anat_upsidedownplotting
 
-- name:  My MRI is upside down, is this a problem?
-  link:  /faq/anat_upsidedown
+- title:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
+  link:  /faq/source/acpc
 
-- name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/anat_upsidedownplotting
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
 
-- name:  How can I anonymize or deidentify an anatomical MRI?
-  link:  /faq/anonymization_anatomical
+- title:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/source/anat_dicom2ctf
 
-- name:  How can I anonymize or deidentify DICOM files?
-  link:  /faq/anonymization_dicom
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/coordsys
+- title:  How to change the MRI orientation, the voxel size or the field-of-view?
+  link:  /faq/source/anat_reslice
 
-- name:  Why is the source model deformed or incorrectly aligned after warping template?
-  link:  /faq/sourcemodel_deformation
+- title:  My MRI is upside down, is this a problem?
+  link:  /faq/source/anat_upsidedown
 
-- name:  Can I restrict the source reconstruction to the grey matter?
-  link:  /faq/sourcerecon_greymatter
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
-- name:  Getting started with fMRI timeseries data
-  link:  /getting_started/fmri
+- title:  Why is the source model deformed or incorrectly aligned after warping template?
+  link:  /faq/source/sourcemodel_deformation
 
-- name:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime_fmri
+- title:  Can I restrict the source reconstruction to the grey matter?
+  link:  /faq/source/sourcerecon_greymatter
 
-- name:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/beamformer
+- title:  Getting started with fMRI timeseries data
+  link:  /getting_started/otherdata/fmri
 
-- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
 
-- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
+- title:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/intracranial/human_ecog
 
-- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
+- title:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/source/beamformer
 
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
+- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_bem
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
+- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_fem
 
-- name:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/sourcemodel
+- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+  link:  /tutorial/source/headmodel_meg
+
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
+
+- title:  Creating a source model for source reconstruction of MEG or EEG data
+  link:  /tutorial/source/sourcemodel
 

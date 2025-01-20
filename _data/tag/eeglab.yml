@@ -1,6 +1,6 @@
-- name:  Why is FieldTrip developed separately from EEGLAB?
-  link:  /faq/fieldtrip_eeglab
+- title:  Why is FieldTrip developed separately from EEGLAB?
+  link:  /faq/organization/fieldtrip_eeglab
 
-- name:  Getting started with EEGLAB
-  link:  /getting_started/eeglab
+- title:  Getting started with EEGLAB
+  link:  /getting_started/othersoftware/eeglab
 

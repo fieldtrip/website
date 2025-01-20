@@ -1,3 +1,3 @@
-- name:  Compute EEG leadfields using a FEM headmodel
-  link:  /example/fem
+- title:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/source/fem
 

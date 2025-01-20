@@ -1,15 +1,15 @@
-- name:  Advanced MEG/EEG toolkit at the Donders
+- title:  Advanced MEG/EEG toolkit at the Donders
   link:  /workshop/toolkit2020
 
-- name:  Code of Conduct
+- title:  Code of Conduct
   link:  /workshop/toolkit2020/code_of_conduct
 
-- name:  Lessons learned
+- title:  Lessons learned
   link:  /workshop/toolkit2020/lessons_learned
 
-- name:  Preparation for the online toolkit
+- title:  Preparation for the online toolkit
   link:  /workshop/toolkit2020/preparation
 
-- name:  Test your MATLAB and FieldTrip installation in advance
+- title:  Test your MATLAB and FieldTrip installation in advance
   link:  /workshop/toolkit2020/test_installation
 

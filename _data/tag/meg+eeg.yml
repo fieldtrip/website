@@ -1,21 +1,21 @@
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus/beamformingerf
+- title:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/sensor/preprocessing
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg2014/beamforming
+- title:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/sensor/timefrequency
 
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg2014/dipolefitting
+- title:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /tutorial/source/beamforming
 
-- name:  Details of the auditory oddball combined MEG/EEG dataset
+- title:  Dipole fitting of combined MEG/EEG data
+  link:  /tutorial/source/dipolefitting
+
+- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+  link:  /tutorial/stats/statistics
+
+- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus2015/beamformingerf
+
+- title:  Details of the auditory oddball combined MEG/EEG dataset
   link:  /workshop/natmeg2014/meg_audodd
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg2014/preprocessing
-
-- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg2014/statistics
-
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg2014/timefrequency
 

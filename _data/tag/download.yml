@@ -1,18 +1,18 @@
-- name:  Download the FieldTrip toolbox
+- title:  Download the FieldTrip toolbox
   link:  /download
 
-- name:  I am working at the Donders, should I also download FieldTrip?
-  link:  /faq/download_donders
+- title:  How can I keep track of changes to the code?
+  link:  /faq/development/trackchanges
 
-- name:  I am having problems downloading
-  link:  /faq/download_ftpproblem
+- title:  I am working at the Donders, should I also download FieldTrip?
+  link:  /faq/organization/download_donders
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/download_version
+- title:  I am having problems downloading
+  link:  /faq/organization/download_ftpproblem
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/fieldtrip_downloadversion
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/organization/fieldtrip_downloadversion
 
-- name:  How can I keep track of changes to the code?
-  link:  /faq/trackchanges
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/other/download_version
 

@@ -1,12 +1,15 @@
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/granger_conditional
+- title:  Conditional Granger causality in the frequency domain
+  link:  /example/spectral/granger_conditional
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
+- title:  Connectivity in auditory evoked responses
+  link:  /tutorial/connectivity/connectivity_aef
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- title:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivity_sensor_source
 
-- name:  Simulating and estimating, what about model (mis)match?
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
+
+- title:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti2015/simulation
 

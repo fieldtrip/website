@@ -1,6 +1,6 @@
-- name:  Getting started with AnyWave
-  link:  /getting_started/anywave
+- title:  Getting started with AnyWave
+  link:  /getting_started/othersoftware/anywave
 
-- name:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/epilepsy
+- title:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/source/epilepsy
 

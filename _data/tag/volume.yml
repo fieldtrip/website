@@ -1,18 +1,18 @@
-- name:  How to change the MRI orientation, the voxel size or the field-of-view?
-  link:  /faq/anat_reslice
+- title:  How to change the MRI orientation, the voxel size or the field-of-view?
+  link:  /faq/source/anat_reslice
 
-- name:  My MRI is upside down, is this a problem?
-  link:  /faq/anat_upsidedown
+- title:  My MRI is upside down, is this a problem?
+  link:  /faq/source/anat_upsidedown
 
-- name:  How is anatomical, functional or statistical "volume data" described?
-  link:  /faq/datatype_volume
+- title:  How is anatomical, functional or statistical "volume data" described?
+  link:  /faq/source/datatype_volume
 
-- name:  Getting started with ParaView
-  link:  /getting_started/paraview
+- title:  Getting started with ParaView
+  link:  /getting_started/othersoftware/paraview
 
-- name:  Getting started with Seg3D
-  link:  /getting_started/seg3d
+- title:  Getting started with Seg3D
+  link:  /getting_started/othersoftware/seg3d
 
-- name:  Getting started with SimNIBS
-  link:  /getting_started/simnibs
+- title:  Getting started with SimNIBS
+  link:  /getting_started/othersoftware/simnibs
 

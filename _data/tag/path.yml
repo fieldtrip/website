@@ -1,15 +1,15 @@
-- name:  I am working at the Donders, should I also download FieldTrip?
-  link:  /faq/download_donders
+- title:  Installation and setting up the path
+  link:  /faq/matlab/installation
 
-- name:  Installation and setting up the path
-  link:  /faq/installation
+- title:  Replacements for functions from MathWorks toolboxes
+  link:  /faq/matlab/matlab_replacements
 
-- name:  Replacements for functions from MathWorks toolboxes
-  link:  /faq/matlab_replacements
+- title:  How to select the correct SPM toolbox?
+  link:  /faq/matlab/spmversion
 
-- name:  How to select the correct SPM toolbox?
-  link:  /faq/spmversion
+- title:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/matlab/toolboxes_legacyvsexternal
 
-- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
-  link:  /faq/toolboxes_legacyvsexternal
+- title:  I am working at the Donders, should I also download FieldTrip?
+  link:  /faq/organization/download_donders
 

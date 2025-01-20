@@ -1,12 +1,12 @@
-- name:  Converting an example EMG dataset for sharing in BIDS
-  link:  /example/bids_emg
+- title:  Converting an example EMG dataset for sharing in BIDS
+  link:  /example/other/bids_emg
 
-- name:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/trialdef_emg
+- title:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/preproc/trialdef_emg
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
 

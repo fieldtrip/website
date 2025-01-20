@@ -1,21 +1,21 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Getting started with Cerca OPM data
-  link:  /getting_started/cerca
+- title:  Getting started with Cerca OPM data
+  link:  /getting_started/meg/cerca
 
-- name:  Getting started with FieldLine OPM data
-  link:  /getting_started/fieldline
+- title:  Getting started with FieldLine OPM data
+  link:  /getting_started/meg/fieldline
 
-- name:  Getting started with OPM data recorded at the FIL
-  link:  /getting_started/opm_fil
+- title:  Getting started with OPM data recorded at the FIL
+  link:  /getting_started/meg/opm_fil
 
-- name:  Template 2-D layouts for plotting
+- title:  Template 2-D layouts for plotting
   link:  /template/layout
 
-- name:  Coregistration of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/coregistration_opm
+- title:  Preprocessing of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/sensor/preprocessing_opm
 
-- name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/preprocessing_opm
+- title:  Coregistration of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/source/coregistration_opm
 

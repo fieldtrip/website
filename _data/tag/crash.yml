@@ -1,6 +1,6 @@
-- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/databrowser_crash
+- title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
+  link:  /faq/matlab/databrowser_crash
 
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/ica_crash
+- title:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/preproc/artifact/ica_crash
 

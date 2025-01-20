@@ -1,27 +1,27 @@
-- name:  MEG-UK 2015 meeting
+- title:  MEG-UK 2015 meeting
   link:  /workshop/meg-uk-2015
 
-- name:  Multimodal faces dataset
+- title:  Multimodal faces dataset
   link:  /workshop/meg-uk-2015/dataset
 
-- name:  SPM DCM demo
+- title:  SPM DCM demo
   link:  /workshop/meg-uk-2015/dcm_tutorial
 
-- name:  FieldTrip beamformer demo
+- title:  FieldTrip beamformer demo
   link:  /workshop/meg-uk-2015/fieldtrip-beamformer-demo
 
-- name:  FieldTrip connectivity demo
+- title:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 
-- name:  FieldTrip stats demo
+- title:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
 
-- name:  General instructions for MATLAB demo's
+- title:  General instructions for MATLAB demo's
   link:  /workshop/meg-uk-2015/general
 
-- name:  SPM Source reconstruction demo
+- title:  SPM Source reconstruction demo
   link:  /workshop/meg-uk-2015/spm_source
 
-- name:  SPM Sensor-level stats demo
+- title:  SPM Sensor-level stats demo
   link:  /workshop/meg-uk-2015/spm_stats
 

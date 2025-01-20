@@ -1,15 +1,15 @@
-- name:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
   link:  /development/realtime/rda
 
-- name:  How can I anonymize or deidentify a BrainVision dataset?
-  link:  /faq/anonymization_brainvision
+- title:  How can I anonymize or deidentify a BrainVision dataset?
+  link:  /faq/other/anonymization_brainvision
 
-- name:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/brainvision
+- title:  Getting started with BrainVision Analyzer and Easycap
+  link:  /getting_started/eeg/brainvision
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 

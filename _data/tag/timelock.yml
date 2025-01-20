@@ -1,48 +1,48 @@
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/dipolefit_somatosensory_erf
+- title:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/source/dipolefit_somatosensory_erf
 
-- name:  What kind of filters can I apply to my data?
-  link:  /faq/preproc_filtertypes
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
 
-- name:  Reference documentation
+- title:  Reference documentation
   link:  /reference
 
-- name:  Cluster-based permutation tests on event-related fields
-  link:  /tutorial/cluster_permutation_timelock
+- title:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/intro/introduction
 
-- name:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/eventrelatedaveraging
+- title:  Event-related averaging and MEG planar gradient
+  link:  /tutorial/sensor/eventrelatedaveraging
 
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
+- title:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor/sensor_analysis
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
 
-- name:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/mvpa_light
+- title:  Cluster-based permutation tests on event-related fields
+  link:  /tutorial/stats/cluster_permutation_timelock
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
+- title:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/stats/eventrelatedstatistics
 
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
+- title:  Classification of event-related MEG data using MVPA-Light
+  link:  /tutorial/stats/mvpa_light
 
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
+- title:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
-- name:  Group analysis
+- title:  Group analysis
   link:  /workshop/paris2019/handson_groupanalysis
 
-- name:  From raw data to ERP
+- title:  From raw data to ERP
   link:  /workshop/paris2019/handson_raw2erp
 
-- name:  Group-level statistics with parametric and non-parametric methods
+- title:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
-- name:  Preprocessing raw data and computing ERPs/ERFs
+- title:  Preprocessing raw data and computing ERPs/ERFs
   link:  /workshop/practicalmeeg2022/handson_raw2erp
 

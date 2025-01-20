@@ -1,9 +1,9 @@
-- name:  CuttingEEG X workshop at the Donders
+- title:  CuttingEEG X workshop at the Donders
   link:  /workshop/cuttingeegx
 
-- name:  SQUIDs versus OPMs
+- title:  SQUIDs versus OPMs
   link:  /workshop/cuttingeegx/squids_vs_opms
 
-- name:  Test your MATLAB and FieldTrip installation in advance
+- title:  Test your MATLAB and FieldTrip installation in advance
   link:  /workshop/cuttingeegx/test_installation
 

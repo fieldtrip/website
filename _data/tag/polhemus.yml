@@ -1,9 +1,9 @@
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/fiducials_definition
+- title:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/source/fiducials_definition
 
-- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/structuresensor
+- title:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
+  link:  /faq/source/structuresensor
 
-- name:  Coregistration of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/coregistration_opm
+- title:  Coregistration of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/source/coregistration_opm
 

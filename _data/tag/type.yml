@@ -1,15 +1,15 @@
-- name:  How are the various MATLAB data structures defined?
-  link:  /faq/datatype
+- title:  How are the various MATLAB data structures defined?
+  link:  /faq/development/datatype
 
-- name:  How is the segmentation defined?
-  link:  /faq/datatype_segmentation
+- title:  What does a typical call to a FieldTrip function look like?
+  link:  /faq/development/fieldtrip_functioncall
 
-- name:  How is anatomical, functional or statistical "volume data" described?
-  link:  /faq/datatype_volume
+- title:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/preproc/events/inspect_events
 
-- name:  What does a typical call to a FieldTrip function look like?
-  link:  /faq/fieldtrip_functioncall
+- title:  How is the segmentation defined?
+  link:  /faq/source/datatype_segmentation
 
-- name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/inspect_events
+- title:  How is anatomical, functional or statistical "volume data" described?
+  link:  /faq/source/datatype_volume
 

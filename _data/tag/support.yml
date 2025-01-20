@@ -1,21 +1,21 @@
-- name:  About the FieldTrip project
+- title:  About the FieldTrip project
   link:  /about
 
-- name:  Contribute
+- title:  Contribute
   link:  /development/contribute
 
-- name:  Reporting issues
+- title:  Reporting issues
   link:  /development/issues
 
-- name:  Email discussion list
+- title:  Email discussion list
   link:  /discussion_list
 
-- name:  How to ask good questions to the community?
-  link:  /faq/emaillist_howtoask
+- title:  How to ask good questions to the community?
+  link:  /faq/organization/emaillist_howtoask
 
-- name:  Privacy Policy
+- title:  Privacy Policy
   link:  /privacy
 
-- name:  Support
+- title:  Support
   link:  /support
 

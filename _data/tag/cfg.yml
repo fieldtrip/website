@@ -1,15 +1,15 @@
-- name:  Index of all configuration options
+- title:  Index of all configuration options
   link:  /configuration
 
-- name:  How to use ft_checkconfig
-  link:  /example/checkconfig
+- title:  How to use ft_checkconfig
+  link:  /example/other/checkconfig
 
-- name:  Reference documentation
+- title:  Reference documentation
   link:  /reference
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
+- title:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/intro/introduction
 
-- name:  FieldTrip Walkthrough
+- title:  FieldTrip Walkthrough
   link:  /walkthrough
 

@@ -1,18 +1,18 @@
-- name:  Accessing the FieldTrip source code through CVS
+- title:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- name:  Accessing the FieldTrip source code through Git
+- title:  Accessing the FieldTrip source code through Git
   link:  /development/git
 
-- name:  Accessing the FieldTrip source code through SVN
+- title:  Accessing the FieldTrip source code through SVN
   link:  /development/svn
 
-- name:  How should I share example data with the email list or developers?
-  link:  /faq/datasharing
+- title:  Why was FieldTrip maintained in SVN and not in Git?
+  link:  /faq/development/svnversusgit
 
-- name:  Why was FieldTrip maintained in SVN and not in Git?
-  link:  /faq/svnversusgit
+- title:  How can I keep track of changes to the code?
+  link:  /faq/development/trackchanges
 
-- name:  How can I keep track of changes to the code?
-  link:  /faq/trackchanges
+- title:  How should I share example data with the email list or developers?
+  link:  /faq/organization/datasharing
 

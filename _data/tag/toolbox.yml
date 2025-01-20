@@ -1,18 +1,18 @@
-- name:  Which external toolboxes are used by FieldTrip?
-  link:  /faq/external
+- title:  Which external toolboxes are used by FieldTrip?
+  link:  /faq/matlab/external
 
-- name:  Replacements for functions from MathWorks toolboxes
-  link:  /faq/matlab_replacements
+- title:  Replacements for functions from MathWorks toolboxes
+  link:  /faq/matlab/matlab_replacements
 
-- name:  What are the MATLAB requirements for using FieldTrip?
-  link:  /faq/matlab_requirements
+- title:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab/matlab_requirements
 
-- name:  What are the MATLAB and external requirements?
-  link:  /faq/requirements
+- title:  What are the MATLAB and external requirements?
+  link:  /faq/matlab/requirements
 
-- name:  How to select the correct SPM toolbox?
-  link:  /faq/spmversion
+- title:  How to select the correct SPM toolbox?
+  link:  /faq/matlab/spmversion
 
-- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
-  link:  /faq/toolboxes_legacyvsexternal
+- title:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/matlab/toolboxes_legacyvsexternal
 

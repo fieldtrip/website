@@ -1,12 +1,12 @@
-- name:  Analysis of monkey ECoG recordings
-  link:  /tutorial/monkey_ecog
+- title:  Analysis of monkey ECoG recordings
+  link:  /tutorial/intracranial/monkey_ecog
 
-- name:  Channel and source analysis of mouse EEG
-  link:  /tutorial/mouse_eeg
+- title:  Channel and source analysis of mouse EEG
+  link:  /tutorial/intracranial/mouse_eeg
 
-- name:  Preprocessing and analysis of spike-train data
-  link:  /tutorial/spike
+- title:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/intracranial/spike
 
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
+- title:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/intracranial/spikefield
 

@@ -1,60 +1,60 @@
-- name:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/dss_ecg
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
 
-- name:  How to incorporate head movements in MEG analysis
-  link:  /example/headmovement_meg
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
 
-- name:  Independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/ica_ecg
+- title:  Independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/preproc/ica_eog
 
-- name:  Independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/ica_eog
+- title:  Combine MEG with Eyelink eyetracker data
+  link:  /example/preproc/meg_eyelink
 
-- name:  Combine MEG with Eyelink eyetracker data
-  link:  /example/meg_eyelink
+- title:  How to incorporate head movements in MEG analysis
+  link:  /example/sensor/headmovement_meg
 
-- name:  How can I interpret the different types of padding in FieldTrip?
-  link:  /faq/artifact_padding
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  How can I consistently represent artifacts in my data?
-  link:  /faq/artifact_representation
+- title:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/plotting/opacityrendering
 
-- name:  How can I use the databrowser?
-  link:  /faq/databrowser
+- title:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/preproc/artifact/artifact_padding
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  How can I consistently represent artifacts in my data?
+  link:  /faq/preproc/artifact/artifact_representation
 
-- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/dftfilter_residual
+- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/preproc/artifact/dftfilter_residual
 
-- name:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/opacityrendering
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
 
-- name:  What kind of filters can I apply to my data?
-  link:  /faq/preproc_filtertypes
+- title:  How does the filter padding in preprocessing work?
+  link:  /faq/preproc/artifact/preproc_padding
 
-- name:  How does the filter padding in preprocessing work?
-  link:  /faq/preproc_padding
+- title:  How can I use the databrowser?
+  link:  /faq/preproc/databrowser
 
-- name:  Why does my TFR look strange (part I, demeaning)?
-  link:  /faq/tfr_strangedemean
+- title:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/spectral/tfr_strangedemean
 
-- name:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/tfr_strangedetrend
+- title:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/spectral/tfr_strangedetrend
 
-- name:  Introduction on dealing with artifacts
-  link:  /tutorial/artifacts
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
 
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
 
-- name:  Cleaning artifacts using ICA
-  link:  /tutorial/ica_artifact_cleaning
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
 
-- name:  Visual or manual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
 
-- name:  Dealing with artifacts
+- title:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
 

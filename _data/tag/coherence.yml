@@ -1,36 +1,36 @@
-- name:  Effect of SNR on Coherence
-  link:  /example/coherence_snr
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
 
-- name:  Correlation analysis of fMRI data
-  link:  /example/fmri_correlationanalysis
+- title:  Effect of SNR on Coherence
+  link:  /example/spectral/coherence_snr
 
-- name:  What is the difference between coherence and coherency?
-  link:  /faq/coherence_coherency
+- title:  What is the difference between coherence and coherency?
+  link:  /faq/spectral/coherence_coherency
 
-- name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/datatype_freq
+- title:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/spectral/datatype_freq
 
-- name:  How can I compute inter-trial coherence?
-  link:  /faq/itc
+- title:  How can I compute inter-trial coherence?
+  link:  /faq/spectral/itc
 
-- name:  How to interpret the sign of the phase slope index?
-  link:  /faq/phaseslopeindex
+- title:  How to interpret the sign of the phase slope index?
+  link:  /faq/spectral/phaseslopeindex
 
-- name:  References to implemented methods
+- title:  References to implemented methods
   link:  /references_methods
 
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- title:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivity_sensor_source
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/source/beamformingextended
 
-- name:  Simulating and estimating, what about model (mis)match?
+- title:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti2015/simulation
 

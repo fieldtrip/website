@@ -1,12 +1,12 @@
-- name:  Creation of headmodels and sourcemodels for source reconstruction
+- title:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/paris2019/handson_anatomy
 
-- name:  Reconstructing source activity using beamformers
+- title:  Reconstructing source activity using beamformers
   link:  /workshop/paris2019/handson_sourceanalysis
 
-- name:  Creation of headmodels and sourcemodels for source reconstruction
+- title:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
-- name:  Reconstructing source activity using beamformers
+- title:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

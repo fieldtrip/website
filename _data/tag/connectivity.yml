@@ -1,33 +1,36 @@
-- name:  Connectivity estimates for EEG/MEG time series data
+- title:  Connectivity estimates for EEG/MEG time series data
   link:  /development/module/connectivity
 
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/granger_conditional
+- title:  Conditional Granger causality in the frequency domain
+  link:  /example/spectral/granger_conditional
 
-- name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/datatype_freq
+- title:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/spectral/datatype_freq
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
+- title:  Connectivity in auditory evoked responses
+  link:  /tutorial/connectivity/connectivity_aef
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- title:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivity_sensor_source
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_eeg
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_eeg
 
-- name:  Simulating and estimating, what about model (mis)match?
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_old
+
+- title:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti2015/simulation
 
-- name:  FieldTrip connectivity demo
+- title:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 

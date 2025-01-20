@@ -1,30 +1,30 @@
-- name:  Converting an example video dataset for sharing in BIDS
-  link:  /example/bids_video
+- title:  Converting an example video dataset for sharing in BIDS
+  link:  /example/other/bids_video
 
-- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
-  link:  /example/video_eeg
+- title:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/plotting/video_eeg
 
-- name:  How can I play back EEG/MEG and synchronous audio or video?
-  link:  /faq/audiovideo
+- title:  Are the FieldTrip lectures available on video?
+  link:  /faq/other/video
 
-- name:  Are the FieldTrip lectures available on video?
-  link:  /faq/video
+- title:  How can I play back EEG/MEG and synchronous audio or video?
+  link:  /faq/plotting/audiovideo
 
-- name:  Getting started with video data
-  link:  /getting_started/video
+- title:  Getting started with video data
+  link:  /getting_started/otherdata/video
 
-- name:  Video lectures and tutorials
+- title:  Video lectures and tutorials
   link:  /video
 
-- name:  Workshop at BRAMS Institute, Montreal (2012)
+- title:  Workshop at BRAMS Institute, Montreal (2012)
   link:  /video/montreal2012
 
-- name:  FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
+- title:  FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
   link:  /video/natmeg
 
-- name:  FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)
+- title:  FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)
   link:  /video/stlouis2011
 
-- name:  FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)
+- title:  FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)
   link:  /video/stockholm2014
 

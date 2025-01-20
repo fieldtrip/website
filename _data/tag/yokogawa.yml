@@ -1,9 +1,9 @@
-- name:  MEG dataformats
+- title:  MEG dataformats
   link:  /dataformat/meg
 
-- name:  Getting started with Yokogawa data
-  link:  /getting_started/yokogawa
+- title:  Getting started with Yokogawa data
+  link:  /getting_started/meg/yokogawa
 
-- name:  Template 3-D gradiometer descriptions
+- title:  Template 3-D gradiometer descriptions
   link:  /template/gradiometer
 

@@ -1,21 +1,21 @@
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/anat_landmarks
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- name:  Where is the anterior commissure?
-  link:  /faq/anterior_commissure
+- title:  Where is the anterior commissure?
+  link:  /faq/source/anterior_commissure
 
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/coordsys
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
-- name:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/fiducial
+- title:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/source/fiducial
 
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/fiducials_definition
+- title:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/source/fiducials_definition
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/sensors_definition
+- title:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/source/sensors_definition
 
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 

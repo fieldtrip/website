@@ -1,9 +1,9 @@
-- name:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
   link:  /development/realtime/biosemi
 
-- name:  Example analysis pipeline for Biosemi data
-  link:  /example/biosemi
+- title:  Example analysis pipeline for Biosemi data
+  link:  /example/other/biosemi
 
-- name:  Getting started with Biosemi BDF data
-  link:  /getting_started/biosemi
+- title:  Getting started with Biosemi BDF data
+  link:  /getting_started/eeg/biosemi
 

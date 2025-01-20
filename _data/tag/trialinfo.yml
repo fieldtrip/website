@@ -1,6 +1,6 @@
-- name:  Is it possible to keep track of trial-specific information in my analysis pipeline?
-  link:  /faq/trialinfo
+- title:  Is it possible to keep track of trial-specific information in my analysis pipeline?
+  link:  /faq/preproc/events/trialinfo
 
-- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/trialinfo_trl
+- title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
+  link:  /faq/preproc/trialinfo_trl
 

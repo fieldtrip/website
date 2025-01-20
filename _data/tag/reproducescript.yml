@@ -1,9 +1,9 @@
-- name:  Making your analysis pipeline reproducible using reproducescript
-  link:  /example/reproducescript
+- title:  Making your analysis pipeline reproducible using reproducescript
+  link:  /example/other/reproducescript
 
-- name:  Using reproducescript on a full study
-  link:  /example/reproducescript_andersen
+- title:  Using reproducescript on a full study
+  link:  /example/other/reproducescript_andersen
 
-- name:  Using reproducescript for a group analysis
-  link:  /example/reproducescript_group
+- title:  Using reproducescript for a group analysis
+  link:  /example/other/reproducescript_group
 

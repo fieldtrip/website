@@ -1,30 +1,30 @@
-- name:  Using General Linear Modeling on time series data
-  link:  /example/glm_timeseries
+- title:  Using General Linear Modeling on time series data
+  link:  /example/stats/glm_timeseries
 
-- name:  Using General Linear Modeling over trials
-  link:  /example/glm_trials
+- title:  Using General Linear Modeling over trials
+  link:  /example/stats/glm_trials
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
-
-- name:  Details on the EEG language dataset
+- title:  Details on the EEG language dataset
   link:  /tutorial/eeg_language
 
-- name:  Convert the EEG language dataset for sharing in BIDS
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
+
+- title:  Convert the EEG language dataset for sharing in BIDS
   link:  /workshop/cuttingeeg2021/bids_language
 
-- name:  Time-frequency analysis on short and long timescales
+- title:  Time-frequency analysis on short and long timescales
   link:  /workshop/cuttingeeg2021/tutorial_freq
 
-- name:  FieldTrip workshop in Madrid
+- title:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019
 
-- name:  Getting started with EEG data, quality checks and ERPs
+- title:  Getting started with EEG data, quality checks and ERPs
   link:  /workshop/madrid2019/tutorial_erp
 
-- name:  Time-frequency and spectral analysis
+- title:  Time-frequency and spectral analysis
   link:  /workshop/madrid2019/tutorial_freq
 

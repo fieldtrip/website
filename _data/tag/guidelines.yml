@@ -1,18 +1,18 @@
-- name:  Guidelines
+- title:  Guidelines
   link:  /development/guideline
 
-- name:  Code guidelines
+- title:  Code guidelines
   link:  /development/guideline/code
 
-- name:  Communication guidelines
+- title:  Communication guidelines
   link:  /development/guideline/communication
 
-- name:  Documentation guidelines this is the title, it should also be the first top-level heading
+- title:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
 
-- name:  Template guidelines
+- title:  Template guidelines
   link:  /development/guideline/templates
 
-- name:  Website syntax and formatting Website syntax and formatting New page title
+- title:  Website syntax and formatting Website syntax and formatting New page title
   link:  /development/guideline/website
 

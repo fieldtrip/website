@@ -1,48 +1,48 @@
-- name:  Converting an example NIRS dataset for sharing in BIDS
-  link:  /example/bids_nirs
+- title:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/other/bids_nirs
 
-- name:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
-  link:  /example/nirs_fingertapping
+- title:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/plotting/nirs_layout
 
-- name:  Using GLM to analyze NIRS timeseries data
-  link:  /example/nirs_glm
+- title:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/plotting/video_eeg
 
-- name:  Creating a layout for plotting NIRS optodes and channels
-  link:  /example/nirs_layout
+- title:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+  link:  /example/sensor/nirs_fingertapping
 
-- name:  Analyzing NIRS data recorded during listening to and repeating speech
-  link:  /example/nirs_speech
+- title:  Analyzing NIRS data recorded during listening to and repeating speech
+  link:  /example/sensor/nirs_speech
 
-- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
-  link:  /example/video_eeg
+- title:  Using GLM to analyze NIRS timeseries data
+  link:  /example/stats/nirs_glm
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Getting started with Artinis NIRS data
-  link:  /getting_started/artinis
+- title:  Getting started with Artinis NIRS data
+  link:  /getting_started/nirs/artinis
 
-- name:  Getting started with Hitachi NIRS data
-  link:  /getting_started/hitachi
+- title:  Getting started with Hitachi NIRS data
+  link:  /getting_started/nirs/hitachi
 
-- name:  Getting started with Homer
-  link:  /getting_started/homer
+- title:  Getting started with NIRx NIRS data
+  link:  /getting_started/nirs/nirx
 
-- name:  Getting started with NIRx NIRS data
-  link:  /getting_started/nirx
+- title:  Getting started with Shimadzu NIRS data
+  link:  /getting_started/nirs/shimadzu
 
-- name:  Getting started with Shimadzu NIRS data
-  link:  /getting_started/shimadzu
+- title:  Getting started with SNIRF data
+  link:  /getting_started/nirs/snirf
 
-- name:  Getting started with SNIRF data
-  link:  /getting_started/snirf
+- title:  Getting started with Homer
+  link:  /getting_started/othersoftware/homer
 
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
+- title:  Preprocessing and averaging of multi-channel NIRS data
+  link:  /tutorial/nirs/nirs_multichannel
 
-- name:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/nirs_multichannel
+- title:  Preprocessing and averaging of single-channel NIRS data
+  link:  /tutorial/nirs/nirs_singlechannel
 
-- name:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs_singlechannel
+- title:  Specifying the channel layout for plotting
+  link:  /tutorial/plotting/layout
 
