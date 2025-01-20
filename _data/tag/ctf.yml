@@ -1,7 +1,7 @@
 - title:  MEG dataformats
   link:  /dataformat/meg
 
-- title:  CTF
+- title:  Streaming realtime data from CTF
   link:  /development/realtime/ctf
 
 - title:  Converting an example MEG dataset for sharing in BIDS

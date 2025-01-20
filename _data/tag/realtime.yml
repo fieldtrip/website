@@ -43,7 +43,7 @@
 - title:  Closing the loop in a real-time BCI application
   link:  /development/realtime/closing_the_loop
 
-- title:  CTF
+- title:  Streaming realtime data from CTF
   link:  /development/realtime/ctf
 
 - title:  Suggested improvements for compatibility across versions

@@ -82,9 +82,6 @@
 - title:  Cluster-based permutation tests on event-related fields
   link:  /tutorial/stats/cluster_permutation_timelock
 
-- title:  Plotting data at the channel and source level
-  link:  /tutorial/stats/plotting
-
 - title:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms/tms-eeg
 
