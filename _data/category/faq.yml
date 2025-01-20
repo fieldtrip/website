@@ -1,561 +1,558 @@
-- name:  Frequently Asked Questions
+- title:  Frequently asked questions
   link:  /faq
 
-- name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
-  link:  /faq/acpc
+- title:  How are the various MATLAB data structures defined?
+  link:  /faq/development/datatype
 
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/anat_coreg
+- title:  What does a typical call to a FieldTrip function look like?
+  link:  /faq/development/fieldtrip_functioncall
 
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/anat_dicom2ctf
+- title:  How can I debug my analysis script if a FieldTrip function gives an error?
+  link:  /faq/development/matlab_debugging
 
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/anat_landmarks
+- title:  Why was FieldTrip maintained in SVN and not in Git?
+  link:  /faq/development/svnversusgit
 
-- name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/anat_plottingconvention
+- title:  How can I keep track of changes to the code?
+  link:  /faq/development/trackchanges
 
-- name:  How to change the MRI orientation, the voxel size or the field-of-view?
-  link:  /faq/anat_reslice
+- title:  How can I distribute a batch of jobs?
+  link:  /faq/distcomp/distributed_batch
 
-- name:  My MRI is upside down, is this a problem?
-  link:  /faq/anat_upsidedown
+- title:  What are the different approaches I can take for distributed computing?
+  link:  /faq/distcomp/distributed_computing
 
-- name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/anat_upsidedownplotting
+- title:  How to get started with the MATLAB distributed computing toolbox?
+  link:  /faq/distcomp/distributed_matlab
 
-- name:  How can I anonymize or deidentify an anatomical MRI?
-  link:  /faq/anonymization_anatomical
+- title:  How to get started with distributed computing using qsub?
+  link:  /faq/distcomp/distributed_qsub
 
-- name:  How can I anonymize or deidentify a BrainVision dataset?
-  link:  /faq/anonymization_brainvision
+- title:  How to compile MATLAB code into stand-alone executables?
+  link:  /faq/distcomp/matlab_compile
 
-- name:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/anonymization_ctf
+- title:  How can I change the head localization in a CTF dataset?
+  link:  /faq/experiment/ctf_changeheadloc
 
-- name:  How can I anonymize or deidentify DICOM files?
-  link:  /faq/anonymization_dicom
+- title:  How can I monitor a subject's head position during a MEG session?
+  link:  /faq/experiment/headlocalizer
 
-- name:  How can I anonymize data processed in FieldTrip?
-  link:  /faq/anonymization_fieldtripdata
+- title:  How can I visualize the neuromag head position indicator coils?
+  link:  /faq/experiment/neuromag_hpi
 
-- name:  Where is the anterior commissure?
-  link:  /faq/anterior_commissure
+- title:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
+  link:  /faq/experiment/psychtoolbox_macbook
 
-- name:  How can I append the files of two separate recordings?
-  link:  /faq/append_files
+- title:  What kind of cable do I need for a serial port connection between two computers?
+  link:  /faq/experiment/serialport
 
-- name:  How can I interpret the different types of padding in FieldTrip?
-  link:  /faq/artifact_padding
+- title:  How can I compile the mex files and command-line executable?
+  link:  /faq/matlab/compile
 
-- name:  How can I consistently represent artifacts in my data?
-  link:  /faq/artifact_representation
+- title:  How can I compile the mex files on macOS?
+  link:  /faq/matlab/compile_osx
 
-- name:  How can I play back EEG/MEG and synchronous audio or video?
-  link:  /faq/audiovideo
+- title:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/matlab/compile_windows
 
-- name:  How can I test whether a behavioral measure is phasic?
-  link:  /faq/behavior_cosinefit
+- title:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/matlab/compiled
 
-- name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
-  link:  /faq/behavior_signalcorrelation
+- title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
+  link:  /faq/matlab/databrowser_crash
 
-- name:  How can I fine-tune my BEM volume conduction model?
-  link:  /faq/bem_finetune
+- title:  Which external toolboxes are used by FieldTrip?
+  link:  /faq/matlab/external
 
-- name:  How should I specify the coordinate systems in a BIDS dataset?
-  link:  /faq/bids_coordsystem
+- title:  How many lines of code does FieldTrip consist of?
+  link:  /faq/matlab/fieldtrip_codelines
 
-- name:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/capmapping
+- title:  Installation and setting up the path
+  link:  /faq/matlab/installation
 
-- name:  Which methodological details should I report in an EEG/MEG manuscript?
-  link:  /faq/checklist
+- title:  MATLAB version 7.3 (2006b) crashes when I try to do ...
+  link:  /faq/matlab/matlab_crash73
 
-- name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
-  link:  /faq/clusterstats_correcttail
+- title:  MATLAB complains about a missing or invalid mex file, what should I do?
+  link:  /faq/matlab/matlab_mexinvalid
 
-- name:  How to test an interaction effect using cluster-based permutation tests?
-  link:  /faq/clusterstats_interaction
+- title:  MATLAB does not see the functions in the "private" directory
+  link:  /faq/matlab/matlab_privatefunctions
 
-- name:  How NOT to interpret results from a cluster-based permutation test
-  link:  /faq/clusterstats_interpretation
+- title:  Replacements for functions from MathWorks toolboxes
+  link:  /faq/matlab/matlab_replacements
 
-- name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
-  link:  /faq/clusterstats_iuwcvar
+- title:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab/matlab_requirements
 
-- name:  Should I use t or F values for cluster-based permutation tests?
-  link:  /faq/clusterstats_teststatistic
+- title:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/matlab/mex_osx
 
-- name:  What is the difference between coherence and coherency?
-  link:  /faq/coherence_coherency
+- title:  Can I use Octave instead of MATLAB?
+  link:  /faq/matlab/octave
 
-- name:  What does the coilaccuracy parameter do?
-  link:  /faq/coilaccuracy
+- title:  Why are so many of the interesting functions in the private directories?
+  link:  /faq/matlab/privatefunctions_why
 
-- name:  Which colormaps are supported?
-  link:  /faq/colormap
+- title:  What are the MATLAB and external requirements?
+  link:  /faq/matlab/requirements
 
-- name:  How can I compile the mex files and command-line executable?
-  link:  /faq/compile
+- title:  How to select the correct SPM toolbox?
+  link:  /faq/matlab/spmversion
 
-- name:  How can I compile the mex files on macOS?
-  link:  /faq/compile_osx
+- title:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/matlab/toolboxes_legacyvsexternal
 
-- name:  How can I compile the mex files on 64-bit Windows?
-  link:  /faq/compile_windows
+- title:  How should I share example data with the email list or developers?
+  link:  /faq/organization/datasharing
 
-- name:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/compiled
+- title:  Can I get an offline version of the documentation on the website?
+  link:  /faq/organization/documentation_offline
 
-- name:  What is the conductivity of the brain, CSF, skull and skin tissue?
-  link:  /faq/conductivity_defaults
+- title:  I am working at the Donders, should I also download FieldTrip?
+  link:  /faq/organization/download_donders
 
-- name:  Why should I set continuous to yes for CTF data?
-  link:  /faq/continuous
+- title:  I am having problems downloading
+  link:  /faq/organization/download_ftpproblem
 
-- name:  How can I convert one dataformat into an other?
-  link:  /faq/convert_dataformat
+- title:  Why am I receiving warnings about too many bouncing emails?
+  link:  /faq/organization/emaillist_bounces
 
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/coordsys
+- title:  How to ask good questions to the community?
+  link:  /faq/organization/emaillist_howtoask
 
-- name:  How can I change the head localization in a CTF dataset?
-  link:  /faq/ctf_changeheadloc
+- title:  Why am I not allowed to post to the discussion list?
+  link:  /faq/organization/emaillist_nopost
 
-- name:  I am having problems reading the CTF .hc headcoordinates file
-  link:  /faq/ctf_fixhc
+- title:  Why am I not receiving emails from the discussion list?
+  link:  /faq/organization/emaillist_noreceive
 
-- name:  How can I fix a corrupt CTF meg4 file?
-  link:  /faq/ctf_fixmeg4
+- title:  Why is my message rejected from the email discussion list?
+  link:  /faq/organization/emaillist_rejected
 
-- name:  How can I fix a corrupt CTF res4 header file?
-  link:  /faq/ctf_fixres4
+- title:  How many people are subscribed to the email discussion list?
+  link:  /faq/organization/emaillist_subscribers
 
-- name:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/ctf_readcorrupted
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/organization/fieldtrip_downloadversion
 
-- name:  How does the CTF higher-order gradiometer work?
-  link:  /faq/ctf_syntheticgradient
+- title:  Why is FieldTrip developed separately from EEGLAB?
+  link:  /faq/organization/fieldtrip_eeglab
 
-- name:  How can I share my MEG data?
-  link:  /faq/data_sharing
+- title:  How should I refer to FieldTrip in my publication?
+  link:  /faq/organization/fieldtrip_reference
 
-- name:  How can I use the databrowser?
-  link:  /faq/databrowser
+- title:  Can I use the FieldTrip logo on my poster?
+  link:  /faq/organization/fieldtriplogo
 
-- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/databrowser_crash
+- title:  How can I anonymize or deidentify an anatomical MRI?
+  link:  /faq/other/anonymization_anatomical
 
-- name:  What dataformats are supported?
-  link:  /faq/dataformat
+- title:  How can I anonymize or deidentify a BrainVision dataset?
+  link:  /faq/other/anonymization_brainvision
 
-- name:  How can I import my own data format?
-  link:  /faq/dataformat_own
+- title:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/other/anonymization_ctf
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/datasets
+- title:  How can I anonymize or deidentify DICOM files?
+  link:  /faq/other/anonymization_dicom
 
-- name:  How should I share example data with the email list or developers?
-  link:  /faq/datasharing
+- title:  How can I anonymize data processed in FieldTrip?
+  link:  /faq/other/anonymization_fieldtripdata
 
-- name:  How are the various MATLAB data structures defined?
-  link:  /faq/datatype
+- title:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/other/bids_coordsystem
 
-- name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/datatype_freq
+- title:  Can I compare EEG channels between different electrode caps?
+  link:  /faq/other/capmapping
 
-- name:  What kind of volume conduction models of the head (head models) are implemented?
-  link:  /faq/datatype_headmodel
+- title:  Which methodological details should I report in an EEG/MEG manuscript?
+  link:  /faq/other/checklist
 
-- name:  How is the segmentation defined?
-  link:  /faq/datatype_segmentation
+- title:  How can I share my MEG data?
+  link:  /faq/other/data_sharing
 
-- name:  How is anatomical, functional or statistical "volume data" described?
-  link:  /faq/datatype_volume
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
-- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/dftfilter_residual
+- title:  Which version of FieldTrip should I download?
+  link:  /faq/other/download_version
 
-- name:  Where can I find the dipoli command-line executable?
-  link:  /faq/dipoli_filelocation
+- title:  Where can I find open access MEG/EEG data?
+  link:  /faq/other/open_data
 
-- name:  How can I deal with a discontinuous Neuralynx LFP recording?
-  link:  /faq/discontinuous_neuralynx
+- title:  How do I prevent FieldTrip from printing the time and memory after each function call?
+  link:  /faq/other/showcallinfo
 
-- name:  How can I distribute a batch of jobs?
-  link:  /faq/distributed_batch
+- title:  What are the units of the data and of the derived results?
+  link:  /faq/other/units
 
-- name:  What are the different approaches I can take for distributed computing?
-  link:  /faq/distributed_computing
+- title:  Are the FieldTrip lectures available on video?
+  link:  /faq/other/video
 
-- name:  How to get started with the MATLAB distributed computing toolbox?
-  link:  /faq/distributed_matlab
+- title:  Can I organize my own FieldTrip workshop?
+  link:  /faq/other/workshop
 
-- name:  How to get started with distributed computing using qsub?
-  link:  /faq/distributed_qsub
+- title:  How should I prepare for the upcoming FieldTrip workshop?
+  link:  /faq/other/workshop_preparation
 
-- name:  Can I get an offline version of the documentation on the website?
-  link:  /faq/documentation_offline
+- title:  What is the plotting convention for anatomical MRIs?
+  link:  /faq/plotting/anat_plottingconvention
 
-- name:  I am working at the Donders, should I also download FieldTrip?
-  link:  /faq/download_donders
+- title:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
+  link:  /faq/plotting/anat_upsidedownplotting
 
-- name:  I am having problems downloading
-  link:  /faq/download_ftpproblem
+- title:  How can I play back EEG/MEG and synchronous audio or video?
+  link:  /faq/plotting/audiovideo
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/download_version
+- title:  Which colormaps are supported?
+  link:  /faq/plotting/colormap
 
-- name:  How can I read all channels from an EDF file that contains multiple sampling rates?
-  link:  /faq/edf2fieldtrip
+- title:  What is a good way to save images for later processing in other software?
+  link:  /faq/plotting/figure_export
 
-- name:  How can I determine the onset of an effect?
-  link:  /faq/effectonset
+- title:  I am having problems printing figures that use opacity
+  link:  /faq/plotting/figure_opacity
 
-- name:  How can I read EGI mff data without the JVM?
-  link:  /faq/egi_nojvm
+- title:  How can I visualize a localspheres volume conductor model?
+  link:  /faq/plotting/headmodel_localspheres
 
-- name:  Why am I receiving warnings about too many bouncing emails?
-  link:  /faq/emaillist_bounces
+- title:  How do I construct a layout file for the plotting functions?
+  link:  /faq/plotting/layout_creation
 
-- name:  How to ask good questions to the community?
-  link:  /faq/emaillist_howtoask
+- title:  What is the format of the layout file which is used for plotting?
+  link:  /faq/plotting/layout_fileformat
 
-- name:  Why am I not allowed to post to the discussion list?
-  link:  /faq/emaillist_nopost
+- title:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/plotting/layout_magandgrad
 
-- name:  Why am I not receiving emails from the discussion list?
-  link:  /faq/emaillist_noreceive
+- title:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/plotting/opacityrendering
 
-- name:  Why is my message rejected from the email discussion list?
-  link:  /faq/emaillist_rejected
+- title:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/preproc/artifact/artifact_padding
 
-- name:  How many people are subscribed to the email discussion list?
-  link:  /faq/emaillist_subscribers
+- title:  How can I consistently represent artifacts in my data?
+  link:  /faq/preproc/artifact/artifact_representation
 
-- name:  What is the relation between "events" (such as triggers) and "trials"?
-  link:  /faq/eventsversustrials
+- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/preproc/artifact/dftfilter_residual
 
-- name:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
-  link:  /faq/evoked_vs_induced
+- title:  Why does my ICA output contain complex numbers?
+  link:  /faq/preproc/artifact/ica_complexvalues
 
-- name:  Which external toolboxes are used by FieldTrip?
-  link:  /faq/external
+- title:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/preproc/artifact/ica_crash
 
-- name:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/fiducial
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
 
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/fiducials_definition
+- title:  How does the filter padding in preprocessing work?
+  link:  /faq/preproc/artifact/preproc_padding
 
-- name:  How many lines of code does FieldTrip consist of?
-  link:  /faq/fieldtrip_codelines
+- title:  Do I need to resample my data, and if so, how is this to be done?
+  link:  /faq/preproc/artifact/resampling_lowpassfilter
 
-- name:  Which version of FieldTrip should I download?
-  link:  /faq/fieldtrip_downloadversion
+- title:  Why should I set continuous to yes for CTF data?
+  link:  /faq/preproc/continuous
 
-- name:  Why is FieldTrip developed separately from EEGLAB?
-  link:  /faq/fieldtrip_eeglab
+- title:  How can I use the databrowser?
+  link:  /faq/preproc/databrowser
 
-- name:  What does a typical call to a FieldTrip function look like?
-  link:  /faq/fieldtrip_functioncall
+- title:  I am having problems reading the CTF .hc headcoordinates file
+  link:  /faq/preproc/dataformat/ctf_fixhc
 
-- name:  How should I refer to FieldTrip in my publication?
-  link:  /faq/fieldtrip_reference
+- title:  How can I fix a corrupt CTF meg4 file?
+  link:  /faq/preproc/dataformat/ctf_fixmeg4
 
-- name:  Does the FieldTrip realtime buffer only work with MATLAB?
-  link:  /faq/fieldtripbuffer
+- title:  How can I fix a corrupt CTF res4 header file?
+  link:  /faq/preproc/dataformat/ctf_fixres4
 
-- name:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/fieldtripbuffer_gettingstarted
+- title:  How does the CTF higher-order gradiometer work?
+  link:  /faq/preproc/dataformat/ctf_syntheticgradient
 
-- name:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/fieldtripbuffer_speed
+- title:  How can I import my own data format?
+  link:  /faq/preproc/dataformat/dataformat_own
 
-- name:  Can I use the FieldTrip logo on my poster?
-  link:  /faq/fieldtriplogo
+- title:  How can I deal with a discontinuous Neuralynx LFP recording?
+  link:  /faq/preproc/dataformat/discontinuous_neuralynx
 
-- name:  What is a good way to save images for later processing in other software?
-  link:  /faq/figure_export
+- title:  How can I read all channels from an EDF file that contains multiple sampling rates?
+  link:  /faq/preproc/dataformat/edf2fieldtrip
 
-- name:  I am having problems printing figures that use opacity
-  link:  /faq/figure_opacity
+- title:  How can I read EGI mff data without the JVM?
+  link:  /faq/preproc/dataformat/egi_nojvm
 
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/fileio_dataformat
+- title:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/preproc/dataformat/fileio_dataformat
 
-- name:  Why are the fileio functions stateless, does the fseek not make them very slow?
-  link:  /faq/fileio_stateless
+- title:  Why are the fileio functions stateless, does the fseek not make them very slow?
+  link:  /faq/preproc/dataformat/fileio_stateless
 
-- name:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
-  link:  /faq/freqanalysis_foimismatchmtmconvol
+- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
 
-- name:  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis
-  link:  /faq/freqanalysis_foimismatchmtmfft
+- title:  How can I append the files of two separate recordings?
+  link:  /faq/preproc/datahandling/append_files
 
-- name:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-  link:  /faq/freqanalysis_foimismatchwavelet
+- title:  How can I convert one dataformat into an other?
+  link:  /faq/preproc/datahandling/convert_dataformat
 
-- name:  Why am I not getting integer frequencies?
-  link:  /faq/freqanalysis_foinoninteger
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/datahandling/ctf_readcorrupted
 
-- name:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
-  link:  /faq/freqanalysis_mtmconvol_new
+- title:  What dataformats are supported?
+  link:  /faq/preproc/datahandling/dataformat
 
-- name:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
-  link:  /faq/freqanalysis_mtmfft_new
+- title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/preproc/datahandling/mergedata
 
-- name:  What does "padding not sufficient for requested frequency resolution" mean?
-  link:  /faq/freqanalysis_paddinginsufficient
+- title:  How can I preprocess a dataset that is too large to fit into memory?
+  link:  /faq/preproc/datahandling/preproc_downsample
 
-- name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
-  link:  /faq/freqanalysis_phasedefinition
+- title:  How can I rename channels in my data structure?
+  link:  /faq/preproc/datahandling/rename_channels
 
-- name:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-  link:  /faq/freqanalysis_wavelet_new
+- title:  Reading is slow, can I write my raw data to a more efficient file format?
+  link:  /faq/preproc/datahandling/writedata_matbin
 
-- name:  What material is used for the flexible MEG headcasts?
-  link:  /faq/headcast
+- title:  What is the relation between "events" (such as triggers) and "trials"?
+  link:  /faq/preproc/events/eventsversustrials
 
-- name:  How can I monitor a subject's head position during a MEG session?
-  link:  /faq/headlocalizer
+- title:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/preproc/events/inspect_events
 
-- name:  How can I visualize a localspheres volume conductor model?
-  link:  /faq/headmodel_localspheres
+- title:  How can I process continuous data without triggers?
+  link:  /faq/preproc/events/preproc_continuous
 
-- name:  Why does my EEG headmodel look funny?
-  link:  /faq/headmodel_meshingproblem
+- title:  How can I transform trigger values from bits to decimal representation with a trialfun?
+  link:  /faq/preproc/events/trialfun_bit2decimal
 
-- name:  How do homogenous coordinate transformation matrices work?
-  link:  /faq/homogenous
+- title:  Is it possible to keep track of trial-specific information in my analysis pipeline?
+  link:  /faq/preproc/events/trialinfo
 
-- name:  Why does my ICA output contain complex numbers?
-  link:  /faq/ica_complexvalues
+- title:  How can I check or decipher the sequence of triggers in my data?
+  link:  /faq/preproc/events/triggers
 
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/ica_crash
+- title:  Should I rereference prior to or after ICA for artifact removal?
+  link:  /faq/preproc/ica_rereference
 
-- name:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/ica_rereference
+- title:  How can I inspect the electrode impedances of my data?
+  link:  /faq/preproc/impedancecheck
 
-- name:  How can I inspect the electrode impedances of my data?
-  link:  /faq/impedancecheck
+- title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
+  link:  /faq/preproc/trialinfo_trl
 
-- name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/inspect_events
+- title:  Does the FieldTrip realtime buffer only work with MATLAB?
+  link:  /faq/realtime/fieldtripbuffer
 
-- name:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-  link:  /faq/inspect_geometries
+- title:  How should I get started with the FieldTrip realtime buffer?
+  link:  /faq/realtime/fieldtripbuffer_gettingstarted
 
-- name:  Installation and setting up the path
-  link:  /faq/installation
+- title:  How fast is the FieldTrip buffer for realtime data streaming?
+  link:  /faq/realtime/fieldtripbuffer_speed
 
-- name:  How can I compute inter-trial coherence?
-  link:  /faq/itc
+- title:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
+  link:  /faq/source/acpc
 
-- name:  How can I determine the anatomical label of a source or electrode?
-  link:  /faq/label_lookup
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
 
-- name:  How do I construct a layout file for the plotting functions?
-  link:  /faq/layout_creation
+- title:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/source/anat_dicom2ctf
 
-- name:  What is the format of the layout file which is used for plotting?
-  link:  /faq/layout_fileformat
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-  link:  /faq/layout_magandgrad
+- title:  How to change the MRI orientation, the voxel size or the field-of-view?
+  link:  /faq/source/anat_reslice
 
-- name:  How to compile MATLAB code into stand-alone executables?
-  link:  /faq/matlab_compile
+- title:  My MRI is upside down, is this a problem?
+  link:  /faq/source/anat_upsidedown
 
-- name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
-  link:  /faq/matlab_crash73
+- title:  Where is the anterior commissure?
+  link:  /faq/source/anterior_commissure
 
-- name:  How can I debug my analysis script if a FieldTrip function gives an error?
-  link:  /faq/matlab_debugging
+- title:  How can I fine-tune my BEM volume conduction model?
+  link:  /faq/source/bem_finetune
 
-- name:  MATLAB complains about a missing or invalid mex file, what should I do?
-  link:  /faq/matlab_mexinvalid
+- title:  What is the conductivity of the brain, CSF, skull and skin tissue?
+  link:  /faq/source/conductivity_defaults
 
-- name:  MATLAB does not see the functions in the "private" directory
-  link:  /faq/matlab_privatefunctions
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
-- name:  Replacements for functions from MathWorks toolboxes
-  link:  /faq/matlab_replacements
+- title:  What kind of volume conduction models of the head (head models) are implemented?
+  link:  /faq/source/datatype_headmodel
 
-- name:  What are the MATLAB requirements for using FieldTrip?
-  link:  /faq/matlab_requirements
+- title:  How is the segmentation defined?
+  link:  /faq/source/datatype_segmentation
 
-- name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/mergedata
+- title:  How is anatomical, functional or statistical "volume data" described?
+  link:  /faq/source/datatype_volume
 
-- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
-  link:  /faq/mex_osx
+- title:  Where can I find the dipoli command-line executable?
+  link:  /faq/source/dipoli_filelocation
 
-- name:  How does MTMCONVOL work?
-  link:  /faq/mtmconvol
+- title:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/source/fiducial
 
-- name:  Why are there multiple neighbour templates for the Neuromag306 system?
-  link:  /faq/neighbours_neuromag
+- title:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/source/fiducials_definition
 
-- name:  How does ft_prepare_neighbours work?
-  link:  /faq/neighbours_prepare
+- title:  What material is used for the flexible MEG headcasts?
+  link:  /faq/source/headcast
 
-- name:  How can I visualize the neuromag head position indicator coils?
-  link:  /faq/neuromag_hpi
+- title:  Why does my EEG headmodel look funny?
+  link:  /faq/source/headmodel_meshingproblem
 
-- name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/neuroscan
+- title:  How do homogenous coordinate transformation matrices work?
+  link:  /faq/source/homogenous
 
-- name:  Can I use Octave instead of MATLAB?
-  link:  /faq/octave
+- title:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
+  link:  /faq/source/inspect_geometries
 
-- name:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/opacityrendering
+- title:  How can I determine the anatomical label of a source or electrode?
+  link:  /faq/source/label_lookup
 
-- name:  Where can I find open access MEG/EEG data?
-  link:  /faq/open_data
+- title:  How do I install the OpenMEEG binaries
+  link:  /faq/source/openmeeg
 
-- name:  How do I install the OpenMEEG binaries
-  link:  /faq/openmeeg
+- title:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+  link:  /faq/source/sensors_accuracy
 
-- name:  How to interpret the sign of the phase slope index?
-  link:  /faq/phaseslopeindex
+- title:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/source/sensors_definition
 
-- name:  How can I process continuous data without triggers?
-  link:  /faq/preproc_continuous
+- title:  Why is the source model deformed or incorrectly aligned after warping template?
+  link:  /faq/source/sourcemodel_deformation
 
-- name:  How can I preprocess a dataset that is too large to fit into memory?
-  link:  /faq/preproc_downsample
+- title:  How can I map source locations onto an anatomical label in an atlas?
+  link:  /faq/source/sourcerecon_atlas
 
-- name:  What kind of filters can I apply to my data?
-  link:  /faq/preproc_filtertypes
+- title:  Why should I use an average reference for EEG source reconstruction?
+  link:  /faq/source/sourcerecon_avgref
 
-- name:  How does the filter padding in preprocessing work?
-  link:  /faq/preproc_padding
+- title:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
+  link:  /faq/source/sourcerecon_checkalignment
 
-- name:  Why are so many of the interesting functions in the private directories?
-  link:  /faq/privatefunctions_why
+- title:  Can I restrict the source reconstruction to the grey matter?
+  link:  /faq/source/sourcerecon_greymatter
 
-- name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
-  link:  /faq/psychtoolbox_macbook
+- title:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/source/sourcerecon_meeg
 
-- name:  How can I rename channels in my data structure?
-  link:  /faq/rename_channels
+- title:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
+  link:  /faq/source/sourcerecon_outside
 
-- name:  What are the MATLAB and external requirements?
-  link:  /faq/requirements
+- title:  Why is there a rim around the brain for which the source reconstruction is not computed?
+  link:  /faq/source/sourcerecon_rim
 
-- name:  Do I need to resample my data, and if so, how is this to be done?
-  link:  /faq/resampling_lowpassfilter
+- title:  Is it OK for vertices/dipoles to stick out of the volume conductor?
+  link:  /faq/source/sticking_out
 
-- name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
-  link:  /faq/sensors_accuracy
+- title:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
+  link:  /faq/source/structuresensor
 
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/sensors_definition
+- title:  What is the difference between coherence and coherency?
+  link:  /faq/spectral/coherence_coherency
 
-- name:  How can I define neighbouring sensors?
-  link:  /faq/sensors_neighbours
+- title:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/spectral/datatype_freq
 
-- name:  What kind of cable do I need for a serial port connection between two computers?
-  link:  /faq/serialport
+- title:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+  link:  /faq/spectral/evoked_vs_induced
 
-- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
-  link:  /faq/showcallinfo
+- title:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_foimismatchmtmconvol
 
-- name:  Why is the source model deformed or incorrectly aligned after warping template?
-  link:  /faq/sourcemodel_deformation
+- title:  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis
+  link:  /faq/spectral/freqanalysis_foimismatchmtmfft
 
-- name:  How can I map source locations onto an anatomical label in an atlas?
-  link:  /faq/sourcerecon_atlas
+- title:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_foimismatchwavelet
 
-- name:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/sourcerecon_avgref
+- title:  Why am I not getting integer frequencies?
+  link:  /faq/spectral/freqanalysis_foinoninteger
 
-- name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
-  link:  /faq/sourcerecon_checkalignment
+- title:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_mtmconvol_new
 
-- name:  Can I restrict the source reconstruction to the grey matter?
-  link:  /faq/sourcerecon_greymatter
+- title:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_mtmfft_new
 
-- name:  Can I do combined EEG and MEG source reconstruction?
-  link:  /faq/sourcerecon_meeg
+- title:  What does "padding not sufficient for requested frequency resolution" mean?
+  link:  /faq/spectral/freqanalysis_paddinginsufficient
 
-- name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
-  link:  /faq/sourcerecon_outside
+- title:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
+  link:  /faq/spectral/freqanalysis_phasedefinition
 
-- name:  Why is there a rim around the brain for which the source reconstruction is not computed?
-  link:  /faq/sourcerecon_rim
+- title:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_wavelet_new
 
-- name:  How to select the correct SPM toolbox?
-  link:  /faq/spmversion
+- title:  How can I compute inter-trial coherence?
+  link:  /faq/spectral/itc
 
-- name:  How does a difference in trial numbers per condition affect my statistical test
-  link:  /faq/statistics_ntrials
+- title:  How does MTMCONVOL work?
+  link:  /faq/spectral/mtmconvol
 
-- name:  What is the idea behind statistical inference at the second-level?
-  link:  /faq/statistics_secondlevel
+- title:  How to interpret the sign of the phase slope index?
+  link:  /faq/spectral/phaseslopeindex
 
-- name:  Is it OK for vertices/dipoles to stick out of the volume conductor?
-  link:  /faq/sticking_out
+- title:  How can I do time-frequency analysis on continuous data?
+  link:  /faq/spectral/tfr_continuous
 
-- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/structuresensor
+- title:  Why does my TFR contain NaNs?
+  link:  /faq/spectral/tfr_nans
 
-- name:  Why was FieldTrip maintained in SVN and not in Git?
-  link:  /faq/svnversusgit
+- title:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/spectral/tfr_strangedemean
 
-- name:  How can I do time-frequency analysis on continuous data?
-  link:  /faq/tfr_continuous
+- title:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/spectral/tfr_strangedetrend
 
-- name:  Why does my TFR contain NaNs?
-  link:  /faq/tfr_nans
+- title:  What is meant by time-frequency trade off?
+  link:  /faq/spectral/timefreqtradeoff
 
-- name:  Why does my TFR look strange (part I, demeaning)?
-  link:  /faq/tfr_strangedemean
+- title:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
+  link:  /faq/spectral/why_largest_peak_spectrum
 
-- name:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/tfr_strangedetrend
+- title:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/stats/behavior_cosinefit
 
-- name:  What is meant by time-frequency trade off?
-  link:  /faq/timefreqtradeoff
+- title:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
+  link:  /faq/stats/behavior_signalcorrelation
 
-- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
-  link:  /faq/toolboxes_legacyvsexternal
+- title:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
+  link:  /faq/stats/clusterstats_correcttail
 
-- name:  How can I keep track of changes to the code?
-  link:  /faq/trackchanges
+- title:  How to test an interaction effect using cluster-based permutation tests?
+  link:  /faq/stats/clusterstats_interaction
 
-- name:  How can I transform trigger values from bits to decimal representation with a trialfun?
-  link:  /faq/trialfun_bit2decimal
+- title:  How NOT to interpret results from a cluster-based permutation test
+  link:  /faq/stats/clusterstats_interpretation
 
-- name:  Is it possible to keep track of trial-specific information in my analysis pipeline?
-  link:  /faq/trialinfo
+- title:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
+  link:  /faq/stats/clusterstats_iuwcvar
 
-- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/trialinfo_trl
+- title:  Should I use t or F values for cluster-based permutation tests?
+  link:  /faq/stats/clusterstats_teststatistic
 
-- name:  How can I check or decipher the sequence of triggers in my data?
-  link:  /faq/triggers
+- title:  How can I determine the onset of an effect?
+  link:  /faq/stats/effectonset
 
-- name:  What are the units of the data and of the derived results?
-  link:  /faq/units
+- title:  Why are there multiple neighbour templates for the Neuromag306 system?
+  link:  /faq/stats/neighbours_neuromag
 
-- name:  Are the FieldTrip lectures available on video?
-  link:  /faq/video
+- title:  How does ft_prepare_neighbours work?
+  link:  /faq/stats/neighbours_prepare
 
-- name:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
-  link:  /faq/why_largest_peak_spectrum
+- title:  How can I define neighbouring sensors?
+  link:  /faq/stats/sensors_neighbours
 
-- name:  Can I organize my own FieldTrip workshop?
-  link:  /faq/workshop
+- title:  How does a difference in trial numbers per condition affect my statistical test
+  link:  /faq/stats/statistics_ntrials
 
-- name:  How should I prepare for the upcoming FieldTrip workshop?
-  link:  /faq/workshop_preparation
-
-- name:  Reading is slow, can I write my raw data to a more efficient file format?
-  link:  /faq/writedata_matbin
+- title:  What is the idea behind statistical inference at the second-level?
+  link:  /faq/stats/statistics_secondlevel
 

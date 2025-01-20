@@ -1,159 +1,168 @@
-- name:  Overview of all tutorials
+- title:  Tutorials
   link:  /tutorial
 
-- name:  Introduction on dealing with artifacts
-  link:  /tutorial/artifacts
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
+- title:  Connectivity in auditory evoked responses
+  link:  /tutorial/connectivity/connectivity_aef
 
-- name:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/beamformer
+- title:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivity_sensor_source
 
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
-- name:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/cluster_permutation_freq
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis
 
-- name:  Cluster-based permutation tests on event-related fields
-  link:  /tutorial/cluster_permutation_timelock
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_eeg
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_old
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
+- title:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/intracranial/human_ecog
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- title:  Analysis of monkey ECoG recordings
+  link:  /tutorial/intracranial/monkey_ecog
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
+- title:  Channel and source analysis of mouse EEG
+  link:  /tutorial/intracranial/mouse_eeg
 
-- name:  Coregistration of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/coregistration_opm
+- title:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/intracranial/spike
 
-- name:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/distributedcomputing_parfor
+- title:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/intracranial/spikefield
 
-- name:  Speeding up your analysis using distributed computing with qsub
-  link:  /tutorial/distributedcomputing_qsub
+- title:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/intro/introduction
 
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
+- title:  Creating a clean analysis pipeline
+  link:  /tutorial/intro/scripting
 
-- name:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/epilepsy
+- title:  Preprocessing and averaging of multi-channel NIRS data
+  link:  /tutorial/nirs/nirs_multichannel
 
-- name:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/eventrelatedaveraging
+- title:  Preprocessing and averaging of single-channel NIRS data
+  link:  /tutorial/nirs/nirs_singlechannel
 
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
+- title:  Specifying the channel layout for plotting
+  link:  /tutorial/plotting/layout
 
-- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/plotting/plotting_channel_source
 
-- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
 
-- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
 
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
 
-- name:  Cleaning artifacts using ICA
-  link:  /tutorial/ica_artifact_cleaning
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
+- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
+  link:  /tutorial/preproc/preprocessing
 
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
 
-- name:  Making a memory efficient analysis pipeline
-  link:  /tutorial/memory
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
 
-- name:  Analysis of monkey ECoG recordings
-  link:  /tutorial/monkey_ecog
+- title:  Making a memory efficient analysis pipeline
+  link:  /tutorial/scripting/memory
 
-- name:  Channel and source analysis of mouse EEG
-  link:  /tutorial/mouse_eeg
+- title:  Event-related averaging and MEG planar gradient
+  link:  /tutorial/sensor/eventrelatedaveraging
 
-- name:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/mvpa_light
+- title:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/sensor/preprocessing
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_eeg
+- title:  Preprocessing of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/sensor/preprocessing_opm
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
+- title:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor/sensor_analysis
 
-- name:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/nirs_multichannel
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
 
-- name:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs_singlechannel
+- title:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/sensor/timefrequency
 
-- name:  Plotting data at the channel and source level
-  link:  /tutorial/plotting
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
 
-- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-  link:  /tutorial/preprocessing
+- title:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/source/beamformer
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
+- title:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /tutorial/source/beamforming
 
-- name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
-  link:  /tutorial/preprocessing_opm
+- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/source/beamformingextended
 
-- name:  Creating a clean analysis pipeline
-  link:  /tutorial/scripting
+- title:  Coregistration of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/source/coregistration_opm
 
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
+- title:  Dipole fitting of combined MEG/EEG data
+  link:  /tutorial/source/dipolefitting
 
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 
-- name:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/sourcemodel
+- title:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/source/epilepsy
 
-- name:  Preprocessing and analysis of spike-train data
-  link:  /tutorial/spike
+- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_bem
 
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
+- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_fem
 
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
+- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+  link:  /tutorial/source/headmodel_meg
 
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
 
-- name:  Visual or manual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
+- title:  Creating a source model for source reconstruction of MEG or EEG data
+  link:  /tutorial/source/sourcemodel
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg2014/beamforming
+- title:  Computation of virtual MEG channels in source-space
+  link:  /tutorial/source/virtual_sensors
 
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg2014/dipolefitting
+- title:  Cluster-based permutation tests on time-frequency data
+  link:  /tutorial/stats/cluster_permutation_freq
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg2014/preprocessing
+- title:  Cluster-based permutation tests on event-related fields
+  link:  /tutorial/stats/cluster_permutation_timelock
 
-- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg2014/statistics
+- title:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/stats/eventrelatedstatistics
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg2014/timefrequency
+- title:  Classification of event-related MEG data using MVPA-Light
+  link:  /tutorial/stats/mvpa_light
+
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/stats/plotting
+
+- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+  link:  /tutorial/stats/statistics
+
+- title:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms/tms-eeg
 

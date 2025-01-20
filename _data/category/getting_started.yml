@@ -1,159 +1,162 @@
-- name:  Getting Started
+- title:  Getting started
   link:  /getting_started
 
-- name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/1020
+- title:  Getting started with 20%, 10% and 5% electrode arrangements
+  link:  /getting_started/eeg/1020
 
-- name:  Getting started with animal electrophysiology data, including spikes
-  link:  /getting_started/animal
+- title:  Getting started with ANT-Neuro, ASA and EEProbe data
+  link:  /getting_started/eeg/antneuro
 
-- name:  Getting started with ANT-Neuro, ASA and EEProbe data
-  link:  /getting_started/antneuro
+- title:  Getting started with ABM's B-Alert EEG data
+  link:  /getting_started/eeg/b_alert
 
-- name:  Getting started with AnyWave
-  link:  /getting_started/anywave
+- title:  Getting started with BESA data
+  link:  /getting_started/eeg/besa
 
-- name:  Getting started with Artinis NIRS data
-  link:  /getting_started/artinis
+- title:  Getting started with Biosemi BDF data
+  link:  /getting_started/eeg/biosemi
 
-- name:  Getting started with audio data
-  link:  /getting_started/audio
+- title:  Getting started with BrainVision Analyzer and Easycap
+  link:  /getting_started/eeg/brainvision
 
-- name:  Getting started with ABM's B-Alert EEG data
-  link:  /getting_started/b_alert
+- title:  Getting started with EDF (European Data Format) data
+  link:  /getting_started/eeg/edf
 
-- name:  Getting started with BabySQUID data
-  link:  /getting_started/babysquid
+- title:  Getting started with EGI/Philips/Magstim data
+  link:  /getting_started/eeg/egi
 
-- name:  Getting started with BESA data
-  link:  /getting_started/besa
+- title:  Getting started with Nicolet data
+  link:  /getting_started/eeg/nicolet
 
-- name:  Getting started with BIDS
-  link:  /getting_started/bids
+- title:  Getting started with TMSi data
+  link:  /getting_started/eeg/tmsi
 
-- name:  Getting started with BioImage Suite
-  link:  /getting_started/bioimage
+- title:  Getting started with SR-Research EyeLink eye-tracker data
+  link:  /getting_started/eyetracker/eyelink
 
-- name:  Getting started with Biosemi BDF data
-  link:  /getting_started/biosemi
+- title:  Getting started with animal electrophysiology data, including spikes
+  link:  /getting_started/intracranial/animal
 
-- name:  Getting started with Blackrock data
-  link:  /getting_started/blackrock
+- title:  Getting started with Blackrock data
+  link:  /getting_started/intracranial/blackrock
 
-- name:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/brainvision
+- title:  Getting started with Cyberkinetics data
+  link:  /getting_started/intracranial/cyberkinetics
 
-- name:  Getting started with BTi/4D data
-  link:  /getting_started/bti
+- title:  Getting started with human ECoG data
+  link:  /getting_started/intracranial/human_ecog
 
-- name:  Getting started with Cerca OPM data
-  link:  /getting_started/cerca
+- title:  Getting started with Neuralynx data
+  link:  /getting_started/intracranial/neuralynx
 
-- name:  Getting started with CTF data
-  link:  /getting_started/ctf
+- title:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/intracranial/neuralynx_fcdc
 
-- name:  Getting started with Cyberkinetics data
-  link:  /getting_started/cyberkinetics
+- title:  Getting started with Neurodata Without Borders (NWB) data
+  link:  /getting_started/intracranial/nwb
 
-- name:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/edf
+- title:  Getting started with Plexon data
+  link:  /getting_started/intracranial/plexon
 
-- name:  Getting started with EEGLAB
-  link:  /getting_started/eeglab
+- title:  Getting started with BabySQUID data
+  link:  /getting_started/meg/babysquid
 
-- name:  Getting started with EGI/Philips/Magstim data
-  link:  /getting_started/egi
+- title:  Getting started with BTi/4D data
+  link:  /getting_started/meg/bti
 
-- name:  Getting started with SR-Research EyeLink eye-tracker data
-  link:  /getting_started/eyelink
+- title:  Getting started with Cerca OPM data
+  link:  /getting_started/meg/cerca
 
-- name:  Getting started with FieldLine OPM data
-  link:  /getting_started/fieldline
+- title:  Getting started with CTF data
+  link:  /getting_started/meg/ctf
 
-- name:  Getting started with fMRI timeseries data
-  link:  /getting_started/fmri
+- title:  Getting started with FieldLine OPM data
+  link:  /getting_started/meg/fieldline
 
-- name:  Getting started with Hitachi NIRS data
-  link:  /getting_started/hitachi
+- title:  Getting started with Neuromag/Elekta/Megin data
+  link:  /getting_started/meg/neuromag
 
-- name:  Getting started with Homer
-  link:  /getting_started/homer
+- title:  Getting started with OPM data recorded at the FIL
+  link:  /getting_started/meg/opm_fil
 
-- name:  Getting started with human ECoG data
-  link:  /getting_started/human_ecog
+- title:  Getting started with Ricoh data
+  link:  /getting_started/meg/ricoh
 
-- name:  Getting started with LIMO MEEG
-  link:  /getting_started/limo
+- title:  Getting started with Yokogawa data
+  link:  /getting_started/meg/yokogawa
 
-- name:  Getting started with LORETA
-  link:  /getting_started/loreta
+- title:  Getting started with XSens motion capture data
+  link:  /getting_started/motion/xsens
 
-- name:  Getting started with MeshLab
-  link:  /getting_started/meshlab
+- title:  Getting started with Artinis NIRS data
+  link:  /getting_started/nirs/artinis
 
-- name:  Getting started with MNE(-python)
-  link:  /getting_started/mne
+- title:  Getting started with Hitachi NIRS data
+  link:  /getting_started/nirs/hitachi
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
+- title:  Getting started with NIRx NIRS data
+  link:  /getting_started/nirs/nirx
 
-- name:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
+- title:  Getting started with Shimadzu NIRS data
+  link:  /getting_started/nirs/shimadzu
 
-- name:  Getting started with Neuromag/Elekta/Megin data
-  link:  /getting_started/neuromag
+- title:  Getting started with SNIRF data
+  link:  /getting_started/nirs/snirf
 
-- name:  Getting started with Nicolet data
-  link:  /getting_started/nicolet
+- title:  Getting started with audio data
+  link:  /getting_started/otherdata/audio
 
-- name:  Getting started with NIRx NIRS data
-  link:  /getting_started/nirx
+- title:  Getting started with fMRI timeseries data
+  link:  /getting_started/otherdata/fmri
 
-- name:  Getting started with Neurodata Without Borders (NWB) data
-  link:  /getting_started/nwb
+- title:  Getting started with video data
+  link:  /getting_started/otherdata/video
 
-- name:  Getting started with OPM data recorded at the FIL
-  link:  /getting_started/opm_fil
+- title:  Getting started with AnyWave
+  link:  /getting_started/othersoftware/anywave
 
-- name:  Getting started with ParaView
-  link:  /getting_started/paraview
+- title:  Getting started with BIDS
+  link:  /getting_started/othersoftware/bids
 
-- name:  Getting started with Plexon data
-  link:  /getting_started/plexon
+- title:  Getting started with BioImage Suite
+  link:  /getting_started/othersoftware/bioimage
 
-- name:  Getting started with real-time analysis for BCI/neurofeedback
-  link:  /getting_started/realtime
+- title:  Getting started with EEGLAB
+  link:  /getting_started/othersoftware/eeglab
 
-- name:  Getting started with real-time head localization in MEG
-  link:  /getting_started/realtime_headlocalizer
+- title:  Getting started with Homer
+  link:  /getting_started/othersoftware/homer
 
-- name:  Getting started with Ricoh data
-  link:  /getting_started/ricoh
+- title:  Getting started with LIMO MEEG
+  link:  /getting_started/othersoftware/limo
 
-- name:  Getting started with Seg3D
-  link:  /getting_started/seg3d
+- title:  Getting started with LORETA
+  link:  /getting_started/othersoftware/loreta
 
-- name:  Getting started with Shimadzu NIRS data
-  link:  /getting_started/shimadzu
+- title:  Getting started with MeshLab
+  link:  /getting_started/othersoftware/meshlab
 
-- name:  Getting started with SimNIBS
-  link:  /getting_started/simnibs
+- title:  Getting started with MNE(-python)
+  link:  /getting_started/othersoftware/mne
 
-- name:  Getting started with SNIRF data
-  link:  /getting_started/snirf
+- title:  Getting started with ParaView
+  link:  /getting_started/othersoftware/paraview
 
-- name:  Getting started with SPM
-  link:  /getting_started/spm
+- title:  Getting started with Seg3D
+  link:  /getting_started/othersoftware/seg3d
 
-- name:  Getting started with TMSi data
-  link:  /getting_started/tmsi
+- title:  Getting started with SimNIBS
+  link:  /getting_started/othersoftware/simnibs
 
-- name:  Getting started with video data
-  link:  /getting_started/video
+- title:  Getting started with SPM
+  link:  /getting_started/othersoftware/spm
 
-- name:  Getting started with XSens motion capture data
-  link:  /getting_started/xsens
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /getting_started/realtime/realtime
 
-- name:  Getting started with Yokogawa data
-  link:  /getting_started/yokogawa
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
+
+- title:  Getting started with real-time head localization in MEG
+  link:  /getting_started/realtime/realtime_headlocalizer
 
