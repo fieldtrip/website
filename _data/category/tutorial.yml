@@ -157,9 +157,6 @@
 - title:  Classification of event-related MEG data using MVPA-Light
   link:  /tutorial/stats/mvpa_light
 
-- title:  Plotting data at the channel and source level
-  link:  /tutorial/stats/plotting
-
 - title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
   link:  /tutorial/stats/statistics
 
