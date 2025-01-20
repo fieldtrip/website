@@ -227,7 +227,7 @@ For people that do not use a computer at the DCCN:
     -   <https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/>
     -   <https://download.fieldtriptoolbox.org/tutorial/beamformer/>
     -   <https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/>
-    -   <https://download.fieldtriptoolbox.org/tutorial/connectivity/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/>
 
 Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
 

@@ -1,24 +1,25 @@
 ---
-title: Analysis of auditory evoked fields in sensor and source space
+title: Connectivity in auditory evoked responses
 parent: Connectivity analysis
 grand_parent: Tutorials
 category: tutorial
 tags: [granger, meg, freq, source, connectivity]
 redirect_from:
     - /tutorial/salzburg/
+    - /tutorial/connectivity_aef/
 ---
 
-# Analysis of auditory evoked fields in sensor and source space
+# Connectivity in auditory evoked responses
 
 ## Introduction
 
-In this tutorial we will analyze auditory evoked fields in the context of a widely studied sensory gating paradigm. First we will analyze the data on sensor level in both time and time-frequency domain. On the basis of this analysis we will define relevant latencies and/or time-frequency tiles that will be subsequently analyzed in source space using beamforming techniques. Finally we will try to identify relevant "nodes" based on statistical contrasts in source space and perform some connectivity metric on these task relevant nodes.
+In this tutorial we will analyze auditory evoked fields (AEFs) in the context of a widely studied sensory gating paradigm. First we will analyze the data on sensor level in both time and time-frequency domain. On the basis of this analysis we will define relevant latencies and/or time-frequency tiles that will be subsequently analyzed in source space using beamforming techniques. Finally we will try to identify relevant cortical "nodes" based on statistical contrasts and compute connectivity between these task-relevant nodes.
 
 ## Background
 
 The data in this tutorial has been acquired with 148 sensor magnetometer system 4D/Neuroimaging. The experimental paradigm is illustrated in the figure below. An auditory stimulus of 3ms duration is presented twice with an inter-stimulus interval of 500 ms. The first presentation is typically labeled as 'S1' and the second 'S2', yet the stimuli are identical. This paired-click trial is presented 100 times with an inter-trial interval of 8 seconds. The sensory gating phenomenon refers to a decrease in neuronal activity after S2 and is typically quantified as a ratio (S2/S1) of the early M50 (30-90ms post stimulus) component of the event-related field.
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure1.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure1.png" width="600" %}
 
 ## Procedure
 
@@ -31,7 +32,7 @@ The following steps had been performed:
 - Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event-related interval including S1 and S2).
 - Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
-To run the following section of code you need the original dataset and trial function: [c,rfhp0.1Hz](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/c,rfhp0.1Hz), [config](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/config), and [ft_trialfun_sensorygating.m](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/ft_trialfun_sensorygating.m)
+To run the following section of code you need the original dataset and trial function: [c,rfhp0.1Hz](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/c,rfhp0.1Hz), [config](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/config), and [ft_trialfun_sensorygating.m](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/ft_trialfun_sensorygating.m)
 
     clear all
     close all
@@ -45,7 +46,7 @@ To run the following section of code you need the original dataset and trial fun
     cfg = ft_definetrial(cfg);
     data = ft_preprocessing(cfg);
 
-The epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/dataclean.mat).
+The epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/dataclean.mat).
 
 Load the data using the following command:
 
@@ -96,7 +97,7 @@ Take your time to browse and evaluate the topographies and the corresponding tim
     cfg.component = [3 6 7 16];
     dataica = ft_rejectcomponent(cfg, comp);
 
-The ica corrected data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/dataica.mat).
+The ica corrected data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/dataica.mat).
 
 ### Computing and plotting of the auditory evoked fields
 
@@ -125,7 +126,7 @@ Now we can average over trials using **[ft_timelockanalysis](/reference/ft_timel
     subplot(2,2,4); ft_topoplotER(cfg,tlk);
     title('S2')
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure2.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure2.png" width="600" %}
 
 ### Computing and plotting time-frequency power representations
 
@@ -164,7 +165,7 @@ Subsequently we plot and evaluate the result.
     subplot(2,2,4); ft_topoplotTFR(cfg,tfrbl);
     title('S2')
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure3.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure3.png" width="600" %}
 
 Sometimes one might be interested in power modulations significantly different from pre stimulus baseline. In the following section we will illustrate how to achieve this.
 
@@ -259,7 +260,7 @@ Now we can plot the result in a similar way as illustrated above. The difference
     subplot(2,2,4); ft_topoplotTFR(cfg,stat);
     title('S2')
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure4.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure4.png" width="600" %}
 
 ## Localizing auditory evoked fields using beamforming techniques in parceled brain space
 
@@ -273,7 +274,7 @@ Before you continue it is recommended to make your self familiar with the releva
 
 Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/sourcemodel_aligned2mni_atlas).
 
-We will start with loading a precomputed headmodel [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
+We will start with loading a precomputed headmodel [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 
 ##### Create template grid based on the standard head model
 
@@ -294,7 +295,7 @@ We will start with loading a precomputed headmodel [here](https://download.field
     hold on
     ft_plot_headmodel(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure5.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure5.png" width="600" %}
 
 ##### Load atlas and create a binary mask
 
@@ -319,11 +320,11 @@ We will start with loading a precomputed headmodel [here](https://download.field
     % plot the atlas based grid
     figure; ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure6.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure6.png" %}
 
 ##### Inverse-warp the subject specific grid to the atlas based template grid
 
-For this step the individual volume is required, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/aef_sensor_source/mri.mat).
+For this step the individual volume is required, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/mri.mat).
 
     cfg                = [];
     cfg.warpmni   = 'yes';
@@ -349,7 +350,7 @@ For this step the individual volume is required, which can be downloaded [here](
     ft_plot_sens(dataica.grad,'style','*r'); % plot the sensor array
     view ([0 -90 0])
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure7.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure7.png" %}
 
 ### Compute the leadfield
 
@@ -438,7 +439,7 @@ Finally, we can plot the result using **[ft_sourceplot](/reference/ft_sourceplot
     cfg.funcolormap = 'jet';
     ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure8.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure8.png" %}
 
 ### Plot the result in parceled brain space
 
@@ -484,7 +485,7 @@ We create a dummy structure where we identify the power values per voxel and use
     cfg.funcolorlim = [-30 30];
     ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure9.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure9.png" %}
 
 Alternatively, the maximal activity in the left Heschl gyrus can be plotted on the brain surface as follows.
 
@@ -502,7 +503,7 @@ Alternatively, the maximal activity in the left Heschl gyrus can be plotted on t
     light ('Position',[-70 20 50])
     material dull
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure10.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure10.png" %}
 
 ### Apply statistical threshold for plotting the result on source level
 
@@ -593,7 +594,7 @@ And plot the result masked for significant activations where the functional data
     cfg.funcolormap = 'jet';
     ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure11.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure11.png" %}
 
 We repeat the steps from above and plot the result in parceled brain space.
 
@@ -621,11 +622,11 @@ We repeat the steps from above and plot the result in parceled brain space.
     cfg.atlas = atlas;
     ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure12.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure12.png" %}
 
 The two different thresholds (80% of maximum vs. permutation statistics) seem to convey slightly different results. While a predominant activation in the left heschl gyrus was observed as a maximal difference between pre and post stimulus interval, the statistical evaluation suggest right temporal activation together with distributed activity in prefrontal areas. At first this appears somewhat puzzling yet evaluating the spatial extend of the activity in the left heschl gyrus suggest a very focal circumscribed source likely involving very few voxels. On the other hand during the call to **[ft_sourcestatistics](/reference/ft_sourcestatistics)** we used a particular configuration for the clusterstatistics- 'maxsum'. Using this option only voxel clusters with largest summed activity are considered during the sampling of the distribution. The right temporal area is characterized by rather broad spatial homogeneity that leads to greater statistical sensitivity. Instead of 'maxsum' it is also possible to use 'max' values during the montercarlo sampling of the distribution. When we do so it becomes apparent that on the basis of the activity in the left heschl gyrus we can reject H0 too.
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure13.png" width="800" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure13.png" width="800" %}
 
 ## Connectivity analysis
 
@@ -760,7 +761,7 @@ Now we compute the source wave forms, plot and evaluate the result.
         subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
     end
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure14.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure14.png" width="600" %}
 
 ### Compute cortico-cortical coherence
 
@@ -791,7 +792,7 @@ Now we can plot and evaluate the result of the power estimates essentially confi
         subplot(2,2,i);ft_singleplotTFR(cfg,tfr);
     end
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure15.png" width="600" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure15.png" width="600" %}
 
 The slow frequency increases in energy are likely related to the evoked components in the data. In addition an increase in amplitude around 10-14Hz is also observed. In the next step we would like to evaluate to what extend this patterns represent a temporal relationship between the nodes.
 
@@ -817,7 +818,7 @@ and restructure the output such that it can be plotted with an appropriate plott
         subplot(2,2,i);ft_singleplotTFR(cfg,coh);
     end
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure16.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure16.png" width="400" %}
 
 The color scale in this figure now represents the strength of coherence, which varies always between 0 and 1. Descriptively we can conclude that cingulum and right auditory cortex comunicate strongly ~7Hz in the first 300 ms after stimulus presentation. Both auditory corticies are strongly linked at ~11Hz for some 200 ms starting after 300 ms post stimulus. Finally, cingulum and left auditory cortex seem to be linked at rather faster frequency ~ 14Hz.
 
@@ -845,7 +846,7 @@ A property of volume conduction is that it is instantaneously. As a consequence 
         subplot(2,2,i);ft_singleplotTFR(cfg,coh);
     end
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure17.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure17.png" width="400" %}
 
 #### Exercise: coherence vs. imaginary part of coherency
 
@@ -892,7 +893,7 @@ and plot the result...
     cfg.xlim      = [0 40];
     figure; ft_connectivityplot(cfg,granger);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure18.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure18.png" width="400" %}
 
 Again, we can now **descriptively** evaluate the output. Left auditory cortex appears to regulate activity in frontal areas at around 20 Hz. In turn, frontal areas exert a 10Hz drive over the left primary auditory cortex.
 
@@ -933,4 +934,4 @@ Now we plot the results of the original and the flipped version of the same data
     cfg.xlim      = [0 40];
     figure; ft_connectivityplot(cfg,granger,grangerflip);
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/figure19.png" %}
+{% include image src="/assets/img/tutorial/connectivity_aef/figure19.png" %}

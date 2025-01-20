@@ -4,6 +4,8 @@ parent: Connectivity analysis
 grand_parent: Tutorials
 category: tutorial
 tags: [freq, connectivity, coherence, granger, dtf, pdc]
+redirect_from:
+    - /tutorial/connectivity_sensor_source
 ---
 
 # Analysis of sensor- and source-level connectivity
@@ -50,7 +52,7 @@ In short, the dataset consists of combined MEG and EMG recordings while the subj
 
 We start with determining the motor cortex as the region of interest. At the [end of the coherence tutorial](/tutorial/coherence#appendix_1localisation_of_neuronal_sources_coherent_with_the_emg_using_beamformers) it is demonstrated how to make a 3-D reconstruction of the cortico-muscular coherence (CMC) using the DICS algorithm. That source reconstruction serves as starting point for this analysis.
 
-You can download the (source.mat)(https://download.fieldtriptoolbox.org/tutorial/connectivity/source.mat) file with the result from the DICS reconstruction.
+You can download the (source.mat)(https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/source.mat) file with the result from the DICS reconstruction.
 
 We will first determine the position on which the cortico-muscular coherence is the largest.
 
@@ -68,7 +70,7 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually ap
 
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel [data.mat](https://download.fieldtriptoolbox.org/tutorial/connectivity/data.mat) and [SubjectCMC.hdm](https://download.fieldtriptoolbox.org/tutorial/connectivity/SubjectCMC.hdm).
+Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel [data.mat](https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/data.mat) and [SubjectCMC.hdm](https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/SubjectCMC.hdm).
 
     load data
 
@@ -131,7 +133,7 @@ The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing]
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, sourcedata);
 
-{% include image src="/assets/img/tutorial/connectivity/figure1.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity_sensor_source/figure1.png" width="300" %}
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.
 
@@ -218,7 +220,7 @@ This computes the spectral decomposition and the coherence spectrum between all 
     ft_connectivityplot(cfg, coherence);
     title('coherence')
 
-{% include image src="/assets/img/tutorial/connectivity/figure2.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity_sensor_source/figure2.png" width="400" %}
 
 To look in more detail into the numerical representation of the coherence results, you can use
 
@@ -228,7 +230,7 @@ To look in more detail into the numerical representation of the coherence result
     xlabel('freq (Hz)')
     ylabel('coherence')
 
-{% include image src="/assets/img/tutorial/connectivity/figure3.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity_sensor_source/figure3.png" width="300" %}
 
 The spectrum reveals coherence peaks at 10 and 20 Hz (remember that the initial DICS localizer was done at beta). Furthermore, there is a broader plateau of coherence in the gamma range from 40-50 Hz.
 

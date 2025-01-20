@@ -16,7 +16,7 @@ Conditional Granger causality is a derivative of spectral Granger causality that
 This example illustrates the simulation and base analysis of the paper
 [Chen, Y., Bressler, S. L., & Ding, M. (2006). Frequency decomposition of conditional Granger causality and application to multivariate neural field potential data. <i>Journal of neuroscience methods, 150(2), 228-237</i>](https://arxiv.org/pdf/q-bio/0608034).
 
-See also the [connectivity tutorial]/tutorial/connectivity/).
+See also the [connectivity tutorial]/tutorial/connectivity/connectivity_sensor_source/).
 
 ## Setup and simulating the data sets
 

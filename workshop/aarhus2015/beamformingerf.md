@@ -1,6 +1,6 @@
 ---
 title: Beamforming evoked fields and potentials in combined MEG/EEG data
-tags: [aarhus, meg+eeg, beamforming, erf, lcmv, meg-audodd]
+tags: [aarhus2015, meg+eeg, beamforming, erf, lcmv, meg-audodd]
 ---
 
 # Beamforming evoked fields and potentials in combined MEG/EEG data

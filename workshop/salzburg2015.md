@@ -10,8 +10,8 @@ redirect_from:
 
 The University of Salzburg, with support from the [TINNET-COST Action](http://tinnet.tinnitusresearch.net)
 
-{% include image src="/assets/img/tutorial/aef_sensor_source/usalzburg.png" width="200" %}
-{% include image src="/assets/img/tutorial/aef_sensor_source/tinnetcost.png" width="100" %}
+{% include image src="/assets/img/workshop/salzburg2015/usalzburg.png" width="200" %}
+{% include image src="/assets/img/workshop/salzburg2015/tinnetcost.png" width="100" %}
 
 #### When
 

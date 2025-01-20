@@ -1,6 +1,6 @@
 ---
 title: FieldTrip workshop in Aarhus
-tags: [aarhus, meg-audodd]
+tags: [aarhus2015, meg-audodd]
 ---
 
 # FieldTrip workshop in Aarhus
@@ -32,7 +32,7 @@ To prepare for the hands-on session, you should watch the following online video
 - [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
 - [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
 
-Also, make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/workshop/hands-on.rar).
+Also, make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus2015/hands-on.rar).
 
 ## Program
 
