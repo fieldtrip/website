@@ -1,9 +1,9 @@
 ---
-title: CTF
+title: Streaming realtime data from CTF
 tags: [realtime, ctf]
 ---
 
-# CTF
+# Streaming realtime data from CTF
 
 ## Introduction
 

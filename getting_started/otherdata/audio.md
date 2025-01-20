@@ -4,6 +4,7 @@ parent: Other data
 grand_parent: Getting started
 category: getting_started
 tags: [dataformat, audio]
+nav_order: 1
 redirect_from:
     - /getting_started/audio/
 ---

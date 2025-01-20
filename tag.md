@@ -3,7 +3,7 @@ title: Tags
 nav_exclude: true
 ---
 
-## Tags
+# Tags
 
 <ul>
 {% for item in site.data.tag %}

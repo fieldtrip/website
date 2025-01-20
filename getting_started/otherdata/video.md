@@ -4,6 +4,7 @@ parent: Other data
 grand_parent: Getting started
 category: getting_started
 tags: [dataformat, video]
+nav_order: 2
 redirect_from:
     - /getting_started/video/
 ---

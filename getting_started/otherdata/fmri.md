@@ -4,6 +4,7 @@ parent: Other data
 grand_parent: Getting started
 category: getting_started
 tags: [dataformat, fmri]
+nav_order: 3
 redirect_from:
     - /getting_started/fmri/
 ---
@@ -16,7 +17,7 @@ Although FieldTrip is not designed for processing functional MRI data, you can n
 
 The FieldTrip [raw data structure](/reference/utilities/ft_datatype_raw) requires that each voxel timeseries is represented as a channel with a label.
 
-```
+```matlab
 fmridata = ft_read_mri('sub-01_ses-mri_task-facerecognition_run-01_bold.nii', 'outputfield', 'functional');
 
 ntime = fmridata.dim(4);
@@ -44,7 +45,7 @@ With so many channels, you will notice that some FieldTrip functions will be slo
 
 You can also represent the 4D timeseries data as a source representation, similar how virtual-channel timeseries are represented, for example from an LCMV beamformer estimate.
 
-```
+```matlab
 filename3d = 'sub-01_ses-mri_acq-mprage_T1w.nii';                    % 3D anatomical
 filename4d = 'sub-01_ses-mri_task-facerecognition_run-01_bold.nii';  % 4D functional
 
@@ -91,7 +92,7 @@ ft_sourceplot(cfg, source4d);
 
 In many cases you have a region of interest (ROI) over which you want to average, for example based on an anatomical atlas or a prior GLM analysis resulting in a specific ROI.
 
-```
+```matlab
 % The next sequence of steps will
 % - define ROIs on basis of the original 3D anatomical data
 % - interpolate the ROIs from the 3D onto the 4D representation
@@ -142,7 +143,7 @@ You could also do the interpolation the other way around, but interpolating the 
 
 It is also possible to use an atlas for the parcellation, see [here](/template/atlas) for a description of the template atlases that are included. Note that you can also construct and use your own atlas, the only requirement is that it represented as a [parcellated](/reference/utilities/ft_datatype_parcellation) or [segmented](/reference/utilities/ft_datatype_segmentation) data structure with an indexed representation, i.e. each voxel or vertex belongs to a single tissue type.
 
-```
+```matlab
 
 [ftver, ftpath] = ft_version;
 atlas = ft_read_atlas(fullfile(ftpath, 'template', 'atlas', 'aal', 'ROI_MNI_V4.nii'));

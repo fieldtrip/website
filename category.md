@@ -3,7 +3,7 @@ title: Categories
 nav_exclude: true
 ---
 
-## Categories
+# Categories
 
 <ul>
 {% for item in site.data.category %}
