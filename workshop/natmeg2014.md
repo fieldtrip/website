@@ -27,7 +27,7 @@ We will use the same dataset throughout the workshop. Please familiarize yoursel
 
 You can download the dataset from our [download server](https://download.fieldtriptoolbox.org/workshop/natmeg2014/).
 
-- Tuesday: [Preprocessing and event-related activity in MEG and EEG](/workshop/natmeg2014/preprocessing)
-- Wednesday: [Time-frequency analysis](/workshop/natmeg2014/timefrequency) and [Dipole fitting](/workshop/natmeg2014/dipolefitting)
-- Thursday: [Beamforming](/workshop/natmeg2014/beamforming)
-- Friday: [Statistics](/workshop/natmeg2014/statistics)
+- Tuesday: [Preprocessing and event-related activity in MEG and EEG](/tutorial/sensor/preprocessing)
+- Wednesday: [Time-frequency analysis](/tutorial/sensor/timefrequency) and [Dipole fitting](/tutorial/source/dipolefitting)
+- Thursday: [Beamforming](/tutorial/source/beamforming)
+- Friday: [Statistics](/tutorial/stats/statistics)

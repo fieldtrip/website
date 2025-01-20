@@ -1,9 +1,9 @@
 ---
-title: Frequently Asked Questions
+title: Frequently asked questions
 category: faq
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
 On this page you can find answers to a variety of FieldTrip and MATLAB related questions.
 

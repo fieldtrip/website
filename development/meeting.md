@@ -1,6 +1,7 @@
 ---
 title: Meetings
 tags: [development, meeting]
+nav_exclude: true
 ---
 
 # Meetings

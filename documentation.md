@@ -1,5 +1,5 @@
 ---
-title: User Documentation
+title: Documentation
 ---
 
 # Documentation

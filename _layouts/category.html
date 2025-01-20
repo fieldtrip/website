@@ -19,10 +19,10 @@
           <h1>Pages in the category "{{ page.category }}"</h1>
           {% if site.data.category[page.category] != nill %}
             <ul>
-              {% assign list = site.data.category[page.category] | sort_natural: "name" %}
+              {% assign list = site.data.category[page.category] | sort_natural: "title" %}
               {% for item in list %}
                 <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-                  {{ item.name }}
+                  {{ item.title }}
                 </a></li>
               {% endfor %}
             </ul>

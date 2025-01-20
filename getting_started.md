@@ -1,9 +1,9 @@
 ---
-title: Getting Started
+title: Getting started
 category: getting_started
 ---
 
-# Getting Started
+# Getting started
 
 FieldTrip is a MATLAB toolbox that contains a set of separate (high-level) functions, it does **not** have a graphical user interface. The toolbox functions can be combined into an analysis pipeline, i.e. a MATLAB script containing all steps of your analysis. For this reason, if you are new to MATLAB scripting or EEG/MEG/iEEG/NIRS analysis, FieldTrip might not be the most efficient for you. If you are persistent and eager to learn, [references to review papers and teaching material](/references_to_review_papers_and_teaching_material) can help you on your way.
 

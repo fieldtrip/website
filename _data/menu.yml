@@ -1,0 +1,1716 @@
+- title: About the FieldTrip project
+  link: /about/
+  nav_order: 0
+- title: Citations to the FieldTrip reference paper
+  link: /citations/
+  nav_order: 0
+- title: Copyrights
+  link: /copyrights/
+  nav_order: 0
+- title: Dataformats
+  link: /dataformat/
+  nav_order: 0
+  menu:
+  - title: MEG dataformats
+    link: /dataformat/meg/
+    nav_order: 0
+  - title: Spike and LFP dataformats
+    link: /dataformat/spike/
+    nav_order: 0
+- title: Development
+  link: /development/
+  nav_order: 0
+  menu:
+  - title: Accessing the FieldTrip source code through CVS
+    link: /development/cvs/
+    nav_order: 0
+  - title: Accessing the FieldTrip source code through Git
+    link: /development/git/
+    nav_order: 0
+  - title: Accessing the FieldTrip source code through SVN
+    link: /development/svn/
+    nav_order: 0
+  - title: Contribute
+    link: /development/contribute/
+    nav_order: 0
+  - title: Data structures used by FieldTrip
+    link: /development/datastructure/
+    nav_order: 0
+  - title: Deprecated functions and options
+    link: /development/deprecated/
+    nav_order: 0
+  - title: Distributed computing
+    link: /development/distributed/
+    nav_order: 0
+  - title: Forward and inverse computation of EEG/MEG data
+    link: /development/forwinv/
+    nav_order: 0
+  - title: Getting Started
+    link: /development/getting_started/
+    nav_order: 0
+  - title: Guidelines
+    link: /development/guideline/
+    nav_order: 0
+    menu:
+    - title: Code guidelines
+      link: /development/guideline/code/
+      nav_order: 0
+    - title: Communication guidelines
+      link: /development/guideline/communication/
+      nav_order: 0
+    - title: Documentation guidelines
+      link: /development/guideline/documentation/
+      nav_order: 0
+    - title: Template guidelines
+      link: /development/guideline/templates/
+      nav_order: 0
+    - title: Website syntax and formatting
+      link: /development/guideline/website/
+      nav_order: 0
+  - title: Integration between tools
+    link: /development/integration/
+    nav_order: 0
+  - title: Modules
+    link: /development/module/
+    nav_order: 0
+    menu:
+    - title: Connectivity estimates for EEG/MEG time series data
+      link: /development/module/connectivity/
+      nav_order: 0
+    - title: Distributed computing using a Linux compute cluster
+      link: /development/module/qsub/
+      nav_order: 0
+    - title: Forward computation of EEG/MEG source models
+      link: /development/module/forward/
+      nav_order: 0
+    - title: Inverse source parameter estimates from EEG/MEG data
+      link: /development/module/inverse/
+      nav_order: 0
+    - title: Plotting of channel-level, source-level and other geometrical data related
+        to EEG/MEG
+      link: /development/module/plotting/
+      nav_order: 0
+    - title: Preprocessing of EEG/MEG time series data
+      link: /development/module/preproc/
+      nav_order: 0
+    - title: Reading and writing of EEG/MEG time series data
+      link: /development/module/fileio/
+      nav_order: 0
+    - title: Spectral estimation of of EEG/MEG time series data
+      link: /development/module/specest/
+      nav_order: 0
+  - title: Real-time access to neurophysiological data
+    link: /development/realtime/
+    nav_order: 0
+    menu:
+    - title: CTF
+      link: /development/realtime/ctf/
+      nav_order: 0
+    - title: Closing the loop in a real-time BCI application
+      link: /development/realtime/closing_the_loop/
+      nav_order: 0
+    - title: FieldTrip buffer C implementation
+      link: /development/realtime/buffer_c/
+      nav_order: 0
+    - title: FieldTrip buffer C++ implementation
+      link: /development/realtime/buffer_cpp/
+      nav_order: 0
+    - title: FieldTrip buffer Java interface
+      link: /development/realtime/buffer_java/
+      nav_order: 0
+    - title: FieldTrip buffer MATLAB interface
+      link: /development/realtime/buffer_matlab/
+      nav_order: 0
+    - title: FieldTrip buffer Python interface
+      link: /development/realtime/buffer_python/
+      nav_order: 0
+    - title: FieldTrip buffer reference implementation
+      link: /development/realtime/reference_implementation/
+      nav_order: 0
+    - title: Low-level FieldTrip buffer TCP network protocol
+      link: /development/realtime/buffer_protocol/
+      nav_order: 0
+    - title: Overview of the realtime buffer
+      link: /development/realtime/buffer/
+      nav_order: 0
+    - title: Pipeline architecture
+      link: /development/realtime/pipeline/
+      nav_order: 0
+    - title: Realtime visualization of data from the FieldTrip buffer
+      link: /development/realtime/viewer/
+      nav_order: 0
+    - title: Scratchpad for the realtime buffer interface
+      link: /development/realtime/scratchpad/
+      nav_order: 0
+    - title: Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+      link: /development/realtime/implementation/
+      nav_order: 0
+    - title: Streaming realtime EEG data to and from Arduino
+      link: /development/realtime/arduino/
+      nav_order: 0
+    - title: Streaming realtime data from ANT NeuroSDK
+      link: /development/realtime/neurosdk/
+      nav_order: 0
+    - title: Streaming realtime data from Artinis Medical Systems
+      link: /development/realtime/artinis/
+      nav_order: 0
+    - title: Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+      link: /development/realtime/biosemi/
+      nav_order: 0
+    - title: Streaming realtime data from BrainVision Recorder Remote Data Access
+        (RDA)
+      link: /development/realtime/rda/
+      nav_order: 0
+    - title: Streaming realtime data from Emotiv neuroheadset
+      link: /development/realtime/emotiv/
+      nav_order: 0
+    - title: Streaming realtime data from Jinga-Hi
+      link: /development/realtime/jinga-hi/
+      nav_order: 0
+    - title: Streaming realtime data from Micromed
+      link: /development/realtime/micromed/
+      nav_order: 0
+    - title: Streaming realtime data from Modular EEG (aka OpenEEG)
+      link: /development/realtime/modulareeg/
+      nav_order: 0
+    - title: Streaming realtime data from Neuralynx
+      link: /development/realtime/neuralynx/
+      nav_order: 0
+    - title: Streaming realtime data from Neuromag/Elekta/Megin
+      link: /development/realtime/neuromag/
+      nav_order: 0
+    - title: Streaming realtime data from Neurosky ThinkCap
+      link: /development/realtime/neurosky/
+      nav_order: 0
+    - title: Streaming realtime data from OpenBCI
+      link: /development/realtime/openbci/
+      nav_order: 0
+    - title: Streaming realtime data from TMSI EEG amplifiers
+      link: /development/realtime/tmsi/
+      nav_order: 0
+    - title: Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+      link: /development/realtime/tobi/
+      nav_order: 0
+    - title: Streaming realtime data from Unicorn Hybrid Black
+      link: /development/realtime/unicorn/
+      nav_order: 0
+    - title: Streaming realtime data from and to BCI2000
+      link: /development/realtime/bci2000/
+      nav_order: 0
+    - title: Streaming realtime data from and to BrainStream
+      link: /development/realtime/brainstream/
+      nav_order: 0
+    - title: Streaming realtime data from soundcard using PortAudio
+      link: /development/realtime/audio2ft/
+      nav_order: 0
+    - title: Suggested changes to the network protocol
+      link: /development/realtime/draft_network/
+      nav_order: 0
+    - title: Suggested changes to the reference implementation
+      link: /development/realtime/draft_implementation/
+      nav_order: 0
+    - title: Suggested improvements for compatibility across versions
+      link: /development/realtime/draft_compatability/
+      nav_order: 0
+    - title: Suggested improvements for handling header and chunks
+      link: /development/realtime/draft_header_chunks/
+      nav_order: 0
+    - title: Testing with sine waves and pre-recorded EEG data
+      link: /development/realtime/eeg/
+      nav_order: 0
+    - title: Translating characters received on a serial port to FieldTrip events
+      link: /development/realtime/serial_event/
+      nav_order: 0
+  - title: Release and quality control
+    link: /development/releasing/
+    nav_order: 0
+  - title: Reporting issues
+    link: /development/issues/
+    nav_order: 0
+  - title: Testing
+    link: /development/testing/
+    nav_order: 0
+  - title: Toolbox architecture and organization of the source code
+    link: /development/architecture/
+    nav_order: 0
+- title: Documentation
+  link: /documentation/
+  nav_order: 0
+- title: Download the FieldTrip toolbox
+  link: /download/
+  nav_order: 0
+- title: Email discussion list
+  link: /discussion_list/
+  nav_order: 0
+- title: Examples
+  link: /example/
+  nav_order: 0
+  menu:
+  - title: Plotting and visualization
+    link: /example/plotting/
+    nav_order: 0
+    menu:
+    - title: Creating a layout for plotting NIRS optodes and channels
+      link: /example/plotting/nirs_layout/
+      nav_order: 0
+    - title: Making a synchronous movie of EEG or NIRS combined with video recordings
+      link: /example/plotting/video_eeg/
+      nav_order: 0
+    - title: Plotting the result of source reconstruction on a cortical mesh
+      link: /example/plotting/plotting_source_surface/
+      nav_order: 0
+  - title: Reading and preprocessing data
+    link: /example/preproc/
+    nav_order: 0
+    menu:
+    - title: Combine MEG with Eyelink eyetracker data
+      link: /example/preproc/meg_eyelink/
+      nav_order: 0
+    - title: Detect the muscle activity in an EMG channel and use that as trial definition
+      link: /example/preproc/trialdef_emg/
+      nav_order: 0
+    - title: Fixing a missing channel
+      link: /example/preproc/fixing_a_missing_sensor/
+      nav_order: 0
+    - title: Getting started with reading raw EEG or MEG data
+      link: /example/preproc/raw_meeg/
+      nav_order: 0
+    - title: Independent component analysis (ICA) to remove ECG artifacts
+      link: /example/preproc/ica_ecg/
+      nav_order: 0
+    - title: Independent component analysis (ICA) to remove EOG artifacts
+      link: /example/preproc/ica_eog/
+      nav_order: 0
+    - title: Making your own trialfun for conditional trial definition
+      link: /example/preproc/trialfun/
+      nav_order: 0
+    - title: Re-reference EEG and iEEG data
+      link: /example/preproc/rereference/
+      nav_order: 0
+    - title: Use denoising source separation (DSS) to remove ECG artifacts
+      link: /example/preproc/dss_ecg/
+      nav_order: 0
+  - title: Real-time analysis
+    link: /example/realtime/
+    nav_order: 0
+    menu:
+    - title: Example real-time average
+      link: /example/realtime/ft_realtime_average/
+      nav_order: 0
+    - title: Example real-time classification
+      link: /example/realtime/ft_realtime_classification/
+      nav_order: 0
+    - title: Example real-time power estimate
+      link: /example/realtime/ft_realtime_powerestimate/
+      nav_order: 0
+    - title: Example real-time selective average
+      link: /example/realtime/ft_realtime_selectiveaverage/
+      nav_order: 0
+    - title: Example real-time signal viewer
+      link: /example/realtime/ft_realtime_signalviewer/
+      nav_order: 0
+    - title: Measuring the timing delay and jitter for a real-time application
+      link: /example/realtime/realtime_evaluation/
+      nav_order: 0
+    - title: Realtime neurofeedback application based on Hilbert phase estimation
+      link: /example/realtime/ft_realtime_hilbert/
+      nav_order: 0
+  - title: Sensor-level analysis
+    link: /example/sensor/
+    nav_order: 0
+    menu:
+    - title: Analyzing NIRS data recorded during listening to and repeating speech
+      link: /example/sensor/nirs_speech/
+      nav_order: 0
+    - title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+      link: /example/sensor/nirs_fingertapping/
+      nav_order: 0
+    - title: How to incorporate head movements in MEG analysis
+      link: /example/sensor/headmovement_meg/
+      nav_order: 0
+    - title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+      link: /example/sensor/megrealign/
+      nav_order: 0
+    - title: The correct pipeline order for combining planar MEG channels
+      link: /example/sensor/combineplanar_pipelineorder/
+      nav_order: 0
+  - title: Source reconstruction
+    link: /example/source/
+    nav_order: 0
+    menu:
+    - title: Align EEG electrode positions to BEM headmodel
+      link: /example/source/electrodes2bem/
+      nav_order: 0
+    - title: Can I create an artificial CTF dataset using MATLAB?
+      link: /example/source/simulateddata_ctf/
+      nav_order: 0
+    - title: Check the quality of the anatomical coregistration
+      link: /example/source/coregistration_quality_control/
+      nav_order: 0
+    - title: Combined EEG and MEG source reconstruction
+      link: /example/source/sourcerecon_meeg/
+      nav_order: 0
+    - title: Common filters in beamforming
+      link: /example/source/beamformer_commonfilter/
+      nav_order: 0
+    - title: Compute EEG leadfields using a FEM headmodel
+      link: /example/source/fem/
+      nav_order: 0
+    - title: Compute forward simulated data and apply a beamformer scan
+      link: /example/source/simulateddata_beamformer/
+      nav_order: 0
+    - title: Compute forward simulated data and apply a dipole fit
+      link: /example/source/simulateddata_dipolefit/
+      nav_order: 0
+    - title: Compute forward simulated data using ft_dipolesimulation
+      link: /example/source/simulateddata/
+      nav_order: 0
+    - title: Compute forward simulated data with the low-level ft_compute_leadfield
+      link: /example/source/compute_leadfield/
+      nav_order: 0
+    - title: Create MNI-aligned grids in individual head-space
+      link: /example/source/sourcemodel_aligned2mni/
+      nav_order: 0
+    - title: Create brain atlas based MNI-aligned grids in individual head-space
+      link: /example/source/sourcemodel_aligned2mni_atlas/
+      nav_order: 0
+    - title: Determine the filter characteristics
+      link: /example/source/filter_characteristics/
+      nav_order: 0
+    - title: Fit a dipole to the tactile ERF after mechanical stimulation
+      link: /example/source/dipolefit_somatosensory_erf/
+      nav_order: 0
+    - title: Fitting a template MRI to the MEG Polhemus head shape
+      link: /example/source/sphere_fitting/
+      nav_order: 0
+    - title: How to create a head model if you do not have an individual MRI
+      link: /example/source/fittemplate/
+      nav_order: 0
+    - title: Localizing the sources underlying the difference in event-related fields
+      link: /example/source/difference_erf/
+      nav_order: 0
+    - title: Make MEG leadfields using different headmodels
+      link: /example/source/headmodel_various/
+      nav_order: 0
+    - title: Read neuromag .fif mri and create a MNI-aligned single-shell head model
+      link: /example/source/neuromag_aligned2mni/
+      nav_order: 0
+    - title: Symmetric dipole pairs for beamforming
+      link: /example/source/symmetry/
+      nav_order: 0
+    - title: Testing BEM created EEG lead fields
+      link: /example/source/bem_evaluation/
+      nav_order: 0
+    - title: Use your own forward leadfield model in an inverse beamformer computation
+      link: /example/source/beamformer_ownforward/
+      nav_order: 0
+  - title: Spectral analysis
+    link: /example/spectral/
+    nav_order: 0
+    menu:
+    - title: Analysis of high-gamma band signals in human ECoG
+      link: /example/spectral/ecog_ny/
+      nav_order: 0
+    - title: Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+      link: /example/spectral/ssvep/
+      nav_order: 0
+    - title: Conditional Granger causality in the frequency domain
+      link: /example/spectral/granger_conditional/
+      nav_order: 0
+    - title: Cross-frequency analysis
+      link: /example/spectral/crossfreq/
+      nav_order: 0
+      menu:
+      - title: Amplow_amphigh
+        link: /example/spectral/crossfreq/amplow_amphigh/
+        nav_order: 0
+      - title: Phalow_amphigh
+        link: /example/spectral/crossfreq/phalow_amphigh/
+        nav_order: 0
+      - title: Phalow_freqhigh
+        link: /example/spectral/crossfreq/phalow_freqhigh/
+        nav_order: 0
+    - title: Effect of SNR on Coherence
+      link: /example/spectral/coherence_snr/
+      nav_order: 0
+    - title: Effects of tapering for power estimates
+      link: /example/spectral/effects_of_tapering/
+      nav_order: 0
+    - title: Fitting oscillations and one-over-F (FOOOF)
+      link: /example/spectral/fooof/
+      nav_order: 0
+    - title: Fourier analysis of neuronal oscillations and synchronization
+      link: /example/spectral/fourier/
+      nav_order: 0
+    - title: Irregular Resampling Auto-Spectral Analysis (IRASA)
+      link: /example/spectral/irasa/
+      nav_order: 0
+    - title: Simulate an oscillatory signal with phase resetting
+      link: /example/spectral/phase_reset/
+      nav_order: 0
+  - title: Statistical analysis
+    link: /example/stats/
+    nav_order: 0
+    menu:
+    - title: Apply non-parametric statistics with clustering on TFRs of power that
+        were computed with BESA
+      link: /example/stats/stats_besa/
+      nav_order: 0
+    - title: Computing and reporting the effect size
+      link: /example/stats/effectsize/
+      nav_order: 0
+    - title: Defining electrodes as neighbours for cluster-level statistics
+      link: /example/stats/neighbours/
+      nav_order: 0
+    - title: Source statistics
+      link: /example/stats/source_statistics/
+      nav_order: 0
+    - title: Stratify the distribution of one variable that differs in two conditions
+      link: /example/stats/stratify/
+      nav_order: 0
+    - title: Use simulated ERPs to explore cluster statistics
+      link: /example/stats/simulateddata_clusterstats/
+      nav_order: 0
+    - title: Using GLM to analyze NIRS timeseries data
+      link: /example/stats/nirs_glm/
+      nav_order: 0
+    - title: Using General Linear Modeling on time series data
+      link: /example/stats/glm_timeseries/
+      nav_order: 0
+    - title: Using General Linear Modeling over trials
+      link: /example/stats/glm_trials/
+      nav_order: 0
+    - title: Using simulations to estimate the sample size for cluster-based permutation
+        test
+      link: /example/stats/samplesize/
+      nav_order: 0
+    - title: Using threshold-free cluster enhancement for cluster statistics
+      link: /example/stats/tfce/
+      nav_order: 0
+  - title: Various other examples
+    link: /example/other/
+    nav_order: 0
+    menu:
+    - title: BIDS - the brain imaging data structure
+      link: /example/other/bids/
+      nav_order: 0
+    - title: Combining simultaneous recordings in BIDS
+      link: /example/other/bids_pom/
+      nav_order: 0
+    - title: Converting an example EEG dataset for sharing in BIDS
+      link: /example/other/bids_eeg/
+      nav_order: 0
+    - title: Converting an example EMG dataset for sharing in BIDS
+      link: /example/other/bids_emg/
+      nav_order: 0
+    - title: Converting an example MEG dataset for sharing in BIDS
+      link: /example/other/bids_meg/
+      nav_order: 0
+    - title: Converting an example NIRS dataset for sharing in BIDS
+      link: /example/other/bids_nirs/
+      nav_order: 0
+    - title: Converting an example audio dataset for sharing in BIDS
+      link: /example/other/bids_audio/
+      nav_order: 0
+    - title: Converting an example behavioral dataset for sharing in BIDS
+      link: /example/other/bids_behavioral/
+      nav_order: 0
+    - title: Converting an example eyetracker dataset for sharing in BIDS
+      link: /example/other/bids_eyetracker/
+      nav_order: 0
+    - title: Converting an example motion tracking dataset for sharing in BIDS
+      link: /example/other/bids_motion/
+      nav_order: 0
+    - title: Converting an example video dataset for sharing in BIDS
+      link: /example/other/bids_video/
+      nav_order: 0
+    - title: Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
+      link: /example/other/bids_mous/
+      nav_order: 0
+    - title: Correlation analysis of fMRI data
+      link: /example/other/fmri_correlationanalysis/
+      nav_order: 0
+    - title: Example analysis pipeline for Biosemi data
+      link: /example/other/biosemi/
+      nav_order: 0
+    - title: Find the orientation of planar gradiometers
+      link: /example/other/planar_orientation/
+      nav_order: 0
+    - title: How to import data from MNE-Python and FreeSurfer
+      link: /example/other/import_mne/
+      nav_order: 0
+    - title: How to use ft_checkconfig
+      link: /example/other/checkconfig/
+      nav_order: 0
+    - title: Making your analysis pipeline reproducible using reproducescript
+      link: /example/other/reproducescript/
+      nav_order: 0
+    - title: Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+      link: /example/other/entropy_analysis/
+      nav_order: 0
+    - title: Using reproducescript for a group analysis
+      link: /example/other/reproducescript_group/
+      nav_order: 0
+    - title: Using reproducescript on a full study
+      link: /example/other/reproducescript_andersen/
+      nav_order: 0
+- title: External links
+  link: /external_links/
+  nav_order: 0
+- title: FieldTrip Walkthrough
+  link: /walkthrough/
+  nav_order: 0
+- title: Frequently asked questions
+  link: /faq/
+  nav_order: 0
+  menu:
+  - title: Code and development questions
+    link: /faq/development/
+    nav_order: 0
+    menu:
+    - title: How are the various MATLAB data structures defined?
+      link: /faq/development/datatype/
+      nav_order: 0
+    - title: How can I debug my analysis script if a FieldTrip function gives an error?
+      link: /faq/development/matlab_debugging/
+      nav_order: 0
+    - title: How can I keep track of changes to the code?
+      link: /faq/development/trackchanges/
+      nav_order: 0
+    - title: What does a typical call to a FieldTrip function look like?
+      link: /faq/development/fieldtrip_functioncall/
+      nav_order: 0
+    - title: Why was FieldTrip maintained in SVN and not in Git?
+      link: /faq/development/svnversusgit/
+      nav_order: 0
+  - title: Distributed computing
+    link: /faq/distcomp/
+    nav_order: 0
+    menu:
+    - title: How can I distribute a batch of jobs?
+      link: /faq/distcomp/distributed_batch/
+      nav_order: 0
+    - title: How to compile MATLAB code into stand-alone executables?
+      link: /faq/distcomp/matlab_compile/
+      nav_order: 0
+    - title: How to get started with distributed computing using qsub?
+      link: /faq/distcomp/distributed_qsub/
+      nav_order: 0
+    - title: How to get started with the MATLAB distributed computing toolbox?
+      link: /faq/distcomp/distributed_matlab/
+      nav_order: 0
+    - title: What are the different approaches I can take for distributed computing?
+      link: /faq/distcomp/distributed_computing/
+      nav_order: 0
+  - title: Experimental questions
+    link: /faq/experiment/
+    nav_order: 0
+    menu:
+    - title: How can I change the head localization in a CTF dataset?
+      link: /faq/experiment/ctf_changeheadloc/
+      nav_order: 0
+    - title: How can I monitor a subject's head position during a MEG session?
+      link: /faq/experiment/headlocalizer/
+      nav_order: 0
+    - title: How can I use my MacBook Pro for stimulus presentation in the MEG lab?
+      link: /faq/experiment/psychtoolbox_macbook/
+      nav_order: 0
+    - title: How can I visualize the neuromag head position indicator coils?
+      link: /faq/experiment/neuromag_hpi/
+      nav_order: 0
+    - title: What kind of cable do I need for a serial port connection between two
+        computers?
+      link: /faq/experiment/serialport/
+      nav_order: 0
+  - title: MATLAB questions
+    link: /faq/matlab/
+    nav_order: 0
+    menu:
+    - title: Can I prevent "external" toolboxes from being added to my MATLAB path?
+      link: /faq/matlab/toolboxes_legacyvsexternal/
+      nav_order: 0
+    - title: Can I use FieldTrip without MATLAB license?
+      link: /faq/matlab/compiled/
+      nav_order: 0
+    - title: Can I use Octave instead of MATLAB?
+      link: /faq/matlab/octave/
+      nav_order: 0
+    - title: How can I compile the mex files and command-line executable?
+      link: /faq/matlab/compile/
+      nav_order: 0
+    - title: How can I compile the mex files on 64-bit Windows?
+      link: /faq/matlab/compile_windows/
+      nav_order: 0
+    - title: How can I compile the mex files on macOS?
+      link: /faq/matlab/compile_osx/
+      nav_order: 0
+    - title: How many lines of code does FieldTrip consist of?
+      link: /faq/matlab/fieldtrip_codelines/
+      nav_order: 0
+    - title: How to select the correct SPM toolbox?
+      link: /faq/matlab/spmversion/
+      nav_order: 0
+    - title: Installation and setting up the path
+      link: /faq/matlab/installation/
+      nav_order: 0
+    - title: MATLAB complains about a missing or invalid mex file, what should I do?
+      link: /faq/matlab/matlab_mexinvalid/
+      nav_order: 0
+    - title: MATLAB complains that mexmaci64 cannot be opened because the developer
+        cannot be verified
+      link: /faq/matlab/mex_osx/
+      nav_order: 0
+    - title: MATLAB does not see the functions in the "private" directory
+      link: /faq/matlab/matlab_privatefunctions/
+      nav_order: 0
+    - title: MATLAB version 7.3 (2006b) crashes when I try to do ...
+      link: /faq/matlab/matlab_crash73/
+      nav_order: 0
+    - title: Replacements for functions from MathWorks toolboxes
+      link: /faq/matlab/matlab_replacements/
+      nav_order: 0
+    - title: The databrowser crashes and destroys the whole MATLAB session, how can
+        I resolve this?
+      link: /faq/matlab/databrowser_crash/
+      nav_order: 0
+    - title: What are the MATLAB and external requirements?
+      link: /faq/matlab/requirements/
+      nav_order: 0
+    - title: What are the MATLAB requirements for using FieldTrip?
+      link: /faq/matlab/matlab_requirements/
+      nav_order: 0
+    - title: Which external toolboxes are used by FieldTrip?
+      link: /faq/matlab/external/
+      nav_order: 0
+    - title: Why are so many of the interesting functions in the private directories?
+      link: /faq/matlab/privatefunctions_why/
+      nav_order: 0
+  - title: Organizational questions
+    link: /faq/organization/
+    nav_order: 0
+    menu:
+    - title: Can I get an offline version of the documentation on the website?
+      link: /faq/organization/documentation_offline/
+      nav_order: 0
+    - title: Can I use the FieldTrip logo on my poster?
+      link: /faq/organization/fieldtriplogo/
+      nav_order: 0
+    - title: How many people are subscribed to the email discussion list?
+      link: /faq/organization/emaillist_subscribers/
+      nav_order: 0
+    - title: How should I refer to FieldTrip in my publication?
+      link: /faq/organization/fieldtrip_reference/
+      nav_order: 0
+    - title: How should I share example data with the email list or developers?
+      link: /faq/organization/datasharing/
+      nav_order: 0
+    - title: How to ask good questions to the community?
+      link: /faq/organization/emaillist_howtoask/
+      nav_order: 0
+    - title: I am having problems downloading
+      link: /faq/organization/download_ftpproblem/
+      nav_order: 0
+    - title: I am working at the Donders, should I also download FieldTrip?
+      link: /faq/organization/download_donders/
+      nav_order: 0
+    - title: Which version of FieldTrip should I download?
+      link: /faq/organization/fieldtrip_downloadversion/
+      nav_order: 0
+    - title: Why am I not allowed to post to the discussion list?
+      link: /faq/organization/emaillist_nopost/
+      nav_order: 0
+    - title: Why am I not receiving emails from the discussion list?
+      link: /faq/organization/emaillist_noreceive/
+      nav_order: 0
+    - title: Why am I receiving warnings about too many bouncing emails?
+      link: /faq/organization/emaillist_bounces/
+      nav_order: 0
+    - title: Why is FieldTrip developed separately from EEGLAB?
+      link: /faq/organization/fieldtrip_eeglab/
+      nav_order: 0
+    - title: Why is my message rejected from the email discussion list?
+      link: /faq/organization/emaillist_rejected/
+      nav_order: 0
+  - title: Plotting and visualization
+    link: /faq/plotting/
+    nav_order: 0
+    menu:
+    - title: How can I play back EEG/MEG and synchronous audio or video?
+      link: /faq/plotting/audiovideo/
+      nav_order: 0
+    - title: How can I visualize a localspheres volume conductor model?
+      link: /faq/plotting/headmodel_localspheres/
+      nav_order: 0
+    - title: How do I construct a layout file for the plotting functions?
+      link: /faq/plotting/layout_creation/
+      nav_order: 0
+    - title: I am getting strange artifacts in figures that use opacity
+      link: /faq/plotting/opacityrendering/
+      nav_order: 0
+    - title: I am having problems printing figures that use opacity
+      link: /faq/plotting/figure_opacity/
+      nav_order: 0
+    - title: What are the different Neuromag/Elekta/Megin and Yokogawa layouts good
+        for?
+      link: /faq/plotting/layout_magandgrad/
+      nav_order: 0
+    - title: What is a good way to save images for later processing in other software?
+      link: /faq/plotting/figure_export/
+      nav_order: 0
+    - title: What is the format of the layout file which is used for plotting?
+      link: /faq/plotting/layout_fileformat/
+      nav_order: 0
+    - title: What is the plotting convention for anatomical MRIs?
+      link: /faq/plotting/anat_plottingconvention/
+      nav_order: 0
+    - title: Which colormaps are supported?
+      link: /faq/plotting/colormap/
+      nav_order: 0
+    - title: Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
+      link: /faq/plotting/anat_upsidedownplotting/
+      nav_order: 0
+  - title: Reading and preprocessing data
+    link: /faq/preproc/
+    nav_order: 0
+    menu:
+    - title: Artifacts
+      link: /faq/preproc/artifact/
+      nav_order: 0
+      menu:
+      - title: Do I need to resample my data, and if so, how is this to be done?
+        link: /faq/preproc/artifact/resampling_lowpassfilter/
+        nav_order: 0
+      - title: How can I consistently represent artifacts in my data?
+        link: /faq/preproc/artifact/artifact_representation/
+        nav_order: 0
+      - title: How can I interpret the different types of padding in FieldTrip?
+        link: /faq/preproc/artifact/artifact_padding/
+        nav_order: 0
+      - title: How does the filter padding in preprocessing work?
+        link: /faq/preproc/artifact/preproc_padding/
+        nav_order: 0
+      - title: I used ICA on my MEG data from before 2012 and now FieldTrip crashes,
+          why is that?
+        link: /faq/preproc/artifact/ica_crash/
+        nav_order: 0
+      - title: What kind of filters can I apply to my data?
+        link: /faq/preproc/artifact/preproc_filtertypes/
+        nav_order: 0
+      - title: Why does my ICA output contain complex numbers?
+        link: /faq/preproc/artifact/ica_complexvalues/
+        nav_order: 0
+      - title: Why is there a residual 50Hz line-noise component after applying a
+          DFT filter?
+        link: /faq/preproc/artifact/dftfilter_residual/
+        nav_order: 0
+    - title: Data handling
+      link: /faq/preproc/datahandling/
+      nav_order: 0
+      menu:
+      - title: How can I append the files of two separate recordings?
+        link: /faq/preproc/datahandling/append_files/
+        nav_order: 0
+      - title: How can I convert one dataformat into an other?
+        link: /faq/preproc/datahandling/convert_dataformat/
+        nav_order: 0
+      - title: How can I merge two datasets that were acquired simultaneously with
+          different amplifiers?
+        link: /faq/preproc/datahandling/mergedata/
+        nav_order: 0
+      - title: How can I preprocess a dataset that is too large to fit into memory?
+        link: /faq/preproc/datahandling/preproc_downsample/
+        nav_order: 0
+      - title: How can I read corrupted (unsaved) CTF data?
+        link: /faq/preproc/datahandling/ctf_readcorrupted/
+        nav_order: 0
+      - title: How can I rename channels in my data structure?
+        link: /faq/preproc/datahandling/rename_channels/
+        nav_order: 0
+      - title: Reading is slow, can I write my raw data to a more efficient file format?
+        link: /faq/preproc/datahandling/writedata_matbin/
+        nav_order: 0
+      - title: What dataformats are supported?
+        link: /faq/preproc/datahandling/dataformat/
+        nav_order: 0
+    - title: How can I inspect the electrode impedances of my data?
+      link: /faq/preproc/impedancecheck/
+      nav_order: 0
+    - title: How can I use the databrowser?
+      link: /faq/preproc/databrowser/
+      nav_order: 0
+    - title: I used to work with trl-matrices that have more than 3 columns. Why is
+        this not supported anymore?
+      link: /faq/preproc/trialinfo_trl/
+      nav_order: 0
+    - title: Should I rereference prior to or after ICA for artifact removal?
+      link: /faq/preproc/ica_rereference/
+      nav_order: 0
+    - title: Specific data formats
+      link: /faq/preproc/dataformat/
+      nav_order: 0
+      menu:
+      - title: How can I deal with a discontinuous Neuralynx LFP recording?
+        link: /faq/preproc/dataformat/discontinuous_neuralynx/
+        nav_order: 0
+      - title: How can I extend the reading functions with a new dataformat?
+        link: /faq/preproc/dataformat/fileio_dataformat/
+        nav_order: 0
+      - title: How can I fix a corrupt CTF meg4 file?
+        link: /faq/preproc/dataformat/ctf_fixmeg4/
+        nav_order: 0
+      - title: How can I fix a corrupt CTF res4 header file?
+        link: /faq/preproc/dataformat/ctf_fixres4/
+        nav_order: 0
+      - title: How can I import my own data format?
+        link: /faq/preproc/dataformat/dataformat_own/
+        nav_order: 0
+      - title: How can I read EGI mff data without the JVM?
+        link: /faq/preproc/dataformat/egi_nojvm/
+        nav_order: 0
+      - title: How can I read all channels from an EDF file that contains multiple
+          sampling rates?
+        link: /faq/preproc/dataformat/edf2fieldtrip/
+        nav_order: 0
+      - title: How does the CTF higher-order gradiometer work?
+        link: /faq/preproc/dataformat/ctf_syntheticgradient/
+        nav_order: 0
+      - title: I am having problems reading the CTF .hc headcoordinates file
+        link: /faq/preproc/dataformat/ctf_fixhc/
+        nav_order: 0
+      - title: I have problems reading in neuroscan .cnt files. How can I fix this?
+        link: /faq/preproc/dataformat/neuroscan/
+        nav_order: 0
+      - title: Why are the fileio functions stateless, does the fseek not make them
+          very slow?
+        link: /faq/preproc/dataformat/fileio_stateless/
+        nav_order: 0
+    - title: Trials, triggers and events
+      link: /faq/preproc/events/
+      nav_order: 0
+      menu:
+      - title: How can I check or decipher the sequence of triggers in my data?
+        link: /faq/preproc/events/triggers/
+        nav_order: 0
+      - title: How can I find out what eventvalues and eventtypes there are in my
+          data?
+        link: /faq/preproc/events/inspect_events/
+        nav_order: 0
+      - title: How can I process continuous data without triggers?
+        link: /faq/preproc/events/preproc_continuous/
+        nav_order: 0
+      - title: How can I transform trigger values from bits to decimal representation
+          with a trialfun?
+        link: /faq/preproc/events/trialfun_bit2decimal/
+        nav_order: 0
+      - title: Is it possible to keep track of trial-specific information in my analysis
+          pipeline?
+        link: /faq/preproc/events/trialinfo/
+        nav_order: 0
+      - title: What is the relation between "events" (such as triggers) and "trials"?
+        link: /faq/preproc/events/eventsversustrials/
+        nav_order: 0
+    - title: Why should I set continuous to yes for CTF data?
+      link: /faq/preproc/continuous/
+      nav_order: 0
+  - title: Real-time analysis
+    link: /faq/realtime/
+    nav_order: 0
+    menu:
+    - title: Does the FieldTrip realtime buffer only work with MATLAB?
+      link: /faq/realtime/fieldtripbuffer/
+      nav_order: 0
+    - title: How fast is the FieldTrip buffer for realtime data streaming?
+      link: /faq/realtime/fieldtripbuffer_speed/
+      nav_order: 0
+    - title: How should I get started with the FieldTrip realtime buffer?
+      link: /faq/realtime/fieldtripbuffer_gettingstarted/
+      nav_order: 0
+  - title: Source reconstruction
+    link: /faq/source/
+    nav_order: 0
+    menu:
+    - title: Can I do combined EEG and MEG source reconstruction?
+      link: /faq/source/sourcerecon_meeg/
+      nav_order: 0
+    - title: Can I restrict the source reconstruction to the grey matter?
+      link: /faq/source/sourcerecon_greymatter/
+      nav_order: 0
+    - title: How are electrodes, magnetometers or gradiometers described?
+      link: /faq/source/sensors_definition/
+      nav_order: 0
+    - title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+      link: /faq/source/anat_landmarks/
+      nav_order: 0
+    - title: How are the different head and MRI coordinate systems defined?
+      link: /faq/source/coordsys/
+      nav_order: 0
+    - title: How can I check whether the grid that I have is aligned to the segmented
+        volume and to the sensor gradiometer?
+      link: /faq/source/sourcerecon_checkalignment/
+      nav_order: 0
+    - title: How can I convert an anatomical MRI from DICOM into CTF format?
+      link: /faq/source/anat_dicom2ctf/
+      nav_order: 0
+    - title: How can I determine the anatomical label of a source or electrode?
+      link: /faq/source/label_lookup/
+      nav_order: 0
+    - title: How can I fine-tune my BEM volume conduction model?
+      link: /faq/source/bem_finetune/
+      nav_order: 0
+    - title: How can I map source locations onto an anatomical label in an atlas?
+      link: /faq/source/sourcerecon_atlas/
+      nav_order: 0
+    - title: How can I visualize the different geometrical objects that are needed
+        for forward and inverse computations?
+      link: /faq/source/inspect_geometries/
+      nav_order: 0
+    - title: How do I install the OpenMEEG binaries
+      link: /faq/source/openmeeg/
+      nav_order: 0
+    - title: How do homogenous coordinate transformation matrices work?
+      link: /faq/source/homogenous/
+      nav_order: 0
+    - title: How is anatomical, functional or statistical "volume data" described?
+      link: /faq/source/datatype_volume/
+      nav_order: 0
+    - title: How is the segmentation defined?
+      link: /faq/source/datatype_segmentation/
+      nav_order: 0
+    - title: How should I report the positions of the fiducial points on the head?
+      link: /faq/source/fiducials_definition/
+      nav_order: 0
+    - title: How should I specify the fiducials for electrode realignment?
+      link: /faq/source/fiducial/
+      nav_order: 0
+    - title: How to change the MRI orientation, the voxel size or the field-of-view?
+      link: /faq/source/anat_reslice/
+      nav_order: 0
+    - title: How to coregister an anatomical MRI with the gradiometer or electrode
+        positions?
+      link: /faq/source/anat_coreg/
+      nav_order: 0
+    - title: Is it OK for vertices/dipoles to stick out of the volume conductor?
+      link: /faq/source/sticking_out/
+      nav_order: 0
+    - title: Is it good or bad to have dipole locations outside of the brain for which
+        the source reconstruction is computed?
+      link: /faq/source/sourcerecon_outside/
+      nav_order: 0
+    - title: Is it important to have accurate measurements of electrode locations
+        for EEG source reconstruction?
+      link: /faq/source/sensors_accuracy/
+      nav_order: 0
+    - title: My MRI is upside down, is this a problem?
+      link: /faq/source/anat_upsidedown/
+      nav_order: 0
+    - title: Should I use a Polhemus or a Structure Sensor to record electrode positions?
+      link: /faq/source/structuresensor/
+      nav_order: 0
+    - title: What is the conductivity of the brain, CSF, skull and skin tissue?
+      link: /faq/source/conductivity_defaults/
+      nav_order: 0
+    - title: What is the difference between the ACPC, MNI, SPM and TAL coordinate
+        systems?
+      link: /faq/source/acpc/
+      nav_order: 0
+    - title: What kind of volume conduction models of the head (head models) are implemented?
+      link: /faq/source/datatype_headmodel/
+      nav_order: 0
+    - title: What material is used for the flexible MEG headcasts?
+      link: /faq/source/headcast/
+      nav_order: 0
+    - title: Where can I find the dipoli command-line executable?
+      link: /faq/source/dipoli_filelocation/
+      nav_order: 0
+    - title: Where is the anterior commissure?
+      link: /faq/source/anterior_commissure/
+      nav_order: 0
+    - title: Why does my EEG headmodel look funny?
+      link: /faq/source/headmodel_meshingproblem/
+      nav_order: 0
+    - title: Why is the source model deformed or incorrectly aligned after warping
+        template?
+      link: /faq/source/sourcemodel_deformation/
+      nav_order: 0
+    - title: Why is there a rim around the brain for which the source reconstruction
+        is not computed?
+      link: /faq/source/sourcerecon_rim/
+      nav_order: 0
+    - title: Why should I use an average reference for EEG source reconstruction?
+      link: /faq/source/sourcerecon_avgref/
+      nav_order: 0
+  - title: Spectral analysis
+    link: /faq/spectral/
+    nav_order: 0
+    menu:
+    - title: Does it make sense to subtract the ERP prior to time frequency analysis,
+        to distinguish evoked from induced power?
+      link: /faq/spectral/evoked_vs_induced/
+      nav_order: 0
+    - title: How can I compute inter-trial coherence?
+      link: /faq/spectral/itc/
+      nav_order: 0
+    - title: How can I do time-frequency analysis on continuous data?
+      link: /faq/spectral/tfr_continuous/
+      nav_order: 0
+    - title: How does MTMCONVOL work?
+      link: /faq/spectral/mtmconvol/
+      nav_order: 0
+    - title: How to interpret the sign of the phase slope index?
+      link: /faq/spectral/phaseslopeindex/
+      nav_order: 0
+    - title: In what way can frequency domain data be represented in FieldTrip?
+      link: /faq/spectral/datatype_freq/
+      nav_order: 0
+    - title: What are the differences between the old and the new implementation of
+        'mtmconvol' in ft_freqanalysis?
+      link: /faq/spectral/freqanalysis_mtmconvol_new/
+      nav_order: 0
+    - title: What are the differences between the old and the new implementation of
+        'mtmftt' in ft_freqanalysis?
+      link: /faq/spectral/freqanalysis_mtmfft_new/
+      nav_order: 0
+    - title: What are the differences between the old and the new implementation of
+        'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+      link: /faq/spectral/freqanalysis_wavelet_new/
+      nav_order: 0
+    - title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet'
+        and 'mtmfft'?
+      link: /faq/spectral/freqanalysis_phasedefinition/
+      nav_order: 0
+    - title: What does "padding not sufficient for requested frequency resolution"
+        mean?
+      link: /faq/spectral/freqanalysis_paddinginsufficient/
+      nav_order: 0
+    - title: What is meant by time-frequency trade off?
+      link: /faq/spectral/timefreqtradeoff/
+      nav_order: 0
+    - title: What is the difference between coherence and coherency?
+      link: /faq/spectral/coherence_coherency/
+      nav_order: 0
+    - title: Why am I not getting integer frequencies?
+      link: /faq/spectral/freqanalysis_foinoninteger/
+      nav_order: 0
+    - title: Why does my TFR contain NaNs?
+      link: /faq/spectral/tfr_nans/
+      nav_order: 0
+    - title: Why does my TFR look strange (part I, demeaning)?
+      link: /faq/spectral/tfr_strangedemean/
+      nav_order: 0
+    - title: Why does my TFR look strange (part II, detrending)?
+      link: /faq/spectral/tfr_strangedetrend/
+      nav_order: 0
+    - title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in
+        ft_freqanalysis?
+      link: /faq/spectral/freqanalysis_foimismatchmtmconvol/
+      nav_order: 0
+    - title: Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis
+      link: /faq/spectral/freqanalysis_foimismatchmtmfft/
+      nav_order: 0
+    - title: Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly
+        'wltconvol') in ft_freqanalysis?
+      link: /faq/spectral/freqanalysis_foimismatchwavelet/
+      nav_order: 0
+    - title: Why is the largest peak in the spectrum at the frequency which is 1/segment
+        length?
+      link: /faq/spectral/why_largest_peak_spectrum/
+      nav_order: 0
+  - title: Various other questions
+    link: /faq/other/
+    nav_order: 0
+    menu:
+    - title: Are the FieldTrip lectures available on video?
+      link: /faq/other/video/
+      nav_order: 0
+    - title: Can I compare EEG channels between different electrode caps?
+      link: /faq/other/capmapping/
+      nav_order: 0
+    - title: Can I organize my own FieldTrip workshop?
+      link: /faq/other/workshop/
+      nav_order: 0
+    - title: How can I anonymize data processed in FieldTrip?
+      link: /faq/other/anonymization_fieldtripdata/
+      nav_order: 0
+    - title: How can I anonymize or deidentify DICOM files?
+      link: /faq/other/anonymization_dicom/
+      nav_order: 0
+    - title: How can I anonymize or deidentify a BrainVision dataset?
+      link: /faq/other/anonymization_brainvision/
+      nav_order: 0
+    - title: How can I anonymize or deidentify a CTF dataset?
+      link: /faq/other/anonymization_ctf/
+      nav_order: 0
+    - title: How can I anonymize or deidentify an anatomical MRI?
+      link: /faq/other/anonymization_anatomical/
+      nav_order: 0
+    - title: How can I share my MEG data?
+      link: /faq/other/data_sharing/
+      nav_order: 0
+    - title: How do I prevent FieldTrip from printing the time and memory after each
+        function call?
+      link: /faq/other/showcallinfo/
+      nav_order: 0
+    - title: How should I prepare for the upcoming FieldTrip workshop?
+      link: /faq/other/workshop_preparation/
+      nav_order: 0
+    - title: How should I specify the coordinate systems in a BIDS dataset?
+      link: /faq/other/bids_coordsystem/
+      nav_order: 0
+    - title: What are the units of the data and of the derived results?
+      link: /faq/other/units/
+      nav_order: 0
+    - title: Where can I find open access MEG/EEG data?
+      link: /faq/other/open_data/
+      nav_order: 0
+    - title: Which datasets are used in the documentation and where are they used?
+      link: /faq/other/datasets/
+      nav_order: 0
+    - title: Which methodological details should I report in an EEG/MEG manuscript?
+      link: /faq/other/checklist/
+      nav_order: 0
+    - title: Which version of FieldTrip should I download?
+      link: /faq/other/download_version/
+      nav_order: 0
+  - title: stats
+    link: /faq/stats/
+    nav_order: 0
+    menu:
+    - title: How NOT to interpret results from a cluster-based permutation test
+      link: /faq/stats/clusterstats_interpretation/
+      nav_order: 0
+    - title: How can I define neighbouring sensors?
+      link: /faq/stats/sensors_neighbours/
+      nav_order: 0
+    - title: How can I determine the onset of an effect?
+      link: /faq/stats/effectonset/
+      nav_order: 0
+    - title: How can I test for correlations between neuronal data and quantitative
+        stimulus and behavioral variables?
+      link: /faq/stats/behavior_signalcorrelation/
+      nav_order: 0
+    - title: How can I test whether a behavioral measure is phasic?
+      link: /faq/stats/behavior_cosinefit/
+      nav_order: 0
+    - title: How can I use the ivar, uvar, wvar and cvar options to precisely control
+        the permutations?
+      link: /faq/stats/clusterstats_iuwcvar/
+      nav_order: 0
+    - title: How does a difference in trial numbers per condition affect my statistical
+        test
+      link: /faq/stats/statistics_ntrials/
+      nav_order: 0
+    - title: How does ft_prepare_neighbours work?
+      link: /faq/stats/neighbours_prepare/
+      nav_order: 0
+    - title: How to test an interaction effect using cluster-based permutation tests?
+      link: /faq/stats/clusterstats_interaction/
+      nav_order: 0
+    - title: Should I use t or F values for cluster-based permutation tests?
+      link: /faq/stats/clusterstats_teststatistic/
+      nav_order: 0
+    - title: What is the idea behind statistical inference at the second-level?
+      link: /faq/stats/statistics_secondlevel/
+      nav_order: 0
+    - title: Why are there multiple neighbour templates for the Neuromag306 system?
+      link: /faq/stats/neighbours_neuromag/
+      nav_order: 0
+    - title: Why should I use the cfg.correcttail option when using statistics_montecarlo?
+      link: /faq/stats/clusterstats_correcttail/
+      nav_order: 0
+- title: Getting started
+  link: /getting_started/
+  nav_order: 0
+  menu:
+  - title: EEG
+    link: /getting_started/eeg/
+    nav_order: 0
+    menu:
+    - title: Getting started with 20%, 10% and 5% electrode arrangements
+      link: /getting_started/eeg/1020/
+      nav_order: 0
+    - title: Getting started with ABM's B-Alert EEG data
+      link: /getting_started/eeg/b_alert/
+      nav_order: 0
+    - title: Getting started with ANT-Neuro, ASA and EEProbe data
+      link: /getting_started/eeg/antneuro/
+      nav_order: 0
+    - title: Getting started with BESA data
+      link: /getting_started/eeg/besa/
+      nav_order: 0
+    - title: Getting started with Biosemi BDF data
+      link: /getting_started/eeg/biosemi/
+      nav_order: 0
+    - title: Getting started with BrainVision Analyzer and Easycap
+      link: /getting_started/eeg/brainvision/
+      nav_order: 0
+    - title: Getting started with EDF (European Data Format) data
+      link: /getting_started/eeg/edf/
+      nav_order: 0
+    - title: Getting started with EGI/Philips/Magstim data
+      link: /getting_started/eeg/egi/
+      nav_order: 0
+    - title: Getting started with Nicolet data
+      link: /getting_started/eeg/nicolet/
+      nav_order: 0
+    - title: Getting started with TMSi data
+      link: /getting_started/eeg/tmsi/
+      nav_order: 0
+  - title: Eyetracker
+    link: /getting_started/eyetracker/
+    nav_order: 0
+    menu:
+    - title: Getting started with SR-Research EyeLink eye-tracker data
+      link: /getting_started/eyetracker/eyelink/
+      nav_order: 0
+  - title: Intracranial
+    link: /getting_started/intracranial/
+    nav_order: 0
+    menu:
+    - title: Getting started with Blackrock data
+      link: /getting_started/intracranial/blackrock/
+      nav_order: 0
+    - title: Getting started with Cyberkinetics data
+      link: /getting_started/intracranial/cyberkinetics/
+      nav_order: 0
+    - title: Getting started with Neuralynx data
+      link: /getting_started/intracranial/neuralynx/
+      nav_order: 0
+    - title: Getting started with Neuralynx data recorded at the Donders Institute
+      link: /getting_started/intracranial/neuralynx_fcdc/
+      nav_order: 0
+    - title: Getting started with Neurodata Without Borders (NWB) data
+      link: /getting_started/intracranial/nwb/
+      nav_order: 0
+    - title: Getting started with Plexon data
+      link: /getting_started/intracranial/plexon/
+      nav_order: 0
+    - title: Getting started with animal electrophysiology data, including spikes
+      link: /getting_started/intracranial/animal/
+      nav_order: 0
+    - title: Getting started with human ECoG data
+      link: /getting_started/intracranial/human_ecog/
+      nav_order: 0
+  - title: MEG
+    link: /getting_started/meg/
+    nav_order: 0
+    menu:
+    - title: Getting started with BTi/4D data
+      link: /getting_started/meg/bti/
+      nav_order: 0
+    - title: Getting started with BabySQUID data
+      link: /getting_started/meg/babysquid/
+      nav_order: 0
+    - title: Getting started with CTF data
+      link: /getting_started/meg/ctf/
+      nav_order: 0
+    - title: Getting started with Cerca OPM data
+      link: /getting_started/meg/cerca/
+      nav_order: 0
+    - title: Getting started with FieldLine OPM data
+      link: /getting_started/meg/fieldline/
+      nav_order: 0
+    - title: Getting started with Neuromag/Elekta/Megin data
+      link: /getting_started/meg/neuromag/
+      nav_order: 0
+    - title: Getting started with OPM data recorded at the FIL
+      link: /getting_started/meg/opm_fil/
+      nav_order: 0
+    - title: Getting started with Ricoh data
+      link: /getting_started/meg/ricoh/
+      nav_order: 0
+    - title: Getting started with Yokogawa data
+      link: /getting_started/meg/yokogawa/
+      nav_order: 0
+  - title: Motion capture
+    link: /getting_started/motion/
+    nav_order: 0
+    menu:
+    - title: Getting started with XSens motion capture data
+      link: /getting_started/motion/xsens/
+      nav_order: 0
+  - title: NIRS
+    link: /getting_started/nirs/
+    nav_order: 0
+    menu:
+    - title: Getting started with Artinis NIRS data
+      link: /getting_started/nirs/artinis/
+      nav_order: 0
+    - title: Getting started with Hitachi NIRS data
+      link: /getting_started/nirs/hitachi/
+      nav_order: 0
+    - title: Getting started with NIRx NIRS data
+      link: /getting_started/nirs/nirx/
+      nav_order: 0
+    - title: Getting started with SNIRF data
+      link: /getting_started/nirs/snirf/
+      nav_order: 0
+    - title: Getting started with Shimadzu NIRS data
+      link: /getting_started/nirs/shimadzu/
+      nav_order: 0
+  - title: Other data
+    link: /getting_started/otherdata/
+    nav_order: 0
+    menu:
+    - title: Getting started with audio data
+      link: /getting_started/otherdata/audio/
+      nav_order: 0
+    - title: Getting started with fMRI timeseries data
+      link: /getting_started/otherdata/fmri/
+      nav_order: 0
+    - title: Getting started with video data
+      link: /getting_started/otherdata/video/
+      nav_order: 0
+  - title: Other software
+    link: /getting_started/othersoftware/
+    nav_order: 0
+    menu:
+    - title: Getting started with AnyWave
+      link: /getting_started/othersoftware/anywave/
+      nav_order: 0
+    - title: Getting started with BIDS
+      link: /getting_started/othersoftware/bids/
+      nav_order: 0
+    - title: Getting started with BioImage Suite
+      link: /getting_started/othersoftware/bioimage/
+      nav_order: 0
+    - title: Getting started with EEGLAB
+      link: /getting_started/othersoftware/eeglab/
+      nav_order: 0
+    - title: Getting started with Homer
+      link: /getting_started/othersoftware/homer/
+      nav_order: 0
+    - title: Getting started with LIMO MEEG
+      link: /getting_started/othersoftware/limo/
+      nav_order: 0
+    - title: Getting started with LORETA
+      link: /getting_started/othersoftware/loreta/
+      nav_order: 0
+    - title: Getting started with MNE(-python)
+      link: /getting_started/othersoftware/mne/
+      nav_order: 0
+    - title: Getting started with MeshLab
+      link: /getting_started/othersoftware/meshlab/
+      nav_order: 0
+    - title: Getting started with ParaView
+      link: /getting_started/othersoftware/paraview/
+      nav_order: 0
+    - title: Getting started with SPM
+      link: /getting_started/othersoftware/spm/
+      nav_order: 0
+    - title: Getting started with Seg3D
+      link: /getting_started/othersoftware/seg3d/
+      nav_order: 0
+    - title: Getting started with SimNIBS
+      link: /getting_started/othersoftware/simnibs/
+      nav_order: 0
+  - title: Real-time analysis
+    link: /getting_started/realtime/
+    nav_order: 0
+    menu:
+    - title: Getting started with real-time analysis for BCI/neurofeedback
+      link: /getting_started/realtime/realtime/
+      nav_order: 0
+    - title: Getting started with real-time head localization in MEG
+      link: /getting_started/realtime/realtime_headlocalizer/
+      nav_order: 0
+    - title: Streaming realtime fMRI from Siemens scanners
+      link: /getting_started/realtime/realtime_fmri/
+      nav_order: 0
+- title: Importing your data
+  link: /reading_data/
+  nav_order: 0
+- title: Index of all configuration options
+  link: /configuration/
+  nav_order: 0
+- title: Privacy Policy
+  link: /privacy/
+  nav_order: 0
+- title: Reference documentation
+  link: /reference/
+  nav_order: 0
+- title: References to implemented methods
+  link: /references_methods/
+  nav_order: 0
+- title: References to review papers and teaching material
+  link: /references_papers/
+  nav_order: 0
+- title: Search results
+  link: /search_results/
+  nav_order: 0
+- title: Support
+  link: /support/
+  nav_order: 0
+- title: Template models and data
+  link: /template/
+  nav_order: 0
+  menu:
+  - title: Anatomical templates for visualizing source reconstructed activity
+    link: /template/anatomy/
+    nav_order: 0
+  - title: Template 2-D layouts for plotting
+    link: /template/layout/
+    nav_order: 0
+  - title: Template 3-D electrode sets
+    link: /template/electrode/
+    nav_order: 0
+  - title: Template 3-D gradiometer descriptions
+    link: /template/gradiometer/
+    nav_order: 0
+  - title: Template MEG dewar shapes
+    link: /template/dewar/
+    nav_order: 0
+  - title: Template anatomical atlases and parcellation schemes
+    link: /template/atlas/
+    nav_order: 0
+  - title: Template head models for EEG volume conduction modeling
+    link: /template/headmodel/
+    nav_order: 0
+  - title: Template models for source reconstruction
+    link: /template/sourcemodel/
+    nav_order: 0
+  - title: Templates for defining neighbouring channels
+    link: /template/neighbours/
+    nav_order: 0
+- title: Tutorials
+  link: /tutorial/
+  nav_order: 0
+  menu:
+  - title: Analysis of TMS-EEG data
+    link: /tutorial/tms/
+    nav_order: 0
+    menu:
+    - title: Dealing with TMS-EEG datasets
+      link: /tutorial/tms/tms-eeg/
+      nav_order: 0
+  - title: Analysis of fNIRS data
+    link: /tutorial/nirs/
+    nav_order: 0
+    menu:
+    - title: Preprocessing and averaging of multi-channel NIRS data
+      link: /tutorial/nirs/nirs_multichannel/
+      nav_order: 0
+    - title: Preprocessing and averaging of single-channel NIRS data
+      link: /tutorial/nirs/nirs_singlechannel/
+      nav_order: 0
+  - title: Analysis of intracranial data
+    link: /tutorial/intracranial/
+    nav_order: 0
+    menu:
+    - title: Analysis of human ECoG and sEEG recordings
+      link: /tutorial/intracranial/human_ecog/
+      nav_order: 0
+    - title: Analysis of monkey ECoG recordings
+      link: /tutorial/intracranial/monkey_ecog/
+      nav_order: 0
+    - title: Channel and source analysis of mouse EEG
+      link: /tutorial/intracranial/mouse_eeg/
+      nav_order: 0
+    - title: ECoG tutorials
+      link: /tutorial/intracranial/ecog/
+      nav_order: 0
+    - title: Preprocessing and analysis of spike and local field potential data
+      link: /tutorial/intracranial/spikefield/
+      nav_order: 0
+    - title: Preprocessing and analysis of spike-train data
+      link: /tutorial/intracranial/spike/
+      nav_order: 0
+  - title: Connectivity analysis
+    link: /tutorial/connectivity/
+    nav_order: 0
+    menu:
+    - title: Analysis of corticomuscular coherence
+      link: /tutorial/connectivity/coherence/
+      nav_order: 0
+    - title: Analysis of sensor- and source-level connectivity
+      link: /tutorial/connectivity/connectivity_sensor_source/
+      nav_order: 0
+    - title: Connectivity in auditory evoked responses
+      link: /tutorial/connectivity/connectivity_aef/
+      nav_order: 0
+    - title: Extended analysis of sensor- and source-level connectivity
+      link: /tutorial/connectivity/connectivityextended/
+      nav_order: 0
+    - title: Whole brain connectivity and network analysis
+      link: /tutorial/connectivity/networkanalysis/
+      nav_order: 0
+    - title: Whole brain connectivity and network analysis
+      link: /tutorial/connectivity/networkanalysis_eeg/
+      nav_order: 0
+    - title: Whole brain connectivity and network analysis
+      link: /tutorial/connectivity/networkanalysis_old/
+      nav_order: 0
+  - title: Introduction to FieldTrip and MATLAB
+    link: /tutorial/intro/
+    nav_order: 0
+    menu:
+    - title: Creating a clean analysis pipeline
+      link: /tutorial/intro/scripting/
+      nav_order: 0
+    - title: Introduction to the FieldTrip toolbox
+      link: /tutorial/intro/introduction/
+      nav_order: 0
+  - title: Making your analyses more efficient
+    link: /tutorial/scripting/
+    nav_order: 0
+    menu:
+    - title: Making a memory efficient analysis pipeline
+      link: /tutorial/scripting/memory/
+      nav_order: 0
+    - title: Speeding up your analysis using distributed computing with parfor
+      link: /tutorial/scripting/distributedcomputing_parfor/
+      nav_order: 0
+    - title: Speeding up your analysis using distributed computing with qsub
+      link: /tutorial/scripting/distributedcomputing_qsub/
+      nav_order: 0
+  - title: Plotting and visualization
+    link: /tutorial/plotting/
+    nav_order: 0
+    menu:
+    - title: Plotting data at the channel and source level
+      link: /tutorial/plotting/plotting_channel_source/
+      nav_order: 0
+    - title: Specifying the channel layout for plotting
+      link: /tutorial/plotting/layout/
+      nav_order: 0
+  - title: Reading and preprocessing data
+    link: /tutorial/preproc/
+    nav_order: 0
+    menu:
+    - title: Automatic artifact rejection
+      link: /tutorial/preproc/automatic_artifact_rejection/
+      nav_order: 0
+    - title: Cleaning artifacts using ICA
+      link: /tutorial/preproc/ica_artifact_cleaning/
+      nav_order: 0
+    - title: Introduction on dealing with artifacts
+      link: /tutorial/preproc/artifacts/
+      nav_order: 0
+    - title: Preprocessing - Reading continuous EEG and MEG data
+      link: /tutorial/preproc/continuous/
+      nav_order: 0
+    - title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
+      link: /tutorial/preproc/preprocessing/
+      nav_order: 0
+    - title: Visual or manual artifact rejection
+      link: /tutorial/preproc/visual_artifact_rejection/
+      nav_order: 0
+  - title: Sensor-level analyses
+    link: /tutorial/sensor/
+    nav_order: 0
+    menu:
+    - title: Event-related averaging and MEG planar gradient
+      link: /tutorial/sensor/eventrelatedaveraging/
+      nav_order: 0
+    - title: Extracting the brain state and events from continuous sleep EEG
+      link: /tutorial/sensor/sleep/
+      nav_order: 0
+    - title: Preprocessing and event-related activity in combined MEG/EEG data
+      link: /tutorial/sensor/preprocessing/
+      nav_order: 0
+    - title: Preprocessing of EEG data and computing ERPs
+      link: /tutorial/sensor/preprocessing_erp/
+      nav_order: 0
+    - title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+      link: /tutorial/sensor/preprocessing_opm/
+      nav_order: 0
+    - title: Sensor-level ERF, TFR and connectivity analyses
+      link: /tutorial/sensor/sensor_analysis/
+      nav_order: 0
+    - title: Time-frequency analysis of combined MEG/EEG data
+      link: /tutorial/sensor/timefrequency/
+      nav_order: 0
+    - title: Time-frequency analysis using Hanning window, multitapers and wavelets
+      link: /tutorial/sensor/timefrequencyanalysis/
+      nav_order: 0
+  - title: Source reconstruction
+    link: /tutorial/source/
+    nav_order: 0
+    menu:
+    - title: Beamforming oscillatory responses in combined MEG/EEG data
+      link: /tutorial/source/beamforming/
+      nav_order: 0
+    - title: Computation of virtual MEG channels in source-space
+      link: /tutorial/source/virtual_sensors/
+      nav_order: 0
+    - title: Coregistration of Optically Pumped Magnetometer (OPM) data
+      link: /tutorial/source/coregistration_opm/
+      nav_order: 0
+    - title: Creating a BEM volume conduction model of the head for source reconstruction
+        of EEG data
+      link: /tutorial/source/headmodel_eeg_bem/
+      nav_order: 0
+    - title: Creating a FEM volume conduction model of the head for source reconstruction
+        of EEG data
+      link: /tutorial/source/headmodel_eeg_fem/
+      nav_order: 0
+    - title: Creating a source model for source reconstruction of MEG or EEG data
+      link: /tutorial/source/sourcemodel/
+      nav_order: 0
+    - title: Creating a volume conduction model of the head for source reconstruction
+        of MEG data
+      link: /tutorial/source/headmodel_meg/
+      nav_order: 0
+    - title: Dipole fitting of combined MEG/EEG data
+      link: /tutorial/source/dipolefitting/
+      nav_order: 0
+    - title: EEG headmodels
+      link: /tutorial/source/headmodel_eeg/
+      nav_order: 0
+    - title: Localizing electrodes using a 3D-scanner
+      link: /tutorial/source/electrode/
+      nav_order: 0
+    - title: Localizing oscillatory sources using beamformer techniques
+      link: /tutorial/source/beamformer/
+      nav_order: 0
+    - title: Localizing visual gamma and cortico-muscular coherence using DICS
+      link: /tutorial/source/beamformingextended/
+      nav_order: 0
+    - title: Source reconstruction of event-related fields using minimum-norm estimation
+      link: /tutorial/source/minimumnormestimate/
+      nav_order: 0
+    - title: Virtual channel analysis of epilepsy MEG data
+      link: /tutorial/source/epilepsy/
+      nav_order: 0
+  - title: Statistical analysis
+    link: /tutorial/stats/
+    nav_order: 0
+    menu:
+    - title: Classification of event-related MEG data using MVPA-Light
+      link: /tutorial/stats/mvpa_light/
+      nav_order: 0
+    - title: Cluster-based permutation tests on event-related fields
+      link: /tutorial/stats/cluster_permutation_timelock/
+      nav_order: 0
+    - title: Cluster-based permutation tests on time-frequency data
+      link: /tutorial/stats/cluster_permutation_freq/
+      nav_order: 0
+    - title: Parametric and non-parametric statistics on event-related fields
+      link: /tutorial/stats/eventrelatedstatistics/
+      nav_order: 0
+    - title: Plotting data at the channel and source level
+      link: /tutorial/stats/plotting/
+      nav_order: 0
+    - title: Statistical analysis and multiple comparison correction for combined
+        MEG/EEG data
+      link: /tutorial/stats/statistics/
+      nav_order: 0
+- title: Video lectures and tutorials
+  link: /video/
+  nav_order: 0
+  menu:
+  - title: FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
+    link: /video/natmeg/
+    nav_order: 0
+  - title: FieldTrip workshop for the Human Connectome project at Washington University,
+      St. Louis (2011)
+    link: /video/stlouis2011/
+    nav_order: 0
+  - title: FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)
+    link: /video/stockholm2014/
+    nav_order: 0
+  - title: Workshop at BRAMS Institute, Montreal (2012)
+    link: /video/montreal2012/
+    nav_order: 0
+- title: Welcome to the FieldTrip website
+  link: /index/
+  nav_order: 0

@@ -21,11 +21,11 @@ find . -name \*.md | xargs grep -h '^category:' | cut -d : -f 2 | tr -d '[] ' | 
 for CATEGORY in `cat ${CATEGORYFILE}` ; do
   FILELIST=`find . -name \*.md | xargs grep -wl ^category:.*${CATEGORY} | sort -u `
   for FILE in ${FILELIST}; do
-    NAME=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
+    TITLE=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
     LINK=${FILE:1:$((${#FILE}-4))}
-    echo '- name: ' $NAME  >> _data/category/$CATEGORY.yml
-    echo '  link: ' $LINK  >> _data/category/$CATEGORY.yml
-    echo ''                >> _data/category/$CATEGORY.yml
+    echo '- title: ' $TITLE >> _data/category/$CATEGORY.yml
+    echo '  link: '  $LINK  >> _data/category/$CATEGORY.yml
+    echo ''                 >> _data/category/$CATEGORY.yml
   done
 done
 
