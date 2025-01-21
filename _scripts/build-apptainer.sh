@@ -41,19 +41,17 @@ LATEST=$(git log -1 --format=%H)
 
 if [ "$LATEST" != "$PREVIOUS" ] ; then
 
-# DISABLED FOR NOW TO AVOID A PUSH/PULL LOOP
-#
-# # update the tags, this uses a bash script
-# _scripts/tags.sh
-# $GIT add _data/tag/*.yml
-# $GIT add tag/*.md
-# $GIT commit -m "updated tags" _data/tag tag > /dev/null 2>&1
-# 
-##  update the categories, this uses a bash script
-# _scripts/categories.sh
-# $GIT add _data/category/*.yml
-# $GIT add category/*.md
-# $GIT commit -m "updated categories" _data/category category > /dev/null 2>&1
+# update the tags, this uses a bash script
+_scripts/tags.sh
+$GIT add _data/tag/*.yml
+$GIT add tag/*.md
+$GIT commit -m "updated tags" _data/tag tag > /dev/null 2>&1
+
+# update the categories, this uses a bash script
+_scripts/categories.sh
+$GIT add _data/category/*.yml
+$GIT add category/*.md
+$GIT commit -m "updated categories" _data/category category > /dev/null 2>&1
 
 # push the updates back to the repository
 $GIT push > /dev/null 2>&1
