@@ -3166,6 +3166,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.updatesens** - [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_amm](/reference/ft_denoise_amm), [ft_denoise_hfc](/reference/ft_denoise_hfc), [ft_denoise_pca](/reference/ft_denoise_pca), [ft_denoise_ssp](/reference/ft_denoise_ssp), [ft_denoise_sss](/reference/ft_denoise_sss), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_rejectcomponent](/reference/ft_rejectcomponent)  
 
 
+**cfg.updatetrialinfo** - [ft_redefinetrial](/reference/ft_redefinetrial)  
+
+
 **cfg.usefftfilt** - [ft_preprocessing](/reference/ft_preprocessing)  
 
 
