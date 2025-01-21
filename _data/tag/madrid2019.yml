@@ -1,8 +1,8 @@
-- title:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
 - title:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
+
+- title:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
 
 - title:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning

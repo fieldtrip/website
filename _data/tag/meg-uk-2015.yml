@@ -1,6 +1,3 @@
-- title:  MEG-UK 2015 meeting
-  link:  /workshop/meg-uk-2015
-
 - title:  Multimodal faces dataset
   link:  /workshop/meg-uk-2015/dataset
 
@@ -18,6 +15,9 @@
 
 - title:  General instructions for MATLAB demo's
   link:  /workshop/meg-uk-2015/general
+
+- title:  MEG-UK 2015 meeting
+  link:  /workshop/meg-uk-2015
 
 - title:  SPM Source reconstruction demo
   link:  /workshop/meg-uk-2015/spm_source

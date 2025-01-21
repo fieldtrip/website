@@ -97,11 +97,11 @@
 - title:  Connectivity in auditory evoked responses
   link:  /tutorial/connectivity/connectivity_aef
 
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
 - title:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivityextended
+
+- title:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivity_sensor_source
 
 - title:  Introduction to the FieldTrip toolbox
   link:  /tutorial/intro/introduction

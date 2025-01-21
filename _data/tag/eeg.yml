@@ -28,11 +28,11 @@
 - title:  Compute EEG leadfields using a FEM headmodel
   link:  /example/source/fem
 
-- title:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/source/simulateddata
-
 - title:  Compute forward simulated data and apply a dipole fit
   link:  /example/source/simulateddata_dipolefit
+
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg
@@ -157,20 +157,20 @@
 - title:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/preproc/continuous
 
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/sensor/preprocessing
-
 - title:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/sensor/preprocessing_erp
+
+- title:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/sensor/preprocessing
 
 - title:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sensor/sleep
 
-- title:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/sensor/timefrequency
-
 - title:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /tutorial/sensor/timefrequencyanalysis
+
+- title:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/sensor/timefrequency
 
 - title:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/source/beamforming
@@ -214,14 +214,14 @@
 - title:  Time-frequency analysis on short and long timescales
   link:  /workshop/cuttingeeg2021/tutorial_freq
 
-- title:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
 - title:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 
 - title:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_sedation
+
+- title:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
 
 - title:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
@@ -238,14 +238,14 @@
 - title:  Details of the auditory oddball combined MEG/EEG dataset
   link:  /workshop/natmeg2014/meg_audodd
 
-- title:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
 - title:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
 - title:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
+
+- title:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
 
 - title:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics

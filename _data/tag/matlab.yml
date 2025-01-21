@@ -4,11 +4,11 @@
 - title:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/experiment/psychtoolbox_macbook
 
-- title:  How can I compile the mex files on 64-bit Windows?
-  link:  /faq/matlab/compile_windows
-
 - title:  Can I use FieldTrip without MATLAB license?
   link:  /faq/matlab/compiled
+
+- title:  How can I compile the mex files on 64-bit Windows?
+  link:  /faq/matlab/compile_windows
 
 - title:  Which external toolboxes are used by FieldTrip?
   link:  /faq/matlab/external

@@ -13,11 +13,11 @@
 - title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
   link:  /example/source/neuromag_aligned2mni
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
-
 - title:  Create brain atlas based MNI-aligned grids in individual head-space
   link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
 
 - title:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/other/anonymization_anatomical

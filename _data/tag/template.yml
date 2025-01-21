@@ -1,9 +1,6 @@
 - title:  Why are there multiple neighbour templates for the Neuromag306 system?
   link:  /faq/stats/neighbours_neuromag
 
-- title:  Template models and data
-  link:  /template
-
 - title:  Anatomical templates for visualizing source reconstructed activity
   link:  /template/anatomy
 
@@ -24,6 +21,9 @@
 
 - title:  Template 2-D layouts for plotting
   link:  /template/layout
+
+- title:  Template models and data
+  link:  /template
 
 - title:  Templates for defining neighbouring channels
   link:  /template/neighbours

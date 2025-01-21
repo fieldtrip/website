@@ -34,20 +34,20 @@
 - title:  Make MEG leadfields using different headmodels
   link:  /example/source/headmodel_various
 
-- title:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/source/simulateddata
-
 - title:  Compute forward simulated data and apply a beamformer scan
   link:  /example/source/simulateddata_beamformer
 
 - title:  Compute forward simulated data and apply a dipole fit
   link:  /example/source/simulateddata_dipolefit
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
 
 - title:  Create brain atlas based MNI-aligned grids in individual head-space
   link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg

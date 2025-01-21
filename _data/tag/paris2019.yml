@@ -1,6 +1,3 @@
-- title:  PracticalMEEG workshop at ICM in Paris
-  link:  /workshop/paris2019
-
 - title:  Multimodal faces dataset
   link:  /workshop/paris2019/dataset
 
@@ -18,6 +15,9 @@
 
 - title:  Reconstructing source activity using beamformers
   link:  /workshop/paris2019/handson_sourceanalysis
+
+- title:  PracticalMEEG workshop at ICM in Paris
+  link:  /workshop/paris2019
 
 - title:  Instructions for the USB stick
   link:  /workshop/paris2019/usb_instructions
