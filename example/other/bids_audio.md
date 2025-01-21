@@ -26,7 +26,7 @@ The example is a short recording of someone speaking into a microphone. In the e
 
 The example includes the audio recording under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
-In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIFTI), you probably want to keep a copy of the original data, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the audio file but only copying and renaming it, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
+In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIfTI), you probably want to keep a copy of the original data, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the audio file but only copying and renaming it, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
 ```
 cfg = [];

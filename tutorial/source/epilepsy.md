@@ -139,7 +139,7 @@ We want to store all processed results in a different directory than the one con
 
 #### Coregistration of the MEG and MRI data
 
-The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
+The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIfTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
 {% include markup/skyblue %}
 For coregistration we need the original MRI with full facial details, however this is not shared for reasons of anonymity. You should skip this section and continue after the coregistration.
@@ -350,7 +350,7 @@ We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
 
 ##### Visualize the kurtosis images in MRIcro
 
-At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
+At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIfTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
 
     cfg = [];
     cfg.filename = 'Case3_anatomy.nii';

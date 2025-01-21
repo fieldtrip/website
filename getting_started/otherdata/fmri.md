@@ -11,7 +11,7 @@ redirect_from:
 
 # Getting started with fMRI timeseries data
 
-Although FieldTrip is not designed for processing functional MRI data, you can nevertheless read data from NIFTI files and use the various timeseries, spectral and statistical analysis methods on that data.
+Although FieldTrip is not designed for processing functional MRI data, you can nevertheless read data from NIfTI files and use the various timeseries, spectral and statistical analysis methods on that data.
 
 ## As channel-level raw data
 

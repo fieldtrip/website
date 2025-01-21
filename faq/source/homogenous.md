@@ -25,4 +25,4 @@ Indexing of numerical arrays in MATLAB starts with 1, i.e., the first voxel in t
 
 The first 3 elements of the resulting `headpos` vector correspond to the (x,y,z) coordinates in the head coordinate system.
 
-Note that, if the MRI comes directly from the scanner, it still is expressed in DICOM or in NIFTI scanner coordinates, and not relative to actual anatomical landmarks of the individual participant whose data is represented in the MRI.
+Note that, if the MRI comes directly from the scanner, it still is expressed in DICOM or in NIfTI scanner coordinates, and not relative to actual anatomical landmarks of the individual participant whose data is represented in the MRI.

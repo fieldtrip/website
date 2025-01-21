@@ -84,11 +84,11 @@ For this request, the buffer server will only return a fixed 8-byte message cons
 
 #### Example
 
-Suppose you want to write header information that corresponds to a NIFTI-1 file for transmitting fMRI scans. For this you could pick the dedicated NIFTI-1 chunk type (FT_CHUNK_NIFTI1=5), the length of which is always 348 bytes. Lets assume the data are given as 16-bit integers (DATATYPE_INT16=6), the sampling frequency is 0.5 Hz (for a repetition time of 2 sec.) and that your volumes contain 64x64x20 = 81920 voxels. The complete request would then look like this
+Suppose you want to write header information that corresponds to a NIfTI-1 file for transmitting fMRI scans. For this you could pick the dedicated NIfTI-1 chunk type (FT_CHUNK_NIFTI1=5), the length of which is always 348 bytes. Lets assume the data are given as 16-bit integers (DATATYPE_INT16=6), the sampling frequency is 0.5 Hz (for a repetition time of 2 sec.) and that your volumes contain 64x64x20 = 81920 voxels. The complete request would then look like this
 
-| message definition (request)                | fixed header definition                                                              | NIFTI-1 chunk                                    |
+| message definition (request)                | fixed header definition                                                              | NIfTI-1 chunk                                    |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| `version`=1, `command`=0x101, `bufsize`=380 | `nchans`=81920, `nsamples`=0, `nevents`=0, `fsamp`=0.5, `data_type`=6, `bufsize`=356 | `type`=5, `size`=348, NIFTI-1 header (348 bytes) |
+| `version`=1, `command`=0x101, `bufsize`=380 | `nchans`=81920, `nsamples`=0, `nevents`=0, `fsamp`=0.5, `data_type`=6, `bufsize`=356 | `type`=5, `size`=348, NIfTI-1 header (348 bytes) |
 
 Note that for every additional chunk, you need to increase the `bufsize` field of both the message definition and the header definition by the size of the chunk (including the 8 bytes for its `type` and `size` field).
 
@@ -376,15 +376,15 @@ Not used so far.
 | `size` | total length of key/value strings, including terminating zeros |
 | `data` | list of 0-terminated strings (key,value,key,value,...)         |
 
-#### NIFTI-1 header
+#### NIfTI-1 header
 
-Used for transporting a NIFTI-1 header structure for specifying fMRI data.
+Used for transporting a NIfTI-1 header structure for specifying fMRI data.
 
 | field  | contents                      |
 | ------ | ----------------------------- |
 | `type` | FT_CHUNK_NIFTI1 = 5           |
 | `size` | 348                           |
-| `data` | NIFTI-1 header in binary form |
+| `data` | NIfTI-1 header in binary form |
 
 #### Siemens MR sequence protocol (ASCII)
 

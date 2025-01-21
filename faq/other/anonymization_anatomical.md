@@ -39,7 +39,7 @@ It is good practice to review the result of the defacing procedure using
 
 {% include image src="/assets/img/faq/anonymization_anatomical/defacevolume3.png" width="400" %}
 
-Subsequently you can save it to a MATLAB file or to a NIFTI file using
+Subsequently you can save it to a MATLAB file or to a NIfTI file using
 
     ft_write_mri('subjectXX_anon.nii', mri_anon.anatomy, 'transform', mri_anon.transform, 'dataformat', 'nifti');
 

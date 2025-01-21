@@ -245,8 +245,8 @@ different sample points.
 FAQ: "Can I use the buffer to transfer XXX data over the network?", where the
 answer would detail for different XXX what the data is that can be transferred
 and hence also what the information is that would consequently get lost in the
-transfer. Given that NIFTI is much more limited in what can be represented, it
-is possible to transfer NIFTI data without loss of information, whereas it is
+transfer. Given that NIfTI is much more limited in what can be represented, it
+is possible to transfer NIfTI data without loss of information, whereas it is
 not possible to to transfer DICOM data. It is also not possible to transfer
 data from EEG and MEG systems without loss of information that in those systems
 is normally represent on disk.
