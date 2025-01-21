@@ -1,6 +1,3 @@
-- title:  Frequently asked questions
-  link:  /faq
-
 - title:  How are the various MATLAB data structures defined?
   link:  /faq/development/datatype
 
@@ -46,6 +43,9 @@
 - title:  What kind of cable do I need for a serial port connection between two computers?
   link:  /faq/experiment/serialport
 
+- title:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/matlab/compiled
+
 - title:  How can I compile the mex files and command-line executable?
   link:  /faq/matlab/compile
 
@@ -54,9 +54,6 @@
 
 - title:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/matlab/compile_windows
-
-- title:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/matlab/compiled
 
 - title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/matlab/databrowser_crash
@@ -103,6 +100,9 @@
 - title:  Can I prevent "external" toolboxes from being added to my MATLAB path?
   link:  /faq/matlab/toolboxes_legacyvsexternal
 
+- title:  Frequently asked questions
+  link:  /faq
+
 - title:  How should I share example data with the email list or developers?
   link:  /faq/organization/datasharing
 
@@ -139,11 +139,11 @@
 - title:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/organization/fieldtrip_eeglab
 
-- title:  How should I refer to FieldTrip in my publication?
-  link:  /faq/organization/fieldtrip_reference
-
 - title:  Can I use the FieldTrip logo on my poster?
   link:  /faq/organization/fieldtriplogo
+
+- title:  How should I refer to FieldTrip in my publication?
+  link:  /faq/organization/fieldtrip_reference
 
 - title:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/other/anonymization_anatomical
@@ -169,11 +169,11 @@
 - title:  Which methodological details should I report in an EEG/MEG manuscript?
   link:  /faq/other/checklist
 
-- title:  How can I share my MEG data?
-  link:  /faq/other/data_sharing
-
 - title:  Which datasets are used in the documentation and where are they used?
   link:  /faq/other/datasets
+
+- title:  How can I share my MEG data?
+  link:  /faq/other/data_sharing
 
 - title:  Which version of FieldTrip should I download?
   link:  /faq/other/download_version
@@ -343,11 +343,11 @@
 - title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
   link:  /faq/preproc/trialinfo_trl
 
-- title:  Does the FieldTrip realtime buffer only work with MATLAB?
-  link:  /faq/realtime/fieldtripbuffer
-
 - title:  How should I get started with the FieldTrip realtime buffer?
   link:  /faq/realtime/fieldtripbuffer_gettingstarted
+
+- title:  Does the FieldTrip realtime buffer only work with MATLAB?
+  link:  /faq/realtime/fieldtripbuffer
 
 - title:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/realtime/fieldtripbuffer_speed

@@ -1,9 +1,6 @@
 - title:  Examples
   link:  /example
 
-- title:  BIDS - the brain imaging data structure
-  link:  /example/other/bids
-
 - title:  Converting an example audio dataset for sharing in BIDS
   link:  /example/other/bids_audio
 
@@ -18,6 +15,9 @@
 
 - title:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/other/bids_eyetracker
+
+- title:  BIDS - the brain imaging data structure
+  link:  /example/other/bids
 
 - title:  Converting an example MEG dataset for sharing in BIDS
   link:  /example/other/bids_meg
@@ -55,14 +55,14 @@
 - title:  Find the orientation of planar gradiometers
   link:  /example/other/planar_orientation
 
-- title:  Making your analysis pipeline reproducible using reproducescript
-  link:  /example/other/reproducescript
-
 - title:  Using reproducescript on a full study
   link:  /example/other/reproducescript_andersen
 
 - title:  Using reproducescript for a group analysis
   link:  /example/other/reproducescript_group
+
+- title:  Making your analysis pipeline reproducible using reproducescript
+  link:  /example/other/reproducescript
 
 - title:  Creating a layout for plotting NIRS optodes and channels
   link:  /example/plotting/nirs_layout
@@ -175,9 +175,6 @@
 - title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
   link:  /example/source/neuromag_aligned2mni
 
-- title:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/source/simulateddata
-
 - title:  Compute forward simulated data and apply a beamformer scan
   link:  /example/source/simulateddata_beamformer
 
@@ -187,11 +184,14 @@
 - title:  Compute forward simulated data and apply a dipole fit
   link:  /example/source/simulateddata_dipolefit
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
 
 - title:  Create brain atlas based MNI-aligned grids in individual head-space
   link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg
