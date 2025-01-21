@@ -24,25 +24,25 @@ Note that the same approach can also be used for combined EEG and invasive EEG, 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % create a set of electrodes, randomly placed on the sphere
     elec = [];
-    elec.pnt = randn(32,3);
-    dum = sqrt(sum(elec.pnt.^2,2));
-    elec.pnt = elec.pnt ./ [dum dum dum];  % scale them to a unit sphere
+    elec.elecpos = randn(32,3);
+    dum = sqrt(sum(elec.elecpos.^2,2));                  % compute the distance to the origin
+    elec.elecpos = elec.elecpos ./ [dum dum dum] * 0.10; % scale them to a 0.1 meter sphere
     for i=1:32
       elec.label{i} = sprintf('eeg%03d', i);
     end
 
     % create a concentric 3-sphere volume conductor for the EEG, the radius is the same as for the electrodes
     headmodel_eeg   = [];
-    headmodel_eeg.r = [0.88 0.92 1.00]; % radii of spheres
-    headmodel_eeg.c = [1 1/80 1];       % conductivity
-    headmodel_eeg.o = [0 0 0];          % center of sphere
+    headmodel_eeg.r = [0.088 0.092 0.100]; % radii of spheres
+    headmodel_eeg.c = [1 1/80 1];          % conductivity
+    headmodel_eeg.o = [0 0 0];             % center of sphere
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % create a set of magnetometers, randomly placed around the sphere
     grad = [];
     grad.coilpos = randn(64,3);
     dum = sqrt(sum(grad.coilpos.^2,2));
-    grad.coilpos = grad.coilpos ./ [dum dum dum] * 1.2;  % scale them to a unit sphere and shift outward a bit
+    grad.coilpos = grad.coilpos ./ [dum dum dum] * 0.12; % scale them to a 0.12 meter sphere, shifted outward from the head surface
     grad.coilori = grad.coilpos ./ [dum dum dum];        % unit length
     for i=1:64
       grad.label{i} = sprintf('meg%03d', i);
@@ -51,7 +51,7 @@ Note that the same approach can also be used for combined EEG and invasive EEG, 
 
     % create a single-sphere volume conductor for the MEG
     headmodel_meg   = [];
-    headmodel_meg.r = 1.00;             % radius of sphere
+    headmodel_meg.r = 0.1;             % radius of sphere
     headmodel_meg.c = 1;                % conductivity
     headmodel_meg.o = [0 0 0];          % center of sphere
 
@@ -64,24 +64,47 @@ Note that the same approach can also be used for combined EEG and invasive EEG, 
     pos = [0 0 0.8];
     mom = [1 0 0]';
 
-    [combined_headmodel{1}, combined_sens{1}] = ft_prepare_headmodel_sens(combined_headmodel{1}, combined_sens{1});
-    [combined_headmodel{2}, combined_sens{2}] = ft_prepare_headmodel_sens(combined_headmodel{2}, combined_sens{2});
-    leadfield  = ft_compute_leadfield(pos, combined_sens, combined_headmodel) * mom;
+    [combined_headmodel{1}, combined_sens{1}] = ft_prepare_vol_sens(combined_headmodel{1}, combined_sens{1});
+    [combined_headmodel{2}, combined_sens{2}] = ft_prepare_vol_sens(combined_headmodel{2}, combined_sens{2});
+    leadfield  = ft_compute_leadfield(pos, combined_sens, combined_headmodel);
 
-    figure; plot(leadfield(1:32)); title('eeg');
-    figure; plot(leadfield(33:end)); title('meg');
+    assert(size(leadfield,1)==96);
+    assert(size(leadfield,2)==3);
 
-    whos leadfield
+    eeg = leadfield(1:32,:)*mom;
+    meg = leadfield(33:end,:)*mom;
 
-    Name            Size            Bytes  Class     Attributes
-    leadfield      96x1               768  double
+    figure; plot(eeg); title('eeg');
+    figure; plot(meg); title('meg');
+
+You can plot the EEG and MEG topography in 3D, but note that that the EEG/MEG sensors are randomly distributed on a 10/12 cm sphere. The 3D topography is plotted interpolated on flat triangles that connect the sensors, so that is not exactly following the spherical surface. Especially for the EEG you will see that the electrodes are on the sphere representing the scalp, but that the triangles with the colorcoded topography fall inside the sphere. To fix this, you should interpolate the topography onto a triangulation of the sphere with a much higher resolution.
+
+    figure
+    ft_plot_topo3d(elec.elecpos, eeg)
+    ft_plot_sens(elec, 'axes', true)
+    ft_plot_headmodel(headmodel_eeg, 'facecolor', 'skin', 'facealpha', 0.5)
+
+    figure
+    ft_plot_topo3d(grad.coilpos, meg)
+    ft_plot_sens(grad, 'axes', true)
+    ft_plot_headmodel(headmodel_meg, 'facecolor', 'skin', 'facealpha', 0.5)
+
+You can explore the variables that were created.
+
+    >> whos leadfield eeg meg
+
+      Name            Size            Bytes  Class     Attributes
+      eeg            32x1               256  double              
+      leadfield      96x3              2304  double              
+      meg            64x1               512  double              
+
 
     >> ft_senstype(combined_sens)
 
-    ans =
-      'electrode'    'meg'
+      ans =
+        'electrode'    'meg'
 
     >> ft_headmodeltype(combined_headmodel)
 
-    ans =
-      'concentric'    'singlesphere'
+      ans =
+        'concentric'    'singlesphere'
