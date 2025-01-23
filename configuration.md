@@ -1601,6 +1601,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.keepnumeric** - [ft_anonymizedata](/reference/ft_anonymizedata)  
 
 
+**cfg.keeppartial** - [ft_redefinetrial](/reference/ft_redefinetrial)  
+
+
 **cfg.keepremoved** - [ft_analysispipeline](/reference/ft_analysispipeline)  
 
 
