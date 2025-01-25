@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39828755'
+- idtype: doi
+  value: 10.1038/s41598-025-86192-8
+- idtype: pmcid
+  value: PMC11743778
+authors:
+- authtype: Author
+  name: Mehraram R
+- authtype: Author
+  name: Kries J
+- authtype: Author
+  name: De Clercq P
+- authtype: Author
+  name: Vandermosten M
+- authtype: Author
+  name: Francart T
+epubdate: 2025 Jan 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2441'
+pmclivedate: 2025/01/20
+printpubdate: ''
+pubdate: 2025 Jan 19
+sortdate: 2025/01/19 00:00
+source: Sci Rep
+title: EEG reveals brain network alterations in chronic aphasia during natural speech
+  listening
+uid: '11743778'
+volume: '15'

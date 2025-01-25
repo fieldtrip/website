@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39835602'
+- idtype: doi
+  value: 10.1002/hbm.70109
+- idtype: pmcid
+  value: PMC11747998
+authors:
+- authtype: Author
+  name: Dumitrescu AM
+- authtype: Author
+  name: Coolen T
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: Rovai A
+- authtype: Author
+  name: Trotta N
+- authtype: Author
+  name: Goldman S
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Urbain C
+epubdate: 2025 Jan 21
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: e70109
+pmclivedate: 2025/01/22
+printpubdate: ''
+pubdate: 2025 Jan 21
+sortdate: 2025/01/21 00:00
+source: Hum Brain Mapp
+title: Investigating the Spatio‐Temporal Signatures of Language Control–Related Brain
+  Synchronization Processes
+uid: '11747998'
+volume: '46'

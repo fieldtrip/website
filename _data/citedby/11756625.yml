@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39715688'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0398-24.2024
+- idtype: pmcid
+  value: PMC11756625
+authors:
+- authtype: Author
+  name: Saadatmehr B
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Ghostine G
+- authtype: Author
+  name: Kongolo G
+- authtype: Author
+  name: Flaten E
+- authtype: Author
+  name: Tillmann B
+- authtype: Author
+  name: Trainor L
+- authtype: Author
+  name: Moghimi S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: e0398242024
+pmclivedate: 2025/01/24
+printpubdate: 2025 Jan 22
+pubdate: 2025 Jan 22
+sortdate: 2025/01/22 00:00
+source: J Neurosci
+title: 'Auditory Rhythm Encoding during the Last Trimester of Human Gestation: From
+  Tracking the Basic Beat to Tracking Hierarchical Nested Temporal Structures'
+uid: '11756625'
+volume: '45'

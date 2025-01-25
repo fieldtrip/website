@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39753371'
+- idtype: doi
+  value: 10.1523/ENEURO.0287-24.2024
+- idtype: pmcid
+  value: PMC11747973
+authors:
+- authtype: Author
+  name: Haupt T
+- authtype: Author
+  name: Rosenkranz M
+- authtype: Author
+  name: Bleichner MG
+epubdate: 2025 Jan 16
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0287-24.2024
+pmclivedate: 2025/01/21
+printpubdate: ''
+pubdate: 2025 Jan 16
+sortdate: 2025/01/16 00:00
+source: eNeuro
+title: Exploring Relevant Features for EEG-Based Investigation of Sound Perception
+  in Naturalistic Soundscapes
+uid: '11747973'
+volume: '12'

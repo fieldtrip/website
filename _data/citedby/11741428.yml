@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39829811'
+- idtype: doi
+  value: 10.1101/2025.01.06.631506
+- idtype: pmcid
+  value: PMC11741428
+authors:
+- authtype: Author
+  name: Kronemer SI
+- authtype: Author
+  name: Gobo VE
+- authtype: Author
+  name: Japee S
+- authtype: Author
+  name: Merriam E
+- authtype: Author
+  name: Osborne B
+- authtype: Author
+  name: Bandettini PA
+- authtype: Author
+  name: Liu T
+epubdate: 2025 Jan 8
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.01.06.631506
+pmclivedate: 2025/01/18
+printpubdate: ''
+pubdate: 2025 Jan 8
+sortdate: 2025/01/08 00:00
+source: bioRxiv
+title: Eye metrics are a marker of visual conscious awareness and neural processing
+  in cerebral blindness
+uid: '11741428'
+volume: ''
