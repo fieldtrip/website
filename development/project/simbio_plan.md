@@ -70,4 +70,3 @@ to be discussed
 - http://www.rheinahrcampus.de/~medsim/vgrid/index.html
 - http://www.ant-neuro.com/products/asa
 - http://www.sci.utah.edu/cibc/software/106-scirun.html
-- ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/

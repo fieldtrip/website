@@ -39,9 +39,11 @@ Besides FieldTrip, other external software is used in the workflow, e.g., FEniCS
 {% include image src="/assets/img/development/project/femfuns/schema_doll_embedded.png" width="500" %}
 
 ## Running a simulation with FieldTrip and FEMfuns combined
+
 The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and sourcemodel are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model.
 
 ### Setting-up
+
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/Donders-Institute/FEMfuns).
 Setting up is achieved in three steps:
 
@@ -76,7 +78,9 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
     ft_defaults
 
 ### Simulation
+
 #### Two-sphere model
+
 Then surfaces of two spheres can be created using FieldTrip:
 
     % Create a spherical volume conductor with two spheres of radius 7 and 10 cm at the origin
@@ -177,16 +181,19 @@ Alternatively, stimulating electrodes can be used:
     conductivities = [0.33 0.01 0 0 1e10 1e10 1e10];
     lf_stim = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
 
-An example of the potential distribution on the inner sphere with the stimulating and ground electrode (visualized using https://www.paraview.org/):
+An example of the potential distribution on the inner sphere with the stimulating and ground electrode (visualized using <https://www.paraview.org>):
 
 {% include image src="/assets/img/development/project/femfuns/innersphere_stim.png" width="500" %}
 
 The test script with all the above snippets put together is `test_realistic_electrodes.m`.
 
 #### Realistic model of the head
+
 The workflow for a realistic headmodel based on an anatomical MRI is comparable to the 2-sphere example. Here, we will go over the first steps where the mesh is created.
 
-First, read in the mri data from FieldTrip ([download the dataset here: Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)) and reslice it:
+You can download the tutorial dataset `Subject01.zip` from our [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
+
+First, read in the anatomical MRI and reslice it:
 
     mri = ft_read_mri('Subject01.mri');
     cfg     = [];
@@ -243,11 +250,10 @@ Finally, we can create our volumetric tetrahedral mesh with 7 regions, 4 electro
 
 The steps where the sourcemodel and leadfield is created is omitted here, since it consists of exactly the same steps as the 2-sphere example. The test script with the complete code is named `test_headmodel_realistic_electrodes.m`.
 
-After running the code, an example of the potential distribution on the brain looks like (visualized using https://www.paraview.org/):
+After running the code, an example of the potential distribution on the brain looks like (visualized using <https://www.paraview.org>):
 
 {% include image src="/assets/img/development/project/femfuns/3surf_elecs_bipole.png" width="500" %}
 
 Disclaimer: as the number of cells increases, the RAM usage will quickly increase when converting the mesh to FEMfuns format and computing the FEM. In this realistic head model (with 7198480 tetrahedra) make sure to have at least 5GB available.
 
-
-This work is supported by a grant from stichting IT projecten ([StITPro](https://stitpro.nl/)).
+This work was supported by a grant from stichting IT projecten ([StITPro](https://stitpro.nl/)).
