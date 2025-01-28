@@ -16,7 +16,7 @@ Although initially we considered to use [semantic versioning](https://semver.org
 
 We release regular versions of FieldTrip, with the name fieldtrip-YYYYMMDD, where YYYY, MM and DD are the year, month and day. These are generated following the development, test and release cycle described [here](/development/releasing) and contain the tested and most up-to-date code.
 
-Besides the normal release, there is also a "lite" version that does not contain the binary *.mat files. These mat files contain templates used for plotting source reconstructions and they do not change very often. The lite version is only approximately 80 MiB, whereas the normal version (which includes the anatomical templates) is around 400 MiB.
+Besides the normal release, there is also a "lite" version that does not contain the binary .mat files. These .mat files contain [template](/template) models and data that are among others used for plotting and they do not change very often. The lite version is only approximately 80 MiB, whereas the normal version (which includes the anatomical templates) is around 400 MiB.
 
 In general, you should download the most recent daily release version. It contains the most features and all known bugs will be fixed in that version. If you encounter a problem and think that that is caused by a bug in the code, you should download the latest version at that moment. If the problem still persists, please inform us about it through the [email discussion list](/discussion_list) or report it as a [bug](/development/issues).
 
