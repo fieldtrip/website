@@ -105,8 +105,8 @@ The `hold on` command is necessary in order to show more than one line in
 the figure.
 
 **_Evaluate the effect of the different parameter settings is on the shape
-of the time course, by specifying different values for the frequency, ncycle,
-latency and phase._**
+of the time course, by specifying different values for `frequency`, `ncycle`,
+`latency` and `phase`._**
 
 We can apply a very simple instantaneous mixing to the two sources' time courses
 by just summing the two. This procedure is equivalent to taking a weighted combination,
