@@ -1,0 +1,77 @@
+articleids:
+- idtype: pmid
+  value: '39829871'
+- idtype: doi
+  value: 10.1101/2024.10.02.616378
+- idtype: pmcid
+  value: PMC11741236
+authors:
+- authtype: Author
+  name: Westerberg JA
+- authtype: Author
+  name: Xiong YS
+- authtype: Author
+  name: Nejat H
+- authtype: Author
+  name: Sennesh E
+- authtype: Author
+  name: Durand S
+- authtype: Author
+  name: Hardcastle B
+- authtype: Author
+  name: Cabasco H
+- authtype: Author
+  name: Belski H
+- authtype: Author
+  name: Bawany A
+- authtype: Author
+  name: Gillis R
+- authtype: Author
+  name: Loeffler H
+- authtype: Author
+  name: Peene CR
+- authtype: Author
+  name: Han W
+- authtype: Author
+  name: Nguyen K
+- authtype: Author
+  name: Ha V
+- authtype: Author
+  name: Johnson T
+- authtype: Author
+  name: Grasso C
+- authtype: Author
+  name: Young A
+- authtype: Author
+  name: Swapp J
+- authtype: Author
+  name: Ouellette B
+- authtype: Author
+  name: Caldejon S
+- authtype: Author
+  name: Williford A
+- authtype: Author
+  name: Groblewski PA
+- authtype: Author
+  name: Olsen SR
+- authtype: Author
+  name: Kiselycznyk C
+- authtype: Author
+  name: Lecoq JA
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Bastos AM
+epubdate: 2025 Jan 9
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.10.02.616378
+pmclivedate: 2025/01/18
+printpubdate: ''
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: bioRxiv
+title: Adaptation, not prediction, drives neuronal spiking responses in mammalian
+  sensory cortex
+uid: '11741236'
+volume: ''

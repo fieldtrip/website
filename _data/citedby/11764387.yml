@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39851390'
+- idtype: doi
+  value: 10.3390/brainsci15010022
+- idtype: pmcid
+  value: PMC11764387
+authors:
+- authtype: Author
+  name: Juras L
+- authtype: Author
+  name: Vranic A
+- authtype: Author
+  name: Hromatko I
+epubdate: 2024 Dec 29
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '22'
+pmclivedate: 2025/01/27
+printpubdate: ''
+pubdate: 2024 Dec 29
+sortdate: 2024/12/29 00:00
+source: Brain Sci
+title: 'Elusive Gains of Cognitive Training: Limited Effects on Neural Activity Across
+  Sessions'
+uid: '11764387'
+volume: '15'
