@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39809818'
+- idtype: doi
+  value: 10.1038/s42003-024-07448-z
+- idtype: pmcid
+  value: PMC11733256
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: de Vico Fallani F
+- authtype: Author
+  name: Boehme R
+- authtype: Author
+  name: Salamone PC
+epubdate: 2025 Jan 14
+fulljournalname: Communications Biology
+issue: ''
+pages: '52'
+pmclivedate: 2025/01/15
+printpubdate: ''
+pubdate: 2025 Jan 14
+sortdate: 2025/01/14 00:00
+source: Commun Biol
+title: Linking heartbeats with the cortical network dynamics involved in self-social
+  touch distinction
+uid: '11733256'
+volume: '8'

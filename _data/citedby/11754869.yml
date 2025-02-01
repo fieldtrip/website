@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39843944'
+- idtype: doi
+  value: 10.1038/s41598-025-87244-9
+- idtype: pmcid
+  value: PMC11754869
+authors:
+- authtype: Author
+  name: Giannini G
+- authtype: Author
+  name: Nierhaus T
+- authtype: Author
+  name: Blankenburg F
+epubdate: 2025 Jan 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2819'
+pmclivedate: 2025/01/23
+printpubdate: ''
+pubdate: 2025 Jan 22
+sortdate: 2025/01/22 00:00
+source: Sci Rep
+title: Investigation of sensory attenuation in the somatosensory domain using EEG
+  in a novel virtual reality paradigm
+uid: '11754869'
+volume: '15'

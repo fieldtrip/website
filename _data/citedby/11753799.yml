@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39845721'
+- idtype: doi
+  value: 10.1080/23273798.2024.2375248
+- idtype: pmcid
+  value: PMC11753799
+- idtype: MID
+  value: NIHMS2008933
+authors:
+- authtype: Author
+  name: Hubbard RJ
+- authtype: Author
+  name: Federmeier KD
+epubdate: 2024 Jul 12
+fulljournalname: Language, cognition and neuroscience
+issue: '7'
+pages: 891-908
+pmclivedate: ''
+printpubdate: '2024'
+pubdate: 2024 Jul 12
+sortdate: 2024/07/12 00:00
+source: Lang Cogn Neurosci
+title: Altered Oscillatory Neural Dynamics Related to Word Prediction in Older Adult
+  Readers
+uid: '11753799'
+volume: '39'

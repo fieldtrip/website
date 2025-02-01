@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39752187'
+- idtype: doi
+  value: 10.1111/nyas.15279
+- idtype: pmcid
+  value: PMC11776452
+authors:
+- authtype: Author
+  name: Czepiel AM
+- authtype: Author
+  name: Fink LK
+- authtype: Author
+  name: Scharinger M
+- authtype: Author
+  name: Seibert C
+- authtype: Author
+  name: Wald‐Fuhrmann M
+- authtype: Author
+  name: Kotz SA
+epubdate: 2025 Jan 3
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: 117-132
+pmclivedate: 2025/01/30
+printpubdate: 2025 Jan
+pubdate: 2025 Jan 3
+sortdate: 2025/01/03 00:00
+source: Ann N Y Acad Sci
+title: Audio‐visual concert performances synchronize audience's heart rates
+uid: '11776452'
+volume: '1543'

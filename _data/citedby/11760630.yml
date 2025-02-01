@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39853833'
+- idtype: doi
+  value: 10.1111/ejn.70005
+- idtype: pmcid
+  value: PMC11760630
+authors:
+- authtype: Author
+  name: Lui TK
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Wöstmann M
+epubdate: 2025 Jan 24
+fulljournalname: The European Journal of Neuroscience
+issue: '2'
+pages: e70005
+pmclivedate: 2025/01/26
+printpubdate: 2025 Jan
+pubdate: 2025 Jan 24
+sortdate: 2025/01/24 00:00
+source: Eur J Neurosci
+title: 'Predicting the Irrelevant: Neural Effects of Distractor Predictability Depend
+  on Load'
+uid: '11760630'
+volume: '61'

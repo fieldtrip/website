@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '39870674'
+- idtype: doi
+  value: 10.1038/s41597-024-04136-9
+- idtype: pmcid
+  value: PMC11772744
+authors:
+- authtype: Author
+  name: Luke R
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Cockx H
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Shader MJ
+- authtype: Author
+  name: Orihuela-Espina F
+- authtype: Author
+  name: Innes-Brown H
+- authtype: Author
+  name: Tucker S
+- authtype: Author
+  name: Boas D
+- authtype: Author
+  name: Yücel MA
+- authtype: Author
+  name: Gau R
+- authtype: Author
+  name: Salo T
+- authtype: Author
+  name: Appelhoff S
+- authtype: Author
+  name: Markiewicz CJ
+- authtype: Author
+  name: McAlpine D
+- authtype: CollectiveName
+  name: The BIDS Maintainershttp://orcid.org/0000-0002-1535-9767GauRemiR10SaloTaylorT11AppelhoffStefanS12http://orcid.org/0000-0002-6533-164XMarkiewiczChristopher
+    J.CJ13
+- authtype: Author
+  name: Pollonini L
+epubdate: 2025 Jan 27
+fulljournalname: Scientific Data
+issue: ''
+pages: '159'
+pmclivedate: 2025/01/28
+printpubdate: ''
+pubdate: 2025 Jan 27
+sortdate: 2025/01/27 00:00
+source: Sci Data
+title: 'NIRS-BIDS: Brain Imaging Data Structure Extended to Near-Infrared Spectroscopy'
+uid: '11772744'
+volume: '12'

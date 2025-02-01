@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39572236'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2193-23.2024
+- idtype: pmcid
+  value: PMC11735671
+authors:
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Corcoran AW
+- authtype: Author
+  name: Dede AJ
+- authtype: Author
+  name: Kohler MJ
+- authtype: Author
+  name: Coussens SW
+- authtype: Author
+  name: Zou-Williams L
+- authtype: Author
+  name: Schlesewsky M
+- authtype: Author
+  name: Gaskell GM
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Bornkessel-Schlesewsky I
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: e2193232024
+pmclivedate: ''
+printpubdate: 2025 Jan 15
+pubdate: 2025 Jan 15
+sortdate: 2025/01/15 00:00
+source: J Neurosci
+title: Slow Oscillation–Spindle Coupling Predicts Sequence-Based Language Learning
+uid: '11735671'
+volume: '45'

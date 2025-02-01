@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39581793'
+- idtype: doi
+  value: 10.1016/j.neurot.2024.e00497
+- idtype: pmcid
+  value: PMC11742839
+authors:
+- authtype: Author
+  name: De Martino E
+- authtype: Author
+  name: Casali AG
+- authtype: Author
+  name: Nascimento Couto BA
+- authtype: Author
+  name: Graven-Nielsen T
+- authtype: Author
+  name: Ciampi de Andrade D
+epubdate: 2024 Nov 24
+fulljournalname: Neurotherapeutics
+issue: '1'
+pages: e00497
+pmclivedate: 2025/01/20
+printpubdate: ''
+pubdate: 2024 Nov 24
+sortdate: 2024/11/24 00:00
+source: Neurotherapeutics
+title: Increase in beta frequency phase synchronization and power after a session
+  of high frequency repetitive transcranial magnetic stimulation to the primary motor
+  cortex
+uid: '11742839'
+volume: '22'

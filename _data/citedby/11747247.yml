@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39833172'
+- idtype: doi
+  value: 10.1038/s41598-025-85385-5
+- idtype: pmcid
+  value: PMC11747247
+authors:
+- authtype: Author
+  name: Johannknecht M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2025 Jan 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2531'
+pmclivedate: 2025/01/21
+printpubdate: ''
+pubdate: 2025 Jan 20
+sortdate: 2025/01/20 00:00
+source: Sci Rep
+title: Subliminal visual stimulation produces behavioural oscillations in multiple
+  frequencies in a visual integration task
+uid: '11747247'
+volume: '15'

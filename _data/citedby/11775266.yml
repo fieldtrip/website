@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '39875442'
+- idtype: doi
+  value: 10.1038/s41598-025-86895-y
+- idtype: pmcid
+  value: PMC11775266
+authors:
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Volehaugen V
+- authtype: Author
+  name: Foldal MD
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Danielsen A
+epubdate: 2025 Jan 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3510'
+pmclivedate: 2025/01/29
+printpubdate: ''
+pubdate: 2025 Jan 28
+sortdate: 2025/01/28 00:00
+source: Sci Rep
+title: Beta oscillations predict the envelope sharpness in a rhythmic beat sequence
+uid: '11775266'
+volume: '15'

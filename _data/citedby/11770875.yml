@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39681243'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2024.120973
+- idtype: pmcid
+  value: PMC11770875
+- idtype: MID
+  value: NIHMS2047894
+authors:
+- authtype: Author
+  name: Chowdhury A
+- authtype: Author
+  name: Bianciardi M
+- authtype: Author
+  name: Chapdelaine E
+- authtype: Author
+  name: Riaz OS
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: van Lutterveld R
+- authtype: Author
+  name: Sparby T
+- authtype: Author
+  name: Sacchet MD
+epubdate: 2024 Dec 14
+fulljournalname: NeuroImage
+issue: ''
+pages: '120973'
+pmclivedate: 2025/01/27
+printpubdate: 2025 Jan
+pubdate: 2024 Dec 14
+sortdate: 2024/12/14 00:00
+source: Neuroimage
+title: 'Multimodal neurophenomenology of advanced concentration absorption meditation:
+  An intensively sampled case study of Jhana'
+uid: '11770875'
+volume: '305'
