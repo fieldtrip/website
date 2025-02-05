@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39826353'
+- idtype: doi
+  value: 10.1016/j.dcn.2025.101506
+- idtype: pmcid
+  value: PMC11787029
+authors:
+- authtype: Author
+  name: van den Boomen C
+- authtype: Author
+  name: Praat AC
+- authtype: Author
+  name: Junge CM
+- authtype: Author
+  name: Kemner C
+epubdate: 2025 Jan 9
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101506'
+pmclivedate: 2025/02/03
+printpubdate: ''
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: Dev Cogn Neurosci
+title: The effects of Covid-19 related policies on neurocognitive face processing
+  in the first four years of life
+uid: '11787029'
+volume: '72'

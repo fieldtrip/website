@@ -1,0 +1,73 @@
+articleids:
+- idtype: pmid
+  value: '39106285'
+- idtype: doi
+  value: 10.1093/brain/awae262
+- idtype: pmcid
+  value: PMC11788215
+authors:
+- authtype: Author
+  name: Bakouh N
+- authtype: Author
+  name: Castaño-Martín R
+- authtype: Author
+  name: Metais A
+- authtype: Author
+  name: Dan EL
+- authtype: Author
+  name: Balducci E
+- authtype: Author
+  name: Chhuon C
+- authtype: Author
+  name: Lepicka J
+- authtype: Author
+  name: Barcia G
+- authtype: Author
+  name: Losito E
+- authtype: Author
+  name: Lourdel S
+- authtype: Author
+  name: Planelles G
+- authtype: Author
+  name: Muresan RC
+- authtype: Author
+  name: Moca VV
+- authtype: Author
+  name: Kaminska A
+- authtype: Author
+  name: Bourgeois M
+- authtype: Author
+  name: Chemaly N
+- authtype: Author
+  name: Rguez Y
+- authtype: Author
+  name: Auvin S
+- authtype: Author
+  name: Huberfeld G
+- authtype: Author
+  name: Varlet P
+- authtype: Author
+  name: Asnafi V
+- authtype: Author
+  name: Guerrera IC
+- authtype: Author
+  name: Kabashi E
+- authtype: Author
+  name: Nabbout R
+- authtype: Author
+  name: Ciura S
+- authtype: Author
+  name: Blauwblomme T
+epubdate: 2024 Aug 6
+fulljournalname: Brain
+issue: '2'
+pages: 549-563
+pmclivedate: 2025/02/04
+printpubdate: ''
+pubdate: 2024 Aug 6
+sortdate: 2024/08/06 00:00
+source: Brain
+title: Chloride deregulation and GABA depolarization in MTOR-related malformations
+  of cortical development
+uid: '11788215'
+volume: '148'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39824803'
+- idtype: doi
+  value: 10.1038/s41398-025-03225-6
+- idtype: pmcid
+  value: PMC11742065
+authors:
+- authtype: Author
+  name: Ivanova M
+- authtype: Author
+  name: Germanova K
+- authtype: Author
+  name: Petelin DS
+- authtype: Author
+  name: Ragimova A
+- authtype: Author
+  name: Kopytin G
+- authtype: Author
+  name: Volel BA
+- authtype: Author
+  name: Nikulin VV
+- authtype: Author
+  name: Herrojo Ruiz M
+epubdate: 2025 Jan 17
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '13'
+pmclivedate: 2025/01/19
+printpubdate: ''
+pubdate: 2025 Jan 17
+sortdate: 2025/01/17 00:00
+source: Transl Psychiatry
+title: Frequency-specific changes in prefrontal activity associated with maladaptive
+  belief updating in volatile environments in euthymic bipolar disorder
+uid: '11742065'
+volume: '15'

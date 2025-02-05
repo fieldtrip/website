@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '39898025'
+- idtype: doi
+  value: 10.1016/j.isci.2024.111506
+- idtype: pmcid
+  value: PMC11787601
+authors:
+- authtype: Author
+  name: Qiao X
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Huang H
+- authtype: Author
+  name: Hong Y
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Yang L
+- authtype: Author
+  name: Ong S
+- authtype: Author
+  name: Yao Y
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Lin KM
+- authtype: Author
+  name: Xiao Y
+- authtype: Author
+  name: Weng M
+- authtype: Author
+  name: Zhang J
+epubdate: 2024 Nov 29
+fulljournalname: iScience
+issue: '2'
+pages: '111506'
+pmclivedate: 2025/02/02
+printpubdate: ''
+pubdate: 2024 Nov 29
+sortdate: 2024/11/29 00:00
+source: iScience
+title: 'Exploring the neural mechanisms underlying cooperation and competition behavior:
+  Insights from stereo-electroencephalography hyperscanning'
+uid: '11787601'
+volume: '28'
