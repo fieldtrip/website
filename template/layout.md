@@ -175,6 +175,18 @@ The following template layouts are for electrode caps from [NeuroScan](http://ww
 {% include image src="/assets/img/template/layout/quickcap64.mat.png" width="200" %} (since june 2012 - r6055)
 {% include image src="/assets/img/template/layout/quikcap_nsl_128.mat.png" width="200" %} (since nov 2012 - r6915)
 
+### TMSi infinity gel headcap
+
+The following template layouts are for the [32- and 64-channel electrode caps](https://knowledge.tmsi.com/electrode-lay-out-infinity-gel-cap) from [TMSi](https://www.tmsi.com/).
+
+##### tmsi32 - TMSi 32-channel infinity gel headcap
+
+{% include image src="/assets/img/template/layout/tmsi32.lay.png" width="200" %} 
+
+##### tmsi64 - TMSi 64-channel infinity gel headcap
+
+{% include image src="/assets/img/template/layout/tmsi64.lay.png" width="200" %}
+
 ## MEG layouts
 
 ### BTi/4D system
