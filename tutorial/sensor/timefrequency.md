@@ -1,7 +1,5 @@
 ---
 title: Time-frequency analysis of combined MEG/EEG data
-parent: Sensor-level analyses
-grand_parent: Tutorials
 category: tutorial
 tags: [natmeg2014, meg+eeg, frequency, meg-audodd]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Testing BEM created EEG lead fields
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [eeg, mri, headmodel, source, simulation]
 redirect_from:

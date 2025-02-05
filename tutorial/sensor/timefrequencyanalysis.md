@@ -1,7 +1,5 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-parent: Sensor-level analyses
-grand_parent: Tutorials
 category: tutorial
 tags: [freq, meg, eeg, plotting, meg-language]
 redirect_from:

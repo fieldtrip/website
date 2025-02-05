@@ -1,7 +1,5 @@
 ---
 title: How can I define neighbouring sensors?
-parent: Statistical analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [statistics, cluster, plotting]
 redirect_from:

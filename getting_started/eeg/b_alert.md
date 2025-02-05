@@ -1,7 +1,5 @@
 ---
 title: Getting started with ABM's B-Alert EEG data
-parent: EEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, b-alert, balert, abm, x10, x-10, x24, x-24]
 redirect_from:

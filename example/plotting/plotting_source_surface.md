@@ -1,7 +1,5 @@
 ---
 title: Plotting the result of source reconstruction on a cortical mesh
-parent: Plotting and visualization
-grand_parent: Examples
 category: example
 tags: [plotting, source]
 redirect_from:

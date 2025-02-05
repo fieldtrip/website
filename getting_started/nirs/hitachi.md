@@ -1,7 +1,5 @@
 ---
 title: Getting started with Hitachi NIRS data
-parent: NIRS
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, nirs, hitachi]
 redirect_from:

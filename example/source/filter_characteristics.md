@@ -1,7 +1,5 @@
 ---
 title: Determine the filter characteristics
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [preprocessing, filter]
 redirect_from:

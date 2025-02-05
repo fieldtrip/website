@@ -1,7 +1,5 @@
 ---
 title: Getting started with BabySQUID data
-parent: MEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, babysquid, meg]
 redirect_from:

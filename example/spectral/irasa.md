@@ -1,7 +1,5 @@
 ---
 title: Irregular Resampling Auto-Spectral Analysis (IRASA)
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [irasa]
 redirect_from:

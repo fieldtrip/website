@@ -1,7 +1,5 @@
 ---
 title: Analysis of human ECoG and sEEG recordings
-parent: Analysis of intracranial data
-grand_parent: Tutorials
 category: tutorial
 tags: [ieeg, ecog, seeg, anatomy, mri, ct, freesurfer, ecog-protocol]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Introduction on dealing with artifacts
-parent: Reading and preprocessing data
-grand_parent: Tutorials
 category: tutorial
 tags: [artifact, preprocessing, eeg, meg]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Why am I not receiving emails from the discussion list?
-parent: Organizational questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [email]
 redirect_from:

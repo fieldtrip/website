@@ -1,7 +1,5 @@
 ---
 title: Getting started with ANT-Neuro, ASA and EEProbe data
-parent: EEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, eeg, ant, asa, eeprobe]
 redirect_from:

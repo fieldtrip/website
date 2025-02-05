@@ -1,7 +1,5 @@
 ---
 title: How can I determine the onset of an effect?
-parent: Statistical analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [statistics]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: How can I use the databrowser?
-parent: Reading and preprocessing data
-grand_parent: Frequently asked questions
 category: faq
 tags: [databrowser, plotting, artifact]
 redirect_from:

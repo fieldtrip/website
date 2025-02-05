@@ -1,7 +1,5 @@
 ---
 title: Fitting oscillations and one-over-F (FOOOF)
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [fooof]
 redirect_from:

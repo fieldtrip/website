@@ -1,7 +1,5 @@
 ---
 title: Fixing a missing channel
-parent: Reading and preprocessing data
-grand_parent: Examples
 category: example
 tags: [meg, preprocessing, ctf, neighbours]
 redirect_from:

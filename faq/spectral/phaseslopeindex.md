@@ -1,7 +1,5 @@
 ---
 title: How to interpret the sign of the phase slope index?
-parent: Spectral analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [coherence]
 redirect_from:

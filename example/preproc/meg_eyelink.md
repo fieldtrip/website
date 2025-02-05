@@ -1,7 +1,5 @@
 ---
 title: Combine MEG with Eyelink eyetracker data
-parent: Reading and preprocessing data
-grand_parent: Examples
 category: example
 tags: [artifact, preprocessing, eyelink, eog]
 redirect_from:

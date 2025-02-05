@@ -1,7 +1,5 @@
 ---
 title: Getting started with Cyberkinetics data
-parent: Intracranial
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, cyberkinetics, blackrock, lfp, spike]
 redirect_from:

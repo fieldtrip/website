@@ -1,7 +1,5 @@
 ---
 title: Why is my message rejected from the email discussion list?
-parent: Organizational questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [email]
 redirect_from:

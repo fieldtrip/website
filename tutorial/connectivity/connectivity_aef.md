@@ -1,7 +1,5 @@
 ---
 title: Connectivity in auditory evoked responses
-parent: Connectivity analysis
-grand_parent: Tutorials
 category: tutorial
 tags: [granger, meg, freq, source, connectivity]
 redirect_from:

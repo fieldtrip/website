@@ -1,7 +1,5 @@
 ---
 title: Using General Linear Modeling over trials
-parent: Statistical analysis
-grand_parent: Examples
 category: example
 tags: [glm, statistics, eeg-language]
 redirect_from:

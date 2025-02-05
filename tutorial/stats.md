@@ -1,6 +1,5 @@
 ---
 title: Statistical analysis
-parent: Tutorials
 ---
 
 # {{ page.title }}

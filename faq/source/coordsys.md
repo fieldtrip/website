@@ -1,7 +1,5 @@
 ---
 title: How are the different head and MRI coordinate systems defined?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [headmodel, mri, source, fiducial, coordinate]
 redirect_from:

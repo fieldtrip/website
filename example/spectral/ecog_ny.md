@@ -1,7 +1,5 @@
 ---
 title: Analysis of high-gamma band signals in human ECoG
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [ieeg, eeg, ecog, ecog-visual]
 redirect_from:

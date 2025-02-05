@@ -1,7 +1,5 @@
 ---
 title: How can I map source locations onto an anatomical label in an atlas?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 redirect_from:
     - /faq/how_can_i_map_source_locations_between_two_different_representations/

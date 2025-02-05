@@ -1,7 +1,5 @@
 ---
 title: How can I inspect the electrode impedances of my data?
-parent: Reading and preprocessing data
-grand_parent: Frequently asked questions
 category: faq
 tags: [eeg, electrode]
 redirect_from:

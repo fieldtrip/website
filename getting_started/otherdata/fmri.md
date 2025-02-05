@@ -1,7 +1,5 @@
 ---
 title: Getting started with fMRI timeseries data
-parent: Other data
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, fmri]
 nav_order: 3

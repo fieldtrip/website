@@ -1,7 +1,5 @@
 ---
 title: Which version of FieldTrip should I download?
-parent: Various other questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [download, release]
 redirect_from:

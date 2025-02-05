@@ -1,7 +1,5 @@
 ---
 title: Use simulated ERPs to explore cluster statistics
-parent: Statistical analysis
-grand_parent: Examples
 category: example
 tags: [statistics, cluster, simulation]
 redirect_from:

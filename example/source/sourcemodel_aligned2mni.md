@@ -1,7 +1,5 @@
 ---
 title: Create MNI-aligned grids in individual head-space
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [meg, mri, headmodel, source]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Realtime neurofeedback application based on Hilbert phase estimation
-parent: Real-time analysis
-grand_parent: Examples
 category: example
 tags: [realtime]
 redirect_from:

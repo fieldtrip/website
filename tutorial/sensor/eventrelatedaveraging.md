@@ -1,7 +1,5 @@
 ---
 title: Event-related averaging and MEG planar gradient
-parent: Sensor-level analyses
-grand_parent: Tutorials
 category: tutorial
 tags: [meg, timelock, preprocessing, plotting, meg-language]
 redirect_from:

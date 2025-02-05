@@ -1,7 +1,5 @@
 ---
 title: How do I construct a layout file for the plotting functions?
-parent: Plotting and visualization
-grand_parent: Frequently asked questions
 category: faq
 tags: [layout, plotting]
 redirect_from:

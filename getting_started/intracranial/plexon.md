@@ -1,7 +1,5 @@
 ---
 title: Getting started with Plexon data
-parent: Intracranial
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, plexon, lfp, spike]
 redirect_from:

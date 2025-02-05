@@ -1,7 +1,5 @@
 ---
 title: Getting started with XSens motion capture data
-parent: Motion capture
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, xsens, motion]
 redirect_from:

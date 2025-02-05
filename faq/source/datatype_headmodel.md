@@ -1,7 +1,5 @@
 ---
 title: What kind of volume conduction models of the head (head models) are implemented?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [headmodel, source]
 redirect_from:

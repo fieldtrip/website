@@ -1,7 +1,5 @@
 ---
 title: Source statistics
-parent: Statistical analysis
-grand_parent: Examples
 category: example
 tags: [meg, source, statistics]
 redirect_from:

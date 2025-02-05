@@ -1,7 +1,5 @@
 ---
 title: Amplow_amphigh
-parent: Cross-frequency analysis
-grand_parent: Examples
 ---
 
 # Amplow_amphigh

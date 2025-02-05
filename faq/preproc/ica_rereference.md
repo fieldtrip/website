@@ -1,7 +1,5 @@
 ---
 title: Should I rereference prior to or after ICA for artifact removal?
-parent: Reading and preprocessing data
-grand_parent: Frequently asked questions
 category: faq
 tags: [ica]
 redirect_from:

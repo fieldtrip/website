@@ -1,7 +1,5 @@
 ---
 title: Why are there multiple neighbour templates for the Neuromag306 system?
-parent: Statistical analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [neuromag, template, warning]
 redirect_from:

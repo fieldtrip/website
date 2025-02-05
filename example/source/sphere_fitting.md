@@ -1,7 +1,5 @@
 ---
 title: Fitting a template MRI to the MEG Polhemus head shape
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [headmodel, meg]
 redirect_from:

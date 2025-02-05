@@ -1,7 +1,5 @@
 ---
 title: Making a synchronous movie of EEG or NIRS combined with video recordings
-parent: Plotting and visualization
-grand_parent: Examples
 category: example
 tags: [video, eeg, nirs, plotting]
 redirect_from:

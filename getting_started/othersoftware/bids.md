@@ -1,7 +1,5 @@
 ---
 title: Getting started with BIDS
-parent: Other software
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, bids]
 redirect_from:

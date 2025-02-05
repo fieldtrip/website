@@ -1,6 +1,5 @@
 ---
 title: Statistical analysis
-parent: Examples
 ---
 
 # {{ page.title }}

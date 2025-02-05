@@ -1,7 +1,5 @@
 ---
 title: Getting started with Ricoh data
-parent: MEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, ricoh, meg]
 redirect_from:

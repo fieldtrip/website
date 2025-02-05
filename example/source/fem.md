@@ -1,7 +1,5 @@
 ---
 title: Compute EEG leadfields using a FEM headmodel
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [eeg, fem, leadfield, headmodel]
 redirect_from:

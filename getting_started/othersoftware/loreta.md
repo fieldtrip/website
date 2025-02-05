@@ -1,7 +1,5 @@
 ---
 title: Getting started with LORETA
-parent: Other software
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, loreta]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Getting started with OPM data recorded at the FIL
-parent: MEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, meg, opm, fil]
 redirect_from:

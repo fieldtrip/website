@@ -1,7 +1,5 @@
 ---
 title: How can I append the files of two separate recordings?
-parent: Data handling
-grand_parent: Reading and preprocessing data
 category: faq
 tags: [dataformat, preprocessing]
 redirect_from:

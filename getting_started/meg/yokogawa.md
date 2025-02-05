@@ -1,7 +1,5 @@
 ---
 title: Getting started with Yokogawa data
-parent: MEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, meg, yokogawa, coordinate]
 redirect_from:

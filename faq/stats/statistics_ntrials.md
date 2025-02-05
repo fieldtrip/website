@@ -1,7 +1,5 @@
 ---
 title: How does a difference in trial numbers per condition affect my statistical test
-parent: Statistical analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [statistics]
 redirect_from:

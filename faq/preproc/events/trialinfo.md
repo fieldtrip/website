@@ -1,7 +1,5 @@
 ---
 title: Is it possible to keep track of trial-specific information in my analysis pipeline?
-parent: Trials, triggers and events
-grand_parent: Reading and preprocessing data
 category: faq
 tags: [trialinfo, trialdef, trialfun]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Independent component analysis (ICA) to remove ECG artifacts
-parent: Reading and preprocessing data
-grand_parent: Examples
 category: example
 tags: [artifact, preprocessing, ica, meg-removal]
 redirect_from:

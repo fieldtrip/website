@@ -1,7 +1,5 @@
 ---
 title: Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [source]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Getting started with Neurodata Without Borders (NWB) data
-parent: Intracranial
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, spike, nwb]
 redirect_from:

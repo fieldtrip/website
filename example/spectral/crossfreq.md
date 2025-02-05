@@ -1,7 +1,5 @@
 ---
 title: Cross-frequency analysis
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [freq]
 redirect_from:

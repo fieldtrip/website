@@ -1,7 +1,5 @@
 ---
 title: How can I debug my analysis script if a FieldTrip function gives an error?
-parent: Code and development questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [debug]
 redirect_from:

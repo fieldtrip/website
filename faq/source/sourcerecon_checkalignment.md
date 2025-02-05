@@ -1,7 +1,5 @@
 ---
 title: How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [source, headmodel, seg]
 redirect_from:

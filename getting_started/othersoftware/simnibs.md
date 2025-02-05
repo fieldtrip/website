@@ -1,7 +1,5 @@
 ---
 title: Getting started with SimNIBS
-parent: Other software
-grand_parent: Getting started
 category: getting_started
 tags: [mesh, segmentation, volume, headmodel, simnibs]
 redirect_from:

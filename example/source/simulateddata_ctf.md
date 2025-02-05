@@ -1,7 +1,5 @@
 ---
 title: Can I create an artificial CTF dataset using MATLAB?
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [dataformat, ctf, meg]
 redirect_from:

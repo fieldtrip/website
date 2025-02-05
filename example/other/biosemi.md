@@ -1,7 +1,5 @@
 ---
 title: Example analysis pipeline for Biosemi data
-parent: Various other examples
-grand_parent: Examples
 category: example
 tags: [eeg, dataformat, biosemi, bdf]
 redirect_from:

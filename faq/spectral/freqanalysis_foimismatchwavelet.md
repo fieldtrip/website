@@ -1,7 +1,5 @@
 ---
 title: Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-parent: Spectral analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [freq, wavelet]
 redirect_from:

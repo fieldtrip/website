@@ -1,7 +1,5 @@
 ---
 title: Getting started with Seg3D
-parent: Other software
-grand_parent: Getting started
 category: getting_started
 tags: [segmentation, volume, headmodel, seg3d]
 redirect_from:

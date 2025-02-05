@@ -1,7 +1,5 @@
 ---
 title: How can I anonymize or deidentify a BrainVision dataset?
-parent: Various other questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [brainvision, raw, anonymize, sharing]
 redirect_from:

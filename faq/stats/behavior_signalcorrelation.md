@@ -1,7 +1,5 @@
 ---
 title: How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
-parent: Statistical analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [statistics]
 redirect_from:

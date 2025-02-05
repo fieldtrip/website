@@ -1,7 +1,5 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [freq]
 redirect_from:

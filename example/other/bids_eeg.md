@@ -1,7 +1,5 @@
 ---
 title: Converting an example EEG dataset for sharing in BIDS
-parent: Various other examples
-grand_parent: Examples
 category: example
 tags: [bids, sharing]
 redirect_from:

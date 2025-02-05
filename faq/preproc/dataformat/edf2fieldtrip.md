@@ -1,7 +1,5 @@
 ---
 title: How can I read all channels from an EDF file that contains multiple sampling rates?
-parent: Specific data formats
-grand_parent: Reading and preprocessing data
 category: faq
 tags: [edf, preprocessing]
 redirect_from:

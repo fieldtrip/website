@@ -1,7 +1,5 @@
 ---
 title: Getting started with TMSi data
-parent: EEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, tmsi, eeg]
 redirect_from:

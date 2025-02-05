@@ -1,7 +1,5 @@
 ---
 title: Why am I not getting integer frequencies?
-parent: Spectral analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [preprocessing, freq]
 redirect_from:

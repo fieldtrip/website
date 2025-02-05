@@ -1,7 +1,5 @@
 ---
 title: Getting started with NIRx NIRS data
-parent: NIRS
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, nirs, nirx]
 redirect_from:

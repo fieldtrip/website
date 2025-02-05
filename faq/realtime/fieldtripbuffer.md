@@ -1,7 +1,5 @@
 ---
 title: Does the FieldTrip realtime buffer only work with MATLAB?
-parent: Real-time analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [realtime]
 redirect_from:

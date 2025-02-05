@@ -1,7 +1,5 @@
 ---
 title: Create brain atlas based MNI-aligned grids in individual head-space
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [meg, mri, atlas, headmodel, source]
 redirect_from:

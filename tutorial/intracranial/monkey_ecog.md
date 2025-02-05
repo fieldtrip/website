@@ -1,7 +1,5 @@
 ---
 title: Analysis of monkey ECoG recordings
-parent: Analysis of intracranial data
-grand_parent: Tutorials
 category: tutorial
 tags: [ieeg, ecog, neurotycho, animal]
 redirect_from:

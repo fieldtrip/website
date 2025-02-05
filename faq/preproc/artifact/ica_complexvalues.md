@@ -1,7 +1,5 @@
 ---
 title: Why does my ICA output contain complex numbers?
-parent: Artifacts
-grand_parent: Reading and preprocessing data
 category: faq
 tags: [ica]
 redirect_from:

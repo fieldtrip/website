@@ -1,7 +1,5 @@
 ---
 title: Why am I receiving warnings about too many bouncing emails?
-parent: Organizational questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [email]
 redirect_from:

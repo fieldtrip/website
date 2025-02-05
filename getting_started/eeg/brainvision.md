@@ -1,7 +1,5 @@
 ---
 title: Getting started with BrainVision Analyzer and Easycap
-parent: EEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, brainvision, easycap, eeg, layout]
 redirect_from:

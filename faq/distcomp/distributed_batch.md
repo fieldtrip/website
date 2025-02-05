@@ -1,7 +1,5 @@
 ---
 title: How can I distribute a batch of jobs?
-parent: Distributed computing
-grand_parent: Frequently asked questions
 category: faq
 tags: [distcomp]
 redirect_from:

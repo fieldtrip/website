@@ -1,7 +1,5 @@
 ---
 title: What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
-parent: Spectral analysis
-grand_parent: Frequently asked questions
 category: faq
 tags: [freq, mtmfft]
 redirect_from:

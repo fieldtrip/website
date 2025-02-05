@@ -1,7 +1,5 @@
 ---
 title: Getting started with Neuralynx data recorded at the Donders Institute
-parent: Intracranial
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, neuralynx, lfp, spike]
 redirect_from:

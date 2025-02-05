@@ -1,7 +1,5 @@
 ---
 title: MATLAB version 7.3 (2006b) crashes when I try to do ...
-parent: MATLAB questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [matlab]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-parent: Sensor-level analysis
-grand_parent: Examples
 category: example
 tags: [meg, ctf]
 redirect_from:

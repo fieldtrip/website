@@ -1,7 +1,5 @@
 ---
 title: Getting started with BTi/4D data
-parent: MEG
-grand_parent: Getting started
 category: getting_started
 tags: [dataformat, 4d, bti, meg]
 redirect_from:

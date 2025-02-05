@@ -1,7 +1,5 @@
 ---
 title: Effects of tapering for power estimates
-parent: Spectral analysis
-grand_parent: Examples
 category: example
 tags: [freq, simulation]
 redirect_from:

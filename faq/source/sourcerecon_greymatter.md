@@ -1,7 +1,5 @@
 ---
 title: Can I restrict the source reconstruction to the grey matter?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [source, mri, headmodel]
 redirect_from:

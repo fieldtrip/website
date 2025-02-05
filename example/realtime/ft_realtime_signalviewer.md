@@ -1,7 +1,5 @@
 ---
 title: Example real-time signal viewer
-parent: Real-time analysis
-grand_parent: Examples
 category: example
 tags: [realtime]
 redirect_from:

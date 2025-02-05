@@ -1,7 +1,5 @@
 ---
 title: How should I prepare for the upcoming FieldTrip workshop?
-parent: Various other questions
-grand_parent: Frequently asked questions
 category: faq
 tags: [workshop]
 redirect_from:

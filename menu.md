@@ -1,5 +1,4 @@
 ---
-nav_exclude: true
 ---
 
 {% assign menu = site.data.menu %}

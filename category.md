@@ -1,6 +1,5 @@
 ---
 title: Categories
-nav_exclude: true
 ---
 
 # Categories

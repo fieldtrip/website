@@ -1,6 +1,5 @@
 ---
 title: Getting Started
-parent: Development
 ---
 
 # Getting Started

@@ -1,7 +1,5 @@
 ---
 title: How can I import my own data format?
-parent: Specific data formats
-grand_parent: Reading and preprocessing data
 category: faq
 tags: [dataformat, preprocessing]
 redirect_from:

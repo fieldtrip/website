@@ -1,7 +1,5 @@
 ---
 title: Measuring the timing delay and jitter for a real-time application
-parent: Real-time analysis
-grand_parent: Examples
 category: example
 tags: [realtime]
 redirect_from:

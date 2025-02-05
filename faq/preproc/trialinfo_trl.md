@@ -1,7 +1,5 @@
 ---
 title: I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-parent: Reading and preprocessing data
-grand_parent: Frequently asked questions
 category: faq
 tags: [trialinfo, trialdef, trialfun]
 redirect_from:

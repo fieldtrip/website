@@ -1,7 +1,5 @@
 ---
 title: Dealing with TMS-EEG datasets
-parent: Analysis of TMS-EEG data
-grand_parent: Tutorials
 category: tutorial
 tags: [tms, eeg, preprocessing, plotting, eeg-tms]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Where can I find the dipoli command-line executable?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [headmodel, source, matlab]
 redirect_from:

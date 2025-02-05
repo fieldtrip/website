@@ -1,7 +1,5 @@
 ---
 title: How to import data from MNE-Python and FreeSurfer
-parent: Various other examples
-grand_parent: Examples
 category: example
 tags: [mne, source]
 redirect_from:

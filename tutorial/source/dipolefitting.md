@@ -1,7 +1,5 @@
 ---
 title: Dipole fitting of combined MEG/EEG data
-parent: Source reconstruction
-grand_parent: Tutorials
 category: tutorial
 tags: [natmeg2014, meg+eeg, dipole, meg-audodd]
 redirect_from:

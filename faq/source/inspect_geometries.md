@@ -1,7 +1,5 @@
 ---
 title: How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-parent: Source reconstruction
-grand_parent: Frequently asked questions
 category: faq
 tags: [source, headmodel, inverse, warning]
 redirect_from:

@@ -1,7 +1,5 @@
 ---
 title: Read neuromag .fif mri and create a MNI-aligned single-shell head model
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [meg, mri, headmodel]
 redirect_from:

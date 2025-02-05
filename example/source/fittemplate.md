@@ -1,7 +1,5 @@
 ---
 title: How to create a head model if you do not have an individual MRI
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [source]
 redirect_from:

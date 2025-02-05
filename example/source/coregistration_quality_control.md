@@ -1,7 +1,5 @@
 ---
 title: Check the quality of the anatomical coregistration
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [source, mri, plotting]
 redirect_from:

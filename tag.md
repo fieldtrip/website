@@ -1,6 +1,5 @@
 ---
 title: Tags
-nav_exclude: true
 ---
 
 # Tags

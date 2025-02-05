@@ -1,7 +1,5 @@
 ---
 title: Common filters in beamforming
-parent: Source reconstruction
-grand_parent: Examples
 category: example
 tags: [meg, freq, source, fixme]
 redirect_from:
