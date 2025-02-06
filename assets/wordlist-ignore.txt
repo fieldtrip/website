@@ -6,6 +6,7 @@ ACTvsBL
 ADES
 ADF
 AEF
+AEFs
 AEP
 AES
 AFNI
@@ -3460,6 +3461,7 @@ hd
 hdEEG
 hdm
 hdr
+headcap
 headcast
 headcasts
 headcoil
@@ -4118,6 +4120,7 @@ nas
 nasion
 natively
 natmeg
+nav
 nchan
 nchans
 ncl
@@ -4361,6 +4364,7 @@ packageless
 paddinginsufficient
 padtype
 pagina
+pagelist
 parallelization
 parallelize
 parallelized
