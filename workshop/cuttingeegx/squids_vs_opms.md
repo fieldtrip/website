@@ -482,7 +482,7 @@ ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none');
 hold on
 ft_plot_topo3d(pos275, selected_avg, 'facealpha', 0.9)
 camlight
-view([360 0])
+view([90 0])
 
 print -dpng cuttingeegx_topo3d_squid.png
 ```
@@ -724,11 +724,7 @@ load mesh_scalp mesh_scalp % from the SQUID analysis
 load fieldlinebeta2_head fieldlinebeta2_head
 load append_opm append_opm
 
-% find the indices of append_opm.label that match the ones in fieldlinebeta2_head.label
-i_avg = ismember(append_opm.label, fieldlinebeta2_head.label);
-
-% 'R603_bz', 'R105_bz' were duplicate sensors, so they need to be omitted
-i_sens = ~ismember(fieldlinebeta2_head.label, {'R603_bz', 'R105_bz'}); 
+[i_avg, i_sens] = match_str(append_opm.label, fieldlinebeta2_head.label);
 
 % average the activity of interest in the time window [0.035 0.050] sec
 sampling_rate = 5000; % in Hz
@@ -745,7 +741,7 @@ ft_plot_mesh(mesh_scalp, 'facealpha', 0.05, 'facecolor', 'skin', 'edgecolor', 'n
 hold on
 ft_plot_topo3d(fieldlinebeta2_head.chanpos(i_sens,:), selected_avg(i_avg), 'facealpha', 1)
 camlight
-view([360 0])
+view([90 0])
 
 print -dpng cuttingeegx_topo3d_no-interp_opm.png
 ```
