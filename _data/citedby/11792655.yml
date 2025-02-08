@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39831532'
+- idtype: doi
+  value: 10.1093/scan/nsaf009
+- idtype: pmcid
+  value: PMC11792655
+authors:
+- authtype: Author
+  name: Gao T
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: Pan X
+- authtype: Author
+  name: Li W
+- authtype: Author
+  name: Han S
+epubdate: 2025 Jan 20
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf009
+pmclivedate: 2025/02/04
+printpubdate: ''
+pubdate: 2025 Jan 20
+sortdate: 2025/01/20 00:00
+source: Soc Cogn Affect Neurosci
+title: Cognitive and neural underpinnings of friend-prioritization in a perceptual
+  matching task
+uid: '11792655'
+volume: '20'
