@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39917852'
+- idtype: doi
+  value: 10.1002/hbm.70093
+- idtype: pmcid
+  value: PMC11803410
+authors:
+- authtype: Author
+  name: Jedynak M
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Romano A
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: David O
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2025 Feb 7
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: e70093
+pmclivedate: 2025/02/07
+printpubdate: ''
+pubdate: 2025 Feb 7
+sortdate: 2025/02/07 00:00
+source: Hum Brain Mapp
+title: Intermodal Consistency of Whole‐Brain Connectivity and Signal Propagation Delays
+uid: '11803410'
+volume: '46'
