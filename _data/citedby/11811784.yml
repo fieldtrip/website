@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '39935680'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1470662
+- idtype: pmcid
+  value: PMC11811784
+authors:
+- authtype: Author
+  name: Gorin A
+- authtype: Author
+  name: Kuznetsova E
+- authtype: Author
+  name: Kislov A
+- authtype: Author
+  name: Levchenko E
+- authtype: Author
+  name: Klucharev V
+- authtype: Author
+  name: Moiseeva V
+- authtype: Author
+  name: Yurchenko A
+- authtype: Author
+  name: Luzhin A
+- authtype: Author
+  name: Galkina N
+- authtype: Author
+  name: Shestakova AN
+epubdate: 2025 Jan 28
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1470662'
+pmclivedate: 2025/02/11
+printpubdate: ''
+pubdate: 2025 Jan 28
+sortdate: 2025/01/28 00:00
+source: Front Hum Neurosci
+title: 'Neural correlates of the non-optimal price: an MEG/EEG study'
+uid: '11811784'
+volume: '19'
