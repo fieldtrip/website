@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39160351'
+- idtype: doi
+  value: 10.1038/s41591-024-03196-z
+- idtype: pmcid
+  value: PMC11826929
+- idtype: MID
+  value: NIHMS2040504
+authors:
+- authtype: Author
+  name: Oehrn CR
+- authtype: Author
+  name: Cernera S
+- authtype: Author
+  name: Hammer LH
+- authtype: Author
+  name: Shcherbakova M
+- authtype: Author
+  name: Yao J
+- authtype: Author
+  name: Hahn A
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Ostrem JL
+- authtype: Author
+  name: Little S
+- authtype: Author
+  name: Starr PA
+epubdate: 2024 Aug 19
+fulljournalname: Nature medicine
+issue: '11'
+pages: 3345-3356
+pmclivedate: ''
+printpubdate: 2024 Nov
+pubdate: 2024 Aug 19
+sortdate: 2024/08/19 00:00
+source: Nat Med
+title: 'Chronic adaptive deep brain stimulation versus conventional stimulation in
+  Parkinson''s disease: a blinded randomized feasibility trial'
+uid: '11826929'
+volume: '30'

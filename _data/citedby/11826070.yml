@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '39786979'
+- idtype: doi
+  value: 10.1113/JP286873
+- idtype: pmcid
+  value: PMC11826070
+authors:
+- authtype: Author
+  name: Haverland B
+- authtype: Author
+  name: Timmsen LS
+- authtype: Author
+  name: Wolf S
+- authtype: Author
+  name: Stagg CJ
+- authtype: Author
+  name: Frontzkowski L
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Schön G
+- authtype: Author
+  name: Feldheim J
+- authtype: Author
+  name: Higgen FL
+- authtype: Author
+  name: Gerloff C
+- authtype: Author
+  name: Schulz R
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Schwab BC
+- authtype: Author
+  name: Quandt F
+epubdate: 2025 Jan 9
+fulljournalname: The Journal of Physiology
+issue: '4'
+pages: 873-893
+pmclivedate: 2025/02/15
+printpubdate: 2025 Feb 15
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: J Physiol
+title: Human cortical high‐gamma power scales with movement rate in healthy participants
+  and stroke survivors
+uid: '11826070'
+volume: '603'
