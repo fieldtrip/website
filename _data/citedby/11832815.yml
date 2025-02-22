@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39569914'
+- idtype: doi
+  value: 10.1002/mds.30064
+- idtype: pmcid
+  value: PMC11832815
+authors:
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Blech J
+- authtype: Author
+  name: Winter Y
+- authtype: Author
+  name: Gonzalez‐Escamilla G
+- authtype: Author
+  name: Groppa S
+epubdate: 2024 Nov 21
+fulljournalname: Movement Disorders
+issue: '2'
+pages: 285-291
+pmclivedate: 2025/02/19
+printpubdate: 2025 Feb
+pubdate: 2024 Nov 21
+sortdate: 2024/11/21 00:00
+source: Mov Disord
+title: Low‐Frequency Deep Brain Stimulation in Non‐Rapid Eye Movement Sleep Modifies
+  Memory Retention in Parkinson's Disease
+uid: '11832815'
+volume: '40'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39825867'
+- idtype: doi
+  value: 10.1093/scan/nsaf008
+- idtype: pmcid
+  value: PMC11833688
+authors:
+- authtype: Author
+  name: Veranic K
+- authtype: Author
+  name: Ewing L
+- authtype: Author
+  name: Sambrook T
+- authtype: Author
+  name: Watson EA
+- authtype: Author
+  name: Zhao M
+- authtype: Author
+  name: Bayliss AP
+epubdate: 2025 Jan 18
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf008
+pmclivedate: 2025/02/18
+printpubdate: ''
+pubdate: 2025 Jan 18
+sortdate: 2025/01/18 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Changes in interpersonal distance modulate social attention engagement: evidence
+  from EEG alpha band suppression'
+uid: '11833688'
+volume: '20'

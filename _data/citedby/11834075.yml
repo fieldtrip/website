@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39967864'
+- idtype: doi
+  value: 10.1016/j.isci.2025.111782
+- idtype: pmcid
+  value: PMC11834075
+authors:
+- authtype: Author
+  name: Aleman-Zapata A
+- authtype: Author
+  name: Capitan MM
+- authtype: Author
+  name: Samanta A
+- authtype: Author
+  name: Özsezer P
+- authtype: Author
+  name: Agarwal K
+- authtype: Author
+  name: Adam T
+- authtype: Author
+  name: Rayan A
+- authtype: Author
+  name: Genzel L
+epubdate: 2025 Jan 10
+fulljournalname: iScience
+issue: '2'
+pages: '111782'
+pmclivedate: 2025/02/18
+printpubdate: ''
+pubdate: 2025 Jan 10
+sortdate: 2025/01/10 00:00
+source: iScience
+title: Differential contributions of CA3 and entorhinal cortex inputs to ripple patterns
+  in the hippocampus
+uid: '11834075'
+volume: '28'

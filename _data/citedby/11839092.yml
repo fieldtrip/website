@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39880674'
+- idtype: doi
+  value: 10.1523/ENEURO.0275-24.2025
+- idtype: pmcid
+  value: PMC11839092
+authors:
+- authtype: Author
+  name: Wilroth J
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Skoglund MA
+- authtype: Author
+  name: Signoret C
+- authtype: Author
+  name: Rönnberg J
+- authtype: Author
+  name: Enqvist M
+epubdate: 2025 Feb 14
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0275-24.2025
+pmclivedate: 2025/02/19
+printpubdate: ''
+pubdate: 2025 Feb 14
+sortdate: 2025/02/14 00:00
+source: eNeuro
+title: 'Improving Tracking of Selective Attention in Hearing Aid Users: The Role of
+  Noise Reduction and Nonlinearity Compensation'
+uid: '11839092'
+volume: '12'

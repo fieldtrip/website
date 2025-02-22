@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39892154'
+- idtype: doi
+  value: 10.1016/j.dcn.2025.101521
+- idtype: pmcid
+  value: PMC11833649
+authors:
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Jan 30
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101521'
+pmclivedate: 2025/02/18
+printpubdate: ''
+pubdate: 2025 Jan 30
+sortdate: 2025/01/30 00:00
+source: Dev Cogn Neurosci
+title: Metacontrol instructions lead to adult-like event segmentation in adolescents
+uid: '11833649'
+volume: '72'

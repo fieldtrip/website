@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39966577'
+- idtype: doi
+  value: 10.1038/s41598-025-90362-z
+- idtype: pmcid
+  value: PMC11836123
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Mou S
+- authtype: Author
+  name: Pei X
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Shen S
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Shen X
+- authtype: Author
+  name: Shen Z
+epubdate: 2025 Feb 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5991'
+pmclivedate: 2025/02/19
+printpubdate: ''
+pubdate: 2025 Feb 18
+sortdate: 2025/02/18 00:00
+source: Sci Rep
+title: The power spectrum and functional connectivity characteristics of resting-state
+  EEG in patients with generalized anxiety disorder
+uid: '11836123'
+volume: '15'
