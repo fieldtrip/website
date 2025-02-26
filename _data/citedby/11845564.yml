@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38956003'
+- idtype: doi
+  value: 10.3758/s13414-024-02916-4
+- idtype: pmcid
+  value: PMC11845564
+authors:
+- authtype: Author
+  name: Melcher D
+- authtype: Author
+  name: Alaberkyan A
+- authtype: Author
+  name: Anastasaki C
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Deodato M
+- authtype: Author
+  name: Marsicano G
+- authtype: Author
+  name: Almeida D
+epubdate: 2024 Jul 2
+fulljournalname: Attention, Perception & Psychophysics
+issue: '1'
+pages: 94-119
+pmclivedate: 2025/02/23
+printpubdate: '2025'
+pubdate: 2024 Jul 2
+sortdate: 2024/07/02 00:00
+source: Atten Percept Psychophys
+title: An early effect of the parafoveal preview on post-saccadic processing of English
+  words
+uid: '11845564'
+volume: '87'

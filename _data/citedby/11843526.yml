@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39981616'
+- idtype: doi
+  value: 10.1111/psyp.70018
+- idtype: pmcid
+  value: PMC11843526
+authors:
+- authtype: Author
+  name: Arslan C
+- authtype: Author
+  name: Schneider D
+- authtype: Author
+  name: Getzmann S
+- authtype: Author
+  name: Wascher E
+- authtype: Author
+  name: Klatt L
+epubdate: 2025 Feb 21
+fulljournalname: Psychophysiology
+issue: '2'
+pages: e70018
+pmclivedate: 2025/02/22
+printpubdate: 2025 Feb
+pubdate: 2025 Feb 21
+sortdate: 2025/02/21 00:00
+source: Psychophysiology
+title: 'The Interplay Between Multisensory Processing and Attention in Working Memory:
+  Behavioral and Neural Indices of Audiovisual Object Storage'
+uid: '11843526'
+volume: '62'

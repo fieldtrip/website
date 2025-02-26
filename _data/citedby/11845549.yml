@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38977612'
+- idtype: doi
+  value: 10.3758/s13414-024-02917-3
+- idtype: pmcid
+  value: PMC11845549
+authors:
+- authtype: Author
+  name: Nolte D
+- authtype: Author
+  name: Vidal De Palol M
+- authtype: Author
+  name: Keshava A
+- authtype: Author
+  name: Madrid-Carvajal J
+- authtype: Author
+  name: Gert AL
+- authtype: Author
+  name: von Butler EM
+- authtype: Author
+  name: Kömürlüoğlu P
+- authtype: Author
+  name: König P
+epubdate: 2024 Jul 8
+fulljournalname: Attention, Perception & Psychophysics
+issue: '1'
+pages: 207-227
+pmclivedate: 2025/02/23
+printpubdate: '2025'
+pubdate: 2024 Jul 8
+sortdate: 2024/07/08 00:00
+source: Atten Percept Psychophys
+title: 'Combining EEG and eye-tracking in virtual reality: Obtaining fixation-onset
+  event-related potentials and event-related spectral perturbations'
+uid: '11845549'
+volume: '87'

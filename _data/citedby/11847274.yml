@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '39990283'
+- idtype: doi
+  value: 10.1016/j.bbih.2025.100954
+- idtype: pmcid
+  value: PMC11847274
+authors:
+- authtype: Author
+  name: Ramli Y
+- authtype: Author
+  name: Prawiroharjo P
+- authtype: Author
+  name: Wiratman W
+- authtype: Author
+  name: Tenda E
+- authtype: Author
+  name: Ibrahim N
+- authtype: Author
+  name: Susilaradeya D
+- authtype: Author
+  name: Reza A
+- authtype: Author
+  name: Agatha J
+- authtype: Author
+  name: Siagian R
+- authtype: Author
+  name: Fauhan H
+- authtype: Author
+  name: Evelyn F
+- authtype: Author
+  name: Ugawa Y
+- authtype: Author
+  name: Yusuf P
+epubdate: 2025 Jan 24
+fulljournalname: Brain, Behavior, & Immunity - Health
+issue: ''
+pages: '100954'
+pmclivedate: 2025/02/23
+printpubdate: ''
+pubdate: 2025 Jan 24
+sortdate: 2025/01/24 00:00
+source: Brain Behav Immun Health
+title: The relationship between cognitive function and neuropsychiatric disorders
+  with quantitative electroencephalogram (qEEG) on long COVID syndrome patients
+uid: '11847274'
+volume: '44'
