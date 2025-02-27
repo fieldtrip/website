@@ -342,6 +342,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.artfctdef.zvalue.interactive** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
+**cfg.artfctdef.zvalue.keepintermediate** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
+
+
 **cfg.artfctdef.zvalue.lpfilter** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
