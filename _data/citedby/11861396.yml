@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39186407'
+- idtype: doi
+  value: 10.1109/RBME.2024.3449790
+- idtype: pmcid
+  value: PMC11861396
+- idtype: MID
+  value: NIHMS2052501
+authors:
+- authtype: Author
+  name: Edelman BJ
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Müller-Putz G
+- authtype: Author
+  name: Guan C
+- authtype: Author
+  name: He B
+epubdate: 2024 Aug 26
+fulljournalname: IEEE reviews in biomedical engineering
+issue: ''
+pages: 10.1109/RBME.2024.3449790
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Aug 26
+sortdate: 2024/08/26 00:00
+source: IEEE Rev Biomed Eng
+title: 'Non-Invasive Brain-Computer Interfaces: State of the Art and Trends'
+uid: '11861396'
+volume: PP

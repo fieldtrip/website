@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40002523'
+- idtype: doi
+  value: 10.3390/brainsci15020189
+- idtype: pmcid
+  value: PMC11853692
+authors:
+- authtype: Author
+  name: Herrera-Diaz A
+- authtype: Author
+  name: Boshra R
+- authtype: Author
+  name: Kolesar R
+- authtype: Author
+  name: Pajankar N
+- authtype: Author
+  name: Tavakoli P
+- authtype: Author
+  name: Lin CY
+- authtype: Author
+  name: Fox-Robichaud A
+- authtype: Author
+  name: Connolly JF
+epubdate: 2025 Feb 13
+fulljournalname: Brain Sciences
+issue: '2'
+pages: '189'
+pmclivedate: 2025/02/26
+printpubdate: ''
+pubdate: 2025 Feb 13
+sortdate: 2025/02/13 00:00
+source: Brain Sci
+title: Decoding Analyses Show Dynamic Waxing and Waning of Event-Related Potentials
+  in Coma Patients
+uid: '11853692'
+volume: '15'

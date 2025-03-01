@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38862067'
+- idtype: doi
+  value: 10.1016/j.biopsycho.2024.108826
+- idtype: pmcid
+  value: PMC11853962
+- idtype: MID
+  value: NIHMS2056136
+authors:
+- authtype: Author
+  name: Happer JP
+- authtype: Author
+  name: Beaton LE
+- authtype: Author
+  name: Wagner LC
+- authtype: Author
+  name: Hodgkinson CA
+- authtype: Author
+  name: Goldman D
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2024 Jun 9
+fulljournalname: Biological psychology
+issue: ''
+pages: '108826'
+pmclivedate: 2025/02/25
+printpubdate: 2024 Sep
+pubdate: 2024 Jun 9
+sortdate: 2024/06/09 00:00
+source: Biol Psychol
+title: 'Neural indices of heritable impulsivity: Impact of the COMT Val158Met polymorphism
+  on frontal beta power during early motor preparation'
+uid: '11853962'
+volume: '191'
