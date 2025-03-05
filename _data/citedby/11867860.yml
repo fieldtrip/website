@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39716573'
+- idtype: doi
+  value: 10.1016/j.brs.2024.12.1193
+- idtype: pmcid
+  value: PMC11867860
+- idtype: MID
+  value: NIHMS2055711
+authors:
+- authtype: Author
+  name: Khatri UU
+- authtype: Author
+  name: Pulliam K
+- authtype: Author
+  name: Manesiya M
+- authtype: Author
+  name: Cortez MV
+- authtype: Author
+  name: del R. Millán J
+- authtype: Author
+  name: Hussain SJ
+epubdate: 2024 Dec 21
+fulljournalname: Brain stimulation
+issue: '1'
+pages: 64-76
+pmclivedate: 2025/02/28
+printpubdate: 2025 Jan-Feb
+pubdate: 2024 Dec 21
+sortdate: 2024/12/21 00:00
+source: Brain Stimul
+title: Personalized whole-brain activity patterns predict human corticospinal tract
+  activation in real-time
+uid: '11867860'
+volume: '18'

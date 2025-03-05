@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39977317'
+- idtype: doi
+  value: 10.1073/pnas.2411098122
+- idtype: pmcid
+  value: PMC11873822
+authors:
+- authtype: Author
+  name: Stier C
+- authtype: Author
+  name: Balestrieri E
+- authtype: Author
+  name: Fehring J
+- authtype: Author
+  name: Focke NK
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Dannlowski U
+- authtype: Author
+  name: Gross J
+epubdate: 2025 Feb 20
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '8'
+pages: e2411098122
+pmclivedate: ''
+printpubdate: 2025 Feb 25
+pubdate: 2025 Feb 20
+sortdate: 2025/02/20 00:00
+source: Proc Natl Acad Sci U S A
+title: Temporal autocorrelation is predictive of age—An extensive MEG time-series
+  analysis
+uid: '11873822'
+volume: '122'

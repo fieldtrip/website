@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36682508'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.119871
+- idtype: pmcid
+  value: PMC11851351
+- idtype: MID
+  value: NIHMS2043930
+authors:
+- authtype: Author
+  name: Castagna PJ
+- authtype: Author
+  name: van Noordt S
+- authtype: Author
+  name: Sederberg PB
+- authtype: Author
+  name: Crowley MJ
+epubdate: 2023 Jan 20
+fulljournalname: NeuroImage
+issue: ''
+pages: '119871'
+pmclivedate: 2025/02/25
+printpubdate: 2023 Mar
+pubdate: 2023 Jan 20
+sortdate: 2023/01/20 00:00
+source: Neuroimage
+title: 'Modeling brain dynamics and gaze behavior: Starting point bias and drift rate
+  relate to frontal midline theta oscillations'
+uid: '11851351'
+volume: '268'

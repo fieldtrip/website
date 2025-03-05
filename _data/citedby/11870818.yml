@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39558602'
+- idtype: doi
+  value: 10.1111/psyp.14712
+- idtype: pmcid
+  value: PMC11870818
+authors:
+- authtype: Author
+  name: Mylius M
+- authtype: Author
+  name: Guendelman S
+- authtype: Author
+  name: Iliopoulos F
+- authtype: Author
+  name: Gallese V
+- authtype: Author
+  name: Kaltwasser L
+epubdate: 2024 Nov 18
+fulljournalname: Psychophysiology
+issue: '2'
+pages: e14712
+pmclivedate: 2025/03/02
+printpubdate: 2025 Feb
+pubdate: 2024 Nov 18
+sortdate: 2024/11/18 00:00
+source: Psychophysiology
+title: Meditation expertise influences response bias and prestimulus alpha activity
+  in the somatosensory signal detection task
+uid: '11870818'
+volume: '62'

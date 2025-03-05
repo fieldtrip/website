@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '40025189'
+- idtype: doi
+  value: 10.1038/s42003-025-07788-4
+- idtype: pmcid
+  value: PMC11873316
+authors:
+- authtype: Author
+  name: Federici A
+- authtype: Author
+  name: Fantoni M
+- authtype: Author
+  name: Pavani F
+- authtype: Author
+  name: Handjaras G
+- authtype: Author
+  name: Bednaya E
+- authtype: Author
+  name: Martinelli A
+- authtype: Author
+  name: Berto M
+- authtype: Author
+  name: Trabalzini F
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Nava E
+- authtype: Author
+  name: Orzan E
+- authtype: Author
+  name: Bianchi B
+- authtype: Author
+  name: Bottari D
+epubdate: 2025 Mar 1
+fulljournalname: Communications Biology
+issue: ''
+pages: '343'
+pmclivedate: 2025/03/03
+printpubdate: ''
+pubdate: 2025 Mar 1
+sortdate: 2025/03/01 00:00
+source: Commun Biol
+title: Resilience and vulnerability of neural speech tracking after hearing restoration
+uid: '11873316'
+volume: '8'
