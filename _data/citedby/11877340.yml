@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40035382'
+- idtype: doi
+  value: 10.1002/hbm.70173
+- idtype: pmcid
+  value: PMC11877340
+authors:
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Koyun AH
+- authtype: Author
+  name: Stock A
+- authtype: Author
+  name: Werner A
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Colzato L
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Mar 4
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: e70173
+pmclivedate: 2025/03/04
+printpubdate: ''
+pubdate: 2025 Mar 4
+sortdate: 2025/03/04 00:00
+source: Hum Brain Mapp
+title: Catecholaminergic Modulation of Metacontrol Is Reflected in Aperiodic EEG Activity
+  and Predicted by Baseline GABA+ and Glx Concentrations
+uid: '11877340'
+volume: '46'

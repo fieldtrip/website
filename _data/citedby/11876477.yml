@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '39289330'
+- idtype: doi
+  value: 10.1007/s12264-024-01297-w
+- idtype: pmcid
+  value: PMC11876477
+authors:
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Lv X
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Chen P
+- authtype: Author
+  name: Pang S
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Zhao X
+epubdate: 2024 Sep 17
+fulljournalname: Neuroscience Bulletin
+issue: '3'
+pages: 449-460
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Sep 17
+sortdate: 2024/09/17 00:00
+source: Neurosci Bull
+title: Accurate Machine Learning-based Monitoring of Anesthesia Depth with EEG Recording
+uid: '11876477'
+volume: '41'
