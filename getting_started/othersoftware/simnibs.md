@@ -211,7 +211,7 @@ There is currently a limitation to the use of leadfields generated with SimNIBS,
 
 ### Source model
 
-It would be nice to tnclude options to write out the transfer matrix so that the results can be used with other source models, e.g., from DUNEuro. The source model is described in the reference at the top of this page.
+It would be nice to include options to write out the transfer matrix so that the results can be used with other source models, e.g., from DUNEuro. The source model is described in the reference at the top of this page.
 
 ### Conductivities
 
