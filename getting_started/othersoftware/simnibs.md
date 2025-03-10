@@ -8,11 +8,9 @@ redirect_from:
 
 # Getting started with SimNIBS
 
-
 ## Background
 
 [SimNIBS](https://simnibs.github.io/simnibs/build/html/index.html) is a free and open source software package for Simulation of Non-invasive Brain Stimulation. Besides allowing for calculations of the electric field induced by transcranial magnetic stimulation (TMS) and transcranial electric stimulation (TES), the methods implemented in SimNIBS can also be used for electroencephalography (EEG) forward modeling. We refer to [Nielsen et al. (2023)](https://doi.org/10.1016/j.neuroimage.2023.120259) for more information about using SimNIBS for EEG forward calculations.
-
 
 ## Procedure
 
@@ -27,7 +25,6 @@ Below, we provide more details on each of these steps and show the necessary com
 
 Note that we have used SimNIBS 4.0.1 for this tutorial.
 
-
 ### Preparation
 
 We will need `Subject01.mri` which you can get [here](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/). For the remainder of this tutorial we will assume that this file is present *in the current working directory* (to which all paths mentioned here are relative). Let us start by converting the MR image to the RAS coordinate system (it is initially CTF) and save it in a standard NIfTI format that can be read by SimNIBS. (If your image is already in NIfTI format, this should not be necessary.)
@@ -41,7 +38,6 @@ We will need `Subject01.mri` which you can get [here](https://download.fieldtrip
     mri = ft_read_mri(mri_in);
     mri = ft_convert_coordsys(mri, 'ras'); % this relies on the SPM toolbox
     ft_write_mri(mri_out, mri);
-
 
 ### Generating the head model
 
@@ -120,6 +116,7 @@ We can check the coregistration by loading the head mesh and plotting it togethe
 Which should look something like the image below. As we are fitting template positions, the fit is not perfect.
 
 {% include image src="/assets/img/getting_started/simnibs/headmodel_electrodes_aligned.png" width="600" %}
+
 _Figure. Electrodes aligned with headmodel._
 
 Next, we will use the function `prepare_eeg_montage` provided by SimNIBS to write the electrode information to a CSV file. This function assumes that the electrode structure is represented in the default FieldTrip format (as printed above). It reads a MAT file and assumes that it contains a variable `elec` describing the electrode montage. Now convert the montage to CSV
@@ -128,7 +125,6 @@ Next, we will use the function `prepare_eeg_montage` provided by SimNIBS to writ
     prepare_eeg_montage fieldtrip elec.csv elec.mat
 
 This creates `elec.csv`. (Actually, we only require the fields `elecpos`, `chanunit`, `chantype`, and `label` to be present in the electrode structure.)
-
 
 ### Running the FEM simulation
 
@@ -150,7 +146,6 @@ To visualize the headmodel along with the electrodes projected on the skin surfa
 {% include image src="/assets/img/getting_started/simnibs/headmodel_electrodes_aligned_projected.png" width="600" %}
 _Figure. Electrodes aligned and projected on headmodel._
 
-
 ### Calculating the final forward model and exporting to FieldTrip
 
 The final step is to prepare the EEG forward solution from the previous TDCS leadfield simulation. We do this by executing
@@ -168,7 +163,7 @@ Let us load these into MATLAB
     % matlab
     load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-fwd.mat;
     load fem_Subject01/Subject01_leadfield_elec_subsampling-10000-src.mat;
-   
+
 and see what they contain
 
     % matlab
@@ -191,7 +186,6 @@ and see what they contain
     src =
 
     struct with fields:
-
                         pos: [20000×3 double]
                         tri: [39992×3 int32]
                        unit: 'mm'
@@ -199,7 +193,6 @@ and see what they contain
              brainstructure: [1×20000 int64]
         brainstructurelabel: {'CORTEX_LEFT'  'CORTEX_RIGHT'}
                     normals: [20000×3 double]
-
 
 You should be able to use `fwd` as if it had been obtained from `ft_prepare_leadfield` and `src` as if obtained from `ft_prepare_sourcemodel` (with `method = 'basedoncortex'`), e.g., something like
 
@@ -210,17 +203,16 @@ You should be able to use `fwd` as if it had been obtained from `ft_prepare_lead
     % cfg.method = ;
     % source = ft_sourceanalysis(cfg, );
 
-> **Note**
-There is currently one limitation to the use of leadfields generated with SimNIBS as they do not support nonlinear dipole fitting. Hence, this will need to be disabled when running `ft_dipolefitting`. However, you can simply compute the leadfield on the full resolution cortical surfaces instead.
-
-redirect_from:
-    - /getting_started/simnibs/
----
+{% include markup/yellow %}
+There is currently a limitation to the use of leadfields generated with SimNIBS, as they do not support nonlinear optimization during dipole fitting. Hence, this will need to be disabled when running `ft_dipolefitting` by specifying `cfg.nonlinear = 'no'`. However, you can compute the leadfield on the full resolution cortical surfaces instead and do a gridsearch over the whole cortical surface.
+{% include markup/end %}
 
 ## Work in progress
 
-**Source model**
-- Include options to write out the transfer matrix so that the results can be used with other source models, e.g., from DUNEuro. (The source model is described in the reference at the top of this page.)
+### Source model
 
-**Conductivities**
-- It is currently not possible to specify the conductivities through this interface. Consequently, all simulations will use the default conductivities in SimNIBS.
+It would be nice to tnclude options to write out the transfer matrix so that the results can be used with other source models, e.g., from DUNEuro. The source model is described in the reference at the top of this page.
+
+### Conductivities
+
+It is currently not possible to specify the conductivities through this interface. Consequently, all simulations will use the default conductivities in SimNIBS.
