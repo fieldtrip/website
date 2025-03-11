@@ -11,7 +11,7 @@ The toolkit consists of a number of lectures, followed by hands-on sessions in w
 
 There are only 38 places available for this toolkit and from experience we expect the course to be over-subscribed. Participants will be selected on the basis of background experience, the research interest and the expectations on what to learn (see the questions during pre-registration). We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction.
 
-You can [pre-register here](https://www.ru.nl/en/donders-institute/agenda/donders-megeeg-toolkit), the deadline for pre-registration is April 11, 2025.
+You cannot yet pre-register, but we will make the link available here once it is possible, the deadline for pre-registration is April 11, 2025.
 
 We will inform you as to whether you obtained a place in this course not later than April 22,  2025.
 
