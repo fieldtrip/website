@@ -17,7 +17,7 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2025, MEG/EEG toolkit - Nijmegen, NL
+- 2025, [MEG/EEG toolkit](/workshop/toolkit2025) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
