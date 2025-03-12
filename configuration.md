@@ -1607,9 +1607,6 @@ A detailed description of each function is available in the [reference documenta
 **cfg.keeppartial** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 
 
-**cfg.keepremoved** - [ft_analysispipeline](/reference/ft_analysispipeline)  
-
-
 **cfg.keepsampleinfo** - [ft_appenddata](/reference/ft_appenddata), [ft_appendtimelock](/reference/ft_appendtimelock)  
 
 
@@ -2414,9 +2411,6 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.relnoise** - [ft_dipolesimulation](/reference/ft_dipolesimulation)  
-
-
-**cfg.remove** - [ft_analysispipeline](/reference/ft_analysispipeline)  
 
 
 **cfg.removefield** - [ft_anonymizedata](/reference/ft_anonymizedata)  
