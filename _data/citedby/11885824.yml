@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40050533'
+- idtype: doi
+  value: 10.1038/s42003-025-07805-6
+- idtype: pmcid
+  value: PMC11885824
+authors:
+- authtype: Author
+  name: Koyun AH
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Beste C
+- authtype: Author
+  name: Stock AK
+epubdate: 2025 Mar 6
+fulljournalname: Communications Biology
+issue: ''
+pages: '375'
+pmclivedate: 2025/03/07
+printpubdate: ''
+pubdate: 2025 Mar 6
+sortdate: 2025/03/06 00:00
+source: Commun Biol
+title: Neurophysiological insights into catecholamine-dependent tDCS modulation of
+  cognitive control
+uid: '11885824'
+volume: '8'

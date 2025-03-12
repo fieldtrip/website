@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40047245'
+- idtype: doi
+  value: 10.7554/eLife.90826
+- idtype: pmcid
+  value: PMC11884783
+authors:
+- authtype: Author
+  name: Basha D
+- authtype: Author
+  name: Azarmehri A
+- authtype: Author
+  name: Proulx E
+- authtype: Author
+  name: Chauvette S
+- authtype: Author
+  name: Ghorbani M
+- authtype: Author
+  name: Timofeev I
+epubdate: 2025 Mar 6
+fulljournalname: eLife
+issue: ''
+pages: RP90826
+pmclivedate: 2025/03/06
+printpubdate: ''
+pubdate: 2025 Mar 6
+sortdate: 2025/03/06 00:00
+source: eLife
+title: The reuniens nucleus of the thalamus facilitates hippocampo-cortical dialogue
+  during sleep
+uid: '11884783'
+volume: '12'

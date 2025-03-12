@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40036617'
+- idtype: doi
+  value: 10.1093/scan/nsaf020
+- idtype: pmcid
+  value: PMC11891439
+authors:
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Riecke L
+- authtype: Author
+  name: Ryan BE
+- authtype: Author
+  name: de Gelder B
+epubdate: 2025 Feb 27
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf020
+pmclivedate: 2025/03/10
+printpubdate: ''
+pubdate: 2025 Feb 27
+sortdate: 2025/02/27 00:00
+source: Soc Cogn Affect Neurosci
+title: 'The contribution of body perception to self-identity: an event-related potential
+  study'
+uid: '11891439'
+volume: '20'

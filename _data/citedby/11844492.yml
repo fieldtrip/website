@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39990315'
+- idtype: doi
+  value: 10.1101/2025.02.12.637987
+- idtype: pmcid
+  value: PMC11844492
+authors:
+- authtype: Author
+  name: Khan AU
+- authtype: Author
+  name: Hoy C
+- authtype: Author
+  name: Anderson KL
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: KingStephens D
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Weber P
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Bentley JN
+epubdate: 2025 Feb 13
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.02.12.637987
+pmclivedate: 2025/02/22
+printpubdate: ''
+pubdate: 2025 Feb 13
+sortdate: 2025/02/13 00:00
+source: bioRxiv
+title: Neural dynamics of proactive and reactive cognitive control in medial and lateral
+  prefrontal cortex
+uid: '11844492'
+volume: ''

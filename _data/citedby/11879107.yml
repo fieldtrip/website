@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40041745'
+- idtype: doi
+  value: 10.1093/nc/niaf002
+- idtype: pmcid
+  value: PMC11879107
+authors:
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Schweitzer Y
+- authtype: Author
+  name: Nave O
+- authtype: Author
+  name: Trautwein FM
+- authtype: Author
+  name: Fulder S
+- authtype: Author
+  name: Lutz A
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Berkovich-Ohana A
+epubdate: 2025 Feb 28
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niaf002
+pmclivedate: 2025/03/04
+printpubdate: ''
+pubdate: 2025 Feb 28
+sortdate: 2025/02/28 00:00
+source: Neurosci Conscious
+title: 'Training the embodied self in its impermanence: meditators evidence neurophysiological
+  markers of death acceptance'
+uid: '11879107'
+volume: '2025'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40057550'
+- idtype: doi
+  value: 10.1038/s41597-025-04744-z
+- idtype: pmcid
+  value: PMC11890752
+authors:
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Zeng Z
+- authtype: Author
+  name: Varlet M
+epubdate: 2025 Mar 8
+fulljournalname: Scientific Data
+issue: ''
+pages: '407'
+pmclivedate: 2025/03/09
+printpubdate: ''
+pubdate: 2025 Mar 8
+sortdate: 2025/03/08 00:00
+source: Sci Data
+title: Human infant EEG recordings for 200 object images presented in rapid visual
+  streams
+uid: '11890752'
+volume: '12'

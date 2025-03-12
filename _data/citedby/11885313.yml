@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40060267'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1544397
+- idtype: pmcid
+  value: PMC11885313
+authors:
+- authtype: Author
+  name: Shawki N
+- authtype: Author
+  name: Napoli A
+- authtype: Author
+  name: Vargas-Irwin CE
+- authtype: Author
+  name: Thompson CK
+- authtype: Author
+  name: Donoghue JP
+- authtype: Author
+  name: Serruya MD
+epubdate: 2025 Feb 21
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1544397'
+pmclivedate: 2025/03/07
+printpubdate: ''
+pubdate: 2025 Feb 21
+sortdate: 2025/02/21 00:00
+source: Front Hum Neurosci
+title: 'Neural signal analysis in chronic stroke: advancing intracortical brain-computer
+  interface design'
+uid: '11885313'
+volume: '19'

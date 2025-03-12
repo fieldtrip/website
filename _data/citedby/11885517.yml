@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40050310'
+- idtype: doi
+  value: 10.1038/s41598-025-90269-9
+- idtype: pmcid
+  value: PMC11885517
+authors:
+- authtype: Author
+  name: Bayram B
+- authtype: Author
+  name: Meijer D
+- authtype: Author
+  name: Barumerli R
+- authtype: Author
+  name: Spierings M
+- authtype: Author
+  name: Baumgartner R
+- authtype: Author
+  name: Pomper U
+epubdate: 2025 Mar 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7931'
+pmclivedate: 2025/03/07
+printpubdate: ''
+pubdate: 2025 Mar 7
+sortdate: 2025/03/07 00:00
+source: Sci Rep
+title: Bayesian prior uncertainty and surprisal elicit distinct neural patterns during
+  sound localization in dynamic environments
+uid: '11885517'
+volume: '15'

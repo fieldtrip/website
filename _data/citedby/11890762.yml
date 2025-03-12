@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40057611'
+- idtype: doi
+  value: 10.1038/s41598-025-92854-4
+- idtype: pmcid
+  value: PMC11890762
+authors:
+- authtype: Author
+  name: Tanaka Y
+- authtype: Author
+  name: Ito Y
+- authtype: Author
+  name: Shibata M
+- authtype: Author
+  name: Terasawa Y
+- authtype: Author
+  name: Umeda S
+epubdate: 2025 Mar 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8072'
+pmclivedate: 2025/03/09
+printpubdate: ''
+pubdate: 2025 Mar 8
+sortdate: 2025/03/08 00:00
+source: Sci Rep
+title: Heartbeat evoked potentials reflect interoceptive awareness during an emotional
+  situation
+uid: '11890762'
+volume: '15'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39985773'
+- idtype: doi
+  value: 10.1016/j.xpro.2025.103602
+- idtype: pmcid
+  value: PMC11889973
+authors:
+- authtype: Author
+  name: Lin Q
+- authtype: Author
+  name: Cao Y
+- authtype: Author
+  name: Wu Y
+- authtype: Author
+  name: Qiu X
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Lv X
+epubdate: 2025 Feb 21
+fulljournalname: STAR Protocols
+issue: '1'
+pages: '103602'
+pmclivedate: 2025/03/08
+printpubdate: ''
+pubdate: 2025 Feb 21
+sortdate: 2025/02/21 00:00
+source: STAR Protoc
+title: Protocol to study the neural mechanism of music therapy in alleviating depression
+  using EEG-LFP signal recording
+uid: '11889973'
+volume: '6'
