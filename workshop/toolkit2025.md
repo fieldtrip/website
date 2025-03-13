@@ -9,7 +9,7 @@ From May 19-23 2025 we will host our annual MEG/EEG Tool-kit course in Nijmegen.
 
 The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own data under supervision of experienced tutors.
 
-There are only 38 places available for this toolkit and from experience we expect the course to be over-subscribed. Participants will be selected on the basis of background experience, the research interest and the expectations on what to learn (see the questions during pre-registration). We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction.
+There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that the course is specifically aimed at participants that already have designed and conducted their own experiment(s) and already have data that they can bring along for analysis. This means that first year PhD students, as well as master students, should consider taking the course at a somewhat later career stage.
 
 You cannot yet pre-register, but we will make the link available here once it is possible, the deadline for pre-registration is April 11, 2025.
 
