@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40070410'
+- idtype: doi
+  value: 10.1016/j.dib.2025.111390
+- idtype: pmcid
+  value: PMC11893357
+authors:
+- authtype: Author
+  name: Hayes HB
+- authtype: Author
+  name: Magne CL
+epubdate: 2025 Feb 12
+fulljournalname: Data in Brief
+issue: ''
+pages: '111390'
+pmclivedate: 2025/03/11
+printpubdate: ''
+pubdate: 2025 Feb 12
+sortdate: 2025/02/12 00:00
+source: Data Brief
+title: Dataset of 37-subject EEG recordings using a low-cost mobile EEG headset during
+  a semantic relatedness judgment task
+uid: '11893357'
+volume: '59'

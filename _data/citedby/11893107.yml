@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39638868'
+- idtype: doi
+  value: 10.1038/s42003-024-06851-w
+- idtype: pmcid
+  value: PMC11893107
+authors:
+- authtype: Author
+  name: Avancini C
+- authtype: Author
+  name: Ciria LF
+- authtype: Author
+  name: Alameda C
+- authtype: Author
+  name: Palenciano AF
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Sanabria D
+epubdate: 2024 Dec 5
+fulljournalname: Communications Biology
+issue: ''
+pages: '1625'
+pmclivedate: 2025/03/10
+printpubdate: ''
+pubdate: 2024 Dec 5
+sortdate: 2024/12/05 00:00
+source: Commun Biol
+title: High-intensity physiological activation disrupts the neural signatures of conflict
+  processing
+uid: '11893107'
+volume: '7'

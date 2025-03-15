@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '39694345'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2024.120977
+- idtype: pmcid
+  value: PMC11894502
+- idtype: MID
+  value: NIHMS2060010
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Eddine SN
+- authtype: Author
+  name: Brothers T
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2024 Dec 16
+fulljournalname: NeuroImage
+issue: ''
+pages: '120977'
+pmclivedate: 2025/03/11
+printpubdate: 2025 Mar
+pubdate: 2024 Dec 16
+sortdate: 2024/12/16 00:00
+source: Neuroimage
+title: An implemented predictive coding model of lexico-semantic processing explains
+  the dynamics of univariate and multivariate activity within the left ventromedial
+  temporal lobe during reading comprehension
+uid: '11894502'
+volume: '308'

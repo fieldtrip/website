@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40038052'
+- idtype: doi
+  value: 10.1111/psyp.70032
+- idtype: pmcid
+  value: PMC11879918
+authors:
+- authtype: Author
+  name: Hausinger T
+- authtype: Author
+  name: Reisinger P
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Hansen A
+- authtype: Author
+  name: Harris T
+- authtype: Author
+  name: Pletzer B
+epubdate: 2025 Mar 4
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e70032
+pmclivedate: 2025/03/06
+printpubdate: 2025 Mar
+pubdate: 2025 Mar 4
+sortdate: 2025/03/04 00:00
+source: Psychophysiology
+title: Spatio‐Temporal Decoding of the Navon Task Challenges Rigid Hemispheric Asymmetries
+  in Global–Local Processing
+uid: '11879918'
+volume: '62'

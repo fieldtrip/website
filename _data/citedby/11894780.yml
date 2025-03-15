@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40066794'
+- idtype: doi
+  value: 10.1111/psyp.70030
+- idtype: pmcid
+  value: PMC11894780
+authors:
+- authtype: Author
+  name: Revers H
+- authtype: Author
+  name: Stekelenburg JJ
+- authtype: Author
+  name: Vroomen J
+- authtype: Author
+  name: Van Deun K
+- authtype: Author
+  name: Bastiaansen M
+epubdate: 2025 Mar 11
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e70030
+pmclivedate: 2025/03/12
+printpubdate: 2025 Mar
+pubdate: 2025 Mar 11
+sortdate: 2025/03/11 00:00
+source: Psychophysiology
+title: 'Dissociating Affective Salience and Valence in (Very) Long‐Latency ERPs '
+uid: '11894780'
+volume: '62'

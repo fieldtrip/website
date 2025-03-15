@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39843232'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0238-24.2024
+- idtype: pmcid
+  value: PMC11905343
+authors:
+- authtype: Author
+  name: Orf M
+- authtype: Author
+  name: Hannemann R
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '11'
+pages: e0238242024
+pmclivedate: ''
+printpubdate: 2025 Mar 12
+pubdate: 2025 Mar 12
+sortdate: 2025/03/12 00:00
+source: J Neurosci
+title: Does Amplitude Compression Help or Hinder Attentional Neural Speech Tracking?
+uid: '11905343'
+volume: '45'
