@@ -60,15 +60,15 @@ _Figure 1: The time-frequency presentation used to determine the time- and frequ
 ### Select conditions and time windows of interest
 
 We have identified the beta band effect on trials belonging to the fully incongruent condition (FIC, coded with a trigger value of 3). We will therefore now select all trials belonging to this condition based on the trigger information, which is preserved in the trialinfo field during the call to ft_preprocessing.
-Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to **[ft_selectdata](/reference/utilities/ft_selectdata)**:
+Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to **[ft_selectdata](/reference/utilities/ft_selectdata)** (note that in the specification of the latency we subtract 1 sample to end up with a nice round number of samples):
 
     cfg = [];
     cfg.trials  = data_all.trialinfo == 3;
-    cfg.latency = [-0.5 0];
+    cfg.latency = [-0.5 0-1./data_all.fsample];
     dataPre     = ft_selectdata(cfg, data_all);
 
     cfg.trials  = data_all.trialinfo == 3;
-    cfg.latency = [0.8 1.3];
+    cfg.latency = [0.8 1.3-1./data_all.fsample];
     dataPost    = ft_selectdata(cfg, data_all);
 
 ### Exercise 1: data length
