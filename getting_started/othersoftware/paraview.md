@@ -35,20 +35,22 @@ From the segmentation, you can make meshes with
     cfg.method = 'hexahedral';
     hexahedral = ft_prepare_mesh(cfg, segmentedmri);
 
-Using the `isosurface` method and the highest number of vertices makes a detailed surface description using the MATLAB [isosurface](https://nl.mathworks.com/help/matlab/ref/isosurface.html) function. The surface meshes created here are not suitable for a BEM model, as that requires nested surfaces that are closed and non-intersecting. To construct BEM meshes you can use the `projectmesh` method on the brain, skull and scalp segmentation.
+Using the `isosurface` method of **[ft_prepare_mesh](/reference/ft_prepare_mesh)** and the highest number of vertices makes a detailed surface description using the MATLAB [isosurface](https://nl.mathworks.com/help/matlab/ref/isosurface.html) function. The surface meshes created here are not suitable for a BEM model, as that requires nested surfaces that are closed and non-intersecting. To construct BEM meshes you can use the `projectmesh` method on the brain, skull and scalp segmentation.
 
 The tetrahedral and hexahedral meshes can be used for FEM models.
 
-We can write the anatomical MRI and segmentation to a `.vtk` file with
+We can write the anatomical MRI and segmentation to a `.vtk` file with **[ft_write_mri](/reference/fileio/ft_write_mri)**
 
+    % write the anatomical MRI, including the coordinate transformation matrix
     ft_write_mri('mri.vtk', mri.anatomy, 'transform', mri.transform, 'dataformat', 'vtk')
 
     % convert the different boolean/probabilistic volumes into one volume with indices
     segmentedmri = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
-    % write the volume with the indices that represent the different issue types
+
+    % write the segmentation with the indices that represent the different issue types
     ft_write_mri('segmentedmri.vtk', segmentedmri.tissue, 'transform', segmentedmri.transform, 'dataformat', 'vtk')
 
-and the meshes with
+and the meshes with **[ft_write_headshape](/reference/fileio/ft_write_headshape)**
 
     % one surface per file
     ft_write_headshape('surface_csf.vtk', surface(1), 'format', 'vtk')
