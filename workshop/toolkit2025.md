@@ -15,8 +15,6 @@ You cannot yet pre-register, but we will make the link available here once it is
 
 We will inform you as to whether you obtained a place in this course not later than April 22,  2025.
 
-The fee is €550 for PhD students and €750 for senior researchers. If your institute is based in a low/middle income country, you will also be able to request a discount.
-
 ## Program
 
 Note that the tentative program below still might change a bit.
