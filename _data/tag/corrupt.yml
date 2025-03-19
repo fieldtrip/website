@@ -1,0 +1,12 @@
+- title:  How can I fix a corrupt CTF meg4 file?
+  link:  /faq/preproc/dataformat/ctf_fixmeg4
+
+- title:  How can I fix a corrupt CTF res4 header file?
+  link:  /faq/preproc/dataformat/ctf_fixres4
+
+- title:  How can I deal with a discontinuous Neuralynx LFP recording?
+  link:  /faq/preproc/dataformat/discontinuous_neuralynx
+
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/datahandling/ctf_readcorrupted
+

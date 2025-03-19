@@ -1,47 +1,11 @@
 - title:  Distributed computing
   link:  /development/distributed
 
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
+- title:  What are the different approaches I can take for distributed computing?
+  link:  /faq/distcomp/distributed_computing
 
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Speeding up your analysis using distributed computing with parfor
-  link:  /tutorial/scripting/distributedcomputing_parfor
-
-- title:  Distributed computing
-  link:  /development/distributed
+- title:  How to get started with the MATLAB distributed computing toolbox?
+  link:  /faq/distcomp/distributed_matlab
 
 - title:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/scripting/distributedcomputing_parfor

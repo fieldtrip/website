@@ -1,23 +1,20 @@
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
+- title:  Where is the anterior commissure?
+  link:  /faq/source/anterior_commissure
 
-- title:  Localizing electrodes using a 3D-scanner
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
-  link:  /tutorial/source/electrode
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
+- title:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/source/fiducial
 
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
+- title:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/source/fiducials_definition
 
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
-
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
+- title:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/source/sensors_definition
 
 - title:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/source/electrode

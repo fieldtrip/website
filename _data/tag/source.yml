@@ -1,338 +1,113 @@
-- title:  Reference documentation
-  link:  /reference
+- title:  How to import data from MNE-Python and FreeSurfer
+  link:  /example/other/import_mne
 
-- title:  References to implemented methods
-  link:  /references_methods
+- title:  Plotting the result of source reconstruction on a cortical mesh
+  link:  /example/plotting/plotting_source_surface
 
-- title:  Reference documentation
-- title:  Reference documentation
-  link:  /reference
-  link:  /reference
-- title:  Analysis of corticomuscular coherence
+- title:  Common filters in beamforming
+  link:  /example/source/beamformer_commonfilter
 
+- title:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/source/beamformer_ownforward
 
-  link:  /tutorial/connectivity/coherence
-- title:  References to implemented methods
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
 
-- title:  References to implemented methods
-  link:  /references_methods
-  link:  /references_methods
-- title:  Connectivity in auditory evoked responses
+- title:  Compute forward simulated data with the low-level ft_compute_leadfield
+  link:  /example/source/compute_leadfield
 
+- title:  Check the quality of the anatomical coregistration
+  link:  /example/source/coregistration_quality_control
 
-  link:  /tutorial/connectivity/connectivity_aef
-- title:  Analysis of corticomuscular coherence
+- title:  Localizing the sources underlying the difference in event-related fields
+  link:  /example/source/difference_erf
 
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/connectivity/coherence
+- title:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/source/dipolefit_somatosensory_erf
 
-  link:  /tutorial/intracranial/mouse_eeg
+- title:  Align EEG electrode positions to BEM headmodel
+  link:  /example/source/electrodes2bem
 
+- title:  How to create a head model if you do not have an individual MRI
+  link:  /example/source/fittemplate
 
-- title:  Connectivity in auditory evoked responses
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-- title:  Introduction to the FieldTrip toolbox
+- title:  Make MEG leadfields using different headmodels
+  link:  /example/source/headmodel_various
 
-  link:  /tutorial/connectivity/connectivity_aef
-  link:  /tutorial/intro/introduction
+- title:  Compute forward simulated data and apply a beamformer scan
+  link:  /example/source/simulateddata_beamformer
 
-- title:  Channel and source analysis of mouse EEG
+- title:  Compute forward simulated data and apply a dipole fit
+  link:  /example/source/simulateddata_dipolefit
 
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Channel and source analysis of mouse EEG
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
 
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Localizing oscillatory sources using beamformer techniques
+- title:  Create brain atlas based MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni_atlas
 
-  link:  /tutorial/source/beamformer
-- title:  Introduction to the FieldTrip toolbox
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
 
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-  link:  /tutorial/intro/introduction
+- title:  Combined EEG and MEG source reconstruction
+  link:  /example/source/sourcerecon_meeg
 
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+- title:  Symmetric dipole pairs for beamforming
+  link:  /example/source/symmetry
 
-  link:  /tutorial/source/beamformingextended
-- title:  Localizing oscillatory sources using beamformer techniques
+- title:  Source statistics
+  link:  /example/stats/source_statistics
 
-  link:  /tutorial/source/beamformer
-- title:  Localizing oscillatory sources using beamformer techniques
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
 
-  link:  /tutorial/source/beamformer
-- title:  Localizing electrodes using a 3D-scanner
+- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/source/anat_landmarks
 
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/electrode
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
+- title:  Where is the anterior commissure?
+  link:  /faq/source/anterior_commissure
 
-  link:  /tutorial/source/beamformingextended
+- title:  How can I fine-tune my BEM volume conduction model?
+  link:  /faq/source/bem_finetune
 
+- title:  What is the conductivity of the brain, CSF, skull and skin tissue?
+  link:  /faq/source/conductivity_defaults
 
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Localizing electrodes using a 3D-scanner
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
 
+- title:  What kind of volume conduction models of the head (head models) are implemented?
+  link:  /faq/source/datatype_headmodel
 
-  link:  /tutorial/source/electrode
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+- title:  Where can I find the dipoli command-line executable?
+  link:  /faq/source/dipoli_filelocation
 
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /tutorial/source/headmodel_eeg_fem
+- title:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
+  link:  /faq/source/inspect_geometries
 
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+- title:  How can I determine the anatomical label of a source or electrode?
+  link:  /faq/source/label_lookup
 
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+- title:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+  link:  /faq/source/sensors_accuracy
 
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-  link:  /tutorial/source/headmodel_meg
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+- title:  Why should I use an average reference for EEG source reconstruction?
+  link:  /faq/source/sourcerecon_avgref
 
+- title:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
+  link:  /faq/source/sourcerecon_checkalignment
 
-  link:  /tutorial/source/headmodel_eeg_fem
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+- title:  Can I restrict the source reconstruction to the grey matter?
+  link:  /faq/source/sourcerecon_greymatter
 
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/source/headmodel_meg
-  link:  /tutorial/source/minimumnormestimate
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+- title:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/source/sourcerecon_meeg
 
+- title:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
+  link:  /faq/source/sourcerecon_outside
 
-  link:  /tutorial/source/headmodel_meg
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/source/minimumnormestimate
-  link:  /tutorial/source/sourcemodel
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-
-
-  link:  /tutorial/source/minimumnormestimate
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-- title:  Computation of virtual MEG channels in source-space
-
-  link:  /tutorial/source/sourcemodel
-  link:  /tutorial/source/virtual_sensors
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-
-  link:  /tutorial/source/sourcemodel
-- title:  Computation of virtual MEG channels in source-space
-
-  link:  /tutorial/source/virtual_sensors
-- title:  Beamforming oscillatory responses in MEG data
-- title:  Computation of virtual MEG channels in source-space
-
-  link:  /workshop/oslo2019/beamforming
-  link:  /tutorial/source/virtual_sensors
-
-- title:  Beamforming oscillatory responses in MEG data
-
-  link:  /workshop/oslo2019/beamforming
-
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/intracranial/mouse_eeg
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/source/beamformer
-
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
-
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_bem
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/source/headmodel_meg
-
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/source/minimumnormestimate
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/source/sourcemodel
-
-- title:  Computation of virtual MEG channels in source-space
-  link:  /tutorial/source/virtual_sensors
-
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-- title:  Reference documentation
-  link:  /references_methods
-  link:  /reference
-
-- title:  Reference documentation
-
-  link:  /reference
-- title:  Analysis of corticomuscular coherence
-
-  link:  /tutorial/connectivity/coherence
-- title:  References to implemented methods
-
-  link:  /references_methods
-- title:  References to implemented methods
-
-  link:  /references_methods
-- title:  Connectivity in auditory evoked responses
-
-  link:  /tutorial/connectivity/connectivity_aef
-- title:  Analysis of corticomuscular coherence
-
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-  link:  /tutorial/connectivity/coherence
-- title:  Channel and source analysis of mouse EEG
-
-
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Connectivity in auditory evoked responses
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-  link:  /tutorial/connectivity/connectivity_aef
-
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-- title:  Channel and source analysis of mouse EEG
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/intracranial/mouse_eeg
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Localizing oscillatory sources using beamformer techniques
-
-
-  link:  /tutorial/source/beamformer
-- title:  Introduction to the FieldTrip toolbox
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-  link:  /tutorial/intro/introduction
-
-
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-- title:  Localizing oscillatory sources using beamformer techniques
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/source/beamformer
-
-
-  link:  /tutorial/source/beamformer
-
-- title:  Localizing electrodes using a 3D-scanner
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/electrode
-  link:  /tutorial/source/beamformingextended
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-
-
-  link:  /tutorial/source/beamformingextended
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /tutorial/source/electrode
-- title:  Localizing electrodes using a 3D-scanner
-
-
-  link:  /tutorial/source/electrode
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-
-
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-
-
-  link:  /tutorial/source/headmodel_meg
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-
-  link:  /tutorial/source/headmodel_eeg_fem
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-
-  link:  /tutorial/source/headmodel_meg
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-
-  link:  /tutorial/source/minimumnormestimate
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-
-  link:  /tutorial/source/headmodel_meg
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-
-  link:  /tutorial/source/minimumnormestimate
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-
-  link:  /tutorial/source/sourcemodel
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/source/minimumnormestimate
-  link:  /tutorial/source/sourcemodel
-- title:  Computation of virtual MEG channels in source-space
-
-  link:  /tutorial/source/virtual_sensors
-
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-- title:  Computation of virtual MEG channels in source-space
-  link:  /tutorial/source/sourcemodel
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /tutorial/source/virtual_sensors
-
-
-  link:  /workshop/oslo2019/beamforming
-- title:  Computation of virtual MEG channels in source-space
-- title:  Beamforming oscillatory responses in MEG data
-
-  link:  /tutorial/source/virtual_sensors
-  link:  /workshop/oslo2019/beamforming
-
-
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
+- title:  Why is there a rim around the brain for which the source reconstruction is not computed?
+  link:  /faq/source/sourcerecon_rim
 
 - title:  Reference documentation
   link:  /reference

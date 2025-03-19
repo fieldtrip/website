@@ -1,380 +1,113 @@
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/nirs/nirs_multichannel
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
 
-- title:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs/nirs_singlechannel
+- title:  Fixing a missing channel
+  link:  /example/preproc/fixing_a_missing_sensor
 
-- title:  Introduction on dealing with artifacts
-  link:  /tutorial/preproc/artifacts
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
 
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/automatic_artifact_rejection
+- title:  Independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/preproc/ica_eog
 
-- title:  Preprocessing - Reading continuous EEG and MEG data
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/preproc/continuous
-  link:  /tutorial/nirs/nirs_multichannel
+- title:  Combine MEG with Eyelink eyetracker data
+  link:  /example/preproc/meg_eyelink
 
+- title:  Getting started with reading raw EEG or MEG data
+  link:  /example/preproc/raw_meeg
 
-- title:  Cleaning artifacts using ICA
-- title:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/preproc/ica_artifact_cleaning
-  link:  /tutorial/nirs/nirs_singlechannel
+- title:  Re-reference EEG and iEEG data
+  link:  /example/preproc/rereference
 
+- title:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/preproc/trialdef_emg
 
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/preproc/preprocessing
-- title:  Introduction on dealing with artifacts
-  link:  /tutorial/nirs/nirs_multichannel
+- title:  Making your own trialfun for conditional trial definition
+  link:  /example/preproc/trialfun
 
+- title:  Determine the filter characteristics
+  link:  /example/source/filter_characteristics
 
-  link:  /tutorial/preproc/artifacts
-- title:  Preprocessing and averaging of single-channel NIRS data
-- title:  Visual or manual artifact rejection
+- title:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/preproc/artifact/artifact_padding
 
-  link:  /tutorial/nirs/nirs_singlechannel
-  link:  /tutorial/preproc/visual_artifact_rejection
+- title:  How can I consistently represent artifacts in my data?
+  link:  /faq/preproc/artifact/artifact_representation
 
-- title:  Automatic artifact rejection
-- title:  Introduction on dealing with artifacts
+- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/preproc/artifact/dftfilter_residual
 
-  link:  /tutorial/preproc/automatic_artifact_rejection
-  link:  /tutorial/preproc/artifacts
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
 
-- title:  Event-related averaging and MEG planar gradient
+- title:  How does the filter padding in preprocessing work?
+  link:  /faq/preproc/artifact/preproc_padding
 
-  link:  /tutorial/sensor/eventrelatedaveraging
-- title:  Preprocessing - Reading continuous EEG and MEG data
+- title:  Do I need to resample my data, and if so, how is this to be done?
+  link:  /faq/preproc/artifact/resampling_lowpassfilter
 
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/continuous
-  link:  /tutorial/preproc/automatic_artifact_rejection
-- title:  Preprocessing of EEG data and computing ERPs
+- title:  Why should I set continuous to yes for CTF data?
+  link:  /faq/preproc/continuous
 
+- title:  How can I import my own data format?
+  link:  /faq/preproc/dataformat/dataformat_own
 
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  Cleaning artifacts using ICA
+- title:  How can I deal with a discontinuous Neuralynx LFP recording?
+  link:  /faq/preproc/dataformat/discontinuous_neuralynx
 
-  link:  /tutorial/preproc/ica_artifact_cleaning
-- title:  Preprocessing - Reading continuous EEG and MEG data
+- title:  How can I read all channels from an EDF file that contains multiple sampling rates?
+  link:  /faq/preproc/dataformat/edf2fieldtrip
 
-  link:  /tutorial/preproc/continuous
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
+- title:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/preproc/dataformat/fileio_dataformat
 
-  link:  /tutorial/sensor/preprocessing
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
+- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
 
-- title:  Cleaning artifacts using ICA
-  link:  /tutorial/preproc/preprocessing
-  link:  /tutorial/preproc/ica_artifact_cleaning
+- title:  How can I append the files of two separate recordings?
+  link:  /faq/preproc/datahandling/append_files
 
-- title:  Sensor-level ERF, TFR and connectivity analyses
+- title:  How can I convert one dataformat into an other?
+  link:  /faq/preproc/datahandling/convert_dataformat
 
-  link:  /tutorial/sensor/sensor_analysis
-- title:  Visual or manual artifact rejection
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/datahandling/ctf_readcorrupted
 
-  link:  /tutorial/preproc/visual_artifact_rejection
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
+- title:  What dataformats are supported?
+  link:  /faq/preproc/datahandling/dataformat
 
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/preproc/preprocessing
-  link:  /tutorial/tms/tms-eeg
+- title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/preproc/datahandling/mergedata
 
-- title:  Event-related averaging and MEG planar gradient
+- title:  How can I preprocess a dataset that is too large to fit into memory?
+  link:  /faq/preproc/datahandling/preproc_downsample
 
-  link:  /tutorial/sensor/eventrelatedaveraging
-- title:  Visual or manual artifact rejection
+- title:  How can I rename channels in my data structure?
+  link:  /faq/preproc/datahandling/rename_channels
 
-  link:  /tutorial/preproc/visual_artifact_rejection
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
+- title:  Reading is slow, can I write my raw data to a more efficient file format?
+  link:  /faq/preproc/datahandling/writedata_matbin
 
-- title:  Preprocessing of EEG data and computing ERPs
+- title:  What is the relation between "events" (such as triggers) and "trials"?
+  link:  /faq/preproc/events/eventsversustrials
 
-- title:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
+- title:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/preproc/events/inspect_events
 
-  link:  /tutorial/sensor/eventrelatedaveraging
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
+- title:  How can I process continuous data without triggers?
+  link:  /faq/preproc/events/preproc_continuous
 
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
+- title:  How can I check or decipher the sequence of triggers in my data?
+  link:  /faq/preproc/events/triggers
 
-  link:  /tutorial/sensor/preprocessing
-- title:  Preprocessing of EEG data and computing ERPs
+- title:  Why am I not getting integer frequencies?
+  link:  /faq/spectral/freqanalysis_foinoninteger
 
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  From raw data to ERP
-- title:  Sensor-level ERF, TFR and connectivity analyses
+- title:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/spectral/tfr_strangedemean
 
-  link:  /tutorial/sensor/sensor_analysis
-  link:  /workshop/paris2019/handson_raw2erp
-
-
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-- title:  Dealing with TMS-EEG datasets
-- title:  Dealing with artifacts
-  link:  /tutorial/sensor/preprocessing
-  link:  /tutorial/tms/tms-eeg
-
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /tutorial/sensor/sensor_analysis
-- title:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/oslo2019/introduction
-
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms/tms-eeg
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Preprocessing and event-related potentials in EEG data
-- title:  From raw data to ERP
-  link:  /workshop/oslo2019/introduction
-  link:  /workshop/paris2019/handson_raw2erp
-
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-- title:  Dealing with artifacts
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-
-- title:  From raw data to ERP
-- title:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/paris2019/handson_raw2erp
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-
-- title:  Dealing with artifacts
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-  link:  /tutorial/nirs/nirs_multichannel
-
-- title:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-- title:  Preprocessing and averaging of single-channel NIRS data
-
-  link:  /tutorial/nirs/nirs_singlechannel
-
-- title:  Introduction on dealing with artifacts
-  link:  /tutorial/preproc/artifacts
-
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/automatic_artifact_rejection
-
-- title:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/preproc/continuous
-
-- title:  Cleaning artifacts using ICA
-  link:  /tutorial/preproc/ica_artifact_cleaning
-
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-  link:  /tutorial/preproc/preprocessing
-
-- title:  Preprocessing and averaging of multi-channel NIRS data
-- title:  Visual or manual artifact rejection
-  link:  /tutorial/nirs/nirs_multichannel
-  link:  /tutorial/preproc/visual_artifact_rejection
-
-
-- title:  Preprocessing and averaging of single-channel NIRS data
-- title:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/nirs/nirs_singlechannel
-  link:  /tutorial/sensor/eventrelatedaveraging
-
-
-- title:  Introduction on dealing with artifacts
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preproc/artifacts
-  link:  /tutorial/sensor/preprocessing_erp
-
-
-- title:  Automatic artifact rejection
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/preproc/automatic_artifact_rejection
-  link:  /tutorial/sensor/preprocessing
-
-
-- title:  Preprocessing - Reading continuous EEG and MEG data
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/preproc/continuous
-  link:  /tutorial/sensor/sensor_analysis
-
-
-- title:  Cleaning artifacts using ICA
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/preproc/ica_artifact_cleaning
-  link:  /tutorial/tms/tms-eeg
-
-
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /tutorial/preproc/preprocessing
-  link:  /workshop/oslo2019/introduction
-
-
-- title:  Visual or manual artifact rejection
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /tutorial/preproc/visual_artifact_rejection
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-
-- title:  Event-related averaging and MEG planar gradient
-- title:  From raw data to ERP
-  link:  /tutorial/sensor/eventrelatedaveraging
-  link:  /workshop/paris2019/handson_raw2erp
-
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  Dealing with artifacts
-
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-  link:  /tutorial/sensor/preprocessing
-- title:  Preprocessing raw data and computing ERPs/ERFs
-
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor/sensor_analysis
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms/tms-eeg
-
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  From raw data to ERP
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /workshop/paris2019/handson_raw2erp
-  link:  /tutorial/nirs/nirs_multichannel
-
-
-- title:  Dealing with artifacts
-- title:  Preprocessing and averaging of single-channel NIRS data
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-  link:  /tutorial/nirs/nirs_singlechannel
-
-
-- title:  Preprocessing raw data and computing ERPs/ERFs
-- title:  Introduction on dealing with artifacts
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-  link:  /tutorial/preproc/artifacts
-
-
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/automatic_artifact_rejection
-
-- title:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/preproc/continuous
-
-- title:  Cleaning artifacts using ICA
-  link:  /tutorial/preproc/ica_artifact_cleaning
-
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-  link:  /tutorial/preproc/preprocessing
-
-- title:  Visual or manual artifact rejection
-  link:  /tutorial/preproc/visual_artifact_rejection
-
-- title:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/sensor/eventrelatedaveraging
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/sensor/preprocessing
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor/sensor_analysis
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms/tms-eeg
-
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  From raw data to ERP
-  link:  /workshop/paris2019/handson_raw2erp
-
-- title:  Dealing with artifacts
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-- title:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-- title:  Preprocessing and averaging of multi-channel NIRS data
-  link:  /tutorial/nirs/nirs_multichannel
-
-- title:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs/nirs_singlechannel
-
-- title:  Introduction on dealing with artifacts
-  link:  /tutorial/preproc/artifacts
-
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/automatic_artifact_rejection
-
-- title:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/preproc/continuous
-
-- title:  Cleaning artifacts using ICA
-  link:  /tutorial/preproc/ica_artifact_cleaning
-
-- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
-  link:  /tutorial/preproc/preprocessing
-
-- title:  Visual or manual artifact rejection
-  link:  /tutorial/preproc/visual_artifact_rejection
-
-- title:  Event-related averaging and MEG planar gradient
-  link:  /tutorial/sensor/eventrelatedaveraging
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/sensor/preprocessing
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor/sensor_analysis
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms/tms-eeg
-
-- title:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  From raw data to ERP
-  link:  /workshop/paris2019/handson_raw2erp
-
-- title:  Dealing with artifacts
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-- title:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
+- title:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/spectral/tfr_strangedetrend
 
 - title:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs/nirs_multichannel

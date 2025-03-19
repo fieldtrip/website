@@ -1,6 +1,90 @@
 - title:  Streaming realtime data from Modular EEG (aka OpenEEG)
   link:  /development/realtime/modulareeg
 
+- title:  Example analysis pipeline for Biosemi data
+  link:  /example/other/biosemi
+
+- title:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/plotting/video_eeg
+
+- title:  Getting started with reading raw EEG or MEG data
+  link:  /example/preproc/raw_meeg
+
+- title:  Re-reference EEG and iEEG data
+  link:  /example/preproc/rereference
+
+- title:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/source/beamformer_ownforward
+
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
+
+- title:  Compute forward simulated data with the low-level ft_compute_leadfield
+  link:  /example/source/compute_leadfield
+
+- title:  Align EEG electrode positions to BEM headmodel
+  link:  /example/source/electrodes2bem
+
+- title:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/source/fem
+
+- title:  Compute forward simulated data and apply a dipole fit
+  link:  /example/source/simulateddata_dipolefit
+
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
+
+- title:  Combined EEG and MEG source reconstruction
+  link:  /example/source/sourcerecon_meeg
+
+- title:  Analysis of high-gamma band signals in human ECoG
+  link:  /example/spectral/ecog_ny
+
+- title:  Using General Linear Modeling on time series data
+  link:  /example/stats/glm_timeseries
+
+- title:  Using General Linear Modeling over trials
+  link:  /example/stats/glm_trials
+
+- title:  Can I compare EEG channels between different electrode caps?
+  link:  /faq/other/capmapping
+
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
+
+- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
+
+- title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/preproc/datahandling/mergedata
+
+- title:  How can I inspect the electrode impedances of my data?
+  link:  /faq/preproc/impedancecheck
+
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
+
+- title:  How is the segmentation defined?
+  link:  /faq/source/datatype_segmentation
+
+- title:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/source/fiducial
+
+- title:  How do I install the OpenMEEG binaries
+  link:  /faq/source/openmeeg
+
+- title:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+  link:  /faq/source/sensors_accuracy
+
+- title:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/source/sensors_definition
+
+- title:  Why should I use an average reference for EEG source reconstruction?
+  link:  /faq/source/sourcerecon_avgref
+
+- title:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/source/sourcerecon_meeg
+
 - title:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/eeg/1020
 
@@ -23,1267 +107,70 @@
   link:  /getting_started/eeg/nicolet
 
 - title:  Getting started with TMSi data
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /getting_started/eeg/tmsi
-  link:  /development/realtime/modulareeg
-
-
-- title:  Getting started with human ECoG data
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/intracranial/human_ecog
-  link:  /getting_started/eeg/1020
-
-
-- title:  Getting started with BioImage Suite
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-  link:  /getting_started/othersoftware/bioimage
-  link:  /getting_started/eeg/antneuro
-
-
-- title:  Getting started with EEGLAB
-- title:  Getting started with Biosemi BDF data
-  link:  /getting_started/othersoftware/eeglab
-  link:  /getting_started/eeg/biosemi
-
-
-- title:  Getting started with LIMO MEEG
-- title:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/othersoftware/limo
-  link:  /getting_started/eeg/brainvision
-
-
-- title:  Getting started with MNE(-python)
-- title:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/othersoftware/mne
-  link:  /getting_started/eeg/edf
-
-
-- title:  Importing your data
-- title:  Getting started with EGI/Philips/Magstim data
-  link:  /reading_data
-  link:  /getting_started/eeg/egi
-
-
-- title:  References to implemented methods
-- title:  Getting started with Nicolet data
-  link:  /references_methods
-  link:  /getting_started/eeg/nicolet
-
-
-- title:  Template 2-D layouts for plotting
-- title:  Getting started with TMSi data
-  link:  /template/layout
   link:  /getting_started/eeg/tmsi
 
-
-- title:  Details on the EEG language dataset
 - title:  Getting started with human ECoG data
-  link:  /tutorial/eeg_language
   link:  /getting_started/intracranial/human_ecog
 
-
-- title:  Analysis of human ECoG and sEEG recordings
 - title:  Getting started with BioImage Suite
-  link:  /tutorial/intracranial/human_ecog
   link:  /getting_started/othersoftware/bioimage
 
-
-- title:  Analysis of monkey ECoG recordings
 - title:  Getting started with EEGLAB
-  link:  /tutorial/intracranial/monkey_ecog
   link:  /getting_started/othersoftware/eeglab
 
-
-- title:  Channel and source analysis of mouse EEG
 - title:  Getting started with LIMO MEEG
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
   link:  /getting_started/othersoftware/limo
 
-  link:  /development/realtime/modulareeg
-
-
-- title:  Introduction to the FieldTrip toolbox
 - title:  Getting started with MNE(-python)
-  link:  /tutorial/intro/introduction
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-
-  link:  /getting_started/othersoftware/mne
-  link:  /getting_started/eeg/1020
-
-- title:  Specifying the channel layout for plotting
-
-  link:  /tutorial/plotting/layout
-- title:  Importing your data
-
-  link:  /reading_data
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-
-- title:  Introduction on dealing with artifacts
-  link:  /getting_started/eeg/antneuro
-  link:  /tutorial/preproc/artifacts
-- title:  References to implemented methods
-
-
-  link:  /references_methods
-- title:  Getting started with Biosemi BDF data
-
-- title:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /getting_started/eeg/biosemi
-  link:  /tutorial/preproc/continuous
-- title:  Template 2-D layouts for plotting
-
-
-  link:  /template/layout
-- title:  Getting started with BrainVision Analyzer and Easycap
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /getting_started/eeg/brainvision
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  Details on the EEG language dataset
-
-
-  link:  /tutorial/eeg_language
-- title:  Getting started with EDF (European Data Format) data
-
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /getting_started/eeg/edf
-  link:  /tutorial/sensor/preprocessing
-- title:  Analysis of human ECoG and sEEG recordings
-
-
-  link:  /tutorial/intracranial/human_ecog
-- title:  Getting started with EGI/Philips/Magstim data
-
-- title:  Extracting the brain state and events from continuous sleep EEG
-  link:  /getting_started/eeg/egi
-  link:  /tutorial/sensor/sleep
-
-- title:  Analysis of monkey ECoG recordings
-
-  link:  /tutorial/intracranial/monkey_ecog
-- title:  Getting started with Nicolet data
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /getting_started/eeg/nicolet
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-- title:  Channel and source analysis of mouse EEG
-
-- title:  Getting started with TMSi data
-  link:  /tutorial/intracranial/mouse_eeg
-  link:  /getting_started/eeg/tmsi
-
-
-- title:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/sensor/timefrequency
-- title:  Getting started with human ECoG data
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-  link:  /getting_started/intracranial/human_ecog
-
-
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-- title:  Specifying the channel layout for plotting
-- title:  Getting started with BioImage Suite
-  link:  /tutorial/source/beamforming
-  link:  /tutorial/plotting/layout
-
-  link:  /getting_started/othersoftware/bioimage
-
-
-- title:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/source/dipolefitting
-- title:  Getting started with EEGLAB
-- title:  Introduction on dealing with artifacts
-  link:  /getting_started/othersoftware/eeglab
-
-
-  link:  /tutorial/preproc/artifacts
-
-- title:  Getting started with LIMO MEEG
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /getting_started/othersoftware/limo
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Preprocessing - Reading continuous EEG and MEG data
-
-
-  link:  /tutorial/preproc/continuous
-- title:  Getting started with MNE(-python)
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /getting_started/othersoftware/mne
-  link:  /tutorial/source/headmodel_eeg_fem
-- title:  Preprocessing of EEG data and computing ERPs
-
-
-  link:  /tutorial/sensor/preprocessing_erp
-- title:  Importing your data
-
-  link:  /reading_data
-- title:  Cluster-based permutation tests on time-frequency data
-
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-  link:  /tutorial/sensor/preprocessing
-- title:  References to implemented methods
-
-- title:  Cluster-based permutation tests on event-related fields
-  link:  /references_methods
-  link:  /tutorial/stats/cluster_permutation_timelock
-
-- title:  Extracting the brain state and events from continuous sleep EEG
-
-  link:  /tutorial/sensor/sleep
-- title:  Template 2-D layouts for plotting
-
-  link:  /template/layout
-- title:  Parametric and non-parametric statistics on event-related fields
-
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-- title:  Details on the EEG language dataset
-  link:  /tutorial/sensor/timefrequencyanalysis
-  link:  /tutorial/eeg_language
-- title:  Classification of event-related MEG data using MVPA-Light
-
-
-  link:  /tutorial/stats/mvpa_light
-- title:  Time-frequency analysis of combined MEG/EEG data
-
-- title:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/sensor/timefrequency
-  link:  /tutorial/intracranial/human_ecog
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-
-  link:  /tutorial/stats/statistics
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-
-- title:  Analysis of monkey ECoG recordings
-  link:  /tutorial/source/beamforming
-  link:  /tutorial/intracranial/monkey_ecog
-- title:  Dealing with TMS-EEG datasets
-
-
-  link:  /tutorial/tms/tms-eeg
-- title:  Dipole fitting of combined MEG/EEG data
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/source/dipolefitting
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  FieldTrip Walkthrough
-
-
-  link:  /walkthrough
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /tutorial/intro/introduction
-
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-- title:  Specifying the channel layout for plotting
-
-  link:  /tutorial/source/headmodel_eeg_fem
-  link:  /tutorial/plotting/layout
-
-
-- title:  Convert the EEG language dataset for sharing in BIDS
-  link:  /workshop/cuttingeeg2021/bids_language
-- title:  Cluster-based permutation tests on time-frequency data
-- title:  Introduction on dealing with artifacts
-
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /tutorial/preproc/artifacts
-
-
-- title:  Time-frequency analysis on short and long timescales
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-- title:  Preprocessing - Reading continuous EEG and MEG data
-- title:  Cluster-based permutation tests on event-related fields
-
-  link:  /tutorial/preproc/continuous
-  link:  /tutorial/stats/cluster_permutation_timelock
-
-
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-  link:  /workshop/madrid2019/bids_sedation
-- title:  Parametric and non-parametric statistics on event-related fields
-- title:  Preprocessing of EEG data and computing ERPs
-
-  link:  /tutorial/stats/eventrelatedstatistics
-  link:  /tutorial/sensor/preprocessing_erp
-
-
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /workshop/madrid2019/eeg_sedation
-  link:  /tutorial/stats/mvpa_light
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-
-  link:  /tutorial/sensor/preprocessing
-- title:  FieldTrip workshop in Madrid
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/madrid2019
-  link:  /tutorial/stats/statistics
-
-- title:  Extracting the brain state and events from continuous sleep EEG
-
-  link:  /tutorial/sensor/sleep
-- title:  Cleaning and processing resting-state EEG
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /workshop/madrid2019/tutorial_cleaning
-  link:  /tutorial/tms/tms-eeg
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-- title:  Getting started with EEG data, quality checks and ERPs
-- title:  FieldTrip Walkthrough
-  link:  /workshop/madrid2019/tutorial_erp
-- title:  Time-frequency analysis of combined MEG/EEG data
-  link:  /walkthrough
-
-  link:  /tutorial/sensor/timefrequency
-
-
-- title:  Time-frequency and spectral analysis
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/madrid2019/tutorial_freq
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-
-  link:  /tutorial/source/beamforming
-
-
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-- title:  Convert the EEG language dataset for sharing in BIDS
-  link:  /workshop/madrid2019/tutorial_stats
-- title:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/cuttingeeg2021/bids_language
-
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /tutorial/source/dipolefitting
-
-  link:  /development/realtime/modulareeg
-
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-
-  link:  /workshop/natmeg2014/meg_audodd
-- title:  Time-frequency analysis on short and long timescales
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /tutorial/source/headmodel_eeg_bem
-
-  link:  /getting_started/eeg/1020
-
-- title:  Forward modeling for EEG source reconstruction
-
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /workshop/oslo2019/forward_modeling
-  link:  /workshop/madrid2019/bids_sedation
-  link:  /tutorial/source/headmodel_eeg_fem
-
-
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-
-  link:  /getting_started/eeg/antneuro
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-- title:  Preprocessing and event-related potentials in EEG data
-
-  link:  /workshop/madrid2019/eeg_sedation
-  link:  /workshop/oslo2019/introduction
-- title:  Cluster-based permutation tests on time-frequency data
-
-
-- title:  Getting started with Biosemi BDF data
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /getting_started/eeg/biosemi
-
-- title:  FieldTrip workshop in Oslo
-- title:  FieldTrip workshop in Madrid
-
-  link:  /workshop/oslo2019
-  link:  /workshop/madrid2019
-- title:  Cluster-based permutation tests on event-related fields
-
-
-- title:  Getting started with BrainVision Analyzer and Easycap
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /tutorial/stats/cluster_permutation_timelock
-  link:  /getting_started/eeg/brainvision
-  link:  /development/realtime/modulareeg
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-- title:  Cleaning and processing resting-state EEG
-
-
-  link:  /workshop/oslo2019/statistics
-  link:  /workshop/madrid2019/tutorial_cleaning
-- title:  Parametric and non-parametric statistics on event-related fields
-
-
-- title:  Getting started with EDF (European Data Format) data
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /tutorial/stats/eventrelatedstatistics
-  link:  /getting_started/eeg/edf
-  link:  /getting_started/eeg/1020
-
-- title:  Time-frequency analysis of EEG data
-- title:  Getting started with EEG data, quality checks and ERPs
-
-
-  link:  /workshop/oslo2019/timefrequency
-  link:  /workshop/madrid2019/tutorial_erp
-- title:  Classification of event-related MEG data using MVPA-Light
-
-
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-- title:  Getting started with EGI/Philips/Magstim data
-  link:  /tutorial/stats/mvpa_light
-  link:  /getting_started/eeg/antneuro
-  link:  /getting_started/eeg/egi
-
-- title:  Time-frequency and spectral analysis
-
-
-  link:  /workshop/madrid2019/tutorial_freq
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-- title:  Getting started with Biosemi BDF data
-  link:  /tutorial/stats/statistics
-- title:  Getting started with Nicolet data
-  link:  /getting_started/eeg/biosemi
-
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-  link:  /getting_started/eeg/nicolet
-
-  link:  /workshop/madrid2019/tutorial_stats
-
-- title:  Dealing with TMS-EEG datasets
-
-  link:  /tutorial/tms/tms-eeg
-- title:  Getting started with TMSi data
-- title:  Getting started with BrainVision Analyzer and Easycap
-
-  link:  /getting_started/eeg/tmsi
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-  link:  /getting_started/eeg/brainvision
-
-
-  link:  /workshop/natmeg2014/meg_audodd
-- title:  FieldTrip Walkthrough
-
-  link:  /walkthrough
-- title:  Getting started with EDF (European Data Format) data
-- title:  Getting started with human ECoG data
-
-  link:  /getting_started/eeg/edf
-  link:  /getting_started/intracranial/human_ecog
-- title:  Forward modeling for EEG source reconstruction
-
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/oslo2019/forward_modeling
-  link:  /workshop/aarhus2015/beamformingerf
-- title:  Getting started with EGI/Philips/Magstim data
-- title:  Getting started with BioImage Suite
-
-
-  link:  /getting_started/eeg/egi
-  link:  /getting_started/othersoftware/bioimage
-
-- title:  Preprocessing and event-related potentials in EEG data
-- title:  Convert the EEG language dataset for sharing in BIDS
-
-  link:  /workshop/oslo2019/introduction
-  link:  /workshop/cuttingeeg2021/bids_language
-- title:  Getting started with Nicolet data
-
-
-- title:  Getting started with EEGLAB
-  link:  /getting_started/eeg/nicolet
-  link:  /getting_started/othersoftware/eeglab
-
-- title:  FieldTrip workshop in Oslo
-- title:  Time-frequency analysis on short and long timescales
-
-  link:  /workshop/oslo2019
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-- title:  Getting started with TMSi data
-
-
-- title:  Getting started with LIMO MEEG
-  link:  /getting_started/eeg/tmsi
-  link:  /getting_started/othersoftware/limo
-
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-- title:  Statistical analysis and multiple comparison correction for EEG data
-
-  link:  /workshop/madrid2019/bids_sedation
-  link:  /workshop/oslo2019/statistics
-- title:  Getting started with human ECoG data
-
-- title:  Getting started with MNE(-python)
-
-  link:  /getting_started/intracranial/human_ecog
-  link:  /getting_started/othersoftware/mne
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-
-
-- title:  Time-frequency analysis of EEG data
-  link:  /workshop/madrid2019/eeg_sedation
-  link:  /workshop/oslo2019/timefrequency
-
-- title:  Importing your data
-- title:  Getting started with BioImage Suite
-
-  link:  /reading_data
-  link:  /getting_started/othersoftware/bioimage
-- title:  FieldTrip workshop in Madrid
-
-
-  link:  /workshop/madrid2019
-- title:  References to implemented methods
-
-- title:  Getting started with EEGLAB
-  link:  /references_methods
-  link:  /getting_started/othersoftware/eeglab
-
-- title:  Cleaning and processing resting-state EEG
-
-  link:  /workshop/madrid2019/tutorial_cleaning
-- title:  Template 2-D layouts for plotting
-
-  link:  /template/layout
-- title:  Getting started with LIMO MEEG
-
-  link:  /getting_started/othersoftware/limo
-- title:  Getting started with EEG data, quality checks and ERPs
-
-  link:  /workshop/madrid2019/tutorial_erp
-- title:  Details on the EEG language dataset
-
-  link:  /tutorial/eeg_language
-- title:  Getting started with MNE(-python)
-
-  link:  /getting_started/othersoftware/mne
-- title:  Time-frequency and spectral analysis
-
-  link:  /workshop/madrid2019/tutorial_freq
-- title:  Analysis of human ECoG and sEEG recordings
-
-  link:  /tutorial/intracranial/human_ecog
-- title:  Importing your data
-
-  link:  /reading_data
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-
-  link:  /workshop/madrid2019/tutorial_stats
-- title:  Analysis of monkey ECoG recordings
-
-  link:  /tutorial/intracranial/monkey_ecog
-- title:  References to implemented methods
-
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-  link:  /references_methods
-  link:  /workshop/natmeg2014/meg_audodd
-- title:  Channel and source analysis of mouse EEG
-
-
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Template 2-D layouts for plotting
-
-- title:  Forward modeling for EEG source reconstruction
-  link:  /template/layout
-  link:  /workshop/oslo2019/forward_modeling
-
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-- title:  Details on the EEG language dataset
-
-  link:  /tutorial/eeg_language
-- title:  Preprocessing and event-related potentials in EEG data
-
-  link:  /workshop/oslo2019/introduction
-- title:  Specifying the channel layout for plotting
-
-  link:  /tutorial/plotting/layout
-- title:  Analysis of human ECoG and sEEG recordings
-
-  link:  /tutorial/intracranial/human_ecog
-- title:  FieldTrip workshop in Oslo
-
-  link:  /workshop/oslo2019
-- title:  Introduction on dealing with artifacts
-
-  link:  /tutorial/preproc/artifacts
-- title:  Analysis of monkey ECoG recordings
-
-  link:  /tutorial/intracranial/monkey_ecog
-- title:  Statistical analysis and multiple comparison correction for EEG data
-
-  link:  /workshop/oslo2019/statistics
-- title:  Preprocessing - Reading continuous EEG and MEG data
-
-  link:  /tutorial/preproc/continuous
-- title:  Channel and source analysis of mouse EEG
-
-  link:  /tutorial/intracranial/mouse_eeg
-- title:  Time-frequency analysis of EEG data
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /workshop/oslo2019/timefrequency
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/sensor/preprocessing
-- title:  Specifying the channel layout for plotting
-
-  link:  /tutorial/plotting/layout
-
-- title:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sensor/sleep
-- title:  Introduction on dealing with artifacts
-
-  link:  /tutorial/preproc/artifacts
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /tutorial/sensor/timefrequencyanalysis
-- title:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /development/realtime/modulareeg
-
-  link:  /tutorial/preproc/continuous
-
-
-- title:  Time-frequency analysis of combined MEG/EEG data
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /tutorial/sensor/timefrequency
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /getting_started/eeg/1020
-
-
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /getting_started/eeg/antneuro
-  link:  /tutorial/source/beamforming
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-
-  link:  /tutorial/sensor/preprocessing
-- title:  Getting started with Biosemi BDF data
-
-- title:  Dipole fitting of combined MEG/EEG data
-  link:  /getting_started/eeg/biosemi
-  link:  /tutorial/source/dipolefitting
-- title:  Extracting the brain state and events from continuous sleep EEG
-
-
-  link:  /tutorial/sensor/sleep
-- title:  Getting started with BrainVision Analyzer and Easycap
-
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /getting_started/eeg/brainvision
-  link:  /tutorial/source/headmodel_eeg_bem
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-
-  link:  /tutorial/sensor/timefrequencyanalysis
-- title:  Getting started with EDF (European Data Format) data
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /getting_started/eeg/edf
-  link:  /tutorial/source/headmodel_eeg_fem
-- title:  Time-frequency analysis of combined MEG/EEG data
-
-
-  link:  /tutorial/sensor/timefrequency
-- title:  Getting started with EGI/Philips/Magstim data
-
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /getting_started/eeg/egi
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-
-
-  link:  /tutorial/source/beamforming
-- title:  Getting started with Nicolet data
-
-- title:  Cluster-based permutation tests on event-related fields
-  link:  /getting_started/eeg/nicolet
-  link:  /tutorial/stats/cluster_permutation_timelock
-
-- title:  Dipole fitting of combined MEG/EEG data
-
-  link:  /tutorial/source/dipolefitting
-- title:  Getting started with TMSi data
-
-  link:  /getting_started/eeg/tmsi
-- title:  Parametric and non-parametric statistics on event-related fields
-
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Getting started with human ECoG data
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /getting_started/intracranial/human_ecog
-- title:  Classification of event-related MEG data using MVPA-Light
-
-
-  link:  /tutorial/stats/mvpa_light
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Getting started with BioImage Suite
-  link:  /tutorial/source/headmodel_eeg_fem
-  link:  /getting_started/othersoftware/bioimage
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-  link:  /tutorial/stats/statistics
-- title:  Cluster-based permutation tests on time-frequency data
-
-- title:  Getting started with EEGLAB
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /getting_started/othersoftware/eeglab
-
-- title:  Dealing with TMS-EEG datasets
-
-  link:  /development/realtime/modulareeg
-  link:  /tutorial/tms/tms-eeg
-- title:  Cluster-based permutation tests on event-related fields
-
-
-- title:  Getting started with LIMO MEEG
-  link:  /tutorial/stats/cluster_permutation_timelock
-  link:  /getting_started/othersoftware/limo
-
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-- title:  FieldTrip Walkthrough
-
-  link:  /getting_started/eeg/1020
-  link:  /walkthrough
-- title:  Parametric and non-parametric statistics on event-related fields
-
-
-- title:  Getting started with MNE(-python)
-  link:  /tutorial/stats/eventrelatedstatistics
   link:  /getting_started/othersoftware/mne
 
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-
-  link:  /workshop/aarhus2015/beamformingerf
-  link:  /getting_started/eeg/antneuro
-- title:  Classification of event-related MEG data using MVPA-Light
-
-
 - title:  Importing your data
-  link:  /tutorial/stats/mvpa_light
   link:  /reading_data
 
-- title:  Convert the EEG language dataset for sharing in BIDS
-- title:  Getting started with Biosemi BDF data
-
-  link:  /workshop/cuttingeeg2021/bids_language
-  link:  /getting_started/eeg/biosemi
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-
 - title:  References to implemented methods
-  link:  /tutorial/stats/statistics
   link:  /references_methods
-- title:  Time-frequency analysis on short and long timescales
-- title:  Getting started with BrainVision Analyzer and Easycap
-
-
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-  link:  /getting_started/eeg/brainvision
 
 - title:  Template 2-D layouts for plotting
-- title:  Dealing with TMS-EEG datasets
-
   link:  /template/layout
-  link:  /tutorial/tms/tms-eeg
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-
-
-  link:  /workshop/madrid2019/bids_sedation
-- title:  Getting started with EDF (European Data Format) data
 
 - title:  Details on the EEG language dataset
-  link:  /getting_started/eeg/edf
-- title:  FieldTrip Walkthrough
   link:  /tutorial/eeg_language
 
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-
-  link:  /walkthrough
-  link:  /workshop/madrid2019/eeg_sedation
-- title:  Getting started with EGI/Philips/Magstim data
-
-
 - title:  Analysis of human ECoG and sEEG recordings
-  link:  /getting_started/eeg/egi
   link:  /tutorial/intracranial/human_ecog
 
-- title:  FieldTrip workshop in Madrid
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-
-  link:  /workshop/madrid2019
-  link:  /workshop/aarhus2015/beamformingerf
-- title:  Getting started with Nicolet data
-
-
 - title:  Analysis of monkey ECoG recordings
-  link:  /getting_started/eeg/nicolet
   link:  /tutorial/intracranial/monkey_ecog
-- title:  Cleaning and processing resting-state EEG
-- title:  Convert the EEG language dataset for sharing in BIDS
-
-
-  link:  /workshop/madrid2019/tutorial_cleaning
-  link:  /workshop/cuttingeeg2021/bids_language
-
-- title:  Getting started with TMSi data
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /getting_started/eeg/tmsi
-- title:  Getting started with EEG data, quality checks and ERPs
-  link:  /tutorial/intracranial/mouse_eeg
-
-- title:  Time-frequency analysis on short and long timescales
-  link:  /workshop/madrid2019/tutorial_erp
-
-
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-- title:  Getting started with human ECoG data
-
-  link:  /getting_started/intracranial/human_ecog
-- title:  Introduction to the FieldTrip toolbox
-- title:  Time-frequency and spectral analysis
-
-  link:  /tutorial/intro/introduction
-  link:  /workshop/madrid2019/tutorial_freq
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-
-
-- title:  Getting started with BioImage Suite
-  link:  /workshop/madrid2019/bids_sedation
-  link:  /getting_started/othersoftware/bioimage
-- title:  Specifying the channel layout for plotting
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-
-
-  link:  /tutorial/plotting/layout
-  link:  /workshop/madrid2019/tutorial_stats
-
-
-- title:  Getting started with EEGLAB
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-  link:  /getting_started/othersoftware/eeglab
-  link:  /workshop/madrid2019/eeg_sedation
-- title:  Introduction on dealing with artifacts
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-
-
-  link:  /tutorial/preproc/artifacts
-  link:  /workshop/natmeg2014/meg_audodd
-
-
-- title:  FieldTrip workshop in Madrid
-- title:  Getting started with LIMO MEEG
-  link:  /workshop/madrid2019
-  link:  /getting_started/othersoftware/limo
-- title:  Preprocessing - Reading continuous EEG and MEG data
-- title:  Forward modeling for EEG source reconstruction
-
-
-  link:  /tutorial/preproc/continuous
-  link:  /workshop/oslo2019/forward_modeling
-
-
-- title:  Cleaning and processing resting-state EEG
-- title:  Getting started with MNE(-python)
-  link:  /workshop/madrid2019/tutorial_cleaning
-  link:  /getting_started/othersoftware/mne
-- title:  Preprocessing of EEG data and computing ERPs
-- title:  Preprocessing and event-related potentials in EEG data
-
-
-  link:  /tutorial/sensor/preprocessing_erp
-  link:  /workshop/oslo2019/introduction
-
-
-- title:  Importing your data
-- title:  Getting started with EEG data, quality checks and ERPs
-  link:  /reading_data
-  link:  /workshop/madrid2019/tutorial_erp
-
-- title:  FieldTrip workshop in Oslo
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-  link:  /workshop/oslo2019
-  link:  /tutorial/sensor/preprocessing
-- title:  References to implemented methods
-
-
-- title:  Time-frequency and spectral analysis
-  link:  /references_methods
-  link:  /workshop/madrid2019/tutorial_freq
-- title:  Extracting the brain state and events from continuous sleep EEG
-- title:  Statistical analysis and multiple comparison correction for EEG data
-
-
-  link:  /tutorial/sensor/sleep
-  link:  /workshop/oslo2019/statistics
-
-- title:  Template 2-D layouts for plotting
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-
-  link:  /template/layout
-  link:  /workshop/madrid2019/tutorial_stats
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-
-- title:  Time-frequency analysis of EEG data
-  link:  /tutorial/sensor/timefrequencyanalysis
-  link:  /workshop/oslo2019/timefrequency
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-- title:  Details on the EEG language dataset
-
-
-  link:  /workshop/natmeg2014/meg_audodd
-  link:  /tutorial/eeg_language
-
-- title:  Time-frequency analysis of combined MEG/EEG data
-
-  link:  /tutorial/sensor/timefrequency
-- title:  Forward modeling for EEG source reconstruction
-
-  link:  /workshop/oslo2019/forward_modeling
-- title:  Analysis of human ECoG and sEEG recordings
-
-  link:  /tutorial/intracranial/human_ecog
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-
-  link:  /tutorial/source/beamforming
-- title:  Preprocessing and event-related potentials in EEG data
-
-  link:  /workshop/oslo2019/introduction
-- title:  Analysis of monkey ECoG recordings
-
-  link:  /tutorial/intracranial/monkey_ecog
-- title:  Dipole fitting of combined MEG/EEG data
-- title:  FieldTrip workshop in Oslo
-
-  link:  /tutorial/source/dipolefitting
-  link:  /workshop/oslo2019
-
 
 - title:  Channel and source analysis of mouse EEG
   link:  /tutorial/intracranial/mouse_eeg
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-- title:  Statistical analysis and multiple comparison correction for EEG data
-
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /workshop/oslo2019/statistics
 
 - title:  Introduction to the FieldTrip toolbox
-
   link:  /tutorial/intro/introduction
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
 
-- title:  Time-frequency analysis of EEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-  link:  /workshop/oslo2019/timefrequency
 - title:  Specifying the channel layout for plotting
-
-
   link:  /tutorial/plotting/layout
-- title:  Cluster-based permutation tests on time-frequency data
-
-  link:  /tutorial/stats/cluster_permutation_freq
 
 - title:  Introduction on dealing with artifacts
   link:  /tutorial/preproc/artifacts
-- title:  Cluster-based permutation tests on event-related fields
-
-  link:  /tutorial/stats/cluster_permutation_timelock
-- title:  Preprocessing - Reading continuous EEG and MEG data
-
-  link:  /tutorial/preproc/continuous
-
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Preprocessing of EEG data and computing ERPs
-
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/stats/mvpa_light
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-
-  link:  /tutorial/sensor/preprocessing
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
-  link:  /tutorial/stats/statistics
-- title:  Extracting the brain state and events from continuous sleep EEG
-  link:  /development/realtime/modulareeg
-
-  link:  /tutorial/sensor/sleep
-
-
-- title:  Dealing with TMS-EEG datasets
-- title:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /tutorial/tms/tms-eeg
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /getting_started/eeg/1020
-
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-
-- title:  FieldTrip Walkthrough
-- title:  Getting started with ANT-Neuro, ASA and EEProbe data
-  link:  /walkthrough
-- title:  Time-frequency analysis of combined MEG/EEG data
-  link:  /getting_started/eeg/antneuro
-
-  link:  /tutorial/sensor/timefrequency
-
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-- title:  Getting started with Biosemi BDF data
-  link:  /workshop/aarhus2015/beamformingerf
-  link:  /tutorial/source/beamforming
-
-  link:  /getting_started/eeg/biosemi
-
-
-- title:  Convert the EEG language dataset for sharing in BIDS
-  link:  /workshop/cuttingeeg2021/bids_language
-- title:  Dipole fitting of combined MEG/EEG data
-
-- title:  Getting started with BrainVision Analyzer and Easycap
-  link:  /tutorial/source/dipolefitting
-  link:  /getting_started/eeg/brainvision
-
-- title:  Time-frequency analysis on short and long timescales
-
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Getting started with EDF (European Data Format) data
-  link:  /tutorial/source/headmodel_eeg_bem
-  link:  /getting_started/eeg/edf
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-
-
-  link:  /workshop/madrid2019/bids_sedation
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-
-- title:  Getting started with EGI/Philips/Magstim data
-  link:  /tutorial/source/headmodel_eeg_fem
-  link:  /getting_started/eeg/egi
-
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-
-  link:  /workshop/madrid2019/eeg_sedation
-- title:  Cluster-based permutation tests on time-frequency data
-
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Getting started with Nicolet data
-
-  link:  /getting_started/eeg/nicolet
-- title:  FieldTrip workshop in Madrid
-
-  link:  /workshop/madrid2019
-- title:  Cluster-based permutation tests on event-related fields
-
-  link:  /tutorial/stats/cluster_permutation_timelock
-- title:  Getting started with TMSi data
-
-- title:  Cleaning and processing resting-state EEG
-  link:  /getting_started/eeg/tmsi
-  link:  /workshop/madrid2019/tutorial_cleaning
-
-- title:  Parametric and non-parametric statistics on event-related fields
-
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Getting started with human ECoG data
-
-- title:  Getting started with EEG data, quality checks and ERPs
-  link:  /getting_started/intracranial/human_ecog
-  link:  /workshop/madrid2019/tutorial_erp
-- title:  Classification of event-related MEG data using MVPA-Light
-
-
-  link:  /tutorial/stats/mvpa_light
-- title:  Getting started with BioImage Suite
-
-- title:  Time-frequency and spectral analysis
-  link:  /getting_started/othersoftware/bioimage
-  link:  /workshop/madrid2019/tutorial_freq
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-  link:  /tutorial/stats/statistics
-- title:  Getting started with EEGLAB
-
-  link:  /getting_started/othersoftware/eeglab
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-
-  link:  /workshop/madrid2019/tutorial_stats
-- title:  Dealing with TMS-EEG datasets
-
-- title:  Getting started with LIMO MEEG
-  link:  /tutorial/tms/tms-eeg
-  link:  /getting_started/othersoftware/limo
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-
-
-  link:  /workshop/natmeg2014/meg_audodd
-- title:  Getting started with MNE(-python)
-
-- title:  FieldTrip Walkthrough
-  link:  /getting_started/othersoftware/mne
-  link:  /walkthrough
-- title:  Forward modeling for EEG source reconstruction
-
-
-  link:  /workshop/oslo2019/forward_modeling
-- title:  Importing your data
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /reading_data
-  link:  /workshop/aarhus2015/beamformingerf
-- title:  Preprocessing and event-related potentials in EEG data
-
-
-  link:  /workshop/oslo2019/introduction
-- title:  References to implemented methods
-
-- title:  Convert the EEG language dataset for sharing in BIDS
-  link:  /references_methods
-  link:  /workshop/cuttingeeg2021/bids_language
-- title:  FieldTrip workshop in Oslo
-
-
-  link:  /workshop/oslo2019
-- title:  Template 2-D layouts for plotting
-
-- title:  Time-frequency analysis on short and long timescales
-  link:  /template/layout
-  link:  /workshop/cuttingeeg2021/tutorial_freq
-
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/oslo2019/statistics
-- title:  Details on the EEG language dataset
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-
-  link:  /tutorial/eeg_language
-  link:  /workshop/madrid2019/bids_sedation
-
-- title:  Time-frequency analysis of EEG data
-
-  link:  /workshop/oslo2019/timefrequency
-- title:  Analysis of human ECoG and sEEG recordings
-
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-  link:  /tutorial/intracranial/human_ecog
-  link:  /workshop/madrid2019/eeg_sedation
-
-
-- title:  Analysis of monkey ECoG recordings
-- title:  FieldTrip workshop in Madrid
-  link:  /tutorial/intracranial/monkey_ecog
-  link:  /workshop/madrid2019
-
-
-- title:  Channel and source analysis of mouse EEG
-- title:  Cleaning and processing resting-state EEG
-  link:  /tutorial/intracranial/mouse_eeg
-  link:  /workshop/madrid2019/tutorial_cleaning
-
-
-- title:  Introduction to the FieldTrip toolbox
-- title:  Getting started with EEG data, quality checks and ERPs
-  link:  /tutorial/intro/introduction
-  link:  /workshop/madrid2019/tutorial_erp
-
-
-- title:  Specifying the channel layout for plotting
-- title:  Time-frequency and spectral analysis
-  link:  /tutorial/plotting/layout
-  link:  /workshop/madrid2019/tutorial_freq
-
-
-- title:  Introduction on dealing with artifacts
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-  link:  /tutorial/preproc/artifacts
-  link:  /workshop/madrid2019/tutorial_stats
-
 
 - title:  Preprocessing - Reading continuous EEG and MEG data
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-  link:  /workshop/natmeg2014/meg_audodd
   link:  /tutorial/preproc/continuous
 
-
 - title:  Preprocessing of EEG data and computing ERPs
-- title:  Forward modeling for EEG source reconstruction
   link:  /tutorial/sensor/preprocessing_erp
-  link:  /workshop/oslo2019/forward_modeling
-
 
 - title:  Preprocessing and event-related activity in combined MEG/EEG data
-- title:  Preprocessing and event-related potentials in EEG data
   link:  /tutorial/sensor/preprocessing
-  link:  /workshop/oslo2019/introduction
-
 
 - title:  Extracting the brain state and events from continuous sleep EEG
-- title:  FieldTrip workshop in Oslo
   link:  /tutorial/sensor/sleep
-  link:  /workshop/oslo2019
-
 
 - title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  Statistical analysis and multiple comparison correction for EEG data
   link:  /tutorial/sensor/timefrequencyanalysis
-  link:  /workshop/oslo2019/statistics
-
 
 - title:  Time-frequency analysis of combined MEG/EEG data
-- title:  Time-frequency analysis of EEG data
   link:  /tutorial/sensor/timefrequency
-  link:  /workshop/oslo2019/timefrequency
-
 
 - title:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/source/beamforming

@@ -1,233 +1,71 @@
-- title:  Getting started with LIMO MEEG
-  link:  /getting_started/othersoftware/limo
+- title:  Computing and reporting the effect size
+  link:  /example/stats/effectsize
 
-- title:  Reference documentation
-  link:  /reference
+- title:  Using General Linear Modeling on time series data
+  link:  /example/stats/glm_timeseries
 
-- title:  References to implemented methods
-  link:  /references_methods
+- title:  Using General Linear Modeling over trials
+  link:  /example/stats/glm_trials
 
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
+- title:  Defining electrodes as neighbours for cluster-level statistics
+  link:  /example/stats/neighbours
 
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Getting started with LIMO MEEG
+- title:  Using GLM to analyze NIRS timeseries data
+  link:  /example/stats/nirs_glm
 
-  link:  /getting_started/othersoftware/limo
-- title:  Cluster-based permutation tests on event-related fields
+- title:  Using simulations to estimate the sample size for cluster-based permutation test
+  link:  /example/stats/samplesize
 
-  link:  /tutorial/stats/cluster_permutation_timelock
-- title:  Reference documentation
+- title:  Use simulated ERPs to explore cluster statistics
+  link:  /example/stats/simulateddata_clusterstats
 
-  link:  /reference
+- title:  Source statistics
+  link:  /example/stats/source_statistics
 
-- title:  Parametric and non-parametric statistics on event-related fields
-- title:  References to implemented methods
-  link:  /tutorial/stats/eventrelatedstatistics
-  link:  /references_methods
-- title:  Getting started with LIMO MEEG
+- title:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+  link:  /example/stats/stats_besa
 
+- title:  Stratify the distribution of one variable that differs in two conditions
+  link:  /example/stats/stratify
 
-  link:  /getting_started/othersoftware/limo
-- title:  Introduction to the FieldTrip toolbox
+- title:  Using threshold-free cluster enhancement for cluster statistics
+  link:  /example/stats/tfce
 
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /tutorial/intro/introduction
-  link:  /tutorial/stats/statistics
-- title:  Reference documentation
+- title:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/stats/behavior_cosinefit
 
+- title:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
+  link:  /faq/stats/behavior_signalcorrelation
 
-  link:  /reference
-- title:  Cluster-based permutation tests on time-frequency data
+- title:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
+  link:  /faq/stats/clusterstats_correcttail
 
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  References to implemented methods
-  link:  /workshop/oslo2019/statistics
+- title:  How to test an interaction effect using cluster-based permutation tests?
+  link:  /faq/stats/clusterstats_interaction
 
-  link:  /references_methods
+- title:  How NOT to interpret results from a cluster-based permutation test
+  link:  /faq/stats/clusterstats_interpretation
 
-- title:  Cluster-based permutation tests on event-related fields
+- title:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
+  link:  /faq/stats/clusterstats_iuwcvar
 
-  link:  /tutorial/stats/cluster_permutation_timelock
-- title:  Group analysis
+- title:  Should I use t or F values for cluster-based permutation tests?
+  link:  /faq/stats/clusterstats_teststatistic
 
-- title:  Introduction to the FieldTrip toolbox
-  link:  /workshop/paris2019/handson_groupanalysis
-  link:  /tutorial/intro/introduction
-- title:  Parametric and non-parametric statistics on event-related fields
+- title:  How can I determine the onset of an effect?
+  link:  /faq/stats/effectonset
 
+- title:  How does ft_prepare_neighbours work?
+  link:  /faq/stats/neighbours_prepare
 
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Group-level statistics with parametric and non-parametric methods
+- title:  How can I define neighbouring sensors?
+  link:  /faq/stats/sensors_neighbours
 
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+- title:  How does a difference in trial numbers per condition affect my statistical test
+  link:  /faq/stats/statistics_ntrials
 
-
-  link:  /tutorial/stats/statistics
-- title:  Getting started with LIMO MEEG
-
-  link:  /getting_started/othersoftware/limo
-- title:  Cluster-based permutation tests on event-related fields
-
-  link:  /tutorial/stats/cluster_permutation_timelock
-- title:  Statistical analysis and multiple comparison correction for EEG data
-
-- title:  Reference documentation
-  link:  /workshop/oslo2019/statistics
-
-  link:  /reference
-- title:  Parametric and non-parametric statistics on event-related fields
-
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Group analysis
-
-- title:  References to implemented methods
-  link:  /workshop/paris2019/handson_groupanalysis
-  link:  /references_methods
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-
-  link:  /tutorial/stats/statistics
-
-- title:  Group-level statistics with parametric and non-parametric methods
-- title:  Introduction to the FieldTrip toolbox
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-  link:  /tutorial/intro/introduction
-
-  link:  /workshop/oslo2019/statistics
-
-
-- title:  Cluster-based permutation tests on time-frequency data
-- title:  Group analysis
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /workshop/paris2019/handson_groupanalysis
-
-
-- title:  Cluster-based permutation tests on event-related fields
-- title:  Group-level statistics with parametric and non-parametric methods
-  link:  /tutorial/stats/cluster_permutation_timelock
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/stats/eventrelatedstatistics
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /tutorial/stats/statistics
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/oslo2019/statistics
-
-- title:  Group analysis
-  link:  /workshop/paris2019/handson_groupanalysis
-
-- title:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-- title:  Getting started with LIMO MEEG
-  link:  /getting_started/othersoftware/limo
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-- title:  Getting started with LIMO MEEG
-
-  link:  /getting_started/othersoftware/limo
-
-- title:  Cluster-based permutation tests on time-frequency data
-- title:  Reference documentation
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /reference
-
-
-- title:  Cluster-based permutation tests on event-related fields
-- title:  References to implemented methods
-  link:  /tutorial/stats/cluster_permutation_timelock
-  link:  /references_methods
-
-
-- title:  Parametric and non-parametric statistics on event-related fields
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/stats/eventrelatedstatistics
-  link:  /tutorial/intro/introduction
-
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/stats/statistics
-  link:  /tutorial/stats/cluster_permutation_freq
-
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-- title:  Cluster-based permutation tests on event-related fields
-  link:  /workshop/oslo2019/statistics
-  link:  /tutorial/stats/cluster_permutation_timelock
-
-
-- title:  Group analysis
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /workshop/paris2019/handson_groupanalysis
-  link:  /tutorial/stats/eventrelatedstatistics
-
-
-- title:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
-  link:  /tutorial/stats/statistics
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/oslo2019/statistics
-
-- title:  Group analysis
-  link:  /workshop/paris2019/handson_groupanalysis
-- title:  Getting started with LIMO MEEG
-
-  link:  /getting_started/othersoftware/limo
-- title:  Group-level statistics with parametric and non-parametric methods
-
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/stats/cluster_permutation_freq
-
-- title:  Cluster-based permutation tests on event-related fields
-  link:  /tutorial/stats/cluster_permutation_timelock
-
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/stats/eventrelatedstatistics
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /tutorial/stats/statistics
-
-- title:  Statistical analysis and multiple comparison correction for EEG data
-  link:  /workshop/oslo2019/statistics
-
-- title:  Group analysis
-  link:  /workshop/paris2019/handson_groupanalysis
-
-- title:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
+- title:  What is the idea behind statistical inference at the second-level?
+  link:  /faq/stats/statistics_secondlevel
 
 - title:  Getting started with LIMO MEEG
   link:  /getting_started/othersoftware/limo

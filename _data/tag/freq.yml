@@ -1,257 +1,92 @@
-- title:  Reference documentation
-  link:  /reference
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
 
-- title:  References to implemented methods
-  link:  /references_methods
+- title:  Common filters in beamforming
+  link:  /example/source/beamformer_commonfilter
 
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
+- title:  Effect of SNR on Coherence
+  link:  /example/spectral/coherence_snr
 
-- title:  Extended analysis of sensor- and source-level connectivity
-- title:  Reference documentation
-  link:  /tutorial/connectivity/connectivityextended
-  link:  /reference
+- title:  Cross-frequency analysis
+  link:  /example/spectral/crossfreq
 
+- title:  Effects of tapering for power estimates
+  link:  /example/spectral/effects_of_tapering
 
-- title:  Analysis of sensor- and source-level connectivity
-- title:  References to implemented methods
-  link:  /tutorial/connectivity/connectivity_sensor_source
-  link:  /references_methods
+- title:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /example/spectral/fourier
 
+- title:  Conditional Granger causality in the frequency domain
+  link:  /example/spectral/granger_conditional
 
-- title:  Introduction to the FieldTrip toolbox
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/intro/introduction
-  link:  /tutorial/connectivity/connectivity_aef
+- title:  Simulate an oscillatory signal with phase resetting
+  link:  /example/spectral/phase_reset
 
+- title:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+  link:  /example/spectral/ssvep
 
-- title:  Sensor-level ERF, TFR and connectivity analyses
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/sensor/sensor_analysis
-  link:  /tutorial/connectivity/connectivityextended
+- title:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+  link:  /example/stats/stats_besa
 
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/sensor/timefrequencyanalysis
-  link:  /tutorial/connectivity/connectivity_sensor_source
+- title:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/spectral/datatype_freq
 
+- title:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+  link:  /faq/spectral/evoked_vs_induced
 
-- title:  Localizing oscillatory sources using beamformer techniques
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/source/beamformer
-  link:  /tutorial/intro/introduction
+- title:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_foimismatchmtmconvol
 
+- title:  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalysis
+  link:  /faq/spectral/freqanalysis_foimismatchmtmfft
 
-- title:  Cluster-based permutation tests on time-frequency data
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /tutorial/sensor/sensor_analysis
+- title:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_foimismatchwavelet
 
+- title:  Why am I not getting integer frequencies?
+  link:  /faq/spectral/freqanalysis_foinoninteger
 
-- title:  Parametric and non-parametric statistics on event-related fields
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/stats/eventrelatedstatistics
-  link:  /tutorial/sensor/timefrequencyanalysis
+- title:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_mtmconvol_new
 
+- title:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_mtmfft_new
 
-- title:  Classification of event-related MEG data using MVPA-Light
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/stats/mvpa_light
-  link:  /tutorial/source/beamformer
+- title:  What does "padding not sufficient for requested frequency resolution" mean?
+  link:  /faq/spectral/freqanalysis_paddinginsufficient
 
+- title:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
+  link:  /faq/spectral/freqanalysis_phasedefinition
 
-- title:  FieldTrip Walkthrough
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /walkthrough
-  link:  /tutorial/stats/cluster_permutation_freq
+- title:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
+  link:  /faq/spectral/freqanalysis_wavelet_new
 
+- title:  How does MTMCONVOL work?
+  link:  /faq/spectral/mtmconvol
 
-- title:  Simulating and estimating, what about model (mis)match?
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /workshop/chieti2015/simulation
-  link:  /tutorial/stats/eventrelatedstatistics
+- title:  How can I do time-frequency analysis on continuous data?
+  link:  /faq/spectral/tfr_continuous
 
+- title:  Why does my TFR contain NaNs?
+  link:  /faq/spectral/tfr_nans
 
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-  link:  /tutorial/stats/mvpa_light
+- title:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/spectral/tfr_strangedemean
 
+- title:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/spectral/tfr_strangedetrend
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  FieldTrip Walkthrough
-  link:  /workshop/paris2019/handson_sensoranalysis
-  link:  /walkthrough
+- title:  What is meant by time-frequency trade off?
+  link:  /faq/spectral/timefreqtradeoff
 
+- title:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
+  link:  /faq/spectral/why_largest_peak_spectrum
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-  link:  /workshop/chieti2015/simulation
-
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
-- title:  Reference documentation
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /reference
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
-
-- title:  References to implemented methods
-- title:  Introduction to the FieldTrip toolbox
-  link:  /references_methods
-  link:  /tutorial/intro/introduction
-
-
-- title:  Connectivity in auditory evoked responses
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/connectivity/connectivity_aef
-  link:  /tutorial/sensor/sensor_analysis
-
-
-- title:  Extended analysis of sensor- and source-level connectivity
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/connectivity/connectivityextended
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-
-- title:  Analysis of sensor- and source-level connectivity
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/connectivity/connectivity_sensor_source
-  link:  /tutorial/source/beamformer
-
-
-- title:  Introduction to the FieldTrip toolbox
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/intro/introduction
-  link:  /tutorial/stats/cluster_permutation_freq
-
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/sensor/sensor_analysis
-  link:  /tutorial/stats/eventrelatedstatistics
-
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/sensor/timefrequencyanalysis
-  link:  /tutorial/stats/mvpa_light
-
-
-- title:  Reference documentation
-  link:  /reference
-- title:  FieldTrip Walkthrough
-- title:  Localizing oscillatory sources using beamformer techniques
-
-  link:  /walkthrough
-  link:  /tutorial/source/beamformer
-
-
-- title:  References to implemented methods
-- title:  Cluster-based permutation tests on time-frequency data
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /references_methods
-  link:  /tutorial/stats/cluster_permutation_freq
-  link:  /workshop/chieti2015/simulation
-
-
-
-- title:  Parametric and non-parametric statistics on event-related fields
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-
-  link:  /tutorial/connectivity/connectivity_aef
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Classification of event-related MEG data using MVPA-Light
-
-  link:  /tutorial/stats/mvpa_light
-- title:  Extended analysis of sensor- and source-level connectivity
-
-  link:  /tutorial/connectivity/connectivityextended
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /workshop/paris2019/handson_sensoranalysis
-- title:  FieldTrip Walkthrough
-
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /walkthrough
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-- title:  Simulating and estimating, what about model (mis)match?
-
-  link:  /workshop/chieti2015/simulation
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-- title:  Sensor-level ERF, TFR and connectivity analyses
-
-  link:  /tutorial/sensor/sensor_analysis
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-- title:  Localizing oscillatory sources using beamformer techniques
-
-  link:  /tutorial/source/beamformer
-
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/stats/cluster_permutation_freq
-
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/stats/eventrelatedstatistics
-
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/stats/mvpa_light
-
-- title:  FieldTrip Walkthrough
-  link:  /walkthrough
-
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti2015/simulation
-
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
+- title:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/stats/behavior_cosinefit
 
 - title:  Reference documentation
   link:  /reference
@@ -267,108 +102,6 @@
 
 - title:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivity_sensor_source
-- title:  Reference documentation
-
-  link:  /reference
-- title:  Introduction to the FieldTrip toolbox
-
-  link:  /tutorial/intro/introduction
-
-- title:  References to implemented methods
-  link:  /references_methods
-- title:  Sensor-level ERF, TFR and connectivity analyses
-
-  link:  /tutorial/sensor/sensor_analysis
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /tutorial/sensor/timefrequencyanalysis
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-- title:  Localizing oscillatory sources using beamformer techniques
-
-  link:  /tutorial/source/beamformer
-
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-- title:  Cluster-based permutation tests on time-frequency data
-
-  link:  /tutorial/stats/cluster_permutation_freq
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-- title:  Parametric and non-parametric statistics on event-related fields
-
-  link:  /tutorial/stats/eventrelatedstatistics
-
-- title:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor/sensor_analysis
-- title:  Classification of event-related MEG data using MVPA-Light
-
-  link:  /tutorial/stats/mvpa_light
-
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/sensor/timefrequencyanalysis
-- title:  FieldTrip Walkthrough
-
-  link:  /walkthrough
-
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/source/beamformer
-- title:  Simulating and estimating, what about model (mis)match?
-
-  link:  /workshop/chieti2015/simulation
-
-- title:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/stats/cluster_permutation_freq
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/stats/eventrelatedstatistics
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /workshop/paris2019/handson_sensoranalysis
-
-- title:  Classification of event-related MEG data using MVPA-Light
-  link:  /tutorial/stats/mvpa_light
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-- title:  Reference documentation
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-  link:  /reference
-
-- title:  FieldTrip Walkthrough
-
-  link:  /walkthrough
-
-- title:  References to implemented methods
-  link:  /references_methods
-- title:  Simulating and estimating, what about model (mis)match?
-
-  link:  /workshop/chieti2015/simulation
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-- title:  Reading in data and performing sensor-level ERF and TFR analyses
-
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /workshop/paris2019/handson_sensoranalysis
-
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
 
 - title:  Introduction to the FieldTrip toolbox
   link:  /tutorial/intro/introduction
