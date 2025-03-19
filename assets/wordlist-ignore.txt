@@ -492,6 +492,7 @@ Dubarry
 DuckDuckGo
 Duneuro
 Dvoretskii
+Dyck
 DynamicTableRegion
 EASYCAP
 ECD
@@ -793,10 +794,12 @@ HREF
 HRF
 HTCVive
 HW
+Haase
 Hagoort
 Haider
 Haiteng
 Hajonides
+Halchenko
 Halgren
 Hämäläinen
 Hamer
@@ -1526,6 +1529,7 @@ Perrin
 Pesaran
 Pescara
 Petrov
+Pfeiffer
 Phalow
 Pharmaco
 PhaseSpace
@@ -1947,6 +1951,7 @@ Timelocked
 Timmer
 Timmermann
 TkReg
+Tobias
 Tobii
 Todo
 Todorovic
@@ -2097,6 +2102,7 @@ Weder
 Weisz
 Welch's
 Wellcome
+Welzel
 Werkle
 Westner
 Whereare
@@ -2149,6 +2155,7 @@ YYYY
 YYYYMMDD
 Yao
 Yarek
+Yaroslav
 Yee
 Yeo
 Yokogawa
@@ -3459,6 +3466,8 @@ hcolor
 hcp
 hd
 hdEEG
+hdf
+hdf5
 hdm
 hdr
 headcap
@@ -4363,8 +4372,8 @@ pVaY
 packageless
 paddinginsufficient
 padtype
-pagina
 pagelist
+pagina
 parallelization
 parallelize
 parallelized
