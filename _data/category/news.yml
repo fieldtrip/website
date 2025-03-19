@@ -1,157 +1,152 @@
-- title:  6 March 2018 - Springet Nature policies
-  link:  /_posts/2018-03-06-springer-nature-policies
-
-- title:  12 June 2018 - OHBM workshop
-  link:  /_posts/2018-06-12-ohbm-workshop
-
-- title:  01 July 2018 - HCP workshop
-  link:  /_posts/2018-07-01-hcp-workshop
-
-- title:  09 July 2018 - Intracranial protocol
-  link:  /_posts/2018-07-09-intracranial-protocol
-
-- title:  03 September 2018 - BIOMAG open science panel
-  link:  /_posts/2018-09-03-biomag-open-science-panel
-
-- title:  04 September 2018 - EU decides on open access
-  link:  /_posts/2018-09-04-eu-decides-open-access
-
-- title:  10 September 2018 - New server
-  link:  /_posts/2018-09-08-new-server
-
-- title:  09 October 2018 - FieldTrip made easy
-  link:  /_posts/2018-10-09-fieldtrip-made-easy
-
-- title:  22 November 2018 - New website running
-  link:  /_posts/2018-11-22-new-website-running
-
-- title:  5 December 2018 - New website ready
-  link:  /_posts/2018-12-05-new-website-ready
-
-- title:  20 December 2018 - Donders Award
-  link:  /_posts/2018-12-20-donders-award
-
-- title:  11 January 2019 - 3000 citations
-  link:  /_posts/2019-01-11-3000-citations
-
-- title:  13 March 2019 - MVPA light
-  link:  /_posts/2019-03-13-mvpa-light
-
-- title:  24 March 2019 - ECoG/sEEG workshop
-  link:  /_posts/2019-03-24-ecog-seeg-workshop
-
-- title:  5 April 2019 - MOUS dataset
-  link:  /_posts/2019-04-05-mous-dataset
-
-- title:  25 June 2019 - EEG and iEEG BIDS published
-  link:  /_posts/2019-06-25-eeg-ieeg-bids
-
-- title:  01 July 2019 - FieldTrip workshop at RITMO
-  link:  /_posts/2019-07-01-ritmo-workshop
-
-- title:  11 September 2019 - Tutorial on analyzing MEG epilepsy data
-  link:  /_posts/2019-09-11-epilepsy-tutorial
-
-- title:  23 November 2019 - Multiscale Entropy analysis in FieldTrip
-  link:  /_posts/2019-11-23-entropy
-
-- title:  12 December 2019 - PracticalMEEG 2019
-  link:  /_posts/2019-12-12-practialmeeg2019
-
-- title:  20 January 2020 - Advanced MEG/EEG toolkit in Nijmegen
-  link:  /_posts/2020-01-20-toolkit2020
-
-- title:  05 February 2020 - Computing and reporting effect sizes example script
-  link:  /_posts/2020-02-05-effectsizes
-
-- title:  16 March 2020 - Keep calm and hang in there
-  link:  /_posts/2020-03-16-peptalk
-
-- title:  07 May 2020 - Code update, the default SPM version is now spm12
-  link:  /_posts/2020-05-07-code-update-defaultspmversion
-
-- title:  28 May 2020 - Reference docs now on GitHub
-  link:  /_posts/2020-05-28-reference-docs-on-github
-
-- title:  11 June 2020 - Improved colormap handling
-  link:  /_posts/2020-06-11-improved-colormap-handling
-
-- title:  24 June 2020 - Bug in precomputed leadfields
-  link:  /_posts/2020-06-24-bug-in-precomputed-leadfields
 
 - title:  01 July 2020 - Cleaned up the inverse module
   link:  /_posts/2020-07-01-inverse-cleanup
+- title:  9 October 2020 - data2bids and reproducescript presented on LiveMEEG 2020
+
+  link:  /_posts/2020-10-09-livemeeg
 
 - title:  17 September 2020 - Improved communication strategy
   link:  /_posts/2020-09-17-strategy-change
+- title:  20 November 2020 - video of fNIRS signals and artifacts during motion
+
+  link:  /_posts/2020-11-20-nirs-video
 
 - title:  9 October 2020 - data2bids and reproducescript presented on LiveMEEG 2020
   link:  /_posts/2020-10-09-livemeeg
+- title:  27 November 2020 - Bug in ft_sourceanalysis with the DICS method
+
+  link:  /_posts/2020-11-27-bug-in-sourceanalysis-dics
 
 - title:  20 November 2020 - video of fNIRS signals and artifacts during motion
   link:  /_posts/2020-11-20-nirs-video
+- title:  18 December 2020 - Thanks for the nice postcard
+
+  link:  /_posts/2020-12-18-card
 
 - title:  27 November 2020 - Bug in ft_sourceanalysis with the DICS method
   link:  /_posts/2020-11-27-bug-in-sourceanalysis-dics
+- title:  18 December 2020 - Mats defended his PhD
 
+  link:  /_posts/2020-12-18-mats-phd
 - title:  18 December 2020 - Thanks for the nice postcard
+
   link:  /_posts/2020-12-18-card
+- title:  29 March 2021 - Sample size
+
+  link:  /_posts/2021-03-29-samplesize
 
 - title:  18 December 2020 - Mats defended his PhD
   link:  /_posts/2020-12-18-mats-phd
+- title:  9 July 2021 - Artinis fNIRS analysis toolbox series – FieldTrip
+
+  link:  /_posts/2021-07-09-artinis-nirs
 
 - title:  29 March 2021 - Sample size
   link:  /_posts/2021-03-29-samplesize
+- title:  05 October 2021 - CuttingEEG2021
+
+  link:  /_posts/2021-10-05-cuttingeeg2021
 
 - title:  9 July 2021 - Artinis fNIRS analysis toolbox series – FieldTrip
+- title:  20 October 2021 - Sample size for interaction effects
   link:  /_posts/2021-07-09-artinis-nirs
+  link:  /_posts/2021-10-20-samplesize
+
 
 - title:  05 October 2021 - CuttingEEG2021
   link:  /_posts/2021-10-05-cuttingeeg2021
-
-- title:  20 October 2021 - Sample size for interaction effects
-  link:  /_posts/2021-10-20-samplesize
-
 - title:  19 December 2021 - Download form working again
+
   link:  /_posts/2021-12-19-download-broken
+- title:  20 October 2021 - Sample size for interaction effects
+
+  link:  /_posts/2021-10-20-samplesize
 
 - title:  27 January 2022 - Website privacy improvements
   link:  /_posts/2022-01-27-website-privacy
+- title:  19 December 2021 - Download form working again
+
+  link:  /_posts/2021-12-19-download-broken
 
 - title:  07 May 2022 - MEG Toolkit at the Donders about to go live
   link:  /_posts/2022-05-07-toolkit
+- title:  27 January 2022 - Website privacy improvements
+
+  link:  /_posts/2022-01-27-website-privacy
 
 - title:  30 August 2022 - The FieldTrip team is enjoying great talks and real life social interaction at Biomag
   link:  /_posts/2022-08-30-biomag2022
+- title:  07 May 2022 - MEG Toolkit at the Donders about to go live
 
+  link:  /_posts/2022-05-07-toolkit
 - title:  07 October 2022 - New visualization functionality added to ft_multiplotER
-  link:  /_posts/2022-10-07-multi
 
+  link:  /_posts/2022-10-07-multi
+- title:  30 August 2022 - The FieldTrip team is enjoying great talks and real life social interaction at Biomag
+
+  link:  /_posts/2022-08-30-biomag2022
 - title:  20 December 2022 - FieldTrip switches from Twitter to Mastodon
+
   link:  /_posts/2022-12-20-mastodon
 
+- title:  07 October 2022 - New visualization functionality added to ft_multiplotER
 - title:  25 October 2023 - Hundred years of human EEG
+  link:  /_posts/2022-10-07-multi
   link:  /_posts/2023-10-25-hundred-years
 
+
 - title:  1 February 2024 - EEG100 Image Competition
+- title:  20 December 2022 - FieldTrip switches from Twitter to Mastodon
   link:  /_posts/2024-02-01-image-competition
+  link:  /_posts/2022-12-20-mastodon
+
 
 - title:  15 February 2024 - Bugzilla archived
+- title:  25 October 2023 - Hundred years of human EEG
   link:  /_posts/2024-02-15-bugzilla
+  link:  /_posts/2023-10-25-hundred-years
+
 
 - title:  26 February 2024 - WIRED workshop on Intracranial Recordings
+- title:  1 February 2024 - EEG100 Image Competition
   link:  /_posts/2024-02-26-wired
+  link:  /_posts/2024-02-01-image-competition
+
 
 - title:  6 March 2024 - The Neuro – Irv and Helga Cooper Foundation Open Science Prizes
+- title:  15 February 2024 - Bugzilla archived
   link:  /_posts/2024-03-06-open-science-prize
+  link:  /_posts/2024-02-15-bugzilla
+
 
 - title:  3 May 2024 - Mats presents "reproducescript" in JOSS podcast
+- title:  26 February 2024 - WIRED workshop on Intracranial Recordings
   link:  /_posts/2024-05-03-podcast
+  link:  /_posts/2024-02-26-wired
+
 
 - title:  5 June 2024 - FieldTrip Cheatsheet
+- title:  6 March 2024 - The Neuro – Irv and Helga Cooper Foundation Open Science Prizes
   link:  /_posts/2024-06-05-cheatsheet
+  link:  /_posts/2024-03-06-open-science-prize
+
 
 - title:  29 August 2024 - The FieldTrip team is enjoying great talks and meeting old and new friends at Biomag
+  link:  /_posts/2024-08-29-biomag2024
+- title:  3 May 2024 - Mats presents "reproducescript" in JOSS podcast
+
+  link:  /_posts/2024-05-03-podcast
+
+- title:  6 September 2024 - Belt and Road International Conference and Global Brain Consortium annual meeting
+  link:  /_posts/2024-09-06-neurotech2024
+- title:  5 June 2024 - FieldTrip Cheatsheet
+
+  link:  /_posts/2024-06-05-cheatsheet
+
+- title:  23 November 2024 - CuttingEEG X talks available
+  link:  /_posts/2024-11-23-cuttingeegx
+- title:  29 August 2024 - The FieldTrip team is enjoying great talks and meeting old and new friends at Biomag
+
   link:  /_posts/2024-08-29-biomag2024
 
 - title:  6 September 2024 - Belt and Road International Conference and Global Brain Consortium annual meeting
