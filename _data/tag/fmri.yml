@@ -7,3 +7,12 @@
 - title:  Streaming realtime fMRI from Siemens scanners
   link:  /getting_started/realtime/realtime_fmri
 
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
+
+- title:  Getting started with fMRI timeseries data
+  link:  /getting_started/otherdata/fmri
+
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
+

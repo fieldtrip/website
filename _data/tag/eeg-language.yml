@@ -28,3 +28,33 @@
 - title:  Time-frequency and spectral analysis
   link:  /workshop/madrid2019/tutorial_freq
 
+- title:  Using General Linear Modeling on time series data
+  link:  /example/stats/glm_timeseries
+
+- title:  Using General Linear Modeling over trials
+  link:  /example/stats/glm_trials
+
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
+
+- title:  Details on the EEG language dataset
+  link:  /tutorial/eeg_language
+
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
+
+- title:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
+- title:  Time-frequency analysis on short and long timescales
+  link:  /workshop/cuttingeeg2021/tutorial_freq
+
+- title:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
+
+- title:  Getting started with EEG data, quality checks and ERPs
+  link:  /workshop/madrid2019/tutorial_erp
+
+- title:  Time-frequency and spectral analysis
+  link:  /workshop/madrid2019/tutorial_freq
+
