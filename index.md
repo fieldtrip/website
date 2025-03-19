@@ -103,7 +103,7 @@ _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357
 
 ## News and announcements
 
-_You can also follow us on [Mastodon](https://fosstodon.org/@fieldtriptoolbox)._
+_You can also follow us on [Mastodon](https://fosstodon.org/@fieldtriptoolbox) and [BlueSky](https://bsky.app/profile/fieldtriptoolbox.bsky.social)._
 
 {% assign counter = 0%}
 {% assign posts = site.posts | sort | reverse %}
