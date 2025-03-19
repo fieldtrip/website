@@ -1,20 +1,26 @@
-- title:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/other/capmapping
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
 
-- title:  How can I inspect the electrode impedances of my data?
-  link:  /faq/preproc/impedancecheck
+- title:  Template 3-D electrode sets
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /template/electrode
+  link:  /tutorial/source/electrode
 
-- title:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/source/fiducial
 
-- title:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/source/fiducials_definition
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 
-- title:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/source/sensors_definition
+- title:  Template 3-D electrode sets
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
+  link:  /template/electrode
 
-- title:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/source/structuresensor
+
+- title:  Localizing electrodes using a 3D-scanner
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
+  link:  /tutorial/source/electrode
+
 
 - title:  Template 3-D electrode sets
   link:  /template/electrode
@@ -22,23 +28,17 @@
 - title:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/source/electrode
 
-- title:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/other/capmapping
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
 
-- title:  How can I inspect the electrode impedances of my data?
-  link:  /faq/preproc/impedancecheck
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 
-- title:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/source/fiducial
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
 
-- title:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/source/fiducials_definition
-
-- title:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/source/sensors_definition
-
-- title:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/source/structuresensor
+- title:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/source/electrode
 
 - title:  Template 3-D electrode sets
   link:  /template/electrode

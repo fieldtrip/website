@@ -1,6 +1,3 @@
-- title:  Why are there multiple neighbour templates for the Neuromag306 system?
-  link:  /faq/stats/neighbours_neuromag
-
 - title:  Anatomical templates for visualizing source reconstructed activity
   link:  /template/anatomy
 
@@ -29,10 +26,187 @@
   link:  /template/neighbours
 
 - title:  Template models for source reconstruction
+- title:  Anatomical templates for visualizing source reconstructed activity
+  link:  /template/sourcemodel
+  link:  /template/anatomy
+
+
+- title:  Template anatomical atlases and parcellation schemes
+  link:  /template/atlas
+
+- title:  Template MEG dewar shapes
+  link:  /template/dewar
+
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
+
+- title:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+
+- title:  Anatomical templates for visualizing source reconstructed activity
+- title:  Template 2-D layouts for plotting
+  link:  /template/anatomy
+  link:  /template/layout
+
+
+- title:  Template anatomical atlases and parcellation schemes
+- title:  Template models and data
+  link:  /template/atlas
+  link:  /template
+
+
+- title:  Template MEG dewar shapes
+- title:  Templates for defining neighbouring channels
+  link:  /template/dewar
+  link:  /template/neighbours
+
+
+- title:  Template 3-D electrode sets
+- title:  Template models for source reconstruction
+  link:  /template/electrode
+- title:  Anatomical templates for visualizing source reconstructed activity
   link:  /template/sourcemodel
 
-- title:  Why are there multiple neighbour templates for the Neuromag306 system?
-  link:  /faq/stats/neighbours_neuromag
+  link:  /template/anatomy
+
+- title:  Template 3-D gradiometer descriptions
+
+  link:  /template/gradiometer
+
+- title:  Template anatomical atlases and parcellation schemes
+  link:  /template/atlas
+- title:  Template head models for EEG volume conduction modeling
+
+  link:  /template/headmodel
+
+- title:  Template MEG dewar shapes
+  link:  /template/dewar
+- title:  Template 2-D layouts for plotting
+
+  link:  /template/layout
+
+- title:  Template 3-D electrode sets
+- title:  Template models and data
+  link:  /template/electrode
+  link:  /template
+
+
+- title:  Template 3-D gradiometer descriptions
+- title:  Templates for defining neighbouring channels
+  link:  /template/gradiometer
+  link:  /template/neighbours
+
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+- title:  Template models for source reconstruction
+
+  link:  /template/sourcemodel
+
+- title:  Template 2-D layouts for plotting
+  link:  /template/layout
+
+- title:  Template models and data
+  link:  /template
+
+- title:  Templates for defining neighbouring channels
+  link:  /template/neighbours
+
+- title:  Template models for source reconstruction
+  link:  /template/sourcemodel
+
+- title:  Anatomical templates for visualizing source reconstructed activity
+  link:  /template/anatomy
+
+- title:  Template anatomical atlases and parcellation schemes
+  link:  /template/atlas
+
+- title:  Template MEG dewar shapes
+  link:  /template/dewar
+
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
+
+- title:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+
+- title:  Template 2-D layouts for plotting
+  link:  /template/layout
+
+- title:  Template models and data
+  link:  /template
+- title:  Anatomical templates for visualizing source reconstructed activity
+
+  link:  /template/anatomy
+- title:  Templates for defining neighbouring channels
+
+  link:  /template/neighbours
+- title:  Template anatomical atlases and parcellation schemes
+
+  link:  /template/atlas
+
+- title:  Template models for source reconstruction
+- title:  Template MEG dewar shapes
+  link:  /template/sourcemodel
+  link:  /template/dewar
+
+
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
+
+- title:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+
+- title:  Template 2-D layouts for plotting
+  link:  /template/layout
+
+- title:  Template models and data
+  link:  /template
+
+- title:  Templates for defining neighbouring channels
+  link:  /template/neighbours
+
+- title:  Anatomical templates for visualizing source reconstructed activity
+  link:  /template/anatomy
+- title:  Template models for source reconstruction
+
+  link:  /template/sourcemodel
+
+- title:  Template anatomical atlases and parcellation schemes
+  link:  /template/atlas
+
+- title:  Template MEG dewar shapes
+  link:  /template/dewar
+
+- title:  Template 3-D electrode sets
+  link:  /template/electrode
+
+- title:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+
+- title:  Template 2-D layouts for plotting
+  link:  /template/layout
+
+- title:  Template models and data
+  link:  /template
+
+- title:  Templates for defining neighbouring channels
+  link:  /template/neighbours
+
+- title:  Template models for source reconstruction
+  link:  /template/sourcemodel
 
 - title:  Anatomical templates for visualizing source reconstructed activity
   link:  /template/anatomy

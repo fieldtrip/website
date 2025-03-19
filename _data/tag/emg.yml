@@ -1,8 +1,26 @@
-- title:  Converting an example EMG dataset for sharing in BIDS
-  link:  /example/other/bids_emg
+- title:  Analysis of corticomuscular coherence
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
+  link:  /tutorial/connectivity/coherence
 
-- title:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/preproc/trialdef_emg
+
+- title:  Extracting the brain state and events from continuous sleep EEG
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
+  link:  /tutorial/sensor/sleep
+
+
+- title:  Analysis of corticomuscular coherence
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
+  link:  /tutorial/connectivity/coherence
+
+
+- title:  Extracting the brain state and events from continuous sleep EEG
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
+  link:  /tutorial/sensor/sleep
+
 
 - title:  Analysis of corticomuscular coherence
   link:  /tutorial/connectivity/coherence
@@ -10,11 +28,17 @@
 - title:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sensor/sleep
 
-- title:  Converting an example EMG dataset for sharing in BIDS
-  link:  /example/other/bids_emg
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
 
-- title:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/preproc/trialdef_emg
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
+
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
+
+- title:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sensor/sleep
 
 - title:  Analysis of corticomuscular coherence
   link:  /tutorial/connectivity/coherence

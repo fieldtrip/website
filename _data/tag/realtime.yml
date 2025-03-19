@@ -19,44 +19,764 @@
 - title:  FieldTrip buffer C implementation
   link:  /development/realtime/buffer_c
 
+- title:  Streaming realtime EEG data to and from Arduino
 - title:  FieldTrip buffer C++ implementation
+  link:  /development/realtime/arduino
   link:  /development/realtime/buffer_cpp
 
+
+- title:  Streaming realtime data from Artinis Medical Systems
 - title:  FieldTrip buffer Java interface
+  link:  /development/realtime/artinis
   link:  /development/realtime/buffer_java
 
+
+- title:  Streaming realtime data from soundcard using PortAudio
+  link:  /development/realtime/audio2ft
 - title:  FieldTrip buffer MATLAB interface
+
   link:  /development/realtime/buffer_matlab
 
+- title:  Streaming realtime data from and to BCI2000
 - title:  Overview of the realtime buffer
+  link:  /development/realtime/bci2000
   link:  /development/realtime/buffer
 
+
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
 - title:  Low-level FieldTrip buffer TCP network protocol
+  link:  /development/realtime/biosemi
   link:  /development/realtime/buffer_protocol
 
+
+- title:  Streaming realtime data from and to BrainStream
+- title:  Streaming realtime EEG data to and from Arduino
+  link:  /development/realtime/brainstream
 - title:  FieldTrip buffer Python interface
+  link:  /development/realtime/arduino
+
   link:  /development/realtime/buffer_python
 
+
+- title:  FieldTrip buffer C implementation
+- title:  Streaming realtime data from Artinis Medical Systems
+  link:  /development/realtime/buffer_c
 - title:  Closing the loop in a real-time BCI application
+
+  link:  /development/realtime/artinis
   link:  /development/realtime/closing_the_loop
+- title:  FieldTrip buffer C++ implementation
+
+  link:  /development/realtime/buffer_cpp
+
 
 - title:  Streaming realtime data from CTF
+- title:  Streaming realtime data from soundcard using PortAudio
+- title:  FieldTrip buffer Java interface
   link:  /development/realtime/ctf
+  link:  /development/realtime/audio2ft
+  link:  /development/realtime/buffer_java
 
+
+
+- title:  Streaming realtime data from and to BCI2000
 - title:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/bci2000
+- title:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/draft_compatability
 
+  link:  /development/realtime/buffer_matlab
+
+
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
 - title:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/biosemi
+- title:  Overview of the realtime buffer
   link:  /development/realtime/draft_header_chunks
 
+  link:  /development/realtime/buffer
+
+- title:  Streaming realtime data from and to BrainStream
+
+  link:  /development/realtime/brainstream
 - title:  Suggested changes to the reference implementation
+
+- title:  Low-level FieldTrip buffer TCP network protocol
   link:  /development/realtime/draft_implementation
+  link:  /development/realtime/buffer_protocol
+- title:  FieldTrip buffer C implementation
+
+
+  link:  /development/realtime/buffer_c
+- title:  Suggested changes to the network protocol
+
+- title:  FieldTrip buffer Python interface
+  link:  /development/realtime/draft_network
+- title:  FieldTrip buffer C++ implementation
+  link:  /development/realtime/buffer_python
+
+  link:  /development/realtime/buffer_cpp
+
+
+- title:  Streaming realtime data from Emotiv neuroheadset
+- title:  Closing the loop in a real-time BCI application
+  link:  /development/realtime/emotiv
+- title:  FieldTrip buffer Java interface
+  link:  /development/realtime/closing_the_loop
+
+  link:  /development/realtime/buffer_java
+
+
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+- title:  Streaming realtime data from CTF
+- title:  FieldTrip buffer MATLAB interface
+  link:  /development/realtime/implementation
+  link:  /development/realtime/ctf
+  link:  /development/realtime/buffer_matlab
+
+
+
+- title:  Streaming realtime data from Jinga-Hi
+- title:  Suggested improvements for compatibility across versions
+- title:  Overview of the realtime buffer
+  link:  /development/realtime/jinga-hi
+  link:  /development/realtime/draft_compatability
+  link:  /development/realtime/buffer
+
+
+
+- title:  Low-level FieldTrip buffer TCP network protocol
+- title:  Real-time access to neurophysiological data
+- title:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/buffer_protocol
+  link:  /development/realtime
+  link:  /development/realtime/draft_header_chunks
+
+
+
+- title:  FieldTrip buffer Python interface
+- title:  Suggested changes to the reference implementation
+  link:  /development/realtime/buffer_python
+- title:  Streaming realtime data from Micromed
+
+  link:  /development/realtime/draft_implementation
+  link:  /development/realtime/micromed
+
+- title:  Closing the loop in a real-time BCI application
 
 - title:  Suggested changes to the network protocol
+  link:  /development/realtime/closing_the_loop
   link:  /development/realtime/draft_network
+
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+
+  link:  /development/realtime/modulareeg
+- title:  Streaming realtime data from CTF
+
+- title:  Streaming realtime data from Emotiv neuroheadset
+  link:  /development/realtime/ctf
+  link:  /development/realtime/emotiv
+
+- title:  Streaming realtime data from Neuralynx
+
+- title:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/neuralynx
+  link:  /development/realtime/draft_compatability
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+
+
+  link:  /development/realtime/implementation
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+- title:  Suggested improvements for handling header and chunks
+
+  link:  /development/realtime/neuromag
+  link:  /development/realtime/draft_header_chunks
+
+
+- title:  Streaming realtime data from Jinga-Hi
+  link:  /development/realtime/jinga-hi
+- title:  Streaming realtime data from ANT NeuroSDK
+- title:  Suggested changes to the reference implementation
+
+  link:  /development/realtime/draft_implementation
+  link:  /development/realtime/neurosdk
+
+
+- title:  Real-time access to neurophysiological data
+  link:  /development/realtime
+- title:  Streaming realtime data from Neurosky ThinkCap
+- title:  Suggested changes to the network protocol
+
+  link:  /development/realtime/neurosky
+  link:  /development/realtime/draft_network
+
+
+- title:  Streaming realtime data from Micromed
+  link:  /development/realtime/micromed
+- title:  Streaming realtime data from OpenBCI
+- title:  Streaming realtime data from Emotiv neuroheadset
+
+  link:  /development/realtime/openbci
+  link:  /development/realtime/emotiv
+
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+
+  link:  /development/realtime/modulareeg
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+
+  link:  /development/realtime/rda
+  link:  /development/realtime/implementation
+
+- title:  Streaming realtime data from Neuralynx
+
+  link:  /development/realtime/neuralynx
+- title:  Streaming realtime data from Jinga-Hi
+- title:  FieldTrip buffer reference implementation
+
+  link:  /development/realtime/jinga-hi
+  link:  /development/realtime/reference_implementation
+
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+
+  link:  /development/realtime/neuromag
+- title:  Streaming realtime EEG data to and from Arduino
+- title:  Real-time access to neurophysiological data
+
+  link:  /development/realtime/arduino
+- title:  Scratchpad for the realtime buffer interface
+  link:  /development/realtime
+
+  link:  /development/realtime/scratchpad
+
+- title:  Streaming realtime data from ANT NeuroSDK
+
+  link:  /development/realtime/neurosdk
+- title:  Streaming realtime data from Micromed
+- title:  Streaming realtime data from Artinis Medical Systems
+
+- title:  Streaming realtime data from TMSI EEG amplifiers
+  link:  /development/realtime/micromed
+  link:  /development/realtime/artinis
+
+  link:  /development/realtime/tmsi
+
+- title:  Streaming realtime data from Neurosky ThinkCap
+
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+  link:  /development/realtime/neurosky
+- title:  Streaming realtime data from soundcard using PortAudio
+  link:  /development/realtime/modulareeg
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+
+  link:  /development/realtime/audio2ft
+
+  link:  /development/realtime/tobi
+
+
+- title:  Streaming realtime data from OpenBCI
+- title:  Streaming realtime data from Neuralynx
+- title:  Streaming realtime data from and to BCI2000
+  link:  /development/realtime/openbci
+  link:  /development/realtime/neuralynx
+- title:  Streaming realtime data from Unicorn Hybrid Black
+  link:  /development/realtime/bci2000
+
+
+  link:  /development/realtime/unicorn
+
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+- title:  Streaming realtime EEG data to and from Arduino
+  link:  /development/realtime/rda
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+  link:  /development/realtime/arduino
+  link:  /development/realtime/neuromag
+
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /development/realtime/biosemi
+
+
+  link:  /getting_started/realtime/realtime_fmri
+
+
+- title:  Streaming realtime data from Artinis Medical Systems
+- title:  FieldTrip buffer reference implementation
+  link:  /development/realtime/artinis
+- title:  Streaming realtime data from ANT NeuroSDK
+
+- title:  Streaming realtime data from and to BrainStream
+  link:  /development/realtime/reference_implementation
+- title:  Getting started with real-time head localization in MEG
+  link:  /development/realtime/brainstream
+
+  link:  /development/realtime/neurosdk
+- title:  Streaming realtime data from soundcard using PortAudio
+
+  link:  /getting_started/realtime/realtime_headlocalizer
+
+- title:  Scratchpad for the realtime buffer interface
+
+  link:  /development/realtime/audio2ft
+- title:  FieldTrip buffer C implementation
+  link:  /development/realtime/scratchpad
+- title:  Streaming realtime data from Neurosky ThinkCap
+
+  link:  /development/realtime/buffer_c
+
+
+  link:  /development/realtime/neurosky
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+- title:  Streaming realtime data from and to BCI2000
+
+  link:  /getting_started/realtime/realtime
+  link:  /development/realtime/bci2000
+- title:  Streaming realtime data from TMSI EEG amplifiers
+- title:  FieldTrip buffer C++ implementation
+
+
+- title:  Streaming realtime data from OpenBCI
+  link:  /development/realtime/tmsi
+  link:  /development/realtime/buffer_cpp
+  link:  /development/realtime/openbci
+
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+
+  link:  /workshop/realtime
+
+  link:  /development/realtime/biosemi
+
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+- title:  FieldTrip buffer Java interface
+
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+  link:  /development/realtime/buffer_java
+  link:  /development/realtime/tobi
+  link:  /development/realtime/rda
+
+- title:  Streaming realtime data from and to BrainStream
+
+
+  link:  /development/realtime/brainstream
+- title:  FieldTrip buffer MATLAB interface
+
+- title:  Streaming realtime data from Unicorn Hybrid Black
+- title:  FieldTrip buffer reference implementation
+  link:  /development/realtime/buffer_matlab
+  link:  /development/realtime/unicorn
+  link:  /development/realtime/reference_implementation
+
+- title:  FieldTrip buffer C implementation
+
+
+  link:  /development/realtime/buffer_c
+- title:  Overview of the realtime buffer
+- title:  Streaming realtime fMRI from Siemens scanners
+- title:  Streaming realtime EEG data to and from Arduino
+
+  link:  /development/realtime/buffer
+- title:  Scratchpad for the realtime buffer interface
+  link:  /getting_started/realtime/realtime_fmri
+  link:  /development/realtime/arduino
+
+  link:  /development/realtime/scratchpad
+
+
+- title:  FieldTrip buffer C++ implementation
+
+  link:  /development/realtime/buffer_cpp
+- title:  Getting started with real-time head localization in MEG
+- title:  Streaming realtime data from Artinis Medical Systems
+- title:  Low-level FieldTrip buffer TCP network protocol
+
+  link:  /getting_started/realtime/realtime_headlocalizer
+  link:  /development/realtime/artinis
+- title:  Streaming realtime data from TMSI EEG amplifiers
+  link:  /development/realtime/buffer_protocol
+
+
+  link:  /development/realtime/tmsi
+
+
+- title:  FieldTrip buffer Java interface
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+- title:  Streaming realtime data from soundcard using PortAudio
+- title:  FieldTrip buffer Python interface
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+  link:  /getting_started/realtime/realtime
+  link:  /development/realtime/buffer_java
+  link:  /development/realtime/audio2ft
+  link:  /development/realtime/buffer_python
+  link:  /development/realtime/tobi
+
+
+
+
+
+- title:  FieldTrip buffer MATLAB interface
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+  link:  /development/realtime/buffer_matlab
+- title:  Closing the loop in a real-time BCI application
+- title:  Streaming realtime data from and to BCI2000
+
+  link:  /workshop/realtime
+  link:  /development/realtime/closing_the_loop
+- title:  Streaming realtime data from Unicorn Hybrid Black
+  link:  /development/realtime/bci2000
+
+
+  link:  /development/realtime/unicorn
+- title:  Overview of the realtime buffer
+
+
+  link:  /development/realtime/buffer
+- title:  Streaming realtime data from CTF
+
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+  link:  /development/realtime/ctf
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /development/realtime/biosemi
+
+- title:  Low-level FieldTrip buffer TCP network protocol
+  link:  /getting_started/realtime/realtime_fmri
+
+  link:  /development/realtime/buffer_protocol
+
+- title:  Suggested improvements for compatibility across versions
+
+- title:  Streaming realtime data from and to BrainStream
+- title:  Getting started with real-time head localization in MEG
+  link:  /development/realtime/draft_compatability
+  link:  /development/realtime/brainstream
+- title:  FieldTrip buffer Python interface
+
+
+  link:  /getting_started/realtime/realtime_headlocalizer
+  link:  /development/realtime/buffer_python
+
+- title:  Suggested improvements for handling header and chunks
+- title:  FieldTrip buffer C implementation
+
+  link:  /development/realtime/draft_header_chunks
+  link:  /development/realtime/buffer_c
+
+- title:  Closing the loop in a real-time BCI application
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+
+  link:  /development/realtime/closing_the_loop
+  link:  /getting_started/realtime/realtime
+- title:  Suggested changes to the reference implementation
+
+- title:  FieldTrip buffer C++ implementation
+
+  link:  /development/realtime/draft_implementation
+  link:  /development/realtime/buffer_cpp
+
+
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+- title:  Streaming realtime data from CTF
+  link:  /workshop/realtime
+  link:  /development/realtime/ctf
+- title:  Suggested changes to the network protocol
+- title:  FieldTrip buffer Java interface
+
+
+  link:  /development/realtime/draft_network
+  link:  /development/realtime/buffer_java
+
+
+- title:  Suggested improvements for compatibility across versions
+- title:  Streaming realtime data from Emotiv neuroheadset
+  link:  /development/realtime/draft_compatability
+- title:  FieldTrip buffer MATLAB interface
+  link:  /development/realtime/emotiv
+
+  link:  /development/realtime/buffer_matlab
+
+
+- title:  Suggested improvements for handling header and chunks
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+  link:  /development/realtime/draft_header_chunks
+- title:  Overview of the realtime buffer
+  link:  /development/realtime/implementation
+
+
+  link:  /development/realtime/buffer
+
+- title:  Suggested changes to the reference implementation
+- title:  Streaming realtime data from Jinga-Hi
+  link:  /development/realtime/draft_implementation
+- title:  Low-level FieldTrip buffer TCP network protocol
+
+  link:  /development/realtime/jinga-hi
+  link:  /development/realtime/buffer_protocol
+
+
+- title:  Suggested changes to the network protocol
+- title:  Real-time access to neurophysiological data
+  link:  /development/realtime/draft_network
+- title:  FieldTrip buffer Python interface
+
+  link:  /development/realtime
+  link:  /development/realtime/buffer_python
+
 
 - title:  Streaming realtime data from Emotiv neuroheadset
   link:  /development/realtime/emotiv
+- title:  Closing the loop in a real-time BCI application
+- title:  Streaming realtime data from Micromed
+
+  link:  /development/realtime/closing_the_loop
+  link:  /development/realtime/micromed
+
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+
+- title:  Streaming realtime data from CTF
+  link:  /development/realtime/implementation
+  link:  /development/realtime/ctf
+
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+
+- title:  Streaming realtime data from Jinga-Hi
+  link:  /development/realtime/modulareeg
+  link:  /development/realtime/jinga-hi
+- title:  Suggested improvements for compatibility across versions
+
+
+  link:  /development/realtime/draft_compatability
+- title:  Streaming realtime data from Neuralynx
+
+  link:  /development/realtime/neuralynx
+- title:  Real-time access to neurophysiological data
+
+- title:  Suggested improvements for handling header and chunks
+  link:  /development/realtime
+  link:  /development/realtime/draft_header_chunks
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+
+
+  link:  /development/realtime/neuromag
+
+- title:  Streaming realtime data from Micromed
+- title:  Suggested changes to the reference implementation
+  link:  /development/realtime/micromed
+  link:  /development/realtime/draft_implementation
+- title:  Streaming realtime data from ANT NeuroSDK
+
+
+  link:  /development/realtime/neurosdk
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+- title:  Suggested changes to the network protocol
+
+  link:  /development/realtime/modulareeg
+  link:  /development/realtime/draft_network
+- title:  Streaming realtime data from Neurosky ThinkCap
+
+
+  link:  /development/realtime/neurosky
+- title:  Streaming realtime data from Neuralynx
+
+  link:  /development/realtime/neuralynx
+- title:  Streaming realtime data from Emotiv neuroheadset
+- title:  Streaming realtime data from OpenBCI
+- title:  Streaming realtime EEG data to and from Arduino
+  link:  /development/realtime/emotiv
+
+  link:  /development/realtime/openbci
+  link:  /development/realtime/arduino
+
+
+
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+- title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+  link:  /development/realtime/neuromag
+- title:  Streaming realtime data from Artinis Medical Systems
+  link:  /development/realtime/implementation
+  link:  /development/realtime/rda
+
+  link:  /development/realtime/artinis
+
+
+
+- title:  FieldTrip buffer reference implementation
+- title:  Streaming realtime data from ANT NeuroSDK
+- title:  Streaming realtime data from Jinga-Hi
+  link:  /development/realtime/neurosdk
+  link:  /development/realtime/reference_implementation
+- title:  Streaming realtime data from soundcard using PortAudio
+  link:  /development/realtime/jinga-hi
+
+
+  link:  /development/realtime/audio2ft
+
+- title:  Streaming realtime data from Neurosky ThinkCap
+
+- title:  Scratchpad for the realtime buffer interface
+  link:  /development/realtime/neurosky
+  link:  /development/realtime/scratchpad
+- title:  Real-time access to neurophysiological data
+- title:  Streaming realtime data from and to BCI2000
+
+
+  link:  /development/realtime
+  link:  /development/realtime/bci2000
+
+- title:  Streaming realtime data from OpenBCI
+
+- title:  Streaming realtime data from TMSI EEG amplifiers
+  link:  /development/realtime/openbci
+  link:  /development/realtime/tmsi
+- title:  Streaming realtime data from Micromed
+
+- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+
+  link:  /development/realtime/biosemi
+  link:  /development/realtime/micromed
+
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+  link:  /development/realtime/rda
+- title:  Streaming realtime data from and to BrainStream
+  link:  /development/realtime/tobi
+- title:  Streaming realtime data from Modular EEG (aka OpenEEG)
+
+  link:  /development/realtime/brainstream
+
+  link:  /development/realtime/modulareeg
+
+
+- title:  Streaming realtime data from Unicorn Hybrid Black
+- title:  FieldTrip buffer reference implementation
+  link:  /development/realtime/unicorn
+  link:  /development/realtime/reference_implementation
+- title:  FieldTrip buffer C implementation
+- title:  Streaming realtime data from Neuralynx
+
+
+  link:  /development/realtime/buffer_c
+  link:  /development/realtime/neuralynx
+- title:  Scratchpad for the realtime buffer interface
+
+
+  link:  /development/realtime/scratchpad
+- title:  Streaming realtime fMRI from Siemens scanners
+
+- title:  FieldTrip buffer C++ implementation
+  link:  /getting_started/realtime/realtime_fmri
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+  link:  /development/realtime/buffer_cpp
+- title:  Streaming realtime data from TMSI EEG amplifiers
+
+
+  link:  /development/realtime/tmsi
+  link:  /development/realtime/neuromag
+
+
+- title:  FieldTrip buffer Java interface
+- title:  Getting started with real-time head localization in MEG
+  link:  /development/realtime/buffer_java
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+
+  link:  /getting_started/realtime/realtime_headlocalizer
+- title:  Streaming realtime data from ANT NeuroSDK
+  link:  /development/realtime/tobi
+
+  link:  /development/realtime/neurosdk
+
+- title:  FieldTrip buffer MATLAB interface
+
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /development/realtime/buffer_matlab
+- title:  Streaming realtime data from Unicorn Hybrid Black
+  link:  /getting_started/realtime/realtime
+- title:  Streaming realtime data from Neurosky ThinkCap
+
+  link:  /development/realtime/unicorn
+
+  link:  /development/realtime/neurosky
+
+
+- title:  Overview of the realtime buffer
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /development/realtime/buffer
+- title:  Streaming realtime data from OpenBCI
+  link:  /workshop/realtime
+
+  link:  /getting_started/realtime/realtime_fmri
+  link:  /development/realtime/openbci
+
+
+
+- title:  Low-level FieldTrip buffer TCP network protocol
+- title:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
+- title:  Getting started with real-time head localization in MEG
+  link:  /development/realtime/buffer_protocol
+  link:  /development/realtime/rda
+  link:  /getting_started/realtime/realtime_headlocalizer
+
+
+
+- title:  FieldTrip buffer reference implementation
+- title:  FieldTrip buffer Python interface
+  link:  /development/realtime/reference_implementation
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /development/realtime/buffer_python
+
+
+  link:  /getting_started/realtime/realtime
+- title:  Scratchpad for the realtime buffer interface
+
+- title:  Closing the loop in a real-time BCI application
+  link:  /development/realtime/scratchpad
+  link:  /development/realtime/closing_the_loop
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+
+
+  link:  /workshop/realtime
+- title:  Streaming realtime data from TMSI EEG amplifiers
+
+- title:  Streaming realtime data from CTF
+  link:  /development/realtime/tmsi
+  link:  /development/realtime/ctf
+
+
+- title:  Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
+- title:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/tobi
+  link:  /development/realtime/draft_compatability
+
+
+- title:  Streaming realtime data from Unicorn Hybrid Black
+- title:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/unicorn
+  link:  /development/realtime/draft_header_chunks
+
+
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
+- title:  Suggested changes to the reference implementation
+
+  link:  /development/realtime/draft_implementation
+- title:  Getting started with real-time head localization in MEG
+
+  link:  /getting_started/realtime/realtime_headlocalizer
+
+- title:  Suggested changes to the network protocol
+  link:  /development/realtime/draft_network
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+
+  link:  /getting_started/realtime/realtime
+
+- title:  Streaming realtime data from Emotiv neuroheadset
+  link:  /development/realtime/emotiv
+- title:  Realtime MEG BCI hands-on session in Nijmegen
+
+  link:  /workshop/realtime
 
 - title:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
   link:  /development/realtime/implementation
@@ -105,42 +825,6 @@
 
 - title:  Streaming realtime data from Unicorn Hybrid Black
   link:  /development/realtime/unicorn
-
-- title:  Example real-time average
-  link:  /example/realtime/ft_realtime_average
-
-- title:  Example real-time classification
-  link:  /example/realtime/ft_realtime_classification
-
-- title:  Realtime neurofeedback application based on Hilbert phase estimation
-  link:  /example/realtime/ft_realtime_hilbert
-
-- title:  Example real-time power estimate
-  link:  /example/realtime/ft_realtime_powerestimate
-
-- title:  Example real-time selective average
-  link:  /example/realtime/ft_realtime_selectiveaverage
-
-- title:  Example real-time signal viewer
-  link:  /example/realtime/ft_realtime_signalviewer
-
-- title:  Measuring the timing delay and jitter for a real-time application
-  link:  /example/realtime/realtime_evaluation
-
-- title:  How can I monitor a subject's head position during a MEG session?
-  link:  /faq/experiment/headlocalizer
-
-- title:  What kind of cable do I need for a serial port connection between two computers?
-  link:  /faq/experiment/serialport
-
-- title:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/realtime/fieldtripbuffer_gettingstarted
-
-- title:  Does the FieldTrip realtime buffer only work with MATLAB?
-  link:  /faq/realtime/fieldtripbuffer
-
-- title:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/realtime/fieldtripbuffer_speed
 
 - title:  Streaming realtime fMRI from Siemens scanners
   link:  /getting_started/realtime/realtime_fmri
@@ -261,42 +945,6 @@
 
 - title:  Streaming realtime data from Unicorn Hybrid Black
   link:  /development/realtime/unicorn
-
-- title:  Example real-time average
-  link:  /example/realtime/ft_realtime_average
-
-- title:  Example real-time classification
-  link:  /example/realtime/ft_realtime_classification
-
-- title:  Realtime neurofeedback application based on Hilbert phase estimation
-  link:  /example/realtime/ft_realtime_hilbert
-
-- title:  Example real-time power estimate
-  link:  /example/realtime/ft_realtime_powerestimate
-
-- title:  Example real-time selective average
-  link:  /example/realtime/ft_realtime_selectiveaverage
-
-- title:  Example real-time signal viewer
-  link:  /example/realtime/ft_realtime_signalviewer
-
-- title:  Measuring the timing delay and jitter for a real-time application
-  link:  /example/realtime/realtime_evaluation
-
-- title:  How can I monitor a subject's head position during a MEG session?
-  link:  /faq/experiment/headlocalizer
-
-- title:  What kind of cable do I need for a serial port connection between two computers?
-  link:  /faq/experiment/serialport
-
-- title:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/realtime/fieldtripbuffer_gettingstarted
-
-- title:  Does the FieldTrip realtime buffer only work with MATLAB?
-  link:  /faq/realtime/fieldtripbuffer
-
-- title:  How fast is the FieldTrip buffer for realtime data streaming?
-  link:  /faq/realtime/fieldtripbuffer_speed
 
 - title:  Streaming realtime fMRI from Siemens scanners
   link:  /getting_started/realtime/realtime_fmri

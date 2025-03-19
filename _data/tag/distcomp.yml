@@ -1,11 +1,8 @@
-- title:  How can I distribute a batch of jobs?
-  link:  /faq/distcomp/distributed_batch
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
 
-- title:  What are the different approaches I can take for distributed computing?
-  link:  /faq/distcomp/distributed_computing
-
-- title:  How to get started with the MATLAB distributed computing toolbox?
-  link:  /faq/distcomp/distributed_matlab
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
 
 - title:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/scripting/distributedcomputing_parfor
@@ -13,14 +10,35 @@
 - title:  Speeding up your analysis using distributed computing with qsub
   link:  /tutorial/scripting/distributedcomputing_qsub
 
-- title:  How can I distribute a batch of jobs?
-  link:  /faq/distcomp/distributed_batch
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
 
-- title:  What are the different approaches I can take for distributed computing?
-  link:  /faq/distcomp/distributed_computing
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
 
-- title:  How to get started with the MATLAB distributed computing toolbox?
-  link:  /faq/distcomp/distributed_matlab
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
+
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
+
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
+
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
+
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
+
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
+
+- title:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/scripting/distributedcomputing_parfor
+
+- title:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/scripting/distributedcomputing_qsub
 
 - title:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/scripting/distributedcomputing_parfor

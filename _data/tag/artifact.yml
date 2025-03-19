@@ -1,50 +1,110 @@
-- title:  Use denoising source separation (DSS) to remove ECG artifacts
-  link:  /example/preproc/dss_ecg
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
 
-- title:  Independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/preproc/ica_ecg
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
 
-- title:  Independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/preproc/ica_eog
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
 
-- title:  Combine MEG with Eyelink eyetracker data
-  link:  /example/preproc/meg_eyelink
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
 
-- title:  How to incorporate head movements in MEG analysis
-  link:  /example/sensor/headmovement_meg
-
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/plotting/opacityrendering
-
-- title:  How can I interpret the different types of padding in FieldTrip?
-  link:  /faq/preproc/artifact/artifact_padding
-
-- title:  How can I consistently represent artifacts in my data?
-  link:  /faq/preproc/artifact/artifact_representation
-
-- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/preproc/artifact/dftfilter_residual
-
-- title:  What kind of filters can I apply to my data?
-  link:  /faq/preproc/artifact/preproc_filtertypes
-
-- title:  How does the filter padding in preprocessing work?
-  link:  /faq/preproc/artifact/preproc_padding
-
-- title:  How can I use the databrowser?
-  link:  /faq/preproc/databrowser
-
-- title:  Why does my TFR look strange (part I, demeaning)?
-  link:  /faq/spectral/tfr_strangedemean
-
-- title:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/spectral/tfr_strangedetrend
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
 
 - title:  Introduction on dealing with artifacts
   link:  /tutorial/preproc/artifacts
+
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
+
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
+
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+
+- title:  Introduction on dealing with artifacts
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/artifacts
+  link:  /tutorial/preproc/ica_artifact_cleaning
+
+
+- title:  Automatic artifact rejection
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+
+- title:  Cleaning artifacts using ICA
+- title:  Dealing with artifacts
+  link:  /tutorial/preproc/ica_artifact_cleaning
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- title:  Introduction on dealing with artifacts
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
+  link:  /tutorial/preproc/artifacts
+
+
+- title:  Automatic artifact rejection
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+
+
+- title:  Cleaning artifacts using ICA
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
+  link:  /tutorial/preproc/ica_artifact_cleaning
+
+
+- title:  Visual or manual artifact rejection
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+- title:  Dealing with artifacts
+
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
+
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
+
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
+- title:  Dealing with artifacts
+
+  link:  /workshop/practicalmeeg2022/handson_artifacts
 
 - title:  Automatic artifact rejection
   link:  /tutorial/preproc/automatic_artifact_rejection

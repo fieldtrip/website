@@ -4,14 +4,11 @@
 - title:  Testing
   link:  /development/testing
 
-- title:  I am having problems downloading
-  link:  /faq/organization/download_ftpproblem
+- title:  Release and quality control
+  link:  /development/releasing
 
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/organization/fieldtrip_downloadversion
-
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/other/download_version
+- title:  Testing
+  link:  /development/testing
 
 - title:  Release and quality control
   link:  /development/releasing
@@ -19,12 +16,33 @@
 - title:  Testing
   link:  /development/testing
 
-- title:  I am having problems downloading
-  link:  /faq/organization/download_ftpproblem
+- title:  Release and quality control
+  link:  /development/releasing
 
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/organization/fieldtrip_downloadversion
+- title:  Testing
+  link:  /development/testing
 
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/other/download_version
+- title:  Release and quality control
+  link:  /development/releasing
+
+- title:  Testing
+  link:  /development/testing
+
+- title:  Release and quality control
+  link:  /development/releasing
+
+- title:  Testing
+  link:  /development/testing
+
+- title:  Release and quality control
+  link:  /development/releasing
+
+- title:  Testing
+  link:  /development/testing
+
+- title:  Release and quality control
+  link:  /development/releasing
+
+- title:  Testing
+  link:  /development/testing
 

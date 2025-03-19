@@ -1,11 +1,11 @@
 - title:  Code guidelines
   link:  /development/guideline/code
 
-- title:  Common filters in beamforming
-  link:  /example/source/beamformer_commonfilter
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
 
-- title:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/source/dipolefit_somatosensory_erf
+- title:  Code guidelines
+  link:  /development/guideline/code
 
 - title:  Localizing sources using beamformer techniques
   link:  /tutorial/source/beamformer_lcmv
@@ -13,11 +13,35 @@
 - title:  Code guidelines
   link:  /development/guideline/code
 
-- title:  Common filters in beamforming
-  link:  /example/source/beamformer_commonfilter
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
 
-- title:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/source/dipolefit_somatosensory_erf
+- title:  Code guidelines
+  link:  /development/guideline/code
+
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
+
+- title:  Code guidelines
+  link:  /development/guideline/code
+
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
+
+- title:  Code guidelines
+  link:  /development/guideline/code
+
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
+
+- title:  Code guidelines
+  link:  /development/guideline/code
+
+- title:  Localizing sources using beamformer techniques
+  link:  /tutorial/source/beamformer_lcmv
+
+- title:  Code guidelines
+  link:  /development/guideline/code
 
 - title:  Localizing sources using beamformer techniques
   link:  /tutorial/source/beamformer_lcmv

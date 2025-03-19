@@ -10,8 +10,113 @@
 - title:  Email discussion list
   link:  /discussion_list
 
-- title:  How to ask good questions to the community?
-  link:  /faq/organization/emaillist_howtoask
+- title:  Privacy Policy
+  link:  /privacy
+
+- title:  Support
+  link:  /support
+
+- title:  About the FieldTrip project
+  link:  /about
+
+- title:  Contribute
+  link:  /development/contribute
+
+- title:  Reporting issues
+  link:  /development/issues
+
+- title:  About the FieldTrip project
+- title:  Email discussion list
+  link:  /about
+  link:  /discussion_list
+
+
+- title:  Contribute
+- title:  Privacy Policy
+  link:  /development/contribute
+  link:  /privacy
+
+
+- title:  Reporting issues
+- title:  Support
+- title:  About the FieldTrip project
+  link:  /development/issues
+  link:  /support
+  link:  /about
+
+
+
+- title:  Email discussion list
+  link:  /discussion_list
+- title:  Contribute
+
+  link:  /development/contribute
+- title:  Privacy Policy
+
+  link:  /privacy
+- title:  Reporting issues
+
+  link:  /development/issues
+- title:  Support
+
+  link:  /support
+
+- title:  Email discussion list
+  link:  /discussion_list
+
+- title:  Privacy Policy
+  link:  /privacy
+
+- title:  Support
+  link:  /support
+
+- title:  About the FieldTrip project
+  link:  /about
+- title:  About the FieldTrip project
+
+  link:  /about
+- title:  Contribute
+
+  link:  /development/contribute
+- title:  Contribute
+
+  link:  /development/contribute
+
+- title:  Reporting issues
+  link:  /development/issues
+- title:  Reporting issues
+
+  link:  /development/issues
+- title:  Email discussion list
+
+  link:  /discussion_list
+- title:  Email discussion list
+
+  link:  /discussion_list
+- title:  Privacy Policy
+
+  link:  /privacy
+- title:  Privacy Policy
+
+  link:  /privacy
+
+- title:  Support
+  link:  /support
+- title:  Support
+
+  link:  /support
+
+- title:  About the FieldTrip project
+  link:  /about
+
+- title:  Contribute
+  link:  /development/contribute
+
+- title:  Reporting issues
+  link:  /development/issues
+
+- title:  Email discussion list
+  link:  /discussion_list
 
 - title:  Privacy Policy
   link:  /privacy
@@ -30,9 +135,6 @@
 
 - title:  Email discussion list
   link:  /discussion_list
-
-- title:  How to ask good questions to the community?
-  link:  /faq/organization/emaillist_howtoask
 
 - title:  Privacy Policy
   link:  /privacy
