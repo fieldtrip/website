@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40083072'
+- idtype: doi
+  value: 10.1111/ejn.70060
+- idtype: pmcid
+  value: PMC11906917
+authors:
+- authtype: Author
+  name: Alexander NA
+- authtype: Author
+  name: Medrano J
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Mellor S
+- authtype: Author
+  name: O’Neill GC
+- authtype: Author
+  name: Spedden ME
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Maguire EA
+epubdate: 2025 Mar 13
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: e70060
+pmclivedate: 2025/03/15
+printpubdate: 2025 Mar
+pubdate: 2025 Mar 13
+sortdate: 2025/03/13 00:00
+source: Eur J Neurosci
+title: Anatomically Veridical On‐Scalp Sensor Topographies
+uid: '11906917'
+volume: '61'

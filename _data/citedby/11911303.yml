@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40090877'
+- idtype: doi
+  value: 10.1111/psyp.70024
+- idtype: pmcid
+  value: PMC11911303
+authors:
+- authtype: Author
+  name: Mansur BD
+- authtype: Author
+  name: Villafane Barraza V
+- authtype: Author
+  name: Voegtle A
+- authtype: Author
+  name: Reichert C
+- authtype: Author
+  name: Nasuto SJ
+- authtype: Author
+  name: Sweeney‐Reed CM
+epubdate: 2025 Mar 16
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e70024
+pmclivedate: 2025/03/18
+printpubdate: 2025 Mar
+pubdate: 2025 Mar 16
+sortdate: 2025/03/16 00:00
+source: Psychophysiology
+title: Alpha‐Oscillatory Current Application Impacts Prospective Remembering Through
+  Strategic Monitoring
+uid: '11911303'
+volume: '62'

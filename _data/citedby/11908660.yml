@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39666315'
+- idtype: doi
+  value: 10.1111/epi.18218
+- idtype: pmcid
+  value: PMC11908660
+authors:
+- authtype: Author
+  name: Kienitz R
+- authtype: Author
+  name: Strüber M
+- authtype: Author
+  name: Merkel N
+- authtype: Author
+  name: Süß A
+- authtype: Author
+  name: Spyrantis A
+- authtype: Author
+  name: Strzelczyk A
+- authtype: Author
+  name: Rosenow F
+epubdate: 2024 Dec 12
+fulljournalname: Epilepsia
+issue: '3'
+pages: 790-801
+pmclivedate: 2025/03/15
+printpubdate: 2025 Mar
+pubdate: 2024 Dec 12
+sortdate: 2024/12/12 00:00
+source: Epilepsia
+title: Neuronal complexity tracks changes of epileptic activity and identifies epilepsy
+  patients independent of interictal epileptiform discharges
+uid: '11908660'
+volume: '66'

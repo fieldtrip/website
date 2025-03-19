@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '40089497'
+- idtype: doi
+  value: 10.1038/s41597-025-04784-5
+- idtype: pmcid
+  value: PMC11910653
+authors:
+- authtype: Author
+  name: Alijanpourotaghsara A
+- authtype: Author
+  name: Mirpour K
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Chitta KK
+- authtype: Author
+  name: Shalaby A
+- authtype: Author
+  name: Boswell M
+- authtype: Author
+  name: Chilukuri S
+- authtype: Author
+  name: Cohen SL
+- authtype: Author
+  name: Byon R
+- authtype: Author
+  name: Benam M
+- authtype: Author
+  name: Kariv S
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Duncan D
+- authtype: Author
+  name: Pouratian N
+epubdate: 2025 Mar 15
+fulljournalname: Scientific Data
+issue: ''
+pages: '442'
+pmclivedate: 2025/03/16
+printpubdate: ''
+pubdate: 2025 Mar 15
+sortdate: 2025/03/15 00:00
+source: Sci Data
+title: B(RAIN)2—BRAIN integrated Resource for Anatomy and Intracranial Neurophysiology
+uid: '11910653'
+volume: '12'

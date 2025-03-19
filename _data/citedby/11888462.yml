@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40060422'
+- idtype: doi
+  value: 10.1101/2025.02.28.640787
+- idtype: pmcid
+  value: PMC11888462
+authors:
+- authtype: Author
+  name: Kang JU
+- authtype: Author
+  name: Mattar L
+- authtype: Author
+  name: Vergara J
+- authtype: Author
+  name: Gobo VE
+- authtype: Author
+  name: Rey HG
+- authtype: Author
+  name: Heilbronner SR
+- authtype: Author
+  name: Watrous AJ
+- authtype: Author
+  name: Hayden BY
+- authtype: Author
+  name: Sheth SA
+- authtype: Author
+  name: Bartoli E
+epubdate: 2025 Mar 2
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.02.28.640787
+pmclivedate: 2025/03/08
+printpubdate: ''
+pubdate: 2025 Mar 2
+sortdate: 2025/03/02 00:00
+source: bioRxiv
+title: Parietal cortex is recruited by frontal and cingulate areas to support action
+  monitoring and updating during stopping
+uid: '11888462'
+volume: ''

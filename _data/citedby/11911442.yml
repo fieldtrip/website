@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-025-57813-7
+- idtype: pmcid
+  value: PMC11911442
+authors:
+- authtype: Author
+  name: Grabenhorst M
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Michalareas G
+epubdate: 2025 Mar 16
+fulljournalname: Nature Communications
+issue: ''
+pages: '2602'
+pmclivedate: 2025/03/17
+printpubdate: ''
+pubdate: 2025 Mar 16
+sortdate: 2025/03/16 00:00
+source: Nat Commun
+title: Neural signatures of temporal anticipation in human cortex represent event
+  probability density
+uid: '11911442'
+volume: '16'
