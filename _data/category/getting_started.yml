@@ -294,3 +294,31 @@
 
 - title:  Getting started with LORETA
   link:  /getting_started/othersoftware/loreta
+
+- title:  Getting started with MeshLab
+  link:  /getting_started/othersoftware/meshlab
+
+- title:  Getting started with MNE(-python)
+  link:  /getting_started/othersoftware/mne
+
+- title:  Getting started with ParaView
+  link:  /getting_started/othersoftware/paraview
+
+- title:  Getting started with Seg3D
+  link:  /getting_started/othersoftware/seg3d
+
+- title:  Getting started with SimNIBS
+  link:  /getting_started/othersoftware/simnibs
+
+- title:  Getting started with SPM
+  link:  /getting_started/othersoftware/spm
+
+- title:  Streaming realtime fMRI from Siemens scanners
+  link:  /getting_started/realtime/realtime_fmri
+
+- title:  Getting started with real-time head localization in MEG
+  link:  /getting_started/realtime/realtime_headlocalizer
+
+- title:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /getting_started/realtime/realtime
+
