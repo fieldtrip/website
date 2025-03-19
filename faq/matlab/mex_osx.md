@@ -32,4 +32,8 @@ sudo find LOCATION_OF_FIELDTRIP -name \*.mexmaci64 -exec spctl --add {} \;
 
 where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip. Following `sudo` you will have to give your administrator password.
 
-The first command removes all FieldTrip files from [quarantaine](https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/), the second adds a [Gatekeeper exception](https://osxdaily.com/2015/07/15/add-remove-gatekeeper-app-command-line-mac-os-x/) to all mex files.
+The first command removes all FieldTrip files from [quarantaine](https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/).
+
+The second command adds a [Gatekeeper exception](https://osxdaily.com/2015/07/15/add-remove-gatekeeper-app-command-line-mac-os-x/) to all mex files.
+
+See also this documentation on the [Apple website](https://support.apple.com/en-gb/guide/mac-help/mchleab3a043/mac).
