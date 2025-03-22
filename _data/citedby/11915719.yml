@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40103837'
+- idtype: doi
+  value: 10.3389/fnins.2024.1505017
+- idtype: pmcid
+  value: PMC11915719
+authors:
+- authtype: Author
+  name: Yektaeian Vaziri A
+- authtype: Author
+  name: Makkiabadi B
+epubdate: 2025 Mar 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1505017'
+pmclivedate: 2025/03/18
+printpubdate: ''
+pubdate: 2025 Mar 4
+sortdate: 2025/03/04 00:00
+source: Front Neurosci
+title: Accelerated algorithms for source orientation detection and spatiotemporal
+  LCMV beamforming in EEG source localization
+uid: '11915719'
+volume: '18'

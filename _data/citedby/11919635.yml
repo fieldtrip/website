@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.14814/phy2.70237
+- idtype: pmcid
+  value: PMC11919635
+authors:
+- authtype: Author
+  name: Visser YF
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Selen LP
+epubdate: 2025 Mar 18
+fulljournalname: Physiological Reports
+issue: '6'
+pages: e70237
+pmclivedate: 2025/03/20
+printpubdate: ''
+pubdate: 2025 Mar 18
+sortdate: 2025/03/18 00:00
+source: Physiol Rep
+title: Corticomuscular and intermuscular coherence during evidence accumulation in
+  sensorimotor decision‐making
+uid: '11919635'
+volume: '13'

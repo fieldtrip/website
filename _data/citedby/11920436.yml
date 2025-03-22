@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-025-57602-2
+- idtype: pmcid
+  value: PMC11920436
+authors:
+- authtype: Author
+  name: Nicolas J
+- authtype: Author
+  name: King BR
+- authtype: Author
+  name: Lévesque D
+- authtype: Author
+  name: Lazzouni L
+- authtype: Author
+  name: Leroux G
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Grossman N
+- authtype: Author
+  name: Swinnen SP
+- authtype: Author
+  name: Doyon J
+- authtype: Author
+  name: Carrier J
+- authtype: Author
+  name: Albouy G
+epubdate: 2025 Mar 18
+fulljournalname: Nature Communications
+issue: ''
+pages: '2644'
+pmclivedate: 2025/03/19
+printpubdate: ''
+pubdate: 2025 Mar 18
+sortdate: 2025/03/18 00:00
+source: Nat Commun
+title: Unraveling the neurophysiological correlates of phase-specific enhancement
+  of motor memory consolidation via slow-wave closed-loop targeted memory reactivation
+uid: '11920436'
+volume: '16'

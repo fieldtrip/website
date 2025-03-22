@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-025-57882-8
+- idtype: pmcid
+  value: PMC11920198
+authors:
+- authtype: Author
+  name: Dake M
+- authtype: Author
+  name: Curtis CE
+epubdate: 2025 Mar 18
+fulljournalname: Nature Communications
+issue: ''
+pages: '2675'
+pmclivedate: 2025/03/19
+printpubdate: ''
+pubdate: 2025 Mar 18
+sortdate: 2025/03/18 00:00
+source: Nat Commun
+title: Perturbing human V1 degrades the fidelity of visual working memory
+uid: '11920198'
+volume: '16'
