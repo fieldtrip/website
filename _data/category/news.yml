@@ -67,6 +67,15 @@
 - title:  16 March 2020 - Keep calm and hang in there
   link:  /_posts/2020-03-16-peptalk
 
+- title:  9 April 2020 - M/EEG toolkit online
+  link:  /_posts/2020-04-09-toolkit
+
+- title:  21 April 2020 - M/EEG toolkit online
+  link:  /_posts/2020-04-21-toolkit-online
+
+- title:  29 April 2020 - M/EEG toolkit details
+  link:  /_posts/2020-04-29-toolkit-details
+
 - title:  07 May 2020 - Code update, the default SPM version is now spm12
   link:  /_posts/2020-05-07-code-update-defaultspmversion
 
@@ -100,8 +109,14 @@
 - title:  18 December 2020 - Mats defended his PhD
   link:  /_posts/2020-12-18-mats-phd
 
+- title:  18 March 2021 - M/EEG toolkit
+  link:  /_posts/2021-03-18-toolkit
+
 - title:  29 March 2021 - Sample size
   link:  /_posts/2021-03-29-samplesize
+
+- title:  30 April 2021 - M/EEG toolkit
+  link:  /_posts/2021-04-30-toolkit
 
 - title:  9 July 2021 - Artinis fNIRS analysis toolbox series – FieldTrip
   link:  /_posts/2021-07-09-artinis-nirs
@@ -118,6 +133,12 @@
 - title:  27 January 2022 - Website privacy improvements
   link:  /_posts/2022-01-27-website-privacy
 
+- title:  10 March 2022 - M/EEG toolkit
+  link:  /_posts/2022-03-10-toolkit
+
+- title:  15 April 2022 - Switched from FTP to WebDAV
+  link:  /_posts/2022-04-15-ftp-webdav
+
 - title:  07 May 2022 - MEG Toolkit at the Donders about to go live
   link:  /_posts/2022-05-07-toolkit
 
@@ -129,6 +150,9 @@
 
 - title:  20 December 2022 - FieldTrip switches from Twitter to Mastodon
   link:  /_posts/2022-12-20-mastodon
+
+- title:  7 February 2023 - M/EEG toolkit
+  link:  /_posts/2023-02-07-toolkit
 
 - title:  25 October 2023 - Hundred years of human EEG
   link:  /_posts/2023-10-25-hundred-years
@@ -159,4 +183,7 @@
 
 - title:  23 November 2024 - CuttingEEG X talks available
   link:  /_posts/2024-11-23-cuttingeegx
+
+- title:  25 March 2025 - M/EEG toolkit
+  link:  /_posts/2025-03-25-toolkit
 
