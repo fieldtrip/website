@@ -1,6 +1,7 @@
 ---
 title: 21 April 2020 - M/EEG toolkit online
-categories: [news, toolkit2020]
+category: news
+tags: [toolkit2020]
 ---
 
 ### 21 April 2020

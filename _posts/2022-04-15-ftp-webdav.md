@@ -1,6 +1,7 @@
 ---
 title: 15 April 2022 - Switched from FTP to WebDAV
-categories: [news, download]
+category: news
+tags: [download]
 ---
 
 ### 15 April 2022

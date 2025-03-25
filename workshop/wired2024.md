@@ -1,6 +1,6 @@
 ---
 title: FieldTrip tutorial at WIRED 2024 in Paris
-tags: wired2024
+tags: [wired2024]
 ---
 
 # FieldTrip tutorial at WIRED 2024 in Paris
