@@ -1,8 +1,14 @@
 - title:  Testing BEM created EEG lead fields
   link:  /example/source/bem_evaluation
 
+- title:  Compute EEG leadfields using a BEM headmodel
+  link:  /example/source/bem
+
 - title:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/source/compute_leadfield
+
+- title:  Compute EEG leadfields using a concentric spheres headmodel
+  link:  /example/source/concentricspheres
 
 - title:  Align EEG electrode positions to BEM headmodel
   link:  /example/source/electrodes2bem
