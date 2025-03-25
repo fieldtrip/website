@@ -50,6 +50,8 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
 - [Combined EEG and MEG source reconstruction](/example/combined_eeg_and_meg_source_reconstruction)
 - [Common filters in beamforming](/example/common_filters_in_beamforming)
+- [Compute EEG leadfields using a concentric spheres headmodel](/example/concentricspheres)
+- [Compute EEG leadfields using a BEM headmodel](/example/bem)
 - [Compute EEG leadfields using a FEM headmodel](/example/fem)
 - [Compute forward simulated data and apply a beamformer scan](/example/compute_forward_simulated_data_and_apply_a_beamformer_scan)
 - [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)

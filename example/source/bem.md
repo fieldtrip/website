@@ -1,18 +1,17 @@
 ---
-title: Compute EEG leadfields using a FEM headmodel
+title: Compute EEG leadfields using a BEM headmodel
 category: example
-tags: [eeg, fem, leadfield, headmodel, meg-language]
-redirect_from:
-    - /example/fem/
+tags: [eeg, bem, leadfield, headmodel, meg-language]
 ---
 
-# Compute EEG leadfields using a FEM headmodel
+# Compute EEG leadfields using a BEM headmodel
 
-This example shows how to compute EEG leadfields using a Finite Element Method (FEM) head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, preparing a mesh, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.
+This example shows how to compute EEG leadfields using a Boundary Element Method (BEM) head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, preparing a mesh, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.
 
-The aim of this example is to show the similarities and differences between FEM (here), [BEM](/example/source/bem) and [concentricspheres](/example/source/concentricspheres) and how to deal with units to get correct SI units in the forward and inverse solution. A more elaborate tutorial using FEM can be found [here](/tutorial/source/headmodel_eeg_fem/).
+The aim of this example is to show the similarities and differences between BEM (here), [FEM](/example/source/fem) and [concentricspheres](/example/source/concentricspheres) and how to deal with units to get correct SI units in the forward and inverse solution. A more elaborate tutorial using BEM can be found [here](/tutorial/source/headmodel_eeg_bem/).
 
-This example starts with the anatomical MRI of the same subject that is used in a number of other tutorials. You can download the data from our [download server](https://download.fieldtriptoolbox.org/example/fem).
+This example starts with the anatomical MRI of the same subject that is used in a number of other tutorials. You can download the data from our [download server](https://download.fieldtriptoolbox.org/example/bem).
+
 
 ```matlab
 %% read the anatomical MRI
@@ -31,7 +30,7 @@ ft_determine_coordsys(mri, 'interactive', 'no');
 
 %% segmentation
 cfg          = [];
-cfg.output   = {'gray', 'white', 'csf', 'skull', 'scalp'};
+cfg.output   = {'brain', 'skull', 'scalp'};
 segmentedmri = ft_volumesegment(cfg, mri);
 
 % check that the segmentation is also expressed in millimeter
@@ -39,12 +38,13 @@ disp(segmentedmri.unit)
 
 %% mesh
 cfg        = [];
-cfg.shift  = 0.3; % relative to the length of the edges
-cfg.method = 'hexahedral';
+cfg.method = 'projectmesh';
+cfg.numvertices = [3000 2000 1000];
+cfg.tissue = {'brain', 'skull', 'scalp'};
 mesh       = ft_prepare_mesh(cfg,segmentedmri);
 
 % since the segmentation is in millimeter, the mesh will be in millimeter as well
-disp(mesh.unit)
+disp(mesh(1).unit)
 
 %% read electrodes and align them with the MRI 
 
@@ -91,36 +91,32 @@ for i=1:size(elec_aligned.chanpos,1)
   elec_aligned.elecpos(i,1) = elec_aligned.elecpos(i,1) + 12;
 end
 
-% plot the mesh and the electrodes together 
-% note that the alignment is still not perfect 
-figure
-ft_plot_mesh(mesh, 'edgecolor', 'none')
-ft_plot_sens(elec_aligned)
-alpha 0.5
-
-%% make the FEM volume conduction model
+%% make the volume conductor
 
 % convert the mesh from millimeter to meter
 mesh = ft_convert_units(mesh, 'm');
-disp(mesh.unit)
+disp(mesh(1).unit)
 
 % convert the electrodes from millimeter to meter
 elec_aligned = ft_convert_units(elec_aligned, 'm');
 disp(elec_aligned.unit)
 
-cfg              = [];
-cfg.method       = 'simbio';
-cfg.conductivity = [0.33 0.14 1.79 0.01 0.43]; % this is Siemens per meter
-headmodel        = ft_prepare_headmodel(cfg, mesh);
+cfg               = [];
+cfg.method        = 'dipoli';
+cfg.tissue        = {'brain', 'skull', 'scalp'};
+cfg.conductivity  = [0.33 0.0125 0.33]; % this is Siemens per meter
+headmodel         = ft_prepare_headmodel(cfg, mesh);
 
 %% make a regular 3D grid as the sourcemodel
 
-cfg         = [];
-cfg.method  = 'basedongrid';
-cfg.xgrid   =  -8:1:12;
-cfg.ygrid   = -10:1:10; % from -10 to 10 in steps of 1
-cfg.zgrid   =  -5:1:15;
-cfg.unit    = 'cm';
+cfg           = [];
+cfg.method    = 'basedongrid';
+cfg.xgrid     =  -8:1:12;
+cfg.ygrid     = -10:1:10; % from -10 to 10 in steps of 1
+cfg.zgrid     =  -5:1:15;
+cfg.unit      = 'cm';
+cfg.tight     = 'yes';
+cfg.headmodel = headmodel; % this determines which dipoles are inside/outside
 sourcemodel = ft_prepare_sourcemodel(cfg);
 
 % convert the sourcemodel from centimeter to meter
@@ -128,14 +124,16 @@ sourcemodel = ft_convert_units(sourcemodel, 'm');
 
 % plot the headmodel together with the source positions
 figure
-ft_plot_mesh(mesh, 'edgecolor', 'none')
+ft_plot_mesh(mesh(3), 'edgecolor', 'none', 'facecolor', 'skin')
+ft_plot_sens(elec_aligned, 'elecsize', 0.010, 'elecshape', 'disc', 'facecolor', 'k', 'label', 'label')
 ft_plot_mesh(sourcemodel.pos)
+ft_plot_axes([], 'unit', 'm', 'coordsys', 'ctf')
+ft_headlight
 alpha 0.5
 
 %% compute the leadfields
-% 
 
-% take a subset of 29 channels to speed things up
+% take a subset of 29 channels
 chansel = ft_channelselection('eeg1020', elec_aligned);
 
 % remove some that we are not interested in
@@ -153,7 +151,7 @@ cfg.sourcemodel = sourcemodel;  % expressed in meter
 cfg.channel     = chansel;
 leadfield       = ft_prepare_leadfield(cfg); % expressed in Volt per Ampere*meter
 
-%% plot the potential distribution
+%%
 
 dippos = [0 0 50]/1000;     % in meter
 dipori = [1 0 0]';          % along the x-direction 
@@ -186,5 +184,3 @@ ft_headlight
 alpha 0.8
 colorbar
 ```
-
-## See also 
