@@ -11,9 +11,7 @@ The toolkit consists of a number of lectures, followed by hands-on sessions in w
 
 There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that the course is specifically aimed at participants that already have designed and conducted their own experiment(s) and already have data that they can bring along for analysis. This means that first year PhD students, as well as master students, should consider taking the course at a somewhat later career stage.
 
-You cannot yet pre-register, but we will make the link available here once it is possible, the deadline for pre-registration is April 11, 2025.
-
-We will inform you as to whether you obtained a place in this course not later than April 22,  2025.
+You can now pre-register [here](https://www.ru.nl/en/donders-institute/services/donders-toolkits). The deadline for pre-registration is April 11, 2025. We will inform you as to whether you obtained a place in this course not later than April 22, 2025.
 
 ## Program
 
