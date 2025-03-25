@@ -186,5 +186,3 @@ ft_headlight
 alpha 0.8
 colorbar
 ```
-
-## See also 
