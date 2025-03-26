@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40068876'
+- idtype: doi
+  value: 10.1523/ENEURO.0370-24.2025
+- idtype: pmcid
+  value: PMC11927053
+authors:
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Long J
+epubdate: 2025 Mar 20
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0370-24.2025
+pmclivedate: 2025/03/21
+printpubdate: ''
+pubdate: 2025 Mar 20
+sortdate: 2025/03/20 00:00
+source: eNeuro
+title: Postmovement Beta Synchronization Induced by Speed Effects on IHI from the
+  Ipsilateral to Contralateral Motor Cortex
+uid: '11927053'
+volume: '12'
