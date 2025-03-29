@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40093233'
+- idtype: doi
+  value: 10.1101/2025.03.03.25323046
+- idtype: pmcid
+  value: PMC11908309
+authors:
+- authtype: Author
+  name: Garrett JC
+- authtype: Author
+  name: Wilson S
+- authtype: Author
+  name: Brandel MG
+- authtype: Author
+  name: Nerison CS
+- authtype: Author
+  name: Raslan AM
+- authtype: Author
+  name: Ben-Haim S
+- authtype: Author
+  name: Halgren E
+epubdate: 2025 Mar 6
+fulljournalname: medRxiv
+issue: ''
+pages: 2025.03.03.25323046
+pmclivedate: 2025/03/15
+printpubdate: ''
+pubdate: 2025 Mar 6
+sortdate: 2025/03/06 00:00
+source: medRxiv
+title: Opioidergic pain relief in humans is mediated by beta and high-gamma modulation
+  in limbic regions
+uid: '11908309'
+volume: ''

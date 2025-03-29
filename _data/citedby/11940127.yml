@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci15030226
+- idtype: pmcid
+  value: PMC11940127
+authors:
+- authtype: Author
+  name: O’Reilly D
+- authtype: Author
+  name: Bolam J
+- authtype: Author
+  name: Delis I
+- authtype: Author
+  name: Utley A
+epubdate: 2025 Feb 21
+fulljournalname: Brain Sciences
+issue: '3'
+pages: '226'
+pmclivedate: 2025/03/27
+printpubdate: ''
+pubdate: 2025 Feb 21
+sortdate: 2025/02/21 00:00
+source: Brain Sci
+title: 'Effect of a Plant-Based Nootropic Supplement on Perceptual Decision-Making
+  and Brain Network Interdependencies: A Randomised, Double-Blinded, and Placebo-Controlled
+  Study'
+uid: '11940127'
+volume: '15'

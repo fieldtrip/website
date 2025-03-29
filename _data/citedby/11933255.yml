@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40128238'
+- idtype: doi
+  value: 10.1038/s41467-025-58265-9
+- idtype: pmcid
+  value: PMC11933255
+authors:
+- authtype: Author
+  name: Mirjalili S
+- authtype: Author
+  name: Duarte A
+epubdate: 2025 Mar 24
+fulljournalname: Nature Communications
+issue: ''
+pages: '2856'
+pmclivedate: 2025/03/25
+printpubdate: ''
+pubdate: 2025 Mar 24
+sortdate: 2025/03/24 00:00
+source: Nat Commun
+title: Using machine learning to simultaneously quantify multiple cognitive components
+  of episodic memory
+uid: '11933255'
+volume: '16'
