@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38969752'
+- idtype: doi
+  value: 10.1007/s00406-024-01859-z
+- idtype: pmcid
+  value: PMC11946958
+authors:
+- authtype: Author
+  name: Mijancos-Martínez G
+- authtype: Author
+  name: Bachiller A
+- authtype: Author
+  name: Fernández-Linsenbarth I
+- authtype: Author
+  name: Romero S
+- authtype: Author
+  name: Serna LY
+- authtype: Author
+  name: Molina V
+- authtype: Author
+  name: Mañanas MÁ
+epubdate: 2024 Jul 6
+fulljournalname: European Archives of Psychiatry and Clinical Neuroscience
+issue: '3'
+pages: 785-797
+pmclivedate: 2025/03/28
+printpubdate: '2025'
+pubdate: 2024 Jul 6
+sortdate: 2024/07/06 00:00
+source: Eur Arch Psychiatry Clin Neurosci
+title: Individualized time windows enhance TMS-EEG signal characterization and improve
+  assessment of cortical function in schizophrenia
+uid: '11946958'
+volume: '275'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40128190'
+- idtype: doi
+  value: 10.1038/s41398-025-03308-4
+- idtype: pmcid
+  value: PMC11933319
+authors:
+- authtype: Author
+  name: Silverstein BH
+- authtype: Author
+  name: Kolbman N
+- authtype: Author
+  name: Nelson A
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Guzzo P
+- authtype: Author
+  name: Gilligan J
+- authtype: Author
+  name: Lee U
+- authtype: Author
+  name: Mashour GA
+- authtype: Author
+  name: Vanini G
+- authtype: Author
+  name: Pal D
+epubdate: 2025 Mar 25
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '93'
+pmclivedate: 2025/03/25
+printpubdate: ''
+pubdate: 2025 Mar 25
+sortdate: 2025/03/25 00:00
+source: Transl Psychiatry
+title: Intravenous psilocybin induces dose-dependent changes in functional network
+  organization in rat cortex
+uid: '11933319'
+volume: '15'

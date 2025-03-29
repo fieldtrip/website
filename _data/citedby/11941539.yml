@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39753164'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2024.120998
+- idtype: pmcid
+  value: PMC11941539
+- idtype: MID
+  value: NIHMS2051060
+authors:
+- authtype: Author
+  name: Wartman WA
+- authtype: Author
+  name: Nuñez Ponasso G
+- authtype: Author
+  name: Qi Z
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Weise K
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Raij T
+- authtype: Author
+  name: Makaroff SN
+epubdate: 2025 Jan 1
+fulljournalname: NeuroImage
+issue: ''
+pages: '120998'
+pmclivedate: 2025/03/26
+printpubdate: 2025 Feb 1
+pubdate: 2025 Jan 1
+sortdate: 2025/01/01 00:00
+source: Neuroimage
+title: Fast EEG/MEG BEM-based forward problem solution for high-resolution head models
+uid: '11941539'
+volume: '306'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40129256'
+- idtype: doi
+  value: 10.1002/hbm.70199
+- idtype: pmcid
+  value: PMC11933723
+authors:
+- authtype: Author
+  name: Fernández‐Merino L
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Kalashnikova M
+epubdate: 2025 Mar 25
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: e70199
+pmclivedate: 2025/03/25
+printpubdate: ''
+pubdate: 2025 Mar 25
+sortdate: 2025/03/25 00:00
+source: Hum Brain Mapp
+title: Temporal Structure of Music Improves the Cortical Encoding of Speech
+uid: '11933723'
+volume: '46'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pone.0320233
+- idtype: pmcid
+  value: PMC11940686
+authors:
+- authtype: Author
+  name: Melcón M
+- authtype: Author
+  name: van Bree S
+- authtype: Author
+  name: Sánchez-Carro Y
+- authtype: Author
+  name: Barreiro-Fernández L
+- authtype: Author
+  name: Kolibius LD
+- authtype: Author
+  name: Alzueta E
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Capilla A
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2025 Mar 26
+fulljournalname: PLOS One
+issue: '3'
+pages: e0320233
+pmclivedate: 2025/03/26
+printpubdate: ''
+pubdate: 2025 Mar 26
+sortdate: 2025/03/26 00:00
+source: PLoS One
+title: Evidence for a constant occipital spotlight of attention using MVPA on EEG
+  data
+uid: '11940686'
+volume: '20'
