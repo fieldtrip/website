@@ -1,6 +1,9 @@
 - title:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/preproc/dss_ecg
 
+- title:  Determine the filter characteristics
+  link:  /example/preproc/filter_characteristics
+
 - title:  Fixing a missing channel
   link:  /example/preproc/fixing_a_missing_sensor
 
@@ -24,9 +27,6 @@
 
 - title:  Making your own trialfun for conditional trial definition
   link:  /example/preproc/trialfun
-
-- title:  Determine the filter characteristics
-  link:  /example/source/filter_characteristics
 
 - title:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/preproc/artifact/artifact_padding

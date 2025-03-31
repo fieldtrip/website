@@ -1,5 +1,5 @@
 - title:  Determine the filter characteristics
-  link:  /example/source/filter_characteristics
+  link:  /example/preproc/filter_characteristics
 
 - title:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/preproc/artifact/artifact_padding
