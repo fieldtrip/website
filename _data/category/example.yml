@@ -76,6 +76,9 @@
 - title:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/preproc/dss_ecg
 
+- title:  Determine the filter characteristics
+  link:  /example/preproc/filter_characteristics
+
 - title:  Fixing a missing channel
   link:  /example/preproc/fixing_a_missing_sensor
 
@@ -168,9 +171,6 @@
 
 - title:  Compute EEG leadfields using a FEM headmodel
   link:  /example/source/fem
-
-- title:  Determine the filter characteristics
-  link:  /example/source/filter_characteristics
 
 - title:  How to create a head model if you do not have an individual MRI
   link:  /example/source/fittemplate
