@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39365339'
+- idtype: doi
+  value: 10.1007/s00421-024-05628-7
+- idtype: pmcid
+  value: PMC11950058
+authors:
+- authtype: Author
+  name: Sampieri A
+- authtype: Author
+  name: Marcolin G
+- authtype: Author
+  name: Gennaro F
+- authtype: Author
+  name: Magistrelli E
+- authtype: Author
+  name: Del Vecchio A
+- authtype: Author
+  name: Moro T
+- authtype: Author
+  name: Paoli A
+- authtype: Author
+  name: Casolo A
+epubdate: 2024 Oct 4
+fulljournalname: European Journal of Applied Physiology
+issue: '4'
+pages: 967-976
+pmclivedate: 2025/03/29
+printpubdate: '2025'
+pubdate: 2024 Oct 4
+sortdate: 2024/10/04 00:00
+source: Eur J Appl Physiol
+title: Alterations in magnitude and spatial distribution of erector spinae muscle
+  activity in cyclists with a recent history of low back pain
+uid: '11950058'
+volume: '125'

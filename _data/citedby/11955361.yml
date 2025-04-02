@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '40000196'
+- idtype: doi
+  value: 10.7507/1001-5515.202307003
+- idtype: pmcid
+  value: PMC11955361
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+epubdate: ''
+fulljournalname: Sheng Wu Yi Xue Gong Cheng Xue Za Zhi = Journal of Biomedical Engineering
+issue: '6'
+pages: 1085-1094
+pmclivedate: 2025/04/01
+printpubdate: 2024 Dec 25
+pubdate: 2024 Dec 25
+sortdate: 2024/12/25 00:00
+source: Sheng Wu Yi Xue Gong Cheng Xue Za Zhi
+title: 基于囟门补偿的婴儿脑电正问题建模方法
+uid: '11955361'
+volume: '41'

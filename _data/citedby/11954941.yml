@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-025-91177-8
+- idtype: pmcid
+  value: PMC11954941
+authors:
+- authtype: Author
+  name: Adamczyk AK
+- authtype: Author
+  name: Bramson B
+- authtype: Author
+  name: Koch SB
+- authtype: Author
+  name: Wyczesany M
+- authtype: Author
+  name: van Peer JM
+- authtype: Author
+  name: Roelofs K
+epubdate: 2025 Mar 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10900'
+pmclivedate: 2025/03/30
+printpubdate: ''
+pubdate: 2025 Mar 29
+sortdate: 2025/03/29 00:00
+source: Sci Rep
+title: Lateral frontopolar theta-band activity supports flexible switching between
+  emotion regulation strategies
+uid: '11954941'
+volume: '15'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39890463'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1802-24.2025
+- idtype: pmcid
+  value: PMC11949476
+authors:
+- authtype: Author
+  name: Hendrix CM
+- authtype: Author
+  name: Baker HE
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Schneck DD
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Johnson LA
+- authtype: Author
+  name: Vitek JL
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '13'
+pages: e1802242025
+pmclivedate: ''
+printpubdate: 2025 Mar 26
+pubdate: 2025 Mar 26
+sortdate: 2025/03/26 00:00
+source: J Neurosci
+title: Parkinsonism Disrupts Neuronal Modulation in the Presupplementary Motor Area
+  during Movement Preparation
+uid: '11949476'
+volume: '45'

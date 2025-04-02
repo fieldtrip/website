@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40153104'
+- idtype: doi
+  value: 10.1007/s10548-025-01113-2
+- idtype: pmcid
+  value: PMC11953218
+authors:
+- authtype: Author
+  name: Lucarelli D
+- authtype: Author
+  name: Guidali G
+- authtype: Author
+  name: Sulcova D
+- authtype: Author
+  name: Zazio A
+- authtype: Author
+  name: Bonfiglio NS
+- authtype: Author
+  name: Stango A
+- authtype: Author
+  name: Barchiesi G
+- authtype: Author
+  name: Bortoletto M
+epubdate: 2025 Mar 28
+fulljournalname: Brain Topography
+issue: '3'
+pages: '39'
+pmclivedate: 2025/03/30
+printpubdate: '2025'
+pubdate: 2025 Mar 28
+sortdate: 2025/03/28 00:00
+source: Brain Topogr
+title: 'Stimulation Parameters Recruit Distinct Cortico-Cortical Pathways: Insights
+  from Microstate Analysis on TMS-Evoked Potentials'
+uid: '11953218'
+volume: '38'

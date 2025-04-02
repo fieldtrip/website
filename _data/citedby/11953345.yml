@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40155499'
+- idtype: doi
+  value: 10.1038/s42003-025-07974-4
+- idtype: pmcid
+  value: PMC11953345
+authors:
+- authtype: Author
+  name: Elmers J
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Akgün K
+- authtype: Author
+  name: Ziemssen T
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Mar 29
+fulljournalname: Communications Biology
+issue: ''
+pages: '516'
+pmclivedate: 2025/03/29
+printpubdate: ''
+pubdate: 2025 Mar 29
+sortdate: 2025/03/29 00:00
+source: Commun Biol
+title: Variations in neuronal cytoskeletal integrity affect directed communication
+  in distributed networks during inhibitory control
+uid: '11953345'
+volume: '8'
