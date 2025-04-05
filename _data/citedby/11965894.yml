@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2025.1530147
+- idtype: pmcid
+  value: PMC11965894
+authors:
+- authtype: Author
+  name: Juras L
+- authtype: Author
+  name: Hromatko I
+- authtype: Author
+  name: Vranic A
+epubdate: 2025 Mar 13
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1530147'
+pmclivedate: 2025/04/03
+printpubdate: ''
+pubdate: 2025 Mar 13
+sortdate: 2025/03/13 00:00
+source: Front Aging Neurosci
+title: Parietal alpha and theta power predict cognitive training gains in middle-aged
+  adults
+uid: '11965894'
+volume: '17'

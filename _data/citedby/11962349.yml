@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40170484'
+- idtype: doi
+  value: 10.1111/psyp.70051
+- idtype: pmcid
+  value: PMC11962349
+authors:
+- authtype: Author
+  name: Rominger C
+- authtype: Author
+  name: Fink A
+- authtype: Author
+  name: Perchtold‐Stefan CM
+- authtype: Author
+  name: Schlögl L
+- authtype: Author
+  name: Schwerdtfeger AR
+epubdate: 2025 Apr 1
+fulljournalname: Psychophysiology
+issue: '4'
+pages: e70051
+pmclivedate: 2025/04/03
+printpubdate: 2025 Apr
+pubdate: 2025 Apr 1
+sortdate: 2025/04/01 00:00
+source: Psychophysiology
+title: 'The Interoceptive Brain: Confidence Ratings and Accuracy Scores are Independently
+  and Differently Associated With Task‐Related Alpha Power During the Heartbeat Tracking
+  Task'
+uid: '11962349'
+volume: '62'

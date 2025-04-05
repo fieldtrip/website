@@ -1,0 +1,54 @@
+articleids:
+- idtype: pmid
+  value: '40015653'
+- idtype: doi
+  value: 10.1016/j.nbd.2025.106858
+- idtype: pmcid
+  value: PMC7617547
+- idtype: MID
+  value: EMS204252
+authors:
+- authtype: Author
+  name: West TO
+- authtype: Author
+  name: Steidel K
+- authtype: Author
+  name: Flessner T
+- authtype: Author
+  name: Calvano A
+- authtype: Author
+  name: Kucukahmetler D
+- authtype: Author
+  name: Stam MJ
+- authtype: Author
+  name: Spedden ME
+- authtype: Author
+  name: Wahl B
+- authtype: Author
+  name: Jousmäki V
+- authtype: Author
+  name: Eraifej J
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Saifee TA
+- authtype: Author
+  name: Barnes G
+- authtype: Author
+  name: Farmer SF
+- authtype: Author
+  name: Pedrosa DJ
+- authtype: Author
+  name: Cagnan H
+epubdate: 2025 Feb 25
+fulljournalname: Neurobiology of disease
+issue: ''
+pages: '106858'
+pmclivedate: 2025/04/03
+printpubdate: 2025 Apr 1
+pubdate: 2025 Feb 25
+sortdate: 2025/02/25 00:00
+source: Neurobiol Dis
+title: Essential Tremor Disrupts Rhythmic Brain Networks During Naturalistic Movement
+uid: '7617547'
+volume: '207'

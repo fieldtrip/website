@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38663367'
+- idtype: doi
+  value: 10.1159/000539023
+- idtype: pmcid
+  value: PMC11965844
+authors:
+- authtype: Author
+  name: Ramacciotti MC
+- authtype: Author
+  name: Soares Junior RD
+- authtype: Author
+  name: Sato JR
+- authtype: Author
+  name: Gualtieri M
+epubdate: 2024 Apr 25
+fulljournalname: Developmental Neuroscience
+issue: '2'
+pages: 81-97
+pmclivedate: 2025/04/04
+printpubdate: 2025 Apr
+pubdate: 2024 Apr 25
+sortdate: 2024/04/25 00:00
+source: Dev Neurosci
+title: 'Left OFC Activation in Functional Near-Infrared Spectroscopy during an Inhibitory
+  Control Task in an Early Years Sample: Integrating Stress Responses with Cognitive
+  Function and Brain Activation'
+uid: '11965844'
+volume: '47'
