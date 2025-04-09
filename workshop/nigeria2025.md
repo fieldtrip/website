@@ -34,7 +34,7 @@ See the [African Brain Data Science Network](https://africanbraindatanetwork.com
 
 ### Who
 
-It is organized by Ore Ogundipe, Eberechi Wogu, Victor Owoyele, Robert Oostenveld, Mikkel Vinding, and various others help with the organization.
+It is organized by Damian Eke, Eberechi Wogu, Victor Owoyele, Ore Ogundipe, Robert Oostenveld, Mikkel Vinding, and various others help with the organization.
 
 The lectures and hands-on sessions will be presented by [Robert Oostenveld](https://www.ru.nl/personen/oostenveld-r) from Radboud University Nijmegen, the Netherlands, and [Mikkel Vinding](https://psychology.ku.dk/staff/academic_staff/?pure=en/persons/805933) from Copenhagen University, Denmark. Both Robert and Mikkel have extensive experience with EEG, including designing the experiments, doing recordings, and analyzing data. You can find their publications [here](https://scholar.google.com/citations?user=eEbaa0UAAAAJ&hl=en&oi=ao) and [here](https://scholar.google.com/citations?user=v6A5dRgAAAAJ&hl=en&oi=sra).
 
