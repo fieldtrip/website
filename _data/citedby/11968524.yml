@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39904628'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2066-23.2025
+- idtype: pmcid
+  value: PMC11968524
+authors:
+- authtype: Author
+  name: Fiedler L
+- authtype: Author
+  name: Johnsrude I
+- authtype: Author
+  name: Wendt D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: e2066232025
+pmclivedate: ''
+printpubdate: 2025 Apr 2
+pubdate: 2025 Apr 2
+sortdate: 2025/04/02 00:00
+source: J Neurosci
+title: Salience-Dependent Disruption of Sustained Auditory Attention Can Be Inferred
+  from Evoked Pupil Responses and Neural Tracking of Task-Irrelevant Sounds
+uid: '11968524'
+volume: '45'

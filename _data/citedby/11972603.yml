@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40191181'
+- idtype: doi
+  value: 10.2147/PRBM.S506311
+- idtype: pmcid
+  value: PMC11972603
+authors:
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Xiong Z
+- authtype: Author
+  name: Liu G
+epubdate: 2025 Apr 2
+fulljournalname: Psychology Research and Behavior Management
+issue: ''
+pages: 781-796
+pmclivedate: 2025/04/06
+printpubdate: ''
+pubdate: 2025 Apr 2
+sortdate: 2025/04/02 00:00
+source: Psychol Res Behav Manag
+title: 'EEG-Based Micro-Expression Recognition: Flexible Brain Network Reconfiguration
+  Supporting Micro-Expressions Under Positive Emotion'
+uid: '11972603'
+volume: '18'

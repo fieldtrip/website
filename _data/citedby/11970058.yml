@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40179130'
+- idtype: doi
+  value: 10.1177/23312165251333225
+- idtype: pmcid
+  value: PMC11970058
+authors:
+- authtype: Author
+  name: Kemper M
+- authtype: Author
+  name: Denk F
+- authtype: Author
+  name: Husstedt H
+- authtype: Author
+  name: Obleser J
+epubdate: 2025 Apr 3
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165251333225'
+pmclivedate: 2025/04/04
+printpubdate: ''
+pubdate: 2025 Apr 3
+sortdate: 2025/04/03 00:00
+source: Trends Hear
+title: 'Acoustically Transparent Hearing Aids Increase Physiological Markers of Listening
+  Effort '
+uid: '11970058'
+volume: '29'

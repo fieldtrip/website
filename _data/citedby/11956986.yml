@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40166247'
+- idtype: doi
+  value: 10.1101/2025.03.13.643168
+- idtype: pmcid
+  value: PMC11956986
+authors:
+- authtype: Author
+  name: Nave KM
+- authtype: Author
+  name: Hannon EE
+- authtype: Author
+  name: Snyder JS
+epubdate: 2025 Mar 17
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.03.13.643168
+pmclivedate: 2025/04/01
+printpubdate: ''
+pubdate: 2025 Mar 17
+sortdate: 2025/03/17 00:00
+source: bioRxiv
+title: 'Registered Report: Replication and Extension of '
+uid: '11956986'
+volume: ''

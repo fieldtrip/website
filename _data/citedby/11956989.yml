@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40166314'
+- idtype: doi
+  value: 10.1101/2025.03.04.641458
+- idtype: pmcid
+  value: PMC11956989
+authors:
+- authtype: Author
+  name: Vázquez Y
+- authtype: Author
+  name: Ianni GR
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: Rouse AG
+- authtype: Author
+  name: Schieber MH
+- authtype: Author
+  name: Yazdani F
+- authtype: Author
+  name: Prut Y
+- authtype: Author
+  name: Freiwald WA
+epubdate: 2025 Mar 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.03.04.641458
+pmclivedate: 2025/04/01
+printpubdate: ''
+pubdate: 2025 Mar 19
+sortdate: 2025/03/19 00:00
+source: bioRxiv
+title: Neural Synchrony Links Sensorimotor Cortices in a Network for Facial Motor
+  Control
+uid: '11956989'
+volume: ''
