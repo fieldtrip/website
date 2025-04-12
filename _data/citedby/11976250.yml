@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40120114'
+- idtype: doi
+  value: 10.1016/j.xpro.2025.103693
+- idtype: pmcid
+  value: PMC11976250
+authors:
+- authtype: Author
+  name: Varga L
+- authtype: Author
+  name: Péntek B
+- authtype: Author
+  name: Molnár B
+- authtype: Author
+  name: Perez-Cervera L
+- authtype: Author
+  name: Selim MK
+- authtype: Author
+  name: Díaz-Parra A
+- authtype: Author
+  name: Moratal D
+- authtype: Author
+  name: Sommer WH
+- authtype: Author
+  name: Canals S
+- authtype: Author
+  name: Mureșan RC
+- authtype: Author
+  name: Moca VV
+- authtype: Author
+  name: Ercsey-Ravasz M
+epubdate: 2025 Mar 21
+fulljournalname: STAR Protocols
+issue: '2'
+pages: '103693'
+pmclivedate: 2025/04/08
+printpubdate: ''
+pubdate: 2025 Mar 21
+sortdate: 2025/03/21 00:00
+source: STAR Protoc
+title: Protocol to study brain dynamics of mammals through the hierarchy of complex
+  correlation patterns defining a robust functional architecture
+uid: '11976250'
+volume: '6'

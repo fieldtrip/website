@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39354239'
+- idtype: doi
+  value: 10.1007/s11357-024-01361-3
+- idtype: pmcid
+  value: PMC11979050
+authors:
+- authtype: Author
+  name: Trabado-Fernández A
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: Cuadrado-Soto E
+- authtype: Author
+  name: Peral-Suárez Á
+- authtype: Author
+  name: Salas-González MD
+- authtype: Author
+  name: Lorenzo-Mora AM
+- authtype: Author
+  name: Aparicio A
+- authtype: Author
+  name: Delgado-Losada ML
+- authtype: Author
+  name: Maestú-Unturbe F
+- authtype: Author
+  name: López-Sobaler AM
+epubdate: 2024 Oct 1
+fulljournalname: GeroScience
+issue: '2'
+pages: 1747-1759
+pmclivedate: 2025/04/10
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: GeroScience
+title: Association of a DASH diet and magnetoencephalography in dementia-free adults
+  with different risk levels of Alzheimer’s disease
+uid: '11979050'
+volume: '47'

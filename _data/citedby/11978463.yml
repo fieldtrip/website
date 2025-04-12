@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40199358'
+- idtype: doi
+  value: 10.1098/rspb.2024.2566
+- idtype: pmcid
+  value: PMC11978463
+authors:
+- authtype: Author
+  name: Harting C
+- authtype: Author
+  name: Hehemann L
+- authtype: Author
+  name: Stetza L
+- authtype: Author
+  name: Kayser C
+epubdate: 2025 Apr 9
+fulljournalname: 'Proceedings of the Royal Society B: Biological Sciences'
+issue: '2044'
+pages: '20242566'
+pmclivedate: 2025/04/09
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Proc Biol Sci
+title: Respiration shapes response speed and accuracy with a systematic time lag
+uid: '11978463'
+volume: '292'

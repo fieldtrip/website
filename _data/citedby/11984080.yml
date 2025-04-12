@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '39952668'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0572-24.2024
+- idtype: pmcid
+  value: PMC11984080
+authors:
+- authtype: Author
+  name: Overton JA
+- authtype: Author
+  name: Moxon KA
+- authtype: Author
+  name: Stickle MP
+- authtype: Author
+  name: Peters LM
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Hsu M
+- authtype: Author
+  name: Saez I
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: e0572242024
+pmclivedate: ''
+printpubdate: 2025 Apr 9
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: J Neurosci
+title: Distributed Intracranial Activity Underlying Human Decision-making Behavior
+uid: '11984080'
+volume: '45'

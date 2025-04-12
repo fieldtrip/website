@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '40195440'
+- idtype: doi
+  value: 10.1038/s41598-025-96240-y
+- idtype: pmcid
+  value: PMC11977004
+authors:
+- authtype: Author
+  name: Jap BA
+- authtype: Author
+  name: Hsu YY
+epubdate: 2025 Apr 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11847'
+pmclivedate: 2025/04/08
+printpubdate: ''
+pubdate: 2025 Apr 7
+sortdate: 2025/04/07 00:00
+source: Sci Rep
+title: An ERP study on verb bias and thematic role assignment in standard Indonesian
+uid: '11977004'
+volume: '15'

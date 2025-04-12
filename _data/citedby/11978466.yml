@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '40201225'
+- idtype: doi
+  value: 10.1117/1.NPh.12.2.025006
+- idtype: pmcid
+  value: PMC11978466
+authors:
+- authtype: Author
+  name: Rogers D
+- authtype: Author
+  name: O’Brien WJ
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Zimmermann B
+- authtype: Author
+  name: Grover S
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Gaona AK
+- authtype: Author
+  name: Duwadi S
+- authtype: Author
+  name: Anderson JE
+- authtype: Author
+  name: Carlton L
+- authtype: Author
+  name: Rahimi P
+- authtype: Author
+  name: Farzam PY
+- authtype: Author
+  name: von Lühmann A
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Boas DA
+- authtype: Author
+  name: Yücel MA
+epubdate: 2025 Apr 8
+fulljournalname: Neurophotonics
+issue: '2'
+pages: '025006'
+pmclivedate: 2025/04/08
+printpubdate: 2025 Apr
+pubdate: 2025 Apr 8
+sortdate: 2025/04/08 00:00
+source: Neurophotonics
+title: Co-localized optode-electrode design for multimodal functional near infrared
+  spectroscopy and electroencephalography
+uid: '11978466'
+volume: '12'

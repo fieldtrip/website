@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '40204693'
+- idtype: doi
+  value: 10.1038/s41467-025-58620-w
+- idtype: pmcid
+  value: PMC11982309
+authors:
+- authtype: Author
+  name: Cai J
+- authtype: Author
+  name: Hadjinicolaou AE
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Xia T
+- authtype: Author
+  name: Wang AF
+- authtype: Author
+  name: Rolston JD
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cash SS
+epubdate: 2025 Apr 9
+fulljournalname: Nature Communications
+issue: ''
+pages: '3376'
+pmclivedate: 2025/04/10
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Nat Commun
+title: Natural language processing models reveal neural dynamics of human conversation
+uid: '11982309'
+volume: '16'
