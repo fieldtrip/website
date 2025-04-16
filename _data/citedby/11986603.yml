@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40226202'
+- idtype: doi
+  value: 10.1016/j.dib.2025.111467
+- idtype: pmcid
+  value: PMC11986603
+authors:
+- authtype: Author
+  name: Shikauchi Y
+- authtype: Author
+  name: Uehara K
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: Kitajo K
+epubdate: 2025 Mar 15
+fulljournalname: Data in Brief
+issue: ''
+pages: '111467'
+pmclivedate: 2025/04/11
+printpubdate: ''
+pubdate: 2025 Mar 15
+sortdate: 2025/03/15 00:00
+source: Data Brief
+title: Electroencephalographic responses before, during, and after upper limb paired
+  associative stimulation
+uid: '11986603'
+volume: '60'
