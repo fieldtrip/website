@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40101105'
+- idtype: doi
+  value: 10.1111/nyas.15315
+- idtype: pmcid
+  value: PMC11998481
+authors:
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Pelofi C
+- authtype: Author
+  name: Guan X
+- authtype: Author
+  name: Watson E
+- authtype: Author
+  name: Wight L
+- authtype: Author
+  name: Allen S
+- authtype: Author
+  name: Mencke I
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Rimmele J
+epubdate: 2025 Mar 18
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: 120-135
+pmclivedate: 2025/04/16
+printpubdate: 2025 Apr
+pubdate: 2025 Mar 18
+sortdate: 2025/03/18 00:00
+source: Ann N Y Acad Sci
+title: 'Cortical and behavioral tracking of rhythm in music: Effects of pitch predictability,
+  enjoyment, and expertise'
+uid: '11998481'
+volume: '1546'

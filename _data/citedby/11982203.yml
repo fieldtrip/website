@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40204804'
+- idtype: doi
+  value: 10.1038/s41467-025-58781-8
+- idtype: pmcid
+  value: PMC11982203
+authors:
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Bullock L
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Neudorfer C
+- authtype: Author
+  name: Holt LL
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Mark Richardson R
+epubdate: 2025 Apr 9
+fulljournalname: Nature Communications
+issue: ''
+pages: '3357'
+pmclivedate: 2025/04/10
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Nat Commun
+title: Spike-phase coupling of subthalamic neurons to posterior perisylvian cortex
+  predicts speech sound accuracy
+uid: '11982203'
+volume: '16'

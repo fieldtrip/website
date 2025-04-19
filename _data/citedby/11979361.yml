@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40200796'
+- idtype: doi
+  value: 10.1002/hbm.70209
+- idtype: pmcid
+  value: PMC11979361
+authors:
+- authtype: Author
+  name: Coleman CR
+- authtype: Author
+  name: Shinozuka K
+- authtype: Author
+  name: Tromm R
+- authtype: Author
+  name: Dipasquale O
+- authtype: Author
+  name: Kaelen M
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: Barnett L
+- authtype: Author
+  name: Carhart‐Harris R
+epubdate: 2025 Apr 9
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: e70209
+pmclivedate: 2025/04/09
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Hum Brain Mapp
+title: The Role of the Dorsolateral Prefrontal Cortex in Ego Dissolution and Emotional
+  Arousal During the Psychedelic State
+uid: '11979361'
+volume: '46'

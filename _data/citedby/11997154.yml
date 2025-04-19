@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40229465'
+- idtype: doi
+  value: 10.1038/s42003-025-08011-0
+- idtype: pmcid
+  value: PMC11997154
+authors:
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Kaiser D
+epubdate: 2025 Apr 14
+fulljournalname: Communications Biology
+issue: ''
+pages: '576'
+pmclivedate: 2025/04/15
+printpubdate: ''
+pubdate: 2025 Apr 14
+sortdate: 2025/04/14 00:00
+source: Commun Biol
+title: Representational shifts from feedforward to feedback rhythms index phenomenological
+  integration in naturalistic vision
+uid: '11997154'
+volume: '8'

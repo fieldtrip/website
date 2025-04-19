@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '40234393'
+- idtype: doi
+  value: 10.1038/s41467-025-58683-9
+- idtype: pmcid
+  value: PMC12000325
+authors:
+- authtype: Author
+  name: Bertoni T
+- authtype: Author
+  name: Noel JP
+- authtype: Author
+  name: Bockbrader M
+- authtype: Author
+  name: Foglia C
+- authtype: Author
+  name: Colachis S
+- authtype: Author
+  name: Orset B
+- authtype: Author
+  name: Evans N
+- authtype: Author
+  name: Herbelin B
+- authtype: Author
+  name: Rezai A
+- authtype: Author
+  name: Panzeri S
+- authtype: Author
+  name: Becchio C
+- authtype: Author
+  name: Blanke O
+- authtype: Author
+  name: Serino A
+epubdate: 2025 Apr 16
+fulljournalname: Nature Communications
+issue: ''
+pages: '3594'
+pmclivedate: 2025/04/16
+printpubdate: ''
+pubdate: 2025 Apr 16
+sortdate: 2025/04/16 00:00
+source: Nat Commun
+title: Pre-movement sensorimotor oscillations shape the sense of agency by gating
+  cortical connectivity
+uid: '12000325'
+volume: '16'

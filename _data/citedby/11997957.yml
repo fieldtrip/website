@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40242398'
+- idtype: doi
+  value: 10.1162/imag_a_00265
+- idtype: pmcid
+  value: PMC11997957
+authors:
+- authtype: Author
+  name: Hietala P
+- authtype: Author
+  name: Kurki I
+- authtype: Author
+  name: Hyvärinen A
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Henriksson L
+epubdate: 2024 Aug 12
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: 1-15
+pmclivedate: 2025/04/16
+printpubdate: ''
+pubdate: 2024 Aug 12
+sortdate: 2024/08/12 00:00
+source: Imaging Neurosci (Camb)
+title: Improving source estimation of retinotopic MEG responses by combining data
+  from multiple subjects
+uid: '11997957'
+volume: '2'

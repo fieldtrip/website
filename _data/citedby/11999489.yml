@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40235588'
+- idtype: doi
+  value: 10.1016/j.isci.2025.112171
+- idtype: pmcid
+  value: PMC11999489
+authors:
+- authtype: Author
+  name: Mishra A
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Espinal E
+- authtype: Author
+  name: Markowitz N
+- authtype: Author
+  name: Tostaeva G
+- authtype: Author
+  name: Freund E
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Bickel S
+epubdate: 2025 Mar 13
+fulljournalname: iScience
+issue: '4'
+pages: '112171'
+pmclivedate: 2025/04/15
+printpubdate: ''
+pubdate: 2025 Mar 13
+sortdate: 2025/03/13 00:00
+source: iScience
+title: Hippocampal and cortical high-frequency oscillations orchestrate human semantic
+  networks during word list memory
+uid: '11999489'
+volume: '28'

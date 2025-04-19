@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40206409'
+- idtype: doi
+  value: 10.3389/fnins.2025.1571972
+- idtype: pmcid
+  value: PMC11979279
+authors:
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Huang Q
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Gao S
+- authtype: Author
+  name: Mao X
+- authtype: Author
+  name: Li A
+epubdate: 2025 Mar 26
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1571972'
+pmclivedate: 2025/04/09
+printpubdate: ''
+pubdate: 2025 Mar 26
+sortdate: 2025/03/26 00:00
+source: Front Neurosci
+title: ERP-based evidence for the independent processing of structural and functional
+  action semantics
+uid: '11979279'
+volume: '19'

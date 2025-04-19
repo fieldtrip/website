@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40196759'
+- idtype: doi
+  value: 10.3389/fnint.2025.1553521
+- idtype: pmcid
+  value: PMC11973340
+authors:
+- authtype: Author
+  name: Jung DY
+- authtype: Author
+  name: Sahoo BC
+- authtype: Author
+  name: Snyder AC
+epubdate: 2025 Mar 24
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '1553521'
+pmclivedate: 2025/04/07
+printpubdate: ''
+pubdate: 2025 Mar 24
+sortdate: 2025/03/24 00:00
+source: Front Integr Neurosci
+title: Distractor anticipation during working memory is associated with theta and
+  beta oscillations across spatial scales
+uid: '11973340'
+volume: '19'
