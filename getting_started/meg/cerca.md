@@ -12,7 +12,7 @@ redirect_from:
 
 There are some differences which are relevant for processing Cerca data - and OPM data as a whole. One difference is how events or triggers are represented and detected. Another difference is in the procedure used to record the position of the OPM sensors relative to the head, which is relevant for topographic plotting and for the co-registration between MEG and MRI. Furthermore, Cerca OPM systems use either dual axis or triaxial systems, and so displaying data at a sensor-level requires some further considerations.
 
-The example data provided on the our [download server](https://download.fieldtriptoolbox.org/example/cerca/) includes a self-contained version of the data in the `.fif` format organized according to the [BIDS standard](https://www.bids-standard.org). This includes sensor locations that are already co-registered to a 3D digitization of the participant. An additional folder includes the raw files in the original `.cMEG` if you wish to develop a co-registration pipeline separately from what is provided. All files are detailed in the `README.txt`.
+The example data provided on the our [download server](https://download.fieldtriptoolbox.org/getting_started/cerca/) includes a self-contained version of the data in the `.fif` format organized according to the [BIDS standard](https://www.bids-standard.org). This includes sensor locations that are already co-registered to a 3D digitization of the participant. An additional folder includes the raw files in the original `.cMEG` if you wish to develop a co-registration pipeline separately from what is provided. All files are detailed in the `README.txt`.
 
 ## Read and visualize the continuous data
 
@@ -163,7 +163,7 @@ The `_HelmConfig.tsv` file specifies the channel names (based on the name of the
 
 ## Co-registration
 
-There is a dedicated tutorial elsewhere that deals with various ways to co-register the OPM sensors with the head and the anatomical MRI. In this demonstration, the .fif file already contains a digitization that the sensors have been co-registered to (using the dev2head transform `hdr.orig.dev_head_t`). However, the raw digitization files and CAD file for the helmet have also been provided on the [download server](https://download.fieldtriptoolbox.org/example/cerca/) (see README.txt). The co-registration of the sensors to the digitization was performed as described in Figure 2b in [Hill et al. 2020](https://doi.org/10.1016/j.neuroimage.2020.116995). 
+There is a dedicated tutorial elsewhere that deals with various ways to co-register the OPM sensors with the head and the anatomical MRI. In this demonstration, the .fif file already contains a digitization that the sensors have been co-registered to (using the dev2head transform `hdr.orig.dev_head_t`). However, the raw digitization files and CAD file for the helmet have also been provided on the [download server](https://download.fieldtriptoolbox.org/getting_started/cerca/) (see README.txt). The co-registration of the sensors to the digitization was performed as described in Figure 2b in [Hill et al. 2020](https://doi.org/10.1016/j.neuroimage.2020.116995).
 
 ## See also
 
