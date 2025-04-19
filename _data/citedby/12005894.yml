@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40194841'
+- idtype: doi
+  value: 10.1523/ENEURO.0390-24.2025
+- idtype: pmcid
+  value: PMC12005894
+authors:
+- authtype: Author
+  name: Pesci UG
+- authtype: Author
+  name: Moreau Q
+- authtype: Author
+  name: Era V
+- authtype: Author
+  name: Candidi M
+epubdate: 2025 Apr 16
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0390-24.2025
+pmclivedate: 2025/04/17
+printpubdate: ''
+pubdate: 2025 Apr 16
+sortdate: 2025/04/16 00:00
+source: eNeuro
+title: The Bodily Appearance of a Virtual Partner Affects the Activity of the Action
+  Observation and Action Monitoring Systems in a Minimally Interactive Task
+uid: '12005894'
+volume: '12'
