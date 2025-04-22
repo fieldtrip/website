@@ -48,7 +48,31 @@ The lectures and hands-on sessions will be presented by [Robert Oostenveld](http
 
 ## Program
 
-More information will follow.
+Day-by-Day Overview:
+
+### Monday – Introduction & EEG Basics
+
+The week begins with orientation and practical information, followed by foundational topics: what EEG is, its advantages over other neuroimaging techniques, and its applications in clinical, developmental, and cognitive research. Special emphasis is placed on African-specific challenges, such as dealing with natural hairstyles and electrode types. Sessions also address ethics, informed consent, and experimental design essentials, including noise, artifacts, attention, and stimulus control.
+
+### Tuesday – Experimental Design & EEG Recording
+
+Hands-on sessions guide participants through installing stimulus software (e.g., PsychoPy), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
+
+### Wednesday – EEG Data & Analysis Tools
+
+Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. A comparison of clinical vs. cognitive EEG applications is provided, along with an introduction to analyzing event-related potentials (ERP), followed by practical exercises.
+
+### Thursday – Frequency & Time-Frequency Analysis
+
+Participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, group comparisons), and are introduced to time-frequency and connectivity analysis—highlighting both their promise and complexity. These topics include short lectures with hands-on practice.
+
+### Friday – Statistical & Advanced Analyses
+
+Topics include experimental design types, statistical approaches (e.g., mixed models, Bayesian methods), and multiple comparison correction. Advanced methods such as source reconstruction, BCI applications, and neurofeedback are discussed, with an emphasis on high-density EEG setups (32/64 channels).
+
+### Saturday – Wrap-up & Additional Practice
+
+The final day is flexible, used for review, additional practice, or wrapping up unfinished work. Reflections on the week’s learning and experiences conclude the course.
 
 ## How to prepare
 
