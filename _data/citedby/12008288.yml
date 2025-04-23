@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40251353'
+- idtype: doi
+  value: 10.1038/s42003-025-08078-9
+- idtype: pmcid
+  value: PMC12008288
+authors:
+- authtype: Author
+  name: Singleton SP
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Luppi AI
+- authtype: Author
+  name: Eckernäs E
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Kuceyeski A
+epubdate: 2025 Apr 18
+fulljournalname: Communications Biology
+issue: ''
+pages: '631'
+pmclivedate: 2025/04/19
+printpubdate: ''
+pubdate: 2025 Apr 18
+sortdate: 2025/04/18 00:00
+source: Commun Biol
+title: Network control energy reductions under DMT relate to serotonin receptors,
+  signal diversity, and subjective experience
+uid: '12008288'
+volume: '8'

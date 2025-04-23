@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40246854'
+- idtype: doi
+  value: 10.1038/s41597-025-04995-w
+- idtype: pmcid
+  value: PMC12006373
+authors:
+- authtype: Author
+  name: He B
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Qin T
+- authtype: Author
+  name: Shi B
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Dong W
+epubdate: 2025 Apr 17
+fulljournalname: Scientific Data
+issue: ''
+pages: '651'
+pmclivedate: 2025/04/18
+printpubdate: ''
+pubdate: 2025 Apr 17
+sortdate: 2025/04/17 00:00
+source: Sci Data
+title: A simultaneous EEG and eye-tracking dataset for remote sensing object detection
+uid: '12006373'
+volume: '12'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40196535'
+- idtype: doi
+  value: 10.1101/2025.03.21.644601
+- idtype: pmcid
+  value: PMC11974733
+authors:
+- authtype: Author
+  name: Ponasso GN
+- authtype: Author
+  name: Drumm DA
+- authtype: Author
+  name: Wang A
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Makaroff SN
+- authtype: Author
+  name: Raij T
+epubdate: 2025 Mar 24
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.03.21.644601
+pmclivedate: 2025/04/08
+printpubdate: ''
+pubdate: 2025 Mar 24
+sortdate: 2025/03/24 00:00
+source: bioRxiv
+title: High-Definition MEG Source Estimation using the Reciprocal Boundary Element
+  Fast Multipole Method
+uid: '11974733'
+volume: ''

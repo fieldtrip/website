@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/nc/niaf007
+- idtype: pmcid
+  value: PMC12010161
+authors:
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Sanders JW
+- authtype: Author
+  name: Reydellet D
+- authtype: Author
+  name: Barba T
+- authtype: Author
+  name: Luan LX
+- authtype: Author
+  name: Angona ÓS
+- authtype: Author
+  name: Ona G
+- authtype: Author
+  name: Allocca G
+- authtype: Author
+  name: Smith CH
+- authtype: Author
+  name: Daily ZG
+- authtype: Author
+  name: Mason NL
+- authtype: Author
+  name: Kloft-Heller L
+- authtype: Author
+  name: Kuchar M
+- authtype: Author
+  name: Janeckova L
+- authtype: Author
+  name: Palenicek T
+- authtype: Author
+  name: Erritzoe D
+- authtype: Author
+  name: Ramaekers JG
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Uthaug MV
+epubdate: 2025 Apr 19
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niaf007
+pmclivedate: 2025/04/21
+printpubdate: ''
+pubdate: 2025 Apr 19
+sortdate: 2025/04/19 00:00
+source: Neurosci Conscious
+title: Exploring 5-MeO-DMT as a pharmacological model for deconstructed consciousness
+uid: '12010161'
+volume: '2025'

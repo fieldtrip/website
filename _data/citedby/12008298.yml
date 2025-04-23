@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40251277'
+- idtype: doi
+  value: 10.1038/s41598-025-96897-5
+- idtype: pmcid
+  value: PMC12008298
+authors:
+- authtype: Author
+  name: Quivira-Lopesino A
+- authtype: Author
+  name: Sevilla-García M
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Pusil S
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Fiedler P
+- authtype: Author
+  name: Cebolla AM
+- authtype: Author
+  name: Cheron G
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Maestu F
+epubdate: 2025 Apr 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13399'
+pmclivedate: 2025/04/19
+printpubdate: ''
+pubdate: 2025 Apr 18
+sortdate: 2025/04/18 00:00
+source: Sci Rep
+title: 'Changes of EEG beta band power and functional connectivity during spaceflight:
+  a retrospective study'
+uid: '12008298'
+volume: '15'
