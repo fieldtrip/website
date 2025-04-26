@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40270564'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1574836
+- idtype: pmcid
+  value: PMC12014595
+authors:
+- authtype: Author
+  name: Aparicio-Terrés R
+- authtype: Author
+  name: López-Mochales S
+- authtype: Author
+  name: Díaz-Andreu M
+- authtype: Author
+  name: Escera C
+epubdate: 2025 Apr 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1574836'
+pmclivedate: 2025/04/23
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Front Hum Neurosci
+title: The strength of neural entrainment to electronic music correlates with proxies
+  of altered states of consciousness
+uid: '12014595'
+volume: '19'

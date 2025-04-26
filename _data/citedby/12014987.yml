@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40080252'
+- idtype: doi
+  value: 10.1007/s12264-025-01375-7
+- idtype: pmcid
+  value: PMC12014987
+authors:
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Fan Y
+- authtype: Author
+  name: Jia X
+- authtype: Author
+  name: Fan F
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Zou Q
+- authtype: Author
+  name: Chen B
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Lv Y
+epubdate: 2025 Mar 13
+fulljournalname: Neuroscience Bulletin
+issue: '5'
+pages: 837-852
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2025 Mar 13
+sortdate: 2025/03/13 00:00
+source: Neurosci Bull
+title: 'The Supplementary Motor Area as a Flexible Hub Mediating Behavioral and Neuroplastic
+  Changes in Motor Sequence Learning: A TMS and TMS-EEG Study'
+uid: '12014987'
+volume: '41'

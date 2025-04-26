@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39952670'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0581-24.2025
+- idtype: pmcid
+  value: PMC12019116
+authors:
+- authtype: Author
+  name: Sabados A
+- authtype: Author
+  name: Kim C
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Bergherr E
+- authtype: Author
+  name: Buchfelder M
+- authtype: Author
+  name: Schnell O
+- authtype: Author
+  name: Müller-Voggel N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: e0581242025
+pmclivedate: ''
+printpubdate: 2025 Apr 23
+pubdate: 2025 Apr 23
+sortdate: 2025/04/23 00:00
+source: J Neurosci
+title: Reducing Tinnitus via Inhibitory Influence of the Sensorimotor System on Auditory
+  Cortical Activity
+uid: '12019116'
+volume: '45'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40259923'
+- idtype: doi
+  value: 10.1016/j.softx.2025.102076
+- idtype: pmcid
+  value: PMC12011354
+- idtype: MID
+  value: NIHMS2057988
+authors:
+- authtype: Author
+  name: Fitzroy AB
+- authtype: Author
+  name: Spencer RM
+epubdate: 2025 Feb 1
+fulljournalname: SoftwareX
+issue: ''
+pages: '102076'
+pmclivedate: 2025/04/21
+printpubdate: 2025 Feb
+pubdate: 2025 Feb 1
+sortdate: 2025/02/01 00:00
+source: SoftwareX
+title: 'PSGpower: A MATLAB toolbox for analyzing sleep EEG data'
+uid: '12011354'
+volume: '29'
