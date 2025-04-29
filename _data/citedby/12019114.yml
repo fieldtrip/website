@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40068870'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1675-24.2025
+- idtype: pmcid
+  value: PMC12019114
+authors:
+- authtype: Author
+  name: Ofir N
+- authtype: Author
+  name: Landau AN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: e1675242025
+pmclivedate: 2025/04/25
+printpubdate: 2025 Apr 23
+pubdate: 2025 Apr 23
+sortdate: 2025/04/23 00:00
+source: J Neurosci
+title: Motor Preparation Tracks Decision Boundary Crossing Rather Than Accumulated
+  Evidence in Temporal Decision-Making
+uid: '12019114'
+volume: '45'

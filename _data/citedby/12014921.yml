@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40040314'
+- idtype: doi
+  value: 10.1002/epi4.13128
+- idtype: pmcid
+  value: PMC12014921
+authors:
+- authtype: Author
+  name: Segovia‐Oropeza M
+- authtype: Author
+  name: Rauf EH
+- authtype: Author
+  name: Heide E
+- authtype: Author
+  name: Focke NK
+epubdate: 2025 Mar 4
+fulljournalname: Epilepsia Open
+issue: '2'
+pages: 427-440
+pmclivedate: 2025/04/24
+printpubdate: ''
+pubdate: 2025 Mar 4
+sortdate: 2025/03/04 00:00
+source: Epilepsia Open
+title: Quantitative EEG signatures in patients with and without epilepsy development
+  after a first seizure
+uid: '12014921'
+volume: '10'

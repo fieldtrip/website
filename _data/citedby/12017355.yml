@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39933999'
+- idtype: doi
+  value: 10.1017/S0033291725000042
+- idtype: pmcid
+  value: PMC12017355
+authors:
+- authtype: Author
+  name: Mareckova K
+- authtype: Author
+  name: Trbusek F
+- authtype: Author
+  name: Marecek R
+- authtype: Author
+  name: Chladek J
+- authtype: Author
+  name: Koscova Z
+- authtype: Author
+  name: Plesinger F
+- authtype: Author
+  name: Andrysková L
+- authtype: Author
+  name: Brazdil M
+- authtype: Author
+  name: Nikolova YS
+epubdate: 2025 Feb 12
+fulljournalname: Psychological Medicine
+issue: ''
+pages: e39
+pmclivedate: 2025/04/24
+printpubdate: ''
+pubdate: 2025 Feb 12
+sortdate: 2025/02/12 00:00
+source: Psychol Med
+title: 'Maternal depression during the perinatal period and its relationship with
+  emotion regulation in young adulthood: An fMRI study in a prenatal birth cohort'
+uid: '12017355'
+volume: '55'

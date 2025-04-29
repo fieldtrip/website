@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40196642'
+- idtype: doi
+  value: 10.1101/2025.03.27.645661
+- idtype: pmcid
+  value: PMC11974936
+authors:
+- authtype: Author
+  name: Parto-Dezfouli M
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Psarou E
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Krishna BS
+- authtype: Author
+  name: Fries P
+epubdate: 2025 Apr 2
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.03.27.645661
+pmclivedate: 2025/04/08
+printpubdate: ''
+pubdate: 2025 Apr 2
+sortdate: 2025/04/02 00:00
+source: bioRxiv
+title: On variability in local field potentials
+uid: '11974936'
+volume: ''
