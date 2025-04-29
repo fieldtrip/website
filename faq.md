@@ -18,6 +18,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/trialinfo_trl)
 - [Why should I set continuous to yes for CTF data?](/faq/continuous)
+- [Why should I start with rereferencing for Biosemi EEG data?](/faq/biosemi_reference)
 
 ### Specific data formats
 
