@@ -46,6 +46,9 @@
 - title:  Do I need to resample my data, and if so, how is this to be done?
   link:  /faq/preproc/artifact/resampling_lowpassfilter
 
+- title:  Why should I start with rereferencing for Biosemi EEG data?
+  link:  /faq/preproc/biosemi_reference
+
 - title:  Why should I set continuous to yes for CTF data?
   link:  /faq/preproc/continuous
 
