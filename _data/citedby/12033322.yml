@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '40287449'
+- idtype: doi
+  value: 10.1038/s41540-025-00516-y
+- idtype: pmcid
+  value: PMC12033322
+authors:
+- authtype: Author
+  name: Angiolelli M
+- authtype: Author
+  name: Depannemaecker D
+- authtype: Author
+  name: Agouram H
+- authtype: Author
+  name: Régis J
+- authtype: Author
+  name: Carron R
+- authtype: Author
+  name: Woodman M
+- authtype: Author
+  name: Chiodo L
+- authtype: Author
+  name: Triebkorn P
+- authtype: Author
+  name: Ziaeemehr A
+- authtype: Author
+  name: Hashemi M
+- authtype: Author
+  name: Eusebio A
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2025 Apr 26
+fulljournalname: NPJ Systems Biology and Applications
+issue: ''
+pages: '40'
+pmclivedate: 2025/04/27
+printpubdate: ''
+pubdate: 2025 Apr 26
+sortdate: 2025/04/26 00:00
+source: NPJ Syst Biol Appl
+title: The Virtual Parkinsonian patient
+uid: '12033322'
+volume: '11'

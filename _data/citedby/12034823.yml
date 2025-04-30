@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40289162'
+- idtype: doi
+  value: 10.1038/s41598-025-98865-5
+- idtype: pmcid
+  value: PMC12034823
+authors:
+- authtype: Author
+  name: Fuhrer J
+- authtype: Author
+  name: Glette K
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Bekinschtein T
+- authtype: Author
+  name: Kochen S
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Tørresen J
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Blenkmann A
+epubdate: 2025 Apr 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14725'
+pmclivedate: 2025/04/28
+printpubdate: ''
+pubdate: 2025 Apr 27
+sortdate: 2025/04/27 00:00
+source: Sci Rep
+title: Direct brain recordings reveal implicit encoding of structure in random auditory
+  streams
+uid: '12034823'
+volume: '15'

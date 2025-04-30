@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39197121'
+- idtype: doi
+  value: 10.1093/arclin/acae066
+- idtype: pmcid
+  value: PMC12032606
+authors:
+- authtype: Author
+  name: Melara RD
+- authtype: Author
+  name: Root JC
+- authtype: Author
+  name: Edelman JA
+- authtype: Author
+  name: Estelle MC
+- authtype: Author
+  name: Mohr I
+- authtype: Author
+  name: Ahles TA
+epubdate: 2024 Aug 29
+fulljournalname: Archives of Clinical Neuropsychology
+issue: '1'
+pages: 52-62
+pmclivedate: 2025/04/26
+printpubdate: ''
+pubdate: 2024 Aug 29
+sortdate: 2024/08/29 00:00
+source: Arch Clin Neuropsychol
+title: 'Effects of Breast Cancer Treatment on Neural Noise: a Longitudinal Design'
+uid: '12032606'
+volume: '40'

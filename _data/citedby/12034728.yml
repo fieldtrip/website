@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2025.1467249
+- idtype: pmcid
+  value: PMC12034728
+authors:
+- authtype: Author
+  name: Morucci P
+- authtype: Author
+  name: Giannelli F
+- authtype: Author
+  name: Richter CG
+- authtype: Author
+  name: Molinaro N
+epubdate: 2025 Apr 14
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1467249'
+pmclivedate: 2025/04/28
+printpubdate: ''
+pubdate: 2025 Apr 14
+sortdate: 2025/04/14 00:00
+source: Front Neurosci
+title: Spoken words affect visual object recognition via the modulation of alpha and
+  beta oscillations
+uid: '12034728'
+volume: '19'

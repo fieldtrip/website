@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40292419'
+- idtype: doi
+  value: 10.1016/j.ijchp.2025.100569
+- idtype: pmcid
+  value: PMC12033912
+authors:
+- authtype: Author
+  name: Roy S
+- authtype: Author
+  name: Fan Y
+- authtype: Author
+  name: Mosayebi-Samani M
+- authtype: Author
+  name: Claus M
+- authtype: Author
+  name: Yavari F
+- authtype: Author
+  name: Kleinsorge T
+- authtype: Author
+  name: Nitsche MA
+epubdate: 2025 Apr 18
+fulljournalname: 'International Journal of Clinical and Health Psychology : IJCHP'
+issue: '2'
+pages: '100569'
+pmclivedate: 2025/04/27
+printpubdate: 2025 Apr-Jun
+pubdate: 2025 Apr 18
+sortdate: 2025/04/18 00:00
+source: Int J Clin Health Psychol
+title: 'Modulating prefrontal cortex activity to alleviate stress-induced working
+  memory deficits: A transcranial direct current (tDCS) study'
+uid: '12033912'
+volume: '25'
