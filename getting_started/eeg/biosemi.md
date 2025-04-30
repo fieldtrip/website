@@ -79,58 +79,14 @@ To find out what the trigger codes are in your BDF file, you can use the followi
 
     plot([event.sample], [event.value], '.')
 
-## The BDF fileformat
-
-{% include markup/red %}
-The documentation below is only for reference. To work with this data format you can simply use the standard reading functions **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**.
-{% include markup/end %}
-
-BDF is a 24 bit version of the popular 16 bit EDF format, which was used on previous BioSemi models with 16 bit converters. BDF is almost the same as EDF Although initially the EDF format was mainly used in sleep research, BDF/EDF is now quickly gaining popularity in other EEG applications, ECG body surface potential mapping as well as EMG.
-
-The EDF format was designed and published in 1992 by Bob Kemp, Alpo Värri, Agostinho C. Rosa, Kim D. Nielsen and John Gade as "A simple format for exchange of digitized polygraphic recordings" in Electroencephalography and Clinical Neurophysiology, 82 (1992) 391-393. The original EDF specifications can be found here
-
-Each BDF/EDF file starts with a header followed by the number of Data records indicated in the header.
-
-| Length in bytes | BDF Header                                           | EDF Header              | Description                                                                          |
-| --------------- | ---------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------ |
-| 8 bytes         | Byte 1: "255" (non ascii)                            | Byte 1: "0" (ASCII)     | Identification code                                                                  |
-| :::             | Bytes 2-8 : "BIOSEMI" (ASCII)                        | Bytes 2-8 : " "(ASCII)  | :::                                                                                  |
-| 80 bytes        | User text input (ASCII)                              |                         | Local subject identification                                                         |
-| 80 bytes        | User text input (ASCII)                              |                         | Local recording identification                                                       |
-| 8 bytes         | dd.mm.yy (ASCII)                                     |                         | Startdate of recording                                                               |
-| 8 bytes         | hh.mm.ss (ASCII)                                     |                         | Starttime of recording                                                               |
-| 8 bytes         | (ASCII)                                              |                         | Number of bytes in header record                                                     |
-| 44 bytes        | "24BIT" (ASCII)                                      | "BIOSEMI" (ASCII)       | Version of data format                                                               |
-| 8 bytes         | (ASCII)                                              |                         | Number of data records "-1" if unknown                                               |
-| 8 bytes         | e.g.: "1" (ASCII)                                    |                         | Duration of a data record, in seconds                                                |
-| 4 bytes         | e.g.: "257" or "128"(ASCII)                          |                         | Number of channels (N) in data record                                                |
-| N x 16 bytes    | e.g.: "Fp1", "Fpz", "Fp2", etc (ASCII)               |                         | Labels of the channels                                                               |
-| N x 80 bytes    | e.g.: "active electrode", "respiration belt" (ASCII) |                         | Transducer type                                                                      |
-| N x 8 bytes     | e.g.: "uV", "Ohm" (ASCII)                            |                         | Physical dimension of channels                                                       |
-| N x 8 bytes     | e.g.: "-262144" (ASCII)                              | e.g.: "-32768" (ASCII)  | Physical minimum in units of physical dimension                                      |
-| N x 8 bytes     | e.g.: "262143" (ASCII)                               | e.g.: "32767" (ASCII)   | Physical maximum in units of physical dimension                                      |
-| N x 8 bytes     | e.g.: "-8388608" (ASCII)                             | e.g.: "-32768" (ASCII)  | Digital minimum                                                                      |
-| N x 8 bytes     | e.g.: "8388607" (ASCII)                              | e.g.: "32767" (ASCII)   | Digital maximum                                                                      |
-| N x 80 bytes    | e.g.: "HP:DC; LP:410"                                | e.g.: "HP:0,16; LP:500" | Prefiltering                                                                         |
-| N x 8 bytes     | For example: "2048" (ASCII)                          |                         | Number of samples in each data record (Sample-rate if Duration of data record = "1") |
-| N x 32 bytes    | (ASCII)                                              |                         | Reserved                                                                             |
-
-**Bold Text**
-Number of samples in each data record
-(Sample-rate if Duration of data record = "1")
-N x 32 bytes  
-(ASCII)
-
-{% include markup/skyblue %}
-Total header length (for BDF and EDF) is: {(N+1)\*256} bytes, where N is number of channels (including the status channel).
-
-The "gain" of a specific channel can be calculated by: (Physical max - Physical min) / (Digital max - Digital min). The result is the LSB value in the specified Physical dimension of channels. (31,25nV / 1uV in the BDF/EDF example Header from above).
-
-The last 10 fields are defined for each fields separately. Each channel can be different.
-{% include markup/end %}
-
-{% include image src="/assets/img/getting_started/biosemi/file_format_bdf.png" %}
-
 ## See also
+
+The BDF file format is documented on the [Biosemi website](https://www.biosemi.com/faq/file_format.htm).
+
+The BDF+ file format is not used by the Biosemi acquisition software, but you can find its documentation [here](https://www.teuniz.net/edfbrowser/bdfplus%20format%20description.html) for reference.
+
+The EDF and EDF+ file formats are documented [here](https://www.edfplus.info).
+
+Other pages on this website that relate to Biosemi:
 
 {% include seealso tag="biosemi" %}
