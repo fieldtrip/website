@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40310881'
+- idtype: doi
+  value: 10.7554/eLife.97900
+- idtype: pmcid
+  value: PMC12045619
+authors:
+- authtype: Author
+  name: Noorman S
+- authtype: Author
+  name: Stein T
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: van Gaal S
+epubdate: 2025 May 1
+fulljournalname: eLife
+issue: ''
+pages: RP97900
+pmclivedate: 2025/05/01
+printpubdate: ''
+pubdate: 2025 May 1
+sortdate: 2025/05/01 00:00
+source: eLife
+title: Perceptual and attentional impairments of conscious access involve distinct
+  neural mechanisms despite equal task performance
+uid: '12045619'
+volume: '13'

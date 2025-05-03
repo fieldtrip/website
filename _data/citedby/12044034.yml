@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40101962'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1740-24.2025
+- idtype: pmcid
+  value: PMC12044034
+authors:
+- authtype: Author
+  name: Landron T
+- authtype: Author
+  name: Lopez-Persem A
+- authtype: Author
+  name: Domenech P
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Rheims S
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Bastin J
+- authtype: Author
+  name: Pessiglione M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: e1740242025
+pmclivedate: ''
+printpubdate: 2025 Apr 30
+pubdate: 2025 Apr 30
+sortdate: 2025/04/30 00:00
+source: J Neurosci
+title: 'Dissociation of Value and Confidence Signals in the Orbitofrontal Cortex during
+  Decision-Making: An Intracerebral Electrophysiology Study in Humans'
+uid: '12044034'
+volume: '45'

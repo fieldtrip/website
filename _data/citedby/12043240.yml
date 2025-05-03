@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40233091'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1012934
+- idtype: pmcid
+  value: PMC12043240
+authors:
+- authtype: Author
+  name: Lorenz GM
+- authtype: Author
+  name: Engel NM
+- authtype: Author
+  name: Celotto M
+- authtype: Author
+  name: Koçillari L
+- authtype: Author
+  name: Curreli S
+- authtype: Author
+  name: Fellin T
+- authtype: Author
+  name: Panzeri S
+epubdate: 2025 Apr 15
+fulljournalname: PLOS Computational Biology
+issue: '4'
+pages: e1012934
+pmclivedate: 2025/04/30
+printpubdate: ''
+pubdate: 2025 Apr 15
+sortdate: 2025/04/15 00:00
+source: PLoS Comput Biol
+title: 'MINT: A toolbox for the analysis of multivariate neural information coding
+  and transmission'
+uid: '12043240'
+volume: '21'
