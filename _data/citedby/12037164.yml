@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40228866'
+- idtype: doi
+  value: 10.1523/ENEURO.0055-25.2025
+- idtype: pmcid
+  value: PMC12037164
+authors:
+- authtype: Author
+  name: Benz KR
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Suess N
+- authtype: Author
+  name: Gehmacher Q
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Schmidt F
+- authtype: Author
+  name: Herzog G
+- authtype: Author
+  name: Rösch S
+- authtype: Author
+  name: Weisz N
+epubdate: 2025 Apr 25
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0055-25.2025
+pmclivedate: 2025/04/28
+printpubdate: ''
+pubdate: 2025 Apr 25
+sortdate: 2025/04/25 00:00
+source: eNeuro
+title: Eye Movements in Silent Visual Speech Track Unheard Acoustic Signals and Relate
+  to Hearing Experience
+uid: '12037164'
+volume: '12'
