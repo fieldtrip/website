@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1298/ptr.R0035
+- idtype: pmcid
+  value: PMC12047044
+authors:
+- authtype: Author
+  name: SASAKI R
+epubdate: 2025 Mar 10
+fulljournalname: Physical Therapy Research
+issue: '1'
+pages: 1-8
+pmclivedate: 2025/05/03
+printpubdate: '2025'
+pubdate: 2025 Mar 10
+sortdate: 2025/03/10 00:00
+source: Phys Ther Res
+title: 'Modulating Cortico-cortical Networks with Transcranial Alternating Current
+  Stimulation: A Minireview'
+uid: '12047044'
+volume: '28'
