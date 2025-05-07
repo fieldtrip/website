@@ -16,7 +16,7 @@ redirect_from:
 
 In this tutorial we will use SimNIBS to solve the forward problem in EEG for a specific subject. The end result is a matrix (often called the leadfield or gain matrix) which maps source activations to sensor readings. The procedure consists of four steps:
 
-- Generate a physical model of the head. We rely on one (or two) subject-specific MR image(s) for this.
+- Generate a geometrical model of the head. We rely on one (or two) subject-specific MR image(s) for this.
 - Convert electrode locations to SimNIBS readable format.
 - Calculate a TDCS (transcranial direct current stimulation) leadfield matrix. (This is known as the reciprocal approach.)
 - Calculate the final EEG leadfield matrix.
@@ -27,7 +27,9 @@ Note that we have used SimNIBS 4.0.1 for this tutorial.
 
 ### Preparation
 
-We will need `Subject01.mri` which you can get [here](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/). For the remainder of this tutorial we will assume that this file is present *in the current working directory* (to which all paths mentioned here are relative). Let us start by converting the MR image to the RAS coordinate system (it is initially CTF) and save it in a standard NIfTI format that can be read by SimNIBS. (If your image is already in NIfTI format, this should not be necessary.)
+We will need `Subject01.mri` which you can get [here](https://download.fieldtriptoolbox.org/getting_started/simnibs/). For the remainder of this tutorial we will assume that this file is located *in the present working directory* to which all paths mentioned here are relative.
+
+Let us start by converting the MR image to the RAS coordinate system (it is initially CTF) and save it in a standard NIfTI format that can be read by SimNIBS. If your image is already in NIfTI format, this should not be necessary.
 
     % matlab
     ft_defaults;
@@ -62,6 +64,62 @@ _Figure. Segmentation (borders) overlaid on the T1-weighted image. This MR image
 
 _Figure. Different views of the headmodel showing edges projected on a slice (middle) and the full tetrahedral elements (bottom)._
 
+### Reading the segmentation and/or mesh into FieldTrip
+
+To construct the geometrical model of the head, SimNIBS has created a segmentation of the anatomical MRI. Based on that meshes of the surfaces that describe the boundaries between the tissue types are made, and together these are used to make a tetrahedral mesh that is smooth at the boundaries. We can read the result of these respective steps and - if we would want - continue the remainder of the pipeline in FieldTrip.
+
+    % matlab
+    simnibs_t1 = ft_read_mri('m2m_Subject01/T1.nii.gz');
+    
+    cfg = [];
+    cfg.anaparameter = 'anatomy'; % not strictly needed, this is the default
+    ft_sourceplot(cfg, simnibs_t1);
+
+    % when available, we could also read the coregistered T2 
+    % simnibs_t2 = ft_read_mri('m2m_Subject01/T2_reg.nii.gz');
+    % 
+    % cfg = [];
+    % cfg.funparameter = 'anatomy';
+    % ft_sourceplot(cfg, simnibs_t2);
+
+    % this not only reads the numbers, but also the labels from the final_tissues_LUT.txt file
+    simnibs_seg = ft_read_atlas('m2m_Subject01/final_tissues.nii.gz')    
+
+    cfg = [];
+    cfg.anaparameter = 'anatomy';   % from the T1
+    cfg.funparameter = 'tissue';    % from the segmentation
+    cfg.funcolormap = rand(10,3);   % we have 9 tissues plus air, so we need 10 unique colors
+    ft_sourceplot(cfg, simnibs_seg, simnibs_t1);
+
+    % we now read the tetrahedral volumetric mesh and the triangular surface/boundary meshes
+    simnibs_mesh = ft_read_headshape('m2m_Subject01/Subject01.msh', 'meshtype', 'tet');
+    simnibs_boundaries = ft_read_headshape('m2m_Subject01/Subject01.msh', 'meshtype', 'tri');
+
+    % plot the tetragedral mesh
+    figure
+    ft_plot_mesh(simnibs_mesh)
+
+The default is to only plot the surface of the mesh. You can set the `surfaceonly` option to 'no' and specify `facealpha` as 0.5, then you can also see all the edges of the tetaheders inside the head.
+
+We can also plot the triangular surfaces that describe the boundaries between the tissue types. These were used to make the tetrahedral mesh smooth along these boundaries. Note that these boundaries are not suited for a BEM model, as they are not topoplogically consistent with the BEM implementation which expects non-intersecting nested meshes.
+
+    figure
+    ft_plot_mesh(simnibs_boundaries, 'facealpha', 0.2, 'facecolor', 'skin', 'edgecolor', [0.5 0.5 0.5])
+
+#### Making an alternative segmentation
+
+You can also use **[ft_prepare_mesh](/reference/ft_prepare_mesh)** to make a tetrahedral or hexahedral mesh on basis of the SimNIBS segmentation.
+
+    cfg = [];
+    cfg.method = 'tetrahedral';
+    mesh_tet = ft_prepare_mesh(cfg, simnibs_seg);
+
+or
+
+    cfg = [];
+    cfg.method = 'hexahedral';
+    mesh_hex = ft_prepare_mesh(cfg, simnibs_seg);
+
 ### Converting EEG electrode locations to SimNIBS readable format
 
 Next we need to prepare the electrodes. This means (1) aligning them with the MR image and (2) converting the result to a format which SimNIBS can read. We use the same template montage as is used in the above-mentioned FEM tutorial.
@@ -89,15 +147,15 @@ which should output something like
 
     warping electrodes to average template... mean distance prior to warping 19.449876, after warping 4.452889
     the call to "ft_electroderealign" took 1 seconds and required the additional allocation of an estimated 1 MB
-              chanpos: [97×3 double]
-             chantype: {97×1 cell}
-             chanunit: {97×1 cell}
-              elecpos: [97×3 double]
+              chanpos: [97x3 double]
+             chantype: {97x1 cell}
+             chanunit: {97x1 cell}
+              elecpos: [97x3 double]
         globalrescale: [1.2003 -4.7868 10.2257 -2.9017 1.1005 2.3206 0.8726]
-                label: {97×1 cell}
+                label: {97x1 cell}
                  type: 'eeg1010'
                  unit: 'mm'
-                  cfg: [1×1 struct]
+                  cfg: [1x1 struct]
 
 We can check the coregistration by loading the head mesh and plotting it together with the electrodes
 
@@ -173,11 +231,11 @@ and see what they contain
 
     struct with fields:
 
-                    pos: [20000×3 double]
-                 inside: [20000×1 logical]
+                    pos: [20000x3 double]
+                 inside: [20000x1 logical]
                    unit: 'mm'
-              leadfield: {1×20000 cell}
-                  label: {94×1 cell}
+              leadfield: {1x20000 cell}
+                  label: {94x1 cell}
         leadfielddimord: '{pos}_chan_ori'
                     cfg: 'Created by SimNIBS 4.0.1'
 
@@ -186,13 +244,13 @@ and see what they contain
     src =
 
     struct with fields:
-                        pos: [20000×3 double]
-                        tri: [39992×3 int32]
+                        pos: [20000x3 double]
+                        tri: [39992x3 int32]
                        unit: 'mm'
-                     inside: [20000×1 logical]
-             brainstructure: [1×20000 int64]
+                     inside: [20000x1 logical]
+             brainstructure: [1x20000 int64]
         brainstructurelabel: {'CORTEX_LEFT'  'CORTEX_RIGHT'}
-                    normals: [20000×3 double]
+                    normals: [20000x3 double]
 
 You should be able to use `fwd` as if it had been obtained from `ft_prepare_leadfield` and `src` as if obtained from `ft_prepare_sourcemodel` (with `method = 'basedoncortex'`), e.g., something like
 
