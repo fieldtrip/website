@@ -4606,7 +4606,6 @@ Sporns
 Spotify
 spreadplot
 Springer
-Springet
 sprintf
 spurrious
 sqd

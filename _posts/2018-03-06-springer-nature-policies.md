@@ -1,5 +1,5 @@
 ---
-title: 6 March 2018 - Springet Nature policies
+title: 6 March 2018 - Springer Nature policies
 category: news
 ---
 
