@@ -99,9 +99,9 @@ To construct the geometrical model of the head, SimNIBS has created a segmentati
     figure
     ft_plot_mesh(simnibs_mesh)
 
-The default is to only plot the surface of the mesh. You can set the `surfaceonly` option to 'no' and specify `facealpha` as 0.5, then you can also see all the edges of the tetaheders inside the head.
+The default is to only plot the surface of the mesh. You can set the `surfaceonly` option to 'no' and specify `facealpha` as 0.5, then you can also see all the edges of the tetraheders inside the head.
 
-We can also plot the triangular surfaces that describe the boundaries between the tissue types. These were used to make the tetrahedral mesh smooth along these boundaries. Note that these boundaries are not suited for a BEM model, as they are not topoplogically consistent with the BEM implementation which expects non-intersecting nested meshes.
+We can also plot the triangular surfaces that describe the boundaries between the tissue types. These were used to make the tetrahedral mesh smooth along these boundaries. Note that these boundaries are not suited for a BEM model, as they are not topologically consistent with the BEM implementation which expects non-intersecting nested meshes.
 
     figure
     ft_plot_mesh(simnibs_boundaries, 'facealpha', 0.2, 'facecolor', 'skin', 'edgecolor', [0.5 0.5 0.5])
