@@ -738,7 +738,7 @@ cmb
 cmbrepresentation
 CMC
 cmd
-CMMR
+CMRR
 cmocean
 CMOcean
 CMS
