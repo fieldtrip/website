@@ -1,11 +1,11 @@
 ---
-title: African Brain Data Science Academy
+title: African Brain Data Network
 tags: [nigeria2025]
 ---
 
-# African Brain Data Science Academy
+# African Brain Data Network
 
-We are contributing to an African Brain Data Science Academy intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
+Together with the African Brain Data Network we are organizing an intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
 
 This workshop aims to:
 
@@ -26,11 +26,11 @@ Participants will bring a laptop with a recent web browser for the hands-on data
 
 ## Registration
 
-We have a limited number of seats available. Pre-registration is now closed and we will make a selection of interested candidates with the aim to maximize the impact of the training.
+Since it is a workshop with a hands-on format, we have a limited number of seats available. Pre-registration is now closed and we will make a selection of interested candidates with the aim to maximize the impact of the training.
 
 ## Practicalities
 
-See the [African Brain Data Science Network](https://africanbraindatanetwork.com/) homepage for up to date information. If you have any queries please contact <africanbraindatanetwork@gmail.com>.
+See the [African Brain Data Network](https://africanbraindatanetwork.com/) homepage for up to date information. If you have any queries please contact <africanbraindatanetwork@gmail.com>.
 
 ### Who
 
