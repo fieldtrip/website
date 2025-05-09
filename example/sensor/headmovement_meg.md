@@ -189,7 +189,7 @@ Finally, note that the circumcenter function is a helper function that calculate
 {% include markup/yellow %}
 Please cite this paper when you have used the offline head movement compensation in your study:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
 ## Appendix: circumcenter

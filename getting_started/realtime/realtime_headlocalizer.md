@@ -13,7 +13,7 @@ Using FieldTrip it is possible to [monitor](/faq/how_can_i_monitor_a_subject_s_h
 {% include markup/yellow %}
 Please cite this paper when you use the realtime head localizer in your research:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
 The following documentation describes how to set up the interface between the [CTF](/development/realtime/ctf) or [Neuromag](/development/realtime/neuromag) system and FieldTrip. The recommended implementation uses two separate computers, one for the acquisition (i.e. the one provided by CTF / Neuromag) and another one for the visualization towards the experimenter and the subject. The second computer can be the presentation computer that is commonly available, or another computer.
