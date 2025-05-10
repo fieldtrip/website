@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40267167'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003150
+- idtype: pmcid
+  value: PMC12052181
+authors:
+- authtype: Author
+  name: Luo M
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Fang F
+- authtype: Author
+  name: Luo H
+epubdate: 2025 Apr 23
+fulljournalname: PLOS Biology
+issue: '4'
+pages: e3003150
+pmclivedate: 2025/05/05
+printpubdate: ''
+pubdate: 2025 Apr 23
+sortdate: 2025/04/23 00:00
+source: PLoS Biol
+title: Reactivation of previous decisions repulsively biases sensory encoding but
+  attractively biases decision-making
+uid: '12052181'
+volume: '23'

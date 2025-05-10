@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40325060'
+- idtype: doi
+  value: 10.1038/s41531-025-00947-8
+- idtype: pmcid
+  value: PMC12053694
+authors:
+- authtype: Author
+  name: Shi L
+- authtype: Author
+  name: Xu Y
+- authtype: Author
+  name: Fan S
+- authtype: Author
+  name: Yin Z
+- authtype: Author
+  name: Qin G
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Yang A
+epubdate: 2025 May 5
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '109'
+pmclivedate: 2025/05/06
+printpubdate: ''
+pubdate: 2025 May 5
+sortdate: 2025/05/05 00:00
+source: NPJ Parkinsons Dis
+title: Comparison of oscillatory activity in substantia nigra pars reticulata between
+  Parkinson’s disease and dystonia
+uid: '12053694'
+volume: '11'

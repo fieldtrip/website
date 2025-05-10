@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39158819'
+- idtype: doi
+  value: 10.3758/s13421-024-01619-3
+- idtype: pmcid
+  value: PMC12052872
+authors:
+- authtype: Author
+  name: Scaltritti M
+- authtype: Author
+  name: Greatti E
+- authtype: Author
+  name: Sulpizio S
+epubdate: 2024 Aug 19
+fulljournalname: Memory & Cognition
+issue: '3'
+pages: 911-925
+pmclivedate: 2025/05/07
+printpubdate: '2025'
+pubdate: 2024 Aug 19
+sortdate: 2024/08/19 00:00
+source: Mem Cognit
+title: 'Decisional components of motor responses are not related to online response
+  control: Evidence from lexical decision and speed-accuracy tradeoff manipulations'
+uid: '12052872'
+volume: '53'
