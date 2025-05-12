@@ -77,3 +77,12 @@ The final day is flexible, used for review, additional practice, or wrapping up 
 ## How to prepare
 
 More information will follow.
+
+## Reading material
+
+- Parker, T. C., & Ricard, J. A. (2022). Structural racism in neuroimaging: Perspectives and solutions. The Lancet Psychiatry, 9(5), e22. {% include badge doi="10.1016/S2215-0366(22)00079-7" %}
+- Caspar, E. A. (2024). Guidelines for Inclusive and Diverse Human Neuroscience Research Practices. The Journal of Neuroscience, 44(48), e1971242024. {% include badge doi="10.1523/JNEUROSCI.1971-24.2024" %}
+- Köhler, J., Reis, A. A., & Saxena, A. (2021). A survey of national ethics and bioethics committees. Bulletin of the World Health Organization, 99(2), 138–147. {% include badge doi="10.2471/BLT.19.243907" %}
+- TRUST. (2018). The TRUST code -A Global Code of Conduct for Equitable Research Partnerships (Version 1). TRUST. {% include badge doi="10.48508/GCC/2018.05" %}
+- The Inclusive EEG Handbook. (n.d.). Retrieved April 15, 2025, from <https://www.inclusiveneuro.com/home>.
+- Etienne, A., Laroia, T., Weigle, H., Afelin, A., Kelly, S. K., Krishnan, A., & Grover, P. (2020). Novel Electrodes for Reliable EEG Recordings on Coarse and Curly Hair. BioRxiv. {% include badge doi="10.1101/2020.02.26.965202" %}

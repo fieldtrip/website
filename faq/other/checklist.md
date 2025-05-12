@@ -115,4 +115,4 @@ For each of the following items, please consider whether you have reported it or
 
 ## See also
 
-See also the page with [references to review papers and teaching material](/references_to_review_papers_and_teaching_material) elsewhere on this website, and the paper from Pernet C, Garrido MI, Gramfort A, Maurits N, Michel CM, Pang E, Salmelin R, Schoffelen JM, Valdes-Sosa PA, Puce A. **Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research.** Nat Neurosci. 2020 Dec;23(12):1473-1483. {% include badge doi="10.1038/s41593-020-00709-0" pmid="32958924" %}.
+See also the list of [review papers and teaching material](/references_to_review_papers_and_teaching_material) elsewhere on this website, and the paper from Pernet C, Garrido MI, Gramfort A, Maurits N, Michel CM, Pang E, Salmelin R, Schoffelen JM, Valdes-Sosa PA, Puce A. **Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research.** Nat Neurosci. 2020 Dec;23(12):1473-1483. {% include badge doi="10.1038/s41593-020-00709-0" pmid="32958924" %}.

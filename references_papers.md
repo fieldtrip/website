@@ -1,13 +1,13 @@
 ---
-title: References to review papers and teaching material
+title: Review papers and teaching material
 tags: [literature]
 redirect_from:
     /references_to_review_papers_and_teaching_material/
 ---
 
-# References to review papers and teaching material
+# Review papers and teaching material
 
-Here we try to compile a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the "edit this page" link at the bottom.
+This page contains a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the "edit this page" link at the bottom.
 
 If you are new to FieldTrip, please start by reading the reference paper [FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869) or have a look at one of the introduction [videos](/video).
 

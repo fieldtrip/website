@@ -148,7 +148,7 @@ _Figure: An example analysis protocol of source reconstruction for multiple subj
 On this page we gave a short introduction about the FieldTrip toolbox and about how to use that in MATLAB. We have shown also some examples of analysis protocols.
 
 If you would like to read further about the FieldTrip function, you can continue with the [Preprocessing tutorial](/tutorial/preprocessing).
-If you would like to have an introduction about scripting in MATLAB, it is suggested that you continue with the [tutorial:scripting](/tutorial/scripting) tutorial. If you are new to MATLAB or EEG/MEG analysis, you can take a look in [References to review papers and teaching material](/references_to_review_papers_and_teaching_material).
+If you would like to have an introduction about scripting in MATLAB, it is suggested that you continue with the [tutorial:scripting](/tutorial/scripting) tutorial. If you are new to MATLAB or EEG/MEG analysis, you can take a look at the list of [review papers and teaching material](/references_to_review_papers_and_teaching_material).
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
