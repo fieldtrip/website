@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '40349073'
+- idtype: doi
+  value: 10.1186/s40478-025-02016-w
+- idtype: pmcid
+  value: PMC12065161
+authors:
+- authtype: Author
+  name: Berg MV
+- authtype: Author
+  name: Heymans L
+- authtype: Author
+  name: Toen D
+- authtype: Author
+  name: Adhikari MA
+- authtype: Author
+  name: Audekerke JV
+- authtype: Author
+  name: Verschuuren M
+- authtype: Author
+  name: Pintelon I
+- authtype: Author
+  name: Vos WH
+- authtype: Author
+  name: Linden AV
+- authtype: Author
+  name: Verhoye M
+- authtype: Author
+  name: Keliris GA
+epubdate: 2025 May 10
+fulljournalname: Acta Neuropathologica Communications
+issue: ''
+pages: '96'
+pmclivedate: 2025/05/10
+printpubdate: ''
+pubdate: 2025 May 10
+sortdate: 2025/05/10 00:00
+source: Acta Neuropathol Commun
+title: Partial normalization of hippocampal oscillatory activity during sleep in TgF344-AD
+  rats coincides with increased cholinergic synapses at early-plaque stage of Alzheimer’s
+  disease
+uid: '12065161'
+volume: '13'

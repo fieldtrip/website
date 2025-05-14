@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40340777'
+- idtype: doi
+  value: 10.1080/20008066.2025.2494363
+- idtype: pmcid
+  value: PMC12068345
+authors:
+- authtype: Author
+  name: Marcu GM
+- authtype: Author
+  name: Müller A
+- authtype: Author
+  name: Kropotov J(
+epubdate: 2025 May 9
+fulljournalname: European Journal of Psychotraumatology
+issue: '1'
+pages: '2494363'
+pmclivedate: 2025/05/12
+printpubdate: ''
+pubdate: 2025 May 9
+sortdate: 2025/05/09 00:00
+source: Eur J Psychotraumatol
+title: Event-related potentials associated with cognitive control in adolescents exposed
+  to complex childhood trauma
+uid: '12068345'
+volume: '16'

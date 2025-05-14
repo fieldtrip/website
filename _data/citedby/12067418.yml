@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnetp.2025.1539682
+- idtype: pmcid
+  value: PMC12067418
+authors:
+- authtype: Author
+  name: Jahani A
+- authtype: Author
+  name: Begin C
+- authtype: Author
+  name: Toffa DH
+- authtype: Author
+  name: Obaid S
+- authtype: Author
+  name: Nguyen DK
+- authtype: Author
+  name: Bou Assi E
+epubdate: 2025 Apr 28
+fulljournalname: Frontiers in Network Physiology
+issue: ''
+pages: '1539682'
+pmclivedate: 2025/05/12
+printpubdate: ''
+pubdate: 2025 Apr 28
+sortdate: 2025/04/28 00:00
+source: Front Netw Physiol
+title: 'Preictal connectivity dynamics: Exploring inflow and outflow in iEEG networks'
+uid: '12067418'
+volume: '5'

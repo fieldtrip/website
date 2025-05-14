@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40341884'
+- idtype: doi
+  value: 10.1038/s41598-025-99531-6
+- idtype: pmcid
+  value: PMC12062281
+authors:
+- authtype: Author
+  name: Bertheau MA
+- authtype: Author
+  name: Boetzel C
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2025 May 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16048'
+pmclivedate: 2025/05/09
+printpubdate: ''
+pubdate: 2025 May 8
+sortdate: 2025/05/08 00:00
+source: Sci Rep
+title: Event-related potentials reveal incongruent behavior of autonomous vehicles
+  in the moral machine dilemma
+uid: '12062281'
+volume: '15'
