@@ -31,10 +31,9 @@ Note that the tentative program below still might change a bit.
 
 ### Tuesday May 20, 2025
 
-| 09:00-09:30 | Morning chill or workout |
-| 09:45-10:45 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2025/03_frequency.pdf) by Jan-Mathijs Schoffelen |
-| 10:45-11:00 | Coffee Break |
-| 11:00-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
+| 09:00-10:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2025/03_frequency.pdf) by Jan-Mathijs Schoffelen (NOTE: LOCATION=RED ROOM|
+| 10:30-10:45 | Coffee Break |
+| 10:45-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
 | 14:30-15:45 | Forward and inverse - [lecture](/assets/pdf/workshop/toolkit2025/04_forward_inverse.pdf) by Robert |
