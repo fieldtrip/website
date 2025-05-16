@@ -268,6 +268,7 @@ The fuzzy model is represented in a MATLAB .mat file as
 Both discrete and fuzzy model are consistent with the data representation described in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**.
 
 The atlas is described in:
+
 - DL Collins, AP Zijdenbos, V Kollokian, JG Sled, NJ Kabani, CJ Holmes, AC Evans (1998) [Design and Construction of a Realistic Digital Brain Phantom](https://doi.org/10.1109/42.712135). IEEE Trans Med Imaging, Jun;17(3):463-8.
 - CA Cocosco, V Kollokian, RK-S Kwan, AC Evans (1997) "BrainWeb: Online Interface to a 3D MRI Simulated Brain Database" NeuroImage, vol.5, no.4, part 2/4, S425, 1997 - Proceedings of 3rd International Conference on Functional Mapping of the Human Brain, Copenhagen.
 - RK-S Kwan, AC Evans, GB Pike (1999) "MRI simulation-based evaluation of image-processing and classification methods" IEEE Transactions on Medical Imaging, 18(11):1085-97.

@@ -57,12 +57,9 @@ Electrophysiological signals typically represent a mixture of the underlying
 neuronal sources. The next exercises intend to give some fundamental insights
 with respect to the general mixing phenomenon. After doing these exercises:
 
-- You will understand that instantaneous mixing is the same as making a linear
-combination of the underlying 'source' processes.
-- You will know that making a weighted combination is equivalent to doing
-a matrix multiplication.
-- Argue that temporal characteristics of the sources and the spatial mixing
-interact in a non-trivial way.
+- You will understand that instantaneous mixing is the same as making a linear combination of the underlying 'source' processes.
+- You will know that making a weighted combination is equivalent to doing a matrix multiplication.
+- Argue that temporal characteristics of the sources and the spatial mixing interact in a non-trivial way.
 
 We start with the generation of some 'source signals'. To this end we can
 use the function `ni2_activation`. If you type `help ni2_activation` on the

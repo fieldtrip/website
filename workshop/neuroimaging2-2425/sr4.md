@@ -311,15 +311,11 @@ the norm of `Sx` is always larger than or equal to to the norm of `Sm`. Hence,
 
 After this section you will
 
-- Have a basic understanding of how the minimum norm reconstruction works
-in practice.
-- Understand why the minimum norm reconstruction tends to overemphasize activity
-from superficial sources.
-- Know how to counteract the tendency for overemphasizing the superficial
-sources.
+- Have a basic understanding of how the minimum norm reconstruction works in practice.
+- Understand why the minimum norm reconstruction tends to overemphasize activity from superficial sources.
+- Know how to counteract the tendency for overemphasizing the superficial sources.
 - Understand that noise in the data projects onto the estimated sources.
-- Know how to counteract the contamination of the estimated source activity
-by the noise.
+- Know how to counteract the contamination of the estimated source activity by the noise.
 
 We start by simulating some MEG data that contains two active sources.
 

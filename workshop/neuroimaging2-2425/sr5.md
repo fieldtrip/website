@@ -68,11 +68,8 @@ next section will deal with the concept of the sensor-level covariance matrix._
 After this section you will
 
 - Understand the concept of a covariance matrix.
-- Argue that the sensor covariance matrix represents a mixture of the leadfield
-outer products of all pairs of active sources.
-- Understand that, if the sources underlying the sensor covariance matrix
-are uncorrelated over time, the covariance matrix reduces to a weighted sum
-of the leadfield outer products of only the active sources.
+- Argue that the sensor covariance matrix represents a mixture of the leadfield outer products of all pairs of active sources.
+- Understand that, if the sources underlying the sensor covariance matrix are uncorrelated over time, the covariance matrix reduces to a weighted sum of the leadfield outer products of only the active sources.
 
 In the following we will use `X` and `Y` to represent vectors rather than
 matrices, to allow for formatting an element of that vector with a subscript
@@ -171,11 +168,8 @@ matrix `C` reflects the covariance between the i-th and j-th channel.
 
 There are a few remarks to be made about a covariance matrix:
 
-- When a covariance matrix is mirrored across the main diagonal of the matrix,
-you will get the same values.
-- The elements on the main diagonal contain the auto-covariance between each
-channel and itself, and are always positive values. These values represent the
-variance of each channel.
+- When a covariance matrix is mirrored across the main diagonal of the matrix, you will get the same values.
+- The elements on the main diagonal contain the auto-covariance between each channel and itself, and are always positive values. These values represent the variance of each channel.
 
 **_Q8.1.3 - Compute some normally distributed random data for 32 channels and
 100 timepoints and represent this in a single matrix._**
@@ -431,10 +425,8 @@ The amount of regularization can be determined from the plot of the eigenvalues
 After this section, you will
 
 - Understand the depth bias of the beamformer, and its cause.
-- Understand how in the typical application a contrast between two conditions
-is needed for a meaningful source reconstruction.
-- Understand how the performance of the beamformer is affected by correlation
-of the source time courses.
+- Understand how in the typical application a contrast between two conditions is needed for a meaningful source reconstruction.
+- Understand how the performance of the beamformer is affected by correlation of the source time courses.
 
 In the previous section we visualized the reconstructed time courses at the
 locations close to where we actually simulated the activity. In real applications,
