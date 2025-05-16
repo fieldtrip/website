@@ -276,7 +276,9 @@ The atlas is described in:
 ## See also
 
 The **[ft_read_atlas](/reference/fileio/ft_read_atlas)** function can read geometrical information and anatomical labels from a variety of file formats, and can therefore also be used for other atlases. You can find more atlases here:
-- <https://www.loni.usc.edu/research/atlases>
-- <http://www.bmap.ucla.edu/portfolio/atlases>
-- <https://www.ebrains.eu/tools/human-brain-atlas>
+
 - <https://balsa.wustl.edu>
+- <https://www.bmap.ucla.edu/portfolio/atlases>
+- <https://www.ebrains.eu/tools/human-brain-atlas>
+- <https://www.lead-dbs.org/helpsupport/knowledge-base/atlasesresources/cortical-atlas-parcellations-mni-space/>
+- <https://www.loni.usc.edu/research/atlases>
