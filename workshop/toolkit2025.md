@@ -55,9 +55,9 @@ Note that the tentative program below still might change a bit.
 ### Thursday May 22, 2025
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | New methods for experimental design and analysis - [lecture](/assets/pdf/workshop/toolkit2025/07_new_methods.pdf) by Robert |
+| 09:45-11:00 | New methods for experimental design and analysis - [lecture](/assets/pdf/workshop/toolkit2025/07_new_methods.pdf) by JM |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2025/08_statistics.pdf) by Robert |
+| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2025/08_statistics.pdf) by JM |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock) |
 | 15:45-16:00 | Tea Break |
