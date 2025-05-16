@@ -31,7 +31,7 @@ Note that the tentative program below still might change a bit.
 
 ### Tuesday May 20, 2025
 
-| 09:00-10:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2025/03_frequency.pdf) by Jan-Mathijs Schoffelen (NOTE: LOCATION=RED ROOM|
+| 09:00-10:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2025/03_frequency.pdf) by Jan-Mathijs Schoffelen (NOTE: LOCATION=RED ROOM)|
 | 10:30-10:45 | Coffee Break |
 | 10:45-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
