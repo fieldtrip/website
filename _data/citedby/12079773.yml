@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.70227
+- idtype: pmcid
+  value: PMC12079773
+authors:
+- authtype: Author
+  name: Malan NS
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Cunningham D
+- authtype: Author
+  name: Hogue O
+- authtype: Author
+  name: Baker KB
+- authtype: Author
+  name: Machado AG
+epubdate: 2025 May 15
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: e70227
+pmclivedate: 2025/05/16
+printpubdate: ''
+pubdate: 2025 May 15
+sortdate: 2025/05/15 00:00
+source: Hum Brain Mapp
+title: Human Cortico‐Cerebellar Dynamics During Motor Error Processing After Stroke
+uid: '12079773'
+volume: '46'

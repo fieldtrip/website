@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40231737'
+- idtype: doi
+  value: 10.1113/JP287802
+- idtype: pmcid
+  value: PMC12072251
+authors:
+- authtype: Author
+  name: Simor P
+- authtype: Author
+  name: Lilla RZ
+- authtype: Author
+  name: Szalárdy O
+- authtype: Author
+  name: Jordán Z
+- authtype: Author
+  name: Halász L
+- authtype: Author
+  name: Erőss L
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Bódizs R
+epubdate: 2025 Apr 15
+fulljournalname: The Journal of Physiology
+issue: '9'
+pages: 2839-2855
+pmclivedate: 2025/05/14
+printpubdate: 2025 May 1
+pubdate: 2025 Apr 15
+sortdate: 2025/04/15 00:00
+source: J Physiol
+title: Heartbeat‐related activity in the anterior thalamus differs between phasic
+  and tonic REM sleep
+uid: '12072251'
+volume: '603'

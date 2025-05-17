@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1117/1.NPh.12.2.025011
+- idtype: pmcid
+  value: PMC12081164
+authors:
+- authtype: Author
+  name: Delaire É
+- authtype: Author
+  name: Vincent T
+- authtype: Author
+  name: Cai Z
+- authtype: Author
+  name: Machado A
+- authtype: Author
+  name: Hugueville L
+- authtype: Author
+  name: Schwartz D
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Cassani R
+- authtype: Author
+  name: Bherer L
+- authtype: Author
+  name: Lina JM
+- authtype: Author
+  name: Pélégrini-Issac M
+- authtype: Author
+  name: Grova C
+epubdate: 2025 May 15
+fulljournalname: Neurophotonics
+issue: '2'
+pages: '025011'
+pmclivedate: 2025/05/15
+printpubdate: 2025 Apr
+pubdate: 2025 May 15
+sortdate: 2025/05/15 00:00
+source: Neurophotonics
+title: 'NIRSTORM: a Brainstorm extension dedicated to functional near-infrared spectroscopy
+  data analysis, advanced 3D reconstructions, and optimal probe design'
+uid: '12081164'
+volume: '12'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39420437'
+- idtype: doi
+  value: 10.1111/jsr.14371
+- idtype: pmcid
+  value: PMC12069738
+authors:
+- authtype: Author
+  name: Carro‐Domínguez M
+- authtype: Author
+  name: Huwiler S
+- authtype: Author
+  name: Stich FM
+- authtype: Author
+  name: Sala R
+- authtype: Author
+  name: Aziri F
+- authtype: Author
+  name: Trippel A
+- authtype: Author
+  name: Heimhofer C
+- authtype: Author
+  name: Huber R
+- authtype: Author
+  name: Meissner SN
+- authtype: Author
+  name: Wenderoth N
+- authtype: Author
+  name: Lustenberger C
+epubdate: 2024 Oct 17
+fulljournalname: Journal of Sleep Research
+issue: '3'
+pages: e14371
+pmclivedate: 2025/05/14
+printpubdate: 2025 Jun
+pubdate: 2024 Oct 17
+sortdate: 2024/10/17 00:00
+source: J Sleep Res
+title: Overnight changes in performance fatigability and their relationship to modulated
+  deep sleep oscillations via auditory stimulation
+uid: '12069738'
+volume: '34'

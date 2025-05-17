@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40369123'
+- idtype: doi
+  value: 10.1038/s42003-025-08129-1
+- idtype: pmcid
+  value: PMC12078719
+authors:
+- authtype: Author
+  name: Quinn KR
+- authtype: Author
+  name: Sandhaeger F
+- authtype: Author
+  name: Noury N
+- authtype: Author
+  name: Zezelic E
+- authtype: Author
+  name: Siegel M
+epubdate: 2025 May 14
+fulljournalname: Communications Biology
+issue: ''
+pages: '752'
+pmclivedate: 2025/05/15
+printpubdate: ''
+pubdate: 2025 May 14
+sortdate: 2025/05/14 00:00
+source: Commun Biol
+title: Abstract choice representations during stable choice-response associations
+uid: '12078719'
+volume: '8'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40365529'
+- idtype: doi
+  value: 10.1093/sleepadvances/zpaf022
+- idtype: pmcid
+  value: PMC12070486
+authors:
+- authtype: Author
+  name: Moyne M
+- authtype: Author
+  name: Durand-Ruel M
+- authtype: Author
+  name: Park CH
+- authtype: Author
+  name: Salamanca-Giron R
+- authtype: Author
+  name: Sterpenich V
+- authtype: Author
+  name: Schwartz S
+- authtype: Author
+  name: Hummel FC
+- authtype: Author
+  name: Morishita T
+epubdate: 2025 Mar 26
+fulljournalname: 'Sleep Advances: A Journal of the Sleep Research Society'
+issue: '2'
+pages: zpaf022
+pmclivedate: 2025/05/13
+printpubdate: ''
+pubdate: 2025 Mar 26
+sortdate: 2025/03/26 00:00
+source: Sleep Adv
+title: Impact of spindle-inspired transcranial alternating current stimulation during
+  a nap on sleep-dependent motor memory consolidation in healthy older adults
+uid: '12070486'
+volume: '6'
