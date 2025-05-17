@@ -24,6 +24,16 @@ During this workshop, you will get:
 
 Participants will bring a laptop with a recent web browser for the hands-on data analysis sessions. We will provide WiFi and the analysis will be done using online tools, so you don’t need special software on your laptop.
 
+## Company support
+
+We would like to thank [TMSi, an Artinis company](https://www.tmsi.artinis.com/), for borrowing us an 64-channel [SAGA](https://www.tmsi.artinis.com/saga) EEG system for the practical hands-on sessions.
+
+{% include image src="/assets/img/workshop/nigeria2025/artinis-tmsi.jpg" width="250" %}
+
+We would like to thank [MathWorks](https://www.mathworks.com) for providing the licenses to run [MATLAB in the cloud](http://matlab.mathworks.com) for the data analysis hands-on sessions.  
+
+{% include image src="/assets/img/workshop/nigeria2025/mathworks.jpg" width="250" %}
+
 ## Registration
 
 Since it is a workshop with a hands-on format, we have a limited number of seats available. Pre-registration is now closed and we will make a selection of interested candidates with the aim to maximize the impact of the training.

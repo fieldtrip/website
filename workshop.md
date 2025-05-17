@@ -18,7 +18,7 @@ If there is no information listed for a potential workshop below, then we don't 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
 - 2025, [MEG/EEG toolkit](/workshop/toolkit2025) - Nijmegen, NL
-- 2025, [African Brain Data Science Academy](/workshop/nigeria2025) - Port Harcourt, Nigeria
+- 2025, [African Brain Data Network](/workshop/nigeria2025) - Port Harcourt, Nigeria
 
 Previous FieldTrip workshops took place at
 
