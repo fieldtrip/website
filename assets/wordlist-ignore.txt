@@ -2828,6 +2828,7 @@ matfiles
 Mathieu
 mathijs
 Mathijs
+mathworks
 Mathworks
 MathWorks
 MATHWORKS
