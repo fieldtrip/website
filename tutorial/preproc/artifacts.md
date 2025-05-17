@@ -41,7 +41,7 @@ Detecting the artifacts without reading the complete data into memory allows you
 
 ## Rejecting segments with artifacts
 
-With this strategy, pieces of data contaminated by artifacts are identified and removed from further analysis. For example, a bad channel is excluded, or trials with artifacts are removed. You may want to use this strategy not only to deal with the artifact, but also to deal with undesired behaviour of your participant. For example if in a visual stimulus-detection task the subject blinks exactly at the moment that the (short) stimulus appears on screen, chances are that he did not see the stimulus. In that case the reason to exclude the trial is not because of the EOG artifact, but because of the subject's brain activity in that trial not being of interest.
+With this strategy, pieces of data contaminated by artifacts are identified and removed from further analysis. For example, a bad channel is excluded, or trials with artifacts are removed. You may want to use this strategy not only to deal with the artifact, but also to deal with undesired behaviour of your participant. For example if in a visual stimulus-detection task the subject blinks exactly at the moment that the (short) stimulus appears on screen, chances are that they did not see the stimulus. In that case the reason to exclude the trial is not because of the EOG artifact, but because of the subject's brain activity in that trial not being of interest.
 
 ### Manual/visual detection
 
