@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40285428'
+- idtype: doi
+  value: 10.1093/scan/nsaf036
+- idtype: pmcid
+  value: PMC12083452
+authors:
+- authtype: Author
+  name: Wainio-Theberge S
+- authtype: Author
+  name: Armony JL
+epubdate: 2025 Apr 26
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf036
+pmclivedate: 2025/05/16
+printpubdate: ''
+pubdate: 2025 Apr 26
+sortdate: 2025/04/26 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Neural correlates of power-related postures and their behavioural consequences:
+  a preliminary electrophysiological investigation'
+uid: '12083452'
+volume: '20'

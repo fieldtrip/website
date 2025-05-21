@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40386809'
+- idtype: doi
+  value: 10.3389/fnins.2025.1493641
+- idtype: pmcid
+  value: PMC12082839
+authors:
+- authtype: Author
+  name: Choi HJ
+- authtype: Author
+  name: Kyong JS
+- authtype: Author
+  name: Won JH
+- authtype: Author
+  name: Shim HJ
+epubdate: 2025 May 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1493641'
+pmclivedate: 2025/05/16
+printpubdate: ''
+pubdate: 2025 May 2
+sortdate: 2025/05/02 00:00
+source: Front Neurosci
+title: 'Neural adaptations to temporal cues degradation in early blind: insights from
+  envelope and fine structure vocoding'
+uid: '12082839'
+volume: '19'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40386018'
+- idtype: doi
+  value: 10.3389/fneur.2025.1547573
+- idtype: pmcid
+  value: PMC12083085
+authors:
+- authtype: Author
+  name: Vanbilsen N
+- authtype: Author
+  name: Feys P
+- authtype: Author
+  name: Rosso M
+- authtype: Author
+  name: Van Wijmeersch B
+- authtype: Author
+  name: Kos D
+- authtype: Author
+  name: Leman M
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: Moumdjian L
+epubdate: 2025 May 2
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1547573'
+pmclivedate: 2025/05/16
+printpubdate: ''
+pubdate: 2025 May 2
+sortdate: 2025/05/02 00:00
+source: Front Neurol
+title: Preserved auditory-motor synchronization during finger-tapping to music and
+  metronomes at various tempi in progressive multiple sclerosis
+uid: '12083085'
+volume: '16'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40379647'
+- idtype: doi
+  value: 10.1038/s41467-025-59837-5
+- idtype: pmcid
+  value: PMC12084627
+authors:
+- authtype: Author
+  name: Weijs ML
+- authtype: Author
+  name: Missura S
+- authtype: Author
+  name: Potok-Szybińska W
+- authtype: Author
+  name: Bächinger M
+- authtype: Author
+  name: Badii B
+- authtype: Author
+  name: Carro-Domínguez M
+- authtype: Author
+  name: Wenderoth N
+- authtype: Author
+  name: Meissner SN
+epubdate: 2025 May 16
+fulljournalname: Nature Communications
+issue: ''
+pages: '4552'
+pmclivedate: 2025/05/17
+printpubdate: ''
+pubdate: 2025 May 16
+sortdate: 2025/05/16 00:00
+source: Nat Commun
+title: Modulating cortical excitability and cortical arousal by pupil self-regulation
+uid: '12084627'
+volume: '16'

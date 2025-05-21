@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/alz.70182
+- idtype: pmcid
+  value: PMC12086656
+authors:
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Shi X
+- authtype: Author
+  name: Mu J
+- authtype: Author
+  name: Ren H
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Zhu L
+- authtype: Author
+  name: Cai X
+- authtype: Author
+  name: Lian C
+- authtype: Author
+  name: Pei Z
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Hou G
+- authtype: Author
+  name: Lin L
+- authtype: Author
+  name: Nie C
+- authtype: Author
+  name: Song C
+- authtype: Author
+  name: Gao S
+- authtype: Author
+  name: Zhao L
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Guo Y
+epubdate: 2025 May 19
+fulljournalname: Alzheimer's & Dementia
+issue: '5'
+pages: e70182
+pmclivedate: 2025/05/19
+printpubdate: ''
+pubdate: 2025 May 19
+sortdate: 2025/05/19 00:00
+source: Alzheimers Dement
+title: 'Uncovering stage‐specific neural and molecular progression in Alzheimer''s
+  disease: Implications for early screening'
+uid: '12086656'
+volume: '21'

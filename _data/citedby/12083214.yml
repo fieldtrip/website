@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38703054'
+- idtype: doi
+  value: 10.1111/ejn.16358
+- idtype: pmcid
+  value: PMC12083214
+- idtype: MID
+  value: NIHMS2074504
+authors:
+- authtype: Author
+  name: Cohenour T
+- authtype: Author
+  name: Dickinson A
+- authtype: Author
+  name: Jeste S
+- authtype: Author
+  name: Gulsrud A
+- authtype: Author
+  name: Kasari C
+epubdate: 2024 May 4
+fulljournalname: The European journal of neuroscience
+issue: '1'
+pages: 3597-3613
+pmclivedate: 2025/05/16
+printpubdate: 2024 Jul
+pubdate: 2024 May 4
+sortdate: 2024/05/04 00:00
+source: Eur J Neurosci
+title: Patterns of spontaneous neural activity associated with social communication
+  abilities among infants and toddlers showing signs of autism
+uid: '12083214'
+volume: '60'

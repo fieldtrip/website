@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40365133'
+- idtype: doi
+  value: 10.1093/braincomms/fcaf172
+- idtype: pmcid
+  value: PMC12070268
+authors:
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Rawish T
+- authtype: Author
+  name: Friedrich J
+- authtype: Author
+  name: Hao Y
+- authtype: Author
+  name: Frings C
+- authtype: Author
+  name: Bäumer T
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Beste C
+epubdate: 2025 May 5
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcaf172
+pmclivedate: 2025/05/13
+printpubdate: ''
+pubdate: 2025 May 5
+sortdate: 2025/05/05 00:00
+source: Brain Commun
+title: Differential modulation of neural oscillations in perception-action links in
+  Tourette syndrome
+uid: '12070268'
+volume: '7'

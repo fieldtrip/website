@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40010636'
+- idtype: doi
+  value: 10.1016/j.brs.2025.02.018
+- idtype: pmcid
+  value: PMC12087383
+- idtype: MID
+  value: NIHMS2074154
+authors:
+- authtype: Author
+  name: She X
+- authtype: Author
+  name: Qi W
+- authtype: Author
+  name: Nix KC
+- authtype: Author
+  name: Menchaca M
+- authtype: Author
+  name: Cline CC
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: He Z
+- authtype: Author
+  name: Baumer FM
+epubdate: 2025 Feb 24
+fulljournalname: Brain stimulation
+issue: '2'
+pages: 287-297
+pmclivedate: 2025/05/19
+printpubdate: 2025 Mar-Apr
+pubdate: 2025 Feb 24
+sortdate: 2025/02/24 00:00
+source: Brain Stimul
+title: Repetitive transcranial magnetic stimulation modulates brain connectivity in
+  children with self-limited epilepsy with centrotemporal spikes
+uid: '12087383'
+volume: '18'
