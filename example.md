@@ -44,6 +44,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
 - [Fitting oscillations and one-over-F (FOOOF)](/example/fooof)
 - [Conditional Granger causality in the frequency domain](/example/connectivity_conditional_granger)
+- [Interpolate the time axis of single-trial TFRs](/example/tfr_interpolatetime)
 
 ## Source reconstruction
 
