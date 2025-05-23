@@ -238,6 +238,9 @@
 - title:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/spectral/ssvep
 
+- title:  Interpolate the time axis of single-trial TFRs
+  link:  /example/spectral/tfr_interpolatetime
+
 - title:  Computing and reporting the effect size
   link:  /example/stats/effectsize
 
