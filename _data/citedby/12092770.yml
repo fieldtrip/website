@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '40393988'
+- idtype: doi
+  value: 10.1038/s41597-025-05042-4
+- idtype: pmcid
+  value: PMC12092770
+authors:
+- authtype: Author
+  name: Garro F
+- authtype: Author
+  name: Fenoglio E
+- authtype: Author
+  name: Ceroni I
+- authtype: Author
+  name: Forsiuk I
+- authtype: Author
+  name: Canepa M
+- authtype: Author
+  name: Mozzon M
+- authtype: Author
+  name: Bruschi A
+- authtype: Author
+  name: Zippo F
+- authtype: Author
+  name: Laffranchi M
+- authtype: Author
+  name: De Michieli L
+- authtype: Author
+  name: Buccelli S
+- authtype: Author
+  name: Chiappalone M
+- authtype: Author
+  name: Semprini M
+epubdate: 2025 May 20
+fulljournalname: Scientific Data
+issue: ''
+pages: '831'
+pmclivedate: 2025/05/21
+printpubdate: ''
+pubdate: 2025 May 20
+sortdate: 2025/05/20 00:00
+source: Sci Data
+title: An EEG-EMG dataset from a standardized reaching task for biomarker research
+  in upper limb assessment
+uid: '12092770'
+volume: '12'

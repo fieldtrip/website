@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40028845'
+- idtype: doi
+  value: 10.1002/mds.30165
+- idtype: pmcid
+  value: PMC12089897
+authors:
+- authtype: Author
+  name: Steina A
+- authtype: Author
+  name: Sure S
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Vesper J
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Hirschmann J
+epubdate: 2025 Mar 3
+fulljournalname: Movement Disorders
+issue: '5'
+pages: 896-905
+pmclivedate: 2025/05/21
+printpubdate: 2025 May
+pubdate: 2025 Mar 3
+sortdate: 2025/03/03 00:00
+source: Mov Disord
+title: Oscillatory Coupling Between Thalamus, Cerebellum, and Motor Cortex in Essential
+  Tremor
+uid: '12089897'
+volume: '40'
