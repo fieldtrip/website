@@ -81,6 +81,7 @@ Alternative to reading the volume conduction model from an external file, you ca
     [headmodel] = ft_headmodel_concentricspheres(geom, ...)
     [headmodel] = ft_headmodel_dipoli(geom, ...)
     [headmodel] = ft_headmodel_halfspace(location, orientation, ...)
+    [headmodel] = ft_headmodel_hbf(geom, ...)
     [headmodel] = ft_headmodel_infinite(...)
     [headmodel] = ft_headmodel_localspheres(geom, grad, ...)
     [headmodel] = ft_headmodel_openmeeg(geom, ...)
@@ -96,6 +97,7 @@ Detailed information for each of the functions that creates a head model can be 
 - **[ft_headmodel_concentricspheres](/reference/forward/ft_headmodel_concentricspheres)**
 - **[ft_headmodel_dipoli](/reference/forward/ft_headmodel_dipoli)**
 - **[ft_headmodel_halfspace](/reference/forward/ft_headmodel_halfspace)**
+- **[ft_headmodel_hbf](/reference/forward/ft_headmodel_hbf)**
 - **[ft_headmodel_infinite](/reference/forward/ft_headmodel_infinite)**
 - **[ft_headmodel_localspheres](/reference/forward/ft_headmodel_localspheres)**
 - **[ft_headmodel_openmeeg](/reference/forward/ft_headmodel_openmeeg)**
@@ -135,11 +137,15 @@ The MATLAB interface to the [OpenMEEG](https://openmeeg.github.io) implementatio
 
 ### fieldtrip/external/bemcp
 
-The bemcp implementation is kindly provided by [Christophe Phillips](http://www2.ulg.ac.be/crc/en/cphillips.html), hence the "CP" in the name.
+The bemcp implementation is kindly provided by [Christophe Phillips]([http://www2.ulg.ac.be/crc/en/cphillips.html](https://christophephillips.github.io), hence the "CP" in the name.
 
 ### fieldtrip/external/dipoli
 
 The dipoli implementation is kindly provided by [Thom Oostendorp](http://www.mbfys.ru.nl/~thom/).
+
+### fieldtrip/external/hbf 
+
+The dipole implementation is kindly provided by [Matti Stenroos](https://github.com/MattiStenroos), and [George O'Neill](https://georgeoneill.github.io) wrote the code to directly access this method.
 
 ## Finite element method (FEM) implementation
 
