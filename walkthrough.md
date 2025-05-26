@@ -61,11 +61,11 @@ Most often every trial has the same time axis. e.g., they all go from one second
 
 Where the trials were originally from, meaning the samples in the continuous data are found in data.sampleinfo. It has a simple two column format of a start and end sample number for every trial (on every row).
 
-    data.sampleinfo: [2x25 double]   % one row might be: [173450 174450]
+    data.sampleinfo: [25x2 double]   % one row might be: [173450 174450]
 
 Finally, you might have extra information per trial about the specific condition to which the trial belongs, the response time, etc. How to include this information yourself will be explored next but for now it will suffice to say you can might find it in an extra field called trialinfo where every row contains some extra info for every trial. For example:
 
-    data.trialinfo: [3x25 double]    % one row might be: [100 3.4556 1] 
+    data.trialinfo: [25x3 double]    % one row might be: [100 3.4556 1] 
 
 ## Trial bookkeeping, part I
 
