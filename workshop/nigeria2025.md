@@ -86,7 +86,17 @@ The final day is flexible, used for review, additional practice, or wrapping up 
 
 ## How to prepare
 
-More information will follow.
+### Installing FieldTrip
+
+Open MATLAB online and enter teh following in the command window
+
+    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/fieldtrip-20250517.zip')
+    addpath fieldtrip-20250517
+    ft_defaults
+
+### Downloading the data
+
+Instructions will follow.
 
 ## Reading material
 
