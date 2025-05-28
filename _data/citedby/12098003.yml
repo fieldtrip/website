@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39390709'
+- idtype: doi
+  value: 10.1093/cercor/bhae398
+- idtype: pmcid
+  value: PMC12098003
+authors:
+- authtype: Author
+  name: Xia J
+- authtype: Author
+  name: Kutas M
+- authtype: Author
+  name: Salmon DP
+- authtype: Author
+  name: Stoermann AM
+- authtype: Author
+  name: Rigatuso SN
+- authtype: Author
+  name: Tomaszewski Farias SE
+- authtype: Author
+  name: Edland SD
+- authtype: Author
+  name: Brewer JB
+- authtype: Author
+  name: Olichney JM
+epubdate: 2024 Oct 10
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '10'
+pages: bhae398
+pmclivedate: 2025/05/23
+printpubdate: ''
+pubdate: 2024 Oct 10
+sortdate: 2024/10/10 00:00
+source: Cereb Cortex
+title: Memory-related brain potentials for visual objects in early AD show impairment
+  and compensatory mechanisms
+uid: '12098003'
+volume: '34'

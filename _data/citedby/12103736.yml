@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38357932'
+- idtype: doi
+  value: 10.1162/jocn_a_02131
+- idtype: pmcid
+  value: PMC12103736
+- idtype: MID
+  value: NIHMS2081859
+authors:
+- authtype: Author
+  name: Baror S
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: He BJ
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '5'
+pages: 756-775
+pmclivedate: 2025/05/25
+printpubdate: 2024 May 1
+pubdate: 2024 May 1
+sortdate: 2024/05/01 00:00
+source: J Cogn Neurosci
+title: Neural mechanisms determining the duration of task-free, self-paced visual
+  perception
+uid: '12103736'
+volume: '36'

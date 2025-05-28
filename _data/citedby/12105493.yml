@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.xinn.2025.100846
+- idtype: pmcid
+  value: PMC12105493
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Ge Q
+- authtype: Author
+  name: Dang Y
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Xia X
+- authtype: Author
+  name: Zhang P
+- authtype: Author
+  name: He S
+- authtype: Author
+  name: Laureys S
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: He J
+epubdate: 2025 Feb 25
+fulljournalname: The Innovation
+issue: '5'
+pages: '100846'
+pmclivedate: 2025/05/27
+printpubdate: ''
+pubdate: 2025 Feb 25
+sortdate: 2025/02/25 00:00
+source: Innovation (Camb)
+title: Thalamic burst and tonic firing selectively indicate patients’ consciousness
+  level and recovery
+uid: '12105493'
+volume: '6'

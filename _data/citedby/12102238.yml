@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40410503'
+- idtype: doi
+  value: 10.1038/s41598-025-95045-3
+- idtype: pmcid
+  value: PMC12102238
+authors:
+- authtype: Author
+  name: Valderrama JT
+- authtype: Author
+  name: Mejia J
+- authtype: Author
+  name: Wong A
+- authtype: Author
+  name: Herbert NC
+- authtype: Author
+  name: Edwards B
+epubdate: 2025 May 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17998'
+pmclivedate: 2025/05/24
+printpubdate: ''
+pubdate: 2025 May 23
+sortdate: 2025/05/23 00:00
+source: Sci Rep
+title: Reduced listening effort with adaptive binaural beamforming in realistic noisy
+  environments
+uid: '12102238'
+volume: '15'
