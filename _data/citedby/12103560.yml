@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40413194'
+- idtype: doi
+  value: 10.1038/s41598-025-02553-3
+- idtype: pmcid
+  value: PMC12103560
+authors:
+- authtype: Author
+  name: Maack MC
+- authtype: Author
+  name: Ostrowski J
+- authtype: Author
+  name: Rose M
+epubdate: 2025 May 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18120'
+pmclivedate: 2025/05/25
+printpubdate: ''
+pubdate: 2025 May 24
+sortdate: 2025/05/24 00:00
+source: Sci Rep
+title: The order of multisensory associative sequences is reinstated as context feature
+  during successful recognition
+uid: '12103560'
+volume: '15'

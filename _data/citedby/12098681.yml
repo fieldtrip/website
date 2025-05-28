@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40404918'
+- idtype: doi
+  value: 10.1038/s43856-025-00920-9
+- idtype: pmcid
+  value: PMC12098681
+authors:
+- authtype: Author
+  name: Salami P
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Bourdillon P
+- authtype: Author
+  name: Hadar PN
+- authtype: Author
+  name: Alamoudi OA
+- authtype: Author
+  name: Sisterson ND
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Pati S
+- authtype: Author
+  name: Cash SS
+epubdate: 2025 May 22
+fulljournalname: Communications Medicine
+issue: ''
+pages: '190'
+pmclivedate: 2025/05/23
+printpubdate: ''
+pubdate: 2025 May 22
+sortdate: 2025/05/22 00:00
+source: Commun Med (Lond)
+title: Inter-seizure variability in thalamic recruitment and its implications for
+  precision thalamic neuromodulation
+uid: '12098681'
+volume: '5'
