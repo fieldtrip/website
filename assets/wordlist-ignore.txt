@@ -122,6 +122,7 @@ analyusis
 analyzeCodeCompatibility
 Analzye
 anaparameter
+Anastassiou
 anat
 AnatomicalLandmarkCoordinates
 AnatomicalLandmarkCoordinateSystem
@@ -546,6 +547,7 @@ Butterworth
 buttonclick
 buttonpress
 buttonui
+Buzsáki
 BV
 BVA
 bvery
@@ -1014,6 +1016,7 @@ Cz
 Czienskowski
 d'Action
 d'Annunzio
+da
 DAC
 Dahls
 Dalal
@@ -2179,6 +2182,7 @@ hlmarkersize
 Hmmm
 hoc
 Hochberg
+Höchenberger
 Hochstatter
 Hoekema
 Holleman
@@ -2509,6 +2513,7 @@ Karger
 Karls
 Karolinska
 Karsten
+Kastman
 Kastner
 Katholieke
 Kavanagh
@@ -2684,6 +2689,7 @@ lik
 lilla
 Lilla
 lin
+Lindeløv
 Lindenberger
 LInear
 linenoise
@@ -2756,6 +2762,7 @@ Lundqvist
 Luu
 ly
 Maat
+MacAskill
 macbook
 Macbook
 MacBook
@@ -3480,6 +3487,7 @@ nr
 nrd
 Nref
 nRES
+nrn
 nrpt
 Nrpt
 nRptxNxnFreq
@@ -3739,6 +3747,7 @@ peerlist
 peerreset
 peerworker
 peerzombie
+Peirce
 pele
 Pennartz
 Pentusa
@@ -4527,6 +4536,7 @@ sofia
 Sofía
 Sofie
 softwares
+Sogo
 Soldevilla
 Solidworks
 somatosensation
