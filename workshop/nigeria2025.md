@@ -22,7 +22,7 @@ During this workshop, you will get:
 - Networking opportunities with leading researchers and peers.
 - Discussions on ethics, contextualization of neurotechnological research in Africa.
 
-Participants will bring a laptop with a recent web browser for the hands-on data analysis sessions. We will provide WiFi and the analysis will be done using online tools, so you don’t need special software on your laptop.
+Participants will bring a laptop with a recent web browser for the hands-on data analysis sessions. We will provide WiFi and the analysis will be done using online and open-source tools, so you don’t need special software on your laptop.
 
 ## Company support
 
@@ -44,9 +44,9 @@ See the [African Brain Data Network](https://africanbraindatanetwork.com/) homep
 
 ### Who
 
-It is organized by Damian Eke, Eberechi Wogu, Victor Owoyele, Ore Ogundipe, Robert Oostenveld, Mikkel Vinding, and various others help with the organization.
+It is organized by Damian Eke, Eberechi Wogu, Victor Owoyele, Ore Ogundipe, Robert Oostenveld, Mikkel C. Vinding, and various others help with the organization.
 
-The lectures and hands-on sessions will be presented by [Robert Oostenveld](https://www.ru.nl/personen/oostenveld-r) from Radboud University Nijmegen, the Netherlands, and [Mikkel Vinding](https://psychology.ku.dk/staff/academic_staff/?pure=en/persons/805933) from Copenhagen University, Denmark. Both Robert and Mikkel have extensive experience with EEG, including designing the experiments, doing recordings, and analyzing data. You can find their publications [here](https://scholar.google.com/citations?user=eEbaa0UAAAAJ&hl=en&oi=ao) and [here](https://scholar.google.com/citations?user=v6A5dRgAAAAJ&hl=en&oi=sra).
+The lectures and hands-on sessions will be presented by [Robert Oostenveld](https://www.ru.nl/personen/oostenveld-r) from Radboud University Nijmegen, the Netherlands, and [Mikkel C. Vinding](https://psychology.ku.dk/staff/academic_staff/?pure=en/persons/805933) from University of Copenhagen , Denmark. Both Robert and Mikkel have extensive experience with EEG, including designing the experiments, doing recordings, and analyzing data. You can find their publications [here](https://scholar.google.com/citations?user=eEbaa0UAAAAJ&hl=en&oi=ao) and [here](https://scholar.google.com/citations?user=v6A5dRgAAAAJ&hl=en&oi=sra).
 
 ### When
 
@@ -66,7 +66,7 @@ The week begins with orientation and practical information, followed by foundati
 
 ### Tuesday – Experimental Design & EEG Recording
 
-Hands-on sessions guide participants through installing stimulus software (e.g., PsychoPy), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
+Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
 
 ### Wednesday – EEG Data & Analysis Tools
 
@@ -98,8 +98,18 @@ Open MATLAB online and enter the following in the command window
 
 Instructions will follow.
 
-## Reading material
+## Suggested reading material
 
+### EEG background
+- Buzsáki, G., Anastassiou, C. A., & Koch, C. (2012). The origin of extracellular fields and currents—EEG, ECoG, LFP and spikes. Nature Reviews Neuroscience, 13(6), 407–420. {% include badge doi="10.1038/nrn3241" %}
+- Lopes da Silva, F. (2013). EEG and MEG: Relevance to Neuroscience. Neuron, 80(5), 1112–1128. {% include badge doi="10.1016/j.neuron.2013.10.017" %}
+- Luck, S. J. (2014). An introduction to the event-related potential technique (Second edition). The MIT Press.
+
+### Software
+- Oostenveld, R., Fries, P., Maris, E., & Schoffelen, J.-M. (2011). FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data. Computational Intelligence and Neuroscience, 2011, 1–9. {% include badge doi="10.1155/2011/156869" %}
+- Peirce, J., Gray, J. R., Simpson, S., MacAskill, M., Höchenberger, R., Sogo, H., Kastman, E., & Lindeløv, J. K. (2019). PsychoPy2: Experiments in behavior made easy. Behavior Research Methods, 51(1), 195–203. {% include badge doi="10.3758/s13428-018-01193-y" %}
+
+### EEG in Africa
 - Parker, T. C., & Ricard, J. A. (2022). Structural racism in neuroimaging: Perspectives and solutions. The Lancet Psychiatry, 9(5), e22. {% include badge doi="10.1016/S2215-0366(22)00079-7" %}
 - Caspar, E. A. (2024). Guidelines for Inclusive and Diverse Human Neuroscience Research Practices. The Journal of Neuroscience, 44(48), e1971242024. {% include badge doi="10.1523/JNEUROSCI.1971-24.2024" %}
 - Köhler, J., Reis, A. A., & Saxena, A. (2021). A survey of national ethics and bioethics committees. Bulletin of the World Health Organization, 99(2), 138–147. {% include badge doi="10.2471/BLT.19.243907" %}
