@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40434818'
+- idtype: doi
+  value: 10.7554/eLife.102335
+- idtype: pmcid
+  value: PMC12119085
+authors:
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Johnson PA
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Stein T
+- authtype: Author
+  name: van Gaal S
+epubdate: 2025 May 28
+fulljournalname: eLife
+issue: ''
+pages: RP102335
+pmclivedate: 2025/05/28
+printpubdate: ''
+pubdate: 2025 May 28
+sortdate: 2025/05/28 00:00
+source: eLife
+title: Criterion placement threatens the construct validity of neural measures of
+  consciousness
+uid: '12119085'
+volume: '13'

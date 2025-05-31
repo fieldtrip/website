@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40433299'
+- idtype: doi
+  value: 10.1162/imag_a_00568
+- idtype: pmcid
+  value: PMC7617707
+- idtype: MID
+  value: EMS205317
+authors:
+- authtype: Author
+  name: Nicholls VI
+- authtype: Author
+  name: Krugliak A
+- authtype: Author
+  name: Alsbury-Nealy B
+- authtype: Author
+  name: Gramann K
+- authtype: Author
+  name: Clarke A
+epubdate: 2025 May 7
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: imag_a_00568
+pmclivedate: 2025/05/27
+printpubdate: ''
+pubdate: 2025 May 7
+sortdate: 2025/05/07 00:00
+source: Imaging Neurosci (Camb)
+title: Contextual expectations in the real-world modulate low-frequency neural oscillations
+uid: '7617707'
+volume: '3'

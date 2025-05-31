@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40418430'
+- idtype: doi
+  value: 10.1007/s00221-025-07099-4
+- idtype: pmcid
+  value: PMC12106539
+authors:
+- authtype: Author
+  name: Koster RA
+- authtype: Author
+  name: Zandvoort CS
+- authtype: Author
+  name: Kerkman JN
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: Dominici N
+epubdate: 2025 May 26
+fulljournalname: Experimental Brain Research
+issue: '6'
+pages: '153'
+pmclivedate: 2025/05/28
+printpubdate: '2025'
+pubdate: 2025 May 26
+sortdate: 2025/05/26 00:00
+source: Exp Brain Res
+title: Exploring the cortical involvement in sensorimotor integration during early
+  stages of independent walking
+uid: '12106539'
+volume: '243'

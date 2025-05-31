@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40438538'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1534321
+- idtype: pmcid
+  value: PMC12116543
+authors:
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: Cabrera-Álvarez J
+- authtype: Author
+  name: del Cerro-León A
+- authtype: Author
+  name: Gómez-Ariza CJ
+- authtype: Author
+  name: Santos A
+- authtype: Author
+  name: Maestú F
+epubdate: 2025 May 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1534321'
+pmclivedate: 2025/05/28
+printpubdate: ''
+pubdate: 2025 May 14
+sortdate: 2025/05/14 00:00
+source: Front Hum Neurosci
+title: Individual alpha frequency tACS reduces static functional connectivity across
+  the default mode network
+uid: '12116543'
+volume: '19'

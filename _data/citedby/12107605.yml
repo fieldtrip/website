@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40421899'
+- idtype: doi
+  value: 10.1002/hbm.70224
+- idtype: pmcid
+  value: PMC12107605
+authors:
+- authtype: Author
+  name: Sato W
+- authtype: Author
+  name: Kochiyama T
+- authtype: Author
+  name: Uono S
+epubdate: 2025 May 27
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: e70224
+pmclivedate: 2025/05/27
+printpubdate: ''
+pubdate: 2025 May 27
+sortdate: 2025/05/27 00:00
+source: Hum Brain Mapp
+title: Neural Electrical Correlates of Subjective Happiness
+uid: '12107605'
+volume: '46'

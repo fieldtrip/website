@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40354541'
+- idtype: doi
+  value: 10.1073/pnas.2505454122
+- idtype: pmcid
+  value: PMC12107109
+authors:
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: Iten M
+- authtype: Author
+  name: Haenggi M
+- authtype: Author
+  name: Zubler F
+- authtype: Author
+  name: Schwartz S
+- authtype: Author
+  name: De Lucia M
+epubdate: 2025 May 12
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '20'
+pages: e2505454122
+pmclivedate: ''
+printpubdate: 2025 May 20
+pubdate: 2025 May 12
+sortdate: 2025/05/12 00:00
+source: Proc Natl Acad Sci U S A
+title: Cardiac signals inform auditory regularity processing in the absence of consciousness
+uid: '12107109'
+volume: '122'

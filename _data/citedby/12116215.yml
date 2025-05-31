@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38319683'
+- idtype: doi
+  value: 10.1162/jocn_a_02123
+- idtype: pmcid
+  value: PMC12116215
+- idtype: MID
+  value: NIHMS2079704
+authors:
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Postle BR
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '5'
+pages: 815-827
+pmclivedate: 2025/05/27
+printpubdate: 2024 May 1
+pubdate: 2024 May 1
+sortdate: 2024/05/01 00:00
+source: J Cogn Neurosci
+title: Neural signatures of competition between voluntary and involuntary influences
+  over the focus of attention in visual working memory
+uid: '12116215'
+volume: '36'
