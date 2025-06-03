@@ -5,7 +5,7 @@ tags: [nigeria2025]
 
 # African Brain Data Network
 
-Together with the African Brain Data Network we are organizing an intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
+Together with the [African Brain Data Network](https://africanbraindatanetwork.com) we are organizing an intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
 
 This workshop aims to:
 
@@ -101,15 +101,18 @@ Instructions will follow.
 ## Suggested reading material
 
 ### EEG background
+
 - Buzsáki, G., Anastassiou, C. A., & Koch, C. (2012). The origin of extracellular fields and currents—EEG, ECoG, LFP and spikes. Nature Reviews Neuroscience, 13(6), 407–420. {% include badge doi="10.1038/nrn3241" %}
 - Lopes da Silva, F. (2013). EEG and MEG: Relevance to Neuroscience. Neuron, 80(5), 1112–1128. {% include badge doi="10.1016/j.neuron.2013.10.017" %}
 - Luck, S. J. (2014). An introduction to the event-related potential technique (Second edition). The MIT Press.
 
 ### Software
+
 - Oostenveld, R., Fries, P., Maris, E., & Schoffelen, J.-M. (2011). FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data. Computational Intelligence and Neuroscience, 2011, 1–9. {% include badge doi="10.1155/2011/156869" %}
 - Peirce, J., Gray, J. R., Simpson, S., MacAskill, M., Höchenberger, R., Sogo, H., Kastman, E., & Lindeløv, J. K. (2019). PsychoPy2: Experiments in behavior made easy. Behavior Research Methods, 51(1), 195–203. {% include badge doi="10.3758/s13428-018-01193-y" %}
 
 ### EEG in Africa
+
 - Parker, T. C., & Ricard, J. A. (2022). Structural racism in neuroimaging: Perspectives and solutions. The Lancet Psychiatry, 9(5), e22. {% include badge doi="10.1016/S2215-0366(22)00079-7" %}
 - Caspar, E. A. (2024). Guidelines for Inclusive and Diverse Human Neuroscience Research Practices. The Journal of Neuroscience, 44(48), e1971242024. {% include badge doi="10.1523/JNEUROSCI.1971-24.2024" %}
 - Köhler, J., Reis, A. A., & Saxena, A. (2021). A survey of national ethics and bioethics committees. Bulletin of the World Health Organization, 99(2), 138–147. {% include badge doi="10.2471/BLT.19.243907" %}
