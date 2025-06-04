@@ -19,7 +19,7 @@ find . -name \*.md | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr ,
 
 # this constructs a list of pages that have a certain tag
 for TAG in `cat ${TAGFILE}` ; do
-  FILELIST=`find . -name \*.md | xargs grep -wl ^tags:.*${TAG} | sort -u `
+  FILELIST=`find . -name \*.md -not -path ./.bundle/\* | xargs grep -wl ^tags:.*${TAG} | sort -u `
   for FILE in ${FILELIST}; do
     TITLE=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
     LINK=${FILE:1:$((${#FILE}-4))}

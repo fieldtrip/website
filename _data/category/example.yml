@@ -1,3 +1,276 @@
 - title:  Examples
   link:  /example
 
+- title:  Converting an example audio dataset for sharing in BIDS
+  link:  /example/other/bids_audio
+
+- title:  Converting an example behavioral dataset for sharing in BIDS
+  link:  /example/other/bids_behavioral
+
+- title:  Converting an example EEG dataset for sharing in BIDS
+  link:  /example/other/bids_eeg
+
+- title:  Converting an example EMG dataset for sharing in BIDS
+  link:  /example/other/bids_emg
+
+- title:  Converting an example eyetracker dataset for sharing in BIDS
+  link:  /example/other/bids_eyetracker
+
+- title:  BIDS - the brain imaging data structure
+  link:  /example/other/bids
+
+- title:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/other/bids_meg
+
+- title:  Converting an example motion tracking dataset for sharing in BIDS
+  link:  /example/other/bids_motion
+
+- title:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
+  link:  /example/other/bids_mous
+
+- title:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/other/bids_nirs
+
+- title:  Combining simultaneous recordings in BIDS
+  link:  /example/other/bids_pom
+
+- title:  Converting an example video dataset for sharing in BIDS
+  link:  /example/other/bids_video
+
+- title:  Example analysis pipeline for Biosemi data
+  link:  /example/other/biosemi
+
+- title:  How to use ft_checkconfig
+  link:  /example/other/checkconfig
+
+- title:  Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+  link:  /example/other/entropy_analysis
+
+- title:  Correlation analysis of fMRI data
+  link:  /example/other/fmri_correlationanalysis
+
+- title:  How to import data from MNE-Python and FreeSurfer
+  link:  /example/other/import_mne
+
+- title:  Find the orientation of planar gradiometers
+  link:  /example/other/planar_orientation
+
+- title:  Using reproducescript on a full study
+  link:  /example/other/reproducescript_andersen
+
+- title:  Using reproducescript for a group analysis
+  link:  /example/other/reproducescript_group
+
+- title:  Making your analysis pipeline reproducible using reproducescript
+  link:  /example/other/reproducescript
+
+- title:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/plotting/nirs_layout
+
+- title:  Plotting the result of source reconstruction on a cortical mesh
+  link:  /example/plotting/plotting_source_surface
+
+- title:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/plotting/video_eeg
+
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
+
+- title:  Determine the filter characteristics
+  link:  /example/preproc/filter_characteristics
+
+- title:  Fixing a missing channel
+  link:  /example/preproc/fixing_a_missing_sensor
+
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
+
+- title:  Independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/preproc/ica_eog
+
+- title:  Combine MEG with Eyelink eyetracker data
+  link:  /example/preproc/meg_eyelink
+
+- title:  Getting started with reading raw EEG or MEG data
+  link:  /example/preproc/raw_meeg
+
+- title:  Rereference EEG and iEEG data
+  link:  /example/preproc/rereference
+
+- title:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/preproc/trialdef_emg
+
+- title:  Making your own trialfun for conditional trial definition
+  link:  /example/preproc/trialfun
+
+- title:  Example real-time average
+  link:  /example/realtime/ft_realtime_average
+
+- title:  Example real-time classification
+  link:  /example/realtime/ft_realtime_classification
+
+- title:  Realtime neurofeedback application based on Hilbert phase estimation
+  link:  /example/realtime/ft_realtime_hilbert
+
+- title:  Example real-time power estimate
+  link:  /example/realtime/ft_realtime_powerestimate
+
+- title:  Example real-time selective average
+  link:  /example/realtime/ft_realtime_selectiveaverage
+
+- title:  Example real-time signal viewer
+  link:  /example/realtime/ft_realtime_signalviewer
+
+- title:  Measuring the timing delay and jitter for a real-time application
+  link:  /example/realtime/realtime_evaluation
+
+- title:  The correct pipeline order for combining planar MEG channels
+  link:  /example/sensor/combineplanar_pipelineorder
+
+- title:  How to incorporate head movements in MEG analysis
+  link:  /example/sensor/headmovement_meg
+
+- title:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  link:  /example/sensor/megrealign
+
+- title:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+  link:  /example/sensor/nirs_fingertapping
+
+- title:  Analyzing NIRS data recorded during listening to and repeating speech
+  link:  /example/sensor/nirs_speech
+
+- title:  Common filters in beamforming
+  link:  /example/source/beamformer_commonfilter
+
+- title:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/source/beamformer_ownforward
+
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
+
+- title:  Compute EEG leadfields using a BEM headmodel
+  link:  /example/source/bem
+
+- title:  Compute forward simulated data with the low-level ft_compute_leadfield
+  link:  /example/source/compute_leadfield
+
+- title:  Compute EEG leadfields using a concentric spheres headmodel
+  link:  /example/source/concentricspheres
+
+- title:  Check the quality of the anatomical coregistration
+  link:  /example/source/coregistration_quality_control
+
+- title:  Localizing the sources underlying the difference in event-related fields
+  link:  /example/source/difference_erf
+
+- title:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/source/dipolefit_somatosensory_erf
+
+- title:  Align EEG electrode positions to BEM headmodel
+  link:  /example/source/electrodes2bem
+
+- title:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/source/fem
+
+- title:  How to create a head model if you do not have an individual MRI
+  link:  /example/source/fittemplate
+
+- title:  Make MEG leadfields using different headmodels
+  link:  /example/source/headmodel_various
+
+- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+  link:  /example/source/neuromag_aligned2mni
+
+- title:  Compute forward simulated data and apply a beamformer scan
+  link:  /example/source/simulateddata_beamformer
+
+- title:  Can I create an artificial CTF dataset using MATLAB?
+  link:  /example/source/simulateddata_ctf
+
+- title:  Compute forward simulated data and apply a dipole fit
+  link:  /example/source/simulateddata_dipolefit
+
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
+
+- title:  Create brain atlas based MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
+
+- title:  Combined EEG and MEG source reconstruction
+  link:  /example/source/sourcerecon_meeg
+
+- title:  Fitting a template MRI to the MEG Polhemus head shape
+  link:  /example/source/sphere_fitting
+
+- title:  Symmetric dipole pairs for beamforming
+  link:  /example/source/symmetry
+
+- title:  Effect of SNR on Coherence
+  link:  /example/spectral/coherence_snr
+
+- title:  Cross-frequency analysis
+  link:  /example/spectral/crossfreq
+
+- title:  Analysis of high-gamma band signals in human ECoG
+  link:  /example/spectral/ecog_ny
+
+- title:  Effects of tapering for power estimates
+  link:  /example/spectral/effects_of_tapering
+
+- title:  Fitting oscillations and one-over-F (FOOOF)
+  link:  /example/spectral/fooof
+
+- title:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /example/spectral/fourier
+
+- title:  Conditional Granger causality in the frequency domain
+  link:  /example/spectral/granger_conditional
+
+- title:  Irregular Resampling Auto-Spectral Analysis (IRASA)
+  link:  /example/spectral/irasa
+
+- title:  Simulate an oscillatory signal with phase resetting
+  link:  /example/spectral/phase_reset
+
+- title:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+  link:  /example/spectral/ssvep
+
+- title:  Interpolate the time axis of single-trial TFRs
+  link:  /example/spectral/tfr_interpolatetime
+
+- title:  Computing and reporting the effect size
+  link:  /example/stats/effectsize
+
+- title:  Using General Linear Modeling on time series data
+  link:  /example/stats/glm_timeseries
+
+- title:  Using General Linear Modeling over trials
+  link:  /example/stats/glm_trials
+
+- title:  Defining electrodes as neighbours for cluster-level statistics
+  link:  /example/stats/neighbours
+
+- title:  Using GLM to analyze NIRS timeseries data
+  link:  /example/stats/nirs_glm
+
+- title:  Using simulations to estimate the sample size for cluster-based permutation test
+  link:  /example/stats/samplesize
+
+- title:  Use simulated ERPs to explore cluster statistics
+  link:  /example/stats/simulateddata_clusterstats
+
+- title:  Source statistics
+  link:  /example/stats/source_statistics
+
+- title:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
+  link:  /example/stats/stats_besa
+
+- title:  Stratify the distribution of one variable that differs in two conditions
+  link:  /example/stats/stratify
+
+- title:  Using threshold-free cluster enhancement for cluster statistics
+  link:  /example/stats/tfce
+
