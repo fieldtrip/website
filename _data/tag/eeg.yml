@@ -247,13 +247,13 @@
 - title:  Event-related potentials
   link:  /workshop/nigeria2025/erp
 
-- title:  Frequency analysis
+- title:  Frequency analysis of resting state EEG data
   link:  /workshop/nigeria2025/frequency
 
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
 
-- title:  Time-frequency analysis
+- title:  Time-frequency analysis of task EEG data
   link:  /workshop/nigeria2025/timefrequency
 
 - title:  Forward modeling for EEG source reconstruction
