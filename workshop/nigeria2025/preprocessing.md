@@ -77,7 +77,7 @@ The data is a matrix of the size Nchans by Nsamples. There is a time axis that s
 
 The actual data of the first (and only) trial is in the trial cell-array.
 
-disp(data.trial{1})
+    disp(data.trial{1})
 
 Note that curly brackets '{' and '}' are used to index elements from a cell-array, whereas round brackets '(' and ')' are used to index vectors and matrices (and to pass arguments to a function) and square brackets '[' and ']' are used to construct vectors and matrices.
 
@@ -85,13 +85,13 @@ Note that curly brackets '{' and '}' are used to index elements from a cell-arra
 
 We can make a figure and plot the data using standard MATLAB functions
 
-  close all
+    close all
 
-  figure
-  plot(data.time{1}, data.trial{1})
-  xlabel('time (s)')
-  ylabel('channel amplitude (uV)')
-  legend(data.label)
+    figure
+    plot(data.time{1}, data.trial{1})
+    xlabel('time (s)')
+    ylabel('channel amplitude (uV)')
+    legend(data.label)
 
 This plots all channels and all timepoints. Since the data is a matrix, we can select a single channel (row) and only plot that.
 
@@ -140,13 +140,11 @@ Here we use the databrowser to scroll through the data, reading 15 second steps 
     cfg.blocksize = 15;
     ft_databrowser(cfg);
 
-You can use the buttons to zoom in and out, but you can also set the horizontal and vertical scale in the configuration. 
-
-    % set the vertical limits (in uV)
+You can use the buttons to zoom in and out, but you can also set the horizontal and vertical scale in the configuration.
 
     cfg = [];
-    cfg.blocksize = 15; 
-    cfg.ylim = [-30 30];
+    cfg.blocksize = 15;     % set the horizontal block size (in seconds)
+    cfg.ylim = [-30 30];    % set the vertical limits (in uV)
     ft_databrowser(cfg, data);
 
 ### Looking at low-level data characteristics
@@ -163,8 +161,7 @@ Rather than the data being represents in a MATLAB structure, it is now simply a 
 
     size(dat)
 
-
-The header has teh details on the channel names and the sampling rate, which you could use to construct the time axis.
+The header has the details on the channel names and the sampling rate, which you could use to construct the time axis.
 
     disp(hdr)
 
@@ -175,9 +172,9 @@ The events are a structure array, i.e., a list of structures. Each event corresp
       disp(event(i))
     end
 
-## Define the trials in  the data
+## Define the trials from the triggers
 
-To look at event-related potentials we need to cut the data into segments around the stimulus. These segments are sometimes also called "epochs" or  "trials". To cut the data segments of interest, we need to know the begin and end sample of each segment. These can be determined either
+To look at event-related potentials we need to cut the data into segments around the stimulus. These segments are sometimes also called "epochs" or "trials". To cut the data segments of interest, we need to know the begin and end sample of each segment. These can be determined either
 
 - according to a specific trigger or marker that is present in the data
 - according to your own criteria when you write your own trial function, e.g., for conditional trigger sequences, or by detecting the onset of movement in an EMG channel
@@ -233,7 +230,7 @@ The data now has multiple trials or segments
 
     disp(data);
 
-We can use the databrowser to  plot the trials, one-by-one. The time of each trial is now relative to the trigger.
+We can use the databrowser to plot the trials, one-by-one. The time of each trial is now relative to the trigger.
 
     cfg = [];
     cfg.plotevents = 'no';
