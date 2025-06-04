@@ -10,7 +10,7 @@
 - title:  Getting started with reading raw EEG or MEG data
   link:  /example/preproc/raw_meeg
 
-- title:  Re-reference EEG and iEEG data
+- title:  Rereference EEG and iEEG data
   link:  /example/preproc/rereference
 
 - title:  Use your own forward leadfield model in an inverse beamformer computation
@@ -243,6 +243,9 @@
 
 - title:  Details of the auditory oddball combined MEG/EEG dataset
   link:  /workshop/natmeg2014/meg_audodd
+
+- title:  Preprocessing of EEG data
+  link:  /workshop/nigeria2025/preprocessing
 
 - title:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling

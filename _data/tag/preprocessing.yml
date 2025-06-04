@@ -19,7 +19,7 @@
 - title:  Getting started with reading raw EEG or MEG data
   link:  /example/preproc/raw_meeg
 
-- title:  Re-reference EEG and iEEG data
+- title:  Rereference EEG and iEEG data
   link:  /example/preproc/rereference
 
 - title:  Detect the muscle activity in an EMG channel and use that as trial definition
@@ -150,6 +150,9 @@
 
 - title:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms/tms-eeg
+
+- title:  Preprocessing of EEG data
+  link:  /workshop/nigeria2025/preprocessing
 
 - title:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction

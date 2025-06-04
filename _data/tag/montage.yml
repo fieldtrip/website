@@ -1,4 +1,4 @@
-- title:  Re-reference EEG and iEEG data
+- title:  Rereference EEG and iEEG data
   link:  /example/preproc/rereference
 
 - title:  How can I rename channels in my data structure?
