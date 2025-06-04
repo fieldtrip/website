@@ -1,0 +1,51 @@
+- title:  Converting an example audio dataset for sharing in BIDS
+  link:  /example/other/bids_audio
+
+- title:  Converting an example behavioral dataset for sharing in BIDS
+  link:  /example/other/bids_behavioral
+
+- title:  Converting an example EEG dataset for sharing in BIDS
+  link:  /example/other/bids_eeg
+
+- title:  Converting an example EMG dataset for sharing in BIDS
+  link:  /example/other/bids_emg
+
+- title:  Converting an example eyetracker dataset for sharing in BIDS
+  link:  /example/other/bids_eyetracker
+
+- title:  BIDS - the brain imaging data structure
+  link:  /example/other/bids
+
+- title:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/other/bids_meg
+
+- title:  Converting an example motion tracking dataset for sharing in BIDS
+  link:  /example/other/bids_motion
+
+- title:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
+  link:  /example/other/bids_mous
+
+- title:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/other/bids_nirs
+
+- title:  Combining simultaneous recordings in BIDS
+  link:  /example/other/bids_pom
+
+- title:  Converting an example video dataset for sharing in BIDS
+  link:  /example/other/bids_video
+
+- title:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/other/bids_coordsystem
+
+- title:  Getting started with Cerca OPM data
+  link:  /getting_started/meg/cerca
+
+- title:  Getting started with BIDS
+  link:  /getting_started/othersoftware/bids
+
+- title:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
+- title:  Convert the EEG sedation dataset for sharing in BIDS
+  link:  /workshop/madrid2019/bids_sedation
+

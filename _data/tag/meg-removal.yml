@@ -1,0 +1,18 @@
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
+
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
+
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
+
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
+
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
+
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
+
