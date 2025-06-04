@@ -19,3 +19,24 @@
 - title:  Template 3-D gradiometer descriptions
   link:  /template/gradiometer
 
+- title:  MEG dataformats
+  link:  /dataformat/meg
+
+- title:  Streaming realtime data from Neuromag/Elekta/Megin
+  link:  /development/realtime/neuromag
+
+- title:  Find the orientation of planar gradiometers
+  link:  /example/other/planar_orientation
+
+- title:  How can I visualize the neuromag head position indicator coils?
+  link:  /faq/experiment/neuromag_hpi
+
+- title:  Why are there multiple neighbour templates for the Neuromag306 system?
+  link:  /faq/stats/neighbours_neuromag
+
+- title:  Getting started with Neuromag/Elekta/Megin data
+  link:  /getting_started/meg/neuromag
+
+- title:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+

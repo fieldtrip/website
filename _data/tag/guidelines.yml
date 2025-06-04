@@ -16,3 +16,21 @@
 - title:  Website syntax and formatting Website syntax and formatting New page title
   link:  /development/guideline/website
 
+- title:  Code guidelines
+  link:  /development/guideline/code
+
+- title:  Communication guidelines
+  link:  /development/guideline/communication
+
+- title:  Documentation guidelines this is the title, it should also be the first top-level heading
+  link:  /development/guideline/documentation
+
+- title:  Guidelines
+  link:  /development/guideline
+
+- title:  Template guidelines
+  link:  /development/guideline/templates
+
+- title:  Website syntax and formatting Website syntax and formatting New page title
+  link:  /development/guideline/website
+

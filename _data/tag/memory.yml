@@ -13,3 +13,18 @@
 - title:  Making a memory efficient analysis pipeline
   link:  /tutorial/scripting/memory
 
+- title:  Why are the fileio functions stateless, does the fseek not make them very slow?
+  link:  /faq/preproc/dataformat/fileio_stateless
+
+- title:  How can I preprocess a dataset that is too large to fit into memory?
+  link:  /faq/preproc/datahandling/preproc_downsample
+
+- title:  How fast is the FieldTrip buffer for realtime data streaming?
+  link:  /faq/realtime/fieldtripbuffer_speed
+
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
+
+- title:  Making a memory efficient analysis pipeline
+  link:  /tutorial/scripting/memory
+

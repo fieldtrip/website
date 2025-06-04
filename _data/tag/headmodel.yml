@@ -124,3 +124,129 @@
 - title:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
+
+- title:  Compute EEG leadfields using a BEM headmodel
+  link:  /example/source/bem
+
+- title:  Compute forward simulated data with the low-level ft_compute_leadfield
+  link:  /example/source/compute_leadfield
+
+- title:  Compute EEG leadfields using a concentric spheres headmodel
+  link:  /example/source/concentricspheres
+
+- title:  Align EEG electrode positions to BEM headmodel
+  link:  /example/source/electrodes2bem
+
+- title:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/source/fem
+
+- title:  Make MEG leadfields using different headmodels
+  link:  /example/source/headmodel_various
+
+- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+  link:  /example/source/neuromag_aligned2mni
+
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
+
+- title:  Create brain atlas based MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni_atlas
+
+- title:  Create MNI-aligned grids in individual head-space
+  link:  /example/source/sourcemodel_aligned2mni
+
+- title:  Combined EEG and MEG source reconstruction
+  link:  /example/source/sourcerecon_meeg
+
+- title:  Fitting a template MRI to the MEG Polhemus head shape
+  link:  /example/source/sphere_fitting
+
+- title:  How can I visualize a localspheres volume conductor model?
+  link:  /faq/plotting/headmodel_localspheres
+
+- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/source/anat_coreg
+
+- title:  How can I fine-tune my BEM volume conduction model?
+  link:  /faq/source/bem_finetune
+
+- title:  What is the conductivity of the brain, CSF, skull and skin tissue?
+  link:  /faq/source/conductivity_defaults
+
+- title:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/source/coordsys
+
+- title:  What kind of volume conduction models of the head (head models) are implemented?
+  link:  /faq/source/datatype_headmodel
+
+- title:  How is the segmentation defined?
+  link:  /faq/source/datatype_segmentation
+
+- title:  Where can I find the dipoli command-line executable?
+  link:  /faq/source/dipoli_filelocation
+
+- title:  Why does my EEG headmodel look funny?
+  link:  /faq/source/headmodel_meshingproblem
+
+- title:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
+  link:  /faq/source/inspect_geometries
+
+- title:  How do I install the OpenMEEG binaries
+  link:  /faq/source/openmeeg
+
+- title:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
+  link:  /faq/source/sourcerecon_checkalignment
+
+- title:  Can I restrict the source reconstruction to the grey matter?
+  link:  /faq/source/sourcerecon_greymatter
+
+- title:  Can I do combined EEG and MEG source reconstruction?
+  link:  /faq/source/sourcerecon_meeg
+
+- title:  Getting started with MeshLab
+  link:  /getting_started/othersoftware/meshlab
+
+- title:  Getting started with ParaView
+  link:  /getting_started/othersoftware/paraview
+
+- title:  Getting started with Seg3D
+  link:  /getting_started/othersoftware/seg3d
+
+- title:  Getting started with SimNIBS
+  link:  /getting_started/othersoftware/simnibs
+
+- title:  Reference documentation
+  link:  /reference
+
+- title:  References to implemented methods
+  link:  /references_methods
+
+- title:  Template head models for EEG volume conduction modeling
+  link:  /template/headmodel
+
+- title:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/source/beamformer
+
+- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_bem
+
+- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_fem
+
+- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+  link:  /tutorial/source/headmodel_meg
+
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
+
+- title:  Forward modeling for EEG source reconstruction
+  link:  /workshop/oslo2019/forward_modeling
+
+- title:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
+- title:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/practicalmeeg2022/handson_anatomy
+
