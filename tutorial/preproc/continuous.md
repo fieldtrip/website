@@ -16,21 +16,21 @@ If your experiment consists of a sequence of trials, you may also want to start 
 
 ## Background
 
-Using this approach, you can read all data from the file into memory, apply filters, re-reference (in case of EEG), identify and subtract artifacts using ICA, and subsequently cut the data into segments or trials of interest.
+Using this approach, you can read all data from the file into memory, apply filters, rereference (in case of EEG), identify and subtract artifacts using ICA, and subsequently cut the data into segments or trials of interest.
 
 ### The datasets used in this tutorial
 
 In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
 
-The [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) EEG dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
+The [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) EEG dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using rereferencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset was acquired by Lin Wang in a language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences (not used here). Note that the data was originally acquired and written to disk as 3-second trigger-locked epochs with discontinuities between the epochs; this data can therefore not be treated as continuous.  More details on the experiment and data can be found [here](/tutorial/meg_language).
 
 ## Procedure
 
-The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
+The following steps are taken to read data, to apply filters and to rereference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
 
-- read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
+- read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and rereference to linked mastoids
 - read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
 - combine the EEG and EOG into a single data representation using **[ft_appenddata](/reference/ft_appenddata)**
 - determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
@@ -105,9 +105,9 @@ If you want to force epoched data to be interpreted as continuous data, you can 
 
 If you zoom in and look in detail at the SCLK01 channel, you can see that there are small jumps every 3 seconds. These are due to the data being discontinuous on disk, i.e. only the 3 second segments around each stimulus are stored on disk and the data in-between the trials is not stored. Consequently the MEG channels will also have small jumps every 3 seconds and hence this particular dataset should **not be interpreted** as a continuous recording. Many other CTF recordings are stored on disk with data segments of 10 seconds each; these can be interpreted as continuous as there are no gaps between the long segments.
 
-## Preprocessing, filtering and re-referencing
+## Preprocessing, filtering and rereferencing
 
-For preprocessing this EEG data set, the choice of the reference has to be considered. During acquisition the reference channel of the EEG amplifier was attached to the left mastoid. We would like to analyze this data with a linked-mastoid reference (also known as an average-mastoid reference). Furthermore, the detection of eye movement and blink artifacts is facilitated by computing bipolar derivation for the electrodes that were placed horizontally and vertically around the eyes.
+We can improve the preprocessing by optimizing the reference. During acquisition the reference channel of the EEG amplifier was attached to the left mastoid, and one electrode was placed below the left eye. We would like to analyze the EEG data with a linked-mastoid reference (also known as an average-mastoid reference). Furthermore, the detection of eye movement and blink artifacts is facilitated by computing a bipolar derivation for the electrodes that were placed horizontally and vertically around the eyes.
 
 The channel names that were configured in the BrainAmp Recorder software correspond to the labels of the locations in the electrode cap. These electrode locations are numbered 1 to 60, and the corresponding channel names as ASCII strings are '1', '2', ... '60'. Channel 53 correspond to the right mastoid. Since the left mastoid was used as reference in the acquisition, it is not represented in the data file (because the Voltage at that electrode is zero by definition).
 
@@ -124,11 +124,11 @@ For consistency we will rename the channel with the name '53' located at the rig
     chanindx = find(strcmp(data_eeg.label, '53'));
     data_eeg.label{chanindx} = 'M2';
 
-To discard channels that we do not need any more we can d
+To discard channels that we do not need any more we can do
 
     cfg = [];
     cfg.channel     = [1:61 65];                      % keep channels 1 to 61 and the newly inserted M1 channel
-    data_eeg        = ft_preprocessing(cfg, data_eeg);
+    data_eeg        = ft_selectdata(cfg, data_eeg);
 
 If you look at the data, you will see that it contains a single trial. That single trial represents the complete continuous recording and therefore it is approximately one hour long.
 
@@ -158,7 +158,7 @@ For convenience we rename channel 60 into EOGH and use the **[ft_preprocessing](
 
     cfg = [];
     cfg.channel = 'EOGH';
-    data_eogh   = ft_preprocessing(cfg, data_eogh); % nothing will be done, only the selection of the interesting channel
+    data_eogh   = ft_selectdata(cfg, data_eogh); % nothing will be done, only the selection of the interesting channel
 
 The processing of the vertical EOG is done similar, using the difference between channel 50 and 64 as the bipolar EOG
 
@@ -175,12 +175,12 @@ The processing of the vertical EOG is done similar, using the difference between
     cfg.channel = 'EOGV';
     data_eogv   = ft_preprocessing(cfg, data_eogv); % nothing will be done, only the selection of the interesting channel
 
-Now that we have the EEG data rereferenced to linked mastoids and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation using:
+Now that we have the EEG data rereferenced to linked mastoids, and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation using:
 
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);
 
-In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, re-referencing) to different channels, you should call **[ft_preprocessing](/reference/ft_preprocessing)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
+In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, rereferencing) to different channels, you should call **[ft_preprocessing](/reference/ft_preprocessing)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
 
 ## Segmenting continuous data into trials
 
@@ -193,7 +193,7 @@ Following the reading and channel specific preprocessing, you can identify inter
 
 This will display the event types and values on screen.
 
-    evaluating trialfunction 'trialfun_general'
+    evaluating trial function 'trialfun_general'
     the following events were found in the datafile
     event type: 'New Segment' with event values:
     event type: 'Response' with event values: 'R  8'

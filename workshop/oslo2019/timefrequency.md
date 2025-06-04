@@ -66,7 +66,7 @@ We will focus on two conditions from this dataset: whether the participant respo
     cfg.demean              = 'yes';
     cfg.dftfilter           = 'yes';
     cfg.dftfreq             = [50 100];
-    cfg.reref               = 'yes';  % re-referencing
+    cfg.reref               = 'yes';  % rereferencing
     cfg.refchannel          = 'all';
 
     data                    = ft_preprocessing(cfg);

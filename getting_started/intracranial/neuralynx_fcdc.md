@@ -26,7 +26,7 @@ To deal with the tremendous amounts of data recorded each session (approximately
 
 The downsampling of the original 32 kHz data into the LFP and MUA data is done using the **[ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)** function.
 
-Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to re-reference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check the page on [spike and LFP dataformats](/dataformat/spike) for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the [getting started with Neuralynx](/getting_started/neuralynx) and [getting started with Plexon](/getting_started/plexon) sections.
+Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to rereference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check the page on [spike and LFP dataformats](/dataformat/spike) for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the [getting started with Neuralynx](/getting_started/neuralynx) and [getting started with Plexon](/getting_started/plexon) sections.
 
 ## Data format conversions
 
@@ -177,9 +177,9 @@ All montage files for our particular experiment are available upon request. An e
 
 It is important to note that to change labels in our recordings on Kurt, we use two montages structures. This is because recordings between sessions 17 and 60 headstages were inversely connected to the electrode connectors. In this case, the correct montage file to use is _kurt_montage_rename_plx2elec_17_60.mat_. After session number 60, headstages were correctly positioned. For later sessions therefore the montage file _kurt_montage_rename_plx2elec.mat_ should be used. These files are available upon request.
 
-### Dealing with data re-referencing
+### Dealing with data rereferencing
 
-Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request.
+Similar to what we described in the last section, rereferencing the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request.
 
 ## Plotting Options
 

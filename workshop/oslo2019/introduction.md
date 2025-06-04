@@ -7,7 +7,7 @@ tags: [oslo2019, eeg-audodd, preprocessing]
 
 ## Introduction
 
-This tutorial describes how to define epochs of interest (trials) from recorded EEG data, and how to apply different preprocessing steps such as filtering, cleaning data and re-referencing electrodes. Subsequently, we will average our epochs/trials and acquire so-called event-related potentials (ERPs). We will also compare two different types of stimuli (standard versus deviant tones) and investigate the differing ERPs they give rise to.
+This tutorial describes how to define epochs of interest (trials) from recorded EEG data, and how to apply different preprocessing steps such as filtering, cleaning data and rereferencing electrodes. Subsequently, we will average our epochs/trials and acquire so-called event-related potentials (ERPs). We will also compare two different types of stimuli (standard versus deviant tones) and investigate the differing ERPs they give rise to.
 
 In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
@@ -19,7 +19,7 @@ This data in this tutorial is originally from the [NatMEG workshop](/workshop/na
 
 ## Background
 
-In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
@@ -30,9 +30,9 @@ An advantage of the first approach is that it allows you to apply most temporal 
  Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
-This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field _cfg.trl_. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in `trl` matrix represents a single epoch-of-interest (trial), and the `trl` matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
+This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field `cfg.trl`. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in `trl` matrix represents a single epoch-of-interest (trial), and the `trl` matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
 
-You can either use a default trial function or design your own. When using the default trial function, the fourth column will contain the trigger value of the trigger channel. If you do use your own trial function, you can add as many columns as you wish to the _trl_ matrix, which will be contained in your segmented data in the _.trialinfo_ field. Here, you can add information of for example response buttons, response times.
+You can either use a default trial function or design your own. When using the default trial function, the fourth column will contain the trigger value of the trigger channel. If you do use your own trial function, you can add as many columns as you wish to the `trl` matrix, which will be contained in your segmented data in the `.trialinfo` field. Here, you can add information of for example response buttons, response times.
 
 ## Details of the auditory oddball MEG+EEG Dataset
 
@@ -132,7 +132,7 @@ We will take the following steps
     cfg.channel             = 'EEG';
 
     cfg.reref               = 'yes';    % was recorded with left mastoid but is ...
-    cfg.refchannel          = 'all';    % re-referenced to all (also called common average
+    cfg.refchannel          = 'all';    % rereferenced to all (also called common average
 
     data                    = ft_preprocessing(cfg);
 

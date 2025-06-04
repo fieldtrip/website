@@ -449,7 +449,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg.appendsens = 'yes';
     reref = ft_appenddata(cfg, reref_grids, reref_depths{:});
 
-**44**) Save the re-referenced data to file.
+**44**) Save the rereferenced data to file.
 
     save([subjID '_reref.mat'], reref);
 

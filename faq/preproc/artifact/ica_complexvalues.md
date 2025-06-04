@@ -12,7 +12,7 @@ redirect_from:
 
 Independent component analysis (ICA) can not return more components than the [rank](<https://en.wikipedia.org/wiki/Rank_(linear_algebra)>) of your data. For example, if your data contains 100 linearly independent channels, then the rank of your data would be 100, and you can compute up to 100 independent components. If your data contains 100 channels, of which 99 channels are independent but channel 100 is dependent on channel 99 (e.g., chan100 = -chan99), then the max number of independent components to fully describe your data would be 99. If you try to compute 100 components on this data set, it will fail. Componentanalysis will either return an error, or get into a loop and eventually give you output that contains complex numbers.
 
-This might occur when you have EEG data which is re-referenced using the common average reference, with EEG data that has the reference channel included in the data structure, or with (Neuromag) MEG data that has been MaxFiltered.
+This might occur when you have EEG data which is rereferenced using the common average reference, with EEG data that has the reference channel included in the data structure, or with (Neuromag) MEG data that has been MaxFiltered.
 
 The following shows how to exclude the reference channel, before calling ft_componentanalysis:
 

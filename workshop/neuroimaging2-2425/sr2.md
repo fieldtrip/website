@@ -254,7 +254,7 @@ silent, but this is never true. This is due to intrinsic electrode noise, and
 due to the fact that the reference electrode will also pick up some biological
 signal. In most practical situations, a reference electrode at the location
 of one of the mastoids is used. This location for sure picks up potential fluctuations
-due to brain activity. Therefore, EEG measurements are re-referenced to a linked-mastoid
+due to brain activity. Therefore, EEG measurements are rereferenced to a linked-mastoid
 reference. As a consequence each signal represents the difference between the
 potential at each location and the average potential at the mastoid electrodes.
 This is not really an optimal referencing scheme, but it is widely used and
@@ -285,7 +285,7 @@ average versus the time. You might observe that it is slightly different from
 zero; that is because computers have a limited numerical precision._**
 
 In order to emulate the situation that occurs just when the data has been
-recorded, we need to re-reference these data. As the reference we pick a channel
+recorded, we need to rereference these data. As the reference we pick a channel
 at the back of the head, just posterior of where the negativity has its maximum.
 
 As before, we can visualize the topography of the activity at any time point,
@@ -305,7 +305,7 @@ channel 74 is an occipital channel
 
     ni2_topoplot(sensors, sensordata_reref(:, 485)); colorbar
 
-**_Q5.5 - Also visualize the re-referenced data at the same time point and
+**_Q5.5 - Also visualize the rereferenced data at the same time point and
 describe the similarities/differences. Hint: don’t forget to look at the values
 that are represented by the colors, using the colorbar._**
 
@@ -316,7 +316,7 @@ Now have a look at the time courses, by doing:
 
 **_Q5.6 - Describe the differences._**
 
-A common re-referencing strategy is to use the linked mastoids as a reference.
+A common rereferencing strategy is to use the linked mastoids as a reference.
 This is achieved by taking the data (remember: the data has been physically
 referenced during the recording to one of the mastoid electrodes), and subtract
 half of the signal recorded at the other mastoid electrode. In MATLAB it looks
@@ -328,7 +328,7 @@ Note that we take the data as referenced to the 'left mastoid’ because this
 represents more realistically the data how it would be recorded. Note also,
 that our 'right mastoid’ corresponds with channel number 87.
 
-**_Q5.7 - Visualize the re-referenced to linked mastoids data and compare it
+**_Q5.7 - Visualize the rereferenced to linked mastoids data and compare it
 with the other results._**
 
 **_Q5.8 - Repeat the steps above, but now with a dipole that is close to the

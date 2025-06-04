@@ -30,4 +30,4 @@ To do the renaming as early as possible, you can already include the `cfg.montag
     cfg.montage = montage;
     data = ft_preprocessing(cfg);
 
-Montages can be used for more complex tasks, such as re-referencing EEG and iEEG data as explained in [this example page](/example/rereference/#montage). See also the help of **[ft_apply_montage](/reference/forward/ft_apply_montage)**, which is the low-level function that implements the montage.
+Montages can be used for more complex tasks, such as rereferencing EEG and iEEG data as explained in [this example page](/example/rereference/#montage). See also the help of **[ft_apply_montage](/reference/forward/ft_apply_montage)**, which is the low-level function that implements the montage.

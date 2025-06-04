@@ -17,22 +17,21 @@ This tutorial contains the hands-on material of the [BACI workshop](/workshop/ba
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
 - The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments.
-- The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only.
-  The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+- The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
 - according to a specific trigger channel
-- according to your own criteria when you write your own trial function, e.g., for conditional trigger sequences, or by detecting EMG onset
+- according to your own criteria when you write your own trial function, e.g., for conditional trigger sequences, or by detecting the onset of movement in an EMG channel
 
-Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
+Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field `cfg.trl`. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
-If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the _trl_ matrix. These will be added to the data in the _.trialinfo_ field. This is very handy if you want to add information of e.g., response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
+If you do not specify your own trial function, the 4th column will by default contain the trigger value. When you use your own trial function, you can add any number of extra columns to the `trl` matrix. These will be added to the data in the `.trialinfo` field. This is very handy if you want to add information of e.g., response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
 
 ## Description of the experimental data
 
@@ -279,7 +278,7 @@ _Figure 4: Representation of the P20/N20 component using the function, ft_topopl
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, re-referencing, and average the data to SEPs). We then learned how to display the results in terms of their time courses as well as their corresponding topographies.
+In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, rereferencing, and average the data to SEPs). We then learned how to display the results in terms of their time courses as well as their corresponding topographies.
 
 The next step of workshop will be the source reconstruction among different head models and different inverse methods with [forward problem](/workshop/baci2017/forwardproblem) and
 [inverse problem](/workshop/baci2017/inverseproblem).

@@ -93,7 +93,7 @@ For rejecting artifact trials, we will use the 'summary' method in **[ft_rejectv
     cfg.channel = 'all';
     epoch_data_clean = ft_rejectvisual(cfg, epoch_data_clean_chan);
 
-### 2. Re-reference the data
+### 2. Rereference the data
 
 FIXME
 

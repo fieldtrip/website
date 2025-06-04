@@ -7,9 +7,9 @@ tags: [madrid2019, eeg-language]
 
 ## Introduction
 
-In FieldTrip the preprocessing of data refers to the reading of the data,
+Preprocessing of MEG or EEG data refers to reading the data into memory,
 segmenting the data around interesting events such as triggers, temporal
-filtering, artifact rejection and optionally rereferencing. The
+filtering, artifact rejection and optionally rereferencing in the case of EEG. The
 **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all
 these steps, i.e., it reads the data and applies the preprocessing options.
 
@@ -111,14 +111,14 @@ For consistency we will rename the channel with the name 53 located at the right
 
 ### Extracting EOG channels
 
-We now continue with re-referencing to extract the bipolar EOG signal from the
+We now continue with rereferencing to extract the bipolar EOG signal from the
 data. For the vertical EOG we will use channel 50 and channel 64. For the
 horizontal EOG we will compute the difference between the potential recorded in
 channels 51 and 60.
 
 {% include markup/yellow %}
 Some acquisition systems, such as the CTF system or the Biosemi system, allow
-for direct bipolar recording of ECG, EOG and EMG. The re-referencing step to
+for direct bipolar recording of ECG, EOG and EMG. The rereferencing step to
 obtain the EOG is therefore not required when working with Biosemi or other
 bipolar data.
 {% include markup/end %}

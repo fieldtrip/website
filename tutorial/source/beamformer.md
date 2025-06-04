@@ -147,9 +147,9 @@ The volume conduction model created here is MEG specific and cannot be used for 
 
 For example, if you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
-Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
+Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are rereferenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the source reconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding the bad channels) and after rereferencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
 {% include markup/end %}
 
 You can now visualise the headmodel together with the sensor positions:

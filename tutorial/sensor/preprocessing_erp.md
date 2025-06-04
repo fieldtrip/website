@@ -10,7 +10,7 @@ redirect_from:
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering, and optionally rereferencing in the case of EEG. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which differ in the amount of memory required in the order of the individual analysis steps. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach. This is mainly motivated by the historical development of FieldTrip: in the early days of the toolbox, computer memory as a more limiting factor than nowadays. Also, note, that some (older) datasets may have the data already represented on disk as epoched, which prohibits the treatment of the data as a single continuous data matrix. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
@@ -27,7 +27,7 @@ The EEG dataset used in this script is available [here](https://download.fieldtr
 The preprocessing of the EEG data and the computation of the ERP consists of the following steps:
 
 - Defining trials using **[ft_definetrial](/reference/ft_definetrial)**
-- Pre-processing and re-referencing using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Pre-processing and rereferencing using **[ft_preprocessing](/reference/ft_preprocessing)**
 - Extracting the EOG signals using **[ft_selectdata](/reference/utilities/ft_selectdata)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Identifying and rejecting artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Computing the ERPs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
@@ -62,11 +62,11 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
            74747       75347        -100           1
            ...
 
-## Pre-processing and re-referencing
+## Pre-processing and rereferencing
 
 In this raw BrainVision dataset, the signal from all electrodes is recorded unipolar and referenced to an electrode on the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition an 'RM' electrode (number 32) was placed on the right mastoid and recorded along with all EEG channels.
 
-To re-reference the data we use the `cfg.implicitref` option of **[ft_preprocessing](/reference/ft_preprocessing)** to add the implicit reference channel 'LM' (the left mastoid) to the data representation as a channel with all zeros, and subsequently use the `cfg.refchannel` and `cfg.reref` options to subtract the mean of the two mastoid channels ('LM' and 'RM') from all channels.
+To rereference the data we use the `cfg.implicitref` option of **[ft_preprocessing](/reference/ft_preprocessing)** to add the implicit reference channel 'LM' (the left mastoid) to the data representation as a channel with all zeros, and subsequently use the `cfg.refchannel` and `cfg.reref` options to subtract the mean of the two mastoid channels ('LM' and 'RM') from all channels.
 
 Now call pre-processing using the cfg output that resulted from **[ft_definetrial](/reference/ft_definetrial)**:
 
@@ -129,10 +129,10 @@ and note that, if you wanted to, you could plot a single trial with default MATL
 
 ## Extracting the EOG signals
 
-We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels "57" and "25" (see the plot of the layout and the figure below). For the vertical EOG we will use channel "53" and the "LEOG" channel, which was placed below the subject's left eye (not pictured in the 2D electrode layout).
+We now continue with rereferencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels "57" and "25" (see the plot of the layout and the figure below). For the vertical EOG we will use channel "53" and the "LEOG" channel, which was placed below the subject's left eye (not pictured in the 2D electrode layout).
 
 {% include markup/yellow %}
-Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following re-referencing step to obtain the EOG channels is not needed when working with bipolar data.
+Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following rereferencing step to obtain the EOG channels is not needed when working with bipolar data.
 {% include markup/end %}
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/figure1.png" width="200" %}

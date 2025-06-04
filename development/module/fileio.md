@@ -40,7 +40,7 @@ Other options that have been suggested, but that are not implemented yet are
 - supporting data in multiple files (i.e. an EEG session with a break in the acquisition)
 - storing the file identifier in the header (prevent fopen+fseek for reading each block)
 - downsampling on the fly, support for different sampling rates in one dataset
-- re-reference EEG data while reading in, and/or add the implicit reference channel
+- rereference EEG data while reading in, and/or add the implicit reference channel
 - instead of specifying a refchan, use a complete linear projection matrix (c.f. LDR in neuroscan)
 
 ## Definition of the function-calls (API)

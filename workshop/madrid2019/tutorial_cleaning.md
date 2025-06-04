@@ -17,38 +17,31 @@ Let us begin with the rules of thumb proposed by de Cheveigne and Arzounian:
 
 _As a rule of thumb, if algorithm B is sensitive to an artifact that algorithm A can remove, then A should be applied before B. A difficulty arises of course if A is also sensitive to artifacts that B can remove._
 
-_A likely sequence might be:_
+A likely sequence might be:
 
-_1. discard pathological channels for which there is no useful signal,_
+1. discard pathological channels for which there is no useful signal,
+2. apply robust detrending to each channel,
+3. detect and interpolate temporally-local channel-specific glitches,
+4. robust rereference,
+5. project out eye artifacts (e.g., using ICA or DSS),
+6. fit and remove, or project out, 50 Hz and harmonics,
+7. project out alpha activity, etc.,
+8. apply linear analysis techniques (ICA, CSP, etc.) to further isolate activity of interest.
 
-_2. apply robust detrending to each channel,_
-
-_3. detect and interpolate temporally-local channel-specific glitches,_
-
-_4. robust re-reference,_
-
-_5. project out eye artifacts (e.g., using ICA or DSS),_
-
-_6. fit and remove, or project out, 50 Hz and harmonics,_
-
-_7. project out alpha activity, etc.,_
-
-_8. apply linear analysis techniques (ICA, CSP, etc.) to further isolate activity of interest._
-
-With these guidelines in mind, let us load [Chennu et al., data](/workshop/madrid2019/eeg_sedation) and begin with the cleaning.
+With these guidelines in mind, let us take the [Chennu et al., dataset](/workshop/madrid2019/eeg_sedation) and begin with the cleaning.
 
 ## Procedure
 
 In this tutorial the following steps will be taken:
 
--   Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
--   Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
--   Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
--   Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
+- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
+- Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
+- Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
+- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
 
 ## Reading in data
 
-The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45 Hz, some channels were interpolated using spherical spline algorithms and the data were re-referenced to the average taken over all channels; see [Materials and Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008) section).
+The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45 Hz, some channels were interpolated using spherical spline algorithms and the data were rereferenced to the average taken over all channels; see [Materials and Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008) section).
 
 For this tutorial we will use the EEG data from one example subject (subj22), which has been selected because the data still shows some artifacts. You can download both raw and processed data of the example subject [here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_cleaning/).
 
@@ -352,9 +345,9 @@ So now we performed the second step of the guidelines: _2. apply robust
 detrending to each channel,_. You can play with the `cfg.polyorder` parameter and
 check what happens with the data.
 
-## Robust re-reference
+## Robust rereference
 
-All the data has been cleaned and now we can archive a more robust re-reference,
+All the data has been cleaned and now we can archive a more robust rereference,
 so step 4 can be done as follows:
 
     cfg            = [];

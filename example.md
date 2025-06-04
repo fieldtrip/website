@@ -21,7 +21,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Combine MEG with Eyelink eyetracker data](/example/meg_eyelink)
 - [Use denoising source separation (DSS) to remove ECG artifacts](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)
 - [Fixing a missing sensor](/example/fixing_a_missing_sensor)
-- [Re-reference EEG and iEEG data](/example/rereference)
+- [Rereference EEG and iEEG data](/example/rereference)
 
 ## Sensor-level analysis
 

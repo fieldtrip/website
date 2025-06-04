@@ -123,9 +123,9 @@ Note that the head model can also be referred to as the _volume conduction model
 {% include markup/yellow %}
 If you want to do a source reconstruction of EEG data, you have to pay special attention to the referencing. The forward model will be computed with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
 
-Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
+Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are rereferenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after rereferencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.
 {% include markup/end %}
 
 #### Exercise: head model

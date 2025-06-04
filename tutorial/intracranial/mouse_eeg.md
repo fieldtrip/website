@@ -275,7 +275,7 @@ The two most frontal electrodes in the grid, just anterior of the Fp1 and the Fp
 
     cfg            = [];
     cfg.reref      = 'yes';
-    cfg.channel    = {'all', '-VPM', '-Sync', '-HL1'};  % we don't want to re-reference these
+    cfg.channel    = {'all', '-VPM', '-Sync', '-HL1'};  % we don't want to rereference these
     cfg.refchannel = {'FP1';'FP2';...
                       'AF3';'AF4';'AF7';'AF8';...
                       'F1';'F2';'F5';'F6';...
@@ -296,14 +296,14 @@ We have now lost the LFP in the 'VPM' channel, since that should not be rerefere
     cfg = [];
     data_reref = ft_appenddata(cfg, data_reref, data_vmp);
 
-You can compare the original and re-referenced data using **[ft_databrowser](/reference/ft_databrowser)**.
+You can compare the original and rereferenced data using **[ft_databrowser](/reference/ft_databrowser)**.
 
     cfg = [];
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_reref);
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure7.png" width="500" %}
-_Figure: Single trial in ft_databrowser after re-referencing._
+_Figure: Single trial in ft_databrowser after rereferencing._
 
 ### Making a channel layout for plotting
 

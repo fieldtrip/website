@@ -123,7 +123,7 @@ According to the example here we can now determine
 2.  the up-state around 2.5^10 units is the trigger-on state
 3.  halfway between 0 and 2.5^10 would therefore be a good threshold for flank detection.
 
-Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trialfunction to read in the events.
+Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trial function to read in the events.
 
 For example
 

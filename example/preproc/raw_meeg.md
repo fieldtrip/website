@@ -18,7 +18,7 @@ In FieldTrip you first have to define the segments of data in which you are inte
 
 The output on screen might look like this
 
-    evaluating trialfunction 'trialfun_general'
+    evaluating trial function 'trialfun_general'
     the following events were found in the datafile
     event type: 'trial' with event values:
     no trials have been defined yet, see FT_DEFINETRIAL for further help
@@ -38,7 +38,7 @@ Since "trial" events have a clear begin, end and duration, you do not have to sp
 
 This time the following lines will appear on the MATLAB output
 
-    evaluating trialfunction 'trialfun_general'
+    evaluating trial function 'trialfun_general'
     found 76 events
     created 76 trials
 
@@ -85,7 +85,7 @@ First determine all event types that are present in the datafile.
 
 This will show the following information on scree
 
-    evaluating trialfunction 'trialfun_general'
+    evaluating trial function 'trialfun_general'
     the following events were found in the datafile
     event type: 'FC' with event values:
     event type: 'FIC' with event values:
@@ -112,7 +112,7 @@ As you can see, this MEG dataset contains a lot of different events. The interes
 
 which results in the following info on screen.
 
-    evaluating trialfunction 'trialfun_general'
+    evaluating trial function 'trialfun_general'
     found 1343 events
     created 5 trials
 

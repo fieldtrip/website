@@ -150,7 +150,7 @@ The output cfg variable contains the trial structure in cfg.trl. As we will also
 
     trl = cfg.trl;
 
-The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
+The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be rereferenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
     load data_tms_raw
 

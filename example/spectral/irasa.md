@@ -98,7 +98,7 @@ Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://
     % load the raw raw data
     load('S5_raw_segmented.mat')
 
-    % filter and re-reference the raw data
+    % filter and rereference the raw data
     cfg               = [];
     cfg.hpfilter      = 'yes';
     cfg.hpfiltord     = 3;

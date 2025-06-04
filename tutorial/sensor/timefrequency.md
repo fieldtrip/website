@@ -272,7 +272,7 @@ Keep an eye open for the differences in processing and visualizing EEG.
 
 As with the MEG data we are going to skip trial rejection. However, if you wish to check for bad trials you can do so using, for example, [ft_rejectvisual](/reference/ft_rejectvisual).
 
-Especially EEG records can contain bad channels due to various reasons such as bad impedance, broken channels, etc. In the next steps we will therefor use **[ft_rejectvisual](/reference/ft_rejectvisual)** to select bad channels. We will then fix these channels by replacing the values of these channels with an average of its neighbours. Note that we have not re-referenced our data yet. We should remove bad channels prior to re-referencing or the noise from these channels will be present in all channels.
+Especially EEG records can contain bad channels due to various reasons such as bad impedance, broken channels, etc. In the next steps we will therefor use **[ft_rejectvisual](/reference/ft_rejectvisual)** to select bad channels. We will then fix these channels by replacing the values of these channels with an average of its neighbours. Note that we have not rereferenced our data yet. We should remove bad channels prior to rereferencing or the noise from these channels will be present in all channels.
 
     % select bad channels
     cfg = [];
@@ -316,7 +316,7 @@ We can then use this neighborhood structure to fix our bad channels with **[ft_c
     % save the data
     save data_clean_EEG_responselocked data_clean_EEG_responselocked
 
-Now that we have repaired our bad channels we can re-reference our data to the common average.
+Now that we have repaired our bad channels we can rereference our data to the common average.
 
     cfg = [];
     cfg.reref                  = 'yes';

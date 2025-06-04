@@ -237,7 +237,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-stats-demo/screen_shot_2015-01-05_at_10.34.30.png" %}
 
-    %% use your own trialfunction, e.g., spearman rank correlation
+    %% use your own trial function, e.g., spearman rank correlation
 
     cfg                  = [];
     cfg.channel          = 'MEG2021';
