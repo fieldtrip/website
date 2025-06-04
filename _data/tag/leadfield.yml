@@ -1,0 +1,9 @@
+- title:  Compute EEG leadfields using a BEM headmodel
+  link:  /example/source/bem
+
+- title:  Compute EEG leadfields using a concentric spheres headmodel
+  link:  /example/source/concentricspheres
+
+- title:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/source/fem
+
