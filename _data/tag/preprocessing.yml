@@ -151,8 +151,17 @@
 - title:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms/tms-eeg
 
+- title:  Event-related potentials
+  link:  /workshop/nigeria2025/erp
+
+- title:  Frequency analysis
+  link:  /workshop/nigeria2025/frequency
+
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
+
+- title:  Time-frequency analysis
+  link:  /workshop/nigeria2025/timefrequency
 
 - title:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
