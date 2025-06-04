@@ -1,0 +1,168 @@
+- title:  MEG dataformats
+  link:  /dataformat/meg
+
+- title:  Spike and LFP dataformats
+  link:  /dataformat/spike
+
+- title:  Example analysis pipeline for Biosemi data
+  link:  /example/other/biosemi
+
+- title:  Can I create an artificial CTF dataset using MATLAB?
+  link:  /example/source/simulateddata_ctf
+
+- title:  How are the various MATLAB data structures defined?
+  link:  /faq/development/datatype
+
+- title:  How can I import my own data format?
+  link:  /faq/preproc/dataformat/dataformat_own
+
+- title:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/preproc/dataformat/fileio_dataformat
+
+- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
+
+- title:  How can I append the files of two separate recordings?
+  link:  /faq/preproc/datahandling/append_files
+
+- title:  How can I convert one dataformat into an other?
+  link:  /faq/preproc/datahandling/convert_dataformat
+
+- title:  What dataformats are supported?
+  link:  /faq/preproc/datahandling/dataformat
+
+- title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/preproc/datahandling/mergedata
+
+- title:  Reading is slow, can I write my raw data to a more efficient file format?
+  link:  /faq/preproc/datahandling/writedata_matbin
+
+- title:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/source/anat_dicom2ctf
+
+- title:  Getting started with ANT-Neuro, ASA and EEProbe data
+  link:  /getting_started/eeg/antneuro
+
+- title:  Getting started with ABM's B-Alert EEG data
+  link:  /getting_started/eeg/b_alert
+
+- title:  Getting started with BESA data
+  link:  /getting_started/eeg/besa
+
+- title:  Getting started with Biosemi BDF data
+  link:  /getting_started/eeg/biosemi
+
+- title:  Getting started with BrainVision Analyzer and Easycap
+  link:  /getting_started/eeg/brainvision
+
+- title:  Getting started with EDF (European Data Format) data
+  link:  /getting_started/eeg/edf
+
+- title:  Getting started with EGI/Philips/Magstim data
+  link:  /getting_started/eeg/egi
+
+- title:  Getting started with Nicolet data
+  link:  /getting_started/eeg/nicolet
+
+- title:  Getting started with TMSi data
+  link:  /getting_started/eeg/tmsi
+
+- title:  Getting started with SR-Research EyeLink eye-tracker data
+  link:  /getting_started/eyetracker/eyelink
+
+- title:  Getting started with Blackrock data
+  link:  /getting_started/intracranial/blackrock
+
+- title:  Getting started with Cyberkinetics data
+  link:  /getting_started/intracranial/cyberkinetics
+
+- title:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/intracranial/neuralynx_fcdc
+
+- title:  Getting started with Neuralynx data
+  link:  /getting_started/intracranial/neuralynx
+
+- title:  Getting started with Neurodata Without Borders (NWB) data
+  link:  /getting_started/intracranial/nwb
+
+- title:  Getting started with Plexon data
+  link:  /getting_started/intracranial/plexon
+
+- title:  Getting started with BabySQUID data
+  link:  /getting_started/meg/babysquid
+
+- title:  Getting started with BTi/4D data
+  link:  /getting_started/meg/bti
+
+- title:  Getting started with Cerca OPM data
+  link:  /getting_started/meg/cerca
+
+- title:  Getting started with CTF data
+  link:  /getting_started/meg/ctf
+
+- title:  Getting started with FieldLine OPM data
+  link:  /getting_started/meg/fieldline
+
+- title:  Getting started with Neuromag/Elekta/Megin data
+  link:  /getting_started/meg/neuromag
+
+- title:  Getting started with OPM data recorded at the FIL
+  link:  /getting_started/meg/opm_fil
+
+- title:  Getting started with Ricoh data
+  link:  /getting_started/meg/ricoh
+
+- title:  Getting started with Yokogawa data
+  link:  /getting_started/meg/yokogawa
+
+- title:  Getting started with XSens motion capture data
+  link:  /getting_started/motion/xsens
+
+- title:  Getting started with Artinis NIRS data
+  link:  /getting_started/nirs/artinis
+
+- title:  Getting started with Hitachi NIRS data
+  link:  /getting_started/nirs/hitachi
+
+- title:  Getting started with NIRx NIRS data
+  link:  /getting_started/nirs/nirx
+
+- title:  Getting started with Shimadzu NIRS data
+  link:  /getting_started/nirs/shimadzu
+
+- title:  Getting started with SNIRF data
+  link:  /getting_started/nirs/snirf
+
+- title:  Getting started with audio data
+  link:  /getting_started/otherdata/audio
+
+- title:  Getting started with fMRI timeseries data
+  link:  /getting_started/otherdata/fmri
+
+- title:  Getting started with video data
+  link:  /getting_started/otherdata/video
+
+- title:  Getting started with AnyWave
+  link:  /getting_started/othersoftware/anywave
+
+- title:  Getting started with BIDS
+  link:  /getting_started/othersoftware/bids
+
+- title:  Getting started with BioImage Suite
+  link:  /getting_started/othersoftware/bioimage
+
+- title:  Getting started with EEGLAB
+  link:  /getting_started/othersoftware/eeglab
+
+- title:  Getting started with Homer
+  link:  /getting_started/othersoftware/homer
+
+- title:  Getting started with LORETA
+  link:  /getting_started/othersoftware/loreta
+
+- title:  Getting started with MNE(-python)
+  link:  /getting_started/othersoftware/mne
+
+- title:  Importing your data
+  link:  /reading_data
+

@@ -1,0 +1,180 @@
+- title:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/preproc/dss_ecg
+
+- title:  Determine the filter characteristics
+  link:  /example/preproc/filter_characteristics
+
+- title:  Fixing a missing channel
+  link:  /example/preproc/fixing_a_missing_sensor
+
+- title:  Independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/preproc/ica_ecg
+
+- title:  Independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/preproc/ica_eog
+
+- title:  Combine MEG with Eyelink eyetracker data
+  link:  /example/preproc/meg_eyelink
+
+- title:  Getting started with reading raw EEG or MEG data
+  link:  /example/preproc/raw_meeg
+
+- title:  Rereference EEG and iEEG data
+  link:  /example/preproc/rereference
+
+- title:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/preproc/trialdef_emg
+
+- title:  Making your own trialfun for conditional trial definition
+  link:  /example/preproc/trialfun
+
+- title:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/preproc/artifact/artifact_padding
+
+- title:  How can I consistently represent artifacts in my data?
+  link:  /faq/preproc/artifact/artifact_representation
+
+- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/preproc/artifact/dftfilter_residual
+
+- title:  What kind of filters can I apply to my data?
+  link:  /faq/preproc/artifact/preproc_filtertypes
+
+- title:  How does the filter padding in preprocessing work?
+  link:  /faq/preproc/artifact/preproc_padding
+
+- title:  Do I need to resample my data, and if so, how is this to be done?
+  link:  /faq/preproc/artifact/resampling_lowpassfilter
+
+- title:  Why should I start with rereferencing for Biosemi EEG data?
+  link:  /faq/preproc/biosemi_reference
+
+- title:  Why should I set continuous to yes for CTF data?
+  link:  /faq/preproc/continuous
+
+- title:  How can I import my own data format?
+  link:  /faq/preproc/dataformat/dataformat_own
+
+- title:  How can I deal with a discontinuous Neuralynx LFP recording?
+  link:  /faq/preproc/dataformat/discontinuous_neuralynx
+
+- title:  How can I read all channels from an EDF file that contains multiple sampling rates?
+  link:  /faq/preproc/dataformat/edf2fieldtrip
+
+- title:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/preproc/dataformat/fileio_dataformat
+
+- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
+
+- title:  How can I append the files of two separate recordings?
+  link:  /faq/preproc/datahandling/append_files
+
+- title:  How can I convert one dataformat into an other?
+  link:  /faq/preproc/datahandling/convert_dataformat
+
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/datahandling/ctf_readcorrupted
+
+- title:  What dataformats are supported?
+  link:  /faq/preproc/datahandling/dataformat
+
+- title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/preproc/datahandling/mergedata
+
+- title:  How can I preprocess a dataset that is too large to fit into memory?
+  link:  /faq/preproc/datahandling/preproc_downsample
+
+- title:  How can I rename channels in my data structure?
+  link:  /faq/preproc/datahandling/rename_channels
+
+- title:  Reading is slow, can I write my raw data to a more efficient file format?
+  link:  /faq/preproc/datahandling/writedata_matbin
+
+- title:  What is the relation between "events" (such as triggers) and "trials"?
+  link:  /faq/preproc/events/eventsversustrials
+
+- title:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/preproc/events/inspect_events
+
+- title:  How can I process continuous data without triggers?
+  link:  /faq/preproc/events/preproc_continuous
+
+- title:  How can I check or decipher the sequence of triggers in my data?
+  link:  /faq/preproc/events/triggers
+
+- title:  Why am I not getting integer frequencies?
+  link:  /faq/spectral/freqanalysis_foinoninteger
+
+- title:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/spectral/tfr_strangedemean
+
+- title:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/spectral/tfr_strangedetrend
+
+- title:  Preprocessing and averaging of multi-channel NIRS data
+  link:  /tutorial/nirs/nirs_multichannel
+
+- title:  Preprocessing and averaging of single-channel NIRS data
+  link:  /tutorial/nirs/nirs_singlechannel
+
+- title:  Introduction on dealing with artifacts
+  link:  /tutorial/preproc/artifacts
+
+- title:  Automatic artifact rejection
+  link:  /tutorial/preproc/automatic_artifact_rejection
+
+- title:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/preproc/continuous
+
+- title:  Cleaning artifacts using ICA
+  link:  /tutorial/preproc/ica_artifact_cleaning
+
+- title:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
+  link:  /tutorial/preproc/preprocessing
+
+- title:  Visual or manual artifact rejection
+  link:  /tutorial/preproc/visual_artifact_rejection
+
+- title:  Event-related averaging and MEG planar gradient
+  link:  /tutorial/sensor/eventrelatedaveraging
+
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
+
+- title:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/sensor/preprocessing
+
+- title:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor/sensor_analysis
+
+- title:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms/tms-eeg
+
+- title:  Event-related potentials
+  link:  /workshop/nigeria2025/erp
+
+- title:  Frequency analysis of resting state EEG data
+  link:  /workshop/nigeria2025/frequency
+
+- title:  Preprocessing of EEG data
+  link:  /workshop/nigeria2025/preprocessing
+
+- title:  Time-frequency analysis of task EEG data
+  link:  /workshop/nigeria2025/timefrequency
+
+- title:  Preprocessing and event-related potentials in EEG data
+  link:  /workshop/oslo2019/introduction
+
+- title:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
+
+- title:  From raw data to ERP
+  link:  /workshop/paris2019/handson_raw2erp
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- title:  Preprocessing raw data and computing ERPs/ERFs
+  link:  /workshop/practicalmeeg2022/handson_raw2erp
+
