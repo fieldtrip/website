@@ -1,9 +1,9 @@
 ---
-title: African Brain Data Network
+title: African Brain Data Network workshop in Nigeria
 tags: [nigeria2025]
 ---
 
-# African Brain Data Network
+# African Brain Data Network workshop in Nigeria
 
 Together with the [African Brain Data Network](https://africanbraindatanetwork.com) we are organizing an intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
 
