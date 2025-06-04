@@ -94,7 +94,7 @@
 - title:  Getting started with reading raw EEG or MEG data
   link:  /example/preproc/raw_meeg
 
-- title:  Re-reference EEG and iEEG data
+- title:  Rereference EEG and iEEG data
   link:  /example/preproc/rereference
 
 - title:  Detect the muscle activity in an EMG channel and use that as trial definition
