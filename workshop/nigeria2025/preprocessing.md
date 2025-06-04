@@ -17,7 +17,7 @@ Towards the end of this tutorial we will also look at rereferencing. Normally th
 
 ## The dataset used in this tutorial
 
-The [eeg-language](/tutorial/eeg_language) dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using rereferencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
+The [eeg-language](/tutorial/eeg_language) dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using rereferencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 for the scalp EEG electrodes plus one EOGH and one EOGV channel. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 ## Procedure
 
@@ -67,7 +67,7 @@ This results in a MATLAB structure that has the EEG data and some descriptive fi
 
     disp(data)
 
-The output of ft_preprocessing always represents the data in "trials", even if it is continuous. The data now consists of one very long trial.
+The output of **[ft_preprocessing](/reference/ft_preprocessing)** always represents the data in "trials", even if it is continuous. The data now consists of one very long trial.
 
     disp(data.trial)
 
@@ -172,7 +172,7 @@ The events are a structure array, i.e., a list of structures. Each event corresp
       disp(event(i))
     end
 
-## Define the trials from the triggers
+### Define the trials from the triggers
 
 To look at event-related potentials we need to cut the data into segments around the stimulus. These segments are sometimes also called "epochs" or "trials". To cut the data segments of interest, we need to know the begin and end sample of each segment. These can be determined either
 
@@ -185,7 +185,7 @@ If you do not specify your own trial function, the 4th column will by default co
 
 ### Looking at the trigger codes
 
-When we look at the event structure, we mainly see many "Stimulus" events. Those are the ones that correspond to teh stimuli that were presented. There are some other event types as well, which we ignore for now.
+When we look at the event structure, we mainly see many "Stimulus" events. Those are the ones that correspond to the stimuli that were presented. There are some other event types as well, which we ignore for now.
 
     % select the stimulus events
     select = strcmp({event.type}, 'Stimulus');
@@ -208,7 +208,7 @@ The figure of the trigger values reveals the temporal structure of the experimen
 
 ### Defining and reading trials
 
-Now that we know about teh structure and values of the events, we can go back to the data on disk, search for a specific stimulus, and define trials around that stimulus event.
+Now that we know about the structure and values of the events, we can go back to the data on disk, search for a specific stimulus, and define trials around that stimulus event.
 
     % read all trials of one stimulus condition
 
@@ -220,9 +220,9 @@ Now that we know about teh structure and values of the events, we can go back to
     cfg.trialdef.poststim = 1;
     cfg = ft_definetrial(cfg);
 
-Following ft_definetrial the output configuration structure has the additional field `cfg.trl` which represents the beginsample, the endsample and the offset (the amount of samples that the trial is shifted relative to the trigger). See the help of ft_definetrial for more details.
+Following ft_definetrial, the output configuration structure has the additional field `cfg.trl` which represents the beginsample, the endsample and the offset (the amount of samples that the trial is shifted relative to the trigger). See the help of ft_definetrial for more details.
 
-Using the updated configuration structure, we can call ft_preprocessing to read only the segments of interest.
+Using the updated configuration structure, we can call **[ft_preprocessing](/reference/ft_preprocessing)** to read only the segments of interest.
 
     data_S123 = ft_preprocessing(cfg);
 
@@ -255,14 +255,14 @@ Now that we have the trials of this one condition we can compute the event-relat
     cfg = [];
     erp_S123 = ft_timelockanalysis(cfg, data_S123);
 
-The ft_timelockanalysis function results in a MATLAB structure that is similar to the one from ft_preprocessing, but now there is only one matrix that contains the EEG data averaged over trials. We can again use the standard MATLAB plotting function.
+The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function results in a MATLAB structure that is similar to the one from **[ft_preprocessing](/reference/ft_preprocessing)**, but now there is only one matrix that contains the EEG data averaged over trials. We can again use the standard MATLAB plotting function.
 
     figure
     plot(erp_S123.time, erp_S123.avg);
 
 ## Segmenting, preprocessing, and averaging the EEG data
 
-When we read the data from disk, we can apply preprocessing options such as filtering. This can be done on the continuous data, but also on the data corresponding to only the trials of interest.
+When we read the data from disk, we can apply preprocessing options such as filtering. This can be done on the continuous data, but also on the data corresponding to only the trials of interest. Since we only read the data of interest, and only filter the short segments, th e processing is much faster and requires less memory. The disadvantage is that the discontinuous signal at the start and end of the trials might cause [filter ringing artifacts](https://en.wikipedia.org/wiki/Ringing_artifacts).
 
     cfg = [];
     cfg.dataset = filename;
@@ -321,7 +321,7 @@ Regardless of which we use, or whether we use them sequentially (feeding the out
 
 ## Preprocessing, segmenting, and averaging the EEG data
 
-Rather than first defining the trials, reading and filtering each trial individually, we can also start with reading and filtering the continuous data and only then cut the trials out of the continuous data.
+Rather than first defining the trials, reading and filtering each trial individually, we can also start with reading and filtering the continuous data and only then cut the trials out of the continuous data. This prevents [filter ringing artifacts](https://en.wikipedia.org/wiki/Ringing_artifacts), but comes at the expense that more data needs to be processed and held in memory, and that the data review for artifacts might be more tedious.
 
     cfg = [];
     cfg.dataset = filename;
@@ -354,11 +354,11 @@ The baseline correction of the trials on basis of the time window prior to the t
     cfg.baselinewindow = [-0.5 0]; % 500 ms prior to the trigger
     data_S123_segmented = ft_preprocessing(cfg, data_S123_segmented);
 
-We can call ft_preprocessing as many times in succession as we like, and the order of many of the preprocessing options can be swapped around without affecting the final result.
+We can call **[ft_preprocessing](/reference/ft_preprocessing)** as many times in succession as we like, and the order of many of the preprocessing options can be swapped around without affecting the final result.
 
 ### Removing artifacts in continuous data
 
-We cannot directly use ft_rejectvisual to detect artifacts in the continuous data, since ft_rejectvisual works trial-by-trial. But we can use ft_databrowser to mark sections of the data with artifacts.
+We cannot directly use **[ft_rejectvisual](/reference/ft_rejectvisual)** to detect artifacts in the continuous data, since **[ft_rejectvisual](/reference/ft_rejectvisual)** works trial-by-trial. But we can use **[ft_databrowser](/reference/ft_databrowser)** to mark sections of the data with artifacts.
 
     cfg = [];
     cfg.blocksize = 15;
@@ -400,7 +400,7 @@ The cleaned data now consists of a few segments, since the parts with the artifa
     cfg.artfctdef.visual.artifact = artifact;
     data_S123_clean_trials = ft_rejectartifact(cfg, data_S123_clean_nantrials);
 
-The resulting trials can be visualized with ft_databrowser, and averaged to get the ERP.
+The resulting trials can be visualized with **[ft_databrowser](/reference/ft_databrowser)**, and averaged to get the ERP.
 
     cfg = [];
     ft_databrowser(cfg, data_S123_clean_trials);
@@ -413,7 +413,7 @@ The resulting trials can be visualized with ft_databrowser, and averaged to get 
 
 ### Using the summary mode on continuous data
 
-A work-around for using ft_rejectvisual on continuous data is to read the continuous data, to segment it into non-overlapping one-second trials using ft_redefinetrial, and to use those to detect artifacts. After the affected one-secont segmentss have been removed, you can "glue" the data back together in longer semi-continuous segments with ft_redefinetrial, or you can use ft_defineterial and ft_redefinetrial to cut out the trials of interest.
+A work-around for using **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data is to read the continuous data, to segment it into non-overlapping one-second trials using ft_redefinetrial, and to use those to detect artifacts. After the affected one-secont segmentss have been removed, you can "glue" the data back together in longer semi-continuous segments with ft_redefinetrial, or you can use ft_defineterial and ft_redefinetrial to cut out the trials of interest.
 
 We start again with the continuous data.
 
@@ -430,7 +430,7 @@ We cut it into one-second segments.
     cfg.overlap = 0;
     data_S123_1sec = ft_redefinetrial(cfg, data_S123_continuous);
 
-With the summary mode of ft_rejectvisual we can very quickly identify the parts of the data that are noisy since the participant had a break.
+With the summary mode of **[ft_rejectvisual](/reference/ft_rejectvisual)** we can very quickly identify the parts of the data that are noisy since the participant had a break.
 
     cfg = [];
     cfg.method = 'summary';
@@ -517,7 +517,7 @@ Now that we have the EEG data rereferenced to linked mastoids, and the horizonta
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);
 
-If we now use ft_databrowser or ft_rejectvisual, it is easier to zoom in on the eye channels and to remove the trials or data segments where the participant blinked or looked away from the center of the screen.
+If we now use **[ft_databrowser](/reference/ft_databrowser)** or **[ft_rejectvisual](/reference/ft_rejectvisual)**, it is easier to zoom in on the eye channels and to remove the trials or data segments where the participant blinked or looked away from the center of the screen.
 
 {% include markup/yellow %}
 Now that you know how to compute the linked-mastoids EEG data, and the bipolar EOGH and EOGV, you could go back in your preprocessing script and use the EOG channels to speed up the detection of trials in which the participant blinked or looked away from the stimulus on screen.

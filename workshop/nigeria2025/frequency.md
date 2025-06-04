@@ -225,7 +225,7 @@ This gives us a vector that we can use as the time axis, with one latency per tr
 
 Note that this is different from a more conventional time-frequency analysis, where we use the peri-stimulus time axis to get a much higher resolution time-frequency representation, for example using wavelet analysis. That is presented elsewhere, for example in the [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis/).
 
-Now we can re-shuffle the power spectrum to change it into a representation similar to that of the time-frequency analysis. The trial dimension in teh data becomes the time dimension, and we add the time axis.
+Now we can re-shuffle the power spectrum to change it into a representation similar to that of the time-frequency analysis. The trial dimension in the data becomes the time dimension, and we add the time axis.
 
     base_timefreq           = base_freqtrials;
     base_timefreq.powspctrm = permute(base_freqtrials.powspctrm, [2, 3, 1]);
