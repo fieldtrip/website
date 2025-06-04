@@ -166,7 +166,7 @@ If you are analyzing an sEEG dataset, you might want to rereference separately c
 
 ## laplace
 
-The Laplacian rereferencing scheme is relatively similar to the bipolar scheme. It allows to reduce the number of task-correlated channels by increasing the degree of correlation between the signal and the task. This scheme consists of the rereferencing of each channel against the mean of its two clostest neighbours. As for the bipolar rereferencing, channels should be given in input to **[ft_preprocessing](/reference/ft_preprocessing)** in the order that should be used tthem. In this case, the first and last channels of the order will be simply rereferenced against their closest neighbor. Laplacian rereferencing is be performed by specifying  `cfg.refmethod = 'laplace'` as in the following example.
+The Laplacian rereferencing scheme is relatively similar to the bipolar scheme. It allows to reduce the number of task-correlated channels by increasing the degree of correlation between the signal and the task. This scheme consists of the rereferencing of each channel against the mean of its two clostest neighbours. As for the bipolar rereferencing, channels should be given in input to **[ft_preprocessing](/reference/ft_preprocessing)** in the order that should be used them. In this case, the first and last channels of the order will be simply rereferenced against their closest neighbor. Laplacian rereferencing is be performed by specifying  `cfg.refmethod = 'laplace'` as in the following example.
 
     cfg = [];
     cfg.channel = 'all'; % this is the default

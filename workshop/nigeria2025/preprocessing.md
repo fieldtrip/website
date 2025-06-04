@@ -13,7 +13,7 @@ There is not a single preprocessing pipeline that will be optimal for all EEG da
 
 There are largely two alternative approaches for preprocessing, which differ in the amount of memory required in the order of the individual analysis steps. The *first* approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The *second* approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. In the remainder of this tutorial we will explore both options and see how those affect the procedure for the artifact detection.
 
-Towards the end of this tutorial we will also look at rereferencing. Normally that would be something that we might want to do early in in the processing pipeline, since the bipolar EOG channels that we can compute in this specific EEG dataset would facilitate the detection of eye blinks. Hwoever, here we first focus on the trial-based versus continuous processing.
+Towards the end of this tutorial we will also look at rereferencing. Normally that would be something that we might want to do early in in the processing pipeline, since the bipolar EOG channels that we can compute in this specific EEG dataset would facilitate the detection of eye blinks. However, here we first focus on the trial-based versus continuous processing.
 
 ## The dataset used in this tutorial
 
@@ -37,7 +37,7 @@ Subsequently, we will demonstrate a more elaborate preprocessing pipeline, both 
 - identify and remove artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - average the trials to get the event-related potential using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 
-Susequently, we will show the continuous approach where we do the filtering and artifact removal on the continuous data prior to segmenting and averaging.
+Subsequently, we will show the continuous approach where we do the filtering and artifact removal on the continuous data prior to segmenting and averaging.
 
 - read the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and apply some filters
 - identify artifacts using **[ft_databrowser](/reference/ft_databrowser)**
@@ -71,7 +71,7 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** always represe
 
     disp(data.trial)
 
-The data is a matrix of the size Nchans by Nsamples. There is a time axis that specifies the latency of each samnple.
+The data is a matrix of the size Nchans by Nsamples. There is a time axis that specifies the latency of each sample.
 
     disp(data.time{1})
 
@@ -181,7 +181,7 @@ To look at event-related potentials we need to cut the data into segments around
 
 Both depend on **[ft_definetrial](/reference/ft_definetrial)**. The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration structure containing the field `cfg.trl`. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
-If you do not specify your own trial function, the 4th column will by default contain the trigger or marker value. When you use your own trial function, you can add any number of extra columns to the `trl` matrix. These will be added to the data in the `.trialinfo` field. This is very handy if you want to add information of e.g., response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the different stimuly together, and then separating them later for averaging.
+If you do not specify your own trial function, the 4th column will by default contain the trigger or marker value. When you use your own trial function, you can add any number of extra columns to the `trl` matrix. These will be added to the data in the `.trialinfo` field. This is very handy if you want to add information of e.g., response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the different stimuli together, and then separating them later for averaging.
 
 ### Looking at the trigger codes
 
@@ -413,7 +413,7 @@ The resulting trials can be visualized with **[ft_databrowser](/reference/ft_dat
 
 ### Using the summary mode on continuous data
 
-A work-around for using **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data is to read the continuous data, to segment it into non-overlapping one-second trials using ft_redefinetrial, and to use those to detect artifacts. After the affected one-secont segmentss have been removed, you can "glue" the data back together in longer semi-continuous segments with ft_redefinetrial, or you can use ft_defineterial and ft_redefinetrial to cut out the trials of interest.
+A work-around for using **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data is to read the continuous data, to segment it into non-overlapping one-second trials using ft_redefinetrial, and to use those to detect artifacts. After the affected one-second segments have been removed, you can "glue" the data back together in longer semi-continuous segments with ft_redefinetrial, or you can use ft_definetrial and ft_redefinetrial to cut out the trials of interest.
 
 We start again with the continuous data.
 

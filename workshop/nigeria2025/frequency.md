@@ -7,9 +7,9 @@ tags: [eeg, egi, preprocessing, eeg-sedation, nigeria2025]
 
 ## General introduction
 
-In this tutorial we will compute and compare power spectra for EEG data recorded during a [resting-state experiment](/workshop/madrid2019/eeg_sedation) in which a farmaceutical intervention was used. Before starting with this tutorial, please read through the linked description of the dataset.
+In this tutorial we will compute and compare power spectra for EEG data recorded during a [resting-state experiment](/workshop/madrid2019/eeg_sedation) in which a pharmaceutical intervention was used. Before starting with this tutorial, please read through the linked description of the dataset.
 
-The general procedure for frequency analysios on resting state data is to read the data, segment it into shorter trials or snippets, optimally using some overlap, and to compute the averaged powerspectra over all those segments. We can use different length of the trials or snippets to influence the spectral resolution, and we can use different tapering methods to influence the spectral smoothing.
+The general procedure for frequency analysis on resting state data is to read the data, segment it into shorter trials or snippets, optimally using some overlap, and to compute the averaged powerspectra over all those segments. We can use different length of the trials or snippets to influence the spectral resolution, and we can use different tapering methods to influence the spectral smoothing.
 
 ## Procedure
 
@@ -99,7 +99,7 @@ We can plot the power spectra of channel 61 using the standard MATLAB plot funct
     xlabel('Frequency (Hz)');
     ylabel('absolute power (uV^2)');
 
-{% include image src="/assets/img/workshop/nigeria2025/frequency/figureX.png" width="600" %}
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure1.png" width="600" %}
 
 Note the differences in power and in frequency resolution for each window length.
 
@@ -148,7 +148,7 @@ Spectral analysis with on multitapers is done with the function **[ft_freqanalys
     xlabel('Frequency (Hz)');
     ylabel('absolute power (uV^2)');
 
-{% include image src="/assets/img/workshop/nigeria2025/frequency/figureX.png" width="600" %}
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure2.png" width="600" %}
 
 Note the differences in amplitude and frequency resolution for each taper, specially the DPSS. Can you explain why the amplitude of the power spectra decrease that much given that in this case the non-stationarity of the data is the same across tapers?
 
@@ -199,7 +199,7 @@ Which set of parameters is more sensitive to detect the shift of low-beta power?
 
 ## Time-frequency analysis on continuous data
 
-Although often we assume stationarity of th edata in a resting-state experiment, it is possible to look at how the powerspectrum changes over time. For that we are using this [trick](/faq/spectral/tfr_continuous/).
+Although often we assume stationarity of the data in a resting-state experiment, it is possible to look at how the powerspectrum changes over time. For that we are using this [trick](/faq/spectral/tfr_continuous/).
 
 As before, we compute the power spectrum on the segmented data, but now we specify `cfg.keeptrials='yes'` to prevent the trials from being averaged.
 
