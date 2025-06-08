@@ -111,6 +111,10 @@ The final day is flexible, used for review, additional practice, or wrapping up 
 
 The slides will be shared as PDF throughout the week. You can access them at [this google drive folder](https://drive.google.com/drive/folders/1NxpOnxtXyMpjNN8MBCh8ij7eOWDZbueO?usp=sharing).
 
+## Questions
+
+Please ask questions during or after the lectures. Your questions are also relevant for the other participants, who will learn from them as well. If you want, you can also type your questions in a [this shared google doc](https://docs.google.com/document/d/19gOTo8fyZUaatmGnmroixB9Un0by1j2CDvIelckCLSE/edit?usp=sharing). Feel free to add your name, or type your question anonymously. We will address the questions diring the day and/or towards the end of the afternoon.
+
 ## How to prepare
 
 ### Installing FieldTrip
