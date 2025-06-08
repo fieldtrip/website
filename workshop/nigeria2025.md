@@ -64,13 +64,36 @@ Day-by-Day Overview:
 
 The week begins with orientation and practical information, followed by foundational topics: what EEG is, its advantages over other neuroimaging techniques, and its applications in clinical, developmental, and cognitive research. Special emphasis is placed on African-specific challenges, such as dealing with natural hairstyles and electrode types. Sessions also address ethics, informed consent, and experimental design essentials, including noise, artifacts, attention, and stimulus control.
 
+- registration and welcome
+- introduction and format (lecture)
+- background on EEG (lecture)
+- lunch
+- EEG in Africa (lecture)
+- experimental design part A (lecture)
+- experimental design Q&A (discussion)
+
 ### Tuesday – Experimental Design & EEG Recording
 
 Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
 
+- how does an EEG system work (lecture)
+- recording of EEG (hands-on)
+- lunch
+- experimental design part B (lecture)
+- synchronisation and triggers (lecture)
+- designing a task and recording it (hands-on)
+
 ### Wednesday – EEG Data & Analysis Tools
 
 Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. A comparison of clinical vs. cognitive EEG applications is provided, along with an introduction to analyzing event-related potentials (ERP), followed by practical exercises.
+
+- where to get EEG data (lecture)
+- preprocessing of EEG (lecture)
+- preprocessing of EEG (hands-on)
+- lunch
+- analysis of ERPs (lecture)
+- analysis of ERPs (hands-on)
+- wrap up (discussion)
 
 ### Thursday – Frequency & Time-Frequency Analysis
 
@@ -84,6 +107,10 @@ Topics include experimental design types, statistical approaches (e.g., mixed mo
 
 The final day is flexible, used for review, additional practice, or wrapping up unfinished work. Reflections on the week’s learning and experiences conclude the course.
 
+## Slides
+
+The slides will be shared as PDF throughout the week. You can access them at [this google drive folder](https://drive.google.com/drive/folders/1NxpOnxtXyMpjNN8MBCh8ij7eOWDZbueO?usp=sharing).
+
 ## How to prepare
 
 ### Installing FieldTrip
@@ -96,7 +123,8 @@ Open MATLAB online and enter the following in the command window
 
 ### Downloading the data
 
-Instructions will follow.
+    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/dsata.zip')
+    cd('/MATLAB Drive/data')
 
 ## Suggested reading material
 
