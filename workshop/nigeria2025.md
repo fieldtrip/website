@@ -127,7 +127,7 @@ Open MATLAB online and enter the following in the command window
 
 ### Downloading the data
 
-    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/dsata.zip')
+    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/data.zip')
     cd('/MATLAB Drive/data')
 
 ## Suggested reading material
