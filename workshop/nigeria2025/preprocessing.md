@@ -73,11 +73,11 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** always represe
 
 The data is a matrix of the size Nchans by Nsamples. There is a time axis that specifies the latency of each sample.
 
-    disp(data.time{1})
+    size(data.time{1})
 
 The actual data of the first (and only) trial is in the trial cell-array.
 
-    disp(data.trial{1})
+    size(data.trial{1})
 
 Note that curly brackets '{' and '}' are used to index elements from a cell-array, whereas round brackets '(' and ')' are used to index vectors and matrices (and to pass arguments to a function) and square brackets '[' and ']' are used to construct vectors and matrices.
 
@@ -503,7 +503,7 @@ The processing of the vertical EOG is done similar, using the difference between
     cfg.dataset    = filename;
     cfg.channel    = {'50', '64'};
     cfg.reref      = 'yes';
-    cfg.refchannel = '50'
+    cfg.refchannel = '50';
     data_eogv      = ft_preprocessing(cfg);
 
     data_eogv.label{2} = 'EOGV';
