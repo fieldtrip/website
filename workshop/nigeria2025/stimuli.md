@@ -33,7 +33,7 @@ info = pylsl.StreamInfo(
     name='My Marker Stream',
     type='Markers',
     channel_count=1,
-    nominal_srate=1000.0,
+    nominal_srate=0, # should be zero for markers
     channel_format='string',
     source_id=None,
 )
