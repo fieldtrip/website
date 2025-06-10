@@ -80,8 +80,7 @@ Hands-on sessions guide participants through installing stimulus software (e.g.,
 - recording of EEG (hands-on)
 - lunch
 - experimental design part B (lecture)
-- synchronisation and triggers (lecture)
-- designing a task and recording it (hands-on)
+- designing a task and recording it ([hands-on](/nigeria2025/stimuli))
 
 ### Wednesday – EEG Data & Analysis Tools
 
