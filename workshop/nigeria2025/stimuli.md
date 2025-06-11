@@ -13,11 +13,138 @@ The experimental design of a task can be implemented in a variety of software en
 
 They all require some coding or scripting to be done to define the stimuli that will be presented, with their timing, and to deal with responses or input from the participants Furthermore, in the implementation of the experimental task triggers (or markers) need to be sent to the EEG system so that the precise synchronization between stimulus or response and th EEG recording can be used in teh subsequent analysis.
 
-The most common strategy is to use a trigger cable, i.e., a cable from the computer to the EEG amplifier or to the MEG system. In the past the parallel (printer) port of the computer would be used for that, but nowadays computers and laptops only have USB ports.
+## Running an experiment from PsychoPy
+
+When designing an experimental task, we usually start small, and then add complexity.
+
+### Presenting a text item
+
+```python
+# The PsychoPy library is used for creating experiments in psychology and neuroscience.
+# This code creates a PsychoPy window and displays the text "Hello ABDN!" in white color for 2 seconds before closing the window.
+# The window is not full screen, and the text is displayed in a pixel unit with a height of 50 pixels.
+# For a proper experiment, we would present this in full screen.
+
+from psychopy import visual, core
+
+myWin = visual.Window([800, 600], color='black', units='pix')
+myText = visual.TextStim(myWin, text='Hello ABDN! ', color='white', height=50)
+
+myText.draw()
+myWin.flip()
+core.wait(2)  # Wait for 2 seconds before closing the window
+
+myWin.close()
+core.quit()
+```
+
+### Presenting multiple text items as a Stroop task
+
+```python
+# this implements a very basic Stroop task using PsychoPy
+# see https://en.wikipedia.org/wiki/Stroop_effect for more details
+
+from psychopy import visual, core
+
+myWin = visual.Window([800, 600], color='black', units='pix')
+fixation = visual.TextStim(myWin, text='+', color='white', height=50)
+text1 = visual.TextStim(myWin, text='RED', color='green', height=50)
+text2 = visual.TextStim(myWin, text='GREEN', color='blue', height=50)
+text3 = visual.TextStim(myWin, text='BLUE', color='red', height=50)
+
+fixation.draw()
+myWin.flip()
+core.wait(0.5)
+text1.draw()  # present the word RED, in the color green
+myWin.flip()
+core.wait(0.5)
+
+fixation.draw()
+myWin.flip()
+core.wait(0.5)
+text2.draw() # present the word GREEN, in the color blue
+myWin.flip()
+core.wait(0.5)
+
+fixation.draw()
+myWin.flip()
+core.wait(0.5)
+text3.draw() # present the word BLUE, in the color red
+myWin.flip()
+core.wait(0.5)
+
+myWin.close()
+core.quit()
+```
+
+### Presenting random text as an oddball task
+
+```python
+# this implements a very basic oddball task using PsychoPy
+# see https://en.wikipedia.org/wiki/Oddball_paradigm for more details
+
+from psychopy import visual, core
+import random
+
+myWin = visual.Window([800, 600], color='black', units='pix')
+fixation = visual.TextStim(myWin, text='+', color='white', height=50)
+standard = visual.TextStim(myWin, text='STANDARD', color='green', height=50)
+deviant  = visual.TextStim(myWin, text='DEVIANT', color='red', height=50)
+
+# present 10 trials of the oddball task
+# where 80% of the stimuli are standard and 20% are deviant
+for trial in range(10):
+    # Randomly choose a stimulus for each trial
+    stimulus = random.choice([standard, standard, standard, standard, deviant])
+
+    fixation.draw()
+    myWin.flip()
+    core.wait(0.5)
+    stimulus.draw()  # present randomly chosen stimulus
+    myWin.flip()
+    core.wait(0.5)
+
+myWin.close()
+core.quit()
+```
+
+### Presenting an auditory oddball task
+
+```python
+# this implements a very basic auditory oddball task using PsychoPy
+# see https://en.wikipedia.org/wiki/Oddball_paradigm for more details
+
+from psychopy import visual, core, sound
+import random
+
+myWin = visual.Window([800, 600], color='black', units='pix')
+fixation = visual.TextStim(myWin, text='+', color='white', height=50)
+standard = sound.Sound('A', secs=0.5)  # standard sound stimulus
+deviant = sound.Sound('C', secs=0.5)   # deviant sound stimulus
+
+# present 10 trials of the oddball task
+for trial in range(10):
+    stimulus = random.choice([standard, standard, standard, standard, deviant])
+
+    fixation.draw()
+    myWin.flip()
+    core.wait(0.5)
+    stimulus.play()  # play the randomly chosen stimulus
+    myWin.flip()
+
+myWin.close()
+core.quit()
+```
+
+## Synchronization
+
+The most common strategy to synchonize the experimnental task with the EEG recording is to use a trigger cable, i.e., a cable from the computer to the EEG amplifier or to the MEG system. In the past the parallel (printer) port of the computer would be used for that, but nowadays computers and laptops only have USB ports.
 
 The USB port of a computer or laptop supports serial-over-usb, which is a common protocol to connect to an external device. Using the serial interface, we can connect to an external device such as an [Arduino](https://www.arduino.cc) deevlopment board, or a [BBT interface](https://www.blackboxtoolkit.com). These then translate the trigger value sent over the serial port into a sequence of parallel bits.
 
-## Python
+An alternative for a hardware cable is to use [LabStreamingLayer](http://labstreaminglayer.readthedocs.io/), which is also known as LSL. This does require that not only the makers are sent over LSL, but also that the EEG is sent over LSL and recorded along with the markers.
+
+## Synchronization from Python
 
 ### Sending markers using LSL
 
@@ -54,7 +181,7 @@ while True:
     time.sleep(random.random()*2)
 ```
 
-### Sending (simulated) EEG data using LSL
+### Sending simulated EEG data using LSL
 
 ```python
 import pylsl
@@ -97,7 +224,7 @@ while True:
 
 ### Sending triggers using parallel ports
 
-Parallel ports sends values based on parallel "pins" that each represents a bit in a binary number. For example with eight pins, you can write values from 0-255. Parallel ports are generally the most reliable way of sending triggers as all information is send at the same time. 
+Parallel ports sends values based on parallel "pins" that each represents a bit in a binary number. For example with eight pins, you can write values from 0-255. Parallel ports are generally the most reliable way of sending triggers as all information is send at the same time.
 
 Be aware that modern PCs and laptops usually do not have parallel ports. In that case, see how to send "parallel" triggers with a serial ports below.
 
@@ -133,6 +260,7 @@ import serial
 # Define the port
 port = serial.Serial("COM4", 115200) 
 ```
+
 In this example, the address for serial port is ``COM4``. The port address change depending on the PC and how the external defince is connected. Change the adress to match your machine.
 
 This example takes the integer `code` and transformes it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
@@ -140,47 +268,82 @@ This example takes the integer `code` and transformes it to a code that can be s
 ```python
 port.write(code.to_bytes(1, 'big'))     # Send trigger code
 print('trigger sent {}'.format(code))   # Print code to terminal for debugging
-
 ```
 
 #### Find the USB serial port address
+
 Plug in the USB/parllel cable connected to the EEG system.
 
 ##### Windows
+
 On most Windows machines the serial port is callel "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
 
 If not, you can try a "brute force" test, and see if you get triggers with any adresses, starting with "COM1", "COM2", and so on.
 
-##### Mac
-On Mac, USB ports are found under "devices" and called "tty.<something>. To find the name, connect the cable, then open a terminal and type:
+##### macOS
+
+On macOS, USB ports are found under "devices" and called `tty.<something>`. To find the name, connect the cable, then open a terminal and type:
 
 ```bash
 ls /dev/tty.*
 ```
-Then find the name that match the connected device. E.g.: 
+
+Then find the name that match the connected device. For example:
 
 ````python
 port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
 ````
 
 ### Use win.callOnFlip() to time triggers in PsychoPy
+
 PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the ``Window`` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next ``flip()`` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
 
 The first argument should be the function to call, the following args should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal):  ``callOnFlip(function, *args, **kwargs)``
 
-E.g. If you have a function that you would normally call like this (code is the trigger value):
+For example, if you have a function that you would normally call like this (code is the trigger value):
 
 ````python
 port.write(code.to_bytes(1, 'big'))
 ````
+
 You call it though ``callOnFlip()`` like this:
 
 ```python
 win.callOnFlip(port.write, code.to_bytes(1, 'big')) 
 ```
+
 Using this procedure should improve timing.
 
-## MATLAB
+## Synchronization from MATLAB
+
+### Sending markers using LSL
+
+```matlab
+% instantiate the library
+disp('Loading library...');
+lib = lsl_loadlib();
+disp(lsl_library_version(lib));
+
+% make a new stream outlet
+disp('Creating a new streaminfo...');
+info = lsl_streaminfo(lib, 'BioSemi', 'EEG', 8, 100, 'cf_float32', 'my_laptop');
+
+disp('Opening an outlet...');
+outlet = lsl_outlet(info);
+
+% send markers to the outlet
+disp('Now transmitting markers...');
+markers = {'fixation', 'stimulus', 'response', '1', '2', '4'};
+while true
+  pause(rand()*3);
+  % pick a random marker
+  mrk = markers{min(length(markers), 1+floor(rand()*(length(markers))))};
+  disp(['now sending ' mrk]);
+  outlet.push_sample({mrk});   % note that the string is wrapped into a cell-array
+end
+```
+
+### Sending triggers using serial ports (incl. USB)
 
 At the Donders we are using trigger boxes that are based on the Arduino Uno or Arduino Mega development boards, which we call "Bitsi" boxes. These boxes have a numner of TTL inputs and TTL outputs and are [programmed](https://github.com/robertoostenveld/arduino/tree/main/bitsi) to send the byte that they receive over the serial port to the parallel output. The parallel output is connected to the EEG or MEG system.
 
@@ -201,7 +364,7 @@ while 1
 end
 ```
 
-The following code is the bitsi helper object, it should be stored in a file that is called `bitsi.m`.
+The following code is the Bitsi helper object, it should be stored in a file that is called `Bitsi.m` (note the capitalization).
 
 ```matlab
 % Class "Bitsi"
