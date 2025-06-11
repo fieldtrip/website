@@ -16,7 +16,7 @@ There are two alternative approaches for preprocessing, which especially differ 
 {% include markup/yellow %}
 Note that the dataset in this tutorial is not particularly large; we could also have used the first approach. But we want to demonstrate how to work efficiently in general with large datasets with many trials where we are not interested in what happens in the breaks.
 
-Both methods are compared in the [preprocessing](/workshop/nigeria/preprocessing) tutorial.
+Both methods are compared in the [preprocessing](/workshop/nigeria2025/preprocessing) tutorial.
 {% include markup/end %}
 
 ## The dataset used in this tutorial
@@ -92,10 +92,10 @@ For consistency we will rename the channel with the name '53' located at the rig
 We now continue with rereferencing to extract the bipolar EOG signal from the data. For the vertical EOG we will use channel 50 and channel 64. For the horizontal EOG we will compute the difference between the potential recorded in channels 51 and 60.
 
 {% include markup/yellow %}
-Some EEG acquisition systems, such as the Biosemi, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
+Some EEG acquisition systems like the TSMi SAGA, the Biosemi systems, or the BrainProducts ActiChamp, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
 {% include markup/end %}
 
-{% include image src="/assets/img/workshop/nigeria/erp/figure1.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure1.png" width="200" %}
 
 Select the channels that we need for the vertical EOG
 
