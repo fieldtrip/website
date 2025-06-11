@@ -33,7 +33,7 @@ info = pylsl.StreamInfo(
     name='My Marker Stream',
     type='Markers',
     channel_count=1,
-    nominal_srate=1000.0,
+    nominal_srate=0, # should be zero for markers
     channel_format='string',
     source_id=None,
 )
@@ -94,6 +94,91 @@ while True:
     time.sleep(0.1)  # Adjust the sleep duration as needed
 
 ```
+
+### Sending triggers using parallel ports
+
+Parallel ports sends values based on parallel "pins" that each represents a bit in a binary number. For example with eight pins, you can write values from 0-255. Parallel ports are generally the most reliable way of sending triggers as all information is send at the same time. 
+
+Be aware that modern PCs and laptops usually do not have parallel ports. In that case, see how to send "parallel" triggers with a serial ports below.
+
+```Python
+from psychopy import parallel
+
+# Define the port
+port = parallel.ParallelPort(0x0378)  
+
+```
+
+``0x0378`` is the default address for parallel port on many Windows machines, but can change from PC to PC. Change to match your machine. To find the adress, find the parllel port in the Windows Systems Settings.
+
+To send the triggers, place this code at the appropiate place in your experiment script:
+
+```Python
+port.setData(code)        # Send trigger code 
+port.setData(0)           # Send code 0 = reset pins
+print('trigger sent {}'.format(code)) # Print code to terminal for debugging
+```
+
+This will the signal ``code`` to the parallel port. ``Code`` should be an integer equal to the trigger value.
+
+### Sending triggers using serial ports (incl. USB)
+
+Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the reciving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
+
+Define the serial port using the ``Serial`` Python package:
+
+```Python
+import serial
+
+# Define the port
+port = serial.Serial("COM4", 115200) 
+```
+In this example, the address for serial port is ``COM4``. The port address change depending on the PC and how the external defince is connected. Change the adress to match your machine.
+
+This example takes the integer `code` and transformes it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
+
+```python
+port.write(code.to_bytes(1, 'big'))     # Send trigger code
+print('trigger sent {}'.format(code))   # Print code to terminal for debugging
+
+```
+
+#### Find the USB serial port address
+Plug in the USB/parllel cable connected to the EEG system.
+
+##### Windows
+On most Windows machines the serial port is callel "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
+
+If not, you can try a "brute force" test, and see if you get triggers with any adresses, starting with "COM1", "COM2", and so on.
+
+##### Mac
+On Mac, USB ports are found under "devices" and called "tty.<something>. To find the name, connect the cable, then open a terminal and type:
+
+```bash
+ls /dev/tty.*
+```
+Then find the name that match the connected device. E.g.: 
+
+````python
+port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
+````
+
+### Use win.callOnFlip() to time triggers in PsychoPy
+PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the ``Window`` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next ``flip()`` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
+
+The first argument should be the function to call, the following args should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal):  ``callOnFlip(function, *args, **kwargs)``
+
+E.g. If you have a function that you would normally call like this (code is the trigger value):
+
+````python
+port.write(code.to_bytes(1, 'big'))
+````
+You call it though ``callOnFlip()`` like this:
+
+```python
+win.callOnFlip(port.write, code.to_bytes(1, 'big')) 
+```
+Using this procedure should improve timing.
 
 ## MATLAB
 

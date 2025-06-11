@@ -61,32 +61,32 @@ Taking the baseline sedation EEG data of participant 22, we will use **[ft_redef
 You can also use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut the data into timewindows with some overlap (e.g.. 50%). This basically implements [Welsh's method](https://en.wikipedia.org/wiki/Welch%27s_method) for spectral estimation.
 {% include markup/end %}
 
-    cfg1 = [];
-    cfg1.length  = 1;
-    cfg1.overlap = 0;
-    base_rpt1    = ft_redefinetrial(cfg1, base);
+    cfg = [];
+    cfg.length  = 1;
+    cfg.overlap = 0;
+    base_rpt1    = ft_redefinetrial(cfg, base);
 
-    cfg1.length  = 2;
-    base_rpt2    = ft_redefinetrial(cfg1, base);
+    cfg.length  = 2;
+    base_rpt2    = ft_redefinetrial(cfg, base);
 
-    cfg1.length  = 4;
-    base_rpt4    = ft_redefinetrial(cfg1, base);
+    cfg.length  = 4;
+    base_rpt4    = ft_redefinetrial(cfg, base);
 
 Now we use **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute the power spectra using a boxcar window.
 
-    cfg2 = [];
-    cfg2.output  = 'pow';
-    cfg2.channel = 'all';
-    cfg2.method  = 'mtmfft';
-    cfg2.taper   = 'boxcar';
-    cfg2.foi     = 0.5:1:45; % 1/cfg1.length  = 1;
-    base_freq1   = ft_freqanalysis(cfg2, base_rpt1);
+    cfg = [];
+    cfg.output  = 'pow';
+    cfg.channel = 'all';
+    cfg.method  = 'mtmfft';
+    cfg.taper   = 'boxcar';
+    cfg.foi     = 0.5:1:45; % 1/cfg.length  = 1;
+    base_freq1   = ft_freqanalysis(cfg, base_rpt1);
 
-    cfg2.foi     = 0.5:0.5:45; % 1/cfg1.length  = 2;
-    base_freq2   = ft_freqanalysis(cfg2, base_rpt2);
+    cfg.foi     = 0.5:0.5:45; % 1/cfg.length  = 2;
+    base_freq2   = ft_freqanalysis(cfg, base_rpt2);
 
-    cfg2.foi     = 0.5:0.25:45; % 1/cfg1.length  = 4;
-    base_freq4   = ft_freqanalysis(cfg2, base_rpt4);
+    cfg.foi     = 0.5:0.25:45; % 1/cfg.length  = 4;
+    base_freq4   = ft_freqanalysis(cfg, base_rpt4);
 
 We can plot the power spectra of channel 61 using the standard MATLAB plot function.
 
@@ -125,20 +125,20 @@ Spectral analysis with on multitapers is done with the function **[ft_freqanalys
   `K = 2*tw*fw-1`, where K is required to be larger than 0. K is the number
   of tapers applied; the more, the greater the smoothing.
 
-    cfg2 = [];
-    cfg2.output    = 'pow';
-    cfg2.channel   = 'all';
-    cfg2.method    = 'mtmfft';
-    cfg2.taper     = 'boxcar';
-    cfg2.foi       = 0.5:0.25:45;
-    base_freq_b    = ft_freqanalysis(cfg2, base_rpt4);
+    cfg = [];
+    cfg.output    = 'pow';
+    cfg.channel   = 'all';
+    cfg.method    = 'mtmfft';
+    cfg.taper     = 'boxcar';
+    cfg.foi       = 0.5:0.25:45;
+    base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
 
-    cfg2.taper     = 'hanning';
-    base_freq_h    = ft_freqanalysis(cfg2, base_rpt4);
+    cfg.taper     = 'hanning';
+    base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
 
-    cfg2.taper     = 'dpss'; % here the multitapers
-    cfg2.tapsmofrq = 4;
-    base_freq_d    = ft_freqanalysis(cfg2, base_rpt4);
+    cfg.taper     = 'dpss'; % here the multitapers
+    cfg.tapsmofrq = 4;
+    base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
 
     figure; hold on
     plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
@@ -156,13 +156,13 @@ Note the differences in amplitude and frequency resolution for each taper, speci
 
 Finally, we will apply what we just learned to investigate the experimental effect of propofol on the resting-state EEG power spectrum.
 
-    cfg1 = [];
-    cfg1.length  = 4;
-    cfg1.overlap = 0;
-    base_rpt4 = ft_redefinetrial(cfg1, base);
-    mild_rpt4 = ft_redefinetrial(cfg1, mild);
-    mode_rpt4 = ft_redefinetrial(cfg1, mode);
-    reco_rpt4 = ft_redefinetrial(cfg1, reco);
+    cfg = [];
+    cfg.length  = 4;
+    cfg.overlap = 0;
+    base_rpt4 = ft_redefinetrial(cfg, base);
+    mild_rpt4 = ft_redefinetrial(cfg, mild);
+    mode_rpt4 = ft_redefinetrial(cfg, mode);
+    reco_rpt4 = ft_redefinetrial(cfg, reco);
 
     cfg = [];
     cfg.output    = 'pow';
@@ -170,26 +170,28 @@ Finally, we will apply what we just learned to investigate the experimental effe
     cfg.method    = 'mtmfft';
     cfg.taper     = 'boxcar';
     cfg.foi       = 0.5:0.25:45;
-    base_freq_b = ft_freqanalysis(cfg2, base_rpt4);
-    mild_freq_b = ft_freqanalysis(cfg2, mild_rpt4);
-    mode_freq_b = ft_freqanalysis(cfg2, mode_rpt4);
-    reco_freq_b = ft_freqanalysis(cfg2, reco_rpt4);
+    base_freq_b = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_b = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_b = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_b = ft_freqanalysis(cfg, reco_rpt4);
 
     cfg.taper     = 'hanning';
-    base_freq_h = ft_freqanalysis(cfg2, base_rpt4);
-    mild_freq_h = ft_freqanalysis(cfg2, mild_rpt4);
-    mode_freq_h = ft_freqanalysis(cfg2, mode_rpt4);
-    reco_freq_h = ft_freqanalysis(cfg2, reco_rpt4);
+    base_freq_h = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_h = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_h = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_h = ft_freqanalysis(cfg, reco_rpt4);
 
     cfg.taper     = 'dpss';
     cfg.tapsmofrq = 4;
-    base_freq_d = ft_freqanalysis(cfg2, base_rpt4);
-    mild_freq_d = ft_freqanalysis(cfg2, mild_rpt4);
-    mode_freq_d = ft_freqanalysis(cfg2, mode_rpt4);
-    reco_freq_d = ft_freqanalysis(cfg2, reco_rpt4);
+    base_freq_d = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_d = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_d = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_d = ft_freqanalysis(cfg, reco_rpt4);
 
     cfg = [];
     cfg.layout = 'GSN-HydroCel-128';
+    cfg.showscale = 'no';
+    cfg.showcmnt = 'no';
 
     figure; ft_multiplotER(cfg, base_freq_b, mild_freq_b, mode_freq_b, reco_freq_b)
     figure; ft_multiplotER(cfg, base_freq_h, mild_freq_h, mode_freq_h, reco_freq_h)
@@ -236,4 +238,6 @@ Now we can re-shuffle the power spectrum to change it into a representation simi
     cfg.baselinetype = 'db';
     cfg.baseline = [-inf inf];
     cfg.layout = 'GSN-HydroCel-128';
+    cfg.showscale = 'no';
+    cfg.showcmnt = 'no';
     ft_multiplotTFR(cfg, base_timefreq);
