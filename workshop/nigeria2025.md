@@ -66,8 +66,9 @@ The week begins with orientation and practical information, followed by foundati
 
 - registration and welcome
 - introduction and format (lecture)
-- background on EEG (lecture)
+- background on EEG (lecture, 1st half)
 - lunch
+- background on EEG (lecture, 2nd half)
 - EEG in Africa (lecture)
 - experimental design part A (lecture)
 - experimental design Q&A (discussion)
@@ -76,7 +77,7 @@ The week begins with orientation and practical information, followed by foundati
 
 Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
 
-- how does an EEG system work (lecture)
+- how does an EEG system work (lecture, 1st half)
 - recording of EEG (hands-on)
 - lunch
 - experimental design part B (lecture)
@@ -86,25 +87,45 @@ Hands-on sessions guide participants through installing stimulus software (e.g.,
 
 Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. A comparison of clinical vs. cognitive EEG applications is provided, along with an introduction to analyzing event-related potentials (ERP), followed by practical exercises.
 
+- synchronisation and triggers (lecture)
+- synchronisation and triggers (demonstration)
 - where to get EEG data (lecture)
-- preprocessing of EEG (lecture)
-- preprocessing of EEG (hands-on)
+- How to analyze EEG data (lecture)
 - lunch
-- analysis of ERPs (lecture)
-- analysis of ERPs (hands-on)
+- preprocessing of EEG (lecture)
+- preprocessing of EEG ([hands-on](/workshop/nigeria2025/preprocessing))
 - wrap up (discussion)
 
 ### Thursday – Frequency & Time-Frequency Analysis
 
 Participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, group comparisons), and are introduced to time-frequency and connectivity analysis—highlighting both their promise and complexity. These topics include short lectures with hands-on practice.
 
+- EEG and ethics (lecture)
+- analysis of ERPs (lecture)
+- analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
+- lunch
+- frequency analysis (lecture)
+- frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
+- EEG and ethics - the African perspective (lecture by Damian)
+
 ### Friday – Statistical & Advanced Analyses
 
 Topics include experimental design types, statistical approaches (e.g., mixed models, Bayesian methods), and multiple comparison correction. Advanced methods such as source reconstruction, BCI applications, and neurofeedback are discussed, with an emphasis on high-density EEG setups (32/64 channels).
 
+- how does an EEG system work (lecture, 2nd half)
+- source localization (lecture)
+- lunch
+- real-time analysis and BCI (lecture)
+- experimental design (hands-on)
+- recording of EEG (hands-on)
+
 ### Saturday – Wrap-up & Additional Practice
 
 The final day is flexible, used for review, additional practice, or wrapping up unfinished work. Reflections on the week’s learning and experiences conclude the course.
+
+- to be determined
+- lunch
+- to be determined
 
 ## Slides
 
