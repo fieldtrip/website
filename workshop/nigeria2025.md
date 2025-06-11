@@ -139,16 +139,24 @@ Please ask questions during or after the lectures. Your questions are also relev
 
 ### Installing FieldTrip
 
-Open MATLAB online and enter the following in the command window
+Open MATLAB online and enter the following in the command window to download and install FieldTrip. Subsequently you should download the data as well.
 
     unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/fieldtrip-20250517.zip')
     addpath('/MATLAB Drive/fieldtrip-20250517')
     ft_defaults
 
-### Downloading the data
-
     unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/data.zip')
     cd('/MATLAB Drive/data')
+
+### Restarting MATLAB online
+
+Whenever you restart MATLAB or when you are kicked out because of poor internet connectivity, you have to set up FieldTrip again.
+
+    addpath('/MATLAB Drive/fieldtrip-20250517')
+    ft_defaults
+    cd('/MATLAB Drive/data')
+
+It is important to save your edited m-files regularly, so that you can continue when you reconnect.
 
 ## Suggested reading material
 
