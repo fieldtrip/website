@@ -102,20 +102,20 @@ Participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, g
 
 - EEG and ethics (lecture)
 - analysis of ERPs (lecture)
-- analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
 - lunch
+- analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
 - frequency analysis (lecture)
-- frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
 - EEG and ethics - the African perspective (lecture by Damian)
 
 ### Friday – Statistical & Advanced Analyses
 
 Topics include experimental design types, statistical approaches (e.g., mixed models, Bayesian methods), and multiple comparison correction. Advanced methods such as source reconstruction, BCI applications, and neurofeedback are discussed, with an emphasis on high-density EEG setups (32/64 channels).
 
-- how does an EEG system work (lecture, 2nd half)
 - source localization (lecture)
-- lunch
 - real-time analysis and BCI (lecture)
+- how does an EEG system work (lecture, 2nd half)
+- lunch
+- frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
 - experimental design (hands-on)
 - recording of EEG (hands-on)
 
