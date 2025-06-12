@@ -165,7 +165,7 @@ The fields in the raw data structure are explained in more detail in **[ft_datay
 
     plot(data.time{1}, data.trial{1});
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure2.png" width="800" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure2.png" width="600" %}
 
 However, a more efficient way to quickly visualize and scroll through your data is to use **[ft_databrowser](/reference/ft_databrowser)**. That function also allows you to mark the time windows in which artifacts are present.
 
@@ -185,7 +185,7 @@ To get a first impression of our data quality we will use **[ft_databrowser](/re
     cfg.viewmode = 'vertical';
     artfct       = ft_databrowser(cfg, data)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure3.png" width="800" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure3.png" width="600" %}
 
 ##### Exercise 1
 
@@ -211,7 +211,7 @@ To mark a channel that is bad, you have to click in the figure on that specific 
 Please click on channel 46 to exclude that from further analysis. It appears to be noisy in all trials.
 {% include markup/end %}
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure4.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure4.png" width="600" %}
 
 ##### Exercise 2
 
@@ -232,7 +232,7 @@ Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display al
     cfg.channel  = {bad_chan{:},'eogv','eogh'};
     data_clean   = ft_rejectvisual(cfg, data);
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure5.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure5.png" width="600" %}
 
 {% include markup/red %}
 Note that this will be not so effective if you have a small screen and many trials. This dataset has 800 trials, which means that 800 small plots are made, each with a timecourse. On a small screen you will not be able to make out the timecourses, so you cannot judge whether there are artifacts or not. Also there are many trials to judge, which can take a long time.
@@ -252,7 +252,7 @@ Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more 
     cfg.trials   = ~bad_trial; % exclude the trials that we already identified as bad
     data_clean   = ft_rejectvisual(cfg, data);
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="700" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="600" %}
 
 ##### Exercise 3
 
@@ -275,7 +275,7 @@ Now that we have identified artifacts using different visual inspection approach
     cfg.artfctdef.visual.artifact = bad_samples;
     cfg_artif = ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure7.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure7.png" width="600" %}
 
 If the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not sufficient yet, you can continue to mark trials or data segments as artifacts within **[ft_databrowser](/reference/ft_databrowser)**. The updated artifact definition will be saved in the `cfg_artif` output and you can subsequently reject those artifacts using **[ft_rejectartifact](/reference/ft_rejectartifact)**.
 
@@ -291,7 +291,7 @@ The electrode positions are in general not recorded during EEG measurements (alt
     cfg.layout = 'easycapM10.mat';
     ft_layoutplot(cfg)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure8.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure8.png" width="600" %}
 
 ### Trial-average
 
@@ -324,9 +324,9 @@ We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both condi
     cfg.baseline    = [-0.2 0];
     ft_topoplotER(cfg, timelockAUD, timelockVIS)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure9.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure9.png" width="400" %}
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure10.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure10.png" width="400" %}
 
 ##### Exercise 5
 
