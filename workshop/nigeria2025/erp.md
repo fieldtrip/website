@@ -207,6 +207,10 @@ We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all ch
 
 To mark a channel that is bad, you have to click in the figure on that specific channel. Clicking the channel once more toggles it back to good. To mark the whole trial as bad, you have to click on the "bad" button at the bottom of the figure. Click through the trials using the `>` button to inspect each trial.
 
+{% include markup/yellow %}
+Please click on channel 46 to exclude that from further analysis. It appears to be noisy in all trials.
+{% include markup/end %}
+
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure4.png" width="400" %}
 
 ##### Exercise 2
@@ -228,8 +232,10 @@ Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display al
     cfg.channel  = {bad_chan{:},'eogv','eogh'};
     data_clean   = ft_rejectvisual(cfg, data);
 
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure5.png" width="400" %}
+
 {% include markup/red %}
-Note that this will be ineffective if you have a small screen. The dataset has 800 trials, which means that 800 small plots are made, each with a timecourse. On a small screen you will not be able to make out the timecourses, so you cannot judge whether there are artifacts or not.
+Note that this will be not so effective if you have a small screen and many trials. This dataset has 800 trials, which means that 800 small plots are made, each with a timecourse. On a small screen you will not be able to make out the timecourses, so you cannot judge whether there are artifacts or not. Also there are many trials to judge, which can take a long time.
 {% include markup/end %}
 
 If we have a large enough screen and can see the timecourses in the trial, we can identify and store the trial numbers that have blinks. We are using the `trialinfo` field for this, which contains the begin and end sample relative to the original data file.
@@ -246,7 +252,7 @@ Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more 
     cfg.trials   = ~bad_trial; % exclude the trials that we already identified as bad
     data_clean   = ft_rejectvisual(cfg, data);
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure5.png" width="700" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="700" %}
 
 ##### Exercise 3
 
@@ -269,6 +275,8 @@ Now that we have identified artifacts using different visual inspection approach
     cfg.artfctdef.visual.artifact = bad_samples;
     cfg_artif = ft_databrowser(cfg, data);
 
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure7.png" width="400" %}
+
 If the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not sufficient yet, you can continue to mark trials or data segments as artifacts within **[ft_databrowser](/reference/ft_databrowser)**. The updated artifact definition will be saved in the `cfg_artif` output and you can subsequently reject those artifacts using **[ft_rejectartifact](/reference/ft_rejectartifact)**.
 
 ## Computing and plotting the ERPs
@@ -282,6 +290,8 @@ The electrode positions are in general not recorded during EEG measurements (alt
     cfg = [];
     cfg.layout = 'easycapM10.mat';
     ft_layoutplot(cfg)
+
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure8.png" width="400" %}
 
 ### Trial-average
 
@@ -314,11 +324,9 @@ We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both condi
     cfg.baseline    = [-0.2 0];
     ft_topoplotER(cfg, timelockAUD, timelockVIS)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure9.png" width="200" %}
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure7.png" width="200" %}
-
-{% include image src="/assets/img/workshop/nigeria2025/erp/figure8.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure10.png" width="200" %}
 
 ##### Exercise 5
 
