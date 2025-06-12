@@ -228,40 +228,39 @@ Parallel ports sends values based on parallel "pins" that each represents a bit 
 
 Be aware that modern PCs and laptops usually do not have parallel ports. In that case, see how to send "parallel" triggers with a serial ports below.
 
-```Python
+```python
 from psychopy import parallel
 
 # Define the port
 port = parallel.ParallelPort(0x0378)  
-
 ```
 
-``0x0378`` is the default address for parallel port on many Windows machines, but can change from PC to PC. Change to match your machine. To find the adress, find the parllel port in the Windows Systems Settings.
+The number `0x0378` is the default address (expressed in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers) for the parallel port on many Windows machines, but it can change from PC to PC. Change to match your machine. To find the adress, find the parllel port in the Windows Systems Settings.
 
 To send the triggers, place this code at the appropiate place in your experiment script:
 
-```Python
+```python
 port.setData(code)        # Send trigger code 
 port.setData(0)           # Send code 0 = reset pins
 print('trigger sent {}'.format(code)) # Print code to terminal for debugging
 ```
 
-This will the signal ``code`` to the parallel port. ``Code`` should be an integer equal to the trigger value.
+This will send the signal `code` to the parallel port. `Code` should be an integer equal to the trigger value.
 
 ### Sending triggers using serial ports (incl. USB)
 
 Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the reciving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
 
-Define the serial port using the ``Serial`` Python package:
+Define the serial port using the `Serial` Python package:
 
-```Python
+```python
 import serial
 
 # Define the port
 port = serial.Serial("COM4", 115200) 
 ```
 
-In this example, the address for serial port is ``COM4``. The port address change depending on the PC and how the external defince is connected. Change the adress to match your machine.
+In this example, the address for serial port is `COM4`. The port address change depending on the PC and how the external defince is connected. Change the adress to match your machine.
 
 This example takes the integer `code` and transformes it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
 
@@ -290,23 +289,23 @@ ls /dev/tty.*
 
 Then find the name that match the connected device. For example:
 
-````python
+```python
 port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
-````
+```
 
 ### Use win.callOnFlip() to time triggers in PsychoPy
 
-PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the ``Window`` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next ``flip()`` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
+PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the `Window` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next `flip()` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
 
-The first argument should be the function to call, the following args should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal):  ``callOnFlip(function, *args, **kwargs)``
+The first argument should be the function to call, the following args should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal, like `callOnFlip(function, *args, **kwargs)`.
 
 For example, if you have a function that you would normally call like this (code is the trigger value):
 
-````python
+```python
 port.write(code.to_bytes(1, 'big'))
-````
+```
 
-You call it though ``callOnFlip()`` like this:
+You call it though `callOnFlip()` like this:
 
 ```python
 win.callOnFlip(port.write, code.to_bytes(1, 'big')) 

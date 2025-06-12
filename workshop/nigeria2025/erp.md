@@ -165,7 +165,7 @@ The fields in the raw data structure are explained in more detail in **[ft_datay
 
     plot(data.time{1}, data.trial{1});
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_plottrl.png" width="800" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure2.png" width="800" %}
 
 However, a more efficient way to quickly visualize and scroll through your data is to use **[ft_databrowser](/reference/ft_databrowser)**. That function also allows you to mark the time windows in which artifacts are present.
 
@@ -181,11 +181,11 @@ So you should apply the same criteria for artifact rejection to all your experim
 
 To get a first impression of our data quality we will use **[ft_databrowser](/reference/ft_databrowser)** to look at our individual trials. This is a good option if you want to quickly browse your data, as it takes both continuous and segmented data as inputs. With **[ft_databrowser](/reference/ft_databrowser)** you can display all channels at the same time to inspect non-systematic artifacts such as blinks or electrode movement.
 
-    cfg = [];
+    cfg          = [];
     cfg.viewmode = 'vertical';
     artfct       = ft_databrowser(cfg, data)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_databrowser.png" width="800" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure3.png" width="800" %}
 
 ##### Exercise 1
 
@@ -207,12 +207,13 @@ We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all ch
 
 To mark a channel that is bad, you have to click in the figure on that specific channel. Clicking the channel once more toggles it back to good. To mark the whole trial as bad, you have to click on the "bad" button at the bottom of the figure. Click through the trials using the `>` button to inspect each trial.
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_rejecttrl.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure4.png" width="400" %}
 
 ##### Exercise 2
 
 {% include markup/skyblue %}
-Can you spot which channels are noisier than others? Using the mouse, you can select channels that you want to remove from the data. {% include markup/end %}
+Can you spot which channels are noisier than others? Using the mouse and clicking, you can select channels that you want to remove from the data.
+{% include markup/end %}
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns the clean data with the bad channels and trials removed and you do not have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue working with the cleaned data, but for now we will only save the list of channel names of the the bad channels and continue with our data inspection.
 
@@ -220,14 +221,18 @@ The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns 
 
 ### Display one channel at a time
 
-Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display all trials for a single channel; this is helpful to identify whether the channel is noisy in general, or becomes bad at a certain time during the experiment, or only has some glitches. It is also helpful to inspect the EOG channels to identify trials that have eye blinks or eye movements.
+Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display all trials for a single channel; this is helpful to identify whether the channel is noisy in general, or becomes bad at a certain time during the experiment, or only has some glitches. It is also helpful to inspect the EOG channels to identify trials that have eye blinks or eye movements. Since we removed some bad trials, the cleaned data would already have fewer trials than the original.
 
     cfg          = [];
     cfg.method   = 'channel';
     cfg.channel  = {bad_chan{:},'eogv','eogh'};
     data_clean   = ft_rejectvisual(cfg, data);
 
-Since we removed some bad trials, the cleaned data will have fewer trials than the original. Let us identify and store the trial numbers that have blinks. We are using the `trialinfo` field for this, which contains the begin and end sample relative to the original data file.
+{% include markup/red %}
+Note that this will be ineffective if you have a small screen. The dataset has 800 trials, which means that 800 small plots are made, each with a timecourse. On a small screen you will not be able to make out the timecourses, so you cannot judge whether there are artifacts or not.
+{% include markup/end %}
+
+If we have a large enough screen and can see the timecourses in the trial, we can identify and store the trial numbers that have blinks. We are using the `trialinfo` field for this, which contains the begin and end sample relative to the original data file.
 
     bad_trial = ismember(data.sampleinfo(:,1), setdiff(data. sampleinfo(:,1), data_clean.sampleinfo(:,1)));
 
@@ -241,7 +246,7 @@ Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more 
     cfg.trials   = ~bad_trial; % exclude the trials that we already identified as bad
     data_clean   = ft_rejectvisual(cfg, data);
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_rejectsummary.png" width="700" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure5.png" width="700" %}
 
 ##### Exercise 3
 
@@ -274,7 +279,7 @@ For topographic plotting and for some other follow-up analyses it is necessary t
 
 The electrode positions are in general not recorded during EEG measurements (although, see [this](/tutorial/electrode) tutorial) and are hence not stored in the EEG dataset. For plotting you have to use a layout file; this is a .lay or a .mat file that contains the 2-D positions of the channels on screen. FieldTrip provides a number of template layouts for different EEG caps in the `fieldtrip/template/layout` directory. See the [template layouts](/template/layout) to get an overview of some electrode cap layouts. It is also possible to create custom layouts for your own EEG cap, see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout).
 
-    cfg        = [];
+    cfg = [];
     cfg.layout = 'easycapM10.mat';
     ft_layoutplot(cfg)
 
@@ -309,11 +314,11 @@ We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both condi
     cfg.baseline    = [-0.2 0];
     ft_topoplotER(cfg, timelockAUD, timelockVIS)
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_topoVIS.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="200" %}
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_topoAUD.png" width="200" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure7.png" width="200" %}
 
-{% include image src="/assets/img/workshop/nigeria2025/erp/tsk_avgtime.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/erp/figure8.png" width="400" %}
 
 ##### Exercise 5
 

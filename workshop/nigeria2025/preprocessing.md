@@ -235,7 +235,6 @@ We can use the databrowser to plot the trials, one-by-one. The time of each tria
     cfg = [];
     cfg.plotevents = 'no';
     cfg.continuous = 'no';
-    cfg.blocksize = 60;
     ft_databrowser(cfg, data_S123);
 
 We can also use the databrowser to plot the data continuously, relative to the start of the recording. This allows us to see where in the recording the segments or trials were coming from.
@@ -489,7 +488,7 @@ The resulting channel 51 in this representation of the data is now referenced to
     plot(data_eogh.time{1}, data_eogh.trial{1}(2,:),'g');
     legend({'51' '60'});
 
-For convenience we rename channel 60 into EOGH and use the **[ft_preprocessing](/reference/ft_preprocessing)** function once more to select the horizontal EOG channel and discard the channel 51 that is now zero.
+For convenience we rename channel 60 into EOGH and use the **[ft_selectdata](/reference/ft_selectdata)** function to select the horizontal EOG channel and discard the channel 51 that is now zero.
 
     data_eogh.label{2} = 'EOGH';
 
