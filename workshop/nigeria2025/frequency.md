@@ -113,42 +113,32 @@ But before doing anything, let us recapitulate what multitapers are good for? Mu
 
 Spectral analysis with on multitapers is done with the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses the time in which the data has been segmented during preprocessing. Prior to the Fourier transformations, the data are "tapered". A single taper can be applied (e.g. Hanning) or several orthogonal tapers might be used for each time window (e.g. DPSS). The power is calculated for each tapered data segment and then averaged over tapers. In the example below we already have the data segmented in windows of different sizes (1, 2, 4 seconds) and we can compute the power spectra using the following parameters:
 
-- cfg.foi determines the frequencies of interest, here from 1 Hz to 30 Hz in
-  steps of 2 Hz. The step size could be decreased at the expense of computation
-  time and redundancy.
+The `cfg.foi` option determines the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
 
-- cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We
-  have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing
-  (±4). For less smoothing you can specify smaller values, however, the
-  following relation determined by the Shannon number must hold (see
-  [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
-  `K = 2*tw*fw-1`, where K is required to be larger than 0. K is the number
-  of tapers applied; the more, the greater the smoothing.
+The `cfg.tapsmofrq` option determines the width of frequency smoothing in Hz (= fw). We have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing (±4). For less smoothing you can specify smaller values, however, the following relation determined by the Shannon number must hold (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)): `K = 2*tw*fw-1`, where K is required to be larger than 0. K is the number of tapers applied; the more, the greater the smoothing.
 
-```matlab
-cfg = [];
-cfg.output    = 'pow';
-cfg.channel   = 'all';
-cfg.method    = 'mtmfft';
-cfg.taper     = 'boxcar';
-cfg.foi       = 0.5:0.25:45;
-base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
+    cfg = [];
+    cfg.output    = 'pow';
+    cfg.channel   = 'all';
+    cfg.method    = 'mtmfft';
+    cfg.taper     = 'boxcar';
+    cfg.foi       = 0.5:0.25:45;
+    base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
 
-cfg.taper     = 'hanning';
-base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
+    cfg.taper     = 'hanning';
+    base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
 
-cfg.taper     = 'dpss'; % here the multitapers
-cfg.tapsmofrq = 4;
-base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
+    cfg.taper     = 'dpss'; % here the multitapers
+    cfg.tapsmofrq = 4;
+    base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
 
-figure; hold on
-plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
-plot(base_freq_h.freq, base_freq_h.powspctrm(61,:))
-plot(base_freq_d.freq, base_freq_d.powspctrm(61,:))
-legend('4 sec boxcar', '4 secs hanning', '4 sec dpss');
-xlabel('Frequency (Hz)');
-ylabel('absolute power (uV^2)');
-```
+    figure; hold on
+    plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
+    plot(base_freq_h.freq, base_freq_h.powspctrm(61,:))
+    plot(base_freq_d.freq, base_freq_d.powspctrm(61,:))
+    legend('4 sec boxcar', '4 secs hanning', '4 sec dpss');
+    xlabel('Frequency (Hz)');
+    ylabel('absolute power (uV^2)');
 
 {% include image src="/assets/img/workshop/nigeria2025/frequency/figure2.png" width="600" %}
 
@@ -199,6 +189,10 @@ Finally, we will apply what we just learned to investigate the experimental effe
     figure; ft_multiplotER(cfg, base_freq_h, mild_freq_h, mode_freq_h, reco_freq_h)
     figure; ft_multiplotER(cfg, base_freq_d, mild_freq_d, mode_freq_d, reco_freq_d)
 
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure3.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure4.png" width="400" %}
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure5.png" width="400" %}
+
 Which set of parameters is more sensitive to detect the shift of low-beta power?
 
 ## Time-frequency analysis on continuous data
@@ -243,3 +237,5 @@ Now we can re-shuffle the power spectrum to change it into a representation simi
     cfg.showscale = 'no';
     cfg.showcmnt = 'no';
     ft_multiplotTFR(cfg, base_timefreq);
+
+{% include image src="/assets/img/workshop/nigeria2025/frequency/figure6.png" width="600" %}
