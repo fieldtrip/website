@@ -113,23 +113,21 @@ Methods to localize the underlying brain activity from the topographical ERP dis
 
 - source localization (lecture by Robert)
 - frequency analysis (lecture by Robert)
-- real-time analysis and BCI (lecture)
 - lunch
 - frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
-- experimental design (hands-on)
-- recording of EEG (hands-on)
+- frequency analysis (demonstration)
+- real-time analysis and BCI (lecture)
+- continue with hands-on preprocessing, ERPs, or frequency analysis
+- outlook and future plans (discussion)
 
 ### Saturday – Wrap-up & Additional Practice
 
 The final day is flexible, used to finalize lectures of previous days, for review, additional practice, or wrapping up unfinished work. Topics that can be presented are statistical approaches and experimental design types. Reflections on the week’s learning and experiences conclude the course.
 
-- statistics (lecture)
-- designing a task and the analysis (discussion)
-- lunch
-- recording of EEG (hands-on)
+- reflection on EEG research (group discussions)
+- Q&A on designing the task and the analysis (general discussion)
 - designing and synchronizing a task ([hands-on](/workshop/nigeria2025/stimuli))
-- outlook and future plans (discussion)
-- any other business
+- recording of EEG (hands-on)
 
 ## Slides
 
