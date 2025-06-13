@@ -62,58 +62,58 @@ Day-by-Day Overview:
 
 ### Monday – Introduction & EEG Basics
 
-The week begins with orientation and practical information, followed by foundational topics: what EEG is, its advantages over other neuroimaging techniques, and its applications in clinical, developmental, and cognitive research. Special emphasis is placed on African-specific challenges, such as dealing with natural hairstyles and electrode types. Sessions also address ethics, informed consent, and experimental design essentials, including noise, artifacts, attention, and stimulus control.
+The week begins with orientation and practical information, followed by foundational topics: what EEG is, its advantages over other neuroimaging techniques, and its applications in clinical, developmental, and cognitive research. Special emphasis is placed on African-specific challenges, such as dealing with natural hairstyles and electrode types. Sessions also experimental design and and stimulus control.
 
 - registration and welcome
-- introduction and format (lecture)
-- background on EEG (lecture, 1st half)
+- introduction and format (lecture by Robert)
+- background on EEG (lecture by Mikkel, 1st half)
 - lunch
-- background on EEG (lecture, 2nd half)
-- EEG in Africa (lecture)
-- experimental design part A (lecture)
+- background on EEG (lecture by Mikkel, 2nd half)
+- EEG in Africa (lecture by Robert)
+- experimental design part A (lecture by Mikkel)
 - experimental design Q&A (discussion)
 
 ### Tuesday – Experimental Design & EEG Recording
 
-Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
+EEG hardware, electrodes, caps and electrode placement is discussed. Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes, and cleaning). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
 
-- how does an EEG system work (lecture, 1st half)
+- how does an EEG system work (lecture by Robert, 1st half)
 - recording of EEG (hands-on)
 - lunch
-- experimental design part B (lecture)
+- experimental design part B (lecture by Mikkel)
 - designing a task and recording it ([hands-on](/workshop/nigeria2025/stimuli))
 
-### Wednesday – EEG Data & Analysis Tools
+### Wednesday – EEG Data, Analysis Tools & Preprocessing
 
-Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. A comparison of clinical vs. cognitive EEG applications is provided, along with an introduction to analyzing event-related potentials (ERP), followed by practical exercises.
+The precise timing of the experimental task and stimuli with the EEG is presented and demonstrated.Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. Experimental design essentials, noise and typical artifacts, and the steps in preprocessing of EEG data such as filtering and rereferencing are presented, followed by practical exercises.
 
-- synchronisation and triggers (lecture)
+- synchronisation and triggers (lecture by Robert)
 - synchronisation and triggers (demonstration)
-- where to get EEG data (lecture)
-- How to analyze EEG data (lecture)
+- where to get EEG data (lecture by Robert)
+- how to analyze EEG data (lecture by Robert)
 - lunch
-- preprocessing of EEG (lecture)
+- preprocessing of EEG (lecture by Robert)
 - preprocessing of EEG ([hands-on](/workshop/nigeria2025/preprocessing))
-- wrap up (discussion)
+- preprocessing of EEG (demonstration)
 
-### Thursday – Frequency & Time-Frequency Analysis
+### Thursday – Event Related Potentials and Ethics
 
-Participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, group comparisons), and are introduced to time-frequency and connectivity analysis—highlighting both their promise and complexity. These topics include short lectures with hands-on practice.
+The ratioale and analysis of event-related potentials (ERP) are presented, with applications to sensory and cognitive processes. The ERP difference wave is discussed, and participants do the preprocessing and compute ERPs in a task-based EEG dataset, contrasting visual and auditory conditions. Ethics, informed consent, incidental findings and adversial effects are presented, followed by a presentation and discussion on translating European practices to the African situation.
 
-- EEG and ethics (lecture)
-- analysis of ERPs (lecture)
+- EEG and ethics (lecture by Robert)
+- analysis of ERPs (lecture by Robert)
 - lunch
 - analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
-- frequency analysis (lecture)
+- analysis of ERPs (demonstration)
 - EEG and ethics - the African perspective (lecture by Damian)
 
-### Friday – Statistical & Advanced Analyses
+### Friday – Frequency Analysis & Source Localization
 
-Topics include experimental design types, statistical approaches (e.g., mixed models, Bayesian methods), and multiple comparison correction. Advanced methods such as source reconstruction, BCI applications, and neurofeedback are discussed, with an emphasis on high-density EEG setups (32/64 channels).
+Methods to localize the underlying brain activity from the topographical ERP distribution are presented. Frequency analysis is explained and participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, group comparisons). Hands-on experience with spectral analysis is provided.
 
-- source localization (lecture)
+- source localization (lecture by Robert)
+- frequency analysis (lecture by Robert)
 - real-time analysis and BCI (lecture)
-- how does an EEG system work (lecture, 2nd half)
 - lunch
 - frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
 - experimental design (hands-on)
@@ -121,11 +121,15 @@ Topics include experimental design types, statistical approaches (e.g., mixed mo
 
 ### Saturday – Wrap-up & Additional Practice
 
-The final day is flexible, used for review, additional practice, or wrapping up unfinished work. Reflections on the week’s learning and experiences conclude the course.
+The final day is flexible, used to finalize lectures of previous days, for review, additional practice, or wrapping up unfinished work. Topics that can be presented are statistical approaches and experimental design types. Reflections on the week’s learning and experiences conclude the course.
 
-- to be determined
+- statistics (lecture)
+- designing a task and the analysis (discussion)
 - lunch
-- to be determined
+- recording of EEG (hands-on)
+- designing and synchronizing a task ([hands-on](/workshop/nigeria2025/stimuli))
+- outlook and future plans (discussion)
+- any other business
 
 ## Slides
 
@@ -137,15 +141,15 @@ Please ask questions during or after the lectures. Your questions are also relev
 
 ## How to prepare
 
-### Installing FieldTrip
+### Installing FieldTrip and the data
 
-Open MATLAB online and enter the following in the command window to download and install FieldTrip. Subsequently you should download the data as well.
+Open MATLAB online and enter the following in the command window to download and unzip FieldTrip and the data. After that, you have to set up FieldTrip and change to th edata directory.
 
     unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/fieldtrip-20250517.zip')
+    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/data.zip')
+
     addpath('/MATLAB Drive/fieldtrip-20250517')
     ft_defaults
-
-    unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/data.zip')
     cd('/MATLAB Drive/data')
 
 ### Restarting MATLAB online
