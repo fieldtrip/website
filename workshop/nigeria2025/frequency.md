@@ -125,28 +125,30 @@ Spectral analysis with on multitapers is done with the function **[ft_freqanalys
   `K = 2*tw*fw-1`, where K is required to be larger than 0. K is the number
   of tapers applied; the more, the greater the smoothing.
 
-    cfg = [];
-    cfg.output    = 'pow';
-    cfg.channel   = 'all';
-    cfg.method    = 'mtmfft';
-    cfg.taper     = 'boxcar';
-    cfg.foi       = 0.5:0.25:45;
-    base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
+```matlab
+cfg = [];
+cfg.output    = 'pow';
+cfg.channel   = 'all';
+cfg.method    = 'mtmfft';
+cfg.taper     = 'boxcar';
+cfg.foi       = 0.5:0.25:45;
+base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
 
-    cfg.taper     = 'hanning';
-    base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
+cfg.taper     = 'hanning';
+base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
 
-    cfg.taper     = 'dpss'; % here the multitapers
-    cfg.tapsmofrq = 4;
-    base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
+cfg.taper     = 'dpss'; % here the multitapers
+cfg.tapsmofrq = 4;
+base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
 
-    figure; hold on
-    plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
-    plot(base_freq_h.freq, base_freq_h.powspctrm(61,:))
-    plot(base_freq_d.freq, base_freq_d.powspctrm(61,:))
-    legend('4 sec boxcar', '4 secs hanning', '4 sec dpss');
-    xlabel('Frequency (Hz)');
-    ylabel('absolute power (uV^2)');
+figure; hold on
+plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
+plot(base_freq_h.freq, base_freq_h.powspctrm(61,:))
+plot(base_freq_d.freq, base_freq_d.powspctrm(61,:))
+legend('4 sec boxcar', '4 secs hanning', '4 sec dpss');
+xlabel('Frequency (Hz)');
+ylabel('absolute power (uV^2)');
+```
 
 {% include image src="/assets/img/workshop/nigeria2025/frequency/figure2.png" width="600" %}
 
