@@ -34,6 +34,7 @@ acticap
 actiCap
 actiCAP
 ActiCap
+ActiChamp
 activ
 activations
 Activations
@@ -48,6 +49,7 @@ ADES
 adf
 ADF
 adobecs
+adversial
 aeb
 aee
 aef
@@ -313,6 +315,7 @@ bayesFactor
 bb
 bbf
 bbq
+BBT
 BCBL
 bcbt
 bcc
@@ -569,6 +572,7 @@ calib
 Calibri
 Calle
 callin
+callOnFlip
 caln
 CamCAN
 camlight
@@ -2095,6 +2099,7 @@ hdf5
 hdm
 hdr
 HDR
+hea
 headcap
 headcast
 headcasts
@@ -2754,6 +2759,7 @@ LRP
 LSB
 LSF
 LSL
+lsl
 lstdc
 LTG
 LTH
@@ -4707,6 +4713,7 @@ strangetfr
 strcmp
 strenth
 StringServer
+Stroop
 struct
 structuresensor
 sts
@@ -4927,6 +4934,7 @@ Tikhonov
 Tilman
 tim
 timecourse
+timecourses
 timecourseatm
 TIMEDOMAIN
 timefreq

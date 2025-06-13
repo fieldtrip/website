@@ -98,7 +98,7 @@ The precise timing of the experimental task and stimuli with the EEG is presente
 
 ### Thursday – Event Related Potentials and Ethics
 
-The ratioale and analysis of event-related potentials (ERP) are presented, with applications to sensory and cognitive processes. The ERP difference wave is discussed, and participants do the preprocessing and compute ERPs in a task-based EEG dataset, contrasting visual and auditory conditions. Ethics, informed consent, incidental findings and adversial effects are presented, followed by a presentation and discussion on translating European practices to the African situation.
+The rationale and analysis of event-related potentials (ERP) are presented, with applications to sensory and cognitive processes. The ERP difference wave is discussed, and participants do the preprocessing and compute ERPs in a task-based EEG dataset, contrasting visual and auditory conditions. Ethics, informed consent, incidental findings and adversial effects are presented, followed by a presentation and discussion on translating European practices to the African situation.
 
 - EEG and ethics (lecture by Robert)
 - analysis of ERPs (lecture by Robert)
@@ -137,13 +137,13 @@ The slides will be shared as PDF throughout the week. You can access them at [th
 
 ## Questions
 
-Please ask questions during or after the lectures. Your questions are also relevant for the other participants, who will learn from them as well. If you want, you can also type your questions in a [this shared google doc](https://docs.google.com/document/d/19gOTo8fyZUaatmGnmroixB9Un0by1j2CDvIelckCLSE/edit?usp=sharing). Feel free to add your name, or type your question anonymously. We will address the questions diring the day and/or towards the end of the afternoon.
+Please ask questions during or after the lectures. Your questions are also relevant for the other participants, who will learn from them as well. If you want, you can also type your questions in a [this shared google doc](https://docs.google.com/document/d/19gOTo8fyZUaatmGnmroixB9Un0by1j2CDvIelckCLSE/edit?usp=sharing). Feel free to add your name, or type your question anonymously. We will address the questions during the day and/or towards the end of the afternoon.
 
 ## How to prepare
 
 ### Installing FieldTrip and the data
 
-Open MATLAB online and enter the following in the command window to download and unzip FieldTrip and the data. After that, you have to set up FieldTrip and change to th edata directory.
+Open MATLAB online and enter the following in the command window to download and unzip FieldTrip and the data. After that, you have to set up FieldTrip and change to the data directory.
 
     unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/fieldtrip-20250517.zip')
     unzip('https://download.fieldtriptoolbox.org/workshop/nigeria2025/data.zip')

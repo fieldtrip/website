@@ -9,9 +9,9 @@ The experimental design of a task can be implemented in a variety of software en
 
 - [NBS Presentation](https://www.neurobs.com/presentation)
 - [PsychoPy](https://psychopy.org), based on Python
-- [PsychToolBox](http://psychtoolbox.org), based on MATLAB
+- [PsychToolbox](http://psychtoolbox.org), based on MATLAB
 
-They all require some coding or scripting to be done to define the stimuli that will be presented, with their timing, and to deal with responses or input from the participants Furthermore, in the implementation of the experimental task triggers (or markers) need to be sent to the EEG system so that the precise synchronization between stimulus or response and th EEG recording can be used in teh subsequent analysis.
+They all require some coding or scripting to be done to define the stimuli that will be presented, with their timing, and to deal with responses or input from the participants Furthermore, in the implementation of the experimental task triggers (or markers) need to be sent to the EEG system so that the precise synchronization between stimulus or response and th EEG recording can be used in the subsequent analysis.
 
 ## Running an experiment from PsychoPy
 
@@ -138,9 +138,9 @@ core.quit()
 
 ## Synchronization
 
-The most common strategy to synchonize the experimnental task with the EEG recording is to use a trigger cable, i.e., a cable from the computer to the EEG amplifier or to the MEG system. In the past the parallel (printer) port of the computer would be used for that, but nowadays computers and laptops only have USB ports.
+The most common strategy to synchronize the experimental task with the EEG recording is to use a trigger cable, i.e., a cable from the computer to the EEG amplifier or to the MEG system. In the past the parallel (printer) port of the computer would be used for that, but nowadays computers and laptops only have USB ports.
 
-The USB port of a computer or laptop supports serial-over-usb, which is a common protocol to connect to an external device. Using the serial interface, we can connect to an external device such as an [Arduino](https://www.arduino.cc) deevlopment board, or a [BBT interface](https://www.blackboxtoolkit.com). These then translate the trigger value sent over the serial port into a sequence of parallel bits.
+The USB port of a computer or laptop supports serial-over-usb, which is a common protocol to connect to an external device. Using the serial interface, we can connect to an external device such as an [Arduino](https://www.arduino.cc) development board, or a [BBT interface](https://www.blackboxtoolkit.com). These then translate the trigger value sent over the serial port into a sequence of parallel bits.
 
 An alternative for a hardware cable is to use [LabStreamingLayer](http://labstreaminglayer.readthedocs.io/), which is also known as LSL. This does require that not only the makers are sent over LSL, but also that the EEG is sent over LSL and recorded along with the markers.
 
@@ -235,9 +235,9 @@ from psychopy import parallel
 port = parallel.ParallelPort(0x0378)  
 ```
 
-The number `0x0378` is the default address (expressed in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers) for the parallel port on many Windows machines, but it can change from PC to PC. Change to match your machine. To find the adress, find the parllel port in the Windows Systems Settings.
+The number `0x0378` is the default address (expressed in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers) for the parallel port on many Windows machines, but it can change from PC to PC. Change to match your machine. To find the address, find the parallel port in the Windows Systems Settings.
 
-To send the triggers, place this code at the appropiate place in your experiment script:
+To send the triggers, place this code at the appropriate place in your experiment script:
 
 ```python
 port.setData(code)        # Send trigger code 
@@ -249,7 +249,7 @@ This will send the signal `code` to the parallel port. `Code` should be an integ
 
 ### Sending triggers using serial ports (incl. USB)
 
-Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the reciving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
+Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the receiving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
 
 Define the serial port using the `Serial` Python package:
 
@@ -260,9 +260,9 @@ import serial
 port = serial.Serial("COM4", 115200) 
 ```
 
-In this example, the address for serial port is `COM4`. The port address change depending on the PC and how the external defince is connected. Change the adress to match your machine.
+In this example, the address for serial port is `COM4`. The port address change depending on the PC and how the external device is connected. Change the address to match your machine.
 
-This example takes the integer `code` and transformes it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
+This example takes the integer `code` and transforms it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
 
 ```python
 port.write(code.to_bytes(1, 'big'))     # Send trigger code
@@ -271,13 +271,13 @@ print('trigger sent {}'.format(code))   # Print code to terminal for debugging
 
 #### Find the USB serial port address
 
-Plug in the USB/parllel cable connected to the EEG system.
+Plug in the USB/parallel cable connected to the EEG system.
 
 ##### Windows
 
-On most Windows machines the serial port is callel "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
+On most Windows machines the serial port is called "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
 
-If not, you can try a "brute force" test, and see if you get triggers with any adresses, starting with "COM1", "COM2", and so on.
+If not, you can try a "brute force" test, and see if you get triggers with any addresses, starting with "COM1", "COM2", and so on.
 
 ##### macOS
 
@@ -297,7 +297,7 @@ port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
 
 PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the `Window` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next `flip()` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
 
-The first argument should be the function to call, the following args should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal, like `callOnFlip(function, *args, **kwargs)`.
+The first argument should be the function to call, the following arguments should be used exactly as you would for your normal call to the function (can use ordered arguments or keyword arguments as normal, like `callOnFlip(function, *args, **kwargs)`.
 
 For example, if you have a function that you would normally call like this (code is the trigger value):
 
@@ -344,9 +344,9 @@ end
 
 ### Sending triggers using serial ports (incl. USB)
 
-At the Donders we are using trigger boxes that are based on the Arduino Uno or Arduino Mega development boards, which we call "Bitsi" boxes. These boxes have a numner of TTL inputs and TTL outputs and are [programmed](https://github.com/robertoostenveld/arduino/tree/main/bitsi) to send the byte that they receive over the serial port to the parallel output. The parallel output is connected to the EEG or MEG system.
+At the Donders we are using trigger boxes that are based on the Arduino Uno or Arduino Mega development boards, which we call "Bitsi" boxes. These boxes have a number of TTL inputs and TTL outputs and are [programmed](https://github.com/robertoostenveld/arduino/tree/main/bitsi) to send the byte that they receive over the serial port to the parallel output. The parallel output is connected to the EEG or MEG system.
 
-The following code can be used with PsychToolBox or generic MATLAB to send triggers over a USB cable via a Bitsi to an EEG system.
+The following code can be used with PsychToolbox or generic MATLAB to send triggers over a USB cable via a Bitsi to an EEG system.
 
 ```matlab
 % this uses the Bitsi MATLAB object to send triggers to a Bitsi device

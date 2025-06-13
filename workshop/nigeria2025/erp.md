@@ -7,7 +7,7 @@ tags: [eeg, brainvision, preprocessing, eeg-language, nigeria2025]
 
 ## Introduction
 
-Event-related potentials can be uset to reveal the activity that is time- and phase-locked to an event or stimulus. Furthermore, a contrast (or difference) between two ERPs can reveal the difference in the cortical processing between two different experimental conditions.  
+Event-related potentials can be used to reveal the activity that is time- and phase-locked to an event or stimulus. Furthermore, a contrast (or difference) between two ERPs can reveal the difference in the cortical processing between two different experimental conditions.  
 
 Prior to computing the ERP, we have to do some preprocessing: read the data into memory, segmenting the data around interesting events such as triggers, temporal filtering, artifact rejection and optionally rereferencing in the case of EEG. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
@@ -92,7 +92,7 @@ For consistency we will rename the channel with the name '53' located at the rig
 We now continue with rereferencing to extract the bipolar EOG signal from the data. For the vertical EOG we will use channel 50 and channel 64. For the horizontal EOG we will compute the difference between the potential recorded in channels 51 and 60.
 
 {% include markup/yellow %}
-Some EEG acquisition systems like the TSMi SAGA, the Biosemi systems, or the BrainProducts ActiChamp, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
+Some EEG acquisition systems like the TMSi SAGA, the Biosemi systems, or the BrainProducts ActiChamp, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure1.png" width="200" %}
@@ -129,7 +129,7 @@ only keep one channel, and rename to it eogh
     eogh             = ft_selectdata(cfg, eogh);
     eogh.label       = {'eogh'};
 
-We can now discard the channel corresponding to the electrode below the eyeand add the bipolar-referenced EOGV and EOGH channels that we have just created.
+We can now discard the channel corresponding to the electrode below the eye and add the bipolar-referenced EOGV and EOGH channels that we have just created.
 
 Keep only the EEG channels
 
@@ -283,7 +283,7 @@ If the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not s
 
 ### Channel layout
 
-For topographic plotting and for some other follow-up analyses it is necessary to know precisely where the electrodes were positioned on the scalp. The topographical arrangement of the electrodes in an EEG cap is not the same in all caps, anD even for a standard placement system like 10-20 or 10-20 might vary a bit between manufacturers. You can use the acquisition system with different caps, and the number and position of electrodes can be adjusted depending on the experimental question. In the current data, a cap with a so-called equidistant electrode layout was used for a 64-channel active electrode system (BrainVision ActiCap). 
+For topographic plotting and for some other follow-up analyses it is necessary to know precisely where the electrodes were positioned on the scalp. The topographical arrangement of the electrodes in an EEG cap is not the same in all caps, and even for a standard placement system like 10-20 or 10-20 might vary a bit between manufacturers. You can use the acquisition system with different caps, and the number and position of electrodes can be adjusted depending on the experimental question. In the current data, a cap with a so-called equidistant electrode layout was used for a 64-channel active electrode system (BrainVision ActiCap). 
 
 The electrode positions are in general not recorded during EEG measurements (although, see [this](/tutorial/electrode) tutorial) and are hence not stored in the EEG dataset. For plotting you have to use a layout file; this is a .lay or a .mat file that contains the 2-D positions of the channels on screen. FieldTrip provides a number of template layouts for different EEG caps in the `fieldtrip/template/layout` directory. See the [template layouts](/template/layout) to get an overview of some electrode cap layouts. It is also possible to create custom layouts for your own EEG cap, see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout).
 
