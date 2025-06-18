@@ -1,6 +1,8 @@
 ---
 title: Experimental design and presenting stimuli
 tags: [lsl, trigger, nigeria2025]
+redirect_from:
+  - /workshop/nigeria2025/stimuli/
 ---
 
 # Experimental design and presenting stimuli
@@ -144,9 +146,57 @@ The USB port of a computer or laptop supports serial-over-usb, which is a common
 
 An alternative for a hardware cable is to use [LabStreamingLayer](http://labstreaminglayer.readthedocs.io/), which is also known as LSL. This does require that not only the makers are sent over LSL, but also that the EEG is sent over LSL and recorded along with the markers.
 
-## Synchronization from Python
+### Synchronization from Python
 
-### Sending markers using LSL
+#### Sending triggers using serial ports (incl. USB)
+
+Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the receiving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
+
+Define the serial port using the `Serial` Python package:
+
+```python
+import serial
+
+# Define the port
+port = serial.Serial("COM4", 115200) 
+```
+
+In this example, the address for serial port is `COM4`. The port address change depending on the PC and how the external device is connected. Change the address to match your machine.
+
+This example takes the integer `code` and transforms it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
+
+```python
+port.write(code.to_bytes(1, 'big'))     # Send trigger code
+print('trigger sent {}'.format(code))   # Print code to terminal for debugging
+```
+
+##### Find the USB serial port address
+
+Plug in the USB/parallel cable connected to the EEG system.
+
+###### Windows
+
+On most Windows machines the serial port is called "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
+
+If not, you can try a "brute force" test, and see if you get triggers with any addresses, starting with "COM1", "COM2", and so on.
+
+###### macOS
+
+On macOS, USB ports are found under "devices" and called `tty.<something>`. To find the name, connect the cable, then open a terminal and type:
+
+```bash
+ls /dev/tty.*
+```
+
+Then find the name that match the connected device. For example:
+
+```python
+port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
+```
+
+#### Sending triggers using LSL
+
+Note that triggers are called markers in LSL, and that the `nominal_srate` should be set to zero.
 
 ```python
 import pylsl
@@ -181,7 +231,32 @@ while True:
     time.sleep(random.random()*2)
 ```
 
-### Sending simulated EEG data using LSL
+#### Sending triggers using parallel ports
+
+Parallel ports sends values based on parallel "pins" that each represents a bit in a binary number. For example with eight pins, you can write values from 0-255. Parallel ports are generally the most reliable way of sending triggers as all information is send at the same time.
+
+Be aware that modern PCs and laptops usually do not have parallel ports. In that case, see how to send "parallel" triggers with a serial ports below.
+
+```python
+from psychopy import parallel
+
+# Define the port
+port = parallel.ParallelPort(0x0378)  
+```
+
+The number `0x0378` is the default address (expressed in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers) for the parallel port on many Windows machines, but it can change from PC to PC. Change to match your machine. To find the address, find the parallel port in the Windows Systems Settings.
+
+To send the triggers, place this code at the appropriate place in your experiment script:
+
+```python
+port.setData(code)        # Send trigger code 
+port.setData(0)           # Send code 0 = reset pins
+print('trigger sent {}'.format(code)) # Print code to terminal for debugging
+```
+
+This will send the signal `code` to the parallel port. `Code` should be an integer equal to the trigger value.
+
+#### Sending simulated EEG data using LSL
 
 ```python
 import pylsl
@@ -222,78 +297,7 @@ while True:
 
 ```
 
-### Sending triggers using parallel ports
-
-Parallel ports sends values based on parallel "pins" that each represents a bit in a binary number. For example with eight pins, you can write values from 0-255. Parallel ports are generally the most reliable way of sending triggers as all information is send at the same time.
-
-Be aware that modern PCs and laptops usually do not have parallel ports. In that case, see how to send "parallel" triggers with a serial ports below.
-
-```python
-from psychopy import parallel
-
-# Define the port
-port = parallel.ParallelPort(0x0378)  
-```
-
-The number `0x0378` is the default address (expressed in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) numbers) for the parallel port on many Windows machines, but it can change from PC to PC. Change to match your machine. To find the address, find the parallel port in the Windows Systems Settings.
-
-To send the triggers, place this code at the appropriate place in your experiment script:
-
-```python
-port.setData(code)        # Send trigger code 
-port.setData(0)           # Send code 0 = reset pins
-print('trigger sent {}'.format(code)) # Print code to terminal for debugging
-```
-
-This will send the signal `code` to the parallel port. `Code` should be an integer equal to the trigger value.
-
-### Sending triggers using serial ports (incl. USB)
-
-Serial ports can send different values where the information is send in series of "packages". This means that the timing and how the codes are read at the receiving end can be off if not handled correctly. Serial ports can be used to emulate parallel ports if given only length 1 and proper encoding.
-
-Define the serial port using the `Serial` Python package:
-
-```python
-import serial
-
-# Define the port
-port = serial.Serial("COM4", 115200) 
-```
-
-In this example, the address for serial port is `COM4`. The port address change depending on the PC and how the external device is connected. Change the address to match your machine.
-
-This example takes the integer `code` and transforms it to a code that can be send over serial to emulate a parallel trigger (note this only works for numbers 0-255):
-
-```python
-port.write(code.to_bytes(1, 'big'))     # Send trigger code
-print('trigger sent {}'.format(code))   # Print code to terminal for debugging
-```
-
-#### Find the USB serial port address
-
-Plug in the USB/parallel cable connected to the EEG system.
-
-##### Windows
-
-On most Windows machines the serial port is called "COM" and a number, e.g., "COM3". The exact name vary from machine to machine. Open the Device Manager (from the menu). Go to the overview of devices. Find the one corresponding to the connected device. Somewhere in the name it (usually) list the COM name.
-
-If not, you can try a "brute force" test, and see if you get triggers with any addresses, starting with "COM1", "COM2", and so on.
-
-##### macOS
-
-On macOS, USB ports are found under "devices" and called `tty.<something>`. To find the name, connect the cable, then open a terminal and type:
-
-```bash
-ls /dev/tty.*
-```
-
-Then find the name that match the connected device. For example:
-
-```python
-port = serial.Serial('/dev/tty.usbserial-DN2Q03LO', 115200)
-```
-
-### Use win.callOnFlip() to time triggers in PsychoPy
+#### Use win.callOnFlip() to time triggers in PsychoPy
 
 PsychoPy has a build-in method that is supposed to control the timing in how it executes functions to deliver stimuli related to the `Window` module called `callOnFlip()`. The method takes a function and the input to the function as arguments and will call the function immediately after the next `flip()` command. If this the next `flip()` is when the visual stimuli is drawn, the should be function will be executed when the stimuli is drawn.
 
@@ -313,9 +317,11 @@ win.callOnFlip(port.write, code.to_bytes(1, 'big'))
 
 Using this procedure should improve timing.
 
-## Synchronization from MATLAB
+### Synchronization from MATLAB
 
-### Sending markers using LSL
+#### Sending triggers using LSL
+
+Note that triggers are called markers in LSL, and that the `nominal_srate` should be set to zero.
 
 ```matlab
 % instantiate the library
@@ -342,7 +348,7 @@ while true
 end
 ```
 
-### Sending triggers using serial ports (incl. USB)
+#### Sending triggers using serial ports (incl. USB)
 
 At the Donders we are using trigger boxes that are based on the Arduino Uno or Arduino Mega development boards, which we call "Bitsi" boxes. These boxes have a number of TTL inputs and TTL outputs and are [programmed](https://github.com/robertoostenveld/arduino/tree/main/bitsi) to send the byte that they receive over the serial port to the parallel output. The parallel output is connected to the EEG or MEG system.
 

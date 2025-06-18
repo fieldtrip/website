@@ -81,7 +81,7 @@ EEG hardware, electrodes, caps and electrode placement is discussed. Hands-on se
 - recording of EEG (hands-on)
 - lunch
 - experimental design part B (lecture by Mikkel)
-- designing a task and recording it ([hands-on](/workshop/nigeria2025/stimuli))
+- designing a task and recording it ([hands-on](/workshop/nigeria2025/stimuluspresentation))
 
 ### Wednesday – EEG Data, Analysis Tools & Preprocessing
 
@@ -90,6 +90,8 @@ The precise timing of the experimental task and stimuli with the EEG is presente
 - synchronisation and triggers (lecture by Robert)
 - synchronisation and triggers (demonstration)
 - where to get EEG data (lecture by Robert)
+- what software to use for EEG analysis (lecture by Robert)
+- Using MATLAB online (a few instructions by Robert)
 - how to analyze EEG data (lecture by Robert)
 - lunch
 - preprocessing of EEG (lecture by Robert)
@@ -126,7 +128,7 @@ The final day is flexible, used to finalize lectures of previous days, for revie
 
 - reflection on EEG research (group discussions)
 - Q&A on designing the task and the analysis (general discussion)
-- designing and synchronizing a task ([hands-on](/workshop/nigeria2025/stimuli))
+- designing and synchronizing a task ([hands-on](/workshop/nigeria2025/stimuluspresentation))
 - recording of EEG (hands-on)
 
 ## Slides

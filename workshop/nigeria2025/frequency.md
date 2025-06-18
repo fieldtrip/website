@@ -42,14 +42,14 @@ Each of these is a FieldTrip data structure with a continuous segment of EEG dat
 
     disp(base)
     
-               hdr: [1×1 struct]
+               hdr: [1x1 struct]
            fsample: 250
         sampleinfo: [1 90000]
-             trial: {[91×90000 double]}
-              time: {[0 0.0040 0.0080 0.0120 … ] (1×90000 double)}
-             label: {91×1 cell}
-               cfg: [1×1 struct]
-              elec: [1×1 struct]
+             trial: {[91x90000 double]}
+              time: {[0 0.0040 0.0080 0.0120 ... ] (1x90000 double)}
+             label: {91x1 cell}
+               cfg: [1x1 struct]
+              elec: [1x1 struct]
 
 There are 90000 samples, which at 250 Hz sampling rate means that this data is 90000/250=360 seconds long, which is 6 minutes.
 
@@ -80,13 +80,13 @@ Now we use **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute the powe
     cfg.method  = 'mtmfft';
     cfg.taper   = 'boxcar';
     cfg.foi     = 0.5:1:45; % 1/cfg.length  = 1;
-    base_freq1   = ft_freqanalysis(cfg, base_rpt1);
+    base_freq1  = ft_freqanalysis(cfg, base_rpt1);
 
     cfg.foi     = 0.5:0.5:45; % 1/cfg.length  = 2;
-    base_freq2   = ft_freqanalysis(cfg, base_rpt2);
+    base_freq2  = ft_freqanalysis(cfg, base_rpt2);
 
     cfg.foi     = 0.5:0.25:45; % 1/cfg.length  = 4;
-    base_freq4   = ft_freqanalysis(cfg, base_rpt4);
+    base_freq4  = ft_freqanalysis(cfg, base_rpt4);
 
 We can plot the power spectra of channel 61 using the standard MATLAB plot function.
 
@@ -123,14 +123,14 @@ The `cfg.tapsmofrq` option determines the width of frequency smoothing in Hz (= 
     cfg.method    = 'mtmfft';
     cfg.taper     = 'boxcar';
     cfg.foi       = 0.5:0.25:45;
-    base_freq_b    = ft_freqanalysis(cfg, base_rpt4);
+    base_freq_b   = ft_freqanalysis(cfg, base_rpt4);
 
     cfg.taper     = 'hanning';
-    base_freq_h    = ft_freqanalysis(cfg, base_rpt4);
+    base_freq_h   = ft_freqanalysis(cfg, base_rpt4);
 
     cfg.taper     = 'dpss'; % here the multitapers
     cfg.tapsmofrq = 4;
-    base_freq_d    = ft_freqanalysis(cfg, base_rpt4);
+    base_freq_d   = ft_freqanalysis(cfg, base_rpt4);
 
     figure; hold on
     plot(base_freq_b.freq, base_freq_b.powspctrm(61,:))
@@ -162,23 +162,23 @@ Finally, we will apply what we just learned to investigate the experimental effe
     cfg.method    = 'mtmfft';
     cfg.taper     = 'boxcar';
     cfg.foi       = 0.5:0.25:45;
-    base_freq_b = ft_freqanalysis(cfg, base_rpt4);
-    mild_freq_b = ft_freqanalysis(cfg, mild_rpt4);
-    mode_freq_b = ft_freqanalysis(cfg, mode_rpt4);
-    reco_freq_b = ft_freqanalysis(cfg, reco_rpt4);
+    base_freq_b   = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_b   = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_b   = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_b   = ft_freqanalysis(cfg, reco_rpt4);
 
-    cfg.taper     = 'hanning';
-    base_freq_h = ft_freqanalysis(cfg, base_rpt4);
-    mild_freq_h = ft_freqanalysis(cfg, mild_rpt4);
-    mode_freq_h = ft_freqanalysis(cfg, mode_rpt4);
-    reco_freq_h = ft_freqanalysis(cfg, reco_rpt4);
+    cfg.taper     = 'hanning'; % change the taper, keep the rest 
+    base_freq_h   = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_h   = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_h   = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_h   = ft_freqanalysis(cfg, reco_rpt4);
 
-    cfg.taper     = 'dpss';
+    cfg.taper     = 'dpss'; % change the taper, keep the rest 
     cfg.tapsmofrq = 4;
-    base_freq_d = ft_freqanalysis(cfg, base_rpt4);
-    mild_freq_d = ft_freqanalysis(cfg, mild_rpt4);
-    mode_freq_d = ft_freqanalysis(cfg, mode_rpt4);
-    reco_freq_d = ft_freqanalysis(cfg, reco_rpt4);
+    base_freq_d   = ft_freqanalysis(cfg, base_rpt4);
+    mild_freq_d   = ft_freqanalysis(cfg, mild_rpt4);
+    mode_freq_d   = ft_freqanalysis(cfg, mode_rpt4);
+    reco_freq_d   = ft_freqanalysis(cfg, reco_rpt4);
 
     cfg = [];
     cfg.layout = 'GSN-HydroCel-128';
