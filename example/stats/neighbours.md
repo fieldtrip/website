@@ -139,9 +139,11 @@ A slightly smaller distance can have a large effect of which electrodes are dete
 
 {% include image src="/assets/img/example/neighbours/figure10.png" width="400" %}
 
-If you rotate the 3D figure, you can see that O1 and O2 are considered neighbours, as well as Fp1 and Fp2. They are quite close to each other, but I would not consider them direct neighbours, since Oz and Fpz are in between. To improve on the neighbour structure, you would edit the structure that it returns.
+If you rotate the 3D figure, you can see that O1 and O2 are considered neighbours, as well as Fp1 and Fp2. They are quite close to each other, but I would not consider them direct neighbours, since Oz and Fpz are in between. To improve on the neighbour structure, you would edit the structure that it returns. See below:
 
-Note that if you remove a neighbour from one channel, you probably also want to remove it the opposite way around. In general we would consider neighbours symmetric, i.e., if channel "A" is a neighbour of channel "B", channel "B" will also be the neighbour of "A".
+## Neighbours based on manual specification
+
+Regardless of whether you start with an empty slate, or whether you use the layout or 3D channel positions to create an (initial) layout, you can use a combination of manual specification and plotting to make and to refine a layout. In general you want the layout to be symmetric, and you want it to have a relatively uniform number of neighbours per channel.
 
 You can use the **[printstruct](/reference/utilities/printstruct)** function to display the structure on screen and copy-and-paste it into your script, where you can make additional refinements.
 
@@ -190,11 +192,17 @@ You can use the **[printstruct](/reference/utilities/printstruct)** function to 
     neighbours(21).label = 'O2';
     neighbours(21).neighblabel = { 'P4', 'P8', 'O1', 'Oz' };
 
-You can also use **[ft_neighbourplot](/reference/ft_neighbourplot)**, clicking on one electrode and then another allows to graphically add or remove a connection.
+You can edit this structure to add and remove neighbours. Note that if you remove a neighbour from one channel, you probably also want to remove it the opposite way around. In general we would consider neighbours symmetric, i.e., if channel "A" is a neighbour of channel "B", channel "B" will also be the neighbour of "A".
+
+While editing this tructure, you would repeatedly evaluate it in MATLAB to update the `neighbours` structure in memory and repeatedly use **[ft_neighbourplot](/reference/ft_neighbourplot)** to show the neighbours.
+
+## Neighbours using the graphical user interface
+
+With the `cfg.enableedit` option in **[ft_neighbourplot](/reference/ft_neighbourplot)** you can also click on one electrode and then another to graphically add or remove a neighbouring connection.
 
     cfg = [];
-    cfg.elec = elec;
-    cfg.neighbours = neighbours;
     cfg.enableedit = 'yes';
     cfg.verbose = 'yes';
+    cfg.elec = elec;                % this is needed to show them in 3D
+    cfg.neighbours = neighbours;    % these are the initial neighbours
     neighbours_edited = ft_neighbourplot(cfg);
