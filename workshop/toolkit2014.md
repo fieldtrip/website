@@ -39,7 +39,7 @@ After installing FieldTrip to your path, you change into the tutorial directory
 
 ## Program
 
-A [PDF with the detailed program](/assets/pdf/workshop/toolkit2014/program.pdf) is available. See below for the relevant tutorials for the hands-on sessions.
+A [PDF with the detailed program](https://download.fieldtriptoolbox.org/workshop/toolkit2014/program.pdf) is available. See below for the relevant tutorials for the hands-on sessions.
 
 ### Tuesday 6 May
 

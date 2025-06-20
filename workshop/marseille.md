@@ -47,12 +47,12 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 
 - morning
 
-  - 1h Lecture on frequency analysis - [slides](/assets/pdf/workshop/marseille_frequency.pdf)
+  - 1h Lecture on frequency analysis - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/frequency.pdf)
   - 2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 
 - afternoon
 
-  - 1h Lecture on source reconstruction using beamforming - [slides](/assets/pdf/workshop/marseille_beamforming.pdf)
+  - 1h Lecture on source reconstruction using beamforming - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/beamforming.pdf)
   - 2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
   - wrap up of the day
 
@@ -63,12 +63,12 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 
 - morning
 
-  - 1h Lecture on connectivity analysis - [slides](/assets/pdf/workshop/marseille_connectivity.pdf)
+  - 1h Lecture on connectivity analysis - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/connectivity.pdf)
   - 2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
 
 - afternoon
 
-  - 1h Lecture on nonparametric statistics using clustering - [slides](/assets/pdf/workshop/marseille_statistics.pdf)
+  - 1h Lecture on nonparametric statistics using clustering - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/statistics.pdf)
   - 2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
   - wrap up of the day
 

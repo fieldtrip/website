@@ -25,7 +25,7 @@ Note that the tentative program below still might change a bit.
 
 | 09:00-09:30 | Registration and coffee |
 | 09:30-10:00 | Welcome and personal introduction round |
-| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2024/02_introduction.pdf) by Robert Oostenveld |
+| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/02_introduction.pdf) by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | EEG, MEG and OPM lab demonstrations |
 | 12:30-13:30 | Lunch |
@@ -36,12 +36,12 @@ Note that the tentative program below still might change a bit.
 ### Tuesday May 28, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-10:45 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2024/03_frequency.pdf) by Jan-Mathijs Schoffelen |
+| 09:45-10:45 | Time frequency analysis of power - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/03_frequency.pdf) by Jan-Mathijs Schoffelen |
 | 10:45-11:00 | Coffee Break |
 | 11:00-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
-| 14:30-15:45 | Forward and inverse - [lecture](/assets/pdf/workshop/toolkit2024/04_forward_inverse.pdf) by Robert |
+| 14:30-15:45 | Forward and inverse - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/04_forward_inverse.pdf) by Robert |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 18:30-22:00 | Drinks & dinner, eetbar [Mikmak](https://www.eetbarmikmak.nl), which is located [here](https://www.google.nl/maps/place/Kelfkensbos+45,+6511+TB+Nijmegen) |
@@ -49,9 +49,9 @@ Note that the tentative program below still might change a bit.
 ### Wednesday May 29, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:30-11:00 | Special interest [lecture](/assets/pdf/workshop/toolkit2024/05_infant_eeg.pdf): The beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
+| 09:30-11:00 | Special interest [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/05_infant_eeg.pdf): The beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2024/06_beamforming.pdf) by Britta Westner |
+| 11:15-12:30 | Source reconstruction using beamformers - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/06_beamforming.pdf) by Britta Westner |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
@@ -60,9 +60,9 @@ Note that the tentative program below still might change a bit.
 ### Thursday May 30, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | New methods for experimental design and analysis - [lecture](/assets/pdf/workshop/toolkit2024/07_new_methods.pdf) by Robert |
+| 09:45-11:00 | New methods for experimental design and analysis - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/07_new_methods.pdf) by Robert |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2024/08_statistics.pdf) by Robert |
+| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/08_statistics.pdf) by Robert |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock) |
 | 15:45-16:00 | Tea Break |
@@ -71,7 +71,7 @@ Note that the tentative program below still might change a bit.
 ### Friday May 31, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Open science and good practices - [lecture](/assets/pdf/workshop/toolkit2024/09_open_science.pdf) by Robert |
+| 09:45-11:00 | Open science and good practices - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/09_open_science.pdf) by Robert |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 12:30-13:30 | Lunch |

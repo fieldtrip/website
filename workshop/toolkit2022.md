@@ -23,7 +23,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 09:30-10:00 | Welcome|
 | 10:00-11:00 | Data acquisition demonstration in the EEG and MEG labs|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture by Robert Oostenveld](/assets/pdf/workshop/toolkit2022/introduction.pdf)|
+| 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture by Robert Oostenveld](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/introduction.pdf)|
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)|
 | 15:45-16:00 | Tea Break|
@@ -33,9 +33,9 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Tuesday May 10, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - [lecture by Vitória Piai](/assets/pdf/workshop/toolkit2022/speaking.pdf)|
+| 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - [lecture by Vitória Piai](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/speaking.pdf)|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | Time frequency analysis of power - [lecture by Jan-Mathijs Schoffelen](/assets/pdf/workshop/toolkit2022/frequency.pdf)|
+| 11:15-12:30 | Time frequency analysis of power - [lecture by Jan-Mathijs Schoffelen](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/frequency.pdf)|
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)|
 | 15:45-16:00 | Tea Break|
@@ -46,9 +46,9 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Wednesday May 11, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Forward and inverse - [lecture by Robert](/assets/pdf/workshop/toolkit2022/forward_inverse.pdf)|
+| 09:45-11:00 | Forward and inverse - [lecture by Robert](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/forward_inverse.pdf)|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | Source reconstruction using beamformers - [lecture by Britta Westner](/assets/pdf/workshop/toolkit2022/beamforming.pdf)|
+| 11:15-12:30 | Source reconstruction using beamformers - [lecture by Britta Westner](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/beamforming.pdf)|
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer)|
 | 15:45-16:00 | Tea Break|
@@ -58,9 +58,9 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Thursday May 12, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Connectivity analysis of MEG and EEG data - [lecture by Jan-Mathijs](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
+| 09:45-11:00 | Connectivity analysis of MEG and EEG data - [lecture by Jan-Mathijs](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/connectivity.pdf)|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture by Robert](/assets/pdf/workshop/toolkit2022/statistics.pdf)|
+| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture by Robert](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/statistics.pdf)|
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
@@ -70,7 +70,7 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Friday May 13, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Open science and good practices - [lecture by Robert](/assets/pdf/workshop/toolkit2022/openscience.pdf)|
+| 09:45-11:00 | Open science and good practices - [lecture by Robert](https://download.fieldtriptoolbox.org/workshop/toolkit2022/slides/openscience.pdf)|
 | 11:00-11:15 | Coffee Break|
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 12:30-13:30 | Lunch|

@@ -56,12 +56,12 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
 - morning
 
-  - 1h welcome and intro lecture - [slides](/assets/pdf/workshop/salzburg_introduction.pdf)
+  - 1h welcome and intro lecture - [slides](https://download.fieldtriptoolbox.org/workshop/salzburg2017/slides/introduction.pdf)
   - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
 - afternoon
 
-  - 1h neuronal oscillations lecture - [slides](/assets/pdf/workshop/salzburg_frequency_analysis.pdf)
+  - 1h neuronal oscillations lecture - [slides](https://download.fieldtriptoolbox.org/workshop/salzburg2017/slides/frequency_analysis.pdf)
   - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
   - wrap up of the day
 
@@ -72,12 +72,12 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
 - morning
 
-  - 1h forward and inverse modeling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
+  - 1h forward and inverse modeling lecture - [slides](https://download.fieldtriptoolbox.org/workshop/salzburg2017/slides/source_reconstruction.pdf)
   - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/beamformer>
 
 - afternoon
 
-  - 1h non-parametric permutation statistics lecture - [slides](/assets/pdf/workshop/salzburg_cluster_statistics.pdf)
+  - 1h non-parametric permutation statistics lecture - [slides](https://download.fieldtriptoolbox.org/workshop/salzburg2017/slides/cluster_statistics.pdf)
   - 2h hands-on
     - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
     - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
