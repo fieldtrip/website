@@ -133,7 +133,29 @@ The final day is flexible, used to finalize lectures of previous days, for revie
 
 ## Slides
 
-The slides will be shared as PDF throughout the week. You can access them at [this google drive folder](https://drive.google.com/drive/folders/1NxpOnxtXyMpjNN8MBCh8ij7eOWDZbueO?usp=sharing).
+To keep track of all lecturesfor ourselves, we have numbered them in the order of the presentations. The full list of PDF slides for all lectures and for the two virtual lab-tour movies is here:
+
+- [01 - Outline of the workshop.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/01 - Outline of the workshop.pdf)
+- [02 - EEG background.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf)
+- [03 - EEG in Africa.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG in Africa.pdf)
+- [03 - EEG lab tour DCC.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCC.mov)
+- [03 - EEG lab tour DCCN.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCCN.mov)
+- [04 - Experimental design, part A.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/04 - Experimental design, part A.pdf)
+- [05 - How does an EEG system work.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/05 - How does an EEG system work.pdf)
+- [06 - Experimental design, part B.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/06 - Experimental design, part B.pdf)
+- [07 - Stimulus presentation and synchronization.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/07 - Stimulus presentation and synchronization.pdf)
+- [08 - Where to get EEG data.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/08 - Where to get EEG data.pdf)
+- [09 - What software to use for EEG analysis.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/09 - What software to use for EEG analysis.pdf)
+- [10 - Using MATLAB online.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/10 - Using MATLAB online.pdf)
+- [11 - Preprocessing of EEG.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/11 - Preprocessing of EEG.pdf)
+- [12 - EEG and ethics.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/12 - EEG and ethics.pdf)
+- [13 - Analysis of ERPs.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/13 - Analysis of ERPs.pdf)
+- [15 - Source localization.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/15 - Source localization.pdf)
+- [16 - Frequency analysis.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/16 - Frequency analysis.pdf)
+- [17 - Real-time and BCI.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/17 - Real-time and BCI.pdf)
+- [18 - What EEG system to get.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/18 - What EEG system to get.pdf)
+- [19 - Where to go from here.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/19 - Where to go from here.pdf)
+- [20 - EEG reflections and summary.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/20 - EEG reflections and summary.pdf)
 
 ## Questions
 
