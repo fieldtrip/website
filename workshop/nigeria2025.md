@@ -158,7 +158,7 @@ To keep track of all lectures for ourselves, we have numbered them in the order 
 
 ## Video recordings
 
-We have recorded most lectures on video. You can find them on our [YouTube channel](https://www.youtube.com/fieldtriptoolbox) and they are listed here.
+We have recorded most lectures on video. You can find them on our [YouTube channel](https://www.youtube.com/playlist?list=PLbVcEw60xnKPP-ONiQwMV4izOB6g2H5SL) and they are listed here.
 
 - [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4)
 - [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8)
