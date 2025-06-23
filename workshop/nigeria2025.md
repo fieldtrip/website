@@ -1,9 +1,9 @@
 ---
-title: African Brain Data Network workshop in Nigeria
+title: African Brain Data Network EEG workshop in Nigeria
 tags: [nigeria2025]
 ---
 
-# African Brain Data Network workshop in Nigeria
+# African Brain Data Network EEG workshop in Nigeria
 
 Together with the [African Brain Data Network](https://africanbraindatanetwork.com) we are organizing an intensive one-week EEG Workshop in Nigeria (9-14 June, 2025) designed to empower researchers across Africa with hands-on training and foundational knowledge in Electroencephalography (EEG). EEG is a powerful, non-invasive tool for studying brain activity and advancing neurotechnological research.
 
@@ -65,36 +65,35 @@ Day-by-Day Overview:
 The week begins with orientation and practical information, followed by foundational topics: what EEG is, its advantages over other neuroimaging techniques, and its applications in clinical, developmental, and cognitive research. Special emphasis is placed on African-specific challenges, such as dealing with natural hairstyles and electrode types. Sessions also experimental design and and stimulus control.
 
 - registration and welcome
-- introduction and format (lecture by Robert)
-- background on EEG (lecture by Mikkel, 1st half)
+- introduction and format ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/01 - Outline of the workshop.pdf) by Robert)
+- background on EEG - part 1 ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf) by Mikkel, [video](https://youtu.be/_Dar7Sd3Yh4))
 - lunch
-- background on EEG (lecture by Mikkel, 2nd half)
-- EEG in Africa (lecture by Robert)
-- experimental design part A (lecture by Mikkel)
+- background on EEG - part 2 ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf) by Mikkel, [video](https://youtu.be/z1w7Nqj19W8))
+- EEG in Africa ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG in Africa.pdf) by Robert, [video](https://youtu.be/NtN8_0g9I9E))
+- experimental design part A ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/04 - Experimental design, part A.pdf) by Mikkel, [video](https://youtu.be/HbXqRAYVafg))
 - experimental design Q&A (discussion)
 
 ### Tuesday – Experimental Design & EEG Recording
 
 EEG hardware, electrodes, caps and electrode placement is discussed. Hands-on sessions guide participants through installing stimulus software (e.g., [PsychoPy](https://psychopy.org/)), designing behavioral tasks, and handling hardware (e.g., EEG caps, electrodes, and cleaning). Participants split into groups to practice recording EEG, focusing on setup, troubleshooting, ethical handling, and documentation.
 
-- how does an EEG system work (lecture by Robert, 1st half)
+- how does an EEG system work ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/05 - How does an EEG system work.pdf) by Robert, [video](https://youtu.be/rIR1osZpIUc))
 - recording of EEG (hands-on)
 - lunch
-- experimental design part B (lecture by Mikkel)
+- experimental design part B ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/06 - Experimental design, part B.pdf) by Mikkel, [video](https://youtu.be/8hdf2kXpeS4))
 - designing a task and recording it ([hands-on](/workshop/nigeria2025/stimuluspresentation))
 
 ### Wednesday – EEG Data, Analysis Tools & Preprocessing
 
 The precise timing of the experimental task and stimuli with the EEG is presented and demonstrated.Lectures cover EEG data formats, metadata (e.g., BIDS), and an overview of the FieldTrip toolbox and alternatives. Experimental design essentials, noise and typical artifacts, and the steps in preprocessing of EEG data such as filtering and rereferencing are presented, followed by practical exercises.
 
-- synchronisation and triggers (lecture by Robert)
+- synchronisation and triggers ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/07 - Stimulus presentation and synchronization.pdf) by Robert, [video](https://youtu.be/H643Y0yKHq0))
 - synchronisation and triggers (demonstration)
-- where to get EEG data (lecture by Robert)
-- what software to use for EEG analysis (lecture by Robert)
-- Using MATLAB online (a few instructions by Robert)
-- how to analyze EEG data (lecture by Robert)
+- where to get EEG data ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/08 - Where to get EEG data.pdf) by Robert, [video](https://youtu.be/bWqVcEz5Byw))
+- what software to use for EEG analysis ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/09 - What software to use for EEG analysis.pdf) by Robert, [video](https://youtu.be/FPFdafaHnWM))
+- using MATLAB online (a few [instructions](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/10 - Using MATLAB online.pdf) by Robert)
 - lunch
-- preprocessing of EEG (lecture by Robert)
+- preprocessing of EEG ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/11 - Preprocessing of EEG.pdf) by Robert, [video](https://youtu.be/2AenpYFM-DQ))
 - preprocessing of EEG ([hands-on](/workshop/nigeria2025/preprocessing))
 - preprocessing of EEG (demonstration)
 
@@ -102,31 +101,31 @@ The precise timing of the experimental task and stimuli with the EEG is presente
 
 The rationale and analysis of event-related potentials (ERP) are presented, with applications to sensory and cognitive processes. The ERP difference wave is discussed, and participants do the preprocessing and compute ERPs in a task-based EEG dataset, contrasting visual and auditory conditions. Ethics, informed consent, incidental findings and adversial effects are presented, followed by a presentation and discussion on translating European practices to the African situation.
 
-- EEG and ethics (lecture by Robert)
-- analysis of ERPs (lecture by Robert)
+- EEG and ethics ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/12 - EEG and ethics.pdf) by Robert, [video](https://youtu.be/kAP769ygqLE))
+- analysis of ERPs ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/13 - Analysis of ERPs.pdf) by Robert, [video](https://youtu.be/nwGlfimXUiw))
 - lunch
 - analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
 - analysis of ERPs (demonstration)
-- EEG and ethics - the African perspective (lecture by Damian)
+- EEG and ethics - the African perspective (lecture by Damian, [video](https://youtu.be/yZnRxK5k05c))
 
 ### Friday – Frequency Analysis & Source Localization
 
 Methods to localize the underlying brain activity from the topographical ERP distribution are presented. Frequency analysis is explained and participants explore frequency-based EEG analysis (e.g., eyes open vs. closed, group comparisons). Hands-on experience with spectral analysis is provided.
 
-- source localization (lecture by Robert)
-- frequency analysis (lecture by Robert)
+- source localization ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/15 - Source localization.pdf) by Robert, [video](https://youtu.be/B-X2tPEcz7w))
+- frequency analysis ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/16 - Frequency analysis.pdf) by Robert, [video](https://youtu.be/USHTEjzAhbU))
 - lunch
 - frequency analysis ([hands-on](/workshop/nigeria2025/frequency))
 - frequency analysis (demonstration)
-- real-time analysis and BCI (lecture)
+- real-time analysis and BCI ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/17 - Real-time and BCI.pdf) by Robert, [video](https://youtu.be/ISgUzYv5SAQ))
 - continue with hands-on preprocessing, ERPs, or frequency analysis
-- outlook and future plans (discussion)
+- where to go from here ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/19 - Where to go from here.pdf) by Mikkel, [video](https://youtu.be/V0X5VEiZFFU))
 
 ### Saturday – Wrap-up & Additional Practice
 
 The final day is flexible, used to finalize lectures of previous days, for review, additional practice, or wrapping up unfinished work. Topics that can be presented are statistical approaches and experimental design types. Reflections on the week’s learning and experiences conclude the course.
 
-- reflection on EEG research (group discussions)
+- reflections on EEG research ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/20 - EEG reflections and summary.pdf) by Robert and discussions)
 - Q&A on designing the task and the analysis (general discussion)
 - designing and synchronizing a task ([hands-on](/workshop/nigeria2025/stimuluspresentation))
 - recording of EEG (hands-on)
