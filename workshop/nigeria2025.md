@@ -133,7 +133,7 @@ The final day is flexible, used to finalize lectures of previous days, for revie
 
 ## Slides
 
-To keep track of all lecturesfor ourselves, we have numbered them in the order of the presentations. The full list of PDF slides for all lectures and for the two virtual lab-tour movies is here:
+To keep track of all lectures for ourselves, we have numbered them in the order of the presentations. The full list of PDF slides for all lectures and for the two virtual lab-tour movies is here:
 
 - [01 - Outline of the workshop.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/01 - Outline of the workshop.pdf)
 - [02 - EEG background.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf)
@@ -156,6 +156,28 @@ To keep track of all lecturesfor ourselves, we have numbered them in the order o
 - [18 - What EEG system to get.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/18 - What EEG system to get.pdf)
 - [19 - Where to go from here.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/19 - Where to go from here.pdf)
 - [20 - EEG reflections and summary.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/20 - EEG reflections and summary.pdf)
+
+## Video recordings
+
+We have recorded most lectures on video. You can find them on our [YouTube channel](https://www.youtube.com/fieldtriptoolbox) and they are listed here.
+
+- [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4)
+- [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8)
+- [03 - EEG in Africa](https://youtu.be/NtN8_0g9I9E)
+- [04 - Experimental design, part A](https://youtu.be/HbXqRAYVafg)
+- [05 - How does an EEG system work](https://youtu.be/rIR1osZpIUc)
+- [06 - Experimental design, part B](https://youtu.be/8hdf2kXpeS4)
+- [07 - Stimulus presentation and synchronization](https://youtu.be/H643Y0yKHq0)
+- [08 - Where to get EEG data](https://youtu.be/bWqVcEz5Byw)
+- [09 - What software to use for EEG analysis](https://youtu.be/FPFdafaHnWM)
+- [11 - Preprocessing of EEG data](https://youtu.be/2AenpYFM-DQ)
+- [12 - EEG and ethics](https://youtu.be/kAP769ygqLE)
+- [13 - Analysis of ERPs](https://youtu.be/nwGlfimXUiw)
+- [14 - Ethical and legal considerations in Africa](https://youtu.be/yZnRxK5k05c)
+- [15 - Source localization](https://youtu.be/B-X2tPEcz7w)
+- [16 - Frequency analysis](https://youtu.be/USHTEjzAhbU)
+- [17 - Real-time and BCI](https://youtu.be/ISgUzYv5SAQ)
+- [19 - Where to go from here](https://youtu.be/V0X5VEiZFFU)
 
 ## Questions
 
