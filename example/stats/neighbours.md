@@ -194,7 +194,7 @@ You can use the **[printstruct](/reference/utilities/printstruct)** function to 
 
 You can edit this structure to add and remove neighbours. Note that if you remove a neighbour from one channel, you probably also want to remove it the opposite way around. In general we would consider neighbours symmetric, i.e., if channel "A" is a neighbour of channel "B", channel "B" will also be the neighbour of "A".
 
-While editing this tructure, you would repeatedly evaluate it in MATLAB to update the `neighbours` structure in memory and repeatedly use **[ft_neighbourplot](/reference/ft_neighbourplot)** to show the neighbours.
+While editing this structure, you would repeatedly evaluate it in MATLAB to update the `neighbours` structure in memory and repeatedly use **[ft_neighbourplot](/reference/ft_neighbourplot)** to show the neighbours.
 
 ## Neighbours using the graphical user interface
 
