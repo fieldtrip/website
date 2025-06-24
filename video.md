@@ -19,25 +19,25 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 {% include youtube id="CPj4jJACeIs" %}
 
-### African Brain Data Network EEG workshop, Nigeria (June 2025)
+## African Brain Data Network EEG workshop, Nigeria (June 2025)
 
-- [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4)
-- [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8)
-- [03 - EEG in Africa](https://youtu.be/NtN8_0g9I9E)
-- [04 - Experimental design, part A](https://youtu.be/HbXqRAYVafg)
-- [05 - How does an EEG system work](https://youtu.be/rIR1osZpIUc)
-- [06 - Experimental design, part B](https://youtu.be/8hdf2kXpeS4)
-- [07 - Stimulus presentation and synchronization](https://youtu.be/H643Y0yKHq0)
-- [08 - Where to get EEG data](https://youtu.be/bWqVcEz5Byw)
-- [09 - What software to use for EEG analysis](https://youtu.be/FPFdafaHnWM)
-- [11 - Preprocessing of EEG data](https://youtu.be/2AenpYFM-DQ)
-- [12 - EEG and ethics](https://youtu.be/kAP769ygqLE)
-- [13 - Analysis of ERPs](https://youtu.be/nwGlfimXUiw)
-- [14 - Ethical and legal considerations in Africa](https://youtu.be/yZnRxK5k05c)
-- [15 - Source localization](https://youtu.be/B-X2tPEcz7w)
-- [16 - Frequency analysis](https://youtu.be/USHTEjzAhbU)
-- [17 - Real-time and BCI](https://youtu.be/ISgUzYv5SAQ)
-- [19 - Where to go from here](https://youtu.be/V0X5VEiZFFU)
+- [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4) by Mikkel Vinding
+- [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8) by Mikkel Vinding
+- [03 - EEG in Africa](https://youtu.be/NtN8_0g9I9E) by Robert Oostenveld
+- [04 - Experimental design, part A](https://youtu.be/HbXqRAYVafg) by Mikkel Vinding
+- [05 - How does an EEG system work](https://youtu.be/rIR1osZpIUc) by Robert Oostenveld
+- [06 - Experimental design, part B](https://youtu.be/8hdf2kXpeS4) by Mikkel Vinding
+- [07 - Stimulus presentation and synchronization](https://youtu.be/H643Y0yKHq0) by Robert Oostenveld
+- [08 - Where to get EEG data](https://youtu.be/bWqVcEz5Byw) by Robert Oostenveld
+- [09 - What software to use for EEG analysis](https://youtu.be/FPFdafaHnWM) by Robert Oostenveld
+- [11 - Preprocessing of EEG data](https://youtu.be/2AenpYFM-DQ) by Robert Oostenveld
+- [12 - EEG and ethics](https://youtu.be/kAP769ygqLE) by Robert Oostenveld
+- [13 - Analysis of ERPs](https://youtu.be/nwGlfimXUiw) by Robert Oostenveld
+- [14 - Ethical and legal considerations in Africa](https://youtu.be/yZnRxK5k05c) by Damian Eke
+- [15 - Source localization](https://youtu.be/B-X2tPEcz7w) by Robert Oostenveld
+- [16 - Frequency analysis](https://youtu.be/USHTEjzAhbU) by Robert Oostenveld
+- [17 - Real-time and BCI](https://youtu.be/ISgUzYv5SAQ) by Robert Oostenveld
+- [19 - Where to go from here](https://youtu.be/V0X5VEiZFFU) by Mikkel Vinding
 
 ## ECoG/sEEG bootcamp, UC Davis (March 2019)
 
