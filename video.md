@@ -33,7 +33,7 @@ Please use the menu below to get an overview and to navigate through the worksho
 - [11 - Preprocessing of EEG data](https://youtu.be/2AenpYFM-DQ) by Robert Oostenveld
 - [12 - EEG and ethics](https://youtu.be/kAP769ygqLE) by Robert Oostenveld
 - [13 - Analysis of ERPs](https://youtu.be/nwGlfimXUiw) by Robert Oostenveld
-- [14 - Ethical and legal considerations in Africa](https://youtu.be/yZnRxK5k05c) by Damian Eke
+- [14 - Ethical and legal considerations in Africa](https://youtu.be/P3fe_SoMR-I) by Damian Eke
 - [15 - Source localization](https://youtu.be/B-X2tPEcz7w) by Robert Oostenveld
 - [16 - Frequency analysis](https://youtu.be/USHTEjzAhbU) by Robert Oostenveld
 - [17 - Real-time and BCI](https://youtu.be/ISgUzYv5SAQ) by Robert Oostenveld

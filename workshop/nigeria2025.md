@@ -106,7 +106,7 @@ The rationale and analysis of event-related potentials (ERP) are presented, with
 - lunch
 - analysis of ERPs ([hands-on](/workshop/nigeria2025/erp))
 - analysis of ERPs (demonstration)
-- EEG and ethics - the African perspective (lecture by Damian, [video](https://youtu.be/yZnRxK5k05c))
+- EEG and ethics - the African perspective (lecture by Damian, [video](https://youtu.be/P3fe_SoMR-I))
 
 ### Friday – Frequency Analysis & Source Localization
 
@@ -173,7 +173,7 @@ We have recorded most lectures on video. You can find them on our [YouTube chann
 - [11 - Preprocessing of EEG data](https://youtu.be/2AenpYFM-DQ)
 - [12 - EEG and ethics](https://youtu.be/kAP769ygqLE)
 - [13 - Analysis of ERPs](https://youtu.be/nwGlfimXUiw)
-- [14 - Ethics and lawful basis for data processing](https://youtu.be/yZnRxK5k05c)
+- [14 - Ethics and lawful basis for data processing](https://youtu.be/P3fe_SoMR-I)
 - [15 - Source localization](https://youtu.be/B-X2tPEcz7w)
 - [16 - Frequency analysis](https://youtu.be/USHTEjzAhbU)
 - [17 - Real-time and BCI](https://youtu.be/ISgUzYv5SAQ)
