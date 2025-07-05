@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40567302'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100117
+- idtype: pmcid
+  value: PMC12172756
+authors:
+- authtype: Author
+  name: Seabra JP
+- authtype: Author
+  name: Kaltwasser L
+- authtype: Author
+  name: Mylius M
+- authtype: Author
+  name: Gallese V
+epubdate: 2022 Jul 20
+fulljournalname: 'Neuroimage: Reports'
+issue: '3'
+pages: '100117'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Jul 20
+sortdate: 2022/07/20 00:00
+source: Neuroimage Rep
+title: 'Artistic expertise shapes face perception: An alpha frequency and N170 study
+  on portraiture'
+uid: '12172756'
+volume: '2'

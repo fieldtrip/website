@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '40606836'
+- idtype: doi
+  value: 10.3389/fnins.2025.1579988
+- idtype: pmcid
+  value: PMC12216668
+authors:
+- authtype: Author
+  name: Cantillo-Negrete J
+- authtype: Author
+  name: Rodríguez-García ME
+- authtype: Author
+  name: Carrillo-Mora P
+- authtype: Author
+  name: Arias-Carrión O
+- authtype: Author
+  name: Ortega-Robles E
+- authtype: Author
+  name: Galicia-Alvarado MA
+- authtype: Author
+  name: Valdés-Cristerna R
+- authtype: Author
+  name: Ramirez-Nava AG
+- authtype: Author
+  name: Hernandez-Arenas C
+- authtype: Author
+  name: Quinzaños-Fresnedo J
+- authtype: Author
+  name: Pacheco-Gallegos MD
+- authtype: Author
+  name: Marín-Arriaga N
+- authtype: Author
+  name: Carino-Escobar RI
+epubdate: 2025 Jun 18
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1579988'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jun 18
+sortdate: 2025/06/18 00:00
+source: Front Neurosci
+title: 'The ReHand-BCI trial: a randomized controlled trial of a brain-computer interface
+  for upper extremity stroke neurorehabilitation'
+uid: '12216668'
+volume: '19'

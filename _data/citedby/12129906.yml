@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40463292'
+- idtype: doi
+  value: 10.3389/fpsyg.2025.1585897
+- idtype: pmcid
+  value: PMC12129906
+authors:
+- authtype: Author
+  name: Visani E
+- authtype: Author
+  name: Rossi Sebastiano D
+- authtype: Author
+  name: Garofalo G
+- authtype: Author
+  name: Duran D
+- authtype: Author
+  name: Tangorra M
+- authtype: Author
+  name: Mezzadri M
+- authtype: Author
+  name: Buccino G
+epubdate: 2025 May 20
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1585897'
+pmclivedate: 2025/06/03
+printpubdate: ''
+pubdate: 2025 May 20
+sortdate: 2025/05/20 00:00
+source: Front Psychol
+title: 'Processing L2 action verbs shares the same mechanisms for processing L1 items:
+  evidence from a combined behavioral and MEG study'
+uid: '12129906'
+volume: '16'

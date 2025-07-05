@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40404358'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2041-24.2025
+- idtype: pmcid
+  value: PMC12160396
+authors:
+- authtype: Author
+  name: Haim S
+- authtype: Author
+  name: Ofir N
+- authtype: Author
+  name: Deouell LY
+- authtype: Author
+  name: Landau AN
+- authtype: Author
+  name: Lottem E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: e2041242025
+pmclivedate: ''
+printpubdate: 2025 Jun 11
+pubdate: 2025 Jun 11
+sortdate: 2025/06/11 00:00
+source: J Neurosci
+title: Neural Signatures of Flexible Multiple Timing
+uid: '12160396'
+volume: '45'

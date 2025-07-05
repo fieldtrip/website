@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '40603846'
+- idtype: doi
+  value: 10.1038/s41467-025-61136-y
+- idtype: pmcid
+  value: PMC12222441
+authors:
+- authtype: Author
+  name: Sjøgård M
+- authtype: Author
+  name: Baxter B
+- authtype: Author
+  name: Mylonas D
+- authtype: Author
+  name: Thompson M
+- authtype: Author
+  name: Kwok K
+- authtype: Author
+  name: Driscoll B
+- authtype: Author
+  name: Tolosa A
+- authtype: Author
+  name: Shi W
+- authtype: Author
+  name: Stickgold R
+- authtype: Author
+  name: Vangel M
+- authtype: Author
+  name: Chu CJ
+- authtype: Author
+  name: Manoach DS
+epubdate: 2025 Jul 2
+fulljournalname: Nature Communications
+issue: ''
+pages: '6089'
+pmclivedate: 2025/07/03
+printpubdate: ''
+pubdate: 2025 Jul 2
+sortdate: 2025/07/02 00:00
+source: Nat Commun
+title: Hippocampal ripples predict motor learning during brief rest breaks in humans
+uid: '12222441'
+volume: '16'

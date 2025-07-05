@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40567304'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100115
+- idtype: pmcid
+  value: PMC12172890
+authors:
+- authtype: Author
+  name: Moffa AH
+- authtype: Author
+  name: Nikolin S
+- authtype: Author
+  name: Martin D
+- authtype: Author
+  name: Loo C
+- authtype: Author
+  name: Boonstra TW
+epubdate: 2022 Jun 21
+fulljournalname: 'Neuroimage: Reports'
+issue: '3'
+pages: '100115'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Jun 21
+sortdate: 2022/06/21 00:00
+source: Neuroimage Rep
+title: Reliability of transcranial magnetic stimulation evoked potentials to detect
+  the effects of theta-burst stimulation of the prefrontal cortex
+uid: '12172890'
+volume: '2'

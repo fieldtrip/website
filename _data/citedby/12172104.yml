@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40256879'
+- idtype: doi
+  value: 10.1002/acn3.70045
+- idtype: pmcid
+  value: PMC12172104
+authors:
+- authtype: Author
+  name: Gefferie SR
+- authtype: Author
+  name: van Nieuw Amerongen AR
+- authtype: Author
+  name: Visser GH
+- authtype: Author
+  name: Zijlmans M
+- authtype: Author
+  name: Tolner EA
+- authtype: Author
+  name: van de Ruit M
+- authtype: Author
+  name: van den Maagdenberg AM
+- authtype: Author
+  name: Thijs RD
+epubdate: 2025 Apr 21
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '6'
+pages: 1265-1275
+pmclivedate: 2025/06/18
+printpubdate: ''
+pubdate: 2025 Apr 21
+sortdate: 2025/04/21 00:00
+source: Ann Clin Transl Neurol
+title: ' EEG Spectral Exponents and Visual Chirp Responses Mirror Anti‐Seizure Medication
+  Load in Refractory Focal Epilepsy'
+uid: '12172104'
+volume: '12'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40455050'
+- idtype: doi
+  value: 10.1167/jov.25.7.1
+- idtype: pmcid
+  value: PMC12136116
+authors:
+- authtype: Author
+  name: Mohr KS
+- authtype: Author
+  name: Geuzebroek AC
+- authtype: Author
+  name: Kelly SP
+epubdate: 2025 Jun 2
+fulljournalname: Journal of Vision
+issue: '7'
+pages: '1'
+pmclivedate: 2025/06/05
+printpubdate: ''
+pubdate: 2025 Jun 2
+sortdate: 2025/06/02 00:00
+source: J Vis
+title: Pattern-pulses and pattern-reversals evoke different cascades of cortical sources
+  in the multifocal visual evoked potential
+uid: '12136116'
+volume: '25'

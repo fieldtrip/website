@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40496979'
+- idtype: doi
+  value: 10.1007/s11571-025-10281-7
+- idtype: pmcid
+  value: PMC12149058
+authors:
+- authtype: Author
+  name: Muñoz V
+- authtype: Author
+  name: Angulo-Ruiz BY
+- authtype: Author
+  name: Gómez CM
+epubdate: 2025 Jun 9
+fulljournalname: Cognitive Neurodynamics
+issue: '1'
+pages: '88'
+pmclivedate: 2025/06/10
+printpubdate: 2025 Dec
+pubdate: 2025 Jun 9
+sortdate: 2025/06/09 00:00
+source: Cogn Neurodyn
+title: 'Sound intensity-dependent cortical activation: implications of the electrical
+  and vascular activity on auditory intensity'
+uid: '12149058'
+volume: '19'

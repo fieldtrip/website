@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40436862'
+- idtype: doi
+  value: 10.1038/s41467-025-60044-5
+- idtype: pmcid
+  value: PMC12119807
+authors:
+- authtype: Author
+  name: Asch N
+- authtype: Author
+  name: Rahamim N
+- authtype: Author
+  name: Morozov A
+- authtype: Author
+  name: Werner-Reiss U
+- authtype: Author
+  name: Israel Z
+- authtype: Author
+  name: Paz R
+- authtype: Author
+  name: Bergman H
+epubdate: 2025 May 28
+fulljournalname: Nature Communications
+issue: ''
+pages: '4963'
+pmclivedate: 2025/05/29
+printpubdate: ''
+pubdate: 2025 May 28
+sortdate: 2025/05/28 00:00
+source: Nat Commun
+title: Basal ganglia deep brain stimulation restores cognitive flexibility and exploration-exploitation
+  balance disrupted by NMDA-R antagonism
+uid: '12119807'
+volume: '16'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40500285'
+- idtype: doi
+  value: 10.1038/s42003-025-08321-3
+- idtype: pmcid
+  value: PMC12159186
+authors:
+- authtype: Author
+  name: Duecker K
+- authtype: Author
+  name: Shapiro KL
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Wolfe JM
+- authtype: Author
+  name: Jensen O
+epubdate: 2025 Jun 11
+fulljournalname: Communications Biology
+issue: ''
+pages: '912'
+pmclivedate: 2025/06/12
+printpubdate: ''
+pubdate: 2025 Jun 11
+sortdate: 2025/06/11 00:00
+source: Commun Biol
+title: Guided visual search is associated with target boosting and distractor suppression
+  in early visual cortex
+uid: '12159186'
+volume: '8'

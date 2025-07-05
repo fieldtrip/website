@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40562744'
+- idtype: doi
+  value: 10.1038/s41467-025-60821-2
+- idtype: pmcid
+  value: PMC12198418
+authors:
+- authtype: Author
+  name: Ericson J
+- authtype: Author
+  name: Ruiz Ibáñez N
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Klingberg T
+epubdate: 2025 Jun 25
+fulljournalname: Nature Communications
+issue: ''
+pages: '5381'
+pmclivedate: 2025/06/26
+printpubdate: ''
+pubdate: 2025 Jun 25
+sortdate: 2025/06/25 00:00
+source: Nat Commun
+title: Low frequency oscillations – neural correlates of stability and flexibility
+  in cognition
+uid: '12198418'
+volume: '16'

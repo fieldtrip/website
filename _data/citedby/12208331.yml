@@ -1,0 +1,79 @@
+articleids:
+- idtype: pmid
+  value: '40449482'
+- idtype: doi
+  value: 10.1016/j.xcrm.2025.102155
+- idtype: pmcid
+  value: PMC12208331
+authors:
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Zhu X
+- authtype: Author
+  name: Sun W
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Duan W
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Jiang Y
+- authtype: Author
+  name: Chen M
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Hu J
+- authtype: Author
+  name: Cai Z
+- authtype: Author
+  name: Zhao J
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Fan Z
+- authtype: Author
+  name: Zheng F
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Xie F
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Guan Y
+- authtype: Author
+  name: Yan K
+- authtype: Author
+  name: Lei Z
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Xiao X
+- authtype: Author
+  name: Zheng H
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Mao Y
+epubdate: 2025 May 30
+fulljournalname: Cell Reports Medicine
+issue: '6'
+pages: '102155'
+pmclivedate: 2025/07/01
+printpubdate: ''
+pubdate: 2025 May 30
+sortdate: 2025/05/30 00:00
+source: Cell Rep Med
+title: Ultrabright ratiometric Raman-guided epilepsy surgery by intraoperatively visualizing
+  proinflammatory microglia
+uid: '12208331'
+volume: '6'

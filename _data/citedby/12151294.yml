@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40411787'
+- idtype: doi
+  value: 10.1016/j.xpro.2025.103835
+- idtype: pmcid
+  value: PMC12151294
+authors:
+- authtype: Author
+  name: Pütz C
+- authtype: Author
+  name: Span M
+- authtype: Author
+  name: Lorist M
+epubdate: 2025 May 22
+fulljournalname: STAR Protocols
+issue: '2'
+pages: '103835'
+pmclivedate: 2025/06/10
+printpubdate: ''
+pubdate: 2025 May 22
+sortdate: 2025/05/22 00:00
+source: STAR Protoc
+title: Protocol for designing, conducting, and analyzing event-related potentials
+  in human participants
+uid: '12151294'
+volume: '6'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40593531'
+- idtype: doi
+  value: 10.1038/s41467-025-60681-w
+- idtype: pmcid
+  value: PMC12217308
+authors:
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Cao D
+- authtype: Author
+  name: Guo C
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Ledergerber D
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Li J
+epubdate: 2025 Jul 1
+fulljournalname: Nature Communications
+issue: ''
+pages: '5798'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Nat Commun
+title: Enhanced role of the entorhinal cortex in adapting to increased working memory
+  load
+uid: '12217308'
+volume: '16'

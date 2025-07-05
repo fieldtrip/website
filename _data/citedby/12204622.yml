@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40489551'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1013118
+- idtype: pmcid
+  value: PMC12204622
+authors:
+- authtype: Author
+  name: Rademacher J
+- authtype: Author
+  name: Grent-'t-Jong T
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Sauer A
+- authtype: Author
+  name: Scheller B
+- authtype: Author
+  name: Gonzalez-Burgos G
+- authtype: Author
+  name: Metzner C
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2025 Jun 9
+fulljournalname: PLOS Computational Biology
+issue: '6'
+pages: e1013118
+pmclivedate: 2025/06/27
+printpubdate: ''
+pubdate: 2025 Jun 9
+sortdate: 2025/06/09 00:00
+source: PLoS Comput Biol
+title: 'Computational modeling of ketamine-induced changes in gamma-band oscillations:
+  The contribution of parvalbumin and somatostatin interneurons'
+uid: '12204622'
+volume: '21'

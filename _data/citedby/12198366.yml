@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40562795'
+- idtype: doi
+  value: 10.1038/s41467-025-60943-7
+- idtype: pmcid
+  value: PMC12198366
+authors:
+- authtype: Author
+  name: Bähner F
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Boehme N
+- authtype: Author
+  name: Hermann S
+- authtype: Author
+  name: Merten T
+- authtype: Author
+  name: Zingone H
+- authtype: Author
+  name: Koppe G
+- authtype: Author
+  name: Meyer-Lindenberg A
+- authtype: Author
+  name: Toutounji H
+- authtype: Author
+  name: Durstewitz D
+epubdate: 2025 Jun 25
+fulljournalname: Nature Communications
+issue: ''
+pages: '5396'
+pmclivedate: 2025/06/26
+printpubdate: ''
+pubdate: 2025 Jun 25
+sortdate: 2025/06/25 00:00
+source: Nat Commun
+title: Abstract rule learning promotes cognitive flexibility in complex environments
+  across species
+uid: '12198366'
+volume: '16'

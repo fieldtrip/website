@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40561110'
+- idtype: doi
+  value: 10.1371/journal.pone.0325930
+- idtype: pmcid
+  value: PMC12194263
+authors:
+- authtype: Author
+  name: Prince P
+- authtype: Author
+  name: Alain C
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Le T
+- authtype: Author
+  name: Lin V
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2025 Jun 25
+fulljournalname: PLOS One
+issue: '6'
+pages: e0325930
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2025 Jun 25
+sortdate: 2025/06/25 00:00
+source: PLoS One
+title: Effects of age on the neural correlates of auditory working memory in cochlear
+  implant users
+uid: '12194263'
+volume: '20'

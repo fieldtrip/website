@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40569931'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003185
+- idtype: pmcid
+  value: PMC12200826
+authors:
+- authtype: Author
+  name: Löwe AT
+- authtype: Author
+  name: Petzka M
+- authtype: Author
+  name: Tzegka MM
+- authtype: Author
+  name: Schuck NW
+epubdate: 2025 Jun 26
+fulljournalname: PLOS Biology
+issue: '6'
+pages: e3003185
+pmclivedate: 2025/06/26
+printpubdate: ''
+pubdate: 2025 Jun 26
+sortdate: 2025/06/26 00:00
+source: PLoS Biol
+title: N2 sleep promotes the occurrence of ‘aha’ moments in a perceptual insight task
+uid: '12200826'
+volume: '23'

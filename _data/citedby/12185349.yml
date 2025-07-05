@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '39809847'
+- idtype: doi
+  value: 10.1038/s41380-025-02889-2
+- idtype: pmcid
+  value: PMC12185349
+authors:
+- authtype: Author
+  name: Agnorelli C
+- authtype: Author
+  name: Cinti A
+- authtype: Author
+  name: Barillà G
+- authtype: Author
+  name: Lomi F
+- authtype: Author
+  name: Scoccia A
+- authtype: Author
+  name: Benelli A
+- authtype: Author
+  name: Neri F
+- authtype: Author
+  name: Smeralda CL
+- authtype: Author
+  name: Cuomo A
+- authtype: Author
+  name: Santarnecchi E
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Godfrey K
+- authtype: Author
+  name: Tarantino F
+- authtype: Author
+  name: Fagiolini A
+- authtype: Author
+  name: Rossi S
+epubdate: 2025 Jan 14
+fulljournalname: Molecular Psychiatry
+issue: '7'
+pages: 2848-2859
+pmclivedate: 2025/06/25
+printpubdate: '2025'
+pubdate: 2025 Jan 14
+sortdate: 2025/01/14 00:00
+source: Mol Psychiatry
+title: 'Neurophysiological correlates of ketamine-induced dissociative state in bipolar
+  disorder: insights from real-world clinical settings'
+uid: '12185349'
+volume: '30'

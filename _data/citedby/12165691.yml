@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '40511786'
+- idtype: doi
+  value: 10.7554/eLife.90387
+- idtype: pmcid
+  value: PMC12165691
+authors:
+- authtype: Author
+  name: Yuasa K
+- authtype: Author
+  name: Groen II
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Montenegro S
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Petridou N
+- authtype: Author
+  name: Winawer J
+epubdate: 2025 Jun 13
+fulljournalname: eLife
+issue: ''
+pages: RP90387
+pmclivedate: 2025/06/13
+printpubdate: ''
+pubdate: 2025 Jun 13
+sortdate: 2025/06/13 00:00
+source: eLife
+title: Precise spatial tuning of visually driven alpha oscillations in human visual
+  cortex
+uid: '12165691'
+volume: '12'

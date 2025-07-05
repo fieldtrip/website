@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40568389'
+- idtype: doi
+  value: 10.1016/j.ynirp.2024.100204
+- idtype: pmcid
+  value: PMC12172863
+authors:
+- authtype: Author
+  name: Tyner K
+- authtype: Author
+  name: McCumber M
+- authtype: Author
+  name: Das S
+- authtype: Author
+  name: Urban C
+- authtype: Author
+  name: Maxin AJ
+- authtype: Author
+  name: Chu T
+- authtype: Author
+  name: Alfatlawi M
+- authtype: Author
+  name: Gliske SV
+epubdate: 2024 May 9
+fulljournalname: 'Neuroimage: Reports'
+issue: '2'
+pages: '100204'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2024 May 9
+sortdate: 2024/05/09 00:00
+source: Neuroimage Rep
+title: Post-processing of a distributed source method for the localization of somatosensory
+  cortex in a cohort of epilepsy patients
+uid: '12172863'
+volume: '4'

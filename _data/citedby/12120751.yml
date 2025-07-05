@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40211612'
+- idtype: doi
+  value: 10.1002/advs.202413195
+- idtype: pmcid
+  value: PMC12120751
+authors:
+- authtype: Author
+  name: Rosso M
+- authtype: Author
+  name: Fernández‐Rubio G
+- authtype: Author
+  name: Keller PE
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Bonetti L
+epubdate: 2025 Apr 10
+fulljournalname: Advanced Science
+issue: '20'
+pages: '2413195'
+pmclivedate: 2025/05/30
+printpubdate: ''
+pubdate: 2025 Apr 10
+sortdate: 2025/04/10 00:00
+source: Adv Sci (Weinh)
+title: FREQ‐NESS Reveals the Dynamic Reconfiguration of Frequency‐Resolved Brain Networks
+  During Auditory Stimulation
+uid: '12120751'
+volume: '12'

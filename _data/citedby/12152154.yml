@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40494859'
+- idtype: doi
+  value: 10.1038/s41531-025-01024-w
+- idtype: pmcid
+  value: PMC12152154
+authors:
+- authtype: Author
+  name: Agouram H
+- authtype: Author
+  name: Neri M
+- authtype: Author
+  name: Angiolelli M
+- authtype: Author
+  name: Depannemaecker D
+- authtype: Author
+  name: Bahuguna J
+- authtype: Author
+  name: Schwey A
+- authtype: Author
+  name: Régis J
+- authtype: Author
+  name: Carron R
+- authtype: Author
+  name: Malfait N
+- authtype: Author
+  name: Eusebio A
+- authtype: Author
+  name: Daucé E
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2025 Jun 10
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '158'
+pmclivedate: 2025/06/11
+printpubdate: ''
+pubdate: 2025 Jun 10
+sortdate: 2025/06/10 00:00
+source: NPJ Parkinsons Dis
+title: L-Dopa-induced changes in aperiodic bursts dynamics relate to individual clinical
+  improvement in Parkinson’s disease
+uid: '12152154'
+volume: '11'

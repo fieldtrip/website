@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40567303'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100102
+- idtype: pmcid
+  value: PMC12172878
+authors:
+- authtype: Author
+  name: Townsend B
+- authtype: Author
+  name: Legere JK
+- authtype: Author
+  name: Mohrenschildt MV
+- authtype: Author
+  name: Shedden JM
+epubdate: 2022 May 28
+fulljournalname: 'Neuroimage: Reports'
+issue: '3'
+pages: '100102'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 May 28
+sortdate: 2022/05/28 00:00
+source: Neuroimage Rep
+title: Beta-band power is an index of multisensory weighting during self-motion perception
+uid: '12172878'
+volume: '2'

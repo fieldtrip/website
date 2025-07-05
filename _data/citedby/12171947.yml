@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40525307'
+- idtype: doi
+  value: 10.1111/ejn.70166
+- idtype: pmcid
+  value: PMC12171947
+authors:
+- authtype: Author
+  name: Costa M
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Bonetti L
+epubdate: 2025 Jun 17
+fulljournalname: The European Journal of Neuroscience
+issue: '12'
+pages: e70166
+pmclivedate: 2025/06/18
+printpubdate: 2025 Jun
+pubdate: 2025 Jun 17
+sortdate: 2025/06/17 00:00
+source: Eur J Neurosci
+title: EEG Correlates of Auditory Short‐Term Memory and Dissimilarity Perception in
+  Young and Older Adults
+uid: '12171947'
+volume: '61'

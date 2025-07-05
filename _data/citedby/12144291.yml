@@ -1,0 +1,268 @@
+articleids:
+- idtype: pmid
+  value: '40480970'
+- idtype: doi
+  value: 10.1038/s41537-025-00622-0
+- idtype: pmcid
+  value: PMC12144291
+authors:
+- authtype: Author
+  name: Mathalon DH
+- authtype: Author
+  name: Nicholas S
+- authtype: Author
+  name: Roach BJ
+- authtype: Author
+  name: Billah T
+- authtype: Author
+  name: Lavoie S
+- authtype: Author
+  name: Whitford T
+- authtype: Author
+  name: Hamilton HK
+- authtype: Author
+  name: Addamo L
+- authtype: Author
+  name: Anohkin A
+- authtype: Author
+  name: Bekinschtein T
+- authtype: Author
+  name: Belger A
+- authtype: Author
+  name: Buccilli K
+- authtype: Author
+  name: Cahill J
+- authtype: Author
+  name: Carrión RE
+- authtype: Author
+  name: Damiani S
+- authtype: Author
+  name: Dzafic I
+- authtype: Author
+  name: Ebdrup BH
+- authtype: Author
+  name: Izyurov I
+- authtype: Author
+  name: Jarcho J
+- authtype: Author
+  name: Jenni R
+- authtype: Author
+  name: Jo A
+- authtype: Author
+  name: Kerins S
+- authtype: Author
+  name: Lee C
+- authtype: Author
+  name: Martin EA
+- authtype: Author
+  name: Mayol-Troncoso R
+- authtype: Author
+  name: Niznikiewicz MA
+- authtype: Author
+  name: Parvaz M
+- authtype: Author
+  name: Pogarell O
+- authtype: Author
+  name: Prieto-Montalvo J
+- authtype: Author
+  name: Rabin R
+- authtype: Author
+  name: Roalf DR
+- authtype: Author
+  name: Rogers J
+- authtype: Author
+  name: Salisbury DF
+- authtype: Author
+  name: Shaik R
+- authtype: Author
+  name: Shankman S
+- authtype: Author
+  name: Stevens MC
+- authtype: Author
+  name: Suen YN
+- authtype: Author
+  name: Swann NC
+- authtype: Author
+  name: Tang X
+- authtype: Author
+  name: Thompson JL
+- authtype: Author
+  name: Tso I
+- authtype: Author
+  name: Wenzel J
+- authtype: Author
+  name: Zhou JH
+- authtype: Author
+  name: Addington J
+- authtype: Author
+  name: Alameda L
+- authtype: Author
+  name: Arango C
+- authtype: Author
+  name: Breitborde NJ
+- authtype: Author
+  name: Broome MR
+- authtype: Author
+  name: Cadenhead KS
+- authtype: Author
+  name: Calkins ME
+- authtype: Author
+  name: Castillo-Passi RI
+- authtype: Author
+  name: Chen EY
+- authtype: Author
+  name: Choi J
+- authtype: Author
+  name: Conus P
+- authtype: Author
+  name: Corcoran CM
+- authtype: Author
+  name: Cornblatt BA
+- authtype: Author
+  name: Diaz-Caneja CM
+- authtype: Author
+  name: Ellman LM
+- authtype: Author
+  name: Fusar-Poli P
+- authtype: Author
+  name: Gaspar PA
+- authtype: Author
+  name: Gerber C
+- authtype: Author
+  name: Glenthøj LB
+- authtype: Author
+  name: Horton LE
+- authtype: Author
+  name: Hui CL
+- authtype: Author
+  name: Kambeitz J
+- authtype: Author
+  name: Kambeitz-Ilankovic L
+- authtype: Author
+  name: Keshavan MS
+- authtype: Author
+  name: Kim M
+- authtype: Author
+  name: Kim SW
+- authtype: Author
+  name: Koutsouleris N
+- authtype: Author
+  name: Kwon JS
+- authtype: Author
+  name: Langbein K
+- authtype: Author
+  name: Mamah D
+- authtype: Author
+  name: Mittal VA
+- authtype: Author
+  name: Nordentoft M
+- authtype: Author
+  name: Pearlson GD
+- authtype: Author
+  name: Perez J
+- authtype: Author
+  name: Perkins DO
+- authtype: Author
+  name: Powers AR
+- authtype: Author
+  name: Sabb FW
+- authtype: Author
+  name: Schiffman J
+- authtype: Author
+  name: Shah JL
+- authtype: Author
+  name: Silverstein SM
+- authtype: Author
+  name: Smesny S
+- authtype: Author
+  name: Stone WS
+- authtype: Author
+  name: Strauss GP
+- authtype: Author
+  name: Upthegrove R
+- authtype: Author
+  name: Verma SK
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Wolf DH
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Bouix S
+- authtype: Author
+  name: Pasternak O
+- authtype: Author
+  name: Cho KI
+- authtype: Author
+  name: Coleman MJ
+- authtype: Author
+  name: Dwyer D
+- authtype: Author
+  name: Nunez A
+- authtype: Author
+  name: Tamayo Z
+- authtype: Author
+  name: Wood SJ
+- authtype: Author
+  name: Kahn RS
+- authtype: Author
+  name: Kane JM
+- authtype: Author
+  name: McGorry PD
+- authtype: Author
+  name: Bearden CE
+- authtype: Author
+  name: Nelson B
+- authtype: Author
+  name: Woods SW
+- authtype: Author
+  name: Shenton ME
+- authtype: CollectiveName
+  name: Accelerating Medicines Partnership® Schizophrenia Programhttp://orcid.org/0000-0001-6090-4974MathalonDaniel
+    H.DHdaniel.mathalon@ucsf.edu12NicholasSperoS23http://orcid.org/0000-0002-3264-1465RoachBrian
+    J.BJ23BillahTashrifT4http://orcid.org/0000-0001-8372-2399LavoieSuzieS56WhitfordThomasT57http://orcid.org/0000-0002-4058-0949HamiltonHolly
+    K.HK18AddamoLaurenL56AnohkinAndreyA9BekinschteinTristanT10http://orcid.org/0000-0003-2687-1966BelgerAysenilA1112BuccilliKateK56CahillJohnJ13http://orcid.org/0000-0002-6393-392XCarriónRicardo
+    E.RE1415http://orcid.org/0000-0002-5235-0788DamianiStefanoS16DzaficIlvanaI56EbdrupBjørn
+    H.BH1718IzyurovIgorI19JarchoJohannaJ20http://orcid.org/0000-0001-6479-5381JenniRaoulR21http://orcid.org/0000-0002-9820-5826JoAnnaA22KerinsSarahS23LeeClariceC56http://orcid.org/0000-0001-8893-1667MartinElizabeth
+    A.EA24http://orcid.org/0000-0002-6421-8768Mayol-TroncosoRocioR2526http://orcid.org/0000-0003-3191-2005NiznikiewiczMargaret
+    A.MA2728ParvazMuhammadM2930http://orcid.org/0000-0001-6455-4190PogarellOliverO31http://orcid.org/0000-0001-7711-0601Prieto-MontalvoJulioJ32http://orcid.org/0000-0002-6530-0288RabinRachelR3334RoalfDavid
+    R.DR35RogersJackJ3637SalisburyDean F.DF38ShaikRiazR29http://orcid.org/0000-0002-8097-4483ShankmanStewartS39StevensMichael
+    C.MC1340SuenYi NamYN41SwannNicole C.NC42http://orcid.org/0000-0003-3796-7111TangXiaochenX43ThompsonJudy
+    L.JL44http://orcid.org/0000-0002-0984-1186TsoIvyI45http://orcid.org/0000-0002-3657-4263WenzelJulianJ46http://orcid.org/0000-0002-0180-8648ZhouJuan
+    HelenJH4748http://orcid.org/0000-0002-8298-0756AddingtonJeanJ49http://orcid.org/0000-0002-8621-2885AlamedaLuisL5051http://orcid.org/0000-0003-3382-4754ArangoCelsoC32BreitbordeNicholas
+    J. K.NJ45http://orcid.org/0000-0002-6963-8884BroomeMatthew R.MR3652http://orcid.org/0000-0002-5952-4605CadenheadKristin
+    S.KS53CalkinsMonica E.ME35http://orcid.org/0000-0002-9446-074XCastillo-PassiRolando
+    I.RI2554http://orcid.org/0000-0002-5247-3593ChenEric Yu HaiEY55ChoiJimmyJ40ConusPhilippeP50http://orcid.org/0000-0002-8902-4353CorcoranCheryl
+    M.CM29CornblattBarbara A.BA1415http://orcid.org/0000-0001-8538-3175Diaz-CanejaCovadonga
+    M.CM32EllmanLauren M.LM20Fusar-PoliPaoloP1651http://orcid.org/0000-0002-9682-5327GasparPablo
+    A.PA25GerberCarlaC5657GlenthøjLouise BirkedalLB5859HortonLeslie E.LE38HuiChristy
+    Lai MingCL55http://orcid.org/0000-0002-8988-3959KambeitzJosephJ46Kambeitz-IlankovicLanaL3146KeshavanMatcheri
+    S.MS60http://orcid.org/0000-0001-8668-0817KimMinahM6162http://orcid.org/0000-0002-6739-2163KimSung-WanSW2263http://orcid.org/0000-0001-6825-6262KoutsoulerisNikolaosN3151http://orcid.org/0000-0002-1060-1462KwonJun
+    SooJS64LangbeinKerstinK19MamahDanielD65http://orcid.org/0000-0001-9017-5119MittalVijay
+    A.VA66NordentoftMereteM1858PearlsonGodfrey D.GD1367PerezJesusJ6869http://orcid.org/0000-0001-9396-2206PerkinsDiana
+    O.DO11http://orcid.org/0000-0003-3057-5043PowersAlbert R.AR1370SabbFred W.FW56SchiffmanJasonJ24http://orcid.org/0000-0002-7549-6990ShahJai
+    L.JL3471http://orcid.org/0000-0002-0699-0960SilversteinSteven M.SM44SmesnyStefanS19http://orcid.org/0000-0003-2932-7288StoneWilliam
+    S.WS60StraussGregory P.GP72http://orcid.org/0000-0001-8204-5103UpthegroveRachelR3673VermaSwapna
+    K.SK7475http://orcid.org/0000-0001-5427-7425WangJijunJ43http://orcid.org/0000-0002-9731-8781WolfDaniel
+    H.DH35http://orcid.org/0000-0002-5379-7119ZhangTianhongT43http://orcid.org/0000-0003-1326-6054BouixSylvainS76PasternakOferO477http://orcid.org/0000-0001-7135-3848ChoKang-Ik
+    K.KI4ColemanMichael J.MJ4http://orcid.org/0000-0003-3949-5867DwyerDominicD56NunezAngelaA1370TamayoZailynZ13http://orcid.org/0000-0003-4186-5919WoodStephen
+    J.SJ56http://orcid.org/0000-0001-5909-8004KahnRene S.RS29KaneJohn M.JM1415McGorryPatrick
+    D.PD56http://orcid.org/0000-0002-8516-923XBeardenCarrie E.CE2478NelsonBarnabyB56http://orcid.org/0000-0002-3103-5228WoodsScott
+    W.SW1370http://orcid.org/0000-0003-4235-7879ShentonMartha E.ME47779LightGregory
+    A.GA5380
+- authtype: Author
+  name: Light GA
+epubdate: 2025 Jun 6
+fulljournalname: Schizophrenia
+issue: '1'
+pages: '85'
+pmclivedate: 2025/06/07
+printpubdate: ''
+pubdate: 2025 Jun 6
+sortdate: 2025/06/06 00:00
+source: Schizophrenia (Heidelb)
+title: 'The electroencephalography protocol for the Accelerating Medicines Partnership®
+  Schizophrenia Program: Reliability and stability of measures'
+uid: '12144291'
+volume: '11'

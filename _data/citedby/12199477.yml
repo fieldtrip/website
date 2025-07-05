@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37494185'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112865
+- idtype: pmcid
+  value: PMC12199477
+- idtype: MID
+  value: NIHMS2035417
+authors:
+- authtype: Author
+  name: Marciano D
+- authtype: Author
+  name: Staveland BR
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Hsu M
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Jul 28
+fulljournalname: Cell reports
+issue: '8'
+pages: '112865'
+pmclivedate: 2025/06/26
+printpubdate: 2023 Aug 29
+pubdate: 2023 Jul 28
+sortdate: 2023/07/28 00:00
+source: Cell Rep
+title: Electrophysiological signatures of inequity-dependent reward encoding in the
+  human OFC
+uid: '12199477'
+volume: '42'
