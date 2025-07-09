@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '40202094'
+- idtype: doi
+  value: 10.1002/mds.30134
+- idtype: pmcid
+  value: PMC12160966
+authors:
+- authtype: Author
+  name: Lamoš M
+- authtype: Author
+  name: Bočková M
+- authtype: Author
+  name: Missey F
+- authtype: Author
+  name: Lubrano C
+- authtype: Author
+  name: de Araújo e Silva M
+- authtype: Author
+  name: Trajlínek J
+- authtype: Author
+  name: Studnička O
+- authtype: Author
+  name: Daniel P
+- authtype: Author
+  name: Carron R
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Chrastina J
+- authtype: Author
+  name: Jančálek R
+- authtype: Author
+  name: Glowacki ED
+- authtype: Author
+  name: Cassara A
+- authtype: Author
+  name: Neufeld E
+- authtype: Author
+  name: Rektorová I
+- authtype: Author
+  name: Williamson A
+epubdate: 2025 Apr 9
+fulljournalname: Movement Disorders
+issue: '6'
+pages: 1051-1060
+pmclivedate: 2025/06/13
+printpubdate: 2025 Jun
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: Mov Disord
+title: Noninvasive Temporal Interference Stimulation of the Subthalamic Nucleus in
+  Parkinson's Disease Reduces Beta Activity
+uid: '12160966'
+volume: '40'

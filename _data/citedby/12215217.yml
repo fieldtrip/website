@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39724862'
+- idtype: doi
+  value: 10.1111/jsr.14439
+- idtype: pmcid
+  value: PMC12215217
+authors:
+- authtype: Author
+  name: Rosenblum Y
+- authtype: Author
+  name: Bogdány T
+- authtype: Author
+  name: Nádasy LB
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Kovács I
+- authtype: Author
+  name: Gombos F
+- authtype: Author
+  name: Ujma P
+- authtype: Author
+  name: Bódizs R
+- authtype: Author
+  name: Adelhöfer N
+- authtype: Author
+  name: Simor P
+- authtype: Author
+  name: Dresler M
+epubdate: 2024 Dec 26
+fulljournalname: Journal of Sleep Research
+issue: '4'
+pages: e14439
+pmclivedate: 2025/07/03
+printpubdate: 2025 Aug
+pubdate: 2024 Dec 26
+sortdate: 2024/12/26 00:00
+source: J Sleep Res
+title: Aperiodic neural activity distinguishes between phasic and tonic REM sleep
+uid: '12215217'
+volume: '34'

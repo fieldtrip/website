@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40568458'
+- idtype: doi
+  value: 10.1016/j.ynirp.2023.100169
+- idtype: pmcid
+  value: PMC12172740
+authors:
+- authtype: Author
+  name: Kabbara A
+- authtype: Author
+  name: Forde N
+- authtype: Author
+  name: Maumet C
+- authtype: Author
+  name: Hassan M
+epubdate: 2023 May 27
+fulljournalname: 'Neuroimage: Reports'
+issue: '2'
+pages: '100169'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2023 May 27
+sortdate: 2023/05/27 00:00
+source: Neuroimage Rep
+title: Successful reproduction of a large EEG study across software packages
+uid: '12172740'
+volume: '3'

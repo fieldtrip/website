@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40610479'
+- idtype: doi
+  value: 10.1038/s41598-025-07644-9
+- idtype: pmcid
+  value: PMC12229605
+authors:
+- authtype: Author
+  name: Castellotti S
+- authtype: Author
+  name: Mazzotta G
+- authtype: Author
+  name: Benedetto A
+- authtype: Author
+  name: Del Viva MM
+epubdate: 2025 Jul 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '23794'
+pmclivedate: 2025/07/06
+printpubdate: ''
+pubdate: 2025 Jul 3
+sortdate: 2025/07/03 00:00
+source: Sci Rep
+title: Optimal feature encoding in early vision
+uid: '12229605'
+volume: '15'

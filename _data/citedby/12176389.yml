@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40530959'
+- idtype: doi
+  value: 10.7554/eLife.100530
+- idtype: pmcid
+  value: PMC12176389
+authors:
+- authtype: Author
+  name: Noorman S
+- authtype: Author
+  name: Stein T
+- authtype: Author
+  name: Zantvoord J
+- authtype: Author
+  name: Fahrenfort J
+- authtype: Author
+  name: van Gaal S
+epubdate: 2025 Jun 18
+fulljournalname: eLife
+issue: ''
+pages: RP100530
+pmclivedate: 2025/06/18
+printpubdate: ''
+pubdate: 2025 Jun 18
+sortdate: 2025/06/18 00:00
+source: eLife
+title: A causal role of the NMDA receptor in recurrent processing during perceptual
+  integration
+uid: '12176389'
+volume: '13'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40470814'
+- idtype: doi
+  value: 10.7554/eLife.101769
+- idtype: pmcid
+  value: PMC12140627
+authors:
+- authtype: Author
+  name: Winkler L
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Sharma A
+- authtype: Author
+  name: Vesper J
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Hirschmann J
+epubdate: 2025 Jun 5
+fulljournalname: eLife
+issue: ''
+pages: RP101769
+pmclivedate: 2025/06/05
+printpubdate: ''
+pubdate: 2025 Jun 5
+sortdate: 2025/06/05 00:00
+source: eLife
+title: Context-dependent modulations of subthalamo-cortical synchronization during
+  rapid reversals of movement direction in Parkinson’s disease
+uid: '12140627'
+volume: '13'

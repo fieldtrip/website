@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40095677'
+- idtype: doi
+  value: 10.1177/13872877251317489
+- idtype: pmcid
+  value: PMC12231819
+authors:
+- authtype: Author
+  name: Dzianok P
+- authtype: Author
+  name: Wojciechowski J
+- authtype: Author
+  name: Wolak T
+- authtype: Author
+  name: Kublik E
+epubdate: 2025 Mar 17
+fulljournalname: Journal of Alzheimer's Disease
+issue: '2'
+pages: 509-524
+pmclivedate: 2025/07/07
+printpubdate: ''
+pubdate: 2025 Mar 17
+sortdate: 2025/03/17 00:00
+source: J Alzheimers Dis
+title: Alzheimer's disease-like features in resting state EEG/fMRI of cognitively
+  intact and healthy middle-aged  APOE/PICALM risk carriers
+uid: '12231819'
+volume: '104'
