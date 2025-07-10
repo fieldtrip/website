@@ -63,7 +63,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/artifact_padding)
 - [How does the filter padding in preprocessing work?](/faq/preproc_padding)
 - [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/dftfilter_residual)
-- [Why does my ICA eyeblink component look strange?](/faq/preproc/artifact/ica_eyeblinktopo)
+- [Why does my ICA eyeblink component look strange?](/faq/ica_eyeblinktopo)
 
 ## Spectral analysis
 
