@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '40514676'
+- idtype: doi
+  value: 10.1186/s12931-025-03296-5
+- idtype: pmcid
+  value: PMC12164151
+authors:
+- authtype: Author
+  name: Harshman SW
+- authtype: Author
+  name: Weatherbie KJ
+- authtype: Author
+  name: Veigl AR
+- authtype: Author
+  name: Jung AE
+- authtype: Author
+  name: Stoner-Dixon MA
+- authtype: Author
+  name: Dash AI
+- authtype: Author
+  name: Land CJ
+- authtype: Author
+  name: Slizewski DT
+- authtype: Author
+  name: Kelley EF
+- authtype: Author
+  name: Schwanekamp-Kerr J
+- authtype: Author
+  name: Halverson T
+- authtype: Author
+  name: Davidson CN
+- authtype: Author
+  name: Myers CW
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: Martin JA
+- authtype: Author
+  name: Pitsch RL
+epubdate: 2025 Jun 13
+fulljournalname: Respiratory Research
+issue: ''
+pages: '215'
+pmclivedate: 2025/06/13
+printpubdate: '2025'
+pubdate: 2025 Jun 13
+sortdate: 2025/06/13 00:00
+source: Respir Res
+title: Estimating hypoxia-induced brain dysfunction and cognitive decline through
+  exhaled breath monitoring
+uid: '12164151'
+volume: '26'

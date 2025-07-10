@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40539497'
+- idtype: doi
+  value: 10.1111/ejn.70157
+- idtype: pmcid
+  value: PMC12180115
+authors:
+- authtype: Author
+  name: Martín CG
+- authtype: Author
+  name: Blanco SM
+- authtype: Author
+  name: Sánchez MD
+- authtype: Author
+  name: García SF
+- authtype: Author
+  name: del Corral GS
+- authtype: Author
+  name: del Río SP
+- authtype: Author
+  name: Moratti S
+epubdate: 2025 Jun 20
+fulljournalname: The European Journal of Neuroscience
+issue: '12'
+pages: e70157
+pmclivedate: 2025/06/21
+printpubdate: 2025 Jun
+pubdate: 2025 Jun 20
+sortdate: 2025/06/20 00:00
+source: Eur J Neurosci
+title: 'How Orienting and Defence Drives Oscillatory Responses in Human Visual and
+  Motor Cortical Circuits During Viewing of Threat Pictures: Evidence From ssVEPs
+  and Beta‐Band Desynchronization'
+uid: '12180115'
+volume: '61'

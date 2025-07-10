@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40596140'
+- idtype: doi
+  value: 10.1038/s41598-025-06037-2
+- idtype: pmcid
+  value: PMC12218133
+authors:
+- authtype: Author
+  name: Rubianes M
+- authtype: Author
+  name: Jiménez-Ortega L
+- authtype: Author
+  name: Muñoz F
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Almeida-Rivera T
+- authtype: Author
+  name: Sánchez-García J
+- authtype: Author
+  name: Fondevila S
+- authtype: Author
+  name: Casado P
+- authtype: Author
+  name: Martín-Loeches M
+epubdate: 2025 Jul 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20449'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Sci Rep
+title: Effects of subliminal emotional facial expressions on language comprehension
+  as revealed by event-related brain potentials
+uid: '12218133'
+volume: '15'

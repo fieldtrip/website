@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '40442130'
+- idtype: doi
+  value: 10.1038/s41598-025-02956-2
+- idtype: pmcid
+  value: PMC12122784
+authors:
+- authtype: Author
+  name: Marquetand J
+- authtype: Author
+  name: Noury N
+- authtype: Author
+  name: Lu H
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Sorrentino CM
+- authtype: Author
+  name: Rüttiger L
+- authtype: Author
+  name: Knipper M
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Löwenheim H
+- authtype: Author
+  name: von Fraunberg J
+- authtype: Author
+  name: Tropitzsch A
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Wolpert S
+epubdate: 2025 May 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18900'
+pmclivedate: 2025/05/30
+printpubdate: ''
+pubdate: 2025 May 29
+sortdate: 2025/05/29 00:00
+source: Sci Rep
+title: Phonation differentiation by non-contact laryngeal magnetomyography
+uid: '12122784'
+volume: '15'

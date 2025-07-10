@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40567564'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100148
+- idtype: pmcid
+  value: PMC12172717
+authors:
+- authtype: Author
+  name: Winward SB
+- authtype: Author
+  name: Siklos-Whillans J
+- authtype: Author
+  name: Itier RJ
+epubdate: 2022 Dec 5
+fulljournalname: 'Neuroimage: Reports'
+issue: '4'
+pages: '100148'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Dec 5
+sortdate: 2022/12/05 00:00
+source: Neuroimage Rep
+title: 'Impact of face outline, parafoveal feature number and feature type on early
+  face perception in a gaze-contingent paradigm: A mass-univariate re-analysis of
+  ERP data'
+uid: '12172717'
+volume: '2'

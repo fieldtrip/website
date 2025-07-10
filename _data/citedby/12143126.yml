@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40423242'
+- idtype: doi
+  value: 10.1093/ijnp/pyaf031
+- idtype: pmcid
+  value: PMC12143126
+authors:
+- authtype: Author
+  name: Mayer J
+- authtype: Author
+  name: Helin Koyun A
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2025 May 27
+fulljournalname: International Journal of Neuropsychopharmacology
+issue: '6'
+pages: pyaf031
+pmclivedate: 2025/06/07
+printpubdate: ''
+pubdate: 2025 May 27
+sortdate: 2025/05/27 00:00
+source: Int J Neuropsychopharmacol
+title: Pharmacological modulation of directed network communication and neural hubs
+  in action–effect integration
+uid: '12143126'
+volume: '28'

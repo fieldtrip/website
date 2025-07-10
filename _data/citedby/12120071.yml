@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '40436963'
+- idtype: doi
+  value: 10.1038/s41598-025-01449-6
+- idtype: pmcid
+  value: PMC12120071
+authors:
+- authtype: Author
+  name: Lasica A
+- authtype: Author
+  name: Filip P
+- authtype: Author
+  name: Burdová K
+- authtype: Author
+  name: Mana J
+- authtype: Author
+  name: Růžička F
+- authtype: Author
+  name: Urgošík D
+- authtype: Author
+  name: Mueller K
+- authtype: Author
+  name: Kiakou D
+- authtype: Author
+  name: Jech R
+epubdate: 2025 May 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18652'
+pmclivedate: 2025/05/29
+printpubdate: ''
+pubdate: 2025 May 28
+sortdate: 2025/05/28 00:00
+source: Sci Rep
+title: Precision of post-operative localization of deep brain stimulation electrodes
+uid: '12120071'
+volume: '15'

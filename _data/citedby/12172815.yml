@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40568044'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100077
+- idtype: pmcid
+  value: PMC12172815
+authors:
+- authtype: Author
+  name: Nikolin S
+- authtype: Author
+  name: Chand N
+- authtype: Author
+  name: Martin D
+- authtype: Author
+  name: Rushby J
+- authtype: Author
+  name: Loo CK
+- authtype: Author
+  name: Boonstra TW
+epubdate: 2022 Jan 17
+fulljournalname: 'Neuroimage: Reports'
+issue: '1'
+pages: '100077'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Jan 17
+sortdate: 2022/01/17 00:00
+source: Neuroimage Rep
+title: Little evidence for a reduced late positive potential to unpleasant stimuli
+  in major depressive disorder
+uid: '12172815'
+volume: '2'

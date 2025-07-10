@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40567560'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100145
+- idtype: pmcid
+  value: PMC12172885
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Kliuchko M
+- authtype: Author
+  name: Gold BP
+- authtype: Author
+  name: Palva S
+- authtype: Author
+  name: Haumann NT
+- authtype: Author
+  name: Tervaniemi M
+- authtype: Author
+  name: Huotilainen M
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Brattico E
+epubdate: 2022 Nov 8
+fulljournalname: 'Neuroimage: Reports'
+issue: '4'
+pages: '100145'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Nov 8
+sortdate: 2022/11/08 00:00
+source: Neuroimage Rep
+title: 'Whole-brain computation of cognitive versus acoustic errors in music: A mismatch
+  negativity study'
+uid: '12172885'
+volume: '2'

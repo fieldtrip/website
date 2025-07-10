@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40568046'
+- idtype: doi
+  value: 10.1016/j.ynirp.2021.100075
+- idtype: pmcid
+  value: PMC12172858
+authors:
+- authtype: Author
+  name: Nijhuis P
+- authtype: Author
+  name: Keller PE
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Varlet M
+epubdate: 2022 Jan 17
+fulljournalname: 'Neuroimage: Reports'
+issue: '1'
+pages: '100075'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Jan 17
+sortdate: 2022/01/17 00:00
+source: Neuroimage Rep
+title: Null effects of musical groove on cortico-muscular coherence during isometric
+  contraction
+uid: '12172858'
+volume: '2'

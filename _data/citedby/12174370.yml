@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40527877'
+- idtype: doi
+  value: 10.1038/s41597-025-05187-2
+- idtype: pmcid
+  value: PMC12174370
+authors:
+- authtype: Author
+  name: Moreira JP
+- authtype: Author
+  name: Carvalho VR
+- authtype: Author
+  name: Mendes EM
+- authtype: Author
+  name: Fallah A
+- authtype: Author
+  name: Sejnowski TJ
+- authtype: Author
+  name: Lainscsek C
+- authtype: Author
+  name: Comstock L
+epubdate: 2025 Jun 17
+fulljournalname: Scientific Data
+issue: ''
+pages: '1017'
+pmclivedate: 2025/06/18
+printpubdate: ''
+pubdate: 2025 Jun 17
+sortdate: 2025/06/17 00:00
+source: Sci Data
+title: 'An open-access EEG dataset for speech decoding: Exploring the role of articulation
+  and coarticulation'
+uid: '12174370'
+volume: '12'

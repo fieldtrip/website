@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40398609'
+- idtype: doi
+  value: 10.1016/j.jad.2025.119448
+- idtype: pmcid
+  value: PMC12172513
+- idtype: MID
+  value: NIHMS2084605
+authors:
+- authtype: Author
+  name: Kheirkhah M
+- authtype: Author
+  name: Hejazi NS
+- authtype: Author
+  name: Nugent AC
+- authtype: Author
+  name: Gilbert JR
+- authtype: Author
+  name: Leistritz L
+- authtype: Author
+  name: Walter M
+- authtype: Author
+  name: Duncan WC Jr
+- authtype: Author
+  name: Goldman D
+- authtype: Author
+  name: Zarate CA Jr
+epubdate: 2025 May 19
+fulljournalname: Journal of affective disorders
+issue: ''
+pages: '119448'
+pmclivedate: ''
+printpubdate: 2025 Sep 15
+pubdate: 2025 May 19
+sortdate: 2025/05/19 00:00
+source: J Affect Disord
+title: Exploring the Link Between Waking Gamma and Sleep Delta Power in Healthy Volunteers
+  and Individuals with Treatment-Resistant Depression
+uid: '12172513'
+volume: '385'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40247672'
+- idtype: doi
+  value: 10.1002/aur.70042
+- idtype: pmcid
+  value: PMC12166514
+authors:
+- authtype: Author
+  name: Matyjek M
+- authtype: Author
+  name: Kita S
+- authtype: Author
+  name: Cuello MT
+- authtype: Author
+  name: Faraco SS
+epubdate: 2025 Apr 17
+fulljournalname: Autism Research
+issue: '6'
+pages: 1156-1169
+pmclivedate: 2025/06/15
+printpubdate: 2025 Jun
+pubdate: 2025 Apr 17
+sortdate: 2025/04/17 00:00
+source: Autism Res
+title: Multisensory Integration of Naturalistic Speech and Gestures in Autistic Adults
+uid: '12166514'
+volume: '18'

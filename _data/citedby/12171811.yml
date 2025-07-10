@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40465456'
+- idtype: doi
+  value: 10.1016/j.xpro.2025.103870
+- idtype: pmcid
+  value: PMC12171811
+authors:
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Hasegawa I
+- authtype: Author
+  name: Tanigawa H
+epubdate: 2025 Jun 3
+fulljournalname: STAR Protocols
+issue: '2'
+pages: '103870'
+pmclivedate: 2025/06/17
+printpubdate: ''
+pubdate: 2025 Jun 3
+sortdate: 2025/06/03 00:00
+source: STAR Protoc
+title: Protocol for assisting frequency band definition and decoding neural dynamics
+  using hierarchical clustering and multivariate pattern analysis
+uid: '12171811'
+volume: '6'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39821802'
+- idtype: doi
+  value: 10.1007/s11357-025-01522-y
+- idtype: pmcid
+  value: PMC12181510
+authors:
+- authtype: Author
+  name: Ustinin M
+- authtype: Author
+  name: Boyko A
+- authtype: Author
+  name: Rykunov S
+epubdate: 2025 Jan 17
+fulljournalname: GeroScience
+issue: '3'
+pages: 4093-4108
+pmclivedate: 2025/06/22
+printpubdate: ''
+pubdate: 2025 Jan 17
+sortdate: 2025/01/17 00:00
+source: GeroScience
+title: Healthy aging changes in conventional frequency bands of neuroelectric brain
+  activity reconstructed from resting-state MEG
+uid: '12181510'
+volume: '47'

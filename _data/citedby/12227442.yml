@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40620538'
+- idtype: doi
+  value: 10.1177/09727531251346432
+- idtype: pmcid
+  value: PMC12227442
+authors:
+- authtype: Author
+  name: Brahmi M
+- authtype: Author
+  name: Jain H
+- authtype: Author
+  name: Swami Sahni P
+- authtype: Author
+  name: Sharma G
+- authtype: Author
+  name: Soni D
+- authtype: Author
+  name: Kumar J
+epubdate: 2025 Jul 4
+fulljournalname: Annals of Neurosciences
+issue: ''
+pages: 09727531251346432
+pmclivedate: 2025/07/05
+printpubdate: ''
+pubdate: 2025 Jul 4
+sortdate: 2025/07/04 00:00
+source: Ann Neurosci
+title: 'Affect-elicited N1 and P3b Effects Under Attentional Demands: Event-related
+  Potentials-based Mass-univariate Analysis in Young Adolescents with Gender Implications'
+uid: '12227442'
+volume: ''

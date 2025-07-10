@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40568440'
+- idtype: doi
+  value: 10.1016/j.ynirp.2021.100051
+- idtype: pmcid
+  value: PMC12172922
+authors:
+- authtype: Author
+  name: Shekoohishooli F
+- authtype: Author
+  name: Chella F
+- authtype: Author
+  name: Caulo M
+- authtype: Author
+  name: Navarra R
+- authtype: Author
+  name: Rapino M
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2021 Sep 17
+fulljournalname: 'Neuroimage: Reports'
+issue: '4'
+pages: '100051'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2021 Sep 17
+sortdate: 2021/09/17 00:00
+source: Neuroimage Rep
+title: 'The impact of gliomas on resting-state oscillatory activity and connectivity:
+  A magnetoencephalography study'
+uid: '12172922'
+volume: '1'

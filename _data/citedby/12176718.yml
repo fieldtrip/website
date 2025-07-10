@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '40533647'
+- idtype: doi
+  value: 10.1186/s40798-025-00867-0
+- idtype: pmcid
+  value: PMC12176718
+authors:
+- authtype: Author
+  name: Delang N
+- authtype: Author
+  name: Robertson RV
+- authtype: Author
+  name: Tinoco Mendoza FA
+- authtype: Author
+  name: Henderson LA
+- authtype: Author
+  name: Rae CD
+- authtype: Author
+  name: McDonald SJ
+- authtype: Author
+  name: Desbrow B
+- authtype: Author
+  name: Irwin C
+- authtype: Author
+  name: Peek AL
+- authtype: Author
+  name: Cairns EA
+- authtype: Author
+  name: Austin PJ
+- authtype: Author
+  name: Green MA
+- authtype: Author
+  name: Jenneke NW
+- authtype: Author
+  name: Cao J
+- authtype: Author
+  name: O’Brien WT
+- authtype: Author
+  name: Ball S
+- authtype: Author
+  name: Buckland ME
+- authtype: Author
+  name: Rae K
+- authtype: Author
+  name: McGregor IS
+- authtype: Author
+  name: McCartney D
+epubdate: 2025 Jun 18
+fulljournalname: Sports Medicine - Open
+issue: ''
+pages: '77'
+pmclivedate: 2025/06/19
+printpubdate: ''
+pubdate: 2025 Jun 18
+sortdate: 2025/06/18 00:00
+source: Sports Med Open
+title: 'The Acute Effects of Non-concussive Head Impacts on Brain Microstructure,
+  Chemistry and Function in Male Soccer Players: A Pilot Randomised Controlled Trial'
+uid: '12176718'
+volume: '11'

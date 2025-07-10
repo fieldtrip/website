@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40600847'
+- idtype: doi
+  value: 10.1080/20008066.2025.2520638
+- idtype: pmcid
+  value: PMC12224737
+authors:
+- authtype: Author
+  name: Bertoli M
+- authtype: Author
+  name: Croce P
+- authtype: Author
+  name: Zappasodi F
+- authtype: Author
+  name: Di Matteo R
+- authtype: Author
+  name: Vellante F
+- authtype: Author
+  name: Pettorruso M
+- authtype: Author
+  name: Martinotti G
+- authtype: Author
+  name: Brunetti M
+epubdate: 2025 Jul 2
+fulljournalname: European Journal of Psychotraumatology
+issue: '1'
+pages: '2520638'
+pmclivedate: 2025/07/03
+printpubdate: ''
+pubdate: 2025 Jul 2
+sortdate: 2025/07/02 00:00
+source: Eur J Psychotraumatol
+title: The aftermath of trauma on resting state source-level MEG microstate dynamics
+uid: '12224737'
+volume: '16'

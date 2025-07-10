@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40567567'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100129
+- idtype: pmcid
+  value: PMC12172849
+authors:
+- authtype: Author
+  name: Zheng XY
+- authtype: Author
+  name: Wynn SC
+epubdate: 2022 Aug 30
+fulljournalname: 'Neuroimage: Reports'
+issue: '4'
+pages: '100129'
+pmclivedate: 2025/06/25
+printpubdate: ''
+pubdate: 2022 Aug 30
+sortdate: 2022/08/30 00:00
+source: Neuroimage Rep
+title: Midfrontal theta is associated with errors, but no evidence for a link with
+  error-related memory
+uid: '12172849'
+volume: '2'

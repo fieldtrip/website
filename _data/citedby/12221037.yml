@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40601643'
+- idtype: doi
+  value: 10.1371/journal.pone.0327521
+- idtype: pmcid
+  value: PMC12221037
+authors:
+- authtype: Author
+  name: Vitali H
+- authtype: Author
+  name: Campus C
+- authtype: Author
+  name: Giorgetti L
+- authtype: Author
+  name: Famà F
+- authtype: Author
+  name: Mattioli P
+- authtype: Author
+  name: Arnaldi D
+- authtype: Author
+  name: Gori M
+epubdate: 2025 Jul 2
+fulljournalname: PLOS One
+issue: '7'
+pages: e0327521
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 2
+sortdate: 2025/07/02 00:00
+source: PLoS One
+title: 'Investigating the impact of the years of blindness on sleep rhythms, dream
+  patterns, and spatial abilities: The BLINDREAM protocol'
+uid: '12221037'
+volume: '20'

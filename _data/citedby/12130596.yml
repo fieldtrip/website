@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39763472'
+- idtype: doi
+  value: 10.1177/15500594241309680
+- idtype: pmcid
+  value: PMC12130596
+authors:
+- authtype: Author
+  name: Kovacevic N
+- authtype: Author
+  name: Meghdadi A
+- authtype: Author
+  name: Berka C
+epubdate: 2025 Jan 7
+fulljournalname: Clinical EEG and Neuroscience
+issue: '4'
+pages: 305-315
+pmclivedate: 2025/06/04
+printpubdate: 2025 Jul
+pubdate: 2025 Jan 7
+sortdate: 2025/01/07 00:00
+source: Clin EEG Neurosci
+title: 'Characterizing PTSD Using Electrophysiology: Towards A Precision Medicine
+  Approach'
+uid: '12130596'
+volume: '56'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40596414'
+- idtype: doi
+  value: 10.1038/s41598-025-99599-0
+- idtype: pmcid
+  value: PMC12215718
+authors:
+- authtype: Author
+  name: Badakul AN
+- authtype: Author
+  name: Soyman E
+epubdate: 2025 Jul 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22444'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Sci Rep
+title: Differential modulation of low- and high-frequency mu oscillations during the
+  observation of manual, facial, and non-biological movements
+uid: '12215718'
+volume: '15'

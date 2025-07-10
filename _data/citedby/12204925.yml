@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '40325329'
+- idtype: doi
+  value: 10.3758/s13414-025-03075-w
+- idtype: pmcid
+  value: PMC12204925
+authors:
+- authtype: Author
+  name: Heuer A
+- authtype: Author
+  name: Schubö A
+epubdate: 2025 May 5
+fulljournalname: Attention, Perception & Psychophysics
+issue: '5'
+pages: 1416-1430
+pmclivedate: 2025/06/29
+printpubdate: '2025'
+pubdate: 2025 May 5
+sortdate: 2025/05/05 00:00
+source: Atten Percept Psychophys
+title: Cueing distractors is effective when the incentive to suppress is high
+uid: '12204925'
+volume: '87'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40594203'
+- idtype: doi
+  value: 10.1038/s41598-025-03880-1
+- idtype: pmcid
+  value: PMC12217781
+authors:
+- authtype: Author
+  name: Fernández-Martín R
+- authtype: Author
+  name: Gijón A
+- authtype: Author
+  name: Feys O
+- authtype: Author
+  name: Juvené E
+- authtype: Author
+  name: Aeby A
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Wens V
+epubdate: 2025 Jul 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '21017'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Sci Rep
+title: 'STIED: a deep learning model for the spatiotemporal detection of focal interictal
+  epileptiform discharges with MEG'
+uid: '12217781'
+volume: '15'

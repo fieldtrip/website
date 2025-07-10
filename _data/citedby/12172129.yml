@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '40244706'
+- idtype: doi
+  value: 10.1002/acn3.70044
+- idtype: pmcid
+  value: PMC12172129
+authors:
+- authtype: Author
+  name: Helling RM
+- authtype: Author
+  name: van Dijk JP
+- authtype: Author
+  name: Bauer PR
+- authtype: Author
+  name: Thijs RD
+- authtype: Author
+  name: Sander JW
+- authtype: Author
+  name: Zwarts M
+- authtype: Author
+  name: Visser GH
+epubdate: 2025 Apr 17
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '6'
+pages: 1256-1264
+pmclivedate: 2025/06/18
+printpubdate: ''
+pubdate: 2025 Apr 17
+sortdate: 2025/04/17 00:00
+source: Ann Clin Transl Neurol
+title: Cortical Excitability Before and After Long‐Term Perampanel Treatment for Epilepsy
+uid: '12172129'
+volume: '12'

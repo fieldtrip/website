@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40588517'
+- idtype: doi
+  value: 10.1038/s41467-025-61064-x
+- idtype: pmcid
+  value: PMC12209421
+authors:
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Udompanyawit C
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: He B
+epubdate: 2025 Jun 30
+fulljournalname: Nature Communications
+issue: ''
+pages: '5401'
+pmclivedate: 2025/07/01
+printpubdate: ''
+pubdate: 2025 Jun 30
+sortdate: 2025/06/30 00:00
+source: Nat Commun
+title: EEG-based brain-computer interface enables real-time robotic hand control at
+  individual finger level
+uid: '12209421'
+volume: '16'

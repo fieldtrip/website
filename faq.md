@@ -43,7 +43,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I convert one dataformat into another?](/faq/convert_dataformat)
 - [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/mergedata)
 - [How can I preprocess a dataset that is too large to fit into memory?](/faq/preproc_downsample)
-- [How can I rename channels in my data structure?](/faq?rename_channels)
+- [How can I rename channels in my data structure?](/faq/rename_channels)
 
 ### Trials, triggers and events
 

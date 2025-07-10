@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40503593'
+- idtype: doi
+  value: 10.1002/brb3.70437
+- idtype: pmcid
+  value: PMC12159765
+authors:
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Huang X
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Feng Y
+- authtype: Author
+  name: Shi H
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Salvi R
+- authtype: Author
+  name: Yin S
+epubdate: 2025 Jun 12
+fulljournalname: Brain and Behavior
+issue: '6'
+pages: e70437
+pmclivedate: 2025/06/12
+printpubdate: ''
+pubdate: 2025 Jun 12
+sortdate: 2025/06/12 00:00
+source: Brain Behav
+title: Theta–Beta/Gamma Coupling Identifies Bothersome Tinnitus Induced by Thalamocortical
+  Dysrhythmia
+uid: '12159765'
+volume: '15'

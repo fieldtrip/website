@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40442093'
+- idtype: doi
+  value: 10.1038/s41597-025-05213-3
+- idtype: pmcid
+  value: PMC12122730
+authors:
+- authtype: Author
+  name: Köhler CA
+- authtype: Author
+  name: Grün S
+- authtype: Author
+  name: Denker M
+epubdate: 2025 May 29
+fulljournalname: Scientific Data
+issue: ''
+pages: '907'
+pmclivedate: 2025/05/30
+printpubdate: ''
+pubdate: 2025 May 29
+sortdate: 2025/05/29 00:00
+source: Sci Data
+title: Improving data sharing and knowledge transfer via the Neuroelectrophysiology
+  Analysis Ontology (NEAO)
+uid: '12122730'
+volume: '12'

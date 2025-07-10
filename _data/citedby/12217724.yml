@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40594034'
+- idtype: doi
+  value: 10.1038/s41598-025-03378-w
+- idtype: pmcid
+  value: PMC12217724
+authors:
+- authtype: Author
+  name: de la Chapelle A
+- authtype: Author
+  name: Serres-Blain S
+- authtype: Author
+  name: ElShafei A
+- authtype: Author
+  name: Schwartz D
+- authtype: Author
+  name: Daligault S
+- authtype: Author
+  name: Jung J
+- authtype: Author
+  name: Ruby P
+- authtype: Author
+  name: Caclin A
+- authtype: Author
+  name: Bidet-Caulet A
+epubdate: 2025 Jul 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22453'
+pmclivedate: 2025/07/02
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Sci Rep
+title: Brain dynamics of the interplay between auditory selective attention and working
+  memory during melody encoding
+uid: '12217724'
+volume: '15'

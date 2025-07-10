@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40186511'
+- idtype: doi
+  value: 10.1002/aur.70038
+- idtype: pmcid
+  value: PMC12166516
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Petrova A
+- authtype: Author
+  name: Bernotaite Z
+- authtype: Author
+  name: Sujawal M
+- authtype: Author
+  name: Zhao C
+- authtype: Author
+  name: Ahmed H
+- authtype: Author
+  name: Jiang C
+- authtype: Author
+  name: Liu F
+epubdate: 2025 Apr 5
+fulljournalname: Autism Research
+issue: '6'
+pages: 1245-1256
+pmclivedate: 2025/06/15
+printpubdate: 2025 Jun
+pubdate: 2025 Apr 5
+sortdate: 2025/04/05 00:00
+source: Autism Res
+title: 'Linguistic and Musical Syntax Processing in Autistic and Non‐Autistic Individuals:
+  An Event‐Related Potential (ERP) Study'
+uid: '12166516'
+volume: '18'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38683726'
+- idtype: doi
+  value: 10.1162/jocn_a_02166
+- idtype: pmcid
+  value: PMC12147455
+- idtype: MID
+  value: NIHMS2079652
+authors:
+- authtype: Author
+  name: Wan Q
+- authtype: Author
+  name: Ardalan A
+- authtype: Author
+  name: Fulvio JM
+- authtype: Author
+  name: Postle BR
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '7'
+pages: 1374-1394
+pmclivedate: 2025/06/09
+printpubdate: 2024 Jun 1
+pubdate: 2024 Jun 1
+sortdate: 2024/06/01 00:00
+source: J Cogn Neurosci
+title: Representing context and priority in working memory
+uid: '12147455'
+volume: '36'

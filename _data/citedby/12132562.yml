@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40462958'
+- idtype: doi
+  value: 10.1101/2025.05.12.653393
+- idtype: pmcid
+  value: PMC12132562
+authors:
+- authtype: Author
+  name: Sánchez-León CA
+- authtype: Author
+  name: Cordones I
+- authtype: Author
+  name: Jiménez-Díaz A
+- authtype: Author
+  name: Cheron G
+- authtype: Author
+  name: Medina JF
+- authtype: Author
+  name: Márquez-Ruiz J
+epubdate: 2025 May 12
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.05.12.653393
+pmclivedate: 2025/06/04
+printpubdate: ''
+pubdate: 2025 May 12
+sortdate: 2025/05/12 00:00
+source: bioRxiv
+title: Cerebellar tDCS differentially modulates sensory inputs in somatosensory cortex
+  and cerebellum
+uid: '12132562'
+volume: ''

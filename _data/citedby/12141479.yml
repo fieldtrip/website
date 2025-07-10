@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '40473645'
+- idtype: doi
+  value: 10.1038/s41598-025-00995-3
+- idtype: pmcid
+  value: PMC12141479
+authors:
+- authtype: Author
+  name: Schneider CL
+- authtype: Author
+  name: Fehér KD
+- authtype: Author
+  name: Hertenstein E
+- authtype: Author
+  name: Hügli F
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Züst MA
+- authtype: Author
+  name: Mikutta C
+- authtype: Author
+  name: Adamantidis AR
+- authtype: Author
+  name: Berger T
+- authtype: Author
+  name: Riemann D
+- authtype: Author
+  name: Feige B
+- authtype: Author
+  name: Nissen C
+epubdate: 2025 Jun 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19328'
+pmclivedate: 2025/06/06
+printpubdate: ''
+pubdate: 2025 Jun 5
+sortdate: 2025/06/05 00:00
+source: Sci Rep
+title: Multimodal assessment of sleep-wake perception in insomnia disorder
+uid: '12141479'
+volume: '15'

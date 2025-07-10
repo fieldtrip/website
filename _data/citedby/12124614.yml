@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40452884'
+- idtype: doi
+  value: 10.1016/j.ijchp.2025.100571
+- idtype: pmcid
+  value: PMC12124614
+authors:
+- authtype: Author
+  name: Xiong S
+- authtype: Author
+  name: Peng M
+- authtype: Author
+  name: Zhao W
+- authtype: Author
+  name: Ren J
+- authtype: Author
+  name: Yao D
+- authtype: Author
+  name: Qin Y
+- authtype: Author
+  name: Liu T
+epubdate: 2025 May 2
+fulljournalname: 'International Journal of Clinical and Health Psychology : IJCHP'
+issue: '2'
+pages: '100571'
+pmclivedate: 2025/05/30
+printpubdate: 2025 Apr-Jun
+pubdate: 2025 May 2
+sortdate: 2025/05/02 00:00
+source: Int J Clin Health Psychol
+title: Slow-paced breathing enhancing emotional control accompanied with the change
+  of the ∼0.1 Hz heartbeat evoked EEG
+uid: '12124614'
+volume: '25'

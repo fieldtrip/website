@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40560240'
+- idtype: doi
+  value: 10.1007/s00429-025-02968-8
+- idtype: pmcid
+  value: PMC12198293
+authors:
+- authtype: Author
+  name: Al-Zubaidi A
+- authtype: Author
+  name: Schepers IM
+- authtype: Author
+  name: Beck AK
+- authtype: Author
+  name: Schwabe K
+- authtype: Author
+  name: Runge J
+- authtype: Author
+  name: Abdallat M
+- authtype: Author
+  name: Krauss JK
+- authtype: Author
+  name: Rieger JW
+epubdate: 2025 Jun 25
+fulljournalname: Brain Structure & Function
+issue: '6'
+pages: '105'
+pmclivedate: 2025/06/27
+printpubdate: '2025'
+pubdate: 2025 Jun 25
+sortdate: 2025/06/25 00:00
+source: Brain Struct Funct
+title: Word onset tracking in neural responses of human basal ganglia nuclei
+uid: '12198293'
+volume: '230'

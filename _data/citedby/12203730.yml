@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '40571935'
+- idtype: doi
+  value: 10.1186/s40779-025-00619-x
+- idtype: pmcid
+  value: PMC12203730
+authors:
+- authtype: Author
+  name: Dai ZP
+- authtype: Author
+  name: Wen Q
+- authtype: Author
+  name: Wu P
+- authtype: Author
+  name: Zhang YN
+- authtype: Author
+  name: Fang CL
+- authtype: Author
+  name: Dai MY
+- authtype: Author
+  name: Zhou HL
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Tang H
+- authtype: Author
+  name: Zhang SQ
+- authtype: Author
+  name: Li XK
+- authtype: Author
+  name: Ji JS
+- authtype: Author
+  name: Chu LX
+- authtype: Author
+  name: Wang ZG
+epubdate: 2025 Jun 27
+fulljournalname: Military Medical Research
+issue: ''
+pages: '32'
+pmclivedate: 2025/06/27
+printpubdate: ''
+pubdate: 2025 Jun 27
+sortdate: 2025/06/27 00:00
+source: Mil Med Res
+title: 'γ neuromodulations: unraveling biomarkers for neurological and psychiatric
+  disorders'
+uid: '12203730'
+volume: '12'

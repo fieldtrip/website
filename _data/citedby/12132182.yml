@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40462986'
+- idtype: doi
+  value: 10.1101/2025.05.12.653459
+- idtype: pmcid
+  value: PMC12132182
+authors:
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Chinappen DM
+- authtype: Author
+  name: Wodeyar A
+- authtype: Author
+  name: Kinard E
+- authtype: Author
+  name: Goodman S
+- authtype: Author
+  name: Shi W
+- authtype: Author
+  name: Baxter BS
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Kramer MA
+- authtype: Author
+  name: Chu CJ
+epubdate: 2025 May 13
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.05.12.653459
+pmclivedate: 2025/06/04
+printpubdate: ''
+pubdate: 2025 May 13
+sortdate: 2025/05/13 00:00
+source: bioRxiv
+title: Changes in slow oscillations and sleep spindles by auditory stimulation positively
+  correlate with memory consolidation in children with epilepsy and controls
+uid: '12132182'
+volume: ''
