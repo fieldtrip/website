@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/brb3.70682
+- idtype: pmcid
+  value: PMC12243399
+authors:
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Ren D
+- authtype: Author
+  name: Ouyang Y
+epubdate: 2025 Jul 10
+fulljournalname: Brain and Behavior
+issue: '7'
+pages: e70682
+pmclivedate: 2025/07/10
+printpubdate: ''
+pubdate: 2025 Jul 10
+sortdate: 2025/07/10 00:00
+source: Brain Behav
+title: 'Chinese Character Features Facilitate Working Memory Updating: Evidence From
+  the EEG'
+uid: '12243399'
+volume: '15'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40399045'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0427-25.2025
+- idtype: pmcid
+  value: PMC12244317
+authors:
+- authtype: Author
+  name: Böttcher A
+- authtype: Author
+  name: Wilken S
+- authtype: Author
+  name: Raab M
+- authtype: Author
+  name: Hoffmann S
+- authtype: Author
+  name: Beste C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: e0427252025
+pmclivedate: ''
+printpubdate: 2025 Jul 9
+pubdate: 2025 Jul 9
+sortdate: 2025/07/09 00:00
+source: J Neurosci
+title: 'Directed Neural Network Dynamics in Sensorimotor Integration: Divergent Roles
+  of Frontal Theta Band Activity Depending on Age'
+uid: '12244317'
+volume: '45'

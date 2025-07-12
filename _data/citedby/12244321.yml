@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '40514242'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0757-25.2025
+- idtype: pmcid
+  value: PMC12244321
+authors:
+- authtype: Author
+  name: Maier ME
+- authtype: Author
+  name: Steinhauser M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: e0757252025
+pmclivedate: ''
+printpubdate: 2025 Jul 9
+pubdate: 2025 Jul 9
+sortdate: 2025/07/09 00:00
+source: J Neurosci
+title: Attentional Precursors of Errors Predict Error-Related Brain Activity
+uid: '12244321'
+volume: '45'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40636701'
+- idtype: doi
+  value: 10.3389/fnins.2025.1599349
+- idtype: pmcid
+  value: PMC12239019
+authors:
+- authtype: Author
+  name: Fusina F
+- authtype: Author
+  name: Marino M
+- authtype: Author
+  name: Angrilli A
+epubdate: 2025 Jun 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1599349'
+pmclivedate: 2025/07/09
+printpubdate: ''
+pubdate: 2025 Jun 25
+sortdate: 2025/06/25 00:00
+source: Front Neurosci
+title: Heart rate and EEG gamma band connectivity in the ventral attention network
+  during emotional movie stimulation in women with high emotion dysregulation
+uid: '12239019'
+volume: '19'
