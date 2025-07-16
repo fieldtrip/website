@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40654586'
+- idtype: doi
+  value: 10.1016/j.nsa.2024.104092
+- idtype: pmcid
+  value: PMC12244184
+authors:
+- authtype: Author
+  name: Godfrey K
+- authtype: Author
+  name: Weiss B
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Spriggs M
+- authtype: Author
+  name: Peill J
+- authtype: Author
+  name: Lyons T
+- authtype: Author
+  name: Carhart-Harris R
+- authtype: Author
+  name: Erritzoe D
+epubdate: 2024 Dec 2
+fulljournalname: Neuroscience Applied
+issue: ''
+pages: '104092'
+pmclivedate: 2025/07/11
+printpubdate: ''
+pubdate: 2024 Dec 2
+sortdate: 2024/12/02 00:00
+source: Neurosci Appl
+title: An investigation of acute physiological and psychological moderators of psychedelic-induced
+  personality change among healthy volunteers
+uid: '12244184'
+volume: '4'

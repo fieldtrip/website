@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40623066'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003234
+- idtype: pmcid
+  value: PMC12251098
+authors:
+- authtype: Author
+  name: Sengupta A
+- authtype: Author
+  name: Sridharan D
+epubdate: 2025 Jul 7
+fulljournalname: PLOS Biology
+issue: '7'
+pages: e3003234
+pmclivedate: 2025/07/11
+printpubdate: ''
+pubdate: 2025 Jul 7
+sortdate: 2025/07/07 00:00
+source: PLoS Biol
+title: Reward expectation yields distinct effects on sensory processing and decision
+  making in the human brain
+uid: '12251098'
+volume: '23'

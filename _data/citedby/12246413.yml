@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40640486'
+- idtype: doi
+  value: 10.1038/s42003-025-08465-2
+- idtype: pmcid
+  value: PMC12246413
+authors:
+- authtype: Author
+  name: Pierrieau E
+- authtype: Author
+  name: Dussard C
+- authtype: Author
+  name: Plantey--Veux A
+- authtype: Author
+  name: Guerrini C
+- authtype: Author
+  name: Lau B
+- authtype: Author
+  name: Pillette L
+- authtype: Author
+  name: George N
+- authtype: Author
+  name: Jeunet-Kelway C
+epubdate: 2025 Jul 11
+fulljournalname: Communications Biology
+issue: ''
+pages: '1041'
+pmclivedate: 2025/07/11
+printpubdate: ''
+pubdate: 2025 Jul 11
+sortdate: 2025/07/11 00:00
+source: Commun Biol
+title: Changes in cortical beta power predict motor control flexibility, not vigor
+uid: '12246413'
+volume: '8'

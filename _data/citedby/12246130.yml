@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40640153'
+- idtype: doi
+  value: 10.1038/s41531-025-01053-5
+- idtype: pmcid
+  value: PMC12246130
+authors:
+- authtype: Author
+  name: Stam MJ
+- authtype: Author
+  name: van Wijk BC
+- authtype: Author
+  name: Buijink AW
+- authtype: Author
+  name: Piña-Fuentes D
+- authtype: Author
+  name: de Bie RM
+- authtype: Author
+  name: Schuurman R
+- authtype: Author
+  name: Beudel M
+epubdate: 2025 Jul 10
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '204'
+pmclivedate: 2025/07/11
+printpubdate: ''
+pubdate: 2025 Jul 10
+sortdate: 2025/07/10 00:00
+source: NPJ Parkinsons Dis
+title: Long-term consistency of aperiodic and periodic physiomarkers in subthalamic
+  local field potentials in Parkinson’s disease
+uid: '12246130'
+volume: '11'

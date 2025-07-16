@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38224783'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2024.110056
+- idtype: pmcid
+  value: PMC12244442
+- idtype: MID
+  value: NIHMS2061252
+authors:
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Leske SL
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+epubdate: 2024 Jan 14
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '110056'
+pmclivedate: 2025/07/10
+printpubdate: 2024 Apr
+pubdate: 2024 Jan 14
+sortdate: 2024/01/14 00:00
+source: J Neurosci Methods
+title: Anatomical registration of intracranial electrodes. Robust model-based localization
+  and deformable smooth brain-shift compensation methods
+uid: '12244442'
+volume: '404'

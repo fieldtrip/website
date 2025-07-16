@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40398872'
+- idtype: doi
+  value: 10.1093/sleep/zsaf056
+- idtype: pmcid
+  value: PMC12246374
+authors:
+- authtype: Author
+  name: Zhao W
+- authtype: Author
+  name: Van Someren EJ
+- authtype: Author
+  name: van der Lande GJ
+- authtype: Author
+  name: van de Ven S
+- authtype: Author
+  name: van Schalkwijk FJ
+- authtype: Author
+  name: Blanken TF
+- authtype: Author
+  name: Ramautar JR
+- authtype: Author
+  name: Cox R
+epubdate: 2025 May 22
+fulljournalname: Sleep
+issue: '7'
+pages: zsaf056
+pmclivedate: 2025/07/12
+printpubdate: ''
+pubdate: 2025 May 22
+sortdate: 2025/05/22 00:00
+source: Sleep
+title: 'One size fits null: attentional brain responses differ depending on insomnia
+  subtype'
+uid: '12246374'
+volume: '48'

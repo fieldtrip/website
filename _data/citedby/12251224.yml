@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40623093'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003278
+- idtype: pmcid
+  value: PMC12251224
+authors:
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Park J
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Linn G
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Falchier AY
+- authtype: Author
+  name: Opitz A
+epubdate: 2025 Jul 7
+fulljournalname: PLOS Biology
+issue: '7'
+pages: e3003278
+pmclivedate: 2025/07/11
+printpubdate: ''
+pubdate: 2025 Jul 7
+sortdate: 2025/07/07 00:00
+source: PLoS Biol
+title: Layers of the monkey visual cortex are selectively modulated during electrical
+  stimulation
+uid: '12251224'
+volume: '23'
