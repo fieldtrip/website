@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40665925'
+- idtype: doi
+  value: 10.1111/cns.70491
+- idtype: pmcid
+  value: PMC12264452
+authors:
+- authtype: Author
+  name: Song B
+- authtype: Author
+  name: Tian M
+- authtype: Author
+  name: Wang T
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Ye X
+- authtype: Author
+  name: Yao Q
+- authtype: Author
+  name: Shi J
+- authtype: Author
+  name: Yin K
+epubdate: 2025 Jul 16
+fulljournalname: CNS Neuroscience & Therapeutics
+issue: '7'
+pages: e70491
+pmclivedate: 2025/07/16
+printpubdate: ''
+pubdate: 2025 Jul 16
+sortdate: 2025/07/16 00:00
+source: CNS Neurosci Ther
+title: 'Effects of Cerebellar Repetitive Transcranial Magnetic Stimulation at Different
+  Frequencies on Working Memory: An EEG Study'
+uid: '12264452'
+volume: '31'

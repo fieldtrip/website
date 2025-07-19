@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40663648'
+- idtype: doi
+  value: 10.1093/cercor/bhaf181
+- idtype: pmcid
+  value: PMC12262118
+authors:
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Kurkela JL
+- authtype: Author
+  name: Lohvansuu K
+- authtype: Author
+  name: Hämäläinen JA
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Astikainen P
+epubdate: 2025 Jul 15
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '7'
+pages: bhaf181
+pmclivedate: 2025/07/15
+printpubdate: ''
+pubdate: 2025 Jul 15
+sortdate: 2025/07/15 00:00
+source: Cereb Cortex
+title: Dynamic changes in electrical brain activity during passive learning of foreign
+  speech sound discrimination
+uid: '12262118'
+volume: '35'
