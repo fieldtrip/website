@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40681689'
+- idtype: doi
+  value: 10.1038/s41598-025-12135-y
+- idtype: pmcid
+  value: PMC12274610
+authors:
+- authtype: Author
+  name: Malekmohammadi A
+- authtype: Author
+  name: Rauschecker JP
+- authtype: Author
+  name: Cheng G
+epubdate: 2025 Jul 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '26174'
+pmclivedate: 2025/07/19
+printpubdate: ''
+pubdate: 2025 Jul 18
+sortdate: 2025/07/18 00:00
+source: Sci Rep
+title: Speech prediction of a listener via EEG-based classification through subject-independent
+  phase dissimilarity model
+uid: '12274610'
+volume: '15'
