@@ -1,0 +1,64 @@
+articleids:
+- idtype: pmid
+  value: '40697964'
+- idtype: doi
+  value: 10.1093/braincomms/fcaf236
+- idtype: pmcid
+  value: PMC12280328
+authors:
+- authtype: Author
+  name: David MC
+- authtype: Author
+  name: Mallas EJ
+- authtype: Author
+  name: Li LM
+- authtype: Author
+  name: Kolanko MA
+- authtype: Author
+  name: Nilforooshan R
+- authtype: Author
+  name: Tsoi ML
+- authtype: Author
+  name: Karakoc H
+- authtype: Author
+  name: Hoang K
+- authtype: Author
+  name: Brandt J
+- authtype: Author
+  name: Triantafyllou C
+- authtype: Author
+  name: Gruia DC
+- authtype: Author
+  name: Custovic D
+- authtype: Author
+  name: Lally PJ
+- authtype: Author
+  name: Zimmerman KA
+- authtype: CollectiveName
+  name: Care Research and Technology Group of the UK Dementia Research Institute SharpDavidDWilsonDanielleDDanielsSarahSNilforooshanRaminRHarrisonMatthewMHaarShlomiSGolemmeMaraMBarnaghiPayamPFreemontPaulPVaidyanathanRaviRConstandinouTimTScottGregoryGDijkDerk-JanDJLallyPetePMalhotraPareshPRobinsonLouiseLHampshireAdamADavidMichaelMDel
+    GiovaneMartinaMGrahamNeilNKolankoMagdalenaMLaiHelenHLiLucia MLMRumseyMark CrookMCMallasEmma
+    JaneEJSerbanAlina-IrinaAISoreqEyalEOtaikuAbidemiAParkinsonMeganMParkerThomasTFabusoroSuccessSBealEmilyEBannonAlanAMandicDaniloDChenZiweiZHadjipanayiCharalambosCHammourGhenaGHsiehBryanBNassibiAmirARapeauxAdrienAWilliamsIanIYinMaowenMYogendraNiroNLimaMariaMSuTingTJouaitiMelanieMWairagkarMaitreyeeMCastilloCarlos
+    SebastianCSWattansiriPanipatPMartineauThomasTShiMayueMXuTianboTXiaoBoBValduncielAlejandroASeeamberReneiraRGuezAnnikaALiuZehaoZDhawanSakshamSFletcher-LloydNanNKouchakiSamanehSCapstickAlexanderAWalshChloeCRignyLouiseLMihaiRuxandraRBafaloukouMarirenaMCuiJinJSchalkampAnn-KathrinAKChenYuYCuiTianyuTBijlaniNiveditaNCroneMichaelMJensenKirstenKTranMartinMAdamThomasTJacksonRaphaellaRWebbAlexanderASkeldonAnne
+    CACWellsKevinKBartschUllrichUMonicaCiro DellaCDRavindranKiran K GKKLambertDamionDMahvashSara
+    MohammadiSMGarciaThalia RodriguezTRRevellVictoria LVLAtzoriGiuseppeGGraingerLucindaLHassaninHanaHWoolleyJamesJWood-CamparIrisIRexhaJanettaJGawwamSarmad
+    AlSAAbulikemuSubatiSJacobJulian JeyasinghJJSteadmanNathanNNardiFedericoFGraefCosimaCKutuzovaAlenaATouboulAssafAPeiroNicolas
+    CalvoNCYunJennaJFrigerioGaiaGDesowskaAdelaAde TaurinesAnastasia GaillyAGMihaiRuxandraRMoutonnetNinaNHarrisonMatthewMHorrocksSophieSQuanBrianBWoodbridgeMarkMJoffeAnnaAMarzukiAmerARahimRamsheed
+    AbdulRANilforooshanRaminRTrueJessicaJBalazikovaOlgaOWhitethreadNicoleNPurnellMatthewMZarombaiteVaivaVCoppsLucyLKnightOliviaOBangarGaganpreetGDeySumitSMukondaChelseaCHineJessicaJMallonLukeLJhalaSaijalSSargentoniOliverOAlvesAmyAHeydariMahanMWingfieldDavidDNormanClaireCPatelAneshaALyallRubyRRazaSanaraSHassimNaomiNKirbyPippaPPattersonJohnJLawMikeMKennyAndyA
+- authtype: Author
+  name: Malhotra PA
+- authtype: Author
+  name: Scott G
+- authtype: Author
+  name: Sharp DJ
+epubdate: 2025 Jul 22
+fulljournalname: Brain Communications
+issue: '4'
+pages: fcaf236
+pmclivedate: 2025/07/22
+printpubdate: ''
+pubdate: 2025 Jul 22
+sortdate: 2025/07/22 00:00
+source: Brain Commun
+title: Pupil-linked arousal, cortical activity, and cognition in Alzheimer’s disease
+uid: '12280328'
+volume: '7'

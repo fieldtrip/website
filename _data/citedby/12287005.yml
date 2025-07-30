@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40708687'
+- idtype: doi
+  value: 10.3389/fnins.2025.1583050
+- idtype: pmcid
+  value: PMC12287005
+authors:
+- authtype: Author
+  name: Rochas V
+- authtype: Author
+  name: Montandon ML
+- authtype: Author
+  name: Rodriguez C
+- authtype: Author
+  name: Herrmann FR
+- authtype: Author
+  name: Eytan A
+- authtype: Author
+  name: Pegna AJ
+- authtype: Author
+  name: Michel CM
+- authtype: Author
+  name: Giannakopoulos P
+epubdate: 2025 Jul 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1583050'
+pmclivedate: 2025/07/24
+printpubdate: ''
+pubdate: 2025 Jul 10
+sortdate: 2025/07/10 00:00
+source: Front Neurosci
+title: EEG correlates of egocentric and altercentric biases in forensic cases with
+  borderline personality
+uid: '12287005'
+volume: '19'

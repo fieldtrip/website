@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40707435'
+- idtype: doi
+  value: 10.1038/s41467-025-61928-2
+- idtype: pmcid
+  value: PMC12289934
+authors:
+- authtype: Author
+  name: Costa M
+- authtype: Author
+  name: Pacheco-Estefan D
+- authtype: Author
+  name: Gil-Nagel A
+- authtype: Author
+  name: Toledano R
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Strange BA
+epubdate: 2025 Jul 24
+fulljournalname: Nature Communications
+issue: ''
+pages: '6820'
+pmclivedate: 2025/07/27
+printpubdate: ''
+pubdate: 2025 Jul 24
+sortdate: 2025/07/24 00:00
+source: Nat Commun
+title: Human hippocampal reactivation of amygdala encoding-related gamma patterns
+  during aversive memory retrieval
+uid: '12289934'
+volume: '16'

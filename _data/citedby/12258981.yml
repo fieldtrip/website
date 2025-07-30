@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40661435'
+- idtype: doi
+  value: 10.1101/2025.06.08.658503
+- idtype: pmcid
+  value: PMC12258981
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Bruss J
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Wu K
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Etkin A
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Jiang J
+epubdate: 2025 Jun 11
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.06.08.658503
+pmclivedate: 2025/07/15
+printpubdate: ''
+pubdate: 2025 Jun 11
+sortdate: 2025/06/11 00:00
+source: bioRxiv
+title: Multimodal Evidence for Hippocampal Engagement and Modulation by Functional
+  Connectivity-Guided Parietal TMS
+uid: '12258981'
+volume: ''

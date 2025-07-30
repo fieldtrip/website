@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2025.103844
+- idtype: pmcid
+  value: PMC12296559
+authors:
+- authtype: Author
+  name: Hao Y
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Rawish T
+- authtype: Author
+  name: Friedrich J
+- authtype: Author
+  name: Tóth-Fáber E
+- authtype: Author
+  name: Tárnok Z
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Frings C
+- authtype: Author
+  name: Weissbach A
+- authtype: Author
+  name: Bäumer T
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Jul 13
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103844'
+pmclivedate: 2025/07/27
+printpubdate: ''
+pubdate: 2025 Jul 13
+sortdate: 2025/07/13 00:00
+source: Neuroimage Clin
+title: Evidence for temporal disintegration of information processing during sensorimotor
+  integration in GTS
+uid: '12296559'
+volume: '48'

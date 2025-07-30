@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.70275
+- idtype: pmcid
+  value: PMC12290479
+authors:
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: van Veenhuijzen K
+- authtype: Author
+  name: Westeneng H
+- authtype: Author
+  name: McMackin R
+- authtype: Author
+  name: van Eijk RP
+- authtype: Author
+  name: Sleutjes BT
+- authtype: Author
+  name: Nasseroleslami B
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: van den Berg LH
+epubdate: 2025 Jul 25
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: e70275
+pmclivedate: 2025/07/27
+printpubdate: ''
+pubdate: 2025 Jul 25
+sortdate: 2025/07/25 00:00
+source: Hum Brain Mapp
+title: Altered EEG Response of the Parietal Network in Asymptomatic C9orf72 Carriers
+uid: '12290479'
+volume: '46'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34823159'
+- idtype: doi
+  value: 10.1016/j.eplepsyres.2021.106809
+- idtype: pmcid
+  value: PMC12289543
+- idtype: MID
+  value: NIHMS2095391
+authors:
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Nariai H
+- authtype: Author
+  name: Rajaraman RR
+- authtype: Author
+  name: Bernardo D
+- authtype: Author
+  name: Shrey DW
+- authtype: Author
+  name: Lopour BA
+- authtype: Author
+  name: Sim MS
+- authtype: Author
+  name: Staba RJ
+- authtype: Author
+  name: Hussain SA
+epubdate: 2021 Nov 7
+fulljournalname: Epilepsy research
+issue: ''
+pages: '106809'
+pmclivedate: 2025/07/27
+printpubdate: 2021 Dec
+pubdate: 2021 Nov 7
+sortdate: 2021/11/07 00:00
+source: Epilepsy Res
+title: Automated preprocessing and phase-amplitude coupling analysis of scalp EEG
+  discriminates infantile spasms from controls during wakefulness
+uid: '12289543'
+volume: '178'

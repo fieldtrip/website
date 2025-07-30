@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-025-08540-8
+- idtype: pmcid
+  value: PMC12297471
+authors:
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Huang Q
+- authtype: Author
+  name: Song P
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Zhai Y
+- authtype: Author
+  name: Du X
+- authtype: Author
+  name: Ye H
+- authtype: Author
+  name: Bao X
+- authtype: Author
+  name: Mehmood I
+- authtype: Author
+  name: Tanigawa H
+- authtype: Author
+  name: Niu W
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Chen P
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Wen W
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Yu X
+epubdate: 2025 Jul 26
+fulljournalname: Communications Biology
+issue: ''
+pages: '1109'
+pmclivedate: 2025/07/27
+printpubdate: ''
+pubdate: 2025 Jul 26
+sortdate: 2025/07/26 00:00
+source: Commun Biol
+title: EEG neural indicator of temporal integration in the human auditory brain with
+  clinical implications
+uid: '12297471'
+volume: '8'

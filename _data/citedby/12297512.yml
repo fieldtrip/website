@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-025-08542-6
+- idtype: pmcid
+  value: PMC12297512
+authors:
+- authtype: Author
+  name: Weidner EM
+- authtype: Author
+  name: Reisch LM
+- authtype: Author
+  name: Mielke M
+- authtype: Author
+  name: Bien CG
+- authtype: Author
+  name: Kissler J
+epubdate: 2025 Jul 25
+fulljournalname: Communications Biology
+issue: ''
+pages: '1105'
+pmclivedate: 2025/07/27
+printpubdate: ''
+pubdate: 2025 Jul 25
+sortdate: 2025/07/25 00:00
+source: Commun Biol
+title: Fear perception as a function of hemisphere- and time-specific dynamics in
+  the medial temporal lobes
+uid: '12297512'
+volume: '8'
