@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40735638'
+- idtype: doi
+  value: 10.1162/nol.a.7
+- idtype: pmcid
+  value: PMC12307025
+authors:
+- authtype: Author
+  name: Oosterhuis EJ
+- authtype: Author
+  name: Bailey N
+- authtype: Author
+  name: Slade K
+- authtype: Author
+  name: May PJ
+- authtype: Author
+  name: Nuttall HE
+epubdate: 2025 Jul 15
+fulljournalname: Neurobiology of Language
+issue: ''
+pages: nol.a.7
+pmclivedate: 2025/07/29
+printpubdate: ''
+pubdate: 2025 Jul 15
+sortdate: 2025/07/15 00:00
+source: Neurobiol Lang (Camb)
+title: Brain Segregation and Integration Relate to Word-Finding Abilities in Older
+  and Younger Adults
+uid: '12307025'
+volume: '6'

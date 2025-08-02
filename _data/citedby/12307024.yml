@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40735639'
+- idtype: doi
+  value: 10.1162/nol_a_00171
+- idtype: pmcid
+  value: PMC12307024
+authors:
+- authtype: Author
+  name: Hustá C
+- authtype: Author
+  name: Meyer A
+- authtype: Author
+  name: Drijvers L
+epubdate: 2025 Jul 15
+fulljournalname: Neurobiology of Language
+issue: ''
+pages: nol_a_00171
+pmclivedate: 2025/07/29
+printpubdate: ''
+pubdate: 2025 Jul 15
+sortdate: 2025/07/15 00:00
+source: Neurobiol Lang (Camb)
+title: Using Rapid Invisible Frequency Tagging (RIFT) to Probe the Neural Interaction
+  Between Representations of Speech Planning and Comprehension
+uid: '12307024'
+volume: '6'

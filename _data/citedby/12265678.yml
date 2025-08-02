@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40672198'
+- idtype: doi
+  value: 10.1101/2025.07.09.663517
+- idtype: pmcid
+  value: PMC12265678
+authors:
+- authtype: Author
+  name: Pandinelli M
+- authtype: Author
+  name: Parto-Dezfouli M
+- authtype: Author
+  name: Psarou E
+- authtype: Author
+  name: Grothe I
+- authtype: Author
+  name: Fries P
+epubdate: 2025 Jul 11
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.07.09.663517
+pmclivedate: 2025/07/17
+printpubdate: ''
+pubdate: 2025 Jul 11
+sortdate: 2025/07/11 00:00
+source: bioRxiv
+title: Surprising effects of stimulus repetition on neuronal firing rates and gamma-band
+  synchronization in awake macaque V1
+uid: '12265678'
+volume: ''

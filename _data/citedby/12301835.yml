@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40684718'
+- idtype: doi
+  value: 10.1016/j.nicl.2025.103848
+- idtype: pmcid
+  value: PMC12301835
+authors:
+- authtype: Author
+  name: Steina A
+- authtype: Author
+  name: Sure S
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Vesper J
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Hirschmann J
+epubdate: 2025 Jul 17
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103848'
+pmclivedate: 2025/07/28
+printpubdate: ''
+pubdate: 2025 Jul 17
+sortdate: 2025/07/17 00:00
+source: Neuroimage Clin
+title: Modulations of thalamo-cortical coupling during voluntary movement in patients
+  with essential tremor
+uid: '12301835'
+volume: '48'
