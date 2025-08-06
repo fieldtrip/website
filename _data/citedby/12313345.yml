@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '40048331'
+- idtype: doi
+  value: 10.1109/JBHI.2025.3540937
+- idtype: pmcid
+  value: PMC12313345
+- idtype: MID
+  value: NIHMS2088170
+authors:
+- authtype: Author
+  name: Ramirez H
+- authtype: Author
+  name: Tabarelli D
+- authtype: Author
+  name: Brancaccio A
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Marsh EB
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Xu M
+- authtype: Author
+  name: Pantazis D
+epubdate: ''
+fulljournalname: IEEE journal of biomedical and health informatics
+issue: '6'
+pages: 4463-4473
+pmclivedate: 2025/07/31
+printpubdate: 2025 Jun
+pubdate: 2025 Jun
+sortdate: 2025/06/01 00:00
+source: IEEE J Biomed Health Inform
+title: 'Fully Hyperbolic Neural Networks: A Novel Approach to Studying Aging Trajectories'
+uid: '12313345'
+volume: '29'

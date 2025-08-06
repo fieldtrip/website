@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40637506'
+- idtype: doi
+  value: 10.1152/jn.00256.2025
+- idtype: pmcid
+  value: PMC12315849
+- idtype: MID
+  value: NIHMS2097512
+authors:
+- authtype: Author
+  name: Slobodin N
+- authtype: Author
+  name: Anderson O
+- authtype: Author
+  name: Dullur P
+- authtype: Author
+  name: Sanabria DE
+- authtype: Author
+  name: Mandava N
+- authtype: Author
+  name: Singh A
+- authtype: Author
+  name: Toth C
+- authtype: Author
+  name: G MA
+- authtype: Author
+  name: Baker K
+epubdate: 2025 Jul 10
+fulljournalname: Journal of neurophysiology
+issue: '2'
+pages: 559-567
+pmclivedate: 2025/08/01
+printpubdate: 2025 Aug 1
+pubdate: 2025 Jul 10
+sortdate: 2025/07/10 00:00
+source: J Neurophysiol
+title: Timing- and Frequency-Specific Effects of Dentate Nucleus Deep Brain Stimulation
+  on Somatosensory Evoked Potentials in People with Post-Stroke Hemiparesis
+uid: '12315849'
+volume: '134'

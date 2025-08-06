@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40473475'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1479-24.2025
+- idtype: pmcid
+  value: PMC12311763
+authors:
+- authtype: Author
+  name: Haarsma J
+- authtype: Author
+  name: Hetenyi D
+- authtype: Author
+  name: Kok P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '30'
+pages: e1479242025
+pmclivedate: 2025/08/01
+printpubdate: 2025 Jul 23
+pubdate: 2025 Jul 23
+sortdate: 2025/07/23 00:00
+source: J Neurosci
+title: Shared and Diverging Neural Dynamics Underlying False and Veridical Perception
+uid: '12311763'
+volume: '45'

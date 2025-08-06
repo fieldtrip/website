@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40753307'
+- idtype: doi
+  value: 10.1038/s42003-025-08601-y
+- idtype: pmcid
+  value: PMC12317987
+authors:
+- authtype: Author
+  name: Eggert E
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Talebi N
+- authtype: Author
+  name: Frings C
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Aug 2
+fulljournalname: Communications Biology
+issue: ''
+pages: '1147'
+pmclivedate: 2025/08/03
+printpubdate: ''
+pubdate: 2025 Aug 2
+sortdate: 2025/08/02 00:00
+source: Commun Biol
+title: Uncovering the role of directed connectivity in alpha and theta band activity
+  for sustaining perception-action links
+uid: '12317987'
+volume: '8'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40634126'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0453-25.2025
+- idtype: pmcid
+  value: PMC12311756
+authors:
+- authtype: Author
+  name: Abbagnano E
+- authtype: Author
+  name: Pascual-Valdunciel A
+- authtype: Author
+  name: Zicher B
+- authtype: Author
+  name: Ibañez J
+- authtype: Author
+  name: Farina D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: e0453252025
+pmclivedate: 2025/08/01
+printpubdate: 2025 Jul 30
+pubdate: 2025 Jul 30
+sortdate: 2025/07/30 00:00
+source: J Neurosci
+title: Projection of Cortical Beta Band Oscillations to a Motor Neuron Pool across
+  the Full Range of Recruitment
+uid: '12311756'
+volume: '45'

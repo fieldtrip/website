@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40095210'
+- idtype: doi
+  value: 10.1007/s12264-025-01371-x
+- idtype: pmcid
+  value: PMC12314303
+authors:
+- authtype: Author
+  name: Moraresku S
+- authtype: Author
+  name: Hammer J
+- authtype: Author
+  name: Dimakopoulos V
+- authtype: Author
+  name: Kajsova M
+- authtype: Author
+  name: Janca R
+- authtype: Author
+  name: Jezdik P
+- authtype: Author
+  name: Kalina A
+- authtype: Author
+  name: Marusic P
+- authtype: Author
+  name: Vlcek K
+epubdate: 2025 Mar 17
+fulljournalname: Neuroscience Bulletin
+issue: '8'
+pages: 1347-1363
+pmclivedate: 2025/08/02
+printpubdate: ''
+pubdate: 2025 Mar 17
+sortdate: 2025/03/17 00:00
+source: Neurosci Bull
+title: Neural Dynamics of Visual Stream Interactions During Memory-Guided Actions
+  Investigated by Intracranial EEG
+uid: '12314303'
+volume: '41'

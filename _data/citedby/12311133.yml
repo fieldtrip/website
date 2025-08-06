@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40739086'
+- idtype: doi
+  value: 10.1038/s41467-025-61744-8
+- idtype: pmcid
+  value: PMC12311133
+authors:
+- authtype: Author
+  name: Goueytes D
+- authtype: Author
+  name: Stockart F
+- authtype: Author
+  name: Robin A
+- authtype: Author
+  name: Gyger L
+- authtype: Author
+  name: Rouy M
+- authtype: Author
+  name: Hoffmann D
+- authtype: Author
+  name: Minotti L
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Pereira M
+- authtype: Author
+  name: Faivre N
+epubdate: 2025 Jul 30
+fulljournalname: Nature Communications
+issue: ''
+pages: '6998'
+pmclivedate: 2025/07/31
+printpubdate: ''
+pubdate: 2025 Jul 30
+sortdate: 2025/07/30 00:00
+source: Nat Commun
+title: Evidence accumulation in the pre-supplementary motor area and insula drives
+  confidence and changes of mind
+uid: '12311133'
+volume: '16'

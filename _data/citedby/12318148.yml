@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40699921'
+- idtype: doi
+  value: 10.1073/pnas.2415573122
+- idtype: pmcid
+  value: PMC12318148
+authors:
+- authtype: Author
+  name: Luo C
+- authtype: Author
+  name: Ester EF
+epubdate: 2025 Jul 23
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '30'
+pages: e2415573122
+pmclivedate: ''
+printpubdate: 2025 Jul 29
+pubdate: 2025 Jul 23
+sortdate: 2025/07/23 00:00
+source: Proc Natl Acad Sci U S A
+title: Traveling waves link human visual and frontal cortex during working memory–guided
+  behavior
+uid: '12318148'
+volume: '122'
