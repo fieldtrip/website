@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40768245'
+- idtype: doi
+  value: 10.7554/eLife.99547
+- idtype: pmcid
+  value: PMC12327942
+authors:
+- authtype: Author
+  name: Schwab-Mohamed I
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Trebuchon A
+- authtype: Author
+  name: Morillon B
+- authtype: Author
+  name: Lancia L
+- authtype: Author
+  name: Schön D
+epubdate: 2025 Aug 6
+fulljournalname: eLife
+issue: ''
+pages: RP99547
+pmclivedate: 2025/08/06
+printpubdate: ''
+pubdate: 2025 Aug 6
+sortdate: 2025/08/06 00:00
+source: eLife
+title: Bridging verbal coordination and neural dynamics
+uid: '12327942'
+volume: '13'

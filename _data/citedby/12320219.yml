@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '38981500'
+- idtype: doi
+  value: 10.1088/1741-2552/ad60f6
+- idtype: pmcid
+  value: PMC12320219
+- idtype: MID
+  value: NIHMS2098053
+authors:
+- authtype: Author
+  name: Hattab T
+- authtype: Author
+  name: König SD
+- authtype: Author
+  name: Carlson DC
+- authtype: Author
+  name: Hayes RF
+- authtype: Author
+  name: Sha Z
+- authtype: Author
+  name: Park MC
+- authtype: Author
+  name: Kahn L
+- authtype: Author
+  name: Patel S
+- authtype: Author
+  name: McGovern RA
+- authtype: Author
+  name: Henry T
+- authtype: Author
+  name: Khan F
+- authtype: Author
+  name: Herman AB
+- authtype: Author
+  name: Darrow DP
+epubdate: 2024 Jul 26
+fulljournalname: Journal of neural engineering
+issue: '4'
+pages: 10.1088/1741-2552/ad60f6
+pmclivedate: 2025/08/04
+printpubdate: ''
+pubdate: 2024 Jul 26
+sortdate: 2024/07/26 00:00
+source: J Neural Eng
+title: Assessing Expert Reliability in Determining Intracranial EEG Channel Quality
+  and Introducing the Automated Bad Channel Detection Algorithm
+uid: '12320219'
+volume: '21'
