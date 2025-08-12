@@ -93,6 +93,7 @@ alleen
 allsubj
 allsubjFC
 allsubjFIC
+Almalinux
 ALPHAMAP
 ALS
 alternatingly
@@ -625,6 +626,7 @@ cellfun
 Cellfun
 CELLFUN
 CentOS
+centOS
 centrale
 centre
 Centre
@@ -1621,6 +1623,7 @@ fdm
 FDM
 fdr
 fdt
+fe
 feb
 fec
 Federmeier
