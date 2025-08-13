@@ -1,0 +1,54 @@
+articleids:
+- idtype: pmid
+  value: '40766888'
+- idtype: pmcid
+  value: PMC12324561
+authors:
+- authtype: Author
+  name: Jeong W
+- authtype: Author
+  name: Kommineni A
+- authtype: Author
+  name: Avramidis K
+- authtype: Author
+  name: McDaniel C
+- authtype: Author
+  name: Berry D
+- authtype: Author
+  name: Hughes M
+- authtype: Author
+  name: McGee T
+- authtype: Author
+  name: Kaiser E
+- authtype: Author
+  name: Byrd D
+- authtype: Author
+  name: Habibi A
+- authtype: Author
+  name: Cahn BR
+- authtype: Author
+  name: Blank IA
+- authtype: Author
+  name: Lerman K
+- authtype: Author
+  name: Pantazis D
+- authtype: Author
+  name: Kadiri SR
+- authtype: Author
+  name: Medani T
+- authtype: Author
+  name: Narayanan S
+- authtype: Author
+  name: Leahy RM
+epubdate: 2025 Jul 30
+fulljournalname: ArXiv
+issue: ''
+pages: arXiv:2507.22313v1
+pmclivedate: 2025/08/06
+printpubdate: ''
+pubdate: 2025 Jul 30
+sortdate: 2025/07/30 00:00
+source: ArXiv
+title: Decoding Neural Signatures of Semantic Evaluation in Depression and Suicidality
+uid: '12324561'
+volume: ''

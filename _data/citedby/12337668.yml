@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.ynirp.2025.100280
+- idtype: pmcid
+  value: PMC12337668
+authors:
+- authtype: Author
+  name: Cela-Conde CJ
+- authtype: Author
+  name: Lumbreras S
+- authtype: Author
+  name: Pusil S
+- authtype: Author
+  name: Chino B
+- authtype: Author
+  name: Caamaño JM
+- authtype: Author
+  name: Gismera L
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Rojas-Marcos L
+epubdate: 2025 Aug 1
+fulljournalname: 'Neuroimage: Reports'
+issue: '3'
+pages: '100280'
+pmclivedate: 2025/08/11
+printpubdate: ''
+pubdate: 2025 Aug 1
+sortdate: 2025/08/01 00:00
+source: Neuroimage Rep
+title: 'Teaching-induced changes in neural networks: Toward a model of the creative
+  universe'
+uid: '12337668'
+volume: '5'

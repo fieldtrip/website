@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40766463'
+- idtype: doi
+  value: 10.1101/2025.07.25.666857
+- idtype: pmcid
+  value: PMC12324248
+authors:
+- authtype: Author
+  name: Subramanian G
+- authtype: Author
+  name: Zelano C
+- authtype: Author
+  name: Paller KA
+- authtype: Author
+  name: Schechtman E
+epubdate: 2025 Jul 31
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.07.25.666857
+pmclivedate: 2025/08/06
+printpubdate: ''
+pubdate: 2025 Jul 31
+sortdate: 2025/07/31 00:00
+source: bioRxiv
+title: Concurrent presentation of memory-related odors and sounds nullified sleep
+  reactivation benefits
+uid: '12324248'
+volume: ''
