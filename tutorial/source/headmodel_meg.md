@@ -158,7 +158,10 @@ The method used in this tutorial is based on [Nolte G. (2003) The magnetic lead 
 
 The paper [Lalancette M, Quraan M, Cheyne D. (2011) Evaluation of multiple-sphere head models for MEG source localization](http://www.ncbi.nlm.nih.gov/pubmed/21828900) discusses another popular method for MEG forward modeling, which is based on fitting local spheres to the surface. This alternative method can be used by specifying 'localspheres' as method in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
 
-Alternatively, you can also create and use a multiple-layered head model with Openmeeg. For this you can follow the procedure described in the tutorial for [creating a volume conduction model for EEG data](/tutorial/headmodel_eeg_bem#head_model)
+Alternatively, you can also create a multiple-layered head model that can be used to create a forward model based on the Boundary Element Method (e.g. as with Openmeeg). For this you can follow the procedure described in the tutorial for [creating a volume conduction model for EEG data (BEM)](/tutorial/headmodel_eeg_bem#head_model)
+
+Alternatively, you can also create an even more detailed volumetric head model that can be used to create a forward model based on the Finite Element Method (e.g. as with SimBIO or DUNEuro). To get started with this, you can follow the procedure described in the tutorial of [creating a volume conduction model for EEG data (FEM)](/tutorial/headmodel_eeg_fem#head_model) 
+
 {% include markup/end %}
 
 ### Visualization
