@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40800903'
+- idtype: doi
+  value: 10.1162/IMAG.a.26
+- idtype: pmcid
+  value: PMC12319817
+authors:
+- authtype: Author
+  name: Andrews R
+- authtype: Author
+  name: Melnychuk MC
+- authtype: Author
+  name: Moran CN
+- authtype: Author
+  name: McGovern DP
+- authtype: Author
+  name: Holfelder A
+- authtype: Author
+  name: Moran S
+- authtype: Author
+  name: Dockree PM
+epubdate: 2025 Jun 3
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.26
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jun 3
+sortdate: 2025/06/03 00:00
+source: Imaging Neurosci (Camb)
+title: Arousal and sustained attention fluctuate differently with respiration in younger
+  and older adults
+uid: '12319817'
+volume: '3'

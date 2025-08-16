@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40800795'
+- idtype: doi
+  value: 10.1162/imag_a_00492
+- idtype: pmcid
+  value: PMC12319801
+authors:
+- authtype: Author
+  name: Criscuolo A
+- authtype: Author
+  name: Schwartze M
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Kotz SA
+epubdate: 2025 Feb 27
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00492
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Feb 27
+sortdate: 2025/02/27 00:00
+source: Imaging Neurosci (Camb)
+title: Basal ganglia and cerebellar lesions causally impact the neural encoding of
+  temporal regularities
+uid: '12319801'
+volume: '3'

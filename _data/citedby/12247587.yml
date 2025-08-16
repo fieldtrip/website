@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40800511'
+- idtype: doi
+  value: 10.1162/imag_a_00150
+- idtype: pmcid
+  value: PMC12247587
+authors:
+- authtype: Author
+  name: Chesley J
+- authtype: Author
+  name: Riecke L
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Vogels R
+- authtype: Author
+  name: de Gelder B
+epubdate: 2024 Apr 26
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00150
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Apr 26
+sortdate: 2024/04/26 00:00
+source: Imaging Neurosci (Camb)
+title: Theta activity discriminates high-level, species-specific body processes
+uid: '12247587'
+volume: '2'

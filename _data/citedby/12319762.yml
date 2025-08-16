@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40800882'
+- idtype: doi
+  value: 10.1162/imag_a_00505
+- idtype: pmcid
+  value: PMC12319762
+authors:
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: Bosch E
+- authtype: Author
+  name: Utzerath C
+- authtype: Author
+  name: Buitelaar J
+- authtype: Author
+  name: de Lange FP
+epubdate: 2025 Mar 19
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00505
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Mar 19
+sortdate: 2025/03/19 00:00
+source: Imaging Neurosci (Camb)
+title: Typical neural adaptation for familiar images in autistic adolescents
+uid: '12319762'
+volume: '3'

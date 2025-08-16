@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40800318'
+- idtype: doi
+  value: 10.1162/imag_a_00296
+- idtype: pmcid
+  value: PMC12290595
+authors:
+- authtype: Author
+  name: Esch L
+- authtype: Author
+  name: Dong J
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Baumgarten D
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Vorwerk J
+epubdate: 2024 Sep 25
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00296
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Sep 25
+sortdate: 2024/09/25 00:00
+source: Imaging Neurosci (Camb)
+title: Online functional connectivity analysis of large all-to-all networks in MNE
+  Scan
+uid: '12290595'
+volume: '2'

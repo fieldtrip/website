@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40800870'
+- idtype: doi
+  value: 10.1162/IMAG.a.20
+- idtype: pmcid
+  value: PMC12319872
+authors:
+- authtype: Author
+  name: Kam JW
+- authtype: Author
+  name: Rahnuma T
+- authtype: Author
+  name: Nanjappan Jothiraj S
+- authtype: Author
+  name: Ouellette-Zuk AA
+- authtype: Author
+  name: Knight RT
+epubdate: 2025 Jun 5
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.20
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jun 5
+sortdate: 2025/06/05 00:00
+source: Imaging Neurosci (Camb)
+title: Electrophysiological signatures of ongoing thoughts during naturalistic behavior
+uid: '12319872'
+volume: '3'

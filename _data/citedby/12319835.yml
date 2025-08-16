@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40800820'
+- idtype: doi
+  value: 10.1162/imag_a_00555
+- idtype: pmcid
+  value: PMC12319835
+authors:
+- authtype: Author
+  name: Gander S
+- authtype: Author
+  name: Rouge C
+- authtype: Author
+  name: Peiffer A
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Urbain C
+epubdate: 2025 May 7
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00555
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 7
+sortdate: 2025/05/07 00:00
+source: Imaging Neurosci (Camb)
+title: Association between theta-band resting-state functional connectivity and declarative
+  memory abilities in children
+uid: '12319835'
+volume: '3'

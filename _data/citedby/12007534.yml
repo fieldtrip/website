@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40799706'
+- idtype: doi
+  value: 10.1162/imag_a_00006
+- idtype: pmcid
+  value: PMC12007534
+authors:
+- authtype: Author
+  name: Chen CY
+- authtype: Author
+  name: Leys G
+- authtype: Author
+  name: Bracci S
+- authtype: Author
+  name: Op de Beeck H
+epubdate: 2023 Aug 10
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-1-00006
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2023 Aug 10
+sortdate: 2023/08/10 00:00
+source: Imaging Neurosci (Camb)
+title: The representational dynamics of the animal appearance bias in human visual
+  cortex are indicative of fast feedforward processing
+uid: '12007534'
+volume: '1'

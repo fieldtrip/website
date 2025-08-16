@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40800309'
+- idtype: doi
+  value: 10.1162/imag_a_00130
+- idtype: pmcid
+  value: PMC12272180
+authors:
+- authtype: Author
+  name: Fleming JT
+- authtype: Author
+  name: Njoroge JM
+- authtype: Author
+  name: Noyce AL
+- authtype: Author
+  name: Perrachione TK
+- authtype: Author
+  name: Shinn-Cunningham BG
+epubdate: 2024 Apr 8
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00130
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Apr 8
+sortdate: 2024/04/08 00:00
+source: Imaging Neurosci (Camb)
+title: Sensory modality and information domain contribute jointly to dual-task interference
+  between working memory and perceptual processing
+uid: '12272180'
+volume: '2'

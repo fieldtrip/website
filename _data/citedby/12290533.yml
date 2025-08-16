@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40800481'
+- idtype: doi
+  value: 10.1162/imag_a_00297
+- idtype: pmcid
+  value: PMC12290533
+authors:
+- authtype: Author
+  name: Kachlicka M
+- authtype: Author
+  name: Symons AE
+- authtype: Author
+  name: Saito K
+- authtype: Author
+  name: Dick F
+- authtype: Author
+  name: Tierney AT
+epubdate: 2024 Oct 1
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00297
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: Imaging Neurosci (Camb)
+title: Tone language experience enhances dimension-selective attention and subcortical
+  encoding but not cortical entrainment to pitch
+uid: '12290533'
+volume: '2'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40800874'
+- idtype: doi
+  value: 10.1162/imag_a_00539
+- idtype: pmcid
+  value: PMC12319891
+authors:
+- authtype: Author
+  name: Piazza G
+- authtype: Author
+  name: Carta S
+- authtype: Author
+  name: Ip EY
+- authtype: Author
+  name: Pérez-Navarro J
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Martin CD
+- authtype: Author
+  name: Di Liberto GM
+epubdate: 2025 Apr 17
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00539
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Apr 17
+sortdate: 2025/04/17 00:00
+source: Imaging Neurosci (Camb)
+title: Are you talking to me? How the choice of speech register impacts listeners’
+  hierarchical encoding of speech
+uid: '12319891'
+volume: '3'

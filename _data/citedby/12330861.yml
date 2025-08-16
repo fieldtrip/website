@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40800890'
+- idtype: doi
+  value: 10.1162/IMAG.a.64
+- idtype: pmcid
+  value: PMC12330861
+authors:
+- authtype: Author
+  name: Cabrera-Álvarez J
+- authtype: Author
+  name: del Cerro-León A
+- authtype: Author
+  name: Carvajal BP
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: Alexandersen CG
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Susi G
+epubdate: 2025 Jul 2
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.64
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jul 2
+sortdate: 2025/07/02 00:00
+source: Imaging Neurosci (Camb)
+title: 'The fluctuations of alpha power: Bimodalities, connectivity, and neural mass
+  models'
+uid: '12330861'
+volume: '3'

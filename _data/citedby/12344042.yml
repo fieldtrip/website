@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40797097'
+- idtype: doi
+  value: 10.1038/s42003-025-08638-z
+- idtype: pmcid
+  value: PMC12344042
+authors:
+- authtype: Author
+  name: Era V
+- authtype: Author
+  name: Pesci UG
+- authtype: Author
+  name: Moreau Q
+- authtype: Author
+  name: Pezzetta R
+- authtype: Author
+  name: Zabberoni S
+- authtype: Author
+  name: Peppe A
+- authtype: Author
+  name: Costa A
+- authtype: Author
+  name: Taglieri S
+- authtype: Author
+  name: Candidi M
+- authtype: Author
+  name: Aglioti SM
+epubdate: 2025 Aug 12
+fulljournalname: Communications Biology
+issue: ''
+pages: '1195'
+pmclivedate: 2025/08/13
+printpubdate: ''
+pubdate: 2025 Aug 12
+sortdate: 2025/08/12 00:00
+source: Commun Biol
+title: Dopaminergic modulation of behavioral and electrocortical markers of interpersonal
+  performance monitoring in Parkinson’s Disease
+uid: '12344042'
+volume: '8'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40800515'
+- idtype: doi
+  value: 10.1162/imag_a_00250
+- idtype: pmcid
+  value: PMC12272196
+authors:
+- authtype: Author
+  name: Rakowska M
+- authtype: Author
+  name: Bagrowska P
+- authtype: Author
+  name: Lazari A
+- authtype: Author
+  name: Navarrete M
+- authtype: Author
+  name: Abdellahi ME
+- authtype: Author
+  name: Johansen-Berg H
+- authtype: Author
+  name: Lewis PA
+epubdate: 2024 Aug 1
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00250
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Aug 1
+sortdate: 2024/08/01 00:00
+source: Imaging Neurosci (Camb)
+title: Cueing memory reactivation during NREM sleep engenders long-term plasticity
+  in both brain and behaviour
+uid: '12272196'
+volume: '2'

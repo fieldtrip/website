@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40802755'
+- idtype: doi
+  value: 10.1126/sciadv.ads0400
+- idtype: pmcid
+  value: PMC12346269
+authors:
+- authtype: Author
+  name: Arazi A
+- authtype: Author
+  name: Toso A
+- authtype: Author
+  name: Grent-‘t-Jong T
+- authtype: Author
+  name: Uhlhaas PJ
+- authtype: Author
+  name: Donner TH
+epubdate: 2025 Aug 13
+fulljournalname: Science Advances
+issue: '33'
+pages: eads0400
+pmclivedate: 2025/08/14
+printpubdate: ''
+pubdate: 2025 Aug 13
+sortdate: 2025/08/13 00:00
+source: Sci Adv
+title: Large-scale maps of altered cortical dynamics in early-stage psychosis are
+  related to GABAergic and glutamatergic neurotransmission
+uid: '12346269'
+volume: '11'

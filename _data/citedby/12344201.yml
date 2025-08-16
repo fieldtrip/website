@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40809002'
+- idtype: doi
+  value: 10.1016/j.isci.2025.113109
+- idtype: pmcid
+  value: PMC12344201
+authors:
+- authtype: Author
+  name: Lin WH
+- authtype: Author
+  name: da Cruz JR
+- authtype: Author
+  name: Sandi C
+- authtype: Author
+  name: Herzog MH
+epubdate: 2025 Jul 15
+fulljournalname: iScience
+issue: '8'
+pages: '113109'
+pmclivedate: 2025/08/13
+printpubdate: ''
+pubdate: 2025 Jul 15
+sortdate: 2025/07/15 00:00
+source: iScience
+title: 'Neural markers of social dominance: A female-focused perspective'
+uid: '12344201'
+volume: '28'

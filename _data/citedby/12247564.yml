@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40800442'
+- idtype: doi
+  value: 10.1162/imag_a_00112
+- idtype: pmcid
+  value: PMC12247564
+authors:
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Schofield H
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Worcester F
+- authtype: Author
+  name: Hayward T
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 Mar 19
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00112
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Mar 19
+sortdate: 2024/03/19 00:00
+source: Imaging Neurosci (Camb)
+title: Optimising the sensitivity of optically-pumped magnetometer magnetoencephalography
+  to gamma band electrophysiological activity
+uid: '12247564'
+volume: '2'

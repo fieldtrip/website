@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40800754'
+- idtype: doi
+  value: 10.1162/IMAG.a.30
+- idtype: pmcid
+  value: PMC12319741
+authors:
+- authtype: Author
+  name: Steinfath P
+- authtype: Author
+  name: Herzog N
+- authtype: Author
+  name: Fourcade A
+- authtype: Author
+  name: Sander C
+- authtype: Author
+  name: Nikulin V
+- authtype: Author
+  name: Villringer A
+epubdate: 2025 Jun 10
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.30
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jun 10
+sortdate: 2025/06/10 00:00
+source: Imaging Neurosci (Camb)
+title: Validating genuine changes in heartbeat-evoked potentials using pseudotrials
+  and surrogate procedures
+uid: '12319741'
+volume: '3'

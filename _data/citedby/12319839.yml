@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40800845'
+- idtype: doi
+  value: 10.1162/imag_a_00570
+- idtype: pmcid
+  value: PMC12319839
+authors:
+- authtype: Author
+  name: Georgiev C
+- authtype: Author
+  name: Mongold SJ
+- authtype: Author
+  name: Cabaraux P
+- authtype: Author
+  name: Naeije G
+- authtype: Author
+  name: Duque J
+- authtype: Author
+  name: Bourguignon M
+epubdate: 2025 May 5
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00570
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 5
+sortdate: 2025/05/05 00:00
+source: Imaging Neurosci (Camb)
+title: Transcallosal generation of phase-aligned beta bursts underlies TMS-induced
+  interhemispheric inhibition
+uid: '12319839'
+volume: '3'

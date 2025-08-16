@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40800947'
+- idtype: doi
+  value: 10.1162/imag_a_00499
+- idtype: pmcid
+  value: PMC12320016
+authors:
+- authtype: Author
+  name: Balestrieri E
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Stier C
+- authtype: Author
+  name: Fehring J
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Dannlowski U
+- authtype: Author
+  name: Ploner M
+- authtype: Author
+  name: Gross J
+epubdate: 2025 Feb 27
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00499
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Feb 27
+sortdate: 2025/02/27 00:00
+source: Imaging Neurosci (Camb)
+title: Beyond oscillations—Toward a richer characterization of brain states
+uid: '12320016'
+volume: '3'

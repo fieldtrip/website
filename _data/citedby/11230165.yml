@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38979146'
+- idtype: doi
+  value: 10.1101/2024.06.21.600060
+- idtype: pmcid
+  value: PMC11230165
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Arazi A
+- authtype: Author
+  name: Talluri BC
+- authtype: Author
+  name: Celotto M
+- authtype: Author
+  name: Panzeri S
+- authtype: Author
+  name: Stocker AA
+- authtype: Author
+  name: Donner TH
+epubdate: 2025 May 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.06.21.600060
+pmclivedate: 2024/07/09
+printpubdate: ''
+pubdate: 2025 May 19
+sortdate: 2025/05/19 00:00
+source: bioRxiv
+title: Confirmation Bias through Selective Readout of Information Encoded in Human
+  Parietal Cortex
+uid: '11230165'
+volume: ''

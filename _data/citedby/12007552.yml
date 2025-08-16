@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '40799699'
+- idtype: doi
+  value: 10.1162/imag_a_00020
+- idtype: pmcid
+  value: PMC12007552
+authors:
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Ritz H
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Norman KA
+- authtype: Author
+  name: Hasson U
+- authtype: Author
+  name: Cohen JD
+- authtype: Author
+  name: Boto E
+epubdate: 2023 Oct 9
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-1-00020
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2023 Oct 9
+sortdate: 2023/10/09 00:00
+source: Imaging Neurosci (Camb)
+title: 'Test-retest reliability of the human connectome: An OPM-MEG study'
+uid: '12007552'
+volume: '1'

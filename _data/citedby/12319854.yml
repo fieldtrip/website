@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40800829'
+- idtype: doi
+  value: 10.1162/imag_a_00524
+- idtype: pmcid
+  value: PMC12319854
+authors:
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Dubarry AS
+- authtype: Author
+  name: Chanoine V
+- authtype: Author
+  name: Sein J
+- authtype: Author
+  name: Anton JL
+- authtype: Author
+  name: Nazarian B
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Trébuchon A
+- authtype: Author
+  name: Pattamadilok C
+epubdate: 2025 Mar 31
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00524
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Mar 31
+sortdate: 2025/03/31 00:00
+source: Imaging Neurosci (Camb)
+title: Revealing the co-existence of written and spoken language coding neural populations
+  in the visual word form area
+uid: '12319854'
+volume: '3'

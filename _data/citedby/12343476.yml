@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40639284'
+- idtype: doi
+  value: 10.1016/j.nicl.2025.103839
+- idtype: pmcid
+  value: PMC12343476
+authors:
+- authtype: Author
+  name: Papaioannou O
+- authtype: Author
+  name: Clark K
+- authtype: Author
+  name: Ogbuagu NN
+- authtype: Author
+  name: Silverstein SM
+- authtype: Author
+  name: Thompson JL
+- authtype: Author
+  name: Erickson MA
+epubdate: 2025 Jul 3
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103839'
+pmclivedate: 2025/08/13
+printpubdate: ''
+pubdate: 2025 Jul 3
+sortdate: 2025/07/03 00:00
+source: Neuroimage Clin
+title: 'Theta-gamma phase-amplitude coupling in psychosis and healthy controls: Predicting
+  working memory capacity across different tasks'
+uid: '12343476'
+volume: '48'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40800988'
+- idtype: doi
+  value: 10.1162/imag_a_00566
+- idtype: pmcid
+  value: PMC12319923
+authors:
+- authtype: Author
+  name: Kopčanová M
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Keitel C
+epubdate: 2025 May 2
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00566
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 2
+sortdate: 2025/05/02 00:00
+source: Imaging Neurosci (Camb)
+title: Characterising time-on-task effects on oscillatory and aperiodic EEG components
+  and their co-variation with visual task performance
+uid: '12319923'
+volume: '3'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40800344'
+- idtype: doi
+  value: 10.1162/imag_a_00398
+- idtype: pmcid
+  value: PMC12315746
+authors:
+- authtype: Author
+  name: Strzelczyk D
+- authtype: Author
+  name: Langer N
+epubdate: 2024 Dec 16
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00398
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Dec 16
+sortdate: 2024/12/16 00:00
+source: Imaging Neurosci (Camb)
+title: Pre-stimulus activity mediates event-related theta synchronization and alpha
+  desynchronization during memory formation in healthy aging
+uid: '12315746'
+volume: '2'

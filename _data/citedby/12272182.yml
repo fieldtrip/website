@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40800424'
+- idtype: doi
+  value: 10.1162/imag_a_00242
+- idtype: pmcid
+  value: PMC12272182
+authors:
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: Bouwkamp FG
+- authtype: Author
+  name: de Lange FP
+epubdate: 2024 Jul 26
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00242
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Jul 26
+sortdate: 2024/07/26 00:00
+source: Imaging Neurosci (Camb)
+title: Perceptual foundation and extension to phase tagging for rapid invisible frequency
+  tagging (RIFT)
+uid: '12272182'
+volume: '2'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40800381'
+- idtype: doi
+  value: 10.1162/imag_a_00330
+- idtype: pmcid
+  value: PMC12290828
+authors:
+- authtype: Author
+  name: van Bree S
+- authtype: Author
+  name: Mackenzie AS
+- authtype: Author
+  name: Wimber M
+epubdate: 2024 Oct 24
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00330
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Oct 24
+sortdate: 2024/10/24 00:00
+source: Imaging Neurosci (Camb)
+title: No evidence that visual impulses enhance the readout of retrieved long-term
+  memory contents from EEG activity
+uid: '12290828'
+volume: '2'

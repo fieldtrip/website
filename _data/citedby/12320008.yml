@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40800964'
+- idtype: doi
+  value: 10.1162/IMAG.a.22
+- idtype: pmcid
+  value: PMC12320008
+authors:
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Cheung T
+- authtype: Author
+  name: Knappe S
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2025 May 30
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.22
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 30
+sortdate: 2025/05/30 00:00
+source: Imaging Neurosci (Camb)
+title: Optimal configuration of on-scalp OPMs with fixed channel counts
+uid: '12320008'
+volume: '3'

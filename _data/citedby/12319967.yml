@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '40800958'
+- idtype: doi
+  value: 10.1162/imag_a_00554
+- idtype: pmcid
+  value: PMC12319967
+authors:
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: McCloy DR
+- authtype: Author
+  name: Larson E
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Katz DS
+- authtype: Author
+  name: Smith AM
+- authtype: Author
+  name: Delorme A
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Tierney TM
+epubdate: 2025 May 2
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00554
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 2
+sortdate: 2025/05/02 00:00
+source: Imaging Neurosci (Camb)
+title: 'Cycling on the Freeway: The perilous state of open-source neuroscience software'
+uid: '12319967'
+volume: '3'

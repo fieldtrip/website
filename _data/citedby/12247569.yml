@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40800308'
+- idtype: doi
+  value: 10.1162/imag_a_00160
+- idtype: pmcid
+  value: PMC12247569
+authors:
+- authtype: Author
+  name: Steinmetzger K
+- authtype: Author
+  name: Rupp A
+epubdate: 2024 May 9
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00160
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 May 9
+sortdate: 2024/05/09 00:00
+source: Imaging Neurosci (Camb)
+title: The auditory P2 is influenced by pitch changes but not pitch strength and consists
+  of two separate subcomponents
+uid: '12247569'
+volume: '2'

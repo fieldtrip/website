@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40800959'
+- idtype: doi
+  value: 10.1162/imag_a_00546
+- idtype: pmcid
+  value: PMC12319774
+authors:
+- authtype: Author
+  name: Gärtner C
+- authtype: Author
+  name: Dercksen T
+- authtype: Author
+  name: Widmann A
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Wetzel N
+epubdate: 2025 Apr 25
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00546
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Apr 25
+sortdate: 2025/04/25 00:00
+source: Imaging Neurosci (Camb)
+title: The readiness potential reflects detailed prediction of action outcome
+uid: '12319774'
+volume: '3'

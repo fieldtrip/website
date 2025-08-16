@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40800872'
+- idtype: doi
+  value: 10.1162/imag_a_00527
+- idtype: pmcid
+  value: PMC12319984
+authors:
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2025 Apr 6
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00527
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Apr 6
+sortdate: 2025/04/06 00:00
+source: Imaging Neurosci (Camb)
+title: Measuring the neurodevelopmental trajectory of excitatory-inhibitory balance
+  via visual gamma oscillations
+uid: '12319984'
+volume: '3'

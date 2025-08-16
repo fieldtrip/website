@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40800288'
+- idtype: doi
+  value: 10.1162/imag_a_00301
+- idtype: pmcid
+  value: PMC12290705
+authors:
+- authtype: Author
+  name: Peterson V
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Luo S
+- authtype: Author
+  name: Rabbani Q
+- authtype: Author
+  name: Crone NE
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Richardson RM
+epubdate: 2024 Oct 1
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00301
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Oct 1
+sortdate: 2024/10/01 00:00
+source: Imaging Neurosci (Camb)
+title: A supervised data-driven spatial filter denoising method for speech artifacts
+  in intracranial electrophysiological recordings
+uid: '12290705'
+volume: '2'

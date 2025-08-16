@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '40800346'
+- idtype: doi
+  value: 10.1162/imag_a_00179
+- idtype: pmcid
+  value: PMC12247592
+authors:
+- authtype: Author
+  name: Seedat ZA
+- authtype: Author
+  name: Pier KS
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Al-Hilaly L
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Embury CM
+- authtype: Author
+  name: Pardington R
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Cross JH
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 May 20
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00179
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 May 20
+sortdate: 2024/05/20 00:00
+source: Imaging Neurosci (Camb)
+title: Simultaneous whole-head electrophysiological recordings using EEG and OPM-MEG
+uid: '12247592'
+volume: '2'

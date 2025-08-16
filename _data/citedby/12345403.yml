@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40603010'
+- idtype: doi
+  value: 10.1523/ENEURO.0078-25.2025
+- idtype: pmcid
+  value: PMC12345403
+authors:
+- authtype: Author
+  name: Benedetto A
+- authtype: Author
+  name: Jenks SK
+- authtype: Author
+  name: Mishra MV
+- authtype: Author
+  name: Giesbrecht B
+- authtype: Author
+  name: Poletti M
+epubdate: 2025 Aug 8
+fulljournalname: eNeuro
+issue: '8'
+pages: ENEURO.0078-25.2025
+pmclivedate: 2025/08/13
+printpubdate: ''
+pubdate: 2025 Aug 8
+sortdate: 2025/08/08 00:00
+source: eNeuro
+title: 'The Speed of Visual Discrimination Differs between Foveola and Perifovea:
+  A Combined EEG and Behavioral Investigation'
+uid: '12345403'
+volume: '12'

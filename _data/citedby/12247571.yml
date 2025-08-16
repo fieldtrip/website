@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40800450'
+- idtype: doi
+  value: 10.1162/imag_a_00119
+- idtype: pmcid
+  value: PMC12247571
+authors:
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: Kujala J
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2024 Mar 28
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00119
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Mar 28
+sortdate: 2024/03/28 00:00
+source: Imaging Neurosci (Camb)
+title: Towards a more robust non-invasive assessment of functional connectivity
+uid: '12247571'
+volume: '2'

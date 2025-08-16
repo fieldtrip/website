@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40800751'
+- idtype: doi
+  value: 10.1162/imag_a_00531
+- idtype: pmcid
+  value: PMC12319803
+authors:
+- authtype: Author
+  name: Balaji V
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2025 Apr 7
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00531
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Apr 7
+sortdate: 2025/04/07 00:00
+source: Imaging Neurosci (Camb)
+title: Modulating somatosensory alpha oscillations using short-period transcranial
+  alternating current stimulation
+uid: '12319803'
+volume: '3'

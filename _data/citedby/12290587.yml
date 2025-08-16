@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40800335'
+- idtype: doi
+  value: 10.1162/imag_a_00350
+- idtype: pmcid
+  value: PMC12290587
+authors:
+- authtype: Author
+  name: Zimmermann M
+- authtype: Author
+  name: Schultz-Nielsen K
+- authtype: Author
+  name: Dumas G
+- authtype: Author
+  name: Konvalinka I
+epubdate: 2024 Nov 1
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00350
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Nov 1
+sortdate: 2024/11/01 00:00
+source: Imaging Neurosci (Camb)
+title: Arbitrary methodological decisions skew inter-brain synchronization estimates
+  in hyperscanning-EEG studies
+uid: '12290587'
+volume: '2'

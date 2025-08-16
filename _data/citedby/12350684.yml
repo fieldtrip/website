@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '40804262'
+- idtype: doi
+  value: 10.1038/s41537-025-00656-4
+- idtype: pmcid
+  value: PMC12350684
+authors:
+- authtype: Author
+  name: Romagnano V
+- authtype: Author
+  name: Kubon J
+- authtype: Author
+  name: Sokolov AN
+- authtype: Author
+  name: Fallgatter AJ
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Pavlova MA
+epubdate: 2025 Aug 13
+fulljournalname: Schizophrenia
+issue: '1'
+pages: '112'
+pmclivedate: 2025/08/15
+printpubdate: ''
+pubdate: 2025 Aug 13
+sortdate: 2025/08/13 00:00
+source: Schizophrenia (Heidelb)
+title: Dynamic brain communication underlying face pareidolia in male schizophrenia
+uid: '12350684'
+volume: '11'

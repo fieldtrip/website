@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40800916'
+- idtype: doi
+  value: 10.1162/imag_a_00557
+- idtype: pmcid
+  value: PMC12319782
+authors:
+- authtype: Author
+  name: Chamanzar A
+- authtype: Author
+  name: Freud E
+- authtype: Author
+  name: Grover P
+- authtype: Author
+  name: Behrmann M
+epubdate: 2025 Apr 30
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00557
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Apr 30
+sortdate: 2025/04/30 00:00
+source: Imaging Neurosci (Camb)
+title: Lesion-network mapping in task-dependent frequencies uncovers remote consequences
+  of focal damage
+uid: '12319782'
+volume: '3'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/s25154810
+- idtype: pmcid
+  value: PMC12349273
+authors:
+- authtype: Author
+  name: Ledwidge PS
+- authtype: Author
+  name: McPherson CN
+- authtype: Author
+  name: Faulkenberg L
+- authtype: Author
+  name: Morgan A
+- authtype: Author
+  name: Baylis GC
+epubdate: 2025 Aug 5
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '15'
+pages: '4810'
+pmclivedate: 2025/08/14
+printpubdate: ''
+pubdate: 2025 Aug 5
+sortdate: 2025/08/05 00:00
+source: Sensors (Basel)
+title: A Comparison of Approaches for Motion Artifact Removal from Wireless Mobile
+  EEG During Overground Running
+uid: '12349273'
+volume: '25'

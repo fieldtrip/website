@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40800773'
+- idtype: doi
+  value: 10.1162/imag_a_00564
+- idtype: pmcid
+  value: PMC12319910
+authors:
+- authtype: Author
+  name: Orlando IF
+- authtype: Author
+  name: Tan JB
+- authtype: Author
+  name: Taylor NL
+- authtype: Author
+  name: Medel V
+- authtype: Author
+  name: Wainstein G
+- authtype: Author
+  name: Lewis SJ
+- authtype: Author
+  name: Shine JM
+- authtype: Author
+  name: O’Callaghan C
+epubdate: 2025 May 6
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag_a_00564
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 May 6
+sortdate: 2025/05/06 00:00
+source: Imaging Neurosci (Camb)
+title: Dopamine alters functional gradients in Parkinson’s disease
+uid: '12319910'
+volume: '3'
