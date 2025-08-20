@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40800350'
+- idtype: doi
+  value: 10.1162/imag_a_00152
+- idtype: pmcid
+  value: PMC12261954
+authors:
+- authtype: Author
+  name: Mohr KS
+- authtype: Author
+  name: Geuzebroek AC
+- authtype: Author
+  name: Kelly SP
+epubdate: 2024 Apr 26
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: imag-2-00152
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2024 Apr 26
+sortdate: 2024/04/26 00:00
+source: Imaging Neurosci (Camb)
+title: 'Visual cortical area contributions to the transient, multifocal and steady-state
+  VEP: A forward model-informed analysis'
+uid: '12261954'
+volume: '2'

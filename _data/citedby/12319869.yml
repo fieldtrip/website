@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40800891'
+- idtype: doi
+  value: 10.1162/IMAG.a.38
+- idtype: pmcid
+  value: PMC12319869
+authors:
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Riecke L
+- authtype: Author
+  name: de Gelder B
+epubdate: 2025 Jun 11
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.38
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jun 11
+sortdate: 2025/06/11 00:00
+source: Imaging Neurosci (Camb)
+title: Behavioral and neural evidence for perceptual predictions in social interactions
+uid: '12319869'
+volume: '3'

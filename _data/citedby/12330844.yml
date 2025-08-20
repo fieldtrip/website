@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40800811'
+- idtype: doi
+  value: 10.1162/IMAG.a.69
+- idtype: pmcid
+  value: PMC12330844
+authors:
+- authtype: Author
+  name: Shpakivska-Bilan D
+- authtype: Author
+  name: Susi G
+- authtype: Author
+  name: Zhou DW
+- authtype: Author
+  name: Cabrera J
+- authtype: Author
+  name: Carvajal BP
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Lopez ME
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Jones SR
+epubdate: 2025 Jul 14
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.69
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jul 14
+sortdate: 2025/07/14 00:00
+source: Imaging Neurosci (Camb)
+title: 'High-power transient 12–30 Hz beta event features as early biomarkers of Alzheimer’s
+  disease conversion: An MEG study'
+uid: '12330844'
+volume: '3'

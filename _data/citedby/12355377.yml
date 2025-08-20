@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40815082'
+- idtype: doi
+  value: 10.1093/scan/nsaf059
+- idtype: pmcid
+  value: PMC12355377
+authors:
+- authtype: Author
+  name: Harris AM
+- authtype: Author
+  name: Denaro CM
+- authtype: Author
+  name: Reed CL
+epubdate: 2025 Jun 4
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf059
+pmclivedate: 2025/08/16
+printpubdate: ''
+pubdate: 2025 Jun 4
+sortdate: 2025/06/04 00:00
+source: Soc Cogn Affect Neurosci
+title: Aperiodic activity masks sensorimotor mu suppression during human action observation
+uid: '12355377'
+volume: '20'

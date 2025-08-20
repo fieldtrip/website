@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '40819087'
+- idtype: doi
+  value: 10.1038/s41398-025-03506-0
+- idtype: pmcid
+  value: PMC12357859
+authors:
+- authtype: Author
+  name: Kinreich S
+epubdate: 2025 Aug 16
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '288'
+pmclivedate: 2025/08/18
+printpubdate: ''
+pubdate: 2025 Aug 16
+sortdate: 2025/08/16 00:00
+source: Transl Psychiatry
+title: Neural transmission in the wired brain, new insights into an encoding-decoding-based
+  neuronal communication model
+uid: '12357859'
+volume: '15'
