@@ -37,7 +37,7 @@ The Aston Brain Centre clinical staff would typically use the following sequence
 1. Screen the data visually for spikes and also to identify physiological or external recording artifacts.
 2. Choose relatively artifact-free data, that appears to contain spikes, for further analysis (bearing in mind that data quality can vary widely in patient recordings, especially children)
 3. Run the kurtosis beamformer analysis to yield candidate sources in volumetric images, which can be examined alongside other information e.g., lesions visible in anatomical images.
-4. Examine source time series from the candidate sources to verify the presence of spikes. Usually source time series would be visualised alongside the original raw data. Candidate spikes can be automatically marked in the time series based on their amplitude.
+4. Examine source time series from the candidate sources to verify the presence of spikes. Usually source time series would be visualized alongside the original raw data. Candidate spikes can be automatically marked in the time series based on their amplitude.
 5. Before reporting back to the surgical team, candidate sources are typically confirmed by dipole-fitting of key spikes identified by the pipeline outlined above.
 
 Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualizing MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis.

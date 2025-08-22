@@ -233,7 +233,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     refpos = conn.pos(:,4:6);
     conn.pos = orgpos;
 
-    %% visualise the seed-based connectivity results
+    %% visualize the seed-based connectivity results
 
     cfg               = [];
     cfg.funparameter  = 'cohspctrm';

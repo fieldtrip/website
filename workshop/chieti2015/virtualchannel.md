@@ -82,12 +82,12 @@ Check it once more.
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.36.34.png" width="500" %}
 
-    % load these from fieldtrip/template
-    template_mri = ft_read_mri('single_subj_T1_1mm.nii');
-    tmp = load('standard_sourcemodel3d6mm.mat');
+    % load these from the fieldtrip/template directory
+    template_mri = ft_read_mri('template/anatomy/single_subj_T1_1mm.nii');
+    tmp = load('template/sourcemodel/standard_sourcemodel3d6mm.mat');
     template_sourcemodel3d = tmp.sourcemodel;
 
-We want to visualise the various geometrical objects that we read into memory. For that we want to have them all expressed in the right coordinate system (which now has been taken care of) and in the same units.
+We want to visualize the various geometrical objects that we read into memory. For that we want to have them all expressed in the right coordinate system (which now has been taken care of) and in the same units.
 
     individual_mri            = ft_convert_units(individual_mri, 'mm');
     individual_sourcemodel3d  = ft_convert_units(individual_sourcemodel3d, 'mm');
@@ -199,7 +199,7 @@ We should now only have movements of a single type, and only see a single moveme
     tfr_lh = ft_freqanalysis(cfg, data_lh);
     tfr_rh = ft_freqanalysis(cfg, data_rh);
 
-Having computed the TFR, we want to visualise it. However, we computed the single-trial Fourier representation. With ft_freqdescriptives we can compute the average power
+Having computed the TFR, we want to visualize it. However, we computed the single-trial Fourier representation. With ft_freqdescriptives we can compute the average power
 
     cfg = [];
     tfr_lh_pow = ft_freqdescriptives(cfg, tfr_lh);
@@ -268,7 +268,7 @@ Around the movement there is a clear differential beta-band effect over bilatera
     cfg.normalize = 'yes';
     leadfield = ft_prepare_leadfield(cfg);
 
-Usually we would not look at the forward solution, i.e. the lead fields. But the quality of the forward model and lead fields influences the quality of the source-level estimate that we will get. Let's visualise the lead field for the most superior source close to the vertex.
+Usually we would not look at the forward solution, i.e. the lead fields. But the quality of the forward model and lead fields influences the quality of the source-level estimate that we will get. Let's visualize the lead field for the most superior source close to the vertex.
 
     selchan = match_str(data.grad.label, leadfield.label);
     % selpos = find(leadfield.inside, 1, 'first');
@@ -330,7 +330,7 @@ Since we have the left- and right-hand conditions, which have the same depth bia
     cfg.operation = 'log(x1/x2)';
     dics_diff = ft_math(cfg, dics_lh, dics_rh);
 
-Following interpolation of the (non-uniform grid) source reconstructed data onto the individual's MRI, we can visualise the distribution of the source estimate.
+Following interpolation of the (non-uniform grid) source reconstructed data onto the individual's MRI, we can visualize the distribution of the source estimate.
 
     cfg = [];
     cfg.parameter = 'all';

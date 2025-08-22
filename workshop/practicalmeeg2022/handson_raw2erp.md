@@ -210,7 +210,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
 
 ## Visualisation of the ERFs
 
-At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualise the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
+At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualize the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
 
 First of all, let's look at the plotting the data directly using standard MATLAB plotting commands. If we look at one of the averaged ERP/ERF data structures, we can recognize the field `time`, `avg` and `label`.
 
@@ -244,7 +244,7 @@ The same figure can be achieved using the following code
 
 There are in total 102 magnetometer channels, 204 planar gradiometer channels, and 70 EEG channels. We would not want to make a separate figure for each of them. We can plot the channels of one specific type (and with the same units) together in one figure, where each channel is plotted at the corresponding location.
 
-    % visualise the magnetometer data
+    % visualize the magnetometer data
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
@@ -267,7 +267,7 @@ _Figure: Topographies of average across selected latency window for each of the 
 
 For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-    % combine planar gradients and visualise the gradiometer data
+    % combine planar gradients and visualize the gradiometer data
     cfg              = [];
     avg_faces_c      = ft_combineplanar(cfg, avg_faces);
     avg_famous_c     = ft_combineplanar(cfg, avg_famous);
@@ -280,7 +280,7 @@ For the visualisation of the gradiometers, we first compute the magnitude of the
 
 Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electrode positions, which were digitized with a Polhemus.
 
-    % create an EEG channel layout on-the-fly and visualise the eeg data
+    % create an EEG channel layout on-the-fly and visualize the eeg data
     cfg      = [];
     cfg.elec = avg_faces.elec;
     layout_eeg = ft_prepare_layout(cfg);

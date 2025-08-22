@@ -59,7 +59,6 @@ A quick look at `dipfit_bem.dip` gives us information about the dipole fit. Espe
 
 And we visualize the dipole and see where it was localized in the brain.
 
-    % Visualise dipole fit
     ft_plot_mesh(headmodel_bem.bnd(3));
     alpha 0.7;
     ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')

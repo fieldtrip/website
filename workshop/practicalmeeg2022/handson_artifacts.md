@@ -261,7 +261,7 @@ Since there are many trials (about 800 in total), going through all of them can 
 
 Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you jump to about 300 seconds in the data, you can see that the blink frequency is increasing. Again, marking all of those blinks would be a lot of work.
 
-We can also use the automatically identified artifact segments and visualise them in **[ft_databrowser](/reference/ft_databrowser)**.
+We can also use the automatically identified artifact segments and visualize them in **[ft_databrowser](/reference/ft_databrowser)**.
 
     cfg = [];
     cfg.channel = 'EOG';

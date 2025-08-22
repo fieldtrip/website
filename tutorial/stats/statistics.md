@@ -229,7 +229,7 @@ Having computed the probability without correcting for multiple comparisons, we 
     cfg.neighbours        = neighbours;
     TFR_stat4     = ft_freqstatistics(cfg, TFR_logpow);
 
-### Visualise the results
+### Visualize the results
 
 We can visualize the results just like any other TFR structure. The _TFR_stat_ structures contain the actual statistical value that was computed (i.e. the t-value) in the _stat_ field.
 
@@ -369,7 +369,7 @@ We proceed by computing the statistical test, which returns the t-value, the pro
     cfg.neighbours        = neighbours;
     ERF_stat4     = ft_timelockstatistics(cfg, ERF_all);
 
-### Visualise the results
+### Visualize the results
 
 Again we can visualize the results of the statistical comparison. Since we have simple ERF data in two conditions, we can plot the original ERFs in combination with the statistical significance. The **[ft_multiplotER](/reference/ft_multiplotER)** function has a number of options for highlighting the data that is significant. These are specified using the cfg.maskstyle parameter.
 

@@ -152,7 +152,7 @@ Prior to doing the spectral decomposition with ft_freqanalysis you have to ensur
 Furthermore, after selecting the channels you want to use in the source reconstruction (excluding the bad channels) and after rereferencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
 {% include markup/end %}
 
-You can now visualise the headmodel together with the sensor positions:
+You can now visualize the headmodel together with the sensor positions:
 
     figure
     ft_plot_sens(freqPost.grad);

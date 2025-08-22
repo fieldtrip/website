@@ -50,7 +50,7 @@ You will notice that the regularly spaced 3D grids are not that interesting to l
 
 When doing source reconstruction using minimum norm estimation (MNE, also known as linear estimation) techniques, the assumption is that the sources in the brain are distributed and that only the strength at all possible cortical locations is to be estimated. Since the strength of all dipoles in the cortical mesh is estimated simultaneously, sources should only be placed in regions where generators might be present. MNE therefore usually assumes a source model that consists of grey matter only, which can be modeled as a highly folded cortical sheet.
 
-A canonical cortical sheet is available in fieldtrip/template/sourcemodel with different numbers of vertices (20484, 8192 and 5124 vertices). These files were taken from the SPM8 release version; they refer to the canonical T1 anatomical MRI and are expressed in MNI coordinates.
+A canonical cortical sheet is available in the `fieldtrip/template/sourcemodel` directory with different numbers of vertices (20484, 8192 and 5124 vertices). These files were taken from the SPM8 release version; they refer to the canonical T1 anatomical MRI and are expressed in MNI coordinates.
 
 - cortex_20484.surf.gii
 - cortex_8196.surf.gii

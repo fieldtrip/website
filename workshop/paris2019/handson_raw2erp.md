@@ -155,16 +155,16 @@ Once the data has been epoched and filtered, we can proceed with computing event
 
 ## Visualisation of the ERFs
 
-At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualise the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
+At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualize the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
 
-Each type of channel can be visualised with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
+Each type of channel can be visualized with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-    % visualise the magnetometer data
+    % visualize the magnetometer data
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
-    % combine planar gradients and visualise the gradiometer data
+    % combine planar gradients and visualize the gradiometer data
     cfg              = [];
     avg_faces_c      = ft_combineplanar(cfg, avg_faces);
     avg_famous_c     = ft_combineplanar(cfg, avg_famous);
@@ -175,7 +175,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
     cfg.layout = 'neuromag306cmb_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
-    % create an EEG channel layout on-the-fly and visualise the eeg data
+    % create an EEG channel layout on-the-fly and visualize the eeg data
     cfg      = [];
     cfg.elec = avg_faces.elec;
     layout_eeg = ft_prepare_layout(cfg);
@@ -200,7 +200,7 @@ _Figure: Average across selected magnetometers for each of the conditions._
 
 _Figure: Topographies of average across selected latency window for each of the conditions._
 
-Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts. Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
+Alternatively, the data of different channel types can be visualized within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts. Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';

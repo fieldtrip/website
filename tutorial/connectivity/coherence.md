@@ -362,7 +362,7 @@ Once we computed this, we can use **[ft_sourceanalysis](/reference/ft_sourceanal
     cfg.unit       = 'cm';
     source              = ft_sourceanalysis(cfg, freq);
 
-The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI. For this, we need the subject's MRI, which is included in the [SubjectCMC.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectCMC.zip) dataset. After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
+The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualize the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI. For this, we need the subject's MRI, which is included in the [SubjectCMC.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectCMC.zip) dataset. After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
 
     mri = ft_read_mri('SubjectCMC.mri');
 
@@ -376,7 +376,7 @@ Next, we can proceed with the interpolation.
     cfg.downsample = 2;
     interp         = ft_sourceinterpolate(cfg, source, mri);
 
-There are various ways to visualise the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](/reference/ft_sourceplot)**.
+There are various ways to visualize the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](/reference/ft_sourceplot)**.
 
     cfg              = [];
     cfg.method       = 'ortho';

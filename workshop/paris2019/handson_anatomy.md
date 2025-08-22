@@ -124,7 +124,7 @@ Now, to create a single-shell model of the inner surface of the skull, we need a
     headmodel  = ft_prepare_headmodel(cfg, seg);
     save(fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel', subj.name)), 'headmodel');
 
-You can now visualise the headmodel in combination with the anatomical image:
+You can now visualize the headmodel in combination with the anatomical image:
 
     cfg = [];
     cfg.intersectmesh = headmodel.bnd;
@@ -132,7 +132,7 @@ You can now visualise the headmodel in combination with the anatomical image:
 
 {% include image src="/assets/img/workshop/paris2019/mri_headmodel.png" width="400" %}
 
-_Figure: The headmodel visualised on top of the volulmetric anatomical image_
+_Figure: The headmodel visualized on top of the volulmetric anatomical image_
 
 ## Creation of a cortex based source model
 
@@ -185,7 +185,7 @@ on the MATLAB command line, you see something like this:
     lh.defect_chull    lh.pial             lh.smoothwm.K2.crv  lh.white           rh.curv.pial         rh.orig            rh.smoothwm.K.crv   rh.volume
     lh.defect_labels   lh.qsphere.nofix    lh.smoothwm.S.crv   lh.white.preaparc  rh.defect_borders    rh.orig.nofix      rh.smoothwm.K1.crv  rh.w-g.pct.mgh
 
-That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualise them in the following way:
+That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualize them in the following way:
 
     pial = ft_read_headshape({'lh.pial' 'rh.pial'});
     figure;

@@ -693,7 +693,7 @@ Since the original anatomical and labeled MRI are expressed in the same coordina
     atlas_realigned.unit        = mri_realigned.unit;
     atlas_realigned.coordsys    = mri_realigned.coordsys;
 
-We can visualise the atlas in the same way as the anatomical MRI.
+We can visualize the atlas in the same way as the anatomical MRI.
 
     cfg = [];
     ft_sourceplot(cfg, atlas);

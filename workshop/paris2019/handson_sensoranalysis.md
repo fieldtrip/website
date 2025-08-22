@@ -343,7 +343,7 @@ If you would like to learn more about plotting of time-frequency representations
 #### Exercise 5
 
 {% include markup/skyblue %}
-Rather than visualising the TFRs in isolated conditions (after a baseline correction), you can also visualise the difference between 2 conditions, for example in the following way, using **[ft_math](/reference/ft_math)**.
+Rather than visualising the TFRs in isolated conditions (after a baseline correction), you can also visualize the difference between 2 conditions, for example in the following way, using **[ft_math](/reference/ft_math)**.
 
     cfg = [];
     cfg.parameter = 'powspctrm';

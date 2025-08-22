@@ -56,7 +56,7 @@ Next, we use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to comput
     cfg.covariance = 'yes';
     baseline_avg   = ft_timelockanalysis(cfg, baseline);
 
-Now, if we reorder the channels a bit, we can visualise this covariance matrix as follows:
+Now, if we reorder the channels a bit, we can visualize this covariance matrix as follows:
 
     selmag  = ft_chantype(baseline_avg.label, 'megmag');
     selgrad = ft_chantype(baseline_avg.label, 'megplanar');

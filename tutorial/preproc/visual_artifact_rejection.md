@@ -33,7 +33,7 @@ The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for se
 
 The **[ft_databrowser](/reference/ft_databrowser)** function works both for continuous and segmented data and also works with the data either on disk or already read into memory. It allows you to browse through the data and to select with the mouse sections of data that contain an artifact. Those time-segments are marked. Contrary to **[ft_rejectvisual](/reference/ft_rejectvisual)**, the **[ft_databrowser](/reference/ft_databrowser)** function does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). After detecting the time-segments with the artifacts, you should call **[ft_rejectartifact](/reference/ft_rejectartifact)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
 
-Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualise the time course of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g., electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
+Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualize the time course of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g., electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
 
 ## Procedure
 
@@ -136,7 +136,7 @@ This operation could be repeated for each of the metrics, by selecting the metri
 {% include markup/skyblue %}
 The summary mode in **[ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e., only for the axial MEG gradiometers in this example.
 
-If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously.
+If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualized simultaneously.
 
 If you have data from a 306-channel Neuromag system, you will have both magnetometers and planar gradiometers, which have different physical units and rather different numbers. Combining them in a single visualization is likely to result in a biassed selection, either mainly relying on the magnetometers or the gradiometers being used to find artefacts.
 

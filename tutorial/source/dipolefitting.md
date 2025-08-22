@@ -47,7 +47,7 @@ To fit the dipole models to the data, we will perform the following steps:
 - Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
 - Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailed visualizations.
 
-### Read and visualise the anatomical data
+### Read and visualize the anatomical data
 
 We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](https://download.fieldtriptoolbox.org/workshop/natmeg2014/dicom.zip) from our download server. We suggest that you unzip the dicom files in a separate directory.
 
@@ -78,7 +78,7 @@ The high-level plotting functions do not offer support for flexible plotting of 
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_geometry1.png" width="500" %}
 
-It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
+It is possible to visualize the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
 
     figure
     cfg = [];
