@@ -43,7 +43,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Construct a headmodel for MEG source analysis](/tutorial/headmodel_meg)
 - [Construct a BEM headmodel for EEG source analysis](/tutorial/headmodel_eeg_bem)
 - [Construct a FEM headmodel for EEG source analysis](/tutorial/headmodel_eeg_fem)
-- [Construct a sourcemodel for MEG or EEG source analysis](/tutorial/sourcemodel)
+- [Creating a source model for MEG or EEG source analysis](/tutorial/sourcemodel)
 - [Localizing electrodes using a 3D-scanner](/tutorial/electrode)
 - [Localizing oscillatory sources in MEG data using a beamformer](/tutorial/beamformer)
 - [Beamforming oscillatory responses in combined MEG/EEG data](/workshop/natmeg2014/beamforming)

@@ -187,7 +187,7 @@ It is not clear for me when you have to define the option grid.inside and grid.o
 
 ## Minimum-norm estimate in FieldTrip using simulated data
 
-Trying to understand the results above, we looked at the phantom data in detail. It turned out that the location of the phantom with respect to the sensor-array was quite eccentric. To get a better idea about whether the results are caused by a feature of the code, or by the strange alignment we simulate some phantom data, where the active dipole is in the centre of the helmet.
+Trying to understand the results above, we looked at the phantom data in detail. It turned out that the location of the phantom with respect to the sensor array was quite eccentric. To get a better idea about whether the results are caused by a feature of the code, or by the strange alignment we simulate some phantom data, where the active dipole is in the centre of the helmet.
 
     cd ~jansch/matlab/toolboxes/fs2fieldtrip/
     load grad;

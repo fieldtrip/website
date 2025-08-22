@@ -168,7 +168,7 @@ We now recompute the virtual channel time series, but now only for the dipole di
 #### Exercise 8
 
 {% include markup/skyblue %}
-Rather than using a sourcemodel in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the _cfg.lcmv.fixedori='yes'_ option.
+Rather than using a source model in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the _cfg.lcmv.fixedori='yes'_ option.
 
 Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time series.
 

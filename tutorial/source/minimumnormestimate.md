@@ -31,10 +31,10 @@ _Figure 1. A schematic overview of the steps needed for the calculation of the m
 The forward model requires three geometric object
 
 - A volume conduction model of the head, also known as headmodel.
-- A sourcemodel, we advocate a minimally distorted low-resolution description of the cortical sheet.
-- A geometric description of the sensor-array (electrode positions + referencing information for EEG, coil positions/orientation and balancing information for MEG).
+- A source model, we advocate a minimally distorted low-resolution description of the cortical sheet.
+- A geometric description of the sensor array (electrode positions + referencing information for EEG, coil positions/orientation and balancing information for MEG).
 
-The sourcemodel and headmodel are ideally generated from a subject-specific MRI image. The description of the sensor-array typically is represented in the data (MEG), or needs to be constructed, for example with a Polhemus device (EEG). The construction of the head- and sourcemodels that are needed for the remainder of this tutorial is described in the following tutorial
+The sourcemodel and headmodel are ideally generated from a subject-specific MRI image. The description of the sensor array typically is represented in the data (MEG), or needs to be constructed, for example with a Polhemus device (EEG). The construction of the head- and sourcemodels that are needed for the remainder of this tutorial is described in the following tutorial
 
 - [Creating a volume conduction model of the head for source reconstruction of MEG data](/tutorial/headmodel_meg)
 - [Creating a source model for source reconstruction of MEG or EEG data](/tutorial/sourcemodel)

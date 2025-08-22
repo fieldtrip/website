@@ -66,7 +66,7 @@ We may need to estimate the time and memory requirements of each process, potent
 
 Robert: an automatic estimation and updating of requirements for subsequent jobs was built into peercellfun, but turned out not to be very robust. In qsubcellfun I therefore forced the correct specification onto the user instead of attempting to have smart defaults.
 
-The benefit to different modules being run in parallel may vary. Memory/processor intensive scripts (fMRI normalisation) vs. hard disk intensive (DICOM to Nifti conversion) depending on the site specific architecture.
+The benefit to different modules being run in parallel may vary. Memory/processor intensive scripts (fMRI normalisation) vs. hard disk intensive (DICOM to NIFTI conversion) depending on the site specific architecture.
 
 Similarly, small jobs would benefit from stacking (running a series of jobs on a single distributed node). That is implemented in qsubcellfun.
 

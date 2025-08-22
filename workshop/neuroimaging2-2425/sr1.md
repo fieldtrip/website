@@ -214,8 +214,8 @@ of three concentric spheres. These spheres represent the inner and outer surface
 of the skull, and the scalp surface. In an EEG volume conduction model, these
 surfaces represent the locations at which the conductivity of the tissue changes
 rapidly, leading to distortion and smearing of the volume currents. We will
-use an EEG sensor-array that has 91 electrodes placed on the spherical scalp
-surface. As such this sensor-array does not correspond to what you typically
+use an EEG sensor array that has 91 electrodes placed on the spherical scalp
+surface. As such this sensor array does not correspond to what you typically
 encounter in real life EEG-setups, but this is not a problem for bringing across
 the main message.
 

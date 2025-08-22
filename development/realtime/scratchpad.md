@@ -114,7 +114,7 @@ and in a get request?
 The chunks seem a logical extension of the header structure, as such it seems
 more logical to extend the GET and PUT commands with a GET_CHUNK and PUT_CHUNK,
 where the respective packet would contain the chunk type and length. Predefined
-chunks (such as Siemens, Nifti and CTF res4) can remain as they are, but would
+chunks (such as Siemens, NIfTI and CTF res4) can remain as they are, but would
 not be sent along with each GET_HDR. This removes the requirement to switch
 from the polling to the blocking-read operation as implemented with WAIT_DAT.
 See also the light-header proposal.
