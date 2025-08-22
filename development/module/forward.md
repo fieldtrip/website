@@ -143,32 +143,44 @@ FieldTrip relies on externally contributed software for some of the low-level co
 The OpenMEEG software is developed within the Athena project-team at INRIA Sophia-Antipolis and was initiated in 2006 by the [Odyssee Project Team](http://www.inria.fr/en/teams/odyssee) (INRIA/ENPC/ENS Ulm). OpenMEEG solves forward problems related to Magneto- and Electro-encephalography (MEG and EEG) using the symmetric Boundary Element Method, providing excellent accuracy.
 
 The MATLAB interface to the [OpenMEEG](https://openmeeg.github.io) implementation is kindly provided by Maureen Clerc, Alexandre Gramfort, and co-workers.
+- based on a system call to a compiled executable, needs to be obtained from elsewhere, and possibly built from the source code
+- source code is not provided
+- file based interaction with data.
 
 ### fieldtrip/external/bemcp
 
 The bemcp implementation is kindly provided by [Christophe Phillips]([http://www2.ulg.ac.be/crc/en/cphillips.html](https://christophephillips.github.io), hence the "CP" in the name.
 - based on mex-files
 - source code is provided (in FieldTrip)
-- 
+- direct interaction with data from within MATLAB.
 
 ### fieldtrip/external/dipoli
 
 The dipoli implementation is kindly provided by [Thom Oostendorp](http://www.mbfys.ru.nl/~thom/).
+- based on mex-files
+- source code is not provided
+- file based interaction with data.
 
 ### fieldtrip/external/hbf 
 
-The dipole implementation is kindly provided by [Matti Stenroos](https://github.com/MattiStenroos), and [George O'Neill](https://georgeoneill.github.io) wrote the code to directly access this method.
+The Helsinki BEM Framework implementation is kindly provided by [Matti Stenroos](https://github.com/MattiStenroos), and [George O'Neill](https://georgeoneill.github.io) wrote the code to directly access this method.
+- based on matlab m-code
 
 ## Finite element method (FEM) implementations
 
 ### fieldtrip/external/simbio
 
 The simbio implementation is kindly provided by [Carsten Wolters](http://www.uni-muenster.de/OCCMuenster/members/carsten-wolters.html) and colleagues. More information can be found [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page).
+- based on mex-files
+- source code is not provided
+- direct interaction with data from within MATLAB.
 
 ### fieldtrip/external/duneuro
 
 The original MATLAB interface to [DUNEuro](https://www.medizin.uni-muenster.de/duneuro/startseite.html) is kindly provided by the 
-
+- based on mex-files
+- source code is not provided
+- direct interaction with data from within MATLAB.
 
 ## Standard International Units
 
