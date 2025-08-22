@@ -55,6 +55,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Compute EEG leadfields using a concentric spheres headmodel](/example/source/concentricspheres)
 - [Compute EEG leadfields using a BEM headmodel](/example/source/bem)
 - [Compute EEG leadfields using a FEM headmodel](/example/source/fem)
+- [Create a template source model aligned to MNI space](/example/source/sourcemodel_mnitemplate)
 - [Compute forward simulated data and apply a beamformer scan](/example/compute_forward_simulated_data_and_apply_a_beamformer_scan)
 - [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
 - [Compute forward simulated data using ft_dipolesimulation](/example/compute_forward_simulated_data)

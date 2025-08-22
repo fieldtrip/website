@@ -20,7 +20,7 @@ When you do source reconstruction with dipole fit methods (as implemented in **[
 When doing source reconstruction with beamformers, people typically scan the brain volume where dipoles are defined on a regular 3D grid, with a regular spacing between the dipole locations. These grids are usually optimized to the individual anatomy of the participant. To facilitate group analysis, however, a clever strategy is to use a template grid (based on a template anatomical volume) that will be (linearly or non-linearly) warped to the individual participant's anatomy. Although this may lead to irregular spacing between the dipole locations (both across and potentially within participants), the dipole locations are directly comparable across participants, because they coincide in standard space.
 The FieldTrip template directory provides a set of sourcemodels defined on regular 3D-grids that are constructed from the MNI-template anatomy from SPM. These template sourcemodels can subsequently be used to be inverse normalized to the individual participant's anatomy. See this [example](/example/sourcemodel_aligned2mni) for more information.
 
-Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are available in fieldtrip/template/sourcemodel director
+Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are released along with the FieldTrip toolbox and available in the `fieldtrip/template/sourcemodel` directory:
 
 - standard_sourcemodel3d10mm.mat
 - standard_sourcemodel3d4mm.mat
@@ -29,7 +29,7 @@ Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 m
 - standard_sourcemodel3d7point5mm.mat
 - standard_sourcemodel3d8mm.mat
 
-To load and visualize the 3D regular grids, you can do for example
+To load and visualize the regularly spaced 3D grids, you can do
 
     load standard_sourcemodel3d5mm.mat
 
@@ -44,7 +44,7 @@ or you can use
     figure
     ft_plot_mesh(sourcemodel)
 
-You will notice that the 3D regular grids are not that interesting to look at; since there are no connecting elements (triangles), **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** will only show the vertices.
+You will notice that the regularly spaced 3D grids are not that interesting to look at; since there are no connecting elements (triangles), **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** will only show the vertices.
 
 ### Distributed source models with MNE
 

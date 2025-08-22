@@ -47,7 +47,7 @@ An example of a source structure obtained after performing a frequency domain so
          inside: [1x3415 double]           indices to the positions at which the source activity is actually estimated
         outside: [1x3317 double]           indices to the positions at which the source activity has not been estimated
 
-            dim: [xdim ydim zdim]          if the positions are described as a 3D regular grid, this contains the
+            dim: [xdim ydim zdim]          if the positions are described as a regularly spaced 3D grid, this contains the
                                              dimensionality of the 3D volume
             vol: [1x1 struct]              volume conductor model
       cumtapcnt: [10x1 double]             information about the number of tapers per original trial
@@ -69,7 +69,7 @@ This is the new definition of a data structure that represents data correspondin
             pos: [6732x3 double]       positions at which the source activity could have been estimated
          inside: [6732x1 logical]      logical vector of positions at which the source activity is actually estimated
 
-            dim: [xdim ydim zdim]      if the positions can be described as a 3D regular grid, this contains the
+            dim: [xdim ydim zdim]      if the positions can be described as a regularly spaced 3D grid, this contains the
                                          dimensionality of the 3D volume
             vol: [1x1 struct]          volume conductor model
       cumtapcnt: [120x1 double]        information about the number of tapers per original trial

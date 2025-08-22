@@ -354,7 +354,7 @@ row in the 'avg’ field belongs to which channel).
 Next we will make a source reconstruction using the 'mne’ method of FieldTrip’s
 ft_sourceanalysis function. Before we can do this, we need to define our source
 model, i.e., the set of locations that we assume to be active. For now we assume
-that the active dipoles are distributed on a 3D regular grid, with a spacing
+that the active dipoles are distributed on a regular 3D grid, with a spacing
 of 1 cm between the dipoles:
 
     sourcemodel = ni2_sourcemodel('type', 'grid', 'resolution', 1);
