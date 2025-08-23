@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.sigpro.2025.110116
+- idtype: pmcid
+  value: PMC12366762
+- idtype: MID
+  value: NIHMS2090718
+authors:
+- authtype: Author
+  name: Ajirak M
+- authtype: Author
+  name: Adali T
+- authtype: Author
+  name: Sanei S
+- authtype: Author
+  name: Grosenick L
+- authtype: Author
+  name: Djurić PM
+epubdate: 2025 Jun 2
+fulljournalname: Signal processing
+issue: ''
+pages: '110116'
+pmclivedate: ''
+printpubdate: 2026 Jan
+pubdate: 2025 Jun 2
+sortdate: 2025/06/02 00:00
+source: Signal Processing
+title: 'Exploring synergies: Advancing neuroscience with machine learning'
+uid: '12366762'
+volume: '238'

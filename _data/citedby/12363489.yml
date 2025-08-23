@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40085759'
+- idtype: doi
+  value: 10.1097/j.pain.0000000000003571
+- idtype: pmcid
+  value: PMC12363489
+authors:
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Bott FS
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2025 Mar 11
+fulljournalname: Pain
+issue: '9'
+pages: 2076-2090
+pmclivedate: 2025/08/20
+printpubdate: 2025 Sep
+pubdate: 2025 Mar 11
+sortdate: 2025/03/11 00:00
+source: Pain
+title: Assessing the predictive value of peak alpha frequency for the sensitivity
+  to pain
+uid: '12363489'
+volume: '166'

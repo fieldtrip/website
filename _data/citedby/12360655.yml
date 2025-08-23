@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40788966'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1013294
+- idtype: pmcid
+  value: PMC12360655
+authors:
+- authtype: Author
+  name: Schwenk JC
+- authtype: Author
+  name: Alamia A
+epubdate: 2025 Aug 11
+fulljournalname: PLOS Computational Biology
+issue: '8'
+pages: e1013294
+pmclivedate: 2025/08/19
+printpubdate: ''
+pubdate: 2025 Aug 11
+sortdate: 2025/08/11 00:00
+source: PLoS Comput Biol
+title: A hierarchical multiscale model of forward and backward alpha-band traveling
+  waves in the visual system
+uid: '12360655'
+volume: '21'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40048377'
+- idtype: doi
+  value: 10.1097/WNP.0000000000001151
+- idtype: pmcid
+  value: PMC12360042
+- idtype: MID
+  value: NIHMS2102028
+authors:
+- authtype: Author
+  name: Caffarelli M
+- authtype: Author
+  name: Simmons R
+- authtype: Author
+  name: Tolokh I
+- authtype: Author
+  name: Karukonda V
+- authtype: Author
+  name: Guterman EL
+- authtype: Author
+  name: Smith W
+- authtype: Author
+  name: Fox CK
+- authtype: Author
+  name: Westover MB
+- authtype: Author
+  name: Amorim E
+epubdate: 2025 Mar 5
+fulljournalname: 'Journal of clinical neurophysiology : official publication of the
+  American Electroencephalographic Society'
+issue: ''
+pages: 10.1097/WNP.0000000000001151
+pmclivedate: 2025/08/19
+printpubdate: ''
+pubdate: 2025 Mar 5
+sortdate: 2025/03/05 00:00
+source: J Clin Neurophysiol
+title: A Quantitative Electroencephalographic Index for Stroke Detection in Adults
+uid: '12360042'
+volume: ''

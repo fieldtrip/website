@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40472854'
+- idtype: doi
+  value: 10.1002/epi4.70069
+- idtype: pmcid
+  value: PMC12362159
+authors:
+- authtype: Author
+  name: Bullinger KL
+- authtype: Author
+  name: Crudele AN
+- authtype: Author
+  name: Morrell MJ
+- authtype: Author
+  name: Johnson L
+epubdate: 2025 Jun 5
+fulljournalname: Epilepsia Open
+issue: '4'
+pages: 1099-1110
+pmclivedate: 2025/08/20
+printpubdate: ''
+pubdate: 2025 Jun 5
+sortdate: 2025/06/05 00:00
+source: Epilepsia Open
+title: 'Chronic thalamic recordings for idiopathic generalized epilepsy and Lennox–Gastaut
+  syndrome: Ictal and interictal electrophysiological findings'
+uid: '12362159'
+volume: '10'

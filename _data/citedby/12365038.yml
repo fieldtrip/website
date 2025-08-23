@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '40830612'
+- idtype: doi
+  value: 10.1038/s41598-025-08037-8
+- idtype: pmcid
+  value: PMC12365038
+authors:
+- authtype: Author
+  name: Rivero GR
+- authtype: Author
+  name: Tanner Z
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Bobela D
+- authtype: Author
+  name: Morris PG
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2025 Aug 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '30471'
+pmclivedate: 2025/08/21
+printpubdate: ''
+pubdate: 2025 Aug 19
+sortdate: 2025/08/19 00:00
+source: Sci Rep
+title: OPM-MEG reveals dynamics of beta bursts underlying attentional processes in
+  sensory cortex
+uid: '12365038'
+volume: '15'

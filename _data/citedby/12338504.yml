@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40791388'
+- idtype: doi
+  value: 10.1101/2025.07.11.664246
+- idtype: pmcid
+  value: PMC12338504
+authors:
+- authtype: Author
+  name: Ponasso GN
+- authtype: Author
+  name: Drumm DA
+- authtype: Author
+  name: Oppermann H
+- authtype: Author
+  name: Wang A
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Makaroff SN
+- authtype: Author
+  name: Haueisen J
+epubdate: 2025 Jul 16
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.07.11.664246
+pmclivedate: 2025/08/12
+printpubdate: ''
+pubdate: 2025 Jul 16
+sortdate: 2025/07/16 00:00
+source: bioRxiv
+title: 'High-Resolution EEG Source Reconstruction from PCA-Corrected BEM-FMM Reciprocal
+  Basis Funcions: A Study with Visual Evoked Potentials from Intermittent Photic Stimulation'
+uid: '12338504'
+volume: ''
