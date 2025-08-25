@@ -356,6 +356,7 @@ belo
 Beltrachini
 bem
 BEM
+BEMs
 bemcp
 bemmodel
 bemtesting
@@ -1632,6 +1633,7 @@ fef
 Feldt
 femfuns
 FEMfuns
+FEMs
 femtoteslas
 Fenics
 FEniCS
@@ -4479,6 +4481,7 @@ Simanova
 simbio
 Simbio
 SimBio
+SimBIO
 SIMBIO
 Similary
 Siminova
