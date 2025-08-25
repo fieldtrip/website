@@ -73,7 +73,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with data from LORETA](/getting_started/othersoftware/loreta)
 - [Getting started with data from the BIOIMAGE suite](/getting_started/othersoftware/bioimage)
 - [Getting started with data from Homer](/getting_started/othersoftware/homer)
-- [Getting started with MNE(-python)](/getting_started/othersoftware/mne)
+- [Getting started with MNE-Python](/getting_started/othersoftware/mne)
 - [Getting started with SimNIBS](/getting_started/othersoftware/simnibs)
 
 ## Getting started with real-time data analysis

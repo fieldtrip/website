@@ -3,7 +3,7 @@ title: Getting started with real-time analysis for BCI and neurofeedback
 category: getting_started
 tags: [realtime]
 redirect_from:
-    - /getting_started/realtime/
+    - /getting_started/realtime_bci/
 ---
 
 # Getting started with real-time analysis for BCI and neurofeedback

@@ -3,7 +3,7 @@ title: Getting started with real-time head localization in MEG
 category: getting_started
 tags: [realtime, meg]
 redirect_from:
-    - /getting_started/realtime/headlocalizer/
+    - /getting_started/realtime_headlocalizer/
 ---
 
 # Getting started with real-time head localization in MEG
