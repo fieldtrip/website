@@ -15,7 +15,6 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 - [Improve integration with other toolboxes](/development/project/integration)
 - [Improve regression testing](/development/project/regression)
 - [Implement a common distributed computing backend](/development/project/distributed)
-- [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
 - [Implementation of realistic electrode properties in forward volume conduction models](/development/project/femfuns)
 
 ## Stale projects
@@ -33,6 +32,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Closed Projects
 
+- [Import and export data to and from MNE-Python](/development/project/integrate_with_mne) (done -> see [getting started section](/getting_started/othersoftware/mne/))
 - [Add stripped spm2 and other toolboxes as external dependencies](/development/project/external_dependencies) (done)
 - [Add support for reading data from any file format supported by neuroshare](/development/project/read_neuroshare) (will not be done, outdated)
 - [Add the spike functions from Martin](/development/project/spike) (done)
