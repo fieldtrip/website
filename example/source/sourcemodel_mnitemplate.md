@@ -21,8 +21,7 @@ resolution, and only with dipoles in gray matter.
 
 {% include markup/yellow %}
 Note that "gray" is the American English spelling, while "grey" is the British English spelling.
-Both are correct, but **[ft_volumesegment](/reference/ft_volumesegment)** uses the American 
-spelling, whereas SPM uses the British spelling.
+Both are correct, but for computers the difference matters. FieldTrip **[ft_volumesegment](/reference/ft_volumesegment)** uses the American spelling, whereas SPM uses the British spelling.
 {% include markup/end %}
 
     % read the 1 mm resolution canonical MNI template MRI

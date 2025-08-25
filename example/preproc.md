@@ -1,5 +1,5 @@
 ---
-title: Examples for rReading and preprocessing data
+title: Examples for reading and preprocessing data
 ---
 
 # {{ page.title }}
