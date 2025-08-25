@@ -1,5 +1,5 @@
 {% if include.section != nill and include.section != "" %}
-{% assign section = include.section %}
+{% assign section =  "/" | append: include.section | append: "/" %}
 {% else %}
 {% assign section = page.url %}
 {% endif %}
@@ -9,7 +9,7 @@
 {% for item in site.pages %}
 {% assign part1 = item.url | slice: 0, section.size %}
 {% if part1 == section %}
-{% assign part2 = item.url | slice: section.size, 999 | split: "/" %}
+{% assign part2 = item.url | slice: section.size, 999  | split: "/" %}
 {% if part2.size == 1 %}
 {% assign selected = selected | push: item %}
 {% endif %}
@@ -17,8 +17,9 @@
 {% endfor %}
 
 <ul>
-{% assign selected = selected | sort_natural: "title" %}
-{% for item in selected %}
-<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% for item in selected | sort_natural: "title" %}
+{% if item.title != nill %}
+<li><a href="{{ item.url }}"> {{ item.title }}</a></li>
+{% endif %}
 {% endfor %}
 </ul>
