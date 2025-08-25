@@ -1,5 +1,5 @@
 ---
-title: NIRS
+title: Getting started with NIRS data
 ---
 
 # {{ page.title }}

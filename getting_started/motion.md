@@ -1,5 +1,5 @@
 ---
-title: Motion capture
+title: Getting started with motion capture data
 ---
 
 # {{ page.title }}

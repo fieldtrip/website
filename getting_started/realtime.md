@@ -1,5 +1,5 @@
 ---
-title: Real-time analysis
+title: Getting started with real-time analysis
 ---
 
 # {{ page.title }}

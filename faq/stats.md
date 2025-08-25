@@ -1,5 +1,5 @@
 ---
-Title: Experimental
+Title: Statistical questions
 ---
 
 # {{ page.title }}

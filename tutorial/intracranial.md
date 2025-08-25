@@ -1,5 +1,5 @@
 ---
-title: Analysis of intracranial data
+title: Tutorials on the analysis of intracranial data
 ---
 
 # {{ page.title }}

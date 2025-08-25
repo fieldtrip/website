@@ -1,5 +1,5 @@
 ---
-title: Other software
+title: Getting started with (data from) other software
 ---
 
 # {{ page.title }}

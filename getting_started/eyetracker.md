@@ -1,5 +1,5 @@
 ---
-title: Eyetracker
+title: Getting started with eyetracker data
 ---
 
 # {{ page.title }}

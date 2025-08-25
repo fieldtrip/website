@@ -589,7 +589,7 @@ At this point we've removed the ringing/step response and discharge artifact by 
 
 Remember that our data is divided into segments of trials excluding the ringing/step response artifact and the recharging artifact. We are first going to recreate the original trial structure by combining the trial segments. The gaps that we've created by excluding certain segments will first be filled with nans. Afterwards all the segments containing nans will be interpolated. The period containing the muscle artifact will also be replaced by nans so that it can be interpolated as well.
 
-We will first recreate our original trial structure. For this purpose we require the original trl matrix created at the beginning of the tutorial [here](/tutorial/tms-eeg#Visual data inspection).
+We will first recreate our original trial structure. For this purpose we require the original trl matrix created at the beginning of the tutorial [here](#Visual data inspection).
 
     % Apply original structure to segmented data, gaps will be filled with nans
     cfg     = [];

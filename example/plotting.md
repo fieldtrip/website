@@ -1,5 +1,5 @@
 ---
-title: Plotting and visualization
+title: Examples for plotting and visualization
 ---
 
 # {{ page.title }}

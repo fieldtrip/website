@@ -1,5 +1,5 @@
 ---
-title: Analysis of fNIRS data
+title: Tutorials on the analysis of NIRS data
 ---
 
 # {{ page.title }}

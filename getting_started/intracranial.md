@@ -1,5 +1,5 @@
 ---
-title: Intracranial
+title: Getting started with intracranial data
 ---
 
 # {{ page.title }}

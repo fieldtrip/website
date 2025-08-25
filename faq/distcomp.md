@@ -1,5 +1,5 @@
 ---
-title: Distributed computing
+title: Distributed computing questions
 ---
 
 # {{ page.title }}

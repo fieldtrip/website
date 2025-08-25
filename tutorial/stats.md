@@ -1,5 +1,5 @@
 ---
-title: Statistical analysis
+title: Tutorials on statistical analysis
 ---
 
 # {{ page.title }}

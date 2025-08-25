@@ -1,5 +1,5 @@
 ---
-title: Making your analyses more efficient
+title: Tutorials on making your analyses more efficient
 ---
 
 # {{ page.title }}

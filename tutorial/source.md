@@ -1,5 +1,5 @@
 ---
-title: Source reconstruction
+title: Tutorials on source reconstruction
 ---
 
 # {{ page.title }}

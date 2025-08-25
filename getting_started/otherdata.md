@@ -1,5 +1,5 @@
 ---
-title: Other data
+title: Getting started with other types of data
 ---
 
 # {{ page.title }}

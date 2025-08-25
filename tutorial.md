@@ -62,7 +62,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Preprocessing and analysis of spike-train data](/tutorial/spike)
 - [Preprocessing and analysis of spike and LFP data](/tutorial/spikefield)
 
-## Analysis of TMS-EEG data
+## Analysis of TMS data
 
 - [Dealing with TMS-EEG datasets](/tutorial/tms-eeg)
 

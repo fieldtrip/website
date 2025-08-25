@@ -1,5 +1,5 @@
 ---
-title: Sensor-level analyses
+title: Tutorials on sensor-level analyses
 ---
 
 # {{ page.title }}

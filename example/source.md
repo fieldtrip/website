@@ -1,5 +1,5 @@
 ---
-title: Source reconstruction
+title: Examples for source reconstruction
 ---
 
 # {{ page.title }}

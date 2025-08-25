@@ -1,5 +1,5 @@
 ---
-title: Statistical analysis
+title: Examples for statistical analysis
 ---
 
 # {{ page.title }}

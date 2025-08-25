@@ -1,5 +1,5 @@
 ---
-title: Connectivity analysis
+title: Tutorials on connectivity analysis
 ---
 
 # {{ page.title }}

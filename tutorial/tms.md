@@ -1,5 +1,5 @@
 ---
-title: Analysis of TMS-EEG data
+title: Tutorials on the analysis of TMS data
 ---
 
 # {{ page.title }}

@@ -1,5 +1,5 @@
 ---
-title: Plotting and visualization
+title: Plotting and visualization questions
 ---
 
 # {{ page.title }}

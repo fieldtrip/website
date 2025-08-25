@@ -1,5 +1,5 @@
 ---
-title: Spectral analysis
+title: Examples for spectral analysis
 ---
 
 # {{ page.title }}

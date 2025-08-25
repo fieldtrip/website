@@ -1,5 +1,5 @@
 ---
-title: Spectral analysis
+title: Spectral analysis questions
 ---
 
 # {{ page.title }}
