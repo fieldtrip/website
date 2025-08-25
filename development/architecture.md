@@ -1,11 +1,11 @@
 ---
-title: Toolbox architecture and organization of the source code
+title: Software architecture
 tags: [development]
 redirect_from:
   - /development/module/
 ---
 
-# Toolbox architecture and organization of the source code
+# Software architecture
 
 {% include markup/skyblue %}
 The **[ft_examplefunction](/reference/ft_examplefunction)** provides a documented walkthrough of a typical high-level FieldTrip function that demonstrates a lot of the features presented below.

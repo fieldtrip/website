@@ -104,7 +104,7 @@ This applies for example when the set of electrodes is distributed on a flat sur
 
 FROM CT TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+This method applies to ECoG or sEEG and is normally not used for scalp EEG:
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/forwsphere.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -245,7 +245,7 @@ This applies for example when the set of electrodes is distributed on a flat sur
 
 FROM MRI TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+This method applies to ECoG or sEEG and is normally not used for scalp EEG:
 {% include /shared/development/forwsegmmri.md %}
 {% include /shared/development/forwsphere.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -338,7 +338,7 @@ This case happens when I have a set of electrodes positions and an estimate of t
 
 FROM Headshape points TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+This method applies to ECoG or sEEG and is normally not used for scalp EEG:
 
 - Load in the set of points of the head shape (these can be the electrodes positions as well)
 - Fit a sphere to the points
@@ -411,7 +411,7 @@ Method:
 
 FROM Headshape triangulation TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+This method applies to ECoG or sEEG and is normally not used for scalp EEG:
 
 1 - Load in the set of points of the head triangulation
 2 - Get rid of the .tri (edges of the mesh) and exclude the points corresponding to the inferior part of the head
@@ -485,7 +485,7 @@ FROM Nothing TO Infinite slab
 
 FROM Nothing TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+This method applies to ECoG or sEEG and is normally not used for scalp EEG:
 
 1 - Use priors or informed guess about the radius and the center of the sphere (i.e. radius = 12cm and center = [0,0,4]cm in head coordinates is normally a good guess!)
 

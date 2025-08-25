@@ -170,7 +170,7 @@ The output structure `dataMytrialfun` now contains fewer trials than before: onl
               grad: [1x1 struct]
                cfg: [1x1 struct]
 
-More on the `trialinfo` field can be found in the [faq](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
+More on the `trialinfo` field can be found in the [FAQ](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
 
 ## Suggested further reading
 

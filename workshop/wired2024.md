@@ -59,7 +59,7 @@ After installing FieldTrip to your path, you change to the location where the tu
 
 ### Allow execution of mex files on macOS
 
-The FieldTrip toolbox comes with a bunch of [mex files](https://en.wikipedia.org/wiki/MEX_file). These contain compiled code that is linked at run time. If you are working on macOS, chances are that your security settings do not allow the execution of unsigned code. This [faq](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified) explains how to add an exception to run the mex files.
+The FieldTrip toolbox comes with a bunch of [mex files](https://en.wikipedia.org/wiki/MEX_file). These contain compiled code that is linked at run time. If you are working on macOS, chances are that your security settings do not allow the execution of unsigned code. This [FAQ](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified) explains how to add an exception to run the mex files.
 
 ### Prepare and bring your questions
 

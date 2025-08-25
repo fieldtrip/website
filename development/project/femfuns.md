@@ -44,7 +44,7 @@ The following section illustrates an example where the FEMfuns pipeline is embed
 
 ### Setting-up
 
-The instructions to set up FEMfuns can be found on the [Github page](https://github.com/Donders-Institute/FEMfuns).
+The instructions to set up FEMfuns can be found on the [GitHub page](https://github.com/Donders-Institute/FEMfuns).
 Setting up is achieved in three steps:
 
 Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/

@@ -23,4 +23,4 @@ If you are very eager to get started with your specific data, please proceed to 
 - [References to implemented methods](/references_to_implemented_methods)
 - [Review and teaching material](/references_to_review_papers_and_teaching_material)
 - [Template models and data](/template)
-- [Realtime BCI](/development/realtime)
+- [Real-time data processing](/development/realtime)

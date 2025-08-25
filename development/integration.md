@@ -12,15 +12,19 @@ We use <https://jekyllrb.com> for our website. The markdown documents are hosted
 
 ## Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>.
+We use this for the email discussion list. It is hosted by C&CZ at <http://mailman.science.ru.nl>.
 
 ## Mastodon
 
 We use <https://fosstodon.org/@fieldtriptoolbox> to notify people about new releases and other updates.
 
+## BlueSky
+
+We use <https://bsky.app/profile/fieldtriptoolbox.bsky.social> to notify people about new releases and other updates.
+
 ## Bitly
 
-We use <https://bitly.com> to automatically create short URLs that are included in the tweets.
+We use <https://bitly.com> to automatically create short URLs that are included in social media posts.
 
 ## Shields
 
@@ -32,7 +36,7 @@ We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) that 
 
 ## GitHub
 
-We use git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [Gitlab](#gitlab).
+We use git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [GitLab](#gitlab).
 
 If changes are pushed to GitHub, a webhook is triggered. The code for that is maintained at <https://github.com/fieldtrip/automation>.
 
@@ -40,7 +44,7 @@ If changes are pushed to GitHub, a webhook is triggered. The code for that is ma
 
 A copy of the git repository of the FieldTrip software is maintained on <https://bitbucket.org/fieldtriptoolbox/fieldtrip>, although the primary site is on [GitHub](#GitHub).
 
-## Gitlab
+## GitLab
 
 A copy of the git repository of the FieldTrip software is stored on <https://gitlab.com/fieldtrip/fieldtrip>, although the primary site is on [GitHub](#GitHub).
 
@@ -58,7 +62,7 @@ At the DCCN we have a central storage system (i.e. a large shared network drive)
 
 ## Dashboard
 
-We have a set of MATLAB and Bash scripts for regression testing. This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the [test dashboard](/development/testing). The code is hosted on [GitHub](https://github.com/fieldtrip/dashboard) and the MATLAB interface is implemented in **[ft_test](/reference/utilities/ft_test)**, which you can find in the utilities folder.
+We have a set of MATLAB and Bash scripts for regression testing that are hosted on [GitHub](https://github.com/fieldtrip/dashboard). This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the [test dashboard](/development/testing).
 
 ## Mixpanel
 
@@ -72,9 +76,9 @@ We are experimenting with [Slack](https://fieldtriptoolbox.slack.com) as a messa
 
 We use a [webdav server](https://download.fieldtriptoolbox.org) to distribute the software releases and tutorial data.
 
-## Ftp - obsolete
+## FTP - obsolete
 
-We used the DCCN [download server](https://download.fieldtriptoolbox.org/) to distribute the software releases and tutorial data.
+In the past we used an FTP server to distribute the software releases and tutorial data.
 
 ## Bugzilla - obsolete
 
@@ -82,7 +86,7 @@ In the past we used [Bugzilla](https://www.bugzilla.org) as an "issue tracker" t
 
 ## Dokuwiki - obsolete
 
-In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our website. In 2018 we switched to Jekyll and GitHub.
+In the past we used [dokuwiki](http://dokuwiki.org/) as the content management system (CMS) for our website. In 2018 we switched to Jekyll and GitHub.
 
 ## SVN - obsolete
 
@@ -90,7 +94,7 @@ We used to do the development with Subversion (also known as SVN). As of Februar
 
 ## CVS - obsolete
 
-We initially used Concurrent Versions System (CVS) as the version control system.  At a certain point we followed the example from the SPM developers and switched to SVN to facilitate collaboration between more contributors.
+We initially used the Concurrent Versions System (CVS) for software version control. At a certain point we followed the example from the SPM developers and switched to SVN to facilitate collaboration with contributors.
 
 ## Google Code - obsolete
 
@@ -110,4 +114,4 @@ We used <http://facebook.com/fieldtriptoolbox> to announce events and to post ph
 
 ## Twitter - obsolete
 
-We used <http://twitter.com/fieldtriptoolbx> to notify people about new releases and other updates. For some time we also tweeted an automatic update for every commit. We are now using Mastodon instead of Twitter.
+We used <http://twitter.com/fieldtriptoolbx> to notify people about new releases and other updates. For some time we also tweeted an automatic update for every commit. We are now using Mastodon and BlueSky instead of Twitter.

@@ -1,11 +1,11 @@
 ---
-title: Data structures used by FieldTrip
+title: Data structures
 tags: [development]
 ---
 
-# Data structures used by FieldTrip
+# Data structures
 
-High-level FieldTrip functions usually expect input data as a MATLAB structure in a specific format, and produce output data. The data is represented as MATLAB structures which are documented in the following helper functions:
+High-level FieldTrip functions expect input data as a MATLAB structure, and produce output data as a MATLAB structure. The input and output data structures are documented in the following helper functions:
 
 - **[ft_datatype_comp](/reference/utilities/ft_datatype_comp)**
 - **[ft_datatype_dip](/reference/utilities/ft_datatype_dip)**

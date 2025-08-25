@@ -12,7 +12,7 @@ Recently, we have developed a novel algorithm based on multiscale entropy (**[Co
 
 {% include image src="/assets/img/example/entropy_analysis/Figure2.png" %}
  
-Notably, mMSE is able to reveal brain-behavior links in EEG data that go undetected by conventional analysis methods such as spectral power, overall signal variation (SD), and event-related potentials (ERPs).  Please see our preprints **[Kloosterman et al.](https://doi.org/10.1101/834614.m)** and **[Kosciessa et al.](https://doi.org/10.1371/journal.pcbi.1007885)** for more information, and the tutorial folder on our Github page for a step-by-step explanation of the computation of mMSE within our fieldtrip MATLAB function.
+Notably, mMSE is able to reveal brain-behavior links in EEG data that go undetected by conventional analysis methods such as spectral power, overall signal variation (SD), and event-related potentials (ERPs).  Please see our preprints **[Kloosterman et al.](https://doi.org/10.1101/834614.m)** and **[Kosciessa et al.](https://doi.org/10.1371/journal.pcbi.1007885)** for more information, and the tutorial folder on our GitHub page for a step-by-step explanation of the computation of mMSE within our fieldtrip MATLAB function.
 
 ## Download and install the mMSE toolbox
 
@@ -99,7 +99,7 @@ To run standard MSE analysis, define your `cfg` as follows:
     cfg.allowgpu          = true;                      % allow GPU computations, if available
     [mse] = ft_entropyanalysis(cfg, data);
 
-Please contact us via [@neuro_klooster](https://twitter.com/neuro_klooster) or kloosterman\[at\]mpib-berlin.mpg.de if you have questions or if you find bugs. You can also send us a Pull Request on the Github page.
+Please contact us via [@neuro_klooster](https://twitter.com/neuro_klooster) or kloosterman\[at\]mpib-berlin.mpg.de if you have questions or if you find bugs. You can also send us a Pull Request on the GitHub page.
 
 This work was contributed by Niels Kloosterman, Julian Kosciessa, Liliana Polyanska, and Douglas Garrett within the **[Lifespan Neural Dynamics Group](https://github.com/LNDG)**.
 

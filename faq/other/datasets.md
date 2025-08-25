@@ -202,7 +202,7 @@ Documentation referring to this dataset:
 
 ## ECoG-protocol
 
-- Intracranial EEG data (ECoG and Stereo EEG) obtained at the UC Irvine Medical Center. Includes a pre-implantation MR and a post-implantation CT, the latter showing the recording electrodes.
+- Intracranial EEG data (ECoG and sEEG) obtained at the UC Irvine Medical Center. Includes a pre-implantation MR and a post-implantation CT, the latter showing the recording electrodes.
 - Download the dataset [SubjectUCI29.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectUCI29.zip) from our download server.
 
 Documentation referring to this dataset:

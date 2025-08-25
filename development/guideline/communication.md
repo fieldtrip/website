@@ -10,13 +10,13 @@ To communicate with and reach a wide audience, we use the following channels
 - this website, for documentation
 - the email [discussion list](/discussion_list), for interactions among users to help each other out
 - [GitHub](https://github.com/fieldtrip), for interaction between developpers
-- [Mastodon](https://fosstodon.org/@fieldtriptoolbox), for release announcements and news items
+- [Mastodon](https://fosstodon.org/@fieldtriptoolbox) and [BlueSky](https://bsky.app/profile/fieldtriptoolbox.bsky.social), for release announcements and news items
 
 With each of these we reach out to a specific group FieldTrip stakeholders but - although they are partially overlapping - there is none through which we reach everyone.
 
 ## News items and releases
 
-These are to be announced on the website and on Mastodon.
+These are to be announced on the website, Mastodon and BlueSky.
 
 To add a news item to the website, please file a pull request adding a new file to the [\_posts folder on the website](https://github.com/fieldtrip/website/tree/master/_posts). See example files there for how these (markdown) files should be structured. The latest files flagged as `category: news` will, when merged, appear on the homepage.
 
