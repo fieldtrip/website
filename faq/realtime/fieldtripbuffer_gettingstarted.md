@@ -83,4 +83,4 @@ You can combine the **[ft_read_header](/reference/fileio/ft_read_header)** and *
 
 ## Suggested further reading
 
-The [getting started with realtime analysis](/getting_started/realtime) documentation provides a more elaborate starting point. You might also want to click on the "realtime" tag at the top of this page, which will show you all other pages that share the same tag.
+The [getting started with realtime analysis](/getting_started/realtime/bci) documentation provides a more elaborate starting point. You might also want to click on the "realtime" tag at the top of this page, which will show you all other pages that share the same tag.

@@ -10,9 +10,9 @@ redirect_from:
 
 The present system for acquiring fMRI data in real time consists of three main blocks:
 
-1.  a stand-alone executable that runs directly on the scanner host,
-2.  a FieldTrip buffer running on another machine in the network, and
-3.  MATLAB scripts or other client applications that retrieve their data from the buffer.
+1. a stand-alone executable that runs directly on the scanner host,
+2. a FieldTrip buffer running on another machine in the network, and
+3. MATLAB scripts or other client applications that retrieve their data from the buffer.
 
 Further to that, a small modification needs to be made to the applied MR sequence such that protocol information is written to a specific location. By now, all the sequences commonly used at the DCCN contain this modification.
 
@@ -22,8 +22,8 @@ Recent Siemens software versions (VB17) include an option for realtime export of
 
 There are essentially two steps involved for using this mechanism
 
-1.  Start a FieldTrip buffer server on some machine and port number in the network, e.g., on mentat069:1972.
-2.  On the scanner console, start **gui_streamer** and enter "mentat069" as well as "1972" in the "hostname" and "port" input fields, then press "Connect".
+1. Start a FieldTrip buffer server on some machine and port number in the network, e.g., on mentat069:1972.
+2. On the scanner console, start **gui_streamer** and enter "mentat069" as well as "1972" in the "hostname" and "port" input fields, then press "Connect".
 
 If the connection could be made, the color of the input fields will switch to green. You can now start scanning and have a look at the **gui_streamer** window
 to monitor the number of scans etc.
@@ -57,11 +57,11 @@ Apart from motion correction and other pre-processing steps, it is necessary to 
 
 #### Starting the various applications
 
-1.  you should start up the FieldTrip buffer servers. In case you **do not** want to save the incoming scans and events, you can use the plain **buffer** application `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/buffer`. In case you *do want to save* the data for later offline analysis or for debugging, you should use the **recording** application. In detail, open a terminal window and type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_raw_data 1972` where "path_to_raw_data" is the name of a new directory (will be created for you) that will receive the unprocessed scans. Then, in a second terminal, similarly type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_processed_data 1973` to spawn a second buffer server on another port.
-2.  you should start **serial_event**, the tool for translating the TTL pulses to FieldTrip events. In the DCCN MRI labs, this application is available on "D:\TTL_to_FieldTrip" on the machine "Presentation010" close to the Avanto. The configuration file "serial_event.conf" should already contain the right settings.
-3.  you should start the MATLAB script that does the preprocessing, e.g., **ft_omri_pipeline**. The script takes a "cfg" structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of "localhost:1972" and "localhost:1973" for "cfg.input" and "cfg.output" are already fine.
-4.  you should start **gui_streamer** on the scanner host. Make sure that the address of the buffer servers is correct (in the example above, this should be "lab-mri004" and "1972"), and that the connection is made (press "Connect", after which the address fields should be green). Also make sure that you enter the name of the presentation machine (e.g., "Presentation010") in the input field on the bottom of the **gui_streamer** dialog window, and that the port number (e.g., 1990) is the same as in the **serial_event** configuration file. Press "Enable" to send "RESET" messages at the start of each MR sequence.
-5.  you should now be ready to start the sequence on the scanner.
+1. you should start up the FieldTrip buffer servers. In case you **do not** want to save the incoming scans and events, you can use the plain **buffer** application `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/buffer`. In case you *do want to save* the data for later offline analysis or for debugging, you should use the **recording** application. In detail, open a terminal window and type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_raw_data 1972` where "path_to_raw_data" is the name of a new directory (will be created for you) that will receive the unprocessed scans. Then, in a second terminal, similarly type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_processed_data 1973` to spawn a second buffer server on another port.
+2. you should start **serial_event**, the tool for translating the TTL pulses to FieldTrip events. In the DCCN MRI labs, this application is available on "D:\TTL_to_FieldTrip" on the machine "Presentation010" close to the Avanto. The configuration file "serial_event.conf" should already contain the right settings.
+3. you should start the MATLAB script that does the preprocessing, e.g., **ft_omri_pipeline**. The script takes a "cfg" structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of "localhost:1972" and "localhost:1973" for "cfg.input" and "cfg.output" are already fine.
+4. you should start **gui_streamer** on the scanner host. Make sure that the address of the buffer servers is correct (in the example above, this should be "lab-mri004" and "1972"), and that the connection is made (press "Connect", after which the address fields should be green). Also make sure that you enter the name of the presentation machine (e.g., "Presentation010") in the input field on the bottom of the **gui_streamer** dialog window, and that the port number (e.g., 1990) is the same as in the **serial_event** configuration file. Press "Enable" to send "RESET" messages at the start of each MR sequence.
+5. you should now be ready to start the sequence on the scanner.
 
 ## Background information
 

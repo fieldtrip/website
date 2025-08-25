@@ -9,7 +9,7 @@ This page contains some loose ends and random pieces that don't fit elsewhere.
 
 - [closing the loop](/development/realtime/closing_the_loop) lists some methods for interacting with, and controlling the external world (i.e. outside the analysis computer)
 - [pipeline](/development/realtime/pipeline) contains example fMRI pipeline description
-- [Siemens fMRI](/getting_started/realtime_fmri) also contains some fMRI details
+- [Siemens fMRI](/getting_started/realtime/fmri) also contains some fMRI details
 
 ## Various notes and comments
 

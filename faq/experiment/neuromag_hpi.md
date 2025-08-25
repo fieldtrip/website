@@ -9,7 +9,7 @@ redirect_from:
 
 # How can I visualize the neuromag head position indicator coils?
 
-It is common practice for an MEG experiment involving Neuromag systems to digitize the positions of head position indicator (HPI) coils, as well as other landmarks of the subject's head, prior to performing the experiment. The [real-time head localizer](/getting_started/realtime_headlocalizer) uses these digitized positions, which are stored in the neuromag fif file, to perform the real time fitting of the actual HPI coil positions during the course of the experiment. It is therefore advised to check whether those digitized positions match the topographical magnetic field distribution of signals evoked by the HPI coils (each energized with a specific frequency).
+It is common practice for an MEG experiment involving Neuromag systems to digitize the positions of head position indicator (HPI) coils, as well as other landmarks of the subject's head, prior to performing the experiment. The [real-time head localizer](/getting_started/realtime/headlocalizer) uses these digitized positions, which are stored in the neuromag fif file, to perform the real time fitting of the actual HPI coil positions during the course of the experiment. It is therefore advised to check whether those digitized positions match the topographical magnetic field distribution of signals evoked by the HPI coils (each energized with a specific frequency).
 
 The following code reads and visualizes the digitized positions of the HPI coils. See panel A for a photograph of the subject, and panel B for the digitized positions of the HPI coils in neuromag device (dewar) space.
 

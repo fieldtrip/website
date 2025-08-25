@@ -11,7 +11,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
 3.  the [reference implementation](/development/realtime/reference_implementation), and
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
-5.  the [getting started](/getting_started/realtime) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
+5.  the [getting started](/getting_started/realtime/bci) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
 
 This page deals with specific implemenations of the FieldTrip buffer protocol. This includes interfacing with specific hardware (e.g., TMSi, Biosemi, CTF, Unicorn), software platforms (e.g., BCI2000, BrainStream) and links to the implementation in specific programming languages (e.g., MATLAB, Java, C/C++, Python).
 
@@ -31,7 +31,7 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 - [Neurosky ThinkCap](/development/realtime/neurosky)
 - [OpenBCI](/development/realtime/openbci)
 - [Sound card input](/development/realtime/audio2ft)
-- [Siemens fMRI](/getting_started/realtime_fmri)
+- [Siemens fMRI](/getting_started/realtime/fmri)
 - [TMSI](/development/realtime/tmsi)
 - [TOBI](/development/realtime/tobi)
 - [Unicorn Hybrid Black](/development/realtime/unicorn)
@@ -48,11 +48,11 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 ## Additional useful tools
 
 - [viewer](/development/realtime/viewer) is a graphical C++ application to visualize online signals from the FieldTrip buffer
-- [serial_event](/development/realtime/serial_event) is a C application that turns incoming characters from a serial port into FieldTrip buffer events (used for translating TTL pulses in [realtime fMRI](/getting_started/realtime_fmri))
+- [serial_event](/development/realtime/serial_event) is a C application that turns incoming characters from a serial port into FieldTrip buffer events (used for translating TTL pulses in [realtime fMRI](/getting_started/realtime/fmri))
 - [buffer_java#MidiToBuffer](/development/realtime/buffer_java#MidiToBuffer) is a Java application that turns MIDI messages into FieldTrip buffer events
 - [buffer_java#MarkerGUI](/development/realtime/buffer_java#MarkerGUI) is a graphical Java application that allows to write FieldTrip buffer events with a freely chosen _type_ and _value_ string.
 - [Testing with sine waves and pre-recorded EEG data](/development/realtime/eeg)
-- [Testing with pre-recorded fMRI data](/getting_started/realtime_fmri#testing_with_pre-recorded_fmri_data)
+- [Testing with pre-recorded fMRI data](/getting_started/realtime/fmri#testing_with_pre-recorded_fmri_data)
 
 ## Recording and playing back online experiments
 

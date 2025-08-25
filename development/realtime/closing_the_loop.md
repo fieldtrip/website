@@ -7,7 +7,7 @@ tags: [realtime]
 
 To close the loop in your BCI application, you have to communicate the control signal from the application/computer that does the feature extraction and feature translation to the application that is controlled by the BCI system. The application that is controlled by the BCI signal can be anything from a generic stimulus presentation software (e.g., NeuroBS Presentation, ERTS, ANT EEvoke, ...) to a spelling device or to custom-built hardware device (e.g., robot arm).
 
-Before you attempt to close the loop, please make sure that the data is streaming properly and that you are able to process it fast enough. Some examples are given in the [getting started](/getting_started/realtime) section.
+Before you attempt to close the loop, please make sure that the data is streaming properly and that you are able to process it fast enough. Some examples are given in the [getting started](/getting_started/realtime/bci) section.
 
 ## Communicating over a serial port connection
 

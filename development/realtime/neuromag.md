@@ -10,7 +10,7 @@ Volume 2011) in any work that uses it.
 
 The rtMEG software relays signals from a 306-channel Neuromag/Elekta/Megin MEG device in real-time to a FieldTrip buffer. This buffer can then be read by any computer in the same network as the computer hosting the buffer. The data is still stored by the Acquisition computer (i.e. where you run the Acquisition software by Neuromag) as a FIF file, and it can be read by as many computers in the network as necessary. The rtMEG software has the capability of running the FieldTrip buffer by itself, or it can output the data to a separate computer hosting the buffer when necessary. The delay introduced by the software to the data being relayed has been measured to be smaller than 50ms, which is sufficient for most real-time studies.
 
-For more information on how to read from a FieldTrip buffer, please check [here](/development/realtime) for a collection of technical documents or the [getting started section](/getting_started/realtime).
+For more information on how to read from a FieldTrip buffer, please check [here](/development/realtime) for a collection of technical documents or the [getting started section](/getting_started/realtime/bci).
 
 ## Usage
 

@@ -11,7 +11,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
 3.  the [reference implementation](/development/realtime/reference_implementation), and
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
-5.  the [getting started](/getting_started/realtime) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
+5.  the [getting started](/getting_started/realtime/bci) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
 
 This page provides a formal description of how the communication over the network is performed between the FieldTrip buffer server and clients.
 
