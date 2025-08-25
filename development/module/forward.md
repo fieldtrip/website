@@ -112,7 +112,7 @@ Detailed information for each of the functions that creates a head model can be 
 - **[ft_headmodel_interpolate](/reference/forward/ft_headmodel_interpolate)**
 - **[ft_headmodel_localspheres](/reference/forward/ft_headmodel_localspheres)**
 - **[ft_headmodel_openmeeg](/reference/forward/ft_headmodel_openmeeg)**
-- **[ft_headmodel_siimbio](/reference/forward/ft_headmodel_simbio)**
+- **[ft_headmodel_simbio](/reference/forward/ft_headmodel_simbio)**
 - **[ft_headmodel_singleshell](/reference/forward/ft_headmodel_singleshell)**
 - **[ft_headmodel_singlesphere](/reference/forward/ft_headmodel_singlesphere)**
 
