@@ -16,7 +16,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 ## Introduction to FieldTrip and MATLAB
 
 - [Introduction to the FieldTrip toolbox](/tutorial/introduction)
-- [Creating a clean analysis pipeline](/tutorial/scripting)
+- [Creating a clean analysis pipeline](/tutorial/pipeline)
 
 ## Reading and preprocessing data
 

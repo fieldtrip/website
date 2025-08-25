@@ -1,3 +1,7 @@
 ---
-title: Introduction to FieldTrip and MATLAB
+title: Tutorials that introduce FieldTrip and MATLAB
 ---
+
+# {{ page.title }}
+
+{% include pagelist %}
