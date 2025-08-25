@@ -36,7 +36,7 @@ FieldTrip and MNE-Python have conceptually similar but not identical processing 
 
 In order to import data from MNE-python into FieldTrip, it is most straightforward to save the data as a fif-file in MNE-python, and read it into FieldTrip using **[ft_preprocessing](/reference/ft_preprocessing)**. A FieldTrip data structure can be exported to a fif-file using the **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function. Alternatively, MNE-python has functionality to read in mat-files that contain a FieldTrip data structure. In this latter case, however, only the time series information will be imported, and the original header information of the raw data file will often be needed to obtain relevant metadata (or this metadata needs to be handcrafted in MNE-python). **[fieldtrip2fiff](/reference/fieldtrip2fiff)** tries to write channel positions (and events/headshape information) directly into the fif-file, provided that this information is present in the data.
 
-Below are some practical examples that demonstrate how to export FieldTrip data to a fif-file. For this we use the example data of [dataset 10](/faq/datasets#meg-tactile_dipole_fitting). If you want to try this out yourself, please download [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
+Below are some practical examples that demonstrate how to export FieldTrip data to a fif-file. For this we use the [SubjectBraille.ds](/faq/datasets/#meg-tactile_dipole_fitting) dataset. If you want to try this out yourself, please download [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
 ### Example: export raw - single trial - data structure
 
@@ -54,16 +54,17 @@ As a first example, we read the data as a continuous chunk. Note that the exampl
     cfg.channel    = {'MEG', '-MLP31', '-MLO12'};
     data           = ft_preprocessing(cfg);
     hs             = ft_read_headshape(cfg.dataset); % let's also read this information
+    event          = ft_read_event(cfg.dataset);
 
 We can now export the data to a fiff file, pretending as if it's raw data. Note that the original fiff-file definition stores the data in single precision (32-bit per data point) format. By default, FieldTrip stores the data in the same precision of the actual data, which usually is double (and even complex-valued). MNE-python should be capable of dealing with this type of numeric precision, but other software might not. If the data needs to be stored in single precision, you can use the key-value pair `'precision', 'single'`. Also, note that the current example is a bit silly, given that MNE-python is perfectly capable of reading in native CTF data. Here, it is presented as a proof-of-principle.
 
     fiff_file  = fullfile(datadir, 'ctf-raw.fif');
-    fieldtrip2fiff(fiff_file, data, 'headshape', hs);
+    fieldtrip2fiff(fiff_file, data, 'headshape', hs, 'event', event);
     save(fullfile(datadir, 'ctf-raw.mat'), 'data'); % for comparison
 
 Including the headshape information as an extra input argument will result in the fif-file to also contain the information about the location of the HPI-coils. This might be relevant for a smooth experience in MNE-python, e.g., if one wishes to apply tSSS to the data.
 
-Also, **[fieldtrip2fiff](/reference/fieldtrip2fiff)** will attempt to create an event file (provided the data object has an event structure buried somewhere in the processing history, called `'ctf_raw-eve.fif'`. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the event file, that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
+Also, **[fieldtrip2fiff](/reference/fieldtrip2fiff)** will add the events as specified in the event-structure to the data, provided it is passed as an additional argument to the function. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the data file (i.e. the mapping from numeric events to annotations), that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
 
 ### Example: export raw - multiple trial - data structure
 
