@@ -1,5 +1,5 @@
 ---
-Title: Statistical questions
+title: Statistical questions
 ---
 
 # {{ page.title }}

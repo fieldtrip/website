@@ -1,3 +1,7 @@
 ---
-title: Data handling
+title: Questions about data handling
 ---
+
+# {{ page.title }}
+
+{% include pagelist %}

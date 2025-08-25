@@ -1,3 +1,7 @@
 ---
-title: Artifacts
+title: Questions about artifacts
 ---
+
+# {{ page.title }}
+
+{% include pagelist %}

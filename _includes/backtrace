@@ -1,0 +1,18 @@
+{% assign backtrace = page.url | slice: 1, 999 | split: "/" %}
+
+{% if backtrace[0] == "configuration" or backtrace[0] == "example" or backtrace[0] == "faq" or backtrace[0] == "reference" or backtrace[0] == "references_methods" or backtrace[0] == "references_papers" or backtrace[0] == "template" or backtrace[0] == "tutorial" or backtrace[0] == "video" or backtrace[0] == "walkthrough" %}
+{% assign backtrace = "documentation" | split: "/" | concat: backtrace %}
+{% endif %}
+
+{% assign thisurl = "" %}
+
+<small><p>
+{% for item in backtrace %}
+{% if item == "documentation" %}
+<a href="/documentation">{{ item }}</a> /
+{% else %}
+{% assign thisurl = thisurl | append: "/" | append: item %}
+<a href="{{ thisurl }}">{{ item }}</a> /
+{% endif %}
+{% endfor %}
+</p></small>

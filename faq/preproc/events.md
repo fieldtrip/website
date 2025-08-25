@@ -1,3 +1,7 @@
 ---
-title: Trials, triggers and events
+title: Questions about trials, triggers and events
 ---
+
+# {{ page.title }}
+
+{% include pagelist %}

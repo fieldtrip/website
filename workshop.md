@@ -1,9 +1,9 @@
 ---
-title: FieldTrip courses and workshops
+title: FieldTrip workshops and courses 
 tags: [workshop]
 ---
 
-# FieldTrip courses and workshops
+# FieldTrip workshops and courses
 
 Every year we organize the "Advanced MEG/EEG analysis toolkit course" at the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen. It consists of lectures and hands-on sessions, and explains the methods implemented in FieldTrip and how to make use of them. More information and the registration for this toolkit course is available on the [Donders website](https://www.ru.nl/donders/agenda/donders-tool-kits/).
 

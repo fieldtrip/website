@@ -13,7 +13,7 @@ The source code in the FieldTrip toolbox is split over multiple directories refl
 
 We use a combination of tools (GitHub, Mastodon, website, mailman) that are loosely linked to each other; for example, every news item on the website is automatically tweeted. An overview is presented on the [integration](/development/integration) page.
 
-- [Contribute to the development](/contribute)
+- [Contribute to the development](/development/contribute)
 - [Guidelines](/development/guideline)
 - [Testing](/development/testing)
 - [Toolbox architecture](/development/architecture)
