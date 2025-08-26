@@ -92,7 +92,7 @@ For consistency we will rename the channel with the name '53' located at the rig
 We now continue with rereferencing to extract the bipolar EOG signal from the data. For the vertical EOG we will use channel 50 and channel 64. For the horizontal EOG we will compute the difference between the potential recorded in channels 51 and 60.
 
 {% include markup/yellow %}
-Some EEG acquisition systems like the TMSi SAGA, the Biosemi systems, or the BrainProducts ActiChamp, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
+Some EEG acquisition systems like the TMSi SAGA, the BioSemi systems, or the BrainProducts ActiChamp, allow for direct _bipolar_ recording of ECG, EOG and EMG. The rereferencing step to obtain the EOG is therefore not required when working with those bipolar recordings.
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure1.png" width="200" %}

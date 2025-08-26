@@ -1,13 +1,13 @@
 ---
-title: Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+title: Streaming realtime data from BioSemi ActiveTwo EEG amplifier
 tags: [realtime, biosemi]
 ---
 
-# Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+# Streaming realtime data from BioSemi ActiveTwo EEG amplifier
 
-This page describes the interface between the [Biosemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/development/realtime/buffer).
+This page describes the interface between the [BioSemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/development/realtime/buffer).
 
-The acquisition setup consists of a battery box, the AD box, an analog input box, and the USB receiver device. We provide a standalone tool called **biosemi2ft** (see "realtime/bin/`<your OS>`) that interfaces directly to the USB driver and thus does not depend on the Actiview software that Biosemi ships. We have tested the tool on Windows XP (32-bit), Windows (64-bit), macOS (32-bit), and Linux (32-bit). It is called on the command line like this:
+The acquisition setup consists of a battery box, the AD box, an analog input box, and the USB receiver device. We provide a standalone tool called **biosemi2ft** (see "realtime/bin/`<your OS>`) that interfaces directly to the USB driver and thus does not depend on the Actiview software that BioSemi ships. We have tested the tool on Windows XP (32-bit), Windows (64-bit), macOS (32-bit), and Linux (32-bit). It is called on the command line like this:
 
     biosemi2ft <config-file> <gdf-file> <hostname> <port>
 
@@ -86,7 +86,7 @@ splittrigger stimulus response
 
 ### Compilation
 
-You will need the Labview DLL (or shared object), which you can download from [the Biosemi website](http://www.biosemi.com/download.htm).
+You will need the Labview DLL (or shared object), which you can download from [the BioSemi website](http://www.biosemi.com/download.htm).
 Depending on your platform, you might be able to get ready-made binaries, or you need to compile this yourself.
 
 For compiling the **biosemi2ft** tool, change to the `realtime/datasource/biosemi` directory and type `make`. The Makefile will

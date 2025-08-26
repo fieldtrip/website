@@ -18,7 +18,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/ica_rereference)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/trialinfo_trl)
 - [Why should I set continuous to yes for CTF data?](/faq/continuous)
-- [Why should I start with rereferencing for Biosemi EEG data?](/faq/biosemi_reference)
+- [Why should I start with rereferencing for BioSemi EEG data?](/faq/biosemi_reference)
 
 ### Specific data formats
 
@@ -26,7 +26,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/edf2fieldtrip)
 - [How does the CTF higher-order gradiometer work?](/faq/ctf_syntheticgradient)
 - [How can I extend the reading functions with a new dataformat?](/faq/fileio_dataformat)
-- [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/neuroscan)
+- [I have problems reading in NeuroScan .cnt files. How can I fix this?](/faq/neuroscan)
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/fileio_stateless)
 - [How can I import my own dataformat?](/faq/dataformat_own)
 - [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)

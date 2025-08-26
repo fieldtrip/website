@@ -12,7 +12,7 @@ The following BCI input agents are desired
 
 - Offline data from a file
 - Online data from CTF MEG system
-- Online data from Biosemi EEG system
+- Online data from BioSemi EEG system
 - Online data from BrainAmp EEG system
 - ...
 

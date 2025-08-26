@@ -1,27 +1,27 @@
 ---
-title: Example analysis pipeline for Biosemi data
+title: Example analysis pipeline for BioSemi data
 category: example
 tags: [eeg, dataformat, biosemi, bdf]
 redirect_from:
     - /example/biosemi/
 ---
 
-# Example analysis pipeline for Biosemi data
+# Example analysis pipeline for BioSemi data
 
 The following is an example analysis pipeline that was used for the FieldTrip workshop at [CUNY, New York](http://www.cuny.edu) by Stephen and Saskia in 2011.
 
 {% include markup/red %}
-Biosemi BDF data should always be off-line referenced to one of the electrodes that is present in the data. The raw data in the file is relative to the CMS and still contains relatively much artifactual and line-noise. See also the [Biosemi website](https://www.biosemi.com/faq/cms&drl.htm).
+BioSemi BDF data should always be off-line referenced to one of the electrodes that is present in the data. The raw data in the file is relative to the CMS and still contains relatively much artifactual and line-noise. See also the [BioSemi website](https://www.biosemi.com/faq/cms&drl.htm).
 {% include markup/end %}
 
 ### Modify layout file
 
-    % load biosemi160 into q (which has sensor locations in polar coordinates
+    % load biosemi160 into q (which has sensor locations in polar coordinates)
     % add fiducials then save
 
-    % cfg=[];
+    % cfg = [];
     % cfg.layout='biosemi160.lay';
-    % q=ft_prepare_layout(cfg);
+    % q = ft_prepare_layout(cfg);
 
     zeroline = 92/40*50;
 

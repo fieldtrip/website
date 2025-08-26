@@ -70,4 +70,4 @@ The tutorials that we will use during this toolkit are
 
 **Wednesday afternoon:** [Multivariate analysis of electrophysiological data](/tutorial/multivariateanalysis)
 
-**Thursday, FieldTrip Playground:** If you are stuck with any .bdf specific questions, you might gain insight from the [getting started with Biosemi](/getting_started/biosemi) documentation page.
+**Thursday, FieldTrip Playground:** If you are stuck with any .bdf specific questions, you might gain insight from the [getting started with BioSemi](/getting_started/biosemi) documentation page.

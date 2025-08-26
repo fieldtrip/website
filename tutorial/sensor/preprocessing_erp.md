@@ -132,7 +132,7 @@ and note that, if you wanted to, you could plot a single trial with default MATL
 We now continue with rereferencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels "57" and "25" (see the plot of the layout and the figure below). For the vertical EOG we will use channel "53" and the "LEOG" channel, which was placed below the subject's left eye (not pictured in the 2D electrode layout).
 
 {% include markup/yellow %}
-Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following rereferencing step to obtain the EOG channels is not needed when working with bipolar data.
+Some acquisition systems, such as BioSemi, allow for direct bipolar recording of EOG. The following rereferencing step to obtain the EOG channels is not needed when working with bipolar data.
 {% include markup/end %}
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/figure1.png" width="200" %}

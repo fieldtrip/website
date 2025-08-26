@@ -118,7 +118,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Using reproducescript for a group analysis](/example/reproducescript_group)
 - [Using reproducescript on a full study](/example/reproducescript_andersen)
 - [Correlation analysis of fMRI data](/example/correlation_analysis_in_fmri_data)
-- [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
+- [Example analysis pipeline for BioSemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use ft_checkconfig](/example/checkconfig)

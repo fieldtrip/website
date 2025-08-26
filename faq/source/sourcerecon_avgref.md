@@ -17,10 +17,10 @@ The prime reason for using the average reference in EEG source estimation is tha
 
 Taking a common average reference in the EEG data, also corresponds to taking a common average reference in the forward model. The consequence of subtracting the average potential (from each channel) is that the model error is *averaged over all channels*. Since there is no reason to assume that the model error is specifically positive or negative, the model error tends to average out and the forward solution at each channel will have a much smaller forward model error.
 
-## Biosemi and other EEG systems with DRL and CMS
+## BioSemi and other EEG systems with DRL and CMS
 
-The Biosemi system uses a common mode sense (CMS) and a driven right leg (DRL) electrode, which injects a small amount of current to improve the CMRR and minimize the effect of external noise sources. When recording data to disk and when reading it into FieldTrip, it is expressed as potential difference relative to the CMS. With this type of amplifier systems you should **always** reference after reading the data from disk, i.e. change the reference from CMS to another electrode, and you should **not** add the CMS electrode as implicit reference channel to the data.
+The BioSemi system uses a common mode sense (CMS) and a driven right leg (DRL) electrode, which injects a small amount of current to improve the CMRR and minimize the effect of external noise sources. When recording data to disk and when reading it into FieldTrip, it is expressed as potential difference relative to the CMS. With this type of amplifier systems you should **always** reference after reading the data from disk, i.e. change the reference from CMS to another electrode, and you should **not** add the CMS electrode as implicit reference channel to the data.
 
 For channel-level analysis you may want to use linked mastoids, or linked T7 and T8. For source analysis you would (as with other systems) best reference to the average of all electrodes (minus CMS).
 
-See also [this](http://www.biosemi.com/faq/cms&drl.htm) explanation on the Biosemi website.
+See also [this](http://www.biosemi.com/faq/cms&drl.htm) explanation on the BioSemi website.

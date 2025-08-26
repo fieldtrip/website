@@ -26,7 +26,7 @@ FieldTrip has direct support for all data file formats that are used in BIDS. Th
   - [BrainVision](/getting_started/brainvision)
   - [European Data Format](/getting_started/edf) (`.edf`)
   - [EEGLAB](/getting_started/eeglab)
-  - [Biosemi](/getting_started/biosemi) (`.bdf`)
+  - [BioSemi](/getting_started/biosemi) (`.bdf`)
 - intracranial EEG
   - [BrainVision](/getting_started/brainvision)
   - [European Data Format](/getting_started/edf) (`.edf`)

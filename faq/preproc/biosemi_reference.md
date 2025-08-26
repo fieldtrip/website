@@ -1,5 +1,5 @@
 ---
-title: Why should I start with rereferencing for Biosemi EEG data?
+title: Why should I start with rereferencing for BioSemi EEG data?
 category: faq
 tags: [biosemi, preprocessing]
 authors: [Robert Oostenveld]
@@ -7,13 +7,13 @@ redirect_from:
     - /faq/biosemi_reference/
 ---
 
-# Why should I start with rereferencing for Biosemi EEG data?
+# Why should I start with rereferencing for BioSemi EEG data?
 
 {% include markup/yellow %}
-Biosemi explains it themselves in their frequently asked question about [the function of the CMS and DRL electrodes](https://www.biosemi.com/faq/cms&drl.htm).
+BioSemi explains it themselves in their frequently asked question about [the function of the CMS and DRL electrodes](https://www.biosemi.com/faq/cms&drl.htm).
 {% include markup/end %}
 
-The Biosemi system uses a reference scheme with a driven-right-leg (DRL) and common-mode-sense (CMS), where a very small current is actively "driven" through the DRL electrode into the participant/patient to minimize the voltage difference between all measuring electrodes and the CMS. See for example [here](https://electronics.stackexchange.com/questions/595051/how-does-a-driven-right-leg-work) for a schematic explanation and the figure below from the Biosemi website. This active DRL scheme reduces the common-mode signal.
+The BioSemi system uses a reference scheme with a driven-right-leg (DRL) and common-mode-sense (CMS), where a very small current is actively "driven" through the DRL electrode into the participant/patient to minimize the voltage difference between all measuring electrodes and the CMS. See for example [here](https://electronics.stackexchange.com/questions/595051/how-does-a-driven-right-leg-work) for a schematic explanation and the figure below from the BioSemi website. This active DRL scheme reduces the common-mode signal.
 
 {% include image src="/assets/img/faq/biosemi_reference/zero_ref1_big.gif" width="600" %}
 
@@ -29,4 +29,4 @@ The digital subtraction of a reference electrode is not implemented in the acqui
 
 ## References
 
-See [this paper](http://dx.doi.org/10.1109/10.99079) from 1991 authored by the Biosemi founders.
+See [this paper](http://dx.doi.org/10.1109/10.99079) from 1991 authored by the BioSemi founders.

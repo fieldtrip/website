@@ -55,7 +55,7 @@ the "SignalConfiguration" class: Once for describing a selection of channels for
 to disk. On top of that, the "SignalConfiguration" provides a few commonly used properties such as the desired
 bandwidth (cutoff frequency) and filter order for lowpass filtering, a decimation factor for downsampling streamed
 data and so on. It also provides functions for parsing these configuration options from a text file (see the
-wiki page for the [Biosemi acquisition driver](/development/realtime/biosemi) for an example).
+wiki page for the [BioSemi acquisition driver](/development/realtime/biosemi) for an example).
 
 "ChannelSelection" could actually be used in both ways:
 

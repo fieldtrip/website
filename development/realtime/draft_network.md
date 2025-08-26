@@ -101,7 +101,7 @@ Instead of reporting the number of samples inside the **datadef_t** field in the
 
 ### Atomic PUT_DAT + PUT_EVT
 
-Many acquisition systems (e.g., Biosemi EEG + CTF MEG) provide continuously sampled trigger channels. Markers contained
+Many acquisition systems (e.g., BioSemi EEG + CTF MEG) provide continuously sampled trigger channels. Markers contained
 in these channels will be turned into discrete events by the acquisition tools. However, while originally the continuous samples
 and the markers in the trigger channels come from the same data block (e.g., from the USB driver or a shared memory segment),
 it is not well defined whether the tools should first write the events or the samples to the FieldTrip buffer. This has consequences

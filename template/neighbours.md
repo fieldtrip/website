@@ -17,11 +17,11 @@ EEG neighbour templates are based on [automatic, symmetric triangulation](/faq/h
 
 Currently, the following neighbour templates are shipping with FieldTrip (note that neighbour templates are always suffixed with \_neighb
 
-### Biosemi
+### BioSemi
 
-- Biosemi 16-electrode cap (biosemi16_neighb.mat)
-- Biosemi 32-electrode cap (biosemi32_neighb.mat)
-- Biosemi 64-electrode cap (biosemi64_neighb.mat)
+- BioSemi 16-electrode cap (biosemi16_neighb.mat)
+- BioSemi 32-electrode cap (biosemi32_neighb.mat)
+- BioSemi 64-electrode cap (biosemi64_neighb.mat)
 
 ### Easycap
 

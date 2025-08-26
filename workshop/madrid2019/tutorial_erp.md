@@ -117,9 +117,9 @@ horizontal EOG we will compute the difference between the potential recorded in
 channels 51 and 60.
 
 {% include markup/yellow %}
-Some acquisition systems, such as the CTF system or the Biosemi system, allow
+Some acquisition systems, such as the CTF system or the BioSemi system, allow
 for direct bipolar recording of ECG, EOG and EMG. The rereferencing step to
-obtain the EOG is therefore not required when working with Biosemi or other
+obtain the EOG is therefore not required when working with BioSemi or other
 bipolar data.
 {% include markup/end %}
 

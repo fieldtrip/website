@@ -25,7 +25,7 @@ The following EEG data formats are supported by **[ft_read_header](/reference/fi
 
 - [ANT Neuro](/getting_started/antneuro) (.avr, .cnt, .trg)
 - BESA (.avr, .swf)
-- [Biosemi BDF](/getting_started/biosemi) (.bdf)
+- [BioSemi BDF](/getting_started/biosemi) (.bdf)
 - [BrainVision](/getting_started/brainvision) (.eeg, .seg, .dat, .vhdr, .vmrk)
 - CED - Cambridge Electronic Design (.smr)
 - EEGLAB (.set, .fdt)

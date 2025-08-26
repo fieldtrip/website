@@ -21,7 +21,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with ANT-Neuro, ASA and EEProbe data](/getting_started/eeg/antneuro)
 - [Getting started with Advanced Brain Monitoring (ABM)'s B-Alert EEG data](/getting_started/eeg/b_alert)
 - [Getting started with BESA data](/getting_started/eeg/besa)
-- [Getting started with Biosemi BDF data](/getting_started/eeg/biosemi)
+- [Getting started with BioSemi BDF data](/getting_started/eeg/biosemi)
 - [Getting started with EDF data](/getting_started/eeg/edf)
 - [Getting started with EGI/Philips/Magstim data](/getting_started/eeg/egi)
 - [Getting started with Nicolet data](/getting_started/eeg/nicolet)
