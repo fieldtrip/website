@@ -15,7 +15,7 @@
       </div>
       <div class="footer-content col-md-4 text-muted small">
         <p>Edit <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">this page on GitHub</a>.</p>
-        <p>This page last modified: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M %z" }}</p>
+        <p>This page was last modified on {{ page.last_modified_at | date: "%Y-%m-%d %H:%M %z" }}</p>
         <p>Copyright (C) 1999-{{ "now" | date: "%Y" }}; <a href="https://creativecommons.org/licenses/by-sa/4.0/"><span class="fab fa-creative-commons"></span> License</a>; <a href="/privacy">Privacy</a></p>
       </div>
       <div class="footer-content col-md-4 text-muted small">
