@@ -115,7 +115,7 @@ The output of ft_freqanalysis should be familiar to you from the [tutorial for t
 
 ### Head model
 
-The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given [here](/example/make_leadfields_using_different_headmodels). We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
+The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given [here](/example/headmodel_various). We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
 For more details on the following steps, you can consult the [tutorial on volume conduction models for source reconstruction of MEG data](/tutorial/headmodel_meg).
 
@@ -199,7 +199,7 @@ At this point we have computed all necessary ingredients for the beamformer sour
     - Use normalized lead fields (see also note above and Exercise 4)
 
 {% include markup/yellow %}
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition.
 Hence, the parameters of your source analysis (i.e. whether to compute common filters, whether to normalize lead fields or not) might change slightly depending on which of those strategies above you decide to use. Which strategy to use, will in turn depend on your experimental design and your research question. In the following we show two possible approaches.
 {% include markup/end %}
 
@@ -301,7 +301,7 @@ Another option, besides contrasting to the noise estimate, is to normalize the l
 
 One approach for contrasting different intervals of the data is to compare the post- and pre-stimulus interval, which we describe now here. Another approach is to contrast the same window of interest (relative in time to some stimulus or response) between two or more conditions, which we do not show here, but the calls to FieldTrip functions are conceptually the same.
 
-Importantly, if you later want to compare the two conditions statistically, you have to compute the sources based on an inverse filter computed from both conditions, so called ['common filters'](/example/common_filters_in_beamforming), and then apply this filter separately to each condition to obtain the source power estimate in each condition separately.
+Importantly, if you later want to compare the two conditions statistically, you have to compute the sources based on an inverse filter computed from both conditions, so called ['common filters'](/example/beamformer_commonfilter), and then apply this filter separately to each condition to obtain the source power estimate in each condition separately.
 
 First we compute a single data structure with both conditions, and compute the frequency domain CSD.
 
@@ -453,7 +453,7 @@ _Figure 7: sourceplot with method "surface"._
 
 Beamforming source analysis in the frequency domain with DICS has been demonstrated. An example of how to compute a head model (single shell) and forward lead field was shown. Various options for contrasting the time-frequency window of interest against a control was shown, including against 'noise' (NAI: minimum eigenvalue of the CSD) and against the pre-stimulus window using a 'common filter'. Options at each stage and their influence on the results were discussed, such as lead field normalization and CSD matrix regularization. Finally, options for plotting on slices, orthogonal views, or on the surface were shown.
 
-Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
+Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/headmodel_various). Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
 ### See also these frequently asked questions

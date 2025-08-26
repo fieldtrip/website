@@ -1,12 +1,12 @@
 ---
-title: Using GLM to analyze NIRS timeseries data
+title: Using general linear modeling to analyze NIRS timeseries data
 category: example
 tags: [nirs, glm, statistics]
 redirect_from:
     - /example/nirs_glm/
 ---
 
-# Using GLM to analyze NIRS timeseries data
+# Using general linear modeling to analyze NIRS timeseries data
 
 This is an example MATLAB script that demonstrates how to compute a simple GLM on the fingertapping NIRS data that is also used in the tutorial on [preprocessing and averaging of single-channel NIRS data](/tutorial/nirs_singlechannel). The data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/).
 

@@ -90,7 +90,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 ## Plotting and visualization
 
 - [Specifying the channel layout for plotting](/tutorial/plotting/layout)
-- [Plotting data at the channel and source level](/tutorial/plotting/plotting)
+- [Plotting data at the channel and source level](/tutorial/plotting/channel_source)
 
 ## Making your analyses more efficient
 

@@ -1,18 +1,18 @@
 ---
-title: Using General Linear Modeling over trials
+title: Using general linear modeling over trials
 category: example
 tags: [glm, statistics, eeg-language]
 redirect_from:
     - /example/glm_trials/
 ---
 
-# Using General Linear Modeling over trials
+# Using general linear modeling over trials
 
 Most MEG/EEG experimental paradigms consists of a repeated task or stimulus presentation, during which data is acquired. Subsequently the data is segmented (based on the events), pre-processed, and for example averaged to construct an ERP. These ERPs can be computed separately for different conditions, and contrasted over conditions to see when and where the cortical processing differs between experimental conditions. In these trial-based analysis it is common to treat ever channel and timepoint around the stimulus separate from all others, and do the averaging or statistical analysis for each channel-time point. Cluster-based permutation tests can be used to deal with the multiple comparisons, but the clusters themselves do not form an explicit model of cortical activity.
 
 An alternative to modeling all channel-time points over trials independently from each other is to make explicit models for the precise temporal structure in the data around each event (i.e. within the trial). This is common for event-related fMRI and fNIRS, where the cognitive activity related to events is very short compared to the low temporal resolution of the data. As the precise millisecond timing of the cortical activity is not represented in the data, the stimuli can be modeled as stick-functions and convolved with the BOLD haemodynamic response function. In MEG and EEG it is also possible to make explicit models including peri-stimulus time and use GLMs to estimate the event-related activity (REFS).
 
-The example page on [Using General Linear Modeling on time series data](/example/glm_timeseries) shows how to use GLMs to model the event-related time series. This specific page will show how to use GLMs to model the trial-based structure in the data.
+The example page on [Using general linear modeling on time series data](/example/glm_timeseries) shows how to use GLMs to model the event-related time series. This specific page will show how to use GLMs to model the trial-based structure in the data.
 
 ## GLMs for two conditions
 

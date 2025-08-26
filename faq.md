@@ -52,6 +52,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I process continuous data without triggers?](/faq/preproc/events/preproc_continuous)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/preproc/events/trialfun_bit2decimal)
 - [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/preproc/events/trialinfo)
+- [What is the relation between "events" (such as triggers) and "trials"?](/faq/preproc/events/eventsversustrials)
 
 ### Artifacts
 
@@ -98,6 +99,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I fine-tune my BEM volume conduction model?](/faq/source/bem_finetune)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/source/sourcerecon_atlas)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/source/inspect_geometries)
+- [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/source/anat_dicom2ctf)
 - [How do I install the OpenMEEG binaries?](/faq/source/openmeeg)
 - [How do homogenous coordinate transformation matrices work?](/faq/source/homogenous)
 - [How is anatomical, functional or statistical "volume data" described?](/faq/source/datatype_volume)
@@ -192,7 +194,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab/matlab_crash73)
 - [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/matlab/databrowser_crash)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/matlab/requirements)
-- [What is the relation between "events" (such as_triggers) and "trials"?](/faq/matlab/eventsversustrials)
 - [Which external toolboxes are used by FieldTrip?](/faq/matlab/external)
 - [Why are so many of the interesting functions in the private directories?](/faq/matlab/privatefunctions_why)
 
@@ -231,13 +232,11 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I anonymize a BrainVision dataset?](/faq/other/anonymization_brainvision)
 - [How can I anonymize data processed in FieldTrip?](/faq/other/anonymization_fieldtripdata)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/other/anonymization_anatomical)
-- [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/other/anat_dicom2ctf)
 - [How can I share my MEG data?](/faq/other/data_sharing)
 - [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/other/showcallinfo)
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/other/workshop_preparation)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/other/bids_coordsystem)
 - [What are the units of the data and of the derived results?](/faq/other/units)
 - [Which datasets are used in the documentation and where are they used?](/faq/other/datasets)
-- [What usage information is FieldTrip tracking?](/faq/other/tracking)
 - [Where can I find open access MEG/EEG data?](/faq/other/open_data)
 - [Which methodological details should I report in an EEG/MEG manuscript?](/faq/other/checklist)

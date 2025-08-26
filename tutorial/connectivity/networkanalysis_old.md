@@ -401,7 +401,7 @@ Subsequently, we will compute the difference between high and low alpha conditio
 
 _Figure 6: Planar (left) and axial (middle) topography of the 10 Hz difference between the high and the low alpha conditions. Right- power spectra split by condition high (blue) and low alpha (red)._
 
-Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias being responsible for potential condition differences, see also [here](/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias being responsible for potential condition differences, see also [here](/example/beamformer_commonfilter) and [here](/tutorial/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest
     cfg            = [];

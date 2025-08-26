@@ -43,7 +43,7 @@ Topic
 ## How to build a forward model in FieldTrip
 
 Differences emerge for the various neural recording techniques on how to build a forward model and this is due to technical and physiological reasons. Accordingly a series of models have been devised, which are recording-specific and will be explained here.
-One of the most important differences across methods takes into account the modeling of the volume conductor, which can be considered having different geometries (see also [different conductor models](/example/make_leadfields_using_different_headmodels)). In order to build a forward model though, several steps are needed, among which the construction of conductor geometry, but also the source modeling and the estimation of physical parameters like i.e. conductivity. The next paragraph explains in details the steps to be executed in FieldTrip.
+One of the most important differences across methods takes into account the modeling of the volume conductor, which can be considered having different geometries (see also [different conductor models](/example/headmodel_various)). In order to build a forward model though, several steps are needed, among which the construction of conductor geometry, but also the source modeling and the estimation of physical parameters like i.e. conductivity. The next paragraph explains in details the steps to be executed in FieldTrip.
 
 Check also 'The Forward model and Lead Field matrix' in [HERE](/tutorial/beamformer) (MEG specific way to do that)
 

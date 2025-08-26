@@ -33,4 +33,4 @@ Besides these volume conduction models for use on actual measured EEG and MEG da
 
 For more information on the methods, you can also check the reference documentation of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and the section in the [references to implemented methods](/references_to_implemented_methods#eeg-and-meg-forward-modeling) page that is related to forward modeling.
 
-If you wish, you can also use a forward model for which you have computed the leadfield matrices yourself outside of FieldTrip. This can then be combined with the inverse source reconstruction algorithms that are implemented in FieldTrip. Some MATLAB code that demonstrates how to do it can be found [in this example](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation).
+If you wish, you can also use a forward model for which you have computed the leadfield matrices yourself outside of FieldTrip. This can then be combined with the inverse source reconstruction algorithms that are implemented in FieldTrip. Some MATLAB code that demonstrates how to do it can be found [in this example](/example/source/beamformer_ownforward).

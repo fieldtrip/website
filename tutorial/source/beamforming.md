@@ -97,7 +97,7 @@ As mentioned in the Background, it is ideal to contrast the activity of interest
     - Activity contrasted with estimated noise (example shown below)
     - Use normalized leadfields
 
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window pooled over both conditions.
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window pooled over both conditions.
 
 ### Exercise 1: data length
 
@@ -454,7 +454,7 @@ If you've made it this far, perhaps you could try beamforming a different time w
 
 Beamforming source analysis in the frequency domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as CSD matrix regularization. Finally, the results were plotted on an orthogonal view.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
 ### See also these frequently asked questions

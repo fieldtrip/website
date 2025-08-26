@@ -79,7 +79,7 @@ none.
 
 ** example scripts:**
 
-[Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
+[Compute forward simulated data and apply a dipole fit](/example/source/simulateddata_dipolefit)
 
 [Fit a dipole to the tactile ERF after mechanical stimulation](/example/dipolefit_somatosensory_erf)
 

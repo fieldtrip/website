@@ -769,7 +769,7 @@ _Figure 6: Comparison of time course reconstruction of activity in the primary m
 
 Beamforming source analysis in the time domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as computing the covariance matrix on the basis of single trials vs. ERF/ERP. The results were plotted on an orthogonal view. Thresholding of the source maps was demonstrated on the basis of an arbitrary and statistical threshold. Finally, virtual sensor time-courses were extracted and compared between the imaging modalities.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/tutorial/source/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/tutorial/source/beamforming) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
 ### See also these frequently asked questions
 

@@ -391,7 +391,7 @@ We can verify the reconstructed distances as follows. Note that for a real measu
 
 ### Definition of the head-based coordinate system
 
-Now that we have identified the HPI coil locations, we can compute the coregistration matrix that transforms the HPI coil positions from 'helmet' coordinates to 'head' coordinates. Here, we use the neuromag convention.
+Now that we have identified the HPI coil locations, we can compute the coregistration matrix that transforms the HPI coil positions from 'helmet' coordinates to 'head' coordinates. Here, we use the Neuromag convention.
 
     % transform fiducial coordinates to head coordinates (RAS)
     fid1 = dip08.dip.pos; % nas

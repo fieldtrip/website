@@ -24,7 +24,7 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     save headshape headshape
     save grad grad
 
-    % realign to neuromag coordinate system
+    % realign to Neuromag coordinate system
     lpa    = [  7 104  26];
     nas    = [ 92 210  32];
     rpa    = [176 104  26];

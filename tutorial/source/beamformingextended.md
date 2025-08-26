@@ -226,7 +226,7 @@ As mentioned in the Background, it is ideal to contrast the activity of interest
 
 The latter two cases are covered in [another tutorial](/tutorial/beamformer#source_analysiswithout_contrasting_condition) that we will not deal with today.
 
-The null hypothesis for both options in (1) is that the data (thus also the noise-level) in these conditions are the same, and thus the best spatial filter is the one computed using both these conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
+The null hypothesis for both options in (1) is that the data (thus also the noise-level) in these conditions are the same, and thus the best spatial filter is the one computed using both these conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition.
 
 In order to not run every function twice, we can combine the two data structure for now. Note that we have to keep track of the condition of each trial, which we will code in the `.trialinfo` field (you could code it in any variable, but for consistency with the FieldTrip coding style and structure, we strongly advise you to use the `.trialinfo` field).
 
@@ -494,8 +494,8 @@ How do all these beamforming result relate to the [sensor level analysis](/tutor
 
 We demonstrated how to apply the DICS beamformer algorithm in the frequency domain. The essence of a source reconstruction model requires to compute a head- and sourcemodel to derive the leadfields. Here, we showed how to compute a head model (single shell) and forward lead field based on an anatomical template in MNI space. Then, we applied the beamformer to retrieve activity on source level. We interpolated the source level result and plotted it against the template anatomy. Subsequently, options for plotting on slices, orthogonal views, or on the surface were shown. In a next step, we discussed how to identify sources of cortico-muscular coherence using the nearly exact pipeline as for ordinary source reconstruction.
 
-Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/virtual_sensors).
+Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/headmodel_various). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/virtual_sensors).
 
 ## See also these frequently asked questions
 

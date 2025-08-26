@@ -434,8 +434,8 @@ If you would like to read about neighbourhood selection, you can read the follow
 
 And you can look also at the following example scripts:
 
-- [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
-- [Apply cluster and analysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
+- [Using threshold-free cluster enhancement for cluster statistics](/example/tfce)
+- [Apply cluster and analysis on TFRs of power that were computed with BESA](/example/stats_besa)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
 - [Computing and reporting the effect size](/example/effectsize)

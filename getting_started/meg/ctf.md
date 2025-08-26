@@ -212,7 +212,7 @@ For example, to read and plot the single sphere model produced with CTF software
     grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
     ft_plot_sens(grad, 'chantype', 'meggrad') % not the reference channels
 
-For more information on reading, creating and plotting headmodels refer to [this page](/example/make_leadfields_using_different_headmodels).
+For more information on reading, creating and plotting headmodels refer to [this page](/example/headmodel_various).
 
 ## Reading MRI files
 

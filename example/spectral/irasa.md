@@ -1,12 +1,12 @@
 ---
-title: Irregular Resampling Auto-Spectral Analysis (IRASA)
+title: Irregular resampling auto-spectral analysis (IRASA)
 category: example
 tags: [irasa]
 redirect_from:
     - /example/irasa/
 ---
 
-# Irregular Resampling Auto-Spectral Analysis (IRASA)
+# Irregular resampling auto-spectral analysis (IRASA)
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
 Below we provide two examples, a simulated dataset and a real human ECoG dataset [(Stolk et al. 2019)](https://elifesciences.org/articles/48065), including how to extract spectral features based on [the IRASA technique (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0).

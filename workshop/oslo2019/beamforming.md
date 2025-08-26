@@ -222,7 +222,7 @@ It is ideal to contrast the activity of interest against some control.
 Why shouldn't we calculate a spatial filter for both conditions separately in the case of contrasting conditions? Would there be a reason to do so?
 {% include markup/end %}
 
-The statistical null hypothesis for both options within (1) is that the data are the same in both conditions, and thus the best spatial filter would be the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window, pooled over both conditions.
+The statistical null hypothesis for both options within (1) is that the data are the same in both conditions, and thus the best spatial filter would be the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window, pooled over both conditions.
 
 ### Frequency analysis for both conditions
 

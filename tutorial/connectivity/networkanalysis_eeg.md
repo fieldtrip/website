@@ -310,7 +310,7 @@ _Figure 7: Difference topography (left) and power spectra of the median splitted
 
 ### Source reconstruction of 'low' and 'high' alpha activity epochs
 
-Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](/example/beamformer_commonfilter) and [here](/tutorial/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest according to the trial split
     cfg            = [];

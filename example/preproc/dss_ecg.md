@@ -13,10 +13,10 @@ redirect_from:
 
 This script demonstrates how you can use denoising source separation (DSS) for cleaning the ECG/BCG artifacts from your MEEG data. It consists of four steps:
 
-1.  detection of QRS-complexes using the ECG channel, which has been recorded along with the data
-2.  use the identified peaks as prior information to inform the DSS algorithm to unmix the MEEG channel data
-2.  selection of a number of components to remove from MEEG data
-3.  removal of the identified components
+1. detection of QRS-complexes using the ECG channel, which has been recorded along with the data
+2. use the identified peaks as prior information to inform the DSS algorithm to unmix the MEEG channel data
+3. selection of a number of components to remove from MEEG data
+4. removal of the identified components
 
 DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. Next, the output of **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** will be used to call **[ft_componentanalysis](/reference/ft_componentanalysis)** with 'dss' as method.
 

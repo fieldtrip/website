@@ -1,12 +1,12 @@
 ---
-title: Read neuromag .fif mri and create a MNI-aligned single-shell head model
+title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
 category: example
 tags: [meg, mri, headmodel]
 redirect_from:
     - /example/neuromag_aligned2mni/
 ---
 
-# Read neuromag .fif mri and create a MNI-aligned single-shell head model
+# Read Neuromag .fif mri and create a MNI-aligned single-shell head model
 
 {% include markup/red %}
 The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/sourcemodel_aligned2mni) example script.
@@ -56,7 +56,7 @@ This example script is derived from the example script [Create MNI-aligned grids
     [segmentedmri]     = ft_volumesegment(cfg, mri_real)
 
     % check how it looks; does the segmented mri fit into the mri? Probably not
-    % because of neuromag coordinates (x and y are swapped) and a bug in volume
+    % because of Neuromag coordinates (x and y are swapped) and a bug in volume
     % segment.
     cfg                = [];
     test               = segmentedmri;

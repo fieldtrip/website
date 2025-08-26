@@ -1,5 +1,5 @@
 ---
-title: How can I visualize the neuromag head position indicator coils?
+title: How can I visualize the Neuromag head position indicator coils?
 category: faq
 tags: [neuromag, head, localization]
 redirect_from:
@@ -7,13 +7,13 @@ redirect_from:
     - /faq/neuromag_hpi/
 ---
 
-# How can I visualize the neuromag head position indicator coils?
+# How can I visualize the Neuromag head position indicator coils?
 
-It is common practice for an MEG experiment involving Neuromag systems to digitize the positions of head position indicator (HPI) coils, as well as other landmarks of the subject's head, prior to performing the experiment. The [real-time head localizer](/getting_started/realtime/headlocalizer) uses these digitized positions, which are stored in the neuromag fif file, to perform the real time fitting of the actual HPI coil positions during the course of the experiment. It is therefore advised to check whether those digitized positions match the topographical magnetic field distribution of signals evoked by the HPI coils (each energized with a specific frequency).
+It is common practice for an MEG experiment involving Neuromag systems to digitize the positions of head position indicator (HPI) coils, as well as other landmarks of the subject's head, prior to performing the experiment. The [real-time head localizer](/getting_started/realtime/headlocalizer) uses these digitized positions, which are stored in the Neuromag fif file, to perform the real time fitting of the actual HPI coil positions during the course of the experiment. It is therefore advised to check whether those digitized positions match the topographical magnetic field distribution of signals evoked by the HPI coils (each energized with a specific frequency).
 
-The following code reads and visualizes the digitized positions of the HPI coils. See panel A for a photograph of the subject, and panel B for the digitized positions of the HPI coils in neuromag device (dewar) space.
+The following code reads and visualizes the digitized positions of the HPI coils. See panel A for a photograph of the subject, and panel B for the digitized positions of the HPI coils in Neuromag device (dewar) space.
 
-    % an example neuromag dataset
+    % an example Neuromag dataset
     dataset = '/home/common/matlab/fieldtrip/data/test/bug1792/20130418_test_cHPI.fif';
 
     % visualize the known/fixed positions of the sensors
@@ -51,7 +51,7 @@ The following code reads and visualizes the topographical magnetic field distrib
     cfg.taper = 'hanning';
     freq = ft_freqanalysis(cfg, data);
 
-    % plot topographical distribution of neuromag coil frequencies
+    % plot topographical distribution of Neuromag coil frequencies
     figure; hold on;
     cfg = [];
     cfg.layout = 'neuromag306mag.lay';

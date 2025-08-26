@@ -26,7 +26,7 @@ Is there any explanation on the website for more on uvar and wvar? (Seems it is 
 - https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
 - https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
 - https://www.fieldtriptoolbox.org/example/source_statistics
-- https://www.fieldtriptoolbox.org/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
+- https://www.fieldtriptoolbox.org/example/stats_besa
 - https://www.fieldtriptoolbox.org/development/statistics
 - https://www.fieldtriptoolbox.org/development/multivariate
 

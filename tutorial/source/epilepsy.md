@@ -453,7 +453,7 @@ For patient confidentiality we only include here the MRI which has already been 
     cfg.coordsys = 'neuromag';
     cfg.spmversion = 'spm12';
     mri_realigned = ft_volumerealign(cfg, mri_orig);
-    mri_realigned.coordsys = 'neuromag'; % remember that it is in neuromag coordinates
+    mri_realigned.coordsys = 'neuromag'; % remember that it is in Neuromag coordinates
 
     % Do you want to change the anatomical labels for the axes [Y, n]? y
     % What is the anatomical label for the positive X-axis [r, l, a, p, s, i]? r

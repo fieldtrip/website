@@ -54,7 +54,7 @@ Note that the head coils are ALWAYS recorded twice: once with the Polhemus and o
 
 ## Comparing CTF and Neuromag
 
-The difference between CTF and Neuromag is that the CTF Acq software (running on the Linux computer) does not take the Polhemus recording (on the windows computer) into account, whereas the Neuromag acquisition software does. If you were to attach the three head localizer coils in a triangle on the forehead, the sensor positions in the CTF dataset would be rather confusing, whereas the neuromag dataset it would be just like usual.
+The difference between CTF and Neuromag is that the CTF Acq software (running on the Linux computer) does not take the Polhemus recording (on the windows computer) into account, whereas the Neuromag acquisition software does. If you were to attach the three head localizer coils in a triangle on the forehead, the sensor positions in the CTF dataset would be rather confusing, whereas the Neuromag dataset it would be just like usual.
 
 ## Anatomical MRI
 

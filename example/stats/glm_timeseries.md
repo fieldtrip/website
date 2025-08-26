@@ -1,12 +1,12 @@
 ---
-title: Using General Linear Modeling on time series data
+title: Using general linear modeling on time series data
 category: example
 tags: [glm, statistics, eeg-language]
 redirect_from:
     - /example/glm_timeseries/
 ---
 
-# Using General Linear Modeling on time series data
+# Using general linear modeling on time series data
 
 For EEG and MEG analysis it is customary to use averaging to obtain ERPs/ERFs, whereas for fMRI it is customary to use GLMs. NIRS data falls a bit in between regarding the temporal characteristics of the acquisition system, which can be quite fast, and the characteristics of the physiological response, which is just as sluggish as the BOLD response. Consequently for NIRS data both averaging approaches are used (e.g., in the tutorials for [single-channel](/tutorial/nirs_singlechannel) and [multi-channel](/tutorial/nirs_multichannel) NIRS data) and GLM approaches are used.
 
