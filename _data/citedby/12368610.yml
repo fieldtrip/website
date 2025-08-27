@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40851912'
+- idtype: doi
+  value: 10.1162/IMAG.a.119
+- idtype: pmcid
+  value: PMC12368610
+authors:
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Pacheco LB
+- authtype: Author
+  name: Smillie LD
+epubdate: 2025 Aug 20
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.119
+pmclivedate: 2025/08/22
+printpubdate: ''
+pubdate: 2025 Aug 20
+sortdate: 2025/08/20 00:00
+source: Imaging Neurosci (Camb)
+title: Cortical travelling waves relate to variation in personality traits
+uid: '12368610'
+volume: '3'
