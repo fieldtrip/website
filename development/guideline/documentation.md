@@ -17,7 +17,7 @@ When you add documentation, please consider the following documentation guidelin
 
 ## Where to add documentation on the website?
 
-There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the [download server](https://download.fieldtriptoolbox.org).
+There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/support) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the [download server](https://download.fieldtriptoolbox.org).
 
 To submit changes to the FieldTrip website, make a Pull Request on the corresponding [website repository](https://github.com/fieldtrip/website) on GitHub.
 
