@@ -19,7 +19,7 @@ We use a combination of tools (GitHub, BlueSky, website, mailman) that are loose
 - [Data structures](/development/datastructure)
 - [Release and quality control](/development/releasing)
 - [Testing](/development/testing)
-- [ntegration between tools](/development/integration)
+- [Integration between tools](/development/integration)
 - [Projects](/development/project)
 - [Meetings](/development/meeting)
 - [Real-time data processing](/development/realtime)
