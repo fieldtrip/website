@@ -99,7 +99,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I fine-tune my BEM volume conduction model?](/faq/source/bem_finetune)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/source/sourcerecon_atlas)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/source/inspect_geometries)
-- [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/source/anat_dicom2ctf)
 - [How do I install the OpenMEEG binaries?](/faq/source/openmeeg)
 - [How do homogenous coordinate transformation matrices work?](/faq/source/homogenous)
 - [How is anatomical, functional or statistical "volume data" described?](/faq/source/datatype_volume)

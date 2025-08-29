@@ -62,7 +62,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Create MNI-aligned grids in individual head coordinates](/example/source/sourcemodel_aligned2mni)
 - [Read Neuromag .fif mri and create a MNI-aligned single-shell head model](/example/source/neuromag_aligned2mni)
 - [Create a template source model aligned to MNI space](/example/source/sourcemodel_mnitemplate)
-- [Use an MNI-aligned grid with a FEM headmodel in individual head coordinates](example/source/sourcemodel_fem_centroids)
+- [Use an MNI-aligned grid with a FEM headmodel in individual head coordinates](/example/source/sourcemodel_fem_centroids)
 - [How to create a head model if you do not have an individual MRI](/example/source/fittemplate)
 - [Fit a dipole to the tactile ERF after mechanical stimulation](/example/source/dipolefit_somatosensory_erf)
 - [Localizing the sources underlying the difference in event-related fields](/example/source/difference_erf)
