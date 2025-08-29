@@ -123,13 +123,13 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
              scalp: [256x256x256 logical]
                cfg: [1x1 struct]
 
-The segmentedmri data structure is similar to the mri data structure, but contains the new fields:
+The `segmentedmri` data structure is similar to the `mri` data structure, but contains the new fields:
 
--   `gray`: binary representation of the grey matter, note the difference between [UK and US spelling](https://www.merriam-webster.com/words-at-play/gray-vs-grey-usage-difference)
--   `white`: binary representation of the white matter
--   `csf`: binary representation of the CSF
--   `skull`: binary representation of the skull
--   `scalp`: binary representation of the scalp
+- `gray`: binary representation of the grey matter, note the difference between [UK and US spelling](https://www.merriam-webster.com/words-at-play/gray-vs-grey-usage-difference)
+- `white`: binary representation of the white matter
+- `csf`: binary representation of the CSF
+- `skull`: binary representation of the skull
+- `scalp`: binary representation of the scalp
 
 The segmentation does not change the coordinate system, nor the size of the voxels or volume. You can see this in the first three fields (`dim`, `transform` and `coordsys`) which are the same as the corresponding fields in the MRI. The field `transform` aligns the 3D array in `gray`,, `white`, `csf`, `skull` and `scalp` to the coordinate system defined in the `coordsys` field, just like it did for the `anatomy` field in the anatomical MRI. It is good practice to check at this point in a figure, whether the segmented compartments look as expected.
 

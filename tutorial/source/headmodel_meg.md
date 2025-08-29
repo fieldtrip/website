@@ -14,7 +14,7 @@ This tutorial describes how to construct a volume conduction model of the head (
 
 The volume conduction model of the head that will be constructed here is specific to the computation and source reconstruction of MEG data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will `not` show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 {% include markup/green %}
 The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/headmodel_eeg).
@@ -24,11 +24,11 @@ The volume conduction model created here is MEG specific and cannot be used for 
 
 {% include /shared/tutorial/sourcelocalization_background.md %}
 
-This tutorial is focusing on how to build the **volume conduction model for the head**.
+This tutorial is focusing on how to build the `volume conduction model for the head`.
 
 {% include /shared/tutorial/headmodel_background.md %}
 
-In this specific tutorial we will use a semi-realistic head model developed by Nolte (2003) that assumes a realistic information about the interface between the brain and the skull. This outer brain surface will be extracted from the anatomical MRI images of the subject. First, we will use anatomical MRI of the subject to extract the brain surface from the anatomical images, which is termed **segmentation**. Note that the segmentation procedure is quite time consuming. Following the segmentation of the anatomical images, a description of the surface using vertices and triangles is constructed. Finally, the single-shell head model will be computed.
+In this specific tutorial we will use a semi-realistic head model developed by Nolte (2003) that assumes a realistic information about the interface between the brain and the skull. This outer brain surface will be extracted from the anatomical MRI images of the subject. First, we will use anatomical MRI of the subject to extract the brain surface from the anatomical images, which is termed `segmentation`. Note that the segmentation procedure is quite time consuming. Following the segmentation of the anatomical images, a description of the surface using vertices and triangles is constructed. Finally, the single-shell head model will be computed.
 
 {% include markup/skyblue %}
 If an anatomical MRI is not available for your MEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g., with a Polhemus tracker), you can use a local spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
@@ -54,7 +54,7 @@ Before starting to use FieldTrip, it is important that you set up your MATLAB pa
     cd <path_to_fieldtrip>
     ft_defaults
 
-Then, you can read in the mri data.
+Then, you can read in the anatomical MRI.
 
     mri = ft_read_mri('Subject01.mri');
 
@@ -66,15 +66,15 @@ Then, you can read in the mri data.
              unit: 'mm'
          coordsys: 'ctf'
 
-The structure of your mri variable contains the following field
+The structure of your mri variable contains the following fields:
 
-- **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
-- **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
-- **hdr**: Header information of the anatomical images.
-- **transform**: A transformation matrix that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
-- **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
+- `dim`: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
+- `anatomy`: This is a matrix (with the size and number of dimensions specified in `dim`) that contains the anatomical information represented by numbers.
+- `hdr`: Header information of the anatomical images.
+- `transform`: A transformation matrix that aligns the anatomical data (in field `anatomy`) to a certain coordinate system.
+- `coordsys`: The description of the coordinate system which the anatomical data is aligned to.
 
-You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) or using the **[ft_volumerealign](/reference/ft_volumerealign)** function.
+You can see that the `coordsys` field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) or using the **[ft_volumerealign](/reference/ft_volumerealign)** function.
 
 {% include markup/skyblue %}
 It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/coordsys). If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
@@ -105,21 +105,16 @@ Note that the segmentation is quite time consuming and if you want you can load 
             brain: [256x256x256 logical]
               cfg: [1x1 struct]
 
-The segmentedmri data structure contains the following field
+The `segmentedmri` data structure contains the following fields:
 
-- **dim**
+- `dim`
+- `transform`
+- `coordsys`
+- `unit`: unit of distance (mm, cm, or m)
+- `brain`: binary brain mask
+- `cfg`: configuration information of the function which created segmentedmri
 
-- **transform**
-
-- **coordsys**
-
-- **unit**: unit of measurement of the voxels
-
-- **brain**: binary brainmask
-
-- **cfg**: configuration information of the function which created segmentedmri
-
-The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain** (which contains the brainmask) to the coordinate system defined in the **coordsys** field.
+The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field `transform` aligns the matrix in field `brain` (which contains the brainmask) to the coordinate system defined in the `coordsys` field.
 
 Alternatively, you can also leave out the definition of the cfg.output. In this case, the function will output the default segmentation that are the probabilistic values of the gray, white and csf compartments. In this case, the brain mask will be automatically created in the next step by the ft_prepare_headmodel function. For further information on the different segmentation options, read the help of **[ft_volumesegment](/reference/ft_volumesegment)**.
 
@@ -141,15 +136,12 @@ Once the brain mask is segmented out of the anatomical MRI, a surface descriptio
 
 The vol data structure contains the following field
 
-- **bnd**: contains the geometrical description of the head model.
+- `bnd`: contains the geometrical description of the head model.
+- `type`: describes the method that was used to create the headmodel.
+- `unit`: the unit of measurement of the geometrical data in the bnd field
+- `cfg`: configuration of the function that was used to create vol
 
-- **type**: describes the method that was used to create the headmodel.
-
-- **unit**: the unit of measurement of the geometrical data in the bnd field
-
-- **cfg**: configuration of the function that was used to create vol
-
-The **bnd** field describes a surface with vertices and triangles (in the **bnd.pnt** and **bnd.tri** fields) as the geometrical description of the volume conductor.
+The `bnd` field describes a surface with vertices and triangles (in the `bnd.pnt` and `bnd.tri` fields) as the geometrical description of the volume conductor.
 
 {% include markup/skyblue %}
 This tutorial does not intend to make a elaborative comparison of the different volume conduction models, nor to discuss their relative merits.
