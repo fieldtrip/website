@@ -68,7 +68,7 @@ Because I didn't do source analysis myself until now I don't now the best way to
 
 ### Create BEM headmodel for EEG
 
-### Create MNI-aligned grids in individual head-space
+### Create MNI-aligned grids in individual head coordinates
 
 ### Cross Frequency analysis in FieldTrip
 

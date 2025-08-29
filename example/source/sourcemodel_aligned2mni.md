@@ -1,5 +1,5 @@
 ---
-title: Create MNI-aligned grids in individual head-space
+title: Create MNI-aligned grids in individual head coordinates
 category: example
 tags: [meg, mri, headmodel, source]
 redirect_from:
@@ -7,7 +7,7 @@ redirect_from:
     - /example/sourcemodel_aligned2mni/
 ---
 
-# Create MNI-aligned grids in individual head-space
+# Create MNI-aligned grids in individual head coordinates
 
 When combining the source-level estimates of activity in multiple subjects, the activity can first be interpolated on the individuals MRI (using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**) and then spatially normalized to a template brain (using **[ft_volumenormalise](/reference/ft_volumenormalise)**).
 

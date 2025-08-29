@@ -60,7 +60,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Compute forward simulated data and apply a dipole fit](/example/source/simulateddata_dipolefit)
 - [Compute forward simulated data using ft_dipolesimulation](/example/source/simulateddata)
 - [Compute forward simulated data with the low-level ft_compute_leadfield](/example/source/compute_leadfield)
-- [Create MNI-aligned grids in individual head-space](/example/source/sourcemodel_aligned2mni)
+- [Create MNI-aligned grids in individual head coordinates](/example/source/sourcemodel_aligned2mni)
 - [Fit a dipole to the tactile ERF after mechanical stimulation](/example/source/dipolefit_somatosensory_erf)
 - [How to create a head model if you do not have an individual MRI](/example/source/fittemplate)
 - [Localizing the sources underlying the difference in event-related fields](/example/source/difference_erf)
