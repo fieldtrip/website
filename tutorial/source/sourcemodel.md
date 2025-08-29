@@ -201,7 +201,7 @@ The following populates an empty subject-specific directory with empty subdirect
 mksubjdirs $SUBJECTS_DIR/$SUBJECTNAME
 ```
 
-Now, we are ready to start using FreeSurfer. As a first step, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by putting the prepared acpc-registered MRI file which you created during the preparation steps in the subject specific "mri" directory. Subsequently, this image is once more converted (adjusting the image orientation), using the mri_convert function from FreeSurfer.
+Now, we are ready to start using FreeSurfer. As a first step, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by putting the prepared acpc-registered MRI file which you created during the preparation steps in the subject-specific mri directory. Subsequently, this image is once more converted (adjusting the image orientation), using the `mri_convert` function from FreeSurfer.
 
 ```shell
 cp $SUBJECTS_DIR/$SUBJECTNAME.mgz $SUBJECTS_DIR/$SUBJECTNAME/mri/$SUBJECTNAME.mgz
@@ -358,7 +358,7 @@ It is not required to create a volume conduction model of the head in order to c
 
 ##### Make the individual subjects' grid
 
-    % create the subject specific grid, using the template grid that has just been created
+    % create the subject-specific grid, using the template grid that has just been created
     cfg           = [];
     cfg.method    = 'basedonmni';
     cfg.template  = template_grid;

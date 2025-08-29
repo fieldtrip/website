@@ -320,7 +320,7 @@ We will start with loading a precomputed headmodel [here](https://download.field
 
 {% include image src="/assets/img/tutorial/connectivity_aef/figure6.png" %}
 
-##### Inverse-warp the subject specific grid to the atlas based template grid
+##### Inverse-warp the subject-specific grid to the atlas based template grid
 
 For this step the individual volume is required, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/mri.mat).
 

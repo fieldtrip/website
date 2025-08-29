@@ -39,7 +39,7 @@ When using FieldTrip for large analyses, it is recommended to save one MATLAB va
 
 When writing intermediate results, consider if you really need to save all intermediate steps in your analysis pipeline. For instance with MEG data it might not take that much time to calculate your planar gradient. It will save you a lot of disk space if you only have to write your axial data to disk. When using a high sampling frequency during acquisition, you may be able to downsample your data to save disk space and speed up all subsequent processing steps.
 
-Do make sure you save the important parameters (e.g., rejected trials) so you can always rerun your script. Subject specific information should be added to the subject specific script.
+Do make sure you save the important parameters (e.g., rejected trials) so you can always rerun your script. Subject specific information should be added to the subject-specific script.
 
 ## Load only as much data as you need
 

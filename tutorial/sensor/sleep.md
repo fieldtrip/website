@@ -53,12 +53,12 @@ To explore the sleep data, we will perform the following step
 
 The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g., Subject05.m), which is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/sleep/).
 
-Load the subject specific information. Then read and preprocess the continuous sleep data
+Load the subject-specific information. Then read and preprocess the continuous sleep data
 
       % set the path to the data to the current directory
       datapath = pwd;
 
-      % load the Subject specific information
+      % load the subject-specific information
       %Subject01
       Subject05
 

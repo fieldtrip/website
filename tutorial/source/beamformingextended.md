@@ -32,26 +32,26 @@ The tutorial is split into three parts. In the first part of the tutorial, we wi
 
 In the first part of this tutorial we will use the anatomical data to prepare the source analysis. This involve
 
--   Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
--   Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
--   Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
+- Reading in the subject-specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
+- Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the visual stimulation. We will localize the sources of the visual gamma-band activity following the following step
 
--   Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
--   Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
--   Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
--   Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
--   Compute the condition difference using **[ft_math](/reference/ft_math)**
--   Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
+- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Compute the condition difference using **[ft_math](/reference/ft_math)**
+- Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 In the third part we shift our attention to the motor task in this dataset. We will compute the spatial distribution of the cortico-muscular coherence over the whole brain using a very similar analysis pipeline.
 
--   Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
--   Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
--   Use the source- and headmodel as computed above using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
--   Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
--   Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
+- Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Use the source- and headmodel as computed above using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 {% include image src="/assets/img/tutorial/beamformingextended/figure1.png" width="650" %}
 

@@ -35,7 +35,7 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the oscillatory sources for the example dataset we will perform the following steps:
 
-- Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
+- Reading in the subject-specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
 - Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 - Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
