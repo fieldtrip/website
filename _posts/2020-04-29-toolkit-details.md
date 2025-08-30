@@ -1,7 +1,6 @@
 ---
 title: 29 April 2020 - M/EEG toolkit details
 category: news
-tags: [toolkit2020]
 ---
 
 ### 29 April 2020
