@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40853325'
+- idtype: doi
+  value: 10.1177/23312165251372462
+- idtype: pmcid
+  value: PMC12378310
+authors:
+- authtype: Author
+  name: Borges HB
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Christensen CB
+- authtype: Author
+  name: Kidmose P
+- authtype: Author
+  name: Zaar J
+epubdate: 2025 Aug 25
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165251372462'
+pmclivedate: 2025/08/27
+printpubdate: ''
+pubdate: 2025 Aug 25
+sortdate: 2025/08/25 00:00
+source: Trends Hear
+title: Age-Related Differences in EEG-Based Speech Reception Threshold Estimation
+  Using Scalp and Ear-EEG
+uid: '12378310'
+volume: '29'

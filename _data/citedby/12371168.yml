@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '40841961'
+- idtype: doi
+  value: 10.1111/ejn.70219
+- idtype: pmcid
+  value: PMC12371168
+authors:
+- authtype: Author
+  name: Millard SK
+- authtype: Author
+  name: Chiang AK
+- authtype: Author
+  name: Chowdhury N
+- authtype: Author
+  name: Chang W
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: De Martino E
+- authtype: Author
+  name: Graven‐Nielsen T
+- authtype: Author
+  name: Schabrun SM
+- authtype: Author
+  name: Seminowicz DA
+epubdate: 2025 Aug 21
+fulljournalname: The European Journal of Neuroscience
+issue: '4'
+pages: e70219
+pmclivedate: 2025/08/26
+printpubdate: 2025 Aug
+pubdate: 2025 Aug 21
+sortdate: 2025/08/21 00:00
+source: Eur J Neurosci
+title: Peak Alpha Frequency Is Not Significantly Altered by Five Days of Experimental
+  Pain and Repetitive Transcranial Stimulation of the Left Dorsolateral Prefrontal
+  Cortex
+uid: '12371168'
+volume: '62'

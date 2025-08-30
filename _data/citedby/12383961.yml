@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/bioengineering12080814
+- idtype: pmcid
+  value: PMC12383961
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Xia J
+- authtype: Author
+  name: Kan Z
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Toprani S
+- authtype: Author
+  name: Brewer JB
+- authtype: Author
+  name: Kutas M
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Olichney J
+epubdate: 2025 Jul 29
+fulljournalname: Bioengineering
+issue: '8'
+pages: '814'
+pmclivedate: 2025/08/28
+printpubdate: ''
+pubdate: 2025 Jul 29
+sortdate: 2025/07/29 00:00
+source: Bioengineering (Basel)
+title: Unveiling Early Signs of Preclinical Alzheimer’s Disease Through ERP Analysis
+  with Weighted Visibility Graphs and Ensemble Learning
+uid: '12383961'
+volume: '12'
