@@ -57,7 +57,7 @@ Now we determine all indices of the binary mask to be considered as inside the h
 
 {% include image src="/assets/img/example/sourcemodel_aligned2mni_atlas/atlasbasedmnigrid.png" width="600" %}
 
-Downoad the subject-specific MRI from [our download server](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/mri.mat) and inverse-warp the subject-specific grid to the template grid.
+Download the subject-specific MRI from [our download server](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/mri.mat) and inverse-warp the subject-specific grid to the template grid.
 
     mri = ft_read_mri('mri.mat'));
 

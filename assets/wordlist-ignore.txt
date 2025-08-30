@@ -1969,8 +1969,9 @@ gii
 Gio
 Girgis
 github
+GitHub
 gitlab
-Gitlab
+GitLab
 GJ
 Glessner
 Gligorijevic

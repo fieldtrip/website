@@ -124,7 +124,7 @@ spelling, whereas SPM uses the British spelling.
     save sourcemodel_template3mm.mat sourcemodel_template
 
 This template source model can be used just as the other templates to create MNI-aligned individual source 
-models, as explained in the tutorial on contructing a [source model](/tutorial/source/sourcemodel/#subject-specific-grids-that-are-equivalent-across-subjects-in-normalized-space).
+models, as explained in the tutorial on constructing a [source model](/tutorial/source/sourcemodel/#subject-specific-grids-that-are-equivalent-across-subjects-in-normalized-space).
 
 This template sourcemodel is also used in [another example script](/example/source/sourcemodel_fem_centroids)
 that shows how to use an individually aligned MNI template grid with a FEM headmodel.
