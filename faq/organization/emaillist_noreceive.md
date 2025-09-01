@@ -7,8 +7,6 @@ redirect_from:
     - /faq/emaillist_noreceive/
 ---
 
-# Why am I not receiving emails from the discussion list?
-
 Your registration may have been automatically disabled because
 
 - your mailbox is full, no more messages can be sent to you.

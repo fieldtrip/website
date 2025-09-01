@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/distributedcomputing_parfor/
 ---
 
-# Speeding up your analysis using distributed computing with parfor
-
 ## Introduction
 
 Many times you are faced with the analysis of multiple subjects and experimental conditions, or with the analysis of your data using multiple analysis parameters (e.g., frequency bands). Parallel computing in MATLAB can help you to speed up these types of analysis. This tutorial describes an approach for distributing the analysis of multiple subjects using the [MATLAB Parallel Computing toolbox](http://www.mathworks.com/products/parallel-computing/).
@@ -230,7 +228,6 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
     cfg.figure      = figure; % Create a fresh figure
     ft_multiplotER(cfg, grandavgFIC)
 
-
 {% include markup/skyblue %}
 Saving data and figures to disk can be done using the MATLAB [save](https://www.mathworks.com/help/matlab/ref/save.html) and [savefig](https://www.mathworks.com/help/matlab/ref/savefig.html) or [saveas](https://www.mathworks.com/help/matlab/ref/saveas.html) commands. Since you want to distinguish the data from different subjects, you can use  [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html) to construct a unique filenames.
 
@@ -265,7 +262,6 @@ and
     cfg.outputfile = filename;
     ft_multiplotER(cfg, avgFIC);
 {% include markup/end %}
-
 
 ## Multi-subject, parfor loop
 

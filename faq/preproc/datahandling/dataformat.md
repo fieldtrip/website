@@ -6,8 +6,6 @@ redirect_from:
     - /faq/dataformat/
 ---
 
-# What dataformats are supported?
-
 FieldTrip has a flexible way for supporting data formats. It uses a small number of reading functions that provide a common interface to all electrophysiological (MEG/EEG) and MRI file formats: **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**. Where needed, these functions will call the appropriate low-level functions that are specific to the file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/module/fileio) page.
 
 What follows is a summary of the data formats that are supported by FieldTrip. You can find more details on some of the formats, especially regarding the different MEG systems and their auxiliary files (e.g., MRI and volume conduction models). We regularly implement new data formats and this documentation may be out of date, so if yours is not listed here, please check the code.

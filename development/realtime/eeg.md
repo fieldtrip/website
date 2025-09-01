@@ -2,8 +2,6 @@
 title: Testing with sine waves and pre-recorded EEG data
 ---
 
-# Testing with sine waves and pre-recorded EEG data
-
 To test the FieldTrip buffer interface between MATLAB and/or other software, you can use a simple sine wave generator.
 
 ## MATLAB test function

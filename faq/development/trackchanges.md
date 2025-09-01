@@ -7,8 +7,6 @@ redirect_from:
     - /faq/trackchanges/
 ---
 
-# How can I keep track of changes to the code?
-
 The FieldTrip code is accessible using [git](https://git-scm.com/) at [github.com](https://github.com). To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
     git clone https://github.com/fieldtrip/fieldtrip

@@ -2,8 +2,6 @@
 title: FieldTrip Workshop in Göttingen in 2019
 ---
 
-# FieldTrip workshop in Göttingen in 2019
-
 The Clinic for Clinical Neurophysiology (Georg-August University) in Göttingen Germany will be hosting a FieldTrip Course on MEG Analysis
 with Tzvetan Popov and Mats van Es from 4 to 6 of February 2019.
 

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/distributed_batch/
 ---
 
-# How can I distribute a batch of jobs?
-
 Peer distributed computing allows to have multiple computers running the same analysis at the same time, efficiently speeding up your entire analysis. But how can I distribute my jobs?
 
 Let's say we have an analysis script and we want to run that particular analysis for every subject, every condition (say we have 2), every event (again 2), and 5 different frequencies of interest. The analysis script should receive any of these parameters and then compute. For example, such an analysis script could look like this:

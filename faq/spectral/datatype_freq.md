@@ -7,8 +7,6 @@ redirect_from:
     - /faq/datatype_freq/
 ---
 
-# In what way can frequency domain data be represented in FieldTrip?
-
 ## Different output options in ft_freqanalysis
 
 When computing the frequency domain representation of your data using **[ft_freqanalysis](/reference/ft_freqanalysis)**, you can specify the cfg-option 'output'. This option determines the representation of your data:

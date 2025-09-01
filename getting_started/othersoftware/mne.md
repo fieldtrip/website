@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/mne/
 ---
 
-# Getting started with MNE-Python
-
 ## Background
 
 MNE-python is an interactive python toolbox for processing EEG, MEG and other electrophysiological data. The homepage of MNE-python is located at <https://mne.tools/stable/>. MNE-python is built on the older MNE-suite software, which has developed around the fif-file format (i.e. the native file format for neuromag/elekta/megin MEG devices), with a strong focus on Minimum Norm source estimation techniques. Based on this historical development scheme, the fif-file format and the representation of data in those files are central to the way in which MNE-python handles their data internally.

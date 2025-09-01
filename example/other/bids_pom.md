@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_pom/
 ---
 
-# Combining simultaneous recordings in BIDS
-
 The [BIDS standard](https://bids.neuroimaging.io) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. When studying cognition and/or behavior in relation to the brain, it is common to use multiple pieces of equipment at the same time. For the offline analysis of the biological activity in the brain in relation to the behaviour, we rely on the equipment recording digital data on disk. Each of the pieces of equipment has its own way of recording data and its own file formats. When we represent all data in BIDS, we combine all these recordings in a uniform fashion to facilitate the interpretation and (re)use of the data.
 
 Here are some pieces of equipment that we use at the Donders Institute _and_ that record data to disk, together with a short description of the data that they record.

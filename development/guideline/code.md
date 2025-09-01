@@ -3,8 +3,6 @@ title: Code guidelines
 tags: [guidelines, development, fixme]
 ---
 
-# Code guidelines
-
 A recent paper "Best Practices for Scientific Computing" which can be found [here](http://arxiv.org/pdf/1210.0530v1.pdf) provides a very accessible account of things you should consider when developing software such as FieldTrip. It is recommended reading material for all contributors.
 
 When you contribute new code or make changes to existing code, please consider the following guidelines.
@@ -447,7 +445,6 @@ You should add something like this to code that you have written yourself, or to
     %
     %    You should have received a copy of the GNU General Public License
     %    along with FieldTrip. If not, see <https://www.gnu.org/licenses/>.
-
 
 ## Ask for help
 

@@ -3,8 +3,6 @@ title: Creation of headmodels and sourcemodels for source reconstruction
 tags: [paris2019, meg, headmodel, sourcemodel, sourceanalysis, mmfaces]
 ---
 
-# Creation of headmodels and sourcemodels for source reconstruction
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [MEG headmodel tutorial](/tutorial/source/headmodel_meg).
 {% include markup/end %}

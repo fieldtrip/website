@@ -4,7 +4,6 @@ title: Import and export data to and from MNE-Python
 
 {% include /shared/development/warning.md %}
 
-# Import and export data to and from MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 

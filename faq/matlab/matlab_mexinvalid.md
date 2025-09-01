@@ -7,8 +7,6 @@ redirect_from:
     - /faq/matlab_mexinvalid/
 ---
 
-# MATLAB complains about a missing or invalid mex file, what should I do?
-
 The FieldTrip version that we release includes compiled mex files for the most common platforms (Windows, Linux, macOS). However, it might be that you have a combination of operating system and MATLAB on which the precompiled mex files are not included or on which they do not work. In that case you have to recompile them yourself.
 
 The source code for the FieldTrip mex files is mostly contained in the `fieldtrip/src` directory. Some mex files are contained in `fieldtrip/external`, for example for SPM. Those are not the responsibility of the FieldTrip team.

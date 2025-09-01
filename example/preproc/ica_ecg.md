@@ -7,8 +7,6 @@ redirect_from:
     - /example/ica_ecg/
 ---
 
-# Independent component analysis (ICA) to remove ECG artifacts
-
 ## Description
 
 This script demonstrates how you can use ICA for cleaning the ECG artifacts from your MEG data. It consists of four steps:

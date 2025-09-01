@@ -8,8 +8,6 @@ redirect_from:
     - /faq/clusterstats_teststatistic/
 ---
 
-# Should I use t or F values for cluster-based permutation tests?
-
 Both t and F distributions are interchangeable for a two-sample setting. In this setting, the F value is simply the t value to the power of two: ```F = t^2```.
 Cluster-based permutation tests have originally been used with a t-test statistic (Maris & Oostenveld, 2007, in J. of Neurosci. Methods) but their implementation in FieldTrip allows to use any other statistic function in addition to the common [ft_statfun_depsamplesT](/reference/statfun/ft_statfun_depsamplesT) and [ft_statfun_indepsamplesT](/reference/statfun/ft_statfun_indepsamplesT), such as [ft_statfun_depsamplesFunivariate](/reference/statfun/ft_statfun_depsamplesFunivariate) and [ft_statfun_indepsamplesF](/reference/statfun/ft_statfun_indepsamplesF). Using F values instead of t values for cluster-based permutation tests looks like a good opportunity to test for interaction effects and one might think that the results are equivalent to their t-test version. This is, however, not the case as will be explained below and it will finally be recommended to use the t statistic wherever possible in order to maintain the statistical properties of the test (in terms of power).
 

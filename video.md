@@ -3,8 +3,6 @@ title: Video lectures and tutorials
 tags: [video]
 ---
 
-# Video lectures and tutorials
-
 This page lists the video documentation that we have made publicly available. Note that none of us are expert on-screen presenters, most of us are not native English speakers, nor experts on recording and editing video material. We are doing our best to make this video material as good as we can and to make it available, but please be considerate that it sometimes is not as professional or polished as we would like it to be.
 
 Please use the menu below to get an overview and to navigate through the workshops and videos. Some lecture material has been presented and recorded multiple times. In general, we recommend you start with the most recent lecture.

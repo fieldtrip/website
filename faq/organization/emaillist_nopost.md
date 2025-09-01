@@ -7,8 +7,6 @@ redirect_from:
     - /faq/emaillist_nopost/
 ---
 
-# Why am I not allowed to post to the discussion list?
-
 If you try to post on the FieldTrip [email discussion list](/discussion_list) and get the following error:
 
 _You are not allowed to post to this mailing list, and your message has been automatically rejected. If you think that your messages are being rejected in error, contact the mailing list owner at fieldtrip-owner AT science.ru.nl._

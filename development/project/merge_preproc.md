@@ -4,7 +4,6 @@ title: Switch to using the preproc functions and phase out the old preprocessing
 
 {% include /shared/development/warning.md %}
 
-# Switch to using the preproc functions and phase out the old preprocessing code
 
 FieldTrip is being modularized to facilitate further development of the toolbox itself, and to facilitate reuse of the code in other projects (such as realtime analysis for BrainGain, or in EEGLAB or SPM8).
 

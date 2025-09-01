@@ -7,8 +7,6 @@ redirect_from:
   - /workshop/natmeg2014/beamforming/
 ---
 
-# Beamforming oscillatory responses in combined MEG/EEG data
-
 ## Introduction
 
 In this tutorial we will continue working on the [dataset](/workshop/natmeg2014/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)).

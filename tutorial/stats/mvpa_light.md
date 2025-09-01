@@ -6,12 +6,9 @@ redirect_from:
     - /tutorial/mvpa_light/
 ---
 
-# Classification of event-related MEG data using MVPA-Light
-
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the classification of event-related data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preproc/preprocessing), [event-related averaging](/tutorial/sensor/eventrelatedaveraging) and [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorials.
-
 
 ## Installation
 
@@ -100,7 +97,6 @@ Looking at the diagonal of the matrix tells us that the classifier is better at 
 
     {% include image src="/assets/img/tutorial/mvpa_light/figure1.png" width="300" %}
 
-
 ## Cross-validation
 
 To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Other cross-validation schemes supported by MVPA-Light are leave-one-out cross-validation, holdout, and predefined folds. Cross-validation is controlled by the following parameters:
@@ -156,7 +152,6 @@ The resultant plot shows AUC across time in the trial. The shaded area is the st
 Perform classification across time using all three classes FIC, FC, and IC. As classifier, use kernel FDA. As metric, use classification accuracy.
 {% include markup/end %}
 
-
 ## Search across channels ('where')
 
 Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform a separate classification analysis for each channel.
@@ -189,7 +184,6 @@ Since a classification result is obtained for each channel, classification accur
 Although we set `cfg.features = 'time'`, there was actually only one time point since `cfg.avgovertime='yes'`. To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window are used as features rather than just their average. The maximum performance should increase slightly.
 {% include markup/end %}
 
-
 In the previous analysis, classification has been performed for each channel separately. However, the spatial arrangement of MEG channels can be exploited in order to group neighbouring channels as features in the searchlight. To build the neighbourhood structure, we use `ft_prepare_neighbours`.
 
     cfg = [];
@@ -211,7 +205,6 @@ We are now ready to re-run the searchlight analysis. We can pass the neighbourho
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-
 Call `ft_topoplotER` to plot the result as a topography.
 
       cfg              = [];
@@ -224,7 +217,6 @@ Call `ft_topoplotER` to plot the result as a topography.
 As expected, the resultant topography is slightly more smeared out. Peak classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
       {% include image src="/assets/img/tutorial/mvpa_light/figure4.png" width="200" %}
-
 
 ## Search across both time and channels
 
@@ -242,7 +234,6 @@ In this case, both channels and time points act as search dimensions and the res
 
     mv_plot_result(stat.mvpa, stat.time)
     set(gca, 'YTick', 1:2:length(stat.label), 'YTickLabel', stat.label(1:2:end))
-
 
     {% include image src="/assets/img/tutorial/mvpa_light/figure5.png" width="300" %}
 
@@ -282,7 +273,6 @@ The techniques we explored for 3-D _[samples x chan x time]_ data seamlessly gen
       freqFIC = ft_freqanalysis(cfg, dataFIC_LP);
       freqFC = ft_freqanalysis(cfg, dataFC_LP);
 
-
 We aim to perform classification for each time-frequency point separately using channels as features. To this end, we only need to set `cfg.features = 'chan'`.
 
     cfg = [] ;
@@ -302,7 +292,6 @@ This yields a _[freq x time]_ matrix of classification accuracies. However, we a
 - `cfg.features = 'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
 - `cfg.features = []`: in this case, a search is performed across all dimensions yielding a _[chan x freq x time]_ array.
 - `cfg.features = {'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding a _[time x 1]_ vector.
-
 
 ### Exercise 4
 
@@ -326,7 +315,6 @@ Similar to what we did in the 'where' analysis, we can control the size of the s
     stat = ft_freqstatistics(cfg, freqFIC, freqFC);
 
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
-
 
 {% include image src="/assets/img/tutorial/mvpa_light/figure8.png" width="300" %}
 
@@ -425,14 +413,11 @@ Finally, let's carry out the analysis.
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
-
 The [understanding preprocessing tutorial](https://github.com/treder/MVPA-Light/blob/master/examples/understanding_preprocessing.m)
 on the GitHub page covers preprocessing in more detail. Although the tutorial uses MVPA-Light directly, not through its FieldTrip interface,
 you can translate the code into FieldTrip by replacing all instances of `cfg.preprocess` by `cfg.mvpa.preprocess`.
 
-
 <!--
-
 
 ### Unbalanced classes
 
@@ -440,13 +425,11 @@ Classes are unbalanced when one class contains more instances than another class
 Unbalanced classes can distort some of the classification metrics. For instance,
 if 90\% of the metrics
 
-
 ### Classifier weights vs activation patterns
 
 TODO
 
 -->
-
 
 ## Summary
 

@@ -6,8 +6,6 @@ redirect_from:
     - /faq/audiovideo/
 ---
 
-# How can I play back EEG/MEG and synchronous audio or video?
-
 In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g., involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
 FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](/reference/ft_databrowser)** and **[ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.

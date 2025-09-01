@@ -7,8 +7,6 @@ redirect_from:
   - /workshop/natmeg2014/dipolefitting/
 ---
 
-# Dipole fitting of combined MEG/EEG data
-
 ## Introduction
 
 In this tutorial you can find information about how to fit dipole models to the event-related fields (MEG) and potentials (EEG) of a single subject. We will be working on the dataset described in the [Preprocessing and event-related activity](/tutorial/sensor/preprocessing) tutorial, and we will use the anatomical images that belong to the same subject. We will repeat some code here to select the trials, preprocess the data and compute averages that are suitable for dipole fitting. We assume that preprocessing and event-related averaging is already clear for the reader.

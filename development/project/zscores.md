@@ -4,7 +4,6 @@ title: What is the best way to homogenize data using z-scores?
 
 {% include /shared/development/warning.md %}
 
-# What is the best way to homogenize data using z-scores?
 
 Z-scores are being used as a means to 'normalize' the data before doing over-subjects statistics. However, there are many ways of implementing this and at the moment there is not much consensus what the best method is.
 
@@ -69,7 +68,6 @@ The choice of the 'best' solution will (probably) depend on the characteristics 
 
 1.  develop realistic effect and noise models
 2.  find optimal noise and effect range
-
 
 ##### 1. Effect and noise model
 

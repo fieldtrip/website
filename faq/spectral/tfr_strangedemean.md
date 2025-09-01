@@ -7,8 +7,6 @@ redirect_from:
     - /faq/tfr_strangedemean/
 ---
 
-# Why does my TFR look strange (part I, demeaning)?
-
 If you use 'mtmconvol' as a method for frequency analysis it could happen that the Time-Frequency Representation of your data looks like this:
 
 {% include image src="/assets/img/faq/tfr_strangedemean/strangetfr1.png" width="400" %}

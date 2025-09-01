@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/connectivity_sensor_source
 ---
 
-# Analysis of sensor- and source-level connectivity
-
 ## Introduction
 
 {% include /shared/tutorial/connectivity_simulation_intro.md %}

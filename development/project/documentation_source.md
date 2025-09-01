@@ -4,7 +4,6 @@ title: Developing the documentation of the source reconstruction methods
 
 {% include /shared/development/warning.md %}
 
-# Developing the documentation of the source reconstruction methods
 
 ## Introduction
 

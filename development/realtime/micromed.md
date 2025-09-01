@@ -3,8 +3,6 @@ title: Streaming realtime data from Micromed
 tags: [realtime, micromed]
 ---
 
-# Streaming realtime data from Micromed
-
 Micromed is company based in Italy that develops systems for clinical neurophysiology. One of the systems that is used commonly in combination with real-time analysis and BCI is their ECoG amplifier, with which neuronal activity can be recorded directly from the brain surface using up to 128 channels. The Micromed ECoG system has the feature of sending the data over the network to be analyzed in external software. The Micromed acquisition software can connect to a remote TCP server. Once the connection is made, the data is streamed from the acquisition software TCP client towards the TCP server.
 
 ## Interface with MATLAB and FieldTrip

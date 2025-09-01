@@ -3,8 +3,6 @@ title: Project overview
 tags: [development]
 ---
 
-# Project overview
-
 This section lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [GitHub](/development/git) to track the development of specific projects; those are typically not listed here.
 
 ## Active projects

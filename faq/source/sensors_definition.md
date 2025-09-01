@@ -7,8 +7,6 @@ redirect_from:
     - /faq/sensors_definition/
 ---
 
-# How are electrodes, magnetometers or gradiometers described?
-
 Sensor locations are described by the `elec` or `grad` field in the data structure. These sensor definitions can contain fewer or more sensors than channels actually present in the data, i.e., you can have bipolar EOG channels that do not have a unique position on the scalp, but you might also have reference gradiometers positions for which you did not read or preprocess the data.
 
 ## The definition of EEG and IEEG (ECoG and sEEG) electrodes

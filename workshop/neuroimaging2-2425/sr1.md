@@ -3,8 +3,6 @@ title: SR1 - Source reconstruction
 tags: [neuroimaging2-2425]
 ---
 
-# SR1 - Source reconstruction
-
 ## 1 The biophysical forward model and linear mixing
 
 We assume that you have MATLAB installed and that you understand the basics

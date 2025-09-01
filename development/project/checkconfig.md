@@ -4,7 +4,6 @@ title: Implement function that checks consistency of cfgs
 
 {% include /shared/development/warning.md %}
 
-# Implement function that checks consistency of cfgs
 
 ## Objectives
 

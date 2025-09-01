@@ -3,8 +3,6 @@ title: Suggested improvements for handling header and chunks
 tags: [realtime, development]
 ---
 
-# Suggested improvements for handling header and chunks
-
 This is a draft for the calls involved in writing and reading header information and chunks, where the server
 keeps a running identifier for the fixed part of the header, as well as for each chunk that is attached to
 the current header.

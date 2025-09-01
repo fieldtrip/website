@@ -7,8 +7,6 @@ redirect_from:
     - /example/dss_ecg/
 ---
 
-# Use denoising source separation (DSS) to remove ECG artifacts
-
 ## Description
 
 This script demonstrates how you can use denoising source separation (DSS) for cleaning the ECG/BCG artifacts from your MEEG data. It consists of four steps:

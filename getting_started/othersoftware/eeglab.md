@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/eeglab/
 ---
 
-# Getting started with EEGLAB
-
 ## Background
 
 EEGLAB is an interactive MATLAB toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection. EEGLAB incorporates and extends the ICA/EEG toolbox of Makeig, and it provides the user with a graphical interface. The homepage of EEGLAB is located at <http://www.sccn.ucsd.edu/eeglab/>.

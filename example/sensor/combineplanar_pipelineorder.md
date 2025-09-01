@@ -6,8 +6,6 @@ redirect_from:
     - /example/combineplanar_pipelineorder/
 ---
 
-# The correct pipeline order for combining planar MEG channels
-
 ## Description
 
 This script demonstrates the pipeline sequence you should follow when you use **[ft_combineplanar](/reference/ft_combineplanar)** in your induced Time-Frequency and Event-Related Fields analysis. This script is specific for MEG datasets that have axial/magnetometer sensors (CTF, Elekta) and you're interested to compute a synthetic planar representation.

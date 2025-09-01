@@ -3,8 +3,6 @@ title: CuttingEEG X workshop at the Donders
 tags: [cuttingeegx]
 ---
 
-# CuttingEEG X workshop at the Donders
-
 CuttingEEG is turning 10 years old! This milestone calls for a special edition, looking back at the EEG and MEG fields of the past 10 years and looking ahead at the next 10 years and beyond! Alongside the [CuttingEEG X](https://cuttingeegx.org) conference we are organizing a number of local workshops that will take place in the morning. This specific page describes the content and practicalities for the FieldTrip OPM workshop, but there is also the MNE-Python workshop (presented by Britta Westner and Tilman Stephani) and the Git/GitHub workshop (presented by Julia Chauvet, Jan-Mathijs and Robert).
 
 - Who: Konstantinos Tsilimparis, Robert Oostenveld, Jan-Mathijs Schoffelen
@@ -95,7 +93,6 @@ cd('data');
 % Download the SQUID and OPM dataset
 url = 'https://download.fieldtriptoolbox.org/workshop/cuttingeegx';
 recursive_download(url, pwd)
-
 
 function recursive_download(webLocation, localFolder)
 

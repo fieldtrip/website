@@ -4,7 +4,6 @@ title: Create a tutorial on the processing of animal data
 
 {% include /shared/development/warning.md %}
 
-# Create a tutorial on the processing of animal data
 
 list of related bugs
 

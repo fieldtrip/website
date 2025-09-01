@@ -3,8 +3,6 @@ title: Cluster-based permutation tests on resting-state EEG power spectra
 tags: [madrid2019, eeg-sedation]
 ---
 
-# Cluster-based permutation tests on resting-state EEG power spectra
-
 ## Introduction
 
 This tutorial gives an introduction to the statistical analysis of resting state

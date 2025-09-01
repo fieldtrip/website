@@ -2,8 +2,6 @@
 title: Advanced analysis and source modeling of EEG and MEG data
 ---
 
-# Advanced analysis and source modeling of EEG and MEG data
-
 On April 3-6, 2017 we will host the “Advanced MEG/EEG Tool-kit” at the Donders Institute in Nijmegen.
 
 This intense 4-day toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG data, and there will also be plenty of opportunity to interact and ask questions to us about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of the tutors.

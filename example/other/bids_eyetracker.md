@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_eyetracker/
 ---
 
-# Converting an example eye tracker dataset for sharing in BIDS
-
 {% include markup/red %}
 The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).
 {% include markup/end %}

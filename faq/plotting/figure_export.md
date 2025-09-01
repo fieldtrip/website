@@ -7,8 +7,6 @@ redirect_from:
     - /faq/figure_export/
 ---
 
-# What is a good way to save images for later processing in other software?
-
 Here are some tips from various users/developers:
 
 - Save in `.eps` format, these can be easily edited in Adobe Illustrator etc.

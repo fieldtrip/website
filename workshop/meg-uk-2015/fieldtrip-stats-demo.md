@@ -3,8 +3,6 @@ title: FieldTrip stats demo
 tags: [meg-uk-2015, mmfaces]
 ---
 
-# FieldTrip stats demo
-
 In this demonstration we will use the [face recognition dataset](/workshop/meg-uk-2015/dataset).
 
 Please use the [general instructions](/workshop/meg-uk-2015/general) to get started.
@@ -68,10 +66,8 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 
     end % for each run
 
-
     %% append the 6 runs into a single structure
     data = ft_appenddata(cfg, rundata{:});
-
 
     %% compute the overall average and condition-specific averages
 
@@ -162,7 +158,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.design(timelock.trialinfo==3) = 2;  % Scrambled
     cfg.ivar      = 1;                      % the first (and only) row of the design represents the independent variable
     analytic = ft_timelockstatistics(cfg, timelock);
-
 
     %% do some sanity checks
     figure

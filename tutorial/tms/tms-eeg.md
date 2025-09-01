@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/tms-eeg/
 ---
 
-# Dealing with TMS-EEG datasets
-
 ## Introduction
 
 This tutorial shows how to process EEG that was recorded together with transcranial magnetic stimulation (TMS) that was applied to the primary motor cortex (M1), while subjects either contracted, or relaxed their contra-lateral hand. The application of TMS pulses during the EEG acquisition poses some specific challenges that will be addressed.

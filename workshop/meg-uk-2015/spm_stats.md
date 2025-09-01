@@ -3,8 +3,6 @@ title: SPM Sensor-level stats demo
 tags: [meg-uk-2015, glm]
 ---
 
-# SPM Sensor-level stats demo
-
 In this demo we will perform statistical analysis of sensor-level scalp x time images within subject. All classical statistical analyses in SPM are performed on either volumetric images in NIfTI format (can appear either as single files with .nii extension or pairs of files with .hdr and .img extensions) or data on meshes in GIfTI format (pairs of files with .gii and .dat extensions). Thus, any features derived from M/EEG must be converted into one of these formats first.
 
 Then we will use the batch interface to specify a statistical model. There are many options in the batch tool, but they all eventually come down to specification of the GLM design matrix and covariance structure of the residuals. Therefore, any classical statistical analysis in SPM (time-frequency data, source images, group analysis etc.) will only differ from what you are about to do by the inputs you provide and the exact statistical design specification. You can see an example of group analysis of time-frequency data in the SPM12 manual chapter on [Multimodal, Multisubject data fusion](http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf).

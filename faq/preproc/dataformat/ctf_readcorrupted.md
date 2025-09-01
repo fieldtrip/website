@@ -7,8 +7,6 @@ redirect_from:
     - /faq/ctf_readcorrupted/
 ---
 
-# How can I read corrupted (unsaved) CTF data?
-
 When during recording a system failure occurs, the dataset may not be (properly) saved. This may have its problematic consequences with respect to the offline reading of the data. Because prior to recording the CTF system is set up to record 1000 10-second trials, and subsequently corrected during saving of the actually recorded trials, there is a mismatch between the headerinformation and the datafile.
 
 You can check with the following command whether this is the case or not:
@@ -57,7 +55,6 @@ Now re-read the res4 file again and correct for the number of trials. Then read 
          hdr.nTrials = 75;
 
          data = read_ctf_meg4('/home/arjsto/MEG/subjectx/subjectx.meg4', hdr, 1, hdr.nTrials*12000);
-
 
 If you want to do the same with high-level FieldTrip functions, invoke the above mentioned low-level functions by specifying the 'ctf_old' header- and dataformat. In your trialfunction:
 

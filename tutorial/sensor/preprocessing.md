@@ -7,8 +7,6 @@ redirect_from:
   - /workshop/natmeg2014/preprocessing/
 ---
 
-# Preprocessing and event-related activity in combined MEG/EEG data
-
 ## Introduction
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded EEG-MEG-data, and how to apply the different preprocessing steps. This tutorial also shows you how to average your data and compare conditions (standard versus deviant tones).

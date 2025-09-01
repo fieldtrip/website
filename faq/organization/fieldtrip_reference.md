@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fieldtrip_reference/
 ---
 
-# How should I refer to FieldTrip in my publication?
-
 We would appreciate it to be mentioned in your publication if you have used FieldTrip for a considerable part of your analysis.
 
 Please cite the **[FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/)** when you have used FieldTrip for data analysis in your study.

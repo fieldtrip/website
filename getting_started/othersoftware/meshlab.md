@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/meshlab/
 ---
 
-# Getting started with MeshLab
-
 [MeshLab](https://www.meshlab.net) is open source software for processing and editing 3D triangular meshes. It provides a set of tools for editing, cleaning, healing, inspecting, rendering, texturing and converting meshes. It offers features for processing raw data produced by 3D digitization tools/devices and for preparing models, among others for 3D printing. MeshLab is available for Windows, macOS, and Linux.
 
 ## Example use

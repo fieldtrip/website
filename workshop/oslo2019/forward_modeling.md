@@ -3,8 +3,6 @@ title: Forward modeling for EEG source reconstruction
 tags: [oslo2019, eeg-audodd, headmodel]
 ---
 
-# Forward modeling for EEG source reconstruction
-
 ## Introduction
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.
@@ -20,7 +18,6 @@ To do source reconstruction, a so-called forward model is needed. The forward mo
 Optimally, we have individual Magnetic Resonance Images (MRIs) available for each subject. If this is not so, it is also possible to use a template brain for source reconstruction. See [here](/template/sourcemodel). In this tutorial we will assume that you have individual structural MRIs at your disposal.
 
 There are four components of a forward model
-
 
 1. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
 2. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources

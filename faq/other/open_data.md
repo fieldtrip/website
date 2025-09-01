@@ -6,8 +6,6 @@ redirect_from:
     - /faq/open_data/
 ---
 
-# Where can I find open access MEG/EEG data?
-
 {% include markup/yellow %}
 Feel free to hit the **edit** button at the bottom of this page to add links to other open access datasets.
 {% include markup/end %}

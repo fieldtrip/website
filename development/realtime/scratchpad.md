@@ -3,8 +3,6 @@ title: Scratchpad for the realtime buffer interface
 tags: [realtime, development]
 ---
 
-# Scratchpad for the realtime buffer interface
-
 This page contains some loose ends and random pieces that don't fit elsewhere.
 
 - [closing the loop](/development/realtime/closing_the_loop) lists some methods for interacting with, and controlling the external world (i.e. outside the analysis computer)

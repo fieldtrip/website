@@ -7,8 +7,6 @@ redirect_from:
     - /faq/mex_osx/
 ---
 
-# MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
-
 When you try to use FieldTrip on macOS Catalina or later, you may get an error like
 
 ```matlab

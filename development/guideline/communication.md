@@ -3,8 +3,6 @@ title: Communication guidelines
 tags: [guidelines, development]
 ---
 
-# Communication guidelines
-
 To communicate with and reach a wide audience, we use the following channels
 
 - this website, for documentation

@@ -4,8 +4,6 @@ category: example
 tags: [source, sourcemodel, fem]
 ---
 
-# Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
-
 When using a FEM head model in forward and inverse computations, for numerical reasons the dipoles are ideally placed well within the geometric elements of the FEM mesh and not on the element boundaries, i.e., at the center of the hexahedra or tetrahedra. To support this, the **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** function supports for `cfg.method` the basedoncentroids method. Alternatively, it has the `cfg.movetocentroids` option.
 
 With the basedoncentroids method, a dipole is placed at the center of each hexahedron or tetrahedron. If the FEM mesh is based on a segmentation of an anatomical MRI at 1 mm, the geometric elements of the FEM mesh are also about 1 mm large, which means that the grid of dipoles will also have 1 mm spacing. That is a very dense (most likely irregular) grid, and the computational time fo the forward and inverse method will be very long.

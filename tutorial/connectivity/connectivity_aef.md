@@ -7,8 +7,6 @@ redirect_from:
     - /tutorial/connectivity_aef/
 ---
 
-# Connectivity in auditory evoked responses
-
 ## Introduction
 
 In this tutorial we will analyze auditory evoked fields (AEFs) in the context of a widely studied sensory gating paradigm. First we will analyze the data on sensor level in both time and time-frequency domain. On the basis of this analysis we will define relevant latencies and/or time-frequency tiles that will be subsequently analyzed in source space using beamforming techniques. Finally we will try to identify relevant cortical "nodes" based on statistical contrasts and compute connectivity between these task-relevant nodes.

@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/ricoh/
 ---
 
-# Getting started with Ricoh data
-
 {% include markup/green %}
 These MEG systems were initially developed at the [Kanazawa Institute of Technology](https://www.kanazawa-it.ac.jp/ekit/) (KIT) and later co-developed and marketed by [Yokogawa Electric Corporation](http://www.yokogawa.com/). In 2016 Ricoh took over the MEG branch from Yokogawa and has started manufacturing and installing the MEG system. The Ricoh system has some updates over the Yokogawa system.
 

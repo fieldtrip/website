@@ -3,8 +3,6 @@ title: Reconstructing source activity using beamformers
 tags: [paris2019, meg, sourceanalysis, beamformer, mmfaces]
 ---
 
-# Reconstructing source activity using beamformers
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
 {% include markup/end %}

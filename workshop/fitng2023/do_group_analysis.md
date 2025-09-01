@@ -3,8 +3,6 @@ title: Analysis script to perform the group analysis
 tags: [fitng2023]
 ---
 
-# Analysis script to perform the group analysis
-
 This page is part of the [Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Neuroimaging Group](/workshop/fitng2023).
 
 The script on this page and the data in BIDS format are part of Meyer, M., Lamers, D., Kayhan, E., Hunnius, S., & Oostenveld, R. (2021). Enhancing reproducibility in developmental EEG research: BIDS, cluster-based permutation tests, and effect sizes, Developmental Cognitive Neuroscience, 52, 101036, https://doi.org/10.1016/j.dcn.2021.101036.
@@ -44,7 +42,6 @@ scripts     = fullfile(pwd, 'scripts');
 bidsroot    = fullfile(pwd, 'bidsdata');
 results     = fullfile(pwd, 'results');
 derivatives = fullfile(pwd, 'bidsresults');
-
 
 % Display step of analysis
 fprintf('\n')

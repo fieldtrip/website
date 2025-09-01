@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/coherence/
 ---
 
-# Analysis of corticomuscular coherence
-
 ## Introduction
 
 In this tutorial we will analyze cortico-muscular coherence, which reflects functional connectivity between primary motor cortex and a contralateral effector muscle during isometric contraction.

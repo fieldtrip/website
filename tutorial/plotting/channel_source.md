@@ -4,8 +4,6 @@ category: tutorial
 tags: [plotting, layout]
 ---
 
-# Plotting data at the channel and source level
-
 ## Introduction
 
 To visualize your data you can use FieldTrip's high-level plotting functions, which are optimized for the FT data structures. Like other high-level functions they take a cfg as first input argument, followed by the data. These functions take care of all bookkeeping and some of the functions allow you to interact with the data by clicking in the figure.

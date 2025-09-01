@@ -7,8 +7,6 @@ redirect_from:
     - /faq/statistics_secondlevel/
 ---
 
-# What is the idea behind statistical inference at the second-level?
-
 A common approach for statistical inference is to split the statistics into two levels. At level 1 you compute a within-subject statistic which **describes** the effect size (i.e. no inference). At level 2 you do the **inference**, testing whether the effect is consistent over subjects.
 
 Conventionally you would do the inference over the single subject between-condition difference in the averages. Here you replace the difference between the averages by another difference measure. Using the t-score as the measure of difference suppresses differences in the non-consistent parts of the data (e.g., channels that don't show an effect and time points in the baseline) and stresses the difference in consistent large-effect channels. The second level statistical inference thereby becomes more sensitive. Furthermore, the multiple comparison problem at the second level becomes easier to solve using randomization testing, because the randomization distribution will be less broadened by the uninteresting noisy parts of the data.

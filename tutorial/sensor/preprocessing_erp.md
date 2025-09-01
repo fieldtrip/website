@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/preprocessing_erp/
 ---
 
-# Preprocessing of EEG data and computing ERPs
-
 ## Background
 
 Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering, and optionally rereferencing in the case of EEG. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
@@ -144,7 +142,6 @@ Some acquisition systems, such as BioSemi, allow for direct bipolar recording of
     cfg.implicitref  = []; % this is the default, we mention it here to be explicit
     cfg.refchannel   = {'53'};
     eogv             = ft_preprocessing(cfg, data);
-
 
     % only keep one channel, and rename to eogv
     cfg              = [];

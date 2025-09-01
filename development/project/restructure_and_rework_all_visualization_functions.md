@@ -4,7 +4,6 @@ title: Restructure and rework all visualization functions
 
 {% include /shared/development/warning.md %}
 
-# Restructure and rework all visualization functions
 
 The current naming scheme is ambiguous and/or inefficient for end-users and developers. The goal of this page is to develop a new scheme for naming functions and structuring the underlying code.
 

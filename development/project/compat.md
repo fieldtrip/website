@@ -4,7 +4,6 @@ title: Ensure that the compat directories are NOT called by FieldTrip itself
 
 {% include /shared/development/warning.md %}
 
-# Ensure that the compat directories are NOT called by FieldTrip itself
 
 This has been resolved with <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1114> and test_bug1114.m
 

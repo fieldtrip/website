@@ -7,8 +7,6 @@ redirect_from:
     - /faq/installation/
 ---
 
-# Installation and setting up the path
-
 In general you should *not* add FieldTrip with all subdirectories to your path. In other words, don't use a command such as ```addpath(genpath(<path_to_fieldtrip>))```, nor use MATLAB's graphical user interface to set the path. There are a number of external toolboxes in `fieldtrip/external` that are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in `fieldtrip/compat`, which should *only* be added to your path in case you use the corresponding old MATLAB release.
 
 ## Step 0

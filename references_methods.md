@@ -5,8 +5,6 @@ redirect_from:
     - /references_to_implemented_methods/
 ---
 
-# References to implemented methods
-
 This page links to the original publications that describe the methods implemented in the FieldTrip toolbox. If you are looking for specific implementation details, please look at the [references documentation](/reference).
 
 This list is far from complete, FieldTrip implements many more algorithms that have been published in papers. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion_list).

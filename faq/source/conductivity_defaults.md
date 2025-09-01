@@ -7,8 +7,6 @@ redirect_from:
     - /faq/conductivity_defaults/
 ---
 
-# What is the conductivity of the brain, CSF, skull and skin tissue?
-
 There are multiple literature references from which you can get estimates for the conductivity, e.g.
 
 - McCann H, Pisano G, Beltrachini L. _Variation in Reported Human Head Tissue Electrical Conductivity Values._ Brain Topogr. 2019

@@ -6,8 +6,6 @@ redirect_from:
     - /faq/data_sharing/
 ---
 
-# How can I share my MEG data?
-
 Sharing data along with published results is a vital step towards better reproducibility of MEG/EEG research; furthermore, it supports the ongoing development and validation of new analysis methods such as those implemented in FieldTrip.
 
 Funding agencies and journals are more frequently requiring that data is being shared along with publications.

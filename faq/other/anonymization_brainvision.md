@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anonymization_brainvision/
 ---
 
-# How can I anonymize or deidentify a BrainVision dataset?
-
 The BrainVision recorder and analyzer software writes EEG data in a combination of three separate files
 
 1. A text header file (`.vhdr`) containing the header information

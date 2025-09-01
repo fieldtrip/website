@@ -6,8 +6,6 @@ redirect_from:
     - /example/symmetry/
 ---
 
-# Symmetric dipole pairs for beamforming
-
 When you expect symmetric activity in an ERP analysis, it makes sense to use a symmetric dipole pair in **[ft_dipolefitting](/reference/ft_dipolefitting)** by specifying the `cfg.symmetry` option. For the scanning methods that are implemented in **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, and notably for the beamformer methods, you can also make use of symmetric dipole pairs.
 
 This is especially beneficial when the source activity in left and right hemisphere is expected to be highly correlated, as the beamformer expects sources to be (reasonably) uncorrelated. By extending the sourcemodel, the source activity that you are simultaneously estimating while scanning includes both left and right hemisphere activity and the correlation _inside_ that sourcemodel is not a problem.
@@ -267,7 +265,6 @@ Compute the contrast between the conditions as before and plot the results
 {% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_sym_cor.png" width="600" %}
 
 ### Un-correlated symmetric sources with symmetric source model
-
 
 Finally, we show the effect of using a symmetric source model to estimate two un-correlated symmetric sources:
 

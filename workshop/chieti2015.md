@@ -3,8 +3,6 @@ title: FieldTrip workshop in Chieti
 tags: [chieti]
 ---
 
-# FieldTrip workshop in Chieti
-
 {% include image src="/assets/img/workshop/chieti2015/screen_shot_2015-09-17_at_17.29.15.png" width="150" %}
 
 A FieldTrip MEG connectivity workshop will be hosted by the [ITAB in Chieti](http://www.itab.unich.it) (Italy), following the [MEG connectivity workshop](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1508&L=MEGCOMMUNITY&F=&S=&P=6229) on 16 and 17 September.

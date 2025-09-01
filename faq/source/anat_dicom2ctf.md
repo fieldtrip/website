@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anat_dicom2ctf/
 ---
 
-# How can I convert an anatomical MRI from DICOM into CTF format?
-
 {% include markup/yellow %}
 This page describes how we do the conversion at the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen and some of the items described here are specific to us, such as the directory layout and the precise definition of the ear landmarks, but most of this description applies in general.
 {% include markup/end %}

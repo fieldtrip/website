@@ -3,8 +3,6 @@ title: Time-frequency and spectral analysis
 tags: [madrid2019, eeg-language, eeg-sedation]
 ---
 
-# Frequency analysis of task and resting state EEG
-
 ## General introduction
 
 In this tutorial we will analyze the power spectra for two different EEG

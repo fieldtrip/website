@@ -7,8 +7,6 @@ redirect_from:
     - /faq/matlab_debugging/
 ---
 
-# How can I debug my analysis script if a FieldTrip function gives an error?
-
 You may write an elaborate data analysis pipeline in a script, which calls other data analysis scripts. If you get an error in such a nested combination of scripts, it might be difficult to debug because reaching the error takes a long time and MATLAB bails out as soon as the error happens.
 
 ## Standard MATLAB debugging

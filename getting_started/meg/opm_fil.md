@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/opm_fil/
 ---
 
-# Getting started with OPM data recorded at the FIL
-
 Optically Pumped Magnetometers offer an exiting opportunity to advance the recording of MEG data. This page provides a short summary on how to get started with processing OPM MEG data that was recorded at the FIL in London. This documentation is largely based on the [OPM GitHub repository](https://github.com/tierneytim/OPM) of Tim Tierney which is geared towards processing the data in SPM.
 
 {% include markup/skyblue %}

@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/eyelink/
 ---
 
-# Getting started with SR-Research EyeLink eye-tracker data
-
 At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/eyelink1000plus.html) that supports sampling rates up to 2000 Hz for monocular and 1000 Hz for binocular tracking. For a technical overview about Eyelink 1000 characteristics look [here](http://www.sr-research.com/el1000plus_baseunit.html)
 
 The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g., EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following, we will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.

@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/animal/
 ---
 
-# Getting started with animal electrophysiology data, including spikes
-
 The algorithms implemented in FieldTrip can also be used on data from animal electrophysiology experiments, such as local field potentials (LFPs) and spikes. The way that data from animal electrophysiology data acquisition systems in handled in FieldTrip is slightly different from that of EEG and MEG data. Furthermore, there are a few functions that are specific to animal electrophysiology data.
 
 If you are only processing LFPs and no spikes, then the remainder of this page is not relevant for you. LFPs are processed in exactly the same way as EEG and MEG data, and the other tutorials should help you to get started. However, if you are analyzing spikes, or a combination of spikes with LFPs, then you should read on.

@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/eventrelatedstatistics/
 ---
 
-# Parametric and non-parametric statistics on event-related fields
-
 ## Introduction
 
 The goal of this tutorial is to provide a gentle introduction into the different options that are implemented for statistical analysis. Here we will use event-related fields (ERFs), because they are more familiar to most of the audience and easier to visualize. We will show how to do basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.

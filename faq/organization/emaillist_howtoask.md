@@ -7,8 +7,6 @@ redirect_from:
     - /faq/emaillist_howtoask/
 ---
 
-# How to ask good questions to the community?
-
 The FieldTrip community is represented on the [email discussion list](/discussion_list). You can also sign up and ask for help if you are stuck in using FieldTrip. Asking good questions there (and giving useful answers) is the key to a successful community. However, please do some research yourself on them before approaching fellow researchers on the discussion list. Keep in mind that several hundreds of researchers around the world will get note of your question and will spend their valuable time on reading your question. In addition, also keep career perspectives into mind. By asking your first question on the mailing list (which could be before you wrote your first paper), they will get a first impression of you and may start to form a picture of you, be it as a prospective colleague or collaborator. Many of the members are senior researchers and might have a job opening and are looking for you! But, don't be afraid to ask questions, we really appreciate if you approach us and we will try to help, even if your question turns out to have a trivial answer :)
 
 {% include image src="/assets/img/faq/emaillist_howtoask/peanutsediting.jpg" width="400" %}

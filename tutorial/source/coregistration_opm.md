@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/coregistration_opm/
 ---
 
-# Coregistration of Optically Pumped Magnetometer (OPM) data
-
 ## Introduction
 
 Conventionally, MEG is recorded with SQUIDs, which are superconductive sensors that require cryocooling and hence need to be placed as an fixed helmet-shaped array in a dewar. Optically Pumped Magnetometers (OPMs) are a new type of magnetic field sensors for MEG. OPMs do not require cryocooling and can be placed individually. Due to their small size and flexibility, different strategies are used to place OPM sensors on the head.

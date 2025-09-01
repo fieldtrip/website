@@ -3,8 +3,6 @@ title: Template MEG dewar shapes
 tags: [template, dewar]
 ---
 
-# Template MEG dewar shapes
-
 To help position the subject in the MEG dewar (i.e. the helmet), you can use **[ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)** in combination with the FieldTrip [realtime interface](/development/realtime). Template dewar outlines are available for the CTF and the Neuromag/Elekta/MEGIN system and will be loaded automatically. The head localizer allows you to visualize the following geometries:
 
 - head localizer coils

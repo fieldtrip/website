@@ -4,7 +4,6 @@ title: Improve artifact handling
 
 {% include /shared/development/warning.md %}
 
-# Improve artifact handling
 
 With the initial focus in development on MEG data, we have mostly relied on not having (many) bad channels, and on rejecting segments based on unwanted data (e.g., physiological or behavioural artifacts, such as eye blinks) rather than recording hardware instabilities (such as electrodes moving). We typically reject affected segments from further analyses, and can also exclude channels, or if needed (e.g., for grand-averaged ERPs) to interpolate channels. This is documented [here](/tutorial/preproc/artifacts).
 

@@ -7,8 +7,6 @@ redirect_from:
     - /example/realtime_evaluation/
 ---
 
-# Measuring the timing delay and jitter for a real-time application
-
 ## Timing of a closed loop system
 
 The idea is to make a trigger-echo application. Triggers are sent (e.g., via MATLAB and a serial port) to a trigger channel (e.g., a PPT of the MEG system). Then we can read from that trigger channel (sampled along with the data) and once the trigger is detected, we can either write to another trigger channel, or write to the same channel but use different value for the trigger. The example below was used to measure trigger echo delays in the MEG system at FCDC. I was sending triggers (pulses of height 4), that were then recorded on trigger channel UPPT001. I then read this channel data online from shared memory and did a flank detection -of flanks with height 4- on the fly. Once, the flank was detected, I wrote another pulse (of a different height) on the same channel. The difference between the two flanks (the one sent and the one received) is a measure of the delay in the loop.The data was then saved on disk and the delays between the sent and received triggers were analyzed offline.
@@ -65,7 +63,6 @@ On the receiving side (the machine, that reads the data online from shared memor
     hdr = ft_read_header(cfg.headerfile, 'headerformat', cfg.headerformat, 'cache', true, 'retry', true);
     cfg.blocksize = hdr.nSamples / hdr.Fs; %% the size of one data segment in shared memory, typically ~70 samples
 
-
     %% set the default configuration options
     if ~isfield(cfg, 'dataformat'),     cfg.dataformat = [];      end % default is detected automatically
     if ~isfield(cfg, 'headerformat'),   cfg.headerformat = [];    end % default is detected automatically
@@ -93,7 +90,6 @@ On the receiving side (the machine, that reads the data online from shared memor
     % determine the size of blocks to process
     blocksize = round(cfg.blocksize * hdr.Fs);
     overlap   = round(cfg.overlap*hdr.Fs);
-
 
     %% as we will be doing flank detection on the fly on short segments, we have to
     %% make sure that the data is padded, such that no triggers go missing
@@ -208,7 +204,6 @@ i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the
     end
     %% calculate loop delay in samples
     diff_in_sampl=out_sample-in_sample;
-
 
     diff_in_sampl=out_sample-in_sample;
 
@@ -378,7 +373,6 @@ The number of new samples is now already returned by the ft_poll_buffer function
             %write_event(outstream, out_event);
             fwrite(serobjw, out_event.value);
           end
-
 
         else %% use read_event function that does the flank detection
 

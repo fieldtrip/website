@@ -2,12 +2,9 @@
 title: FieldTrip from a software development perspective
 ---
 
-# FieldTrip from a software development perspective
-
 {% include markup/green %}
 This page reports the insights from a MathWorks Community Toolbox Project that was sponsored by MathWorks and carried out by [Aljen Uitbeijerse](https://www.linkedin.com/in/aljenuitbeijerse/) at [VORtech](https://www.vortech.nl/en). The version presented here has been edited from the [original PDF version](/assets/pdf/project/code_review.pdf) (from April 20, 2023). The edits include formatting and fixing small typos.
 {% include markup/end %}
-
 
 ## 1. Introduction
 

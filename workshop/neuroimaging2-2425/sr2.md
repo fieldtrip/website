@@ -3,8 +3,6 @@ title: SR2 - Source reconstruction
 tags: [neuroimaging2-2425]
 ---
 
-# SR2 - Source reconstruction
-
 ## 4 Spatiotemporal mixing of neural sources: the basic observation model
 
 This document continue with the MATLAB exercises that form part of the course

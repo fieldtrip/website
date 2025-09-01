@@ -6,8 +6,6 @@ redirect_from:
     - /faq/colormap/
 ---
 
-# Which colormaps are supported?
-
 FieldTrip includes a helper-function **[ft_colormap](/reference/plotting/ft_colormap)** with which you can select any of the standard [MATLAB](https://nl.mathworks.com/help/matlab/ref/colormap.html) colormaps, but also those of [Matplotlib](https://matplotlib.org), [Brewermap](https://nl.mathworks.com/matlabcentral/fileexchange/45208-colorbrewer-attractive-and-distinctive-colormaps), [CMOcean](https://www.chadagreene.com/CDT/cmocean_documentation.html) and [ColorCET](https://colorcet.com).
 
 You can use **[ft_colormap](/reference/plotting/ft_colormap)** just like you would the standard MATLAB [colormap](https://nl.mathworks.com/help/matlab/ref/colormap.html) function. Furthermore, most plotting functions support the option `cfg.colormap` with which you can specify the desired colormap.

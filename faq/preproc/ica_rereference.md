@@ -7,8 +7,6 @@ redirect_from:
     - /faq/ica_rereference/
 ---
 
-# Should I rereference prior to or after ICA for artifact removal?
-
 The short answer is: It does not really matter. There are however a few things to keep in mind.
 
 Let's assume your data was recorded with a system comprising N channels with the Nth channel being the reference. From this, one can derive N-1 unique time series:
@@ -38,7 +36,6 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 {% include image src="/assets/img/faq/ica_rereference/multiplot.png" width="400" %}
 
 {% include image src="/assets/img/faq/ica_rereference/singleplot_FC1.png" width="400" %}
-
 
 ## Code
 

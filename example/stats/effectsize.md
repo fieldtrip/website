@@ -6,8 +6,6 @@ redirect_from:
     - /example/effectsize/
 ---
 
-# Computing and reporting the effect size
-
 It is good practice to compute and report the size of the effect that you are studying: see for example the 2019 OHBM Committee on Best Practice in Data Analysis and Sharing (COBIDAS) recommendation [Best Practices in Data Analysis and Sharing in Neuroimaging using MEEG](https://doi.org/10.31219/osf.io/a8dhx) or the 2013 [Good practice for conducting and reporting MEG research](https://doi.org/10.1016/j.neuroimage.2012.10.001) guidelines.
 
 The [effect size](https://en.wikipedia.org/wiki/Effect_size) is a way of quantifying the magnitude of an effect on your data. It can be quantified in different ways, e.g., as the uV difference in ERP amplitude on a specific channel  at a specific latency following stimulus presentation, or as a standardized measure such as [Cohen's d](https://en.wikiversity.org/wiki/Cohen%27s_d).
@@ -105,7 +103,6 @@ Above we demonstrated how to compute it by hand. The same equation for Cohen\'s 
  {% include markup/skyblue %}
  Note that Cohen\'s d is not the only way to quantify the effect size. If you look into the code of `ft_statfun_cohensd`, you will see that it is easy to implement other measures. You could also use a statfun to implement the [Bayes factor](https://www.statisticshowto.datasciencecentral.com/bayes-factor-definition/) to quantify the evidence of one hypothesis versus another.
  {% include markup/end %}
-
 
 ## Computing the paired effect size by hand
 
@@ -349,7 +346,6 @@ And again we can compute the effect size:
 When averaging the data over the largest cluster, i.e. the one on the basis of which we rejected H0, we see that the estimated effect size is 1.74.
 {% include markup/end %}
 
-
 ## Which effect size to report?
 
 We have demonstrated that there are different ways to estimate the effect size.
@@ -401,7 +397,6 @@ For the channels it is similar, except that we form a Boolean column-vector to f
         {'MLT42'}
         {'MLT43'}
         {'MLT44'}  
-
 
 The advantage of the list of channels and the begin- and end-latency is that these are easy to report in a written manuscript/paper. As before, these can be used to compute the average in the region of interest, and to compute the effect size for that rectangle:
 

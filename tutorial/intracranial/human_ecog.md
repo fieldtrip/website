@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/human_ecog/
 ---
 
-# Analysis of human ECoG and sEEG recordings
-
 ## Introduction
 
 Intracranial EEG (iEEG) allows simultaneous recordings from tens to hundreds of electrodes placed directly on the neocortex (electrocorticography, ECoG), or intracortically (stereoelectroencephalography, SEEG). These recordings are known for known for their high spatiotemporal precision. In humans, the most common implementation of iEEG is when non-invasive techniques such as scalp-EEG and MRI do not provide sufficient information to guide surgery in medication refractory epilepsy patients. This tutorial illustrates how to deal with the multitude of raw anatomical and electrophysiological data files in order to get to integrated neural observations.

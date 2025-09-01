@@ -4,7 +4,6 @@ title: NIRS development
 
 {% include /shared/development/warning.md %}
 
-# NIRS development
 
 See <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2753>
 

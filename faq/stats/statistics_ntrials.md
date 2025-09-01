@@ -15,7 +15,6 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 {% include markup/end %}
 
-# How does a difference in trial numbers per condition affect my statistical test
 
 ## The problem
 
@@ -63,7 +62,6 @@ Now that we have simulated the data for all subjects we are going to divide the 
     cfg_stats.uvar                = 2; % the 2nd row in cfg.design contains the subject number
 
     cfg = [];
-
 
     n_tests = 100;
 

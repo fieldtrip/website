@@ -7,8 +7,6 @@ redirect_from:
     - /faq/behavior_signalcorrelation/
 ---
 
-# How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
-
 ## Dependent versus Independent Variables
 
 A common perspective on the statistical testing starts from the distinction between dependent and independent variables. When analyzing neurobiological signals, these are typically considered to be the dependent variable. In these studies, the independent variable can be the experimental conditions, as defined by task instructions, stimulus type, learning history, etc. The label _independent variable_ suggests that it must be under the experimenter's control. However, this is not necessarily the case, and this is exemplified by response accuracy, which may very well serve as the independent variable in a study in which the relation is investigated between behavior (actually, one aspect of it, accuracy) and neural activity. Because neither of these variables (accuracy and neural activity) is under experimental control, it is arbitrary how the roles of dependent and independent variable are assigned. In FieldTrip, we use the convention that the variable with the smallest dimensionality is assigned the role of independent variable. For our example, this implies that accuracy is assigned the role of independent and the neurobiological signal the role of dependent variable. In fact, accuracy is represented by a single number, whereas the neurobiological signal often has a spatial (the channels), a temporal (the time points), and a spectral (the frequencies) dimension.

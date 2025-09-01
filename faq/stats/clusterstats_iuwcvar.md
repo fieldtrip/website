@@ -7,8 +7,6 @@ redirect_from:
     - /faq/clusterstats_iuwcvar/
 ---
 
-# How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
-
 In **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, **[ft_freqstatistics](/reference/ft_freqstatistics)**, and **[ft_sourcestatistics](/reference/ft_sourcestatistics)** you can specify cfg.method='montecarlo' to use the permutation framework to get an estimate of the probability of the null-hypothesis that the data can be exchanged over the conditions. If that probability is low, you usually reject the null-hypothesis (H0) in favor of the alternative hypothesis (H1).
 
 However, not all permutations of the data are relevant for making a decision between the H0 and H1 in which you are interested. It might for example be that you have observed data for two conditions in 10 subjects. In that case, you probably are interested in whether the data is different for the conditions within a subject. So, you don't want to randomly shuffle the data over all subjects, but instead would like to know whether or not shuffling _within_ the subjects destroys the difference between the conditions. In conventional statistics, you might use a [paired two-samples t-test](https://en.wikipedia.org/wiki/Student's_t-test).

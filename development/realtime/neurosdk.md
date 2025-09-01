@@ -3,8 +3,6 @@ title: Streaming realtime data from ANT NeuroSDK
 tags: [realtime, ant]
 ---
 
-# Streaming realtime data from ANT NeuroSDK
-
 Advanced Neuro Technologies is an Dutch company that provides EEG hardware and software for research and clinical applications. They provide complete and user-friendly EEG systems composed of well-integrated hardware and software for acquisition, analysis and stimulus presentation.
 
 {% include image src="/assets/img/development/realtime/neurosdk/amp_72ch.jpg" width="197" %}

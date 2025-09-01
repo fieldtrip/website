@@ -7,8 +7,6 @@ redirect_from:
   - /workshop/natmeg2014/statistics/
 ---
 
-# Statistical analysis and multiple comparison correction for combined MEG/EEG data
-
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of MEG data using different methods to control for the false alarm rate. The tutorial starts with sketching

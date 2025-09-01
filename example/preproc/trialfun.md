@@ -7,8 +7,6 @@ redirect_from:
     - /example/trialfun/
 ---
 
-# Making your own trialfun for conditional trial definition
-
 The **[ft_definetrial](/reference/ft_definetrial)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the `cfg.trialfun` option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g., only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity.
 
 This trial-function should be a MATLAB function with the following function definition

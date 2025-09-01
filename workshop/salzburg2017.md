@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Salzburg, Austria
 ---
 
-# FieldTrip workshop in Salzburg, Austria
-
 There will be a FieldTrip training event linked to the first [Salzburg Mind-Brain Annual Meeting](https://samba.ccns.sbg.ac.at).
 
 - By whom: Robert Oostenveld and Jan-Mathijs Schoffelen

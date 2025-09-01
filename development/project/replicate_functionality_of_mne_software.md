@@ -4,7 +4,6 @@ title: Replicate functionality of MNE software
 
 {% include /shared/development/warning.md %}
 
-# Replicate functionality of MNE software
 
 ## Objectives
 
@@ -438,7 +437,6 @@ First, the units of the source space should be converted because all units shoul
 
     bnd3.unit = 'mm';
     bnd3 = ft_convert_units(bnd3, 'cm');
-
 
     cfg = [];
     cfg.grad = data.grad;

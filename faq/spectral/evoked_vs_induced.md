@@ -6,8 +6,6 @@ redirect_from:
     - /faq/evoked_vs_induced/
 ---
 
-# Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
-
 ## Introduction
 
 When interpreting the time-frequency representation of the data, one needs to be aware of the fact that transient signal components (often denoted as phase-locked, or evoked components) contribute to the TFR. Sometimes one wishes to distinguish between stimulus-induced and stimulus-evoked activity in the interpretation of the results. For instance, if an observed effect in the data can be explained in terms of changes in power of ongoing rhythmic activity (induced). To make this distinction, it has been suggested to subtract the trial-averaged ERP/ERF from the data, prior to computing the time-frequency representation. One could seriously question the validity of this suggested subtraction, because the ERP is not a robot-like repetition of exactly the same transient on each and every trial. Rather, the ERP is by definition the average across trials, and thus averages out trial-specific noise (as intended), but also averages out trial-specific morphological differences of the transient (slight jitter in latency and/or amplitude from one trial to the next). The toy example provide below demonstrates the effect of ERP subtraction on the resulting TFR. As can be seen, if the transient is super constant across trials, the subtraction method makes sense, but once the transient becomes variable across trials (i.e. introducing trial-specific latency shifts and amplitude variations) the subtraction does not work anymore.  
@@ -68,7 +66,6 @@ Figure 1: simulated data on 4 channels, each with a slightly different transient
     
     tlck = ft_timelockanalysis([], data);
     figure;plot(tlck.time, tlck.avg); legend(tlck.label);
-
 
 Figure 2: ERP 
 

@@ -2,8 +2,6 @@
 title: Integration between tools
 ---
 
-# Integration between tools
-
 For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integrations between them.
 
 ## Jekyll

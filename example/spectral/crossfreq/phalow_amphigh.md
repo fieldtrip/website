@@ -2,8 +2,6 @@
 title: Phalow_amphigh
 ---
 
-# Phalow_amphigh
-
 ## Help ft_freqsimulation
 
     % In the method 'phalow_amphigh' the signal is build up of 4 components; s1, s2, s3 and nois

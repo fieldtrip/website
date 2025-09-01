@@ -7,8 +7,6 @@ redirect_from:
     - /faq/preproc_downsample/
 ---
 
-# How can I preprocess a dataset that is too large to fit into memory?
-
 If your dataset is too large to fit into memory at once, you can preprocess one channel at a time With **[ft_preprocessing](/reference/ft_preprocessing)**, immediately combined with **[ft_resampledata](/reference/ft_resampledata)**. After gathering all downsampled channels, you can combine them again into a normal multi-channel data structure.
 
 In summary, the code would look like this:

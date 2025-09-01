@@ -2,8 +2,6 @@
 title: Documentation
 ---
 
-# Documentation
-
 The [tutorials](/tutorial) will help you to get started by providing examples that you can copy-and-paste into MATLAB. The [introduction tutorial](/tutorial/intro/introduction) provides a short introduction in the the ideas behind the FieldTrip toolbox. The [Walkthrough](/walkthrough) will give you a more thorough overview of the conceptual ideas behind MEG and EEG analysis and how the toolbox is used.
 
 The [frequently asked questions](/faq) section provides a lot of practical information. Furthermore, the [example MATLAB scripts](/example) contain pieces of documentation that are often not so elaborate as the tutorials, but that go in more detail into specific aspects of the data, code or analysis.

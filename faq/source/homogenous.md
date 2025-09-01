@@ -6,8 +6,6 @@ redirect_from:
     - /faq/homogenous/
 ---
 
-# How do homogenous coordinate transformation matrices work? Or how do I get the coordinates for a specific voxel?
-
 A coordinate system specifies the interpretation of how points are expressed in 3D space. This makes use of the three numbers (x, y, z) that represent the point, relative to a known origin (0,0,0), and making use of cardinal x-, y-, and z-axes that are pointing into a specific direction such as towards the nasion, or from the [posterior to the anterior commissure](/faq/acpc/).
 
 A homogenous transformation matrix allows you to transform 3D points from one coordinate system to another. The conversion is achieved by simple matrix multiplication, as described in detail in the documentation of the [AIR](http://air.bmap.ucla.edu/AIR5) software by Roger P. Woods. This provides a very complete description of [homogenous coordinates](http://air.bmap.ucla.edu/AIR5/homogenous.html). Another, perhaps more accessible description can be found on the [brainvoyager website](https://www.brainvoyager.com/bv/doc/UsersGuide/CoordsAndTransforms/SpatialTransformationMatrices.html).

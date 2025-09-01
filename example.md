@@ -3,8 +3,6 @@ title: Examples
 category: example
 ---
 
-# Examples
-
 Here you can find example MATLAB scripts together with documentation that show specific analyses done in FieldTrip or in MATLAB. The documentation here is often not as elaborate as the [tutorials](/tutorial), but goes more in detail into specific aspects of the data, code or analysis.
 
 We invite you to [add your own](/development/contribute) example scripts or frequently asked questions to the website. Also tutorials can be added. Every time you explain somebody something about FieldTrip, please consider whether you could use the website for this, so others can learn from it as well. If you want to contribute one of your example scripts, please [add it directly](/development/contribute) to the website or [contact](/support) us.

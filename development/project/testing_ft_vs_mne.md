@@ -4,7 +4,6 @@ title: Testing minimum-norm estimate in FieldTrip and in MNE Suite
 
 {% include /shared/development/warning.md %}
 
-# Testing minimum-norm estimate in FieldTrip and in MNE Suite
 
 To test the equality of the two softwares solving the inverse solution with minimum-norm estimate we use a phantom data set from a 151 CTF MEG system.
 
@@ -27,7 +26,6 @@ Here is the script that I use
     % no trials have been defined yet, see FT_DEFINETRIAL for further help
     % found 38 events
     % created 0 trials
-
 
     cfg = [];
     cfg.dataset = '/<path>/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
@@ -615,7 +613,6 @@ Note, that the values in the second figure are much larger.
     %bnd.pnt = source.pos;
     bnd.pnt = source2.pos(spoints,:);
 
-
     [az,el,r] = cart2sph(bnd.pnt(:,1),bnd.pnt(:,2),bnd.pnt(:,3));
     [x, y]    = pol2cart(az, pi/2 - el);
     proj      = [x y];
@@ -837,7 +834,6 @@ Maximum was at 284.
     bnd = [];
     %bnd.pnt = source.pos;
     bnd.pnt = res.inv.src.rr(z,:);
-
 
     [az,el,r] = cart2sph(bnd.pnt(:,1),bnd.pnt(:,2),bnd.pnt(:,3));
     [x, y]    = pol2cart(az, pi/2 - el);

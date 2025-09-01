@@ -5,8 +5,6 @@ redirect_from:
   - /development/plotting/
 ---
 
-# Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
-
 FieldTrip supports plotting of channel-level and source-level data using functions that are described in the [plotting tutorial](/tutorial/plotting). These functions allow the user to specify a configuration and to work with all standard [data structures](/faq/development/datatype). Under the hood, these functions make use of a collection of shared lower-level functions which are still at a higher level than the standard MATLAB plotting tools.
 
 The goal of the shared plotting functions (compared to MATLAB) is to reuse the same functionality in different functions and be able to improve the functionality everywhere.

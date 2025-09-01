@@ -3,8 +3,6 @@ title: Advanced MEG/EEG toolkit at the Donders
 tags: [toolkit2021]
 ---
 
-# Advanced MEG/EEG toolkit at the Donders
-
 From 19-23 April 2021 we will host the “Advanced MEG/EEG toolkit”. Although we would have loved to welcome you in-person in Nijmegen, the ongoing COVID situation restricts traveling and large meetings. However, [last year](/workshop/toolkit2020) we experienced that in an online format the toolkit course is also really fun, effective and rewarding!
 
 Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen.

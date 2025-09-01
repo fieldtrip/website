@@ -3,8 +3,6 @@ title: Preprocessing of EEG and MEG data
 tags: [ohbm2018]
 ---
 
-# Preprocessing of EEG and MEG data
-
 ## Introduction
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded EEG-data, and how to apply the different preprocessing steps. This tutorial also shows you how to average your data for a specific experiment (electric wrist stimulation on the right hand).

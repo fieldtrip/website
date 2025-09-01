@@ -7,8 +7,6 @@ redirect_from:
     - /faq/datatype/
 ---
 
-# How are the various MATLAB data structures defined?
-
 To ensure that the functions implemented in the FieldTrip toolbox can be mixed and matched, we always try to keep a small number of data structures.
 
 The general principle is that a data structure should be as small as possible, but nevertheless contain enough information to fully understand its contents. Information on the data in a structure should not be replicated. If there is replication, there would be the risk of one function might use one version of the information whereas another function would use the other version. Changing the data in a structure should only require changing the information once.

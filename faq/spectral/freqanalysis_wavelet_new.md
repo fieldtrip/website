@@ -8,8 +8,6 @@ redirect_from:
     - /faq/freqanalysis_wavelet_new/
 ---
 
-# What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-
 Several things have changed in the new implementation of frequency analysis by the new low-level module 'specest'.
 
 - All output is now phase-shifted such that an angle of 0 of any fourier-coefficient always means a peak of an oscillation in the data, and an angle of pi/-pi will always mean the trough of an oscillation (wavelet wise angle = 0 is implemented as cosine at peak, and sine in up-going flank)

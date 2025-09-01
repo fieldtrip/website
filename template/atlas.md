@@ -3,8 +3,6 @@ title: Template anatomical atlases and parcellation schemes
 tags: [template, atlas]
 ---
 
-# Template anatomical atlases and parcellation schemes
-
 We define an atlas as a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g., as [Brodmann area](https://en.wikipedia.org/wiki/Brodmann_area). A review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
 
 In general an atlas can be read with **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](/reference/utilities/ft_datatype_parcellation)**. The volume based representation can be used with **[ft_volumelookup](/reference/ft_volumelookup)** or with the cfg.atlas option in **[ft_sourceplot](/reference/ft_sourceplot)**.

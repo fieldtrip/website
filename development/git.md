@@ -3,8 +3,6 @@ title: Accessing the FieldTrip source code through Git
 tags: [development, git]
 ---
 
-# Accessing the FieldTrip source code through Git
-
 The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](https://github.com/fieldtrip).
 
 {% include markup/skyblue %}

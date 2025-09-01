@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anonymization_fieldtripdata/
 ---
 
-# How can I anonymize data processed in FieldTrip?
-
 If you share your MATLAB files with others, you should be aware that the [provenance](https://en.wikipedia.org/wiki/Provenance) information might contain identifying information about your subjects.
 
 FieldTrip keeps track of the analyses in the `data.cfg.previous` field. This is something you can exploit using **[ft_analysispipeline](/reference/ft_analysispipeline)** to look up details of the processing that you might not be able to find in your analysis scripts any more.

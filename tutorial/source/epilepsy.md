@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/epilepsy/
 ---
 
-# Virtual channel analysis of epilepsy MEG data
-
 {% include markup/red %}
 The FieldTrip toolbox is designed for research purposes only. The FieldTrip project and development team make no representation that FieldTrip is a clinically approved medical device, and users understand and accept that any result or its display presented in whatever form obtained using FieldTrip must not be used for any purpose other than research.
 
@@ -701,7 +699,6 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     fclose(fid);
 
 {% include image src="/assets/img/tutorial/epilepsy/figure17.png" width="700" %}
-
 
 ## Summary and conclusion
 

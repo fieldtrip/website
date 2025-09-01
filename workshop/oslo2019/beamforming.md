@@ -3,8 +3,6 @@ title: Beamforming oscillatory responses in MEG data
 tags: [oslo2019, beamforming, source, meg, meg-audodd]
 ---
 
-# Beamforming oscillatory responses in MEG data
-
 ## Introduction
 
 This tutorial explains beamformer source reconstruction techniques in the frequency domain. You will learn how to compute appropriate time-frequency windows, how to apply the spatial filter, and about options for contrasting the effect of interest against some control/baseline. Finally, you will be guided through different options to visualize the results overlaid on a structural MRI.
@@ -243,7 +241,6 @@ To start with this, we need to compute the oscillatory power for both conditions
     % for conditions: we already computed "powcsd_left", right hand trials:
     cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
     powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
-
 
 {% include markup/skyblue %}
 You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/utilities/ft_selectdata)**. This would be computationally more efficient, but requires more memory.

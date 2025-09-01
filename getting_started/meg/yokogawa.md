@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/yokogawa/
 ---
 
-# Getting started with Yokogawa data
-
 {% include markup/green %}
 These MEG systems were initially developed at the [Kanazawa Institute of Technology](https://www.kanazawa-it.ac.jp/ekit/) (KIT) and later co-developed and marketed by [Yokogawa Electric Corporation](http://www.yokogawa.com/). In 2016 the MEG business of Yokogawa was [transferred](https://asia.nikkei.com/Business/Deals/Ricoh-enters-medical-field-with-purchase-of-Yokogawa-Electric-business) to Ricoh, where they continue making these systems.
 
@@ -179,7 +177,6 @@ As an alternative to the above procedure, it might be possible in some situation
     cfg.trialdef.combinebinary = 1;
     cfg.trialdef.trigshift = 2; % return the value of the combined pulse 2 samples after the on-ramp (in case of small staircases)
     cfg = ft_definetrial(cfg);
-
 
 ## Creating a custom channel layout
 

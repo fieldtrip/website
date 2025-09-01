@@ -6,8 +6,6 @@ redirect_from:
     - /example/nirs_speech/
 ---
 
-# Analyzing NIRS data recorded during listening to and repeating speech
-
 This example script demonstrates the analysis of data that is shared by Jessica Defenderfer and Aaron Buss in _[fNIRS data files for event-related vocoding/background noise study](http://dx.doi.org/10.17632/4cjgvyg5p2.1)_.
 
 In the shared data the authors refer to an article _"Examining the hemodynamic response during perception of noise-vocoded speech and speech in background noise: An image-based fNIRS study"_. However, I have not been able to find an article with precisely that title, although another article from the same authors has a title that comes close. The following links point to the shared data and to the published PDF manuscript that explains (some aspects of) the shared data.
@@ -239,7 +237,6 @@ We can look at the number of trials per block (or condition):
     numel(block5)
     ans =
         33
-
 
 Again this does not match the PDF manuscript, which mentions three blocks of 96 trials each. When we do the same for the 2nd dataset, we recognize the same number of trials in the different blocks, but they occur in another order (46, 36, 46, 33, 33). This is consistent with the description in the PDF manuscript that condition blocks were randomized over subjects. So it seems that the experiment described in the PDF document is very similar to, but not exactly the same, as the one in the shared data. We do not know which 5 conditions were employed in the shared dataset; we also do not know in which order they were presented to each of the subjects. If each of the blocks would have had a unique number of trials (and identical over subjects), then we could at least have matched the blocks over subjects. Now we have two blocks with 46 and two blocks of 33 trials, which makes matching the (unknown) conditions over subjects impossible. The only condition/block that can be matched over subjects is the one with 36 trials.
 

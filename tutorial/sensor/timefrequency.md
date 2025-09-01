@@ -7,8 +7,6 @@ redirect_from:
   - /workshop/natmeg2014/timefrequency/
 ---
 
-# Time-frequency analysis of combined MEG/EEG data
-
 ## Introduction
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's EEG-MEG data using a Hanning window. This tutorial also shows how to visualize the results, which will now have an extra dimension beyond time and sensor: frequency. We will pay special attention to differences between EEG and MEG, which will shown themselves not only in visualizing the results, but also in the effects of having a reference in EEG, i.e. of having relative signals versus absolute signals in MEG. We will also compare conditions in the frequency domain, looking at differences in beta-rebound after left versus the right hand responses. Familiarize yourself with the paradigm and data we recorded by re-reading [the example dataset description](/workshop/natmeg2014/meg_audodd)

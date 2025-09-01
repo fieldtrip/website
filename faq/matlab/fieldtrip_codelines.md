@@ -8,8 +8,6 @@ redirect_from:
     - /faq/fieldtrip_codelines/
 ---
 
-# How many lines of code does FieldTrip consist of?
-
 You can count that using the following commands
 
     roboos@mac001> cat `find fieldtrip-20221223 -name \*.m` | grep -v ' *%' | grep -v '^ *$' | wc -l

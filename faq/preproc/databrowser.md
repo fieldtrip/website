@@ -7,8 +7,6 @@ redirect_from:
     - /faq/databrowser/
 ---
 
-# How can I use the databrowser?
-
 The databrowser can be used to look at your raw or preprocessed data and annotate time periods at which specific events happen. Originally designed to identify sleep spindles, it's current main purpose is manual artifact detection. You can call the databrowser in an interactive mode by storing the output in a cfg like this:
 
     cfg = ft_databrowser(cfg, data);

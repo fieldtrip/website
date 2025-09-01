@@ -7,8 +7,6 @@ redirect_from:
     - /faq/layout_fileformat/
 ---
 
-# What is the format of the layout file which is used for plotting?
-
 The layout file is a plain ASCII file with the extention .lay. It gives you exact control of the 2-D position of the channels for topoplotting, and of the per-channel local coordinate axes for the multiplotting. The 2-D positions of the channels can be expressed in an arbitrary coordinate system. Once read in, they will be shifted and scaled such that they fit within a prespecified x- and y-range ([-0.45 0.45] a.u.). After shifting and scaling, a circle representing the head with nose and ears will be added. This circle has a center (0,0) and radius 0.5 (a.u.).
 
 Here is a small snippet of an EEG layout fil

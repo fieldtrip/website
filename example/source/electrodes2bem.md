@@ -7,8 +7,6 @@ redirect_from:
     - /example/electrodes2bem/
 ---
 
-# Align EEG electrode positions to BEM headmodel
-
 ## Description
 
 To use accurate individual volume conduction models of the head (or "head models") in inverse source reconstruction of EEG data, we construct a head model from the individual MRI. Furthermore, it is necessary to express the electrode positions in the same coordinate system and units as the MRI and head model.

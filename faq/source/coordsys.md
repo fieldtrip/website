@@ -7,8 +7,6 @@ redirect_from:
     - /faq/coordsys/
 ---
 
-# How are the different head and MRI coordinate systems defined?
-
 {% include markup/yellow %}
 To understand the coordinate system in which data is expressed, you should consider:
 

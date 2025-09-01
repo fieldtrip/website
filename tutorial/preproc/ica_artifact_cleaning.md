@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/ica_artifact_cleaning/
 ---
 
-# Cleaning artifacts using ICA
-
 ## Introduction
 
 In this tutorial we will demonstrate ICA cleaning on the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This is a resting state recording without an explicit experimental task, however in this recording the subject was on putpose making certain types of artifacts, such as blinking with the eyes, looking back and forth, making headmovements, and biting their teeth to induce EMG activity in the jaw muscles.

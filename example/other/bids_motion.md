@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_motion/
 ---
 
-# Converting an example motion tracking dataset for sharing in BIDS
-
 {% include markup/red %}
 Motion data is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) as of version 1.9.0. 
 
@@ -493,7 +491,6 @@ cfg.channels = []; % I do not know any details
 
 data2bids(cfg, eegStream);
 ```
-
 
 ## XSens
 

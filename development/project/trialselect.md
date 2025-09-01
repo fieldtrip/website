@@ -4,7 +4,6 @@ title: Implement trial selection option
 
 {% include /shared/development/warning.md %}
 
-# Implement trial selection option
 
 Consistent implementation of option for trial selection in all relevant functions (such as plotting functions, functions that handle raw data, etc.).
 
@@ -78,7 +77,6 @@ How it's currently implemented in these function
 
     % set the defaults
     if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
-
 
     % select trials of interest
     if ~strcmp(cfg.trials, 'all')

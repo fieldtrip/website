@@ -7,8 +7,6 @@ redirect_from:
     - /example/simulateddata_beamformer/
 ---
 
-# Compute forward simulated data and apply a beamformer scan
-
 This example script shows you how to create some simulated channel-level MEG data with a single dipole at a specified location in the head. Subsequently it does a beamformer source reconstruction to localize that source.
 
     % create an array with some magnetometers at 12cm distance from the origin

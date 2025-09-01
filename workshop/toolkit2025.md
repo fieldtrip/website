@@ -3,8 +3,6 @@ title: Advanced MEG/EEG toolkit at the Donders
 tags: [toolkit2025]
 ---
 
-# Advanced MEG/EEG toolkit at the Donders
-
 From May 19-23 2025 we will host our annual MEG/EEG Tool-kit course in Nijmegen. During this 5-day toolkit course we will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction, analysis methods such as RSA and TRFs, and various statistical methods will be covered. Furthermore, we will give special attention to new opportunities in experimental design and measurements with Optically Pumped Magnetometer (OPM) systems and mobile EEG.
 
 The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own data under supervision of experienced tutors.

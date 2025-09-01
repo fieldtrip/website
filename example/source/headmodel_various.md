@@ -7,8 +7,6 @@ redirect_from:
     - /example/headmodel_various/
 ---
 
-# Make MEG leadfields using different headmodels
-
 ## Introduction
 
 These scripts demonstrate how to compute and compare leadfields using some different MEG headmodels that are available in FieldTrip.

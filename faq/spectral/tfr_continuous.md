@@ -7,8 +7,6 @@ redirect_from:
     - /faq/tfr_continuous/
 ---
 
-# How can I do time-frequency analysis on continuous data?
-
 There are cases where you have recorded continuous data without specific events of interest, e.g., resting state data. In the absence of events on the basis of which to segment the data into trials, you would proceed processing the data as [continuous data](/tutorial/preproc/continuous).
 
 In continuous data you primarily would expect the EEG or MEG signal to be stationary, i.e. not change over time. Hence there is no point in doing time-frequency analysis, because you don't expect changes in the power spectrum over time, at least not on a very short time scale.

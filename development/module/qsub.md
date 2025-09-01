@@ -5,8 +5,6 @@ redirect_from:
   - /development/qsub/
 ---
 
-# Distributed computing using a Linux compute cluster
-
 The FieldTrip-qsub toolbox facilitates distributed computing on a Linux compute cluster without requiring the MATLAB parallel toolbox or distributed computing engines. It only requires a standard MATLAB installation on the cluster nodes. Alternatively, it can use the MATLAB compiler to run on clusters where MATLAB is not available.
 
 The goal of this toolbox is to provide you with an easy MATLAB interface to distribute your jobs that is compatible with the MATLAB [feval](https://www.mathworks.com/help/matlab/ref/feval.html) and [cellfun](https://www.mathworks.com/help/matlab/ref/cellfun.htm) functions. It offers a simple MATLAB interface to distribute your jobs and you do not have to go to the Linux command-line to use the qsub command from there.

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/dftfilter_residual/
 ---
 
-# Why is there a residual 50Hz line-noise component after applying a DFT filter?
-
 The residual line noise at 50 or 60 Hz is due to its non-stationarity. Imagine a trial in which the 50Hz line noise increases in amplitude over time (e.g., trial #3 in the first figure).
 
 {% include image src="/assets/img/faq/dftfilter_residual/linenoise.png" width="600" %}

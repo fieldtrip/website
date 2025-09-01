@@ -3,8 +3,6 @@ title: Time-frequency analysis of EEG data
 tags: [oslo2019, eeg-audodd, frequency]
 ---
 
-# Time-frequency analysis of EEG data
-
 ## Introduction
 
 In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both Fourier analysis with Hanning tapers and Morlet wavelets; and we will have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain, looking at differences in beta band activity after left versus the right hand responses. You can familiarize yourself with the paradigm and data by reading the [example dataset description](/workshop/natmeg2014/meg_audodd).

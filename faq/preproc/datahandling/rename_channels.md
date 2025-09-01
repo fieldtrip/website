@@ -6,8 +6,6 @@ redirect_from:
     - /faq/rename_channels/
 ---
 
-# How can I rename channels in my data structure?
-
 You may have a data file that includes channel names that don't match the proper name, or in which the channel names don't match the sensor positions (for example with OPM sensors). The **[ft_preprocessing](/reference/ft_preprocessing)** will return that data with the original channel names. One way to rename the channel names is by doing it by hand using standard MATLAB code. However, the preferred way of doing it is by using a montage.
 
     montage = [];

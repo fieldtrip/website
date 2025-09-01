@@ -4,7 +4,6 @@ title: Neighbour templates
 
 {% include /shared/development/warning.md %}
 
-# Neighbour templates
 
 This project has been completed and it's result can be found here:
 

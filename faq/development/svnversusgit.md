@@ -7,8 +7,6 @@ redirect_from:
     - /faq/svnversusgit/
 ---
 
-# Why was FieldTrip maintained in SVN and not in Git?
-
 {% include markup/skyblue %}
 This question does not apply any more.
 {% include markup/end %}

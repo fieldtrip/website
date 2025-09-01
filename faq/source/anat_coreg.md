@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anat_coreg/
 ---
 
-# How to coregister an anatomical MRI with the gradiometer or electrode positions?
-
 In general, volumetric data such as anatomical MRIs are represented in FieldTrip as a MATLAB-structure, containing the anatomical (and if applicable also the functional) information in a 3D numeric matrix, combined with a 4x4 affine transformation matrix. The 4x4 transformation matrix specified how to go from voxel space to source space, as explained in this [frequently asked question](/faq/source/homogenous).
 
 When reading anatomical data with **[ft_read_mri](/reference/fileio/ft_read_mri)**, the transformation is extracted from the MRI file. In the case that the MRI has not been processed, it is likely that the coordinate system corresponds to DICOM or in NIfTI scanner coordinates, which do _not_ relate the coordinates to the actual anatomy represented in the data.

@@ -4,7 +4,6 @@ title: Reimplement the avg/cov/trial handling
 
 {% include /shared/development/warning.md %}
 
-# Reimplement the avg/cov/trial handling
 
     cfg.output     = trial, cov
     cfg.keeptrials = yes, no

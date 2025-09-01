@@ -3,8 +3,6 @@ title: Details on the resting-state EEG dataset recorded with different sedation
 tags: [eeg-sedation]
 ---
 
-# Details on the resting-state EEG dataset recorded with different sedation levels
-
 The EEG resting state dataset was acquired by Srivas Chennu and collaborators in a study investigating reliable brain measures to track the loss of reportable consciousness during propofol sedation. You can find full details in their [publication](https://doi.org/10.1371/journal.pcbi.1004669).
 
 They also made the entire dataset available under the [CC BY 2.0 UK](https://creativecommons.org/licenses/by/2.0/uk/) license from the [University of Cambridge Data Repository](https://www.repository.cam.ac.uk/handle/1810/252736).

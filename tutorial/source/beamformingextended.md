@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/beamformingextended/
 ---
 
-# Localizing visual gamma and cortico-muscular coherence using DICS
-
 ## Introduction
 
 In this tutorial we will continue working on the combined visual and motor task dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) described in the [channel-level analysis tutorial](/tutorial/sensor/sensor_analysis).

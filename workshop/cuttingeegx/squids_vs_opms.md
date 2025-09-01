@@ -5,7 +5,6 @@ tags: [cuttingeegx]
 
 _This page is still under construction_
 
-# SQUIDs versus OPMs
 
 ## Introduction
 
@@ -16,7 +15,6 @@ Even though both SQUID and OPM system detect the brain's magnetic fields, their 
 OPMs are flexible in their placement allowing for new recording strategies. These new recording strategies lead to new data analysis strategies. For example, in this tutorial we use a small number of OPMs (32 sensors) and do sequential recordings in which we position them over different places over the scalp.
 
 OPMs are magnetometers, as their name suggests. Magnetometers are more sensitive to environmental noise than gradiometers, which most SQUID systems have. Several data analysis algorithms to remove environmental noise have been proposed (see [Seymour et al (2022)](https://www.sciencedirect.com/science/article/pii/S1053811921011058?via%3Dihub) for more details). In this tutorial, we apply homogeneous field correction (HFC). HFC works better with a large number of sensors.
-
 
 Unlike SQUID systems, which have standard coregistration strategies, OPMs don't have a single coregistration standard. In this tutorial, we coregister the OPMs with the MRI using an optical 3D scanner which captures the participant’s facial features along with the OPM helmet ([Zetter et al., 2019](https://www.nature.com/articles/s41598-019-41763-4)).
 
@@ -67,7 +65,6 @@ For the OPMs we will take the following steps:
 ## Preprocessing & computing ERFs
 
 ### SQUID
-
 
 We begin by loading the SQUID data and defining trials. We select trials in which left median nerve stimulation occurred (trigger code = 1). In the experiment, the inter-trial interval ranged from 800-1200 ms, so it makes sense to select a 200 ms prestimulus and 400 ms poststimulus window.
 
@@ -425,7 +422,6 @@ ft_volumerealign(cfg, mri_realigned2);
 save mri_realigned2 mri_realigned2
 ```
 
-
 Let's plot the sensor topography in 3D using **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**. This will help us visualize where the sensors are positioned relative to the head. To make this clearer, we'll also display the scalp and brain surfaces.
 
 First, we'll prepare the surface mesh of the scalp and brain:
@@ -596,7 +592,6 @@ save scan_helmet scan_helmet
 ```
 
 {% include image src="/assets/img/workshop/cuttingeegx/scan_helmet.png" width="500" %}
-
 
 We load the MRI. As the same participant took part in both SQUID and OPM recordings, we can reuse his/her segmented MRI from the SQUID analysis to save time: 
 

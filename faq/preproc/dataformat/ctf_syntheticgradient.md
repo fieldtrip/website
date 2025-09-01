@@ -7,8 +7,6 @@ redirect_from:
     - /faq/ctf_syntheticgradient/
 ---
 
-# How does the CTF higher-order gradiometer work?
-
 The following is taken from the CTF documentation "MEG File Formats - release 5.2.1" appendix C.
 
 \_Higher-order gradiometer formation is a noise-cancellation technique exclusive to the CTF MEG System. It permits the MEG detectors to be sensitive to the weak signals of the brain, yet impervious to the much stronger sources from the environment. This process, which is carried out in real time, allows the system to be run without the expense of magnetic shielding, or in combination with a standard shielded room for enhanced noise reduction.

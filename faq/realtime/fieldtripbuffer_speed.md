@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fieldtripbuffer_speed/
 ---
 
-# How fast is the FieldTrip buffer for realtime data streaming?
-
 For real-time use of the buffer it is relevant to know how fast it can handle read and write requests. For a write request, the time depends on the number of channels and on the number of samples in the data block.
 
 The following benchmarks have been run using the **rt_benchmark** script in the **realtime** directory on the following computer

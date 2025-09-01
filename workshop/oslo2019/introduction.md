@@ -3,8 +3,6 @@ title: Preprocessing and event-related potentials in EEG data
 tags: [oslo2019, eeg-audodd, preprocessing]
 ---
 
-# Preprocessing and event-related potentials in EEG data
-
 ## Introduction
 
 This tutorial describes how to define epochs of interest (trials) from recorded EEG data, and how to apply different preprocessing steps such as filtering, cleaning data and rereferencing electrodes. Subsequently, we will average our epochs/trials and acquire so-called event-related potentials (ERPs). We will also compare two different types of stimuli (standard versus deviant tones) and investigate the differing ERPs they give rise to.

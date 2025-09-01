@@ -6,7 +6,6 @@ redirect_from:
 
 {% include /shared/development/warning.md %}
 
-# Integration with NUTMEG
 
     1) Identify pieces of code in common and avoid replication
     2) NUTMEG can call FieldTrip's fileio

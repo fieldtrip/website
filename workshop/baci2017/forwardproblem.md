@@ -3,8 +3,6 @@ title: Solving the EEG forward problem using BEM and FEM
 tags: [baci2017]
 ---
 
-# Solving the EEG forward problem using BEM and FEM
-
 ## Introduction
 
 The aim of this tutorial is to solve the EEG forward problem using two different numerical methods, namely the Boundary Element Method (BEM) and the Finite Element Method (FEM).

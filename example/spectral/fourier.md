@@ -7,8 +7,6 @@ redirect_from:
     - /example/fourier/
 ---
 
-# Fourier analysis of neuronal oscillations and synchronization
-
 ## Background
 
 EEG and MEG measure brain activity as a so called time series, i.e. they measure electric voltage or

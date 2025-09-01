@@ -7,8 +7,6 @@ redirect_from:
     - /faq/behavior_cosinefit/
 ---
 
-# How can I test whether a behavioral measure is phasic?
-
 Some experimental hypotheses address the question: *Is my measure-of-interest systematically modulated by the phase of an underlying process?*
 
 For instance, you may wish to quantify the effect of the phase of a band-limited neuronal oscillation on behavioral accuracy or reaction time. Alternatively, you may wish to quantify the effect of pre-stimulus phase on the amplitude of a stimulus-evoked transient in the neuronal signal. One way to evaluate this is to fit a sine/cosine function to the dependent variable, which (according to the hypothesis) modulates as a function of phase. Subsequently, you test the probability of observing the outcome of this fit (typically expressed as the amplitude, or modulation depth) under some null hypothesis.
@@ -24,7 +22,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     A   = rand(nchan,1).*0.4; % amplitude
     phi = 2.*pi.*rand(nchan,1); % phase shift
 
-
     % create some data, consisting of 0's and 1's
     n = 500;
     ix = 2.*pi.*rand(1,nobs);
@@ -32,7 +29,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     x = exp(1i.*ix);
     xshift = exp(1i.*(ix+phi));
     y = round(rand(nchan,nobs)+A.*real(xshift));
-
 
     % bin the data, this is not efficient, but does the trick
     nbin     = 20;
@@ -67,7 +63,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
 
     figure;plot(x_binned,y_binned, 'o');
 
-
     s = ft_statfun_cosinefit([], y_binned, x_binned);
 
     s_unbinned = ft_statfun_cosinefit([], y, angle(x));
@@ -77,7 +72,6 @@ Here, we demonstrate how this can be achieved in a generic way, using a binning 
     xlabel = 'actual';
     ylabel = 'estimate';
     legend({'unbinned';'binned'});
-
 
 The relevant function that computes the cosine fit is provided below:
 

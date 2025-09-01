@@ -3,8 +3,6 @@ title: PracticalMEEG workshop in Aix-en-Provence
 tags: [practicalmeeg2022]
 ---
 
-# PracticalMEEG workshop in Aix-en-Provence
-
 PracticalMEEG aims at providing an intensive three–day training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of four leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip, EEGLAB, and MNE-python). On demand, we hope to provide attendees with the opportunity to bridge across toolboxes and weave their own complex multi-software pipeline. More details can be found [here](https://practicalmeeg2022.org).
 
 ## Where

@@ -4,7 +4,6 @@ title: Visualization concept for 4D bivariate data
 
 {% include /shared/development/warning.md %}
 
-# Visualization concept for 4D bivariate data
 
 ## Goals
 

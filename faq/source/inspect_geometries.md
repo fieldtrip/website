@@ -7,8 +7,6 @@ redirect_from:
     - /faq/inspect_geometries/
 ---
 
-# How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-
 For forward and inverse computations several geometrical objects need to be correctly coregistered. It's good practice to verify this coregistration before proceeding with the next steps of the analysis. The simplest way of verification is obviously visual inspection. FieldTrip allows for the plotting of various geometrical objects by means of the functions in the [plotting module](/development/module/plotting). The following describes how you can use the lower-level plotting functions for the visualization.
 
 {% include markup/red %}

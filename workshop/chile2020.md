@@ -3,8 +3,6 @@ title: FieldTrip workshop at Universidad Católica del Maule, Chile
 tags: [chile2020]
 ---
 
-# FieldTrip workshop at Universidad Católica del Maule, Chile
-
 We are still planning for this workshop; more details than those listed here are not yet available.
 
 ## Where

@@ -4,7 +4,6 @@ title: Implement a common distributed computing backend
 
 {% include /shared/development/warning.md %}
 
-# Implement a common distributed computing backend
 
 ## Core idea
 
@@ -92,7 +91,6 @@ Here are some possible ways to estimate a module's requirements, ranging from si
 | Amazon Cloud          | ?                        |
 | SLURM                 | ?                        |
 | MathWorks DCE         | Robert, WashU and Chieti |
-
 
 Q (Robert): How would you like to refer to the home-built Cambridge system for distributing the load (i.e. with aa_doprocessing_parallel in v3.01).
 

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/serialport/
 ---
 
-# What kind of cable do I need for a serial port connection between two computers?
-
 For the type of connection we are talking about here, you need a so called 'null modem cable'. [A null modem cable is an RS-232 serial cable where the transmit and receive lines are cross-linked.](https://en.wikipedia.org/wiki/Null_modem)
 
 ## How can I test the serial port connection between two computers?
@@ -60,7 +58,6 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
       break
     end
     end
-
 
     figure
     plot(tlop*1000,'.');

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fieldtripbuffer/
 ---
 
-# Does the FieldTrip realtime buffer only work with MATLAB?
-
 No, the FieldTrip realtime buffer defines a network communication protocol at the level of the TCP/IP protocol. It does not require any specific operating system, programming language or data analysis environment, although we happen to use it a lot in combination with MATLAB and with functions from the FieldTrip toolbox on the analysis side. Most of the applications on the data acquisition side are implemented in C or C++.
 
 Furthermore, it helps to distinguish between the buffer server and the clients.

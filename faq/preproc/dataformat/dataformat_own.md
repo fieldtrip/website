@@ -7,8 +7,6 @@ redirect_from:
     - /faq/dataformat_own/
 ---
 
-# How can I import my own data format?
-
 There are two approaches for importing data from an unsupported format: you can either extend FieldTrip with new code, or you can circumvent the import procedure.
 
 ## Extend the FieldTrip reading functions

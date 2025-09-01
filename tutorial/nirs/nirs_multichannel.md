@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/nirs_multichannel/
 ---
 
-# Preprocessing and averaging of multi-channel NIRS data
-
 ## Introduction
 
 In this tutorial, you will process a functional near-infrared spectroscopy (fNIRS) data set consisting of multiple channels. We will read in the raw data, have a look at the setup and the data, preprocess the data incorporating specific procedures for multichannel setups, and explore different methods of visualizing the temporal and spatial aspects of the response.

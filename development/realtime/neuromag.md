@@ -3,8 +3,6 @@ title: Streaming realtime data from Neuromag/Elekta/Megin
 tags: [realtime, neuromag]
 ---
 
-# Streaming realtime data from Neuromag/Elekta/Megin
-
 This software has been developed as a collaboration between [Gustavo Sudre](mailto:gsudre@andrew.cmu.edu) (Carnegie Mellon University), [Lauri Parkkonen](mailto:lauri@neuro.hut.fi) (Aalto University School of Science and Technology), [Elizabeth Bock](mailto:ebock@mcw.edu) and [Sylvain Baillet](mailto:sbaillet@mcw.edu) (Medical College of Wisconsin), and [Wei Wang](mailto:wangwei3@pitt.edu) and [Doug Weber](mailto:djw50@pitt.edu) (University of Pittsburgh). We would also like to thank Robert Oostenveld and Stefan Klanke (Donders/DCCN) for their assistance with the integration with the FieldTrip buffer. Please cite the paper [rtMEG: A Real-time Software Interface for Magnetoencephalography](http://www.hindawi.com/journals/cin/2011/327953/) (Computational Intelligence and Neuroscience,
 Volume 2011) in any work that uses it.
 

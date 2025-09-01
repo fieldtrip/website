@@ -6,8 +6,6 @@ redirect_from:
     - /example/ft_realtime_hilbert/
 ---
 
-# Realtime neurofeedback application based on Hilbert phase estimation
-
 This page describes the neurofeedback application that was developed by Marco Rotonda for his MSc thesis **"Controllo volontario della sincronizzazione di fase intraemisferica nella banda gamma eeg mediante neurofeedback"** (Voluntary control of intrahemispheric phase sychronization in the EEG gamma band using neurofeedback).
 
 The thesis (in Italian) which describes all details and the results is available [here](/assets/pdf/example/rt_hilbert/rotonda_thesis_msc.pdf).
@@ -275,7 +273,6 @@ Basically there are 12 channels: 4 for EEG (I used F3-P3-F4-P4), 4 for the EOG, 
             emgfmean = nanmean (upf'); %#ok`<UDIM>`
             emgnmean = nanmean (upn'); %#ok`<UDIM>`
             % plot(data.time{1},upf,'r')
-
 
             % Istantaneous (proto)phase difference found via Hilbert
             % Based on Pikovsky, A. R. (2001). Synchronization. A Universal
@@ -625,7 +622,6 @@ Basically there are 12 channels: 4 for EEG (I used F3-P3-F4-P4), 4 for the EOG, 
             emgfmean = nanmean (upf'); %#ok`<UDIM>`
             emgnmean = nanmean (upn'); %#ok`<UDIM>`
             % plot(data.time{1},upf,'r')
-
 
             % Istantaneous (proto)phase difference found via Hilbert
             % Based on Pikovsky, A. R. (2001). Synchronization. A Universal

@@ -4,7 +4,6 @@ title: Add support for reading data from any file format supported by neuroshare
 
 {% include /shared/development/warning.md %}
 
-# Add support for reading data from any file format supported by neuroshare
 
 ## Objectives
 
@@ -55,7 +54,6 @@ title: Add support for reading data from any file format supported by neuroshare
     hdr.FirstTimeStamp      = tmp.spikew.timestamp(1); % tmp.spiket.data(1) = same ???
     hdr.TimeStampPerSample  = [];
 
-
     %% read_event
 
     tmp = read_neuroshare(filename, 'readevent', 'yes');
@@ -87,7 +85,6 @@ title: Add support for reading data from any file format supported by neuroshare
     %     event(i).sample    = tmp.event.sample(i);
     % end
 
-
     %% read_data
 
     tmp = read_neuroshare(filename, 'readanalog', 'yes', 'chanindx', chanindx, 'begsample', begsample, 'endsample', endsample);
@@ -99,7 +96,6 @@ title: Add support for reading data from any file format supported by neuroshare
 
     dat = tmp.analog.data';
 
-
     %% read_spike
 
     tmp = read_neuroshare(filename, 'readspike', 'yes');
@@ -109,7 +105,6 @@ title: Add support for reading data from any file format supported by neuroshare
     %   spike.waveform  = 1xNchans cell-array, each element contains a matrix (Nsamples X Nspikes)
     %   spike.timestamp = 1xNchans cell-array, each element contains a vector (1 X Nspikes)
     %   spike.unit      = 1xNchans cell-array, each element contains a vector (1 X Nspikes)
-
 
     spike.label = {tmp.hdr.entityinfo(tmp.list.segment).EntityLabel};
     for i=1:length(spike.label)

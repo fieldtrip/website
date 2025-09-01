@@ -6,8 +6,6 @@ redirect_from:
     - /faq/bids_coordsystem/
 ---
 
-# How should I specify the coordinate systems in a BIDS dataset?
-
 [BIDS](http://bids.neuroimaging.io) is a standard for formatting and documenting raw data resulting from a measurement in a MRI, MEG or EEG lab. Regarding the “data” elements that have a geometrical quality in an MEG measurement (i.e. that are described somewhere in three dimensional space and hence are described using three numbers) we have
 
 - MEG sensors in the dataset are expressed in the MEGCoordinateSystem

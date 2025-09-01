@@ -3,8 +3,6 @@ title: Suggested improvements for compatibility across versions
 tags: [realtime, development]
 ---
 
-# Suggested improvements for compatibility across versions
-
 This section pertains to the implementation of backward compatibility in the C language reference implementation.
 
 The formal description of the communication protocol should independent of the implementation also specify how to deal with network messages (e.g., requests and responses) that are not known.

@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/sleep/
 ---
 
-# Extracting the brain state and events from continuous sleep EEG
-
 ## Introduction
 
 In this tutorial you will explore and combine continuous EEG with multiple recordings from other modalities, such as muscles (EMG), eyes (EOG) and the heart (ECG). You will learn how combining the modalities can give a better understanding of the brain states and the switching between them.

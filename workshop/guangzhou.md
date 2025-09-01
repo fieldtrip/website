@@ -2,8 +2,6 @@
 title: FieldTrip Workshop in Guangzhou, China
 ---
 
-# FieldTrip Workshop in Guangzhou, China
-
 - Who: Diego Lozano-Soldevilla
 - When: August 23rd-25th 2016
 - Where: South China Normal University, Guangzhou

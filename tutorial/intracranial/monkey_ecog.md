@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/monkey_ecog/
 ---
 
-# Analysis of monkey ECoG recordings
-
 ## Introduction
 
 In the following tutorial we will analyze a whole hemisphere EcoG grid implanted in a macaque monkey. This data set has been recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN, Japan and has been shared as part of the [NeuroTycho](http://neurotycho.org/) project. The NeuroTycho homepage also provides some information about why and how the data is shared so that we will not expand on this here. Instead this tutorial provides some overview of how to get started with ECoG data by using this particular data set as an example.

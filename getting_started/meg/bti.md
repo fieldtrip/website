@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/bti/
 ---
 
-# Getting started with BTi/4D data
-
 {% include markup/green %}
 The company based in San Diego (CA, USA) making these MEG systems was initially called BTi and later renamed to 4D-Neuroimaging. The company is not operational any more, although its MEG systems are still being used in various labs over the world.    
 {% include markup/end %}

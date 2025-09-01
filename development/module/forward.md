@@ -5,8 +5,6 @@ redirect_from:
   - /development/forward/
 ---
 
-# Forward computation of EEG/MEG source models
-
 FieldTrip has a consistent set of low-level functions for forward computations of the EEG potential or MEG field. The spatial distribution of a known source in a volume conductor is called a leadfield.
 
 The forward module comprises a complete toolbox of high-quality forward methods, i.e. it contains all functions to set up the volume conduction models of the head and to compute the leadfields. Using the high-level FieldTrip functions and the inverse module, these can be used for reconstructing the sources given real experimental MEG and EEG data.
@@ -192,7 +190,6 @@ The high level FieldTrip functions aim as much as possible to check (and where p
 - the conductive properties of the volume conduction model (FIXME, is this true? -> safest would be always specify headmodel.cond in S/m)
 - the units of the channel level values (e.g., T, uV or fT/cm), `sens.chanunit`
 - the units of of dipole strength (FIXME, is this true?)
-
 
 ## Related documentation
 

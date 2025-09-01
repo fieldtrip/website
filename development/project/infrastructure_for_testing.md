@@ -4,7 +4,6 @@ title: Infrastructure for testing
 
 {% include /shared/development/warning.md %}
 
-# Infrastructure for testing
 
 FIXME See also [/development/testing](/development/project/testing)
 

@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/electrode/
 ---
 
-# Localizing electrodes using a 3D-scanner
-
 ## Introduction
 
 This tutorial demonstrates how to construct an electrode model based on a single subject's 3D-scan. This electrode model can be used in combination with a [BEM](/tutorial/source/headmodel_eeg_bem) or [FEM](/tutorial/source/headmodel_eeg_fem) volume conduction model for source reconstruction.

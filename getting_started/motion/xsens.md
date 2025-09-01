@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/xsens/
 ---
 
-# Getting started with XSens motion tracking data
-
 [XSens](http://www.xsens.com) is a company that makes IMU-based motion capture systems that are used in the animation industry and in research. Their MVN Analyze system comprises full-body sensor systems and acquisition and analysis software. By default the software stores the data in the proprietary MVN file format, but it allows the data to be exported to open formats that are supported by FieldTrip
 
 ## C3D
@@ -57,13 +55,11 @@ where the channels correspond to the time-varying positions of of the reconstruc
         {'pLeftToe_z'               }
         ...
 
-
 ## MVNX
 
 The MVNX file format is an open XML file format that contains more information than the C3D files, including all of the segment information as well as joint angle data, center of mass and factory calibrated sensor data. It can be read using either the low-level [reading functions](/development/module/fileio) and using the high-level **[ft_preprpcessing](/reference/ft_preprocessing)** function.
 
 Reading the MVNX file requires that you have the `load_mvnx.m` function on your MATLAB path. This function can be found within the MVN Studio Developer Toolkit or [here](https://github.com/Roger-Dai/motion-capture). We recommend that you put the file in `fieldtrip/external/xsens`, in which case that directory will automatically be added to the path when needed.
-
 
 ## Plotting stick figures
 

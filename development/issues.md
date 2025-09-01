@@ -5,8 +5,6 @@ redirect_from:
   - /bugzilla/
 ---
 
-# Reporting issues
-
 You first have to [sign up for an account](https://github.com/join) or log in on GitHub, subsequently you can report the issue [here](https://github.com/fieldtrip/fieldtrip/issues). We automatically will receive an email and will follow up and keep you updated; i.e., you will get an email through GitHub whenever someone works on your issue.
 
 ## Bug reporting

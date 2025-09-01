@@ -6,8 +6,6 @@ redirect_from:
     - /faq/resampling_lowpassfilter/
 ---
 
-# Do I need to resample my data, and if so, how is this to be done?
-
 ## When is resampling required?
 In principle, if your computing hardware is sufficient, there is hardly ever a need to resample the data in order to represent the time series at a sampling rate that is different from the sampling rate that was used upon data acquisition. Specifically, if you have enough compute power (and patience), storage space, and RAM, then **not** resampling the data may even be recommended, because it avoids potential unforeseen side effects (to be discussed below).
 

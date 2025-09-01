@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/artifacts/
 ---
 
-# Introduction on dealing with artifacts
-
 This tutorial explains the general approach on how to deal with artifacts.
 
 {% include markup/red %}

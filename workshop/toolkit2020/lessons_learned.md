@@ -3,8 +3,6 @@ title: Lessons learned
 tags: [toolkit2020]
 ---
 
-# Lessons learned
-
 If you ask all participants to do something online (such as answer a poll, or provide information about their MATLAB version), only 50% of them will actually do it, which might go up to 75% after asking repeatedly. So you cannot check explicitly with everyone, only get some statistics.
 
 Even if you give participants explicit instructions on downloading and installing a “recent version” of FieldTrip, quite some do not (or consider a 1 or 2 year version recent enough). Perspectives on “recent” apparently differ.

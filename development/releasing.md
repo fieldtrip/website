@@ -5,8 +5,6 @@ redirect_from:
   - /development/dashboard/
 ---
 
-# Release and quality control
-
 Daily releases of FieldTrip are made available on the download server. The corresponding commits (i.e., point in time in the git repository) are tagged, such that the releases are also [available from GitHub](https://github.com/fieldtrip/fieldtrip/releases). New FieldTrip versions are released only if all tests pass. So, on some days there will not be a release.
 
 ## Releasing the code

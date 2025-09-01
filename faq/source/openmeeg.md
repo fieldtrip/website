@@ -7,8 +7,6 @@ redirect_from:
     - /faq/openmeeg/
 ---
 
-# How do I install the OpenMEEG binaries
-
 OpenMEEG is a package that solves the MEG and EEG forward problems. It implements a Boundary Element Method (BEM) and provides accurate solutions when dealing with realistic head models (1, 2 or 3 nested layers)
 
 The OpenMEEG binaries are **not** included in the FieldTrip release, but the OpenMEEG MATLAB wrapper functions are.

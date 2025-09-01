@@ -3,8 +3,6 @@ title: Development
 tags: [development]
 ---
 
-# Development
-
 For direct access to the code, please refer to the [Git and GitHub](/development/git) documentation.
 
 For keeping track of new ideas, feature requests and bugs, we use an [issue tracking system](/development/issues).

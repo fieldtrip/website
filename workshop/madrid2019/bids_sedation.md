@@ -3,8 +3,6 @@ title: Convert the EEG sedation dataset for sharing in BIDS
 tags: [bids, eeg-sedation, madrid2019]
 ---
 
-# Convert the EEG sedation dataset for sharing in BIDS
-
 The following MATLAB script shows how the EEG data supporting [Brain connectivity during propofol sedation](https://doi.org/10.1371/journal.pcbi.1004669)
 by Chennu et al. (2015) was converted to the Brain Imaging Data Structure (BIDS). The original data has been made available on the [Cambridge data repository](https://www.repository.cam.ac.uk/handle/1810/252736).
 

@@ -2,8 +2,6 @@
 title: FieldTrip Workshop in London, UK
 ---
 
-# FieldTrip Workshop in London, UK
-
 - Workshop leaders: Eelke Spaak and Johanna Zumer
 - When: 3-5 March 2016
 - Where: King's College, IoP

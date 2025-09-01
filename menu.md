@@ -2,8 +2,6 @@
 title: Website menu
 ---
 
-# Website menu
-
 
 {% assign menu = site.data.menu %}
 {% if menu %}

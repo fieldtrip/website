@@ -3,8 +3,6 @@ title: Preprocessing of EEG data
 tags: [eeg, brainvision, preprocessing, eeg-language, nigeria2025]
 ---
 
-# Preprocessing of EEG data
-
 ## Introduction
 
 Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering, and optionally rereferencing in the case of EEG. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options. Furthermore, preprocessing involves the detection and removal of artifacts, for which FieldTrip offers a number of visual and semiautomatic methods.

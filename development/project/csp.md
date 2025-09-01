@@ -4,7 +4,6 @@ title: CSP for classification
 
 {% include /shared/development/warning.md %}
 
-# CSP for classification
 
 - Create CSP patterns and filters based on testdata (done)
 - Plot the patterns (done)

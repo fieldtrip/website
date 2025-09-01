@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anonymization_dicom/
 ---
 
-# How can I anonymize or deidentify DICOM files?
-
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
 {% include markup/red %}

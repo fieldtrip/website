@@ -3,8 +3,6 @@ title: Statistical analysis and multiple comparison correction for EEG data
 tags: [oslo2019, eeg-audodd, statistics]
 ---
 
-# Statistical analysis and multiple comparison correction for EEG data
-
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of EEG data using different methods to control for the false alarm rate. The tutorial starts with sketching
@@ -184,7 +182,6 @@ As noted above, EEG data is smooth over the spatio-temporal dimensions. We can e
 {% include markup/red %}
 Sometimes we use the word 'neighbour' according to the British spelling and sometimes we use it as neighbor according to the American spelling.
 {% include markup/end %}
-
 
     cleaned_data_ERP.elec = elec; % add the elec structure
 

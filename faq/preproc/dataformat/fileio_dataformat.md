@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fileio_dataformat/
 ---
 
-# How can I extend the reading functions with a new dataformat?
-
 Implementing reading of a new file format is done by extending the **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions. These functions are basically wrappers around many different file formats, providing a common interface so that FieldTrip does not have to deal with format-specific details.
 
 To ensure that the appropriate low-level reading functions are executed, the **[ft_filetype](/reference/fileio/ft_filetype)** function should be extended to allow auto-detection of the file format. This detection can be based on the filename extension, but preferably is done on some magic bytes at the start of the file, or by detecting the simultaneous presence of multiple files (i.e. a header file with a corresponding data file and a trigger file).

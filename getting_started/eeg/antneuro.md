@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/antneuro/
 ---
 
-# Getting started with ASA and EEProbe
-
 ASA and EEProbe are software products developed by [ANT Neuro](http://www.ant-neuro.com/). These both use the eeprobe format, which consists of files with the following extensions:
 
 - .cnt continuous data

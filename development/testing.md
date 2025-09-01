@@ -5,8 +5,6 @@ redirect_from:
   - /development/dashboard/
 ---
 
-# Testing
-
 To make sure everything works correctly, we use [regression testing](https://en.wikipedia.org/wiki/Regression_testing). This way, we can be confident that when we add, modify, or remove a function, we won't break the existing ones. Testing also helps us find and fix any issues early on, ensuring that FieldTrip functions smoothly for all users. We use nightly testing as part of the [release](/development/releasing) procedure.
 
 FieldTrip is a toolbox with many functions, designed to be compatible with each other. This means that one function often relies on the output of another function. Functions are categorized as [high, low-level, or private](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions), with high-level functions depending on low-level and private functions. The regression testing mainly focusses on high- and low-level functions that users can call from their analysis scripts.
@@ -59,7 +57,6 @@ This helps to select an appropriate subset of tests to run based on:
         ft_test find_dependency test_bug46
 
     to find what are the direct dependencies of test_bug46.
-
 
 ## Running existing tests
 

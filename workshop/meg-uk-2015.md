@@ -3,8 +3,6 @@ title: MEG-UK 2015 meeting
 tags: [meg-uk-2015, mmfaces]
 ---
 
-# MEG-UK 2015 meeting
-
 The workshop highlights complementary analysis methods offered by FieldTrip and SPM. It is aimed at people who already have some MEG/EEG experience, who would like to improve their analysis skills and get a better overview of the features offered by FieldTrip and SPM. The topics that will be discussed include: statistical inference, source reconstruction, and connectivity. The aim of the workshop will be to demonstrate the different analysis methods available within FieldTrip and SPM, and how to apply them. Advantages/disadvantages of the different methods will be discussed.
 
 ## Organizational details

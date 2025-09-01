@@ -7,8 +7,6 @@ redirect_from:
     - /example/dipolefit_somatosensory_erf/
 ---
 
-# Fit a dipole to the tactile ERF after mechanical stimulation
-
 ## Description
 
 The MATLAB script is given first; the figures that this script produces are at the bottom of this page.

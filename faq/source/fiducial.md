@@ -6,8 +6,6 @@ redirect_from:
     - /faq/fiducial/
 ---
 
-# How should I specify the fiducials for electrode realignment?
-
 Sensor locations are described by the `elec` structure and can contain fewer or more electrodes than channels actually present in the data, e.g., the electrode positions for the EOG or ECG channels might not be represented.
 
 Depending on the system from which the data originates, fiducials are either digitized and represented just like electrodes, or fiducials are represented separately from the electrodes.

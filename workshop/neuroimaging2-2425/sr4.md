@@ -3,8 +3,6 @@ title: SR4 - Source reconstruction
 tags: [neuroimaging2-2425]
 ---
 
-# SR4 - Source reconstruction
-
 ## 7 Modelling EEG/MEG activity using distributed sources
 
 This document contains the MATLAB exercises that form part of the course “Neuroimaging

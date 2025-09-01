@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/sensor_analysis/
 ---
 
-# Sensor-level ERF, TFR and connectivity analyses
-
 ## Introduction
 
 In this tutorial, we will provide an overview of several sensor-level analyses to help you get started working with FieldTrip. We will work on a dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) collected during an experiment where subjects were instructed to fixate on a screen. Each trial started with the presentation of a cue pointing either rightward or leftward. This cue indicated which hand the subject had to use for the trial's response. Next, the subjects were instructed to extend both their wrists. After a baseline interval of 1s, an inward drifting grating was visually presented. Then, after an unpredictable delay, the stimulus changed speed, after which the subjects had to increase their wrist extension on the one cued side only. This experimental design is illustrated in Figure 1. Magneto-encephalography (MEG) data was collected using a 151-channel CTF system. Also, electromyography (EMG) data was collected from electrodes attached to the bilateral musculus extensor carpi radialis longus.

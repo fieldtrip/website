@@ -3,8 +3,6 @@ title: Event-related potentials
 tags: [eeg, brainvision, preprocessing, eeg-language, nigeria2025]
 ---
 
-# Event-related potentials
-
 ## Introduction
 
 Event-related potentials can be used to reveal the activity that is time- and phase-locked to an event or stimulus. Furthermore, a contrast (or difference) between two ERPs can reveal the difference in the cortical processing between two different experimental conditions.  

@@ -5,8 +5,6 @@ redirect_from:
   - /workshop/natmeg/
 ---
 
-# FieldTrip course at the NatMEG in Stockholm
-
 {% include image src="/assets/img/workshop/natmeg2014/natmeg_pos.png" width="200" %}
 
 - Where: NatMEG, Karolinska Institute, Stockholm, Sweden

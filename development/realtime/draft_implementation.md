@@ -3,8 +3,6 @@ title: Suggested changes to the reference implementation
 tags: [realtime, development]
 ---
 
-# Suggested changes to the reference implementation
-
 ### Provide a unified open_connection call
 
 Currently, MATLAB users type 'buffer://hostname:port' for talking to a buffer, and thanks to some intelligence in

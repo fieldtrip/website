@@ -6,8 +6,6 @@ redirect_from:
     - /faq/acpc/
 ---
 
-# What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
-
 There are a number of coordinate systems that have the origin, i.e., the [0,0,0] point, at the Anterior Commissure and that have a RAS orientation (i.e. the x-axis pointing to the right, the y-axis pointing to anterior, the z-axis pointing to superior).
 
 - ACPC is used if the geometry is according to the individual subject head/brain size.

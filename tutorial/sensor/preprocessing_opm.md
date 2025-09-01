@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/preprocessing_opm/
 ---
 
-# Preprocessing of Optically Pumped Magnetometer (OPM) data
-
 ## Introduction
 
 Optically Pumped Magnetometers (OPMs) are magnetic field sensors that can be used for MEG as an alternative to the conventional SQUID sensors. SQUIDs are superconductive sensors that require cryocooling, and hence need to be placed as an array in a fixed helmet-shaped dewar that is filled with extremely cold liquid helium.

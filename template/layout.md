@@ -3,8 +3,6 @@ title: Template 2-D layouts for plotting
 tags: [template, eeg, meg, opm, layout]
 ---
 
-# Template 2-D layouts for plotting
-
 EEG electrode and MEG gradiometer positions in the layouts are represented as points in 2-D Cartesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/plotting/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII `.lay` files is explained [here](/faq/plotting/layout_fileformat).
 
 ## EEG layouts

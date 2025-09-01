@@ -4,7 +4,6 @@ title: Improve regression testing
 
 {% include /shared/development/warning.md %}
 
-# Improve regression testing
 
 The goal is to extend the coverage of the unit and integration testing functions. The general principle is explained [here](/development/testing). The functions (we often refer to them as “scripts”) are used to ensure the quality of released versions and we execute them prior to every release. A function either passes or gives an error, which indicates that the code is not ready for release. The test scripts are located in https://github.com/fieldtrip/fieldtrip/tree/master/test, for some we also have test data which is on a file server in the Donders Institute (not shared).
 

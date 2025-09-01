@@ -3,8 +3,6 @@ title: FieldTrip tutorial at WIRED 2024 in Paris
 tags: [wired2024]
 ---
 
-# FieldTrip tutorial at WIRED 2024 in Paris
-
 Robert Oostenveld and [Marie-Constance Corsi](https://marieconstance-corsi.netlify.app) will present a hands-on tutorial at the [Workshop on Intracranial Recordings in humans, Epilepsy, DBS](https://wired-icm.org) (WIRED) at ICM in Paris from 13th to  15th of March 2024. The FieldTrip tutorial will happen in the afternoon of Wednesday 13 March.
 
 To attend the hands-on tutorials, participants will have to register [here](https://wired-icm.org/registration/) and bring their own laptops with MATLAB installed.

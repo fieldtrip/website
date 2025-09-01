@@ -3,8 +3,6 @@ title: Details on the EEG language dataset
 tags: [eeg-language]
 ---
 
-# Details on the EEG language dataset
-
 This EEG dataset was acquired by [Irina Siminova et al.](https://doi.org/10.1371/journal.pone.0014465) in a study investigating semantic processing of stimuli presented as pictures (black line drawings on white background), visually displayed text or as auditory presented words. Stimuli consisted of concepts from three semantic categories: two relevant categories (animals, tools) and a task category that varied across subjects, either clothing or vegetables.
 
 The data from one subject is shared for tutorial purposes on the FieldTrip download server. The full dataset is available from the [MPI for Psycholinguistics Archive](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8).

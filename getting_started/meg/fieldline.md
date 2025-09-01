@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/fieldline/
 ---
 
-# Getting started with FieldLine OPM data
-
 [FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and used by [Neuromag/Elekta/Megin](/getting_started/meg/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
 
     cfg = [];
@@ -121,7 +119,6 @@ During acquisition of the data, an Excel table was maintained to map the channel
 | 6       | 336        | FL35            |
 | 7       | 22         | FL34            |
 | 8       | 246        | FL84            |
-
 
 {% include markup/skyblue %}
 Note that the OPM sensor number is not used here, but it might be relevant if you want to apply fine calibration, or if you want to account for the different noise characteristics of the different OPMs.

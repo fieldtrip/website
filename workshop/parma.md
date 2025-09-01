@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Parma
 ---
 
-# FieldTrip workshop in Parma
-
 #### Where
 
 Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parm

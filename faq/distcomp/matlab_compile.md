@@ -7,8 +7,6 @@ redirect_from:
     - /faq/matlab_compile/
 ---
 
-# How to compile MATLAB code into stand-alone executables?
-
 Using **[qsubcellfun](/reference/qsub/qsubcellfun)** and/or **[qsubcompile](/reference/qsub/qsubcompile)** it is possible to compile your jobs prior to submitting them to the cluster batch queuing system. These compiled jobs do not require a MATLAB license for execution at run-time. The compilation itself (which is done once per batch) does require that you have a license for the [MATLAB compiler](http://www.mathworks.com/products/compiler) on the computer from which you are submitting the jobs. Furthermore, it requires that the MCR is installed on the cluster worker nodes.
 
 When compiling your qsub jobs, or when compiling MATLAB code in general, you might run into some issues that have to do with the compile process. This page tries to list the problems that you might expect and the solutions.

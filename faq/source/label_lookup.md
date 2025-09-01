@@ -7,8 +7,6 @@ redirect_from:
     - /faq/label_lookup/
 ---
 
-# How can I determine the anatomical label of a source or electrode?
-
 ## Determine the label of a source that you localized
 
 FieldTrip supports the use of an anatomical atlas to look up the anatomical label of a source that you have localized. Vice versa you can also first look up the location of an anatomical region and subsequently use that in source analysis, e.g., as region of interest for beamforming or as starting point for dipole fitting.
@@ -52,7 +50,6 @@ Next, look up the corresponding anatomical label of an electrode of interest, e.
 
     'ParaHippocampal_L'
 
-
 The function below represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table.
 
     function generate_electable_v3(filename, varargin)
@@ -83,7 +80,6 @@ The function below represents a tool that automatically overlays all channels in
     % This function is part of Stolk, Griffin et al., Integrated analysis
     % of anatomical and electrophysiological human intracranial data
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
     % get the optional input arguments
     elec_mni        = ft_getopt(varargin, 'elec_mni');

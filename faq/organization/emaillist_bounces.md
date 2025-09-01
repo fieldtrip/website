@@ -7,8 +7,6 @@ redirect_from:
     - /faq/emaillist_bounces/
 ---
 
-# Why am I receiving warnings about too many bouncing emails?
-
 A "bounce" means that the email from the mailing list cannot be delivered to your email server.
 
 Please see http://www.list.org/mailman-member/node25.html and note the section

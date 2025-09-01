@@ -7,8 +7,6 @@ redirect_from:
     - /faq/matlab_privatefunctions/
 ---
 
-# MATLAB does not see the functions in the "private" directory
-
 The functions in the fieldtrip/private directory are only available for functions that are located in fieldtrip. You cannot call them from the command line, and you cannot call them from functions (or scripts) that are located outside the FieldTrip directory.
 
 See this this [Mathworks documentation](https://nl.mathworks.com/help/matlab/matlab_prog/private-functions.html) for more general information.

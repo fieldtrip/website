@@ -7,8 +7,6 @@ redirect_from:
     - /faq/ctf_changeheadloc/
 ---
 
-# How can I change the head localization in a CTF dataset?
-
 ## Introduction
 
 The res4 file in a CTF dataset contains information about the location of each gradiometer with respect to the head. This information is computed and stored using the localizer measurements prior to, and after the real experiment. It is important to know the location of the gradiometers exactly if you want to do source analysis (in fieldtrip, CTF or Curry), or if you want to realign the data to a template head location.

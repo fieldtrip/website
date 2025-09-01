@@ -3,8 +3,6 @@ title: FieldTrip connectivity demo
 tags: [meg-uk-2015, mmfaces, connectivity]
 ---
 
-# FieldTrip connectivity demo
-
 In this demonstration we will use the [face recognition dataset](/workshop/meg-uk-2015/dataset).
 
 Please use the [general instructions](/workshop/meg-uk-2015/general) to get started.
@@ -21,7 +19,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     load sens
     load mri_realigned
 
-
     %% deal with maxfilter
 
     % the data has been maxfiltered and subsequently contatenated
@@ -37,7 +34,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.updatesens  = 'no';
     cfg.component   = comp.label(51:end);
     data_fix = ft_rejectcomponent(cfg, comp);
-
 
     %%
 
@@ -69,7 +65,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 
     cfg.sourcemodel.pos = pos2;
     source2 = ft_sourceanalysis(cfg, timelock2);
-
 
     %% construct single-trial virtual channel representation
 
@@ -124,7 +119,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.method = 'coh';
     coherence = ft_connectivityanalysis(cfg, virtualchannel_wavelet);
 
-
     figure
     imagesc(coherence.time, coherence.freq, squeeze(coherence.cohspctrm(1,:,:)));
     axis xy
@@ -142,7 +136,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     load vol
     load sens
     load mri_realigned
-
 
     %% deal with maxfilter
 
@@ -171,7 +164,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.toi = 0.150;
     freq = ft_freqanalysis(cfg, data_fix);
 
-
     %%
 
     cfg = [];
@@ -185,7 +177,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     grid = ft_prepare_leadfield(cfg, freq);
 
     % save grid grid
-
 
     %%
 

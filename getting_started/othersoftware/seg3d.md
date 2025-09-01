@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/seg3d/
 ---
 
-# Getting started with Seg3D
-
 [Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html) is a free volume segmentation and processing tool that can be used to check and modify segmentation results. It is developed by the NIH Center for Integrative Biomedical Computing at the University of Utah Scientific Computing and Imaging (SCI) Institute and combines a flexible manual segmentation interface with powerful higher-dimensional image processing and segmentation algorithms from the [Insight Toolkit](https://itk.org). You can explore and interact with volumetric imaging data using volume rendering and orthogonal slice view windows and label voxels as a certain tissue class. Seg3D is implemented in C++ and hence very fast, and is available for Windows, macOS, and Linux.
 
 In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](/reference/ft_volumesegment)** and the underlying SPM algorithms.

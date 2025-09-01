@@ -7,8 +7,6 @@ redirect_from:
     - /example/beamformer_commonfilter/
 ---
 
-# Common filters in beamforming
-
 When you want to reconstruct and compare the sources of two (or more) conditions using a beamformer approach, you can either compute separate spatial filters for each condition, or use a common filter based on the combined conditions.
 
 ## What are the advantages of common filters?

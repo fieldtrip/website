@@ -7,8 +7,6 @@ redirect_from:
     - /example/simulateddata_dipolefit/
 ---
 
-# Compute forward simulated data and apply a dipole fit
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %% create a set of electrodes, randomly placed on the sphere
     elec = [];

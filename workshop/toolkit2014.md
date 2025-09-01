@@ -2,8 +2,6 @@
 title: Toolkit of Cognitive Neuroscience - EEG/MEG
 ---
 
-# Toolkit of Cognitive Neuroscience: EEG/MEG
-
 - Where: Donders Institute, Radboud University Nijmegen
 - When: 6-9 May 2014
 - Who: Robert Oostenveld, Jan-Mathijs Schoffelen, et al.

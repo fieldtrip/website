@@ -3,8 +3,6 @@ title: Time-frequency analysis using Hanning window, multitapers and wavelets
 tags: [paris2019, meg, freq, mmfaces]
 ---
 
-# Time-frequency analysis using Hanning window, multitapers and wavelets
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis).
 {% include markup/end %}

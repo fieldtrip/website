@@ -4,7 +4,6 @@ title: Document grad.tra, modifications to it, and effects on inverse
 
 {% include /shared/development/warning.md %}
 
-# Document grad.tra, modifications to it, and effects on inverse
 
 ## Resolution: see faq
 

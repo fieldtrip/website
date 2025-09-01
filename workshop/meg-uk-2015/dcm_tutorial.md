@@ -3,8 +3,6 @@ title: SPM DCM demo
 tags: [meg-uk-2015]
 ---
 
-# SPM DCM demo
-
 In this demo we will specify one subject's dynamic causal model, compare several models across participants, and look at posterior estimates of parameters (connectivity weights).
 
 With DCM for evoked responses one typically models smooth ERP/ERF deflections. The dataset prepared for you has been low-pass filtered with a 48Hz cut-off.

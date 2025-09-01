@@ -3,8 +3,6 @@ title: Anatomical templates for visualizing source reconstructed activity
 tags: [template]
 ---
 
-# Anatomical templates for visualizing source reconstructed activity
-
 When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the "colin27" brain (in MNI152 space) with FreeSurfer. These surfaces have been derived from the SPM Canonical Brain.
 
 {% include markup/yellow %}

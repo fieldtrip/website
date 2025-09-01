@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Trento, Italy
 ---
 
-# FieldTrip workshop in Trento, Italy
-
 ## When and where
 
 Monday 22 October - Wednesday 24 October 2012
@@ -101,7 +99,6 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 
     % the TMS pulse happens at the onset
     tms_sample = find(trig==1);
-
 
     trialbeg = tms_sample(:) - hdr.Fs*cfg.trialdef.pre;
     trialend = tms_sample(:) + hdr.Fs*cfg.trialdef.post;

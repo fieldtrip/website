@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/neuralynx/
 ---
 
-# Getting started with Neuralynx data
-
 ## Introduction
 
 The Neuralynx acquisition software writes a variety of file formats.

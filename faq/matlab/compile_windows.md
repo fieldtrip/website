@@ -7,8 +7,6 @@ redirect_from:
     - /faq/compile_windows/
 ---
 
-# How can I compile the mex files on 64-bit Windows?
-
 The 32-bit versions of MATLAB include the free lcc compiler. However, if you want to use a 64-bit version of MATLAB on a 64-bit Microsoft Windows operating system (WinXP, Vista or Win7), then you must install a compiler yourself. The Microsoft Visual Studio 2008 Express Edition can be used, which can be downloaded for free.
 
 The installation procedure for the compiler is described by MathWorks at <http://www.mathworks.com/support/solutions/en/data/1-6IJJ3L/index.html?solution=1-6IJJ3L>.

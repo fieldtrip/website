@@ -13,7 +13,6 @@ See <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718> for the progress
 Once this tutorial is completed, it will be listed in the tutorial section in the menu. Also once complete, it will receive the tags _tutorial meg source headmodel mri lcmv beamformer_ to link it to other pages.
 {% include markup/end %}
 
-# Localizing sources using beamformer techniques
 
 ## Introduction
 

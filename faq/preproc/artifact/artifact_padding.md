@@ -7,8 +7,6 @@ redirect_from:
     - /faq/artifact_padding/
 ---
 
-# How can I interpret the different types of padding in FieldTrip?
-
 Padding is an operation that extends a predetermined segment of data (usually referred to as a "trial") either with zeros or with additional data. You should distinguish **data padding**, which can be helpful to improve filter characteristics, but is also used to extend the length of a window for a certain type of analysis (such as detecting behavioral artifacts), versus **zero padding**, which only plays a role in preventing filter artifacts. Padding with actual data can only be applied to continuous datasets while reading data from disk.
 
 Besides the difference between data and zero padding, there are also differences how it is specified. Sometimes padding is specified as the desired total length of the segment: this is referred to as **padding to** the desired length. This is used in preprocessing and spectral analysis:

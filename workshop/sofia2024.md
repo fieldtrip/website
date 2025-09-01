@@ -3,8 +3,6 @@ title: FieldTrip workshop in Sofia, Bulgaria
 tags: [sofia2024]
 ---
 
-# FieldTrip workshop in Sofia, Bulgaria
-
 [The Institute of Neurobiology](https://inb.bas.bg/index-en.html) at  the [Bulgarian Academy of Science](https://www.bas.bg/?lang=en) is organizing a FieldTrip workshop in Sofia.
 
 ## Where

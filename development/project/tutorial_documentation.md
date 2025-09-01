@@ -6,7 +6,6 @@ title: A tutorial on forward modeling
 
 FIXME This page is under construction
 
-# A tutorial on forward modeling
 
 ## Introduction
 

@@ -6,8 +6,6 @@ redirect_from:
     - /example/ft_realtime_powerestimate/
 ---
 
-# Example real-time power estimate
-
 The **[ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate)** function reads data in small chunks and performs a spectral estimation for each chunck. The output of this function is a constantly updating figure with the power spectrum, averaged over the selected channels.
 
 ## Flowchart

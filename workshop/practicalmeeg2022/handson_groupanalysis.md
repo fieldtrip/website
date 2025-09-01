@@ -3,8 +3,6 @@ title: Group-level statistics with parametric and non-parametric methods
 tags: [practicalmeeg2022, meg, timelock, statistics, plotting, mmfaces]
 ---
 
-# Group-level statistics with parametric and non-parametric methods
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}

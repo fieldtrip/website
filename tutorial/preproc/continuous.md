@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/continuous/
 ---
 
-# Preprocessing - Reading continuous EEG and MEG data
-
 ## Introduction
 
 A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once. The advantage of preprocessing data in a continuous format is that it can help to prevent filter artifacts, it can improve the quality of ICA decompositions, and  gives a better overview of all data features, including artifacts that may be more difficult to recognize in segmented data.

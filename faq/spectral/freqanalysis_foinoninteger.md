@@ -7,8 +7,6 @@ redirect_from:
     - /faq/freqanalysis_foinoninteger/
 ---
 
-# Why am I not getting integer frequencies?
-
 Probably this is due to your time windows being one sample longer than you expect, at a sampling frequency of 1000 Hz you might have e.g., 1001 samples rather than 1000 samples.
 
 When defining time and/or frequency intervals, you should be aware about the different behavior of FieldTrip functions of the specification of bounds. The problem is sketched in general on the websitepedia lemma on [interval notation](http://en.wikibooks.org/wiki/Algebra/Interval_Notation).

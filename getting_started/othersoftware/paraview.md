@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/paraview/
 ---
 
-# Getting started with ParaView
-
 [ParaView](https://www.paraview.org) is both an application framework and a turn-key application for advanced data visualization that can be used to inspect anatomical MRI data and segmentations, in combination with triangular, tetrahedral and/or hexahedral meshes. It is useful to check the details of the meshes used in BEM and FEM forward modeling.
 
 ## Example use

@@ -7,8 +7,6 @@ redirect_from:
     - /example/granger_conditional/
 ---
 
-# Conditional Granger causality in the frequency domain
-
 Conditional Granger causality is a derivative of spectral Granger causality that is computed over a triplet of channels (or blocks of channels). It provides the advantage that for this triplet, it allows to differentiate between a delayed parallel drive from sources <i>A</i> to be <i>B</i> and <i>C</i> and a sequential drive from <i>A</i> to <i>B</i> to <i>C</i>.
 
 This example illustrates the simulation and base analysis of the paper

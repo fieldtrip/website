@@ -7,8 +7,6 @@ redirect_from:
     - /faq/datatype_headmodel/
 ---
 
-# What kind of volume conduction models of the head (head models) are implemented?
-
 The volume conduction model of the head is an important ingredient for source analysis, since it determines how a source within the brain is visible on the EEG or MEG sensors. All forward and inverse computations that are done within FieldTrip share the same low-level code for the computation of the forward model potential or field. Since the volume conduction model depends on the geometry of the head, you have to provide anatomical data on which the geometry can be based. The most commonly used anatomical data is an anatomical MRI.
 
 FieldTrip supports the following common volume conduction models for EEG:

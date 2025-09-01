@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/headmodel_eeg_fem/
 ---
 
-# Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-
 ## Introduction
 
 This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).

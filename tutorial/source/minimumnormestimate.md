@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/minimumnormestimate/
 ---
 
-# Source reconstruction of event-related fields using minimum-norm estimation
-
 ## Introduction
 
 In this tutorial you can find information about how to do source reconstruction using minimum-norm estimation, to reconstruct the event-related fields (MEG) of a single subject. We will be working on the [dataset](/tutorial/meg_language) described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) and [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) tutorials, and we will use also the anatomical images that belong to the same subject. We will repeat code to select the trials and preprocess the data as described in the [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) tutorial. We assume that preprocessing and event-related averaging is already clear for the reader. To preprocess the anatomical data, we will use two other software packages (FreeSurfer and MNE Suite).

@@ -3,8 +3,6 @@ title: FieldTrip beamformer demo
 tags: [meg-uk-2015, mmfaces]
 ---
 
-# FieldTrip beamformer demo
-
 In this demonstration we will use the [face recognition dataset](/workshop/meg-uk-2015/dataset).
 
 Please use the [general instructions](/workshop/meg-uk-2015/general) to get started.
@@ -160,7 +158,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     raw      = spm2fieldtrip(D);
     timelock = ft_timelockanalysis([], raw);
 
-
     %% start from data that was processed by FieldTrip
     subj = 15;
     prefix = sprintf('Sub%02d', subj);
@@ -173,7 +170,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     % load the results from part 1
     load vol
     load sens
-
 
     %% deal with maxfilter
 
@@ -190,7 +186,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.updatesens = 'no';
     cfg.component = comp.label(51:end);
     data_fix = ft_rejectcomponent(cfg, comp);
-
 
     %%
 
@@ -225,7 +220,6 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     grid = ft_prepare_leadfield(cfg, wavelet);
 
     % save grid grid
-
 
     %% perform whole-brain source reconstruction
 

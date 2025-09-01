@@ -4,7 +4,6 @@ title: Ensure consistent trial definition
 
 {% include /shared/development/warning.md %}
 
-# Ensure consistent trial definition
 
 There are certain functions that rely on the trl somewhere hidden in the config. After resampledata the trl is invalid. Simulated data also does not have a trl. No idea what appenddata does, but is probably also related...
 

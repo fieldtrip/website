@@ -7,8 +7,6 @@ redirect_from:
     - /faq/impedancecheck/
 ---
 
-# How can I inspect the electrode impedances of my data?
-
 The quality of EEG signals depends for a large part on how well the electrodes make contact to the skin. Currents flow from the head across the skin-gel-electrode interface and through wires to the amplifier. Along this path the current will face some resistance, often called impedance. Impedance is related to voltage and current by Ohm's law (I = V/R).
 
 In general, the higher the impedance of an electrode, the lower the signal-to-noise ratio of the EEG signal. Importantly, recording EEG with a lower signal-to-noise ratio may increase noise levels and decrease the probability of obtaining statistically signifcant effects.

@@ -3,8 +3,6 @@ title: Test your MATLAB and FieldTrip installation in advance
 tags: [toolkit2021]
 ---
 
-# Test your MATLAB and FieldTrip installation in advance
-
 Prior to the hands-on sessions, we want you to provide us with some information with respect to the computational setup you have on your end. This is needed for us to anticipate (and ideally fix) any restrictions on your end. Also, it is needed to avoid a lot of time to be spent during the first session to get everybody up-and-running.
 
 Therefore, please start MATLAB on your computer, copy-and-paste the code below into the MATLAB command line, and make a screenshot of the output you get on your screen. Please upload this screenshot in your personal hands-on notes google document so that we can check.

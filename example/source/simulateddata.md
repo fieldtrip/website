@@ -7,8 +7,6 @@ redirect_from:
     - /example/simulateddata/
 ---
 
-# Compute forward simulated data using ft_dipolesimulation
-
     %%
     % load the template MNI headmodel, electrodes and MRI
 
@@ -21,7 +19,6 @@ redirect_from:
 
     cfg = [];
     ft_sourceplot(cfg, mri);
-
 
     %%
     % compute a forward model for a single dipole, 10 trials of 1 second each, with a 2Hz signal

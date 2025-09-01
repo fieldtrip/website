@@ -3,8 +3,6 @@ title: Neuroimaging II - Electrophysiological Methods
 tags: [neuroimaging2-2324]
 ---
 
-# Neuroimaging II - Electrophysiological Methods
-
 This course is about the analysis of EEG- and MEG-data. The objective of the course is to introduce the student to the most important analysis methods for this type of data.
 
 {% include markup/yellow %}

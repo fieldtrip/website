@@ -3,8 +3,6 @@ title: Advanced MEG/EEG toolkit at the Donders
 tags: [toolkit2022]
 ---
 
-# Advanced MEG/EEG toolkit at the Donders
-
 This 5-day toolkit course (May 9-13, 2022) will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox.
 
 We hope and expect that we will be able to teach this toolkit on site. Whether or not this will be possible depends on the covid restrictions imposed by the Dutch government. We will notify you in case we need to fall back to an online or hybrid option.
@@ -90,7 +88,6 @@ A large part of the toolkit will consist of playground sessions, in which ideall
 
 For the hands-on sessions you will work on a PC that is provided by us. If you want, you can work on your own computer during the FieldTrip playground. If that's the case, we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2022/test_installation).
 
-
 ## Getting started with the hands-on sessions
 
 For the hands-on sessions we will use MATLAB R2021b, which is installed on the PCs in the instruction rooms. If you log in with the credentials that are provided for each of the course computers, you should start MATLAB using the Desktop shortcut, named 'toolkit2022'. To ensure that everything runs smoothly, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers. Importantly, the tutorial data does not have to be downloaded and has already been placed in the course accounts' home directories. These home directories are mounted as the computer's M-drive, and the FieldTrip code + necessary data are located in M:\toolkit2022. If you start MATLAB from the Desktop shortcut, FieldTrip will be automatically added to the MATLAB path, and you will be taken to the directory that contains the course data. 
@@ -112,7 +109,6 @@ In general, please do NOT use the graphical path management tool from MATLAB. In
 
 Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation).
 {% include markup/end %}
-
 
 ## Code of conduct
 

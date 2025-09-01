@@ -3,8 +3,6 @@ title: MEG virtual channels and seed-based connectivity
 tags: [chieti, hcp-motort]
 ---
 
-# MEG virtual channels and seed-based connectivity
-
 ## Introduction
 
 {% include markup/skyblue %}

@@ -3,8 +3,6 @@ title: Preparation for the online toolkit
 tags: [toolkit2020]
 ---
 
-# Preparation for the online toolkit
-
 _This is the list of items that we used to get all work organized prior to and during the MEG/EEG toolkit. We have copied the list here so that others organizing similar events might learn something from it._
 
 ## General

@@ -6,8 +6,6 @@ redirect_from:
     - /example/ecog_ny/
 ---
 
-# Analysis of high-gamma band signals in human ECoG
-
 ## Introduction
 
 In this example script, we will demonstrate how to analyze functional brain activity in ECoG data. The tutorial contains instructions and code for event-related potentials (ERP), high-gamma power (HGP, 80 - 200 Hz) and time-frequency analyses, including statistical analyses and visualization of the outcome. HGP is a measure of neural activity that is specific for ECoG data analysis. Because high frequency signals are strongly attenuated by tissue and bone that lie between source and sensor, high-gamma activity can hardly be found in scalp EEG data. However, in ECoG data HGP (80 - 200 Hz) is a very prominent neural signature. HGP does not seem to be of oscillatory nature but has rather been associated with population neural spiking rate (Manning et al., 2009; Ray & Maunsell, 2011). It is also highly locally specific, compared with low frequency activity and ERPs.

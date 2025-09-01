@@ -7,8 +7,6 @@ redirect_from:
     - /faq/neighbours_prepare/
 ---
 
-# How does ft_prepare_neighbours work?
-
 There are three methods how **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** can define the neighbour structure for your data: '**distance**', '**triangulation**' and '**template**'.
 
 Usually, neighbouring sensors can be defined as sensors that are close by. The '**distance**' method simply draws a circle of certain size around each sensor-position. Each other sensor included in this circle is defined to be a neighbouring sensor. The radius of the circle is defined by cfg.neighbourdist. If not given a value, the function will try to be smart and 'guess' a good value. From experience we know, however, that this default is not always a good choice. Choosing 'distance' as the defining property of neighbour might not always be useful. It might introduce superfluous information, thereby reducing sensitivity of your analyses. It will lead to some central sensor having way more neighbours than outer sensors, which, depending on the choice of cfg.neighbourdist, might even be neglected.

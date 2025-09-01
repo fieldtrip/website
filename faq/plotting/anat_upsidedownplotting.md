@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anat_upsidedownplotting/
 ---
 
-# Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-
 When visualizing anatomical MRIs and source reconstructed data with **[ft_sourceplot](/reference/ft_sourceplot)**, it may happen that the image is plotted upside-down. This has to do with the way in which anatomical volumes are plotted in FieldTrip. For more information, see the frequently asked question [What is the plotting convention for anatomical MRIs?](/faq/plotting/anat_plottingconvention).
 
 {% include image src="/assets/img/faq/anat_upsidedownplotting/upside_down_sourceplot.png" width="400" %}

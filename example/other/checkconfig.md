@@ -6,8 +6,6 @@ redirect_from:
     - /example/checkconfig/
 ---
 
-# How to use ft_checkconfig
-
 The function **[ft_checkconfig](/reference/utilities/ft_checkconfig)** is used in the main FieldTrip functions and checks the input configuration (cfg). This is similar to what **[ft_checkdata](/reference/utilities/ft_checkdata)** does for the input data. The **[ft_checkconfig](/reference/utilities/ft_checkconfig)** function is automatically called when you use a FieldTrip function. You may not even notice this, unless it gives you feedback about your cfg,m for example with a warning or error message.
 
 This example explains what **[ft_checkconfig](/reference/utilities/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!

@@ -2,8 +2,6 @@
 title: Pipeline architecture
 ---
 
-# Pipeline architecture
-
 At the moment, this is a collection of ideas about how to implement an easy-to-use and flexible pipeline architecture for online processing of data. It's also quite fMRI-centric so far.
 
 ## General layout of a pipeline

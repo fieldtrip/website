@@ -4,7 +4,6 @@ title: An alternative algorithm for constructing triangulated EEG-BEM head model
 
 {% include /shared/development/warning.md %}
 
-# An alternative algorithm for constructing triangulated EEG-BEM head models
 
 This page presents the outline of an algorithm (or set of algorithms) that allow the robust creation of single-subject triangulations of the skin/skull/brain boundaries to be used in EEG-BEM volume conduction modeling. The algorithm described here is not implemented in FieldTrip, but an improved version could be considered for implementation
 

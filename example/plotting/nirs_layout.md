@@ -6,8 +6,6 @@ redirect_from:
     - /example/nirs_layout/
 ---
 
-# Creating a layout for plotting NIRS optodes and channels
-
 FieldTrip uses layouts to specify in 2D (e.g., on screen) where channels are to be
 plotted. This is used for example in ft_multiplotER and ft_multiplotTFR, and also
 in ft_topoplotER and ft_topoplotTFR. The layout does not only describe where the

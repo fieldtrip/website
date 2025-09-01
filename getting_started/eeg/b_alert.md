@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/b_alert/
 ---
 
-# Getting started with ABM's B-Alert EEG data
-
 ## Introduction
 
 The B-Alert systems are relatively new EEG systems developed by [Advanced Brain Monitoring](http://www.advancedbrainmonitoring.com/) (ABM) and are often used for real time assessment of workload, attention and distraction ([Berka et al., 2007](http://www.ingentaconnect.com/content/asma/asem/2007/00000078/A00105s1/art00032)), for which they have built-in algorithms in their paid software [B-Alert Live](http://www.advancedbrainmonitoring.com/b-alert-live/). Besides EEG, you can measure EKG with an EKG lead and head movements with 3D-accelerometers.

@@ -3,8 +3,6 @@ title: Group analysis
 tags: [paris2019, meg, timelock, statistics, plotting, mmfaces]
 ---
 
-# Group-level statistics with parametric and non-parametric methods
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics).
 {% include markup/end %}

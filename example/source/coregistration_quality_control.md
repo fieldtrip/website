@@ -6,8 +6,6 @@ redirect_from:
     - /example/coregistration_quality_control/
 ---
 
-# Check the quality of the anatomical coregistration
-
 The following code makes a number of figures that can be used as quality control for the procedure to coregister the MRI with the MEG.
 
 {% include markup/red %}

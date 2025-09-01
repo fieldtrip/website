@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/besa/
 ---
 
-# Getting started with BESA data
-
 A lot of valuable information can be found on the [BESA wiki](http://wiki.besa.de/). Please add your information and experiences here if you're using BESA data.
 
 ## Background

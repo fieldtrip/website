@@ -5,8 +5,6 @@ redirect_from:
   - /development/fileio/
 ---
 
-# Reading and writing of EEG/MEG time series data
-
 FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](/reference/fileio/ft_read_mri)**, **[ft_read_sens](/reference/fileio/ft_read_sens)** and **[ft_read_headshape](/reference/fileio/ft_read_headshape)**. Furthermore, **[ft_read_headmodel](/reference/fileio/ft_read_headmodel)** can be used for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](/reference/fileio/ft_read_spike)**.
 
 All these ft_read_xxx functions automatically detect the file format and subsequently will call the appropriate low-level function for each file format. Some of the low-level functions are written by ourselves, some are supplied by the manufacturers and some are obtained from other open source toolboxes.

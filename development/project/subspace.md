@@ -4,7 +4,6 @@ title: Implement support for a separation of data into a signal and noise subspa
 
 {% include /shared/development/warning.md %}
 
-# Implement support for a separation of data into a signal and noise subspace
 
 ## Objectives
 

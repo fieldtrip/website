@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/automatic_artifact_rejection/
 ---
 
-# Automatic artifact rejection
-
 Automatic artifact rejection in FieldTrip is a sophisticated and complicated approach, that without full understanding of _all_ steps involved will unavoidably lead to more harm than good. Only when you fully understand your data and the artifacts you will be dealing with, will you be able to set appropriate parameters for automatic artifact rejection. We therefore advise to first [deal with artifacts visually or manually](/tutorial/preproc/visual_artifact_rejection), using either **[ft_databrowser](/reference/ft_databrowser)** or **[ft_rejectvisual](/reference/ft_rejectvisual)**. If what follows below is unclear at any point, ask your colleagues or post a question on the mailing list.
 
 ## Introduction

@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Göttingen in 2014
 ---
 
-# FieldTrip workshop in Göttingen in 2014
-
 ## Where
 
 Room 2.122

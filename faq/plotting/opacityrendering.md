@@ -7,8 +7,6 @@ redirect_from:
     - /faq/opacityrendering/
 ---
 
-# I am getting strange artifacts in figures that use opacity
-
 The MATLAB OpenGL renderer is very buggy when using opacity. Sometimes parts of your axes system disappear or colors are not drawn correctly, etc. , and some of these issues are especially prevalent when saving your figures as vectorized images using postscript (e.g.: .eps).
 
 One option is to manually specify the renderer for your figure, e.g.,  

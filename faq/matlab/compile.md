@@ -6,8 +6,6 @@ redirect_from:
     - /faq/compile/
 ---
 
-# How can I compile the mex files and command-line executable?
-
 We try to provide FieldTrip with all the mex files compiled for the most common platforms. However, sometimes specific MATLAB versions and/or specific operating systems require that you (re)compile the mex files. FieldTrip also includes a number of (command-line) executable programs. These are also provided in a compiled form that allows you to use them directly. Sometimes it is also required to recompile those. This FAQ describes the compilation procedure for the various components.
 
 Note that for compiling the mex files and/or executables you will need to have write access to the installation directory. If you are using a shared version that is installed on a network drive, that might not be the case.

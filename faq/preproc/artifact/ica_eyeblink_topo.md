@@ -6,8 +6,6 @@ redirect_from:
     - /faq/ica_eyeblink_topo/
 ---
 
-# Why does my ICA eyeblink component look strange?
-
 Using 64-channel Brainvision data, it could happen that a IC, which in its timecourse clearly presents as an eyeblink component, shows a topographical mixing matrix that looks strange. 
 
 {% include image src="/assets/img/faq/ica_eyeblink_topo/topo_strange01.png" width="600" %}

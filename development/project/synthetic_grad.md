@@ -4,7 +4,6 @@ title: Implement support for CTF synthetic gradiometers
 
 {% include /shared/development/warning.md %}
 
-# Implement support for CTF synthetic gradiometers
 
 ## Objectives
 

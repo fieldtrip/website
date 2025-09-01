@@ -6,8 +6,6 @@ redirect_from:
     - /example/biosemi/
 ---
 
-# Example analysis pipeline for BioSemi data
-
 The following is an example analysis pipeline that was used for the FieldTrip workshop at [CUNY, New York](http://www.cuny.edu) by Stephen and Saskia in 2011.
 
 {% include markup/red %}

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/coherence_coherency/
 ---
 
-# What is the difference between coherence and coherency?
-
 **"Coherency"** is the normalized cross-spectrum at a specific frequency, i.e. for two signals A and B it is defined as
 Cab/sqrt(Pa _ Pb) or equivalent Cab/sqrt(Caa _ Cbb). Coherency is a complex-valued number with a magnitude (or "modulus") smaller than or equal to 1 and an angle corresponding to the phase lag between the signals.
 

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anonymization_anatomical/
 ---
 
-# How can I anonymize or deidentify an anatomical MRI?
-
 {% include markup/skyblue %}
 This is something that in general you will want to do **after** the coregistration of the anatomical MRI with the MEG data (using **[ft_volumerealign](/reference/ft_volumerealign)**), as the coregistration often relies on facial landmarks.
 {% include markup/end %}
@@ -75,7 +73,6 @@ You can also combine defacing with brain segmentation to ensure that you do not 
 
     cfg = [];
     ft_sourceplot(cfg, defaced_mri);
-
 
 See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/other/anonymization_ctf).
 

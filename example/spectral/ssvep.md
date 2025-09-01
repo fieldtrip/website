@@ -6,8 +6,6 @@ redirect_from:
     - /example/ssvep/
 ---
 
-# Analyze steady-state visual evoked potentials (SSVEPs)
-
 Steady-state stimulation is frequently used for sensory stimulation in the visual (SSVEP), auditory (SSAEP), and somatosensory (SSSEP) domains. On this page, we will first present an example analysis strategy for a 64-channel SSVEP dataset. Subsequently, we will make some simulated data and use another analysis strategy.
 
 ## Analyze experimental data

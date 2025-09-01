@@ -7,8 +7,6 @@ redirect_from:
     - /faq/headlocalizer/
 ---
 
-# How can I monitor a subject's head position during a MEG session?
-
 The CTF/Neuromag acquisition software provides a shared memory in which the the data from the MEG channels and all auxiliary channels are available in real-time. The acq2ftx/neuromag2ft application transfers this data from the shared memory to a [FieldTrip buffer](/development/realtime/buffer) on the acquisition computer. MATLAB software running on another computer can then be used to analyze the real-time data. See the [getting started](/getting_started/realtime/headlocalizer) page for setting up this interface on your MEG system.
 
 {% include markup/yellow %}

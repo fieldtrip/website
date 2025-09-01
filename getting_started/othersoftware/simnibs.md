@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/simnibs/
 ---
 
-# Getting started with SimNIBS
-
 ## Background
 
 [SimNIBS](https://simnibs.github.io/simnibs/build/html/index.html) is a free and open source software package for Simulation of Non-invasive Brain Stimulation. Besides allowing for calculations of the electric field induced by transcranial magnetic stimulation (TMS) and transcranial electric stimulation (TES), the methods implemented in SimNIBS can also be used for electroencephalography (EEG) forward modeling. We refer to [Nielsen et al. (2023)](https://doi.org/10.1016/j.neuroimage.2023.120259) for more information about using SimNIBS for EEG forward calculations.

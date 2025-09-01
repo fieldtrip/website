@@ -4,7 +4,6 @@ title: Add stripped spm2 and other toolboxes as external dependencies
 
 {% include /shared/development/warning.md %}
 
-# Add stripped spm2 and other toolboxes as external dependencies
 
 Some FieldTrip functions use SPM2, SPM5 and EEGLAB for the actual computations. From these external toolboxes only limited functionality is used. Therefore it makes sense to copy those functions into a stripped-down version that can then be included in the release version of fieldtrip. E.g.
 

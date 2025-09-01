@@ -3,8 +3,6 @@ title: Streaming realtime EEG data to and from Arduino
 tags: [realtime, arduino]
 ---
 
-# Streaming realtime EEG data to and from Arduino
-
 The following is a scratch pad for a demo that I (=Robert) have prepared for the [BrainGain public showcase event](https://twitter.com/intent/user?screen_name=BrainGain_NL). It consists of three Arduino devices, a Raspberry Pi and and a number of laptops. The flow of the data is as follows:
 
 1.  arduino1: read data from a gravity sensor, write to bluetooth just like ModEEG

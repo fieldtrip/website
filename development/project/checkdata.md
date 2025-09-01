@@ -4,7 +4,6 @@ title: Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives
 
 {% include /shared/development/warning.md %}
 
-# Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives using checkdata
 
 - Ad sourceanalysis:
 

@@ -3,8 +3,6 @@ title: Suggested changes to the network protocol
 tags: [realtime, development]
 ---
 
-# Suggested changes to the network protocol
-
 ### GET_REQ_VER: Get supported request and version numbers
 
 The client sends an 8-byte triple with **version**=2, **command**=GET_REQ_VER (number to be specified later) and **bufsize=0**.

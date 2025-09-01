@@ -7,8 +7,6 @@ redirect_from:
     - /faq/psychtoolbox_macbook/
 ---
 
-# How can I use my MacBook Pro for stimulus presentation in the MEG lab?
-
 It can be useful to use your MacBook Pro for stimulus presentation instead of the normal windows based presentation machine. Together with [Psychtoolbox](http://psychtoolbox.org/wikka.php?wakka=HomePage) this offers the possibility to implement complex experimental designs while maintaining reasonably accurate control of stimulus timing.
 
 In order to make use of this setup:

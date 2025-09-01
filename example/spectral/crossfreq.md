@@ -6,8 +6,6 @@ redirect_from:
     - /example/crossfreq/
 ---
 
-# Cross-frequency analysis
-
 There are several ways in which cross-frequency interactions might occur. In [Jensen and Colgin TICS 2007](https://doi.org/10.1016/j.tics.2007.05.003) different principles of cross-frequency interactions are shown in Figure 1.
 
 {% include image src="/assets/img/example/crossfreq/jensencolgin.png" width="700" %}

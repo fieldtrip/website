@@ -2,8 +2,6 @@
 title: FieldTrip workshop at ESI/MPI Frankfurt, Germany
 ---
 
-# FieldTrip workshop at ESI/MPI Frankfurt, Germany
-
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
 version of FieldTrip that is distributed on a USB stcik, rather than the version you might already

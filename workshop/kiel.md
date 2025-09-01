@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Kiel, Germany
 ---
 
-# FieldTrip workshop in Kiel, Germany
-
 We will keep this page up to date and post new information here when available.
 
 - Instructor: Cristiano Micheli

@@ -4,8 +4,6 @@ tags: [meg, eeg, raw, freq, cfg, trialfun, trialdef]
 authors: [Stephen Whitmarsh]
 ---
 
-# FieldTrip Walkthrough
-
 ### Foreword
 
 This walkthrough is intended to give a little background in the use of FieldTrip. It is not a manual, nor is it meant to be canonical or generic for all possible uses. I am making this from my limited experience as a user, not as a developer. Also, at the time of making this, many modifications on the code, both in detail as well as more substantive ones (e.g., a different implementation of data structure in its main functions) are planned. I do believe, however, that an absolute beginner might benefit from a bit of overview, especially those who want to end up using FieldTrip for frequency and time-locked (MEG) data-analysis within a cognitive paradigm in humans, from sensor to source level. It is meant to be read before one commences with the analysis as a background on which to explore the already detailed documentation available at the FieldTrip website. However, some experience in programming, and of MATLAB in particular, is definitely needed. I would like to refer to the MATLAB knowledge database on intranet for those that need help getting started (at the Donders Center). Finally, please see this attempt itself as experimental. Because of the fact that FieldTrip, from the developers point of view, is investing most of its efforts in innovation, a full manual will never be up to date, or even correct, at least not for long.

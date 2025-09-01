@@ -5,8 +5,6 @@ redirect_from:
     - /workshop/aarhus/beamformingerf/
 ---
 
-# Beamforming evoked fields and potentials in combined MEG/EEG data
-
 ## Introduction
 
 In this tutorial we will apply beaforming techniques to event-realted fields. The data used herein has been used and preprocessing procedures have been extensively explained in the Natmeg tutorial [dataset](/workshop/natmeg2014/meg_audodd). Below we will focus on motor-evoked fields associated with the right-hand button press. We will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)). Except, we will focus on motor responses rather than the preceding stimuli. Further, we will compare the measured topography and the corresponding source reconstruction. The quality of the topography often depends on the presence of super-positioned activity of no interest, i.e. ocular and cardiac artifacts. Thus, we will apply ICA in order to identify and subsequently remove such activity.

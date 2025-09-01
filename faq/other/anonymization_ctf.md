@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anonymization_ctf/
 ---
 
-# How can I anonymize or deidentify a CTF dataset?
-
 ## Determining whether a dataset contains identifiers
 
 If you have a dataset from a subject with a known name, you can search on the Linux or macOS command line whether that name occurs in any of the text or binary files.
@@ -78,7 +76,6 @@ writeCTFds([output],hdr_anon,data,'fT');
 
 fprintf('COMPLETE\n');
 ```
-
 
 ## Using CTF command-line tools on Linux
 

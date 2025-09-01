@@ -2,8 +2,6 @@
 title: Copyrights
 ---
 
-# Copyrights
-
 {% include shared/copyright.md %}
 
 ## GNU GENERAL PUBLIC LICENSE

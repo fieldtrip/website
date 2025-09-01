@@ -7,8 +7,6 @@ redirect_from:
     - /example/ica_eog/
 ---
 
-# Independent component analysis (ICA) to remove EOG artifacts
-
 ## Description
 
 This script demonstrates how you can use ICA for cleaning eye artifacts from MEG or EEG data. It consists of three steps:

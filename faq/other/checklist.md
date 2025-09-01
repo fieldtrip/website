@@ -6,8 +6,6 @@ redirect_from:
     - /faq/checklist/
 ---
 
-# Which methodological details should I report in an EEG/MEG manuscript?
-
 This is a checklist for authors to use it prior to submission of a manuscript, to ensure that the manuscript provides key information. It originates from the following paper, which also provides more background on how to report methodological details on MEG and EEG studies.
 
 {% include markup/yellow %}

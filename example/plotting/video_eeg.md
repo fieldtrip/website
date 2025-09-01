@@ -6,8 +6,6 @@ redirect_from:
     - /example/video_eeg/
 ---
 
-# Making a synchronous movie of EEG or NIRS combined with video recordings
-
 Inspecting your data is important to get a better understanding of it. You might have video recordings of your participant or the experimental setting. Playing the video recordings synchronously with the EEG or NIRS data can provide a lot of insight, for example to detect possible motion artifacts or to detect clear effects of the experimental stimuli.
  
 This example script shows how to make a movie of your data with the help of **[ft_databrowser](/reference/ft_databrowser)** and MATLAB's Videowriter function. Subsequently, you synchronize this movie with your actual video data with video editing software like Adobe Premiere Pro or using  annotation software like [ELAN](https://archive.mpi.nl/tla/elan).

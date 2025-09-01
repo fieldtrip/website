@@ -7,8 +7,6 @@ redirect_from:
     - /faq/bem_finetune/
 ---
 
-# How can I fine-tune my BEM volume conduction model?
-
 The construction of a BEM volume conduction model is not always straight forward, especially if the quality of the MRI is not optimal or if the model needs to be very accurate. For example, getting an accurate estimate of the thickness of the skull or incorporating the CSF layer is difficult.
 
 The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguished:

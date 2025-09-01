@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/nirx/
 ---
 
-# Getting started with NIRx NIRS data
-
 FieldTrip does not offer direct support for the NIRx NIRS data yet, but you can make use of a work-around using the [Homer2](https://www.nitrc.org/projects/homer2) toolbox and a conversion script that is shared on [NITRC](https://www.nitrc.org).
 
 {% include markup/skyblue %}

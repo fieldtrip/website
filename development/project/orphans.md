@@ -4,7 +4,6 @@ title: Ensure that all website pages exist
 
 {% include /shared/development/warning.md %}
 
-# Ensure that all website pages exist
 
 There should not be any internal links that are broken.  
 

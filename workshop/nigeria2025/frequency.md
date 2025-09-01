@@ -3,8 +3,6 @@ title: Frequency analysis of resting state EEG data
 tags: [eeg, egi, preprocessing, eeg-sedation, nigeria2025]
 ---
 
-# Frequency analysis of resting state EEG data
-
 ## General introduction
 
 In this tutorial we will compute and compare power spectra for EEG data recorded during a [resting-state experiment](/workshop/madrid2019/eeg_sedation) in which a pharmaceutical intervention was used. Before starting with this tutorial, please read through the linked description of the dataset.

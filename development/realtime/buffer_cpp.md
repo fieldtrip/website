@@ -3,8 +3,6 @@ title: FieldTrip buffer C++ implementation
 tags: [realtime, development]
 ---
 
-# FieldTrip buffer C++ implementation
-
 This page describes the C++ wrappers around the reference implementation and a generic framework for writing an acquisition driver using a set of ready-made C++ modules.
 
 ## Components

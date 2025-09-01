@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/networkanalysis/
 ---
 
-# Whole brain connectivity and network analysis
-
 ## Introduction
 
 This tutorial will demonstrate one of the possible ways to analyze MEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/preproc/continuous) and on time-frequency analysis [here](/tutorial/sensor/timefrequencyanalysis).

@@ -4,7 +4,6 @@ title: Ensure consistent units throughout fieldtrip
 
 {% include /shared/development/warning.md %}
 
-# Ensure consistent units throughout fieldtrip
 
 Goal: to consistently deal with spatial units.
 

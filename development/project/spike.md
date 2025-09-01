@@ -4,7 +4,6 @@ title: Add the spike functions from Martin
 
 {% include /shared/development/warning.md %}
 
-# Add the spike functions from Martin
 
 Martin Vinck has developed a nice set of functions for spike data. These should be integrated into fieldtrip.
 

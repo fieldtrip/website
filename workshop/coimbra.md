@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Coimbra, Portugal
 ---
 
-# FieldTrip workshop in Coimbra, Portugal
-
 - Who: Diego Soldevilla and Cristiano Micheli
 - When: June 6th-8th
 - Institute for Biomedical Imaging and Life Sciences, Universidade de Coimbra, Portugal

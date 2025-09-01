@@ -7,8 +7,6 @@ redirect_from:
     - faq/mergedata/
 ---
 
-# How can I merge two datasets that were acquired simultaneously with different amplifiers?
-
 If your experimental setup requires you to acquire the data with two (or more) amplifiers, you end up with datasets that cannot easily be processed together. An example is an EEG setup with a separate GSR signal, or a MEG system with a non-standard EEG amplifier.
 
 Below a piece of example code is given that outlines the approach that can be used to merge the two datasets. It assumes that both datasets can individually be preprocessed with FieldTrip, and that the triggers were sent to both acquisition systems.

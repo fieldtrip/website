@@ -3,8 +3,6 @@ title: Realtime MEG BCI hands-on session in Nijmegen
 tags: [realtime]
 ---
 
-# Realtime MEG BCI hands-on session in Nijmegen
-
 To set up MATLAB, you should do
 
     restoredefaultpath

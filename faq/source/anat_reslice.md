@@ -7,8 +7,6 @@ redirect_from:
     - /faq/anat_reslice/
 ---
 
-# How to change the MRI orientation, the voxel size or the field-of-view?
-
 The function **[ft_volumereslice](/reference/ft_volumereslice)** allows you to
 
 1.  align the anatomical MRI or functional volume along the x,y,z axis, i.e. put it right side up

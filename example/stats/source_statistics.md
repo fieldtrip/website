@@ -6,8 +6,6 @@ redirect_from:
     - /example/source_statistics/
 ---
 
-# Source statistics
-
 After source analysis (e.g., power estimation with the DICS method as explained in the [beamformer tutorial](/tutorial/source/beamformer)) you might want to subject the distributions of source power to statistical analysis. This can either be done on the single subject level or on the group level. For both cases, example code is presented.
 
 ## Single subject level, statistics over trials

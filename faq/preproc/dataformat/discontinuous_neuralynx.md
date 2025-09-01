@@ -6,8 +6,6 @@ redirect_from:
     - /faq/discontinuous_neuralynx/
 ---
 
-# How can I deal with a discontinuous Neuralynx LFP recording?
-
 It may occur that there are gaps in the continuous LFP recordings with the Neuralynx system, e.g., when the experimenter stops and re-starts the recording in the Cheetah acquisition software. The consequence is that the subsequent data samples in the recording do not form a continuous representation any more. This can be detected offline, as the time-stamps that are stored along with the data will show a gap or a jump at the moment of the break.
 
 In case there are gaps in the recording, the default way of linking spike and event timestamps to LFP samples and vice versa will be incorrect. The default is to assume a linear relationship, i.e.

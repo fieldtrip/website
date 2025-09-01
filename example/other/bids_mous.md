@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_mous/
 ---
 
-# Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
-
 The [BIDS standard](https://bids.neuroimaging.io) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. This example describes how we prepared a combined MEG/fMRI dataset in BIDS format for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
 
 {% include markup/green %}

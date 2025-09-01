@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/realtime_bci/
 ---
 
-# Getting started with real-time analysis for BCI and neurofeedback
-
 With FieldTrip it is possible to analyze EEG or MEG data in real-time and to create applications for BCI, neurofeedback or for other situations in which you want to be flexible in the analysis and display of data. The real-time support in FieldTrip is not yet as mature as the other functions, so it requires a little more programming from your side.
 
 The general idea behind the real-time processing data in FieldTrip in particular, or in MATLAB in general, is to separate the streaming/buffering from the analysis. Below we'll first describe the buffering of the data, followed by some real-time analysis examples.

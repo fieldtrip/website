@@ -3,8 +3,6 @@ title: Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
 tags: [realtime, tobi]
 ---
 
-# Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
-
 The [TOBI](http://www.tobi-project.org) project defines a standardized interface called TiA (TOBI interface A) to transmit raw biosignals, supporting multi rate and block-oriented transmission of different kinds of signals from various acquisition devices (e.g., EEG, EOG, near-infrared spectroscopy signals, etc.) at the same time [1].
 
 Interoperability between on streams provided with the TiA and the FieldTrip buffer is provided by the `tia2ft` application. It can connect to a TiA server, and serve the incoming data through its own FieldTrip buffer, or optionally, push it to an external FieldTrip buffer (potentially run on a different device).

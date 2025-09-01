@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/nirs_singlechannel/
 ---
 
-# Preprocessing and averaging of single-channel NIRS data
-
 ## Introduction
 
 This tutorial demonstrates how to analyze a functional near-infrared spectroscopy (fNIRS) dataset focussing on one single channel. The goal is to introduce the basic fNIRS analysis features of FieldTrip on Artinis NIRS data. You can find details on the Artinis recording and analysis software [here](/getting_started/nirs/artinis).

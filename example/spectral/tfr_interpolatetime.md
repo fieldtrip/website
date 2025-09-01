@@ -6,8 +6,6 @@ redirect_from:
     - /example/tfr_interpolatetime/
 ---
 
-# Interpolate the time axis of single-trial TFRs 
-
 If you're interested in quantifying the time-frequency response during an underlying slower (pseudo-)periodicity, e.g. during the gait cycle, it may be useful to adjust the time axes of the TFR on a cycle-by-cycle basis. This example script demonstrates a way to achieve this.
 
 ```matlab

@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/cluster_permutation_timelock/
 ---
 
-# Cluster-based permutation tests on event-related fields
-
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).

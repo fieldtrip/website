@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/spm/
 ---
 
-# Getting started with SPM
-
 Statistical Parametric Mapping (SPM) is a software package designed for the analysis of brain imaging data sequences. FieldTrip and SPM are both implemented in MATLAB and the projects work closely together and share code. If you use FieldTrip, chances are that you use SPM code (possibly without knowing it), and vice versa.
 
 ## Background
@@ -26,7 +24,6 @@ The developers of SPM have a formal collaboration with the developers of FieldTr
 
 [Reference paper](https://www.hindawi.com/journals/cin/2011/852961/), [courses](https://www.fil.ion.ucl.ac.uk/spm/course/video/) and [tutorials](https://jsheunis.github.io/2018-06-28-spm12-matlab-scripting-tutorial-1/) are also available
 
-
 ## How does FieldTrip use SPM?
 
 As SPM's core expertise is mainly oriented to volumetric data processing (MRI, fMRI), FieldTrip integrates SPM functionalities to deal with two main operations:
@@ -38,13 +35,11 @@ The following figure shows main FieldTrip functions using SPM:
 
 {% include image src="/assets/img/getting_started/spm/FieldTrip_uses_SPM.png" width="500" %}
 
-
 ## How does SPM use FieldTrip?
 
 SPM integrates some FieldTrip functions to perform operations on M/EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. Specifically, SPM needs FieldTrip to create forward models (_ft_compute_leadfield_, _ft_prepare_vol_sens_). The following figure illustrates some SPM functions that call FieldTrip:
 
 {% include image src="/assets/img/getting_started/spm/SPM_uses_FieldTrip.png" width="500" %}
-
 
 ## Complementary use of both toolboxes
 
@@ -69,7 +64,6 @@ Let's have a look at the specific tools available within each of them:
 In summary, FieldTrip leaves more freedom to the user with highly customizable tools, while SPM tools are very specific to achieve maximum efficiency. This complementarity is illustrated in the following figure:
 
 {% include image src="/assets/img/getting_started/spm/FieldTrip_SPM_complement.png" width="500" %}
-
 
 ## Practical issues
 

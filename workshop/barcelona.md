@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Barcelona
 ---
 
-# FieldTrip workshop in Barcelona
-
 The workshop is hosted by the Sociedad Española de Psicofisiología y Neurociencia cognitiva y afectiva (SEPNECA).
 
 {% include image src="/assets/img/workshop/barcelona/campus_mundet.jpg" width="250" %}

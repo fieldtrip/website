@@ -7,8 +7,6 @@ redirect_from:
     - /faq/biosemi_reference/
 ---
 
-# Why should I start with rereferencing for BioSemi EEG data?
-
 {% include markup/yellow %}
 BioSemi explains it themselves in their frequently asked question about [the function of the CMS and DRL electrodes](https://www.biosemi.com/faq/cms&drl.htm).
 {% include markup/end %}

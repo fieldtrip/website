@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/egi/
 ---
 
-# Getting started with EGI/Philips/Magstim data
-
 Please add information if you're using EGI/Philips/Magstim data and want to share info with other FieldTrip users.
 
 ## Introduction to the EGI file formats

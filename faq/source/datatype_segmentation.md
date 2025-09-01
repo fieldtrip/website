@@ -7,8 +7,6 @@ redirect_from:
     - /faq/datatype_segmentation/
 ---
 
-# How is the segmentation defined?
-
 The MATLAB structure that FieldTrip uses to describe a **[segmentation](/reference/utilities/ft_datatype_segmentation)** represents different tissue-types in the anatomical MRI typically after obtained calling **[ft_volumesegment](/reference/ft_volumesegment)** or **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. The segmentation is a special kind of a **[volumetric](/reference/utilities/ft_datatype_volume)** structure that contains additional fields describing for each voxel to which tissue type or brain area it belongs.
 
 An example segmentation obtained after ft_volumesegment with the default segmentation options is shown here. The style of this representation is "probabilistic" (see below

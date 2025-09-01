@@ -6,8 +6,6 @@ redirect_from:
     - /faq/structuresensor/
 ---
 
-# Should I use a Polhemus or a Structure Sensor to record electrode positions?
-
 This is a quick note with opinions regarding the [Structure Sensor](http://structure.io/) to record the head shape and/or electrode locations, as described in detail in [this tutorial](/tutorial/source/electrode).
 
 - The Polhemus Fastrack is more accurate, but also more time-consuming.

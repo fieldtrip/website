@@ -7,8 +7,6 @@ redirect_from:
     - /example/filter_characteristics/
 ---
 
-# Determine the filter characteristics
-
 The following script demonstrates how you can determine the filter characteristics. Better ways than those described here are available, but this will give you an idea on how to approach the filter details. This snippet of code generates a one second piece of data with a delta function in it (i.e. a spike). This signal is passed though the **[ft_preproc_lowpassfilter](/reference/preproc/ft_preproc_lowpassfilter)** function (located in fieldtrip/preproc) and the result is plotted in the time domain (left panel) and frequency domain (right panel).
 
     % generate the signal and the corresponding time axis

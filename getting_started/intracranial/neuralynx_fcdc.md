@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/neuralynx_fcdc/
 ---
 
-# Getting started with Neuralynx data recorded at the Donders Institute
-
 ## Introduction
 
 In the following, we will describe our procedure to preprocess high-density electrode data recorded by a Neuralynx amplifier and some basic preprocessing steps particularly used in our recording setup.

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/egi_nojvm/
 ---
 
-# How can I read EGI mff data without the JVM?
-
 FieldTrip implements two methods for reading data from EGI .mff datasets. The first was implemented to get started with the existing data that was being recorded in some labs. Subsequently EGI offered support to make a new MATLAB implementation based on their reference toolbox (which is implemented in Java).
 
 You can specify egi_mff_v1 or egi_mff_v2 as the headerformat, dataformat and eventformat options to **[ft_preprocessing](/reference/ft_preprocessing)** or the lower-level ft_read_XXX functions to determine which implementation will be used.

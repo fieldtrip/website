@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/timefrequencyanalysis/
 ---
 
-# Time-frequency analysis using Hanning window, multitapers and wavelets
-
 ## Introduction
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.

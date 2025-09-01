@@ -6,8 +6,6 @@ redirect_from:
     - /faq/compiled/
 ---
 
-# Can I use FieldTrip without MATLAB license?
-
 Yes, if you have the MATLAB [compiler toolbox](https://www.mathworks.com/products/compiler.html) you can make a compiled version and use that to run your analysis pipelines. You compile FieldTrip with all its dependencies like this
 
     ft_compile_standalone

@@ -3,8 +3,6 @@ title: PracticalMEEG workshop at ICM in Paris
 tags: [paris2019]
 ---
 
-# PracticalMEEG workshop at ICM in Paris
-
 PracticalMEEG aims at providing an intensive several–days training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of three leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip and MNE-Python). More details can be found [here](http://practicalmeeg2019.org).
 
 {% include image src="/assets/img/workshop/paris2019/practicalmeeg.jpg" width=235 %}
@@ -41,7 +39,6 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 10:30 – 12:30 Hands-on 1a: [From raw to ERPs using FieldTrip](/workshop/paris2019/handson_raw2erp)
 - 10:30 – 12:30 Hands-on 1b: [From raw to ERPs using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 10:30 – 12:30 Hands-on 1c: [From raw to ERPs using MNE-Python](https://github.com/agramfort/mne_pratical_meeg/blob/master/1-From_raw_to_epochs_evoked_ERF_ERP.ipynb)
-
 
 - 12:30 – 13:30 Lunch
 

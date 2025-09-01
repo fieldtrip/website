@@ -3,8 +3,6 @@ title: Solving the EEG inverse problem
 tags: [baci2017]
 ---
 
-# Solving the EEG inverse problem
-
 ## Introduction
 
 In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](/workshop/baci2017/preprocessing).

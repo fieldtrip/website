@@ -3,9 +3,7 @@ title: MEG dataformats
 tags: [dataformat, meg, ctf, neuromag, 4d, yokogawa]
 ---
 
-# MEG dataformats
-
-## Support for CTF MEG data.
+## Support for CTF MEG data
 
 Initially the reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
 
@@ -13,7 +11,7 @@ The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, 
 
 You may want to continue reading the section on [getting started with CTF](/getting_started/meg/ctf).
 
-## Support for Neuromag/Elekta/Megin MEG data.
+## Support for Neuromag/Elekta/Megin MEG data
 
 All Neuromag/Elekta/MEGIN data stored in .fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level MATLAB functions from the MNE toolbox from Matti Hämäläinen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). This will work on any platform, as it is based on open source m-files.
 

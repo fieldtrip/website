@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fieldtrip_eeglab/
 ---
 
-# Why is FieldTrip developed separately from EEGLAB?
-
 The motivation for developing FieldTrip is twofold: first to make advanced methods available to end-users, second to get interaction with the end-users in order to improve the methods. The software design underlying FieldTrip was made with the researchers of the FC Donders Centre in mind, where a large focus is on studying oscillatory brain dynamics using MEG. An important feature in FieldTrip is therefore source analysis of oscillatory activity. Most FieldTrip users at the Donders Centre can be considered advanced users. Furthermore, it is relatively easy for them to ask advice to the developers and from other users.
 
 EEGLAB has a wider audience, it has a graphical interface, and supports more of a black-box approach to data analysis. EEGLAB is primarily aimed at EEG and at users with a less strong methodological background. The main FieldTrip developer (Robert Oostenveld) is also a long-time contributor to the source analysis part of EEGLAB. At the start of the Donders Centre we considered whether EEGLAB could fulfill the needs of our researchers, but decided that it would not be an optimal match. Hence, we decided that it would be more efficient and scientifically rewarding to design and implement an analysis package from scratch.

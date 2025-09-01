@@ -2,8 +2,6 @@
 title: Amplow_amphigh
 ---
 
-# Amplow_amphigh
-
 ## Help ft_freqsimulation
 
     % method 'amplow_amphigh

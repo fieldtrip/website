@@ -7,8 +7,6 @@ redirect_from:
     - /faq/showcallinfo/
 ---
 
-# How do I prevent FieldTrip from printing the time and memory after each function call?
-
 To inform the user about the requirements of each function call and thereby give him/her a better feeling on how to optimize the analysis using distributed computing, each FieldTrip function estimates the time and memory(\*) it requires. This information about the call is printed at the end of the function, like this
 
     cfg = [];

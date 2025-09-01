@@ -4,7 +4,6 @@ title: FieldTrip/SIMBIO integration scenarios
 
 {% include /shared/development/warning.md %}
 
-# FieldTrip/SIMBIO integration scenarios
 
 This page describe the experimental situations in which some typical users find themselves in need of a tool like SIMBIO to calculate a FEM forward model.
 

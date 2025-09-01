@@ -7,8 +7,6 @@ redirect_from:
     - /faq/emaillist_rejected/
 ---
 
-# Why is my message rejected from the email discussion list?
-
 It might be that you receive the following message when you try to post a question to the email discussion list.
 
     You are not allowed to post to this mailing list, and your message

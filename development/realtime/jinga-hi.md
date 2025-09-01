@@ -3,8 +3,6 @@ title: Streaming realtime data from Jinga-Hi
 tags: [realtime, jinga-hi, jaga16]
 ---
 
-# Streaming realtime data from Jinga-Hi
-
 This page describes the interface between the Jinga-Hi JAGA16 device and the FieldTrip buffer.
 
 {% include image src="/assets/img/development/realtime/jinga-hi/jaga16.jpg" width="120" %}

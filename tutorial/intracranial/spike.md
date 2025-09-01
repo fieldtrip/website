@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/spike/
 ---
 
-# Preprocessing and analysis of spike-train data
-
 ## Introduction
 
 In this tutorial you find information about preprocessing and analysis of spike data, that is isolated single-unit or multi-unit activity. We explain the format by which we represent spike data and demonstrate how to compute

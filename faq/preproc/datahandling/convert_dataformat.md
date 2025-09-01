@@ -7,8 +7,6 @@ redirect_from:
     - /faq/convert_dataformat/
 ---
 
-# How can I convert one dataformat into another?
-
 You can read in the data from the original data format using **[ft_preprocessing](/reference/ft_preprocessing)** and subsequently use the **[ft_write_data](/reference/fileio/ft_write_data)** function to write the data to another format that you can specify.
 
 The **[ft_write_data](/reference/fileio/ft_write_data)** function requires that you construct a header structure that describes the data (i.e. channel names, sampling frequency) similar to what is returned by **[ft_read_header](/reference/fileio/ft_read_header)**. If your data is represented as a FieldTrip raw data structure, i.e. consistent with the documentation in **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**, you can use **[ft_fetch_header](/reference/utilities/ft_fetch_header)** to construct a header on the fly, e.g.

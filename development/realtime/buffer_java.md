@@ -3,8 +3,6 @@ title: FieldTrip buffer Java interface
 tags: [java, realtime, development]
 ---
 
-# FieldTrip buffer Java interface
-
 Because the tools listed here are fairly simple, studying their [source code](http://code.google.com/p/fieldtrip/source/browse/trunk/realtime/src/buffer/java) is a good way to learn about the Java interface to the FieldTrip buffer.
 
 ## Java implementation of the Buffer Server

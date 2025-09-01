@@ -7,8 +7,6 @@ redirect_from:
     - /faq/artifact_representation/
 ---
 
-# How can I consistently represent artifacts in my data?
-
 FieldTrip includes multiple functions for automatic artifact rejection, as explained in this [tutorial](/tutorial/preproc/automatic_artifact_rejection). These functions detect time segments in the data in which an artifact is present by the begin and end sample of that artifact. If there are N artifacts, that results in a Nx2 matrix, with the first column representing the begin samples, and the second column representing the end samples.
 
 If you manually identify time segments with an artifact, you can represent them like

@@ -6,8 +6,6 @@ redirect_from:
     - /faq/sticking_out/
 ---
 
-# Is it OK for vertices/dipoles to stick out of the volume conductor?
-
 It is relatively common to use a triangulated cortical sheet - e.g., from FreeSurfer - as the basis for a source model. In that case dipoles are placed on all vertices of the cortical sheet. Sometimes the orientation of the triangles is also used to determine the orientation of the neighboring vertices/dipoles.
 
 Dipoles sticking out of the inner surface of the volume conductor can indeed be a problem. The inner surface the describes the interface between brain and skull tissues, and defines the compartment in which all sources have to be.

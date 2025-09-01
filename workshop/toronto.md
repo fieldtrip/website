@@ -2,8 +2,6 @@
 title: Workshop on analyzing intracranial data - spikes and fields
 ---
 
-# Workshop on analyzing intracranial data: spikes and fields
-
 ## Where
 
 York University, Toronto, Canada.

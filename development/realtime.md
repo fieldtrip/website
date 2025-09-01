@@ -3,8 +3,6 @@ title: Real-time data processing
 tags: [realtime]
 ---
 
-# Real-time data processing
-
 Although the FieldTrip toolbox is primarily developed for offline analysis, you can also use it for real-time data analysis, feature extraction and classification. To implement Brain-Computer Interface (BCI) and neurofeedback applications, the toolbox includes functionality for real-time processing of all sorts of neuroimaging data (including EEG, MEG, LFP, ECoG, sEEG, NIRS, fMRI) using a common interface to all types of data.
 
 This page is part of the documentation series of the FieldTrip buffer for realtime acquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being

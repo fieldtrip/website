@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Hamburg in 2012
 ---
 
-# FieldTrip workshop in Hamburg in 2012
-
 - Course Instructors: Robert Oostenveld and Jan-Mathijs Schoffelen
 - Venue: UKE Hamburg N55
 - Dates: June 15-17, 2012

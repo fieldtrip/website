@@ -2,8 +2,6 @@
 title: Chengdu, China
 ---
 
-# FieldTrip workshop in Chengdu, China
-
 - By whom: Robert Oostenveld
 - When: 27-29 September 2017
 - Where: Room 133 (theoretical part) and Room 135 (practical part), Center for Information in Medicine, School of Life Science & Technology, University of Electronic Science & Technology of China (UESTC)

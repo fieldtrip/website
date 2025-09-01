@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Hamburg in 2023
 ---
 
-# FieldTrip workshop in Hamburg 2023
-
 The research training group [Emotional Learning and Memory](https://www.grk2753.uni-hamburg.de/) GRK/RTG 2753 organizes a FieldTrip workshop at the University of Hamburg, Germany.
 
 ## Where

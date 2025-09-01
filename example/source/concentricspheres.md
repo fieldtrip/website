@@ -4,8 +4,6 @@ category: example
 tags: [eeg, concentricspheres, leadfield, headmodel, meg-language]
 ---
 
-# Compute EEG leadfields using a concentric spheres headmodel
-
 This example shows how to compute EEG leadfields using an analytical concentric spheres head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, fitting spheres to the segmentation, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.
 
 The aim of this example is to show the similarities and differences between an analytical concentric spheres model (here), [BEM](/example/source/bem) and [FEM](/example/source/fem) and how to deal with units to get correct SI units in the forward and inverse solutions.

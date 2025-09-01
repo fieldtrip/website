@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/mouse_eeg/
 ---
 
-# Channel and source analysis of mouse EEG
-
 ## Introduction
 
 This tutorial describes the processing of mouse EEG data. Although the mouse EEG data as demonstrated here is not recorded intracranial (i.e., inside the skull), the recording is invasive and as such more comparable to ECoG than to normal scalp EEG. The implantation and recording method for the data in this tutorial is explained in this [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also points to information on optical stimulation of the mouse brain through an optical fiber.

@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/cerca/
 ---
 
-# Getting started with Cerca OPM data
-
 [Cerca Magnetics](https://www.cercamagnetics.com) is a joint-venture spin-out company from the University of Nottingham and Magnetic Shields Limited that develops full wearable OPM-MEG systems. The data from their current systems is stored in the `.cMEG` format, but a converter is supplied with each system to turn the data into the `.fif` format for post-processing. The `.fif` format is already supported by FieldTrip, which means that no special functions are needed for reading the data. A separate function can be used to read the data straight from `.cMEG` into FieldTrip – this is currently being developed.
 
 There are some differences which are relevant for processing Cerca data - and OPM data as a whole. One difference is how events or triggers are represented and detected. Another difference is in the procedure used to record the position of the OPM sensors relative to the head, which is relevant for topographic plotting and for the co-registration between MEG and MRI. Furthermore, Cerca OPM systems use either dual axis or triaxial systems, and so displaying data at a sensor-level requires some further considerations.

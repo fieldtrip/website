@@ -7,8 +7,6 @@ redirect_from:
     - /faq/sourcemodel_deformation/
 ---
 
-# Why is the source model deformed or incorrectly aligned after warping template?
-
 A commonly used strategy to create a source model is to start with a [template source model](/template/sourcemodel/#grid-search-in-dipole-fitting) and warp or spatially deform it to the individual subject's anatomy. Warping templates makes it easy to average source estimates across subjects and do group analysis without any interpolation. This is usually done with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** before doing the source reconstruction, see for example in [this tutorial](/tutorial/sourcemodel/#performing-group-analysis-on-3-dimensional-source-reconstructed-data).
 
 The procedure requires estimating a transformation between the subject's anatomy and the template anatomy. This procedure can go wrong, and the source model can then end up outside the head/brain volume. That is why it is important to inspect the warped source model:

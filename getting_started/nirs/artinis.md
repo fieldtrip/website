@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/artinis/
 ---
 
-# Getting started with Artinis NIRS data
-
 [Artinis Medical Systems BV](http://www.artinis.com/) is a Dutch company located close to Nijmegen, which develops and produces systems for functional NIRS. Artinis has multiple hardware designs, which all work with the same [Oxysoft](http://www.artinis.com/oxysoft) acquisition and analysis software.
 
 The data that is recorded with Oxysoft is organized in various files: all data recorded during a measurement is contained in binary `.oxy3` or `.oxy4` files. The information about the transmitter and receiver optodes is represented in `optodetemplates.xml`, which is usually located in `C:\Program files\Artinis Medical Systems\Oxysoft\`. Following data acquisition, some processing can be done using OxySoft, the results of this are stored in a project file, which again is an XML file.

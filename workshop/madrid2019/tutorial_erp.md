@@ -3,8 +3,6 @@ title: Getting started with EEG data, quality checks and ERPs
 tags: [madrid2019, eeg-language]
 ---
 
-# Getting started with EEG data, quality checks and ERPs
-
 ## Introduction
 
 Preprocessing of MEG or EEG data refers to reading the data into memory,

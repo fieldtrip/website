@@ -6,8 +6,6 @@ redirect_from:
     - /example/import_mne/
 ---
 
-# How to import data from MNE-Python and FreeSurfer
-
 {% include image src="/assets/img/example/import_mne/import_mne.png" width="400" %}
 
     % This script was made by Mikkel Vinding, based on code courtesy of Bushra Riaz Syeda

@@ -3,8 +3,6 @@ title: Template 3-D gradiometer descriptions
 tags: [template, gradiometer, ctf, neuromag, 4d, bti, yokogawa, itab]
 ---
 
-# Template 3-D gradiometer descriptions
-
 SQUID-based MEG systems have channels that comprise of one coil (for magnetometers) or multiple coils (for axial or planar gradiometers). OPM-based MEG systems consists of small vapor-filled cells. In FieldTrip these are all described as "coils", where each coil can be described by a single position and orientation in 3D space, or where larger coils (like for the Neuromag system) can be described using multiple integration points. All coils or integration points are linearly weighted and combined in a channel. There is a frequently asked question about [how the gradiometer structure is described](/faq/source/sensors_definition).
 
 The `fieldtrip/template/gradiometer` directory contains template gradiometer descriptions for a number of MEG systems.

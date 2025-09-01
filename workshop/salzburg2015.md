@@ -4,8 +4,6 @@ redirect_from:
     - /workshop/salzburg/
 ---
 
-# FieldTrip workshop in Salzburg
-
 #### Where
 
 The University of Salzburg, with support from the [TINNET-COST Action](http://tinnet.tinnitusresearch.net)

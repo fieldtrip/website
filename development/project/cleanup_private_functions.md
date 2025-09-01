@@ -4,7 +4,6 @@ title: Cleanup the functions in the private folders
 
 {% include /shared/development/warning.md %}
 
-# Cleanup the functions in the private folders
 
 Functions that according to _mydepfun_ are not called by any other function:
 

@@ -7,8 +7,6 @@ redirect_from:
     - /faq/phaseslopeindex/
 ---
 
-# How to interpret the sign of the phase slope index?
-
 The phase slope index is a bivariate measure that quantifies the consistency of the phase lag (or lead) as a function of frequency, between two signals. A value that is deviating substantially from zero, for a wider frequency range, suggests that one of the signals is consistently leading the other one, which in itself is suggestive of a 'causal' (at least a time-delayed) interaction between the two signals. What does the sign of the phase slope index mean, i.e. which signal is leading which?
 
 The answer to this question is that a positive value of the phase slope index indicates that the first signal is leading the second signal. First and second signal are defined based on the order of the channels in the labelcmb field (if the data has this field). Alternatively, if the data are defined as an NxN(xNfrequency) matrix, the channel in the row is leading the channel in the column (in this case the channel names are defined in the label field of the variable.

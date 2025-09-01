@@ -4,7 +4,6 @@ title: Improve parallel computing under the hood
 
 {% include /shared/development/warning.md %}
 
-# Improve parallel computing under the hood
 
 For EEG and MEG research we often process large amount of data, over multiple subjects, and using different analysis strategies implemented in pipelines. Executing such a pipeline, or reexecuting it completely once all parameters have been fixed, is a tedious task due to the computational costs.
 

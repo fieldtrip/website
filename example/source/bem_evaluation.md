@@ -7,8 +7,6 @@ redirect_from:
     - /example/bem_evaluation/
 ---
 
-# Testing BEM created EEG lead fields
-
 ## Introduction
 
 The following section compares lead fields calculated by means of BEM implementation and theoretical model, by correlating their values for different densities of the head model vertices. It is expected that solutions for a single shell EEG realistic head model converge to the theoretical one with an increasing number of points in the mesh.

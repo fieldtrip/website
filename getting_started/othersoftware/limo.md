@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/limo/
 ---
 
-# Getting started with LIMO EEG
-
 ## Background
 
 **[LIMO MEEG](https://limo-eeg-toolbox.github.io/limo_meeg/)** is an open source toolbox for statistical analysis of MEEG data ([Pernet *et al.*, 2011](https://doi.org/10.1155/2011/831409)). The main goal of the toolbox is to provide 'full space' analyses of experimental effects, i.e. simultaneously for all time and/or frequency time points and all channels, independent components or sources. It is implemented in [MATLAB](https://se.mathworks.com/products/matlab.html) and requires the MathWorks [statistics and machine learning toolbox](https://se.mathworks.com/products/statistics.html).

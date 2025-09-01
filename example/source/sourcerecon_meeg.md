@@ -7,8 +7,6 @@ redirect_from:
     - /example/sourcerecon_meeg/
 ---
 
-# Combined EEG and MEG source reconstruction
-
 ## Description
 
 This example script shows how to do combined EEG and MEG source reconstruction. It is sofar only supported by the low-level code in [forwinv](/development/forwinv) and not by the high-level FieldTrip functions such as **[ft_dipolesimulation](/reference/ft_dipolesimulation)**, **[ft_dipolefitting](/reference/ft_dipolefitting)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
@@ -95,7 +93,6 @@ You can explore the variables that were created.
       eeg            32x1               256  double              
       leadfield      96x3              2304  double              
       meg            64x1               512  double              
-
 
     >> ft_senstype(combined_sens)
 

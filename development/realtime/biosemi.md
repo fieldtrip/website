@@ -3,8 +3,6 @@ title: Streaming realtime data from BioSemi ActiveTwo EEG amplifier
 tags: [realtime, biosemi]
 ---
 
-# Streaming realtime data from BioSemi ActiveTwo EEG amplifier
-
 This page describes the interface between the [BioSemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/development/realtime/buffer).
 
 The acquisition setup consists of a battery box, the AD box, an analog input box, and the USB receiver device. We provide a standalone tool called **biosemi2ft** (see "realtime/bin/`<your OS>`) that interfaces directly to the USB driver and thus does not depend on the Actiview software that BioSemi ships. We have tested the tool on Windows XP (32-bit), Windows (64-bit), macOS (32-bit), and Linux (32-bit). It is called on the command line like this:

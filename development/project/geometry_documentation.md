@@ -4,7 +4,6 @@ title: Clean up the documentation on head modeling, anatomical processing, etc.
 
 {% include /shared/development/warning.md %}
 
-# Clean up the documentation on head modeling, anatomical processing, etc.
 
 there are now sections at
 

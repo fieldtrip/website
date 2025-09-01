@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/neuromag/
 ---
 
-# Getting started with Neuromag/Elekta/Megin data
-
 {% include markup/green %}
 The company based in Helsinki (Finland) making these MEG systems started as Neuromag, and later was acquired by Elekta, a much larger Swedish company. Since 2018 it operates under the name Megin and now is part of [Croton Healthcare](https://crotonhealthcare.com) (which also happens to be the parent company of York Instruments). We usually refer to these systems as "Neuromag" systems.
 {% include markup/end %}

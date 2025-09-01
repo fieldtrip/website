@@ -3,8 +3,6 @@ title: Test your MATLAB and FieldTrip installation in advance
 tags: [toolkit2022]
 ---
 
-# Test your MATLAB and FieldTrip installation in advance
-
 Prior to the hands-on sessions, we want you to provide us with some information with respect to the computational setup you have on your end. This is needed for us to anticipate (and ideally fix) any restrictions on your end. Also, it is needed to avoid a lot of time to be spent during the first session to get everybody up-and-running.
 
     fprintf('################################################################\n');

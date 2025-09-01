@@ -2,8 +2,6 @@
 title: Biomag 2016 satellite meeting - Seoul, Korea
 ---
 
-# Biomag 2016 satellite meeting - Seoul, Korea
-
 **From raw MEG to publication: How to perform MEG group analysis with free academic software.**
 
 This page is currently still a placeholder. In due time it will contain the documentation on single subject and group analysis in line with the [other toolboxes](http://neuroimage.usc.edu/brainstorm/Biomag2016).

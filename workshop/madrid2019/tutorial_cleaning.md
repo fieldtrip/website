@@ -3,8 +3,6 @@ title: Cleaning and processing resting-state EEG
 tags: [madrid2019, eeg-sedation]
 ---
 
-# Cleaning and processing resting-state EEG
-
 ## Introduction
 
 This tutorial shows how to preprocess and analyze resting state EEG data using an open access resting state EEG dataset that is shared by the University of Cambridge. You can click [here](/workshop/madrid2019/eeg_sedation) for details on the dataset. In this tutorial you will learn how to load and inspect this dataset using FieldTrip. You will perform some basic preprocessing such as repairing broken channels, visual artifact rejection and artifact correction using ICA.

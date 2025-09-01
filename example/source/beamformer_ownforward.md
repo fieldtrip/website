@@ -7,8 +7,6 @@ redirect_from:
     - /example/beamformer_ownforward/
 ---
 
-# Use your own forward leadfield model in an inverse beamformer computation
-
 You can use externally precomputed leadfield matrices for each dipole location on which you want to compute the beamformer solution. That is usually done using the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function, and the main purpose is to speed up the source reconstruction. The output of **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** can be used as input in **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, and you should construct a MATLAB structure that resembles the output of **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**. The best way of getting to know the format of the precomputed leadfields is by computing the leadfield for a spherical model and look at it.
 
 That can be demonstrated using the following code

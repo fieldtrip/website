@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/brainvision/
 ---
 
-# Getting started with BrainVision Analyzer and Easycap
-
 ## Introduction
 
 [BrainProducts GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz.

@@ -2,8 +2,6 @@
 title: M/EEG analysis workshop in Jyväskylä, Finland
 ---
 
-# M/EEG analysis workshop in Jyväskylä, Finland
-
 There will be a M/EEG analysis workshop in Jyvaskyla, focussing on connectivity analysis. On one of the days we will use FieldTrip for the teaching, on the other day we will use MNE-Python. This workshop is part of a summer school: [International summer school on understanding learning in the brain](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program).
 
 - By whom: Simo Monto, Matti Stenroos, Jan Kujala, Jan-Mathijs Schoffelen and others

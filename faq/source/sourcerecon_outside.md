@@ -7,8 +7,6 @@ redirect_from:
     - /faq/sourcerecon_outside/
 ---
 
-# Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
-
 This depends on the type of source reconstruction you are performing, and on the head model (also called volume conduction model) with which you create your source model (also called grid). Depending on this it is beneficial in some cases, but harmful in others. To determine whether it is harmful, one could ask the following question
 
 1.  is my source reconstruction of locations inside the brain affected by the source reconstruction of other locations? (e.g., with minimum norm estimate (MNE) based methods, but not with beamformers)

@@ -7,8 +7,6 @@ redirect_from:
     - /example/trialdef_emg/
 ---
 
-# Detect the muscle activity in an EMG channel and use that as trial definition
-
 This page describes a FieldTrip trial function that detects muscle activity in an EMG channel
 and that defines variable length trials from the EMG onset up to the EMG offset.
 

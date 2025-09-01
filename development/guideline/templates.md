@@ -3,8 +3,6 @@ title: Template guidelines
 tags: [guidelines, development]
 ---
 
-# Template guidelines
-
 The FieldTrip release includes a range of [templates](/template) that can be used in the analysis. Most templates depend on some original data somehow, usually of a geometrical nature. It is important that the origin of the (geometrical) data and the processing that was performed on it can be retrieved.
 
 The following aspects should be considered when documenting the templates:

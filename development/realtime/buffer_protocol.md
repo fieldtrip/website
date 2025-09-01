@@ -3,8 +3,6 @@ title: Low-level FieldTrip buffer TCP network protocol
 tags: [realtime]
 ---
 
-# Low-level FieldTrip buffer TCP network protocol
-
 This page is part of the documentation series of the FieldTrip buffer for realtime acquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being:
 
 1.  description and general [overview of the buffer](/development/realtime/buffer),

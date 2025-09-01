@@ -4,7 +4,6 @@ title: How to deal with the forward model units?
 
 {% include /shared/development/warning.md %}
 
-# How to deal with the forward model units?
 
 See also [this small reminder](/development/project/units)
 

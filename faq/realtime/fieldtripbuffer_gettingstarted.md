@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fieldtripbuffer_gettingstarted/
 ---
 
-# How should I get started with the FieldTrip realtime buffer?
-
 The fastest and best way to get started is to try out something really simple. This does not require MATLAB.
 
 Navigate to the directory ''fieldtrip/realtime/bin/ARCH'' where ARCH is the architecture of your compute

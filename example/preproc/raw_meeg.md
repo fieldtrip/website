@@ -7,8 +7,6 @@ redirect_from:
     - /example/raw_meeg/
 ---
 
-# Getting started with reading raw EEG or MEG data
-
 In FieldTrip you first have to define the segments of data in which you are interested, i.e. the "trials". That is done using the **[ft_definetrial](/reference/ft_definetrial)** function. You can use the **[ft_definetrial](/reference/ft_definetrial)** function also to show a summary of all events on your data fil
 
     cfg = [];

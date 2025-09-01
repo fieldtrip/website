@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/plexon/
 ---
 
-# Getting started with Plexon data
-
 The Plexon acquisition system writes data to .plx files, and more recent systems like the Omniplex also support a new efficient .pl2 format. Furthermore, the Plexon software and the accompanying NeuroExplorer and OfflineSorter software can write data to .ddt and .nex files. Currently FieldTrip supports legacy .plx file reading code (filetype = plexon_plx), though there is a [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1795) that uses the official Plexon SDK to make file loading much faster and more robust.
 
 ## Introduction

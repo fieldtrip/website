@@ -3,8 +3,6 @@ title: Instructions for the USB stick
 tags: [paris2019]
 ---
 
-# Instructions for the USB stick
-
 ## The software
 
 The USB stick contains a recent [release](https://github.com/fieldtrip/fieldtrip/releases) of the toolbox, called `fieldtrip-yyyymmdd.zip`. Please copy it to your computer and unzip it. Once FieldTrip is on your computer, the toolbox needs to be added to the MATLAB path. To achieve this, do the following:
@@ -107,7 +105,6 @@ unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-04.
 unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-05.zip
 unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-06.zip
 ```
-
 
 The others are optional:
 

@@ -8,8 +8,6 @@ redirect_from:
     - /faq/freqanalysis_foimismatchwavelet/
 ---
 
-# Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-
 Conceptually, a wavelet analysis is a time domain convolution of a signal with a set of wavelets, each of these being designed to capture some feature in the data. In neuroscience, we typically use Morlet-wavelets, which are designed to capture sine and cosine waves in the data. This is because a Morlet wavelet consists of a sine/cosine wave, tapered by a gaussian window. When doing a spectral decomposition, the goal typically is to assign the fluctuations in the signal to distinct frequency bands. Importantly, the (implicitly) required behavior of the spectral transformation is, that the power estimated at X Hz truly comes from signal fluctuations at X Hz, and not from signal fluctuations at Y Hz (and Z Hz, etc). This is the issue of spectral leakage, and a few signal processing tricks are needed to optimally control for this.
 
 In the context of wavelet analysis in FieldTrip and in order to minimize detrimental effects of (unpredictable spectral leakage), you need to keep 2 things in mind:

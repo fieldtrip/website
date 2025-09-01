@@ -7,8 +7,6 @@ redirect_from:
     - /faq/spmversion/
 ---
 
-# How to select the correct SPM toolbox?
-
 FieldTrip relies on SPM code to do operations on volumetric images. These operations entail volumetric smoothing, spatial normalisation, segmentation, the reading and writing of a certain (old-style) mri-filetypes, and spatial clustering. Over the years that FieldTrip has been developing, the SPM developers have released a newer versions of the software, each of which with slightly different functionalities. The older the version of SPM, the more likely it is that it will not run smoothly on current computers. For instance, the SPM2 code dates from 2002 and the toolbox does not run correctly on recent versions of MATLAB. In particular, some MATLAB functions (on which the SPM2 code relied) do not exist in recent versions of MATLAB anymore. Moreover, some relevant functions are compiled mex-files and these functions don't work if they the computer's operating system is too different from the one on which the original files was compiled.
 
 FieldTrip includes functional (subparts of the) SPM-toolbox in fieldtrip/external/spm2, fieldtrip/external/spm8, fieldtrip/external/spm12, ensuring a fully functional version of FieldTrip without requiring the user to maintain a separate installation of SPM.

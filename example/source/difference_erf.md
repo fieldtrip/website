@@ -6,8 +6,6 @@ redirect_from:
     - /example/difference_erf/
 ---
 
-# Localizing the sources underlying the difference in event-related fields
-
 ## Background
 
 Activity of neuronal sources can be measured with EEG or MEG as event-related potentials or fields. A general principle for EEG and MEG source analysis is that of superposition. The channel-level spatial distribution of the activity of one source and that of another source will be different. That difference is easy to recognize if one source is active in one experimental condition and the other source in another condition. The superposition principle states that if two sources are simultaneously active, the resulting channel-level spatial distribution is equal to the sum of the channel-level spatial distribution of the two sources separately.

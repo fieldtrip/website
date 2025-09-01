@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/realtime_fmri/
 ---
 
-# Streaming realtime fMRI from Siemens scanners
-
 The present system for acquiring fMRI data in real time consists of three main blocks:
 
 1. a stand-alone executable that runs directly on the scanner host,

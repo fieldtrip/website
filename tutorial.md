@@ -3,8 +3,6 @@ title: Tutorials
 category: tutorial
 ---
 
-# Tutorials
-
 The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. The [frequently asked questions](/faq) and [example scripts](/example) are other forms of documentation.
 
 Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).

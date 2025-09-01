@@ -7,8 +7,6 @@ redirect_from:
     - /faq/sourcerecon_checkalignment/
 ---
 
-# How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
-
 Having a source model (i.e., positions of the dipoles), a head model (i.e., volume conduction model of the head), and the 'grad' structure, (i.e., information of the gradiometers) you can use the following:
 
     hold on

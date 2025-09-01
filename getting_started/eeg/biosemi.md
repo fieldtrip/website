@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/biosemi/
 ---
 
-# Getting started with BioSemi BDF data
-
 [BioSemi](http://www.biosemi.com) makes EEG amplifiers for EEG that have active electrodes, i.e the signal is already pre-amplified at the scalp before it is sent to the amplifier box where it is further amplified and digitized. The active electrodes make the recorded signals less sensitive for environmental noise (e.g., electronics noise in the lab) and for movements of the electrode cables. These BioSemi amplifiers are especially popular in applications with high channel density.
 
 The BioSemi system has a few special characteristics

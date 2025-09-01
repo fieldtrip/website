@@ -6,8 +6,6 @@ redirect_from:
     - /example/ft_realtime_classification/
 ---
 
-# Example real-time classification
-
 ## Flowchart
 
 {% include image src="/assets/img/example/ft_realtime_classification/realtime_classification.png" width="400" %}

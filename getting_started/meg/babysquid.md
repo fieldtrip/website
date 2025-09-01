@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/babysquid/
 ---
 
-# Getting started with BabySQUID data
-
 ## Introduction
 
 The BabySQUID is a series of MEG systems for infants and young children that is developed by [Tristan Technologies](http://tristantech.com/babysquid).

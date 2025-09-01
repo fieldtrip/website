@@ -3,8 +3,6 @@ title: Streaming realtime data from BrainVision Recorder Remote Data Access (RDA
 tags: [realtime, brainvision]
 ---
 
-# Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
-
 BrainVision Recorder is the EEG acquisition software that accompanies the BrainAmp EEG amplifier from [BrainProducts](http://www.brainproducts.com/).
 
 The recorder software allows the incoming data to be sent out to the network via the TCP/IP protocol using the Remote Data Access module to the BrainVision RecView software or any homemade software (such as FieldTrip or BCI2000) for real time data analyses.

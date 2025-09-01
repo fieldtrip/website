@@ -5,8 +5,6 @@ redirect_from:
   - /workshop/nigeria2025/stimuli/
 ---
 
-# Experimental design and presenting stimuli
-
 The experimental design of a task can be implemented in a variety of software environments, such as the following:
 
 - [NBS Presentation](https://www.neurobs.com/presentation)

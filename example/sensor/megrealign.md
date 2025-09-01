@@ -6,8 +6,6 @@ redirect_from:
     - /example/megrealign/
 ---
 
-# Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-
     % the two example files with the 151 and 275 channel CTF specifications are available from
     % https://download.fieldtriptoolbox.org/example/megrealign/
 

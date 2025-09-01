@@ -5,8 +5,6 @@ redirect_from:
   - /faq/tracking/
 ---
 
-# Privacy Policy
-
 This website is hosted on a server of the [Donders Centre for Cognitive Neuroimaging](https://www.ru.nl/donders/), [Radboud University](https://www.ru.nl/english/), Nijmegen, the Netherlands. The web server logs web page access and IP addresses for technical and security reasons, but does not retain information about individual users.
 
 ## How we process your personal data on this website

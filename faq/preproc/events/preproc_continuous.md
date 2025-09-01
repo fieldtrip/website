@@ -7,8 +7,6 @@ redirect_from:
     - /faq/preproc_continuous/
 ---
 
-# How can I process continuous data without triggers?
-
 Most of the FieldTrip documentation is written for a cognitive neuroscience audience, i.e. researchers that usually are performing experiments in which different stimuli are presented and where the subject performs different mental tasks.
 
 However, you can also use FieldTrip for analyzing continuous data that does not contain any triggers. One way for processing continuous data is to read it as a single, very long data segment. That is done by skipping **[ft_definetrial](/reference/ft_definetrial)** and by calling **[ft_preprocessing](/reference/ft_preprocessing)** like this

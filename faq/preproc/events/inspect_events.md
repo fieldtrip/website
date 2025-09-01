@@ -7,8 +7,6 @@ redirect_from:
     - /faq/inspect_events/
 ---
 
-# How can I find out what eventvalues and eventtypes there are in my data?
-
 If you recorded data and do not know what eventvalues or eventtypes there are in your data or if the expected values or types do not show up in your data, there is an easy way in FieldTrip to find out what actually _is_ in your data. You need to call **[ft_definetrial](/reference/ft_definetrial)** with `cfg.dataset` as you are interested in and `cfg.eventtype` set to '?':
 
     cfg = [];

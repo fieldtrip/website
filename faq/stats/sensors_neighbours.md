@@ -8,8 +8,6 @@ redirect_from:
     - /faq/sensors_neighbours/
 ---
 
-# How can I define neighbouring sensors?
-
 Certain functions require knowledge what sensors are near other sensors and should be considered as neighbours. As an example, a classical cluster-based permutation test on event-related fields (in which clustering happens in both the spatial and time domain) needs to be informed which sensors are allowed to form a cluster. From August 2011 on, you as the user are obliged to define and verify the neighbours manually rather than relying on FieldTrip's internal standard. Here we explain what possibilities there are to achieve this.
 
 In FieldTrip, the function **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** is computing information about what sensors are neighbours of which other sensors. Neighbourhood should be a symmetric property (if A is a neighbour of B, then B is a neighbour of A). You can get neighbours from your data as following

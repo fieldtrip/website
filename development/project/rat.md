@@ -4,8 +4,6 @@ title: The rat beamformer
 
 {% include /shared/development/warning.md %}
 
-# The rat beamformer
-
 ## Introduction
 
 The project deals with the source reconstruction of brain activity recorded by a polyimide grid placed in direct contact with the dura, and thus very close to the gray matter.

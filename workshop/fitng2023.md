@@ -3,8 +3,6 @@ title: Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Ne
 tags: [fitng2023]
 ---
 
-# Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Neuroimaging Group
-
 FIT’NG is hosting a 10-day virtual workshop series covering basic and advanced methods in developmental EEG/ERP.
 
 - Where: online

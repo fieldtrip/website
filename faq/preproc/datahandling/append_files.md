@@ -6,8 +6,6 @@ redirect_from:
     - /faq/append_files/
 ---
 
-# How can I append the files of two separate recordings?
-
 It can happen that in one experimental EEG session you have recorded the data in different runs or blocks, where the data of each run or block ends up in a separate file on disk. Since the definition of trials in FieldTrip is based on reading triggers from the original data and refers to the sample numbers in that recording (assuming the samples all refer to the same file), the handling of complex sequences of trials and triggers works best with recordings contained that in a single file.
 
 To facilitate working with the data in the different runs or blocks, you can concatenate them and treat the data as if it were a continuous recording. For that you would do something like the following:

@@ -3,8 +3,6 @@ title: Dealing with artifacts
 tags: [practicalmeeg2022, artifact, ica, preprocessing, mmfaces]
 ---
 
-# Dealing with artifacts
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials.
 {% include markup/end %}

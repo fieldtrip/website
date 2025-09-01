@@ -3,8 +3,6 @@ title: FieldTrip workshop in Aarhus
 tags: [aarhus2015, meg-audodd]
 ---
 
-# FieldTrip workshop in Aarhus
-
 Aarhus University (IMC and Cfin) will be hosting a FieldTrip Course on EEG/MEG Analysis with Jim Herring and Luca Ambrogioni from 7 to 9 of October 2015. Registration to the limited places is open now via the link below. Externals will be charged a fee of 150 Euro.
 
 <http://interactingminds.au.dk/events/single-events/artikel/field-trip-workshop/>

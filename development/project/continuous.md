@@ -4,7 +4,6 @@ title: Handling of continuous data
 
 {% include /shared/development/warning.md %}
 
-# Handling of continuous data
 
 ## Introduction
 

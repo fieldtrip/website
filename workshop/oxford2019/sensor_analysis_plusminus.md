@@ -3,8 +3,6 @@ title: Reading in data and performing sensor-level ERF and TFR analyses
 tags: [oxford2019, meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
 ---
 
-# Reading in data and performing sensor-level ERF and TFR analyses
-
 {% include markup/skyblue %}
 This tutorial was written specifically for the workshop in Oxford in May 2019, and is a modified version of the [sensor analysis](/tutorial/sensor/sensor_analysis) tutorial. Specifically, a bit is added here about reading in data and preprocessing, and the bit about sensor-level connectivity analysis is removed.
 {% include markup/end %}
@@ -311,7 +309,6 @@ The function ft_analysispipeline puts all conducted analysis steps into perspect
 {% include image src="/assets/img/workshop/oxford2019/sensor_analysis_plusminus/analysispipeline_sensor_analysis.png" %}
 
 By clicking on one of the boxes (in MATLAB), a new figure will appear that shows all cfg-options that were used to in the respective function.
-
 
 ## Summary and suggested further reading
 

@@ -6,8 +6,6 @@ redirect_from:
     - /faq/units/
 ---
 
-# What are the units of the data and of the derived results?
-
 It depends. FieldTrip tries to adhere to the units of the original manufacturer file formats, which are not always consistent. Furthermore, not all file formats clearly specify the units, so sometimes the units are not even known.
 
 For geometrical objects that do not specify the units, FieldTrip estimates the units, assuming that the object approximates a human head. e.g., if the span of the geometrical object is about 200, FieldTrip assumes the units to be in "mm". If the span of the object is 0.2, FieldTrip assumes the units to be in "m".

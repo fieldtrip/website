@@ -6,8 +6,6 @@ redirect_from:
     - /example/samplesize/
 ---
 
-# Using simulations to estimate the sample size for cluster-based permutation test
-
 {% include markup/green %}
 This example is contributed by [Dr. Cheng Wang](https://www.researchgate.net/profile/Cheng-Wang-93).
 {% include markup/end %}

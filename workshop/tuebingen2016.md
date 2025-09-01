@@ -2,8 +2,6 @@
 title: FieldTrip Workshop in Tübingen, Germany
 ---
 
-# FieldTrip Workshop in Tübingen, Germany
-
 - Workshop leaders: Britta Westner and Tzvetan Popov
 - When: 13-14 October 2016
 - Where: University of Tübingen, Germany

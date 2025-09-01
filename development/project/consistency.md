@@ -4,7 +4,6 @@ title: Check the consistency between the documentation and the implementations
 
 {% include /shared/development/warning.md %}
 
-# Check the consistency between the documentation and the implementations
 
 ## Objectives
 

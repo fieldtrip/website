@@ -2,8 +2,6 @@
 title: Phalow_freqhigh
 ---
 
-# Phalow_freqhigh
-
 ## Help freqsimulation
 
     % method 'phalow_freqhigh' creates a frequency modulated signal
@@ -136,7 +134,6 @@ title: Phalow_freqhigh
     figure; imagesc(freq2.freq, freq2.freq2, freq2.powspctrm)
     axis xy
     print -dpng phalow_freqhigh_fig6.png
-
 
     %zoom in
     figure; imagesc(freq2.freq(1:33), freq2.freq2(5:15), freq2.powspctrm(5:15,1:33))

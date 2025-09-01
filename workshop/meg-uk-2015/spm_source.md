@@ -3,8 +3,6 @@ title: SPM Source reconstruction demo
 tags: [meg-uk-2015]
 ---
 
-# SPM Source reconstruction demo
-
 During this demo we will estimate the current sources on the cortical surface that gave rise to the electromagnetic activity we measured with MEG and EEG outside the head. To do so, we first need to build a head model, based on the individual MRI, coregister the head model and our M/EEG data and then build a forward model which describes how sources in the brain appear on the different M/EEG sensors. We will then apply two different inversion approaches, both in a Bayesian framework: the Multiple Sparse Priors and the Minimum Norm solution. We will compare the model evidences for these distributed imaging approaches and source localise the evoked oscillatory activity at a particular time-frequency window.
 
 We start by opening SPM1

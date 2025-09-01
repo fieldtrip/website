@@ -3,8 +3,6 @@ title: Documentation guidelines
 tags: [guidelines, development]
 ---
 
-# Documentation guidelines
-
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
 
 - FieldTrip should be written with capital "F" and capital "T"
@@ -90,7 +88,6 @@ We also considered SVG, which is a standardized scalable vector graphics format.
 Making schematic figures in SVG is easy in Microsoft Word or Microsoft Powerpoint using their default shapes under the _insert_ tab. When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
 
 {% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
-
 
 ## What colors to use
 

@@ -3,8 +3,6 @@ title: Test your MATLAB and FieldTrip installation in advance
 tags: [cuttingeegx]
 ---
 
-# Test your MATLAB and FieldTrip installation in advance
-
 Prior to the hands-on sessions, you need to check the functionality of the computational setup you have on your end. This is needed to hit the ground running, and to avoid to spend time on debugging the MATLAB environment during the hands on session. We recommend to use a clean install of a [recent version](https://github.com/fieldtrip/fieldtrip/releases/tag/20241025) of the toolbox. Once you have set this up, please execute the code below, and check the output.
 
     fprintf('################################################################\n');

@@ -3,8 +3,6 @@ title: Streaming realtime data from CTF
 tags: [realtime, ctf]
 ---
 
-# Streaming realtime data from CTF
-
 ## Introduction
 
 The CTF system is one of most widely used MEG systems and one of the first on which real-time MEG analysis has been done for the purpose of BCI (see [Mellinger et al., NeuroImage 2007](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2017111/)). There are 151-channel and 275-channel systems, which all provide real-time access to the MEG data through shared memory.

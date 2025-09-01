@@ -6,8 +6,6 @@ redirect_from:
     - /example/fem/
 ---
 
-# Compute EEG leadfields using a FEM headmodel
-
 This example shows how to compute EEG leadfields using a Finite Element Method (FEM) head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, preparing a mesh, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.
 
 The aim of this example is to show the similarities and differences between FEM (here), [BEM](/example/source/bem) and [concentricspheres](/example/source/concentricspheres) and how to deal with units to get correct SI units in the forward and inverse solution. A more elaborate tutorial using FEM can be found [here](/tutorial/source/headmodel_eeg_fem/).

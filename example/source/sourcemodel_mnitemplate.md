@@ -4,8 +4,6 @@ category: example
 tags: [meg, mri, headmodel, source]
 ---
 
-# Create a template source model aligned to MNI space
-
 On the [template sourcemodel](/template/sourcemodel) page we describe a number of regular 3D grid 
 source models defined in MNI space. These models can be used as templates for individual subject data,
 allowing for more accurate and consistent source reconstruction across subjects. The procedure for this

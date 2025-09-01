@@ -4,7 +4,6 @@ title: Implement a graphical user interface as a "wizard" for certain analysis p
 
 {% include /shared/development/warning.md %}
 
-# Implement a graphical user interface as a "wizard" for certain analysis protocols
 
 _This project has been completed, the documentation below is only provided for future reference._
 

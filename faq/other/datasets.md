@@ -8,8 +8,6 @@ redirect_from:
     - /faq/datasets/
 ---
 
-# Which datasets are used in the documentation and where are they used?
-
 The FieldTrip website and download server include a variety of datasets. some of these are used in the [tutorials](/tutorial), while others are used in [example MATLAB scripts](/example). All of these datasets were recorded from humans, unless otherwise specified.
 
 In this [frequently asked question](/faq/other/open_data) you can find links to other open access datasets.

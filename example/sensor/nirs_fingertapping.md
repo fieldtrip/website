@@ -6,8 +6,6 @@ redirect_from:
     - /example/nirs_fingertapping/
 ---
 
-# Analyzing NIRS data recorded during unilateral finger- and foot-tapping
-
 This example script demonstrates the analysis of data that is shared by Sujin Bak, Jinwoo Park, Jaeyoung Shin, and Jichai Jeong: _[Open Access fNIRS Dataset for Classification of Unilateral Finger- and Foot-Tapping](https://doi.org/10.6084/m9.figshare.9783755.v2)_.
 
 The following links point to the shared data, to the PDF manuscript that explains the shared data, and to a GitHub repository from one of the authors that contains some example analyses on the data.
@@ -138,7 +136,6 @@ Contrary to the description in the accompanying publication (see table 1 in the 
           nClasses: 3
          className: {'RIGHT'  'LEFT'  'FOOT'}
 
-
     >> nirs.mnt
     ans =
      struct with fields:
@@ -150,7 +147,6 @@ Contrary to the description in the accompanying publication (see table 1 in the 
              box_sz: [2x41 double]
           scale_box: [2x1 double]
        scale_box_sz: [2x1 double]
-
 
     >> nirs.mrk
     ans =

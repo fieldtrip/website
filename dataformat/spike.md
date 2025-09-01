@@ -3,8 +3,6 @@ title: Spike and LFP dataformats
 tags: [dataformat, spike, lfp]
 ---
 
-# Spike and LFP dataformats
-
 ## Neuralynx
 
 The standard output format for Neuralynx writes a single file for each channel. All channels together are combined in a directory. This directory can be referred to as the "dataset directory". All channels/files within that directory can be read simultaneously.

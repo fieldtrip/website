@@ -7,8 +7,6 @@ redirect_from:
     - /faq/sourcerecon_greymatter/
 ---
 
-# Can I restrict the source reconstruction to the grey matter?
-
 Yes, there are two strategies you can use. You can either make a regular 3D grid spanning the whole brain in which only grid locations in grey matter are considered in the source estimation. The alternative is to construct a triangulated surface description of the cortical sheet.
 
 ## Constraining the 3D grid to gray matter

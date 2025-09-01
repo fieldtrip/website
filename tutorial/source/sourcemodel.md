@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/sourcemodel/
 ---
 
-# Creating a source model for source reconstruction of MEG or EEG data
-
 ## Introduction
 
 In this tutorial you can find information about how to construct a source model that can be used for source reconstruction of EEG or MEG data. The source model describes a set of positions (and possibly orientations) of equivalent current dipoles that are taken into consideration when doing the source reconstruction. Note that not all source reconstruction methods require an explicit definition of a source model. Note also, that by and large source models should have the same specifications, irrespective of whether you are reconstructing EEG or MEG data. In this tutorial we will demonstrate how to use subject-specific anatomical data to create different types of source models. Which source model is most appropriate depends on the source reconstruction algorithm used, the additional analysis steps you have in mind, and on your own preferences. The anatomical MRI is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).

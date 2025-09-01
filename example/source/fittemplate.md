@@ -6,8 +6,6 @@ redirect_from:
     - /example/fittemplate/
 ---
 
-# How to create a head model if you do not have an individual MRI
-
 ## Introduction
 
 A volume conduction model of the head is required for source reconstruction. Ideally you base the head model on the individual's anatomical MRI, but that is not always available. In the case of EEG you can use a template head model and fit your measured electrodes (or template electrodes) on the scalp of the template model. For MEG you cannot simply use a template head model, since the distance between the head and the (fixed) MEG sensors depends on the head size.
@@ -27,7 +25,6 @@ You load the head shape measured during the MEG recording with the Polhemus and 
 
     template = ft_read_headmodel('standard_bem.mat');
     template = ft_convert_units(template, 'mm');
-
 
 Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it describes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
 
@@ -98,7 +95,6 @@ Determine the global scaling and translation
           0 0 1 sphere_polhemus.o(3);
           0 0 0 1                 ];
 
-
     transformation = T2*S*T1;
 
 Apply the transformation to the template head model
@@ -160,7 +156,6 @@ We can compute the volume conduction model on the basis of the refined template 
 
     template_fit_sphere  = ft_convert_units(template_fit_sphere,'m');
     template_fit_surface = ft_convert_units(template_fit_surface,'m');
-
 
 ### Openmeeg
 

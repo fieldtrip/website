@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_eeg/
 ---
 
-# Converting an example EEG dataset for sharing in BIDS
-
 This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the [BIDS standard](https://bids.neuroimaging.io).  
 
 {% include markup/yellow %}

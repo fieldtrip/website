@@ -4,7 +4,6 @@ title: Provide an interface to the OpenMEEG software for BEM modelling
 
 {% include /shared/development/warning.md %}
 
-# Provide an interface to the OpenMEEG software for BEM modelling
 
 The OpenMEEG software is developed within the Odyssee project-team at INRIA Sophia-Antipolis and at ENPC. This package provides tools for solving forward and inverse problems for Magneto- and Electro-encephalography (MEG and EEG). The forward problem uses symmetric Boundary Element Method (symmetric BEM) [Kybic et al, A common formalism for the integral formulations of the forward EEG Problem, IEEE Transactions on Medical Imaging, vol. 24, no.1, 2005]. This method provides excellent accuracy notably for superficial cortical sources.
 

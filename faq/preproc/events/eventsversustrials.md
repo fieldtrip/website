@@ -7,8 +7,6 @@ redirect_from:
     - /faq/eventsversustrials/
 ---
 
-# What is the relation between "events" (such as triggers) and "trials"?
-
 FieldTrip can work both with epoched and with continuously recorded data files (both are treated as continuous). However, FieldTrip does assume that in the stream of data, some pieces are of interest. Those are the "trials". In contrast with other software packages, trials in FieldTrip can have a variable duration. For example, you want to analyze the data in a time window between a stimulus and the subject's response, and the subject responds faster in one trial than in the next.
 
 To support variable length trials, a generic way of handling those datapieces of interest is needed: the **[ft_definetrial](/reference/ft_definetrial)** function. This function returns the segments of the data that you think are interesting. This can consist of variable length trials that start at a stimulus trigger and end at a response trigger, but of course it can also correspond to the trials as they are present in your datafile. The **[ft_definetrial](/reference/ft_definetrial)** function translates the events in your datafile into trials. These events are read from the datafile (and the accompanying files) using the **[ft_read_event](/reference/fileio/ft_read_event)** function. Events are, for example, stimulus and response triggers, or artifacts, but can also consist of the trials that are potentially already present in the datafile.

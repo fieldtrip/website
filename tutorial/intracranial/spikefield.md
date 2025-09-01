@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/spikefield/
 ---
 
-# Preprocessing and analysis of spike and local field potential data
-
 ## Introduction
 
 In this tutorial, we will show how to compute the ongoing phase and power of the LFP at the time of neuronal firing, and statistics of spike-LFP phase-coupling, such as the Rayleigh probability or the PPC (Vinck et al., 2010, NeuroImage, 2011, J Comp Neurosci). To this end, we will use a dataset from Pascal Fries and colleagues (2001, 2008), in which both LFPs and spikes were recorded simultaneously. In this experiment, V4 LFP and spike data was recorded while monkeys performed a visual attention task. A moving stimulus grating was presented in the recorded neurons' receptive fields, and another stimulus was presented outside the recorded neurons' receptive fields. In a given trial, the grating stimulus in the receptive field was either attended (attention inside the receptive field) or not attended (distractor; attention outside the receptive field). In this tutorial, we analyze the spike data around the presentation of the stimulus until the time of the first stimulus change (of either distractor or target).

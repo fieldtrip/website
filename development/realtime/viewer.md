@@ -2,8 +2,6 @@
 title: Realtime visualization of data from the FieldTrip buffer
 ---
 
-# Realtime visualization of data from the FieldTrip buffer
-
 We provide a C++ GUI application (based on the [FLTK](http://www.fltk.org) library, that can be used to visualize any kind of signals online from the FieldTrip buffer. The source code and pre-compiled binaries (for Windows, Linux & macOS) can be found in the `realtime/utilities/viewer` directory. After starting up the application, you need to type in the address of the FieldTrip buffer server and press the "Connect" button (which on success will toggle to "Disconnect"). You have the option of applying a fixed highpass filter (2nd order Butterworth, 5Hz cutoff) to remove DC bias and slow drifts.
 The display is fixed to show 4 seconds of data, independently of the sampling frequency, and will wrap around.
 

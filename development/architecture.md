@@ -5,8 +5,6 @@ redirect_from:
   - /development/module/
 ---
 
-# Software architecture
-
 {% include markup/skyblue %}
 The **[ft_examplefunction](/reference/ft_examplefunction)** provides a documented walkthrough of a typical high-level FieldTrip function that demonstrates a lot of the features presented below.
 {% include markup/end %}

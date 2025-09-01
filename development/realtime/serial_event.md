@@ -2,8 +2,6 @@
 title: Translating characters received on a serial port to FieldTrip events
 ---
 
-# Translating characters received on a serial port to FieldTrip events
-
 This page describes the tool **serial2event**, which is located in the directory "realtime/utilities/serial2event", and whose purpose is to write events to a FieldTrip buffer when a character is received on a serial port. The tool was developed specifically to be run on the presentation machines in the DCCN's MRI labs in order to forward TTL pulses from the scanner to the FieldTrip buffer.
 
 The user has the option to either only react on specific characters, and to write events with

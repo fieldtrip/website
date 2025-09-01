@@ -6,8 +6,6 @@ redirect_from:
     - /faq/requirements/
 ---
 
-# What are the MATLAB and external requirements?
-
 {% include /shared/faq/requirements.md %}
 
 ## External requirements

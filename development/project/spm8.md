@@ -4,7 +4,6 @@ title: Integration with SPM8
 
 {% include /shared/development/warning.md %}
 
-# Integration with SPM8
 
     1) support of arbitrary EEG montages (elec.tra)
     2) scaling of electrophysiological data

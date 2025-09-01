@@ -4,7 +4,6 @@ title: Implementation of realistic electrode properties in forward volume conduc
 
 {% include /shared/development/warning.md %}
 
-# Implementation of realistic electrode properties in forward volume conduction models
 
 ## Description
 

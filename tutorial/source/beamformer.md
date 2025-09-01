@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/beamformer/
 ---
 
-# Localizing oscillatory sources using beamformer techniques
-
 ## Introduction
 
 In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)).

@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/nicolet/
 ---
 
-# Getting started with Nicolet data
-
 Note: please add additional information if you have additional knowledge about Nicolet data that you want to share with other FieldTrip users.
 
 ## Introduction to the Nicolet file formats

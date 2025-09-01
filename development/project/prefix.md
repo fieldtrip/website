@@ -4,7 +4,6 @@ title: Prefix all public functions with ft
 
 {% include /shared/development/warning.md %}
 
-# Prefix all public functions with ft
 
 done
 

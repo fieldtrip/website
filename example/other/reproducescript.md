@@ -6,8 +6,6 @@ redirect_from:
     - /example/reproducescript/
 ---
 
-# Making your analysis pipeline reproducible using reproducescript
-
 This example script will introduce you to functionality in the FieldTrip toolbox designed to aid in making your analysis pipeline - including code, data and results - easily reproducible and shareable. It is based on the manuscript [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566).
 
 ## Description
@@ -20,13 +18,11 @@ The analysis of M/EEG data, and neuroimaging data in general, typically requires
 
 Many researchers are not formally trained as software engineers or computer scientists. Thus, the quality, readability, and generalizability of analysis scripts is highly dependent on the individual researcher's coding style and expertise. Unfortunately, the variability in the quality of analysis scripts might compromise the reproducibility of results. Re-running the analysis pipeline might lead to different results, or the pipeline doesn't run on someone else's computer.
 
-
 ### Reproducescript
 
 In order to encourage code and data sharing, and to ensure that the shared material can reliably reproduce results, we added a functionality into FieldTrip, called _reproducescript_. In short: the researcher adds one additional flag to the configuration options in each FieldTrip function in the pipeline, which results in the analysis pipeline and data dependencies to be exported to a standardized representation that resembles the format of the FieldTrip tutorials. The generated scripts and corresponding data have minimal to no ambiguity. This code and data will then immediately be ready for sharing (though we encourage to add comments to the analysis scripts in order to explain what is happening).
 
 To explain the new reproducescript functionality, we will demonstrate its use with a simple example pipeline for a single-subject analysis that comprises only a few analysis steps. Second, we demonstrate its application in a complete pipeline with preprocessing for multiple subjects, followed by a group analysis. The original idiosyncratic scripts that we selected for these first two examples are relatively clean and transparent, which means they are easily reproducible even without the new reproducescript functionality. As a final, third, example, we will apply _reproducescript_ to an already published analysis pipeline that contains more complexity, and thus benefits more from the _reproducescript_ functionality. The analysis code and data used in these examples are publicly available in the [Donders Repository](https://doi.org/10.34973/21pa-dg13).
-
 
 ## Example 1
 

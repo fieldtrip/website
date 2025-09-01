@@ -4,7 +4,6 @@ title: Check the correctness of the implementation of the algorithms
 
 {% include /shared/development/warning.md %}
 
-# Check the correctness of the implementation of the algorithms
 
 ## Objectives
 

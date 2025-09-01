@@ -7,8 +7,6 @@ redirect_from:
     - /faq/effectonset/
 ---
 
-# How can I determine the onset of an effect?
-
 {% include markup/skyblue %}
 I received the following question:
 

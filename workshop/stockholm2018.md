@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Stockholm
 ---
 
-# FieldTrip workshop in Stockholm
-
 - By whom: Lau Møller Andersen, Mikkel Vinding, Robert Oostenveld
 - When: 16 May 2018
 - Where: training workshop at the MEG NORD conference

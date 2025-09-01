@@ -7,8 +7,6 @@ redirect_from:
     - /example/fmri_correlationanalysis/
 ---
 
-# Correlation analysis of fMRI data
-
 This script demonstrates how FieldTrip can be used for time-series analysis of fMRI data.
 
 ## Get the data in a "raw" data structure, similar to preprocessed MEG data

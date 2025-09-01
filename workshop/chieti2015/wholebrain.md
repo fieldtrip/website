@@ -3,8 +3,6 @@ title: MEG whole-brain connectivity
 tags: [chieti, hcp-motort]
 ---
 
-# MEG whole-brain connectivity
-
 ## Introduction
 
 {% include markup/skyblue %}

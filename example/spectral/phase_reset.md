@@ -6,8 +6,6 @@ redirect_from:
     - /example/phase_reset/
 ---
 
-# Simulate an oscillatory signal with phase resetting
-
 ## Narrow-band oscillation
 
 The following code simulates a clean oscillating signal with a phase reset at time zero.

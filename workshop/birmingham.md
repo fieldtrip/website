@@ -2,8 +2,6 @@
 title: MRC Partnership Grant FieldTrip workshop in Birmingham
 ---
 
-# MRC Partnership Grant FieldTrip workshop in Birmingham
-
 The official page for this workshop is hosted [here](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/fieldtrip-workshop-birmingham). Some details are copied here for reference and easier maintenance.
 
 ### Where

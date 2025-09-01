@@ -7,8 +7,6 @@ redirect_from:
     - /faq/ctf_fixmeg4/
 ---
 
-# How can I fix a corrupt CTF meg4 file?
-
 A corrupt .meg4 file can occur if your recording did not end properly. In this case, the size of your .meg4 file will not obey the demands of a regular .meg4 file. The CTF system records 'trials' of pre-specified length, usually 10s chunks of data. Note that this triallength has nothing to do with your experiment, it is just a convention! Any .meg4 file must contain a full number of trials, and the corresponding headerfile must contain these number of trials as well.
 
 If your datafile is corrupt, maybe due to incomplete storing or because the acquisition machine showed an error, you can still repair this file and use it. You can use the following script written by Ivar Clemens to fix both the datafile and the header:
@@ -31,7 +29,6 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
     [path, file, ext] = fileparts(dataset);
     headerfile = fullfile(dataset, [file '.res4']);
     datafile   = fullfile(dataset, [file '.meg4']);
-
 
     hdr = ft_read_header(headerfile, 'headerformat', 'ctf_old');
 

@@ -7,8 +7,6 @@ redirect_from:
     - /example/tfce/
 ---
 
-# Using threshold-free cluster enhancement for cluster statistics
-
 This example explains how the threshold-free cluster enhancement (TFCE) method works for cluster statistics.
 
 ## Why is it useful?

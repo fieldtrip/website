@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/bioimage/
 ---
 
-# Getting started with BioImage Suite
-
 Viewing and localizing intracranial EEG (iEEG) electrodes from volumetric brain images (CT and/or MR images) can be accomplished using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, as demonstrated in the [Analysis of human ECoG and sEEG recordings](/tutorial/intracranial/human_ecog) tutorial. Alternatively, users may choose to localize electrodes using [BioImage Suite](http://bioimagesuite.yale.edu) and subsequently view them in MATLAB using FieldTrip. Finally, users may also choose to localize electrodes using **[ft_electrodeplacement](/reference/ft_electrodeplacement)** and subsequently view them in BioImage Suite.
 
 This page covers (1) how electrodes that have been localized in BioImage Suite (.mgrid files) can be loaded into MATLAB as a FieldTrip-compatible elec structure; and (2) how electrodes that have been localized in FieldTrip can be saved as BioImage Suite compatible `.mgrid` files.

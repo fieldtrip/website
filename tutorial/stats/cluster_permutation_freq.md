@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/cluster_permutation_freq/
 ---
 
-# Cluster-based permutation tests on time-frequency data
-
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests.

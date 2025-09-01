@@ -6,8 +6,6 @@ redirect_from:
     - /example/irasa/
 ---
 
-# Irregular resampling auto-spectral analysis (IRASA)
-
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
 Below we provide two examples, a simulated dataset and a real human ECoG dataset [(Stolk et al. 2019)](https://elifesciences.org/articles/48065), including how to extract spectral features based on [the IRASA technique (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0).
 
@@ -87,7 +85,6 @@ end
 
 {% include image src="/assets/img/example/irasa/mixed_new.png" %}
 
-
 ## Extracting spectral features from human ECoG data
 
 Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://elifesciences.org/articles/48065). This adaptive approach allows defining rhythm frequency bands on a participant-by-participant basis (e.g., alpha and beta frequency bands), avoiding having to rely on canonical frequency bands that may not accurately capture the neural phenomena of interest in each individual. To run this example, download S5_raw_segmented.mat from the [OSF repository](https://osf.io/z4hfm/). Additionally, download S5_lh.pial used to localize rhythmic activity in the sensorimotor cortex in a next step.
@@ -164,7 +161,6 @@ Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://
 
 {% include image src="/assets/img/example/irasa/IRASA_S5.png" %}
 
-
 - Localizing spectral features in the sensorimotor cortex
 
 ```
@@ -220,7 +216,6 @@ Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://
 
 Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065), alpha rhythmic activity is maximal at electrodes on the postcentral gyrus, and beta rhythmic activity is strongest at electrodes placed over the central sulcus.
 {% include image src="/assets/img/example/irasa/IRASA_S5_beta.png" %}
-
 
 ## Updates to the IRASA implementation
 

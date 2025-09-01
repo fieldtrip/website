@@ -7,8 +7,6 @@ redirect_from:
     - /example/sphere_fitting/
 ---
 
-# Fitting a template MRI to the MEG Polhemus head shape
-
 This example script demonstrates how to fit a sphere to the MEG Polhemus recorded head shape, how to fit a sphere to a template MRI, and subsequently use the two fitted spheres to scale the template MRI such that it fits the MEG Polhemus head shape. This example has been written with a Elekta-system fif-file in mind. Accordingly, the variable 'dataset', specified below should point to a fif-file that includes a Polhemus-based headshape description.
 
     load standard_mri % Colin 27 template in fieldtrip
@@ -71,7 +69,6 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     cfg.selection = 'outside';
     headshape_denosed = ft_defacemesh(cfg, headshape);
 
-
     figure
     ft_plot_headshape(headshape);
     hold on
@@ -120,7 +117,6 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     cfg.tissue      = {'scalp'};
     cfg.numvertices = 3600;
     scalp_scaled    = ft_prepare_mesh(cfg, segmentedmri);
-
 
     cfg             = [];
     cfg.tissue      = {'brain'};

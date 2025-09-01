@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fiducials_definition/
 ---
 
-# How should I report the positions of the fiducial points on the head?
-
 _The documentation on this page follows careful considerations and discussions with Clement Lee and Scott Makeig and aligns with the EEGLAB recommendations._
 
 Consistency is key when using fiducials or anatomical landmark points; the accuracy of collaborative or comparative analysis is severely diminished without accurate knowledge about the electrode positions. This is particularly the case when source estimation can use individual head models based on individual subject MRIs, but is also the case when electrode positions are warped to a template head model for source location estimation.

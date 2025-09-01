@@ -4,7 +4,6 @@ title: Dealing with the geometry of the forward model
 
 {% include /shared/development/warning.md %}
 
-# Dealing with the geometry of the forward model
 
 This part overviews the available routines (and not yet available too!) to get an optimal description of the head geometry in order to build a forward model.
 

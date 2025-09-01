@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/nwb/
 ---
 
-# Getting started with Neurodata Without Borders (NWB) data
-
 [Neurodata Without Borders (NWB)](https://www.nwb.org) is a consortium founded to promote data sharing in neuroscience. Among their efforts, NWB created a data standard called *NWB: Neurophysiology (NWB:N)*. Many datasets in this format are already freely available (e.g., [here](https://www.nwb.org/example-datasets/)).
 
 ## Introduction

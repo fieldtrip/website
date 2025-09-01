@@ -8,8 +8,6 @@ redirect_from:
     - /example/headmovement_meg/
 ---
 
-# How to incorporate head movements in MEG analysis
-
 ## Description
 
 Changes in the subject's position of the head during MEG recordings may cause a significant error in the source localization. Besides, the mixture of different head positions over time adds variance to the data that is not accounted for by the experimental manipulation. Thus head movements may deteriorate statistical sensitivity when analyzing MEG on both sensor and source levels. It is therefore recommended to incorporate head movements in the offline MEG analysis, see [Stolk et al., NeuroImage 2013](https://doi.org/10.1016/j.neuroimage.2012.11.047).

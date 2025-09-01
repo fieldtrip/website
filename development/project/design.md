@@ -4,7 +4,6 @@ title: Explain how to create cfg.design for ft_xxxstatistics
 
 {% include /shared/development/warning.md %}
 
-# Explain how to create cfg.design for ft_statistics
 
 cfg.design as input into ft_statistics (freq, timelock, or source) should be designed as Windowssize MxN, where N is the number of trials/conditions.
 

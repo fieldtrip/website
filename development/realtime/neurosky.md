@@ -3,8 +3,6 @@ title: Streaming realtime data from Neurosky ThinkCap
 tags: [realtime, neurosky]
 ---
 
-# Streaming realtime data from Neurosky ThinkCap
-
 This page describes the interface between the 7 channel wireless ThinkCap of Neurosky and the FieldTrip buffer.
 
 We provide a standalone tool (see "realtime/acquisition/neurosky") to grab raw data packets from the serial port (via bluetooth), and stream it to a FieldTrip buffer. The application is called **thinkgear2ft** and allows to specify which channels to stream and save in a configuration file like this:

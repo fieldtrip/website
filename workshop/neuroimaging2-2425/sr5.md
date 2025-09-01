@@ -3,8 +3,6 @@ title: SR5 - Source reconstruction
 tags: [neuroimaging2-2425]
 ---
 
-# SR5 - Source reconstruction
-
 ## 8 Reconstructing EEG/MEG activity using beamforming
 
 This document contains the MATLAB exercises that form part of the course “Neuroimaging

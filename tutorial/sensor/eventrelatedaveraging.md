@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/eventrelatedaveraging/
 ---
 
-# Event-related averaging and MEG planar gradient
-
 ## Introduction
 
 This tutorial works on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating some code used to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)).

@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/preprocessing/
 ---
 
-# Preprocessing - Segmenting and reading trial-based EEG and MEG data
-
 ## Introduction
 
 This tutorial describes how to define epochs-of-interest (trials) from MEG data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g., average) your data.
@@ -59,7 +57,6 @@ The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **
 
         save PreprocData data_all
 
-
 The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure data_all which has the following fields:
 
     data_all =
@@ -101,7 +98,6 @@ These functions demonstrate how to extract trials from a dataset based on trigge
 
 There are often cases in which it is not sufficient to define a trial only according to a given trigger signal. For instance you might want to accept or reject a trial according to a button response recorded by the trigger channel as well. Another example might be that you want the signals from the EMG or A/D channel being part of the trial selection. In those cases it is necessary to define a specialized function for trial selections. In this example we only select trials of which the previous trial was of a different condition. First, the condition of the current and the preceding trial are noted in the trial information. At the end, all trials in which these are the same, are removed. This is helpful when for example, you are interested in sequential trial effects, like: Is the signal different when it was preceded by a trial of type A rather than a trial of type B?
 
-
     function trl = mytrialfun(cfg);
 
     % this function requires the following fields to be specified
@@ -137,7 +133,6 @@ There are often cases in which it is not sufficient to define a trial only accor
 
     samecondition = trl(:,4)==trl(:,5); % find out which trials were preceded by a trial of the same condition
     trl(samecondition,:) = []; % delete those trials
-
 
 Save the trial function together with your other scripts as `mytrialfun.m`. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
 

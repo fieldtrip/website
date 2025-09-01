@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Zürich
 ---
 
-# FieldTrip workshop in Zürich
-
 - Where: Department of Psychology, University Zürich
 - When: 24-26 February, 2014
 - Who: Eelke Spaak and Jörn Horschig, the local organizers are Maj-Britt Niemi and Alexandra Buender

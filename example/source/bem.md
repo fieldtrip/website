@@ -4,14 +4,11 @@ category: example
 tags: [eeg, bem, leadfield, headmodel, meg-language]
 ---
 
-# Compute EEG leadfields using a BEM headmodel
-
 This example shows how to compute EEG leadfields using a Boundary Element Method (BEM) head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, preparing a mesh, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.
 
 The aim of this example is to show the similarities and differences between BEM (here), [FEM](/example/source/fem) and [concentricspheres](/example/source/concentricspheres) and how to deal with units to get correct SI units in the forward and inverse solution. A more elaborate tutorial using BEM can be found [here](/tutorial/source/headmodel_eeg_bem/).
 
 This example starts with the anatomical MRI of the same subject that is used in a number of other tutorials. You can download the data from our [download server](https://download.fieldtriptoolbox.org/example/bem).
-
 
 ```matlab
 %% read the anatomical MRI

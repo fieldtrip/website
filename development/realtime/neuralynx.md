@@ -3,8 +3,6 @@ title: Streaming realtime data from Neuralynx
 tags: [realtime, neuralynx]
 ---
 
-# Streaming realtime data from Neuralynx
-
 The Neuralynx electrophysiology system is used at the DCCN for high-density recordings of LFP and spike activity of up to 256 channels. Furthermore, at the DCC a 32 channel Neuralynx setup is used.
 
 The acquisition setup consists of the Digital Lynx amplifier hardware and the Cheetah acquisition software. The Cheetah software runs on a Windows computer that is connected with the amplifier through a fiber-optic cable.

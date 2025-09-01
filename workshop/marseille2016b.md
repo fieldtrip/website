@@ -2,8 +2,6 @@
 title: FieldTrip Workshop in Marseille in November 2016
 ---
 
-# FieldTrip Workshop in Marseille in November 2016
-
 Together with Jean-Michel Badier, Christian Benar ([MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page)), and Marie-Laure Olive (Inserm - Trainings office), we will run a FieldTrip workshop.
 
 - Who: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff

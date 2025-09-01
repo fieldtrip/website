@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/layout/
 ---
 
-# Specifying the channel layout for plotting
-
 The 2D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2D computer screen (or piece of paper). The 2D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
 
 The layout is a MATLAB structure with the following elements

@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Krakow, Poland
 ---
 
-# FieldTrip workshop in Krakow, Poland
-
 ## Using the tutorial data and the FieldTrip version provided
 
 For the hands-on sessions you have to start MATLAB. To ensure that

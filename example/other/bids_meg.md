@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_meg/
 ---
 
-# Converting an example MEG dataset for sharing in BIDS
-
 {% include markup/skyblue %}
 
 The general description of how MEG data can be shared in the [BIDS format](https://bids.neuroimaging.io) is described in the paper [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://doi.org/10.1038/sdata.2018.110) by Guiomar Niso, et al. Scientific Data volume 5, Article number: 180110 (2018). The BIDS standard itself with all details can be found on <https://bids-standard.org>.
@@ -31,7 +29,6 @@ Control subjects are coded from S101 to S115, patients are coded from S201 to S2
 The data is anonimized using the `go_anonymiseDs.m` function from [this example page](/faq/how_can_i_anonymize_a_ctf_dataset/#using-matlab). This reads in the data with a low-level CTF function, scrubs potentially identifying  information, and writes it with a low-level CTF function. Some of the auxiliary files that can optionally be present (for example when the data was opened with the CTF DataEditor application) and the headlocalizer data will be ignored upon reading, and hence also not appear in the copy that is written.
 
 The anonimized version of the CTF data has a short descriptive name. Using the **[data2bids](/reference/data2bids)** we copy and rename the CTF data so that it has the right directory structure and file names, and we add the metadata.
-
 
 ```
 subj = {
@@ -66,7 +63,6 @@ subj = {
   'S214'
   'S215'
   };
-
 
 for subindx=1:numel(subj)
   for runindx=1:2

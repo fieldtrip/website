@@ -6,8 +6,6 @@ redirect_from:
     - /example/bids_nirs/
 ---
 
-# Converting an example NIRS dataset for sharing in BIDS
-
 {% include markup/yellow %}
 NIRS is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/11-near-infrared-spectroscopy.html) as of version 1.8.0 and uses the [SNIRF file format](https://github.com/fNIRS/snirf/blob/v1.1/snirf_specification.md).
 {% include markup/end %}
@@ -45,7 +43,6 @@ The raw data is available on our download server, together with the script to co
       'LR-04-2015-06-17-0001.oxy3'
       'LR-05-2015-06-23-0001.oxy3'
       };
-
 
     %%
 

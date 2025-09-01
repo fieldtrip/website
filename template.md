@@ -3,8 +3,6 @@ title: Template models and data
 tags: [template]
 ---
 
-# Template models and data
-
 The FieldTrip release comes with a number of templates to facilitate data processing and to ensure consistent high-quality results.
 
 These templates are based on "data", where data should be seen in a broad sense. Most of the templates pertain to geometrical data, for example electrode layouts and head models. These depend on the original assessment (i.e. measurement) of the geometry.

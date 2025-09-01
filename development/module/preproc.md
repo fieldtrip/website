@@ -5,8 +5,6 @@ redirect_from:
   - /development/preproc/
 ---
 
-# Preprocessing of EEG/MEG time series data
-
 FieldTrip has a consistent set of low-level functions for reprocessing of EEG and MEG data, such as filtering, baseline
 correction and rereferencing. This allows other projects to re-use the implemented methods separate from FieldTrip (e.g., for realtime analysis of EEG and MEG data) and perhaps also to contribute to FieldTrip.
 

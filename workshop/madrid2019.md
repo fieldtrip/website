@@ -3,8 +3,6 @@ title: FieldTrip workshop in Madrid
 tags: [madrid2019, eeg-sedation, eeg-language]
 ---
 
-# FieldTrip workshop in Madrid
-
 ## Where
 
 Facultad de Psicologia, Universidad Autonoma de Madrid, Calle Iván Pavlov, 6, 28049 Madrid, Spain.

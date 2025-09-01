@@ -2,8 +2,6 @@
 title: Advanced analysis and source modeling of EEG and MEG data
 ---
 
-# Advanced analysis and source modeling of EEG and MEG data
-
 {% include markup/red %}
 The code in line 1604-1606 in ft_volumerealign.m should be commented out to work around the MATLAB 2012b error with the slider.
 

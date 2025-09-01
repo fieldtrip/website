@@ -57,7 +57,6 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     cfg.method = 'coh';
     c = ft_connectivityanalysis(cfg, freq);
 
-
     % visualize the results
     cfg = [];
     cfg.parameter = 'grangerspctrm';

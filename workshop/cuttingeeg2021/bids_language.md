@@ -3,8 +3,6 @@ title: Convert the EEG language dataset for sharing in BIDS
 tags: [cuttingeeg2021, bids, eeg-language]
 ---
 
-# Convert the EEG sedation dataset for sharing in BIDS
-
 The following MATLAB script shows how the EEG data supporting [Identifying Object Categories from Event-Related EEG: Toward Decoding of Conceptual Representations](https://doi.org/10.1371/journal.pone.0014465) by Simanova et al. (2010) was converted to the Brain Imaging Data Structure (BIDS). The original data is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8). More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 The BIDS background is explained on <http://bids.neuroimaging.io>, details on the specification can be found on <https://bids-specification.readthedocs.io/>.

@@ -7,8 +7,6 @@ redirect_from:
     - /example/stats_besa/
 ---
 
-# Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
-
     % this is the list of BESA data files in one condition
     filename_ld = {
       'AM_LD_ERA.tfc'

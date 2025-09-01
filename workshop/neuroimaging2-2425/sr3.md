@@ -3,8 +3,6 @@ title: SR3 - Source reconstruction
 tags: [neuroimaging2-2425]
 ---
 
-# SR3 - Source reconstruction
-
 ## 6 Fitting EEG/MEG activity with dipole models
 
 This document contains the MATLAB exercises that form part of the course “Neuroimaging

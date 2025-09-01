@@ -6,8 +6,6 @@ redirect_from:
     - /getting_started/homer/
 ---
 
-# Getting started with Homer
-
 ## Background
 
 Homer is a set of MATLAB scripts used for analyzing fNIRS data to obtain estimates and maps of brain activation. It has evolved since the early 1990s, first as the Photon Migration Imaging toolbox, then HOMER and [Homer2](https://homer-fnirs.org), and development now continues as [Homer3](https://github.com/BUNPC/Homer3)

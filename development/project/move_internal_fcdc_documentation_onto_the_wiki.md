@@ -4,7 +4,6 @@ title: Move internal fcdc documentation onto the website
 
 {% include /shared/development/warning.md %}
 
-# Move internal fcdc documentation onto the website
 
 The IKEA beamforming manual points to internal FCDC intranet pages, which should be moved to the website.
 

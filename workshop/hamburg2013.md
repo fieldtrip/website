@@ -2,8 +2,6 @@
 title: FieldTrip workshop in Hamburg in 2013
 ---
 
-# FieldTrip workshop in Hamburg in 2013
-
 ## When
 
 Wednesday 11 to Friday 13 September 2013.

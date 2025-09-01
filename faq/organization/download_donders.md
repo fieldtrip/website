@@ -7,8 +7,6 @@ redirect_from:
     - /faq/download_donders/
 ---
 
-# I am working at the Donders, should I also download FieldTrip?
-
 If you want to use FieldTrip at the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen, you do not have to download it. Instead you can add `h:\common\matlab\fieldtrip` (on Windows) or `/home/common/matlab/fieldtrip` (on Linux) to your MATLAB path.
 
 {% include markup/yellow %}

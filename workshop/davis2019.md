@@ -3,8 +3,6 @@ title: ECoG/sEEG FieldTrip bootcamp at UC Davis
 tags: [davis2019]
 ---
 
-# ECoG/sEEG FieldTrip bootcamp at UC Davis
-
 We're hosting the first ECoG/sEEG FieldTrip bootcamp at the UC Davis
 Medical Center (Sacramento, California) on March 20-22. The workshop
 will consist of lectures and hands-on sessions covering the methods

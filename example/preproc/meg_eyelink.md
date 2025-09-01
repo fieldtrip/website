@@ -6,8 +6,6 @@ redirect_from:
     - /example/meg_eyelink/
 ---
 
-# Combine MEG with Eyelink eyetracker data
-
 ## Description
 
 This example demonstrates how you can combine detailed information from Eyelink eyetracker data with the MEG data to mark eye movement events. The Eyelink eyetracker data contains timing information about blinks, fixations and saccades, which can inform the MEG data analysis, for artifact identification/rejection purposes, or for experimental reasons. Upon data acquisition, the Eyelink can be set up (or is set up by default), to mark saccades and blinks in the output file. This identification scheme is based on certain heuristics (e.g., velocity thresholding of the eye position traces to identify saccades), and may be configured by the researcher. Under the assumption that the parameters have been judiciously specified, it may be useful to use this timing information in the downstream analysis. This could replace an ad-hoc analysis of the eyetracker data that has been recorded along with the MEG data.

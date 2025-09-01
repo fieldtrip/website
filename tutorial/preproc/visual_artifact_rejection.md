@@ -6,8 +6,6 @@ redirect_from:
     - /tutorial/visual_artifact_rejection/
 ---
 
-# Visual or manual artifact rejection
-
 ## Introduction
 
 This tutorial makes use of the preprocessed data from the [preprocessing tutorial](/tutorial/preproc/preprocessing). Run the script from that section in order to produce the single trial data structure, or download [PreprocData.mat](https://download.fieldtriptoolbox.org/tutorial/visual_artifact_rejection/PreprocData.mat). Load the data into MATLAB memory with the following command:

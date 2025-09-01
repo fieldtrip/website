@@ -7,8 +7,6 @@ redirect_from:
     - /faq/fileio_stateless/
 ---
 
-# Why are the fileio functions stateless, does the fseek not make them very slow?
-
 The **[ft_read_data](/reference/fileio/ft_read_data)** function in the fileio module is used to read the data into MATLAB from all supported EEG and MEG data formats. However, between multiple read operations the file is closed. This "stateless" handling of the read operations makes the interface simpler, i.e. in between read operations there is no state to be remembered (the state being the file pointer). It being stateless means that you don't have to keep track of the file-pointer and facilitates error handling. However, developers that started programming on the DOS operating system might know from experience that fseek operations are slow, which would impact reading performance.
 
 This belief that fopen and fseek are slow certainly applied to old-fashioned file systems, such as FAT16, which was used in the MS-DOS era. The reason for that was that on every fseek the File Allocation Table (FAT) had to be read from disk to determine the physical block on disk to which the fseek should be made. Modern file systems don't seem to have this problem any more, and there are only small differences in stateless versus stateful read operations. The MATLAB code below demonstrates this.

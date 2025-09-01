@@ -3,8 +3,6 @@ title: Time-frequency analysis on short and long timescales
 tags: [cuttingeeg2021, eeg-language]
 ---
 
-# Time-frequency analysis on short and long timescales
-
 ## Introduction
 
 In this tutorial we will be looking at frequency analysis, and specifically on time-frequency analysis on short time scales (around the stimulus) and long time scales (over the course of hours). This tutorial is an adaptation from [this](/tutorial/sensor/timefrequencyanalysis) and [this](/tutorial/sensor/sleep) tutorial, using an EEG dataset that was recorded in a language experiment.

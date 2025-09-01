@@ -7,8 +7,6 @@ redirect_from:
     - /example/simulateddata_clusterstats/
 ---
 
-# Use simulated ERPs to explore cluster statistics
-
 The following code starts off with an ERP in two conditions, where it is slightly larger in condition 1 than 2. This simulation demonstrates a randomization test, correcting for multiple comparisons by using the largest cluster mass.
 
 {% include markup/skyblue %}
@@ -35,7 +33,6 @@ and look in the [reference](/references_methods) section for more literature poi
       data1.trial{i}(1,:) = 1.1*erp + 0.1*randn(size(erp)); % the effect size is specified here
     end
     data1.label = {'Cz'};
-
 
     data2 = [];
     for i=1:100
@@ -75,7 +72,6 @@ and look in the [reference](/references_methods) section for more literature poi
     cfg.keeptrials = 'yes';
     timelock1 = ft_timelockanalysis(cfg, data1);
     timelock2 = ft_timelockanalysis(cfg, data2);
-
 
     cfg = [];
     cfg.design = [ 1*ones(1,100) 2*ones(1,100) ];

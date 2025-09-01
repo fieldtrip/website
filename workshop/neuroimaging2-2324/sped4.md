@@ -6,8 +6,6 @@ redirect_from:
   - /workshop/neuroimaging2/timefrequencyanalysis/
 ---
 
-# SPED4 - Time-frequency analysis in practice using FieldTrip
-
 ## Introduction
 
 This is an adapted version of the [general FieldTrip tutorial on time-frequency analysis](/tutorial/sensor/timefrequencyanalysis), made specifically for the module _Signal Processing for Electrophysiological Data (SPED)_ in the course _Neuroimaging 2: Electrophysiological Methods_, in the _Cognitive Neuroscience Masters (CNS)_ program at Radboud University. This module is taught by Eelke Spaak.
@@ -288,7 +286,6 @@ Plot the result (again, recommended to do this in the command window directly be
     cfg.colorbar     = 'yes';
     figure
     ft_multiplotTFR(cfg, TFRwave)
-
 
 {% include markup/skyblue %}
 **Exercise 9A**: Adjust `cfg.width` and see how the TFRs change. **Exercise 9B**: Make some plots using `absolute` baseline correction instead of `db` and see how the TFRs change. I'd recommend switching to `ft_singleplotTFR` for one or a few channels of interest for these exercises, rather than doing the full `ft_multiplotTFR` each time.

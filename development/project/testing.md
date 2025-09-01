@@ -6,7 +6,6 @@ title: Testing code quality
 
 FIXME See also [/development/infrastructure_for_testing](/development/project/infrastructure_for_testing)
 
-# Testing code quality
 
 ## Supported MATLAB versions and operating systems
 

@@ -3,8 +3,6 @@ title: FieldTrip buffer MATLAB interface
 tags: [realtime, development]
 ---
 
-# FieldTrip buffer MATLAB interface
-
 The FieldTrip toolbox includes an interface to the buffer through the following functions
 
 - **[ft_read_header](/reference/fileio/ft_read_header)**

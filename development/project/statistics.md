@@ -4,7 +4,6 @@ title: Redesign and implement a common statistical backend for various data type
 
 {% include /shared/development/warning.md %}
 
-# Redesign and implement a common statistical backend for various data types
 
 ## Objectives
 

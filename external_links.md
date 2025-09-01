@@ -2,8 +2,6 @@
 title: External links
 ---
 
-# External links
-
 Feel free to edit this page and add links that you think are appropriate.
 
 ## Collaborating institutes

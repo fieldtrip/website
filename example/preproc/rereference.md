@@ -6,8 +6,6 @@ redirect_from:
     - /example/rereference/
 ---
 
-# Rereference EEG and iEEG data
-
 EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g., with an electrode firmly attached on the mastoid behind the ear), but that is not necessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some rereferencing in the preprocessing of EEG and iEEG data.
 
 FieldTrip implements multiple methods for rereferencing in the **[ft_preprocessing](/reference/ft_preprocessing)** function. To use these, you specify `cfg.reref='yes'` and give the specific method as `cfg.refmethod`. Alternatively, if you have a more complex referencing scheme or want more control over the rereferencing, you can specify `cfg.reref='no'` and rather use `cfg.montage` in combination with **[ft_prepare_montage](/reference/ft_prepare_montage)**.

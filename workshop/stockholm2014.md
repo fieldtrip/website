@@ -2,8 +2,6 @@
 title: Joint FieldTrip/MNE course at the NatMEG in Stockholm
 ---
 
-# Joint FieldTrip/MNE course at the NatMEG in Stockholm
-
 - Where: Karolinska Institute, Stockholm, Sweden
 - When: 20-24 Januari 2014
 - Who: Robert Oostenveld, Matti Hämäläinen, Stephen Whitmarsh, Alexandre Gramfort

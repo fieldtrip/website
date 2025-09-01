@@ -1,22 +1,20 @@
 ---
-title: Workshop on FieldTrip, nonparametric statistics and connectivity
+title: Workshop in Tübingen on nonparametric statistics and connectivity
 ---
 
-## Workshop on FieldTrip, nonparametric statistics and connectivity
-
-### Where
+## Where
 
 Eberhard-Karls-University of Tübingen, Graduate Training Center of Neuroscience, Tübingen, Germany.
 
-### When
+## When
 
 Wednesday February 27 2013 up to Friday March 1 2013.
 
-### Who
+## Who
 
 Paolo Belardinelli is the host and local organizer. Eelke Spaak and Jörn Horschig (Donders, Nijmegen, NL) are the main tutors. Paolo Belardinelli and Erick Ortiz will support the workshop.
 
-### Installing FieldTrip and Tutorial preparation
+## Installing FieldTrip and tutorial preparation
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
@@ -24,9 +22,9 @@ version of FieldTrip that is distributed on a USB stcik, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
-1.  Copy the complete Tübingen directory from the USB stick to your computer
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
+1. Copy the complete Tübingen directory from the USB stick to your computer
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
@@ -53,9 +51,9 @@ After installing FieldTrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
 
-### Tentative program
+## Tentative program
 
-#### Wednesday
+### Wednesday
 
 - morning
 
@@ -70,7 +68,7 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - evening
   - dinner
 
-#### Thursday
+### Thursday
 
 - morning
 
@@ -86,7 +84,7 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - evening
   - pub?
 
-#### Friday
+### Friday
 
 - morning
   - 3h playground (working on own data)
