@@ -55,4 +55,4 @@ which will convert the Markdown into HTML and serve your local copy of the websi
 ## Checking for broken links and missing images
 
     wget --spider -r -nd -nv -o spider.log http://localhost:4000
-    grep -B1 'broken link!' spider.log  | grep http > broken.log
+    grep -B1 'broken link!' spider.log  | grep http | grep -v location.protocol | grep -v 4000/reference  > broken.log
