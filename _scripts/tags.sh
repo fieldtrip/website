@@ -15,11 +15,11 @@ rm _data/tag/*.yml
 TAGFILE=`mktemp`
 
 # this constructs a list of all tags
-find . -name \*.md | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | sort -u > $TAGFILE
+find . -name \*.md -not -path ./.bundle/\* | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | LC_COLLATE=C sort -u > $TAGFILE
 
 # this constructs a list of pages that have a certain tag
 for TAG in `cat ${TAGFILE}` ; do
-  FILELIST=`find . -name \*.md -not -path ./.bundle/\* | xargs grep -wl ^tags:.*${TAG} | sort -u `
+  FILELIST=`find . -name \*.md -not -path ./.bundle/\* | xargs grep -wl ^tags:.*${TAG} | LC_COLLATE=C sort -u `
   for FILE in ${FILELIST}; do
     TITLE=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
     LINK=${FILE:1:$((${#FILE}-4))}

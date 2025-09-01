@@ -15,11 +15,11 @@ rm _data/category/*.yml
 CATEGORYFILE=`mktemp`
 
 # this constructs a list of all categories
-find . -name \*.md | xargs grep -h '^category:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | sort -u > $CATEGORYFILE
+find . -name \*.md -not -path ./.bundle/\* | xargs grep -h '^category:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | LC_COLLATE=C sort -u > $CATEGORYFILE
 
 # this constructs a list of pages that belong to a certain category
 for CATEGORY in `cat ${CATEGORYFILE}` ; do
-  FILELIST=`find . -name \*.md -not -path ./.bundle/\*| xargs grep -wl ^category:.*${CATEGORY} | sort -u `
+  FILELIST=`find . -name \*.md -not -path ./.bundle/\* | xargs grep -wl ^category:.*${CATEGORY} | LC_COLLATE=C sort -u `
 
   for FILE in ${FILELIST}; do
     TITLE=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
