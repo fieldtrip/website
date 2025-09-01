@@ -2,7 +2,6 @@
 title: Getting started with fMRI timeseries data
 category: getting_started
 tags: [dataformat, fmri]
-nav_order: 3
 redirect_from:
     - /getting_started/fmri/
 ---

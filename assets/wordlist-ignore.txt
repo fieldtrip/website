@@ -301,6 +301,9 @@ barcelona
 Barratt
 barthannwin
 Bartho
+basedoncentroids
+basedongrid
+basedonresolution
 baselin
 baselinecorrect
 baselinecorrection
