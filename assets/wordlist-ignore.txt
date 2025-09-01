@@ -308,6 +308,7 @@ baselin
 baselinecorrect
 baselinecorrection
 baselinetype
+baselinewindow
 baselining
 Baselining
 bashrc
