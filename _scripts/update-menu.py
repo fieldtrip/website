@@ -69,7 +69,7 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
             continue
         if file.startswith('COPYING') or file.startswith('LICENSE') or file.startswith('README'):
             continue
-        if filepath.startswith('.') or filepath.startswith('_') or filepath.startswith('assets') or  filepath.startswith('error'):
+        if filepath.startswith('.') or filepath.startswith('_') or filepath.startswith('assets') or filepath.startswith('error') or filepath.startswith('tag') or filepath.startswith('category'):
             continue
         paths.append(os.path.join(filepath, file))
 

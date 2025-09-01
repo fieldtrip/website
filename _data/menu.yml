@@ -33,7 +33,7 @@
   - title: Contribute
     link: /development/contribute/
     nav_order: 0
-  - title: Data structures used by FieldTrip
+  - title: Data structures
     link: /development/datastructure/
     nav_order: 0
   - title: Deprecated functions and options
@@ -44,9 +44,6 @@
     nav_order: 0
   - title: Forward and inverse computation of EEG/MEG data
     link: /development/forwinv/
-    nav_order: 0
-  - title: Getting Started
-    link: /development/getting_started/
     nav_order: 0
   - title: Guidelines
     link: /development/guideline/
@@ -70,6 +67,247 @@
   - title: Integration between tools
     link: /development/integration/
     nav_order: 0
+  - title: Meetings
+    link: /development/meeting/
+    nav_order: 0
+    menu:
+    - title: FieldTrip meeting - 20120822
+      link: /development/meeting/20120822/
+      nav_order: 0
+    - title: FieldTrip meeting - 20120905
+      link: /development/meeting/20120905/
+      nav_order: 0
+    - title: FieldTrip meeting - 20120912
+      link: /development/meeting/20120912/
+      nav_order: 0
+    - title: FieldTrip meeting - 20120919
+      link: /development/meeting/20120919/
+      nav_order: 0
+    - title: FieldTrip meeting - 20120926
+      link: /development/meeting/20120926/
+      nav_order: 0
+    - title: FieldTrip meeting - 20121024
+      link: /development/meeting/20121024/
+      nav_order: 0
+    - title: FieldTrip meeting - 20121114
+      link: /development/meeting/20121114/
+      nav_order: 0
+    - title: FieldTrip meeting - 20121121
+      link: /development/meeting/20121121/
+      nav_order: 0
+    - title: FieldTrip meeting - 20131030
+      link: /development/meeting/20131030/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140319
+      link: /development/meeting/20140319/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140326
+      link: /development/meeting/20140326/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140402
+      link: /development/meeting/20140402/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140409
+      link: /development/meeting/20140409/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140416
+      link: /development/meeting/20140416/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140423
+      link: /development/meeting/20140423/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140430
+      link: /development/meeting/20140430/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140514
+      link: /development/meeting/20140514/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140521
+      link: /development/meeting/20140521/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140528
+      link: /development/meeting/20140528/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140604
+      link: /development/meeting/20140604/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140611
+      link: /development/meeting/20140611/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140618
+      link: /development/meeting/20140618/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140625
+      link: /development/meeting/20140625/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140702
+      link: /development/meeting/20140702/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140709
+      link: /development/meeting/20140709/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140716
+      link: /development/meeting/20140716/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140723
+      link: /development/meeting/20140723/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140730
+      link: /development/meeting/20140730/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140806
+      link: /development/meeting/20140806/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140813
+      link: /development/meeting/20140813/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140903
+      link: /development/meeting/20140903/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140917
+      link: /development/meeting/20140917/
+      nav_order: 0
+    - title: FieldTrip meeting - 20140923
+      link: /development/meeting/20140923/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141008
+      link: /development/meeting/20141008/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141015
+      link: /development/meeting/20141015/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141029
+      link: /development/meeting/20141028/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141029
+      link: /development/meeting/20141029/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141105
+      link: /development/meeting/20141105/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141126
+      link: /development/meeting/20141126/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141203
+      link: /development/meeting/20141203/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141215
+      link: /development/meeting/20141215/
+      nav_order: 0
+    - title: FieldTrip meeting - 20141222
+      link: /development/meeting/20141222/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150112
+      link: /development/meeting/20150112/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150126
+      link: /development/meeting/20150126/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150202
+      link: /development/meeting/20150202/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150209
+      link: /development/meeting/20150209/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150216
+      link: /development/meeting/20150216/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150223
+      link: /development/meeting/20150223/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150302
+      link: /development/meeting/20150302/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150309
+      link: /development/meeting/20150309/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150316
+      link: /development/meeting/20150316/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150330
+      link: /development/meeting/20150330/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150413
+      link: /development/meeting/20150413/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150504
+      link: /development/meeting/20150504/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150518
+      link: /development/meeting/20150518/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150601
+      link: /development/meeting/20150601/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150608
+      link: /development/meeting/20150608/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150615
+      link: /development/meeting/20150615/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150622
+      link: /development/meeting/20150622/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150629
+      link: /development/meeting/20150629/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150706
+      link: /development/meeting/20150706/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150713
+      link: /development/meeting/20150713/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150720
+      link: /development/meeting/20150720/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150831
+      link: /development/meeting/20150831/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150907
+      link: /development/meeting/20150907/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150914
+      link: /development/meeting/20150914/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150921
+      link: /development/meeting/20150921/
+      nav_order: 0
+    - title: FieldTrip meeting - 20150928
+      link: /development/meeting/20150928/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151005
+      link: /development/meeting/20151005/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151019
+      link: /development/meeting/20151019/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151026
+      link: /development/meeting/20151026/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151102
+      link: /development/meeting/20151102/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151109
+      link: /development/meeting/20151109/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151116
+      link: /development/meeting/20151116/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151123
+      link: /development/meeting/20151123/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151130
+      link: /development/meeting/20151130/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151207
+      link: /development/meeting/20151207/
+      nav_order: 0
+    - title: FieldTrip meeting - 20151214
+      link: /development/meeting/20151214/
+      nav_order: 0
+    - title: FieldTrip meeting - 20160104
+      link: /development/meeting/20160104/
+      nav_order: 0
   - title: Modules
     link: /development/module/
     nav_order: 0
@@ -99,13 +337,262 @@
     - title: Spectral estimation of of EEG/MEG time series data
       link: /development/module/specest/
       nav_order: 0
-  - title: Real-time access to neurophysiological data
+  - title: Project overview
+    link: /development/project/
+    nav_order: 0
+    menu:
+    - title: A tutorial on forward modeling
+      link: /development/project/tutorial_documentation/
+      nav_order: 0
+    - title: Add stripped spm2 and other toolboxes as external dependencies
+      link: /development/project/external_dependencies/
+      nav_order: 0
+    - title: Add support for reading data from any file format supported by neuroshare
+      link: /development/project/read_neuroshare/
+      nav_order: 0
+    - title: Add the spike functions from Martin
+      link: /development/project/spike/
+      nav_order: 0
+    - title: An alternative algorithm for constructing triangulated EEG-BEM head models
+      link: /development/project/bemmodel/
+      nav_order: 0
+    - title: CSP for classification
+      link: /development/project/csp/
+      nav_order: 0
+    - title: Check the consistency between the documentation and the implementations
+      link: /development/project/consistency/
+      nav_order: 0
+    - title: Check the correctness of the implementation of the algorithms
+      link: /development/project/correctness/
+      nav_order: 0
+    - title: Clean up inside_vol and similar functions
+      link: /development/project/inside_vol/
+      nav_order: 0
+    - title: Clean up the buffer implementation
+      link: /development/project/buffer_v3/
+      nav_order: 0
+    - title: Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives
+        using checkdata
+      link: /development/project/checkdata/
+      nav_order: 0
+    - title: Clean up the documentation on head modeling, anatomical processing, etc.
+      link: /development/project/geometry_documentation/
+      nav_order: 0
+    - title: Cleanup the functions in the private folders
+      link: /development/project/cleanup_private_functions/
+      nav_order: 0
+    - title: Code coverage
+      link: /development/project/code_coverage/
+      nav_order: 0
+    - title: Consistent flank detection for triggers
+      link: /development/project/trigger/
+      nav_order: 0
+    - title: Create a forward solver for charges in an infinite halfspace
+      link: /development/project/halfspace/
+      nav_order: 0
+    - title: Create a headmodel for source reconstruction of MEG data
+      link: /development/project/headmodel_tutorial/
+      nav_order: 0
+    - title: Create a tutorial on the processing of animal data
+      link: /development/project/animal/
+      nav_order: 0
+    - title: Create a volume conduction model of the head for source reconstruction
+        of EEG data
+      link: /development/project/headmodel_tutorial_eeg/
+      nav_order: 0
+    - title: Dealing with TMS-EEG datasets
+      link: /development/project/eeg_tms/
+      nav_order: 0
+    - title: Dealing with the geometry of the forward model
+      link: /development/project/fwdarch2/
+      nav_order: 0
+    - title: Developing the documentation of the source reconstruction methods
+      link: /development/project/documentation_source/
+      nav_order: 0
+    - title: Document grad.tra, modifications to it, and effects on inverse
+      link: /development/project/tra/
+      nav_order: 0
+    - title: Ensemble methods
+      link: /development/project/ensemblemethods/
+      nav_order: 0
+    - title: Ensure consistency of the documentation
+      link: /development/project/documentation/
+      nav_order: 0
+    - title: Ensure consistent trial definition
+      link: /development/project/ensure_consistent_trial_definition/
+      nav_order: 0
+    - title: Ensure consistent units throughout fieldtrip
+      link: /development/project/units/
+      nav_order: 0
+    - title: Ensure that all website pages exist
+      link: /development/project/orphans/
+      nav_order: 0
+    - title: Ensure that the compat directories are NOT called by FieldTrip itself
+      link: /development/project/compat/
+      nav_order: 0
+    - title: Explain how to create cfg.design for ft_xxxstatistics
+      link: /development/project/design/
+      nav_order: 0
+    - title: FieldTrip from a software development perspective
+      link: /development/project/code_review/
+      nav_order: 0
+    - title: FieldTrip/SIMBIO integration materials
+      link: /development/project/simbio_materials/
+      nav_order: 0
+    - title: FieldTrip/SIMBIO integration plan
+      link: /development/project/simbio_plan/
+      nav_order: 0
+    - title: FieldTrip/SIMBIO integration scenarios
+      link: /development/project/simbio_scenarios/
+      nav_order: 0
+    - title: Handling of continuous data
+      link: /development/project/continuous/
+      nav_order: 0
+    - title: How to create a volumetric current density
+      link: /development/project/curdens/
+      nav_order: 0
+    - title: How to deal with the forward model units?
+      link: /development/project/fwdunits/
+      nav_order: 0
+    - title: Implement a common distributed computing backend
+      link: /development/project/distributed/
+      nav_order: 0
+    - title: Implement a consistent way to spatially transform a grid or source model
+      link: /development/project/transform_grid/
+      nav_order: 0
+    - title: Implement a function which computes a variety of bivariate coupling measures
+        from the input data
+      link: /development/project/couplinganalysis/
+      nav_order: 0
+    - title: Implement a function which computes an mvar-model based on the input
+        data
+      link: /development/project/mvaranalysis/
+      nav_order: 0
+    - title: Implement a graphical user interface as a "wizard" for certain analysis
+        protocols
+      link: /development/project/wizard/
+      nav_order: 0
+    - title: Implement function that checks consistency of cfgs
+      link: /development/project/checkconfig/
+      nav_order: 0
+    - title: Implement online data processing and classification for BCI
+      link: /development/project/bci/
+      nav_order: 0
+    - title: Implement support for CTF synthetic gradiometers
+      link: /development/project/synthetic_grad/
+      nav_order: 0
+    - title: Implement support for a separation of data into a signal and noise subspace
+      link: /development/project/subspace/
+      nav_order: 0
+    - title: Implement trial selection option
+      link: /development/project/trialselect/
+      nav_order: 0
+    - title: Implementation of realistic electrode properties in forward volume conduction
+        models
+      link: /development/project/femfuns/
+      nav_order: 0
+    - title: Import and export data to and from MNE-Python
+      link: /development/project/integrate_with_mne/
+      nav_order: 0
+    - title: Improve artifact handling
+      link: /development/project/artifacts/
+      nav_order: 0
+    - title: Improve integration with other toolboxes
+      link: /development/project/integration/
+      nav_order: 0
+    - title: "Improve parallel computing under\_the hood"
+      link: /development/project/parallel/
+      nav_order: 0
+    - title: Improve regression testing
+      link: /development/project/regression/
+      nav_order: 0
+    - title: Infrastructure for testing
+      link: /development/project/infrastructure_for_testing/
+      nav_order: 0
+    - title: Integration with NUTMEG
+      link: /development/project/nutmeg/
+      nav_order: 0
+    - title: Integration with SPM12
+      link: /development/project/spm12/
+      nav_order: 0
+    - title: Integration with SPM8
+      link: /development/project/spm8/
+      nav_order: 0
+    - title: Modularise ft_connectivityanalysis
+      link: /development/project/modularise_ft_connectivityanalysis/
+      nav_order: 0
+    - title: Move internal fcdc documentation onto the website
+      link: /development/project/move_internal_fcdc_documentation_onto_the_wiki/
+      nav_order: 0
+    - title: NIRS development
+      link: /development/project/nirs/
+      nav_order: 0
+    - title: Neighbour templates
+      link: /development/project/neighbourtemplates/
+      nav_order: 0
+    - title: Prefix all public functions with ft
+      link: /development/project/prefix/
+      nav_order: 0
+    - title: Provide an interface to the FNS software for FDM modelling
+      link: /development/project/fns/
+      nav_order: 0
+    - title: Provide an interface to the OpenMEEG software for BEM modelling
+      link: /development/project/openmeeg/
+      nav_order: 0
+    - title: Redesign and implement a common statistical backend for various data
+        types
+      link: /development/project/statistics/
+      nav_order: 0
+    - title: Redesign the interface to the read_fcdc_xxx functions
+      link: /development/project/read_fcdc_xxx/
+      nav_order: 0
+    - title: Refurbishing the FORWARD module
+      link: /development/project/fwdarch/
+      nav_order: 0
+    - title: Reimplement the avg/cov/trial handling
+      link: /development/project/timelockanalysis/
+      nav_order: 0
+    - title: Replicate functionality of MNE software
+      link: /development/project/replicate_functionality_of_mne_software/
+      nav_order: 0
+    - title: Restructure and rework all visualization functions
+      link: /development/project/restructure_and_rework_all_visualization_functions/
+      nav_order: 0
+    - title: Restructure the directory layout
+      link: /development/project/directorylayout/
+      nav_order: 0
+    - title: Switch from SPM2 to SPM8
+      link: /development/project/switch_from_spm2_to_spm8/
+      nav_order: 0
+    - title: Switch to using the preproc functions and phase out the old preprocessing
+        code
+      link: /development/project/merge_preproc/
+      nav_order: 0
+    - title: Testing code quality
+      link: /development/project/testing/
+      nav_order: 0
+    - title: Testing minimum-norm estimate in FieldTrip and in MNE Suite
+      link: /development/project/testing_ft_vs_mne/
+      nav_order: 0
+    - title: The rat beamformer
+      link: /development/project/rat/
+      nav_order: 0
+    - title: Visualization concept for 4D bivariate data
+      link: /development/project/visualization/
+      nav_order: 0
+    - title: What is the best way to homogenize data using z-scores?
+      link: /development/project/zscores/
+      nav_order: 0
+    - title: Write a tutorial on how to work with the MEGSIM data
+      link: /development/project/megsim/
+      nav_order: 0
+    - title: source reconstruction using two dipoles
+      link: /development/project/symmetric_dipoles/
+      nav_order: 0
+  - title: Real-time data processing
     link: /development/realtime/
     nav_order: 0
     menu:
-    - title: CTF
-      link: /development/realtime/ctf/
-      nav_order: 0
     - title: Closing the loop in a real-time BCI application
       link: /development/realtime/closing_the_loop/
       nav_order: 0
@@ -154,12 +641,15 @@
     - title: Streaming realtime data from Artinis Medical Systems
       link: /development/realtime/artinis/
       nav_order: 0
-    - title: Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+    - title: Streaming realtime data from BioSemi ActiveTwo EEG amplifier
       link: /development/realtime/biosemi/
       nav_order: 0
     - title: Streaming realtime data from BrainVision Recorder Remote Data Access
         (RDA)
       link: /development/realtime/rda/
+      nav_order: 0
+    - title: Streaming realtime data from CTF
+      link: /development/realtime/ctf/
       nav_order: 0
     - title: Streaming realtime data from Emotiv neuroheadset
       link: /development/realtime/emotiv/
@@ -227,11 +717,11 @@
   - title: Reporting issues
     link: /development/issues/
     nav_order: 0
+  - title: Software architecture
+    link: /development/architecture/
+    nav_order: 0
   - title: Testing
     link: /development/testing/
-    nav_order: 0
-  - title: Toolbox architecture and organization of the source code
-    link: /development/architecture/
     nav_order: 0
 - title: Documentation
   link: /documentation/
@@ -246,7 +736,7 @@
   link: /example/
   nav_order: 0
   menu:
-  - title: Plotting and visualization
+  - title: Examples for plotting and visualization
     link: /example/plotting/
     nav_order: 0
     menu:
@@ -259,7 +749,7 @@
     - title: Plotting the result of source reconstruction on a cortical mesh
       link: /example/plotting/plotting_source_surface/
       nav_order: 0
-  - title: Reading and preprocessing data
+  - title: Examples for reading and preprocessing data
     link: /example/preproc/
     nav_order: 0
     menu:
@@ -268,6 +758,9 @@
       nav_order: 0
     - title: Detect the muscle activity in an EMG channel and use that as trial definition
       link: /example/preproc/trialdef_emg/
+      nav_order: 0
+    - title: Determine the filter characteristics
+      link: /example/preproc/filter_characteristics/
       nav_order: 0
     - title: Fixing a missing channel
       link: /example/preproc/fixing_a_missing_sensor/
@@ -284,13 +777,13 @@
     - title: Making your own trialfun for conditional trial definition
       link: /example/preproc/trialfun/
       nav_order: 0
-    - title: Re-reference EEG and iEEG data
+    - title: Rereference EEG and iEEG data
       link: /example/preproc/rereference/
       nav_order: 0
     - title: Use denoising source separation (DSS) to remove ECG artifacts
       link: /example/preproc/dss_ecg/
       nav_order: 0
-  - title: Real-time analysis
+  - title: Examples for real-time analysis
     link: /example/realtime/
     nav_order: 0
     menu:
@@ -315,7 +808,7 @@
     - title: Realtime neurofeedback application based on Hilbert phase estimation
       link: /example/realtime/ft_realtime_hilbert/
       nav_order: 0
-  - title: Sensor-level analysis
+  - title: Examples for sensor-level analysis
     link: /example/sensor/
     nav_order: 0
     menu:
@@ -334,7 +827,7 @@
     - title: The correct pipeline order for combining planar MEG channels
       link: /example/sensor/combineplanar_pipelineorder/
       nav_order: 0
-  - title: Source reconstruction
+  - title: Examples for source reconstruction
     link: /example/source/
     nav_order: 0
     menu:
@@ -353,8 +846,14 @@
     - title: Common filters in beamforming
       link: /example/source/beamformer_commonfilter/
       nav_order: 0
+    - title: Compute EEG leadfields using a BEM headmodel
+      link: /example/source/bem/
+      nav_order: 0
     - title: Compute EEG leadfields using a FEM headmodel
       link: /example/source/fem/
+      nav_order: 0
+    - title: Compute EEG leadfields using a concentric spheres headmodel
+      link: /example/source/concentricspheres/
       nav_order: 0
     - title: Compute forward simulated data and apply a beamformer scan
       link: /example/source/simulateddata_beamformer/
@@ -368,14 +867,14 @@
     - title: Compute forward simulated data with the low-level ft_compute_leadfield
       link: /example/source/compute_leadfield/
       nav_order: 0
-    - title: Create MNI-aligned grids in individual head-space
+    - title: Create MNI-aligned grids in individual head coordinates
       link: /example/source/sourcemodel_aligned2mni/
       nav_order: 0
-    - title: Create brain atlas based MNI-aligned grids in individual head-space
-      link: /example/source/sourcemodel_aligned2mni_atlas/
+    - title: Create a template source model aligned to MNI space
+      link: /example/source/sourcemodel_mnitemplate/
       nav_order: 0
-    - title: Determine the filter characteristics
-      link: /example/source/filter_characteristics/
+    - title: Create atlas-based MNI-aligned grids in individual head coordinates
+      link: /example/source/sourcemodel_aligned2mni_atlas/
       nav_order: 0
     - title: Fit a dipole to the tactile ERF after mechanical stimulation
       link: /example/source/dipolefit_somatosensory_erf/
@@ -392,7 +891,7 @@
     - title: Make MEG leadfields using different headmodels
       link: /example/source/headmodel_various/
       nav_order: 0
-    - title: Read neuromag .fif mri and create a MNI-aligned single-shell head model
+    - title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
       link: /example/source/neuromag_aligned2mni/
       nav_order: 0
     - title: Symmetric dipole pairs for beamforming
@@ -401,17 +900,20 @@
     - title: Testing BEM created EEG lead fields
       link: /example/source/bem_evaluation/
       nav_order: 0
+    - title: Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
+      link: /example/source/sourcemodel_fem_centroids/
+      nav_order: 0
     - title: Use your own forward leadfield model in an inverse beamformer computation
       link: /example/source/beamformer_ownforward/
       nav_order: 0
-  - title: Spectral analysis
+  - title: Examples for spectral analysis
     link: /example/spectral/
     nav_order: 0
     menu:
     - title: Analysis of high-gamma band signals in human ECoG
       link: /example/spectral/ecog_ny/
       nav_order: 0
-    - title: Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+    - title: Analyze steady-state visual evoked potentials (SSVEPs)
       link: /example/spectral/ssvep/
       nav_order: 0
     - title: Conditional Granger causality in the frequency domain
@@ -442,13 +944,16 @@
     - title: Fourier analysis of neuronal oscillations and synchronization
       link: /example/spectral/fourier/
       nav_order: 0
-    - title: Irregular Resampling Auto-Spectral Analysis (IRASA)
+    - title: Interpolate the time axis of single-trial TFRs
+      link: /example/spectral/tfr_interpolatetime/
+      nav_order: 0
+    - title: Irregular resampling auto-spectral analysis (IRASA)
       link: /example/spectral/irasa/
       nav_order: 0
     - title: Simulate an oscillatory signal with phase resetting
       link: /example/spectral/phase_reset/
       nav_order: 0
-  - title: Statistical analysis
+  - title: Examples for statistical analysis
     link: /example/stats/
     nav_order: 0
     menu:
@@ -471,14 +976,14 @@
     - title: Use simulated ERPs to explore cluster statistics
       link: /example/stats/simulateddata_clusterstats/
       nav_order: 0
-    - title: Using GLM to analyze NIRS timeseries data
-      link: /example/stats/nirs_glm/
-      nav_order: 0
-    - title: Using General Linear Modeling on time series data
+    - title: Using general linear modeling on time series data
       link: /example/stats/glm_timeseries/
       nav_order: 0
-    - title: Using General Linear Modeling over trials
+    - title: Using general linear modeling over trials
       link: /example/stats/glm_trials/
+      nav_order: 0
+    - title: Using general linear modeling to analyze NIRS timeseries data
+      link: /example/stats/nirs_glm/
       nav_order: 0
     - title: Using simulations to estimate the sample size for cluster-based permutation
         test
@@ -530,7 +1035,7 @@
     - title: Correlation analysis of fMRI data
       link: /example/other/fmri_correlationanalysis/
       nav_order: 0
-    - title: Example analysis pipeline for Biosemi data
+    - title: Example analysis pipeline for BioSemi data
       link: /example/other/biosemi/
       nav_order: 0
     - title: Find the orientation of planar gradiometers
@@ -545,7 +1050,7 @@
     - title: Making your analysis pipeline reproducible using reproducescript
       link: /example/other/reproducescript/
       nav_order: 0
-    - title: Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+    - title: Perform modified multiscale entropy (mMSE) analysis on EEG/MEG/LFP data
       link: /example/other/entropy_analysis/
       nav_order: 0
     - title: Using reproducescript for a group analysis
@@ -560,6 +1065,492 @@
 - title: FieldTrip Walkthrough
   link: /walkthrough/
   nav_order: 0
+- title: FieldTrip workshops and courses
+  link: /workshop/
+  nav_order: 0
+  menu:
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2018/
+    nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2019/
+    nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2020/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2020/code_of_conduct/
+      nav_order: 0
+    - title: Lessons learned
+      link: /workshop/toolkit2020/lessons_learned/
+      nav_order: 0
+    - title: Preparation for the online toolkit
+      link: /workshop/toolkit2020/preparation/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2020/test_installation/
+      nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2021/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2021/code_of_conduct/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2021/test_installation/
+      nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2022/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2022/code_of_conduct/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2022/test_installation/
+      nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2023/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2023/code_of_conduct/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2023/test_installation/
+      nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2024/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2024/code_of_conduct/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2024/test_installation/
+      nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2025/
+    nav_order: 0
+    menu:
+    - title: Code of Conduct
+      link: /workshop/toolkit2025/code_of_conduct/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2025/test_installation/
+      nav_order: 0
+  - title: Advanced analysis and source modeling of EEG and MEG data
+    link: /workshop/toolkit2015/
+    nav_order: 0
+  - title: Advanced analysis and source modeling of EEG and MEG data
+    link: /workshop/toolkit2016/
+    nav_order: 0
+  - title: Advanced analysis and source modeling of EEG and MEG data
+    link: /workshop/toolkit2017/
+    nav_order: 0
+  - title: African Brain Data Network EEG workshop in Nigeria
+    link: /workshop/nigeria2025/
+    nav_order: 0
+    menu:
+    - title: Event-related potentials
+      link: /workshop/nigeria2025/erp/
+      nav_order: 0
+    - title: Experimental design and presenting stimuli
+      link: /workshop/nigeria2025/stimuluspresentation/
+      nav_order: 0
+    - title: Frequency analysis of resting state EEG data
+      link: /workshop/nigeria2025/frequency/
+      nav_order: 0
+    - title: Preprocessing of EEG data
+      link: /workshop/nigeria2025/preprocessing/
+      nav_order: 0
+  - title: Biomag 2016 satellite meeting - Seoul, Korea
+    link: /workshop/biomag2016/
+    nav_order: 0
+  - title: Chengdu, China
+    link: /workshop/chengdu2017/
+    nav_order: 0
+  - title: ChildBrain pre-conference workshop in Leuven, Belgium
+    link: /workshop/leuven2019/
+    nav_order: 0
+  - title: CuttingEEG X workshop at the Donders
+    link: /workshop/cuttingeegx/
+    nav_order: 0
+    menu:
+    - title: SQUIDs versus OPMs
+      link: /workshop/cuttingeegx/squids_vs_opms/
+      nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/cuttingeegx/test_installation/
+      nav_order: 0
+  - title: ECoG/sEEG FieldTrip bootcamp at UC Davis
+    link: /workshop/davis2019/
+    nav_order: 0
+  - title: FieldTrip Workshop in Exeter, UK
+    link: /workshop/exeter-june2017/
+    nav_order: 0
+  - title: FieldTrip Workshop in Guangzhou, China
+    link: /workshop/guangzhou/
+    nav_order: 0
+  - title: "FieldTrip Workshop in G\xF6ttingen in 2019"
+    link: /workshop/goettingen2019/
+    nav_order: 0
+  - title: FieldTrip Workshop in London, UK
+    link: /workshop/london/
+    nav_order: 0
+  - title: FieldTrip Workshop in Mannheim
+    link: /workshop/mannheim2018/
+    nav_order: 0
+  - title: FieldTrip Workshop in Marseille in January 2016
+    link: /workshop/marseille/
+    nav_order: 0
+  - title: FieldTrip Workshop in Marseille in November 2016
+    link: /workshop/marseille2016b/
+    nav_order: 0
+  - title: "FieldTrip Workshop in T\xFCbingen, Germany"
+    link: /workshop/tuebingen2016/
+    nav_order: 0
+  - title: FieldTrip course at the NatMEG in Stockholm
+    link: /workshop/natmeg2014/
+    nav_order: 0
+    menu:
+    - title: Details of the auditory oddball combined MEG/EEG dataset
+      link: /workshop/natmeg2014/meg_audodd/
+      nav_order: 0
+  - title: FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
+    link: /workshop/cuttingeeg2021/
+    nav_order: 0
+    menu:
+    - title: Convert the EEG language dataset for sharing in BIDS
+      link: /workshop/cuttingeeg2021/bids_language/
+      nav_order: 0
+    - title: Time-frequency analysis on short and long timescales
+      link: /workshop/cuttingeeg2021/tutorial_freq/
+      nav_order: 0
+  - title: FieldTrip tutorial at WIRED 2024 in Paris
+    link: /workshop/wired2024/
+    nav_order: 0
+  - title: FieldTrip tutorial at the Donders Cognition Brain and Technology school
+    link: /workshop/bcbt2022/
+    nav_order: 0
+  - title: FieldTrip workshop Donostia
+    link: /workshop/donostia2013/
+    nav_order: 0
+  - title: FieldTrip workshop at ESI/MPI Frankfurt, Germany
+    link: /workshop/frankfurt/
+    nav_order: 0
+  - title: "FieldTrip workshop at Universidad Cat\xF3lica del Maule, Chile"
+    link: /workshop/chile2020/
+    nav_order: 0
+  - title: FieldTrip workshop at Washington University, St Louis
+    link: /workshop/stlouis/
+    nav_order: 0
+  - title: FieldTrip workshop in Aarhus
+    link: /workshop/aarhus2015/
+    nav_order: 0
+    menu:
+    - title: Beamforming evoked fields and potentials in combined MEG/EEG data
+      link: /workshop/aarhus2015/beamformingerf/
+      nav_order: 0
+  - title: FieldTrip workshop in Barcelona
+    link: /workshop/barcelona/
+    nav_order: 0
+  - title: FieldTrip workshop in Bern, Switzerland
+    link: /workshop/baci2017/
+    nav_order: 0
+    menu:
+    - title: Preprocessing of EEG data
+      link: /workshop/baci2017/preprocessing/
+      nav_order: 0
+    - title: Solving the EEG forward problem using BEM and FEM
+      link: /workshop/baci2017/forwardproblem/
+      nav_order: 0
+    - title: Solving the EEG inverse problem
+      link: /workshop/baci2017/inverseproblem/
+      nav_order: 0
+  - title: FieldTrip workshop in Chieti
+    link: /workshop/chieti2015/
+    nav_order: 0
+    menu:
+    - title: MEG virtual channels and seed-based connectivity
+      link: /workshop/chieti2015/virtualchannel/
+      nav_order: 0
+    - title: MEG whole-brain connectivity
+      link: /workshop/chieti2015/wholebrain/
+      nav_order: 0
+    - title: Simulating and estimating, what about model (mis)match?
+      link: /workshop/chieti2015/simulation/
+      nav_order: 0
+  - title: FieldTrip workshop in Coimbra, Portugal
+    link: /workshop/coimbra/
+    nav_order: 0
+  - title: "FieldTrip workshop in G\xF6ttingen in 2014"
+    link: /workshop/goettingen/
+    nav_order: 0
+  - title: FieldTrip workshop in Hamburg in 2012
+    link: /workshop/hamburg/
+    nav_order: 0
+  - title: FieldTrip workshop in Hamburg in 2013
+    link: /workshop/hamburg2013/
+    nav_order: 0
+  - title: FieldTrip workshop in Hamburg in 2023
+    link: /workshop/hamburg2023/
+    nav_order: 0
+  - title: FieldTrip workshop in Kiel, Germany
+    link: /workshop/kiel/
+    nav_order: 0
+  - title: FieldTrip workshop in Krakow, Poland
+    link: /workshop/krakow/
+    nav_order: 0
+  - title: FieldTrip workshop in Madrid
+    link: /workshop/madrid2019/
+    nav_order: 0
+    menu:
+    - title: Cleaning and processing resting-state EEG
+      link: /workshop/madrid2019/tutorial_cleaning/
+      nav_order: 0
+    - title: Cluster-based permutation tests on resting-state EEG power spectra
+      link: /workshop/madrid2019/tutorial_stats/
+      nav_order: 0
+    - title: Convert the EEG sedation dataset for sharing in BIDS
+      link: /workshop/madrid2019/bids_sedation/
+      nav_order: 0
+    - title: Details on the resting-state EEG dataset recorded with different sedation
+        levels
+      link: /workshop/madrid2019/eeg_sedation/
+      nav_order: 0
+    - title: Getting started with EEG data, quality checks and ERPs
+      link: /workshop/madrid2019/tutorial_erp/
+      nav_order: 0
+    - title: Time-frequency and spectral analysis
+      link: /workshop/madrid2019/tutorial_freq/
+      nav_order: 0
+  - title: FieldTrip workshop in Oslo
+    link: /workshop/oslo2019/
+    nav_order: 0
+    menu:
+    - title: Beamforming oscillatory responses in MEG data
+      link: /workshop/oslo2019/beamforming/
+      nav_order: 0
+    - title: Forward modeling for EEG source reconstruction
+      link: /workshop/oslo2019/forward_modeling/
+      nav_order: 0
+    - title: Preprocessing and event-related potentials in EEG data
+      link: /workshop/oslo2019/introduction/
+      nav_order: 0
+    - title: Statistical analysis and multiple comparison correction for EEG data
+      link: /workshop/oslo2019/statistics/
+      nav_order: 0
+    - title: Time-frequency analysis of EEG data
+      link: /workshop/oslo2019/timefrequency/
+      nav_order: 0
+  - title: FieldTrip workshop in Parma
+    link: /workshop/parma/
+    nav_order: 0
+  - title: FieldTrip workshop in Salzburg, Austria
+    link: /workshop/salzburg2015/
+    nav_order: 0
+  - title: FieldTrip workshop in Salzburg, Austria
+    link: /workshop/salzburg2017/
+    nav_order: 0
+  - title: FieldTrip workshop in Singapore
+    link: /workshop/ohbm2018/
+    nav_order: 0
+    menu:
+    - title: Preprocessing of EEG and MEG data
+      link: /workshop/ohbm2018/preprocessing/
+      nav_order: 0
+    - title: Solving the EEG and MEG forward problem using the finite element method
+      link: /workshop/ohbm2018/forward/
+      nav_order: 0
+    - title: Solving the EEG inverse problem
+      link: /workshop/ohbm2018/inverse/
+      nav_order: 0
+  - title: FieldTrip workshop in Sofia, Bulgaria
+    link: /workshop/sofia2024/
+    nav_order: 0
+  - title: FieldTrip workshop in Stockholm
+    link: /workshop/stockholm2018/
+    nav_order: 0
+  - title: FieldTrip workshop in Trento, Italy
+    link: /workshop/trento/
+    nav_order: 0
+  - title: "FieldTrip workshop in Z\xFCrich"
+    link: /workshop/zurich/
+    nav_order: 0
+  - title: Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler
+      Neuroimaging Group
+    link: /workshop/fitng2023/
+    nav_order: 0
+    menu:
+    - title: Analysis script to perform the group analysis
+      link: /workshop/fitng2023/do_group_analysis/
+      nav_order: 0
+  - title: Joint FieldTrip/MNE course at the NatMEG in Stockholm
+    link: /workshop/stockholm2014/
+    nav_order: 0
+  - title: "M/EEG analysis workshop in Jyv\xE4skyl\xE4, Finland"
+    link: /workshop/jyvaskyla2017/
+    nav_order: 0
+  - title: MEG-UK 2015 meeting
+    link: /workshop/meg-uk-2015/
+    nav_order: 0
+    menu:
+    - title: FieldTrip beamformer demo
+      link: /workshop/meg-uk-2015/fieldtrip-beamformer-demo/
+      nav_order: 0
+    - title: FieldTrip connectivity demo
+      link: /workshop/meg-uk-2015/fieldtrip-connectivity-demo/
+      nav_order: 0
+    - title: FieldTrip stats demo
+      link: /workshop/meg-uk-2015/fieldtrip-stats-demo/
+      nav_order: 0
+    - title: General instructions for MATLAB demo's
+      link: /workshop/meg-uk-2015/general/
+      nav_order: 0
+    - title: Multimodal faces dataset
+      link: /workshop/meg-uk-2015/dataset/
+      nav_order: 0
+    - title: SPM DCM demo
+      link: /workshop/meg-uk-2015/dcm_tutorial/
+      nav_order: 0
+    - title: SPM Sensor-level stats demo
+      link: /workshop/meg-uk-2015/spm_stats/
+      nav_order: 0
+    - title: SPM Source reconstruction demo
+      link: /workshop/meg-uk-2015/spm_source/
+      nav_order: 0
+  - title: MEG/EEG analysis and FieldTrip Workshop in Oxford, UK
+    link: /workshop/oxford2019/
+    nav_order: 0
+    menu:
+    - title: Reading in data and performing sensor-level ERF and TFR analyses
+      link: /workshop/oxford2019/sensor_analysis_plusminus/
+      nav_order: 0
+  - title: MRC Partnership Grant FieldTrip workshop in Birmingham
+    link: /workshop/birmingham/
+    nav_order: 0
+  - title: Neuroimaging II - Electrophysiological Methods
+    link: /workshop/neuroimaging2-2324/
+    nav_order: 0
+    menu:
+    - title: SPED4 - Time-frequency analysis in practice using FieldTrip
+      link: /workshop/neuroimaging2-2324/sped4/
+      nav_order: 0
+  - title: Neuroimaging II - Electrophysiological Methods
+    link: /workshop/neuroimaging2-2425/
+    nav_order: 0
+    menu:
+    - title: SED1 - Statistical testing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sed1/
+      nav_order: 0
+    - title: SED2 - Statistical testing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sed2/
+      nav_order: 0
+    - title: SED3 - Statistical testing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sed3/
+      nav_order: 0
+    - title: SED4 - Statistical testing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sed4/
+      nav_order: 0
+    - title: SPED1 - Signal processing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sped1/
+      nav_order: 0
+    - title: SPED2 - Signal processing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sped2/
+      nav_order: 0
+    - title: SPED3 - Signal processing of electrophysiological data
+      link: /workshop/neuroimaging2-2425/sped3/
+      nav_order: 0
+    - title: SPED4 - Time-frequency analysis in practice using FieldTrip
+      link: /workshop/neuroimaging2-2425/sped4/
+      nav_order: 0
+    - title: SR1 - Source reconstruction
+      link: /workshop/neuroimaging2-2425/sr1/
+      nav_order: 0
+    - title: SR2 - Source reconstruction
+      link: /workshop/neuroimaging2-2425/sr2/
+      nav_order: 0
+    - title: SR3 - Source reconstruction
+      link: /workshop/neuroimaging2-2425/sr3/
+      nav_order: 0
+    - title: SR4 - Source reconstruction
+      link: /workshop/neuroimaging2-2425/sr4/
+      nav_order: 0
+    - title: SR5 - Source reconstruction
+      link: /workshop/neuroimaging2-2425/sr5/
+      nav_order: 0
+  - title: PracticalMEEG workshop at ICM in Paris
+    link: /workshop/paris2019/
+    nav_order: 0
+    menu:
+    - title: Creation of headmodels and sourcemodels for source reconstruction
+      link: /workshop/paris2019/handson_anatomy/
+      nav_order: 0
+    - title: From raw data to ERP
+      link: /workshop/paris2019/handson_raw2erp/
+      nav_order: 0
+    - title: Group analysis
+      link: /workshop/paris2019/handson_groupanalysis/
+      nav_order: 0
+    - title: Instructions for the USB stick
+      link: /workshop/paris2019/usb_instructions/
+      nav_order: 0
+    - title: Multimodal faces dataset
+      link: /workshop/paris2019/dataset/
+      nav_order: 0
+    - title: Reconstructing source activity using beamformers
+      link: /workshop/paris2019/handson_sourceanalysis/
+      nav_order: 0
+    - title: Time-frequency analysis using Hanning window, multitapers and wavelets
+      link: /workshop/paris2019/handson_sensoranalysis/
+      nav_order: 0
+  - title: PracticalMEEG workshop in Aix-en-Provence
+    link: /workshop/practicalmeeg2022/
+    nav_order: 0
+    menu:
+    - title: Creation of headmodels and sourcemodels for source reconstruction
+      link: /workshop/practicalmeeg2022/handson_anatomy/
+      nav_order: 0
+    - title: Dealing with artifacts
+      link: /workshop/practicalmeeg2022/handson_artifacts/
+      nav_order: 0
+    - title: Group-level statistics with parametric and non-parametric methods
+      link: /workshop/practicalmeeg2022/handson_groupanalysis/
+      nav_order: 0
+    - title: Multimodal faces dataset
+      link: /workshop/practicalmeeg2022/dataset/
+      nav_order: 0
+    - title: Preprocessing raw data and computing ERPs/ERFs
+      link: /workshop/practicalmeeg2022/handson_raw2erp/
+      nav_order: 0
+    - title: Reconstructing source activity using beamformers
+      link: /workshop/practicalmeeg2022/handson_sourceanalysis/
+      nav_order: 0
+    - title: Time-frequency analysis using Hanning window, multitapers and wavelets
+      link: /workshop/practicalmeeg2022/handson_sensoranalysis/
+      nav_order: 0
+  - title: Realtime MEG BCI hands-on session in Nijmegen
+    link: /workshop/realtime/
+    nav_order: 0
+  - title: Summerschool on brain networks
+    link: /workshop/groesbeek2013/
+    nav_order: 0
+  - title: Toolkit of Cognitive Neuroscience - EEG/MEG
+    link: /workshop/toolkit2014/
+    nav_order: 0
+  - title: Workshop on FieldTrip, nonparametric statistics and connectivity
+    link: /workshop/tuebingen13/
+    nav_order: 0
+  - title: Workshop on analyzing intracranial data - spikes and fields
+    link: /workshop/toronto/
+    nav_order: 0
+  - title: Workshop on the ECoG forward solution using FEMfuns in FieldTrip at the
+      Donders
+    link: /workshop/femfuns2022/
+    nav_order: 0
 - title: Frequently asked questions
   link: /faq/
   nav_order: 0
@@ -583,7 +1574,7 @@
     - title: Why was FieldTrip maintained in SVN and not in Git?
       link: /faq/development/svnversusgit/
       nav_order: 0
-  - title: Distributed computing
+  - title: Distributed computing questions
     link: /faq/distcomp/
     nav_order: 0
     menu:
@@ -615,7 +1606,7 @@
     - title: How can I use my MacBook Pro for stimulus presentation in the MEG lab?
       link: /faq/experiment/psychtoolbox_macbook/
       nav_order: 0
-    - title: How can I visualize the neuromag head position indicator coils?
+    - title: How can I visualize the Neuromag head position indicator coils?
       link: /faq/experiment/neuromag_hpi/
       nav_order: 0
     - title: What kind of cable do I need for a serial port connection between two
@@ -731,7 +1722,7 @@
     - title: Why is my message rejected from the email discussion list?
       link: /faq/organization/emaillist_rejected/
       nav_order: 0
-  - title: Plotting and visualization
+  - title: Plotting and visualization questions
     link: /faq/plotting/
     nav_order: 0
     menu:
@@ -769,11 +1760,21 @@
     - title: Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
       link: /faq/plotting/anat_upsidedownplotting/
       nav_order: 0
-  - title: Reading and preprocessing data
+  - title: Questions about reading and preprocessing of data
     link: /faq/preproc/
     nav_order: 0
     menu:
-    - title: Artifacts
+    - title: How can I inspect the electrode impedances of my data?
+      link: /faq/preproc/impedancecheck/
+      nav_order: 0
+    - title: How can I use the databrowser?
+      link: /faq/preproc/databrowser/
+      nav_order: 0
+    - title: I used to work with trl-matrices that have more than 3 columns. Why is
+        this not supported anymore?
+      link: /faq/preproc/trialinfo_trl/
+      nav_order: 0
+    - title: Questions about artifacts
       link: /faq/preproc/artifact/
       nav_order: 0
       menu:
@@ -796,6 +1797,9 @@
       - title: What kind of filters can I apply to my data?
         link: /faq/preproc/artifact/preproc_filtertypes/
         nav_order: 0
+      - title: Why does my ICA eyeblink component look strange?
+        link: /faq/preproc/artifact/ica_eyeblink_topo/
+        nav_order: 0
       - title: Why does my ICA output contain complex numbers?
         link: /faq/preproc/artifact/ica_complexvalues/
         nav_order: 0
@@ -803,7 +1807,7 @@
           DFT filter?
         link: /faq/preproc/artifact/dftfilter_residual/
         nav_order: 0
-    - title: Data handling
+    - title: Questions about data handling
       link: /faq/preproc/datahandling/
       nav_order: 0
       menu:
@@ -820,9 +1824,6 @@
       - title: How can I preprocess a dataset that is too large to fit into memory?
         link: /faq/preproc/datahandling/preproc_downsample/
         nav_order: 0
-      - title: How can I read corrupted (unsaved) CTF data?
-        link: /faq/preproc/datahandling/ctf_readcorrupted/
-        nav_order: 0
       - title: How can I rename channels in my data structure?
         link: /faq/preproc/datahandling/rename_channels/
         nav_order: 0
@@ -832,20 +1833,7 @@
       - title: What dataformats are supported?
         link: /faq/preproc/datahandling/dataformat/
         nav_order: 0
-    - title: How can I inspect the electrode impedances of my data?
-      link: /faq/preproc/impedancecheck/
-      nav_order: 0
-    - title: How can I use the databrowser?
-      link: /faq/preproc/databrowser/
-      nav_order: 0
-    - title: I used to work with trl-matrices that have more than 3 columns. Why is
-        this not supported anymore?
-      link: /faq/preproc/trialinfo_trl/
-      nav_order: 0
-    - title: Should I rereference prior to or after ICA for artifact removal?
-      link: /faq/preproc/ica_rereference/
-      nav_order: 0
-    - title: Specific data formats
+    - title: Questions about specific data formats
       link: /faq/preproc/dataformat/
       nav_order: 0
       menu:
@@ -871,20 +1859,23 @@
           sampling rates?
         link: /faq/preproc/dataformat/edf2fieldtrip/
         nav_order: 0
+      - title: How can I read corrupted (unsaved) CTF data?
+        link: /faq/preproc/dataformat/ctf_readcorrupted/
+        nav_order: 0
       - title: How does the CTF higher-order gradiometer work?
         link: /faq/preproc/dataformat/ctf_syntheticgradient/
         nav_order: 0
       - title: I am having problems reading the CTF .hc headcoordinates file
         link: /faq/preproc/dataformat/ctf_fixhc/
         nav_order: 0
-      - title: I have problems reading in neuroscan .cnt files. How can I fix this?
+      - title: I have problems reading in NeuroScan .cnt files. How can I fix this?
         link: /faq/preproc/dataformat/neuroscan/
         nav_order: 0
       - title: Why are the fileio functions stateless, does the fseek not make them
           very slow?
         link: /faq/preproc/dataformat/fileio_stateless/
         nav_order: 0
-    - title: Trials, triggers and events
+    - title: Questions about trials, triggers and events
       link: /faq/preproc/events/
       nav_order: 0
       menu:
@@ -909,10 +1900,16 @@
       - title: What is the relation between "events" (such as triggers) and "trials"?
         link: /faq/preproc/events/eventsversustrials/
         nav_order: 0
+    - title: Should I rereference prior to or after ICA for artifact removal?
+      link: /faq/preproc/ica_rereference/
+      nav_order: 0
     - title: Why should I set continuous to yes for CTF data?
       link: /faq/preproc/continuous/
       nav_order: 0
-  - title: Real-time analysis
+    - title: Why should I start with rereferencing for BioSemi EEG data?
+      link: /faq/preproc/biosemi_reference/
+      nav_order: 0
+  - title: Real-time analysis questions
     link: /faq/realtime/
     nav_order: 0
     menu:
@@ -925,7 +1922,7 @@
     - title: How should I get started with the FieldTrip realtime buffer?
       link: /faq/realtime/fieldtripbuffer_gettingstarted/
       nav_order: 0
-  - title: Source reconstruction
+  - title: Source reconstruction questions
     link: /faq/source/
     nav_order: 0
     menu:
@@ -1039,7 +2036,7 @@
     - title: Why should I use an average reference for EEG source reconstruction?
       link: /faq/source/sourcerecon_avgref/
       nav_order: 0
-  - title: Spectral analysis
+  - title: Spectral analysis questions
     link: /faq/spectral/
     nav_order: 0
     menu:
@@ -1115,6 +2112,52 @@
         length?
       link: /faq/spectral/why_largest_peak_spectrum/
       nav_order: 0
+  - title: Statistical questions
+    link: /faq/stats/
+    nav_order: 0
+    menu:
+    - title: How NOT to interpret results from a cluster-based permutation test
+      link: /faq/stats/clusterstats_interpretation/
+      nav_order: 0
+    - title: How can I define neighbouring sensors?
+      link: /faq/stats/sensors_neighbours/
+      nav_order: 0
+    - title: How can I determine the onset of an effect?
+      link: /faq/stats/effectonset/
+      nav_order: 0
+    - title: How can I test for correlations between neuronal data and quantitative
+        stimulus and behavioral variables?
+      link: /faq/stats/behavior_signalcorrelation/
+      nav_order: 0
+    - title: How can I test whether a behavioral measure is phasic?
+      link: /faq/stats/behavior_cosinefit/
+      nav_order: 0
+    - title: How can I use the ivar, uvar, wvar and cvar options to precisely control
+        the permutations?
+      link: /faq/stats/clusterstats_iuwcvar/
+      nav_order: 0
+    - title: How does a difference in trial numbers per condition affect my statistical
+        test
+      link: /faq/stats/statistics_ntrials/
+      nav_order: 0
+    - title: How does ft_prepare_neighbours work?
+      link: /faq/stats/neighbours_prepare/
+      nav_order: 0
+    - title: How to test an interaction effect using cluster-based permutation tests?
+      link: /faq/stats/clusterstats_interaction/
+      nav_order: 0
+    - title: Should I use t or F values for cluster-based permutation tests?
+      link: /faq/stats/clusterstats_teststatistic/
+      nav_order: 0
+    - title: What is the idea behind statistical inference at the second-level?
+      link: /faq/stats/statistics_secondlevel/
+      nav_order: 0
+    - title: Why are there multiple neighbour templates for the Neuromag306 system?
+      link: /faq/stats/neighbours_neuromag/
+      nav_order: 0
+    - title: Why should I use the cfg.correcttail option when using statistics_montecarlo?
+      link: /faq/stats/clusterstats_correcttail/
+      nav_order: 0
   - title: Various other questions
     link: /faq/other/
     nav_order: 0
@@ -1171,98 +2214,80 @@
     - title: Which version of FieldTrip should I download?
       link: /faq/other/download_version/
       nav_order: 0
-  - title: stats
-    link: /faq/stats/
-    nav_order: 0
-    menu:
-    - title: How NOT to interpret results from a cluster-based permutation test
-      link: /faq/stats/clusterstats_interpretation/
-      nav_order: 0
-    - title: How can I define neighbouring sensors?
-      link: /faq/stats/sensors_neighbours/
-      nav_order: 0
-    - title: How can I determine the onset of an effect?
-      link: /faq/stats/effectonset/
-      nav_order: 0
-    - title: How can I test for correlations between neuronal data and quantitative
-        stimulus and behavioral variables?
-      link: /faq/stats/behavior_signalcorrelation/
-      nav_order: 0
-    - title: How can I test whether a behavioral measure is phasic?
-      link: /faq/stats/behavior_cosinefit/
-      nav_order: 0
-    - title: How can I use the ivar, uvar, wvar and cvar options to precisely control
-        the permutations?
-      link: /faq/stats/clusterstats_iuwcvar/
-      nav_order: 0
-    - title: How does a difference in trial numbers per condition affect my statistical
-        test
-      link: /faq/stats/statistics_ntrials/
-      nav_order: 0
-    - title: How does ft_prepare_neighbours work?
-      link: /faq/stats/neighbours_prepare/
-      nav_order: 0
-    - title: How to test an interaction effect using cluster-based permutation tests?
-      link: /faq/stats/clusterstats_interaction/
-      nav_order: 0
-    - title: Should I use t or F values for cluster-based permutation tests?
-      link: /faq/stats/clusterstats_teststatistic/
-      nav_order: 0
-    - title: What is the idea behind statistical inference at the second-level?
-      link: /faq/stats/statistics_secondlevel/
-      nav_order: 0
-    - title: Why are there multiple neighbour templates for the Neuromag306 system?
-      link: /faq/stats/neighbours_neuromag/
-      nav_order: 0
-    - title: Why should I use the cfg.correcttail option when using statistics_montecarlo?
-      link: /faq/stats/clusterstats_correcttail/
-      nav_order: 0
 - title: Getting started
   link: /getting_started/
   nav_order: 0
   menu:
-  - title: EEG
-    link: /getting_started/eeg/
+  - title: Getting started with (data from) other software
+    link: /getting_started/othersoftware/
     nav_order: 0
     menu:
-    - title: Getting started with 20%, 10% and 5% electrode arrangements
-      link: /getting_started/eeg/1020/
+    - title: Getting started with AnyWave
+      link: /getting_started/othersoftware/anywave/
       nav_order: 0
-    - title: Getting started with ABM's B-Alert EEG data
-      link: /getting_started/eeg/b_alert/
+    - title: Getting started with BIDS
+      link: /getting_started/othersoftware/bids/
       nav_order: 0
-    - title: Getting started with ANT-Neuro, ASA and EEProbe data
-      link: /getting_started/eeg/antneuro/
+    - title: Getting started with BioImage Suite
+      link: /getting_started/othersoftware/bioimage/
       nav_order: 0
-    - title: Getting started with BESA data
-      link: /getting_started/eeg/besa/
+    - title: Getting started with EEGLAB
+      link: /getting_started/othersoftware/eeglab/
       nav_order: 0
-    - title: Getting started with Biosemi BDF data
-      link: /getting_started/eeg/biosemi/
+    - title: Getting started with Homer
+      link: /getting_started/othersoftware/homer/
       nav_order: 0
-    - title: Getting started with BrainVision Analyzer and Easycap
-      link: /getting_started/eeg/brainvision/
+    - title: Getting started with LIMO MEEG
+      link: /getting_started/othersoftware/limo/
       nav_order: 0
-    - title: Getting started with EDF (European Data Format) data
-      link: /getting_started/eeg/edf/
+    - title: Getting started with LORETA
+      link: /getting_started/othersoftware/loreta/
       nav_order: 0
-    - title: Getting started with EGI/Philips/Magstim data
-      link: /getting_started/eeg/egi/
+    - title: Getting started with MNE-Python
+      link: /getting_started/othersoftware/mne/
       nav_order: 0
-    - title: Getting started with Nicolet data
-      link: /getting_started/eeg/nicolet/
+    - title: Getting started with MeshLab
+      link: /getting_started/othersoftware/meshlab/
       nav_order: 0
-    - title: Getting started with TMSi data
-      link: /getting_started/eeg/tmsi/
+    - title: Getting started with ParaView
+      link: /getting_started/othersoftware/paraview/
       nav_order: 0
-  - title: Eyetracker
+    - title: Getting started with SPM
+      link: /getting_started/othersoftware/spm/
+      nav_order: 0
+    - title: Getting started with Seg3D
+      link: /getting_started/othersoftware/seg3d/
+      nav_order: 0
+    - title: Getting started with SimNIBS
+      link: /getting_started/othersoftware/simnibs/
+      nav_order: 0
+  - title: Getting started with NIRS data
+    link: /getting_started/nirs/
+    nav_order: 0
+    menu:
+    - title: Getting started with Artinis NIRS data
+      link: /getting_started/nirs/artinis/
+      nav_order: 0
+    - title: Getting started with Hitachi NIRS data
+      link: /getting_started/nirs/hitachi/
+      nav_order: 0
+    - title: Getting started with NIRx NIRS data
+      link: /getting_started/nirs/nirx/
+      nav_order: 0
+    - title: Getting started with SNIRF data
+      link: /getting_started/nirs/snirf/
+      nav_order: 0
+    - title: Getting started with Shimadzu NIRS data
+      link: /getting_started/nirs/shimadzu/
+      nav_order: 0
+  - title: Getting started with eyetracker data
     link: /getting_started/eyetracker/
     nav_order: 0
     menu:
     - title: Getting started with SR-Research EyeLink eye-tracker data
       link: /getting_started/eyetracker/eyelink/
       nav_order: 0
-  - title: Intracranial
+  - title: Getting started with intracranial data
     link: /getting_started/intracranial/
     nav_order: 0
     menu:
@@ -1290,7 +2315,61 @@
     - title: Getting started with human ECoG data
       link: /getting_started/intracranial/human_ecog/
       nav_order: 0
-  - title: MEG
+  - title: Getting started with motion capture data
+    link: /getting_started/motion/
+    nav_order: 0
+    menu:
+    - title: Getting started with XSens motion capture data
+      link: /getting_started/motion/xsens/
+      nav_order: 0
+  - title: Getting started with other types of data
+    link: /getting_started/otherdata/
+    nav_order: 0
+    menu:
+    - title: Getting started with audio data
+      link: /getting_started/otherdata/audio/
+      nav_order: 0
+    - title: Getting started with fMRI timeseries data
+      link: /getting_started/otherdata/fmri/
+      nav_order: 0
+    - title: Getting started with video data
+      link: /getting_started/otherdata/video/
+      nav_order: 0
+  - title: Getting started with particular EEG data types
+    link: /getting_started/eeg/
+    nav_order: 0
+    menu:
+    - title: Getting started with 20%, 10% and 5% electrode arrangements
+      link: /getting_started/eeg/1020/
+      nav_order: 0
+    - title: Getting started with ABM's B-Alert EEG data
+      link: /getting_started/eeg/b_alert/
+      nav_order: 0
+    - title: Getting started with ANT-Neuro, ASA and EEProbe data
+      link: /getting_started/eeg/antneuro/
+      nav_order: 0
+    - title: Getting started with BESA data
+      link: /getting_started/eeg/besa/
+      nav_order: 0
+    - title: Getting started with BioSemi BDF data
+      link: /getting_started/eeg/biosemi/
+      nav_order: 0
+    - title: Getting started with BrainVision Analyzer and Easycap
+      link: /getting_started/eeg/brainvision/
+      nav_order: 0
+    - title: Getting started with EDF (European Data Format) data
+      link: /getting_started/eeg/edf/
+      nav_order: 0
+    - title: Getting started with EGI/Philips/Magstim data
+      link: /getting_started/eeg/egi/
+      nav_order: 0
+    - title: Getting started with Nicolet data
+      link: /getting_started/eeg/nicolet/
+      nav_order: 0
+    - title: Getting started with TMSi data
+      link: /getting_started/eeg/tmsi/
+      nav_order: 0
+  - title: Getting started with particular MEG data types
     link: /getting_started/meg/
     nav_order: 0
     menu:
@@ -1321,100 +2400,18 @@
     - title: Getting started with Yokogawa data
       link: /getting_started/meg/yokogawa/
       nav_order: 0
-  - title: Motion capture
-    link: /getting_started/motion/
-    nav_order: 0
-    menu:
-    - title: Getting started with XSens motion capture data
-      link: /getting_started/motion/xsens/
-      nav_order: 0
-  - title: NIRS
-    link: /getting_started/nirs/
-    nav_order: 0
-    menu:
-    - title: Getting started with Artinis NIRS data
-      link: /getting_started/nirs/artinis/
-      nav_order: 0
-    - title: Getting started with Hitachi NIRS data
-      link: /getting_started/nirs/hitachi/
-      nav_order: 0
-    - title: Getting started with NIRx NIRS data
-      link: /getting_started/nirs/nirx/
-      nav_order: 0
-    - title: Getting started with SNIRF data
-      link: /getting_started/nirs/snirf/
-      nav_order: 0
-    - title: Getting started with Shimadzu NIRS data
-      link: /getting_started/nirs/shimadzu/
-      nav_order: 0
-  - title: Other data
-    link: /getting_started/otherdata/
-    nav_order: 0
-    menu:
-    - title: Getting started with audio data
-      link: /getting_started/otherdata/audio/
-      nav_order: 0
-    - title: Getting started with fMRI timeseries data
-      link: /getting_started/otherdata/fmri/
-      nav_order: 0
-    - title: Getting started with video data
-      link: /getting_started/otherdata/video/
-      nav_order: 0
-  - title: Other software
-    link: /getting_started/othersoftware/
-    nav_order: 0
-    menu:
-    - title: Getting started with AnyWave
-      link: /getting_started/othersoftware/anywave/
-      nav_order: 0
-    - title: Getting started with BIDS
-      link: /getting_started/othersoftware/bids/
-      nav_order: 0
-    - title: Getting started with BioImage Suite
-      link: /getting_started/othersoftware/bioimage/
-      nav_order: 0
-    - title: Getting started with EEGLAB
-      link: /getting_started/othersoftware/eeglab/
-      nav_order: 0
-    - title: Getting started with Homer
-      link: /getting_started/othersoftware/homer/
-      nav_order: 0
-    - title: Getting started with LIMO MEEG
-      link: /getting_started/othersoftware/limo/
-      nav_order: 0
-    - title: Getting started with LORETA
-      link: /getting_started/othersoftware/loreta/
-      nav_order: 0
-    - title: Getting started with MNE(-python)
-      link: /getting_started/othersoftware/mne/
-      nav_order: 0
-    - title: Getting started with MeshLab
-      link: /getting_started/othersoftware/meshlab/
-      nav_order: 0
-    - title: Getting started with ParaView
-      link: /getting_started/othersoftware/paraview/
-      nav_order: 0
-    - title: Getting started with SPM
-      link: /getting_started/othersoftware/spm/
-      nav_order: 0
-    - title: Getting started with Seg3D
-      link: /getting_started/othersoftware/seg3d/
-      nav_order: 0
-    - title: Getting started with SimNIBS
-      link: /getting_started/othersoftware/simnibs/
-      nav_order: 0
-  - title: Real-time analysis
+  - title: Getting started with real-time analysis
     link: /getting_started/realtime/
     nav_order: 0
     menu:
-    - title: Getting started with real-time analysis for BCI/neurofeedback
-      link: /getting_started/realtime/realtime/
+    - title: Getting started with real-time analysis for BCI and neurofeedback
+      link: /getting_started/realtime/bci/
       nav_order: 0
     - title: Getting started with real-time head localization in MEG
-      link: /getting_started/realtime/realtime_headlocalizer/
+      link: /getting_started/realtime/headlocalizer/
       nav_order: 0
     - title: Streaming realtime fMRI from Siemens scanners
-      link: /getting_started/realtime/realtime_fmri/
+      link: /getting_started/realtime/fmri/
       nav_order: 0
 - title: Importing your data
   link: /reading_data/
@@ -1431,7 +2428,7 @@
 - title: References to implemented methods
   link: /references_methods/
   nav_order: 0
-- title: References to review papers and teaching material
+- title: Review papers and teaching material
   link: /references_papers/
   nav_order: 0
 - title: Search results
@@ -1475,46 +2472,19 @@
   link: /tutorial/
   nav_order: 0
   menu:
-  - title: Analysis of TMS-EEG data
-    link: /tutorial/tms/
+  - title: Details of the MEG language dataset
+    link: /tutorial/meg_language/
     nav_order: 0
-    menu:
-    - title: Dealing with TMS-EEG datasets
-      link: /tutorial/tms/tms-eeg/
-      nav_order: 0
-  - title: Analysis of fNIRS data
-    link: /tutorial/nirs/
+  - title: Details of the tMEG Motor task dataset
+    link: /tutorial/hcp_motort/
     nav_order: 0
-    menu:
-    - title: Preprocessing and averaging of multi-channel NIRS data
-      link: /tutorial/nirs/nirs_multichannel/
-      nav_order: 0
-    - title: Preprocessing and averaging of single-channel NIRS data
-      link: /tutorial/nirs/nirs_singlechannel/
-      nav_order: 0
-  - title: Analysis of intracranial data
-    link: /tutorial/intracranial/
+  - title: Details on the EEG language dataset
+    link: /tutorial/eeg_language/
     nav_order: 0
-    menu:
-    - title: Analysis of human ECoG and sEEG recordings
-      link: /tutorial/intracranial/human_ecog/
-      nav_order: 0
-    - title: Analysis of monkey ECoG recordings
-      link: /tutorial/intracranial/monkey_ecog/
-      nav_order: 0
-    - title: Channel and source analysis of mouse EEG
-      link: /tutorial/intracranial/mouse_eeg/
-      nav_order: 0
-    - title: ECoG tutorials
-      link: /tutorial/intracranial/ecog/
-      nav_order: 0
-    - title: Preprocessing and analysis of spike and local field potential data
-      link: /tutorial/intracranial/spikefield/
-      nav_order: 0
-    - title: Preprocessing and analysis of spike-train data
-      link: /tutorial/intracranial/spike/
-      nav_order: 0
-  - title: Connectivity analysis
+  - title: Details on the multimodal faces dataset
+    link: /tutorial/mmfaces/
+    nav_order: 0
+  - title: Tutorials on connectivity analysis
     link: /tutorial/connectivity/
     nav_order: 0
     menu:
@@ -1539,17 +2509,7 @@
     - title: Whole brain connectivity and network analysis
       link: /tutorial/connectivity/networkanalysis_old/
       nav_order: 0
-  - title: Introduction to FieldTrip and MATLAB
-    link: /tutorial/intro/
-    nav_order: 0
-    menu:
-    - title: Creating a clean analysis pipeline
-      link: /tutorial/intro/scripting/
-      nav_order: 0
-    - title: Introduction to the FieldTrip toolbox
-      link: /tutorial/intro/introduction/
-      nav_order: 0
-  - title: Making your analyses more efficient
+  - title: Tutorials on making your analyses more efficient
     link: /tutorial/scripting/
     nav_order: 0
     menu:
@@ -1562,17 +2522,17 @@
     - title: Speeding up your analysis using distributed computing with qsub
       link: /tutorial/scripting/distributedcomputing_qsub/
       nav_order: 0
-  - title: Plotting and visualization
+  - title: Tutorials on plotting and visualization
     link: /tutorial/plotting/
     nav_order: 0
     menu:
     - title: Plotting data at the channel and source level
-      link: /tutorial/plotting/plotting_channel_source/
+      link: /tutorial/plotting/channel_source/
       nav_order: 0
     - title: Specifying the channel layout for plotting
       link: /tutorial/plotting/layout/
       nav_order: 0
-  - title: Reading and preprocessing data
+  - title: Tutorials on reading and preprocessing of data
     link: /tutorial/preproc/
     nav_order: 0
     menu:
@@ -1594,7 +2554,7 @@
     - title: Visual or manual artifact rejection
       link: /tutorial/preproc/visual_artifact_rejection/
       nav_order: 0
-  - title: Sensor-level analyses
+  - title: Tutorials on sensor-level analyses
     link: /tutorial/sensor/
     nav_order: 0
     menu:
@@ -1622,7 +2582,7 @@
     - title: Time-frequency analysis using Hanning window, multitapers and wavelets
       link: /tutorial/sensor/timefrequencyanalysis/
       nav_order: 0
-  - title: Source reconstruction
+  - title: Tutorials on source reconstruction
     link: /tutorial/source/
     nav_order: 0
     menu:
@@ -1662,6 +2622,9 @@
     - title: Localizing oscillatory sources using beamformer techniques
       link: /tutorial/source/beamformer/
       nav_order: 0
+    - title: Localizing sources using beamformer techniques
+      link: /tutorial/source/beamformer_lcmv/
+      nav_order: 0
     - title: Localizing visual gamma and cortico-muscular coherence using DICS
       link: /tutorial/source/beamformingextended/
       nav_order: 0
@@ -1671,7 +2634,7 @@
     - title: Virtual channel analysis of epilepsy MEG data
       link: /tutorial/source/epilepsy/
       nav_order: 0
-  - title: Statistical analysis
+  - title: Tutorials on statistical analysis
     link: /tutorial/stats/
     nav_order: 0
     menu:
@@ -1687,12 +2650,58 @@
     - title: Parametric and non-parametric statistics on event-related fields
       link: /tutorial/stats/eventrelatedstatistics/
       nav_order: 0
-    - title: Plotting data at the channel and source level
-      link: /tutorial/stats/plotting/
-      nav_order: 0
     - title: Statistical analysis and multiple comparison correction for combined
         MEG/EEG data
       link: /tutorial/stats/statistics/
+      nav_order: 0
+  - title: Tutorials on the analysis of NIRS data
+    link: /tutorial/nirs/
+    nav_order: 0
+    menu:
+    - title: Preprocessing and averaging of multi-channel NIRS data
+      link: /tutorial/nirs/nirs_multichannel/
+      nav_order: 0
+    - title: Preprocessing and averaging of single-channel NIRS data
+      link: /tutorial/nirs/nirs_singlechannel/
+      nav_order: 0
+  - title: Tutorials on the analysis of TMS data
+    link: /tutorial/tms/
+    nav_order: 0
+    menu:
+    - title: Dealing with TMS-EEG datasets
+      link: /tutorial/tms/tms-eeg/
+      nav_order: 0
+  - title: Tutorials on the analysis of intracranial data
+    link: /tutorial/intracranial/
+    nav_order: 0
+    menu:
+    - title: Analysis of human ECoG and sEEG recordings
+      link: /tutorial/intracranial/human_ecog/
+      nav_order: 0
+    - title: Analysis of monkey ECoG recordings
+      link: /tutorial/intracranial/monkey_ecog/
+      nav_order: 0
+    - title: Channel and source analysis of mouse EEG
+      link: /tutorial/intracranial/mouse_eeg/
+      nav_order: 0
+    - title: ECoG tutorials
+      link: /tutorial/intracranial/ecog/
+      nav_order: 0
+    - title: Preprocessing and analysis of spike and local field potential data
+      link: /tutorial/intracranial/spikefield/
+      nav_order: 0
+    - title: Preprocessing and analysis of spike-train data
+      link: /tutorial/intracranial/spike/
+      nav_order: 0
+  - title: Tutorials that introduce FieldTrip and MATLAB
+    link: /tutorial/intro/
+    nav_order: 0
+    menu:
+    - title: Creating a clean analysis pipeline
+      link: /tutorial/intro/pipeline/
+      nav_order: 0
+    - title: Introduction to the FieldTrip toolbox
+      link: /tutorial/intro/introduction/
       nav_order: 0
 - title: Video lectures and tutorials
   link: /video/
@@ -1711,6 +2720,9 @@
   - title: Workshop at BRAMS Institute, Montreal (2012)
     link: /video/montreal2012/
     nav_order: 0
+- title: Website menu
+  link: /menu/
+  nav_order: 0
 - title: Welcome to the FieldTrip website
   link: /index/
   nav_order: 0
