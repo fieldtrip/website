@@ -20,7 +20,7 @@ The tutorial assumes that the preprocessing and averaging steps are already clea
 
 Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on source-level statistics. However, FieldTrip does have similar statistical options for frequency data: at the channel-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function, the latter works on data obtained from **[ft_sourceanalysis](/reference/ft_sourceanalysis)**).
 
-A more thorough explanation of randomization tests and cluster-based statistics can be found in the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
+A more thorough explanation of randomization tests and cluster-based statistics can be found in the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorials.
 
 ## Background
 
@@ -30,12 +30,12 @@ An important feature of the MEG and EEG data is that it has a spatial temporal s
 
 When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting _n_ number of statistical tests then each of the individual tests should be tested under a significance level that is divided by _n_. The Bonferroni correction was derived from the observation that if _n_ tests are performed with an _alpha_ significance level, then the probability that one comes out significantly is smaller than or equal to _n_ times _alpha_ (Boole's inequality). In order to keep this probability lower, we can use an _alpha_ that is divided by _n_ for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.
 
-In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation) and the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
-and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
+In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation) and the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
+and the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorials.
 
 ## Procedure
 
-To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) and  the [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) tutorials. How to use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
+To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) and  the [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) tutorials. How to use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
@@ -316,7 +316,7 @@ Also in the non-parametric approach for testing of statistical significance diff
 
 ### Permutation test based on cluster statistics
 
-FieldTrip also implements a special way to correct for multiple comparisons, which makes use of the feature in the data that the effects at neighbouring timepoints and channels are highly correlated. For more details see the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq) and the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
+FieldTrip also implements a special way to correct for multiple comparisons, which makes use of the feature in the data that the effects at neighbouring timepoints and channels are highly correlated. For more details see the cluster permutation tutorials for [ERFs](/tutorial/stats/cluster_permutation_timelock) and [time frequency data](/tutorial/stats/cluster_permutation_freq) and the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
 This method requires you to define neighbouring channels. FieldTrip has a function that can do that for you called **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. The following example will construct a neighbourhood structure and show which channels are defined as neighbours:
 
@@ -412,30 +412,30 @@ So far we predefined a time window over which the effect was averaged, and teste
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure12.png" width="400" %}
 
 {% include markup/skyblue %}
-To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
+To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/stats/clusterstats_interpretation).
 {% include markup/end %}
 
 ## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the channels that contribute to a significant difference.
 
-After this gentle introduction in statistics with FieldTrip, you can continue with the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials. These give a more detailed description of non-parametric statistical testing with a cluster-based approach.
+After this gentle introduction in statistics with FieldTrip, you can continue with the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorials. These give a more detailed description of non-parametric statistical testing with a cluster-based approach.
 
 If you would like to read more about statistical analysis, you can look at the following FAQs:
 
-- [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
-- [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
+- [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/stats/clusterstats_correcttail)
+- [What is the idea behind statistical inference at the second-level?](/faq/stats/statistics_secondlevel)
 
 If you would like to read about neighbourhood selection, you can read the following FAQs:
 
-- [How can I define my own neighbourhood templates or updating an already existing template?](/faq/how_can_i_define_my_own_neighbourhood_template)
-- [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
-- [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
+- [How can I define my own neighbourhood templates or updating an already existing template?](/faq/stats/sensors_neighbours)
+- [How can I define neighbouring sensors?](/faq/stats/sensors_neighbours)
+- [How does ft_prepare_neighbours work?](/faq/stats/neighbours_prepare)
 
 And you can look also at the following example scripts:
 
-- [Using threshold-free cluster enhancement for cluster statistics](/example/tfce)
-- [Apply cluster and analysis on TFRs of power that were computed with BESA](/example/stats_besa)
-- [Source statistics](/example/source_statistics)
-- [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
-- [Computing and reporting the effect size](/example/effectsize)
+- [Using threshold-free cluster enhancement for cluster statistics](/example/stats/tfce)
+- [Apply cluster and analysis on TFRs of power that were computed with BESA](/example/stats/stats_besa)
+- [Source statistics](/example/stats/source_statistics)
+- [Stratify the distribution of one variable that differs in two conditions](/example/stats/stratify)
+- [Computing and reporting the effect size](/example/stats/effectsize)

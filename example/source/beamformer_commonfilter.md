@@ -40,7 +40,7 @@ FIXME Code for reconstruction of single trial data is incomplete
 In the following, scripts for both approaches are presented.
 Let's say we have data for two conditions, condition A and B, and we assume that the same sources are active in both, but to a different extent.
 
-We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we precomputed the sourcemodel and the volume conduction model (_sourcemodel_ and _headmodel_). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/beamformer) and the FieldTrip functions **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** with method='singleshell'. In order to have some data to begin with, we could use the [beamformer tutorial](/tutorial/beamformer) data, e.g., rename the _dataPre_ and _dataPost_ variables into _dataA_ and _dataB_ respectively, and use the _headmodel_ and _sourcemodel_ that have been created in that tutorial.
+We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we precomputed the sourcemodel and the volume conduction model (_sourcemodel_ and _headmodel_). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/source/beamformer) and the FieldTrip functions **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** with method='singleshell'. In order to have some data to begin with, we could use the [beamformer tutorial](/tutorial/source/beamformer) data, e.g., rename the _dataPre_ and _dataPost_ variables into _dataA_ and _dataB_ respectively, and use the _headmodel_ and _sourcemodel_ that have been created in that tutorial.
 
 ### PCC
     

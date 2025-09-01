@@ -77,7 +77,7 @@ Most functions have additional optional input arguments that are specified as ke
 
 ## Related documentation
 
-The literature references to the implemented methods are given [here](/references_to_implemented_methods).
+The literature references to the implemented methods are given [here](/references_methods).
 
 ### See also these tutorials
 

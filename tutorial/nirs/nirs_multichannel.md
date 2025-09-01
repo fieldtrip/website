@@ -12,13 +12,13 @@ redirect_from:
 
 In this tutorial, you will process a functional near-infrared spectroscopy (fNIRS) data set consisting of multiple channels. We will read in the raw data, have a look at the setup and the data, preprocess the data incorporating specific procedures for multichannel setups, and explore different methods of visualizing the temporal and spatial aspects of the response.
 
-We suggest to first read the [Getting started with Artinis](/getting_started/artinis) page to get the details on the recording system. Furthermore, we suggest you follow the [NIRS single channel](/tutorial/nirs_singlechannel) tutorial to learn how to pre-process a simpler fNIRS data set with only a a single channel.
+We suggest to first read the [Getting started with Artinis](/getting_started/nirs/artinis) page to get the details on the recording system. Furthermore, we suggest you follow the [NIRS single channel](/tutorial/nirs/nirs_singlechannel) tutorial to learn how to pre-process a simpler fNIRS data set with only a a single channel.
 
 Note that other NIRS systems will have a different file format than the ones used here and that this tutorial might not directly translate. The global structure however applies to other NIRS systems as well.
 
 ## Background
 
-fNIRS is a method to assess changes in oxygenated and deoxygenated hemoglobin concentrations and as such is comparable to fMRI. Disadvantage of fNIRS over fMRI is that it has a (much!) poorer spatial resolution than fMRI, but, the advantage is that it has a better temporal resolution and allows the brain measurements of populations that typically cannot easily be scanned using fMRI. More about the method can be read on the page of the [single channel tutorial](/tutorial/nirs_singlechannel).
+fNIRS is a method to assess changes in oxygenated and deoxygenated hemoglobin concentrations and as such is comparable to fMRI. Disadvantage of fNIRS over fMRI is that it has a (much!) poorer spatial resolution than fMRI, but, the advantage is that it has a better temporal resolution and allows the brain measurements of populations that typically cannot easily be scanned using fMRI. More about the method can be read on the page of the [single channel tutorial](/tutorial/nirs/nirs_singlechannel).
 
 Using multiple channels allows the researcher to investigate whether the found event-related brain activity is local, found in mainly one channel, or more widespread and can be observed in multiple channels. Moreover, the location of the effect can then be determined, though of course one is limited by the spatial resolution of the measurement.
 
@@ -60,7 +60,7 @@ Trigger events were recorded in the ADC channels 1 (standards) and 2 (deviants).
 
 ## Procedure
 
-Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. In the [single channel](/tutorial/nirs_singlechannel) tutorial we introduced you to one order of analysis steps.
+Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. In the [single channel](/tutorial/nirs/nirs_singlechannel) tutorial we introduced you to one order of analysis steps.
 
 The order of steps for this specific tutorial is as follows (see the figure below for an overview):
 
@@ -102,7 +102,7 @@ You will see something like this in the command window:
 The structure **data_raw** contains all data and information about the experiment, all stored in separate fields.
 
 {% include markup/skyblue %}
-For information about FieldTrip data structures and their fields, see this [frequently asked question](/faq/how_are_the_various_data_structures_defined).
+For information about FieldTrip data structures and their fields, see this [frequently asked question](/faq/development/datatype).
 {% include markup/end %}
 
 To retrieve the layout from the data file as shown above, you can use:
@@ -334,7 +334,7 @@ We already removed major motion artifacts by epoching, thus removing the periods
 
 ### Transform optical densities to oxy- and deoxy-hemoglobin concentration changes
 
-Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)**.
+Like in the [single channel tutorial](/tutorial/nirs/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)**.
 
     cfg                 = [];
     cfg.target          = {'O2Hb', 'HHb'};
@@ -389,7 +389,7 @@ In the previous steps, you averaged over all standard trials and baseline correc
     cfg.baseline  = [-5 0];
     timelockDEV   = ft_timelockbaseline(cfg, timelockDEV);
 
-To visualize the data in spatial terms (i.e. to answer the question "where on the head do we find functional brain activity in response to my different conditions?"), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called `nirs_48ch_layout.mat`. The [layout tutorial](/tutorial/layout) explains how to create your own channel layout for plotting, and we have a NIRS [layout example](/example/nirs_layout) that shows it in detail.
+To visualize the data in spatial terms (i.e. to answer the question "where on the head do we find functional brain activity in response to my different conditions?"), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called `nirs_48ch_layout.mat`. The [layout tutorial](/tutorial/plotting/layout) explains how to create your own channel layout for plotting, and we have a NIRS [layout example](/example/plotting/nirs_layout) that shows it in detail.
 
 The channel layout can be read the `nirs_48ch_layout.mat` file using the standard MATLAB function `load`. The file contains a structure called `lay`. The channel layout has been designed to show the O2Hb and HHb channels on top of each other.
 

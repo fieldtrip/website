@@ -15,7 +15,7 @@ In this tutorial you will learn about applying beamformer techniques in the time
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [head- and sourcemodel tutorial](/workshop/practicalmeeg2022/handson_anatomy).
 
-This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/minimumnormestimate)).
+This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/source/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/source/minimumnormestimate)).
 
 ## Procedure
 
@@ -134,7 +134,7 @@ _Figure: Visual artifact rejection window_
 #### Exercise 2
 
 {% include markup/skyblue %}
-Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of `cfg.layout` allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
+Consult the [visual artifact rejection tutorial](/tutorial/preproc/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of `cfg.layout` allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
 ## Computation of the covariance matrix of the prewhitened data

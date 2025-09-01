@@ -20,7 +20,7 @@ The windows software that comes with the Arinis system is called "Oxysoft" and i
 
 ### Example
 
-The example here is based on the dataset that is also used in the tutorial on [preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel). The data was recorded in an auditory oddball task. Details can be found in the tutorial.
+The example here is based on the dataset that is also used in the tutorial on [preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs/nirs_multichannel). The data was recorded in an auditory oddball task. Details can be found in the tutorial.
 
 {% include markup/green %}
 The raw data is available on our download server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](https://download.fieldtriptoolbox.org/example/bids_nirs/artinis/).
@@ -93,7 +93,7 @@ Homer is MATLAB-based software for the analysis of NIRS and is developed by rese
 
 ### Example
 
-For the example here we are using the dataset that is shared on Mendeley by Jessica Defenderfer and Aaron Buss in [fNIRS data files for event-related vocoding/background noise study](http://dx.doi.org/10.17632/4cjgvyg5p2.1). The same dataset is also used in [another example](/example/nirs_speech) script here on the website.
+For the example here we are using the dataset that is shared on Mendeley by Jessica Defenderfer and Aaron Buss in [fNIRS data files for event-related vocoding/background noise study](http://dx.doi.org/10.17632/4cjgvyg5p2.1). The same dataset is also used in [another example](/example/sensor/nirs_speech) script here on the website.
 
 To convert the dataset from Homer `.nirs` format to BIDS and SNIRF, we use the following script. Since we do not have so much information about the actual dataset, we can only provide some general metadata. The original data is shared under the "CC BY 4.0 license", which allows redistribution of the data and derived data. This is also one of the fields in the required `dataset_description.json`.
 

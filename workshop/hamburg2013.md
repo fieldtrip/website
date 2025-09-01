@@ -24,7 +24,7 @@ N55,Campus Lehre,room 210/11
 - Coffee break
 - Lecture 2: Generation and propagation of signals - Guido
 - Lunch break
-- Hands-on 1: [data preprocessing and artifact detection](/tutorial/eventrelatedaveraging) (data provided, see below)
+- Hands-on 1: [data preprocessing and artifact detection](/tutorial/sensor/eventrelatedaveraging) (data provided, see below)
 - Tea break
 - Hands-on 2: processing own data, event-related potentials (own data)
 - Wrap-up of the day
@@ -35,11 +35,11 @@ _The first hands-on can be skipped by people that already have been using FieldT
 
 - Lecture 3: Frequency analysis - Jan-Mathijs
 - Coffee break
-- Hands-on 3: [Frequency and time-frequency analysis](/tutorial/timefrequencyanalysis) (own data)
+- Hands-on 3: [Frequency and time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) (own data)
 - Lunch break
 - Lecture 4: Inverse modeling of EEG and MEG - Robert
 - Tea break
-- Hands-on 4: [Beamforming](/tutorial/beamformer) and [Minimum-norm estimation](/tutorial/minimumnormestimate) (own data, bring the MRI)
+- Hands-on 4: [Beamforming](/tutorial/source/beamformer) and [Minimum-norm estimation](/tutorial/source/minimumnormestimate) (own data, bring the MRI)
 - Wrap-up of the day
 
 _We will use the online tutorials on the website, but in principle you will be working on your own data._

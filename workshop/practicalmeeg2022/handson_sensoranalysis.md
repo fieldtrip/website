@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, freq, mmfaces]
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 
 {% include markup/skyblue %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -174,7 +174,7 @@ Since the power spectrum averaged over all trials shows a nice alpha peak, we co
 
 _Figure: Power spectrum for channel MEG0741 over the whole course in the experiment_
 
-There is a FAQ that shows how to use a similar strategy to do [time-frequency analysis on continuous data](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data).
+There is a FAQ that shows how to use a similar strategy to do [time-frequency analysis on continuous data](/faq/spectral/tfr_continuous).
 
 ## Time-frequency analysis I
 
@@ -260,7 +260,7 @@ An interesting effect seems to be present in the TFR of sensor MEG0731. To make 
 
 _Figure: The time-frequency representation of a single sensor obtained using ft_singleplotTFR_
 
-If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+If you see artifacts in your figure, see [this FAQ](/faq/plotting/opacityrendering).
 
 From the previous figure you can see that there is an increase in power around 5 Hz in the time interval 0.6 to 0.8 s after stimulus onset. To show the topography of this 'theta' power increase you can use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
@@ -334,7 +334,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
 _Figure: A time-frequency representation of channel MEG0741 obtained using ft_singleplotTFR_
 
-If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+If you see artifacts in your figure, see [this FAQ](/faq/plotting/opacityrendering).
 
 Note the boundary effects, in particular for the lower frequency bins, i.e. the blue (or white) region in the time frequency plane. Within this region, no power values are calculated. The reason for this is that for the corresponding time points, the requested timewindow is not entirely filled with data. For example, for 2 Hz the time window has a length of 3.5 s (7 cycles for 2 cycles/s = 3.5 s), this does not fit in the 2.3 sec window that is preprocessed and therefore there is no estimate of power. For 5 Hz the window has a length of 1.4 s (7 cycles for 5 cycles/s = 1.4 s). We preprocessed data between t = -.8 sec and t = 1.5 sec so the first power value is assigned to t= -0.1 (since -.8 + (0.5 \* 1.4) = -0.1). Because of these boundary effects it is important to apply **[ft_freqanalysis ](/reference/ft_freqanalysis)** to a larger time window to get all the time frequency points for your time window of interest. This requires some thinking ahead when designing your experiment, because inclusion of data from epochs-of-non-interest might contaminate your data with artifacts or other unwanted data features (e.g., stimulus-offset related rebounds).
 

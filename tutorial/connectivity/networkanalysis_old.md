@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-This tutorial will demonstrate one of the possible ways to analyze MEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/continuous) and on time-frequency analysis [here](/tutorial/timefrequencyanalysis)
+This tutorial will demonstrate one of the possible ways to analyze MEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/preproc/continuous) and on time-frequency analysis [here](/tutorial/sensor/timefrequencyanalysis)
 
 This tutorial will use metrics that are derived from graph theory and are implemented in the Brain Connectivity Toolbox (BCT, detailed explanation can be found [here](https://sites.google.com/site/bctnet/measures/list)).
 
@@ -161,7 +161,7 @@ _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom-
 
 ### Source analysis
 
-In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
+In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis). If you are not familiar with this strategy, please have a look [here](/example/source/sourcemodel_aligned2mni).
 
     %% load the required geometrical information
 
@@ -303,7 +303,7 @@ _Figure 5: Reconstructed activity (neural activity index) with peak maxima in oc
 
 {% include markup/end %}
 
-Comparing source reconstruction results to scalp topography is more or less mandatory. However, a potential mismatch shouldn't prevent you to try out a different strategy. In the beamforming tutorial [here](/tutorial/beamformer) the reconstructed activity is represented as a ratio change from pre stimulus baseline. Although there isn't a baseline we can compare with here, still there is an alternative approach. In the next section we will compute the sensor level alpha power but keep the individual trials. Next we will determine the sensor with a maximum power and use a median split on the trials at that sensor. This would allow us to split the data into trials dominated by high and low alpha power respectively.
+Comparing source reconstruction results to scalp topography is more or less mandatory. However, a potential mismatch shouldn't prevent you to try out a different strategy. In the beamforming tutorial [here](/tutorial/source/beamformer) the reconstructed activity is represented as a ratio change from pre stimulus baseline. Although there isn't a baseline we can compare with here, still there is an alternative approach. In the next section we will compute the sensor level alpha power but keep the individual trials. Next we will determine the sensor with a maximum power and use a median split on the trials at that sensor. This would allow us to split the data into trials dominated by high and low alpha power respectively.
 
     %% compute the power spectrum again but keep the individual trials
     cfg              = [];
@@ -321,7 +321,7 @@ Comparing source reconstruction results to scalp topography is more or less mand
     indlow  = find(tmp(:,ind)<=median(tmp(:,ind)));
     indhigh = find(tmp(:,ind)>=median(tmp(:,ind)));
 
-Next, we will compute the power spectra as above but this time computing them on the planar rather then on the axial gradiometers. Detailed information can be found [here](/tutorial/eventrelatedaveraging) and also [here](/example/combineplanar_pipelineorder).
+Next, we will compute the power spectra as above but this time computing them on the planar rather then on the axial gradiometers. Detailed information can be found [here](/tutorial/sensor/eventrelatedaveraging) and also [here](/example/sensor/combineplanar_pipelineorder).
 
     %% compute the planar gradient
     load ctf275_neighb; % this loads a variable 'neighbours', to be used below
@@ -401,7 +401,7 @@ Subsequently, we will compute the difference between high and low alpha conditio
 
 _Figure 6: Planar (left) and axial (middle) topography of the 10 Hz difference between the high and the low alpha conditions. Right- power spectra split by condition high (blue) and low alpha (red)._
 
-Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias being responsible for potential condition differences, see also [here](/example/beamformer_commonfilter) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias being responsible for potential condition differences, see also [here](/example/source/beamformer_commonfilter) and [here](/tutorial/source/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest
     cfg            = [];

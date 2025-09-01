@@ -50,7 +50,7 @@ Here it helps to clarify some often used terminology:
 
 The MEG and corresponding imaging data should be pseudonomized (i.e. using subject codes instead of names) and deidentified (i.e. no personal identifiable information contained in the files or data). For both MEG and MRI that means that the subject name and exact date of birth should not be stored in the header of the MEG dataset. For the MRI, the identifiable features of the imaging data (i.e. the face) should be removed.
 
-For CTF data, you can look in this [FAQ on anonymizing a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
+For CTF data, you can look in this [FAQ on anonymizing a CTF dataset](/faq/other/anonymization_ctf).
 
 {% include markup/red %}
 Note that "anonymous" or "pseudonomized" does not imply that it is impossible to link the data, just that the link is not directly provided with the data. e.g., am photo of a participant without its name or social security number is anonymous, but could nevertheless still be linked to the participants identity using Google reverse image search. That is why you should also consider to use deidentification methods.

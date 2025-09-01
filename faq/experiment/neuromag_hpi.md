@@ -79,7 +79,7 @@ The following code reads and visualizes the topographical magnetic field distrib
 According to Neuromag documentation, frequencies of the HPI signals are 154, 158, 162, 166 and 170 Hz for the sampling rate of 600 Hz (low-pass filter at 200 Hz), or 293, 307, 314, 321
 and 328 Hz for higher sampling rates.
 
-Note that in this example dataset, the digitized position of HPI coil 5, energized with a frequency of 328 Hz, does not match the topographical distribution of recorded signal at that frequency. In order to optimize the fitting of those HPI coils during the experiment, it is recommended to exclude this coil from the real time analysis when [monitoring the subject's head](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session). For example, by specifying the frequencies of interest when calling **[ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)**:
+Note that in this example dataset, the digitized position of HPI coil 5, energized with a frequency of 328 Hz, does not match the topographical distribution of recorded signal at that frequency. In order to optimize the fitting of those HPI coils during the experiment, it is recommended to exclude this coil from the real time analysis when [monitoring the subject's head](/faq/experiment/headlocalizer). For example, by specifying the frequencies of interest when calling **[ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)**:
 
     cfg.coilfreq = [293, 307, 314, 321]; % note 328 Hz is missing
 

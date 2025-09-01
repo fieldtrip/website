@@ -25,7 +25,7 @@ tags: [oxford2019]
 
 - 13:30 – 14:30 Lecture 2: Statistical inference using non-parametric permutation techniques
 - 14:30 – 14:45 Tea break
-- 14:45 – 16:45 Hands-on 2: [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
+- 14:45 – 16:45 Hands-on 2: [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
 - 16:45 – 17:15 Wrap-up / Q&A session
 
 
@@ -33,7 +33,7 @@ tags: [oxford2019]
 
 - 09:00 – 10:00 Lecture 3: Beamformer techniques for source reconstruction
 - 10:00 – 10:15 Coffee break
-- 10:15 – 12:15 Hands-on 3: [Source reconstruction of induced oscillatory activity and/or  corticomuscular coherence](/tutorial/beamformingextended)
+- 10:15 – 12:15 Hands-on 3: [Source reconstruction of induced oscillatory activity and/or  corticomuscular coherence](/tutorial/source/beamformingextended)
 
 - 12:15 – 13:15 Lunch
 

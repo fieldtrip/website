@@ -14,22 +14,22 @@ What follows is a summary of the data formats that are supported by FieldTrip. Y
 
 The following MEG data formats are supported by **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**:
 
-- [CTF](/getting_started/ctf) (.ds, .res4, .meg4)
-- [Neuromag/Elekta/MEGIN](/getting_started/neuromag) (.fif)
-- [BTi/4D](/getting_started/bti) (.m4d, .pdf, .xyz, and 4D's raw data files)
-- [Yokogawa/Ricoh](/getting_started/yokogawa) (.ave, .con, .raw)
+- [CTF](/getting_started/meg/ctf) (.ds, .res4, .meg4)
+- [Neuromag/Elekta/MEGIN](/getting_started/meg/neuromag) (.fif)
+- [BTi/4D](/getting_started/meg/bti) (.m4d, .pdf, .xyz, and 4D's raw data files)
+- [Yokogawa/Ricoh](/getting_started/meg/yokogawa) (.ave, .con, .raw)
 - ITAB
 - Tristan BabySquid
 
 The following EEG data formats are supported by **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**:
 
-- [ANT Neuro](/getting_started/antneuro) (.avr, .cnt, .trg)
+- [ANT Neuro](/getting_started/eeg/antneuro) (.avr, .cnt, .trg)
 - BESA (.avr, .swf)
-- [BioSemi BDF](/getting_started/biosemi) (.bdf)
-- [BrainVision](/getting_started/brainvision) (.eeg, .seg, .dat, .vhdr, .vmrk)
+- [BioSemi BDF](/getting_started/eeg/biosemi) (.bdf)
+- [BrainVision](/getting_started/eeg/brainvision) (.eeg, .seg, .dat, .vhdr, .vmrk)
 - CED - Cambridge Electronic Design (.smr)
 - EEGLAB (.set, .fdt)
-- [Electrical Geodesics, Inc. (EGI)](/getting_started/egi) (.egis, .ave, .gave, .ses, .raw, .mff)
+- [Electrical Geodesics, Inc. (EGI)](/getting_started/eeg/egi) (.egis, .ave, .gave, .ses, .raw, .mff)
 - NeuroScan (.eeg, .cnt, .avg)
 - Nexstim (.nxe)
 - TMSi (.Poly5)
@@ -48,8 +48,8 @@ The following EEG/MEG sensor formats are supported by **[ft_read_sens](/referenc
 
 The following spike and LFP data formats are supported by **[ft_read_spike](/reference/fileio/ft_read_spike)** and **[ft_read_data](/reference/fileio/ft_read_data)**:
 
-- [Plexon](/getting_started/plexon) (.nex, .plx, .ddt)
-- [Neuralynx](/getting_started/neuralynx) (.ncs, .nse, .nts, .nev, .nrd, .dma, .log)
+- [Plexon](/getting_started/intracranial/plexon) (.nex, .plx, .ddt)
+- [Neuralynx](/getting_started/intracranial/neuralynx) (.ncs, .nse, .nts, .nev, .nrd, .dma, .log)
 - CED - Cambridge Electronic Design (.smr)
 - MPI - Max Planck Institute (.dap)
 - Windaq (.wdq)

@@ -51,7 +51,7 @@ September 2011: the following function should really not be used any more. Since
 
 - **ft_artifact_manual**
 
-October 2010: the following functions will be substituted by a single implementation of **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, which accomplishes the same results of the deprecated function with different cfg settings ([see HERE](/tutorial/artifacts)).
+October 2010: the following functions will be substituted by a single implementation of **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, which accomplishes the same results of the deprecated function with different cfg settings ([see HERE](/tutorial/preproc/artifacts)).
 
 - **ft_artifact_eog**
 - **ft_artifact_jump**
@@ -99,7 +99,7 @@ January 2006: Some of the artifact detection functions have been completely rewr
 
 September 2005: The trial functions in the list below all predate the generic event handling that has been implemented using read_fcdc_event. These trial functions are file-format specific, and therefore deprecated.
 
-The idea underlying the new implementation for trialfuns is to separate the "hardware knowledge" for getting trigger information out of the file (in _read_fcdc_event.m_) from the "experiment knowledge" in determining the sequence of trigger events that is interesting (in the trialfun). There is one general trial function _trialfun_general.m_ that can be used for selecting a segment around a trigger. A more elaborate explanation and example code is given [here](/example/trialfun).
+The idea underlying the new implementation for trialfuns is to separate the "hardware knowledge" for getting trigger information out of the file (in _read_fcdc_event.m_) from the "experiment knowledge" in determining the sequence of trigger events that is interesting (in the trialfun). There is one general trial function _trialfun_general.m_ that can be used for selecting a segment around a trigger. A more elaborate explanation and example code is given [here](/example/preproc/trialfun).
 
 - **trialfun_brainvision.m**
 - **trialfun_ctf_continuous.m**

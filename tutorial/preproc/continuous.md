@@ -12,7 +12,7 @@ redirect_from:
 
 A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once. The advantage of preprocessing data in a continuous format is that it can help to prevent filter artifacts, it can improve the quality of ICA decompositions, and  gives a better overview of all data features, including artifacts that may be more difficult to recognize in segmented data.
 
-If your experiment consists of a sequence of trials, you may also want to start by segmenting the data and only read the trials of interest. This is described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial.
+If your experiment consists of a sequence of trials, you may also want to start by segmenting the data and only read the trials of interest. This is described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) tutorial.
 
 ## Background
 
@@ -254,7 +254,7 @@ The following example shows how to first read the data as a single continuous se
 
 ## Suggested further reading
 
-After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/preprocessing_erp), with the [event-related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/sensor/preprocessing_erp), with the [event-related averaging](/tutorial/sensor/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial.
 
 ### See also these frequently asked questions
 

@@ -5,7 +5,7 @@ tags: [cfg, timelock, freq, source, headmodel, statistics, plotting]
 
 # Reference documentation
 
-This page links to the reference documentation for the most important FieldTrip functions, organized by category. If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_to_implemented_methods).
+This page links to the reference documentation for the most important FieldTrip functions, organized by category. If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_methods).
 
 A complete overview with all configuration options is available in the [configuration index](/configuration).
 

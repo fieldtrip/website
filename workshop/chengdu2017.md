@@ -17,7 +17,7 @@ This will be a loosely organized workshop that comprises a series of lectures an
 #### Wednesday morning
 
 - 1h - welcome and intro lecture - [slides](https://download.fieldtriptoolbox.org/workshop/chengdu2017/slides/introduction.pdf)
-- 2h - hands-on on preprocessing of [EEG](/tutorial/preprocessing_erp) data.
+- 2h - hands-on on preprocessing of [EEG](/tutorial/sensor/preprocessing_erp) data.
 
 #### Thursday morning
 

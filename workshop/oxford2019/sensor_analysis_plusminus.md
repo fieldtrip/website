@@ -6,7 +6,7 @@ tags: [oxford2019, meg, freq, timelock, preprocessing, plotting, meg-visuomotor1
 # Reading in data and performing sensor-level ERF and TFR analyses
 
 {% include markup/skyblue %}
-This tutorial was written specifically for the workshop in Oxford in May 2019, and is a modified version of the [sensor analysis](/tutorial/sensor_analysis) tutorial. Specifically, a bit is added here about reading in data and preprocessing, and the bit about sensor-level connectivity analysis is removed.
+This tutorial was written specifically for the workshop in Oxford in May 2019, and is a modified version of the [sensor analysis](/tutorial/sensor/sensor_analysis) tutorial. Specifically, a bit is added here about reading in data and preprocessing, and the bit about sensor-level connectivity analysis is removed.
 {% include markup/end %}
 
 ## Introduction
@@ -19,7 +19,7 @@ _Figure 1: illustration of the experimental paradigm._
 
 We will show you how data is typically read from disk in FieldTrip. Then, we will perform two types of analyses in this tutorial. We will start by looking at the event-related field (ERF) surrounding visual stimulus onset. Next, we will examine the induced oscillatory activity during the visual stimulation.
 
-This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. This is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details. This tutorial also does not cover the details of the various options available for doing spectral analysis. Please refer to the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial for that.
+This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. This is covered in more detail in the [preprocessing](/tutorial/preproc/preprocessing) tutorial, which you can refer to if you want more details. This tutorial also does not cover the details of the various options available for doing spectral analysis. Please refer to the [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial for that.
 
 ## Reading in raw data from disk
 
@@ -32,7 +32,7 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specified trigger channel
 - according to your own criteria when you write your own trial function
 
-This tutorial will focus on the first way, and briefly mention the second. Both ways depend on **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
+This tutorial will focus on the first way, and briefly mention the second. Both ways depend on **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preproc/preprocessing) tutorial.
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
@@ -212,7 +212,7 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
 {% include markup/red %}
 The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
 
-Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
+Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/sensor/combineplanar_pipelineorder).
 {% include markup/end %}
 
 ## Time-frequency analysis
@@ -319,7 +319,7 @@ This tutorial gave an overview of some options available in FieldTrip for doing 
 
 The tutorial on which this one was based contains an extra section on how to performance analysis of coherence of MEG signals with an external reference (in this case, EMG). If you're done early, you may want to [have a look at that one](/tutorial/sensor_analysis#cortico-muscular-coherence). It's also a good basis for the tutorial we'll later be doing on beamforming.
 
-Alternatively, or additionally, you could read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction (potentially the [extended beamforming tutorial](/tutorial/beamformingextended) on the same data set as the present one) or, for details on statistics, one of the statistics [tutorials](/tutorial).
+Alternatively, or additionally, you could read through the tutorial on [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/source/beamformer) for source reconstruction (potentially the [extended beamforming tutorial](/tutorial/source/beamformingextended) on the same data set as the present one) or, for details on statistics, one of the statistics [tutorials](/tutorial).
 
 ### See also these frequently asked questions
 

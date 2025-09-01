@@ -113,4 +113,4 @@ Uses the function ft_plot_topo3d.m
 
 ### Solve the inverse problem, finally ...
 
-See [beamformer](/tutorial/beamformer), look for 'Scanning the brain volume'
+See [beamformer](/tutorial/source/beamformer), look for 'Scanning the brain volume'

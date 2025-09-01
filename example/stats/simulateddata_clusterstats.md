@@ -16,7 +16,7 @@ See this paper for more details
 
 Maris E., Oostenveld R. [Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438) J Neurosci Methods. 2007 Apr 10;
 
-and look in the [reference](/references_to_implemented_methods) section for more literature pointers.
+and look in the [reference](/references_methods) section for more literature pointers.
 {% include markup/end %}
 
     %%

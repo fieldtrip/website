@@ -16,7 +16,7 @@ The function **[ft_volumereslice](/reference/ft_volumereslice)** allows you to
 3.  zoom in or on a part of the volume, i.e. changing the number of voxels and FOV
 4.  change the resolution, e.g., changing the voxel size from 1 mm to 2 mm
 
-Anatomical data, for example an anatomical MRI or other volumentric representations (such as a [segmentation](/faq/how_is_the_segmentation_defined)) are represented as a [volume](/reference/utilities/ft_datatype_volume) MATLAB structure in FieldTrip.
+Anatomical data, for example an anatomical MRI or other volumentric representations (such as a [segmentation](/faq/source/datatype_segmentation)) are represented as a [volume](/reference/utilities/ft_datatype_volume) MATLAB structure in FieldTrip.
 
 An example volume structure is
 
@@ -31,7 +31,7 @@ An example volume structure is
       coordsys: 'ctf'                % description of the (head) coordinate system
            hdr: [1x1 struct]
 
-This volume is already aligned to the CTF head [coordinate system](/faq/coordsys). But the alignment by itself does not change the orientation of the original `anatomy` field, it just adds a transformation matrix which allows for relating each voxel intensity to the corresponding voxel location in the CTF head coordinate system. Note that the transformation matrix is taken into account at all subsequent computations.
+This volume is already aligned to the CTF head [coordinate system](/faq/source/coordsys). But the alignment by itself does not change the orientation of the original `anatomy` field, it just adds a transformation matrix which allows for relating each voxel intensity to the corresponding voxel location in the CTF head coordinate system. Note that the transformation matrix is taken into account at all subsequent computations.
 
 When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the `anatomy` field, without changing its orientation according to the transformation matrix. This is the reason why anatomical data is sometimes plotted with the top of the head pointing to the bottom of the screen (figure 1).
 
@@ -64,7 +64,7 @@ Isotropic voxels are necessary if we want to apply morphological operators to th
 
 ## Change the field-of-view (FOV)
 
-The **[ft_volumereslice](/reference/ft_volumereslice)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g., see [this tutorial](/tutorial/minimumnormestimate)).
+The **[ft_volumereslice](/reference/ft_volumereslice)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g., see [this tutorial](/tutorial/source/minimumnormestimate)).
 
 In the figures above you can appreciate the change in the FOV by considering the MRI in the original representation not being in the centre of the picture, whereas after reslicing it is in the centre and better fills the available space.
 

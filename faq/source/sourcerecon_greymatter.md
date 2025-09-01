@@ -21,4 +21,4 @@ If you want to use the canonical MRI that is included in SPM, you can also use t
 
 ## Making a surface model of the cortical sheet
 
-FieldTrip does not have its own methods for this, but relies on external software such as BrainVoyager or FreeSurfer. The [minumum-norm estimate tutorial](/tutorial/minimumnormestimate) has more details on this. You could also use the MATLAB [isosurface](http://www.mathworks.com/help/matlab/ref/isosurface.html) function on a segmented brain, although the resulting surface topology will not be as nice.
+FieldTrip does not have its own methods for this, but relies on external software such as BrainVoyager or FreeSurfer. The [minumum-norm estimate tutorial](/tutorial/source/minimumnormestimate) has more details on this. You could also use the MATLAB [isosurface](http://www.mathworks.com/help/matlab/ref/isosurface.html) function on a segmented brain, although the resulting surface topology will not be as nice.

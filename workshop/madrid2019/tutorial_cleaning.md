@@ -45,7 +45,7 @@ The dataset that has been shared does not consist of the original recordings; th
 
 For this tutorial we will use the EEG data from one example subject (subj22), which has been selected because the data still shows some artifacts. You can download both raw and processed data of the example subject [here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_cleaning/).
 
-If you are interested in the raw data from all subjects transformed into [BIDS format](/example/bids), you can download it from our [download server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
+If you are interested in the raw data from all subjects transformed into [BIDS format](/example/other/bids), you can download it from our [download server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
 
 Our goal now is to identify these noisy periods, eye movements, blinks, muscular artifacts and any other channel-specific abnormal behavior. We will guide you through the preprocessing pipeline with the data of the example subject and for one experimental block, i.e., level of sedation:
 
@@ -90,7 +90,7 @@ first step in de Cheveigne & Arzounian's guidelines, so we will now use the
 mark time segments where data is noisy. We can use this function to
 simultaneously mark and keep track of different types of physiological
 artifacts, such as blinks or muscle artifacts. If you have not used the
-databrowser before, read [here](/faq/how_can_i_use_the_databrowser) how to use
+databrowser before, read [here](/faq/preproc/databrowser) how to use
 it.
 
     cfg = [];
@@ -467,4 +467,4 @@ cfg.dftfreq or by using a band stop filter (cfg.bpfilter):
 
 ## See also
 
-A more general overview of dealing with artifacts is provided in the [artifact tutorial](/tutorial/artifacts).
+A more general overview of dealing with artifacts is provided in the [artifact tutorial](/tutorial/preproc/artifacts).

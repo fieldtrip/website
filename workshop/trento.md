@@ -60,13 +60,13 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 
 ### Monday
 
-- morning: [intro and ERFs](/tutorial/eventrelatedaveraging)
-- afternoon: [time-frequency analysis](/tutorial/timefrequencyanalysis)
+- morning: [intro and ERFs](/tutorial/sensor/eventrelatedaveraging)
+- afternoon: [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis)
 
 ### Tuesday
 
-- morning: [beamforming](/tutorial/beamformer)
-- afternoon: [randomization stats](/tutorial/cluster_permutation_timelock)
+- morning: [beamforming](/tutorial/source/beamformer)
+- afternoon: [randomization stats](/tutorial/stats/cluster_permutation_timelock)
 
 ### Wednesday
 

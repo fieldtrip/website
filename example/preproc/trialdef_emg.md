@@ -20,7 +20,7 @@ You would use this function as follows:
     cfg           = ft_definetrial(cfg);
     data          = ft_preprocessing(cfg);
 
-The above code was created using data from the [analysis of corticomuscular coherence](/tutorial/coherence) tutorial which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/SubjectCMC.zip).
+The above code was created using data from the [analysis of corticomuscular coherence](/tutorial/connectivity/coherence) tutorial which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/SubjectCMC.zip).
 
 Note that there are some parameters, like the EMG channel name and the
 processing that is done on the EMG channel data, which are hardcoded in

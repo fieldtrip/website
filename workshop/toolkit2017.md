@@ -20,19 +20,19 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
 | 10:45-11:00 | Coffee Break |  
 | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs |  
 | 12:00-13:00 | Lunch |  
-| 13:00-14:45 | Introduction to Event-Related Fields - [hands-on](/tutorial/eventrelatedaveraging) |  
+| 13:00-14:45 | Introduction to Event-Related Fields - [hands-on](/tutorial/sensor/eventrelatedaveraging) |  
 | 14:45-15:15 | Tea Break |  
 | 15:15-16:30 | Fundamentals of neuronal oscillations and synchrony - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2017/slides/frequency_analysis.pdf) |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers |
 
 ### Tuesday April 4, 2017
 
-| 09:00-10:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |  
+| 09:00-10:45 | Time-frequency analysis of power - [hands-on](/tutorial/sensor/timefrequencyanalysis) |  
 | 10:45-11:00 | Coffee Break |  
 | 11:00-12:15 | Forward and inverse modeling - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2017/slides/forward_and_inverse.pdf) |
 | 12:15-13:00 | Lunch |  
 | 13:00-14:00 | Statistics using non-parametric randomization techniques - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2017/slides/statistical_testing.pdf) |
-| 14:00-15:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock) |  
+| 14:00-15:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/stats/cluster_permutation_timelock) |  
 | 15:00-15:30 | Tea break |  
 | 15:30-16:30 | Statistics using non-parametric randomization techniques - (continued) |  
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers |  
@@ -47,7 +47,7 @@ Fransestraat 58, Nijmegen
 
 | 09:00-10:00 | Source reconstruction using beamformers - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2017/slides/source_reconstruction.pdf) |
 | 10:00-10:15 | Coffee Break |  
-| 10:15-12:15 | Identifying oscillatory sources using beamformers - [hands-on](/tutorial/beamformer) |  
+| 10:15-12:15 | Identifying oscillatory sources using beamformers - [hands-on](/tutorial/source/beamformer) |  
 | 12:15-13:00 | Lunch |  
 | 13:00-14:00 | Connectivity analysis of MEG and EEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2017/slides/connectivity_analysis.pdf) |
 | 14:00-15:00 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity) |  
@@ -85,5 +85,5 @@ The `restoredefaultpath` command clears your path, keeping only the official MAT
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation)).
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation)).
 {% include markup/end %}

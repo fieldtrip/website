@@ -9,7 +9,7 @@ tags: [oslo2019, eeg-audodd, preprocessing]
 
 This tutorial describes how to define epochs of interest (trials) from recorded EEG data, and how to apply different preprocessing steps such as filtering, cleaning data and rereferencing electrodes. Subsequently, we will average our epochs/trials and acquire so-called event-related potentials (ERPs). We will also compare two different types of stimuli (standard versus deviant tones) and investigate the differing ERPs they give rise to.
 
-In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
+In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/preproc/continuous) tutorial.
 
 {% include markup/skyblue %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg2014) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg2014) to see in its entirety.
@@ -27,7 +27,7 @@ There are largely two alternative approaches for preprocessing, which especially
 2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only
 
 An advantage of the first approach is that it allows you to apply most temporal filters to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.
- Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+ Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/preproc/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
 This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field `cfg.trl`. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in `trl` matrix represents a single epoch-of-interest (trial), and the `trl` matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
@@ -50,7 +50,7 @@ The data browser can be used to look at your raw or preprocessed data. The main 
 
 The data browser supports three view modes: _butterfly_, _vertical_ and _component_. In _butterfly_, all signal traces will be plotted on top of one another; in _vertical_, the traces will be below one another. The _component_ view mode is to be used for data that is decomposed into independent components (see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical view mode, but will include the component topography to the left of the time trace. As an alternative to these three view modes, you can provide a _cfg.layout_, and **[ft_databrowser](/reference/ft_databrowser)** will try to plot the data according to the sensor positions specified in that layout.
 
-When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection)). You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
+When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see the [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection)). You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
 
 {% include markup/yellow %}
 The data browser will **not** change your data in an way. If you specify a _cfg_ as output, it will just store your selected artifacts in that output cfg.
@@ -179,7 +179,7 @@ Let's have a closer look at the first entries in _time_ and _trial_:
 
 ### Cleaning data using visual summaries
 
-In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see the  [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection)).
+In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see the  [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection)).
 
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
@@ -389,5 +389,5 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
 
 {% include markup/skyblue %}
-**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout) to improve the topographic representation.
+**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/plotting/layout) to improve the topographic representation.
 {% include markup/end %}

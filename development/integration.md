@@ -66,7 +66,7 @@ We have a set of MATLAB and Bash scripts for regression testing that are hosted 
 
 ## Mixpanel
 
-We are experimenting with MixPanel for software usage tracking. More details are [here](/faq/tracking).
+We are experimenting with MixPanel for software usage tracking. More details are [here](/privacy).
 
 ## Slack
 

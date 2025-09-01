@@ -17,7 +17,7 @@ The objective of supplying the low-level EEG and MEG reading functions as a sepa
 2.  facilitate the implementation and support for new data formats, esp. for external users/contributors
 3.  facilitate the implementation of advanced features without complicating the standard use
 
-A list of the data formats that are supported is given [here](/faq/dataformat). The low-level reading functions are combined in the **fileio** module, which is released together with FieldTrip but can also be downloaded [here](https://download.fieldtriptoolbox.org/modules) as a separate and fully self-contained MATLAB toolbox.
+A list of the data formats that are supported is given [here](/faq/preproc/datahandling/dataformat). The low-level reading functions are combined in the **fileio** module, which is released together with FieldTrip but can also be downloaded [here](https://download.fieldtriptoolbox.org/modules) as a separate and fully self-contained MATLAB toolbox.
 
 ## Module layout
 

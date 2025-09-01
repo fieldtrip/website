@@ -11,7 +11,7 @@ To attend the hands-on tutorials, participants will have to register [here](http
 
 ## Program
 
-We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog). This comprises section 2, 3, and 4 in the outline of the [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438) paper. Section 5 on statistics and section 6 on perspectives are obviously also relevant and we will take some time to discuss these.
+We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/intracranial/human_ecog). This comprises section 2, 3, and 4 in the outline of the [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438) paper. Section 5 on statistics and section 6 on perspectives are obviously also relevant and we will take some time to discuss these.
 
 ## How to prepare
 
@@ -45,7 +45,7 @@ The `<your_fieldtrip_location>` is the directory in which all the code is after 
 {% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the `startup.m` file than the path GUI.
 
-Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/matlab/installation).
 {% include markup/end %}
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
@@ -59,7 +59,7 @@ After installing FieldTrip to your path, you change to the location where the tu
 
 ### Allow execution of mex files on macOS
 
-The FieldTrip toolbox comes with a bunch of [mex files](https://en.wikipedia.org/wiki/MEX_file). These contain compiled code that is linked at run time. If you are working on macOS, chances are that your security settings do not allow the execution of unsigned code. This [FAQ](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified) explains how to add an exception to run the mex files.
+The FieldTrip toolbox comes with a bunch of [mex files](https://en.wikipedia.org/wiki/MEX_file). These contain compiled code that is linked at run time. If you are working on macOS, chances are that your security settings do not allow the execution of unsigned code. This [FAQ](/faq/matlab/mex_osx) explains how to add an exception to run the mex files.
 
 ### Prepare and bring your questions
 

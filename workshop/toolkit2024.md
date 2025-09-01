@@ -29,7 +29,7 @@ Note that the tentative program below still might change a bit.
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | EEG, MEG and OPM lab demonstrations |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging) |
+| 13:30-15:45 | Pre-processing - [hands-on](/tutorial/sensor/eventrelatedaveraging) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
@@ -38,7 +38,7 @@ Note that the tentative program below still might change a bit.
 | 09:00-09:30 | Morning chill or workout |
 | 09:45-10:45 | Time frequency analysis of power - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/03_frequency.pdf) by Jan-Mathijs Schoffelen |
 | 10:45-11:00 | Coffee Break |
-| 11:00-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
+| 11:00-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/sensor/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
 | 14:30-15:45 | Forward and inverse - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/04_forward_inverse.pdf) by Robert |
@@ -53,7 +53,7 @@ Note that the tentative program below still might change a bit.
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Source reconstruction using beamformers - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/06_beamforming.pdf) by Britta Westner |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
+| 13:30-15:45 | Beamforming - [hands-on](/tutorial/source/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
@@ -64,7 +64,7 @@ Note that the tentative program below still might change a bit.
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2024/slides/08_statistics.pdf) by Robert |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock) |
+| 13:30-15:45 | Statistics - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
@@ -241,7 +241,7 @@ The `restoredefaultpath` command clears your path, keeping only the official MAT
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI. You can find more information about startup files in the MATLAB documentation.
 
-Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation).
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation).
 {% include markup/end %}
 
 ## Code of conduct

@@ -26,11 +26,11 @@ The real-world interpretation of the coordinate system can typically not be dete
 
 The remainder of this page describes the native conventions for the coordinate systems for a number of standard atlases, MEG systems, EEG systems, MRI systems, and for various software packages involved in processing geometrical data. Of course it might always possible that the specific user of one of these systems uses a different coordinate system.
 
-The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](https://en.wikipedia.org/wiki/Nasion), [inion](https://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/how_are_the_lpa_and_rpa_points_defined) for a discussion of the LPA and RPA.
+The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](https://en.wikipedia.org/wiki/Nasion), [inion](https://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/source/anat_landmarks) for a discussion of the LPA and RPA.
 
 The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](https://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](https://en.wikipedia.org/wiki/Posterior_commissure) commissure. Furthermore, imaging data is sometimes scaled to a specific standard size, e.g., based on the [Talairach-Tournoux atlas](https://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](https://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
 
-Imaging methods such as MRI and CT result in 3-D volumetric representations of the data, e.g., with 256x256x256 voxels. You can think of this representation as having a "voxel" coordinate system, where voxel (1, 1, 1) is the first and (256, 256, 256) is the last in the volume. The voxel coordinate system however does not specify the geometrical dimensions (e.g., mm or cm) and does not specify how the head (which is somewhere within the volume) relates to the voxel indices. Therefore a volumetric description of imaging data as a 3-D array has to be complemented with a description of the head coordinate system. This description is commonly implemented using a [4x4 homogenous coordinate transformation matrix](/faq/homogenous).
+Imaging methods such as MRI and CT result in 3-D volumetric representations of the data, e.g., with 256x256x256 voxels. You can think of this representation as having a "voxel" coordinate system, where voxel (1, 1, 1) is the first and (256, 256, 256) is the last in the volume. The voxel coordinate system however does not specify the geometrical dimensions (e.g., mm or cm) and does not specify how the head (which is somewhere within the volume) relates to the voxel indices. Therefore a volumetric description of imaging data as a 3-D array has to be complemented with a description of the head coordinate system. This description is commonly implemented using a [4x4 homogenous coordinate transformation matrix](/faq/source/homogenous).
 
 ## Summary
 
@@ -70,7 +70,7 @@ The ACPC coordinate system corresponds to that used in the Talairach atlas, but 
 - the z-axis goes towards the top of the brain
 - the x-axis goes towards the right side of the brain
 
-See also this [frequently asked question](/faq/acpc).
+See also this [frequently asked question](/faq/source/acpc).
 
 ## Details on the Allen Institute mouse coordinate system
 
@@ -143,7 +143,7 @@ The **ITAB** coordinate system is expressed in meter, with the principal (X, Y, 
 
 ## Details of the CTF coordinate system
 
-The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/how_are_the_lpa_and_rpa_points_defined) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The definition of the coordinate system is
+The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/source/anat_landmarks) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The definition of the coordinate system is
 
 - the origin is exactly between LPA and RPA
 - the X-axis goes towards NAS
@@ -190,7 +190,7 @@ The Montreal Neurological Institute coordinate system is comparable to, but not 
 - The Y-axis points from posterior to anterior
 - The Z-axis points from inferior to superior
 
-See also this [frequently asked question](/faq/acpc). Note that the SPM software makes use of the MNI coordinate system.
+See also this [frequently asked question](/faq/source/acpc). Note that the SPM software makes use of the MNI coordinate system.
 
 ## Details of the Neuromag coordinate system
 
@@ -283,7 +283,7 @@ The Talairach-Tournoux coordinate system is comparable to, but [not exactly the 
 - the z-axis goes towards the top of the brain
 - the x-axis goes towards the right side of the brain
 
-See also this [frequently asked question](/faq/acpc).
+See also this [frequently asked question](/faq/source/acpc).
 
 ## Details of the Yokogawa coordinate system
 

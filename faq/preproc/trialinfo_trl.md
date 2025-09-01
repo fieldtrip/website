@@ -15,4 +15,4 @@ In addition, some FieldTrip function implicitly relied on information present in
 
 In summary, to address these problems, and to make the functionality more transparent, we changed the way in which trial-specific information can be handled throughout the analysis pipeline.
 
-See also [this](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) frequently asked question.
+See also [this](/faq/preproc/events/trialinfo) frequently asked question.

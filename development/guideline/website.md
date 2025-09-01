@@ -32,7 +32,7 @@ Workshop tutorials in general should only contain two tags: one for the workshop
 
 ## Datasets
 
-Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](/faq/datasets).
+Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](/faq/other/datasets).
 
 ## Menu
 

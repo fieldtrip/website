@@ -321,7 +321,7 @@ I could load in only the sub10_inner_skull_surface file (output of mne_watershed
 
 FieldTrip is MATLAB based processing tool. Therefore, MATLAB is needed to run its functions. The preparation before starting FieldTrip is that the downloaded FieldTrip has to be added to the MATLAB path.
 
-Function ft_read_mri can read in MRI data in many formats. Look at [Supported data formats](/faq/dataformat). The .mgz files (freesurfer) format is not listed yet, but the function can read in also that volume.
+Function ft_read_mri can read in MRI data in many formats. Look at [Supported data formats](/faq/preproc/datahandling/dataformat). The .mgz files (freesurfer) format is not listed yet, but the function can read in also that volume.
 
     mri=ft_read_mri(<path to directory>/T1.mgz');
 
@@ -519,7 +519,7 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 
 ## Step 3: Tutorial
 
-[Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate)
+[Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate)
 
 ## References
 

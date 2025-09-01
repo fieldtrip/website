@@ -287,7 +287,7 @@ overlapping or side-by-side.
 ## Making a layout from 3D optode positions]
 
 If you are starting with a structure sensor recording of the 3D optode positions as demonstrated
-in the tutorial on [localizing electrodes using a 3D-scanner](/tutorial/electrode), then you
+in the tutorial on [localizing electrodes using a 3D-scanner](/tutorial/source/electrode), then you
 can start by making a layout for only the Tx and Rx optodes, From that you can subsequently
 construct the channels (see above) from the pairwise optode combinations, and again construct
 the layout for the oxy- and deoxyhemoglobin.
@@ -300,5 +300,5 @@ It also shows how you can take an existing layout, split it between the channel 
 Here are some other tutorials that provide useful information:
 
 - [Plotting data at the channel and source level](/tutorial/plotting)
-- [Specifying the channel layout for plotting](/tutorial/layout)
-- [Localizing electrodes using a 3D-scanner](/tutorial/electrode)
+- [Specifying the channel layout for plotting](/tutorial/plotting/layout)
+- [Localizing electrodes using a 3D-scanner](/tutorial/source/electrode)

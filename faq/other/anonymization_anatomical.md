@@ -77,7 +77,7 @@ You can also combine defacing with brain segmentation to ensure that you do not 
     ft_sourceplot(cfg, defaced_mri);
 
 
-See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
+See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/other/anonymization_ctf).
 
 {% include markup/red %}
 If you share your MATLAB files with others, note that there might also be identifying information in the [provenance](https://en.wikipedia.org/wiki/Provenance) information in the "cfg" field that is included in the FieldTrip data structure.

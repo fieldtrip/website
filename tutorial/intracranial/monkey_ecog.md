@@ -33,7 +33,7 @@ The tutorial will follow the steps:
 
 ### Preprocessing
 
-First we will generate the layout along the guidelines explained in the layout tutorial [here](/tutorial/layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](https://download.fieldtriptoolbox.org/tutorial/monkey_ecog).
+First we will generate the layout along the guidelines explained in the layout tutorial [here](/tutorial/plotting/layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](https://download.fieldtriptoolbox.org/tutorial/monkey_ecog).
 
     load Event.mat
     load lay
@@ -137,7 +137,7 @@ _Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 H
 
 ### Time-frequency analysis
 
-After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-frequency tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
+After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/sensor/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-frequency tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
 
     % perform time-frequency analysis
     cfg              = [];
@@ -304,11 +304,11 @@ Given this knowledge often we seek to characterize some quantity of interaction 
 
 Finally, a graph theoretical approach has been applied to formally describe one fundamental property of a node (electrode) in a graph (set of electrodes)- the node degree. This metric essentially describes an aspect of a network topology- the amount of connections of a given node to all possible nodes in the graph. The interpretation of the results however are often not straight forward and require an appropriate statistical contrast, which is not covered in this tutorial.
 
-Several analysis strategies were applied but not explained in further detail. If you are unclear on the organization of the data structure suitable for analysis in FieldTrip please have a look at [this FAQ](/faq/how_can_i_import_my_own_dataformat). When performing frequency analysis, parameter such as length of the time window, desired and given frequency resolution etc. are very important. What is the basis for these decisions is not covered by this tutorial. If you are interested in detailed explanations of the motivation behind such decisions please evaluate the [time-frequency tutorial](/tutorial/timefrequencyanalysis). If you are interested in creating your own electrode layout you can consult the [layout tutorial](/tutorial/layout). If you are interested in a different connectivity analysis that goes somewhat beyond correlation, you can continue with the [connectivity analysis](/tutorial/connectivity) tutorial.
+Several analysis strategies were applied but not explained in further detail. If you are unclear on the organization of the data structure suitable for analysis in FieldTrip please have a look at [this FAQ](/faq/preproc/dataformat/dataformat_own). When performing frequency analysis, parameter such as length of the time window, desired and given frequency resolution etc. are very important. What is the basis for these decisions is not covered by this tutorial. If you are interested in detailed explanations of the motivation behind such decisions please evaluate the [time-frequency tutorial](/tutorial/sensor/timefrequencyanalysis). If you are interested in creating your own electrode layout you can consult the [layout tutorial](/tutorial/plotting/layout). If you are interested in a different connectivity analysis that goes somewhat beyond correlation, you can continue with the [connectivity analysis](/tutorial/connectivity) tutorial.
 
 ## Suggested further reading
 
-You can read more about other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the respective tutorials.
+You can read more about other types of intracranial recordings such as [spike train recordings](/tutorial/intracranial/spike) and [spikes and local field potentials](/tutorial/intracranial/spikefield) in the respective tutorials.
 
 Here is also a list of related documentation:
 

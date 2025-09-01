@@ -380,7 +380,7 @@ save shape shape
 
 {% include markup/skyblue %}
 
-To understand coregistration, you first need to know what [coordinate systems](/faq/coordsys) are. Coregistration is about aligning data that is initially expressed in different coordinate systems into a single coordinate system.
+To understand coregistration, you first need to know what [coordinate systems](/faq/source/coordsys) are. Coregistration is about aligning data that is initially expressed in different coordinate systems into a single coordinate system.
 
 Start by plotting the MRI, SQUID sensors, and Polhemus headshape to see in which coordinate systems these are expressed. You can use **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** for that.
 

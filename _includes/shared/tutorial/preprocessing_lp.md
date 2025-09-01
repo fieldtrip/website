@@ -10,4 +10,4 @@
 
     data_all = ft_preprocessing(cfg);
 
-These data have been cleaned from artifacts by removing several trials and two channels; see the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection).
+These data have been cleaned from artifacts by removing several trials and two channels; see the [visual artifact rejection tutorial](/tutorial/preproc/visual_artifact_rejection).

@@ -11,13 +11,13 @@ redirect_from:
 
 ## Introduction
 
-In this tutorial we will continue working on the [dataset](/workshop/natmeg2014/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
+In this tutorial we will continue working on the [dataset](/workshop/natmeg2014/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain. You will learn how to compute appropriate time-frequency windows, an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. Finally, you will be shown several options for plotting the results overlaid on a structural MRI.
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/source/virtual_sensors) for an example of this).
 
 {% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
@@ -97,7 +97,7 @@ As mentioned in the Background, it is ideal to contrast the activity of interest
     - Activity contrasted with estimated noise (example shown below)
     - Use normalized leadfields
 
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window pooled over both conditions.
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/source/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window pooled over both conditions.
 
 ### Exercise 1: data length
 
@@ -300,7 +300,7 @@ If you were to name the anatomical label of the source of this motor beta, what 
 {% include markup/end %}
 
 {% include markup/green %}
-With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/source/sourcemodel_aligned2mni).
 {% include markup/end %}
 
 #### Exercise: regularization
@@ -454,8 +454,8 @@ If you've made it this far, perhaps you could try beamforming a different time w
 
 Beamforming source analysis in the frequency domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as CSD matrix regularization. Finally, the results were plotted on an orthogonal view.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter).
-If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
+Computing event-related fields with [MNE](/tutorial/source/minimumnormestimate) or [LCMV](/tutorial/source/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/source/beamformer_commonfilter).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/source/sourcemodel_aligned2mni). See [here for source statistics](/example/stats/source_statistics).
 
 ### See also these frequently asked questions
 

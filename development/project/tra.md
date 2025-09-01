@@ -8,7 +8,7 @@ title: Document grad.tra, modifications to it, and effects on inverse
 
 ## Resolution: see faq
 
-- [faq/how_are_electrodes_magnetometers_or_gradiometers_described](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)
+- [faq/how_are_electrodes_magnetometers_or_gradiometers_described](/faq/source/sensors_definition)
 
 ## Original plan: document grad.tra
 

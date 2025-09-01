@@ -27,7 +27,7 @@ In order to express the timing of the events from the Eyelink file relative to t
 
 ## Example dataset
 
-The dataset used for this example is the first session of the first subject of the Sherlock dataset, which can be downloaded from [the Donders Data Repository](https://doi.org/10.34973/5rpw-rn92). The example can be adjusted to use your own data, under the assumption that the converted Eyelink ASC-file (obtained by running EDF2ASC, see the [Eyelink](/getting_started/eyelink) getting started page) contains the trigger information sent by the presentation computer during the experiment.
+The dataset used for this example is the first session of the first subject of the Sherlock dataset, which can be downloaded from [the Donders Data Repository](https://doi.org/10.34973/5rpw-rn92). The example can be adjusted to use your own data, under the assumption that the converted Eyelink ASC-file (obtained by running EDF2ASC, see the [Eyelink](/getting_started/eyetracker/eyelink) getting started page) contains the trigger information sent by the presentation computer during the experiment.
 
 ### What to do if my experimental data does not contain any triggers, or when the Eyelink data does not contain them?
 

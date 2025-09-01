@@ -47,7 +47,7 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -212,7 +212,7 @@ For example, to read and plot the single sphere model produced with CTF software
     grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
     ft_plot_sens(grad, 'chantype', 'meggrad') % not the reference channels
 
-For more information on reading, creating and plotting headmodels refer to [this page](/example/headmodel_various).
+For more information on reading, creating and plotting headmodels refer to [this page](/example/source/headmodel_various).
 
 ## Reading MRI files
 

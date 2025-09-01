@@ -1,10 +1,10 @@
 ## Computation of virtual MEG channels in source-space
 
-In the [extended beamformer tutorial](/tutorial/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analyzing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
+In the [extended beamformer tutorial](/tutorial/source/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analyzing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
 
 ### Compute the spatial filter for the region of interest
 
-After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures, and a headmodel. You can also get these from the [download server](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/):
+After having done all steps in [the extended beamformer tutorial](/tutorial/source/beamformingextended), you have the preprocessed data, two source structures, and a headmodel. You can also get these from the [download server](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/):
 
 - [data_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/data_cmb.mat)
 - [source_coh_lft.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/source_coh_lft.mat)
@@ -26,7 +26,7 @@ We will now determine the positions on which the cortico-muscular coherence is t
     ans =
           0.4000   -8.8000    2.6000
 
-The cortical position is expressed [in MNI space](/faq/coordsys) according to the template brain we used for warping and in centimeter. Relative to the anterior commissure (AC) the coherence peak position is 3.2 cm towards the right side of the brain, -0.6 towards the front of the AC (i.e., 0.6 cm towards the back!) and 7.4 cm towards the vertex. The visual gamma peak is 0.4 cm towards the right of the brain , -8.8 cm to the front of the AC (i.e. 8.6 cm to the back) and 2.6 cm to the top.
+The cortical position is expressed [in MNI space](/faq/source/coordsys) according to the template brain we used for warping and in centimeter. Relative to the anterior commissure (AC) the coherence peak position is 3.2 cm towards the right side of the brain, -0.6 towards the front of the AC (i.e., 0.6 cm towards the back!) and 7.4 cm towards the vertex. The visual gamma peak is 0.4 cm towards the right of the brain , -8.8 cm to the front of the AC (i.e. 8.6 cm to the back) and 2.6 cm to the top.
 
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest. Note that we have to use subject-specific coordinates here and not the MNI template.
 

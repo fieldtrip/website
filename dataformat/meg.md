@@ -11,7 +11,7 @@ Initially the reading functions for CTF files were implemented from scratch by t
 
 The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, .hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
-You may want to continue reading the section on [getting started with CTF](/getting_started/ctf).
+You may want to continue reading the section on [getting started with CTF](/getting_started/meg/ctf).
 
 ## Support for Neuromag/Elekta/Megin MEG data.
 
@@ -21,7 +21,7 @@ Alternative support for Neuromag data is implemented by calling the mex files fr
 
 Note that the MEG-PD toolbox will only function on 32-bit machines, and requires either a Linux or HP-UX system to run. As the mex files are compiled code, it is not possible to modify these to run on 64-bit machines (which are becoming increasingly common), at present.
 
-You may want to continue reading the section on [getting started with Neuromag](/getting_started/neuromag).
+You may want to continue reading the section on [getting started with Neuromag](/getting_started/meg/neuromag).
 
 ## Support for BTi/4D MEG data
 
@@ -31,7 +31,7 @@ Alternatively, you can work with BTi/4D data using intermediate ASCII files (.m4
 
 All the required BTi/4D reading functions for MATLAB are supplied with the FieldTrip toolbox.
 
-You may want to continue reading the section on [getting started with BTi/4D](/getting_started/bti).
+You may want to continue reading the section on [getting started with BTi/4D](/getting_started/meg/bti).
 
 ## Support for Yokogawa MEG data
 
@@ -39,4 +39,4 @@ The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are support
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
 
-You may want to continue reading the section on [getting started with Yokogawa](/getting_started/yokogawa).
+You may want to continue reading the section on [getting started with Yokogawa](/getting_started/meg/yokogawa).

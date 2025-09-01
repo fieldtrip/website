@@ -12,7 +12,7 @@ The CTF system is one of most widely used MEG systems and one of the first on wh
 The acquisition software runs on a Linux computer. When prior to starting the acquisition software, shared memory with the appropriate details is initialized, the acquisition software will write a copy of the data to that shared memory. The shared memory is split over 600 packets, where each packet holding 28160 samples for older versions of the software or 40000 samples for newer versions of the software. With approximately 350 channels (MEG, EEG and status/trigger channels) in the typical MEG system, that amounts to approximately 80 (old) or 114 (new) samples per packet.
 
 {% include markup/green %}
-A specific application for the CTF real-time interface is to monitor and minimize movements of the subject's head during data acquisition. This makes use of the continuous head localization (CHL) channels and is described in detail [here](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session).
+A specific application for the CTF real-time interface is to monitor and minimize movements of the subject's head during data acquisition. This makes use of the continuous head localization (CHL) channels and is described in detail [here](/faq/experiment/headlocalizer).
 {% include markup/end %}
 
 ## Interface with MATLAB and FieldTrip

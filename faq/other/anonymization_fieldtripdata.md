@@ -15,9 +15,9 @@ FieldTrip keeps track of the analyses in the `data.cfg.previous` field. This is 
 
 However, the consequence might also be that original file name are present which might identify the subject. For example, after calling **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** the provenance of the input data is saved in the output `headmodel.cfg.previous`). You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub unwanted information from the provenance.
 
-Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the `.ds` directory with all files in it.
+Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/other/anonymization_ctf), i.e. the `.ds` directory with all files in it.
 
-Another concern for subject confidentiality is the anatomical MRI, which might include facial details. Please see this frequently asked question on [how to anonymize an anatomical MRI](/faq/how_can_i_anonymize_an_anatomical_mri).
+Another concern for subject confidentiality is the anatomical MRI, which might include facial details. Please see this frequently asked question on [how to anonymize an anatomical MRI](/faq/other/anonymization_anatomical).
 
 Furthermore, depending on how strict you want to be, the date at which a subject is recorded or the data at which a subject's data was processed might also contain clues about identifying the subject.
 

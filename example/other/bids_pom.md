@@ -38,7 +38,7 @@ This list does not cover all pieces of lab equipment, only those that record dat
 
 (\*) The BrainVision system cannot only be used for EEG, but also for ECG, EMG, EOG, ERG, and other physiological signals such as GSR, optical pulse sensors for blood flow, high-speed temperature sensors and elastic breathing belts for respiration, etc. Although not all of these correspond to bioelectric signals of nerve or muscle tissue, we will commonly refer to them as ExG recordings.
 
-The data of each of these pieces of equipment can be stored in the BIDS structure, either according to the official specification (currently MRI, MEG, EEG, iEEG, behaviour), or by extending the BIDS specification a bit and storing it in a BIDS-like fashion. In this [example overview page](/example/bids) you can find links to specific examples for converting different types of data and/or organizing it according to BIDS.
+The data of each of these pieces of equipment can be stored in the BIDS structure, either according to the official specification (currently MRI, MEG, EEG, iEEG, behaviour), or by extending the BIDS specification a bit and storing it in a BIDS-like fashion. In this [example overview page](/example/other/bids) you can find links to specific examples for converting different types of data and/or organizing it according to BIDS.
 
 The remainder of this example deals with simultaneous recordings and especially how to represent the timing information of those recordings. This excludes recordings with a static (non-time varying) nature, such as structural MRI, but also excludes relatively static information such as questionnaire data, or information about medication.
 
@@ -334,7 +334,7 @@ The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.co
 
 ## Converting the non-MRI data to BIDS
 
-The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](/reference/data2bids)** and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
+The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](/reference/data2bids)** and follows the [other examples](/example/other/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
 
 The first part of the code is general metadata/documentation and applies to all data:
 

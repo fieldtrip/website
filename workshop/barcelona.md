@@ -29,7 +29,7 @@ Session I
 - 9:00 – 9:30 Registration, coffee, opening remarks
 - 9:30 – 10:30 Lecture: An introduction to the MEG and the FieldTrip toolbox
 - 10:30 – 10:45 Coffee Break
-- 10:45 – 12:30 Hands-on: [Getting started with event-related fields](/tutorial/eventrelatedaveraging)
+- 10:45 – 12:30 Hands-on: [Getting started with event-related fields](/tutorial/sensor/eventrelatedaveraging)
 
 - 12:30 – 13:45 Lunch
 
@@ -37,7 +37,7 @@ Session I
 
 - 13:45 – 14:45 Lecture: Fundamentals of neuronal oscillations and synchrony
 - 14:45 – 15:00 Coffee Break
-- 15:00 – 17:00 Hands-on: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
+- 15:00 – 17:00 Hands-on: [Time-frequency analysis of power](/tutorial/sensor/timefrequencyanalysis)
 - 17:00 – 17:30 Wrap-up-the-day: “Ask the experts” session
 
 - 21:00 – ... Social get-together
@@ -48,14 +48,14 @@ Session III
 
 - 9:00 – 10:00 Lecture: Forward and inverse models
 - 10:00 – 10:15 Coffee break
-- 10:15 – 12:00 Hands-on: [Identifying oscillatory sources using beamformers](/tutorial/beamformer)
+- 10:15 – 12:00 Hands-on: [Identifying oscillatory sources using beamformers](/tutorial/source/beamformer)
 - 12:00 – 13:15 Lunch
 
 Session IV
 
 - 13:15 – 14:15 Lecture: Non-parametric statistical techniques
 - 14:15 – 14:30 Coffee break
-- 14:30 – 16:30 Hands-on: [Cluster-based permutation tests: intro](/tutorial/cluster_permutation_timelock) and [Cluster-based permutation tests: advanced](/tutorial/cluster_permutation_freq)
+- 14:30 – 16:30 Hands-on: [Cluster-based permutation tests: intro](/tutorial/stats/cluster_permutation_timelock) and [Cluster-based permutation tests: advanced](/tutorial/stats/cluster_permutation_freq)
 - 16:30 – 17:00 Wrap-up-the-day: “Ask the experts” session.
 
 - Handing in of evaluation forms

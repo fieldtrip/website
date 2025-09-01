@@ -12,7 +12,7 @@ redirect_from:
 
 In this tutorial you can find information about how to construct a source model that can be used for source reconstruction of EEG or MEG data. The source model describes a set of positions (and possibly orientations) of equivalent current dipoles that are taken into consideration when doing the source reconstruction. Note that not all source reconstruction methods require an explicit definition of a source model. Note also, that by and large source models should have the same specifications, irrespective of whether you are reconstructing EEG or MEG data. In this tutorial we will demonstrate how to use subject-specific anatomical data to create different types of source models. Which source model is most appropriate depends on the source reconstruction algorithm used, the additional analysis steps you have in mind, and on your own preferences. The anatomical MRI is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 ## Background
 
@@ -40,7 +40,7 @@ The preprocessing of the anatomical MRI is done with FieldTrip. The goal of this
 
 One annoying thing to be aware of, and to think about in advance, is that different parts of the pipeline typically assume or require different conventions of coordinate systems. Specifically, geometric information (sensor locations) in M/EEG data is typically expressed in a coordinate system that is defined based on external anatomical landmarks, whereas software used for processing of structural MRI usually requires coordinates to be expressed according to internal brain image based landmarks, such as the anterior and posterior commissures. 
 
-More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/coordsys). For now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following steps:
+More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/source/coordsys). For now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following steps:
 
 - Read the anatomical images into MATLAB with **[ft_read_mri](/reference/fileio/ft_read_mri)**.
 - Ensure that the coordinate system of the mri is defined according to the M/EEG device's coordinate system, which can be checked with **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** and imposed with **[ft_volumerealign](/reference/ft_volumerealign)**.
@@ -388,7 +388,7 @@ If you performed source reconstruction on the cortical surface, and you used the
 
 This tutorial explained how to build a source model that can be used for source reconstruction of EEG or MEG measurements.
 
-You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 ## See also
 

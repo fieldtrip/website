@@ -8,7 +8,7 @@ redirect_from:
 
 # About the FieldTrip project
 
-FieldTrip is the MATLAB software toolbox for MEG, EEG and iEEG analysis. It offers preprocessing and advanced analysis methods, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing. It supports the [data formats](/faq/dataformat) of all major MEG systems and of the most popular EEG and iEEG systems. New data formats can be [added easily](/faq/how_can_i_import_my_own_dataformat). FieldTrip contains high-level functions that you can use to construct your own analysis protocols as a MATLAB script.
+FieldTrip is the MATLAB software toolbox for MEG, EEG and iEEG analysis. It offers preprocessing and advanced analysis methods, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing. It supports the [data formats](/faq/preproc/datahandling/dataformat) of all major MEG systems and of the most popular EEG and iEEG systems. New data formats can be [added easily](/faq/preproc/dataformat/dataformat_own). FieldTrip contains high-level functions that you can use to construct your own analysis protocols as a MATLAB script.
 
 The FieldTrip toolbox is released free of charge as [open source software](https://en.wikipedia.org/wiki/Open_source) under the GNU [general public license](https://www.gnu.org/copyleft/gpl.html).
 

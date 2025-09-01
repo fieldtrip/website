@@ -45,7 +45,7 @@ If it comes to asking questions about FieldTrip including the following is a mus
 
 The cfg and data can be displayed in MATLAB using the display(variable_name) command. Call display(cfg) and display(data) and copy the answer over to include it in your mail.
 
-If you have data to share and it exceeds 1 MB, do not send it as attachment, but use a file hosting service as explained [here](/faq/how_should_i_send_example_data_to_the_developers).
+If you have data to share and it exceeds 1 MB, do not send it as attachment, but use a file hosting service as explained [here](/faq/organization/datasharing).
 {% include markup/end %}
 
 ## Example message

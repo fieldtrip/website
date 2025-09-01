@@ -20,7 +20,7 @@ If you are doing hypothesis-driven research, you should _not_ guide your statist
 On the other hand: if you are doing exploratory research, you should not compute p-values. Effect sizes are interesting and relevant to report for both exploratory and hypothesis-driven research.   
 {% include markup/end %}
 
-The [ERF_orig.mat](https://download.fieldtriptoolbox.org/example/effectsize/ERF_orig.mat) data that is used in this example script is available from our download server. The same data is used in the other statistics tutorials; the example here specifically follows the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+The [ERF_orig.mat](https://download.fieldtriptoolbox.org/example/effectsize/ERF_orig.mat) data that is used in this example script is available from our download server. The same data is used in the other statistics tutorials; the example here specifically follows the [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics) tutorial.
 
 The already preprocessed data is based on 151-channel MEG recordings from 10 subjects and consists of single-subject event-related averages for an auditory language task with two conditions: fully incongruent (FIC) and fully congruent (FC) sentence endings. See the other tutorials on the [meg-language dataset](/tag/meg-language) for more details.
 
@@ -222,7 +222,7 @@ The effect size is 1.47 when averaging over 7 left-temporal channels, and from 3
 
 ## Statistical inference using a cluster-based permutation test
 
-Although we might have had a clear a priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) tutorial for more details.
+Although we might have had a clear a priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) tutorial for more details.
 
     % define neighbouring channels
     load ctf151_neighb.mat

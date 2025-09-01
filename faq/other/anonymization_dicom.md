@@ -14,7 +14,7 @@ DICOM files contain a lot of header details that might provide information about
 {% include markup/red %}
 Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can be reconstructed into picture that might be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan might be considered as a "fingerprint". In both cases an external database would be required to match the data against subject identifiers, e.g., a facial reconstructed picture could be matched against the database formed by Google images.
 
-The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) the data or about imposing legal restrictions to prevent matching data against external databases.
+The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/other/anonymization_anatomical) the data or about imposing legal restrictions to prevent matching data against external databases.
 {% include markup/end %}
 
 Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does store any identifying information. However, there are also situations where it is desired to share the original DICOM files.

@@ -8,7 +8,7 @@ title: Improve parallel computing under the hood
 
 For EEG and MEG research we often process large amount of data, over multiple subjects, and using different analysis strategies implemented in pipelines. Executing such a pipeline, or reexecuting it completely once all parameters have been fixed, is a tedious task due to the computational costs.
 
-The currently advertised strategy to speed up large computations is to [parallelize over subjects](/tutorial/distributedcomputing_qsub), i.e. at the coarsest level of granularity. The disadvantage is that it requires quite some coding skills from researchers: the analysis scripts have to be written in a smart fasion to be able to execute them both on a single computer (for development) and on a big and/or distributed compute system for the complete analysis. If distributed or parallel computing were possible under the hood of the FieldTrip functions, many more people would be able to use it, without the necessity to modify the structure of their analysis scripts.
+The currently advertised strategy to speed up large computations is to [parallelize over subjects](/tutorial/scripting/distributedcomputing_qsub), i.e. at the coarsest level of granularity. The disadvantage is that it requires quite some coding skills from researchers: the analysis scripts have to be written in a smart fasion to be able to execute them both on a single computer (for development) and on a big and/or distributed compute system for the complete analysis. If distributed or parallel computing were possible under the hood of the FieldTrip functions, many more people would be able to use it, without the necessity to modify the structure of their analysis scripts.
 
 ## Organization of the end-user's analysis pipelines
 

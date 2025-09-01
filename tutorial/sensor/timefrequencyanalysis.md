@@ -12,7 +12,7 @@ redirect_from:
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.
 
-Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
+Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [artifact rejection](/tutorial/preproc/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
@@ -161,7 +161,7 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
 
 _Figure: The time-frequency representation of a single sensor obtained using ft_singleplotTFR_
 
-If you see artifacts in your figure, see [this question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+If you see artifacts in your figure, see [this question](/faq/plotting/opacityrendering).
 
 From the previous figure you can see that there is an increase in power around 15-20 Hz in the time interval 0.9 to 1.3 s after stimulus onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
@@ -232,7 +232,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
 _Figure: A time-frequency representation of channel MRC15 obtained using ft_singleplotTFR_
 
-If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+If you see artifacts in your figure, see [this FAQ](/faq/plotting/opacityrendering).
 
 {% include markup/yellow %}
 **Boundary effects**
@@ -363,7 +363,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 This tutorial showed how to do time-frequency analysis on a single's subject MEG data and how to plot the time-frequency representations. There were 4 methods shown for calculating time-frequency representations and 3 functions for plotting the results.
 
-After having finished this tutorial on time-frequency analysis, you can continue with the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
+After having finished this tutorial on time-frequency analysis, you can continue with the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) tutorial if you are interested in the source-localization of the power changes or the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
 
 ### See also these frequently asked questions
 

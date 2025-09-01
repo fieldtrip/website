@@ -32,9 +32,9 @@ This workshop is an **advanced** workshop in which we will move beyond standard 
 To prepare for the hands-on session, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
 - [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
-- [FieldTrip intro (video and hands-on)](/tutorial/introduction)
-- [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
-- [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
+- [FieldTrip intro (video and hands-on)](/tutorial/intro/introduction)
+- [Frequency analysis (video and hands-on)](/tutorial/sensor/timefrequencyanalysis)
+- [Beamformer source analysis (video and hands-on)](/tutorial/source/beamformer)
 
 ## Program
 

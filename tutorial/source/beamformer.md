@@ -10,13 +10,13 @@ redirect_from:
 
 ## Introduction
 
-In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preproc/preprocessing), [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain. You will learn how to compute appropriate time-frequency windows, an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. Finally, you will be shown several options for plotting the results overlaid on a structural MRI.
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/source/virtual_sensors) for an example of this).
 
 {% include markup/skyblue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
@@ -26,7 +26,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Background
 
-In the [Time-Frequency Analysis tutorial](/tutorial/timefrequencyanalysis) we identified strong oscillations in the beta band in a language paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location. Beam forming assumes that sources in different parts of the brain are not temporally correlated.
+In the [Time-Frequency Analysis tutorial](/tutorial/sensor/timefrequencyanalysis) we identified strong oscillations in the beta band in a language paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location. Beam forming assumes that sources in different parts of the brain are not temporally correlated.
 
 The brain is divided into a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross ET al. 2001). Other beamformer methods rely on source estimates calculated in the time domain, e.g., the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
@@ -95,7 +95,7 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.foilim    = [18 18];
     freqPost = ft_freqanalysis(cfg, dataPost);
 
-The output of ft_freqanalysis should be familiar to you from the [tutorial for time-frequency analysis](/tutorial/timefrequencyanalysis)
+The output of ft_freqanalysis should be familiar to you from the [tutorial for time-frequency analysis](/tutorial/sensor/timefrequencyanalysis)
 
   freqPre =
 
@@ -115,9 +115,9 @@ The output of ft_freqanalysis should be familiar to you from the [tutorial for t
 
 ### Head model
 
-The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given [here](/example/headmodel_various). We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
+The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given [here](/example/source/headmodel_various). We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-For more details on the following steps, you can consult the [tutorial on volume conduction models for source reconstruction of MEG data](/tutorial/headmodel_meg).
+For more details on the following steps, you can consult the [tutorial on volume conduction models for source reconstruction of MEG data](/tutorial/source/headmodel_meg).
 
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
 Note that segmentation is quite time consuming and takes about 10 minutes. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can download (segmentedmri.mat)(https://download.fieldtriptoolbox.org/tutorial/beamformer/segmentedmri.mat) and directly load the segmented MRI using the command
@@ -143,7 +143,7 @@ Then prepare the head model from the segmented brain surface:
 {% include markup/yellow %}
 **EEG headmodels**
 
-The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
+The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/source/headmodel_eeg).
 
 For example, if you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
@@ -199,7 +199,7 @@ At this point we have computed all necessary ingredients for the beamformer sour
     - Use normalized lead fields (see also note above and Exercise 4)
 
 {% include markup/yellow %}
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition.
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/source/beamformer_commonfilter)). This common filter is then applied separately to each condition.
 Hence, the parameters of your source analysis (i.e. whether to compute common filters, whether to normalize lead fields or not) might change slightly depending on which of those strategies above you decide to use. Which strategy to use, will in turn depend on your experimental design and your research question. In the following we show two possible approaches.
 {% include markup/end %}
 
@@ -301,7 +301,7 @@ Another option, besides contrasting to the noise estimate, is to normalize the l
 
 One approach for contrasting different intervals of the data is to compare the post- and pre-stimulus interval, which we describe now here. Another approach is to contrast the same window of interest (relative in time to some stimulus or response) between two or more conditions, which we do not show here, but the calls to FieldTrip functions are conceptually the same.
 
-Importantly, if you later want to compare the two conditions statistically, you have to compute the sources based on an inverse filter computed from both conditions, so called ['common filters'](/example/beamformer_commonfilter), and then apply this filter separately to each condition to obtain the source power estimate in each condition separately.
+Importantly, if you later want to compare the two conditions statistically, you have to compute the sources based on an inverse filter computed from both conditions, so called ['common filters'](/example/source/beamformer_commonfilter), and then apply this filter separately to each condition to obtain the source power estimate in each condition separately.
 
 First we compute a single data structure with both conditions, and compute the frequency domain CSD.
 
@@ -453,8 +453,8 @@ _Figure 7: sourceplot with method "surface"._
 
 Beamforming source analysis in the frequency domain with DICS has been demonstrated. An example of how to compute a head model (single shell) and forward lead field was shown. Various options for contrasting the time-frequency window of interest against a control was shown, including against 'noise' (NAI: minimum eigenvalue of the CSD) and against the pre-stimulus window using a 'common filter'. Options at each stage and their influence on the results were discussed, such as lead field normalization and CSD matrix regularization. Finally, options for plotting on slices, orthogonal views, or on the surface were shown.
 
-Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/headmodel_various). Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/beamformer_commonfilter).
-If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
+Details on head models can be found [here](/tutorial/source/headmodel_meg) or [here](/example/source/headmodel_various). Computing event-related fields with [MNE](/tutorial/source/minimumnormestimate) or [LCMV](/tutorial/source/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/source/beamformer_commonfilter).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/source/sourcemodel_aligned2mni). See [here for source statistics](/example/stats/source_statistics).
 
 ### See also these frequently asked questions
 

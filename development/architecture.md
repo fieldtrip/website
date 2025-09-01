@@ -23,11 +23,11 @@ We use the **[ft_checkdata](/reference/utilities/ft_checkdata)** function at the
 
 ## High-level, low-level and private functions
 
-Users mainly use the high-level functions (which take a cfg argument) as the main building blocks in their [analysis scripts](/tutorial/introduction).
+Users mainly use the high-level functions (which take a cfg argument) as the main building blocks in their [analysis scripts](/tutorial/intro/introduction).
 
 The low-level utility functions can sometimes be handy as well in an analysis pipeline. The low-level algorithmic functions in the [modules](/development/architecture/#modular-organization) are accessible on the path but not meant to be used by regular experimental neuroscience researchers.
 
-Finally, we have [private](/faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories) functions that by design cannot be called by the end-user.
+Finally, we have [private](/faq/matlab/privatefunctions_why) functions that by design cannot be called by the end-user.
 
 ## Modular organization
 

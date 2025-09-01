@@ -11,7 +11,7 @@ redirect_from:
 {% include markup/green %}
 These MEG systems were initially developed at the [Kanazawa Institute of Technology](https://www.kanazawa-it.ac.jp/ekit/) (KIT) and later co-developed and marketed by [Yokogawa Electric Corporation](http://www.yokogawa.com/). In 2016 the MEG business of Yokogawa was [transferred](https://asia.nikkei.com/Business/Deals/Ricoh-enters-medical-field-with-purchase-of-Yokogawa-Electric-business) to Ricoh, where they continue making these systems.
 
-We have a separate page for getting started with the [Ricoh MEG system](/getting_started/ricoh).
+We have a separate page for getting started with the [Ricoh MEG system](/getting_started/meg/ricoh).
 {% include markup/end %}
 
 ## Introduction
@@ -40,7 +40,7 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -229,13 +229,13 @@ The general principle of coordinate system coregistration is to measure the same
 2.  MEG using coils through which an alternating electrical current can be passed, resulting in a small but well-localized magnetic field
 3.  Polhemus using a felt-tip pen
 
-In general MEG analyses are performed in a ["head coordinate system"](/faq/coordsys) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/coordsys), e.g., the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
+In general MEG analyses are performed in a ["head coordinate system"](/faq/source/coordsys) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/source/coordsys), e.g., the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
 
 Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehead
 
 {% include image src="/assets/img/getting_started/yokogawa/coordinate_systems.png" %}
 
-In the frequently asked questions you can find an overview of the conventions for the [coordinate systems](/faq/coordsys) that are used by various MEG and MRI systems/software.
+In the frequently asked questions you can find an overview of the conventions for the [coordinate systems](/faq/source/coordsys) that are used by various MEG and MRI systems/software.
 
 ### MEG Dewar Coordinate System
 
@@ -289,7 +289,7 @@ The MEG fiducial positions are stored in an ASCII text file that you can open in
 
     edit  marker-coregis.txt
 
-Using the MRI fiducial positions expressed in [head coordinates](/faq/coordsys), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
+Using the MRI fiducial positions expressed in [head coordinates](/faq/source/coordsys), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
 
     % read the gradiometer definition from file, this is in dewar coordinates
     grad = ft_read_sens('Continuous.con', 'senstype', 'meg');

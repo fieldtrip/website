@@ -49,4 +49,4 @@ The optional outline in the layout defines the black lines that are drawn on top
 
 The optional mask in the layout defines the region over which **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** should interpolate the values. Usually the values should be interpolated over the whole head, and in this example it therefore corresponds to the first outline that is a circle representing the head. For ECoG data the mask should represent the area of the cortex that is covered by the electrode grid. If the recording was done with multiple electrode grids that are spaced, i.e. such that the topographical values should not be interpolated between the separate grids, you can specify one mask for each grid.
 
-See the [layout](/tutorial/layout) tutorial for more information.
+See the [layout](/tutorial/plotting/layout) tutorial for more information.

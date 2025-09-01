@@ -255,7 +255,7 @@ The decomposition not only gives you the component time-series but also their to
 
 ## Suggested further reading
 
-For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. After this tutorial on cleaning your data using ICA, you may want to go back to the [visual artifact rejection](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorials.
+For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/preproc/artifacts) tutorial. After this tutorial on cleaning your data using ICA, you may want to go back to the [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection) tutorials.
 
 More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the [email discussion list](/discussion_list) which can be searched [like this](https://www.google.com/search?q=site%3Amailman.science.ru.nl%2Fpipermail%2Ffieldtrip&q=artifacts).
 

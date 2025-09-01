@@ -49,8 +49,8 @@ We will keep this page up to date and post new information here when available.
 
 To maximally benefit from this course, we expect the users to have basic knowledge of MATLAB and FieldTrip. To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
-- [FieldTrip intro (video and hands-on)](/tutorial/introduction)
-- [spectral analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
+- [FieldTrip intro (video and hands-on)](/tutorial/intro/introduction)
+- [spectral analysis (video and hands-on)](/tutorial/sensor/timefrequencyanalysis)
 
 ## Getting started with the hands-on sessions
 
@@ -76,7 +76,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
 {% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation)).
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation)).
 {% include markup/end %}
 
 The `restoredefaultpath` command clears your path, keeping only the

@@ -268,7 +268,7 @@ We use the same method for the data at the other two positions:
 
 The variance threshold that we identified was 2e-24, which is in units of Tesla-squared. We can also use the standard deviation as the metric, which is the square root of the variance. That gives `sqrt(2e-24)` corresponding to a threshold of 1.4e-12 (or 1.4 pT).
 
-With **[ft_rejectvisual](/reference/ft_rejectvisual)** we manually click in the figure to select the threshold. If we know the threshold that we want to apply and we want to make it consistent over all recordings, we can also use the **[ft_badsegment](/reference/ft_badsegment)** function. That function does not reject the trials immediately, like ft_rejectvisual, but merely marks where the artifacts are, just like most other artifact detection functions. This is explained in more detail in the [introduction on dealing with artifacts](/tutorial/artifacts). The **[ft_rejectartifact](/reference/ft_rejectartifact)** function does the actual work in removing them from the raw data structures.
+With **[ft_rejectvisual](/reference/ft_rejectvisual)** we manually click in the figure to select the threshold. If we know the threshold that we want to apply and we want to make it consistent over all recordings, we can also use the **[ft_badsegment](/reference/ft_badsegment)** function. That function does not reject the trials immediately, like ft_rejectvisual, but merely marks where the artifacts are, just like most other artifact detection functions. This is explained in more detail in the [introduction on dealing with artifacts](/tutorial/preproc/artifacts). The **[ft_rejectartifact](/reference/ft_rejectartifact)** function does the actual work in removing them from the raw data structures.
 
     cfg = [];
     cfg.metric = 'std';
@@ -334,7 +334,7 @@ Note that we cannot concatenate the trial-based data, as the data in trial 1 at 
 
 ## Visualize the ERFs
 
-We can visualize the ERFs from the OPM data just as we would do with other MEG or EEG data, as explained in the plotting tutorial](/tutorial/plotting). For that we need a layout which specifies the location of each channel in the figure. The construction of a layout is explained in the [layout tutorial](/tutorial/layout); but in this case we can use the [template layout](/template/layout) that is included in FieldTrip.
+We can visualize the ERFs from the OPM data just as we would do with other MEG or EEG data, as explained in the plotting tutorial](/tutorial/plotting). For that we need a layout which specifies the location of each channel in the figure. The construction of a layout is explained in the [layout tutorial](/tutorial/plotting/layout); but in this case we can use the [template layout](/template/layout) that is included in FieldTrip.
 
     cfg = [];
     cfg.layout = 'fieldlinealpha1_helmet.mat';
@@ -549,7 +549,7 @@ An even better trimmed layout can be constructed if we also exclude channel 'FL8
 
 ## Plotting the OPM positions in 3D
 
-The multiplot and the topoplot are both projections on the 2D surface of our screen. It can be helpful to look at the OPM sensors in 3D. For that we can load the full [definition of the sensors](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).  
+The multiplot and the topoplot are both projections on the 2D surface of our screen. It can be helpful to look at the OPM sensors in 3D. For that we can load the full [definition of the sensors](/faq/source/sensors_definition).  
 
     close all
     load fieldlinealpha1 % this contains the fieldlinealpha1 structure, similar to the grad structure in the data
@@ -575,7 +575,7 @@ Again it makes sense to look at the specific selection of OPM sensors that was u
 
 This tutorial gave an introduction on processing OPM data, specifically dealing with a small OPM array that was used to record activity sequentially over multiple locations that together cover the region-of-interest. Furthermore, it showed how to plot the data topographically, given that not the whole head was covered by the measurement.  
 
-You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you could have a look at the tutorial about [coregistration of OPM data](/tutorial/coregistration_opm).
+You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you could have a look at the tutorial about [coregistration of OPM data](/tutorial/source/coregistration_opm).
 
 ### See also these frequently asked questions
 

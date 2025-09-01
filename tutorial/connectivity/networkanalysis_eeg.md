@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-This tutorial will replicate the [networkanalysis](/tutorial/networkanalysis) yet using EEG data instead of MEG. It will demonstrate one of the possible ways to analyze EEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/continuous) and on time-frequency analysis [here](/tutorial/timefrequencyanalysis)
+This tutorial will replicate the [networkanalysis](/tutorial/connectivity/networkanalysis) yet using EEG data instead of MEG. It will demonstrate one of the possible ways to analyze EEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/preproc/continuous) and on time-frequency analysis [here](/tutorial/sensor/timefrequencyanalysis)
 
 This tutorial will use metrics that are derived from graph theory and are implemented in the Brain Connectivity Toolbox (BCT, detailed explanation can be found [here](https://sites.google.com/site/bctnet/measures/list)).
 
@@ -118,8 +118,8 @@ _Figure 2: Left- scalp topography of oscillatory power centered at 10 Hz. Right-
 
 ## Computation of the forward model
 
-We first load the precomputed mni-standard [Desikan-Killiani](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlas, BEM headmodel and the sourcemodel. In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected electromagnetic scalp distribution as it is picked up by the EEG electrodes. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
-Alternatively, one could create a volumetric dipole grid based on regularly spaced 3-dimensional grid of dipole locations, or an inverse-warp from MNI normalized volumetric space of a template 3D grid. More information about this can be found in our [sourcemodel tutorial](/tutorial/sourcemodel) as well.
+We first load the precomputed mni-standard [Desikan-Killiani](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlas, BEM headmodel and the sourcemodel. In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected electromagnetic scalp distribution as it is picked up by the EEG electrodes. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/source/sourcemodel).
+Alternatively, one could create a volumetric dipole grid based on regularly spaced 3-dimensional grid of dipole locations, or an inverse-warp from MNI normalized volumetric space of a template 3D grid. More information about this can be found in our [sourcemodel tutorial](/tutorial/source/sourcemodel) as well.
 
     %% load the required geometrical information
     load('dkatlas.mat')
@@ -310,7 +310,7 @@ _Figure 7: Difference topography (left) and power spectra of the median splitted
 
 ### Source reconstruction of 'low' and 'high' alpha activity epochs
 
-Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](/example/beamformer_commonfilter) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](/example/source/beamformer_commonfilter) and [here](/tutorial/source/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest according to the trial split
     cfg            = [];

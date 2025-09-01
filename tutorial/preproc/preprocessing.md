@@ -12,7 +12,7 @@ redirect_from:
 
 This tutorial describes how to define epochs-of-interest (trials) from MEG data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g., average) your data.
 
-If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial, which also introduces some preprocessing options that are specific for EEG. If you want to learn how to segment continuous data into trials, check the [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp) tutorial.
+If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/preproc/continuous) tutorial, which also introduces some preprocessing options that are specific for EEG. If you want to learn how to segment continuous data into trials, check the [Preprocessing of EEG data and computing ERPs](/tutorial/sensor/preprocessing_erp) tutorial.
 
 ## Background
 
@@ -95,7 +95,7 @@ Save the preprocessed data to disk
 
     save PreprocData dataFIC dataIC dataFC -append
 
-These functions demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. Artifact rejection is described in [Preprocessing - Visual artifact rejection](/tutorial/visual_artifact_rejection)
+These functions demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. Artifact rejection is described in [Preprocessing - Visual artifact rejection](/tutorial/preproc/visual_artifact_rejection)
 
 ## Use your own function for trial selection
 
@@ -170,11 +170,11 @@ The output structure `dataMytrialfun` now contains fewer trials than before: onl
               grad: [1x1 struct]
                cfg: [1x1 struct]
 
-More on the `trialinfo` field can be found in the [FAQ](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
+More on the `trialinfo` field can be found in the [FAQ](/faq/preproc/events/trialinfo).
 
 ## Suggested further reading
 
-After having finished this tutorial on preprocessing, you can continue with the [event-related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+After having finished this tutorial on preprocessing, you can continue with the [event-related averaging](/tutorial/sensor/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial.
 
 ### See also these frequently asked questions
 

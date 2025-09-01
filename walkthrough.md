@@ -351,7 +351,7 @@ However, if you want to save trials separately you can specify the following opt
 
 ##### Output of ft_freqanalysis
 
-We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [timefrequencyanalysis](/tutorial/timefrequencyanalysis) and [plotting](/tutorial/plotting).
+We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [timefrequencyanalysis](/tutorial/sensor/timefrequencyanalysis) and [plotting](/tutorial/plotting).
 
 ## Statistics
 

@@ -183,7 +183,7 @@ First, we will load the MRI. It is important that you use the MRI that was reali
 
     load mri_realigned2.mat
 
-Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](/reference/ft_volumereslice)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/how_change_mri_orientation_size_fov).
+Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](/reference/ft_volumereslice)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/source/anat_reslice).
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 
@@ -222,7 +222,7 @@ It is ideal to contrast the activity of interest against some control.
 Why shouldn't we calculate a spatial filter for both conditions separately in the case of contrasting conditions? Would there be a reason to do so?
 {% include markup/end %}
 
-The statistical null hypothesis for both options within (1) is that the data are the same in both conditions, and thus the best spatial filter would be the one that is computed using both data conditions together (also known as ['common filters'](/example/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window, pooled over both conditions.
+The statistical null hypothesis for both options within (1) is that the data are the same in both conditions, and thus the best spatial filter would be the one that is computed using both data conditions together (also known as ['common filters'](/example/source/beamformer_commonfilter)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window, pooled over both conditions.
 
 ### Frequency analysis for both conditions
 

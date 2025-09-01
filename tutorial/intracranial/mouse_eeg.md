@@ -14,7 +14,7 @@ This tutorial describes the processing of mouse EEG data. Although the mouse EEG
 
 This tutorial deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furthermore, it deals with reading and processing anatomical data, the coregistration with EEG electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
 
-To learn how to process EEG data in more general, we suggest you check the tutorial on [EEG preprocessing computing ERPs](/tutorial/preprocessing_erp). More information on the processing of human intracranial data, including the coregistration and electrode localization, can be found in the [human ECoG and sEEG](/tutorial/human_ecog) tutorial.
+To learn how to process EEG data in more general, we suggest you check the tutorial on [EEG preprocessing computing ERPs](/tutorial/sensor/preprocessing_erp). More information on the processing of human intracranial data, including the coregistration and electrode localization, can be found in the [human ECoG and sEEG](/tutorial/intracranial/human_ecog) tutorial.
 
 ## Background
 
@@ -307,7 +307,7 @@ _Figure: Single trial in ft_databrowser after rereferencing._
 
 ### Making a channel layout for plotting
 
-For 2D plotting of the channel data, FieldTrip makes use of so-called [layouts](/tutorial/layout). These layouts specify the location and size of each channel in the figure, and can include an outline (for example of the mouse head) and a mask to restrict the topographic interpolation for topoplots. The goal is to create a layout that combines the pre- and post- electrode placement photo, plus some anatomical features of the mouse head to make it easier recognizeable.
+For 2D plotting of the channel data, FieldTrip makes use of so-called [layouts](/tutorial/plotting/layout). These layouts specify the location and size of each channel in the figure, and can include an outline (for example of the mouse head) and a mask to restrict the topographic interpolation for topoplots. The goal is to create a layout that combines the pre- and post- electrode placement photo, plus some anatomical features of the mouse head to make it easier recognizeable.
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure8.png" width="500" %}
 _Figure: Outline of the desired image for the channel layout._
@@ -599,7 +599,7 @@ Furthermore, we notice that the unit has been estimated as 'cm' and that the sca
 
 #### ... using the graphical user-interface
 
-We can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to coregister the anatomical MRI to the desired coordinate system. There are multiple [coordinate systems](/faq/coordsys) in which the anatomy of the brain and head can be described, but here we want to use the Paxinos-Franklin coordinate system which uses Bregma and Lambda as anatomical landmarks (or fiducials).
+We can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to coregister the anatomical MRI to the desired coordinate system. There are multiple [coordinate systems](/faq/source/coordsys) in which the anatomy of the brain and head can be described, but here we want to use the Paxinos-Franklin coordinate system which uses Bregma and Lambda as anatomical landmarks (or fiducials).
 
     cfg = [];
     cfg.coordsys  = 'paxinos';
@@ -652,7 +652,7 @@ The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function p
         0.0256   -0.0000   -0.9997    3.8987
              0         0         0    1.0000
 
-We can apply this [homogenous transformation matrix](/faq/homogenous) to the MRI with
+We can apply this [homogenous transformation matrix](/faq/source/homogenous) to the MRI with
 
     vox2head    = mri.transform;
     vox2paxinos = head2paxinos * vox2head;
@@ -665,7 +665,7 @@ It is useful to also explicitly specify the coordinate system in the anatomical 
 
 ### Reslicing the anatomical MRI
 
-After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e., to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
+After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/plotting/anat_upsidedownplotting), i.e., to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
 
     cfg = [];
     cfg.xrange = [-6 6];
@@ -898,7 +898,7 @@ The bregma and lambda points can be found by averaging the electrode positions o
 
     elec2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos');
 
-Subsequently, we can apply the transformation matrix to the electrode position. We first organize the electrode positions in a MATLAB structure, in line with the FieldTrip [description of electrodes](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
+Subsequently, we can apply the transformation matrix to the electrode position. We first organize the electrode positions in a MATLAB structure, in line with the FieldTrip [description of electrodes](/faq/source/sensors_definition).
 
     elec = [];
     elec.elecpos  = loc;
@@ -992,7 +992,7 @@ With **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can compute 
 
 ## Source reconstruction
 
-The [beamforming technique](/tutorial/beamformer) that we also use for EEG and MEG source reconstruction is based on a spatial filter. The [DICS spatial filter](http://www.pnas.org/content/98/2/694.short) is derived from the cross-spectral density matrix, which is the frequency-domain counterpart of the covariance matrix.
+The [beamforming technique](/tutorial/source/beamformer) that we also use for EEG and MEG source reconstruction is based on a spatial filter. The [DICS spatial filter](http://www.pnas.org/content/98/2/694.short) is derived from the cross-spectral density matrix, which is the frequency-domain counterpart of the covariance matrix.
 
 ### Calculating the cross spectral density matrix
 

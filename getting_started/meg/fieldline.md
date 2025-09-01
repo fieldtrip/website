@@ -8,7 +8,7 @@ redirect_from:
 
 # Getting started with FieldLine OPM data
 
-[FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and used by [Neuromag/Elekta/Megin](/getting_started/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
+[FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and used by [Neuromag/Elekta/Megin](/getting_started/meg/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
 
     cfg = [];
     cfg.dataset = 'MedianNerve_RestingStateEyesClosed.fif';
@@ -105,7 +105,7 @@ As there is quite some drift in the signal, it is better to apply a filter to th
 
 When we look at this FieldLine v2 recording, we see channel names like `00:01-BZ_OL` and `00:02-BZ_OL`. These channels correspond to the hardware sensors, i.e. the OPMs, and in this case each OPM has only one channel in the axial (or normal) direction, indicated by "BZ".
 
-The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the `grad` field, which describes the sensor positions (see also [this FAQ](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)). However, in this case the recording software did not know in which slots of the 3D-printed helmet the OPMs were placed. The `data.grad.coilpos` and `data.grad.coilori` fields that are obtained from the fif file also don't make sense.
+The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the `grad` field, which describes the sensor positions (see also [this FAQ](/faq/source/sensors_definition)). However, in this case the recording software did not know in which slots of the 3D-printed helmet the OPMs were placed. The `data.grad.coilpos` and `data.grad.coilori` fields that are obtained from the fif file also don't make sense.
 
 In this specific recording the OPM sensors were placed in an early version of the FieldLine smart helmet that the company refers to as the "Alpha1" version. The specific helmet has 107 slots for OPM sensors, but of course not all slots need to be filled. The FieldTrip [templates](/template/gradiometer) includes a detailed description of this helmet, and there is a [layout](/template/layout/#fieldline-opm-system) for 2D topographic plotting.
 
@@ -174,7 +174,7 @@ Since channels in a FieldTrip data structure are required have a unique channel 
 
 ## Coregistration
 
-There is a dedicated [tutorial](/tutorial/coregistration_opm) that deals with various ways to coregister the OPM sensors with the head and the anatomical MRI. 
+There is a dedicated [tutorial](/tutorial/source/coregistration_opm) that deals with various ways to coregister the OPM sensors with the head and the anatomical MRI. 
 
 ## See also
 

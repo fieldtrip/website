@@ -867,7 +867,7 @@ The interaction effects are usually the most interesting in a multifactorial
 design. In this dataset we will compute the interaction using the
 within-participant factor SEDATION (baseline vs moderate) and the
 between-subject factor GROUP (responsive vs drowsy) based on the strategy
-outlined in this [frequently asked question](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests).
+outlined in this [frequently asked question](/faq/stats/clusterstats_interaction).
 
 Let us prepare the data
 
@@ -999,7 +999,7 @@ independent and the neurobiological signal the role of dependent variable. In
 fact, accuracy is represented by a single number, whereas the neurobiological
 signal often has a spatial (the channels) and a spectral (the frequencies)
 dimension. More information can be found in this [frequently asked
-question](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables).
+question](/faq/stats/behavior_signalcorrelation).
 
 ### The Permutation Distribution Results From Breaking the Association Between Dependent and Independent Variable
 

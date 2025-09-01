@@ -28,6 +28,6 @@ There are different purposes for padding in the artifact detection functions:
 
 {% include image src="/assets/img/faq/artifact_padding/padding_fig2.png" %}
 
-See also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection) for more details on the filter padding, trial padding and artifact padding.
+See also the [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection) for more details on the filter padding, trial padding and artifact padding.
 
-And see this [FAQ](/faq/how_does_the_filter_padding_in_preprocessing_work) on filter padding when reading data from disk and preprocessing that data.
+And see this [FAQ](/faq/preproc/artifact/preproc_padding) on filter padding when reading data from disk and preprocessing that data.

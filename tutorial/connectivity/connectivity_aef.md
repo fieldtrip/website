@@ -128,7 +128,7 @@ Now we can average over trials using **[ft_timelockanalysis](/reference/ft_timel
 
 ### Computing and plotting time-frequency power representations
 
-Now we will compute the time-frequency representation of the event-related fields by considering each trial individually and subsequently averaging over trials. It is recommended that you make yourself familiar with the different strategies in frequency and time-frequency analysis [here](/tutorial/timefrequencyanalysis).
+Now we will compute the time-frequency representation of the event-related fields by considering each trial individually and subsequently averaging over trials. It is recommended that you make yourself familiar with the different strategies in frequency and time-frequency analysis [here](/tutorial/sensor/timefrequencyanalysis).
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -199,7 +199,7 @@ Since the data is of equal length we equalize the time axis of pre and post stim
     tfrpre.freq = round(tfrpre.freq);
     tfrpst.freq = round(tfrpst.freq);
 
-Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewhere](/tutorial/cluster_permutation_freq).
+Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewhere](/tutorial/stats/cluster_permutation_freq).
 
     cfg = [];
     cfg.channel          = {'MEG'};
@@ -270,7 +270,7 @@ Before you continue it is recommended to make your self familiar with the releva
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
-Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/sourcemodel_aligned2mni_atlas).
+Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/source/sourcemodel_aligned2mni_atlas).
 
 We will start with loading a precomputed headmodel [here](https://download.fieldtriptoolbox.org/tutorial/connectivity_aef/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 
@@ -510,7 +510,7 @@ In the previous section we used an arbitrary threshold (80% of maximum) to illus
 It is recommended to make yourself familiar with the permutation framework before you continue. This is explained in detail in the statics tutorial. You might also consult this on-line lecture.
 
 {% include markup/skyblue %}
-This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
+This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg2015). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
 {% include youtube id="vOSfabsDUNg" %}
 {% include markup/end %}
@@ -639,7 +639,7 @@ Based on visual inspection of the data provided by the interactive navigation af
 Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g., left heschl gyrus. In the following we will reduce the data to three locations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
 
 {% include markup/yellow %}
-We used statistics to reject the hypothesis that: the data in the pre and post stimulus intervals is exchangeable. It might appear that the decision about which nodes to choose is based on this statistical evaluation. However this is false. The spatial aspect of the data is not subject to hypothesis testing. We motivate our decision on the basis of our interpretation of the conclusion- the data is not exchangeable. The interpretation and not the statistical testing per se is based on prior knowledge, knowledge about function-anatomy, credible expectations of spatial patterns in the context of the experimental design and many other factors. Consulting this [FAQ](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test) is recommended.
+We used statistics to reject the hypothesis that: the data in the pre and post stimulus intervals is exchangeable. It might appear that the decision about which nodes to choose is based on this statistical evaluation. However this is false. The spatial aspect of the data is not subject to hypothesis testing. We motivate our decision on the basis of our interpretation of the conclusion- the data is not exchangeable. The interpretation and not the statistical testing per se is based on prior knowledge, knowledge about function-anatomy, credible expectations of spatial patterns in the context of the experimental design and many other factors. Consulting this [FAQ](/faq/stats/clusterstats_interpretation) is recommended.
 {% include markup/end %}
 
 First, we interpolate the statistical result and the atlas.

@@ -16,7 +16,7 @@ If you are completely new to FieldTrip, we recommend that you skip this tutorial
 
 This tutorial provides some guidelines and suggestions how to set up an analysis pipeline or chain of analysis steps that makes most efficient use of your (and your computer's) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding scripting and data handling are introduced, as well as the idea of batching.
 
-The examples here are mainly about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
+The examples here are mainly about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preproc/preprocessing) tutorial.
 
 {% include markup/skyblue %}
 The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) provides very useful guidelines for writing and organizing your analysis code. Although the examples it provides are based on Python, the ideas it presents apply equally well to MATLAB.
@@ -32,7 +32,7 @@ Another '**no-no**' is the practice of collecting all your steps in a single lar
 
 ## Convert your data to BIDS
 
-It is recommended to start your analysis by first [converting your data to BIDS](/example/bids). This pushes some of the challenging data curation and coding steps to the early phase of your analysis. It also requires that you identify and resolve inconsistencies at the start, rather than as you are going along. It comes at the expense of investing in data management and curation up-front, but it will save you time later, as the actual analysis becomes simpler.
+It is recommended to start your analysis by first [converting your data to BIDS](/example/other/bids). This pushes some of the challenging data curation and coding steps to the early phase of your analysis. It also requires that you identify and resolve inconsistencies at the start, rather than as you are going along. It comes at the expense of investing in data management and curation up-front, but it will save you time later, as the actual analysis becomes simpler.
 
 Converting your data into BIDS early on also means practically that your data acquisition was not so long ago and you better remember the peculiarities of your subjects and the recordings.
 
@@ -67,7 +67,7 @@ An example that uses subject-specific m-files can be found [here](https://github
 A similar example is [this one](https://github.com/Donders-Institute/infant-cluster-effectsize), which also starts from a consistent [BIDS dataset](https://doi.org/10.34973/gvr3-6g88) (hence fewer exceptions needed) and which stores subject-specific details like the selected trials and the bad segments and channels in [mat-files](https://doi.org/10.34973/g4we-5v66) rather than m-files.
 {% include markup/end %}
 
-When the data is nicely curated and represented in [BIDS](/example/bids), including an enriched `events.tsv` file, the organization of the data is very predictable and the `participants.tsv` can be used to loop over subjects using [ft_read_tsv](/reference/fileio/ft_read_tsv) and the subject-specific `events.tsv` can be used with [ft_trialfun_bids](/reference/trialfun/ft_trialfun_bids). In this case you may choose not to use subject-specific m-files, but to store the lists of bad channels and segments to mat-files.
+When the data is nicely curated and represented in [BIDS](/example/other/bids), including an enriched `events.tsv` file, the organization of the data is very predictable and the `participants.tsv` can be used to loop over subjects using [ft_read_tsv](/reference/fileio/ft_read_tsv) and the subject-specific `events.tsv` can be used with [ft_trialfun_bids](/reference/trialfun/ft_trialfun_bids). In this case you may choose not to use subject-specific m-files, but to store the lists of bad channels and segments to mat-files.
 
 ## Splitting the code over scripts
 
@@ -101,7 +101,7 @@ The `do_complete_analysis` script calls the others and could look like this
     % do the group-level statistics
     do_group_analysis
 
-In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the general preparatory scripts for the [layout](/tutorial/layout) and [neighbours](/example/neighbours) will take you some time and effort. While you are writing these, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
+In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the general preparatory scripts for the [layout](/tutorial/plotting/layout) and [neighbours](/example/stats/neighbours) will take you some time and effort. While you are writing these, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
 
 The construction of the `do_singlesubject_analysis` will likely involve some trial-and-error and takes time, probably multiple days. While you are writing the single-subject analysis, you can repeatedly run a part of that script. Only once it is complete, you run the for-loop that executes it for all participants. If you are doing more sophisticated analyses, such as MEG or EEG source reconstruction, it makes sense to split `do_singlesubject_analysis` into multiple scripts: for example one for the anatomical processing, one for the channel-level processing, and one for the source reconstruction.
 
@@ -223,11 +223,11 @@ Large datasets often require quite some processing time, hence it is convenient 
       end
     end
 
-The steps that do not require user interaction can even be executed in parallel to speed up the processing. This is explained in the [parfor](/tutorial/distributedcomputing_parfor) and [qsub](/tutorial/distributedcomputing_qsub) tutorials.
+The steps that do not require user interaction can even be executed in parallel to speed up the processing. This is explained in the [parfor](/tutorial/scripting/distributedcomputing_parfor) and [qsub](/tutorial/scripting/distributedcomputing_qsub) tutorials.
 
 ## Summary and suggested further reading
 
-This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and the tutorials on distributed computing using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_parfor) tutorial.
+This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/scripting/memory) and the tutorials on distributed computing using [qsub](/tutorial/scripting/distributedcomputing_qsub) and [parfor](/tutorial/scripting/distributedcomputing_parfor) tutorial.
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 

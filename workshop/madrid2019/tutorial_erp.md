@@ -26,7 +26,7 @@ Please note that the dataset used in this tutorial is not particularly large; we
 could also have used the first approach. But we want to demonstrate how to work
 in general with large data (or with computers that have a small memory). You can
 see the first approach used in the tutorial on [reading continuous
-EEG](/tutorial/continuous).
+EEG](/tutorial/preproc/continuous).
 {% include markup/end %}
 
 Preprocessing involves several steps including identifying individual
@@ -372,13 +372,13 @@ current data, a cap with a so-called equidistant electrode layout was used for a
 64-channel active electrode system (BrainVision ActiCap).
 
 The channel positions are in general not recorded during EEG measurements
-(although, see [this](/tutorial/electrode) tutorial) and are hence not stored in
+(although, see [this](/tutorial/source/electrode) tutorial) and are hence not stored in
 the EEG dataset. For plotting you have to use a layout file; this is a .mat file
 that contains the 2-D positions of the channels. FieldTrip provides a number of
 template layouts for different EEG caps in the `fieldtrip/template/layout`
 directory. It is also possible to create custom layouts for your own EEG cap,
 see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout
-tutorial](/tutorial/layout).
+tutorial](/tutorial/plotting/layout).
 
     cfg        = [];
     cfg.layout = 'easycapM10.mat';

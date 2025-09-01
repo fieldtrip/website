@@ -1,6 +1,6 @@
 ### Reading in the anatomical data
 
-Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/installation) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/matlab/installation) properly.
 
     cd <path_to_fieldtrip>
     ft_defaults
@@ -25,7 +25,7 @@ The structure of the `mri` variable contains the following fields:
 -   `dim` gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction
 -   `anatomy` is a matrix (with the size and number of dimensions specified in `dim`) that contains the anatomical information
 -   `hdr` contains the detailed header information from the original file, it contents vary, depending on the file format
--   `transform` is a homogenous [transformation matrix](/faq/homogenous) that allows expressing the voxel positions (in the field `anatomy`) in a certain coordinate system
+-   `transform` is a homogenous [transformation matrix](/faq/source/homogenous) that allows expressing the voxel positions (in the field `anatomy`) in a certain coordinate system
 -   `fid` is an optional structure with fiducial information, this will in general not be present
 -   `coordsys` specifies the coordinate system
 -   `unit` specifies the units of distance
@@ -38,7 +38,7 @@ We can check the overall quality of the MRI image using **[ft_sourceplot](/refer
     cfg.method = 'ortho';
     ft_sourceplot(cfg, mri)
 
-In case your MRI appears [upside down](/faq/my_mri_is_upside_down_is_this_a_problem), don't worry. This is common and we will address it in the next section.
+In case your MRI appears [upside down](/faq/source/anat_upsidedown), don't worry. This is common and we will address it in the next section.
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure2.png" width="600" %}
 
@@ -55,7 +55,7 @@ Things to pay attention to when judging the quality of the MRI are
 
 ### Align the MRI to the head coordinate system
 
-The EEG head model needs to be expressed in the same coordinate system as the electrodes and the source model. It is not really relevant which specific coordinate system is used, as long as all are consistently [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions).
+The EEG head model needs to be expressed in the same coordinate system as the electrodes and the source model. It is not really relevant which specific coordinate system is used, as long as all are consistently [aligned](/faq/source/anat_coreg).
 
 Using **[ft_sourceplot](/reference/ft_sourceplot)** we can check the orientation of the axes and the position of the origin by looking at the numbers taht are printed on screen. Alternatively, we can make a 3D image with **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)**. In the command window it will print that the positive x-axis is pointing towards "anterior", the positive y-axis is pointing towards the "left" and the positive z-axis is pointing towards "superior", in line with the CTF convention. You can also see this in the figure, which has the x-axis (red), y-axis (green) and z-axis (blue) pointing in these three directions of the head. The figure also reveals that the y-axis passes through both ears, consistent with the [convention](/faq/how_are_the_lpa_and_rpa_points_defined/#the-lparpa-in-the-donders-meg-and-mri-labs) at the Donders Centre for Cognitive Neuroimaging (DCCN).
 
@@ -67,7 +67,7 @@ Using **[ft_sourceplot](/reference/ft_sourceplot)** we can check the orientation
 
 _Figure; Determine the coordinate system in which the original MRI is expressed_
 
-You might read your anatomical MRI data from DICOM files, from a NIfTI file, or [other formats](/faq/dataformat), with data that is possibly defined in [a different coordinate system](/faq/coordsys). In that case it may not give information on the coordinate system in which the anatomical data is expressed. You can check and update the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function by specifying in which direction eax axis points and where the origin is relative to the head.
+You might read your anatomical MRI data from DICOM files, from a NIfTI file, or [other formats](/faq/preproc/datahandling/dataformat), with data that is possibly defined in [a different coordinate system](/faq/source/coordsys). In that case it may not give information on the coordinate system in which the anatomical data is expressed. You can check and update the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function by specifying in which direction eax axis points and where the origin is relative to the head.
 
 In general following the reading of the MRI, we use **[ft_volumerealign](/reference/ft_volumerealign)** to align the anatomical MRI to the desired coordinate system. For the CTF coordinate system - as for most coordinate systems used in EEG and MEG - you have to specify the anatomical landmarks (LPA, RPA and nasion). Knowing the voxel indices of these landmarks allows the MRI to be translated and rotated such that the axes of the coordinate systems pass through these landmarks. Following the coregistration or realignment of the MRI, the output of any later processing step on the MRI (reslicing, segmentation, mesh, headmodel) will be expressed in the same coordinate system. Once all anatomical processing of the MRI is done, you can also align the electrodes to the same anatomical landmarks and/or you can fit the electrodes interactively on the scalp surface of your head model.
 

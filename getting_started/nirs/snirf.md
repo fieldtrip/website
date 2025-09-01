@@ -18,7 +18,7 @@ In FieldTrip you can read SNIRF files using the low-level reading functions **[f
 
 ## Writing SNIRF data
 
-You can write data that is represented as a continuous FieldTrip raw data structure (see this [FAQ](/faq/how_are_the_various_data_structures_defined)) to a SNIRF file. That means that any data format supported by FieldTrip can be converted to SNIRF; this includes NIRS formats such as Artinis and Homer, but also non-NIRS data such as EEG. Channels in the raw data structure that are recognized as NIRS will be written in the [data](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsidataj) field, all other channels will be written in the [aux](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsiauxj) field.
+You can write data that is represented as a continuous FieldTrip raw data structure (see this [FAQ](/faq/development/datatype)) to a SNIRF file. That means that any data format supported by FieldTrip can be converted to SNIRF; this includes NIRS formats such as Artinis and Homer, but also non-NIRS data such as EEG. Channels in the raw data structure that are recognized as NIRS will be written in the [data](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsidataj) field, all other channels will be written in the [aux](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsiauxj) field.
 
 Events or triggers are represented very differently in the different file formats; in FieldTrip we always use the format as returned by **[ft_read_event](/reference/fileio/ft_read_header)**. To write events to a SNIRF file you have to pass them as additional argument to **[ft_write_data](/reference/fileio/ft_read_header)** like this
 

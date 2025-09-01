@@ -54,7 +54,7 @@ The full list of functions can be found [here](/reference). Each of the function
 There is a difference between high- and low-level functions. The high-level functions are the ones that are used by the user, while the low-level functions are automatically called by the higher level functions. The user does not have to be aware of the low-level functions.
 The toolbox is continuously being developed and extended. Therefore, it is important that you start your analysis in the newest version of FieldTrip.
 
-In some cases, FieldTrip is working together with external toolboxes or programs, like SPM, OpenMEEG and FreeSurfer. Some of the toolboxes are included in the default FieldTrip release, some of them have to be downloaded from the internet. You can read more about the external toolboxes [here](/faq/external).
+In some cases, FieldTrip is working together with external toolboxes or programs, like SPM, OpenMEEG and FreeSurfer. Some of the toolboxes are included in the default FieldTrip release, some of them have to be downloaded from the internet. You can read more about the external toolboxes [here](/faq/matlab/external).
 
 ### Using the toolbox and MATLAB
 
@@ -97,7 +97,7 @@ FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox 
 
 It is now possible to execute the MATLAB scripts by copying/pasting the relevant text from the tutorials (To copy from a Window browser to MATLAB running under Linux from X-Win32, use the mouse to highlight the text in the browser and press crtl-c. Then use ctrl-v or the middle mouse button to paste in MATLAB).
 
-Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/installation) for more information on how to correctly set your path for FieldTrip.
+Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/matlab/installation) for more information on how to correctly set your path for FieldTrip.
 
 ## Making an analysis protocol
 
@@ -147,7 +147,7 @@ _Figure: An example analysis protocol of source reconstruction for multiple subj
 
 On this page we gave a short introduction about the FieldTrip toolbox and about how to use that in MATLAB. We have shown also some examples of analysis protocols.
 
-If you would like to read further about the FieldTrip function, you can continue with the [Preprocessing tutorial](/tutorial/preprocessing).
+If you would like to read further about the FieldTrip function, you can continue with the [Preprocessing tutorial](/tutorial/preproc/preprocessing).
 If you would like to have an introduction about scripting in MATLAB, it is suggested that you continue with the [tutorial:scripting](/tutorial/scripting) tutorial. If you are new to MATLAB or EEG/MEG analysis, you can take a look at the list of [review papers and teaching material](/references_to_review_papers_and_teaching_material).
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).

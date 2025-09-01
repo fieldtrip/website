@@ -25,4 +25,4 @@ Therefore, please start MATLAB on your computer, copy-and-paste the code below i
     fprintf('spm is:          %s\n', which('spm'));     % should not be found yet, or the fieldtrip version
     fprintf('################################################################\n');
 
-If you get an error that says `Undefined function or variable 'ft_version'.` please add FieldTrip to the MATLAB path and try again. See [here](/faq/installation) for more information about adding FieldTrip to the MATLAB search path.
+If you get an error that says `Undefined function or variable 'ft_version'.` please add FieldTrip to the MATLAB path and try again. See [here](/faq/matlab/installation) for more information about adding FieldTrip to the MATLAB search path.

@@ -9,4 +9,4 @@ redirect_from:
 
 # How do I construct a layout file for the plotting functions?
 
-This is explained in detail in the [layout tutorial](/tutorial/layout).
+This is explained in detail in the [layout tutorial](/tutorial/plotting/layout).

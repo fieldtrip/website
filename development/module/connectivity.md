@@ -62,7 +62,7 @@ Spectrally resolved granger causality is a function of both the spectral transfe
 
 ## Related documentation
 
-The literature references to the implemented methods are given [here](/references_to_implemented_methods).
+The literature references to the implemented methods are given [here](/references_methods).
 
 See also these tutorials:
 

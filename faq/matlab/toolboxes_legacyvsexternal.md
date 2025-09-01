@@ -9,11 +9,11 @@ redirect_from:
 
 # Can I prevent "external" toolboxes from being added to my MATLAB path?
 
-The recommended path settings are explained in this [frequently asked question](/faq/installation).
+The recommended path settings are explained in this [frequently asked question](/faq/matlab/installation).
 
 The code in the **[ft_defaults](/reference/ft_defaults)** function will execute only once and should preferably be executed in your `startup.m` file. The main FieldTrip functions will also call **[ft_defaults](/reference/ft_defaults)** to ensure that the required subdirectories are on the path.
 
-The **[ft_defaults](/reference/ft_defaults)** will also add some toolboxes from external to your path, such as external/signal, external/stats and external/image. These contain drop-in [replacements for some MATLAB functions](/faq/matlab_replacements) to reduce the requirements on the (network) licenses, which are often available in a limited number.
+The **[ft_defaults](/reference/ft_defaults)** will also add some toolboxes from external to your path, such as external/signal, external/stats and external/image. These contain drop-in [replacements for some MATLAB functions](/faq/matlab/matlab_replacements) to reduce the requirements on the (network) licenses, which are often available in a limited number.
 
 If you don't want these replacement functions on your path, you can do the following in your `startup.m` file.
 

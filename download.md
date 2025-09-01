@@ -7,9 +7,9 @@ tags: [download]
 
 You can download the FieldTrip toolbox [here](/download.php).
 
-Prior to downloading, you might want to check whether your computer meets the [MATLAB requirements](/faq/requirements).
+Prior to downloading, you might want to check whether your computer meets the [MATLAB requirements](/faq/matlab/requirements).
 
-After downloading, you can follow the instructions in this [frequently asked question](/faq/installation) for setting up the MATLAB path.
+After downloading, you can follow the instructions in this [frequently asked question](/faq/matlab/installation) for setting up the MATLAB path.
 
 You can download the tutorial data [here](https://download.fieldtriptoolbox.org/tutorial/).
 

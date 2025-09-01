@@ -26,7 +26,7 @@ For the hands on session, we kindly require you to bring a functional laptop wit
 - To understand the FieldTrip toolbox design, please read the FieldTrip reference paper.
 - We will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this introduction tutorial.
 
-In the hands-on session we will start with preprocessing structural MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
+In the hands-on session we will start with preprocessing structural MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/intro/introduction).
 _We will start at 9:00 sharp and will finish around 12:00._
 
 ## Setting up for the hands-on session

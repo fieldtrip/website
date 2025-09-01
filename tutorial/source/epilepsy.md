@@ -120,7 +120,7 @@ surgery, though the extent of the polymicrogyria rendered this a difficult
 option.
 {% include markup/end %}
 
-The shared data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/installation).
+The shared data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/matlab/installation).
 
     restoredefaultpath
     addpath ~/matlab/fieldtrip/
@@ -474,7 +474,7 @@ For patient confidentiality we only include here the MRI which has already been 
 
     save mri_defaced.mat mri_defaced % save the data for sharing
 
-When we reslice this MRI, it becomes aligned with the Neuromag co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system. See [this FAQ](/faq/coordsys) for more details on different coordinate systems.
+When we reslice this MRI, it becomes aligned with the Neuromag co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system. See [this FAQ](/faq/source/coordsys) for more details on different coordinate systems.
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);

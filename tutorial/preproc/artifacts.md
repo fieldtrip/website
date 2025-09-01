@@ -55,14 +55,14 @@ These functions are available for manual/visual artifact detection:
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by showing all channels at once (per trial), or by showing all trials at once (per channel), or by showing a summary of all channels and trials in a single figure. Using the mouse, you can select trials and/or channels that are to be removed. This function directly returns the data with the noisy parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
 {% include markup/skyblue %}
-If you want to use **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
+If you want to use **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/preproc/events/preproc_continuous).
 {% include markup/end %}
 
 The **[ft_databrowser](/reference/ft_databrowser)** function works both for continuous and segmented data, and works with the data either still on disk or already read into memory. It allows you to browse through the data and to mark with the mouse segments with an artifact.  Contrary to ft_rejectvisual, ft_databrowser does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). Instead it returns in the output `cfg` a list of segments, expressed as begin and end sample relative to the recording. After detecting the segments with the artifacts, you call **[ft_rejectartifact](/reference/ft_rejectartifact)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
 
 Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualize the time course of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. A good ICA unmixing of your data requires that the atypical artifacts (e.g., electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
 
-More information about manually dealing with artifacts is found in the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial.
+More information about manually dealing with artifacts is found in the [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) tutorial.
 
 ### Automatic detection
 
@@ -86,7 +86,7 @@ The functions to detect eog, jump and muscle artifacts are all just wrappers aro
 
 The **[ft_badchannel](/reference/ft_badchannel)** and **[ft_badsegment](/reference/ft_badsegment)** functions implement the same metrics as the **[ft_rejectvisual](/reference/ft_rejectvisual)** function with `cfg.method='summary'` and allow setting fixed a-priori thresholds to exclude channels or segments.
 
-More information can be found in the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
+More information can be found in the [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection) tutorial.
 
 ### Rejecting segments with artifacts from the data
 
@@ -110,11 +110,11 @@ Some artifacts are represented in specific frequency bands. For example, artifac
 
 You can make a linear decomposition of the data using independent component analysis (ICA) or principal component analysis (PCA). With these methods you apply  a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce maximally independent time courses of the components. In the case of PCA, the filters produce orthogonal time courses. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the channel level with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
-The following example scripts explain how to use ICA to detect and remove [EOG](/example/ica_eog) and [ECG](/example/ica_ecg) artifacts.
+The following example scripts explain how to use ICA to detect and remove [EOG](/example/preproc/ica_eog) and [ECG](/example/preproc/ica_ecg) artifacts.
 
 ## Suggested further reading
 
-Following this short introduction on dealing with artifacts in FieldTrip, you can continue with the [visual artifact rejection](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorials. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is frequently discussed on the [email discussion list](/discussion_list).
+Following this short introduction on dealing with artifacts in FieldTrip, you can continue with the [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection) tutorials. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is frequently discussed on the [email discussion list](/discussion_list).
 
 ### Example scripts
 

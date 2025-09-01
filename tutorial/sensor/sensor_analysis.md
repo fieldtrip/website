@@ -18,7 +18,7 @@ _Figure 1: illustration of the experimental paradigm._
 
 We will perform three types of analyses in this tutorial. We will start by looking at the event-related field (ERF) surrounding visual stimulus onset. Next, we will examine the induced oscillatory activity during the visual stimulation. Finally, we will investigate the connectivity between the cortex and the muscle, by computing MEG-EMG coherence.
 
-This tutorial does not cover the steps required to import data into FieldTrip and preprocess it. This is covered in the [preprocessing](/tutorial/preprocessing) tutorial, which is recommended reading material before starting the present tutorial. This tutorial also does not cover the details of the various options available for doing spectral analysis. Please refer to the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial for that.
+This tutorial does not cover the steps required to import data into FieldTrip and preprocess it. This is covered in the [preprocessing](/tutorial/preproc/preprocessing) tutorial, which is recommended reading material before starting the present tutorial. This tutorial also does not cover the details of the various options available for doing spectral analysis. Please refer to the [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial for that.
 
 ## Reading in the data
 
@@ -161,7 +161,7 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
 {% include markup/red %}
 The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
 
-Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
+Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/sensor/combineplanar_pipelineorder).
 {% include markup/end %}
 
 ## Time-frequency analysis
@@ -326,7 +326,7 @@ Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/f
 
 This tutorial gave an overview of some options available in FieldTrip for doing sensor-level analysis. We started by computing an event-related field evoked by visual stimulation and computing a planar gradient representation. Next, time-frequency analysis was performed and revealed induced visual gamma activity. Finally, we discovered increased cortico-muscular coherence in the beta band of wrist muscles with the contralateral hemisphere.
 
-After having finished this tutorial, you might want to read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction or, for details on statistics, one of the statistics [tutorials](/tutorial).
+After having finished this tutorial, you might want to read through the tutorial on [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/source/beamformer) for source reconstruction or, for details on statistics, one of the statistics [tutorials](/tutorial).
 
 ### See also these frequently asked questions
 

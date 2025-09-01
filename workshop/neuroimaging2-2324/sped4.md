@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-This is an adapted version of the [general FieldTrip tutorial on time-frequency analysis](/tutorial/timefrequencyanalysis), made specifically for the module _Signal Processing for Electrophysiological Data (SPED)_ in the course _Neuroimaging 2: Electrophysiological Methods_, in the _Cognitive Neuroscience Masters (CNS)_ program at Radboud University. This module is taught by Eelke Spaak.
+This is an adapted version of the [general FieldTrip tutorial on time-frequency analysis](/tutorial/sensor/timefrequencyanalysis), made specifically for the module _Signal Processing for Electrophysiological Data (SPED)_ in the course _Neuroimaging 2: Electrophysiological Methods_, in the _Cognitive Neuroscience Masters (CNS)_ program at Radboud University. This module is taught by Eelke Spaak.
 
 Some of the concepts convered here should by now be familiar to you, while some other concepts will be new. The main purpose of this week's tutorial is to show you how spectral and time-frequency data analysis is done when using a typical, widely used, analysis toolbox. This is in contrast to previous weeks, in which the focus was much more on implementing the basic methods yourself and understanding their intricacies. Specifically, this tutorial will cover the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. The tutorial also shows how to visualize the results.
 

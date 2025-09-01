@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-This tutorial demonstrates how to construct an electrode model based on a single subject's 3D-scan. This electrode model can be used in combination with a [BEM](/tutorial/headmodel_eeg_bem) or [FEM](/tutorial/headmodel_eeg_fem) volume conduction model for source reconstruction.
+This tutorial demonstrates how to construct an electrode model based on a single subject's 3D-scan. This electrode model can be used in combination with a [BEM](/tutorial/source/headmodel_eeg_bem) or [FEM](/tutorial/source/headmodel_eeg_fem) volume conduction model for source reconstruction.
 
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
@@ -50,7 +50,7 @@ The structure sensor is attached to an iPad mini. We use the [Scanner - Structur
 
 [Here](https://download.fieldtriptoolbox.org/tutorial/electrode/3D-Scan.zip) you can download the result of the 3D-scan that we will use in this tutorial. Note that the Structure Sensor data comprises three files that should be kept together: an `.obj` file with the geometry, a `.jpg` file with the color photo texture mapping, and an `.mtl` file that maps between the geometry and the colors. If the `.mtl` and `.jpg` file are missing, there is no color information for the mesh.
 
-Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/installation) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/matlab/installation) properly.
 
     cd <path_to_fieldtrip>
     ft_defaults
@@ -99,9 +99,9 @@ To check, you can plot it again.
 
     ft_plot_headshape(headshape, 'axes', true) % plot it together with the axes
 
-After this step, the nose points approximately along the x-axis and the vertex along the z-axis. Note however that the y-axis crosses at the posterior part of the ears, not passing through any specific anatomical landmarks, so although it is upright, it is not yet in a well-defined [coordinate system](/faq/coordsys).
+After this step, the nose points approximately along the x-axis and the vertex along the z-axis. Note however that the y-axis crosses at the posterior part of the ears, not passing through any specific anatomical landmarks, so although it is upright, it is not yet in a well-defined [coordinate system](/faq/source/coordsys).
 
-In the next step we will transform the mesh into [CTF coordinates](/faq/coordsys). For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
+In the next step we will transform the mesh into [CTF coordinates](/faq/source/coordsys). For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
 
     cfg = [];
     cfg.method = 'headshape';
@@ -187,9 +187,9 @@ The electrode location are now digitized on the outer surface of the scanned sur
 
 ## Summary and further reading
 
-In this tutorial we demonstrated how to extract electrode positions from a 3D scanned head surface. The resulting electrode model can be used for volume conduction model, or in the construction of a [2D layout](/tutorial/layout) for data visualization.
+In this tutorial we demonstrated how to extract electrode positions from a 3D scanned head surface. The resulting electrode model can be used for volume conduction model, or in the construction of a [2D layout](/tutorial/plotting/layout) for data visualization.
 
-We suggest you read the frequently asked question about [coordinate systems](/faq/coordsys) to understand the different coordinate systems in which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
+We suggest you read the frequently asked question about [coordinate systems](/faq/source/coordsys) to understand the different coordinate systems in which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/source/headmodel_eeg_bem) and [FEM](/tutorial/source/headmodel_eeg_fem) volume conduction models.
 
 Frequently asked questions that relate to electrodes are:
 

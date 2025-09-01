@@ -23,7 +23,7 @@ To use sLORETA data in FieldTrip, you need to do the following steps.
 1.  In the LORETA program, you go to main utilities > Format converter.
 2.  There you select: input binary file (sLORETA)
 3.  It does not matter which format for output you choose, the code will figure it out. In the text file, rows are the time points, columns are the volume-gridpoints (called voxels).
-4.  After using loreta2fieldtrip the data is in [FieldTrip volume](/reference/utilities/ft_datatype_volume) format in [MNI space](/faq/coordsys).
+4.  After using loreta2fieldtrip the data is in [FieldTrip volume](/reference/utilities/ft_datatype_volume) format in [MNI space](/faq/source/coordsys).
 
 ### Hints on plotting the LORETA source
 

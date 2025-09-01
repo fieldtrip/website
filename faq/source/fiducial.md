@@ -28,4 +28,4 @@ In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are n
 
 In case fiducials are present in the `elec` structure, they will simply be removed at the time of forward modeling. Just like channels such as “trigger” and “EOG” are removed from the data prior to forward modeling.
 
-See also the related documentation that explains [how electrodes, magnetometers or gradiometers are described](/faq/sensors_definition) and that explains [how to report the positions of the fiducial points on the head](/faq/fiducials_definition).
+See also the related documentation that explains [how electrodes, magnetometers or gradiometers are described](/faq/source/sensors_definition) and that explains [how to report the positions of the fiducial points on the head](/faq/source/fiducials_definition).

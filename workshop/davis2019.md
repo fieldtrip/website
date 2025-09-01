@@ -31,14 +31,14 @@ Please see the [playground notes](https://docs.google.com/document/d/1bvzi8gv1WU
 - 9:00 – 9:15 Welcome and opening remarks (Ignacio Saez)
 - 9:15 – 10:15 Lecture I: Introduction to the FieldTrip Toolbox (Robert Oostenveld)
 - 10:15 – 10:30 Coffee break
-- 10:30 – 12:30 Hands-on I: [Trial selection](/tutorial/preprocessing) & [Preprocessing](/tutorial/preprocessing_erp)
+- 10:30 – 12:30 Hands-on I: [Trial selection](/tutorial/preproc/preprocessing) & [Preprocessing](/tutorial/sensor/preprocessing_erp)
 
 ### Session II
 
 - 13:45 – 14:45 Lecture II: Clinical aspects of intracranial recordings (Fady Girgis)
 - 14:45 – 15:45 Lecture III: Fundamentals of neuronal oscillations and synchrony (Arjen Stolk)
 - 15:45 – 16:00 Coffee break
-- 16:00 – 18:00 Hands-on II: [Time-frequency analysis](/tutorial/timefrequencyanalysis)
+- 16:00 – 18:00 Hands-on II: [Time-frequency analysis](/tutorial/sensor/timefrequencyanalysis)
 - 18:00 – 18:30 Wrap-up-the-day and Summary
 
 ## Thursday March 21st 2019
@@ -47,14 +47,14 @@ Please see the [playground notes](https://docs.google.com/document/d/1bvzi8gv1WU
 
 - 9:00 – 10:15 Lecture IV: [Anatomical reconstruction of intracranial data (Arjen Stolk)](https://youtu.be/NdIqUSPPAeM)
 - 10:15 – 10:30 Coffee break
-- 10:30 – 12:30 Hands-on III: [Analysis of human ECoG and SEEG](/tutorial/human_ecog)
+- 10:30 – 12:30 Hands-on III: [Analysis of human ECoG and SEEG](/tutorial/intracranial/human_ecog)
 
 ### Session IV
 
 - 13:45 – 14:45 Lecture V: Insights into Human Cognition from Intracranial Recordings (Robert T. Knight)
 - 14:45 – 15:45 Lecture VI: Connectivity analysis (Robert Oostenveld)
 - 15:45 – 16:00 Coffee break
-- 16:00 – 17:00 Hands-on IV: [Coherence analysis](/tutorial/coherence)
+- 16:00 – 17:00 Hands-on IV: [Coherence analysis](/tutorial/connectivity/coherence)
 - 17:00 – 18:30 Lecture VII: Statistical testing/methods (Robert Oostenveld & Arjen Stolk)
 
 ## Friday March 22nd 2019
@@ -78,7 +78,7 @@ To ensure that everything runs smooth, please use a recent version of FieldTrip.
 {% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/matlab/installation).
 {% include markup/end %}
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.

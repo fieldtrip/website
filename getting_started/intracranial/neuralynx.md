@@ -25,7 +25,7 @@ Neuralynx also writes a raw data file (.nrd) in which all the channels are sampl
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults

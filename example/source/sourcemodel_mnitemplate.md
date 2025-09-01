@@ -9,7 +9,7 @@ tags: [meg, mri, headmodel, source]
 On the [template sourcemodel](/template/sourcemodel) page we describe a number of regular 3D grid 
 source models defined in MNI space. These models can be used as templates for individual subject data,
 allowing for more accurate and consistent source reconstruction across subjects. The procedure for this
-is described in the [source model tutorial](/tutorial/sourcemodel).
+is described in the [source model tutorial](/tutorial/source/sourcemodel).
 
 These source models are only available at a few resolutions, and have dipoles throughout the whole brain
 compartment, including CSF, white matter and gray matter. That is convenient for beamformer source

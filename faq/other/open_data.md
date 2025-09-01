@@ -12,7 +12,7 @@ redirect_from:
 Feel free to hit the **edit** button at the bottom of this page to add links to other open access datasets.
 {% include markup/end %}
 
-The FieldTrip tutorials include a lot of smaller tutorial datasets that are available for [download](https://download.fieldtriptoolbox.org/). These datasets are detailed in [this frequently asked question](/faq/datasets). Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
+The FieldTrip tutorials include a lot of smaller tutorial datasets that are available for [download](https://download.fieldtriptoolbox.org/). These datasets are detailed in [this frequently asked question](/faq/other/datasets). Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org), [DataDryad](https://datadryad.org/stash/) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets.
 

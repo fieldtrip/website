@@ -45,7 +45,7 @@ First, we need to “guess”, based usually on pilot studies or prior similar s
 
 {% include markup/skyblue %}
 
-Once you are done with this example, you may want to continue reading this [example on estimating and reporting the effect size following a cluster-based test](/example/effectsize).
+Once you are done with this example, you may want to continue reading this [example on estimating and reporting the effect size following a cluster-based test](/example/stats/effectsize).
 
 {% include markup/end %}
 
@@ -291,7 +291,7 @@ end
 
 The two functions can also be used to estimate the sample size for 2-by-N (N>=2) interaction effect, however, the first factor must be a within-subjects factor and the second can be a within- or between-subjects factor.
 
-Take a 2x3 design for example, the first and second factors can be respectively denoted A and B, and the six cells in this design can be denoted A1B1, A2B1, A1B2, A2B2, A1B3 and A2B3. For each subject, we can compute the difference between the two levels of A, denoted as A1B1minusA2B1, A1B2minusA2B2, and A1B3minusA2B3. Now testing an interaction effect between A and B can be treated as comparing these three difference scores, which can be done by a one-way ANOVA using `ft_statfun_depsamplesFmultivariate` if B is a within-subjects factor, or `ft_statfun_indepsamplesF` if B is a between-subjects factor. If B has only two levels, you can simply use a t-test to compare the two differences (i.e., A1B1minusA2B1 and A1B2minusA2B2). Uing this approach, we can test an interaction effect using cluster-based permutation test. See [this page](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests) for more details.
+Take a 2x3 design for example, the first and second factors can be respectively denoted A and B, and the six cells in this design can be denoted A1B1, A2B1, A1B2, A2B2, A1B3 and A2B3. For each subject, we can compute the difference between the two levels of A, denoted as A1B1minusA2B1, A1B2minusA2B2, and A1B3minusA2B3. Now testing an interaction effect between A and B can be treated as comparing these three difference scores, which can be done by a one-way ANOVA using `ft_statfun_depsamplesFmultivariate` if B is a within-subjects factor, or `ft_statfun_indepsamplesF` if B is a between-subjects factor. If B has only two levels, you can simply use a t-test to compare the two differences (i.e., A1B1minusA2B1 and A1B2minusA2B2). Uing this approach, we can test an interaction effect using cluster-based permutation test. See [this page](/faq/stats/clusterstats_interaction) for more details.
 
 Thus, we can treat two-way ANOVA as comparing differences by using t-tests or one-way ANOVAs. As to the configuration of the functions, simply enter the means, standard deviations, and correlations of these differences you expect for your data respectively into the `cfg.mu`, `cfg.sd`, and `cfg.cor` fields in the demo m-files.
 
@@ -299,5 +299,5 @@ Thus, we can treat two-way ANOVA as comparing differences by using t-tests or on
 
 - <https://osf.io/rmqhc>
 - <https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html>
-- Example script for [estimating and reporting the effect size following a cluster-based test](/example/effectsize)
+- Example script for [estimating and reporting the effect size following a cluster-based test](/example/stats/effectsize)
 - Other pages on this website that are tagged with [statistics](/tag/statistics)

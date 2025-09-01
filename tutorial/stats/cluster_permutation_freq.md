@@ -14,9 +14,9 @@ The objective of this tutorial is to give an introduction to the statistical ana
 
 The tutorial starts with a long background section that sketches the background of permutation tests. The next sections are more tutorial-like. They deal with the analysis of an actual MEG [dataset](/tutorial/meg_language). In a step-by-step fashion, it will be shown how to statistically compare the data observed in two experimental conditions in a between-trials, in a within-trials and in a within-subjects design. For this, we will use planar TFR's.
 
-In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials. We assume that the preprocessing (see the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial), calculation of the planar gradient (see the [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) tutorial) and the time-frequency analysis (see the [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) tutorial) are already clear for the reader.
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the earlier tutorials. We assume that the preprocessing (see the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) tutorial), calculation of the planar gradient (see the [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) tutorial) and the time-frequency analysis (see the [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/sensor/timefrequencyanalysis) tutorial) are already clear for the reader.
 
-This tutorial is not covering statistical test on event-related fields. If you are interested in that, you can read the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) tutorial. If you are interested how parametric statistical tests can be used, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+This tutorial is not covering statistical test on event-related fields. If you are interested in that, you can read the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) tutorial. If you are interested how parametric statistical tests can be used, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics) tutorial.
 
 {% include markup/skyblue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
@@ -113,7 +113,7 @@ Before calculating the TFRs we calculate the planar gradient with **[ft_megplana
     dataFIC_planar = ft_megplanar(cfg, dataFIC);
     dataFC_planar  = ft_megplanar(cfg, dataFC);
 
-Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FIC and the FC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FIC and FC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FIC and the FC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = 'yes', which is necessary for the subsequent statistical analysis.
+Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FIC and the FC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FIC and FC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FIC and the FC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/sensor/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = 'yes', which is necessary for the subsequent statistical analysis.
 
     cfg = [];
     cfg.output     = 'pow';
@@ -146,7 +146,7 @@ To save:
 
 ### Permutation test
 
-Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [Cluster-based permutation tests on event-related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
+Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [Cluster-based permutation tests on event-related fields tutorial](/tutorial/stats/cluster_permutation_timelock). Also see [this tutorial](/tutorial/stats/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/stats/neighbours_prepare).
 
 To load the planar gradient TFRs (also available from [freqFIC_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat) on our download server), us
 
@@ -319,7 +319,7 @@ To compare `freqFIC_activation_planar_cmb` and `freqFIC_baseline_planar_cmb` by 
 
 This configuration for a within-trials experiment is very similar to the configuration for the [within-subjects experiment in the "Cluster-based permutation tests on event-related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments) in which we compared the evoked responses to fully incongruent and fully congruent sentence endings. The main difference is the measure that we use to evaluate the effect at the sample level (cfg.statistic = 'ft_statfun_actvsblT' instead of cfg.statistic = 'ft_statfun_depsamplesT'). With cfg.statistic = 'ft_statfun_actvsblT', we choose the so-called _activation-versus-baseline T-statistic_. This statistic compares the power in every sample (i.e., a (channel,frequency,time)-triplet) in the activation period with the corresponding time-averaged power (i.e., the average over the temporal dimension) in the baseline period. The comparison of the activation and the time-averaged baseline power is performed by means of a dependent samples T-statistic.
 
-You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
+You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/stats/neighbours_prepare).
 
 We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**
 
@@ -364,7 +364,7 @@ The averages of the TFRs for the fully incongruent and the fully congruent sente
 
 ### Permutation test
 
-We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event-related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
+We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event-related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/stats/neighbours_prepare).
 
     cfg = [];
     cfg.channel          = {'MEG'};
@@ -436,7 +436,7 @@ Try calling clusterplot with cfg.alpha = 0.05;
 
 In this tutorial, we showed how to do non-parametric statistical test, cluster-based permutation test on planar TFR's with between-trials, with within-trials and with within-subjects experimental designs. It was also shown how to plot the results.
 
-If you are interested in parametric tests, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on event-related fields, you can read the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) tutorial.
+If you are interested in parametric tests, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on event-related fields, you can read the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) tutorial.
 
 If you would like to read more about statistical analysis, you can look at the following FAQs:
 

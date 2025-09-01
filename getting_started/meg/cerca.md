@@ -109,9 +109,9 @@ When we look at this recording, we see channel names like “A1X” and “F4Y�
 
 The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the "grad" field, which describes the sensor positions (see also [this FAQ](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/#the-definition-of-meg-sensors)). The recording software itself does not know the relative locations of sensors to each other in the helmet, but it requires you to select a `_HelmConfig.tsv` file that lists which slot each sensor is in, as well as their positions and orientations for each sensitive axis. In this specific recording the OPM sensors were placed in the generic purple adult large helmet supplied by Cerca.
 
-For topographic plotting, the channel names in `data.label` should be mapped to the corresponding locations on the head. To keep the script clean and reproducible, we will not go in the data structure and manually rename the channels, but use a montage as explained [here](/faq/rename_channels).
+For topographic plotting, the channel names in `data.label` should be mapped to the corresponding locations on the head. To keep the script clean and reproducible, we will not go in the data structure and manually rename the channels, but use a montage as explained [here](/faq/preproc/datahandling/rename_channels).
 
-The `_HelmConfig.tsv` file specifies the channel names (based on the name of the hardware sensors) and their placements in the helmet. It also contains 2D projection coordinates of the helmet slot positions in `Layx` and `Layy` which can be used for 2D plotting. Using the `_HelmConfig.tsv` file, we can create a [layout](/tutorial/layout) for the topographic plotting.
+The `_HelmConfig.tsv` file specifies the channel names (based on the name of the hardware sensors) and their placements in the helmet. It also contains 2D projection coordinates of the helmet slot positions in `Layx` and `Layy` which can be used for 2D plotting. Using the `_HelmConfig.tsv` file, we can create a [layout](/tutorial/plotting/layout) for the topographic plotting.
 
     % Rename the channel labels using a montage
     montage = [];

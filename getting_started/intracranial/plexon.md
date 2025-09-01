@@ -22,7 +22,7 @@ The .plx files contain the multiplexed raw acquisition data. During acquisition 
 
 There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](/reference/fileio/ft_read_header)** and **[ft_read_data](/reference/fileio/ft_read_data)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio functions to select the correct sampling frequency and channels.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -89,7 +89,7 @@ If you have read the continuous data using the standard FieldTrip **[ft_preproce
 
 ## Reading continuous or spike data from a .plx file
 
-The low-level functions ft_read_header and ft_read_data also work on .plx files, which means that you can use the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. However, the .plx format is a very inefficient format, which makes the reading of subsequent trials rather slow. Instead of reading individual trials, it is recommended that you use the approach that is explained [here](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format).
+The low-level functions ft_read_header and ft_read_data also work on .plx files, which means that you can use the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. However, the .plx format is a very inefficient format, which makes the reading of subsequent trials rather slow. Instead of reading individual trials, it is recommended that you use the approach that is explained [here](/faq/preproc/datahandling/writedata_matbin).
 
 The FieldTrip **[ft_read_spike](/reference/fileio/ft_read_spike)** function works fine on .plx files. However, note that the .plx files only contain the unsorted spikes.
 

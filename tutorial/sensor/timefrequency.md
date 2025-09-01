@@ -505,6 +505,6 @@ Please take some time to reflect on the differences and similarities between EEG
 
 This tutorial showed how to do time-frequency analysis on a single's subject MEG and EEG data and how to plot the time-frequency representations. We took special notice of noticing the differences and similarities between MEG and EEG analysis.
 
-As we noted in the introduction, there are more ways of doing a frequency analysis. If you want to know more about how to do wavelet analysis, adaptive time-windows and multitapers, please take a look at standard (MEG only) [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis), starting at part II. You can copy-paste parts of it into your own script and use them on our dataset.
+As we noted in the introduction, there are more ways of doing a frequency analysis. If you want to know more about how to do wavelet analysis, adaptive time-windows and multitapers, please take a look at standard (MEG only) [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis), starting at part II. You can copy-paste parts of it into your own script and use them on our dataset.
 
 If you would like to learn more about plotting of time-frequency representations, please see [visualization](#Visualization).

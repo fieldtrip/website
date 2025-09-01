@@ -27,7 +27,7 @@ Although LIMO is primarily designed for EEG data, it can also process MEG and iE
 
 ## Data format
 
-As LIMO directly reads and writes data from/to disk, the recommended way to organize the input data is through **[Brain Imaging Data Structure (BIDS) standard](https://bids.neuroimaging.io/index.html)**. This standard aims to organize neuroimaging data in a uniform way to simplify data sharing through the scientific community. More background on BIDS and example datasets can be found [here](/example/bids).
+As LIMO directly reads and writes data from/to disk, the recommended way to organize the input data is through **[Brain Imaging Data Structure (BIDS) standard](https://bids.neuroimaging.io/index.html)**. This standard aims to organize neuroimaging data in a uniform way to simplify data sharing through the scientific community. More background on BIDS and example datasets can be found [here](/example/other/bids).
 
 The inputs of LIMO consists of preprocessed and segmented data (EEG or source-level time series) that are stored as `.mat` (FieldTrip data) or `.set` (EEGLAB data) files. Following BIDS standard, those data are known as derivatives data.
 

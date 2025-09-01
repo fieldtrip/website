@@ -90,7 +90,7 @@ _The structure in the trials and the timing as described in the PDF manuscript i
 
 ## Exploring the files that hold the NIRS data
 
-The authors have shared the data in the Homer `.nirs` format. This format is directly supported by FieldTrip and you can use both the low-level and the high-level FieldTrip functions to read and/or process the data. See the [getting started with Homer](/getting_started/homer) page for details.
+The authors have shared the data in the Homer `.nirs` format. This format is directly supported by FieldTrip and you can use both the low-level and the high-level FieldTrip functions to read and/or process the data. See the [getting started with Homer](/getting_started/othersoftware/homer) page for details.
 
 We will first use the low-level reading functions to check on some basic characteristics of the data on disk.
 
@@ -100,7 +100,7 @@ We will first use the low-level reading functions to check on some basic charact
 
 ## Look at the optode positions
 
-FieldTrip uses the `opto` structure (see **[ft_datatype_sens](/reference/utilities/ft_datatype_sens)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [plotting](/tutorial/plotting) and [layout](/tutorial/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
+FieldTrip uses the `opto` structure (see **[ft_datatype_sens](/reference/utilities/ft_datatype_sens)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [plotting](/tutorial/plotting) and [layout](/tutorial/plotting/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
 
     optoR = opto;
     optoR.optopos(strcmp(opto.optotype, 'transmitter'),:) = nan;

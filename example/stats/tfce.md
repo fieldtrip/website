@@ -145,4 +145,4 @@ Here is the expected output of the example code.
 
 - [Smith and Nichols (2009), Threshold-free cluster enhancement: addressing problems of smoothing, threshold dependence and localisation in cluster inference](https://doi.org/10.1016/j.neuroimage.2008.03.061)
 - [Blog post on TFCE by Benedikt Ehinger](https://benediktehinger.de/blog/science/threshold-free-cluster-enhancement-explained/)
-- FAQ on [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test)
+- FAQ on [How NOT to interpret results from a cluster-based permutation test](/faq/stats/clusterstats_interpretation)

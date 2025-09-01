@@ -6,4 +6,4 @@ title: Create a volume conduction model of the head for source reconstruction of
 
 # Create a volume conduction model of the head for source reconstruction of EEG data
 
-This page has been moved to [here](/tutorial/headmodel_eeg).
+This page has been moved to [here](/tutorial/source/headmodel_eeg).

@@ -11,7 +11,7 @@ redirect_from:
 {% include markup/green %}
 These MEG systems were initially developed at the [Kanazawa Institute of Technology](https://www.kanazawa-it.ac.jp/ekit/) (KIT) and later co-developed and marketed by [Yokogawa Electric Corporation](http://www.yokogawa.com/). In 2016 Ricoh took over the MEG branch from Yokogawa and has started manufacturing and installing the MEG system. The Ricoh system has some updates over the Yokogawa system.
 
-You may also want to check the page that we have on getting started with the [Yokogawa MEG system](/getting_started/yokogawa).
+You may also want to check the page that we have on getting started with the [Yokogawa MEG system](/getting_started/meg/yokogawa).
 {% include markup/end %}
 
 - This page is under construction [Last updated on June 12th by KK].
@@ -38,7 +38,7 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation). You also need to set the path to your data files.
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation). You also need to set the path to your data files.
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -160,7 +160,7 @@ The first 14 components of the event structure in the above example are:
 
 ## Trial Selection
 
-In the same way as in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial, you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example,
+In the same way as in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) tutorial, you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example,
 
     %% Define trials
     cfg = [];
@@ -235,7 +235,7 @@ An example of your own trial function, `yourowntrialfun` is
 
 ## MRI-MEG Co-registration
 
-The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/faq/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page.
+The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/faq/preproc/datahandling/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page.
 
 The co-registration is usually done in two steps; the first step is an approximate alignment that is based on fiducial points, and the second step is a refinement with additional head-shape digitized points. You practically have two possible cases regarding to the first step:
 
@@ -251,7 +251,7 @@ In the Ricoh and Yokogawa system, the coordinate system is defined as:
 - Y-axis goes towards the left
 - Z-axis goes towards the top of the head
 
-This coordinate system is same as the CTF coordinate system (see the [FAQ](/faq/coordsys)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
+This coordinate system is same as the CTF coordinate system (see the [FAQ](/faq/source/coordsys)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
 
 ### Read MRI
 

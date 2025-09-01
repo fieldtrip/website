@@ -24,7 +24,7 @@ We will be using the [eeg-language](/tag/eeg-language) dataset that has been con
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5531370.svg)](https://doi.org/10.5281/zenodo.5531370)
 
-The conversion of the 5 pilot subjects' EEG data to BIDS is fully documented on [this page](/workshop/cuttingeeg2021/bids_language). You don't have to run that code, but you can use it as inspiration for organizing your own data in the [BIDS format](/example/bids), or use it to convert the full dataset that is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8).
+The conversion of the 5 pilot subjects' EEG data to BIDS is fully documented on [this page](/workshop/cuttingeeg2021/bids_language). You don't have to run that code, but you can use it as inspiration for organizing your own data in the [BIDS format](/example/other/bids), or use it to convert the full dataset that is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8).
 
 The "minimal" dataset (~260MB) contains one subject and is enough to run the tutorial. The "pilot" dataset (~1.7GB) contains all 5 subjects used for the pilot analysis in the original paper; you can use that if you want to explore other subjects with this tutorial.
 
@@ -46,7 +46,7 @@ The `<your_fieldtrip_location>` is the directory in which all the code is after 
 {% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the `startup.m` file than the path GUI.
 
-Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/matlab/installation).
 {% include markup/end %}
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.

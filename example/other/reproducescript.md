@@ -30,7 +30,7 @@ To explain the new reproducescript functionality, we will demonstrate its use wi
 
 ## Example 1
 
-To show how the reproducescript functionality works, we apply it to a script from the tutorial on [Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing). Note that before calling **[ft_topoplotER](/reference/ft_topoplotER)**, we changed the units from T to fT. This is usually not done, but in this instance it serves as an example for how reproducescript handles analysis steps that were performed outside the FieldTrip ecosystem (i.e., arbitrary code).
+To show how the reproducescript functionality works, we apply it to a script from the tutorial on [Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing). Note that before calling **[ft_topoplotER](/reference/ft_topoplotER)**, we changed the units from T to fT. This is usually not done, but in this instance it serves as an example for how reproducescript handles analysis steps that were performed outside the FieldTrip ecosystem (i.e., arbitrary code).
 
     %% LISTING 1
 
@@ -184,5 +184,5 @@ Note that there are other strategies for improving shareability and reproducibil
 ## Suggested further reading
 
 - [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566)
-- [Using reproducescript for a group analysis](/example/reproducescript_group)
-- [Using reproducescript on a full study](/example/reproducescript_andersen)
+- [Using reproducescript for a group analysis](/example/other/reproducescript_group)
+- [Using reproducescript on a full study](/example/other/reproducescript_andersen)

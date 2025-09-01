@@ -128,7 +128,7 @@ Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in 
 
     load data
 
-After the computation of the frequency domain representation **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** will be used to compute the coherence. There are essentially two ways of achieving the same coherence, and these will be explained below. The main difference is the way in which the frequency domain representation is computed. You can also check out [the different ways of representing frequency domain data](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
+After the computation of the frequency domain representation **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** will be used to compute the coherence. There are essentially two ways of achieving the same coherence, and these will be explained below. The main difference is the way in which the frequency domain representation is computed. You can also check out [the different ways of representing frequency domain data](/faq/spectral/datatype_freq)
 
 ##### Method 1
 

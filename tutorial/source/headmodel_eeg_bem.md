@@ -14,9 +14,9 @@ This tutorial demonstrates how to construct a Boundary Element Method (BEM) volu
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence towards the end we will demonstrate how to align the template electrodes with the model.
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
-We have another tutorial that demonstrates how to make a [Finite Element Method (FEM) headmodel for EEG](/tutorial/headmodel_eeg_fem). Furthermore, if you are interested in MEG head models, we recommend that you go to the corresponding [MEG tutorial](/tutorial/headmodel_meg).
+We have another tutorial that demonstrates how to make a [Finite Element Method (FEM) headmodel for EEG](/tutorial/source/headmodel_eeg_fem). Furthermore, if you are interested in MEG head models, we recommend that you go to the corresponding [MEG tutorial](/tutorial/source/headmodel_meg).
 
 ## Background
 
@@ -61,9 +61,9 @@ Check that the homogenous transformation matrix in `mri_realigned` is the same a
 
 ### Reslicing
 
-The segmentation of the anatomical MRI into brain, skull and scalp works best if the voxels are isotropic, i.e., if the size of the voxel is identical in each direction. If you do not have isotropic voxels, or you are not sure, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to interpolate the anatomical MRI onto isotropic voxels. You can read more about reslicing in this [frequently asked question](/faq/how_change_mri_orientation_size_fov).
+The segmentation of the anatomical MRI into brain, skull and scalp works best if the voxels are isotropic, i.e., if the size of the voxel is identical in each direction. If you do not have isotropic voxels, or you are not sure, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to interpolate the anatomical MRI onto isotropic voxels. You can read more about reslicing in this [frequently asked question](/faq/source/anat_reslice).
 
-An advantage of reslicing is that it also aligns the voxels with the axes of the coordinate system, thereby avoiding it being plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem) later in the pipeline.
+An advantage of reslicing is that it also aligns the voxels with the axes of the coordinate system, thereby avoiding it being plotted [upside down](/faq/source/anat_upsidedown) later in the pipeline.
 
     cfg = [];
     cfg.method = 'linear';
@@ -83,7 +83,7 @@ _Figure; The MRI after assigning the desired coordinate system and reslicing_
 
 ### Segmentation
 
-In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull and brain. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
+In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull and brain. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/source/datatype_segmentation).
 
 {% include markup/skyblue %}
 The segmentation is quite time consuming (~15 minutes). For the purpose of this tutorial you can skip this and load the result and move on to the next step. You can download the result from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
@@ -116,7 +116,7 @@ The segmentation does not change the coordinate system, nor the size of the voxe
 {% include markup/yellow %}
 Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This for example happens if there are large spatial inhomogeneities in the MRI that are caused by the anatomical MRI being acquired while the subject was wearing an EEG cap. The **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)** function allows correcting for these inhomogeneities. The **[ft_defacevolume](/reference/ft_defacevolume)** function can be used to erase parts of the MRI where there should be no signal, for example artifacts outside the head.
 
-For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
+For more information, you can consult this [frequently asked question](/faq/source/headmodel_meshingproblem).
 {% include markup/end %}
 
 The first thing to check is whether the segmented volumes have a reasonable size. The brain compartment should be about 1300-1600 ml, and the skull compartment about 400-500 ml when using `cfg.spmmethod='old'` which results in the "inflated brain" as skull compartment (see figure below). The volume of the scalp compartment can be arbitrarily large, as it extends to the neck.
@@ -250,7 +250,7 @@ _Figure; The geometry of the BEM surface meshes: all surfaces plotted together_
 
 Now that the scalp, skull and brain have been segmented and surface descriptions have been constructed for each, we will use **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create the actual volume conduction model.
 
-Here we will specify the 'dipoli' method, but there are [other methods](/faq/what_kind_of_volume_conduction_models_are_implemented) to build a BEM model. Some of these methods are not supported on all platforms (Windows/macOS/Linux), some of them are more accurate, and some of them do not come pre-packaged and are more of a hassle to install. If 'dipoli' does not work for you, you can try 'openmeeg' or 'bemcp'. To skip this step and continue with the tutorial, you can also download the result from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
+Here we will specify the 'dipoli' method, but there are [other methods](/faq/source/datatype_headmodel) to build a BEM model. Some of these methods are not supported on all platforms (Windows/macOS/Linux), some of them are more accurate, and some of them do not come pre-packaged and are more of a hassle to install. If 'dipoli' does not work for you, you can try 'openmeeg' or 'bemcp'. To skip this step and continue with the tutorial, you can also download the result from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
     % Create a volume conduction model
     cfg        = [];
@@ -297,9 +297,9 @@ There are many EEG manufacturers and almost as many EEG electrode placement syst
            type: 'eeg1010'
            unit: 'mm'
 
-The electrode positions are described in the `elecpos` field and the `label` field contains the name of the electrodes. See this [frequently asked question](/faq/how_are_electrodes_magnetometers_or_gradiometers_described) for more details.
+The electrode positions are described in the `elecpos` field and the `label` field contains the name of the electrodes. See this [frequently asked question](/faq/source/sensors_definition) for more details.
 
-The head model is expressed in the same units and coordinates as the anatomical MRI, in this case the CTF [coordinate system](/faq/coordsys)). Therefore, the electrode positions need to be specified accordingly. We can do a first check with
+The head model is expressed in the same units and coordinates as the anatomical MRI, in this case the CTF [coordinate system](/faq/source/coordsys)). Therefore, the electrode positions need to be specified accordingly. We can do a first check with
 
     elec = ft_determine_coordsys(elec)
 
@@ -480,7 +480,7 @@ In exercise 2, you created a head model with method 'concentricspheres'. How is 
 
 This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and the boundary element method (BEM) developed by Oostendorp and van Oosterom (1989). In the exercises, we also compared the BEM model to a concentric spheres model that was fitted on the scalp, skull and brain surfaces.
 
-You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 ### See also these frequently asked questions
 

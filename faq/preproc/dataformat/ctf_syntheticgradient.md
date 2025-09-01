@@ -32,7 +32,7 @@ The grad structure included in the FieldTrip representation (i.e. hdr.grad or da
          G3BR: [1x1 struct]
       current: 'none'
 
-and potentially other "balancing" schemes. The grad.balance.current describes which balancing was applied to the data and to the specification of the sensor array (grad.tra) for the forward computation. See [How are electrodes, magnetometers or gradiometers described?](/faq/how_are_electrodes_magnetometers_or_gradiometers_described) for more information.
+and potentially other "balancing" schemes. The grad.balance.current describes which balancing was applied to the data and to the specification of the sensor array (grad.tra) for the forward computation. See [How are electrodes, magnetometers or gradiometers described?](/faq/source/sensors_definition) for more information.
 
 We can explore the different higher order synthetic gradiometer forward solution as follow
 

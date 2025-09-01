@@ -113,7 +113,7 @@ which is an interactive function. You have to provide the following answers:
     % What is the anatomical label for the positive Z-axis [r, l, a, p, s, i]? s
     % Is the origin of the coordinate system at the a(nterior commissure), i(nterauricular), n(ot a landmark)? n
 
-which results in the coordinate system being updated to RAS. This means that the x goes to the Right, the y goes to Anterior, and the z goes to superior. See also [this FAQ](/faq/coordsys) on coordinate systems.
+which results in the coordinate system being updated to RAS. This means that the x goes to the Right, the y goes to Anterior, and the z goes to superior. See also [this FAQ](/faq/source/coordsys) on coordinate systems.
 
 We could in principle now continue with further coregistration, using either one (or a combination) of these
 

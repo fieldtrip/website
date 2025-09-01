@@ -14,7 +14,7 @@ In this tutorial you will explore and combine continuous EEG with multiple recor
 
 We will be using sleep recordings as an example for multimodal data and will form a picture of what is happening in the brain during sleep. Sleep is the most standardized and well-analyzed brain state to date. The methods used for analyzing sleep might also help you in characterizing drowsiness during a task, detect closed eyes or eye movements, detect spontaneous events in EEG (such as epileptic spikes) and in general how to include other modalities relevant to your task. Along the way you will learn a bit about the structure of sleep.
 
-This tutorial assumes that the steps of [preprocessing](/tutorial/preprocessing) are already clear for the reader.
+This tutorial assumes that the steps of [preprocessing](/tutorial/preproc/preprocessing) are already clear for the reader.
 
 ## Background
 
@@ -268,7 +268,7 @@ Electrophysiological recordings can also be used to identify wake periods. In th
         cumtapcnt: [1154x1 double]
               cfg: [1x1 struct]
 
-Now comes a trick to analyze the data more efficiently: the trials/segments/epochs in the data represent time at the level of the experiment, i.e. every subsequent trial is one 30-s epoch advanced in time. We can reformat the `rpt_chan_freq` structure into a regular time-frequency representation with `chan_freq_time`. The time or latency of each trial can be constructed using the sampleinfo from the segmented data, which specified for each trial the begin and the end-sample relative in the original datafile. See also the frequently asked question ["how can I do time-frequency analysis on continuous data"](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data) for more details.
+Now comes a trick to analyze the data more efficiently: the trials/segments/epochs in the data represent time at the level of the experiment, i.e. every subsequent trial is one 30-s epoch advanced in time. We can reformat the `rpt_chan_freq` structure into a regular time-frequency representation with `chan_freq_time`. The time or latency of each trial can be constructed using the sampleinfo from the segmented data, which specified for each trial the begin and the end-sample relative in the original datafile. See also the frequently asked question ["how can I do time-frequency analysis on continuous data"](/faq/spectral/tfr_continuous) for more details.
 
     begsample = data_epoched_clean.sampleinfo(:,1);
     endsample = data_epoched_clean.sampleinfo(:,2);
@@ -871,12 +871,12 @@ Interesting to continue the analysis if you want to go further:
 
 ### See also these tutorials
 
-- [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
-- [Getting started with EDF (European Data Format) data](/getting_started/edf)
+- [Preprocessing - Reading continuous EEG data](/tutorial/preproc/continuous)
+- [Getting started with EDF (European Data Format) data](/getting_started/eeg/edf)
 - [Creating a clean analysis script and batch processing](/tutorial/scripting)
-- [Time-frequency analysis](/tutorial/timefrequencyanalysis)
+- [Time-frequency analysis](/tutorial/sensor/timefrequencyanalysis)
 - [Time-frequency analysis of combined MEG/EEG data](/tutorial/sensor/timefrequency)
 
 ### See also these frequently asked questions
 
-- [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
+- [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/preproc/dataformat/edf2fieldtrip)

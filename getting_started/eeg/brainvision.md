@@ -93,7 +93,7 @@ Specify the layout that matches your set-up when plotting, for example:
 
     cfg.layout = 'easycapM1.mat';
 
-Examples regarding the type of plots can be observed [here](/tutorial/plotting). In the [template](/template/layout) directory you can find a collection of template layouts for plotting. If you want to create your own custom layout files, please have a look [here](/tutorial/layout).
+Examples regarding the type of plots can be observed [here](/tutorial/plotting). In the [template](/template/layout) directory you can find a collection of template layouts for plotting. If you want to create your own custom layout files, please have a look [here](/tutorial/plotting/layout).
 
 ## See also
 

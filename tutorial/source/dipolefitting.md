@@ -88,13 +88,13 @@ It is possible to visualize the anatomical MRI using the **[ft_sourceplot](/refe
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_mri_orig.png" width="500" %}
 
-You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/my_mri_is_upside_down_is_this_a_problem) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system).
+You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/source/anat_upsidedown) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system).
 
 ### Coregister the anatomical MRI to the MEG coordinate system
 
 The coregistration of the anatomical MRI with the Neuromag head coordinate system is required to express the anatomical MRI in a consistent fashion relative to the MEG and EEG sensors. Since we will use the anatomical MRI to construct the volume conduction model of the head, coregistration is also a prerequisite to ensure that the volume conduction model is aligned with the sensors.
 
-The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference/ft_volumerealign)** with cfg.method='interactive'. It allows us to click on a voxel, and to press 'n', 'l' or 'r' to indicate the nasion, left and right pre-auricular point respectively.
+The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/source/anat_landmarks). We use **[ft_volumerealign](/reference/ft_volumerealign)** with cfg.method='interactive'. It allows us to click on a voxel, and to press 'n', 'l' or 'r' to indicate the nasion, left and right pre-auricular point respectively.
 
     cfg = [];
     cfg.method = 'interactive';
@@ -103,7 +103,7 @@ The first step consists of a coarse coregistration, based on three anatomical la
 
     save mri_realigned1 mri_realigned1
 
-It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly employ at the Donders Institute](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered.
+It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly employ at the Donders Institute](/faq/source/anat_dicom2ctf). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered.
 
     cfg = [];
     cfg.method = 'headshape';
@@ -758,7 +758,7 @@ The three meshes are combined in one struct-array and used as input to **[ft_pre
     save headmodel_eeg headmodel_eeg
 
 {% include markup/skyblue %}
-Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
+Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/source/conductivity_defaults)
 {% include markup/end %}
 
 ### Process the EEG data
@@ -937,7 +937,7 @@ We demonstrated how to use dipole fitting to estimate the location and time cour
 
 This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
 
-More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
+More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/source/headmodel_meg) and [here for EEG](/tutorial/source/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/source/minimumnormestimate) and [Beamformer](/tutorial/source/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/source/virtual_sensors).
 
 ### See also these tutorials
 

@@ -206,5 +206,5 @@ ft_defaults
 The `restoredefaultpath` command sets the path to the MATLAB default, clearing any custom toolboxes that you may have but that we don't need today. The `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
 {% include markup/red %}
-Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation)).
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation)).
 {% include markup/end %}

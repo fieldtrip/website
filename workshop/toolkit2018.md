@@ -20,18 +20,18 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 | 10:45-11:00 | Coffee Break |
 | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs |
 | 12:00-13:00 | Lunch |
-| 13:00-15:00 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging) |
+| 13:00-15:00 | Pre-processing - [hands-on](/tutorial/sensor/eventrelatedaveraging) |
 | 15:00-15:15 | Tea Break |
 | 15:15-16:30 | Time frequency analysis of power - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/frequency.pdf) |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers |
 
 ### Tuesday April 10, 2018
 
-| 09:00-11:00 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
+| 09:00-11:00 | Time-frequency analysis of power - [hands-on](/tutorial/sensor/timefrequencyanalysis) |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:15 | Spontaneous EEG and sleep - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/sleep.pdf) |
 | 12:15-13:15 | Lunch |
-| 13:15-15:15 | Analysis of continuous EEG data - [hands-on](/tutorial/sleep) |
+| 13:15-15:15 | Analysis of continuous EEG data - [hands-on](/tutorial/sensor/sleep) |
 | 15:15-15:30 | Tea break |
 | 15:30-16:30 | Forward and inverse - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/forward_inverse.pdf) |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers |
@@ -45,18 +45,18 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 | 11:00-12:15 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity) |
 | 12:15-13:00 | Lunch |
 | 13:00-14:15 | Source reconstruction using beamformers - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/beamforming.pdf) |
-| 14:15-15:00 | Beamforming - [hands-on](/tutorial/beamformer) |
+| 14:15-15:00 | Beamforming - [hands-on](/tutorial/source/beamformer) |
 | 15:00-15:15 | Tea Break |
-| 15:30-16:30 | Beamforming - [hands-on](/tutorial/beamformer) |
+| 15:30-16:30 | Beamforming - [hands-on](/tutorial/source/beamformer) |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers |
 
 ### Thursday April 12, 2018
 
 | 09:00-10:30 | Statistics using non-parametric randomization techniques - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/statistics.pdf) |
 | 10:30-10:45 | Coffee break |
-| 10:45-12:00 | Statistics using non-parametric randomization techniques -[hands-on](/tutorial/cluster_permutation_timelock) |
+| 10:45-12:00 | Statistics using non-parametric randomization techniques -[hands-on](/tutorial/stats/cluster_permutation_timelock) |
 | 12:00-13:00 | Lunch |
-| 13:00-14:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock) |
+| 13:00-14:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
 | 14:00-15:00 | Large scale analyses and open science - [lecture and demo](https://download.fieldtriptoolbox.org/workshop/toolkit2018/slides/open_science.pdf) |
 | 15:00-15:15 | Tea break |
 | 15:15-17:15 | FieldTrip playground part 1 |
@@ -91,5 +91,5 @@ The `restoredefaultpath` command clears your path, keeping only the official MAT
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation).
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation).
 {% include markup/end %}

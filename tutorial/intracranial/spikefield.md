@@ -118,7 +118,7 @@ The LFP data is now represented in a structure that has the following standard f
 
 Here, every cell of data_lfp.trial contains a chan x time data matrix for one trial (# trials = 600).
 
-It is important to note that we assume that there are no gaps in the recording, i.e. that the LFP recording is continuous. It may occasionally occur that (at least for Neuralynx software this is known) there are gaps in the LFP recording because the recording software has been turned on and off, such that there is one Ncs file with a large gap. In that case, one must take care of linking timestamps and samples as there will not be a linear relationship anymore. We refer to [this page](/getting_started/neuralynx) for potential solutions.
+It is important to note that we assume that there are no gaps in the recording, i.e. that the LFP recording is continuous. It may occasionally occur that (at least for Neuralynx software this is known) there are gaps in the LFP recording because the recording software has been turned on and off, such that there is one Ncs file with a large gap. In that case, one must take care of linking timestamps and samples as there will not be a linear relationship anymore. We refer to [this page](/getting_started/intracranial/neuralynx) for potential solutions.
 
 The critical pieces of information needed to link LFPs to spikes are the number of timestamps per LFP sample, the LFP sampling rate and the first timestamp of the recording.
 If one reads out the LFP files using **[ft_read_spike](/reference/fileio/ft_read_spike)** then this information is represented in
@@ -169,7 +169,7 @@ giving a struct
 
 where spike.trial{i} and spike.time{i} specify, for every i-th unit, the trial in which the spike was fired and the time at which it was fired relative to the trigger, respectively.
 
-An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the `trialfun_stimon.m` function that we defined in the [spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of `trialfun_stimon.m` (from the [spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as `trialfun_stimon.m`. Alternatively you can download the trial function [trialfun_stimon.m](https://download.fieldtriptoolbox.org/tutorial/spikefield/trialfun_stimon.m).
+An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the `trialfun_stimon.m` function that we defined in the [spike](/tutorial/intracranial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of `trialfun_stimon.m` (from the [spike](/tutorial/intracranial/spike) tutorial) in the MATLAB editor and save the m-file as `trialfun_stimon.m`. Alternatively you can download the trial function [trialfun_stimon.m](https://download.fieldtriptoolbox.org/tutorial/spikefield/trialfun_stimon.m).
 
     cfg          = [];
     cfg.dataset  = filename;
@@ -446,4 +446,4 @@ We have shown how to compute measures of spike-LFP phase-coupling using the spik
 
 Further development of the functionality will be in the direction of computing inferential statistics on the phase consistency measures using permutation statistics.
 
-You might want to continue with the [spike](/tutorial/spike) tutorial, which presents more detailed analysis methods that are specific to the spikes.
+You might want to continue with the [spike](/tutorial/intracranial/spike) tutorial, which presents more detailed analysis methods that are specific to the spikes.

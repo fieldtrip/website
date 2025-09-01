@@ -127,7 +127,7 @@ Still, the power is more difficult to interpret due to it being larger for low f
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes.
 
 {% include markup/skyblue %}
-There is a separate tutorial that explains how to [specify the channel layout for plotting](/tutorial/layout).
+There is a separate tutorial that explains how to [specify the channel layout for plotting](/tutorial/plotting/layout).
 {% include markup/end %}
 
 In the subsequent figures you can see these axes that are normally set to “off”.
@@ -185,7 +185,7 @@ Although many tutorials elsewhere on the FieldTrip website are using the standar
 
 {% include image src="/assets/img/tutorial/plotting/figure13.png" %}
 
-The layout is determined by the layout file. Read more on layout files [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
+The layout is determined by the layout file. Read more on layout files [here](/tutorial/plotting/layout), and in the [frequently asked questions](/faq/plotting/layout_fileformat).
 
 For multiplotting planar gradient data from the Neuromag/Elekta/MEGIN system it is especially relevant to understand the layout files. The Neuromag system has two planar gradiometers and one axial magnetometer at each sensor location. You do not want to plot those on top of each other. Hence the Neuromag layout files contain two (for the old 122 channel system) or three (for the recent 306 channel systems) separate subplots for each channel location. Those two (or three) subplots hold the data for the two planar gradients and for the magnetometer signal.
 
@@ -351,7 +351,7 @@ The function automatically finds the clusters in the data which are smaller than
 Stat should be 2D, i.e. channels-by-time, or channels-by frequency. You cannot visualize channels-by-frequency-by-time, that case requires either averaging over time, or averaging over frequency.
 
 {% include markup/red %}
-Although the code below shows how to visualize clusters, you should be [cautious on how to interpret clusters](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
+Although the code below shows how to visualize clusters, you should be [cautious on how to interpret clusters](/faq/stats/clusterstats_interpretation).
 {% include markup/end %}
 
 ##### Clusters in timelocked data
@@ -577,7 +577,7 @@ For geometrical data, such as segmented anatomical MRIs, triangulated surfaces, 
 
 For time-series data for which you otherwise would use **[ft_databrowser](/reference/ft_databrowser)**, you can use
 
-- [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), see [this page](/getting_started/anywave) for an introduction
+- [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), see [this page](/getting_started/othersoftware/anywave) for an introduction
 
 More general approaches for visualisation of data are
 
@@ -586,7 +586,7 @@ More general approaches for visualisation of data are
 
 ## Suggested further reading
 
-Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/layout) explains how this mapping is constructed.
+Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/plotting/layout) explains how this mapping is constructed.
 
 ### See also these frequently asked questions
 

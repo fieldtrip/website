@@ -14,16 +14,16 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 In this tutorial, we will learn how to read in 'raw' data from a file, and to apply some basic processing and averaging in order to inspect event-related fields.
 
 {% include markup/yellow %}
-This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
+This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preproc/preprocessing) tutorial, which you can refer to if you want more details.
 {% include markup/end %}
 
 ## Preliminaries, definition of subject specific filenames, and definition of epochs-of-interest
 
 Preprocessing of MEG/EEG data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally for EEG) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are two alternative approaches for preprocessing, which differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file (possibly with some data padding) and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained [elsewhere](/tutorial/continuous).
+There are two alternative approaches for preprocessing, which differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file (possibly with some data padding) and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained [elsewhere](/tutorial/preproc/continuous).
 
-Preprocessing involves several steps including defining epochs-of-interest from the dataset, filtering and artifact rejections. This tutorial covers how to identify epochs based on the recorded events during the experiment. Typically, this requires the use of **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
+Preprocessing involves several steps including defining epochs-of-interest from the dataset, filtering and artifact rejections. This tutorial covers how to identify epochs based on the recorded events during the experiment. Typically, this requires the use of **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preproc/preprocessing) tutorial.
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the begin of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the end of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
@@ -210,7 +210,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
 
 ## Visualisation of the ERFs
 
-At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualize the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
+At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualize the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/plotting/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
 
 First of all, let's look at the plotting the data directly using standard MATLAB plotting commands. If we look at one of the averaged ERP/ERF data structures, we can recognize the field `time`, `avg` and `label`.
 
@@ -278,7 +278,7 @@ For the visualisation of the gradiometers, we first compute the magnitude of the
     cfg.layout = 'neuromag306cmb_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
-Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electrode positions, which were digitized with a Polhemus.
+Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/plotting/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electrode positions, which were digitized with a Polhemus.
 
     % create an EEG channel layout on-the-fly and visualize the eeg data
     cfg      = [];
@@ -323,7 +323,7 @@ When actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotE
     cfg.distance = 180;
     layout = ft_appendlayout(cfg, ft_appendlayout([], layout_mag, layout_cmb), layout_eeg);
 
-You can use **[ft_plot_layout](/reference/plotting/ft_plot_layout)** to inspect the layout that you have just constructed. See also the [layout tutorial](/tutorial/layout).
+You can use **[ft_plot_layout](/reference/plotting/ft_plot_layout)** to inspect the layout that you have just constructed. See also the [layout tutorial](/tutorial/plotting/layout).
 
 Now that we have a combined layout, we can plot all three datatypes and all three conditions at once. In the figure, you can make a selection to get a topoplot.
 

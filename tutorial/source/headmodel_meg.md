@@ -10,14 +10,14 @@ redirect_from:
 
 ## Introduction
 
-This tutorial describes how to construct a volume conduction model of the head (head model) based on an individual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) and the [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) tutorials. The corresponding anatomical MRI data is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
+This tutorial describes how to construct a volume conduction model of the head (head model) based on an individual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) and the [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) tutorials. The corresponding anatomical MRI data is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
 The volume conduction model of the head that will be constructed here is specific to the computation and source reconstruction of MEG data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 
-This tutorial will `not` show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will `not` show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 {% include markup/green %}
-The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/headmodel_eeg).
+The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/source/headmodel_eeg).
 {% include markup/end %}
 
 ## Background
@@ -49,7 +49,7 @@ _Figure 2. Pipeline of creating and visualizing a head model_
 
 ### Reading in the anatomical data
 
-Before starting to use FieldTrip, it is important that you set up your MATLAB path properly. You can read about how to set up your MATLAB path [here](/faq/installation).
+Before starting to use FieldTrip, it is important that you set up your MATLAB path properly. You can read about how to set up your MATLAB path [here](/faq/matlab/installation).
 
     cd <path_to_fieldtrip>
     ft_defaults
@@ -74,18 +74,18 @@ The structure of your mri variable contains the following fields:
 - `transform`: A transformation matrix that aligns the anatomical data (in field `anatomy`) to a certain coordinate system.
 - `coordsys`: The description of the coordinate system which the anatomical data is aligned to.
 
-You can see that the `coordsys` field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) or using the **[ft_volumerealign](/reference/ft_volumerealign)** function.
+You can see that the `coordsys` field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/source/anat_coreg) or using the **[ft_volumerealign](/reference/ft_volumerealign)** function.
 
 {% include markup/skyblue %}
-It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/coordsys). If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
-points](/faq/how_are_the_lpa_and_rpa_points_defined).
+It is also possible to read in anatomical MRI data in [other formats](/faq/preproc/datahandling/dataformat), which are defined in [a different coordinate system](/faq/source/coordsys). If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/source/anat_coreg) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
+points](/faq/source/anat_landmarks).
 
-When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function.
+When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/source/anat_coreg) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function.
 {% include markup/end %}
 
 ### Segmentation
 
-In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/how_is_the_segmentation_defined) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
+In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/source/datatype_segmentation) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
 {% include markup/yellow %}
 Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
@@ -195,7 +195,7 @@ In exercise 1, you created a head model with method 'singlesphere'. How is its g
 
 In this tutorial, it was explained how to build a volume conduction model of the head using a single subject anatomical mri and the single shell method developed by Nolte (2003). In the exercises, we compared the head model to a single sphere that was fitted on the inside brain surface.
 
-You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 ### See also these frequently asked questions
 

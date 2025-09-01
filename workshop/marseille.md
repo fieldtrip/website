@@ -33,7 +33,7 @@ Furthermore, we recommend you to watch the following online videos prior to the 
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
-In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
+In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/intro/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/sensor/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
 
 {% include markup/yellow %}
 So over all there is about 2 to 5 hours of preparation required from you prior to the workshop!
@@ -48,12 +48,12 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 - morning
 
   - 1h Lecture on frequency analysis - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/frequency.pdf)
-  - 2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
+  - 2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor/sensor_analysis)
 
 - afternoon
 
   - 1h Lecture on source reconstruction using beamforming - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/beamforming.pdf)
-  - 2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
+  - 2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/source/beamformingextended)
   - wrap up of the day
 
 - evening
@@ -64,12 +64,12 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 - morning
 
   - 1h Lecture on connectivity analysis - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/connectivity.pdf)
-  - 2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
+  - 2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivity/connectivityextended)
 
 - afternoon
 
   - 1h Lecture on nonparametric statistics using clustering - [slides](https://download.fieldtriptoolbox.org/workshop/marseille/slides/statistics.pdf)
-  - 2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
+  - 2h hands on [Cluster-based permutation tests on ERFs](/tutorial/stats/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq)
   - wrap up of the day
 
 - evening
@@ -114,7 +114,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
 {% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation)).
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/matlab/installation)).
 {% include markup/end %}
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.

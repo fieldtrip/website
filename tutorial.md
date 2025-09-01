@@ -9,7 +9,7 @@ The tutorials contain background on the different analysis methods and include c
 
 Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).
 
-For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/datasets). The datasets used in the tutorials are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
+For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/other/datasets). The datasets used in the tutorials are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
 
 When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guideline/documentation).
 
@@ -31,10 +31,10 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Event-related fields and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/sensor/preprocessing_erp)
-- [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg2014/preprocessing)
+- [Preprocessing and event-related activity in combined MEG/EEG data](/tutorial/sensor/preprocessing)
 - [Preprocessing of Optically Pumped Magnetometer (OPM) data](/tutorial/sensor/preprocessing_opm)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/sensor/timefrequencyanalysis)
-- [Time-frequency analysis of combined MEG/EEG data](/workshop/natmeg2014/timefrequency)
+- [Time-frequency analysis of combined MEG/EEG data](/tutorial/sensor/timefrequency)
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor/sensor_analysis)
 - [Extracting the brain state and events from continuous sleep EEG](/tutorial/sensor/sleep)
 
@@ -46,10 +46,10 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Creating a source model for MEG or EEG source analysis](/tutorial/source/sourcemodel)
 - [Localizing electrodes using a 3D-scanner](/tutorial/source/electrode)
 - [Localizing oscillatory sources in MEG data using a beamformer](/tutorial/source/beamformer)
-- [Beamforming oscillatory responses in combined MEG/EEG data](/workshop/natmeg2014/beamforming)
+- [Beamforming oscillatory responses in combined MEG/EEG data](/tutorial/source/beamforming)
 - [Localizing visual gamma and cortico-muscular coherence](/tutorial/source/beamformingextended)
 - [Source reconstruction of event-related fields using minimum-norm estimation](/tutorial/source/minimumnormestimate)
-- [Dipole fitting of combined MEG/EEG data](/workshop/natmeg2014/dipolefitting)
+- [Dipole fitting of combined MEG/EEG data](/tutorial/source/dipolefitting)
 - [Computation of virtual MEG channels in source-space](/tutorial/source/virtual_sensors)
 - [Virtual channel analysis of epilepsy MEG data](/tutorial/source/epilepsy)
 - [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/source/coregistration_opm)
@@ -84,7 +84,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics)
 - [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
 - [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq)
-- [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/workshop/natmeg2014/statistics)
+- [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/tutorial/stats/statistics)
 - [Multivariate analysis of MEG/EEG data](/tutorial/stats/mvpa_light) (based on the MVPA-Light toolbox)
 
 ## Plotting and visualization

@@ -13,7 +13,7 @@ You can find the templates for defining neighbouring channels included in FieldT
 
 ## Electrode neighbour templates
 
-EEG neighbour templates are based on [automatic, symmetric triangulation](/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](/template/layout). After the automatic definition, we used [3D electrode positions](/template/electrode) and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+EEG neighbour templates are based on [automatic, symmetric triangulation](/faq/stats/neighbours_prepare) of the [2D layout templates](/template/layout). After the automatic definition, we used [3D electrode positions](/template/electrode) and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 Currently, the following neighbour templates are shipping with FieldTrip (note that neighbour templates are always suffixed with \_neighb
 
@@ -52,7 +52,7 @@ Other 'Easycaps' constitute a subset of one of these systems or feature freely p
 
 ## MEG neighbour templates
 
-MEG neighbour templates are based on [automatic, symmetric triangulation](/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+MEG neighbour templates are based on [automatic, symmetric triangulation](/faq/stats/neighbours_prepare) of the [2D layout templates](/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 ### BTI systems
 
@@ -79,7 +79,7 @@ MEG neighbour templates are based on [automatic, symmetric triangulation](/faq/h
 - Neuromag306, only magnetometer (neuromag306mag_neighb.mat)
 
 {% include markup/skyblue %}
-Please see our FAQ for [why there are multiple neighbour templates for the neuromag306 system](/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
+Please see our FAQ for [why there are multiple neighbour templates for the neuromag306 system](/faq/stats/neighbours_neuromag)
 {% include markup/end %}
 
 ### Yokogawa systems

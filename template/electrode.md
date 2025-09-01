@@ -5,7 +5,7 @@ tags: [template, electrode]
 
 # Template 3-D electrode sets
 
-Electrodes are represented as points in 3-D Cartesian space, i.e. with an X, Y and Z position for each electrode. Furthermore, each electrode has a label. There is a frequently asked question about [how the electrode structure is described](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
+Electrodes are represented as points in 3-D Cartesian space, i.e. with an X, Y and Z position for each electrode. Furthermore, each electrode has a label. There is a frequently asked question about [how the electrode structure is described](/faq/source/sensors_definition).
 
 You can use the following snippet of code to get a quick overview of the template electrode sets.
 

@@ -33,7 +33,7 @@ Local organizers: Klaus Kessler and Ian Holliday.
 
 - 13:45 – 14:45 Lecture: An introduction to the MEG and the FieldTrip toolbox
 - 14:45 – 15:00 Tea Break
-- 15:00 – 17:00 Hands-on: [Getting started with event-related fields](/tutorial/eventrelatedaveraging)
+- 15:00 – 17:00 Hands-on: [Getting started with event-related fields](/tutorial/sensor/eventrelatedaveraging)
 
 ### Day 2 - Thursday
 
@@ -41,13 +41,13 @@ Local organizers: Klaus Kessler and Ian Holliday.
 
 - 9:15 – 10:15 Lecture: Fundamentals of neuronal oscillations and synchrony
 - 10:15 – 10:30 Coffee Break
-- 10:30 – 12:30 Hands-on: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
+- 10:30 – 12:30 Hands-on: [Time-frequency analysis of power](/tutorial/sensor/timefrequencyanalysis)
 
 #### Session III
 
 - 13:45 – 14:45 Lecture: Beamformer techniques for source reconstruction
 - 14:45 – 15:00 Tea break
-- 15:00 – 17:00 Hands-on: [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
+- 15:00 – 17:00 Hands-on: [Localizing visual gamma and cortico-muscular coherence](/tutorial/source/beamformingextended)
 
 - 16:30 – 17:15 Wrap-up-the-day: “Ask the experts” session
 - 17:15 - ??:?? Drinks in pub (Sacks of Potatoes) and dinner (Conference Aston)
@@ -58,7 +58,7 @@ Local organizers: Klaus Kessler and Ian Holliday.
 
 - 9:00 – 10:99 Lecture: Non-parametric randomization techniques
 - 10:00 – 10:15 Coffee break
-- 10:15 – 12:15 Hands-on: [Parametric and non-parametric statistics on ERFs](/tutorial/cluster_permutation_timelock)
+- 10:15 – 12:15 Hands-on: [Parametric and non-parametric statistics on ERFs](/tutorial/stats/cluster_permutation_timelock)
 - 12:15 – 13:00 Lunch
 
 #### Session V

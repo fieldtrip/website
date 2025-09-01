@@ -14,7 +14,7 @@ To read Blackrock data, you will need the NPMK toolbox. The latest version is av
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -44,4 +44,4 @@ You can also use the low-level reading functions like this
     dat = ft_read_data   ('yourfile.nsX')
     evt = ft_read_event  ('yourfile.nev')  % note that the nsX file does not contain trigger events, but the corresponding nev file does
 
-See this [FAQ](/faq/how_can_i_import_my_own_dataformat) for more details about the high-level and low-level functions.
+See this [FAQ](/faq/preproc/dataformat/dataformat_own) for more details about the high-level and low-level functions.

@@ -13,7 +13,7 @@ redirect_from:
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded EEG-MEG-data, and how to apply the different preprocessing steps. This tutorial also shows you how to average your data and compare conditions (standard versus deviant tones).
 
-This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
+This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/preproc/continuous) tutorial.
 
 {% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
@@ -25,7 +25,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/preproc/continuous).
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
@@ -50,7 +50,7 @@ The databrowser can be used to look at your raw or preprocessed data and annotat
 
 The databrowser supports three viewmodes: butterfly, vertical or component. In 'butterfly' viewmode, all signal traces will be plotted on top of each other, in 'vertical' viewmode, the traces will be below each other. The 'component' viewmode is to be used for data that is decomposed into independent components, see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical viewmode, but including the coponent topography to the left of the time trace. As an alternative to these three viewmodes, if you provide a cfg.layout, then the function will try to plot your data according to the sensor positions specified in the layout.
 
-When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection). You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
+When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see the [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection). You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
 {% include markup/yellow %}
 The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
@@ -159,7 +159,7 @@ We will now do the trial definition for both the standard and deviant trial
     cfg.trialfun                = 'trialfun_oddball_stimlocked';
     cfg                         = ft_definetrial(cfg);
 
-This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the _.trl_ that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) and [Making your own trialfun for conditional trial definition](/example/trialfun).
+This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the _.trl_ that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/preproc/events/trialinfo) and [Making your own trialfun for conditional trial definition](/example/preproc/trialfun).
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated _cfg_ structure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
 
@@ -202,7 +202,7 @@ The most important fields are data_MEG.trial containing the individual trials an
 
 _Figure: A plot of a single trial of one channel_
 
-This demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. The way we deal with artifacts is described in general in [another tutorial](/tutorial/artifacts) and visual artifact rejection is described in the [Visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. For efficiency in this hands-on tutorial, we will use a semi-automatic way of rejecting trials and channels containing artifacts using a summary view of all trials and channels transformed into z-scores. This allows you to get a quick overview of your data and enables you to easily detect and remove outliers.
+This demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. The way we deal with artifacts is described in general in [another tutorial](/tutorial/preproc/artifacts) and visual artifact rejection is described in the [Visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) tutorial. For efficiency in this hands-on tutorial, we will use a semi-automatic way of rejecting trials and channels containing artifacts using a summary view of all trials and channels transformed into z-scores. This allows you to get a quick overview of your data and enables you to easily detect and remove outliers.
 
     % separately for magnetometers
     cfg               = [];
@@ -725,7 +725,7 @@ To plot the scalp current density results, use the following code
 
     print -dpng natmeg_scd1.png
 
-Note that if you get plotting artifacts in these figures, such as colorbars that do not show completely, you can have a look at this [frequently asked question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+Note that if you get plotting artifacts in these figures, such as colorbars that do not show completely, you can have a look at this [frequently asked question](/faq/plotting/opacityrendering).
 
 {% include image src="/assets/img/workshop/natmeg2014/preprocessing/natmeg_scd1.png" width="650" %}
 
@@ -792,4 +792,4 @@ We now have the same amount of trials for each type of sensor.
 
 In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and rereferencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their time courses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
 
-If you are interested in a different analysis of your data that shows event-related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/sensor/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+If you are interested in a different analysis of your data that shows event-related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/sensor/timefrequency) or the standard [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial.

@@ -67,7 +67,7 @@ Click around in the figure and look at the "bti" head coordinates that are print
 You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
 {% include markup/end %}
 
-You might also want to read this [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot) which explains that there can be a difference between what your see and how the computer interprets the coordinates. You can also search google for "radiological versus neurological" representations of data.
+You might also want to read this [frequently asked question](/faq/plotting/anat_upsidedownplotting) which explains that there can be a difference between what your see and how the computer interprets the coordinates. You can also search google for "radiological versus neurological" representations of data.
 
     cfg = [];
     cfg.resolution = 1;
@@ -118,7 +118,7 @@ We want to visualize the various geometrical objects that we read into memory. F
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.37.41.png" width="500" %}
 
-You can see that the grid locations of the source model are not exactly aligned with the axes of the coordinate systems. This is because the grid positions have been defines in MNI space and subsequently non-linearly transformed into the individual's space according to the [procedure described here](/example/sourcemodel_aligned2mni).
+You can see that the grid locations of the source model are not exactly aligned with the axes of the coordinate systems. This is because the grid positions have been defines in MNI space and subsequently non-linearly transformed into the individual's space according to the [procedure described here](/example/source/sourcemodel_aligned2mni).
 
     % the figures of ft_determine_coordsys will open in their own figure
     ft_determine_coordsys(template_mri, 'interactive', false); title('template_mri')

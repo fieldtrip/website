@@ -6,4 +6,4 @@ title: Dealing with TMS-EEG datasets
 
 # Dealing with TMS-EEG datasets
 
-This tutorial has been moved [here](/tutorial/tms-eeg).
+This tutorial has been moved [here](/tutorial/tms/tms-eeg).

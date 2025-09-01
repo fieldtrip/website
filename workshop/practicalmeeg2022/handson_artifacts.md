@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 ## Introduction
 
-In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
+In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/preproc/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
 
 In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well suppress the contribution of the eye activity.
 
@@ -19,7 +19,7 @@ However, had we planned other types of analysis, such as connectivity, then deal
 
 Since the data is very large, with more than 400 channels at 1100Hz for a total recording duration of 50 minutes, the strategy that we follow is to first define the segments with **[ft_definetrial](/reference/ft_definetrial)** and then only reading the segments of interest with **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-An alternative strategy that often is preferred for smaller datasets that completely fit in memory of your computer is to read in the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and only later to cut out the segments of interest using **[ft_definetrial](/reference/ft_definetrial)** **[ft_redefinetrial](/reference/ft_redefinetrial)**. That approach is explained in a [separate tutorial](/tutorial/continuous).
+An alternative strategy that often is preferred for smaller datasets that completely fit in memory of your computer is to read in the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and only later to cut out the segments of interest using **[ft_definetrial](/reference/ft_definetrial)** **[ft_redefinetrial](/reference/ft_redefinetrial)**. That approach is explained in a [separate tutorial](/tutorial/preproc/continuous).
 
 There are some differences between first segmenting and then detecting artifacts or detecting the artifacts in the continuous representation of the data. An important difference is that when you only look at segments of interest (aka trials), you won't see artifacts that happen in between the trials. It might be that you instructed your participant to blink whenever there is no fixation cross on the screen, or that you allowed your participant some time to relax (and possibly some movement) in between blocks in your experiment. When only looking at the segments of interest, you won't see (and probably won't care) the corresponding artifacts.
 
@@ -61,7 +61,7 @@ This data structure is about 1.5 GB large and should fit in the RAM of your comp
 
 The complete data represented in double precision would amount to approximately 50\*60\*1100\*404\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 404 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
 
-Please have a look at the tutorial on making a [memory efficient analysis pipeline](/tutorial/memory) for more information.
+Please have a look at the tutorial on making a [memory efficient analysis pipeline](/tutorial/scripting/memory) for more information.
 {% include markup/end %}
 
 ## Looking for eye artifacts
@@ -436,7 +436,7 @@ It would be possible to cut this smoothed vector of artifact occurence up into t
 
 A similar strategy can be used to detect the heartbeats and to determine the heartrate. The **[ft_heartrate](/reference/ft_heartrate)** function can be used for this, by preference on the continuous representation of the ECG channel. The extracted heart rate (which is represented as a continuous channel) can be segmented using **[ft_redefinetrial](/reference/ft_redefinetrial)** and combined with the EEG and MEG using **[ft_appenddata](/reference/ft_appenddata)**. This allows the same type of statistical analysis to be performed on the heartrate and to determine whether an increase in heartrate might be responsible for a spurrious increase in connectivity that would be estimated between brain regions.
 
-Besides **[ft_heartrate](/reference/ft_heartrate)**, you may want to look at **[ft_headmovement](/reference/ft_headmovement)** and **[ft_regressconfound](/reference/ft_regressconfound)** and [this example script](/example/headmovement_meg). For the purpose of the hands-on during the workshop it is fine to skip this for now.
+Besides **[ft_heartrate](/reference/ft_heartrate)**, you may want to look at **[ft_headmovement](/reference/ft_headmovement)** and **[ft_regressconfound](/reference/ft_regressconfound)** and [this example script](/example/sensor/headmovement_meg). For the purpose of the hands-on during the workshop it is fine to skip this for now.
 
 ### Where are the artifacts relative to the stimulus?
 
@@ -482,5 +482,5 @@ Note that ICA assumes a stationary mixing of all the (brain and artifact) source
 {% include markup/skyblue %}
 Use **[ft_componentanalysis](/reference/ft_componentanalysis)**  and **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to remove the eye- and heart-related artifacts from the EEG and the MEG data.
 
-You can follow the tutorial on [Cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning).
+You can follow the tutorial on [Cleaning artifacts using ICA](/tutorial/preproc/ica_artifact_cleaning).
 {% include markup/end %}

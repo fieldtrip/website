@@ -79,7 +79,7 @@ Besides the 'v17' version, the 'v18' is also supported.
 
 ## FreeSurfer FsAverage
 
-We often use [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki) to extract cortical sheets which we use as the basis for a [source model](/tutorial/sourcemodel) or for the projection of [ECoG electrodes](/tutorial/human_ecog). FreeSurfer also comes with atlases (or cortical parcellations), which can be used to label the vertices of the individual's cortical sheet.
+We often use [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki) to extract cortical sheets which we use as the basis for a [source model](/tutorial/source/sourcemodel) or for the projection of [ECoG electrodes](/tutorial/intracranial/human_ecog). FreeSurfer also comes with atlases (or cortical parcellations), which can be used to label the vertices of the individual's cortical sheet.
 
 The FreeSurfer atlases are quite large and therefore not copied into FieldTrip, but you may have them on your local computer. There are multiple [parcellations available](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation):
 

@@ -9,7 +9,7 @@ redirect_from:
 
 # How to test an interaction effect using cluster-based permutation tests?
 
-You can use cluster-based permutation tests for some but not for all interaction effects. This FAQ section covers how to test interaction effects based on corresponding t-values. You can also test interaction effects based on F-values. For a comparison of both procedures, see [Should I use t or F values for cluster-based permutation tests](/faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests).
+You can use cluster-based permutation tests for some but not for all interaction effects. This FAQ section covers how to test interaction effects based on corresponding t-values. You can also test interaction effects based on F-values. For a comparison of both procedures, see [Should I use t or F values for cluster-based permutation tests](/faq/stats/clusterstats_teststatistic).
 
 ## A 2-by-2 factorial design
 

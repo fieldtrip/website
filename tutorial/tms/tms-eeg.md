@@ -131,9 +131,9 @@ It is important that you clean your data from TMS artifacts _prior_ to any other
 
 We start with the original dataset in BrainVision format which is available [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
-We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
+We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/preproc/databrowser)).
 
-The complete dataset is rather memory demanding, hence we will only read the segments of interest (i.e. the trials) from disk using **[ft_preprocessing](/reference/ft_preprocessing)**. For this purpose we first need to create a trial matrix, which specifies which parts of the data on disk are to be represented as trials. This matrix has three (or more) columns and as many rows as there are trials. The first two columns indicate the sample number in the data file on disk corresponding to the first and last sample of each trial. The third column reflects the so-called offset, i.e. which sample corresponds to time point zero in each trial. The matrix can have additional columns containing information, such as the experimental condition for each trial, the reaction time, etc. The trial matrix is created using **[ft_definetrial](/reference/ft_definetrial)** as explained in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial.
+The complete dataset is rather memory demanding, hence we will only read the segments of interest (i.e. the trials) from disk using **[ft_preprocessing](/reference/ft_preprocessing)**. For this purpose we first need to create a trial matrix, which specifies which parts of the data on disk are to be represented as trials. This matrix has three (or more) columns and as many rows as there are trials. The first two columns indicate the sample number in the data file on disk corresponding to the first and last sample of each trial. The third column reflects the so-called offset, i.e. which sample corresponds to time point zero in each trial. The matrix can have additional columns containing information, such as the experimental condition for each trial, the reaction time, etc. The trial matrix is created using **[ft_definetrial](/reference/ft_definetrial)** as explained in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing) tutorial.
 
     triggers = {'S  1', 'S  3'}; % These values correspond to the markers placed in this dataset
 
@@ -512,7 +512,7 @@ Due to various factors it is likely that you will not be able to fully capture b
 #### Exercise: removing other types of noise
 
 {% include markup/skyblue %}
-At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/ica_eog) and [ECG artifacts](/example/ica_ecg)).
+At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/preproc/ica_eog) and [ECG artifacts](/example/preproc/ica_ecg)).
 
 As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](/reference/ft_databrowser)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
 
@@ -798,7 +798,7 @@ GMFP can be calculated using the following formula (from [Esser et al. (2006)](h
 
 {% include image src="/assets/img/tutorial/tms-eeg/figure22.png" %}
 
-where `t` is time, `V` is the voltage at channel `i` and `K` is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
+where `t` is time, `V` is the voltage at channel `i` and `K` is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
 
 FieldTrip includes the [ft_globalmeanfield](/reference/ft_globalmeanfield) function to calculate the GMFP. This requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
@@ -844,9 +844,9 @@ Are there differences between the outcome of this analysis and the comparison be
 
 ### Time-frequency analysis
 
-We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)).
+We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/sensor/timefrequencyanalysis)).
 
-We will first decompose our signal into different frequencies using **[ft_freqanalysis](/reference/ft_freqanalysis)**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange) and [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)). We will therefore detrend and demean our data using the .preproc option.
+We will first decompose our signal into different frequencies using **[ft_freqanalysis](/reference/ft_freqanalysis)**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [Why does my TFR look strange (part I, demeaning)?](/faq/spectral/tfr_strangedemean) and [Why does my TFR look strange (part II, detrending)?](/faq/spectral/tfr_strangedetrend)). We will therefore detrend and demean our data using the .preproc option.
 
     % Calculate Induced TFRs fpor both conditions
     cfg = [];
@@ -941,6 +941,6 @@ Now that we have described three ways of looking at our data, can we conclude th
 
 This tutorial covered how to deal with TMS artifacts in EEG in a single-pulse study. Furthermore, the tutorial showed three examples of how to further analyze this data with a certain research question in mind. In all examples two conditions were compared with each other. A next step would be to test whether differences between these conditions are statistically significant. To see how you can do this please have a look at the following tutorial
 
-- [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)
-- [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
-- [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
+- [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics)
+- [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
+- [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq)

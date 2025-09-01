@@ -164,7 +164,7 @@ which returns
         duration
         offset
 
-This specifies for each of the 37689 recorded events the sample (if available: this corresponds to the LFP samples, see the [spike-field tutorial](/tutorial/spikefield)), the value (a number uniquely identifying the event) and the timestamp at which it occurred.
+This specifies for each of the 37689 recorded events the sample (if available: this corresponds to the LFP samples, see the [spike-field tutorial](/tutorial/intracranial/spikefield)), the value (a number uniquely identifying the event) and the timestamp at which it occurred.
 
 Using the value and timestamp fields, we built a user-specified function that constructs a cfg.trl matrix. In this case, we take -2.75 before stimulus onset until the first change of the stimulus. We first create a trial function that needs to be saved in the MATLAB path.
 
@@ -637,4 +637,4 @@ giving the normalized jpsth, the shuffle corrected normalized jpsth, and the dif
 
 ## Summary
 
-We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g., the output from **[ft_spikedensity](/reference/contrib/spike/ft_spikedensity)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.
+We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g., the output from **[ft_spikedensity](/reference/contrib/spike/ft_spikedensity)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/intracranial/spikefield) tutorial.

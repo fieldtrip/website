@@ -9,7 +9,7 @@ tags: [baci2017]
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded EEG-data, and how to apply the different preprocessing steps. This tutorial also shows you how to average your data for a specific experiment (electric wrist stimulation on the right hand).
 
-This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
+This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/preproc/continuous) tutorial.
 
 {% include markup/skyblue %}
 This tutorial contains the hands-on material of the [BACI workshop](/workshop/baci2017) and is complemented by this lecture.  
@@ -22,7 +22,7 @@ Preprocessing of MEG or EEG data refers to reading the data into memory, segment
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
 - The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments.
-- The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+- The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/preproc/continuous).
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 

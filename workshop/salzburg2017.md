@@ -25,7 +25,7 @@ Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/
 
 Furthermore, we recommend you to watch the [MEG basics and instrumentation video](https://www.youtube.com/watch?v=CPj4jJACeIs)prior to the workshop.
 
-In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
+In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/intro/introduction).
 
 _We will start each day at 9:00 sharp and will finish around 17:30._
 

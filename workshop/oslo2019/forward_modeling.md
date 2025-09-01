@@ -264,7 +264,7 @@ _Figure 7: Electrodes are in meaningful places_
 
 ## Creating a source model (a volumetric grid (fit for beamformer and dipole analysis)) (Component 3)
 
-The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
+The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/source/minimumnormestimate))
 
     cfg             = [];
     cfg.headmodel   = headmodel; % used to estimate extent of grid
@@ -510,6 +510,6 @@ _Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). No
 
 ## Which BEM algorithm to use?
 
-If possible, you should use the [OpenMEEG algorithm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
+If possible, you should use the [OpenMEEG algorithm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/source/openmeeg) before it works, and it only works on Linux and Mac systems.
 
 If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment) is your next choice, and finally _bemcp_ which works on all platforms.

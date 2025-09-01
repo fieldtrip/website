@@ -8,7 +8,7 @@ redirect_from:
 
 # Using reproducescript for a group analysis
 
-This example script will introduce you to functionality in the FieldTrip toolbox designed to aid in making your analysis pipeline - including code, data and results - more easily reproducible and shareable. It is based on the manuscript [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566). We assume that you have already had a look at the example on [Making your analysis pipeline reproducible using reproducescript](/example/reproducescript).
+This example script will introduce you to functionality in the FieldTrip toolbox designed to aid in making your analysis pipeline - including code, data and results - more easily reproducible and shareable. It is based on the manuscript [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566). We assume that you have already had a look at the example on [Making your analysis pipeline reproducible using reproducescript](/example/other/reproducescript).
 
 ## Example 2
 
@@ -770,4 +770,4 @@ Note that there are other strategies for improving shareability and reproducibil
 ## Suggested further reading
 
 - [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566)
-- [Using reproducescript on a full study](/example/reproducescript_andersen)
+- [Using reproducescript on a full study](/example/other/reproducescript_andersen)

@@ -14,9 +14,9 @@ This tutorial demonstrates how to construct a Finite Element Method (FEM) volume
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence towards the end we will demonstrate how to align the template electrodes with the model.
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
-We have another tutorial that demonstrates how to make a [Boundary Element Method (BEM) headmodel for EEG](/tutorial/headmodel_eeg_bem). Furthermore, if you are interested in MEG head models, we recommend that you go to the corresponding [MEG tutorial](/tutorial/headmodel_meg).
+We have another tutorial that demonstrates how to make a [Boundary Element Method (BEM) headmodel for EEG](/tutorial/source/headmodel_eeg_bem). Furthermore, if you are interested in MEG head models, we recommend that you go to the corresponding [MEG tutorial](/tutorial/source/headmodel_meg).
 
 {% include markup/yellow %}
 The FEM method described here is based on the SimBio software, which is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the paper below. Please cite this paper if you use the FieldTrip-SimBio pipeline in your research.
@@ -69,7 +69,7 @@ Check that the homogenous transformation matrix in `mri_realigned` is the same a
 
 ### Reslicing
 
-A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not necessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plotting of MRI slices and quality control later in the pipeline.
+A common issue with anatomical MRI data is that it is plotted [upside down](/faq/source/anat_upsidedown). This is not necessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plotting of MRI slices and quality control later in the pipeline.
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function can be used to flip the volume such that the 1st dimension of the three-dimensional `mri.anatomy` array corresponds approximately with the x-axis of the coordinate system, that the 2nd dimension corresponds approximately to the y-axis, and the 3rd dimension to the z-axis.
 
@@ -99,7 +99,7 @@ You should check that all parts of the head are present in the resliced images, 
 
 ### Segmentation
 
-In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The resulting segmentation should be a binary representation of the 5 tissue types without overlap, i.e., each voxel belongs to exactly one tissue type.
+In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/source/datatype_segmentation). The resulting segmentation should be a binary representation of the 5 tissue types without overlap, i.e., each voxel belongs to exactly one tissue type.
 
 {% include markup/yellow %}
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
@@ -136,10 +136,10 @@ The segmentation does not change the coordinate system, nor the size of the voxe
 {% include markup/yellow %}
 Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This for example happens if there are large spatial inhomogeneities in the MRI that are caused by the anatomical MRI being acquired while the subject was wearing an EEG cap. The **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)** function allows correcting for these inhomogeneities. The **[ft_defacevolume](/reference/ft_defacevolume)** function can be used to erase parts of the MRI where there should be no signal, for example artifacts outside the head.
 
-For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
+For more information, you can consult this [frequently asked question](/faq/source/headmodel_meshingproblem).
 {% include markup/end %}
 
-The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. To see all tissues in one image, we use **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)** to convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue type has a different value and will be shown by a different color.
+The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. To see all tissues in one image, we use **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)** to convert the segmentation structure to an [indexed representation](/faq/source/datatype_segmentation). Each tissue type has a different value and will be shown by a different color.
 
     % convert from probabilistic/binary into indexed representation
     segmentedmri_indexed = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
@@ -205,7 +205,7 @@ You can plot the anatomical MRI, the segmentation and the hexahedral mesh togeth
 
 _Figure. Comparison of a shifted mesh (upper) and unshifted mesh (lower)._
 
-The visualization can also be done using [Seg3D](/getting_started/seg3d) or [ParaView](/getting_started/paraview). With Seg3D you can make modifications to the segmentation.
+The visualization can also be done using [Seg3D](/getting_started/othersoftware/seg3d) or [ParaView](/getting_started/othersoftware/paraview). With Seg3D you can make modifications to the segmentation.
 
 ### Compute the FEM head model
 
@@ -268,11 +268,11 @@ This only shows the outside of the scalp. To see the other tissues, you can spli
     mesh_skull.hex = mesh.hex(mesh.tissue==4,:);
     mesh_white.hex = mesh.hex(mesh.tissue==5,:);
 
-Alternatively, you can write the mesh to a file on disk with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use [ParaView](/getting_started/paraview) for visualization.
+Alternatively, you can write the mesh to a file on disk with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use [ParaView](/getting_started/othersoftware/paraview) for visualization.
 
 ### Align EEG electrodes
 
-The procedure to align the electrodes is basically the same as for a BEM head model which you can read in much more detail [here](/tutorial/headmodel_eeg_bem). Very shortly: you can do the following to align it to the FEM mesh.
+The procedure to align the electrodes is basically the same as for a BEM head model which you can read in much more detail [here](/tutorial/source/headmodel_eeg_bem). Very shortly: you can do the following to align it to the FEM mesh.
 
     % you may need to specify the full path to the file
     elec = ft_read_sens('standard_1020.elc');
@@ -375,7 +375,7 @@ The construction of the sourcemodel above takes quite some time as many dipoles 
 
 This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and a finite element method (FEM) using the FieldTrip-SIMBIO pipeline.
 
-You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 ### See also these frequently asked questions
 

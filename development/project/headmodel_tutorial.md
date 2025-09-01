@@ -6,4 +6,4 @@ title: Create a headmodel for source reconstruction of MEG data
 
 # Create a headmodel for source reconstruction of MEG data
 
-This page has moved to [headmodel_meg](/tutorial/headmodel_meg)
+This page has moved to [headmodel_meg](/tutorial/source/headmodel_meg)

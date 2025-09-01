@@ -162,7 +162,7 @@ Contrary to the description in the accompanying publication (see table 1 in the 
 
 # Converting the MATLAB structure to a FieldTrip raw data structure
 
-Since the data is not stored on disk in a [dataformat](/faq/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequently asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
+Since the data is not stored on disk in a [dataformat](/faq/preproc/datahandling/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequently asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
 
 We start with constructing a MATLAB data structure according to **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**, as if it were produced by **[ft_preprocessing](/reference/ft_preprocessing)**.
 
@@ -226,7 +226,7 @@ This is how far we can get
 
 But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definition is also not required: the optical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
 
-For the plotting of channel level data (see also [this tutorial](/tutorial/plotting)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/layout). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](/reference/ft_prepare_layout)** but now we will manually construct the layout structure.
+For the plotting of channel level data (see also [this tutorial](/tutorial/plotting)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/plotting/layout). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](/reference/ft_prepare_layout)** but now we will manually construct the layout structure.
 
     layout = [];
     layout.label = nirs.mnt.clab(:);
@@ -417,7 +417,7 @@ _Running this script for some of the subjects, I noticed that the the data of su
 Although some of the more noisy channels dominate the figure due to the automatic vertical scaling, if you zoom in and pay attention to `Ch4oxy`, `Ch5oxy`, and `Ch6oxy` over the left hemisphere, and `Ch14oxy` and `Ch16oxy` over the right hemisphere, you can see that the left hemisphere shows more activity during the right fingertapping task (blue) and the right hemisphere shows more activity following the left fingertapping task (red).
 {% include markup/end %}
 
-This [example script](/example/nirs_layout) explains in more detail how for a NIRS dataset the oxy and deoxy channels can either be plotted on top of each other (which is spatially consistent with how the data is recorded) or side-by-side. Plotting them side-by-side makes the results easier to interpret, especially if you have multiple responses (like we have here for left, right and foot conditions). For plotting topographic distributions you also have to ensure that your 2D channel layout does not have overlapping channels that have bvery different numbers.
+This [example script](/example/plotting/nirs_layout) explains in more detail how for a NIRS dataset the oxy and deoxy channels can either be plotted on top of each other (which is spatially consistent with how the data is recorded) or side-by-side. Plotting them side-by-side makes the results easier to interpret, especially if you have multiple responses (like we have here for left, right and foot conditions). For plotting topographic distributions you also have to ensure that your 2D channel layout does not have overlapping channels that have bvery different numbers.
 
 ## Plot the topography of the averaged responses
 

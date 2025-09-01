@@ -12,9 +12,9 @@ redirect_from:
 
 The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
 
-In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in previous tutorials. Below we will repeat some code to select the trials and preprocess the data as described in the earlier tutorials on [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts), and [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in previous tutorials. Below we will repeat some code to select the trials and preprocess the data as described in the earlier tutorials on [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preproc/preprocessing), [artifact rejection](/tutorial/preproc/artifacts), and [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
 
-This tutorial is not covering statistical test on time-frequency representations. If you are interested in that, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+This tutorial is not covering statistical test on time-frequency representations. If you are interested in that, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics) tutorial.
 
 {% include markup/skyblue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
@@ -169,7 +169,7 @@ We now briefly discuss the configuration fields that are not specific for **[ft_
                                      % conditions must be compared (in seconds)
 
 With these two options, we select the spatio-temporal dataset involving all MEG channels and the time interval between 0 and 1 second. The two experimental conditions will only be compared on this selection of the complete spatio-temporal dataset. Also, feel free to consult
-[our frequently asked questions about ft_prepare_neighbours](/faq/how_can_i_define_neighbouring_sensors)
+[our frequently asked questions about ft_prepare_neighbours](/faq/stats/sensors_neighbours)
 
 One should be aware of the fact that the sensitivity of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (i.e., the probability of detecting an effect) depends on the length of the time interval that is analyzed, as specified in cfg.latency. For instance, assume that the difference between the two experimental conditions extends over a short time interval only (e.g., between 0.3 and 0.4 sec.). If it is known in advance that this short time interval is the only interval where an effect is likely to occur, then one should limit the analysis to this time interval (i.e., choose cfg.latency = [0.3 0.4]). Choosing a time interval on the basis of prior information about the time course of the effect will increase the sensitivity of the statistical test. If there is no prior information, then one must compare the experimental conditions over the complete time interval. This is accomplished by choosing cfg.latency = 'all'. In this tutorial, we choose cfg.latency = [0 1] because EEG-studies have shown that the strongest effect of semantic incongruity is observed in the first second after stimulus presentation.
 
@@ -539,7 +539,7 @@ _Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs with th
 
 In this tutorial, it was shown how to do non-parametric statistics on axial and planar ERFs in a between-trials and in within-subjects design. It was also shown how to plot the results.
 
-If you are interested in parametric tests in FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on time-frequency representations, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial.
+If you are interested in parametric tests in FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on time-frequency representations, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorial.
 
 If you would like to read more about statistical analysis, you can look at the following FAQs:
 

@@ -30,7 +30,7 @@ This tutorial consists of three parts:
 
 - **Simulated data with common pick-up and different noise levels**: In this part we are going to simulate some data consisting of an instantaneous mixture of three 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
 
-- **Connectivity between MEG virtual channel and EMG**: In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [corticomuscular coherence tutorial](/tutorial/coherence).
+- **Connectivity between MEG virtual channel and EMG**: In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [corticomuscular coherence tutorial](/tutorial/connectivity/coherence).
 
 ## Simulated data with directed connections
 
@@ -42,7 +42,7 @@ This tutorial consists of three parts:
 
 ## Connectivity between MEG virtual channel and EMG
 
-The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence tutorial](/tutorial/coherence).
+The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence tutorial](/tutorial/connectivity/coherence).
 
 In short, the dataset consists of combined MEG and EMG recordings while the subject lifted his right hand. The [coherence tutorial](/tutorial/coherence#introduction) contains a more elaborate description of the experiment and the dataset and a detailed analysis can be found in the corresponding paper ([Jan-Mathijs Schoffelen, Robert Oostenveld and Pascal Fries. Neuronal Coherence as a Mechanism of Effective Corticospinal Interaction, Science 2005, Vol. 308 no. 5718 pp. 111-113](http://www.sciencemag.org/content/308/5718/111.abstract)). Due to the long distance between the EMG and the MEG, there is no volume conduction and hence no common pick-up. Hence this dataset lends itself well for connectivity analysis. But rather than using one of the MEG channels (as in the original study) and computing connectivity between that one channel and EMG, we will extract the cortical activity using a beamformer virtual channel.
 
@@ -62,7 +62,7 @@ We will first determine the position on which the cortico-muscular coherence is 
     maxpos =
         4 -3 12
 
-The cortical position is expressed in individual subject [head-coordinates](/faq/coordsys) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
+The cortical position is expressed in individual subject [head-coordinates](/faq/source/coordsys) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
 
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest.
 
@@ -252,7 +252,7 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g., interaction
 
 ## Summary and further reading
 
-This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence tutorial](/tutorial/coherence).
+This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence tutorial](/tutorial/connectivity/coherence).
 
 ### See also these frequently asked questions
 

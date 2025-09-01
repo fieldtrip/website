@@ -35,7 +35,7 @@ You don't have to use the CTF software to convert the DICOM images and to assign
 
     % done!
 
-Following coregistration, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
+Following coregistration, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/faq/plotting/anat_upsidedownplotting).
 
 ## Doing it the old and difficult way
 

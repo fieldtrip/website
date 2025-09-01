@@ -12,9 +12,9 @@ redirect_from:
 
 Intracranial EEG (iEEG) allows simultaneous recordings from tens to hundreds of electrodes placed directly on the neocortex (electrocorticography, ECoG), or intracortically (stereoelectroencephalography, SEEG). These recordings are known for known for their high spatiotemporal precision. In humans, the most common implementation of iEEG is when non-invasive techniques such as scalp-EEG and MRI do not provide sufficient information to guide surgery in medication refractory epilepsy patients. This tutorial illustrates how to deal with the multitude of raw anatomical and electrophysiological data files in order to get to integrated neural observations.
 
-Before we start, it is important to emphasize that human iEEG datasets are solely acquired for clinical purposes and come in different shapes and sizes. Some medical institutes use photography or X-ray (e.g., see [Analysis of monkey ECoG recordings)](/tutorial/monkey_ecog) for including anatomy in the analysis of the functional recordings, whilst others use CT (3D image from a series of X-rays) and/or MR, or combinations thereof. The example iEEG dataset used in this tutorial is not representative for all the datasets obtained in the field but it is meant to serve as a platform for thinking and dealing with the challenges associated with analyzing this type of data.
+Before we start, it is important to emphasize that human iEEG datasets are solely acquired for clinical purposes and come in different shapes and sizes. Some medical institutes use photography or X-ray (e.g., see [Analysis of monkey ECoG recordings)](/tutorial/intracranial/monkey_ecog) for including anatomy in the analysis of the functional recordings, whilst others use CT (3D image from a series of X-rays) and/or MR, or combinations thereof. The example iEEG dataset used in this tutorial is not representative for all the datasets obtained in the field but it is meant to serve as a platform for thinking and dealing with the challenges associated with analyzing this type of data.
 
-The tutorial demonstrates the analysis of task-related high-frequency-band activity (~70 to 150 Hz), a prominent neural signature in intracranial data that has been associated with neuron population level firing rate. Many other supported analyses such as event-related potential analysis, connectivity analysis, and statistical analysis have been described in detail elsewhere (Oostenveld et al., 2011; Maris & Oostenveld, 2007; Bastos & Schoffelen, 2016). You will need the iEEG data of SubjectUCI29, which can be obtained from [here](https://doi.org/10.5281/zenodo.1201560). If you are getting started with FieldTrip, download the most recent version from its homepage or GitHub and [set up your MATLAB path](/faq/installation).
+The tutorial demonstrates the analysis of task-related high-frequency-band activity (~70 to 150 Hz), a prominent neural signature in intracranial data that has been associated with neuron population level firing rate. Many other supported analyses such as event-related potential analysis, connectivity analysis, and statistical analysis have been described in detail elsewhere (Oostenveld et al., 2011; Maris & Oostenveld, 2007; Bastos & Schoffelen, 2016). You will need the iEEG data of SubjectUCI29, which can be obtained from [here](https://doi.org/10.5281/zenodo.1201560). If you are getting started with FieldTrip, download the most recent version from its homepage or GitHub and [set up your MATLAB path](/faq/matlab/installation).
 
 {% include markup/yellow %}
 The information on this page originates from the human intracranial data analysis protocol described in Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://doi.org/10.1038/s41596-018-0009-6)**, Nature Protocols, 2018. Please cite that paper when you use the methods described here.
@@ -344,7 +344,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     [ftver, ftpath] = ft_version;
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
-**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
+**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/source/label_lookup).
 
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
@@ -473,7 +473,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Interactive plotting
 
-**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen, see also the [layout tutorial](/tutorial/layout).
+**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen, see also the [layout tutorial](/tutorial/plotting/layout).
 
 The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
 
@@ -601,7 +601,7 @@ We recommend that the user construct a single script for a single subject by cop
 
 ## Suggested further reading
 
-You can read more about the challenges and concepts of preprocessing intracranial EEG data in the [Intracranial EEG for Cognitive Neuroscience handbook](https://psyarxiv.com/9jd32). You can read more about other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
+You can read more about the challenges and concepts of preprocessing intracranial EEG data in the [Intracranial EEG for Cognitive Neuroscience handbook](https://psyarxiv.com/9jd32). You can read more about other types of intracranial recordings such as [spike train recordings](/tutorial/intracranial/spike) and [spikes and local field potentials](/tutorial/intracranial/spikefield) in the following documentation.
 
 {% include seealso tag1="getting_started" tag2="bioimage" %}
 {% include seealso category="example" tag1="ecog" %}

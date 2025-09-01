@@ -190,7 +190,7 @@ The memory should include the amount that MATLAB takes itself (which is about 2g
 
 #### Data usage
 
-You SHOULD include a line that lists whether your test script uses private, public, or no data. In case you contribute a test script that requires data, please [share it with the developers](/faq/how_should_i_send_example_data_to_the_developers) or attach it to the pull request.
+You SHOULD include a line that lists whether your test script uses private, public, or no data. In case you contribute a test script that requires data, please [share it with the developers](/faq/organization/datasharing) or attach it to the pull request.
 
 #### Dependency on other FieldTrip functions
 

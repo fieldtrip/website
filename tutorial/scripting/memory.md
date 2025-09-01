@@ -9,7 +9,7 @@ redirect_from:
 # Making a memory efficient analysis pipeline
 
 {% include markup/yellow %}
-If you are new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial which is more on the technical and coding aspects.
+If you are new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/intro/introduction) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial which is more on the technical and coding aspects.
 {% include markup/end %}
 
 ## Introduction
@@ -124,7 +124,7 @@ When you are working with a very large data set repeatedly or interactively, cle
 
 ## Summary and suggested further reading
 
-This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the tutorial on distributed computing using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_parfor).
+This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the tutorial on distributed computing using [qsub](/tutorial/scripting/distributedcomputing_qsub) and [parfor](/tutorial/scripting/distributedcomputing_parfor).
 
 These are FAQs that are related to memory issues:
 

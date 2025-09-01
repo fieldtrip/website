@@ -23,7 +23,7 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 
 ## Set the path
 
-To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. You should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
+To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. You should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/matlab/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -58,12 +58,12 @@ The header contains a lot of information about the measurement parameters. In th
 
 The variable 'dat' contains all the data for 317 channels for all samples. This is a recording of 396 seconds sampled at 1000 Hz.
 
-When this works you are sure that FieldTrip can handle your dataset and you can start to analyze your data as described [here](/tutorial/introduction).
+When this works you are sure that FieldTrip can handle your dataset and you can start to analyze your data as described [here](/tutorial/intro/introduction).
 
 ## Special issues
 
 - If you have STI001 up to STI008, the TTL values (single bits) in those channels will be combined into an event of type 'Trigger' with an integer value between 0 and 255.
-- Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/neuromag_aligned2mni)).
+- Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/source/neuromag_aligned2mni)).
 - The default behavior of ft_read_event is that it assumes that event values below 5 are noise. However, in the new systems (Elekta Neuromag VectorView or Triux (306 channels both) this is seldom the case.
 
 ## Frequently Asked Questions

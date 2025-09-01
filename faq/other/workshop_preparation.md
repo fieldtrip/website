@@ -17,6 +17,6 @@ In the first few hands-on sessions you will be working with MEG data that we pro
 
 For some workshops we will provide powerful Windows desktop computers (usually 64-bit and more than 4GB RAM) with internet connection and a recent MATLAB (plus license). These will also have FieldTrip set up and all tutorial data preinstalled. If these desktops are provided, we kindly request you to do the tutorials on them rather than on your own laptop, as that saves us time in fixing computer specific problems (e.g., MATLAB path settings, license issues, etc). You will receive explicit instructions to bring a laptop in case computers are not provided by the host institute.
 
-For the playground session it is always fine to work on your own laptop. For that you have to arrange a recent FieldTrip version and working MATLAB license (see [requirements](/faq/requirements)).
+For the playground session it is always fine to work on your own laptop. For that you have to arrange a recent FieldTrip version and working MATLAB license (see [requirements](/faq/matlab/requirements)).
 
 Bringing a USB disk/stick to move data between computers is in general a good idea.

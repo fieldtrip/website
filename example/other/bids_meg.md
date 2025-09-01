@@ -18,7 +18,7 @@ The general description of how MEG data can be shared in the [BIDS format](https
 
 The CTF MEG file format consists of recordings that are represented in a directory with the extension `*.ds`. The directory contains multiple files, where the `*.res4` contains most of the header information, and the `*.meg4` files (there can be multiple) contain the data. However, also the other files contain relevant data and/or metadata, such as markers and information on how the data has been processed.  
 
-In general you **should not** simply rename the directory, or mess with the files in the directory by hand, since there are multiple files that need to have a consistent file naming structure. The CTF Linux command-line software includes tools for anonimizing and renaming datasets in a consistent fashion and [this example page](/faq/how_can_i_anonymize_a_ctf_dataset) also presents a way of doing it directly in MATLAB.
+In general you **should not** simply rename the directory, or mess with the files in the directory by hand, since there are multiple files that need to have a consistent file naming structure. The CTF Linux command-line software includes tools for anonimizing and renaming datasets in a consistent fashion and [this example page](/faq/other/anonymization_ctf) also presents a way of doing it directly in MATLAB.
 
 ### Example
 

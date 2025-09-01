@@ -15,7 +15,7 @@ If you get the message <em>"You are not allowed to post to this mailing list, an
 
 ## Efficient questions
 
-The users and developers are happy to try to help you with your questions, but it helps if you ask your question in a to-the-point way and if you provide sufficient relevant information. Please read our FAQ on [how to ask good questions to the FieldTrip community](/faq/how_to_ask_good_questions_to_the_community), consider these [Ten Simple Rules for Getting Help from Online Scientific Communities](http://www.ploscompbiol.org/article/info:doi%2F10.1371%2Fjournal.pcbi.1002202), and if you're up for a more lengthy read, check out this link that's about [asking smart questions, and providing helpful answers](http://www.catb.org/esr/faqs/smart-questions.html).
+The users and developers are happy to try to help you with your questions, but it helps if you ask your question in a to-the-point way and if you provide sufficient relevant information. Please read our FAQ on [how to ask good questions to the FieldTrip community](/faq/organization/emaillist_howtoask), consider these [Ten Simple Rules for Getting Help from Online Scientific Communities](http://www.ploscompbiol.org/article/info:doi%2F10.1371%2Fjournal.pcbi.1002202), and if you're up for a more lengthy read, check out this link that's about [asking smart questions, and providing helpful answers](http://www.catb.org/esr/faqs/smart-questions.html).
 
 ## Email list archive
 

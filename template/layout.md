@@ -5,7 +5,7 @@ tags: [template, eeg, meg, opm, layout]
 
 # Template 2-D layouts for plotting
 
-EEG electrode and MEG gradiometer positions in the layouts are represented as points in 2-D Cartesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII `.lay` files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
+EEG electrode and MEG gradiometer positions in the layouts are represented as points in 2-D Cartesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/plotting/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII `.lay` files is explained [here](/faq/plotting/layout_fileformat).
 
 ## EEG layouts
 
@@ -320,7 +320,7 @@ Furthermore, this section from the **[ft_prepare_layout](/reference/ft_prepare_l
 
 ## NIRS layouts
 
-Since NIRS caps are in general custom-made with the transmitter and receiver optodes over specific ROIs, we don't have template NIRS layouts. The option `cfg.layout = 'ordered'` that is explained in the **[ft_prepare_layout](/reference/ft_prepare_layout)** help can be useful for a quick visualisation of all channels. The [layout tutorial](/tutorial/layout) explains in general how to create your own channel layout for plotting, and we have a [layout example](/example/nirs_layout) specific to NIRS.
+Since NIRS caps are in general custom-made with the transmitter and receiver optodes over specific ROIs, we don't have template NIRS layouts. The option `cfg.layout = 'ordered'` that is explained in the **[ft_prepare_layout](/reference/ft_prepare_layout)** help can be useful for a quick visualisation of all channels. The [layout tutorial](/tutorial/plotting/layout) explains in general how to create your own channel layout for plotting, and we have a [layout example](/example/plotting/nirs_layout) specific to NIRS.
 
 ## Plotting all layouts
 

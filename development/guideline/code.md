@@ -306,7 +306,7 @@ Note that on Windows the executable is required to have the file extension "exe"
 
 FieldTrip of course depends on MATLAB, but there are additional requirements, such as operating systems (for mex files) and external toolboxes. We want to develop FieldTrip such that it can be used by as many people as possible, which means that we want to control and minimize the additional requirements.
 
-Please consider the general [requirements](/faq/requirements) when extending or changing the FieldTrip code. Keep in mind that FieldTrip should not only run on the latest and greatest MATLAB version that you happen to have installed on your personal "supercomputer", but also on the more modest computers of many other people with other (older or newer) MATLAB versions and operating systems.
+Please consider the general [requirements](/faq/matlab/requirements) when extending or changing the FieldTrip code. Keep in mind that FieldTrip should not only run on the latest and greatest MATLAB version that you happen to have installed on your personal "supercomputer", but also on the more modest computers of many other people with other (older or newer) MATLAB versions and operating systems.
 
 ## Ensure that it runs on older MATLAB versions
 

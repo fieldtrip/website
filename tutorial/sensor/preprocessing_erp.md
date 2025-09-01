@@ -12,7 +12,7 @@ redirect_from:
 
 Preprocessing of MEG or EEG data refers to reading the data into memory, segmenting the data around interesting events such as triggers, temporal filtering, and optionally rereferencing in the case of EEG. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which differ in the amount of memory required in the order of the individual analysis steps. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach. This is mainly motivated by the historical development of FieldTrip: in the early days of the toolbox, computer memory as a more limiting factor than nowadays. Also, note, that some (older) datasets may have the data already represented on disk as epoched, which prohibits the treatment of the data as a single continuous data matrix. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+There are largely two alternative approaches for preprocessing, which differ in the amount of memory required in the order of the individual analysis steps. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach. This is mainly motivated by the historical development of FieldTrip: in the early days of the toolbox, computer memory as a more limiting factor than nowadays. Also, note, that some (older) datasets may have the data already represented on disk as epoched, which prohibits the treatment of the data as a single continuous data matrix. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/preproc/continuous).
 
 Preprocessing involves several steps, including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done according to a specified trigger channel or according to your own criteria when you write your own trial function. Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_definetrial)**.
 
@@ -38,7 +38,7 @@ The preprocessing of the EEG data and the computation of the ERP consists of the
 
 Make sure that all files that you have downloaded are unzipped and are located in the present working directory in MATLAB. In the command window, you can type [pwd](http://www.mathworks.nl/help/techdoc/ref/pwd.html) to see what the present directory is, and you can type [dir](http://www.mathworks.nl/help/techdoc/ref/dir.html) to see the content of the working directory.
 
-For memory efficiency (especially relevant for large datasets in comparison to the available RAM), with FieldTrip we historically commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous).
+For memory efficiency (especially relevant for large datasets in comparison to the available RAM), with FieldTrip we historically commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/preproc/continuous).
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
@@ -199,7 +199,7 @@ For topoplotting and sometimes for analysis it is necessary to know how the elec
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/figure2.png" width="200" %}
 
-The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the `fieldtrip/template/layout` directory, these are documented along with the other [template layouts](/template/layout). It is also possible to create custom layouts using **[ft_prepare_layout](/reference/ft_prepare_layout)** as explained in the [layout tutorial](/tutorial/layout). In this example we will use an existing layout file that is included with the example data.
+The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the `fieldtrip/template/layout` directory, these are documented along with the other [template layouts](/template/layout). It is also possible to create custom layouts using **[ft_prepare_layout](/reference/ft_prepare_layout)** as explained in the [layout tutorial](/tutorial/plotting/layout). In this example we will use an existing layout file that is included with the example data.
 
     cfg        = [];
     cfg.layout = 'mpi_customized_acticap64.mat';
@@ -209,7 +209,7 @@ Note that the channel labels in the layout should match the channel labels in th
 
 ## Artifacts
 
-An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
+An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/preproc/artifacts), the [visual artifact removal tutorial](/tutorial/preproc/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/preproc/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
 
 ### Channel mode
 
@@ -355,7 +355,7 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
 ## Suggested further reading
 
-After having finished this tutorial on EEG data, you can look at the [event-related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+After having finished this tutorial on EEG data, you can look at the [event-related averaging](/tutorial/sensor/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/sensor/timefrequencyanalysis) tutorial.
 
 ### See also these frequently asked questions
 

@@ -8,7 +8,7 @@ redirect_from:
 
 # Getting started with BioImage Suite
 
-Viewing and localizing intracranial EEG (iEEG) electrodes from volumetric brain images (CT and/or MR images) can be accomplished using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, as demonstrated in the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog) tutorial. Alternatively, users may choose to localize electrodes using [BioImage Suite](http://bioimagesuite.yale.edu) and subsequently view them in MATLAB using FieldTrip. Finally, users may also choose to localize electrodes using **[ft_electrodeplacement](/reference/ft_electrodeplacement)** and subsequently view them in BioImage Suite.
+Viewing and localizing intracranial EEG (iEEG) electrodes from volumetric brain images (CT and/or MR images) can be accomplished using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, as demonstrated in the [Analysis of human ECoG and sEEG recordings](/tutorial/intracranial/human_ecog) tutorial. Alternatively, users may choose to localize electrodes using [BioImage Suite](http://bioimagesuite.yale.edu) and subsequently view them in MATLAB using FieldTrip. Finally, users may also choose to localize electrodes using **[ft_electrodeplacement](/reference/ft_electrodeplacement)** and subsequently view them in BioImage Suite.
 
 This page covers (1) how electrodes that have been localized in BioImage Suite (.mgrid files) can be loaded into MATLAB as a FieldTrip-compatible elec structure; and (2) how electrodes that have been localized in FieldTrip can be saved as BioImage Suite compatible `.mgrid` files.
 
@@ -41,7 +41,7 @@ To sanity check that this is the case, you can view the electrode positions in t
 
 #### Warp the electrode coordinates from a CT to a coregistered MRI
 
-If the electrode coordinates in elec correspond to a CT and the user intends to represent the electrode positions or electrophysiological data overlayed on a higher definition T1 MRI (recommended), the user will first have to [pre-process and co-register the corresponding CT to a T1 MRI](/tutorial/human_ecog) from the same subject.
+If the electrode coordinates in elec correspond to a CT and the user intends to represent the electrode positions or electrophysiological data overlayed on a higher definition T1 MRI (recommended), the user will first have to [pre-process and co-register the corresponding CT to a T1 MRI](/tutorial/intracranial/human_ecog) from the same subject.
 
 Once the CT and MRI are coregistered, warp the electrode coordinates in elec (corresponding to the raw CT coordinate system) to the fused CT-MRI head space using **[ft_warp_apply](/reference/utilities/ft_warp_apply)**.
 
@@ -94,7 +94,7 @@ If there are labels in elec_acpc_f that do not match those in the electrophysiol
 
 #### Add the elec structure to the data structure
 
-Once it is confirmed that all of the labels in elec_acpc_f match those in the electrophysiological data, the elec structure can be added to the electrophysiological data to facilitate integrated exploration, analysis, and representation of anatomical and functional electrophysiological data in FieldTrip, as described in the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog) tutorial.
+Once it is confirmed that all of the labels in elec_acpc_f match those in the electrophysiological data, the elec structure can be added to the electrophysiological data to facilitate integrated exploration, analysis, and representation of anatomical and functional electrophysiological data in FieldTrip, as described in the [Analysis of human ECoG and sEEG recordings](/tutorial/intracranial/human_ecog) tutorial.
 
     % load the electrophysiological data
     cfg = [];
@@ -115,7 +115,7 @@ It is also possible to localize electrodes in FieldTrip, using **[ft_electrodepl
 
 #### Load the `.mgrid` file and corresponding brain volume into BioImage Suite
 
-Once the `.mgrid` file is created, it can be loaded into the BioImage Suite Electrode Editor along with the corresponding brain volume file. If the electrodes appear severely misaligned in BioImage Suite, it is likely because the orientation of the brain volume in BioImage Suite does not match the orientation of the brain volume in FieldTrip, which may happen for a variety of reasons. To solve this problem, simply reorient the brain volume in BioImage Suite (in the brain volume window: Relabel → ReOrient Image → select from drop down) to match the orientation of the brain volume in FieldTrip, which can be determined from the [coordinate system](/faq/coordsys) of the brain volume.
+Once the `.mgrid` file is created, it can be loaded into the BioImage Suite Electrode Editor along with the corresponding brain volume file. If the electrodes appear severely misaligned in BioImage Suite, it is likely because the orientation of the brain volume in BioImage Suite does not match the orientation of the brain volume in FieldTrip, which may happen for a variety of reasons. To solve this problem, simply reorient the brain volume in BioImage Suite (in the brain volume window: Relabel → ReOrient Image → select from drop down) to match the orientation of the brain volume in FieldTrip, which can be determined from the [coordinate system](/faq/source/coordsys) of the brain volume.
 
 ## Suggested further reading
 

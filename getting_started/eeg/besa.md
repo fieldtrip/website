@@ -92,14 +92,14 @@ Events can also be stored in a data channel appended to the brain data channels.
     cfg.trialfun   = 'trialfun_ttl';
     cfg            = ft_definetrial(cfg);
 
-where `trialfun_ttl` is your own MATLAB function for conditional selection of data segments or trials of interest. See [this page](/example/trialfun) for the actual `trialfun_ttl` example function.
+where `trialfun_ttl` is your own MATLAB function for conditional selection of data segments or trials of interest. See [this page](/example/preproc/trialfun) for the actual `trialfun_ttl` example function.
 
     % read and preprocess the data
     cfg.continuous = 'yes';
     cfg.channel    = 'all';
     data           = ft_preprocessing(cfg);
 
-Note that filtering, rereferencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
+Note that filtering, rereferencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this page](/tutorial/preproc/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
 
     % visually inspect the data
     cfg            = [];

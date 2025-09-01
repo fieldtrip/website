@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-This tutorial makes use of the preprocessed data from the [preprocessing tutorial](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download [PreprocData.mat](https://download.fieldtriptoolbox.org/tutorial/visual_artifact_rejection/PreprocData.mat). Load the data into MATLAB memory with the following command:
+This tutorial makes use of the preprocessed data from the [preprocessing tutorial](/tutorial/preproc/preprocessing). Run the script from that section in order to produce the single trial data structure, or download [PreprocData.mat](https://download.fieldtriptoolbox.org/tutorial/visual_artifact_rejection/PreprocData.mat). Load the data into MATLAB memory with the following command:
 
     load PreprocData data_all
 
@@ -39,7 +39,7 @@ Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function 
 
 The following steps are used for visual artifact rejection
 
-- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [preprocessing tutorial](/tutorial/preprocessing)
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [preprocessing tutorial](/tutorial/preproc/preprocessing)
 - Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Alternatively you can use **[ft_databrowser](/reference/ft_databrowser)** and mark the artifacts manually by interactively paging trial by trial
 
@@ -219,7 +219,7 @@ With the trials split per condition, this corresponds to the following trials:
 
 ## Suggested further reading
 
-For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to visual artifact detection, you can do it automatically, see the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial. Furthermore, you use ICA to remove artifacts from your data, this is explained in the [cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning) tutorial.
+For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/preproc/artifacts) tutorial. As an alternative to visual artifact detection, you can do it automatically, see the [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection) tutorial. Furthermore, you use ICA to remove artifacts from your data, this is explained in the [cleaning artifacts using ICA](/tutorial/preproc/ica_artifact_cleaning) tutorial.
 
 More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the [email discussion list](/discussion_list) which can be searched [like this](https://www.google.com/search?q=site%3Amailman.science.ru.nl%2Fpipermail%2Ffieldtrip&q=artifacts).
 

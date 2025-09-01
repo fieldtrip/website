@@ -14,7 +14,7 @@ In this example script, we will demonstrate how to analyze functional brain acti
 
 ## Background
 
-This dataset was recorded at the Comprehensive Epilepsy Center of the New York University School of Medicine and processed by members of the Clinical Neurophysiology Lab (Thomas Thesen) and the Multisensory Integration Research Group (Martin Krebber, Daniel Senkowski, Charité - University Medicine Berlin). (Support by the CRCNS Data Sharing Grant 01GQ1416 is gratefully acknowledged.) This dataset includes neural recordings from an electrode grid, with an experimental manipulation that illustrates the spatiotemporal precision of these type of recordings. We will repeat code to select the trials and preprocess the data as described in the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis). We assume that the reader is already familiar with preprocessing and time-frequency analysis.
+This dataset was recorded at the Comprehensive Epilepsy Center of the New York University School of Medicine and processed by members of the Clinical Neurophysiology Lab (Thomas Thesen) and the Multisensory Integration Research Group (Martin Krebber, Daniel Senkowski, Charité - University Medicine Berlin). (Support by the CRCNS Data Sharing Grant 01GQ1416 is gratefully acknowledged.) This dataset includes neural recordings from an electrode grid, with an experimental manipulation that illustrates the spatiotemporal precision of these type of recordings. We will repeat code to select the trials and preprocess the data as described in the [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis). We assume that the reader is already familiar with preprocessing and time-frequency analysis.
 
 The patient suffered from intractable epilepsy and underwent invasive monitoring to localize the epileptogenic zone for subsequent surgical removal. Electrode placement was solely guided by clinical considerations. During the recording the patient performed a visual localizer task that was used to identify electrodes responsive to certain types of visual input. Stimuli from the following 7 categories were presented in random order (event codes in parentheses): false font (3), house (4), object (5), texture (6), body (7), text (8), face (9).
 
@@ -22,7 +22,7 @@ The data [SubjectNY394.zip](https://download.fieldtriptoolbox.org/tutorial/Subje
 
 ## Data analysis
 
-In line with the [main tutorial](/tutorial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
+In line with the [main tutorial](/tutorial/intracranial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
 
     %% load electrode locations
     fid = fopen('NY394_MRI_coor.txt');
@@ -59,7 +59,7 @@ In line with the [main tutorial](/tutorial/human_ecog), you can use the followin
 
 ### 1. Data preprocessing
 
-First, we will load the data and segment them into trials using **[ft_preprocessing](/reference/ft_preprocessing)**. Event information has already been extracted from the trigger channels and stored in NY394_trl.mat. The segmentation of continuous data based on triggers is described in detail in one of the [preprocessing tutorials](/tutorial/preprocessing).
+First, we will load the data and segment them into trials using **[ft_preprocessing](/reference/ft_preprocessing)**. Event information has already been extracted from the trigger channels and stored in NY394_trl.mat. The segmentation of continuous data based on triggers is described in detail in one of the [preprocessing tutorials](/tutorial/preproc/preprocessing).
 
     % load trial info
     load('NY394_trl.mat');
@@ -77,7 +77,7 @@ The data still contain some channels that are not required for the further analy
     cfg.channel = 'EEG*'; % select 'EEG' channles
     epoch_data = ft_selectdata(cfg,epoch_data);
 
-Artifact rejection can be done by visually inspecting individual trials and channels, or by using summary statistics that are calculated across trials and channels (see tutorial [here](/tutorial/visual_artifact_rejection)). We will first visually reject bad channels by browsing through the data channel-wise using **[ft_rejectvisual](/reference/ft_rejectvisual)** with the method 'channel'. You will notice that the data from channel 23 appear very noisy after about a quarter of trials. This is probably a technical artifact due to a bad electrode contact. Therefore, the channel should be marked as bad.
+Artifact rejection can be done by visually inspecting individual trials and channels, or by using summary statistics that are calculated across trials and channels (see tutorial [here](/tutorial/preproc/visual_artifact_rejection)). We will first visually reject bad channels by browsing through the data channel-wise using **[ft_rejectvisual](/reference/ft_rejectvisual)** with the method 'channel'. You will notice that the data from channel 23 appear very noisy after about a quarter of trials. This is probably a technical artifact due to a bad electrode contact. Therefore, the channel should be marked as bad.
 
     cfg         = [];
     cfg.method  = 'channel'; % browse through channels
@@ -86,7 +86,7 @@ Artifact rejection can be done by visually inspecting individual trials and chan
 
 {% include image src="/assets/img/example/ecog_ny/ny394_bad_channel.png" width="400" %}
 
-For rejecting artifact trials, we will use the 'summary' method in **[ft_rejectvisual](/reference/ft_rejectvisual)**. Identifying artifact trials in ECoG is similar to EEG analysis and can be done according to the tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection). Note, that ECoG data typically have higher amplitudes and better signal-to-noise ratios compared with data from scalp EEG, because they are recorded directly from the cortex. Still, a number of technical and physiological artifacts can be present in the data. Due to the clinical - and therefore less rigorously controlled - environment during the recording process, technical artifacts are quite common. The present dataset is relatively clean and, hence, does not need much rejection. Some moderate outliers can be found for the metrics: maxabs, zvalue and maxzvalue.
+For rejecting artifact trials, we will use the 'summary' method in **[ft_rejectvisual](/reference/ft_rejectvisual)**. Identifying artifact trials in ECoG is similar to EEG analysis and can be done according to the tutorial on [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection). Note, that ECoG data typically have higher amplitudes and better signal-to-noise ratios compared with data from scalp EEG, because they are recorded directly from the cortex. Still, a number of technical and physiological artifacts can be present in the data. Due to the clinical - and therefore less rigorously controlled - environment during the recording process, technical artifacts are quite common. The present dataset is relatively clean and, hence, does not need much rejection. Some moderate outliers can be found for the metrics: maxabs, zvalue and maxzvalue.
 
     cfg         = [];
     cfg.method  = 'summary'; % summary statistics across channels and trials
@@ -101,7 +101,7 @@ FIXME
 
 #### 3.1 calculate and plot ERPs
 
-The analysis of event-related potentials is done in accordance with the standard [ERP tutorial](/tutorial/preprocessing_erp). Here, we will calculate and compare the ERPs of two conditions ('object' and 'face'). In the parameters of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** we use the preprocessing options to apply filters to the data (30 Hz low-pass, 1 Hz high-pass). The high-pass filter reduces slow drifts while the low-pass filter eliminates high-frequency noise. Note that the exact filter setting depends on the ERP component under investigation. Baseline correction is subsequently done with respect to the time interval of -300 ms to - 50 ms.
+The analysis of event-related potentials is done in accordance with the standard [ERP tutorial](/tutorial/sensor/preprocessing_erp). Here, we will calculate and compare the ERPs of two conditions ('object' and 'face'). In the parameters of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** we use the preprocessing options to apply filters to the data (30 Hz low-pass, 1 Hz high-pass). The high-pass filter reduces slow drifts while the low-pass filter eliminates high-frequency noise. Note that the exact filter setting depends on the ERP component under investigation. Baseline correction is subsequently done with respect to the time interval of -300 ms to - 50 ms.
 
     % calculate ERPs
     cfg                  = [];
@@ -194,7 +194,7 @@ Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP
 
 #### 3.3 calculate timelock statistics
 
-In the next analysis step, we statistically compare the responses of 'objects' vs. 'faces' for both ERP and HGP data to test which electrodes respond preferentially to one or the other stimulus class. To account for multiple comparisons, we use the [cluster-based permutation](/tutorial/cluster_permutation_timelock) approach as implemented in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. When it comes to statistics, one distinctive feature of ECoG data is that, due to the high local specificity of the recorded activity, no spatial information is exploited for clustering. Consequently, the cfg.neighbours parameter is specified as an empty matrix.
+In the next analysis step, we statistically compare the responses of 'objects' vs. 'faces' for both ERP and HGP data to test which electrodes respond preferentially to one or the other stimulus class. To account for multiple comparisons, we use the [cluster-based permutation](/tutorial/stats/cluster_permutation_timelock) approach as implemented in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. When it comes to statistics, one distinctive feature of ECoG data is that, due to the high local specificity of the recorded activity, no spatial information is exploited for clustering. Consequently, the cfg.neighbours parameter is specified as an empty matrix.
 
     cfg                  = [];
     cfg.latency          = [0 .6];
@@ -258,7 +258,7 @@ The analysis revealed stronger HGP in response to 'faces' compared with 'objects
 
 #### 4.1 calculate and plot TFRs
 
-To get an idea about the spectral content in the ECoG dataset, we will calculate time-frequency representations (TFRs) using **[ft_freqanalysis](/reference/ft_freqanalysis)**, and then baseline-correct the data to reflect relative change from baseline using **[ft_freqbaseline](/reference/ft_freqbaseline)**. More information about time-frequency analysis can be found in the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis)). In the current dataset, we decided to analyze the frequency range from 2 to 200 Hz. To save computational resources, we will increase the frequency steps with higher frequencies.
+To get an idea about the spectral content in the ECoG dataset, we will calculate time-frequency representations (TFRs) using **[ft_freqanalysis](/reference/ft_freqanalysis)**, and then baseline-correct the data to reflect relative change from baseline using **[ft_freqbaseline](/reference/ft_freqbaseline)**. More information about time-frequency analysis can be found in the [time-frequency analysis tutorial](/tutorial/sensor/timefrequencyanalysis)). In the current dataset, we decided to analyze the frequency range from 2 to 200 Hz. To save computational resources, we will increase the frequency steps with higher frequencies.
 
     % time-frequency analysis
     cfg            = [];
@@ -298,7 +298,7 @@ To visualize the time-frequency data from the two conditions, we will plot TFRs 
 
 #### 4.2 Time-frequency statistics
 
-In the next step, we statistically compare the TFRs of the 'house' and 'face' conditions using cluster-based permutation statistics, as implemented in **[ft_freqstatistics](/reference/ft_freqstatistics)**. The statistical approach is presented in more detail in one of the [statistics tutorials](/tutorial/cluster_permutation_freq).
+In the next step, we statistically compare the TFRs of the 'house' and 'face' conditions using cluster-based permutation statistics, as implemented in **[ft_freqstatistics](/reference/ft_freqstatistics)**. The statistical approach is presented in more detail in one of the [statistics tutorials](/tutorial/stats/cluster_permutation_freq).
 
     cfg                  = [];
     cfg.latency          = [0 .6];

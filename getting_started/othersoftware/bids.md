@@ -19,18 +19,18 @@ FieldTrip has direct support for all data file formats that are used in BIDS. Th
 - structural and functional MRI
   - NIfTI format (`.nii` and `.nii.gz`)
 - MEG
-  - [CTF](/getting_started/ctf)
-  - [Neuromag/Elekta/Megin](/getting_started/neuromag)
-  - [BTi/4D](/getting_started/bti)
+  - [CTF](/getting_started/meg/ctf)
+  - [Neuromag/Elekta/Megin](/getting_started/meg/neuromag)
+  - [BTi/4D](/getting_started/meg/bti)
 - EEG
-  - [BrainVision](/getting_started/brainvision)
-  - [European Data Format](/getting_started/edf) (`.edf`)
-  - [EEGLAB](/getting_started/eeglab)
-  - [BioSemi](/getting_started/biosemi) (`.bdf`)
+  - [BrainVision](/getting_started/eeg/brainvision)
+  - [European Data Format](/getting_started/eeg/edf) (`.edf`)
+  - [EEGLAB](/getting_started/othersoftware/eeglab)
+  - [BioSemi](/getting_started/eeg/biosemi) (`.bdf`)
 - intracranial EEG
-  - [BrainVision](/getting_started/brainvision)
-  - [European Data Format](/getting_started/edf) (`.edf`)
-  - [Neurodata Without Borders](/getting_started/nwb) (`.nwb`)
+  - [BrainVision](/getting_started/eeg/brainvision)
+  - [European Data Format](/getting_started/eeg/edf) (`.edf`)
+  - [Neurodata Without Borders](/getting_started/intracranial/nwb) (`.nwb`)
   - Multiscale Electrophysiology File Format
 
 Furthermore, there are a number of BIDS extension proposals (so called BEPs) that are likely to be part of the BIDS specification in the near future. Some of these are:
@@ -38,7 +38,7 @@ Furthermore, there are a number of BIDS extension proposals (so called BEPs) tha
 - PET, see <http://bids.neuroimaging.io/bep009>
   - NIfTI format (`.nii` and `.nii.gz`)
 - NIRS, see <http://bids.neuroimaging.io/bep030>
-  - [SNIRF](/getting_started/snirf)
+  - [SNIRF](/getting_started/nirs/snirf)
 - motion capture, see <http://bids.neuroimaging.io/bep029>
   - tab-separated files (`.tsv`)
 

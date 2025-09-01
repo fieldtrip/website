@@ -12,4 +12,4 @@ Support for the Cyberkinetics format was initially implemented using the Neurosh
 
 Cyberkinetics (the company) now continues as [Blackrock Microsystems](http://blackrockmicro.com), which maintains the [Neural Processing Matlab Kit](https://github.com/BlackrockNeurotech/NPMK) (NPMK) for reading data from the (former) Cyberkinetics and (current) Blackrock file formats.
 
-Please see the [Getting started with Blackrock data](/getting_started/blackrock) for more details.
+Please see the [Getting started with Blackrock data](/getting_started/intracranial/blackrock) for more details.

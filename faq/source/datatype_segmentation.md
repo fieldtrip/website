@@ -59,7 +59,7 @@ The output of this code can be seen in the introduction of this faq.
 {% include markup/skyblue %}
 Here, we used the **[ft_volumereslice](/reference/ft_volumereslice)** function prior to segmentation. It is not required to use this function , but we used it here to obtain a nicer orientation of the MRI images for visualization with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-The reason for this is explained in more detail [here](/faq/how_change_mri_orientation_size_fov).
+The reason for this is explained in more detail [here](/faq/source/anat_reslice).
 {% include markup/end %}
 
 ### Binary representations of brain, skull and scalp

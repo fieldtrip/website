@@ -42,7 +42,7 @@ The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** funct
 
 ## What is the difference between the methods?
 
-Here are the [References to implemented methods](/references_to_implemented_methods).
+Here are the [References to implemented methods](/references_methods).
 
 ## What kind of source reconstruction method should I use?
 
@@ -81,7 +81,7 @@ none.
 
 [Compute forward simulated data and apply a dipole fit](/example/source/simulateddata_dipolefit)
 
-[Fit a dipole to the tactile ERF after mechanical stimulation](/example/dipolefit_somatosensory_erf)
+[Fit a dipole to the tactile ERF after mechanical stimulation](/example/source/dipolefit_somatosensory_erf)
 
 _Why is this fixme?_
 
@@ -103,11 +103,11 @@ _This is under construction, but it is not really clear how this exactly relates
 
 ## What kind of volume conduction models of the head are implemented in FieldTrip?
 
-FAQ: [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
+FAQ: [What kind of volume conduction models are implemented?](/faq/source/datatype_headmodel)
 
 Reference: **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
-- The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
+- The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_methods).
 - The references to implemented methods can be probably extended.
 
 Method

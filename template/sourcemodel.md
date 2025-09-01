@@ -18,7 +18,7 @@ When you do source reconstruction with dipole fit methods (as implemented in **[
 ### Scanning with a beamformer
 
 When doing source reconstruction with beamformers, people typically scan the brain volume where dipoles are defined on a regular 3D grid, with a regular spacing between the dipole locations. These grids are usually optimized to the individual anatomy of the participant. To facilitate group analysis, however, a clever strategy is to use a template grid (based on a template anatomical volume) that will be (linearly or non-linearly) warped to the individual participant's anatomy. Although this may lead to irregular spacing between the dipole locations (both across and potentially within participants), the dipole locations are directly comparable across participants, because they coincide in standard space.
-The FieldTrip template directory provides a set of sourcemodels defined on regular 3D-grids that are constructed from the MNI-template anatomy from SPM. These template sourcemodels can subsequently be used to be inverse normalized to the individual participant's anatomy. See this [example](/example/sourcemodel_aligned2mni) for more information.
+The FieldTrip template directory provides a set of sourcemodels defined on regular 3D-grids that are constructed from the MNI-template anatomy from SPM. These template sourcemodels can subsequently be used to be inverse normalized to the individual participant's anatomy. See this [example](/example/source/sourcemodel_aligned2mni) for more information.
 
 Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are released along with the FieldTrip toolbox and available in the `fieldtrip/template/sourcemodel` directory:
 

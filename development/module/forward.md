@@ -97,7 +97,7 @@ Alternative to reading the volume conduction model from an external file, you ca
     headmodel = ft_headmodel_singleshell(geom, sens, ...)
     headmodel = ft_headmodel_singlesphere(pnt, ...)
 
-Most of these functions take a geometrical description of the head, skull and/or brain surface as input. These geometrical descriptions of the shape of the head can for example be derived from an anatomical MRI, from a CT scan, or from a Polhemus measurement of the outside of the scalp. In many cases the geometrical model consists of an Nx3 matrix with surface points, which is sometimes accompanied by a description of the triangles that form the scalp surface, or a set of surfaces forming tissue boundaries. For some methods the geometrical model will need to be described a volumetric mesh, i.e. an Nx3 matrix of points, accompanied by a description of volumetric elements (tetrahedra or hexahedra) and their optional conductivities. The processing of the anatomical data such as MRIs to construct a geometrical model is not part of the forward module and is described elsewhere specifically for [MEG](/tutorial/headmodel_meg) and [EEG](/tutorial/headmodel_eeg).
+Most of these functions take a geometrical description of the head, skull and/or brain surface as input. These geometrical descriptions of the shape of the head can for example be derived from an anatomical MRI, from a CT scan, or from a Polhemus measurement of the outside of the scalp. In many cases the geometrical model consists of an Nx3 matrix with surface points, which is sometimes accompanied by a description of the triangles that form the scalp surface, or a set of surfaces forming tissue boundaries. For some methods the geometrical model will need to be described a volumetric mesh, i.e. an Nx3 matrix of points, accompanied by a description of volumetric elements (tetrahedra or hexahedra) and their optional conductivities. The processing of the anatomical data such as MRIs to construct a geometrical model is not part of the forward module and is described elsewhere specifically for [MEG](/tutorial/source/headmodel_meg) and [EEG](/tutorial/source/headmodel_eeg).
 
 Detailed information for each of the functions that creates a head model can be found in the respective reference documentation:
 
@@ -196,7 +196,7 @@ The high level FieldTrip functions aim as much as possible to check (and where p
 
 ## Related documentation
 
-The literature references to the implemented methods are given [here](/references_to_implemented_methods).
+The literature references to the implemented methods are given [here](/references_methods).
 
 ### Frequently asked questions on forward and inverse modeling
 

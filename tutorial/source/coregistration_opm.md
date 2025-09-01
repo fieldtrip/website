@@ -20,7 +20,7 @@ To ensure a well-defined sensor placement, labs also often use helmets to positi
 
 This tutorial demonstrates different methods for coregistering OPM sensors. Each method is demonstrated including data that you can download to carry out all steps yourself. Furthermore, it discusses the advantages and disadvantages of each method.
 
-In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. This tutorial will also not cover the processing of the MEG signals recorded from the participants brain, that is covered in the tutorial on [preprocessing of OPM data](/tutorial/preprocessing_opm).
+In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. This tutorial will also not cover the processing of the MEG signals recorded from the participants brain, that is covered in the tutorial on [preprocessing of OPM data](/tutorial/sensor/preprocessing_opm).
 
 ## Background
 
@@ -29,7 +29,7 @@ The common aim of the coregistration methods that we explore in this tutorial is
 In the examples below, the OPM sensor positions and orientations are initially expressed in a coordinate system relative to the FieldLine smart helmet. To facilitate the downstream analysis of the MEG signals, e.g., for group level analysis, it is customary to aim for the OPM sensors expressed in a coordinate system that is defined based on anatomical landmarks on the participant's head.
 
 {% include markup/skyblue %}
-Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/coordsys).
+Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/source/coordsys).
 
 In general you can think of coordinate systems in the same way as [time zones](https://en.wikipedia.org/wiki/Time_zone). To make an online appointment with a colleague on the other side of the world, you have to align your respective agendas. The appointment subsequently appears in your agenda according to your timezone, and in their agenda according to theirs.
 
@@ -197,7 +197,7 @@ If you rotate the image, the first thing to notice is that the nose is properly 
 
 Conventional SQUID-based MEG systems are based on certain number of sensors (e.g., 275 or 306) placed in a fixed-size helmet to accommodate most participants. Unless when using [custom headcasts](https://doi.org/10.1016/j.jneumeth.2016.11.009), the SQUID MEG helmet gives the participant a few cm of space around the head. The heads of different participants will therefore not be in the same position relative to the helmet, for an individual participant the position of the head in the helmet will differ between sessions, and can even vary within a session. Conventional SQUID-based MEG systems therefore commonly use head localization coils (HLC) or head position indicator (HPI) coils.
 
-The HPI coils are placed on the head - usually on well-defined [anatomical landmarks](/faq/how_are_the_lpa_and_rpa_points_defined) - and at the start of the recording session a small current is passed through the coils to create small magnetic dipoles. Sometimes the localization is repeated at the end of the recording session, and some systems also have the possibility to do the localization continuously. These magnetic dipoles can be localized, thereby determining the position of the sensors relative to the anatomical landmarks. All commercial SQUID-based MEG systems have a standard procedure for this that is well-integrated in the acquisition protocol and software, consequently the MEG recordings stored by the acquisition software include the sensor positions in [head coordinates](/faq/coordsys).
+The HPI coils are placed on the head - usually on well-defined [anatomical landmarks](/faq/source/anat_landmarks) - and at the start of the recording session a small current is passed through the coils to create small magnetic dipoles. Sometimes the localization is repeated at the end of the recording session, and some systems also have the possibility to do the localization continuously. These magnetic dipoles can be localized, thereby determining the position of the sensors relative to the anatomical landmarks. All commercial SQUID-based MEG systems have a standard procedure for this that is well-integrated in the acquisition protocol and software, consequently the MEG recordings stored by the acquisition software include the sensor positions in [head coordinates](/faq/source/coordsys).
 
 OPM sensors allow for individual placement and use variable-sized helmets. Furthermore, labs that operate an OPM MEG system will not all have the same number of sensors; some labs have as few as 8 sensors, whereas other labs might have up to 128 sensors.
 
@@ -570,7 +570,7 @@ We will explicitly align the MRI to an anatomical landmark-based coordinate syst
 _Figure: anatomical MRI image with a 'neuromag' head coordinate system._
 
 {% include markup/skyblue %}
-During MRI coregistration you have to click on the nasion, left and right ear. The landmark points at the ears are [ambiguous](/faq/how_are_the_lpa_and_rpa_points_defined) and if you click on different points, your alignment could be off by a centimeter or so. In the subsequent code we will use some rotation and translation parameters. To make sure that your subsequent results match what is presented here, you should download [example3_face_mri_realigned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_mri_realigned.mat) and load it in MATLAB.
+During MRI coregistration you have to click on the nasion, left and right ear. The landmark points at the ears are [ambiguous](/faq/source/anat_landmarks) and if you click on different points, your alignment could be off by a centimeter or so. In the subsequent code we will use some rotation and translation parameters. To make sure that your subsequent results match what is presented here, you should download [example3_face_mri_realigned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_mri_realigned.mat) and load it in MATLAB.
 
     load example3_mri_realigned.mat % this contains the realigned mri
 {% include markup/end %}
@@ -647,7 +647,7 @@ Now we can use the transformation that align the face from the 3D scan with the 
     transform_scan2face   = scan_face_aligned.cfg.transform;
     transform_helmet2face = transform_scan2face/transform_scan2helmet;
     
-These are all expressed as 4x4 matrices that represent [homogenous coordinate transformations](/faq/homogenous).
+These are all expressed as 4x4 matrices that represent [homogenous coordinate transformations](/faq/source/homogenous).
 
 ### Apply the transformation matrix to the sensors
 
@@ -702,7 +702,7 @@ The procedure for this consists of the following steps:
 
 This tutorial gave an introduction on the coregistration of OPM data, specifically dealing with OPM data that has been collected with the sensors positioned in in a known helmet configuration.
 
-You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you may want to proceed with the [OPM preprocessing tutorial](/tutorial/preprocessing_opm).
+You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you may want to proceed with the [OPM preprocessing tutorial](/tutorial/sensor/preprocessing_opm).
 
 Furthermore, you can explore other pages that deal with OPMs:
 

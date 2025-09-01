@@ -38,7 +38,7 @@ For a typical recording with the CTF system and using the CTF Polhemus software 
 
 Note that the head coils can IN PRINCIPLE be recorded twice: once with the Polhemus and once with the MEG system. And note that the anatomical landmarks are usually also recorded twice: once with the Polhemus and once in the anatomical MRI. Idem for the head shape.
 
-(\*) If you place the coils on the anatomical landmarks, the CTF MEGCoordinateSystem is exactly the same as the CTF AnatomicalLandmarkCoordinateSystem. But if you move the coils a little bit, the two are slightly different. Hence the xxxCoordinateDescription field, where you can elaborate. In the [BIDS example](/example/bids_mous) you can recognize this in step 6.
+(\*) If you place the coils on the anatomical landmarks, the CTF MEGCoordinateSystem is exactly the same as the CTF AnatomicalLandmarkCoordinateSystem. But if you move the coils a little bit, the two are slightly different. Hence the xxxCoordinateDescription field, where you can elaborate. In the [BIDS example](/example/other/bids_mous) you can recognize this in step 6.
 
 ## Neuromag system
 

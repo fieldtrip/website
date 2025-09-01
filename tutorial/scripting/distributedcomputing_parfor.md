@@ -69,15 +69,15 @@ This tutorial requires the original MEG datasets for the four subjects, plus one
 
 Additional prerequisites:
 
--   Make sure FieldTrip is on your path, see this [FAQ](/faq/installation)
+-   Make sure FieldTrip is on your path, see this [FAQ](/faq/matlab/installation)
 -   Have the necessary data next to each other in a single directory: the directories 'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds', 'SubjectSEF.ds' should all be next to each other.
 -   Put your test scripts also in this directory
 
 ## Starting simple with a single-subject
 
-Here we give the code that will be the basis for the rest of the tutorial. It is an adaptation of the code in the [event-related averaging tutorial](/tutorial/eventrelatedaveraging). The adaptations were made to reduce the runtime, the number of generated files and plots, and to be able to focus on the specific goals of this tutorial.
+Here we give the code that will be the basis for the rest of the tutorial. It is an adaptation of the code in the [event-related averaging tutorial](/tutorial/sensor/eventrelatedaveraging). The adaptations were made to reduce the runtime, the number of generated files and plots, and to be able to focus on the specific goals of this tutorial.
 
-For reference, the changes in detail w.r.t. the [event-related averaging tutorial](/tutorial/eventrelatedaveraging) are:
+For reference, the changes in detail w.r.t. the [event-related averaging tutorial](/tutorial/sensor/eventrelatedaveraging) are:
 
 -   Removed the line that selects trials without artifacts. It is subject-specific, so needs to be handled on a per-subject basis. See the tutorial on [creating a clean analysis pipeline](/tutorial/scripting) how you can handle subject-specific details. For this tutorial we will ignore the artifacts.
 -   Only use FIC condition, removed the IC and FC related lines. This to reduce the amount of code and calculation time.

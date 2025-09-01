@@ -36,7 +36,7 @@ Many of the FieldTrip plotting functions use a 2D layout of the channels for plo
 
 ### 3D sensor positions
 
-The geometrically most accurate layout representation can be obtained from a 3D representation of the sensor positions as a [grad/elec/opto structure](/faq/how_are_electrodes_magnetometers_or_gradiometers_described). However, projecting 3D sensor positions to a 2D plane always incurs distortion, especially at the edges where the surface is "bending" away from view. Consider for example how the North pole is distorted on a map of the world.
+The geometrically most accurate layout representation can be obtained from a 3D representation of the sensor positions as a [grad/elec/opto structure](/faq/source/sensors_definition). However, projecting 3D sensor positions to a 2D plane always incurs distortion, especially at the edges where the surface is "bending" away from view. Consider for example how the North pole is distorted on a map of the world.
 
 ### Template layout from disk
 
@@ -48,7 +48,7 @@ If you do not have a measurement of the 3D positions of your sensors, but do hav
 
 ### Schematic layout
 
-Sometimes a schematic layout is more convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to locate the electrodes in 3D as explained in the [human iEEG tutorial](/tutorial/human_ecog). Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
+Sometimes a schematic layout is more convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to locate the electrodes in 3D as explained in the [human iEEG tutorial](/tutorial/intracranial/human_ecog). Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
 
 ## Making a layout for MEG sensors
 
@@ -182,11 +182,11 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
 
 ### Creating a layout from 3D electrode positions
 
-The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](/tutorial/human_ecog). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
+The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](/tutorial/intracranial/human_ecog). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
 
 {% include markup/yellow %}
 
-The procedure for anatomical coregistration and subsequent localizing of the electrodes explained in the [ECoG and sEEG tutorial](/tutorial/human_ecog) is based on the paper by Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6.m)**, Nature Protocols, 2018.
+The procedure for anatomical coregistration and subsequent localizing of the electrodes explained in the [ECoG and sEEG tutorial](/tutorial/intracranial/human_ecog) is based on the paper by Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6.m)**, Nature Protocols, 2018.
 
 {% include markup/end %}
 
@@ -253,7 +253,7 @@ The direction of the electrode contacts along the shaft can be specified as 'LR'
 (left-to-right) or RL for horizontal, and 'TB' (top-to-bottom) and 'BT' for
 vertical.
 
-You can also use the raw or processed iEEG data to specify channel names. For example, the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and ROC. You can download the spectrally analyzed data [SubjectUCI29_freq.mat](https://download.fieldtriptoolbox.org/tutorial/layout/SubjectUCI29_freq.mat) and use the following
+You can also use the raw or processed iEEG data to specify channel names. For example, the dataset used in the [ECoG and sEEG tutorial](/tutorial/intracranial/human_ecog) has sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and ROC. You can download the spectrally analyzed data [SubjectUCI29_freq.mat](https://download.fieldtriptoolbox.org/tutorial/layout/SubjectUCI29_freq.mat) and use the following
 
     load SubjectUCI29_freq.mat
 
@@ -427,4 +427,4 @@ Here is a small snippet of an ASCII layout file:
     8   0.809069  0.587789  0.750000  0.450000  F8
     ...
 
-The format of the layout file is described in more detail in this [frequently asked question](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
+The format of the layout file is described in more detail in this [frequently asked question](/faq/plotting/layout_fileformat).

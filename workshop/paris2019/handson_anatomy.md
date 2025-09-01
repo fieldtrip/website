@@ -6,7 +6,7 @@ tags: [paris2019, meg, headmodel, sourcemodel, sourceanalysis, mmfaces]
 # Creation of headmodels and sourcemodels for source reconstruction
 
 {% include markup/skyblue %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [MEG headmodel tutorial](/tutorial/headmodel_meg).
+This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [MEG headmodel tutorial](/tutorial/source/headmodel_meg).
 {% include markup/end %}
 
 ## Introduction
@@ -15,21 +15,21 @@ This tutorial describes how to construct a volume conduction model of the head (
 
 We will use the anatomical images that belong to the same subject whose data were analyzed in the previous tutorials ([From raw data to ERP](/workshop/paris2019/handson_raw2erp), [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/paris2019/handson_sensoranalysis)), thus using anatomical data of subject 15 of the [multimodal face recognition dataset](/workshop/meg-uk-2015/dataset).
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
 {% include markup/green %}
-The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
+The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/source/headmodel_eeg).
 {% include markup/end %}
 
 ## Background
 
 The forward model is a prerequisite for source reconstruction. It is a model that describes, for a given set of putative source locations (defined in the sourcemodel), the spatial distribution of the signals picked up by the sensor array. Each of the sources is modeled as an equivalent current dipole (ECD), which serve as elementary building blocks of arbitrarily complex source configurations. The headmodel is needed to account for the effect of volume currents.
 
-There are different approaches to creating a forward model, each of which require a specific type of headmodel. Some examples of different MEG-based headmodels are given [here](/example/headmodel_various). Typically, individual headmodels required for accurate EEG forward modelling (for example a [boundary element model (BEM)](/tutorial/headmodel_eeg_bem), or [finite element model (FEM)](/tutorial/headmodel_eeg_fem)) require a more sophisticated anatomical processing than sufficiently good headmodels for MEG. For the latter case, typically a single shell boundary that describes the inner surface of the skull provides good results.
+There are different approaches to creating a forward model, each of which require a specific type of headmodel. Some examples of different MEG-based headmodels are given [here](/example/source/headmodel_various). Typically, individual headmodels required for accurate EEG forward modelling (for example a [boundary element model (BEM)](/tutorial/source/headmodel_eeg_bem), or [finite element model (FEM)](/tutorial/source/headmodel_eeg_fem)) require a more sophisticated anatomical processing than sufficiently good headmodels for MEG. For the latter case, typically a single shell boundary that describes the inner surface of the skull provides good results.
 
 ## Coregistration of anatomical MRI image with MEG sensor array
 
-The ingredients for a forward model (i.e. geometrical information about the sensor array, the headmodel, and the sourcemodel) are all defined in space, i.e. the location of their constituting elements can be described with spatial coordinates. It may sound trivial, but before anything meaningful can be done in combining these geometrical objects, we need to ensure that all spatial coordinates are expressed in the same [coordinate system](/faq/coordsys), and that the metrical units are the same. That is, the objects need to be [coregistered](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) to each other.
+The ingredients for a forward model (i.e. geometrical information about the sensor array, the headmodel, and the sourcemodel) are all defined in space, i.e. the location of their constituting elements can be described with spatial coordinates. It may sound trivial, but before anything meaningful can be done in combining these geometrical objects, we need to ensure that all spatial coordinates are expressed in the same [coordinate system](/faq/source/coordsys), and that the metrical units are the same. That is, the objects need to be [coregistered](/faq/source/anat_coreg) to each other.
 
 In our experience, the realm of coordinate systems is a murky one. Typically, software packages try to hide as much as possible the murky details, often by adopting rigid conventions about the coordinate systems in which the data is to be represented. This usually results in relatively robust behavior, yet, when things go wrong, they typically go **very wrong**. FieldTrip aims at being lenient with respect to the exact specification of the coordinate system, and should work fine, as long as the objects are properly coregistered. This requires some basic understanding about coordinate systems and coordinate system transforms, in order to be able to diagnose any potential problems encountered.
 
@@ -108,7 +108,7 @@ Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay specia
 
 ## Creation of the single shell head model
 
-Now, to create a single-shell model of the inner surface of the skull, we need a segmentation of the MRI image, which can be achieved with the function **[ft_volumesegment](/reference/ft_volumesegment)**. This function uses SPM for segmentation, and in its default behavior returns a probabilistic [segmentation](/faq/how_is_the_segmentation_defined) of the grey, white and csd compartments. Here, we only need a description of the surface of the brain, which is obtained by thresholding the probabilistic combined grey/white/csf image,
+Now, to create a single-shell model of the inner surface of the skull, we need a segmentation of the MRI image, which can be achieved with the function **[ft_volumesegment](/reference/ft_volumesegment)**. This function uses SPM for segmentation, and in its default behavior returns a probabilistic [segmentation](/faq/source/datatype_segmentation) of the grey, white and csd compartments. Here, we only need a description of the surface of the brain, which is obtained by thresholding the probabilistic combined grey/white/csf image,
 
     thr = 0.5;
 
@@ -136,11 +136,11 @@ _Figure: The headmodel visualized on top of the volulmetric anatomical image_
 
 ## Creation of a cortex based source model
 
-To creation of a state-of-the-art sourcemodel that is based on an accurate individual cortical segmentation is described in a [dedicated tutorial](/tutorial/sourcemodel). Source reconstruction algorithms that assume distributed sources (for instance Minimum Norm Estimates MNEs) require these cortical models, whereas for beamformers are not absolutely necessary. The generation of cortically constrained sourcemodels, defined on a triangulated surface mesh can be rather time consuming, so we are **not going to do that** here.
+To creation of a state-of-the-art sourcemodel that is based on an accurate individual cortical segmentation is described in a [dedicated tutorial](/tutorial/source/sourcemodel). Source reconstruction algorithms that assume distributed sources (for instance Minimum Norm Estimates MNEs) require these cortical models, whereas for beamformers are not absolutely necessary. The generation of cortically constrained sourcemodels, defined on a triangulated surface mesh can be rather time consuming, so we are **not going to do that** here.
 
 Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the aforementioned tutorial. Below, the code is referenced that was used to generate the sourcemodels. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be however to tweak a set of shell scripts (**ft_freesurferscript.sh** and **ft_postfreesurferscript.sh**), which are located in **fieldtrip/bin**, and execute those on your own computer. This requires a Linux or macOS environment, with installed freesurfer and workbench).
 
-In contrast to the [referenced tutorial](/tutorial/sourcemodel), the input MRI image that serves as the starting point for the freesurfer pipeline is the image coregistered to the MEG coordinate system. This coordinate system is sufficiently similar to the conventional coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
+In contrast to the [referenced tutorial](/tutorial/source/sourcemodel), the input MRI image that serves as the starting point for the freesurfer pipeline is the image coregistered to the MEG coordinate system. This coordinate system is sufficiently similar to the conventional coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
 
     % this part creates a freesurfer output base directory and fills it with
     % an anatomical image that is going to be used by freesurfer

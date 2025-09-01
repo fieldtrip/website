@@ -47,7 +47,7 @@ decrease with frequency, the temporal smoothing decreases and the
 frequency smoothing increases._
 
 If you want to know more about _tapers_ or _window functions_ you can have a
-look at the [time-frequency tutorial](/tutorial/timefrequencyanalysis). This
+look at the [time-frequency tutorial](/tutorial/sensor/timefrequencyanalysis). This
 [Wikipedia page](https://en.wikipedia.org/wiki/Window_function) explains the
 effect of the taper or windowing function. Note that Hann window is another name
 for Hanning window used in this tutorial. There is also a Wikipedia page about
@@ -185,7 +185,7 @@ make a plot of a single channel use the function
 _Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**._
 
 If you see plotting artifacts in your figure, see [this
-question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+question](/faq/plotting/opacityrendering).
 
 From the figure, you can see that there is an increase in power around 3-8
 Hz in the time interval 0.1 to 0.3 s after stimulus onset. To show the
