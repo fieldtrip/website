@@ -4,6 +4,9 @@
 # walk the directory structure and build a tree of the directories
 # and files. The tree will then be converted to a menu structure.
 #
+# Installation:
+#   conda create -n website python==3.10
+#   pip install python-frontmatter pyyaml
 
 import os
 import frontmatter

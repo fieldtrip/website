@@ -6,6 +6,10 @@
 # The script will walk the directory tree starting from the directory where it is
 # located and will look for markdown files. If a file has a 'category' field in the
 # frontmatter, it will add the file to the list of files for that category.
+#
+# Installation:
+#   conda create -n website python==3.10
+#   pip install python-frontmatter pyyaml
 
 import os
 import frontmatter
