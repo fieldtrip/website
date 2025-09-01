@@ -19,3 +19,24 @@
 - title:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
+- title:  Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
+  link:  /example/source/sourcemodel_fem_centroids
+
+- title:  Why is the source model deformed or incorrectly aligned after warping template?
+  link:  /faq/source/sourcemodel_deformation
+
+- title:  Is it OK for vertices/dipoles to stick out of the volume conductor?
+  link:  /faq/source/sticking_out
+
+- title:  Template models for source reconstruction
+  link:  /template/sourcemodel
+
+- title:  Creating a source model for source reconstruction of MEG or EEG data
+  link:  /tutorial/source/sourcemodel
+
+- title:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
+- title:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/practicalmeeg2022/handson_anatomy
+
