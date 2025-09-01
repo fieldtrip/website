@@ -12,9 +12,9 @@ version of FieldTrip that is distributed on a USB stcik, rather than the version
 have installed. Furthermore, the tutorial data **does not have to be
 downloaded** but will also be distributed on the USB stick.
 
-1.  Copy the complete Krakow directory from the USB stick to your computer
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
+1. Copy the complete Krakow directory from the USB stick to your computer
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
@@ -28,8 +28,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-The `restoredefaultpath` command clears your path, keeping only the
-official MATLAB toolboxes.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes.
 
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and for example not in another subfolder. You should see a long list of ft_xxx.m functions.
 
@@ -68,6 +67,6 @@ The tutorials that we will use during this toolkit are
 
 **Wednesday morning:** [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer)
 
-**Wednesday afternoon:** [Multivariate analysis of electrophysiological data](/tutorial/multivariateanalysis)
+**Wednesday afternoon:** Multivariate analysis of electrophysiological data
 
-**Thursday, FieldTrip Playground:** If you are stuck with any .bdf specific questions, you might gain insight from the [getting started with BioSemi](/getting_started/biosemi) documentation page.
+**Thursday, FieldTrip Playground:** If you are stuck with any .bdf specific question, you might gain insight from the [getting started with BioSemi](/getting_started/biosemi) documentation page.

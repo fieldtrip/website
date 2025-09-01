@@ -41,7 +41,7 @@ Note that the classification is performed for a single subject using single tria
 
 ## Classification in the 0.5-0.7 s interval
 
-We will use `ft_timelockstatistics` to determine the classification accuracy between the three classes FIC, FC, and IC. As features, the average activity in each MEG channel in the the 0.5-0.7 s interval is used. In each trial, this yields 149 features for the classifier, one feature per MEG channel. Let us first determine the number of trials in each class:
+We will use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** to determine the classification accuracy between the three classes FIC, FC, and IC. As features, the average activity in each MEG channel in the the 0.5-0.7 s interval is used. In each trial, this yields 149 features for the classifier, one feature per MEG channel. Let us first determine the number of trials in each class:
 
     nFIC = numel(dataFIC_LP.trial);
     nFC = numel(dataFC_LP.trial);
@@ -76,9 +76,9 @@ Now call
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
-to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. It is not required that each class
+to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. It is not required that each class
 is contained in a separate dataset. The same result can be achieved when all classes are part of one
-dataset `dat`. To illustrate this, append the data and then pass it to `ft_timelockstatistics`:
+dataset `dat`. To illustrate this, append the data and then pass it to **[ft_timelockstatistics](/reference/ft_timelockstatistics)**:
 
     dat = ft_appenddata([], dataFIC_LP, dataFC_LP, dataIC_LP);
     stat = ft_timelockstatistics(cfg, dat);
@@ -112,7 +112,7 @@ To obtain a realistic estimate of classifier performance and control for overfit
 - `cfg.mvpa.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 - `cfg.mvpa.fold`: if cv='predefined', fold is a vector of length #samples that specifies the fold each sample belongs to
 
-For k-fold cross-validation, the total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is always the average across all test folds and repetitions.
+For k-fold cross-validation, the total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** is always the average across all test folds and repetitions.
 
 ### Exercise 1
 

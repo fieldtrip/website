@@ -549,7 +549,7 @@ An even better trimmed layout can be constructed if we also exclude channel 'FL8
 
 ## Plotting the OPM positions in 3D
 
-The multiplot and the topoplot are both projections on the 2D surface of our screen. It can be helpful to look at the OPM sensors in 3D. For that we can load the full [definition of the sensors](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/).  
+The multiplot and the topoplot are both projections on the 2D surface of our screen. It can be helpful to look at the OPM sensors in 3D. For that we can load the full [definition of the sensors](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).  
 
     close all
     load fieldlinealpha1 % this contains the fieldlinealpha1 structure, similar to the grad structure in the data
