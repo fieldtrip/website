@@ -94,3 +94,99 @@
 - title:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
+- title:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+  link:  /development/module/plotting
+
+- title:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/plotting/nirs_layout
+
+- title:  Plotting the result of source reconstruction on a cortical mesh
+  link:  /example/plotting/plotting_source_surface
+
+- title:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/plotting/video_eeg
+
+- title:  Check the quality of the anatomical coregistration
+  link:  /example/source/coregistration_quality_control
+
+- title:  Which colormaps are supported?
+  link:  /faq/plotting/colormap
+
+- title:  What is a good way to save images for later processing in other software?
+  link:  /faq/plotting/figure_export
+
+- title:  I am having problems printing figures that use opacity
+  link:  /faq/plotting/figure_opacity
+
+- title:  How do I construct a layout file for the plotting functions?
+  link:  /faq/plotting/layout_creation
+
+- title:  What is the format of the layout file which is used for plotting?
+  link:  /faq/plotting/layout_fileformat
+
+- title:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
+  link:  /faq/plotting/layout_magandgrad
+
+- title:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/plotting/opacityrendering
+
+- title:  How can I use the databrowser?
+  link:  /faq/preproc/databrowser
+
+- title:  How can I define neighbouring sensors?
+  link:  /faq/stats/sensors_neighbours
+
+- title:  Reference documentation
+  link:  /reference
+
+- title:  Analysis of corticomuscular coherence
+  link:  /tutorial/connectivity/coherence
+
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/plotting/channel_source
+
+- title:  Specifying the channel layout for plotting
+  link:  /tutorial/plotting/layout
+
+- title:  Event-related averaging and MEG planar gradient
+  link:  /tutorial/sensor/eventrelatedaveraging
+
+- title:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor/sensor_analysis
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
+
+- title:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/source/beamformer
+
+- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_bem
+
+- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/source/headmodel_eeg_fem
+
+- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
+  link:  /tutorial/source/headmodel_meg
+
+- title:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/source/minimumnormestimate
+
+- title:  Creating a source model for source reconstruction of MEG or EEG data
+  link:  /tutorial/source/sourcemodel
+
+- title:  Cluster-based permutation tests on event-related fields
+  link:  /tutorial/stats/cluster_permutation_timelock
+
+- title:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms/tms-eeg
+
+- title:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
+
+- title:  Group analysis
+  link:  /workshop/paris2019/handson_groupanalysis
+
+- title:  Group-level statistics with parametric and non-parametric methods
+  link:  /workshop/practicalmeeg2022/handson_groupanalysis
+

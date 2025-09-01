@@ -28,3 +28,18 @@
 - title:  How is anatomical, functional or statistical "volume data" described?
   link:  /faq/source/datatype_volume
 
+- title:  How are the various MATLAB data structures defined?
+  link:  /faq/development/datatype
+
+- title:  What does a typical call to a FieldTrip function look like?
+  link:  /faq/development/fieldtrip_functioncall
+
+- title:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/preproc/events/inspect_events
+
+- title:  How is the segmentation defined?
+  link:  /faq/source/datatype_segmentation
+
+- title:  How is anatomical, functional or statistical "volume data" described?
+  link:  /faq/source/datatype_volume
+
