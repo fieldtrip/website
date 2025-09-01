@@ -15,7 +15,7 @@ To test the equality of the two softwares solving the inverse solution with mini
 Here is the script that I use
 
     cfg=[];
-    cfg.dataset='//MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
+    cfg.dataset='MagPhant_Phantom_20031211_01-av.ds';
     cfg.trialdef.eventtype='?';
     cfg=ft_definetrial(cfg);
 
@@ -140,7 +140,6 @@ The source space is a 2D surface.
     l = length(X(:)); %l = 841
     pos = [X(:) Y(:) 7*ones(l,1)];
 
-
     ft_plot_mesh(pos);
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/ft_plot_mesh_pos.jpg" width="300" %}
@@ -174,7 +173,6 @@ It is not clear for me when you have to define the option grid.inside and grid.o
     cfg.grid = grid;
     cfg.method = 'mne';
     mne1 = ft_sourceanalysis(cfg,average);
-
 
     figure;
     mne1.avg.pow(100,30)
@@ -244,7 +242,7 @@ Clearly, there is an issue with the (default) pinv implementation. Apparently, s
 
 ## Back to the original phantom data, using FieldTrip and a regularized minimumnormestimate
 
-### Part 1.
+### Part 1
 
 This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda prior to calling ft_sourceanalysis.
 
@@ -305,7 +303,7 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
     % plot a random source
     figure;plot(source.avg.mom{source.inside(100)}');
 
-This gives the following figur
+This gives the following figure:
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/phantomftvsmne01.png" width="400" %}
 
@@ -338,11 +336,11 @@ This gives the following figur
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/phantomftvsmne02.png" width="400" %}
 
-### Part 2.
+### Part 2
 
-Now, I do the same as above (part 1.) but I use the same volume conductor and grid as what I used for MNE Suite.
+Now, I do the same as above (part 1) but I use the same volume conductor and grid as what I used for MNE Suite.
 
-    %cd ~jansch;
+    cd ~jansch;
     cfg.dataset = '/home/language/lilmag/phantom data/MagPhant_Phantom_20031211_01-av.ds';
     hdr         = ft_read_header(cfg.dataset);
     cfg.trl     = [1 600 0;601 1200 0;1201 1800 0];
@@ -461,7 +459,7 @@ I have also tried to plot it the same way as I plot the mesh for the MNE suite r
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/ftplotmesh_ft_phantom_at198.jpg" width="300" %}
 
-### Part 3.
+### Part 3
 
 Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
 
@@ -632,17 +630,17 @@ Compare this to figure at the end of the next session ("Minimum-norm estimate wi
 
 ## Minimum-norm estimate in MNE Suite using phantom data
 
-### Setting up the environmental variables and etc.
+### Setting up the environmental variables etcetera
 
     export MNE_ROOT=/<path>/MNE/MNE-2.7.0-3106-Linux-x86_64
     echo $MNE_ROOT
     export MATLAB_ROOT=/<path>/matlab
     cd $MNE_ROOT/bin
 
-. ./mne_setup_sh
-export SUBJECTS_DIR=/data/corpora/MPI_workspace/ncl/studass/lilla/FT/test/subjects
-echo \$SUBJECTS_DIR
-export SUBJECT=phantomas
+    ./mne_setup_sh
+    export SUBJECTS_DIR=/data/corpora/MPI_workspace/ncl/studass/lilla/FT/test/subjects
+    echo $SUBJECTS_DIR
+    export SUBJECT=phantomas
 
 ### Data conversion
 
@@ -654,7 +652,6 @@ export SUBJECT=phantomas
 First, I have created text files with matlab.
 
     pos_mm=pos.*10; %this pos structure is the same that I used in FT
-
 
     fid = fopen('pos.txt', 'wt');
     n=size(pos_mm,1);
@@ -706,6 +703,7 @@ First, I have created a text file in MATLAB with .tri extension
     fclose(fid);
 
 I renamed the .txt file to .tri.
+
 And then, I used MNE Suite.
 
     mne_surf2bem --tri /<path>/vol.tri --sigma 1 --id 1 --fif /<path>/test/subjects/phantomas/bem/phantomas-bem.fif
@@ -726,14 +724,15 @@ Compensation:Third-order gradient, Selection: phantomas_raw.fif
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/mne_phantom_browse.png" width="600" %}
 
-To look at the data in topographical vie
+To look at the data in topographical view:
 
 Adjust... Full view layout... CTF-151
+
 Windows... Show full view
 
 I had to create a new event list in a text editor
 
-    0 0.000        0   0
+    0   0.000        0   0
     600 1.000        0   1
 
 Saved as phantomas1.eve.
@@ -742,33 +741,7 @@ I did the averaging in batch mode with the help of an averaging file.
 
     mne_process_raw --raw phantomas_raw.fif --projoff  --filteroff --events phantomas1.eve --ave phantomas.ave --digtrig STIM
 
-The averaging file (phantomas.ave
-
-    average {
-
-#
-
-# Output files
-
-#
-
-    outfile         phantom-ave.fif
-    logfile         phantom-ave.log
-    eventfile  phantom1-eve.fif
-
-# Category specifications
-
-#
-
-    category {
-      name  "trial"
-      event  1
-      tmin  -1
-      tmax  0
-      color  1 1 0
-    }
-
-}
+The averaging file (phantomas.ave).
 
 (I haven't rejected anything and there is no baseline.)
 
@@ -777,11 +750,15 @@ Back to MNE browser to look at the averages.
     mne_browse_raw
 
 File... Open evoked Selection: phanotmas-ave.fif
-To se
+
+To set:
+
 Adjust... Full view layout... CTF-151
+
 Windows.. Show averages (If amplitude is to big: Adjust... Scales... Scale magnification for averages: 0.1)
 
-To look at how many trial
+To look at how many trials:
+
 Windows... Manage averages... (It should be N=1)
 
 ### Noise-covariance matrix estimation
@@ -817,7 +794,6 @@ I haven't aligned anything but a transformation matrix saved (with diagonal matr
 ### Forward solution
 
     mne_prepare_bem_model --bem /<path>/test/subjects/phantomas/bem/phantomas-bem.fif --sol /<path>/test/subjects/phantomas/bem/phantomas-bem-sol.fif --method linear
-
     mne_do_forward_solution --src phantomas-src.fif --bem phantomas-bem.fif  --meas phantomas-ave.fif --fwd phantomas-fwd.fif --megonly
 
 ### Inverse solution
@@ -828,19 +804,14 @@ I haven't aligned anything but a transformation matrix saved (with diagonal matr
 
     res = mne_ex_compute_inverse('/home/language/lilmag/Lilla/phantom_mne/phantomas-ave.fif',1,'/home/language/lilmag/Lilla/phantom_mne/phantomas-meg-inv.fif',1,1e-4,[]);
 
-The arguments ar
+The arguments are:
 
-fname_data - Name of the data file
-
-setno - Data set number
-
-fname_inv - Inverse operator file name
-
-nave - Number of averages (scales the noise covariance) If negative, the number of averages in the data will be used
-
-lambda2 - The regularization factor
-
-dSPM - do dSPM?
+- fname_data - Name of the data file
+- setno - Data set number
+- fname_inv - Inverse operator file name
+- nave - Number of averages (scales the noise covariance) If negative, the number of averages in the data will be used
+- lambda2 - The regularization factor
+- dSPM - do dSPM?
 
 I got a res structure.
 
@@ -860,7 +831,6 @@ Maximum was at 284.
     bnd = [];
     m = res.sol(:,284);
 
-
     spoints = res.inv.src.inuse;
     z = find(spoints == 1);
 
@@ -874,7 +844,7 @@ Maximum was at 284.
     proj      = [x y];
     bnd.tri   = delaunay(x, y);
 
-    figure;hold on;
+    figure; hold on;
     ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/ftplotmesh_mne_phantom_at284.jpg" width="300" %}

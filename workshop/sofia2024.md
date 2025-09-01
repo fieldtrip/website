@@ -3,17 +3,21 @@ title: FieldTrip workshop in Sofia, Bulgaria
 tags: [sofia2024]
 ---
 
-# FieldTrip workshop Sofia 07-10.02.2024
+# FieldTrip workshop in Sofia, Bulgaria
 
 [The Institute of Neurobiology](https://inb.bas.bg/index-en.html) at  the [Bulgarian Academy of Science](https://www.bas.bg/?lang=en) is organizing a FieldTrip workshop in Sofia.
 
-# Where
+## Where
 
 The workshop will take place at **[заседателната зала на Института по Биофизика и Биомедицинско Инженерство при БАН - блок 105](https://www.bas.bg/?page_id=3395)**
 
-# Who
+## Who
 
 Tzvetan Popov with local organizers and the generous hardware support by [MBrainTrain](https://mbraintrain.com/).
+
+## When
+
+From 7 to 10 February 2024.
 
 ## Program
 
@@ -46,7 +50,6 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 - **14:45 – 15:00** Coffee break
 - **15:00 – 16:30** **_Hands-On_**: Statistical Analyses- cluster permutation strategies, MVPA and decoding
 - **16:30 – 17:00** Wrap-up-the-day and Summary
-
 
 ### **Day 3 - 09.02.2024**
 

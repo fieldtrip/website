@@ -43,7 +43,7 @@ These are for example due to the contribution of sources that we as neuroscienti
 
 Sometimes it is difficult to say whether something is signal or noise, for example with interictal spikes in intracranial EEG (ECoG and sEEG) recordings: detecting and localizing the epilepsy is _the_ reason why the iEEG electrodes were implanted in the first place, and the doctors mainly care about that part of the signal and hope that it will be well captured in the recordings. However, if the patient volunteered to participate in your experiment, you are likely not interested in the spikes and mostly care about the signal contributions from unaffected brain regions and cognitive processes.
 
-# Procedure
+## Reading the raw data
 
 We start with the raw data that we preprocessed in the [previous tutorial](/workshop/practicalmeeg2022/handson_raw2erp/)
 

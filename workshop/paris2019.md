@@ -26,7 +26,7 @@ Maximilien Chaumon is the local organizer.
 
 Robert Oostenveld and Jan-Mathijs Schoffelen will come from the Donders to lecture and tutor, assisted by Stephen Whitmarsh (who is a former Donderian), and various other people from the MNE and BrainStorm teams.
 
-# Program and training material
+## Program and training material
 
 Please visit the <http://practicalmeeg2019.org> website for more information.
 

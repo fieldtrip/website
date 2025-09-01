@@ -71,7 +71,7 @@ If, after the install of libtdc++5, the lstdc++ error persists, just do a symbol
 
 and it should work.
 
-# Known issues with SPM mex files and workarounds
+## Known issues with SPM mex files and workarounds
 
 Some mex files have been compiled but have not been tested by the FieldTrip developpers on all current platforms that we support. Examples are the mex files provided by external software packages. Below is a list of known issues and alternative workarounds, other than recompiling the incompatible mex files yourself.
 

@@ -160,7 +160,7 @@ Contrary to the description in the accompanying publication (see table 1 in the 
                y: [3x75 double]
        className: {'RIGHT'  'LEFT'  'FOOT'}
 
-# Converting the MATLAB structure to a FieldTrip raw data structure
+## Converting the MATLAB structure to a FieldTrip raw data structure
 
 Since the data is not stored on disk in a [dataformat](/faq/preproc/datahandling/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequently asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
 

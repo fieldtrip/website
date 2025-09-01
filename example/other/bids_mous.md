@@ -197,9 +197,7 @@ done # for SUB in ...
 ##################################################
 
 # the following section deals with the exceptions.
-
 # these are task datasets that consist of 2 ds
-
 # directories upon acquisition, caused by DSQ problems
 
 newDs -anon $RAW/A2011/meg/A2011_301102009_02.ds  $BIDS/sub-A2011/meg/sub-A2011_task-auditory_run-1_meg.ds
