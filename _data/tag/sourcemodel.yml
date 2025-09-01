@@ -1,3 +1,6 @@
+- title:  Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
+  link:  /example/source/sourcemodel_fem_centroids
+
 - title:  Why is the source model deformed or incorrectly aligned after warping template?
   link:  /faq/source/sourcemodel_deformation
 

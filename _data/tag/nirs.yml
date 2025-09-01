@@ -13,7 +13,7 @@
 - title:  Analyzing NIRS data recorded during listening to and repeating speech
   link:  /example/sensor/nirs_speech
 
-- title:  Using GLM to analyze NIRS timeseries data
+- title:  Using general linear modeling to analyze NIRS timeseries data
   link:  /example/stats/nirs_glm
 
 - title:  Which datasets are used in the documentation and where are they used?

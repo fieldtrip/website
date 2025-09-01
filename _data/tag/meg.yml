@@ -43,7 +43,7 @@
 - title:  Make MEG leadfields using different headmodels
   link:  /example/source/headmodel_various
 
-- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+- title:  Read Neuromag .fif mri and create a MNI-aligned single-shell head model
   link:  /example/source/neuromag_aligned2mni
 
 - title:  Compute forward simulated data and apply a beamformer scan
@@ -52,11 +52,14 @@
 - title:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/source/simulateddata_ctf
 
-- title:  Create brain atlas based MNI-aligned grids in individual head-space
+- title:  Create MNI-aligned grids in individual head coordinates
+  link:  /example/source/sourcemodel_aligned2mni
+
+- title:  Create atlas-based MNI-aligned grids in individual head coordinates
   link:  /example/source/sourcemodel_aligned2mni_atlas
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
+- title:  Create a template source model aligned to MNI space
+  link:  /example/source/sourcemodel_mnitemplate
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg
@@ -127,11 +130,11 @@
 - title:  Getting started with LIMO MEEG
   link:  /getting_started/othersoftware/limo
 
-- title:  Getting started with MNE(-python)
+- title:  Getting started with MNE-Python
   link:  /getting_started/othersoftware/mne
 
 - title:  Getting started with real-time head localization in MEG
-  link:  /getting_started/realtime/realtime_headlocalizer
+  link:  /getting_started/realtime/headlocalizer
 
 - title:  Importing your data
   link:  /reading_data
@@ -193,20 +196,20 @@
 - title:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor/sensor_analysis
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/sensor/timefrequencyanalysis
-
 - title:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/sensor/timefrequency
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
 
 - title:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/source/beamformer
 
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-
 - title:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/source/beamforming
+
+- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/source/beamformingextended
 
 - title:  Dipole fitting of combined MEG/EEG data
   link:  /tutorial/source/dipolefitting
@@ -250,11 +253,14 @@
 - title:  FieldTrip Walkthrough
   link:  /walkthrough
 
+- title:  FieldTrip workshop in Aarhus
+  link:  /workshop/aarhus2015
+
 - title:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus2015/beamformingerf
 
-- title:  FieldTrip workshop in Aarhus
-  link:  /workshop/aarhus2015
+- title:  MEG-UK 2015 meeting
+  link:  /workshop/meg-uk-2015
 
 - title:  Multimodal faces dataset
   link:  /workshop/meg-uk-2015/dataset
@@ -273,9 +279,6 @@
 
 - title:  General instructions for MATLAB demo's
   link:  /workshop/meg-uk-2015/general
-
-- title:  MEG-UK 2015 meeting
-  link:  /workshop/meg-uk-2015
 
 - title:  SPM Source reconstruction demo
   link:  /workshop/meg-uk-2015/spm_source

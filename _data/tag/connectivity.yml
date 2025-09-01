@@ -13,17 +13,17 @@
 - title:  Connectivity in auditory evoked responses
   link:  /tutorial/connectivity/connectivity_aef
 
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
 - title:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivity_sensor_source
 
-- title:  Whole brain connectivity and network analysis
-  link:  /tutorial/connectivity/networkanalysis_eeg
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
 - title:  Whole brain connectivity and network analysis
   link:  /tutorial/connectivity/networkanalysis
+
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_eeg
 
 - title:  Whole brain connectivity and network analysis
   link:  /tutorial/connectivity/networkanalysis_old

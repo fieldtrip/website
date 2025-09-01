@@ -1,6 +1,9 @@
 - title:  Examples
   link:  /example
 
+- title:  BIDS - the brain imaging data structure
+  link:  /example/other/bids
+
 - title:  Converting an example audio dataset for sharing in BIDS
   link:  /example/other/bids_audio
 
@@ -15,9 +18,6 @@
 
 - title:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/other/bids_eyetracker
-
-- title:  BIDS - the brain imaging data structure
-  link:  /example/other/bids
 
 - title:  Converting an example MEG dataset for sharing in BIDS
   link:  /example/other/bids_meg
@@ -37,13 +37,13 @@
 - title:  Converting an example video dataset for sharing in BIDS
   link:  /example/other/bids_video
 
-- title:  Example analysis pipeline for Biosemi data
+- title:  Example analysis pipeline for BioSemi data
   link:  /example/other/biosemi
 
 - title:  How to use ft_checkconfig
   link:  /example/other/checkconfig
 
-- title:  Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+- title:  Perform modified multiscale entropy (mMSE) analysis on EEG/MEG/LFP data
   link:  /example/other/entropy_analysis
 
 - title:  Correlation analysis of fMRI data
@@ -55,14 +55,14 @@
 - title:  Find the orientation of planar gradiometers
   link:  /example/other/planar_orientation
 
+- title:  Making your analysis pipeline reproducible using reproducescript
+  link:  /example/other/reproducescript
+
 - title:  Using reproducescript on a full study
   link:  /example/other/reproducescript_andersen
 
 - title:  Using reproducescript for a group analysis
   link:  /example/other/reproducescript_group
-
-- title:  Making your analysis pipeline reproducible using reproducescript
-  link:  /example/other/reproducescript
 
 - title:  Creating a layout for plotting NIRS optodes and channels
   link:  /example/plotting/nirs_layout
@@ -145,11 +145,11 @@
 - title:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/source/beamformer_ownforward
 
-- title:  Testing BEM created EEG lead fields
-  link:  /example/source/bem_evaluation
-
 - title:  Compute EEG leadfields using a BEM headmodel
   link:  /example/source/bem
+
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
 
 - title:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/source/compute_leadfield
@@ -178,8 +178,11 @@
 - title:  Make MEG leadfields using different headmodels
   link:  /example/source/headmodel_various
 
-- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+- title:  Read Neuromag .fif mri and create a MNI-aligned single-shell head model
   link:  /example/source/neuromag_aligned2mni
+
+- title:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/source/simulateddata
 
 - title:  Compute forward simulated data and apply a beamformer scan
   link:  /example/source/simulateddata_beamformer
@@ -190,14 +193,17 @@
 - title:  Compute forward simulated data and apply a dipole fit
   link:  /example/source/simulateddata_dipolefit
 
-- title:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/source/simulateddata
+- title:  Create MNI-aligned grids in individual head coordinates
+  link:  /example/source/sourcemodel_aligned2mni
 
-- title:  Create brain atlas based MNI-aligned grids in individual head-space
+- title:  Create atlas-based MNI-aligned grids in individual head coordinates
   link:  /example/source/sourcemodel_aligned2mni_atlas
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
+- title:  Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
+  link:  /example/source/sourcemodel_fem_centroids
+
+- title:  Create a template source model aligned to MNI space
+  link:  /example/source/sourcemodel_mnitemplate
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg
@@ -229,13 +235,13 @@
 - title:  Conditional Granger causality in the frequency domain
   link:  /example/spectral/granger_conditional
 
-- title:  Irregular Resampling Auto-Spectral Analysis (IRASA)
+- title:  Irregular resampling auto-spectral analysis (IRASA)
   link:  /example/spectral/irasa
 
 - title:  Simulate an oscillatory signal with phase resetting
   link:  /example/spectral/phase_reset
 
-- title:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+- title:  Analyze steady-state visual evoked potentials (SSVEPs)
   link:  /example/spectral/ssvep
 
 - title:  Interpolate the time axis of single-trial TFRs
@@ -244,16 +250,16 @@
 - title:  Computing and reporting the effect size
   link:  /example/stats/effectsize
 
-- title:  Using General Linear Modeling on time series data
+- title:  Using general linear modeling on time series data
   link:  /example/stats/glm_timeseries
 
-- title:  Using General Linear Modeling over trials
+- title:  Using general linear modeling over trials
   link:  /example/stats/glm_trials
 
 - title:  Defining electrodes as neighbours for cluster-level statistics
   link:  /example/stats/neighbours
 
-- title:  Using GLM to analyze NIRS timeseries data
+- title:  Using general linear modeling to analyze NIRS timeseries data
   link:  /example/stats/nirs_glm
 
 - title:  Using simulations to estimate the sample size for cluster-based permutation test

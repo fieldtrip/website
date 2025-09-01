@@ -16,6 +16,9 @@
 - title:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
   link:  /faq/preproc/artifact/ica_crash
 
+- title:  Why does my ICA eyeblink component look strange?
+  link:  /faq/preproc/artifact/ica_eyeblink_topo
+
 - title:  Should I rereference prior to or after ICA for artifact removal?
   link:  /faq/preproc/ica_rereference
 

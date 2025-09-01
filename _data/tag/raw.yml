@@ -22,11 +22,11 @@
 - title:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/preproc/dataformat/ctf_fixres4
 
-- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/preproc/dataformat/neuroscan
-
 - title:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/preproc/datahandling/ctf_readcorrupted
+  link:  /faq/preproc/dataformat/ctf_readcorrupted
+
+- title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
+  link:  /faq/preproc/dataformat/neuroscan
 
 - title:  What dataformats are supported?
   link:  /faq/preproc/datahandling/dataformat

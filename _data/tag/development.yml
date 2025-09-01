@@ -1,4 +1,7 @@
-- title:  Toolbox architecture and organization of the source code
+- title:  Development
+  link:  /development
+
+- title:  Software architecture
   link:  /development/architecture
 
 - title:  Contribute
@@ -7,7 +10,7 @@
 - title:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- title:  Data structures used by FieldTrip
+- title:  Data structures
   link:  /development/datastructure
 
 - title:  Accessing the FieldTrip source code through Git
@@ -30,9 +33,6 @@
 
 - title:  Reporting issues
   link:  /development/issues
-
-- title:  Development
-  link:  /development
 
 - title:  Meetings
   link:  /development/meeting

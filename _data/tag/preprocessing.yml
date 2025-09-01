@@ -46,11 +46,14 @@
 - title:  Do I need to resample my data, and if so, how is this to be done?
   link:  /faq/preproc/artifact/resampling_lowpassfilter
 
-- title:  Why should I start with rereferencing for Biosemi EEG data?
+- title:  Why should I start with rereferencing for BioSemi EEG data?
   link:  /faq/preproc/biosemi_reference
 
 - title:  Why should I set continuous to yes for CTF data?
   link:  /faq/preproc/continuous
+
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/dataformat/ctf_readcorrupted
 
 - title:  How can I import my own data format?
   link:  /faq/preproc/dataformat/dataformat_own
@@ -64,7 +67,7 @@
 - title:  How can I extend the reading functions with a new dataformat?
   link:  /faq/preproc/dataformat/fileio_dataformat
 
-- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+- title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
   link:  /faq/preproc/dataformat/neuroscan
 
 - title:  How can I append the files of two separate recordings?
@@ -72,9 +75,6 @@
 
 - title:  How can I convert one dataformat into an other?
   link:  /faq/preproc/datahandling/convert_dataformat
-
-- title:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/preproc/datahandling/ctf_readcorrupted
 
 - title:  What dataformats are supported?
   link:  /faq/preproc/datahandling/dataformat
@@ -139,11 +139,11 @@
 - title:  Event-related averaging and MEG planar gradient
   link:  /tutorial/sensor/eventrelatedaveraging
 
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
 - title:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/sensor/preprocessing
+
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 
 - title:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor/sensor_analysis
@@ -159,9 +159,6 @@
 
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
-
-- title:  Time-frequency analysis of task EEG data
-  link:  /workshop/nigeria2025/timefrequency
 
 - title:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction

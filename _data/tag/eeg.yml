@@ -1,7 +1,7 @@
 - title:  Streaming realtime data from Modular EEG (aka OpenEEG)
   link:  /development/realtime/modulareeg
 
-- title:  Example analysis pipeline for Biosemi data
+- title:  Example analysis pipeline for BioSemi data
   link:  /example/other/biosemi
 
 - title:  Making a synchronous movie of EEG or NIRS combined with video recordings
@@ -16,11 +16,11 @@
 - title:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/source/beamformer_ownforward
 
-- title:  Testing BEM created EEG lead fields
-  link:  /example/source/bem_evaluation
-
 - title:  Compute EEG leadfields using a BEM headmodel
   link:  /example/source/bem
+
+- title:  Testing BEM created EEG lead fields
+  link:  /example/source/bem_evaluation
 
 - title:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/source/compute_leadfield
@@ -34,11 +34,11 @@
 - title:  Compute EEG leadfields using a FEM headmodel
   link:  /example/source/fem
 
-- title:  Compute forward simulated data and apply a dipole fit
-  link:  /example/source/simulateddata_dipolefit
-
 - title:  Compute forward simulated data using ft_dipolesimulation
   link:  /example/source/simulateddata
+
+- title:  Compute forward simulated data and apply a dipole fit
+  link:  /example/source/simulateddata_dipolefit
 
 - title:  Combined EEG and MEG source reconstruction
   link:  /example/source/sourcerecon_meeg
@@ -46,10 +46,10 @@
 - title:  Analysis of high-gamma band signals in human ECoG
   link:  /example/spectral/ecog_ny
 
-- title:  Using General Linear Modeling on time series data
+- title:  Using general linear modeling on time series data
   link:  /example/stats/glm_timeseries
 
-- title:  Using General Linear Modeling over trials
+- title:  Using general linear modeling over trials
   link:  /example/stats/glm_trials
 
 - title:  Can I compare EEG channels between different electrode caps?
@@ -58,7 +58,7 @@
 - title:  Which datasets are used in the documentation and where are they used?
   link:  /faq/other/datasets
 
-- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+- title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
   link:  /faq/preproc/dataformat/neuroscan
 
 - title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
@@ -97,7 +97,7 @@
 - title:  Getting started with ANT-Neuro, ASA and EEProbe data
   link:  /getting_started/eeg/antneuro
 
-- title:  Getting started with Biosemi BDF data
+- title:  Getting started with BioSemi BDF data
   link:  /getting_started/eeg/biosemi
 
 - title:  Getting started with BrainVision Analyzer and Easycap
@@ -127,7 +127,7 @@
 - title:  Getting started with LIMO MEEG
   link:  /getting_started/othersoftware/limo
 
-- title:  Getting started with MNE(-python)
+- title:  Getting started with MNE-Python
   link:  /getting_started/othersoftware/mne
 
 - title:  Importing your data
@@ -163,20 +163,20 @@
 - title:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/preproc/continuous
 
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
 - title:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/sensor/preprocessing
+
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 
 - title:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sensor/sleep
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/sensor/timefrequencyanalysis
-
 - title:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/sensor/timefrequency
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
 
 - title:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/source/beamforming
@@ -220,14 +220,14 @@
 - title:  Time-frequency analysis on short and long timescales
   link:  /workshop/cuttingeeg2021/tutorial_freq
 
+- title:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
+
 - title:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 
 - title:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_sedation
-
-- title:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
 
 - title:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
@@ -253,17 +253,14 @@
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
 
-- title:  Time-frequency analysis of task EEG data
-  link:  /workshop/nigeria2025/timefrequency
+- title:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
 
 - title:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
 - title:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
-
-- title:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
 
 - title:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics

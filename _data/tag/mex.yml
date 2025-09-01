@@ -1,6 +1,3 @@
-- title:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/matlab/compiled
-
 - title:  How can I compile the mex files and command-line executable?
   link:  /faq/matlab/compile
 
@@ -9,6 +6,9 @@
 
 - title:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/matlab/compile_windows
+
+- title:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/matlab/compiled
 
 - title:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab/matlab_mexinvalid

@@ -46,11 +46,11 @@
 - title:  Analysis of corticomuscular coherence
   link:  /tutorial/connectivity/coherence
 
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/plotting/channel_source
+
 - title:  Specifying the channel layout for plotting
   link:  /tutorial/plotting/layout
-
-- title:  Plotting data at the channel and source level
-  link:  /tutorial/plotting/plotting_channel_source
 
 - title:  Event-related averaging and MEG planar gradient
   link:  /tutorial/sensor/eventrelatedaveraging

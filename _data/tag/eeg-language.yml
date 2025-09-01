@@ -1,7 +1,7 @@
-- title:  Using General Linear Modeling on time series data
+- title:  Using general linear modeling on time series data
   link:  /example/stats/glm_timeseries
 
-- title:  Using General Linear Modeling over trials
+- title:  Using general linear modeling over trials
   link:  /example/stats/glm_trials
 
 - title:  Which datasets are used in the documentation and where are they used?
@@ -33,7 +33,4 @@
 
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
-
-- title:  Time-frequency analysis of task EEG data
-  link:  /workshop/nigeria2025/timefrequency
 

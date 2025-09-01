@@ -1,3 +1,6 @@
+- title:  Getting started
+  link:  /getting_started
+
 - title:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/eeg/1020
 
@@ -10,7 +13,7 @@
 - title:  Getting started with BESA data
   link:  /getting_started/eeg/besa
 
-- title:  Getting started with Biosemi BDF data
+- title:  Getting started with BioSemi BDF data
   link:  /getting_started/eeg/biosemi
 
 - title:  Getting started with BrainVision Analyzer and Easycap
@@ -43,20 +46,17 @@
 - title:  Getting started with human ECoG data
   link:  /getting_started/intracranial/human_ecog
 
-- title:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/intracranial/neuralynx_fcdc
-
 - title:  Getting started with Neuralynx data
   link:  /getting_started/intracranial/neuralynx
+
+- title:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/intracranial/neuralynx_fcdc
 
 - title:  Getting started with Neurodata Without Borders (NWB) data
   link:  /getting_started/intracranial/nwb
 
 - title:  Getting started with Plexon data
   link:  /getting_started/intracranial/plexon
-
-- title:  Getting started
-  link:  /getting_started
 
 - title:  Getting started with BabySQUID data
   link:  /getting_started/meg/babysquid
@@ -136,7 +136,7 @@
 - title:  Getting started with MeshLab
   link:  /getting_started/othersoftware/meshlab
 
-- title:  Getting started with MNE(-python)
+- title:  Getting started with MNE-Python
   link:  /getting_started/othersoftware/mne
 
 - title:  Getting started with ParaView
@@ -151,12 +151,12 @@
 - title:  Getting started with SPM
   link:  /getting_started/othersoftware/spm
 
+- title:  Getting started with real-time analysis for BCI and neurofeedback
+  link:  /getting_started/realtime/bci
+
 - title:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime/realtime_fmri
+  link:  /getting_started/realtime/fmri
 
 - title:  Getting started with real-time head localization in MEG
-  link:  /getting_started/realtime/realtime_headlocalizer
-
-- title:  Getting started with real-time analysis for BCI/neurofeedback
-  link:  /getting_started/realtime/realtime
+  link:  /getting_started/realtime/headlocalizer
 

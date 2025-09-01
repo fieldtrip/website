@@ -22,7 +22,7 @@
 - title:  Simulate an oscillatory signal with phase resetting
   link:  /example/spectral/phase_reset
 
-- title:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+- title:  Analyze steady-state visual evoked potentials (SSVEPs)
   link:  /example/spectral/ssvep
 
 - title:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
@@ -97,11 +97,11 @@
 - title:  Connectivity in auditory evoked responses
   link:  /tutorial/connectivity/connectivity_aef
 
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
 - title:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivity_sensor_source
+
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
 - title:  Introduction to the FieldTrip toolbox
   link:  /tutorial/intro/introduction

@@ -22,11 +22,11 @@
 - title:  Analysis of corticomuscular coherence
   link:  /tutorial/connectivity/coherence
 
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
 - title:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivity_sensor_source
+
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
 - title:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/source/beamformingextended

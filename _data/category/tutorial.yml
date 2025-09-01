@@ -1,20 +1,23 @@
+- title:  Tutorials
+  link:  /tutorial
+
 - title:  Analysis of corticomuscular coherence
   link:  /tutorial/connectivity/coherence
 
 - title:  Connectivity in auditory evoked responses
   link:  /tutorial/connectivity/connectivity_aef
 
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
 - title:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity/connectivity_sensor_source
 
-- title:  Whole brain connectivity and network analysis
-  link:  /tutorial/connectivity/networkanalysis_eeg
+- title:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity/connectivityextended
 
 - title:  Whole brain connectivity and network analysis
   link:  /tutorial/connectivity/networkanalysis
+
+- title:  Whole brain connectivity and network analysis
+  link:  /tutorial/connectivity/networkanalysis_eeg
 
 - title:  Whole brain connectivity and network analysis
   link:  /tutorial/connectivity/networkanalysis_old
@@ -28,20 +31,17 @@
 - title:  Channel and source analysis of mouse EEG
   link:  /tutorial/intracranial/mouse_eeg
 
-- title:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/intracranial/spikefield
-
 - title:  Preprocessing and analysis of spike-train data
   link:  /tutorial/intracranial/spike
+
+- title:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/intracranial/spikefield
 
 - title:  Introduction to the FieldTrip toolbox
   link:  /tutorial/intro/introduction
 
 - title:  Creating a clean analysis pipeline
-  link:  /tutorial/intro/scripting
-
-- title:  Tutorials
-  link:  /tutorial
+  link:  /tutorial/intro/pipeline
 
 - title:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs/nirs_multichannel
@@ -49,11 +49,11 @@
 - title:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs/nirs_singlechannel
 
+- title:  Plotting data at the channel and source level
+  link:  /tutorial/plotting/channel_source
+
 - title:  Specifying the channel layout for plotting
   link:  /tutorial/plotting/layout
-
-- title:  Plotting data at the channel and source level
-  link:  /tutorial/plotting/plotting_channel_source
 
 - title:  Introduction on dealing with artifacts
   link:  /tutorial/preproc/artifacts
@@ -85,11 +85,11 @@
 - title:  Event-related averaging and MEG planar gradient
   link:  /tutorial/sensor/eventrelatedaveraging
 
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
 - title:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/sensor/preprocessing
+
+- title:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/sensor/preprocessing_erp
 
 - title:  Preprocessing of Optically Pumped Magnetometer (OPM) data
   link:  /tutorial/sensor/preprocessing_opm
@@ -100,20 +100,20 @@
 - title:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sensor/sleep
 
-- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/sensor/timefrequencyanalysis
-
 - title:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/sensor/timefrequency
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/sensor/timefrequencyanalysis
 
 - title:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/source/beamformer
 
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-
 - title:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/source/beamforming
+
+- title:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/source/beamformingextended
 
 - title:  Coregistration of Optically Pumped Magnetometer (OPM) data
   link:  /tutorial/source/coregistration_opm

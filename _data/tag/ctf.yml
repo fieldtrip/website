@@ -34,11 +34,11 @@
 - title:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/preproc/dataformat/ctf_fixres4
 
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/dataformat/ctf_readcorrupted
+
 - title:  How does the CTF higher-order gradiometer work?
   link:  /faq/preproc/dataformat/ctf_syntheticgradient
-
-- title:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/preproc/datahandling/ctf_readcorrupted
 
 - title:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/source/anat_dicom2ctf

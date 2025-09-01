@@ -10,14 +10,17 @@
 - title:  Align EEG electrode positions to BEM headmodel
   link:  /example/source/electrodes2bem
 
-- title:  Read neuromag .fif mri and create a MNI-aligned single-shell head model
+- title:  Read Neuromag .fif mri and create a MNI-aligned single-shell head model
   link:  /example/source/neuromag_aligned2mni
 
-- title:  Create brain atlas based MNI-aligned grids in individual head-space
+- title:  Create MNI-aligned grids in individual head coordinates
+  link:  /example/source/sourcemodel_aligned2mni
+
+- title:  Create atlas-based MNI-aligned grids in individual head coordinates
   link:  /example/source/sourcemodel_aligned2mni_atlas
 
-- title:  Create MNI-aligned grids in individual head-space
-  link:  /example/source/sourcemodel_aligned2mni
+- title:  Create a template source model aligned to MNI space
+  link:  /example/source/sourcemodel_mnitemplate
 
 - title:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/other/anonymization_anatomical
@@ -62,7 +65,7 @@
   link:  /getting_started/otherdata/fmri
 
 - title:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime/realtime_fmri
+  link:  /getting_started/realtime/fmri
 
 - title:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/intracranial/human_ecog

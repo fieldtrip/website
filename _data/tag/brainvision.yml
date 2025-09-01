@@ -4,6 +4,9 @@
 - title:  How can I anonymize or deidentify a BrainVision dataset?
   link:  /faq/other/anonymization_brainvision
 
+- title:  Why does my ICA eyeblink component look strange?
+  link:  /faq/preproc/artifact/ica_eyeblink_topo
+
 - title:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/eeg/brainvision
 
@@ -18,7 +21,4 @@
 
 - title:  Preprocessing of EEG data
   link:  /workshop/nigeria2025/preprocessing
-
-- title:  Time-frequency analysis of task EEG data
-  link:  /workshop/nigeria2025/timefrequency
 

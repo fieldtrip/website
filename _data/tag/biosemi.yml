@@ -1,12 +1,12 @@
-- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+- title:  Streaming realtime data from BioSemi ActiveTwo EEG amplifier
   link:  /development/realtime/biosemi
 
-- title:  Example analysis pipeline for Biosemi data
+- title:  Example analysis pipeline for BioSemi data
   link:  /example/other/biosemi
 
-- title:  Why should I start with rereferencing for Biosemi EEG data?
+- title:  Why should I start with rereferencing for BioSemi EEG data?
   link:  /faq/preproc/biosemi_reference
 
-- title:  Getting started with Biosemi BDF data
+- title:  Getting started with BioSemi BDF data
   link:  /getting_started/eeg/biosemi
 

@@ -1,3 +1,6 @@
+- title:  Real-time data processing
+  link:  /development/realtime
+
 - title:  Streaming realtime EEG data to and from Arduino
   link:  /development/realtime/arduino
 
@@ -10,11 +13,14 @@
 - title:  Streaming realtime data from and to BCI2000
   link:  /development/realtime/bci2000
 
-- title:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
+- title:  Streaming realtime data from BioSemi ActiveTwo EEG amplifier
   link:  /development/realtime/biosemi
 
 - title:  Streaming realtime data from and to BrainStream
   link:  /development/realtime/brainstream
+
+- title:  Overview of the realtime buffer
+  link:  /development/realtime/buffer
 
 - title:  FieldTrip buffer C implementation
   link:  /development/realtime/buffer_c
@@ -27,9 +33,6 @@
 
 - title:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/buffer_matlab
-
-- title:  Overview of the realtime buffer
-  link:  /development/realtime/buffer
 
 - title:  Low-level FieldTrip buffer TCP network protocol
   link:  /development/realtime/buffer_protocol
@@ -63,9 +66,6 @@
 
 - title:  Streaming realtime data from Jinga-Hi
   link:  /development/realtime/jinga-hi
-
-- title:  Real-time access to neurophysiological data
-  link:  /development/realtime
 
 - title:  Streaming realtime data from Micromed
   link:  /development/realtime/micromed
@@ -133,23 +133,23 @@
 - title:  What kind of cable do I need for a serial port connection between two computers?
   link:  /faq/experiment/serialport
 
-- title:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/realtime/fieldtripbuffer_gettingstarted
-
 - title:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/realtime/fieldtripbuffer
+
+- title:  How should I get started with the FieldTrip realtime buffer?
+  link:  /faq/realtime/fieldtripbuffer_gettingstarted
 
 - title:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/realtime/fieldtripbuffer_speed
 
+- title:  Getting started with real-time analysis for BCI and neurofeedback
+  link:  /getting_started/realtime/bci
+
 - title:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime/realtime_fmri
+  link:  /getting_started/realtime/fmri
 
 - title:  Getting started with real-time head localization in MEG
-  link:  /getting_started/realtime/realtime_headlocalizer
-
-- title:  Getting started with real-time analysis for BCI/neurofeedback
-  link:  /getting_started/realtime/realtime
+  link:  /getting_started/realtime/headlocalizer
 
 - title:  Realtime MEG BCI hands-on session in Nijmegen
   link:  /workshop/realtime

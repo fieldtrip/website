@@ -16,11 +16,11 @@
 - title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
   link:  /tutorial/stats/statistics
 
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-
 - title:  FieldTrip workshop in Aarhus
   link:  /workshop/aarhus2015
+
+- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus2015/beamformingerf
 
 - title:  FieldTrip course at the NatMEG in Stockholm
   link:  /workshop/natmeg2014

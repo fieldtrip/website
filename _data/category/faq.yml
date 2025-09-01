@@ -1,3 +1,6 @@
+- title:  Frequently asked questions
+  link:  /faq
+
 - title:  How are the various MATLAB data structures defined?
   link:  /faq/development/datatype
 
@@ -34,7 +37,7 @@
 - title:  How can I monitor a subject's head position during a MEG session?
   link:  /faq/experiment/headlocalizer
 
-- title:  How can I visualize the neuromag head position indicator coils?
+- title:  How can I visualize the Neuromag head position indicator coils?
   link:  /faq/experiment/neuromag_hpi
 
 - title:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
@@ -42,9 +45,6 @@
 
 - title:  What kind of cable do I need for a serial port connection between two computers?
   link:  /faq/experiment/serialport
-
-- title:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/matlab/compiled
 
 - title:  How can I compile the mex files and command-line executable?
   link:  /faq/matlab/compile
@@ -54,6 +54,9 @@
 
 - title:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/matlab/compile_windows
+
+- title:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/matlab/compiled
 
 - title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/matlab/databrowser_crash
@@ -100,9 +103,6 @@
 - title:  Can I prevent "external" toolboxes from being added to my MATLAB path?
   link:  /faq/matlab/toolboxes_legacyvsexternal
 
-- title:  Frequently asked questions
-  link:  /faq
-
 - title:  How should I share example data with the email list or developers?
   link:  /faq/organization/datasharing
 
@@ -139,11 +139,11 @@
 - title:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/organization/fieldtrip_eeglab
 
-- title:  Can I use the FieldTrip logo on my poster?
-  link:  /faq/organization/fieldtriplogo
-
 - title:  How should I refer to FieldTrip in my publication?
   link:  /faq/organization/fieldtrip_reference
+
+- title:  Can I use the FieldTrip logo on my poster?
+  link:  /faq/organization/fieldtriplogo
 
 - title:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/other/anonymization_anatomical
@@ -169,11 +169,11 @@
 - title:  Which methodological details should I report in an EEG/MEG manuscript?
   link:  /faq/other/checklist
 
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
 - title:  How can I share my MEG data?
   link:  /faq/other/data_sharing
+
+- title:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/other/datasets
 
 - title:  Which version of FieldTrip should I download?
   link:  /faq/other/download_version
@@ -244,6 +244,9 @@
 - title:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
   link:  /faq/preproc/artifact/ica_crash
 
+- title:  Why does my ICA eyeblink component look strange?
+  link:  /faq/preproc/artifact/ica_eyeblink_topo
+
 - title:  What kind of filters can I apply to my data?
   link:  /faq/preproc/artifact/preproc_filtertypes
 
@@ -253,7 +256,7 @@
 - title:  Do I need to resample my data, and if so, how is this to be done?
   link:  /faq/preproc/artifact/resampling_lowpassfilter
 
-- title:  Why should I start with rereferencing for Biosemi EEG data?
+- title:  Why should I start with rereferencing for BioSemi EEG data?
   link:  /faq/preproc/biosemi_reference
 
 - title:  Why should I set continuous to yes for CTF data?
@@ -270,6 +273,9 @@
 
 - title:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/preproc/dataformat/ctf_fixres4
+
+- title:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/preproc/dataformat/ctf_readcorrupted
 
 - title:  How does the CTF higher-order gradiometer work?
   link:  /faq/preproc/dataformat/ctf_syntheticgradient
@@ -292,7 +298,7 @@
 - title:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/preproc/dataformat/fileio_stateless
 
-- title:  I have problems reading in neuroscan .cnt files. How can I fix this?
+- title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
   link:  /faq/preproc/dataformat/neuroscan
 
 - title:  How can I append the files of two separate recordings?
@@ -300,9 +306,6 @@
 
 - title:  How can I convert one dataformat into an other?
   link:  /faq/preproc/datahandling/convert_dataformat
-
-- title:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/preproc/datahandling/ctf_readcorrupted
 
 - title:  What dataformats are supported?
   link:  /faq/preproc/datahandling/dataformat
@@ -346,11 +349,11 @@
 - title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
   link:  /faq/preproc/trialinfo_trl
 
-- title:  How should I get started with the FieldTrip realtime buffer?
-  link:  /faq/realtime/fieldtripbuffer_gettingstarted
-
 - title:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/realtime/fieldtripbuffer
+
+- title:  How should I get started with the FieldTrip realtime buffer?
+  link:  /faq/realtime/fieldtripbuffer_gettingstarted
 
 - title:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/realtime/fieldtripbuffer_speed

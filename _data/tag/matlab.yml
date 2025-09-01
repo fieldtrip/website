@@ -4,11 +4,11 @@
 - title:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/experiment/psychtoolbox_macbook
 
-- title:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/matlab/compiled
-
 - title:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/matlab/compile_windows
+
+- title:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/matlab/compiled
 
 - title:  Which external toolboxes are used by FieldTrip?
   link:  /faq/matlab/external
@@ -62,7 +62,7 @@
   link:  /tutorial/intro/introduction
 
 - title:  Creating a clean analysis pipeline
-  link:  /tutorial/intro/scripting
+  link:  /tutorial/intro/pipeline
 
 - title:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/scripting/distributedcomputing_parfor
