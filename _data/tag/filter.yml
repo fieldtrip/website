@@ -16,21 +16,3 @@
 - title:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/spectral/tfr_strangedetrend
 
-- title:  Determine the filter characteristics
-  link:  /example/preproc/filter_characteristics
-
-- title:  How can I interpret the different types of padding in FieldTrip?
-  link:  /faq/preproc/artifact/artifact_padding
-
-- title:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/preproc/artifact/dftfilter_residual
-
-- title:  What kind of filters can I apply to my data?
-  link:  /faq/preproc/artifact/preproc_filtertypes
-
-- title:  How does the filter padding in preprocessing work?
-  link:  /faq/preproc/artifact/preproc_padding
-
-- title:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/spectral/tfr_strangedetrend
-

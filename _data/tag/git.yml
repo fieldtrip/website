@@ -16,21 +16,3 @@
 - title:  How should I share example data with the email list or developers?
   link:  /faq/organization/datasharing
 
-- title:  Accessing the FieldTrip source code through CVS
-  link:  /development/cvs
-
-- title:  Accessing the FieldTrip source code through Git
-  link:  /development/git
-
-- title:  Accessing the FieldTrip source code through SVN
-  link:  /development/svn
-
-- title:  Why was FieldTrip maintained in SVN and not in Git?
-  link:  /faq/development/svnversusgit
-
-- title:  How can I keep track of changes to the code?
-  link:  /faq/development/trackchanges
-
-- title:  How should I share example data with the email list or developers?
-  link:  /faq/organization/datasharing
-

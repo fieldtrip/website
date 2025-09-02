@@ -10,15 +10,3 @@
 - title:  Localizing sources using beamformer techniques
   link:  /tutorial/source/beamformer_lcmv
 
-- title:  Code guidelines
-  link:  /development/guideline/code
-
-- title:  Common filters in beamforming
-  link:  /example/source/beamformer_commonfilter
-
-- title:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/source/dipolefit_somatosensory_erf
-
-- title:  Localizing sources using beamformer techniques
-  link:  /tutorial/source/beamformer_lcmv
-
