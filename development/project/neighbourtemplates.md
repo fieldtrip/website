@@ -49,7 +49,7 @@ or by simply asking for feedback when calling ft_neighbourselection
 There are three methods how ft_neighbourselection can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'. We recommend check whether the 'template' method looks suitable for you using ft_neighbourplot. However, note that we do not take responsibility for any wrongly drawn conclusions. The choice how to select neighbours has to be made by you!
 **Also note that ft_neighbourselection will first try to deduce the neighbours from the configuration(e.g., from the optional cfg.layout field) before it will try searching your data for sensor position information.**
 
-#### In depth information: How to ft_neighbourselection work?
+### In depth information: How to ft_neighbourselection work?
 
 There are three methods how ft_neighbourselection can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'.
 
