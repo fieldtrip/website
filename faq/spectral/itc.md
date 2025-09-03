@@ -56,6 +56,6 @@ Finally we can plot it, just like a regular time-frequency representation
 
 For interpretation of the ITC metric, we recommend the following paper for caveats: van Diepen, R. M., & Mazaheri, A. (2018). _The caveats of observing inter-trial phase-coherence in cognitive neuroscience._ Scientific reports, 8(1), 1-9. 
 
-### Reference
+## Reference
 
 Delorme A, Makeig S. _EEGLAB: an open source toolbox for analysis of single-trial EEG dynamics including independent component analysis._ J Neurosci Methods. 2004 Mar 15;134(1):9-21. [pdf](http://sccn.ucsd.edu/~scott/pdf/EEGLAB04.pdf)

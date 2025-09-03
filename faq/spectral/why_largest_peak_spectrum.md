@@ -49,6 +49,6 @@ If you don't want the DC-component to be removed prior to spectral transformatio
     xlim([0 10])
     ylim([-2 4])
 
-### Figure: spectra from signal with large DC component with (left) and without (right) demeaning prior to ft_freqanalysis
-
 {% include image src="/assets/img/faq/why_largest_peak_spectrum/spectra.png" width="400" %}
+
+_Figure: Spectra from signal with large DC component with (left) and without (right) demeaning prior to ft_freqanalysis_

@@ -57,7 +57,7 @@ You can load and visualize it with
     cfg.intersectmesh = {headmodel.bnd(1), headmodel.bnd(2), headmodel.bnd(3)}; % optional, these are from standard_bem.mat
     ft_sourceplot(cfg, mri)
 
-#### revision information
+### revision information
 
 Up to r7413 (Jan 2013) the file content corresponded to the original anatomical MRI. From r7414 onwards the anatomical MRI was updated with private/volumeedit to remove the aliasing effect that resulted in the volume to contain segmentation-corrupting data very close to the top of the head.
 

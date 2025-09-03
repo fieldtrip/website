@@ -12,7 +12,7 @@ The following is an example analysis pipeline that was used for the FieldTrip wo
 BioSemi BDF data should always be off-line referenced to one of the electrodes that is present in the data. The raw data in the file is relative to the CMS and still contains relatively much artifactual and line-noise. See also the [BioSemi website](https://www.biosemi.com/faq/cms&drl.htm).
 {% include markup/end %}
 
-### Modify layout file
+## Modify layout file
 
     % load biosemi160 into q (which has sensor locations in polar coordinates)
     % add fiducials then save
@@ -71,7 +71,7 @@ BioSemi BDF data should always be off-line referenced to one of the electrodes t
     %save new electrodes
     save elec160.mat elec
 
-### Preprocessing
+## Preprocessing
 
     clear all
 
@@ -122,7 +122,7 @@ BioSemi BDF data should always be off-line referenced to one of the electrodes t
       end
     end
 
-### Artifact rejection
+## Artifact rejection
 
     clear all
     cond = {'Pitch20' 'Pitch40', 'Timbre490', 'Timbre510'};
@@ -207,7 +207,7 @@ BioSemi BDF data should always be off-line referenced to one of the electrodes t
 
     save('analysis/data_clean', 'data')
 
-### Timelock Analysis
+## Timelock analysis
 
     clear all
 
@@ -326,7 +326,7 @@ BioSemi BDF data should always be off-line referenced to one of the electrodes t
 
     print(gcf, '-dpng', 'figures/fig4_ERP')
 
-### Statistics
+## Statistics
 
     cfg               = [];
     cfg.layout        = 'biosemi160lay.mat'; %in meters
