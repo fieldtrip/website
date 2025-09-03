@@ -11,7 +11,7 @@ The [FieldTrip qsub toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/
 
 You should start by adding the qsub toolbox to your MATLAB path:
 
-    >> addpath /home/common/matlab/fieldtrip/qsub/
+    addpath /home/common/matlab/fieldtrip/qsub/
 
 ### Submitting a single MATLAB job to the cluster
 
@@ -37,8 +37,9 @@ Note, that qsubfeval does not return the output of your function to the command 
 You can check the status of your submitted job with qstat command in Linux terminal.
 
 ```bash
-    bash-3.2$ qstat
-    Job id                    Name             User            Time Use S Queue
+  bash-3.2$ qstat
+
+  Job id                    Name             User            Time Use S Queue
   ------------------------- ---------------- --------------- -------- - -----
   1066196.dccn-l014         ...23910_b1_j001 username        00:00:00 C MATLAB
 ```
@@ -47,6 +48,7 @@ For detailed information on the submitted job use qstat -f JobI
 
 ```bash
     bash-3.2$ qstat -f 1066196
+
     Job Id: 1066196.dccn-l014.dccn.nl
       Job_Name = username_dccn_c004_p23910_b1_j001
       Job_Owner = username@dccn-c004.dccn.nl
@@ -59,11 +61,11 @@ For detailed information on the submitted job use qstat -f JobI
 
 The **[qsubfeval](/reference/qsub/qsubfeval)** command creates a bunch of temporary files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
 
-To pick up the results of the job, you type in matlab
-    
+To pick up the results of the job, you type in MATLAB
+
     result = qsubget(jobid);
     
-The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line. 
+The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line.
 
 Rather than specifying the function `'rand'` as a string, you can also specify it as a [function handle](https://www.mathworks.com/help/matlab/matlab_prog/creating-a-function-handle.html) with `@rand`.
 

@@ -144,7 +144,7 @@ If you download this data into a folder named 'testdata', the directory should l
     segmentedmri = ft_volumesegment(cfg, mri);
     save segmentedmri segmentedmri
 
-    % ft_prepare_headmodel (for information type 'help ft_prepare_headmodel' in matlab)
+    % ft_prepare_headmodel (for information type 'help ft_prepare_headmodel' in MATLAB)
     cfg           = [];
     cfg.grad      = grad;
     cfg.method    = 'localspheres';
@@ -176,7 +176,7 @@ If you download this data into a folder named 'testdata', the directory should l
     % dimensions)
     %--------------------------------------------------------------------------------------
 
-    % ft_prepare_headmodel (for information type 'help ft_prepare_headmodel' in matlab)
+    % ft_prepare_headmodel (for information type 'help ft_prepare_headmodel' in MATLAB)
     cfg           = [];
     cfg.grad      = grad;
     cfg.method    = 'singleshell';
