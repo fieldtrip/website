@@ -10,7 +10,7 @@ We will keep this page up to date and post new information here when available.
 
 ## Schedule
 
-#### Day 1 (Thursday 13 October, 2016)
+### Day 1 (Thursday 13 October, 2016)
 
 - 09:00 - 09:30 Registration, welcome and coffee
 - 09:30 - 10:45 Lecture 1: Fundamentals of neuronal oscillations and synchrony (**Britta Westner**)
@@ -27,7 +27,7 @@ We will keep this page up to date and post new information here when available.
 - 16:30 - 17:00 Wrap-up-the-day: special topics, general questions and answers
 - 19:00 - 21:30 Dinner: **tba** (not included in registration)
 
-#### Day 2 (Friday 14 October, 2016)
+### Day 2 (Friday 14 October, 2016)
 
 - 9:00 - 10:30 Lecture 3: Source reconstruction using beamformers (**Britta Westner**)
 - 10:30 - 10:45 Coffee break

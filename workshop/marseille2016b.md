@@ -12,7 +12,7 @@ Together with Jean-Michel Badier, Christian Benar ([MEG laboratory in Marseille]
 
 We will keep this page up to date and post new information here when available.
 
-#### Monday November 21
+### Monday November 21
 
 - Session I
 
@@ -32,7 +32,7 @@ We will keep this page up to date and post new information here when available.
     - <https://www.fieldtriptoolbox.org/tutorial/networkanalysis>
   - 16:15 – 17:00 Wrap-up-the-day: “Ask the expert” session
 
-#### Tuesday November 22
+### Tuesday November 22
 
 - Session III
 

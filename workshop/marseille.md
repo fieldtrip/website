@@ -41,7 +41,7 @@ So over all there is about 2 to 5 hours of preparation required from you prior t
 
 _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and Tuesday, and around 12:30 on Wednesday._
 
-#### Monday
+### Monday
 
 - morning
 
@@ -57,7 +57,7 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 - evening
   - dinner (not included, i.e. on own costs)
 
-#### Tuesday
+### Tuesday
 
 - morning
 
@@ -73,7 +73,7 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 - evening
   - pub (not included, i.e. on own costs)
 
-#### Wednesday
+### Wednesday
 
 - Playground in which you will be working on own data (under supervision)
 - Wrap up of the workshop
