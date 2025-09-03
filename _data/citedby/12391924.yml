@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2025.1578473
+- idtype: pmcid
+  value: PMC12391924
+authors:
+- authtype: Author
+  name: Franceschini S
+- authtype: Author
+  name: Ambrosanio M
+- authtype: Author
+  name: Autorino MM
+- authtype: Author
+  name: Maqsood S
+- authtype: Author
+  name: Baselice F
+epubdate: 2025 Jul 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1578473'
+pmclivedate: 2025/08/29
+printpubdate: ''
+pubdate: 2025 Jul 21
+sortdate: 2025/07/21 00:00
+source: Front Neurosci
+title: Magnetoencephalographic source localization and reconstruction via deep learning
+uid: '12391924'
+volume: '19'

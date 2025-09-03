@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40829497'
+- idtype: doi
+  value: 10.1016/j.nicl.2025.103871
+- idtype: pmcid
+  value: PMC12395080
+authors:
+- authtype: Author
+  name: van der A J
+- authtype: Author
+  name: Fleischmann R
+- authtype: Author
+  name: Mengel A
+- authtype: Author
+  name: Vernooij L
+- authtype: Author
+  name: Stam C
+- authtype: Author
+  name: Leroy S
+- authtype: Author
+  name: Schneider P
+- authtype: Author
+  name: Ehler J
+- authtype: Author
+  name: Slooter A
+- authtype: Author
+  name: van Dellen E
+epubdate: 2025 Aug 18
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103871'
+pmclivedate: 2025/08/30
+printpubdate: ''
+pubdate: 2025 Aug 18
+sortdate: 2025/08/18 00:00
+source: Neuroimage Clin
+title: 'Quantitative electroencephalography characteristics in delirium with various
+  etiologies: A multicenter study'
+uid: '12395080'
+volume: '48'

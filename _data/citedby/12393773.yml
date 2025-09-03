@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40845054'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003333
+- idtype: pmcid
+  value: PMC12393773
+authors:
+- authtype: Author
+  name: Shan J
+- authtype: Author
+  name: Hajonides JE
+- authtype: Author
+  name: Myers NE
+epubdate: 2025 Aug 22
+fulljournalname: PLOS Biology
+issue: '8'
+pages: e3003333
+pmclivedate: 2025/08/29
+printpubdate: ''
+pubdate: 2025 Aug 22
+sortdate: 2025/08/22 00:00
+source: PLoS Biol
+title: Attractive serial dependence arises during decision-making
+uid: '12393773'
+volume: '23'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40885761'
+- idtype: doi
+  value: 10.1038/s41539-025-00356-9
+- idtype: pmcid
+  value: PMC12398527
+authors:
+- authtype: Author
+  name: Zhao H
+- authtype: Author
+  name: Lin X
+- authtype: Author
+  name: Yuan K
+- authtype: Author
+  name: Hu X
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Su W
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Lu L
+epubdate: 2025 Aug 30
+fulljournalname: NPJ Science of Learning
+issue: ''
+pages: '65'
+pmclivedate: 2025/09/01
+printpubdate: ''
+pubdate: 2025 Aug 30
+sortdate: 2025/08/30 00:00
+source: NPJ Sci Learn
+title: Updating social evaluation during sleep
+uid: '12398527'
+volume: '10'

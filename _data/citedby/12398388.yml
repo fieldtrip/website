@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40591486'
+- idtype: doi
+  value: 10.1093/scan/nsaf069
+- idtype: pmcid
+  value: PMC12398388
+authors:
+- authtype: Author
+  name: Domic-Siede M
+- authtype: Author
+  name: Guzmán-González M
+- authtype: Author
+  name: Ortiz R
+- authtype: Author
+  name: Hernández S
+- authtype: Author
+  name: Carvallo C
+epubdate: 2025 Jul 1
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf069
+pmclivedate: 2025/08/31
+printpubdate: ''
+pubdate: 2025 Jul 1
+sortdate: 2025/07/01 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Phase-synchronized brain connectivity during emotion regulation: attachment
+  as a moderator'
+uid: '12398388'
+volume: '20'

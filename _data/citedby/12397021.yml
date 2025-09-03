@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40202551'
+- idtype: doi
+  value: 10.1007/s11357-025-01649-y
+- idtype: pmcid
+  value: PMC12397021
+authors:
+- authtype: Author
+  name: Suntrup-Krueger S
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: Slavik J
+- authtype: Author
+  name: von Itter J
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Wirth R
+- authtype: Author
+  name: Warnecke T
+- authtype: Author
+  name: Dziewas R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Meuth SG
+- authtype: Author
+  name: Labeit B
+epubdate: 2025 Apr 9
+fulljournalname: GeroScience
+issue: '4'
+pages: 5481-5491
+pmclivedate: 2025/08/31
+printpubdate: ''
+pubdate: 2025 Apr 9
+sortdate: 2025/04/09 00:00
+source: GeroScience
+title: Cognitive decline limits compensatory resource allocation within the aged swallowing
+  network
+uid: '12397021'
+volume: '47'

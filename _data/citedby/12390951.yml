@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2025.113028
+- idtype: pmcid
+  value: PMC12390951
+authors:
+- authtype: Author
+  name: Mashhadi AR
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Levé F
+- authtype: Author
+  name: Stamatiadis A
+- authtype: Author
+  name: Chazal C
+- authtype: Author
+  name: Trainor L
+- authtype: Author
+  name: Moghimi S
+epubdate: 2025 Jul 24
+fulljournalname: iScience
+issue: '9'
+pages: '113028'
+pmclivedate: 2025/08/29
+printpubdate: ''
+pubdate: 2025 Jul 24
+sortdate: 2025/07/24 00:00
+source: iScience
+title: Neural encoding of auditory rhythm beyond cortical auditory areas before the
+  age of term
+uid: '12390951'
+volume: '28'

@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '40885708'
+- idtype: doi
+  value: 10.1038/s41398-025-03515-z
+- idtype: pmcid
+  value: PMC12398619
+authors:
+- authtype: Author
+  name: Chen M
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Zhuang W
+- authtype: Author
+  name: Xu Y
+- authtype: Author
+  name: Pei Z
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Yu C
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Hou G
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Xu M
+- authtype: Author
+  name: Tang Y
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Zhou D
+epubdate: 2025 Aug 30
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '332'
+pmclivedate: 2025/09/01
+printpubdate: ''
+pubdate: 2025 Aug 30
+sortdate: 2025/08/30 00:00
+source: Transl Psychiatry
+title: 'Heightened effective connectivity of DLPFC-mPFC and DLPFC-ACC circuits in
+  major depressive disorder with suicidal ideation: evidence from a TMS-EEG study'
+uid: '12398619'
+volume: '15'

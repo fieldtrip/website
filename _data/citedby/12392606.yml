@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40877774'
+- idtype: doi
+  value: 10.1186/s12868-025-00976-2
+- idtype: pmcid
+  value: PMC12392606
+authors:
+- authtype: Author
+  name: Zhao H
+- authtype: Author
+  name: Si F
+- authtype: Author
+  name: Meng H
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Sun D
+- authtype: Author
+  name: Peng L
+- authtype: Author
+  name: Cao J
+epubdate: 2025 Aug 28
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '54'
+pmclivedate: 2025/08/29
+printpubdate: ''
+pubdate: 2025 Aug 28
+sortdate: 2025/08/28 00:00
+source: BMC Neurosci
+title: 'Threat context impairs cognitive control of neutral words processing in social
+  anxiety individuals: evidence from ERP and theta oscillations'
+uid: '12392606'
+volume: '26'
