@@ -78,7 +78,7 @@ Previous FieldTrip workshops took place at
 - 2013, [Hamburg, Germany](/workshop/hamburg2013)
 - 2013, [San Sebastian, Spain](/workshop/donostia2013)
 - 2013, [Toronto, Canada](/workshop/toronto)
-- 2013, [Tübingen, Germany](/workshop/tuebingen13)
+- 2013, [Tübingen, Germany](/workshop/tuebingen2013)
 - 2013, MEG/EEG toolkit, Nijmegen, NL
 - 2012, [Trento, Italy](/workshop/trento)
 - 2012, [Krakow, Poland](/workshop/krakow)

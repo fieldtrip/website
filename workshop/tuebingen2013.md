@@ -1,5 +1,7 @@
 ---
 title: Workshop in Tübingen on nonparametric statistics and connectivity
+redirect_from:
+    - /workshop/tuebingen13/
 ---
 
 ## Where
@@ -56,12 +58,10 @@ After installing FieldTrip to your path, you change into the tutorial directory
 ### Wednesday
 
 - morning
-
   - 1h intro lecture
   - 2h handson <https://www.fieldtriptoolbox.org/tutorial/sensor_analysis>
 
 - afternoon
-
   - 1h beamforming lecture
   - 2h handson <https://www.fieldtriptoolbox.org/tutorial/beamformingextended>
 
@@ -71,12 +71,10 @@ After installing FieldTrip to your path, you change into the tutorial directory
 ### Thursday
 
 - morning
-
   - 1h connectivity lecture
   - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/connectivityextended>
 
 - afternoon
-
   - 1h nonparametric statistics lecture
   - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
   - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
