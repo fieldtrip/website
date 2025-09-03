@@ -67,7 +67,7 @@ The week begins with orientation and practical information, followed by foundati
 - background on EEG - part 1 ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf) by Mikkel, [video](https://youtu.be/_Dar7Sd3Yh4))
 - lunch
 - background on EEG - part 2 ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf) by Mikkel, [video](https://youtu.be/z1w7Nqj19W8))
-- EEG in Africa ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG in Africa.pdf) by Robert, [video](https://youtu.be/NtN8_0g9I9E))
+- EEG in Africa ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG in Africa.pdf) by Robert, [video](https://youtu.be/NtN8_0g9I9E), includes [DCCN](https://youtu.be/bnM9NjBcdXc) and [DCC](https://youtu.be/yf2l8gmuJqQ) EEG lab tours)
 - experimental design part A ([lecture](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/04 - Experimental design, part A.pdf) by Mikkel, [video](https://youtu.be/HbXqRAYVafg))
 - experimental design Q&A (discussion)
 
@@ -135,8 +135,8 @@ To keep track of all lectures for ourselves, we have numbered them in the order 
 - [01 - Outline of the workshop.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/01 - Outline of the workshop.pdf)
 - [02 - EEG background.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/02 - EEG background.pdf)
 - [03 - EEG in Africa.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG in Africa.pdf)
-- [03 - EEG lab tour DCC.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCC.mov)
-- [03 - EEG lab tour DCCN.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCCN.mov)
+  - [03 - EEG lab tour DCC.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCC.mov)
+  - [03 - EEG lab tour DCCN.mov](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/03 - EEG lab tour DCCN.mov)
 - [04 - Experimental design, part A.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/04 - Experimental design, part A.pdf)
 - [05 - How does an EEG system work.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/05 - How does an EEG system work.pdf)
 - [06 - Experimental design, part B.pdf](https://download.fieldtriptoolbox.org/workshop/nigeria2025/slides/06 - Experimental design, part B.pdf)
@@ -162,6 +162,8 @@ We have recorded most lectures on video. You can find them on our [YouTube chann
 - [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4)
 - [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8)
 - [03 - EEG in Africa](https://youtu.be/NtN8_0g9I9E)
+  - [03 - EEG lab tour DCCN](https://youtu.be/bnM9NjBcdXc)
+  - [03 - EEG lab tour DCC](https://youtu.be/yf2l8gmuJqQ)
 - [04 - Experimental design, part A](https://youtu.be/HbXqRAYVafg)
 - [05 - How does an EEG system work](https://youtu.be/rIR1osZpIUc)
 - [06 - Experimental design, part B](https://youtu.be/8hdf2kXpeS4)
