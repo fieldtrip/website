@@ -17,8 +17,8 @@
 {% endfor %}
 
 <ul>
-{% assign selected = selected | sort_natural: "title" %}
-{% for item in selected %}
+{% assign sorted = selected | sort_natural: "title" | sort: "weight" %}
+{% for item in sorted %}
 {% if item.title != nill %}
 <li><a href="{{ item.url }}"> {{ item.title }}</a></li>
 {% endif %}

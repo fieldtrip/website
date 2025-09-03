@@ -1842,6 +1842,7 @@ frequencyanalysis
 Friston
 frontend
 frontends
+frontmatter
 fronto
 frontotemporal
 frontpanel
