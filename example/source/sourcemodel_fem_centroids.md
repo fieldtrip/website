@@ -6,7 +6,7 @@ tags: [source, sourcemodel, fem]
 
 When using a FEM head model in forward and inverse computations, for numerical reasons the dipoles are ideally placed well within the geometric elements of the FEM mesh and not on the element boundaries, i.e., at the center of the hexahedra or tetrahedra. To support this, the **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** function supports for `cfg.method` the basedoncentroids method. Alternatively, it has the `cfg.movetocentroids` option.
 
-With the basedoncentroids method, a dipole is placed at the center of each hexahedron or tetrahedron. If the FEM mesh is based on a segmentation of an anatomical MRI at 1 mm, the geometric elements of the FEM mesh are also about 1 mm large, which means that the grid of dipoles will also have 1 mm spacing. That is a very dense (most likely irregular) grid, and the computational time fo the forward and inverse method will be very long.
+With the basedoncentroids method, a dipole is placed at the center of each hexahedron or tetrahedron. If the FEM mesh is based on a segmentation of an anatomical MRI at 1 mm, the geometric elements of the FEM mesh are also about 1 mm large, which means that the grid of dipoles will also have 1 mm spacing. That is a very dense (most likely irregular) grid, and the computational time for the forward and inverse method will be very long.
 
 With the `cfg.movetocentroids` option, you can use any of the other methods to construct the initial source model, for example the basedongrid or the basedonresolution method. The resulting grid of dipoles subsequently undergoes some postprocessing (sill inside the ft_prepare_sourcemodel function) where each dipole is moved to the center of the nearest hexahedral or tetrahedral element. The tissue type of that hexahedral or tetrahedral element is subsequently copied and retained alongside the dipoles, allowing you yourself (outside the function) to make an inside selection of only the dipoles in the grey matter of the FEM mesh. This approach allows you to make a grid with a resolution according to your own choice that results in a more appropriate computational time.
 
@@ -22,7 +22,8 @@ The required input files are available from our [download server](https://downlo
     %% we prepare an individual sourcemodel based on the centroids
 
     % this places dipoles at centers of the hexahedral or tetrahedral FEM mesh
-    % elements, but only for the grey matter. This results in a high resolution
+    % elements and for each dipole the corresponding tissue is returned so that you
+    % could select gray matter dipoles as "inside". This results in a high resolution
     % mesh with dipoles approximately every 1 mm - assuming the segmented MRI on
     % which the mesh is based had a 1 mm resolution.
 
