@@ -24,6 +24,6 @@ The two sliders and scrollbars can be used to browse through the various channel
 - 'm' ... magenta
 - 't' ... turquoise
 
-### Compilation
+## Compilation
 
 We provide a simple "Makefile" for the MinGW compiler on Windows or GCC on other platforms. Please go to the `realtime/src/utilities/viewer` directory and type `make` or `mingw32-make`. You will need to have the [FLTK](http://www.fltk.org) library installed for your platform. Note that you also might need to compile the buffer library first.

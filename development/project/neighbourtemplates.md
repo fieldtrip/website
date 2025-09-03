@@ -20,7 +20,7 @@ Related bugzilla bugs:
 
 Find below the old project notes
 
-#### Goals
+## Goals
 
 1. Provide functionality for supporting neighbour templates [check]
 2. Provide information how to create own neighbour templates and check using ft_neighbourplot [check]
@@ -29,7 +29,7 @@ Find below the old project notes
 5. Update community about this functionality change
 6. Make a FAQ: How can I select neighbouring sensors? This can incorporate information from (2) [check]
 
-#### How can I define neighbouring sensors?
+## How can I define neighbouring sensors?
 
 Certain functions require knowledge what sensors are near other sensors and should be considered as neighbours. As an example, any cluster-statistic needs to be informed which sensors are allowed to form a cluster. From August 2011 on, you as the user are obliged to define and verify the neighbours manually rather than relying on FieldTrip's internal standard. In the following will be explained what possibilities there are to achieve this.
 
@@ -62,7 +62,7 @@ To circumvent all the above mentioned problems, we introduced a 'template'-based
 
 For more information how to call and use this ft_neighbourselection, please see the function reference [TODO: add].
 
-#### Creating templates or updating an already existing template
+## Creating templates or updating an already existing template
 
 Currently, each entry of the neighbour-structure needs to have two fields: 'label' and 'neighblabel'. cfg.neighbours must be a cell-array, with each entry having these two fields. You can then define the structure as follows:
 

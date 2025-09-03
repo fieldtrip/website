@@ -15,7 +15,7 @@ The tool is started from the command line by typing
 
 If the "config-file" argument is not given, a default of "serial2event.conf" is assumed.
 
-### Configuration file syntax
+## Configuration file syntax
 
 The operation mode of the tool is controlled by given a configuration file. A documented example follows below:
 
@@ -55,6 +55,6 @@ The operation mode of the tool is controlled by given a configuration file. A do
     port=1990
 ```
 
-### Compilation
+## Compilation
 
 We provide a simple "Makefile" for the MinGW compiler or GCC. Please go to the "realtime/utilities/serial2event" directory and type "make" or "mingw32-make". Note that you might need to [compile](/development/realtime/buffer) the **buffer** library first.

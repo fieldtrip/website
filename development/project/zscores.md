@@ -18,7 +18,7 @@ Z-scores are being used as a means to 'normalize' the data before doing over-sub
 3.  what are the possible solutions?
 4.  what are the underlying assumptions?
 
-##### 1. Goal
+### 1. Goal
 
 To homogenize the data on two level
 
@@ -27,7 +27,7 @@ To homogenize the data on two level
 
 What we want to accomplish is at the same time control the false alarm rate, and have max statistical power.
 
-##### 2. Problem
+### 2. Problem
 
 Ad 1)
 
@@ -36,7 +36,7 @@ Ad 1)
   Ad 2)
 - large individual differences
 
-##### 3. Possible solution
+### 3. Possible solution
 
 Ad 1)
 
@@ -55,7 +55,7 @@ Ad 2)
 
 _--> Problem: these solutions may introduce additional noise!_
 
-##### 4. Assumption
+### 4. Assumption
 
 Properties of the data:
 
@@ -69,7 +69,7 @@ The choice of the 'best' solution will (probably) depend on the characteristics 
 1.  develop realistic effect and noise models
 2.  find optimal noise and effect range
 
-##### 1. Effect and noise model
+### 1. Effect and noise model
 
 The simulated dataset should consist of two conditions, baseline and activation, that can be compared and should contain an effect that is small enough to not always be detected by the statistical test. We will ignore the MCP, since cluster randomization effectively deals with that, so it is not of current interest.
 
@@ -96,7 +96,7 @@ This gives us the following dimension
 
 This way we can vary the size/range of effect and noise, have multiple trials and at the same time repeat the statistical test several times, using freqstatistics.
 
-##### 2. Find interesting range
+### 2. Find interesting range
 
 We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power.
 

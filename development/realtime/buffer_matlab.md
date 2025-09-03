@@ -24,7 +24,7 @@ Access to the real-time buffer provided by the standard FieldTrip reading functi
 
 The interface between MATLAB and the real-time buffer is network transparent. That means that the buffering can be done on one computer, e.g., the one attached to the EEG amplifier, and the computations in MATLAB can be done on another.
 
-### Details on the MATLAB mex-file implementation
+## Details on the MATLAB mex-file implementation
 
 In principle the only support that has to be implemented specifically in MATLAB is to allow it connect as client to the buffer server. That could be done using the pnet function from the tcp_udp_ip toolbox. For efficiency reasons and for simplicity, we also have made a direct implementation of the buffer source code in MATLAB by wrappint it into a mex file.
 
@@ -32,7 +32,7 @@ The primary responsibility of the mex file is to allow you from within MATLAB to
 
 Furthermore, it is possible to instantiate the buffer as network transparent server, linked to the MATLAB application (the "tcpserver" thread). It is even possible to start a second thread that emulates an EEG acquisition system (the "sinewave" thread).
 
-### Writing a new proxy for acquiring data in MATLAB
+## Writing a new proxy for acquiring data in MATLAB
 
 You should start by studying the example scripts in the 'realtime' directory, e.g., **[ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy)** as a simple example for reading data from some hardware device and writing into a buffer.
 

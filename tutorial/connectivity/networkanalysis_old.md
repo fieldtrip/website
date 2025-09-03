@@ -625,7 +625,7 @@ Of course one can use also phase locking value or some other metric for quantifi
 
 {% include image src="/assets/img/tutorial/networkanalysis_old/figure11.png" width="400" %}
 
-##### Exercise 1
+#### Exercise 1
 
 {% include markup/skyblue %}
 Compare both network configurations. Obiviously, they have little in common.

@@ -20,7 +20,7 @@ redirect_from:
 
 See [/development/compat](/development/project/compat) for mydepfun example
 
-### 2) fileio questions
+## 2) fileio questions
 
 - How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g., load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
 - BTi_UCSF support? (No)
@@ -30,12 +30,12 @@ See [/development/compat](/development/project/compat) for mydepfun example
 - ft_chantype(data.label) 'unknown' in test case for neuromag.
 - Issue of clearing a data variable in MATLAB but it still takes up memory (with FT but not with NM).
 
-### 3) Forward modelling
+## 3) Forward modelling
 
 - ft_prepare_localspheres should not call 'clf' and 'cla' as this will mess with the Nutmeg figures. Can it instead call: hfig=figure; and then use hfig handle for plotting?
 - ft_volumesegment sufficient (which calls SPM), or prefer other software/method? \* Can't do 'skull' yet.
 
-### 4) NM ideas missing from FT
+## 4) NM ideas missing from FT
 
 - nut*filter2:  
    * 'firls' (rather than fir1) filter
@@ -53,22 +53,22 @@ See [/development/compat](/development/project/compat) for mydepfun example
 - Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
 - weight normalisation? (rather than leadfield norm)? (could be better for EEG data, whereas leadfield norm better for MEG...just hearsay at the moment)
 
-#### 4a) overlap/comparison of functional connectivity metrics between NM and FT
+### 4a) overlap/comparison of functional connectivity metrics between NM and FT
 
 - [Nutmeg page comparison of FC metrics and options in both NM and FT](http://nutmeg.berkeley.edu/index.php?title=Comparison_of_connectivity_options) (especially Adrian's FCM toolbox)
 
-### 5) FT ideas missing from NM
+## 5) FT ideas missing from NM
 
 1.  NM directly call FT artifact reject, databrowser, topoplots, etc. Remove this from nut_beamforming_gui
 2.  NM can call ft_freqanalysis and ft_sourceanalysis(DICS)
 3.  How are continuous head-tracking coils dealt with? Ideally separate leadfield per trial?
 4.  Units setting (default should be fT for MEG not T to avoid numerical issues)
 
-### 7) Changes to FT for compatibility with NM
+## 7) Changes to FT for compatibility with NM
 
 - any function/tool that plots should 'play nice' with Nutmeg figures concurrently open \* Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g., Nutmeg GUI figures)
 
-### 8) Conversion functions
+## 8) Conversion functions
 
 The conversion from FieldTrip to NUTMEG is done with the following functions inside NUTMEG sv
 Please see: http://nutmeg.berkeley.edu/index.php?title=Reading_FieldTrip_processed_data
@@ -83,13 +83,13 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
 - nutmegBeam2fieldtripSource
 - nutmegNuts2fieldtrip
 
-### 9) Examples of why/how to switch between toolboxes
+## 9) Examples of why/how to switch between toolboxes
 
-##### 9.1 Load data not supported by NM (e.g., Yokogawa), then do source-loc in NM
+### 9.1 Load data not supported by NM (e.g., Yokogawa), then do source-loc in NM
 
-##### 9.2 Preprocess data in FT (e.g., ft_rejectvisual) then do source-loc in NM
+### 9.2 Preprocess data in FT (e.g., ft_rejectvisual) then do source-loc in NM
 
-##### 9.3 ft_freqanalysis and DICS in FT, then view results in NM
+### 9.3 ft_freqanalysis and DICS in FT, then view results in NM
 
     nuts=load('jz_alldsallstim5s_both.mat');
     [raw,grid,mri]=nutmegNuts2fieldtrip(nuts);
@@ -137,7 +137,7 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     beam.coreg=nuts.coreg;
     save('s_beam_both_ftDICS.mat','-struct','beam')
 
-##### 9.4 Time-freq LCMV in NM, keeptrials (in tfZ), then further stats in ft_sourcestatistics
+### 9.4 Time-freq LCMV in NM, keeptrials (in tfZ), then further stats in ft_sourcestatistics
 
     tfbf(['nuts_sim.mat'],'actconwindows',2,80,'firlsbp200cn.mat');
     params.keeptrials=1;save('firlsbp200cn.mat,'params,'filt');

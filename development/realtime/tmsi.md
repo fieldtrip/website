@@ -10,7 +10,7 @@ We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) ampl
 
 Note that the PORTI amplifier is in real life much smaller than it seems to be on the photo above (~20% of the size of the REFA). The type of connectors that you can see on both photos are identical.
 
-### tmsidriver
+## tmsidriver
 
 Bart Niehuis has contributed an acquisition interface and tested it for the TMSI Refa amplifier.
 
@@ -18,7 +18,7 @@ A parameter.txt file lets you edit the sample frequency and the (relative) block
 
 The interface also saves the data to a text file, which is named after the date and time of the data recording, and will be saved in the same folder as the tmsi-buffer executable file.
 
-### tmsi2ft
+## tmsi2ft
 
 Based on code from **tmsidriver**, but also heavily relying on the [common C++](/development/realtime/buffer_cpp) Online Data Manger framework, Stefan Klanke made an alternative implementation and briefly tested it on a PORTI device. In contrast to **tmsidriver**, **tmsi2ft** can save the data to GDF while streaming it out, and the user can select channels and downsampling properties via a configuration file or using the TCP command interface of the OnlineDataManager. This tool will also decode a digital (trigger) channel and write corresponding events to the FieldTrip buffer. You can start the acquisition tool from the command line using
 
@@ -26,12 +26,12 @@ Based on code from **tmsidriver**, but also heavily relying on the [common C++](
 
 where only the first parameter (configuration file) is mandatory. Defaults for the remaining three parameters are "localhost", "1972", and "8000". If you want **tmsi2ft** to spawn its own FieldTrip buffer server, pass a minus (-) for the hostname parameter.
 
-### Compatibility
+## Compatibility
 
 It is currently not quite clear which driver versions work with the SDK that we use
 to compile the aforementioned tools. A brief test with a recent beta version of the driver
 for Windows 7 (64-bit), using the old SDK failed.
 
-### Compilation
+## Compilation
 
 There is a Visual C++ project file for **tmsidriver**, but both tools can also be compiled using [MinGW](http://www.mingw.org) using the provided "Makefile".

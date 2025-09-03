@@ -15,15 +15,15 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 
 The page [scratchpad](/development/realtime/scratchpad) contains some loose ends that have no clear place.
 
-### Frequently asked questions
+## Frequently asked questions
 
 {% include seealso category="faq" tag1="realtime" %}
 
-### Example scripts
+## Example scripts
 
 {% include seealso category="example" tag1="realtime" %}
 
-### General tips and tricks
+## General tips and tricks
 
 If you find you're getting problems you might want to think about the following:
 
@@ -34,6 +34,6 @@ If you find you're getting problems you might want to think about the following:
 - You can try moving the actual buffer to another machine, and you do not need to have the buffer attached to a MATLAB session (try using the ''buffer'' application that you will find in fieldtrip/realtime/bin).
 - You can try to report and compare the wall clock time with the sample time. Here, wall clock time refers to the real time your computer has run since you started the acquisition loop, while sample time is given by the amount of data processed so far, divided by your sampling frequency. These two numbers should ideally be the same or have a small constant offset, but they should not drift apart. Successive sample and clock times should also match your block size; that is, if you always read 500 samples at a time from a device, and your sampling rate is 1000 Hz, your measured clock time and calculated sample time should increase roughly by 0.5 seconds after each block.
 
-### Ongoing development of the realtime interface
+## Ongoing development of the realtime interface
 
 {% include seealso tag1="realtime" tag2="development" %}

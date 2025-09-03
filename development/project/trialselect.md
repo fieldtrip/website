@@ -20,7 +20,7 @@ Consistent implementation of option for trial selection in all relevant function
 
 ---
 
-##### Functions that use raw data:
+### Functions that use raw data:
 
 - preprocessing.m (when called with preprocessed data) -done-
 - combineplanar.m -done-
@@ -34,7 +34,7 @@ Consistent implementation of option for trial selection in all relevant function
 - timelockanalysis.m -done-
 - freqanalysis.m -done-
 
-##### Functions that (could) use data with an 'rpt' dimension
+### Functions that (could) use data with an 'rpt' dimension
 
 - freqdescriptives.m -done-
 - singleplotER.m -done-
@@ -44,7 +44,7 @@ Consistent implementation of option for trial selection in all relevant function
 - multiplotER.m -done-
 - multiplotTFR.m -done-
 
-##### Functions where this has already been implemented
+### Functions where this has already been implemented
 
 - componentanalysis.m -done-
 - nonlinearassociation.m -done-
@@ -71,7 +71,7 @@ How it's currently implemented in these function
 
 ---
 
-##### Ensure consistency in solution
+### Ensure consistency in solution
 
 **For raw data input functions (implement before 'Ntrials=...' or equivalent):**
 
@@ -122,7 +122,7 @@ How it's currently implemented in these function
   if ~isfield(cfg, 'yparam'), cfg.yparam='freq'; end
   if ~isfield(cfg, 'zparam'), cfg.zparam='powspctrm'; end
 
-##### Relevant fields (trl) should be adjusted accordingly
+### Relevant fields (trl) should be adjusted accordingly
 
 (note: when cfg.trials='all' this doesn't apply)
 
@@ -153,7 +153,7 @@ adjusting the tr
     cfg.trl=trl(cfg.trials,:);
     end
 
-##### Documentatio
+### Documentation
 
     %   cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
 

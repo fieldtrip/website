@@ -27,7 +27,7 @@ Leaving out the two optional arguments spawns a local buffer on the default port
 
     openbci2ft /dev/tty.usbserial-DN0094FY
 
-#### Compilation
+### Compilation
 
 On the command line, change to the "realtime/src/acquisition/openbci" directory and type "make". Note that you might need to compile the buffer library first.
 

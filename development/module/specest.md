@@ -35,7 +35,7 @@ where `dat` consists of a matrix of dimensionality Nchan x Ntime, and `time` is 
 
 Each function can take a set of common and function-specific additional arguments in key-value pairs. Which additional arguments a function can take is described in the reference documentation: **[ft_specest_mtmconvol](/reference/specest/ft_specest_mtmconvol)**, **[ft_specest_mtmfft](/reference/specest/ft_specest_mtmfft)**, **[ft_specest_hilbert](/reference/specest/ft_specest_hilbert)**, **[ft_specest_wavelet](/reference/specest/ft_specest_wavelet)**, **[ft_specest_tfr](/reference/specest/ft_specest_tfr)**.
 
-##### Definition of Phase
+## Definition of Phase
 
 In the case of **[ft_specest_mtmconvol](/reference/specest/ft_specest_mtmconvol)**, the phase at the peak of an oscillation in the data is defined to be 0, and the trough of an oscillation in the data is defined to be π/-π, progressing counter-clockwise around the circle.
 

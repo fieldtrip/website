@@ -57,7 +57,7 @@ A third approach that is available in the distributed computing toolbox is to us
 
 The labindex variable is automatically replaced by the number of the worker. Note that this only works if your matlabpool is greater than or equal to the number of jobs.
 
-### Some closing remarks
+## Some closing remarks
 
 Many of the FieldTrip functions allow to specify the cfg.inputfile and cfg.outputfile option, which allow you to run large analyses in parallel without all the analysis results being returned to your primary MATLAB session. This is especially relevant if your primary computer is not able to hold the results of all computations in memory at the same time.
 

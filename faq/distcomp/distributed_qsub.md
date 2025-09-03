@@ -13,7 +13,7 @@ You should start by adding the qsub toolbox to your MATLAB path:
 
     addpath /home/common/matlab/fieldtrip/qsub/
 
-### Submitting a single MATLAB job to the cluster
+## Submitting a single MATLAB job to the cluster
 
 To submit a job to the cluster, you will use **[qsubfeval](/reference/qsub/qsubfeval)**. It stands for “qsub – evaluation - function”. As an input you specify a name of your function, an argument, and time and memory requirements (see below).
 
@@ -73,7 +73,7 @@ Rather than specifying the function `'rand'` as a string, you can also specify i
 If you write your own function `@myfunction`, to be executed by `qsubfeval`, beware **NOT** to do something like `clear all`, `clear mex`, or `clear functions` inside your function, as this messes up the environment in which the job gets executed. Rest assured that your job always starts in a fresh MATLAB instance, so there is no reason to clear anything.
 {% include markup/end %}
 
-### Submitting a batch of jobs
+## Submitting a batch of jobs
 
 To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsub/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsub/qsubfeval)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsub/qsubfeval)** as many times as the number of elements in the array.
 
@@ -109,7 +109,7 @@ Same as with **[qsubfeval](/reference/qsub/qsubfeval)**, you can use `qstat, qst
 
 Qsubcellfun works as a wrapper for qsubfeval. If you use qsubcellfun, all the temporally files created by qsubfeval are automatically deleted when the job is completed, or when it is terminated with Ctrl+C, or with an error.
 
-#### Time and memory management
+### Time and memory management
 
 You will have noticed that you have to specify the time and memory requirements for the individual jobs using the 'timreq' and 'memreq' arguments to **[qsubcellfun](/reference/qsub/qsubcellfun)**. These time and memory requirements are passed to the batch queueing system, which uses them to find an appropriate execution host (i.e., one that has enough free memory) and to monitor the usage.
 
@@ -117,7 +117,7 @@ Do not set the requirements too tight, because if the job exceeds the requested 
 
 The help of **[qsubcellfun](/reference/qsub/qsubcellfun)** lists some suggestions on how to estimate the time and memory.
 
-### Stacking of jobs
+## Stacking of jobs
 
 The execution of each job involves writing the input arguments to a file, submitting the job, to Torque, starting MATLAB, reading the file, evaluate the function, writing the output arguments to file and at the end collecting all output arguments of all jobs and rearranging them. Starting MATLAB for each job imposes quite some overhead on the jobs if they are small, that is why **[qsubcellfun](/reference/qsub/qsubcellfun)** implements "stacking" to combine multiple MATLAB jobs into one job for the Linux cluster. If the jobs that you pass to **[qsubcellfun](/reference/qsub/qsubcellfun)** are small (less than 180 seconds) they will be stacked automatically. You can control it in detail with the "stack" option in **[qsubcellfun](/reference/qsub/qsubcellfun)**. For example
 
@@ -137,7 +137,7 @@ The execution of each job involves writing the input arguments to a file, submit
 
 Note that the stacking implementation is not yet ideal, since with the default option it distributed the 4 jobs into 3+1, whereas 2+2 would be better.
 
-### Submitting a batch and don't wait within MATLAB for them to return
+## Submitting a batch and don't wait within MATLAB for them to return
 
 If you run your interactive MATLAB session on a torque execution host with a limited walltime and want to submit a batch of jobs with qsubcellfun, you don't know when the batch of jobs will finish. Consequently, you cannot predict the walltime that your interactive session requires in order to see all jobs returning.
 

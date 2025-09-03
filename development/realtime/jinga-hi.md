@@ -52,6 +52,6 @@ Leaving out all arguments spawns a local buffer on the default port 197
 
     jaga2ft
 
-#### Compilation
+### Compilation
 
 On the command line, change to the "realtime/src/acquisition/jaga" directory and type "make". Note that you might need to compile the buffer library first.

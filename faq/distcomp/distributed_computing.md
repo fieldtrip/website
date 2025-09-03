@@ -15,7 +15,7 @@ The approach that we have adopted so far in FieldTrip is the end-user (i.e. you)
 
 Let me outline the different approaches below. Note that although in the examples below a FieldTrip toolbox function is distributed without the function being aware of it, we have made some changes to the FieldTrip toolbox main functions to facilitate their distribution, i.e. the cfg.inputfile and cfg.outputfile options. Please have a look at the tutorials using distributed computing using [qsub](/tutorial/scripting/distributedcomputing_qsub) and [parfor](/tutorial/scripting/distributedcomputing_parfor) for a more thorough description of the interaction between a FieldTrip analysis pipeline and the distributed computing.
 
-### MathWorks parallel computing toolbox and distributed computing engines
+## MathWorks parallel computing toolbox and distributed computing engines
 
 The [MATLAB Parallel Computing toolbox](http://www.mathworks.nl/products/parallel-computing) allows you to start multiple MATLAB "labs" on your desktop computer and distribute the computational load over these labs. This for example looks like this:
 
@@ -38,7 +38,7 @@ Another way to distribute jobs is using [batch](https://www.mathworks.com/help/d
 
 If you also have the [MATLAB Parallel Server](https://nl.mathworks.com/products/matlab-parallel-server.html), which has to be installed on a compute cluster, you can use those as remote engines for executing the separate jobs.
 
-### FieldTrip qsub toolbox
+## FieldTrip qsub toolbox
 
 At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/module/qsub).
 
