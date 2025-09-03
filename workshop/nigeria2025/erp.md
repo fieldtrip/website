@@ -185,7 +185,7 @@ To get a first impression of our data quality we will use **[ft_databrowser](/re
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure3.png" width="600" %}
 
-##### Exercise 1
+#### Exercise 1
 
 {% include markup/skyblue %}
 Skip through a couple of data segments and see if you can already spot some artifacts. Use the buttons to mark an artifact. Are there any bad channels in this dataset?
@@ -211,7 +211,7 @@ Please click on channel 46 to exclude that from further analysis. It appears to 
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure4.png" width="600" %}
 
-##### Exercise 2
+#### Exercise 2
 
 {% include markup/skyblue %}
 Can you spot which channels are noisier than others? Using the mouse and clicking, you can select channels that you want to remove from the data.
@@ -252,7 +252,7 @@ Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more 
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure6.png" width="600" %}
 
-##### Exercise 3
+#### Exercise 3
 
 {% include markup/skyblue %}
 Which channels show the most variance? Why is that?
@@ -305,7 +305,7 @@ For each trial, the condition information is kept with the data structure in `da
     cfg.trials = ismember(data_clean.trialinfo, [113, 123, 133, 143]);
     timelockAUD = ft_timelockanalysis(cfg, data_clean);
 
-##### Exercise 4
+#### Exercise 4
 
 {% include markup/skyblue %}
 Inspect the resulting data structure after
@@ -326,7 +326,7 @@ We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both condi
 
 {% include image src="/assets/img/workshop/nigeria2025/erp/figure10.png" width="400" %}
 
-##### Exercise 5
+#### Exercise 5
 
 {% include markup/skyblue %}
 Select the time window where the conditions differ the most. Do the topographies look as you would expect?
@@ -336,7 +336,7 @@ Select the time window where the conditions differ the most. Do the topographies
 
 Following the computation of ERPs, FieldTrip offers many more functions to continue analyzing your data. You can use **[ft_math](/reference/ft_math)** to compute difference waves, **[ft_timelockstatistics](/reference/ft_timelockstatistics)** to run statistics on your ERP effect, compute group level averages with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** or explore different ways of visualizing, i.e. **[ft_multiplotER](/reference/ft_multiplotER)** etc.
 
-##### Exercise 6
+#### Exercise 6
 
 {% include markup/skyblue %}
 The following code allows you to compute at the ERP difference waves.

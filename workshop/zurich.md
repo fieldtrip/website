@@ -6,7 +6,7 @@ title: FieldTrip workshop in Zürich
 - When: 24-26 February, 2014
 - Who: Eelke Spaak and Jörn Horschig, the local organizers are Maj-Britt Niemi and Alexandra Buender
 
-### Installing FieldTrip and Tutorial preparation
+## Installing FieldTrip and Tutorial preparation
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that is distributed on a USB stick, rather than the version you might already have installed. (If you have a FieldTrip version dating from sometime in the last few weeks, that should be fine.) Importantly, the tutorial data does not have to be downloaded but will also be distributed on the USB stick.
 
@@ -39,9 +39,9 @@ After installing FieldTrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
 
-### Program
+## Program
 
-#### Monday
+### Monday
 
 - morning
 
@@ -56,7 +56,7 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - evening
   - pub
 
-#### Tuesday
+### Tuesday
 
 - morning
 
@@ -72,7 +72,7 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - evening
   - dinner <http://goo.gl/maps/IM6yX>
 
-#### Wednesday
+### Wednesday
 
 - morning
   - 3h playground (working on own data), [ft_trialfun_brainvision_segmented](https://db.tt/rn7mS2Lu)

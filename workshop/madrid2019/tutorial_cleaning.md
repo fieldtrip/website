@@ -104,7 +104,7 @@ it.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig1_databrowser_init.png" width="800" %}
 
-##### Exercise 1
+#### Exercise 1
 
 {% include markup/skyblue %}
 Browse through the segments to get a feel for the data. Do you see any obvious
@@ -242,7 +242,7 @@ combine the trials into one structure again.
 
     data_fixed = ft_appenddata([], data_fixed{:});
 
-##### Exercise 2
+#### Exercise 2
 
 {% include markup/skyblue %}
 Visualize the selected artifacts in data_bad with
@@ -268,7 +268,7 @@ artifacts and append the fixed data.
     % clear these variables from memory to avoid confusion later on
     clear data_rejected data_fixed
 
-##### Exercise 3
+#### Exercise 3
 
 {% include markup/skyblue %}
 Inspect the new data structure. What has changed?

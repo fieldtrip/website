@@ -206,7 +206,7 @@ topography of this power increase use the function
 
 _Figure: A topographic representation of the time-frequency representations (3 - 8 Hz, 0.1 - 0.3 s post stimulus) obtained using ft_topoplotTFR_
 
-##### Exercise 1
+#### Exercise 1
 
 {% include markup/skyblue %}
 Plot the power with respect to a relative
@@ -217,7 +217,7 @@ How are the responses different? Discuss the assumptions behind choosing
 a relative or absolute baseline
 {% include markup/end %}
 
-##### Exercise 2
+#### Exercise 2
 
 {% include markup/skyblue %}
 Plot the TFR of sensor 1.
@@ -268,7 +268,7 @@ Plot the result
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets._
 
-##### Exercise 3
+#### Exercise 3
 
 {% include markup/skyblue %}
 Adjust `cfg.width` and see how the TFRs change.

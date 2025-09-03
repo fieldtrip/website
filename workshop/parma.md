@@ -2,23 +2,23 @@
 title: FieldTrip workshop in Parma
 ---
 
-#### Where
+## Where
 
 Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parm
 Via Volturno 39, Parma, Italia
 
-#### When
+## When
 
 April 28-30 2014
 
-#### Who
+## Who
 
 Diego Lozano-Soldevilla and Arjen Stolk will be lecturing and tutoring.
 Sebo Uithol is the host and local organizer
 
 ## Tentative Program
 
-#### Monday April 28
+### Monday April 28
 
 - Session I
 
@@ -36,7 +36,7 @@ Sebo Uithol is the host and local organizer
     - <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
   - 16:45 - 17:30 Wrap-up-the-day: Ask the experts session
 
-#### Tuesday April 29
+### Tuesday April 29
 
 - Session III
 
@@ -57,7 +57,7 @@ Sebo Uithol is the host and local organizer
 
   - 20:00 Workshop Dinner @ ???
 
-#### Wednesday April 30
+### Wednesday April 30
 
 - Session V
   - 10:00 - 13:00 FieldTrip playground

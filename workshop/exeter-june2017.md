@@ -10,7 +10,7 @@ We will keep this page up to date and post new information here when available.
 
 ## Schedule
 
-#### Day 1 (Tuesday 6 June 2017)
+### Day 1 (Tuesday 6 June 2017)
 
 - 8:45 - 9:00 Registration, with coffee/tea
 - 9:00 - 9:15 Introduction
@@ -25,7 +25,7 @@ We will keep this page up to date and post new information here when available.
 - 16:45 - 17:15 Wrap-up / Q&A session
 - 19:00 Dinner
 
-#### Day 2 (Wednesday 7 June 2017)
+### Day 2 (Wednesday 7 June 2017)
 
 - 9:00 - 10:00 Lecture 3: Statistical inference using non-parametric permutation techniques [slides](https://www.dropbox.com/s/ah8kp2tejegza6u/3.%20cluster%20statistics%20%28Eelke%29.pptx?dl=0)
 - 10:00 - 10:15 Coffee break

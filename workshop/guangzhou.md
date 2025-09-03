@@ -10,7 +10,7 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
 ## Program
 
-#### Tuesday August 23rd
+### Tuesday August 23rd
 
 - Session I
 
@@ -32,7 +32,7 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
 - dinner (not included, i.e. on own costs)
 
-#### Wednesday August 24th
+### Wednesday August 24th
 
 - Session III
 
@@ -50,7 +50,7 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
     - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 – 18:00 Wrap-up-the-day: “Ask the experts” session
 
-#### Thursday August 25th
+### Thursday August 25th
 
 - Session V
   - 10:00 – 13:00 FieldTrip playground: bring your own data

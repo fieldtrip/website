@@ -27,7 +27,7 @@ Please read [this paper](https://iopscience.iop.org/article/10.1088/1741-2552/ab
 
 _We will start after lunch, at 12:30 sharp, and will finish around 17:00. If you come in advance, you can join us for a free lunch in the DCCN canteen, which is downstairs in the Trigon building._
 
-#### Schedule.
+### Schedule.
 
 | 12:00-12:30 | Lunch offered at Trigon Welcome                                                                                                                           |
 | 12:30-12:45 | Welcome and get started: Thom Oostendorp (15mins): the project Into the Brain, technical details on installation/cloning

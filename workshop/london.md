@@ -10,7 +10,7 @@ We will keep this page up to date and post new information here when available.
 
 ## Schedule
 
-#### Day 1 (Thursday 3 March, 2016)
+### Day 1 (Thursday 3 March, 2016)
 
 - 15:00 - 15:30 Registration, with coffee/tea
 - 15:30 - 16:00 Introduction ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/0_overview_Eelke.pptx))
@@ -18,7 +18,7 @@ We will keep this page up to date and post new information here when available.
 
 - Evening Pub? (at own expense)
 
-#### Day 2 (Friday 4 March, 2016)
+### Day 2 (Friday 4 March, 2016)
 
 - 9:00 - 11:00 Hands-on 1: [Preprocessing EEG data and event-related potentials](/tutorial/sensor/preprocessing_erp)
   - If you finish early, feel free to look at [Event-related averaging and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient)
@@ -32,7 +32,7 @@ We will keep this page up to date and post new information here when available.
 - 17:00 - 17:30 wrap-up / Q&A
 - 18:30 Dinner (at own expense)
 
-#### Day 3 (Saturday 5 March, 2016)
+### Day 3 (Saturday 5 March, 2016)
 
 - 9:00 - 11:00 Hands-on 3: [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics)
 

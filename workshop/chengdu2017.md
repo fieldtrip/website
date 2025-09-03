@@ -17,11 +17,11 @@ This will be a loosely organized workshop that comprises a series of lectures an
 - 1h - welcome and intro lecture - [slides](https://download.fieldtriptoolbox.org/workshop/chengdu2017/slides/introduction.pdf)
 - 2h - hands-on on preprocessing of [EEG](/tutorial/sensor/preprocessing_erp) data.
 
-#### Thursday morning
+### Thursday morning
 
 - 3h - preprocessing of Cuban EEG dataset (eyes opened/closed and hyperventilation)
 
-#### Friday morning
+### Friday morning
 
 - 1h - forward and inverse modeling lecture - [slides](https://download.fieldtriptoolbox.org/workshop/chengdu2017/slides/forward.pdf)
 - 2h - anatomical processing and lead fields for Cuban EEG dataset

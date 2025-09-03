@@ -71,7 +71,7 @@ To align the coordinates of the MRI with the anatomical landmarks, we use the fo
 
 _Figure: The location of the NAS indicated by the crosshair in the anatomical MRI image_
 
-#### Exercise 1
+### Exercise 1
 
 {% include markup/skyblue %}
 Inspect the location of the LPA and RPA.
@@ -91,7 +91,7 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
     % save(filename, 'mri');
     % load(filename, 'mri');
 
-#### Exercise 2
+### Exercise 2
 
 {% include markup/skyblue %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.

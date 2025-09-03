@@ -8,7 +8,7 @@ We will keep this page up to date and post new information here when available.
 - When: 25-27 April 2016
 - Where: Kiel, Germany
 
-#### Monday April 25th
+### Monday April 25th
 
 - Session I
 
@@ -30,7 +30,7 @@ We will keep this page up to date and post new information here when available.
 
 - Evening : ... social activity
 
-#### Tuesday April 26th
+### Tuesday April 26th
 
 - Session III
 
@@ -48,7 +48,7 @@ We will keep this page up to date and post new information here when available.
 
   - Evening : ... social activity
 
-#### Wednesday April 27th
+### Wednesday April 27th
 
 - Session V
   - 10:00 – 13:00 FieldTrip playground

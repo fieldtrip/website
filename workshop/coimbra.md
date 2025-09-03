@@ -8,7 +8,7 @@ title: FieldTrip workshop in Coimbra, Portugal
 
 ## Workshop Program
 
-#### Monday June 6th
+### Monday June 6th
 
 - Session I
 
@@ -27,7 +27,7 @@ title: FieldTrip workshop in Coimbra, Portugal
 
 - 20:00 Workshop Dinner @ ???
 
-#### Tuesday June 7th
+### Tuesday June 7th
 
 - Session III
 
@@ -43,7 +43,7 @@ title: FieldTrip workshop in Coimbra, Portugal
   - 15:30 – 17:15 Hands-on: Parametric and non-parametric statistics on event-related fields <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics> and <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 – 18:00 Wrap-up-the-day: “Ask the experts” session
 
-#### Wednesday June 8th
+### Wednesday June 8th
 
 - Session V
   - 10:00 – 13:00 FieldTrip playground

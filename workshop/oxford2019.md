@@ -10,7 +10,7 @@ tags: [oxford2019]
 
 ## Schedule
 
-#### Day 1 (Monday 6 May, 2019)
+### Day 1 (Monday 6 May, 2019)
 
 - 08:45 – 09:00 Registration, with coffee/tea
 - 09:00 – 09:15 Introduction
@@ -25,7 +25,7 @@ tags: [oxford2019]
 - 14:45 – 16:45 Hands-on 2: [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
 - 16:45 – 17:15 Wrap-up / Q&A session
 
-#### Day 2 (Tuesday 7 May, 2019)
+### Day 2 (Tuesday 7 May, 2019)
 
 - 09:00 – 10:00 Lecture 3: Beamformer techniques for source reconstruction
 - 10:00 – 10:15 Coffee break
@@ -42,7 +42,7 @@ tags: [oxford2019]
 
 - 19:00 Dinner, location TBA
 
-#### Day 3 (Wednesday 8 May, 2019)
+### Day 3 (Wednesday 8 May, 2019)
 
 - 09:00 – 12:30 FieldTrip/advanced analysis playground
 

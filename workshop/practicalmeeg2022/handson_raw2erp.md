@@ -333,7 +333,7 @@ Now that we have a combined layout, we can plot all three datatypes and all thre
     cfg.eegscale  = 1e6;
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
-#### Exercise 1
+### Exercise 1
 
 {% include markup/skyblue %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
@@ -343,7 +343,7 @@ Explore the data, using the interactive property of the figure. Visualize the to
 _Figure: Topographies of the average across selected latency window for one of the conditions._
 {% include markup/end %}
 
-#### Exercise 2
+### Exercise 2
 
 {% include markup/skyblue %}
 The `avg_famous` structure not only contains the average, but also the variance. That can be used to compute the standard deviation and the standard error of the mean (SEM).
@@ -382,7 +382,7 @@ _Figure: the averaged ERP on EEG065, plus and minus the SEM._
 
 {% include markup/end %}
 
-#### Exercise 3
+### Exercise 3
 
 {% include markup/skyblue %}
 
@@ -409,7 +409,7 @@ _Figure: the ERP with the SEM as highlighted region, and the ERP that highlights
 
 {% include markup/end %}
 
-#### Exercise 4
+### Exercise 4
 
 {% include markup/skyblue %}
 Rather than looking at the average and go to the thresholded statistics straight away, we can also look at the individual trials. For that it helps to represent the data according to the `timelock` structure, but keeping all the trials.

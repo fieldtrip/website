@@ -23,7 +23,7 @@ A single subject from this dataset was also analyzed for the MEG-UK workshop
 - <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo>
 - <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
 
-### Abstract (of the satellite meeting)
+## Abstract (of the satellite meeting)
 
 Free academic toolboxes have gained increasing prominence in MEG analysis as a means to disseminate cutting edge methods, share best practices between different research groups and pool resources for developing essential tools for the MEG community. In the recent years large and vibrant research communities have emerged around several of these toolboxes. Teaching events are regularly held around the world where the basics of each toolbox are explained by its respective developers and experienced power users. There are, however, two knowledge gaps that our BIOMAG satellite symposium aims to address. Firstly, most teaching examples only show analysis of a single 'typical best' subject whereas most real MEG studies involve analysis of group data. It is then left to the researchers in the field to figure out for themselves how to make the transition and obtain significant group results. Secondly, we are not familiar with any examples of fully analyzing the same group dataset with different academic toolboxes to assess the degree of agreement in scientific conclusions and compare strengths and weaknesses of various analysis methods and their independent implementations. Our workshop is organised by the lead developers of six most popular free academic MEG toolboxes (in alphabetic order): Brainstorm, EEGLAB, FieldTrip, MNE, NUTMEG, and SPM. Ahead of the workshop the research team for each toolbox will analyze the same group MEG/EEG dataset. This dataset containing evoked responses to face stimuli was acquired by Richard Henson and Daniel Wakeman, who won a special award at BIOMAG2010 to make it freely available to the community. All the raw data are available at <https://openfmri.org/dataset/ds000117/>.
 
@@ -35,11 +35,11 @@ Following the event we plan to integrate the suggestions and questions from the 
 
 We hope that this proposal will lead to creation of invaluable resource for the whole MEG community and the workshop will contribute to establishment of good practice and promoting consistent and reproducible analyses approaches. The event will also showcase all the toolboxes and will be of interest to beginners in the field with basic background in MEG who contemplate the most suitable analysis approach and software for their study as well as to experienced researchers who would like to get up to date with the latest methodological developments.
 
-### Dataset description
+## Dataset description
 
 This is a mulimodal dataset containing simultaneous M/EEG recordings on 19 healthy subjects. Subjects were presented with 6 sessions of 10 minutes duration each. In the original study, three subjects (sub001, sub005, sub016) were excluded from the analysis.
 
-### Stimulation details
+## Stimulation details
 
 The start of a trial was indicated with a fixation cross of random duration between 400 to 600 ms.
 The face stimuli was superimposed on the fixation cross for a random duration of 800 to 1,000 ms.
@@ -53,7 +53,7 @@ Two types of stimulation pattern:
 For the purposes of our analysis, we treat these two stimulation patterns of stimuli together.
 To maintain attention, subjects were asked to judge the symmetry of the image and respond with a keypress.
 
-### Acquisition details
+## Acquisition details
 
 - Sampling frequency : 1100 Hz
 - Stimulation triggers: The trigger channel is STI101 with the following event code

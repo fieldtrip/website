@@ -82,7 +82,7 @@ If the contrast of the image is a bit low, you can use the 'shift+' key to incre
 
 _Figure: The location of the NAS indicated by the crosshair in the anatomical MRI image_
 
-#### Exercise 1
+### Exercise 1
 
 {% include markup/skyblue %}
 Inspect the location of the LPA and RPA.
@@ -98,7 +98,7 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
     cfg.coordsys     = 'neuromag';
     mri              = ft_volumerealign(cfg, mri_orig);
 
-#### Exercise 2
+### Exercise 2
 
 {% include markup/skyblue %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.

@@ -230,7 +230,7 @@ movement.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="800" %}
 
-##### Exercise 1
+#### Exercise 1
 
 {% include markup/skyblue %}
 Skip through a couple of data segments and see if you can already spot some
@@ -268,7 +268,7 @@ figure. Click through the trials using the `>` button to inspect each trial.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejecttrl.png" width="400" %}
 
-##### Exercise 2
+#### Exercise 2
 
 {% include markup/skyblue %}
 Can you spot which channels are noisier than others? Using
@@ -318,7 +318,7 @@ channels that are noisy.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejectsummary.png" width="700" %}
 
-##### Exercise 3
+#### Exercise 3
 
 {% include markup/skyblue %}
 Which channels show the most variance? Why is that?
@@ -396,7 +396,7 @@ For each trial, the condition information is kept with the data structure in `da
     cfg.trials = ismember(data_clean.trialinfo, [113, 123, 133, 143]);
     timelockAUD = ft_timelockanalysis(cfg, data_clean);
 
-##### Exercise 4
+#### Exercise 4
 
 {% include markup/skyblue %}
 Inspect the resulting data structure after
@@ -422,7 +422,7 @@ back and forth between the topographic and time representation of the data.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_avgtime.png" width="400" %}
 
-##### Exercise 5
+#### Exercise 5
 
 {% include markup/skyblue %}
 Select the time window where the conditions differ the most. Do the topographies
@@ -440,7 +440,7 @@ on your ERP effect, compute group level averages with
 different ways of visualizing, i.e.
 **[ft_multiplotER](/reference/ft_multiplotER)** etc.
 
-##### Exercise 6
+#### Exercise 6
 
 {% include markup/skyblue %}
 The following code allows you to compute at the ERP difference waves.

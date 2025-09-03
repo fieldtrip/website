@@ -6,7 +6,7 @@ title: FieldTrip workshop in Hamburg in 2012
 - Venue: UKE Hamburg N55
 - Dates: June 15-17, 2012
 
-### Friday June 15
+## Friday June 15
 
 **Session I**
 

@@ -50,7 +50,7 @@ If you get the error "can't find the command ft_defaults" you should check the p
 
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\toolkit_salzburg\\fieldtrip\\data.
 
-#### Tuesday
+### Tuesday
 
 - morning
 
@@ -66,7 +66,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 - evening
   - dinner and drinks + visit to Mozart Geburtshaus
 
-#### Wednesday
+### Wednesday
 
 - morning
 
