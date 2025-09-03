@@ -60,21 +60,24 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
                     h5 += len(re.findall("^##### ", line))
                     h6 += len(re.findall("^###### ", line))
 
-                # keep track of the total count of incorrect headings
-                count += h1 + h2 + h3 + h4 + h5 + h6
-
                 if h1 > 0:
                     print(f"Warning: H1 heading found in {relfile}")
+                    count += 1
                 if h3 > 0 and h2 == 0:
                     print(f"Warning: H3 heading found without H2 in {relfile}")
+                    count += 1
                 if h4 > 0 and h3 == 0:
                     print(f"Warning: H4 heading found without H3 in {relfile}")
+                    count += 1
                 if h5 > 0 and h4 == 0:
                     print(f"Warning: H5 heading found without H4 in {relfile}")
+                    count += 1
                 if h6 > 0 and h5 == 0:
                     print(f"Warning: H6 heading found without H5 in {relfile}")
+                    count += 1
+
+print(f"Found {count} files with incorrect headings")
 
 if count > 0:
-    print(f"Total incorrect headings found: {count}")
     # return an error code to allow external tools to detect the issue
     exit(1)
