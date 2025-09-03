@@ -5,15 +5,15 @@ tags: [website, syntax, guidelines, development]
 
 This page describes the syntax and formatting for the FieldTrip website. The content of the website is maintained on <https://github.com/fieldtrip/website> and we have a complete [tutorial](/development/git) that explains how to contribute. You can also use the GitHub web interface by opening a specific page page and clicking on the pen symbol ("Edit this file") in the upper right corner.
 
-The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting, for which the Shopify [Liquid cheat sheet](http://cheat.markdunkley.com) is a good resource. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The resulting html pages and css style sheets make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
-This Markdown [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a very good place to start. It is also helpful to check the formatting in an online Markdown editor like <https://stackedit.io> or <https://dillinger.io>.
+This Markdown [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a good place to start. It is also helpful to check the formatting in an online Markdown editor like <https://stackedit.io> or <https://dillinger.io>.
 
-Since Markdown is limited in its layout options, we use some custom code implemented in Liquid for specific formatting details. A good way to learn the formatting is by looking at the **raw format** of pages on <https://github.com/fieldtrip/website>.
+For more complex content and formatting, the Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language. The Shopify [Liquid cheat sheet](http://cheat.markdunkley.com) is a good resource and the online editor <https://liquidjs.com/playground.htm> helps to develop and test code.
 
-## Page header
+## Frontmatter
 
-The Markdown document should start with a short header between two lines with three minus characters (not more and not less), including the title and the tags (formatted in a comma-separated) like this
+The Markdown document should start with some so-called frontmatter, i.e., a short header between two lines with three minus characters each (not more and not less), including the title and the tags (formatted in a comma-separated) like this
 
 ```markdown
 ---
@@ -21,6 +21,14 @@ title: Website syntax and formatting
 tags: [website, syntax, guidelines, development]
 ---
 ```
+
+## Title and headings
+
+The page title as defined in the frontmatter is automatically used as the top-level (H1) heading. The Markdown document should therefore not start with a header using `# ...`.
+
+Each page should only have a single top-level H1 heading, and since that is automatically added, you should not use H1 level headers with `# ...` on any page yourself. You can and should use subsequent heading levels (`## ...`, `### ...`), which will appear in the table of contents in the right column.
+
+You should not use sub-headings if the corresponding higher level heading is not also present, i.e., it is fine to use headings at the levels H3, H2 and H1 (which is automatically added with the page title), but not H4 and H2, skipping H3 in between.
 
 ## Tags
 
@@ -32,11 +40,9 @@ Workshop tutorials in general should only contain two tags: one for the workshop
 
 Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](/faq/other/datasets).
 
-## Menu
+## Table of content
 
-The first and only section with a single `#` corresponds to the page title and is not shown in the page-specific table of content on the right. All subsequent `##` and `###` sections are shown the table of content.
-
-Please ensure that the page title in the header and the first `#` section title are identical.
+The first and only H1 level header (with a single `#`) is automatically added based on the title in the frontmatter and is not shown in the page-specific table of content on the right. All subsequent `##` and `###` headers are shown the table of content on the right.
 
 ## Text block highlighting
 
@@ -143,24 +149,32 @@ You can include an automatically generated list of pages with specific tags like
 {% raw %}
 
 ```liquid
-{% include seealso tag1="guidelines" %}
+{% include seealso tag="guidelines" %}
 ```
 
 {% endraw %}
 
 which results in the following list
 
-{% include seealso tag1="guidelines" %}
+{% include seealso tag="guidelines" %}
 
-Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**.
+Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**. The page category (`tutorial`, `example`, `faq`) can also be indicated using `category` like this
+
+{% raw %}
+
+```liquid
+{% include seealso category="faq" tag="matlab" %}
+```
+
+{% endraw %}
 
 ## Line breaks
 
-If you have a short piece of text, such as an address, that you want to appear over multiple lines _without_ converting it into a list, you can add two spaces to the end of each line. This will cause explicit line breaks to be inserted.
+If you have a short piece of text, such as an address, that you want to appear over multiple lines _without_ converting it into a list, you can add two spaces to the end of the line. This will cause explicit line breaks to be inserted.
 
 ## Images
 
-Since images can only be displayed inline in a Markdown document with the size (width and height) determined by the actual bitmap, we are using a piece of Liquid code to insert resizable images. Whereas in Markdown you would to
+Since bitmap images can only be displayed inline in a Markdown document with the size (width and height) determined by the actual bitmap images, we are using a piece of Liquid code to insert resizable images. Whereas in Markdown you would to
 
 ```markdown
 Inline-style:
@@ -184,17 +198,17 @@ For the FieldTrip website you have to do
 
 {% endraw %}
 
-Please keep images in `assets/img` with subdirectories according to the place where the image appears. The preferred filename is `figureXX.png`, with XX being the sequential number of the image appearing on the page. The preferred format for screenshots is png. The preferred format for photos is jpg. Do not cross-link to figures from another tutorial or example, but copy that figure over (otherwise changes to the original page with the figure might break the page that cross-links to the figure). 
+Please keep images in `assets/img` with subdirectories according to the place where the image appears. The preferred filename is `figureXX.png`, with XX being the sequential number of the image appearing on the page. The preferred format for screenshots is png. The preferred format for photos is jpg. Do not cross-link to figures from another tutorial or example, but copy that figure over (otherwise changes to the original page with the figure might break the page that cross-links to the figure).
 
 ## Pdf documents
 
-Pdf documents can be used on the FieldTrip website, but are not managed in git on GitHub. Since they are binary files and often very large (e.g., slides of presentations), storing them in git would be inefficient. Please send pdf file that you want on the website to Robert, he will copy it to .
+Pdf documents can be used on the FieldTrip website, but are not managed in git on GitHub. Since they are binary files and often very large (e.g., slides of presentations), storing them in git would be inefficient. Please send pdf files that you want to appear on the website to Robert, he will copy it to the server.
 
 ## Videos
 
-This is implemented with some small snippets of html code contained in the `includes` directory.
+This is implemented with some small snippets of html code contained in the `_includes` directory.
 
-You can include a Youtube video like This
+You can include a Youtube video like this
 
 {% raw %}
 
@@ -216,4 +230,8 @@ and a Vimeo video like this
 
 ## News items
 
-To show a news item on the front page, you have to add the news item as a Markdown page to `_posts` with the name `YYYY-MM-DD-short-description.md`. See the other examples in that directory. Posts that have the category `news` are shown on the front page, for older posts you should remove the `news` category.
+To show a news item on the front page, you have to add the news item as a Markdown page to `_posts` with the name `YYYY-MM-DD-short-description.md`. See the other examples in that directory.
+
+Posts should not have any tags.
+
+Recent posts that have the category 'news' are automatically shown on the front page.
