@@ -7,10 +7,10 @@ When you add documentation, please consider the following documentation guidelin
 
 - FieldTrip should be written with capital "F" and capital "T"
 - All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
-- When you add a new page, please give it relevant [tags](#how_to_add_tags).
+- When you add a new page, please give it relevant [tags](#how-to-add-tags).
 - If you see something that needs to be fixed in the documentation, report it as issue on [GitHub](https://github.com/fieldtrip/website/issues)
-- Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).
-- Please give clear [names for example data](</#How to name example data>).
+- Please structure new tutorials [in the following way](#how-to-structure-a-tutorial).
+- Please give clear [names for example data](#how-to-name-example-data).
 - If you refer to file formats using the extension, please do it like .txt, .dat or .ext in general.
 
 ## Where to add documentation on the website?

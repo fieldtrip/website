@@ -13,12 +13,15 @@ For more complex content and formatting, the Markdown pages includes sections in
 
 ## Frontmatter
 
-The Markdown document should start with some so-called frontmatter, i.e., a short header between two lines with three minus characters each (not more and not less), including the title and the tags (formatted in a comma-separated) like this
+The Markdown document should start with some so-called frontmatter, i.e., a short header between two lines with three minus characters each (not more and not less), including the title, tags, etc.
 
 ```markdown
 ---
 title: Website syntax and formatting
 tags: [website, syntax, guidelines, development]
+category:
+tags: []
+weight:
 ---
 ```
 
@@ -30,19 +33,61 @@ Each page should only have a single top-level H1 heading, and since that is auto
 
 You should not use sub-headings if the corresponding higher level heading is not also present, i.e., it is fine to use headings at the levels H3, H2 and H1 (which is automatically added with the page title), but not H4 and H2, skipping H3 in between.
 
+### Table of content
+
+The first (and only) H1 level header with a single `#` is automatically added based on the title in the frontmatter and is _not_ shown in the table of content on the right. All subsequent headers _are_ shown in the table of content on the right.
+
 ## Tags
 
-Tags that are defined in the page header will automatically appear at the top of the page, where they will link to an overview page with all pages containing the specific tag. Please be restrictive in creating new tags and assigning tags. Tags are meant to search and link **relevant** pages. If you add too many tags, they become less useful.
+Tags that are defined in the frontmatter will automatically appear at the top of the page, where they will link to an overview page with all pages containing the specific tag. Tags should be formatted as a list, even if there is one. Please be restrictive in creating new tags and assigning tags. Tags are meant to search and link **relevant** pages. If you add too many tags, they become less useful.
 
-Workshop tutorials in general should only contain two tags: one for the workshop like `oslo2019`, and one for the dataset that is used like `eeg-audodd`.
+Tags for a page are displayed in the right column under the table of content. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those tag overview pages are automatically built on the web server after every change. The tag can be used together with the category to make a "See also" list (see below).
 
-## Datasets
+Posts and news items should not have any tags. Workshop tutorials in general should only contain two tags: one for the workshop identifier like `oslo2019`, and one for the dataset that is used like `eeg-audodd`.
+
+### Datasets
 
 Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](/faq/other/datasets).
 
-## Table of content
+## Category
 
-The first and only H1 level header (with a single `#`) is automatically added based on the title in the frontmatter and is not shown in the page-specific table of content on the right. All subsequent `##` and `###` headers are shown the table of content on the right.
+You should specify the category under which the page falls in the frontmatter. This should be a single word, not a list. The following categories are currently in use: `tutorial`, `example`, `faq`, `getting_started`.
+
+The category can be used together with the tags to make a "See also" list (see below).
+
+## See also
+
+You can include an automatically generated list of pages with specific tags and/or a specific category like this
+
+{% raw %}
+
+```liquid
+{% include seealso category="example" tag="plotting" %}
+```
+
+{% endraw %}
+
+which results in the following list
+
+{% include seealso category="example" tag="plotting" %}
+
+The page category can be indicated using a single word. Tags are indicated with `tag`, or when multiple are specified with `tag1`, `tag2`, etcetera. Multiple tags are logically combined with **and**, not with **or**.
+
+## Weights
+
+In the frontmatter you can specify a weigth between 10 and 99 (i.e., it should consist of two digits) that is used to determine how pages are sorted in lists. Low weights appear at the top, high weights at the bottom. If a page does not have a weight, it will go all the way to the bottom. Pages that have the same weight will be sorted alphabetically.
+
+## Redirection
+
+If you rename a page, the URL (i.e. the link on the web) that points to it will not be valid any more. That is problematic if that link is for example used in other documentation, on other websites, or in the email archive. To prevent broken links, you can redirect from the old page to the new page; this requires that you including `redirect_from` in the frontmatter of the new page. You can also use it to redirect links to multiple old pages to a new single page in which the documentation has been merged.
+
+```plaintext
+---
+title: New page title
+redirect_from:
+  - /olddir/oldname/
+---
+```
 
 ## Text block highlighting
 
@@ -125,48 +170,6 @@ This is formatted with a fixed-width font, but without color highlighting.
 ````
 
 The last option is useful for MATLAB command window output, which in itself is not executable code, and for displaying sections of MATLAB help.
-
-## Tags
-
-Tags are displayed at the top of the page. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those overview pages are automatically build on the web server after every change.
-
-## Redirection
-
-If you rename a page, the URL (i.e. the link on the web) that points to it will not be valid any more. That is problematic if that link is for example used in other documentation, on other websites, or in the email archive. To prevent broken links, you can redirect from the old page to the new page; this requires that you including `redirect_from` in the page header of the new page. You can also use it to redirect links to multiple old pages to a new single page in which the documentation has been merged.
-
-```plaintext
----
-title: New page title
-redirect_from:
-  - /olddir/oldname/
----
-```
-
-## See also
-
-You can include an automatically generated list of pages with specific tags like this
-
-{% raw %}
-
-```liquid
-{% include seealso tag="guidelines" %}
-```
-
-{% endraw %}
-
-which results in the following list
-
-{% include seealso tag="guidelines" %}
-
-Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**. The page category (`tutorial`, `example`, `faq`) can also be indicated using `category` like this
-
-{% raw %}
-
-```liquid
-{% include seealso category="faq" tag="matlab" %}
-```
-
-{% endraw %}
 
 ## Line breaks
 

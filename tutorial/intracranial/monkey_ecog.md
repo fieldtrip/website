@@ -2,6 +2,7 @@
 title: Analysis of monkey ECoG recordings
 category: tutorial
 tags: [ieeg, ecog, neurotycho, animal]
+weight: 30
 redirect_from:
     - /tutorial/monkey_ecog/
 ---

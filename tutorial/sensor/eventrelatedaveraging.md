@@ -1,5 +1,6 @@
 ---
 title: Event-related averaging and MEG planar gradient
+weight: 20
 category: tutorial
 tags: [meg, timelock, preprocessing, plotting, meg-language]
 redirect_from:

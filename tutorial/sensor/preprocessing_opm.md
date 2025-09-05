@@ -1,5 +1,6 @@
 ---
 title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+weight: 50
 category: tutorial
 tags: [opm, fieldline, opm-mediannerve]
 redirect_from:

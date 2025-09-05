@@ -2,6 +2,7 @@
 title: Cluster-based permutation tests on event-related fields
 category: tutorial
 tags: [statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
+weight: 30
 redirect_from:
     - /tutorial/cluster_permutation_timelock/
 ---

@@ -17,10 +17,13 @@
 {% endfor %}
 
 <ul>
-{% assign sorted = selected | sort_natural: "title" | sort: "weight" %}
+{% assign grouped = selected | group_by: "weight" | sort_natural: "name" %}
+{% for group in grouped %}
+{% assign sorted = group.items | sort_natural: "title" %}
 {% for item in sorted %}
 {% if item.title != nill %}
 <li><a href="{{ item.url }}"> {{ item.title }}</a></li>
 {% endif %}
+{% endfor %}
 {% endfor %}
 </ul>

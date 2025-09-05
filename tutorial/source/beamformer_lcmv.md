@@ -13,7 +13,6 @@ See <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718> for the progress
 Once this tutorial is completed, it will be listed in the tutorial section in the menu. Also once complete, it will receive the tags _tutorial meg source headmodel mri lcmv beamformer_ to link it to other pages.
 {% include markup/end %}
 
-
 ## Introduction
 
 In this tutorial you will learn about applying beamformer techniques in the time domain. You will learn how to compute and select appropriate time windows, create an appropriate head model and lead field matrix, and various options for contrasting the effect of interest (in this case a somatosensory evoked field - SEF) against some control/baseline. Finally, you will be shown several options for plotting the results overlaid on a structural MRI.

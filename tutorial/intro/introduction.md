@@ -1,5 +1,6 @@
 ---
 title: Introduction to the FieldTrip toolbox
+weight: 20
 category: tutorial
 tags: [meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
 redirect_from:

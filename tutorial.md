@@ -3,38 +3,25 @@ title: Tutorials
 category: tutorial
 ---
 
-The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. The [frequently asked questions](/faq) and [example scripts](/example) are other forms of documentation.
+The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).
 
-Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).
+The example datasets that are used in the documentation are listed in [this overview](/faq/other/datasets), inlcuding links to all pages that use a specific dataset. These datasets are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
 
-For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/other/datasets). The datasets used in the tutorials are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
+We invite you to [add your own](/development/contribute) tutorials to the website, considering the [documentation guidelines](/development/guideline/documentation). Whenever you explain somebody in person or over email how to do something with FieldTrip, please consider whether you could use the website for this, allowing others to learn from it as well.
 
-When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guideline/documentation).
+See also the [frequently asked questions](/faq) and [example scripts](/example).
 
 ## Introduction to FieldTrip and MATLAB
 
-- [Introduction to the FieldTrip toolbox](/tutorial/intro/introduction)
-- [Creating a clean analysis pipeline](/tutorial/intro/pipeline)
+{% include pagelist section="tutorial/intro" %}
 
 ## Reading and preprocessing data
 
-- [Preprocessing - Reading continuous EEG and MEG data](/tutorial/preproc/continuous)
-- [Preprocessing - Trigger based trial selection](/tutorial/preproc/preprocessing)
-- [Introduction on dealing with artifacts](/tutorial/preproc/artifacts)
-- [Visual or manual artifact rejection](/tutorial/preproc/visual_artifact_rejection)
-- [Automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection)
-- [Cleaning artifacts using ICA](/tutorial/preproc/ica_artifact_cleaning)
+{% include pagelist section="tutorial/preproc" %}
 
 ## Sensor-level analyses
 
-- [Event-related fields and MEG planar gradient](/tutorial/sensor/eventrelatedaveraging)
-- [Preprocessing of EEG data and computing ERPs](/tutorial/sensor/preprocessing_erp)
-- [Preprocessing and event-related activity in combined MEG/EEG data](/tutorial/sensor/preprocessing)
-- [Preprocessing of Optically Pumped Magnetometer (OPM) data](/tutorial/sensor/preprocessing_opm)
-- [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/sensor/timefrequencyanalysis)
-- [Time-frequency analysis of combined MEG/EEG data](/tutorial/sensor/timefrequency)
-- [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor/sensor_analysis)
-- [Extracting the brain state and events from continuous sleep EEG](/tutorial/sensor/sleep)
+{% include pagelist section="tutorial/sensor" %}
 
 ## Source reconstruction
 
@@ -42,6 +29,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Construct a BEM headmodel for EEG source analysis](/tutorial/source/headmodel_eeg_bem)
 - [Construct a FEM headmodel for EEG source analysis](/tutorial/source/headmodel_eeg_fem)
 - [Creating a source model for MEG or EEG source analysis](/tutorial/source/sourcemodel)
+- [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/source/coregistration_opm)
 - [Localizing electrodes using a 3D-scanner](/tutorial/source/electrode)
 - [Localizing oscillatory sources in MEG data using a beamformer](/tutorial/source/beamformer)
 - [Beamforming oscillatory responses in combined MEG/EEG data](/tutorial/source/beamforming)
@@ -50,24 +38,18 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Dipole fitting of combined MEG/EEG data](/tutorial/source/dipolefitting)
 - [Computation of virtual MEG channels in source-space](/tutorial/source/virtual_sensors)
 - [Virtual channel analysis of epilepsy MEG data](/tutorial/source/epilepsy)
-- [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/source/coregistration_opm)
 
 ## Analysis of intracranial data
 
-- [Analysis of human ECoG and sEEG recordings](/tutorial/intracranial/human_ecog)
-- [Analysis of monkey ECoG recordings](/tutorial/intracranial/monkey_ecog)
-- [Channel and source analysis of mouse EEG](/tutorial/intracranial/mouse_eeg)
-- [Preprocessing and analysis of spike-train data](/tutorial/intracranial/spike)
-- [Preprocessing and analysis of spike and LFP data](/tutorial/intracranial/spikefield)
+{% include pagelist section="tutorial/intracranial" %}
 
 ## Analysis of TMS data
 
-- [Dealing with TMS-EEG datasets](/tutorial/tms/tms-eeg)
+{% include pagelist section="tutorial/tms" %}
 
 ## Analysis of fNIRS data
 
-- [Preprocessing and averaging of single-channel NIRS data](/tutorial/nirs/nirs_singlechannel)
-- [Preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs/nirs_multichannel)
+{% include pagelist section="tutorial/nirs" %}
 
 ## Connectivity analysis
 
@@ -79,19 +61,12 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Statistical analysis
 
-- [Parametric and non-parametric statistics on event-related fields](/tutorial/stats/eventrelatedstatistics)
-- [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock)
-- [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq)
-- [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/tutorial/stats/statistics)
-- [Multivariate analysis of MEG/EEG data](/tutorial/stats/mvpa_light) (based on the MVPA-Light toolbox)
+{% include pagelist section="tutorial/stats" %}
 
 ## Plotting and visualization
 
-- [Specifying the channel layout for plotting](/tutorial/plotting/layout)
-- [Plotting data at the channel and source level](/tutorial/plotting/channel_source)
+{% include pagelist section="tutorial/plotting" %}
 
 ## Making your analyses more efficient
 
-- [Making a memory efficient analysis pipeline](/tutorial/scripting/memory)
-- [Speeding up your analysis using distributed computing with qsub](/tutorial/scripting/distributedcomputing_qsub)
-- [Speeding up your analysis using distributed computing with parfor](/tutorial/scripting/distributedcomputing_parfor)
+{% include pagelist section="tutorial/scripting" %}

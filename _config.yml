@@ -23,6 +23,7 @@ defaults:
     values:
       layout: "default"
       toc: true
+      weight: 99
   -
     scope:
       path: ""

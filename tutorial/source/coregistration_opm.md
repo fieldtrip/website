@@ -2,6 +2,7 @@
 title: Coregistration of Optically Pumped Magnetometer (OPM) data
 category: tutorial
 tags: [opm, fieldline, coordsys, polhemus]
+weight: 60
 redirect_from:
     - /tutorial/coregistration_opm/
 ---
@@ -692,7 +693,7 @@ The coregistration of individually designed 3D printed helmets is mostly done du
 
 The procedure for this consists of the following steps:
 
-- Import the anatomical MRI from the participant with **[ft_read_mri](/reference/fileio/ft_read_mri)**, use **[ft_volumerealign](/reference/ft_volumerealign)** to align and **[ft_volumesegment](/reference/ft_volumesegment)** to segment the scalp surface. Then use \*\*[ft_prepare_mesh](/reference/ft_prepare_mesh) to construct a triangulated surface.
+- Import the anatomical MRI from the participant with **[ft_read_mri](/reference/fileio/ft_read_mri)**, use **[ft_volumerealign](/reference/ft_volumerealign)** to align and **[ft_volumesegment](/reference/ft_volumesegment)** to segment the scalp surface. Then use **[ft_prepare_mesh](/reference/ft_prepare_mesh)** to construct a triangulated surface.
 - Alternatively to starting with an MRI, you can also start with a 3D scan of the participants head. while wearing a swimming cap or similar to press down the hair. In that case you proceed with **[ft_read_headshape](/reference/fileio/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)** to align, and **[ft_defacemesh](/reference/ft_defacemesh)** to remove unwanted parts from the mesh, like the shoulders and/or the face.
 - You export the mesh as an STL file using **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and import it in your favourite 3D design software like Fusion360, Solidworks or Blender. From there it is up to you to design the helmet, including the OPM sensor holders.
 

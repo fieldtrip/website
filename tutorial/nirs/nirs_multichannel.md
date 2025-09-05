@@ -2,6 +2,7 @@
 title: Preprocessing and averaging of multi-channel NIRS data
 category: tutorial
 tags: [nirs, preprocessing, nirs-multichannel]
+weight: 30
 redirect_from:
     - /tutorial/nirs_multichannel/
 ---

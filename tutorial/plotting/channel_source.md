@@ -2,6 +2,7 @@
 title: Plotting data at the channel and source level
 category: tutorial
 tags: [plotting, layout]
+weight: 20
 ---
 
 ## Introduction
