@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40832198'
+- idtype: doi
+  value: 10.1101/2025.08.08.668962
+- idtype: pmcid
+  value: PMC12363898
+authors:
+- authtype: Author
+  name: Holubecki AM
+- authtype: Author
+  name: Yarbrough JB
+- authtype: Author
+  name: Rangarajan V
+- authtype: Author
+  name: Kuperman R
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Johnson EL
+epubdate: 2025 Aug 12
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.08.08.668962
+pmclivedate: 2025/08/20
+printpubdate: ''
+pubdate: 2025 Aug 12
+sortdate: 2025/08/12 00:00
+source: bioRxiv
+title: High frequency broadband activity detected noninvasively in infants distinguishes
+  wake from sleep states
+uid: '12363898'
+volume: ''

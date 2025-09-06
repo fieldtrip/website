@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40894703'
+- idtype: doi
+  value: 10.1101/2025.08.13.670238
+- idtype: pmcid
+  value: PMC12393282
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Tatz J
+- authtype: Author
+  name: Hassan U
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Jiang J
+epubdate: 2025 Aug 18
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.08.13.670238
+pmclivedate: 2025/08/29
+printpubdate: ''
+pubdate: 2025 Aug 18
+sortdate: 2025/08/18 00:00
+source: bioRxiv
+title: 'A Practical Preprocessing Pipeline for Concurrent TMS-iEEG: Critical Steps
+  and Methodological Considerations'
+uid: '12393282'
+volume: ''

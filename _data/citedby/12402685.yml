@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40891000'
+- idtype: doi
+  value: 10.1111/psyp.70135
+- idtype: pmcid
+  value: PMC12402685
+authors:
+- authtype: Author
+  name: Sala M
+- authtype: Author
+  name: Vespignani F
+- authtype: Author
+  name: Gastaldon S
+- authtype: Author
+  name: Casalino L
+- authtype: Author
+  name: Peressotti F
+epubdate: 2025 Sep 1
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e70135
+pmclivedate: 2025/09/03
+printpubdate: 2025 Sep
+pubdate: 2025 Sep 1
+sortdate: 2025/09/01 00:00
+source: Psychophysiology
+title: 'In the Words of Others: ERP Evidence of Speaker‐Specific Phonological Prediction'
+uid: '12402685'
+volume: '62'

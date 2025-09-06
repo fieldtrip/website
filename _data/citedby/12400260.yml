@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40888183'
+- idtype: doi
+  value: 10.1111/ejn.70230
+- idtype: pmcid
+  value: PMC12400260
+authors:
+- authtype: Author
+  name: Vittek A
+- authtype: Author
+  name: Juan C
+- authtype: Author
+  name: Gaillard C
+- authtype: Author
+  name: Mercier M
+- authtype: Author
+  name: Girard P
+- authtype: Author
+  name: Ben Hamed S
+- authtype: Author
+  name: Cappe C
+epubdate: 2025 Sep 1
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: e70230
+pmclivedate: 2025/09/02
+printpubdate: 2025 Sep
+pubdate: 2025 Sep 1
+sortdate: 2025/09/01 00:00
+source: Eur J Neurosci
+title: Frequency Coding of Multisensory Integration in the Local Field Potentials
+  of the Medial Pulvinar
+uid: '12400260'
+volume: '62'

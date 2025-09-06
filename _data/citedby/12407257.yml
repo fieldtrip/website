@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40470749'
+- idtype: doi
+  value: 10.1002/advs.202417408
+- idtype: pmcid
+  value: PMC12407257
+authors:
+- authtype: Author
+  name: Li W
+- authtype: Author
+  name: Gao C
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Diao Y
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Zhou J
+- authtype: Author
+  name: Zhou J
+- authtype: Author
+  name: Peng Y
+- authtype: Author
+  name: Chen G
+- authtype: Author
+  name: Wu X
+- authtype: Author
+  name: Wu K
+epubdate: 2025 Jun 5
+fulljournalname: Advanced Science
+issue: '32'
+pages: e17408
+pmclivedate: 2025/09/04
+printpubdate: ''
+pubdate: 2025 Jun 5
+sortdate: 2025/06/05 00:00
+source: Adv Sci (Weinh)
+title: 'BrainFusion: a Low‐Code, Reproducible, and Deployable Software Framework for
+  Multimodal Brain‒Computer Interface and Brain‒Body Interaction Research'
+uid: '12407257'
+volume: '12'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40705680'
+- idtype: doi
+  value: 10.1093/scan/nsaf075
+- idtype: pmcid
+  value: PMC12401490
+authors:
+- authtype: Author
+  name: Fanghella M
+- authtype: Author
+  name: Mussini E
+- authtype: Author
+  name: Zazio A
+- authtype: Author
+  name: Genovese F
+- authtype: Author
+  name: Satta E
+- authtype: Author
+  name: Barchiesi G
+- authtype: Author
+  name: Battaglia-Mayer A
+- authtype: Author
+  name: Bortoletto M
+- authtype: Author
+  name: Sinigaglia C
+epubdate: 2025 Jul 24
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf075
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2025 Jul 24
+sortdate: 2025/07/24 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Distinct neural dynamics in joint versus side-by-side actions: insights from
+  dual EEG'
+uid: '12401490'
+volume: '20'
