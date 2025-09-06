@@ -15,7 +15,8 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2026, MEG/OPM toolkit- Nijmegen, NL
+- 2026, MEG/OPM toolkit - Nijmegen, NL
+- 2025, [PracticalMEEG](https://cuttingeeg.org/practicalmeeg2025/) - Aix-en-Provence, France
 
 Previous FieldTrip workshops took place at
 
