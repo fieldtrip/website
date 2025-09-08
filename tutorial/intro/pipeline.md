@@ -5,6 +5,7 @@ category: tutorial
 tags: [matlab, script]
 redirect_from:
     - /tutorial/pipeline/
+    - /tutorial/intro/scripting/
 ---
 
 {% include markup/yellow %}
