@@ -1,7 +1,7 @@
 ---
 title: How can I change the head localization in a CTF dataset?
-category: faq
 tags: [ctf]
+category: faq
 redirect_from:
     - /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset/
     - /faq/ctf_changeheadloc/

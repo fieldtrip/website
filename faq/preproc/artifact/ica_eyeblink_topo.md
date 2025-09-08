@@ -1,7 +1,7 @@
 ---
 title: Why does my ICA eyeblink component look strange?
-category: faq
 tags: [ica, brainvision]
+category: faq
 redirect_from:
     - /faq/ica_eyeblink_topo/
 ---

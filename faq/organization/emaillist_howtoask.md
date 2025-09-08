@@ -1,7 +1,7 @@
 ---
 title: How to ask good questions to the community?
-category: faq
 tags: [support, email]
+category: faq
 redirect_from:
     - /faq/how_to_ask_good_questions_to_the_community/
     - /faq/emaillist_howtoask/

@@ -1,7 +1,7 @@
 ---
 title: Compute forward simulated data with the low-level ft_compute_leadfield
-category: example
 tags: [eeg, source, headmodel, dipole, simulation]
+category: example
 redirect_from:
     - /example/compute_leadfield/
 ---

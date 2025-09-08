@@ -1,7 +1,7 @@
 ---
 title: Why is the source model deformed or incorrectly aligned after warping template?
-category: faq
 tags: [sourcemodel, mri, normalization]
+category: faq
 redirect_from:
     - /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/
     - /faq/sourcemodel_deformation/

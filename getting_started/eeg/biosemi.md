@@ -1,7 +1,7 @@
 ---
 title: Getting started with BioSemi BDF data
-category: getting_started
 tags: [dataformat, eeg, biosemi, bdf]
+category: getting_started
 redirect_from:
     - /getting_started/biosemi/
 ---

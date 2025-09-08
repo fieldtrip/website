@@ -1,7 +1,7 @@
 ---
 title: Determine the filter characteristics
-category: example
 tags: [preprocessing, filter]
+category: example
 redirect_from:
     - /example/determine_the_filter_characteristics/
     - /example/filter_characteristics/

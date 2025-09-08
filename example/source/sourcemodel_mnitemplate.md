@@ -1,7 +1,7 @@
 ---
 title: Create a template source model aligned to MNI space
-category: example
 tags: [meg, mri, headmodel, source]
+category: example
 ---
 
 On the [template sourcemodel](/template/sourcemodel) page we describe a number of regular 3D grid 

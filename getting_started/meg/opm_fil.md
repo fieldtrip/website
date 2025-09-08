@@ -1,7 +1,7 @@
 ---
 title: Getting started with OPM data recorded at the FIL
-category: getting_started
 tags: [dataformat, meg, opm, fil]
+category: getting_started
 redirect_from:
     - /getting_started/opm_fil/
 ---

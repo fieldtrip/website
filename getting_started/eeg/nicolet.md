@@ -1,7 +1,7 @@
 ---
 title: Getting started with Nicolet data
-category: getting_started
 tags: [dataformat, nicolet, eeg]
+category: getting_started
 redirect_from:
     - /getting_started/nicolet/
 ---

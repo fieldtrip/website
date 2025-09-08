@@ -1,7 +1,7 @@
 ---
 title: Plotting data at the channel and source level
-category: tutorial
 tags: [plotting, layout]
+category: tutorial
 weight: 20
 redirect_from:
     - /tutorial/plotting/plotting_channel_source/

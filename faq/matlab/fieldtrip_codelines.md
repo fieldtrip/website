@@ -1,7 +1,7 @@
 ---
 title: How many lines of code does FieldTrip consist of?
-category: faq
 tags: [matlab]
+category: faq
 redirect_from:
     - /faq/how_many_lines_of_code_does_fieldtrip_consist_of/    
 redirect_from:

@@ -1,7 +1,7 @@
 ---
 title: What is the format of the layout file which is used for plotting?
-category: faq
 tags: [layout, plotting]
+category: faq
 redirect_from:
     - /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting/
     - /faq/layout_fileformat/

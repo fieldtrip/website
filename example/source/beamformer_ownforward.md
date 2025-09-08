@@ -1,7 +1,7 @@
 ---
 title: Use your own forward leadfield model in an inverse beamformer computation
-category: example
 tags: [eeg, source]
+category: example
 redirect_from:
     - /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation/
     - /example/beamformer_ownforward/

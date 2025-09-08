@@ -18,9 +18,8 @@ The Markdown document should start with some so-called frontmatter, i.e., a shor
 ```markdown
 ---
 title: Website syntax and formatting
-tags: [website, syntax, guidelines, development]
-category:
 tags: []
+category:
 weight:
 ---
 ```
@@ -39,7 +38,7 @@ The first (and only) H1 level header with a single `#` is automatically added ba
 
 ## Tags
 
-Tags that are defined in the frontmatter will automatically appear at the top of the page, where they will link to an overview page with all pages containing the specific tag. Tags should be formatted as a list, even if there is one. Please be restrictive in creating new tags and assigning tags. Tags are meant to search and link **relevant** pages. If you add too many tags, they become less useful.
+Tags that are defined in the frontmatter will automatically appear at the top of the page, where they will link to an overview page with all pages containing the specific tag. Tags should be formatted as a list, even if there is only one. Please be restrictive in creating new tags and assigning tags. Tags are meant to search and link **relevant** pages. If you add too many tags, they become less useful.
 
 Tags for a page are displayed in the right column under the table of content. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those tag overview pages are automatically built on the web server after every change. The tag can be used together with the category to make a "See also" list (see below).
 
@@ -51,7 +50,7 @@ Each dataset that is used in the tutorials or examples has an identifier which s
 
 ## Category
 
-You should specify the category under which the page falls in the frontmatter. This should be a single word, not a list. The following categories are currently in use: `tutorial`, `example`, `faq`, `getting_started`.
+You can specify in the frontmatter under which documentation category the page falls. This should be a single word, not a list. The following categories are currently in use: `tutorial`, `example`, `faq`, `getting_started`.
 
 The category can be used together with the tags to make a "See also" list (see below).
 
@@ -75,7 +74,7 @@ The page category can be indicated using a single word. Tags are indicated with 
 
 ## Weights
 
-In the frontmatter you can specify a weigth between 10 and 99 (i.e., it should consist of two digits) that is used to determine how pages are sorted in lists. Low weights appear at the top, high weights at the bottom. If a page does not have a weight, it will go all the way to the bottom. Pages that have the same weight will be sorted alphabetically.
+In the frontmatter you can specify a weight between 10 and 99 (i.e., it should consist of two digits) that is used to determine how pages are sorted in lists. Low weights appear at the top, high weights at the bottom. If a page does not have a weight, it will go all the way to the bottom. Pages that have the same weight will be sorted alphabetically.
 
 ## Redirection
 

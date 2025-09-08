@@ -1,7 +1,7 @@
 ---
 title: Example real-time classification
-category: example
 tags: [realtime]
+category: example
 redirect_from:
     - /example/ft_realtime_classification/
 ---

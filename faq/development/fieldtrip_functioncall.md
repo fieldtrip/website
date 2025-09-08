@@ -1,7 +1,7 @@
 ---
 title: What does a typical call to a FieldTrip function look like?
-category: faq
 tags: [datatype, function]
+category: faq
 redirect_from:
     - /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like/
     - /faq/fieldtrip_functioncall/

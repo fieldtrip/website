@@ -1,7 +1,7 @@
 ---
 title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
-category: example
 tags: [meg, mri, headmodel]
+category: example
 redirect_from:
     - /example/neuromag_aligned2mni/
 ---

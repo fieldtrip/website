@@ -1,7 +1,7 @@
 ---
 title: Make MEG leadfields using different headmodels
-category: example
 tags: [meg, headmodel, source]
+category: example
 redirect_from:
     - /example/make_leadfields_using_different_headmodels/
     - /example/headmodel_various/

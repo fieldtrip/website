@@ -1,7 +1,7 @@
 ---
 title: Why should I start with rereferencing for BioSemi EEG data?
-category: faq
 tags: [biosemi, preprocessing]
+category: faq
 authors: [Robert Oostenveld]
 redirect_from:
     - /faq/biosemi_reference/

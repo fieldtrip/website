@@ -1,7 +1,7 @@
 ---
 title: Computing and reporting the effect size
-category: example
 tags: [statistics, cluster, meg-language]
+category: example
 redirect_from:
     - /example/effectsize/
 ---

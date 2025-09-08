@@ -1,7 +1,7 @@
 ---
 title: Parametric and non-parametric statistics on event-related fields
-category: tutorial
 tags: [statistics, meg, eeg, timelock, freq, meg-language, neighbours]
+category: tutorial
 weight: 20
 redirect_from:
     - /tutorial/eventrelatedstatistics/

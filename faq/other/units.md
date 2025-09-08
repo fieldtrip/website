@@ -1,7 +1,7 @@
 ---
 title: What are the units of the data and of the derived results?
-category: faq
 tags: [units]
+category: faq
 redirect_from:
     - /faq/units/
 ---

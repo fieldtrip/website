@@ -1,7 +1,7 @@
 ---
 title: Streaming realtime fMRI from Siemens scanners
-category: getting_started
 tags: [realtime, siemens, fmri]
+category: getting_started
 redirect_from:
     - /getting_started/realtime_fmri/
 ---

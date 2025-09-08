@@ -1,7 +1,7 @@
 ---
 title: Getting started with SR-Research EyeLink eye-tracker data
-category: getting_started
 tags: [dataformat, eyelink]
+category: getting_started
 redirect_from:
     - /getting_started/eyelink/
 ---

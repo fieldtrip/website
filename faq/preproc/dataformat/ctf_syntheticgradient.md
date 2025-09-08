@@ -1,7 +1,7 @@
 ---
 title: How does the CTF higher-order gradiometer work?
-category: faq
 tags: [ctf]
+category: faq
 redirect_from:
     - /faq/how_does_the_ctf_higher-order_gradiometer_work/
     - /faq/ctf_syntheticgradient/

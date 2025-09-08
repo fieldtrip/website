@@ -1,7 +1,7 @@
 ---
 title: How can I find out what eventvalues and eventtypes there are in my data?
-category: faq
 tags: [preprocessing, raw, trigger, event, values, type, eventvalue, eventtype]
+category: faq
 redirect_from:
     - /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data/
     - /faq/inspect_events/

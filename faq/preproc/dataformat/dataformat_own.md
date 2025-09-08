@@ -1,7 +1,7 @@
 ---
 title: How can I import my own data format?
-category: faq
 tags: [dataformat, preprocessing]
+category: faq
 redirect_from:
     - /faq/how_can_i_import_my_own_dataformat/
     - /faq/dataformat_own/

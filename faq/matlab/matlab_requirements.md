@@ -1,7 +1,7 @@
 ---
 title: What are the MATLAB requirements for using FieldTrip?
-category: faq
 tags: [matlab, toolbox]
+category: faq
 redirect_from:
     - /faq/matlab_requirements/
 ---

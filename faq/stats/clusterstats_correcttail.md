@@ -1,7 +1,7 @@
 ---
 title: Why should I use the cfg.correcttail option when using statistics_montecarlo?
-category: faq
 tags: [statistics, cluster]
+category: faq
 redirect_from:
     - /faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo/
     - /faq/clusterstats_correcttail/

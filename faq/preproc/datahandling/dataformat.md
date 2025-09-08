@@ -1,7 +1,7 @@
 ---
 title: What dataformats are supported?
-category: faq
 tags: [dataformat, preprocessing, raw]
+category: faq
 redirect_from:
     - /faq/dataformat/
 ---

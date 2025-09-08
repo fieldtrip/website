@@ -1,7 +1,7 @@
 ---
 title: BIDS - the brain imaging data structure
-category: example
 tags: [bids, sharing]
+category: example
 redirect_from:
     - /example/bids/
 ---

@@ -1,7 +1,7 @@
 ---
 title: What is a good way to save images for later processing in other software?
-category: faq
 tags: [plotting]
+category: faq
 redirect_from:
     - /faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software/
     - /faq/figure_export/

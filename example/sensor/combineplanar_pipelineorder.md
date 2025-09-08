@@ -1,7 +1,7 @@
 ---
 title: The correct pipeline order for combining planar MEG channels
-category: example
 tags: [planar, gradient, combineplanar]
+category: example
 redirect_from:
     - /example/combineplanar_pipelineorder/
 ---

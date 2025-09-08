@@ -1,7 +1,7 @@
 ---
 title: Compute forward simulated data and apply a beamformer scan
-category: example
 tags: [meg, source, dipole]
+category: example
 redirect_from:
     - /example/compute_forward_simulated_data_and_apply_a_beamformer_scan/
     - /example/simulateddata_beamformer/

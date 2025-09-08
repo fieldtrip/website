@@ -1,7 +1,7 @@
 ---
 title: Preprocessing of EEG data and computing ERPs
-category: tutorial
 tags: [eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
+category: tutorial
 weight: 30
 redirect_from:
     - /tutorial/preprocessing_erp/

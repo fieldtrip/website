@@ -1,7 +1,7 @@
 ---
 title: Getting started with AnyWave
-category: getting_started
 tags: [dataformat, anywave]
+category: getting_started
 redirect_from:
     - /getting_started/anywave/
 ---

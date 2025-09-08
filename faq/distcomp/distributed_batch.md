@@ -1,7 +1,7 @@
 ---
 title: How can I distribute a batch of jobs?
-category: faq
 tags: [distcomp]
+category: faq
 redirect_from:
     - /faq/how_can_i_distribute_a_batch_of_jobs/
     - /faq/distributed_batch/

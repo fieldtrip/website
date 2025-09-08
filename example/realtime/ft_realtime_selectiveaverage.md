@@ -1,7 +1,7 @@
 ---
 title: Example real-time selective average
-category: example
 tags: [realtime]
+category: example
 redirect_from:
     - /example/ft_realtime_selectiveaverage/
 ---

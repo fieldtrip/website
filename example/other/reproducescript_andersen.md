@@ -1,7 +1,7 @@
 ---
 title: Using reproducescript on a full study
-category: example
 tags: [reproducescript]
+category: example
 redirect_from:
     - /example/reproducescript_andersen/
 ---

@@ -1,7 +1,7 @@
 ---
 title: How does ft_prepare_neighbours work?
-category: faq
 tags: [statistics, cluster]
+category: faq
 redirect_from:
     - /faq/how_does_ft_prepare_neighbours_work/
     - /faq/neighbours_prepare/

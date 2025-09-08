@@ -1,7 +1,7 @@
 ---
 title: Why does my TFR look strange (part I, demeaning)?
-category: faq
 tags: [mtmconvol, freq, preprocessing, artifact]
+category: faq
 redirect_from:
     - /faq/why_does_my_tfr_look_strange/
     - /faq/tfr_strangedemean/

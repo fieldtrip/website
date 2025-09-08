@@ -1,7 +1,7 @@
 ---
 title: Which external toolboxes are used by FieldTrip?
-category: faq
 tags: [matlab, toolbox]
+category: faq
 redirect_from:
     - /faq/external/
 ---

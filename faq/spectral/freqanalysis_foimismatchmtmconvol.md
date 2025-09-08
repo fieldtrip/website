@@ -1,7 +1,7 @@
 ---
 title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
-category: faq
 tags: [freq, mtmconvol]
+category: faq
 redirect_from:
     - /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalysis/
     - /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis/

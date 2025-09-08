@@ -1,7 +1,7 @@
 ---
 title: Where is the anterior commissure?
-category: faq
 tags: [source, fiducial]
+category: faq
 redirect_from:
     - /faq/anterior_commissure/
 ---

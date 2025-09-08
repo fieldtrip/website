@@ -1,7 +1,7 @@
 ---
 title: How NOT to interpret results from a cluster-based permutation test
-category: faq
 tags: [statistics]
+category: faq
 redirect_from:
     - /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test/
     - /faq/clusterstats_interpretation/

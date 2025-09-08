@@ -1,7 +1,7 @@
 ---
 title: How can I keep track of changes to the code?
-category: faq
 tags: [download, development, cvs, svn, git]
+category: faq
 redirect_from:
     - /faq/how_can_i_keep_track_of_the_changes_to_the_code/
     - /faq/trackchanges/

@@ -1,7 +1,7 @@
 ---
 title: How fast is the FieldTrip buffer for realtime data streaming?
-category: faq
 tags: [realtime, matlab, memory]
+category: faq
 redirect_from:
     - /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/
     - /faq/fieldtripbuffer_speed/

@@ -1,7 +1,7 @@
 ---
 title: Compute EEG leadfields using a BEM headmodel
-category: example
 tags: [eeg, bem, leadfield, headmodel, meg-language]
+category: example
 ---
 
 This example shows how to compute EEG leadfields using a Boundary Element Method (BEM) head model. The process involves reading and aligning MRI data, segmenting the MRI into different tissue types, preparing a mesh, aligning electrodes, constructing a volume conduction model, creating a source model, and finally computing the leadfields. Visualization steps are included to verify alignment and results.

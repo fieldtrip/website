@@ -1,7 +1,7 @@
 ---
 title: Connectivity in auditory evoked responses
-category: tutorial
 tags: [granger, meg, freq, source, connectivity]
+category: tutorial
 redirect_from:
     - /tutorial/salzburg/
     - /tutorial/connectivity_aef/

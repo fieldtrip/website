@@ -1,7 +1,7 @@
 ---
 title: Converting an example audio dataset for sharing in BIDS
-category: example
 tags: [bids, sharing, audio]
+category: example
 redirect_from:
     - /example/bids_audio/
 ---

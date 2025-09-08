@@ -1,7 +1,7 @@
 ---
 title: Which methodological details should I report in an EEG/MEG manuscript?
-category: faq
 tags: [sharing]
+category: faq
 redirect_from:
     - /faq/checklist/
 ---

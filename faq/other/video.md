@@ -1,7 +1,7 @@
 ---
 title: Are the FieldTrip lectures available on video?
-category: faq
 tags: [video]
+category: faq
 redirect_from:
     - /faq/video/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-category: faq
 tags: [dataset, meg-language, meg-artifact, meg-removal, meg-visuomotor151, meg-visuomotor151-k, meg-attention, meg-tactile, meg-audodd, meg-epilepsy, hcp-motort, opm-mediannerve, mmfaces, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel, spike-attention, spike-placefield, neurotycho]
+category: faq
 redirect_from:
     - /faq/datasets
 redirect_from:

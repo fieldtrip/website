@@ -1,8 +1,8 @@
 ---
 title: Preprocessing and event-related activity in combined MEG/EEG data
-weight: 40
-category: tutorial
 tags: [natmeg2014, meg+eeg, raw, preprocessing, meg-audodd]
+category: tutorial
+weight: 40
 redirect_from:
   - /workshop/natmeg/preprocessing/
   - /workshop/natmeg2014/preprocessing/

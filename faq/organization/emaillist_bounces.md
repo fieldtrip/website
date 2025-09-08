@@ -1,7 +1,7 @@
 ---
 title: Why am I receiving warnings about too many bouncing emails?
-category: faq
 tags: [email]
+category: faq
 redirect_from:
     - /faq/why_am_i_receiving_warnings_about_too_many_bouncing_emails/
     - /faq/emaillist_bounces/

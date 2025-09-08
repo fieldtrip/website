@@ -1,7 +1,7 @@
 ---
 title: What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
-category: faq
 tags: [mri, coordinate]
+category: faq
 redirect_from:
     - /faq/acpc/
 ---

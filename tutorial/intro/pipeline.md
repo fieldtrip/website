@@ -1,8 +1,8 @@
 ---
 title: Creating a clean analysis pipeline
-weight: 30
-category: tutorial
 tags: [matlab, script]
+category: tutorial
+weight: 30
 redirect_from:
     - /tutorial/pipeline/
     - /tutorial/intro/scripting/

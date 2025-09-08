@@ -1,7 +1,7 @@
 ---
 title: Using general linear modeling to analyze NIRS timeseries data
-category: example
 tags: [nirs, glm, statistics]
+category: example
 redirect_from:
     - /example/nirs_glm/
 ---

@@ -1,7 +1,7 @@
 ---
 title: I am working at the Donders, should I also download FieldTrip?
-category: faq
 tags: [path, download]
+category: faq
 redirect_from:
     - /faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip/
     - /faq/download_donders/

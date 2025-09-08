@@ -1,8 +1,8 @@
 ---
 title: Sensor-level ERF, TFR and connectivity analyses
-weight: 70
-category: tutorial
 tags: [meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
+category: tutorial
+weight: 70
 redirect_from:
     - /tutorial/sensor_analysis/
 ---

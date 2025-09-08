@@ -1,7 +1,7 @@
 ---
 title: Getting started with Hitachi NIRS data
-category: getting_started
 tags: [dataformat, nirs, hitachi]
+category: getting_started
 redirect_from:
     - /getting_started/hitachi/
 ---

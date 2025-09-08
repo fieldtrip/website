@@ -1,7 +1,7 @@
 ---
 title: How can I play back EEG/MEG and synchronous audio or video?
-category: faq
 tags: [audio, video]
+category: faq
 redirect_from:
     - /faq/audiovideo/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Analyze steady-state visual evoked potentials (SSVEPs)
-category: example
 tags: [freq]
+category: example
 redirect_from:
     - /example/ssvep/
 ---

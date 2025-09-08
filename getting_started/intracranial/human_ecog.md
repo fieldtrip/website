@@ -1,7 +1,7 @@
 ---
 title: Getting started with human ECoG data
-category: getting_started
 tags: [ieeg, ecog, seeg]
+category: getting_started
 redirect_from:
     - /getting_started/human_ecog/
 ---

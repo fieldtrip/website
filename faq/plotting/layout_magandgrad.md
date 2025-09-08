@@ -1,7 +1,7 @@
 ---
 title: What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-category: faq
 tags: [layout, plotting]
+category: faq
 redirect_from:
     - /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for/
     - /faq/layout_magandgrad/

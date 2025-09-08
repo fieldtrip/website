@@ -1,7 +1,7 @@
 ---
 title: What are the MATLAB and external requirements?
-category: faq
 tags: [matlab, toolbox]
+category: faq
 redirect_from:
     - /faq/requirements/
 ---

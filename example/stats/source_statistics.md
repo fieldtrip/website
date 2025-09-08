@@ -1,7 +1,7 @@
 ---
 title: Source statistics
-category: example
 tags: [meg, source, statistics]
+category: example
 redirect_from:
     - /example/source_statistics/
 ---

@@ -1,7 +1,7 @@
 ---
 title: How do homogenous coordinate transformation matrices work?
-category: faq
 tags: [coordinate]
+category: faq
 redirect_from:
     - /faq/homogenous/
 ---

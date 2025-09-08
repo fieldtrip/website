@@ -1,7 +1,7 @@
 ---
 title: Perform modified multiscale entropy (mMSE) analysis on EEG/MEG/LFP data
-category: example
 tags: [entropy]
+category: example
 redirect_from:
     - /example/entropy_analysis/
 ---

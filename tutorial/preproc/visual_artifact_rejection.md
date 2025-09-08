@@ -1,8 +1,8 @@
 ---
 title: Visual or manual artifact rejection
-weight: 41
-category: tutorial
 tags: [artifact, meg, raw, preprocessing, meg-language]
+category: tutorial
+weight: 41
 redirect_from:
     - /tutorial/visual_artifact_rejection/
 ---

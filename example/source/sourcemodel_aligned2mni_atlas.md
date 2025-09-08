@@ -1,7 +1,7 @@
 ---
 title: Create atlas-based MNI-aligned grids in individual head coordinates
-category: example
 tags: [meg, mri, atlas, headmodel, source]
+category: example
 redirect_from:
     - /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space/
     - /example/sourcemodel_aligned2mni_atlas/

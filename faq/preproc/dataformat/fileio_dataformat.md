@@ -1,7 +1,7 @@
 ---
 title: How can I extend the reading functions with a new dataformat?
-category: faq
 tags: [dataformat, preprocessing]
+category: faq
 redirect_from:
     - /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat/
     - /faq/fileio_dataformat/

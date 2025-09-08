@@ -1,7 +1,7 @@
 ---
 title: Compute EEG leadfields using a FEM headmodel
-category: example
 tags: [eeg, fem, leadfield, headmodel, meg-language]
+category: example
 redirect_from:
     - /example/fem/
 ---

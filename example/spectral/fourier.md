@@ -1,7 +1,7 @@
 ---
 title: Fourier analysis of neuronal oscillations and synchronization
-category: example
 tags: [freq]
+category: example
 redirect_from:
     - /tutorial/fourier/
     - /example/fourier/

@@ -1,7 +1,7 @@
 ---
 title: Getting started with Blackrock data
-category: getting_started
 tags: [dataformat, blackrock, lfp, spike]
+category: getting_started
 redirect_from:
     - /getting_started/blackrock/
 ---

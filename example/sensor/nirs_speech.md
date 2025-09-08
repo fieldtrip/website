@@ -1,7 +1,7 @@
 ---
 title: Analyzing NIRS data recorded during listening to and repeating speech
-category: example
 tags: [nirs]
+category: example
 redirect_from:
     - /example/nirs_speech/
 ---

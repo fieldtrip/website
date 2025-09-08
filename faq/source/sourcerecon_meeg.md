@@ -1,7 +1,7 @@
 ---
 title: Can I do combined EEG and MEG source reconstruction?
-category: faq
 tags: [eeg, meg, headmodel, source]
+category: faq
 redirect_from:
     - /faq/can_i_do_combined_eeg_and_meg_source_reconstruction/
     - /faq/sourcerecon_meeg/

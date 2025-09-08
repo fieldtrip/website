@@ -1,7 +1,7 @@
 ---
 title: Analysis of human ECoG and sEEG recordings
-category: tutorial
 tags: [ieeg, ecog, seeg, anatomy, mri, ct, freesurfer, ecog-protocol]
+category: tutorial
 weight: 20
 redirect_from:
     - /tutorial/human_ecog/

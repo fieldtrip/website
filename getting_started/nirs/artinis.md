@@ -1,7 +1,7 @@
 ---
 title: Getting started with Artinis NIRS data
-category: getting_started
 tags: [dataformat, nirs, artinis]
+category: getting_started
 redirect_from:
     - /getting_started/artinis/
 ---

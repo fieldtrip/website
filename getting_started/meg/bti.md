@@ -1,7 +1,7 @@
 ---
 title: Getting started with BTi/4D data
-category: getting_started
 tags: [dataformat, 4d, bti, meg]
+category: getting_started
 redirect_from:
     - /getting_started/bti/
 ---

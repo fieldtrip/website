@@ -1,7 +1,7 @@
 ---
 title: Getting started with Seg3D
-category: getting_started
 tags: [segmentation, volume, headmodel, seg3d]
+category: getting_started
 redirect_from:
     - /getting_started/seg3d/
 ---

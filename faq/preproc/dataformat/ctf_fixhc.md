@@ -1,7 +1,7 @@
 ---
 title: I am having problems reading the CTF .hc headcoordinates file
-category: faq
 tags: [ctf, raw]
+category: faq
 redirect_from:
     - /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file/
     - /faq/ctf_fixhc/

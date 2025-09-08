@@ -1,7 +1,7 @@
 ---
 title: Why am I not allowed to post to the discussion list?
-category: faq
 tags: [email]
+category: faq
 redirect_from:
     - /faq/why_am_i_not_allowed_to_post_to_the_discussion_list/
     - /faq/emaillist_nopost/

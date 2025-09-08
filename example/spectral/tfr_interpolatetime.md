@@ -1,7 +1,7 @@
 ---
 title: Interpolate the time axis of single-trial TFRs
-category: example
 tags: [tfr]
+category: example
 redirect_from:
     - /example/tfr_interpolatetime/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Making your analysis pipeline reproducible using reproducescript
-category: example
 tags: [reproducescript, script]
+category: example
 redirect_from:
     - /example/reproducescript/
 ---

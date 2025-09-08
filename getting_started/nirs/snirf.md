@@ -1,7 +1,7 @@
 ---
 title: Getting started with SNIRF data
-category: getting_started
 tags: [dataformat, snirf, nirs]
+category: getting_started
 redirect_from:
     - /getting_started/snirf/
 ---

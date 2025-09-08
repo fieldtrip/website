@@ -1,7 +1,7 @@
 ---
 title: How many people are subscribed to the email discussion list?
-category: faq
 tags: [email]
+category: faq
 redirect_from:
     - /faq/how_many_people_are_subscribed_to_the_email_discussion_list/
     - /faq/emaillist_subscribers/

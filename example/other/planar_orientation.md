@@ -1,7 +1,7 @@
 ---
 title: Find the orientation of planar gradiometers
-category: example
 tags: [neuromag, planar]
+category: example
 redirect_from:
     - /example/planar_orientation/
 ---

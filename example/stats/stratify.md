@@ -1,7 +1,7 @@
 ---
 title: Stratify the distribution of one variable that differs in two conditions
-category: example
 tags: [statistics]
+category: example
 redirect_from:
     - /example/stratify/
 ---

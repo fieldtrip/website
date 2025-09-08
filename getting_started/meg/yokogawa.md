@@ -1,7 +1,7 @@
 ---
 title: Getting started with Yokogawa data
-category: getting_started
 tags: [dataformat, meg, yokogawa, coordinate]
+category: getting_started
 redirect_from:
     - /getting_started/yokogawa/
 ---

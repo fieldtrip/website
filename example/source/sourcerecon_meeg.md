@@ -1,7 +1,7 @@
 ---
 title: Combined EEG and MEG source reconstruction
-category: example
 tags: [eeg, meg, headmodel, source]
+category: example
 redirect_from:
     - /example/combined_eeg_and_meg_source_reconstruction/
     - /example/sourcerecon_meeg/

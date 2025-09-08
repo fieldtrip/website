@@ -1,7 +1,7 @@
 ---
 title: Installation and setting up the path
-category: faq
 tags: [matlab, path, warning]
+category: faq
 redirect_from:
     - /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/
     - /faq/installation/

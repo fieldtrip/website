@@ -1,7 +1,7 @@
 ---
 title: I am having problems downloading
-category: faq
 tags: [download, release]
+category: faq
 redirect_from:
     - /faq/i_am_having_problems_downloading_from_the_ftp_server/
     - /faq/i_am_having_problems_downloading/

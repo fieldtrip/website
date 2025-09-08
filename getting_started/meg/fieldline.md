@@ -1,7 +1,7 @@
 ---
 title: Getting started with FieldLine OPM data
-category: getting_started
 tags: [dataformat, meg, opm, opm-mediannerve, fieldline]
+category: getting_started
 redirect_from:
     - /getting_started/fieldline/
 ---

@@ -1,7 +1,7 @@
 ---
 title: How can I deal with a discontinuous Neuralynx LFP recording?
-category: faq
 tags: [neuralynx, corrupt, preprocessing]
+category: faq
 redirect_from:
     - /faq/discontinuous_neuralynx/
 ---

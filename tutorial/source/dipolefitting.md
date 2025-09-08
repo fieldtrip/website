@@ -1,7 +1,7 @@
 ---
 title: Dipole fitting of combined MEG/EEG data
-category: tutorial
 tags: [natmeg2014, meg+eeg, dipole, meg-audodd]
+category: tutorial
 weight: 85
 redirect_from:
   - /workshop/natmeg/dipolefitting/

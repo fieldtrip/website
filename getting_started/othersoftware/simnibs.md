@@ -1,7 +1,7 @@
 ---
 title: Getting started with SimNIBS
-category: getting_started
 tags: [mesh, segmentation, volume, headmodel, simnibs]
+category: getting_started
 redirect_from:
     - /getting_started/simnibs/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Getting started with video data
-category: getting_started
 tags: [dataformat, video]
+category: getting_started
 redirect_from:
     - /getting_started/video/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Getting started with CTF data
-category: getting_started
 tags: [dataformat, ctf, meg]
+category: getting_started
 redirect_from:
     - /getting_started/ctf/
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to coregister an anatomical MRI with the gradiometer or electrode positions?
-category: faq
 tags: [eeg, meg, mri, headmodel, source, coordinate]
+category: faq
 redirect_from:
     - /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions/
     - /faq/anat_coreg/

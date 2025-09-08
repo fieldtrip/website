@@ -1,7 +1,7 @@
 ---
 title: Getting started with MNE-Python
-category: getting_started
 tags: [dataformat, mne, eeg, meg]
+category: getting_started
 redirect_from:
     - /getting_started/mne/
 ---

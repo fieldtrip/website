@@ -1,7 +1,7 @@
 ---
 title: Using simulations to estimate the sample size for cluster-based permutation test
-category: example
 tags: [statistics, cluster, neighbours, simulation]
+category: example
 redirect_from:
     - /example/samplesize/
 ---

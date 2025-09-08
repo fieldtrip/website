@@ -1,7 +1,7 @@
 ---
 title: Fitting oscillations and one-over-F (FOOOF)
-category: example
 tags: [fooof]
+category: example
 redirect_from:
     - /example/fooof/
 ---

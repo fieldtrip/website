@@ -1,8 +1,8 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-weight: 60
-category: tutorial
 tags: [freq, meg, eeg, plotting, meg-language]
+category: tutorial
+weight: 60
 redirect_from:
     - /tutorial/timefrequencyanalysis/
 ---

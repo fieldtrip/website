@@ -1,7 +1,7 @@
 ---
 title: Do I need to resample my data, and if so, how is this to be done?
-category: faq
 tags: [preprocessing]
+category: faq
 redirect_from:
     - /faq/resampling_lowpassfilter/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Cluster-based permutation tests on time-frequency data
-category: tutorial
 tags: [statistics, eeg, meg, raw, freq, meg-language, neighbours]
+category: tutorial
 weight: 40
 redirect_from:
     - /tutorial/cluster_permutation_freq/

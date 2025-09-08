@@ -1,7 +1,7 @@
 ---
 title: Localizing the sources underlying the difference in event-related fields
-category: example
 tags: [source, erf]
+category: example
 redirect_from:
     - /example/difference_erf/
 ---
