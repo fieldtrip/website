@@ -5,7 +5,7 @@ category: tutorial
 
 The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).
 
-The example datasets that are used in the documentation are listed in [this overview](/faq/other/datasets), inlcuding links to all pages that use a specific dataset. These datasets are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
+The example datasets that are used in the documentation are listed in [this overview](/faq/other/datasets), including links to all pages that use a specific dataset. These datasets are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
 
 We invite you to [add your own](/development/contribute) tutorials to the website, considering the [documentation guidelines](/development/guideline/documentation). Whenever you explain somebody in person or over email how to do something with FieldTrip, please consider whether you could use the website for this, allowing others to learn from it as well.
 
