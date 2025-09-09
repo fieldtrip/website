@@ -1,5 +1,5 @@
 ---
-title: How to test an interaction effect using cluster-based permutation tests?
+title: How can I test an interaction effect using cluster-based permutation tests?
 tags: [statistics]
 category: faq
 redirect_from:
