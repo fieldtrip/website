@@ -1,5 +1,5 @@
 ---
-title: How can I anonymize data processed in FieldTrip?
+title: How can I anonymize or deidentify data processed in FieldTrip?
 tags: [sharing, anonymize]
 category: faq
 redirect_from:
