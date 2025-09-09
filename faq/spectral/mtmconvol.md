@@ -1,5 +1,5 @@
 ---
-title: How does MTMCONVOL work?
+title: How does mtmconvol work?
 tags: [freq]
 category: faq
 redirect_from:

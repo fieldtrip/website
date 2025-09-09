@@ -2,6 +2,7 @@
 title: How to compile MATLAB code into stand-alone executables?
 tags: [qsub]
 category: faq
+weight: 60
 redirect_from:
     - /faq/how_to_compile_matlab_code_into_stand-alone_executables/
     - /faq/matlab_compile/

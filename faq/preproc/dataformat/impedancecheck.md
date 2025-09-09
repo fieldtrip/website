@@ -1,5 +1,5 @@
 ---
-title: How can I inspect the electrode impedances of my data?
+title: How can I inspect the electrode impedances of my BrainVision data?
 tags: [eeg, electrode]
 category: faq
 redirect_from:
