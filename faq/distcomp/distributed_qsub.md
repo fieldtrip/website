@@ -2,6 +2,7 @@
 title: How to get started with distributed computing using qsub?
 tags: [qsub]
 category: faq
+weight: 20
 redirect_from:
     - /faq/how_to_get_started_with_distributed_computing_using_qsub/
     - /faq/distributed_qsub/
