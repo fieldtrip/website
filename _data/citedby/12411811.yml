@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '40908768'
+- idtype: doi
+  value: 10.1111/ejn.70236
+- idtype: pmcid
+  value: PMC12411811
+authors:
+- authtype: Author
+  name: Ody E
+- authtype: Author
+  name: Kircher T
+- authtype: Author
+  name: He Y
+- authtype: Author
+  name: Straube B
+epubdate: 2025 Sep 4
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: e70236
+pmclivedate: 2025/09/06
+printpubdate: 2025 Sep
+pubdate: 2025 Sep 4
+sortdate: 2025/09/04 00:00
+source: Eur J Neurosci
+title: 'Differential Effects of Self‐Initiated, Externally Triggered, and Passive
+  Movements on Action‐Outcome Processing: Insights From Sensory and Motor‐Preparatory
+  Event Related Potentials'
+uid: '12411811'
+volume: '62'

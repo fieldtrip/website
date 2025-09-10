@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '40721674'
+- idtype: doi
+  value: 10.1038/s41593-025-02008-y
+- idtype: pmcid
+  value: PMC12411218
+authors:
+- authtype: Author
+  name: Trabanelli S
+- authtype: Author
+  name: Akselrod M
+- authtype: Author
+  name: Fellrath J
+- authtype: Author
+  name: Vanoni G
+- authtype: Author
+  name: Bertoni T
+- authtype: Author
+  name: Serino S
+- authtype: Author
+  name: Papadopoulou G
+- authtype: Author
+  name: Born M
+- authtype: Author
+  name: Girondini M
+- authtype: Author
+  name: Ercolano G
+- authtype: Author
+  name: Ellena G
+- authtype: Author
+  name: Cornu A
+- authtype: Author
+  name: Mastria G
+- authtype: Author
+  name: Gallart-Ayala H
+- authtype: Author
+  name: Ivanisevic J
+- authtype: Author
+  name: Grivaz P
+- authtype: Author
+  name: Paladino MP
+- authtype: Author
+  name: Jandus C
+- authtype: Author
+  name: Serino A
+epubdate: 2025 Jul 28
+fulljournalname: Nature Neuroscience
+issue: '9'
+pages: 1968-1977
+pmclivedate: 2025/09/06
+printpubdate: '2025'
+pubdate: 2025 Jul 28
+sortdate: 2025/07/28 00:00
+source: Nat Neurosci
+title: Neural anticipation of virtual infection triggers an immune response
+uid: '12411218'
+volume: '28'
