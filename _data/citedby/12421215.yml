@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '40926560'
+- idtype: doi
+  value: 10.1111/psyp.70137
+- idtype: pmcid
+  value: PMC12421215
+authors:
+- authtype: Author
+  name: Kroczek LO
+- authtype: Author
+  name: Frank S
+- authtype: Author
+  name: Gold U
+- authtype: Author
+  name: Hesse F
+- authtype: Author
+  name: Hettenkofer S
+- authtype: Author
+  name: Peterreins N
+- authtype: Author
+  name: Teutsch L
+- authtype: Author
+  name: Theophile V
+- authtype: Author
+  name: Mühlberger A
+epubdate: 2025 Sep 9
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e70137
+pmclivedate: 2025/09/11
+printpubdate: 2025 Sep
+pubdate: 2025 Sep 9
+sortdate: 2025/09/09 00:00
+source: Psychophysiology
+title: Communicative Social Intentions Modulate Emotional Mimicry Responses
+uid: '12421215'
+volume: '62'

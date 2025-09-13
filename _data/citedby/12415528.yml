@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40916899'
+- idtype: doi
+  value: 10.1002/hbm.70339
+- idtype: pmcid
+  value: PMC12415528
+authors:
+- authtype: Author
+  name: Mayer J
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Sep 8
+fulljournalname: Human Brain Mapping
+issue: '13'
+pages: e70339
+pmclivedate: 2025/09/09
+printpubdate: ''
+pubdate: 2025 Sep 8
+sortdate: 2025/09/08 00:00
+source: Hum Brain Mapp
+title: Maturational Changes in Action‐Effect Integration Processes Are Reflected by
+  Changes in the Directed Cortical Network Communication
+uid: '12415528'
+volume: '46'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40928751'
+- idtype: doi
+  value: 10.1093/cercor/bhaf244
+- idtype: pmcid
+  value: PMC12421880
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Meineke HM
+- authtype: Author
+  name: Schönweiler R
+- authtype: Author
+  name: Hollfelder D
+- authtype: Author
+  name: Bruchhage KL
+- authtype: Author
+  name: Leichtle A
+- authtype: Author
+  name: Obleser J
+epubdate: 2025 Sep 10
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: bhaf244
+pmclivedate: 2025/09/11
+printpubdate: ''
+pubdate: 2025 Sep 10
+sortdate: 2025/09/10 00:00
+source: Cereb Cortex
+title: Neural alpha oscillations and auditory steady-state responses during adaptation
+  to a cochlear implant
+uid: '12421880'
+volume: '35'

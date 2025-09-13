@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40927421'
+- idtype: doi
+  value: 10.3389/fnins.2025.1645936
+- idtype: pmcid
+  value: PMC12414998
+authors:
+- authtype: Author
+  name: Greif T
+- authtype: Author
+  name: Barumerli R
+- authtype: Author
+  name: Ignatiadis K
+- authtype: Author
+  name: Tóth B
+- authtype: Author
+  name: Baumgartner R
+epubdate: 2025 Aug 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1645936'
+pmclivedate: 2025/09/09
+printpubdate: ''
+pubdate: 2025 Aug 25
+sortdate: 2025/08/25 00:00
+source: Front Neurosci
+title: 'The role of spatial perception in auditory looming bias: neurobehavioral evidence
+  from impossible ears'
+uid: '12414998'
+volume: '19'

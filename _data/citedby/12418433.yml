@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40246612'
+- idtype: doi
+  value: 10.1016/j.neurot.2025.e00577
+- idtype: pmcid
+  value: PMC12418433
+authors:
+- authtype: Author
+  name: Zhu L
+- authtype: Author
+  name: Cai M
+- authtype: Author
+  name: Pei Z
+- authtype: Author
+  name: Shi X
+- authtype: Author
+  name: Dang G
+- authtype: Author
+  name: Lan X
+- authtype: Author
+  name: Luo X
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Guo Y
+epubdate: 2025 Apr 16
+fulljournalname: Neurotherapeutics
+issue: '4'
+pages: e00577
+pmclivedate: 2025/09/10
+printpubdate: ''
+pubdate: 2025 Apr 16
+sortdate: 2025/04/16 00:00
+source: Neurotherapeutics
+title: Concurrent TMS-EEG to characterize cortical responses in the motor and prefrontal
+  cortices in Parkinson's disease
+uid: '12418433'
+volume: '22'

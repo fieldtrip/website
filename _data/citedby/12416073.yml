@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39760730'
+- idtype: doi
+  value: 10.1037/dev0001892
+- idtype: pmcid
+  value: PMC12416073
+- idtype: MID
+  value: NIHMS2046115
+authors:
+- authtype: Author
+  name: Kanel D
+- authtype: Author
+  name: Morales S
+- authtype: Author
+  name: Altman K
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Winkler AM
+- authtype: Author
+  name: Pine DS
+- authtype: Author
+  name: Fox NA
+- authtype: Author
+  name: Filippi CA
+epubdate: 2025 Jan 6
+fulljournalname: Developmental psychology
+issue: '7'
+pages: 1397-1411
+pmclivedate: ''
+printpubdate: 2025 Jul
+pubdate: 2025 Jan 6
+sortdate: 2025/01/06 00:00
+source: Dev Psychol
+title: 'Infants’ resting state functional connectivity and ERPs: A multimodal approach
+  to investigating the neural basis of infant novelty detection'
+uid: '12416073'
+volume: '61'
