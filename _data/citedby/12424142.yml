@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33940142'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118094
+- idtype: pmcid
+  value: PMC12424142
+- idtype: MID
+  value: NIHMS2106040
+authors:
+- authtype: Author
+  name: Crocker B
+- authtype: Author
+  name: Ostrowski L
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Dougherty DD
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Widge AS
+- authtype: Author
+  name: Chu CJ
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Paulk AC
+epubdate: 2021 Apr 30
+fulljournalname: NeuroImage
+issue: ''
+pages: '118094'
+pmclivedate: 2025/09/12
+printpubdate: 2021 Aug 15
+pubdate: 2021 Apr 30
+sortdate: 2021/04/30 00:00
+source: Neuroimage
+title: Local and distant responses to single pulse electrical stimulation reflect
+  different forms of connectivity
+uid: '12424142'
+volume: '237'

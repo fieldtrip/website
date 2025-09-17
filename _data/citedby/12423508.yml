@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '40948939'
+- idtype: doi
+  value: 10.34133/research.0863
+- idtype: pmcid
+  value: PMC12423508
+authors:
+- authtype: Author
+  name: Mirzac D
+- authtype: Author
+  name: Glaser MB
+- authtype: Author
+  name: Kreis SL
+- authtype: Author
+  name: Ringel F
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Rotaru L
+- authtype: Author
+  name: Almeida V
+- authtype: Author
+  name: Blech J
+- authtype: Author
+  name: Oshaghi M
+- authtype: Author
+  name: Kunz S
+- authtype: Author
+  name: Klein M
+- authtype: Author
+  name: Paulsen J
+- authtype: Author
+  name: Luhmann HJ
+- authtype: Author
+  name: Bopp T
+- authtype: Author
+  name: de Jager PL
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Gonzalez-Escamilla G
+epubdate: 2025 Sep 11
+fulljournalname: Research
+issue: ''
+pages: 0863
+pmclivedate: 2025/09/12
+printpubdate: ''
+pubdate: 2025 Sep 11
+sortdate: 2025/09/11 00:00
+source: Research (Wash D C)
+title: Cortical Single-Cell Primers of Abnormal Brain Activity in Parkinson’s Disease
+uid: '12423508'
+volume: '8'

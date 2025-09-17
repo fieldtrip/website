@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '40940414'
+- idtype: doi
+  value: 10.1038/s41598-025-18305-2
+- idtype: pmcid
+  value: PMC12432218
+authors:
+- authtype: Author
+  name: Bertheau MA
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2025 Sep 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '32462'
+pmclivedate: 2025/09/14
+printpubdate: ''
+pubdate: 2025 Sep 12
+sortdate: 2025/09/12 00:00
+source: Sci Rep
+title: Detecting unacceptable behavior of an autonomous vehicle using electroencephalography
+uid: '12432218'
+volume: '15'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40909568'
+- idtype: doi
+  value: 10.1101/2025.08.20.671126
+- idtype: pmcid
+  value: PMC12407684
+authors:
+- authtype: Author
+  name: Gerrity CG
+- authtype: Author
+  name: Treuting RL
+- authtype: Author
+  name: Peters RA
+- authtype: Author
+  name: Womelsdorf T
+epubdate: 2025 Aug 25
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.08.20.671126
+pmclivedate: 2025/09/04
+printpubdate: ''
+pubdate: 2025 Aug 25
+sortdate: 2025/08/25 00:00
+source: bioRxiv
+title: Neuronal Decoding of Decisions in Multidimensional Feature Space Using a Gated
+  Recurrent Variational Autoencoder
+uid: '12407684'
+volume: ''
