@@ -12,6 +12,7 @@
 #
 # Installation:
 #   conda create -n website python==3.10
+#   conda activate website
 
 import os
 import re

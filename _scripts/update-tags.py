@@ -9,6 +9,7 @@
 #
 # Installation:
 #   conda create -n website python==3.10
+#   conda activate website
 #   pip install python-frontmatter pyyaml
 
 import os
