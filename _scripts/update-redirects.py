@@ -10,7 +10,6 @@
 #   pip install python-frontmatter pyyaml
 
 import os
-import re
 import frontmatter
 import yaml
 
@@ -23,8 +22,8 @@ redirects = {}
 for (root,dirs,files) in os.walk(rootdir, topdown=True):
     for file in files:
         if file.endswith(".md") and not '.' in root: # skip hidden directories, like .git and .bundle
-            page = frontmatter.load(os.path.join(root,file))
-            if 'redirect_from' in page.keys():
+            page = frontmatter.load(os.path.join(root, file))
+            if 'redirect_from' in page.keys() and isinstance(page['redirect_from'], list):
                 for old_link in page['redirect_from']:
                     if old_link.endswith("/"):
                         old_link = old_link[:-1] # remove trailing slash
@@ -45,8 +44,10 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
 
             # Update the content with the new links
             for old_link, new_link in redirects.items():
-                old_link = f']({old_link}'
-                new_link = f']({new_link}'
+                # only replace full links, i.e. [text](old_link)
+                # this may miss some cases, like links to anchors in the page
+                old_link = f']({old_link})'
+                new_link = f']({new_link})'
                 content = content.replace(old_link, new_link)
 
             if content != original_content:

@@ -153,7 +153,7 @@ The old 64-channel CTF datasets are not supported in the native CTF reading func
 
 Usually, you would call **[ft_definetrial](/reference/ft_definetrial)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trial function calls the low-level reading function **[ft_read_event](/reference/fileio/ft_read_event)**. The **[ft_read_event](/reference/fileio/ft_read_event)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
-**[ft_read_event](/reference/fileio/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [FAQ](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
+**[ft_read_event](/reference/fileio/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [FAQ](/faq/preproc/events/eventsversustrials).
 
 To read the events from the [tutorial data](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip), use
 
