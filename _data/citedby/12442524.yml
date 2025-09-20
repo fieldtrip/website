@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40698457'
+- idtype: doi
+  value: 10.1002/aur.70087
+- idtype: pmcid
+  value: PMC12442524
+authors:
+- authtype: Author
+  name: D’Ambrosio S
+- authtype: Author
+  name: Gualandris D
+- authtype: Author
+  name: Caputo D
+- authtype: Author
+  name: Donati F
+- authtype: Author
+  name: Mayeli A
+- authtype: Author
+  name: del Giudice R
+- authtype: Author
+  name: Ferrarelli F
+- authtype: Author
+  name: Mingarelli A
+- authtype: Author
+  name: Raviglione F
+- authtype: Author
+  name: Canevini MP
+- authtype: Author
+  name: D’Agostino A
+epubdate: 2025 Jul 23
+fulljournalname: Autism Research
+issue: '9'
+pages: 1764-1774
+pmclivedate: 2025/09/18
+printpubdate: 2025 Sep
+pubdate: 2025 Jul 23
+sortdate: 2025/07/23 00:00
+source: Autism Res
+title: 'Sleep Spindle Abnormalities in Preschool Children With Autism Spectrum Disability:
+  Insights From Nap Polysomnography'
+uid: '12442524'
+volume: '18'

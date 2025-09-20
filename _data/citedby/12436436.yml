@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40964197'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1641840
+- idtype: pmcid
+  value: PMC12436436
+authors:
+- authtype: Author
+  name: Petri S
+- authtype: Author
+  name: Vitali H
+- authtype: Author
+  name: Campus C
+- authtype: Author
+  name: Riberto M
+- authtype: Author
+  name: Gori M
+epubdate: 2025 Sep 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1641840'
+pmclivedate: 2025/09/17
+printpubdate: ''
+pubdate: 2025 Sep 2
+sortdate: 2025/09/02 00:00
+source: Front Hum Neurosci
+title: 'Exploring neurodevelopment through oscillatory and aperiodic EEG activity:
+  methodological and clinical consideration'
+uid: '12436436'
+volume: '19'
