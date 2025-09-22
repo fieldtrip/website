@@ -8,7 +8,7 @@ redirect_from:
 
 The specifications of the Blackrock file formats can be found on [the company's website](http://support.blackrockmicro.com/). Blackrock files come in 2 flavors. One file type has the extension `.nev`, and contains information about extracellularly recorded spiking activity. The other file type has as extension `.nsX`, with X any number between 1 and 9. These files contain continuously sampled data, e.g.,  local field potentials.
 
-To read Blackrock data, you will need the NPMK toolbox. The latest version is available from <https://github.com/BlackrockMicrosystems/NPMK>.
+To read Blackrock data, you will need the NPMK toolbox. The latest version is available from [https://github.com/BlackrockNeuroTech/NPMK](https://github.com/BlackrockNeurotech/NPMK).
 
 ## Set the path
 
