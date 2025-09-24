@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40972151'
+- idtype: doi
+  value: 10.1093/cercor/bhaf252
+- idtype: pmcid
+  value: PMC12448742
+authors:
+- authtype: Author
+  name: Qi YY
+- authtype: Author
+  name: Zhu JY
+- authtype: Author
+  name: Zhu Y
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Luo C
+- authtype: Author
+  name: Ma N
+- authtype: Author
+  name: Sun JW
+- authtype: Author
+  name: Guo XT
+epubdate: 2025 Sep 16
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: bhaf252
+pmclivedate: 2025/09/20
+printpubdate: ''
+pubdate: 2025 Sep 16
+sortdate: 2025/09/16 00:00
+source: Cereb Cortex
+title: Abnormally enhanced temporal correlations of alpha oscillations across multiple
+  timescales in tinnitus patients
+uid: '12448742'
+volume: '35'

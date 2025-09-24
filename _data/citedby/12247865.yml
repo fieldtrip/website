@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '40655002'
+- idtype: doi
+  value: 10.1101/2025.05.10.653174
+- idtype: pmcid
+  value: PMC12247865
+authors:
+- authtype: Author
+  name: Dahl MJ
+- authtype: Author
+  name: Li T
+- authtype: Author
+  name: Mather M
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: 2025 May 11
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.05.10.653174
+pmclivedate: 2025/07/12
+printpubdate: ''
+pubdate: 2025 May 11
+sortdate: 2025/05/11 00:00
+source: bioRxiv
+title: Locus coeruleus-related insula activation supports implicit learning
+uid: '12247865'
+volume: ''

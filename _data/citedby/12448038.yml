@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40978292'
+- idtype: doi
+  value: 10.1016/j.ohx.2025.e00689
+- idtype: pmcid
+  value: PMC12448038
+authors:
+- authtype: Author
+  name: Samimisabet P
+- authtype: Author
+  name: Krieger L
+- authtype: Author
+  name: De Palol MV
+- authtype: Author
+  name: Gün D
+- authtype: Author
+  name: Pipa G
+epubdate: 2025 Aug 19
+fulljournalname: HardwareX
+issue: ''
+pages: e00689
+pmclivedate: 2025/09/20
+printpubdate: ''
+pubdate: 2025 Aug 19
+sortdate: 2025/08/19 00:00
+source: HardwareX
+title: 'Enhancing mobile EEG: Software development and performance insights of the
+  DreamMachine'
+uid: '12448038'
+volume: '23'

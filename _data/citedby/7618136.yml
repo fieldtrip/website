@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29708821'
+- idtype: doi
+  value: 10.1162/jocn_a_01275
+- idtype: pmcid
+  value: PMC7618136
+- idtype: MID
+  value: EMS208344
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Jensen O
+epubdate: 2018 Apr 30
+fulljournalname: Journal of cognitive neuroscience
+issue: '8'
+pages: 1075-1085
+pmclivedate: 2025/09/19
+printpubdate: 2018 Aug 1
+pubdate: 2018 Apr 30
+sortdate: 2018/04/30 00:00
+source: J Cogn Neurosci
+title: Gamma oscillatory activity related to language prediction
+uid: '7618136'
+volume: '30'
