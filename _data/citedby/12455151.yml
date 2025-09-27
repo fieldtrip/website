@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40985134'
+- idtype: doi
+  value: 10.1002/hbm.70333
+- idtype: pmcid
+  value: PMC12455151
+authors:
+- authtype: Author
+  name: Prasad S
+- authtype: Author
+  name: Talebi N
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Sep 23
+fulljournalname: Human Brain Mapping
+issue: '14'
+pages: e70333
+pmclivedate: 2025/09/24
+printpubdate: ''
+pubdate: 2025 Sep 23
+sortdate: 2025/09/23 00:00
+source: Hum Brain Mapp
+title: 'Uncertainty, Cognitive Control and Theta‐Band Activity: A Relationship That
+  Depends on Metacontrol Requirements'
+uid: '12455151'
+volume: '46'

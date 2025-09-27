@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '40532683'
+- idtype: doi
+  value: 10.1159/000546716
+- idtype: pmcid
+  value: PMC12453574
+authors:
+- authtype: Author
+  name: Loução R
+- authtype: Author
+  name: Kocher M
+- authtype: Author
+  name: Brandt GA
+- authtype: Author
+  name: Petry-Schmelzer JN
+- authtype: Author
+  name: Barbe M
+- authtype: Author
+  name: Dafsari H
+- authtype: Author
+  name: Mana J
+- authtype: Author
+  name: Jech R
+- authtype: Author
+  name: Wirths J
+- authtype: Author
+  name: Visser-Vandewalle V
+- authtype: Author
+  name: Andrade P
+- authtype: CollectiveName
+  name: 'and the NEURIPIDES Study Group:'
+- authtype: Author
+  name: Baqapuri H
+- authtype: Author
+  name: Luehrs M
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: Santyr B
+- authtype: Author
+  name: Lozano A
+- authtype: Author
+  name: Bongioanni A
+- authtype: Author
+  name: Jarraya B
+- authtype: Author
+  name: Cukur T
+epubdate: 2025 Jun 18
+fulljournalname: Stereotactic and Functional Neurosurgery
+issue: '4'
+pages: 279-294
+pmclivedate: 2025/09/23
+printpubdate: 2025 Sep
+pubdate: 2025 Jun 18
+sortdate: 2025/06/18 00:00
+source: Stereotact Funct Neurosurg
+title: Structural Connectivity of the Basal Ganglia from Patient-Individual Tractography
+  Is Key for Understanding the Effects of Deep Brain Stimulation in Parkinson’s Disease
+uid: '12453574'
+volume: '103'

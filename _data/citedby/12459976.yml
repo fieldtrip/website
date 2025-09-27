@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/nol.a.15
+- idtype: pmcid
+  value: PMC12459976
+authors:
+- authtype: Author
+  name: Zheng XY
+- authtype: Author
+  name: Piai V
+epubdate: 2025 Sep 15
+fulljournalname: Neurobiology of Language
+issue: ''
+pages: nol.a.15
+pmclivedate: 2025/09/25
+printpubdate: ''
+pubdate: 2025 Sep 15
+sortdate: 2025/09/15 00:00
+source: Neurobiol Lang (Camb)
+title: Neural Oscillations in the Aging Brain Associated With Interference Control
+  in Word Production
+uid: '12459976'
+volume: '6'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '40989811'
+- idtype: doi
+  value: 10.1162/IMAG.a.150
+- idtype: pmcid
+  value: PMC12451300
+authors:
+- authtype: Author
+  name: Virtue-Griffiths S
+- authtype: Author
+  name: Fornito A
+- authtype: Author
+  name: Thompson SC
+- authtype: Author
+  name: Biabani M
+- authtype: Author
+  name: Tiego J
+- authtype: Author
+  name: Thapa T
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Rogasch NC
+epubdate: 2025 Sep 19
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.150
+pmclivedate: 2025/09/23
+printpubdate: ''
+pubdate: 2025 Sep 19
+sortdate: 2025/09/19 00:00
+source: Imaging Neurosci (Camb)
+title: Task-related changes in aperiodic activity are related to visual working memory
+  capacity independent of event-related potentials and alpha oscillations
+uid: '12451300'
+volume: '3'
