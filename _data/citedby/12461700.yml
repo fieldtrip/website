@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40996143'
+- idtype: doi
+  value: 10.1093/cercor/bhaf258
+- idtype: pmcid
+  value: PMC12461700
+authors:
+- authtype: Author
+  name: Damsma A
+- authtype: Author
+  name: de Roo M
+- authtype: Author
+  name: Doelling K
+- authtype: Author
+  name: Bazin PL
+- authtype: Author
+  name: Bouwer FL
+epubdate: 2025 Sep 25
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: bhaf258
+pmclivedate: 2025/09/26
+printpubdate: ''
+pubdate: 2025 Sep 25
+sortdate: 2025/09/25 00:00
+source: Cereb Cortex
+title: Tempo-dependent selective enhancement of neural responses at the beat frequency
+  can be mimicked by both an oscillator and an evoked model
+uid: '12461700'
+volume: '35'

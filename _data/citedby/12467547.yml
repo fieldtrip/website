@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41002325'
+- idtype: doi
+  value: 10.3390/bios15090585
+- idtype: pmcid
+  value: PMC12467547
+authors:
+- authtype: Author
+  name: Graichen U
+- authtype: Author
+  name: Klee S
+- authtype: Author
+  name: Fiedler P
+- authtype: Author
+  name: Hofmann L
+- authtype: Author
+  name: Haueisen J
+epubdate: 2025 Sep 6
+fulljournalname: Biosensors
+issue: '9'
+pages: '585'
+pmclivedate: 2025/09/27
+printpubdate: ''
+pubdate: 2025 Sep 6
+sortdate: 2025/09/06 00:00
+source: Biosensors (Basel)
+title: 'Head-Specific Spatial Spectra of Electroencephalography Explained: A Sphara
+  and BEM Investigation'
+uid: '12467547'
+volume: '15'

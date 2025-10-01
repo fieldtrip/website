@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41013368'
+- idtype: doi
+  value: 10.1186/s12888-025-07286-1
+- idtype: pmcid
+  value: PMC12465451
+authors:
+- authtype: Author
+  name: Liu H
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Cai S
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Lu Q
+epubdate: 2025 Sep 26
+fulljournalname: BMC Psychiatry
+issue: ''
+pages: '866'
+pmclivedate: 2025/09/27
+printpubdate: ''
+pubdate: 2025 Sep 26
+sortdate: 2025/09/26 00:00
+source: BMC Psychiatry
+title: Large-scale neural network correlates of response inhibition associated with
+  antidepressant response in major depressive disorder
+uid: '12465451'
+volume: '25'

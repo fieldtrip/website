@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40702349'
+- idtype: doi
+  value: 10.3758/s13415-025-01295-z
+- idtype: pmcid
+  value: PMC12464111
+authors:
+- authtype: Author
+  name: Driessen JM
+- authtype: Author
+  name: Diaconescu AO
+- authtype: Author
+  name: Atanassova DV
+- authtype: Author
+  name: Buitelaar JK
+- authtype: Author
+  name: Kessels RP
+- authtype: Author
+  name: Glennon JC
+- authtype: Author
+  name: Brazil IA
+epubdate: 2025 Jul 23
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '5'
+pages: 1543-1562
+pmclivedate: 2025/09/27
+printpubdate: '2025'
+pubdate: 2025 Jul 23
+sortdate: 2025/07/23 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Dissecting how psychopathic traits are linked to learning in different contexts:
+  A multilevel computational and electrophysiological approach'
+uid: '12464111'
+volume: '25'

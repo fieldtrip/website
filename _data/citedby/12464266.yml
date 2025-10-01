@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '40999061'
+- idtype: doi
+  value: 10.1038/s41598-025-18275-5
+- idtype: pmcid
+  value: PMC12464266
+authors:
+- authtype: Author
+  name: Sieghartsleitner S
+- authtype: Author
+  name: Schreiner L
+- authtype: Author
+  name: Grünwald J
+- authtype: Author
+  name: Jordan M
+- authtype: Author
+  name: Spataro R
+- authtype: Author
+  name: Scharinger J
+- authtype: Author
+  name: Guger C
+epubdate: 2025 Sep 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '32917'
+pmclivedate: 2025/09/27
+printpubdate: ''
+pubdate: 2025 Sep 25
+sortdate: 2025/09/25 00:00
+source: Sci Rep
+title: Decoding of image properties from single-trial visual evoked potentials recorded
+  by ultra-high-density EEG
+uid: '12464266'
+volume: '15'

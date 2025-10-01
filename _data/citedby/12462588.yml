@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '40835436'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0091-25.2025
+- idtype: pmcid
+  value: PMC12462588
+authors:
+- authtype: Author
+  name: Wang (王思思) S
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '39'
+pages: e0091252025
+pmclivedate: 2025/09/26
+printpubdate: 2025 Sep 24
+pubdate: 2025 Sep 24
+sortdate: 2025/09/24 00:00
+source: J Neurosci
+title: Looking into Working Memory to Verify Potential Search Targets
+uid: '12462588'
+volume: '45'

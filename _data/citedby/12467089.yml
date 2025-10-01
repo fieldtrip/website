@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41007317'
+- idtype: doi
+  value: 10.3390/biology14091172
+- idtype: pmcid
+  value: PMC12467089
+authors:
+- authtype: Author
+  name: Zitouni A
+- authtype: Author
+  name: Akounach M
+- authtype: Author
+  name: Kızılışık S
+- authtype: Author
+  name: Campanella S
+- authtype: Author
+  name: Aarabi A
+- authtype: Author
+  name: Lelard T
+- authtype: Author
+  name: Mouras H
+epubdate: 2025 Sep 2
+fulljournalname: Biology
+issue: '9'
+pages: '1172'
+pmclivedate: 2025/09/27
+printpubdate: ''
+pubdate: 2025 Sep 2
+sortdate: 2025/09/02 00:00
+source: Biology (Basel)
+title: Joint Modulation of Postural and Neural Correlates in Response to Motivational
+  Images in Non-Clinical Drinkers
+uid: '12467089'
+volume: '14'

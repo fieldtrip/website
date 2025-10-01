@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '41006226'
+- idtype: doi
+  value: 10.1038/s41467-025-63255-y
+- idtype: pmcid
+  value: PMC12475450
+authors:
+- authtype: Author
+  name: Stockart F
+- authtype: Author
+  name: Msheik R
+- authtype: Author
+  name: Robin A
+- authtype: Author
+  name: Jurkovičová L
+- authtype: Author
+  name: Goueytes D
+- authtype: Author
+  name: Rouy M
+- authtype: Author
+  name: Mareček R
+- authtype: Author
+  name: Hoffmann D
+- authtype: Author
+  name: Mudrik L
+- authtype: Author
+  name: Roman R
+- authtype: Author
+  name: Brázdil M
+- authtype: Author
+  name: Minotti L
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Pereira M
+- authtype: Author
+  name: Faivre N
+epubdate: 2025 Sep 26
+fulljournalname: Nature Communications
+issue: ''
+pages: '8458'
+pmclivedate: 2025/09/28
+printpubdate: ''
+pubdate: 2025 Sep 26
+sortdate: 2025/09/26 00:00
+source: Nat Commun
+title: Cortical evidence accumulation for visual perception occurs irrespective of
+  reports
+uid: '12475450'
+volume: '16'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40999997'
+- idtype: doi
+  value: 10.1111/ejn.70260
+- idtype: pmcid
+  value: PMC12464804
+authors:
+- authtype: Author
+  name: Will M
+- authtype: Author
+  name: Korka B
+- authtype: Author
+  name: Stenner M
+epubdate: 2025 Sep 26
+fulljournalname: The European Journal of Neuroscience
+issue: '6'
+pages: e70260
+pmclivedate: 2025/09/27
+printpubdate: 2025 Sep
+pubdate: 2025 Sep 26
+sortdate: 2025/09/26 00:00
+source: Eur J Neurosci
+title: Involvement of Perimovement Neural Beta‐Oscillations in Strategic Aiming for
+  Motor Adaptation
+uid: '12464804'
+volume: '62'
