@@ -28,7 +28,7 @@ sudo xattr -r -d com.apple.quarantine LOCATION_OF_FIELDTRIP
 sudo find 'LOCATION_OF_FIELDTRIP' -name \*.mexmaca64 -exec spctl --add {} \;
 ```
 
-or if you have an older Intel mac
+or if you have an older Intel mac it could look like this
 
 ```bash
 sudo xattr -r -d com.apple.quarantine LOCATION_OF_FIELDTRIP
@@ -36,9 +36,11 @@ sudo xattr -r -d com.apple.quarantine LOCATION_OF_FIELDTRIP
 sudo find 'LOCATION_OF_FIELDTRIP' -name \*.mexmaci64 -exec spctl --add {} \;
 ```
 
-where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip. If your mac is using the zsh shell (the default since macOS 10.15) rather than bash, it is important to include the quotes around the `LOCATION_OF_FIELDTRIP` as otherwise it will not find mex files in subdirectories.
+where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip. 
 
 Following `sudo` you will have to give your administrator password.
+
+If your mac is using the zsh shell (the default since macOS 10.15) rather than bash, it is important to include the quotes around the `LOCATION_OF_FIELDTRIP` as otherwise it will not find mex files in subdirectories.
 
 The first command removes all FieldTrip files from [quarantaine](https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/).
 

@@ -301,6 +301,7 @@ barthannwin
 Bartho
 basedoncentroids
 basedongrid
+basedonmni
 basedonresolution
 baselin
 baselinecorrect
@@ -446,6 +447,7 @@ bknipscheer
 blackmanharris
 blackrock
 Blackrock
+BlackRock
 blas
 blc
 Blenkmann
@@ -4666,6 +4668,7 @@ SSAEP
 SSAEPs
 SSD
 SSEC
+ssp
 SSP
 SSPs
 sss
