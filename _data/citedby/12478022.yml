@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40705676'
+- idtype: doi
+  value: 10.1093/scan/nsaf076
+- idtype: pmcid
+  value: PMC12478022
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2025 Jul 24
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf076
+pmclivedate: 2025/09/30
+printpubdate: ''
+pubdate: 2025 Jul 24
+sortdate: 2025/07/24 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Mapping neural signatures of face processing in young children: an OPM-MEG
+  study'
+uid: '12478022'
+volume: '20'

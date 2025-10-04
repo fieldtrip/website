@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.ynirp.2025.100271
+- idtype: pmcid
+  value: PMC12489780
+authors:
+- authtype: Author
+  name: Dogan C
+- authtype: Author
+  name: Miller CE
+- authtype: Author
+  name: Jefferis T
+- authtype: Author
+  name: Saranti M
+- authtype: Author
+  name: Tempesta AJ
+- authtype: Author
+  name: Schofield AJ
+- authtype: Author
+  name: Palaniappan R
+- authtype: Author
+  name: Bowman H
+epubdate: 2025 Jun 24
+fulljournalname: 'Neuroimage: Reports'
+issue: '3'
+pages: '100271'
+pmclivedate: 2025/10/03
+printpubdate: ''
+pubdate: 2025 Jun 24
+sortdate: 2025/06/24 00:00
+source: Neuroimage Rep
+title: 'Headache-specific hyperexcitation sensitises and habituates on different time
+  scales: An event related potential study of pattern-glare'
+uid: '12489780'
+volume: '5'

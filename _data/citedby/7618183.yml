@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '40929354'
+- idtype: doi
+  value: 10.1152/jn.00359.2025
+- idtype: pmcid
+  value: PMC7618183
+- idtype: MID
+  value: EMS208693
+authors:
+- authtype: Author
+  name: Pohle LM
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Nierula B
+- authtype: Author
+  name: Ploner M
+- authtype: Author
+  name: Horn U
+- authtype: Author
+  name: Eippert F
+epubdate: 2025 Sep 10
+fulljournalname: Journal of neurophysiology
+issue: ''
+pages: 10.1152/jn.00359.2025
+pmclivedate: 2025/09/30
+printpubdate: 2025 Sep 10
+pubdate: 2025 Sep 10
+sortdate: 2025/09/10 00:00
+source: J Neurophysiol
+title: Expectation effects on repetition suppression in nociception
+uid: '7618183'
+volume: ''

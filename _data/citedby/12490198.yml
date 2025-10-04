@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40983248'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2025.109275
+- idtype: pmcid
+  value: PMC12490198
+- idtype: MID
+  value: NIHMS2113197
+authors:
+- authtype: Author
+  name: Cho M
+- authtype: Author
+  name: Murugavel S
+- authtype: Author
+  name: Thiha AS
+- authtype: Author
+  name: Schechtman E
+epubdate: 2025 Sep 20
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '109275'
+pmclivedate: 2025/10/03
+printpubdate: ''
+pubdate: 2025 Sep 20
+sortdate: 2025/09/20 00:00
+source: Neuropsychologia
+title: The effects of targeted reactivation on memories cued once or multiple times
+  during a nap
+uid: '12490198'
+volume: '219'

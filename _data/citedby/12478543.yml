@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40543565'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2025.109211
+- idtype: pmcid
+  value: PMC12478543
+- idtype: MID
+  value: NIHMS2113208
+authors:
+- authtype: Author
+  name: Lazarus A
+- authtype: Author
+  name: Bassard A
+- authtype: Author
+  name: Schechtman E
+epubdate: 2025 Jun 19
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '109211'
+pmclivedate: ''
+printpubdate: 2025 Oct 10
+pubdate: 2025 Jun 19
+sortdate: 2025/06/19 00:00
+source: Neuropsychologia
+title: Manipulating memory processing during sleep to explore the critical duration
+  of reactivation events
+uid: '12478543'
+volume: '217'

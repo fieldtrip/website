@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41001461'
+- idtype: doi
+  value: 10.1101/2025.09.16.25335842
+- idtype: pmcid
+  value: PMC12458608
+authors:
+- authtype: Author
+  name: Verdonk C
+- authtype: Author
+  name: Mink K
+- authtype: Author
+  name: Choquette E
+- authtype: Author
+  name: Moseman SE
+- authtype: Author
+  name: Mayeli A
+- authtype: Author
+  name: Stewart JL
+- authtype: Author
+  name: Paulus MP
+- authtype: Author
+  name: Smith R
+- authtype: Author
+  name: Khalsa SS
+epubdate: 2025 Sep 18
+fulljournalname: medRxiv
+issue: ''
+pages: 2025.09.16.25335842
+pmclivedate: 2025/09/25
+printpubdate: ''
+pubdate: 2025 Sep 18
+sortdate: 2025/09/18 00:00
+source: medRxiv
+title: Altered Gastrointestinal Interoception in Anorexia Nervosa Predicts Relapse
+uid: '12458608'
+volume: ''

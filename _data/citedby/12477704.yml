@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41020550'
+- idtype: doi
+  value: 10.1002/hbm.70370
+- idtype: pmcid
+  value: PMC12477704
+authors:
+- authtype: Author
+  name: Yang P
+- authtype: Author
+  name: Reed JL
+- authtype: Author
+  name: Sengupta A
+- authtype: Author
+  name: Mishra A
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Gore JC
+- authtype: Author
+  name: Chen LM
+epubdate: 2025 Sep 29
+fulljournalname: Human Brain Mapping
+issue: '14'
+pages: e70370
+pmclivedate: 2025/09/30
+printpubdate: ''
+pubdate: 2025 Sep 29
+sortdate: 2025/09/29 00:00
+source: Hum Brain Mapp
+title: Relationships Between Intra‐Spinal Resting‐State Functional Connectivity and
+  Electrophysiology Following Spinal Cord Injury
+uid: '12477704'
+volume: '46'
