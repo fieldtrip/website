@@ -27,3 +27,7 @@ Tim Bardouille has shared [instructions](https://github.com/tbardouille/MEG_bios
 ## EEG phantoms
 
 David Hairston and Alfred Yu have shared the [instructions](https://osf.io/qrka2/) for fabricating a phantom for EEG and similar electrophysiology recordings.
+
+## MRI hardware
+
+Although this FieldTrip website is not the most logical place to search for or to document open MRI software and hardware, we do want to point out the review paper on [Open-source magnetic resonance imaging](https://doi.org/10.1002/nbm.5052) by Lukas Winter and colleagues. It provides links to open software and hardware resources, for example the [Open Source Imaging Initiative](https://gitlab.com/osii).
