@@ -296,6 +296,7 @@ bandstop
 bandstopfilter
 barbeque
 barcelona
+Bardouille
 Barratt
 barthannwin
 Bartho
@@ -385,6 +386,7 @@ bestlink
 betacdf
 betainv
 betapdf
+bfieldtools
 BG
 BH
 BhCvGV
@@ -2069,6 +2071,7 @@ hackathon
 haemodynamic
 Hagoort
 Haider
+Hairston
 Haiteng
 Hajonides
 Halchenko
@@ -2780,6 +2783,7 @@ LTH
 luca
 Luca
 Lucero
+Lukas
 Lundqvist
 Luu
 ly
@@ -3538,6 +3542,8 @@ Ntrials
 nts
 ntt
 Nucleonics
+nulling
+Nulling
 num
 numcontour
 numel
@@ -4061,6 +4067,7 @@ queueing
 quickcap
 quikcap
 Quraan
+QuSpin
 Qx
 Qy
 Qz
