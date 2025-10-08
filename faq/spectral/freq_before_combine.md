@@ -33,3 +33,4 @@ plot(freqaxis, fdata_combined(1:501));
 legend({'first fft, then combine' 'first combine, then fft'});
 ```
 
+{% include image src="/assets/img/faq/freq_before_combine/freq_before_combine.png" width="300" %}
