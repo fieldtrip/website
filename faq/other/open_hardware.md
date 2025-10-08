@@ -16,7 +16,9 @@ At the Donders we are using 3D printing for [flexible head-casts](https://github
 
 ## Nulling coils for OPMs
 
-The [bfieldtools](https://bfieldtools.github.io) package is Open-source Python software for magnetic field modeling, that can be used to design the wiring pattern of field nulling coils for OPM setups. 
+The [bfieldtools](https://bfieldtools.github.io) package is Open-source Python software for magnetic field modeling, that can be used to design the wiring pattern of field nulling coils for OPM setups.
+
+Mainak Jas has shared a [paper](https://doi.org/10.3390/s25092759) with corresponding [code and design details](https://github.com/opm-martinos/opm_coils) on Github for the design and construction of biplanar nulling coil using printed-circuit boards (PCBs).
 
 QuSpin has documented in a [Google doc](https://docs.google.com/document/d/1e3LUfdOmUhHHBT-lbirucRoW1TdrYyMxdaS1W-6WDjA/edit?tab=t.0) a simple procedure for installing residual field nulling coils in along the walls of an MSR. This can be used with their [coil driver](https://quspin.com/low-noise-coil-driver/), but you can also make your own low-noise coil driver.
 
