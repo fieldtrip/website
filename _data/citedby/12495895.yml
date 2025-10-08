@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '40262608'
+- idtype: doi
+  value: 10.1016/j.cell.2025.03.038
+- idtype: pmcid
+  value: PMC12495895
+- idtype: MID
+  value: NIHMS2075949
+authors:
+- authtype: Author
+  name: Veselic S
+- authtype: Author
+  name: Muller TH
+- authtype: Author
+  name: Gutierrez E
+- authtype: Author
+  name: Behrens TE
+- authtype: Author
+  name: Hunt LT
+- authtype: Author
+  name: Butler JL
+- authtype: Author
+  name: Kennerley SW
+epubdate: 2025 Apr 21
+fulljournalname: Cell
+issue: '12'
+pages: 3259-3273.e22
+pmclivedate: ''
+printpubdate: 2025 Jun 12
+pubdate: 2025 Apr 21
+sortdate: 2025/04/21 00:00
+source: Cell
+title: A cognitive map for value-guided choice in ventromedial prefrontal cortex
+uid: '12495895'
+volume: '188'

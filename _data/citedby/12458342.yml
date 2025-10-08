@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41000668'
+- idtype: doi
+  value: 10.1101/2025.09.15.676366
+- idtype: pmcid
+  value: PMC12458342
+authors:
+- authtype: Author
+  name: Shin JD
+- authtype: Author
+  name: Satchell M
+- authtype: Author
+  name: Miller P
+- authtype: Author
+  name: Jadhav SP
+epubdate: 2025 Sep 17
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.09.15.676366
+pmclivedate: 2025/09/25
+printpubdate: ''
+pubdate: 2025 Sep 17
+sortdate: 2025/09/17 00:00
+source: bioRxiv
+title: REM sleep prefrontal ripple chains mediate distinct cortical-hippocampal reactivation
+  patterns compared to NREM ripples
+uid: '12458342'
+volume: ''

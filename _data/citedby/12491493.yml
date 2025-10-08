@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41038940'
+- idtype: doi
+  value: 10.1038/s41598-025-17451-x
+- idtype: pmcid
+  value: PMC12491493
+authors:
+- authtype: Author
+  name: Simeone D
+- authtype: Author
+  name: Polo EM
+- authtype: Author
+  name: Barbieri R
+- authtype: Author
+  name: Paglialonga A
+epubdate: 2025 Oct 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '34421'
+pmclivedate: 2025/10/04
+printpubdate: ''
+pubdate: 2025 Oct 2
+sortdate: 2025/10/02 00:00
+source: Sci Rep
+title: Dynamic assessment of listening effort by EEG alpha oscillations during an
+  adaptive speech-in-noise test
+uid: '12491493'
+volume: '15'
