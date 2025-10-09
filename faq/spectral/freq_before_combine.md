@@ -14,7 +14,7 @@ freqaxis = 0:500;
 
 data = randn(2,1000);
 data = data + [1;1]*sin(2*pi*timeaxis*20); % add a 20 Hz sine wave
-data = data + [1;1]*sin(2*pi*timeaxis*320); % add a 300 Hz sine wave
+data = data + [1;1]*sin(2*pi*timeaxis*320); % add a 320 Hz sine wave
 data = data - mean(data,2); % subtract mean before FFT to avoid DC leak
 
 data_combined = sqrt(sum(data.^2));
@@ -33,4 +33,4 @@ plot(freqaxis, fdata_combined(1:501));
 legend({'first fft, then combine' 'first combine, then fft'});
 ```
 
-{% include image src="/assets/img/faq/freq_before_combine/freq_before_combine.png" width="300" %}
+{% include image src="/assets/img/faq/freq_before_combine/freq_before_combine.png" width="400" %}
