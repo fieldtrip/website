@@ -435,6 +435,7 @@ Biosig
 BIOSIG
 biosignal
 biosignals
+biplanar
 bipole
 Birkbeck
 bitbucket
@@ -2458,6 +2459,7 @@ janmathijs
 Janny
 jannystapel
 Januari
+Jas
 javaaddpath
 javaclasspath
 javascript
@@ -2814,6 +2816,7 @@ Magyari
 mAh
 Mahnaz
 mailserver
+Mainak
 mak
 makefile
 Makefile
@@ -2849,6 +2852,7 @@ markersymbol
 Marquand
 Marqui
 Marseille
+marseille
 Martine
 Martinistrasse
 Martinos
@@ -3756,6 +3760,7 @@ Paxinos
 pc
 pca
 PCA
+PCBs
 pcbi
 pcc
 PCC
