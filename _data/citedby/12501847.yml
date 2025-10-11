@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41064242'
+- idtype: doi
+  value: 10.1093/pnasnexus/pgaf288
+- idtype: pmcid
+  value: PMC12501847
+authors:
+- authtype: Author
+  name: Barbieri P
+- authtype: Author
+  name: Berto M
+- authtype: Author
+  name: Sarasso P
+- authtype: Author
+  name: Frascaroli J
+- authtype: Author
+  name: Handjaras G
+- authtype: Author
+  name: Piovesan F
+- authtype: Author
+  name: Gnecco G
+- authtype: Author
+  name: Bottari D
+- authtype: Author
+  name: Ronga I
+epubdate: 2025 Sep 9
+fulljournalname: PNAS Nexus
+issue: '10'
+pages: pgaf288
+pmclivedate: 2025/10/08
+printpubdate: ''
+pubdate: 2025 Sep 9
+sortdate: 2025/09/09 00:00
+source: PNAS Nexus
+title: Unveiling the relationship between aesthetic experiences and attention through
+  a cross-experiment validation of their processing biomarkers
+uid: '12501847'
+volume: '4'

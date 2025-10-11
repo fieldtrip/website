@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40193266'
+- idtype: doi
+  value: 10.1109/TBME.2025.3554935
+- idtype: pmcid
+  value: PMC12498167
+- idtype: MID
+  value: NIHMS2112562
+authors:
+- authtype: Author
+  name: Yu K
+- authtype: Author
+  name: He B
+epubdate: ''
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '10'
+pages: 2893-2901
+pmclivedate: 2025/10/07
+printpubdate: 2025 Oct
+pubdate: 2025 Oct
+sortdate: 2025/10/01 00:00
+source: IEEE Trans Biomed Eng
+title: Transcranial Focused Ultrasound Modulates Visual Thalamus in A Nonhuman Primate
+  Model
+uid: '12498167'
+volume: '72'

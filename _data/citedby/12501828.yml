@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41054872'
+- idtype: doi
+  value: 10.1111/psyp.70160
+- idtype: pmcid
+  value: PMC12501828
+authors:
+- authtype: Author
+  name: Pfister R
+- authtype: Author
+  name: Foerster A
+- authtype: Author
+  name: Schwarz KA
+- authtype: Author
+  name: Varga S
+- authtype: Author
+  name: Steinhauser M
+- authtype: Author
+  name: Kunde W
+epubdate: 2025 Oct 7
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e70160
+pmclivedate: 2025/10/08
+printpubdate: 2025 Oct
+pubdate: 2025 Oct 7
+sortdate: 2025/10/07 00:00
+source: Psychophysiology
+title: Error‐Related Brain Activity Indicates Immediate Auto‐Cancellation of Action
+  Slips
+uid: '12501828'
+volume: '62'

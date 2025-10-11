@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '41040163'
+- idtype: doi
+  value: 10.1101/2025.09.26.678792
+- idtype: pmcid
+  value: PMC12485926
+authors:
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Pittaro G
+- authtype: Author
+  name: Zareian B
+- authtype: Author
+  name: Aljishi A
+- authtype: Author
+  name: Toro AP
+- authtype: Author
+  name: Zibly Z
+- authtype: Author
+  name: Obaid S
+- authtype: Author
+  name: Sivaraju A
+- authtype: Author
+  name: Harpaz-Rotem I
+- authtype: Author
+  name: Kaye A
+- authtype: Author
+  name: Krystal J
+- authtype: Author
+  name: Sheth K
+- authtype: Author
+  name: Gu X
+- authtype: Author
+  name: Pittenger C
+- authtype: Author
+  name: Damisah EC
+epubdate: 2025 Sep 27
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.09.26.678792
+pmclivedate: 2025/10/02
+printpubdate: ''
+pubdate: 2025 Sep 27
+sortdate: 2025/09/27 00:00
+source: bioRxiv
+title: Beta bursts mediate amygdala gating of hippocampal emotional encoding
+uid: '12485926'
+volume: ''

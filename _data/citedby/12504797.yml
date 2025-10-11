@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41058084'
+- idtype: doi
+  value: 10.1002/hup.70020
+- idtype: pmcid
+  value: PMC12504797
+authors:
+- authtype: Author
+  name: Krylova M
+- authtype: Author
+  name: Alizadeh S
+- authtype: Author
+  name: Jamalabadi H
+- authtype: Author
+  name: Izyurov I
+- authtype: Author
+  name: Chand T
+- authtype: Author
+  name: van der Meer J
+- authtype: Author
+  name: Vester JC
+- authtype: Author
+  name: Naschold B
+- authtype: Author
+  name: Schultz M
+- authtype: Author
+  name: Engert V
+- authtype: Author
+  name: Walter M
+epubdate: 2025 Oct 7
+fulljournalname: Human Psychopharmacology
+issue: '6'
+pages: e70020
+pmclivedate: 2025/10/09
+printpubdate: 2025 Nov
+pubdate: 2025 Oct 7
+sortdate: 2025/10/07 00:00
+source: Hum Psychopharmacol
+title: 'Comprehensive Mitigation of Peripheral and Central Stress Responses by Nx4:
+  Insights From EEG and Heart Rate Variability in Post‐Stress Resting State'
+uid: '12504797'
+volume: '40'

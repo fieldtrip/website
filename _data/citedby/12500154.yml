@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40997102'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003418
+- idtype: pmcid
+  value: PMC12500154
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Kong S
+- authtype: Author
+  name: van Ede F
+epubdate: 2025 Sep 25
+fulljournalname: PLOS Biology
+issue: '9'
+pages: e3003418
+pmclivedate: 2025/10/07
+printpubdate: ''
+pubdate: 2025 Sep 25
+sortdate: 2025/09/25 00:00
+source: PLoS Biol
+title: Microsaccades strongly modulate but do not directly cause the EEG N2pc marker
+  of spatial attention
+uid: '12500154'
+volume: '23'
