@@ -60,7 +60,7 @@ end
 function testEverything(testCase)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Get FieldTrip version and path
+% Determine where FieldTrip is installed
 [~, ftpath] = ft_version;
 
 % Define the folder containing test scripts
@@ -109,7 +109,7 @@ Additionally, we define the functions we want to find the coverage for. Here I o
 ```matlab
 %%%%%%% Run this in the command window %%%%%%%%%%
 
-% Get FieldTrip version and path
+% Determine where FieldTrip is installed
 [~, ftpath] = ft_version;
 list = dir(ftpath);
 
@@ -157,6 +157,7 @@ First create the `inspect_codecoverage.m` function as above and put it inside a 
 import matlab.unittest.plugins.CodeCoveragePlugin
 import matlab.unittest.plugins.codecoverage.CoverageReport
 
+% determine where FieldTrip is installed
 [~, ftpath] = ft_version;
 
 runner = testrunner('textoutput');

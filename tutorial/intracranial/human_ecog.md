@@ -285,8 +285,9 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 
 CRITICAL STEP Accuracy of the spatial normalization step is important for correctly overlaying the electrode positions with a brain atlas in a following step.
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
-    load([ftpath filesep 'template/anatomy/surface_pial_left.mat']);
+    load([ftpath '/template/anatomy/surface_pial_left.mat']);
     
     % rename the variable that we read from the file, as not to confuse it with the MATLAB mesh plotting function
     template_lh = mesh; clear mesh;
@@ -340,8 +341,9 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 **33**) FieldTrip supports looking up the anatomical or functional labels corresponding to the electrodes in a number of atlases, including the AFNI Talairach Tournoux atlas, the AAL atlas, the BrainWeb data set, the JuBrain cytoarchitectonic atlas, the VTPM atlas, and the Brainnetome atlas, in addition to the subject-tailored Desikan-Killiany and Destrieux atlases produced by FreeSurfer. Given that no two electrodes end up in the exact same location across subjects due to inter-individual variability in electrode coverage and brain anatomy, atlases are particularly useful for the systematic combination of neural activity from different subjects in a so-called region of interest (ROI) analysis. With exception of the above FreeSurfer-based atlases, the atlases are in MNI coordinate space and require the electrodes to be spatially normalized (Steps 26 through 27). First, import an atlas of interest, e.g., the AAL atlas, into the MATLAB workspace.
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
-    atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
+    atlas = ft_read_atlas([ftpath '/template/atlas/aal/ROI_MNI_V4.nii']);
 
 **34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/source/label_lookup).
 

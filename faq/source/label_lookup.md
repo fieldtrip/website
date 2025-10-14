@@ -32,8 +32,10 @@ The most important function for using an atlas is **[ft_volumelookup](/reference
 
 In the context of intracranial EEG recordings, FieldTrip supports looking up the anatomical or functional labels corresponding to electrodes in a number of atlases, including the AFNI Talairach Tournoux atlas, the AAL atlas, the BrainWeb data set, the JuBrain cytoarchitectonic atlas, the VTPM atlas, the Brainnetome atlas, and the Yeo atlases, in addition to the subject-tailored Desikan-Killiany and Destrieux atlases produced by FreeSurfer (for details of each atlas, see the [template atlas documentation](/template/atlas)). Given that no two electrodes end up in the exact same location across subjects due to inter-individual variability in electrode coverage and brain anatomy, atlases are particularly useful for the systematic combination of neural activity from different subjects in a so-called region of interest (ROI) analysis. With exception of the above FreeSurfer-based atlases, the atlases are in MNI coordinate space and require the electrodes to be spatially normalized (Steps 26 through 27 of the [human iEEG tutorial](/tutorial/intracranial/human_ecog)). First, import an atlas of interest, e.g., the AAL atlas, into the MATLAB workspace.
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
-    atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
+    
+    atlas = ft_read_atlas([ftpath '/template/atlas/aal/ROI_MNI_V4.nii']);
 
 Next, look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1 of the iEEG tutorial dataset, targeting the left hemisphere's hippocampus.
 
@@ -103,8 +105,11 @@ The function below represents a tool that automatically overlays all channels in
     atlas = {};
     name = {};
     elec = [];
+
     if ~isempty(elec_mni) % mni-based atlases
+      % determine where FieldTrip is installed
       [~, ftpath]       = ft_version;
+
       atlas{end+1}      = ft_read_atlas([ftpath ...
         '/template/atlas/afni/TTatlas+tlrc.HEAD']); % AFNI
       name{end+1}       = 'AFNI';

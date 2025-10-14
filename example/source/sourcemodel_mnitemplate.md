@@ -24,8 +24,10 @@ FieldTrip**[ft_volumesegment](/reference/ft_volumesegment)** we try to stick to 
 spelling, whereas SPM uses the British spelling.
 {% include markup/end %}
 
-    % read the 1 mm resolution canonical MNI template MRI
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
+    
+    % read the 1 mm resolution canonical MNI template MRI
     mri = ft_read_mri(fullfile(ftpath, 'template/anatomy/single_subj_T1_1mm.nii'));
     mri.coordsys = 'mni';
 

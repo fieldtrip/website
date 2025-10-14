@@ -74,7 +74,7 @@ For example, let's say you made a modification to the **[ft_preprocessing](/refe
 
  If **[test_ft_preprocessing](/reference/test/test_ft_preprocessing)** did not exist or if you want to do a more detailed testing, you can list all test scripts together with their list of requirements and dependencies in a [MATLAB table](https://nl.mathworks.com/help/matlab/ref/table.html):
 
-    % find your copy of FieldTrip
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
     
     % list all m-files in the test directory

@@ -140,6 +140,7 @@ It is also possible to use an atlas for the parcellation, see [here](/template/a
 
 ```matlab
 
+% determine where FieldTrip is installed
 [ftver, ftpath] = ft_version;
 atlas = ft_read_atlas(fullfile(ftpath, 'template', 'atlas', 'aal', 'ROI_MNI_V4.nii'));
 

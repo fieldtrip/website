@@ -11,8 +11,10 @@ When combining the source-level data of multiple subjects this data is typically
 
 The procedure is as follows. First, a template grid is computed on the basis of the standard head model located in the FieldTrip template directory. Subsequently, a brain atlas is loaded using **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. On the basis on the brain atlas and the template grid it is possible to create a binary mask of all locations in the template grid that match atlas locations using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally the mask is used to determine which location shall be defined as 'inside' the head model.
 
-    % first you read the MEG single shell headmodel for the MNI template brain
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
+    
+    % read the MEG single shell headmodel for the MNI template brain
     load(fullfile(ftpath, 'template/headmodel/standard_singleshell.mat'), 'vol');
     vol = ft_convert_units(vol, 'cm');
 

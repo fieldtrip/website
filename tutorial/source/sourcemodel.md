@@ -291,8 +291,9 @@ First, you need to define a template grid, as mentioned above, and the easiest t
 
 ##### Load a template_grid, recommended
 
-    % NOTE: the path to the template file is user-specific
-    ftpath   = '/home/common/matlab/fieldtrip'; % this is the path to FieldTrip at Donders
+    % determine where FieldTrip is installed
+    [~, ftpath] = ft_version;
+
     load(fullfile(ftpath, 'template/sourcemodel/standard_sourcemodel3d10mm'));
     template_grid = sourcemodel;
     clear sourcemodel;
@@ -301,8 +302,9 @@ As an alternative you can create a template grid yourself, like this:
 
 ##### Make a template_grid, only if you really want to
 
-    % NOTE: the path to the template file is user-specific
-    ftpath   = '/home/common/matlab/fieldtrip'; % this is the path to FieldTrip at Donders
+    % determine where FieldTrip is installed
+    [~, ftpath] = ft_version;
+
     template = ft_read_mri(fullfile(ftpath, '/external/spm8/templates/T1.nii'));
     template.coordsys = 'spm'; % so that FieldTrip knows how to interpret the coordinate system
 

@@ -46,7 +46,7 @@ disp(mesh.unit)
 
 %% read electrodes and align them with the MRI 
 
-% determine where FieldTrip and the electrode templates are installed
+% determine where FieldTrip is installed
 [ftver, ftpath] = ft_version;
 
 % read some template electrodes

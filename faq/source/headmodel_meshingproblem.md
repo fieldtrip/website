@@ -9,8 +9,10 @@ redirect_from:
 
 If you create an EEG (or MEG) headmodel from an anatomical MRI image, it may happen that the one-shoe-fits-almost-all recipe that you are following does not work that well. For instance, using the pipeline sketched in the [EEG BEM headmodel](/tutorial/source/headmodel_eeg_bem) tutorial, it could be that the meshes you end up with contain artifacts. For instance, there may be undesired 'horns' attached to the head or brain surface, or there might be holes. The below code shows two situations that might happen. Sometimes, things can be relatively easily solved, by tweaking judiciously the tweakable parameters in the pipeline used, but sometimes there's no way around going in by hand and to manually adjust/fix the faulty segmented images. This FAQ only sketches 2 situations that can be solved relatively easily. The first example, uses the single subject template MRI from FieldTrip, which has quite a prominent aliasing artifact at the top of the image. Using a segmentation approach with the default settings will result in a 'strange' head surface. This can be alleviated with tweaking some segmentation parameters. The second example introduces an manipulated MRI image, that has an inhomogeneous intensity. This might occur for instance if the participant was wearing an EEG cap with electrodes while the image was acquired. Satisfactory results can be obtained if the intensity bias in the image is corrected prior to segmenting. For this, one can use the function **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)**.
 
-    % load an anatomical mri
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
+    
+    % load an anatomical mri
     mri = ft_read_mri(fullfile(ftpath, 'template/anatomy', 'single_subj_T1_1mm.nii'));
     mri.coordsys = 'acpc';
 

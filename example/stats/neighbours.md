@@ -18,6 +18,7 @@ Although FieldTrip includes some functions that help you to construct a neighbou
 
 It first starts off with the 2D layout of these channels. This 2D layout is basically a flat pancake projection of the 3D positions. As with any cartographic projection, this will cause geometrical distortions, especially along the edes of the sphere.
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
     cd(fullfile(ftpath, 'template', 'layout'));
 
@@ -78,6 +79,7 @@ Rather than using the flattened 2D projection of the electrodes in the layout, w
 
 Having two electrodes on exactly the same place (like T3 and T7) confuses the code that determines the orientation of the electrode that is used in plotting, not all orientations are therefore correct.
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
     cd(fullfile(ftpath, 'template', 'electrode'));
 

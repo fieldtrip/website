@@ -61,7 +61,7 @@ BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](/r
 
 Because BESA `.dat` files do not include mask information, the resulting data structure will not have the `.inside` field assigned correctly, which will lead to errors in subsequent analyses. Consequently these fields much be set for each subject. The following code is an example of how to develop a reasonable mask and apply it to all subjects (it masks out only those coordinates with a value of 0 for all subjects
 
-    files=dir(['yoursubjectdirectory' filesep '.dat']);
+    files=dir(fullfile(yoursubjectdirectory, '*.dat'));
     inside=[];
     for k=1:length(files)
       src(k)=besa2fieldtrip(files(k).name);

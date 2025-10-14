@@ -23,7 +23,9 @@ If you don't want these replacement functions on your path, you can do the follo
 
 Alternatively, to remove them at a later stage you can do the following
 
+    % determine where FieldTrip is installed
     [ftver, ftpath] = ft_version;
+    
     rmpath(fullfile(ftpath, 'external', 'signal'))
     rmpath(fullfile(ftpath, 'external', 'stats'))
     rmpath(fullfile(ftpath, 'external', 'image'))
