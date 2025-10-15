@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '40484327'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2025.121311
+- idtype: pmcid
+  value: PMC12515077
+- idtype: MID
+  value: NIHMS2116416
+authors:
+- authtype: Author
+  name: Bondi E
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Maggioni E
+- authtype: Author
+  name: He B
+epubdate: 2025 Jun 6
+fulljournalname: NeuroImage
+issue: ''
+pages: '121311'
+pmclivedate: 2025/10/12
+printpubdate: 2025 Aug 15
+pubdate: 2025 Jun 6
+sortdate: 2025/06/06 00:00
+source: Neuroimage
+title: 'Investigating the neurovascular coupling across multiple motor execution and
+  imagery conditions: a whole-brain EEG-informed fMRI analysis'
+uid: '12515077'
+volume: '317'

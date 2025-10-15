@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41079997'
+- idtype: doi
+  value: 10.3389/fnagi.2025.1604345
+- idtype: pmcid
+  value: PMC12511049
+authors:
+- authtype: Author
+  name: Ye X
+- authtype: Author
+  name: Yan Y
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Shi J
+epubdate: 2025 Sep 26
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1604345'
+pmclivedate: 2025/10/11
+printpubdate: ''
+pubdate: 2025 Sep 26
+sortdate: 2025/09/26 00:00
+source: Front Aging Neurosci
+title: 'EEG-based minimum spanning tree analysis reveals network disruptions in Alzheimer’s
+  disease spectrum: an observational study'
+uid: '12511049'
+volume: '17'
