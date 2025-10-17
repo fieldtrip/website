@@ -19,7 +19,7 @@ Anne-Sophie Dubarry and Maximilien Chaumon are the local organizers.
 
 The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) (from the Donders Institute for Brain, Cognition and Behaviour, Nijmegen, NL), [Marie-Constance Corsi](https://marieconstance-corsi.netlify.app) (Inria, Paris, FR) and [Laure Spieser](https://lnc.univ-amu.fr/en/profile/spieser-laure) (Laboratoire de Neurosciences Cognitives, Aix-en-Provence, FR).
 
-There will also be other experts from MNE-Python, BrainStorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
+There will also be other experts from MNE-Python, Brainstorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
 
 ## Hands-on program and training material
 

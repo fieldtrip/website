@@ -14,7 +14,7 @@ The corresponding group analysis was also done in other free software package
 
 - SPM <http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi>
 - MNE <http://mne-tools.github.io/mne-biomag-group-demo/>
-- BrainStorm <http://neuroimage.usc.edu/brainstorm/Biomag2016>
+- Brainstorm <http://neuroimage.usc.edu/brainstorm/Biomag2016>
 - NutMEG
 
 A single subject from this dataset was also analyzed for the MEG-UK workshop

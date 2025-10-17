@@ -36,7 +36,7 @@ Previous FieldTrip workshops took place at
 - 2021, [CuttingEEG 2021](/workshop/cuttingeeg2021) - Aix-en-Provence, France
 - 2021, [MEG/EEG toolkit](/workshop/toolkit2021) - (online) Nijmegen, NL
 - 2020, [MEG/EEG toolkit](/workshop/toolkit2020) - (online) Nijmegen, NL
-- 2019, [PracticalMEEG in Paris](/workshop/paris2019) - combined with BrainStorm and MNE-Python
+- 2019, [PracticalMEEG in Paris](/workshop/paris2019) - combined with Brainstorm and MNE-Python
 - 2019, [EEG workshop](/workshop/oslo2019) - Oslo, Norway
 - 2019, [Oxford, UK](/workshop/oxford2019) - Oxford, UK
 - 2019, [MEG/EEG toolkit](/workshop/toolkit2019) - Nijmegen, NL

@@ -17,7 +17,7 @@ Feel free to edit this page and add links that you think are appropriate.
 
 - [EEGLAB](http://www.sccn.ucsd.edu/eeglab)
 - [SPM](http://www.fil.ion.ucl.ac.uk/spm/)
-- [BrainStorm](http://neuroimage.usc.edu/brainstorm)
+- [Brainstorm](http://neuroimage.usc.edu/brainstorm)
 - [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/sofMNE.php)
 - [OpenMEEG](https://openmeeg.github.io)
 - [BIOSIG](http://biosig.sourceforge.net)

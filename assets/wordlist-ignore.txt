@@ -496,7 +496,7 @@ brainnetome
 Brainnetome
 BrainProducts
 brainstim
-BrainStorm
+Brainstorm
 brainstream
 BrainStream
 brainstructure

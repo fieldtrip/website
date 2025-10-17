@@ -14,7 +14,7 @@ FieldTrip can read data from all MEG, EEG, iEEG and MRI file formats that are su
 We recommend that you convert your raw data to BIDS **prior** to implementing your analyses scripts. That will make it much easier to share the scripts, the raw and the derived data.
 {% include markup/end %}
 
-The BIDS project overview is presented on <http://bids.neuroimaging.io>. You can read the full specification on <https://bids-specification.readthedocs.io>. Please note that BIDS is not only relevant for FieldTrip, but that it also been embraced by the SPM, EEGLAB, MNE-Python and BrainStorm developers, and of course by the MRI and fMRI community, for example on <https://openneuro.org>.
+The BIDS project overview is presented on <http://bids.neuroimaging.io>. You can read the full specification on <https://bids-specification.readthedocs.io>. Please note that BIDS is not only relevant for FieldTrip, but that it also been embraced by the SPM, EEGLAB, MNE-Python and Brainstorm developers, and of course by the MRI and fMRI community, for example on <https://openneuro.org>.
 
 The following figure gives an example of EEG data organized according to BIDS (taken from [Pernet *et al.*, 2019](https://doi.org/10.1038/s41597-019-0104-8)):
 

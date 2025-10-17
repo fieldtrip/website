@@ -15,7 +15,7 @@ This could be implemented into
 - the SPM batch system
 - FieldTrip
 - EEGLAB
-- BrainStorm
+- Brainstorm
 - ...
 
 We could consider splitting the problem into three categorie
