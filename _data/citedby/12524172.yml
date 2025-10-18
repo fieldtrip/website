@@ -1,0 +1,67 @@
+articleids:
+- idtype: pmid
+  value: '41045609'
+- idtype: doi
+  value: 10.1016/j.nicl.2025.103888
+- idtype: pmcid
+  value: PMC12524172
+authors:
+- authtype: Author
+  name: Sanders BJ
+- authtype: Author
+  name: Gilmartin CG
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Gascoyne L
+- authtype: Author
+  name: McCann E
+- authtype: Author
+  name: Cabrera J
+- authtype: Author
+  name: Leggett J
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Castleman C
+- authtype: Author
+  name: Hibbert A
+- authtype: Author
+  name: Ford DC
+- authtype: Author
+  name: Schofield H
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Bobela D
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Radford K
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Evangelou N
+epubdate: 2025 Sep 26
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103888'
+pmclivedate: 2025/10/16
+printpubdate: ''
+pubdate: 2025 Sep 26
+sortdate: 2025/09/26 00:00
+source: Neuroimage Clin
+title: 'OPM-MEG in multiple sclerosis: Proof of principle, and the effect of naturalistic
+  posture'
+uid: '12524172'
+volume: '48'

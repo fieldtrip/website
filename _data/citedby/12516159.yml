@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41089190'
+- idtype: doi
+  value: 10.1162/IMAG.a.924
+- idtype: pmcid
+  value: PMC12516159
+authors:
+- authtype: Author
+  name: Greco V
+- authtype: Author
+  name: Foldes TA
+- authtype: Author
+  name: Abdellahi ME
+- authtype: Author
+  name: Wawrzuta M
+- authtype: Author
+  name: Harrison NA
+- authtype: Author
+  name: Murphy K
+- authtype: Author
+  name: Lewis PA
+epubdate: 2025 Oct 10
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.924
+pmclivedate: 2025/10/14
+printpubdate: ''
+pubdate: 2025 Oct 10
+sortdate: 2025/10/10 00:00
+source: Imaging Neurosci (Camb)
+title: Disarming emotional memories using targeted memory reactivation during rapid
+  eye movement sleep
+uid: '12516159'
+volume: '3'

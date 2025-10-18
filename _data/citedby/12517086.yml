@@ -1,0 +1,56 @@
+articleids:
+- idtype: pmid
+  value: '41033105'
+- idtype: doi
+  value: 10.1016/j.ebiom.2025.105955
+- idtype: pmcid
+  value: PMC12517086
+authors:
+- authtype: Author
+  name: Bott FS
+- authtype: Author
+  name: Zebhauser PT
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Turgut Ö
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Day MA
+- authtype: Author
+  name: Adhia DB
+- authtype: Author
+  name: Ashar YK
+- authtype: Author
+  name: Wager TD
+- authtype: Author
+  name: Granovsky Y
+- authtype: Author
+  name: Yarnitsky D
+- authtype: Author
+  name: Jensen MP
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2025 Sep 30
+fulljournalname: eBioMedicine
+issue: ''
+pages: '105955'
+pmclivedate: 2025/10/14
+printpubdate: ''
+pubdate: 2025 Sep 30
+sortdate: 2025/09/30 00:00
+source: eBioMedicine
+title: 'Exploring electroencephalographic chronic pain biomarkers: a mega-analysis'
+uid: '12517086'
+volume: '120'

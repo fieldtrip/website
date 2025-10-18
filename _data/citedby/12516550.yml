@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41089211'
+- idtype: doi
+  value: 10.1016/j.ynirp.2025.100294
+- idtype: pmcid
+  value: PMC12516550
+authors:
+- authtype: Author
+  name: Hervochon R
+- authtype: Author
+  name: Ziri D
+- authtype: Author
+  name: Dupuch G
+- authtype: Author
+  name: Chaumon M
+- authtype: Author
+  name: Foirest C
+- authtype: Author
+  name: Schwartz D
+- authtype: Author
+  name: Gitton C
+- authtype: Author
+  name: George N
+- authtype: Author
+  name: Tankere F
+epubdate: 2025 Sep 30
+fulljournalname: 'Neuroimage: Reports'
+issue: '4'
+pages: '100294'
+pmclivedate: 2025/10/14
+printpubdate: ''
+pubdate: 2025 Sep 30
+sortdate: 2025/09/30 00:00
+source: Neuroimage Rep
+title: 'Cerebral plasticity after hypoglosso-facial anastomosis in facial palsy: a
+  magnetoencephalography study'
+uid: '12516550'
+volume: '5'
