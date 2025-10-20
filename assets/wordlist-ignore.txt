@@ -284,6 +284,7 @@ baddata
 Badier
 badsegment
 BAE
+Bai
 baillet
 Baillet
 Bak
@@ -1068,6 +1069,7 @@ dataformats
 datahandling
 dataIC
 datain
+datalad
 DataLad
 DataOrientation
 dataout
@@ -2337,6 +2339,7 @@ indepsamplesregrT
 indepsamplesT
 indepsamplesWilksLambda
 indepsamplesZcoh
+INDoS
 indx
 Infomax
 infos
@@ -2851,8 +2854,8 @@ markersize
 markersymbol
 Marquand
 Marqui
-Marseille
 marseille
+Marseille
 Martine
 Martinistrasse
 Martinos
@@ -3760,8 +3763,8 @@ Paxinos
 pc
 pca
 PCA
-PCBs
 pcbi
+PCBs
 pcc
 PCC
 pD
@@ -4578,6 +4581,7 @@ Solidworks
 somatosensation
 somatosensor
 someFieldOrSubStruct
+Songyun
 Sónia
 sortable
 sortdate
