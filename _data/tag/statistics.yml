@@ -40,7 +40,7 @@
 - title:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
   link:  /faq/stats/clusterstats_correcttail
 
-- title:  How to test an interaction effect using cluster-based permutation tests?
+- title:  How can I test an interaction effect using cluster-based permutation tests?
   link:  /faq/stats/clusterstats_interaction
 
 - title:  How NOT to interpret results from a cluster-based permutation test
@@ -99,4 +99,7 @@
 
 - title:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
+
+- title:  Group-level statistics with parametric and non-parametric methods
+  link:  /workshop/practicalmeeg2025/handson_groupanalysis
 

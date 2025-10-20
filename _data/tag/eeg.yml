@@ -58,19 +58,19 @@
 - title:  Which datasets are used in the documentation and where are they used?
   link:  /faq/other/datasets
 
+- title:  How can I inspect the electrode impedances of my BrainVision data?
+  link:  /faq/preproc/dataformat/impedancecheck
+
 - title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
   link:  /faq/preproc/dataformat/neuroscan
 
 - title:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/preproc/datahandling/mergedata
 
-- title:  How can I inspect the electrode impedances of my data?
-  link:  /faq/preproc/impedancecheck
-
 - title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/source/anat_coreg
 
-- title:  How is the segmentation defined?
+- title:  How is a segmentation defined?
   link:  /faq/source/datatype_segmentation
 
 - title:  How should I specify the fiducials for electrode realignment?

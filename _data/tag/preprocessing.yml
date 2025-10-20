@@ -47,10 +47,10 @@
   link:  /faq/preproc/artifact/resampling_lowpassfilter
 
 - title:  Why should I start with rereferencing for BioSemi EEG data?
-  link:  /faq/preproc/biosemi_reference
+  link:  /faq/preproc/dataformat/biosemi_reference
 
 - title:  Why should I set continuous to yes for CTF data?
-  link:  /faq/preproc/continuous
+  link:  /faq/preproc/dataformat/continuous
 
 - title:  How can I read corrupted (unsaved) CTF data?
   link:  /faq/preproc/dataformat/ctf_readcorrupted
@@ -174,4 +174,10 @@
 
 - title:  Preprocessing raw data and computing ERPs/ERFs
   link:  /workshop/practicalmeeg2022/handson_raw2erp
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2025/handson_artifacts
+
+- title:  Preprocessing raw data and computing ERPs/ERFs
+  link:  /workshop/practicalmeeg2025/handson_raw2erp
 

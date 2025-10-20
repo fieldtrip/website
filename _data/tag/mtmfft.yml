@@ -1,6 +1,3 @@
-- title:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_mtmfft_new
-
 - title:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
   link:  /faq/spectral/freqanalysis_phasedefinition
 

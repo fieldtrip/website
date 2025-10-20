@@ -13,6 +13,6 @@
 - title:  How can I anonymize or deidentify DICOM files?
   link:  /faq/other/anonymization_dicom
 
-- title:  How can I anonymize data processed in FieldTrip?
+- title:  How can I anonymize or deidentify data processed in FieldTrip?
   link:  /faq/other/anonymization_fieldtripdata
 

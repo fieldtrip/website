@@ -16,9 +16,6 @@
 - title:  How can I keep track of changes to the code?
   link:  /faq/development/trackchanges
 
-- title:  How can I distribute a batch of jobs?
-  link:  /faq/distcomp/distributed_batch
-
 - title:  What are the different approaches I can take for distributed computing?
   link:  /faq/distcomp/distributed_computing
 
@@ -46,7 +43,7 @@
 - title:  What kind of cable do I need for a serial port connection between two computers?
   link:  /faq/experiment/serialport
 
-- title:  How can I compile the mex files and command-line executable?
+- title:  How can I compile the mex files and command-line executables?
   link:  /faq/matlab/compile
 
 - title:  How can I compile the mex files on macOS?
@@ -157,7 +154,7 @@
 - title:  How can I anonymize or deidentify DICOM files?
   link:  /faq/other/anonymization_dicom
 
-- title:  How can I anonymize data processed in FieldTrip?
+- title:  How can I anonymize or deidentify data processed in FieldTrip?
   link:  /faq/other/anonymization_fieldtripdata
 
 - title:  How should I specify the coordinate systems in a BIDS dataset?
@@ -180,6 +177,9 @@
 
 - title:  Where can I find open access MEG/EEG data?
   link:  /faq/other/open_data
+
+- title:  Where can I find open hardware for MEG and EEG?
+  link:  /faq/other/open_hardware
 
 - title:  How do I prevent FieldTrip from printing the time and memory after each function call?
   link:  /faq/other/showcallinfo
@@ -207,6 +207,9 @@
 
 - title:  Which colormaps are supported?
   link:  /faq/plotting/colormap
+
+- title:  How can I use the databrowser?
+  link:  /faq/plotting/databrowser
 
 - title:  What is a good way to save images for later processing in other software?
   link:  /faq/plotting/figure_export
@@ -247,6 +250,9 @@
 - title:  Why does my ICA eyeblink component look strange?
   link:  /faq/preproc/artifact/ica_eyeblink_topo
 
+- title:  Should I rereference prior to or after ICA for artifact removal?
+  link:  /faq/preproc/artifact/ica_rereference
+
 - title:  What kind of filters can I apply to my data?
   link:  /faq/preproc/artifact/preproc_filtertypes
 
@@ -257,13 +263,10 @@
   link:  /faq/preproc/artifact/resampling_lowpassfilter
 
 - title:  Why should I start with rereferencing for BioSemi EEG data?
-  link:  /faq/preproc/biosemi_reference
+  link:  /faq/preproc/dataformat/biosemi_reference
 
 - title:  Why should I set continuous to yes for CTF data?
-  link:  /faq/preproc/continuous
-
-- title:  How can I use the databrowser?
-  link:  /faq/preproc/databrowser
+  link:  /faq/preproc/dataformat/continuous
 
 - title:  I am having problems reading the CTF .hc headcoordinates file
   link:  /faq/preproc/dataformat/ctf_fixhc
@@ -297,6 +300,9 @@
 
 - title:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/preproc/dataformat/fileio_stateless
+
+- title:  How can I inspect the electrode impedances of my BrainVision data?
+  link:  /faq/preproc/dataformat/impedancecheck
 
 - title:  I have problems reading in NeuroScan .cnt files. How can I fix this?
   link:  /faq/preproc/dataformat/neuroscan
@@ -340,15 +346,6 @@
 - title:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/preproc/events/triggers
 
-- title:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/preproc/ica_rereference
-
-- title:  How can I inspect the electrode impedances of my data?
-  link:  /faq/preproc/impedancecheck
-
-- title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/preproc/trialinfo_trl
-
 - title:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/realtime/fieldtripbuffer
 
@@ -391,7 +388,7 @@
 - title:  What kind of volume conduction models of the head (head models) are implemented?
   link:  /faq/source/datatype_headmodel
 
-- title:  How is the segmentation defined?
+- title:  How is a segmentation defined?
   link:  /faq/source/datatype_segmentation
 
 - title:  How is anatomical, functional or statistical "volume data" described?
@@ -469,6 +466,9 @@
 - title:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
   link:  /faq/spectral/evoked_vs_induced
 
+- title:  Why do I need to run ft_freqanalysis before ft_combineplanar?
+  link:  /faq/spectral/freq_before_combine
+
 - title:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
   link:  /faq/spectral/freqanalysis_foimismatchmtmconvol
 
@@ -481,25 +481,16 @@
 - title:  Why am I not getting integer frequencies?
   link:  /faq/spectral/freqanalysis_foinoninteger
 
-- title:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_mtmconvol_new
-
-- title:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_mtmfft_new
-
 - title:  What does "padding not sufficient for requested frequency resolution" mean?
   link:  /faq/spectral/freqanalysis_paddinginsufficient
 
 - title:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
   link:  /faq/spectral/freqanalysis_phasedefinition
 
-- title:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_wavelet_new
-
 - title:  How can I compute inter-trial coherence?
   link:  /faq/spectral/itc
 
-- title:  How does MTMCONVOL work?
+- title:  How does mtmconvol work?
   link:  /faq/spectral/mtmconvol
 
 - title:  How to interpret the sign of the phase slope index?
@@ -532,7 +523,7 @@
 - title:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
   link:  /faq/stats/clusterstats_correcttail
 
-- title:  How to test an interaction effect using cluster-based permutation tests?
+- title:  How can I test an interaction effect using cluster-based permutation tests?
   link:  /faq/stats/clusterstats_interaction
 
 - title:  How NOT to interpret results from a cluster-based permutation test

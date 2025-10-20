@@ -16,6 +16,9 @@
 - title:  Which colormaps are supported?
   link:  /faq/plotting/colormap
 
+- title:  How can I use the databrowser?
+  link:  /faq/plotting/databrowser
+
 - title:  What is a good way to save images for later processing in other software?
   link:  /faq/plotting/figure_export
 
@@ -33,9 +36,6 @@
 
 - title:  I am getting strange artifacts in figures that use opacity
   link:  /faq/plotting/opacityrendering
-
-- title:  How can I use the databrowser?
-  link:  /faq/preproc/databrowser
 
 - title:  How can I define neighbouring sensors?
   link:  /faq/stats/sensors_neighbours
@@ -93,4 +93,7 @@
 
 - title:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
+
+- title:  Group-level statistics with parametric and non-parametric methods
+  link:  /workshop/practicalmeeg2025/handson_groupanalysis
 

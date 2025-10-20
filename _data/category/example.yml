@@ -187,9 +187,6 @@
 - title:  Compute forward simulated data and apply a beamformer scan
   link:  /example/source/simulateddata_beamformer
 
-- title:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/source/simulateddata_ctf
-
 - title:  Compute forward simulated data and apply a dipole fit
   link:  /example/source/simulateddata_dipolefit
 

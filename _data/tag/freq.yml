@@ -37,6 +37,9 @@
 - title:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
   link:  /faq/spectral/evoked_vs_induced
 
+- title:  Why do I need to run ft_freqanalysis before ft_combineplanar?
+  link:  /faq/spectral/freq_before_combine
+
 - title:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
   link:  /faq/spectral/freqanalysis_foimismatchmtmconvol
 
@@ -49,22 +52,13 @@
 - title:  Why am I not getting integer frequencies?
   link:  /faq/spectral/freqanalysis_foinoninteger
 
-- title:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_mtmconvol_new
-
-- title:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_mtmfft_new
-
 - title:  What does "padding not sufficient for requested frequency resolution" mean?
   link:  /faq/spectral/freqanalysis_paddinginsufficient
 
 - title:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
   link:  /faq/spectral/freqanalysis_phasedefinition
 
-- title:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalysis?
-  link:  /faq/spectral/freqanalysis_wavelet_new
-
-- title:  How does MTMCONVOL work?
+- title:  How does mtmconvol work?
   link:  /faq/spectral/mtmconvol
 
 - title:  How can I do time-frequency analysis on continuous data?
@@ -138,4 +132,7 @@
 
 - title:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /workshop/practicalmeeg2022/handson_sensoranalysis
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/practicalmeeg2025/handson_sensoranalysis
 

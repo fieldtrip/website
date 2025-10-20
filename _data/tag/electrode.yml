@@ -1,8 +1,8 @@
 - title:  Can I compare EEG channels between different electrode caps?
   link:  /faq/other/capmapping
 
-- title:  How can I inspect the electrode impedances of my data?
-  link:  /faq/preproc/impedancecheck
+- title:  How can I inspect the electrode impedances of my BrainVision data?
+  link:  /faq/preproc/dataformat/impedancecheck
 
 - title:  How should I specify the fiducials for electrode realignment?
   link:  /faq/source/fiducial

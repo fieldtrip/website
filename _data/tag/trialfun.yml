@@ -16,9 +16,6 @@
 - title:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/preproc/events/triggers
 
-- title:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/preproc/trialinfo_trl
-
 - title:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/sensor/preprocessing_erp
 

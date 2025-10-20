@@ -7,9 +7,6 @@
 - title:  Example analysis pipeline for BioSemi data
   link:  /example/other/biosemi
 
-- title:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/source/simulateddata_ctf
-
 - title:  How are the various MATLAB data structures defined?
   link:  /faq/development/datatype
 

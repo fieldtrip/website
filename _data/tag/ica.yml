@@ -20,8 +20,11 @@
   link:  /faq/preproc/artifact/ica_eyeblink_topo
 
 - title:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/preproc/ica_rereference
+  link:  /faq/preproc/artifact/ica_rereference
 
 - title:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
+
+- title:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2025/handson_artifacts
 

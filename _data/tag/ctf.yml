@@ -13,9 +13,6 @@
 - title:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/sensor/megrealign
 
-- title:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/source/simulateddata_ctf
-
 - title:  How can I change the head localization in a CTF dataset?
   link:  /faq/experiment/ctf_changeheadloc
 
@@ -23,7 +20,7 @@
   link:  /faq/other/anonymization_ctf
 
 - title:  Why should I set continuous to yes for CTF data?
-  link:  /faq/preproc/continuous
+  link:  /faq/preproc/dataformat/continuous
 
 - title:  I am having problems reading the CTF .hc headcoordinates file
   link:  /faq/preproc/dataformat/ctf_fixhc

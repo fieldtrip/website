@@ -49,9 +49,6 @@
 - title:  Compute forward simulated data and apply a beamformer scan
   link:  /example/source/simulateddata_beamformer
 
-- title:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/source/simulateddata_ctf
-
 - title:  Create MNI-aligned grids in individual head coordinates
   link:  /example/source/sourcemodel_aligned2mni
 
@@ -88,7 +85,7 @@
 - title:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/source/anat_dicom2ctf
 
-- title:  How is the segmentation defined?
+- title:  How is a segmentation defined?
   link:  /faq/source/datatype_segmentation
 
 - title:  What material is used for the flexible MEG headcasts?
@@ -327,4 +324,19 @@
 
 - title:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
+
+- title:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/practicalmeeg2025/handson_anatomy
+
+- title:  Group-level statistics with parametric and non-parametric methods
+  link:  /workshop/practicalmeeg2025/handson_groupanalysis
+
+- title:  Preprocessing raw data and computing ERPs/ERFs
+  link:  /workshop/practicalmeeg2025/handson_raw2erp
+
+- title:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/practicalmeeg2025/handson_sensoranalysis
+
+- title:  Reconstructing source activity using beamformers
+  link:  /workshop/practicalmeeg2025/handson_sourceanalysis
 
