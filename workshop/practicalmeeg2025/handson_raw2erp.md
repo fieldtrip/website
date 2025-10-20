@@ -12,7 +12,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 In this tutorial, we will learn how to read in 'raw' data from a file, and to apply some basic processing and averaging in order to inspect event-related fields.
 
 {% include markup/yellow %}
-This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preproc/preprocessing) tutorial, which you can refer to if you want more details.
+This tutorial does not cover all possible steps in importing specific data into FieldTrip and how to preprocess it. This tutorial rather focusses on processing multiple runs of the same dataset, and on exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preproc/preprocessing) tutorial, which you can refer to if you want more details.
 {% include markup/end %}
 
 ## Preliminaries, definition of subject specific filenames, and definition of epochs-of-interest
@@ -29,7 +29,7 @@ In this tutorial, the data is contained in 6 different fif files, one for every 
 
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
 
-We use the `datainfo_subject` function, which is provided in the `code` folder associated with this workshop. If we do the following:
+We use the `datainfo_subject` function, which is provided in the [code](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/code/) folder associated with this workshop. If we do the following:
 
     subj = datainfo_subject(1);
 
@@ -39,9 +39,9 @@ We obtain a structure that looks like this:
      struct with fields:
                  id: 1
                name: 'sub-01'
-            mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-            fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-         outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
+            mrifile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-01/ses-mri/anat/sub-01_ses-mri_acq-mprage_T1w.nii.gz'
+            fidfile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-01/ses-mri/anat/sub-01_ses-mri_acq-mprage_T1w.json'
+         outputpath: '/Volumes/SamsungT3/practicalmeeg2025/derivatives'
             megfile: {6x1 cell}
          eventsfile: {6x1 cell}
 
@@ -73,9 +73,9 @@ We can now run the following chunk of code:
     end % for each run
 
 {% include markup/red %}
-In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
+In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the derivative dataset is NOT perfectly following the BIDS standard since, MEG and EEG derivatives are not yet formally finalized. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
-Although we have the MaxFiltered fif file with the data and original trigger codes
+The problem we encounter is that, although in the derivative we do have the MaxFiltered fif file:
 
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
 
@@ -206,7 +206,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
     % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
     % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
-## Visualisation of the ERFs
+## Visualisation of the ERFs and ERPs
 
 At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualize the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/electrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/plotting/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
 
@@ -237,8 +237,10 @@ and to plot the 'EEG065' channel channel we can do
 The same figure can be achieved using the following code
 
     cfg = [];
-    cfg.channel = 'EEG065'
+    cfg.channel = 'EEG065';
     ft_singleplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled)
+
+### ERFs on the magnetometers
 
 There are in total 102 magnetometer channels, 204 planar gradiometer channels, and 70 EEG channels. We would not want to make a separate figure for each of them. We can plot the channels of one specific type (and with the same units) together in one figure, where each channel is plotted at the corresponding location.
 
@@ -262,6 +264,8 @@ _Figure: Average across selected magnetometers for each of the conditions._
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_raw2erp/figure5.png" width="400" %}
 
 _Figure: Topographies of average across selected latency window for each of the conditions._
+
+### ERFs on the gradiometers
 
 For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
@@ -428,7 +432,7 @@ This results in the data being represented in a 3D array that is trials by chann
 
 _Figure: the ERP image of channel EEG065._
 
-It usually gets more interesting if we sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
+It would get more interesting if we were to sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
 
     [triggercode, order] = sort(avg_all.trialinfo(:,1));
 

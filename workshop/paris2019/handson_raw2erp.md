@@ -40,9 +40,9 @@ We obtain a structure that looks like this:
 
                  id: 15
                name: 'sub-15'
-            mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-            fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-         outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
+            mrifile: '/Volumes/SamsungT3/paris2019/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.nii.gz'
+            fidfile: '/Volumes/SamsungT3/paris2019/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.json'
+         outputpath: '/Volumes/SamsungT3/paris2019/derivatives'
             megfile: {6x1 cell}
          eventsfile: {6x1 cell}
 

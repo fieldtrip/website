@@ -61,6 +61,29 @@ This reads the data from file as one long continuous segment without any additio
     ylabel('channel amplitude (uV)')
     legend(data_eeg.label(chansel))
 
+You can also use the **[ft_databrowser](/reference/ft_databrowser)** function to scroll through the continuous data, here showing 30 seconds along the horizontal axis.
+
+    cfg = [];
+    cfg.blocksize = 30; % seconds
+    cfg.ylim = [-50 50]; % uVprint
+    % cfg.event = ft_read_event('subj2.vhdr'); % also read and show the events
+    ft_databrowser(cfg, data_eeg)
+
+{% include image src="/assets/img/tutorial/preproc/continuous/figure1.png" width="600" %}
+
+You don't even have to read the continuous data in memory, as **[ft_databrowser](/reference/ft_databrowser)** can do that for you. This allows scrolling through segments of a dataset, where only the requested segment is read into memory and displayed.
+
+    cfg = [];
+    cfg.dataset = 'subj2.vhdr'; % events will be read automatically
+    % cfg.plotevents = 'no'; % to NOT show the events
+    cfg.blocksize = 30; % seconds
+    cfg.ylim = [-50 50]; % uV
+    ft_databrowser(cfg)
+
+{% include image src="/assets/img/tutorial/preproc/continuous/figure2.png" width="600" %}
+
+Using the "<" and ">" buttons at the bottom of the figure you can scroll forward and back, using the "+" and "-" buttons you can zoom in and out on the horizontal time and vertical amplitude axis.
+
 ## Reading continuous MEG data into memory
 
 If the data on disk is stored in a segmented or epoched format, i.e. where the file format already reflects the trials in the experiment, a call to **[ft_preprocessing](/reference/ft_preprocessing)** will return in the data being read and segmented into the original trials.
