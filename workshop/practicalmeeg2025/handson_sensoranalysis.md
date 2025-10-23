@@ -44,7 +44,9 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ## Preprocessing the data
 
-The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-15` folder, and can also be loaded from there:
+The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. 
+
+The execution of the following piece of code takes some time. You may want to skip this section and load the precomputed data from disk.
 
     subj = datainfo_subject(15);
 
@@ -98,17 +100,17 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-Alternatively, you can also use the data file that is shared on our download server.
+By storing the results of all computations systematically, we can also easily go back to the data that was computed previously and that in this case is available from the download server.
 
     filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
     % save(filename, 'data');
-    load(filename, 'data');
+    % load(filename, 'data');
 
 ## Frequency analysis (not time-resolved)
 
 Before we go to time-frequency analysis, let's first look at how the power spectrum of the signal looks like without considering the stimulus that is presented at t=0.
 
-We can compute the power using the `mtmfft` method using a single hanning window.
+We can compute the power using the `mtmfft` method using a single Hanning window.
 
     cfg = [];
     cfg.method = 'mtmfft';
@@ -147,7 +149,7 @@ Or we can log transform the data ourselves. The following converts the data into
 
 _Figure: Power spectrum for channel MEG0741_
 
-We can see that the powerspectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliasing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
+We can see that the power spectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliasing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
 
 Furthermore, we see clear peaks at 50, 100 and 150 Hz, corresponding to the line-noise and its [harmonics](https://en.wikipedia.org/wiki/Harmonic). There is quite some low-frequency noise below 5 Hz (which would probably be way less if we would have worked with the artifact-cleaned data). There is an alpha peak around 10 Hz, and not really a peak but rather a "shoulder" at 25 Hz, corresponding to the beta band.
 
@@ -267,15 +269,15 @@ From the previous figure you can see that there is an increase in power around 5
     cfg.layout       = 'neuromag306mag_helmet.mat'
     cfg.baseline     = [-0.6 -0.2];
     cfg.baselinetype = 'absolute';
-    cfg.xlim         = [0.6 0.8];
-    cfg.zlim         = [-5e-27 5e-27];
+    cfg.xlim         = [0.9 1.3];
     cfg.ylim         = [15 20];
+    % cfg.zlim         = [-5e-27 5e-27];
     cfg.marker       = 'on';
     figure; ft_topoplotTFR(cfg, freqlow_famous);
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_sensoranalysis/figure5.png" width="400" %}
 
-_Figure: A topographic representation of the time-frequency representations (15 - 20 Hz, 0.9 - 1.3 s post stimulus) obtained using ft_topoplotTFR_
+_Figure: Topography of the time-frequency representation at a selected time and frequency_
 
 ##### Exercise 1
 
