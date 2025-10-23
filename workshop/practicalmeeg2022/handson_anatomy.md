@@ -51,25 +51,15 @@ Next, we can inspect the location of the landmarks in the anatomical image.
 
     cfg = [];
     cfg.locationcoordinates = 'voxel'; % treat the location as voxel coordinates
-    cfg.location = NAS;
+    cfg.location = coordinates.AnatomicalLandmarkCoordinates.Nasion';
+    cfg.flip = 'no';
     ft_sourceplot(cfg, mri_orig);
 
 If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels.
 
-To align the coordinates of the MRI with the anatomical landmarks, we use the following.
-
-    cfg              = [];
-    cfg.method       = 'fiducial';
-    % this information has been obtained from the .json associated with the anatomical image
-    cfg.fiducial.nas = coordinates.AnatomicalLandmarkCoordinates.Nasion';
-    cfg.fiducial.lpa = coordinates.AnatomicalLandmarkCoordinates.LPA';
-    cfg.fiducial.rpa = coordinates.AnatomicalLandmarkCoordinates.RPA';
-    cfg.coordsys     = 'neuromag';
-    mri              = ft_volumerealign(cfg, mri);
-
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_anatomy/figure1.png" width="400" %}
 
-_Figure: The location of the NAS indicated by the crosshair in the anatomical MRI image_
+_Figure: The location of the nasion indicated by the crosshair in the anatomical MRI image_
 
 ### Exercise 1
 
@@ -81,9 +71,10 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 
     cfg              = [];
     cfg.method       = 'fiducial';
-    cfg.fiducial.nas = NAS(:)';
-    cfg.fiducial.lpa = LPA(:)';
-    cfg.fiducial.rpa = RPA(:)';
+    % this information has been obtained from the .json associated with the anatomical image
+    cfg.fiducial.nas = coordinates.AnatomicalLandmarkCoordinates.Nasion';
+    cfg.fiducial.lpa = coordinates.AnatomicalLandmarkCoordinates.LPA';
+    cfg.fiducial.rpa = coordinates.AnatomicalLandmarkCoordinates.RPA';
     cfg.coordsys     = 'neuromag';
     mri              = ft_volumerealign(cfg, mri_orig);
 
