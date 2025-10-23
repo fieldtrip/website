@@ -61,6 +61,7 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
       Scrambled   = [17 18 19];
 
       cfg.trialfun = 'ft_trialfun_general';
+      cfg.trialdef.detectflank = 'up'; % needed for subject 15, run 6
       cfg.trialdef.eventtype = 'STI101';
       cfg.trialdef.eventvalue = [Famous Unfamiliar Scrambled];
       cfg.trialdef.prestim = 0.5;
