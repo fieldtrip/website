@@ -54,7 +54,7 @@ title: Phalow_freqhigh
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig1.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig2.png" width="400" %}
 
-    % show powerspectrum simulated data
+    % show power spectrum simulated data
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.channel   = 'mix';
@@ -126,7 +126,7 @@ title: Phalow_freqhigh
     cfg.keeptrials = 'no';
 
     freq2 = ft_freqanalysis(cfg,freq1); %FieldTrip automatically converts the freq1 data to raw data.
-                                   %Every frequency in the powerspectrum is converted to a a channel labeled mix@xxHz
+                                   %Every frequency in the power spectrum is converted to a a channel labeled mix@xxHz
 
     freq2.freq2 = [2:2:60];
 

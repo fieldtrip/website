@@ -52,7 +52,7 @@ title: Phalow_amphigh
     subplot(3,3,5); plot(data.trial{1}(5,sel)); title(data.label{5})
     print -dpng phalow_amphigh_fig1.png
 
-    % show powerspectrum simulated data
+    % show power spectrum simulated data
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.channel   = 'mix';
@@ -97,7 +97,7 @@ title: Phalow_amphigh
     cfg.keeptrials = 'no';
 
     freq2 = ft_freqanalysis(cfg,freq1); %FieldTrip automatically converts the freq1 data to raw data.
-                                   %Every frequency in the powerspectrum is converted to a a channel labeled mix@xxHz
+                                   %Every frequency in the power spectrum is converted to a a channel labeled mix@xxHz
 
     freq2.freq2 = [2:2:60];
     figure; imagesc(freq2.freq, freq2.freq2, freq2.powspctrm)
@@ -192,7 +192,7 @@ title: Phalow_amphigh
     plot(data_hilbert.time{1}(sel),data_hilbert.trial{1}(sel),'r', 'linewidth', 2)
     print -dpng phalow_amphigh_fig7.png
 
-    % calculate powerspectrum of hilbert data
+    % calculate power spectrum of hilbert data
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.channel   = 'mix';
@@ -202,7 +202,7 @@ title: Phalow_amphigh
 
     fft_hilbert = ft_freqanalysis(cfg,data_hilbert);
 
-    % plot powerspectrum
+    % plot power spectrum
     cfg = []
     cfg.xlim = [1 20];
     figure; ft_singleplotER(cfg,fft_hilbert);

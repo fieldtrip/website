@@ -33,7 +33,7 @@ In the second MATLAB session you start the **[ft_realtime_powerestimate](/refere
     cfg.dataset        = 'buffer://localhost:1972';    % where to read the data from
     ft_realtime_powerestimate(cfg)
 
-After starting the **[ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate)**, you should see a figure that updates itself every second. That figure contains the powerspectrum of the simulated random number signal. If you close the figure, the figure will re-appear and start all over again with the automatic scaling of the vertical axis.
+After starting the **[ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate)**, you should see a figure that updates itself every second. That figure contains the power spectrum of the simulated random number signal. If you close the figure, the figure will re-appear and start all over again with the automatic scaling of the vertical axis.
 
 You can also start the two MATLAB sessions on two different computers, where on the second you would then point the reading function to the first computer.
 

@@ -249,7 +249,7 @@ We cut out the relevant time segment using **[ft_selectdata](/reference/utilitie
     cfg.channel = {'all' '-L212_bz' '-R212_bz'};
     data        = ft_selectdata(cfg, data_all);
 
-We cut the data into 10-second segments with 80% overlap and compute the averaged powerspectrum over all segments to verify the expected spectral peaks (and their harmonics) at 8, 11 and 14 Hz.
+We cut the data into 10-second segments with 80% overlap and compute the averaged power spectrum over all segments to verify the expected spectral peaks (and their harmonics) at 8, 11 and 14 Hz.
 
     cfg            = [];
     cfg.length     = 10;
@@ -270,7 +270,7 @@ We cut the data into 10-second segments with 80% overlap and compute the average
     ylabel('log_10 power')
 
 {% include image src="/assets/img/tutorial/coregistration_opm/figure5.png" width="400" %}
-_Figure: Powerspectrum from a measurement containing strong signals at 8, 11 and 14 Hz, and at their harmonics._
+_Figure: Power spectrum from a measurement containing strong signals at 8, 11 and 14 Hz, and at their harmonics._
 
 To focus on the signals of the specific HPI-coils, we bandpass filter the data in the frequency bands corresponding to each of the coils, and cut off the edges for any potential filter edge artifacts.
 

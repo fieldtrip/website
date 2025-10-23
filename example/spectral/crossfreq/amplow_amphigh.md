@@ -63,7 +63,7 @@ title: Amplow_amphigh
     subplot(3,3,8); plot(data.trial{1}(8,sel)); title(data.label{8})
     print -dpng amplow_amphigh_fig1.png
 
-    % show powerspectrum simulated data
+    % show power spectrum simulated data
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.channel   = 'mix';

@@ -849,7 +849,7 @@ We will first decompose our signal into different frequencies using **[ft_freqan
     % Calculate Induced TFRs fpor both conditions
     cfg = [];
     cfg.polyremoval     = 1; % Removes mean and linear trend
-    cfg.output          = 'pow'; % Output the powerspectrum
+    cfg.output          = 'pow'; % Output the power spectrum
     cfg.method          = 'mtmconvol';
     cfg.taper           = 'hanning';
     cfg.foi             = 1:50; % Our frequencies of interest. Now: 1 to 50, in steps of 1.

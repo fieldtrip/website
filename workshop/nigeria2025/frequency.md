@@ -195,7 +195,7 @@ Which set of parameters is more sensitive to detect the shift of low-beta power?
 
 ## Time-frequency analysis on continuous data
 
-Although often we assume stationarity of the data in a resting-state experiment, it is possible to look at how the powerspectrum changes over time. For that we are using this [trick](/faq/spectral/tfr_continuous/).
+Although often we assume stationarity of the data in a resting-state experiment, it is possible to look at how the power spectrum changes over time. For that we are using this [trick](/faq/spectral/tfr_continuous/).
 
 As before, we compute the power spectrum on the segmented data, but now we specify `cfg.keeptrials='yes'` to prevent the trials from being averaged.
 

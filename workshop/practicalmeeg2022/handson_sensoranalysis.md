@@ -146,7 +146,7 @@ Or we can log transform the data ourselves. The following converts the data into
 
 _Figure: Power spectrum for channel MEG0741_
 
-We can see that the powerspectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliasing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
+We can see that the power spectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliasing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
 
 Furthermore, we see clear peaks at 50, 100 and 150 Hz, corresponding to the line-noise and its [harmonics](https://en.wikipedia.org/wiki/Harmonic). There is quite some low-frequency noise below 5 Hz (which would probably be way less if we would have worked with the artifact-cleaned data). There is an alpha peak around 10 Hz, and not really a peak but rather a "shoulder" at 25 Hz, corresponding to the beta band.
 
