@@ -74,7 +74,7 @@ The `/Volumes/SamsungT3/practicalmeeg2025` directory is where I have the data on
 {% include markup/yellow %}
 Since the whole dataset is too large, we provide a pruned version with only the MEG data of only a single subject. We have `ds000117-pruned_sub-01` and `ds000117-pruned_sub-15`, for subject 1 and 15.
 
-Subject 1 is the one that is also analyzed by the other toolboxes (EEGLAB, BrainStorm, MNE-Python) at PracticalMEEG. Subject 15 is the one that was once upon a time selected as the "representative subject" for the SPM tutorial. The figures in the FieldTrip tutorials are based on subject 15, so we recommend that you download that.
+Subject 1 is the one that is also analyzed by the other toolboxes (EEGLAB, Brainstorm, MNE-Python) at PracticalMEEG. Subject 15 is the one that was once upon a time selected as the "representative subject" for the SPM tutorial. The figures in the FieldTrip tutorials are based on subject 15, so we recommend that you download that.
 {% include markup/end %}
 
 The derivatives directory contains (or will contain) the results of the analysis, you can download some precomputed results as .mat files from our download server. For some steps that is not needed and you will compute them yourself, but for some lengthy analysis you will continue to work with the precomputed results that were saved by us.

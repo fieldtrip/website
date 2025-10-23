@@ -44,7 +44,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ## Preprocessing the data
 
-The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. 
+The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data.
 
 The execution of the following piece of code takes some time. You may want to skip this section and load the precomputed data from disk.
 
@@ -333,7 +333,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_sensoranalysis/figure6.png" width="400" %}
 
-_Figure: A time-frequency representation of channel MEG0741 obtained using ft_singleplotTFR_
+_Figure: The time-frequency representation of channel MEG0741_
 
 If you see artifacts in your figure, see [this FAQ](/faq/plotting/opacityrendering).
 
@@ -485,7 +485,7 @@ _Figure: Time-frequency representations of power calculated using Morlet wavelet
 #### Exercise 6
 
 {% include markup/skyblue %}
-Adjust cfg.width and see how the TFRs change.
+Adjust `cfg.width` for the wavelets and see how the TFRs change.
 {% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency representations, please see [visualization](#Visualization).
