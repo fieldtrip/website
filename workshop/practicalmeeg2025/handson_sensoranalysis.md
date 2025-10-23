@@ -405,6 +405,10 @@ K is the number of tapers applied; the more, the greater the smoothing.
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqhigh_scrambled = ft_freqanalysis(cfg, data);
 
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_mtmconvol', subj.name));
+    % save(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
+    % load(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
+
 Plot the result
 
     cfg = [];
@@ -459,6 +463,10 @@ Calculate TFRs using Morlet wavelet
 
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freq_scrambled = ft_freqanalysis(cfg, data);
+
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_wavelet', subj.name));
+    % save(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
+    % load(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
 
 Plot the result
 
