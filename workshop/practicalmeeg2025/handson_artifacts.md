@@ -54,6 +54,7 @@ Sometimes it is difficult to say whether something is signal or noise, for examp
 We start with the raw data that we preprocessed in the [previous tutorial](/workshop/practicalmeeg2025/handson_raw2erp/)
 
     subj = datainfo_subject(15);
+    
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
     load(filename, 'data')
 

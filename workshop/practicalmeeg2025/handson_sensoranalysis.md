@@ -44,7 +44,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ## Preprocessing the data
 
-The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-01` folder, and can also be loaded from there:
+The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-15` folder, and can also be loaded from there:
 
     subj = datainfo_subject(15);
 
@@ -98,7 +98,7 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-Alternatively, you can also use the [sub-01_data.mat](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/derivatives/sensoranalysis/sub-01/sub-01_data.mat) data file that is shared on our download server.
+Alternatively, you can also use the data file that is shared on our download server.
 
     filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
     % save(filename, 'data');
@@ -315,7 +315,7 @@ Below is the configuration for a 7-cycle time window. The calculation is only do
     cfg.foi          = 2:1:30;
     cfg.t_ftimwin    = 7./cfg.foi;  % 7 cycles per time window
     cfg.toi          = -0.8:0.05:1.5;
-    cfg.trials       = find(data.trialinfo(:,1)==1);
+    cfg.trials       = ismember(data.trialinfo(:,1), Famous);
     TFRhann7         = ft_freqanalysis(cfg, data);
 
 To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
@@ -352,7 +352,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
     cfg.method       = 'mtmconvol';
     cfg.taper        = 'hanning';
     cfg.foi          = 2:1:30;
-    cfg.trials       = find(data.trialinfo(:,1)==1);
+    cfg.trials       = ismember(data.trialinfo(:,1), Famous);
     cfg.toi          = -0.8:0.05:1.5;
 
     cfg.t_ftimwin    = 4./cfg.foi;  % 4 cycles per time window
@@ -394,13 +394,13 @@ K is the number of tapers applied; the more, the greater the smoothing.
     cfg.toi       = (-0.8:0.05:1.3);
     cfg.pad       = 4;
 
-    cfg.trials = find(data.trialinfo(:,1)==1);
+    cfg.trials = ismember(data.trialinfo(:,1), Famous);
     freqhigh_famous = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==2);
+    cfg.trials = ismember(data.trialinfo(:,1), Unfamiliar);
     freqhigh_unfamiliar = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==3);
+    cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqhigh_scrambled = ft_freqanalysis(cfg, data);
 
 Plot the result
@@ -449,13 +449,13 @@ Calculate TFRs using Morlet wavelet
     cfg.toi    = (-0.8:0.05:1.3);
     cfg.pad    = 4;
 
-    cfg.trials = find(data.trialinfo(:,1)==1);
+    cfg.trials = ismember(data.trialinfo(:,1), Famous);
     freq_famous = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==2);
+    cfg.trials = ismember(data.trialinfo(:,1), Unfamiliar);
     freq_unfamiliar = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==3);
+    cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freq_scrambled = ft_freqanalysis(cfg, data);
 
 Plot the result

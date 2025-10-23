@@ -38,9 +38,9 @@ We obtain a structure that looks like this:
      subj =
      struct with fields:
                  id: 1
-               name: 'sub-01'
-            mrifile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-01/ses-mri/anat/sub-01_ses-mri_acq-mprage_T1w.nii.gz'
-            fidfile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-01/ses-mri/anat/sub-01_ses-mri_acq-mprage_T1w.json'
+               name: 'sub-15'
+            mrifile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.nii.gz'
+            fidfile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.json'
          outputpath: '/Volumes/SamsungT3/practicalmeeg2025/derivatives'
             megfile: {6x1 cell}
          eventsfile: {6x1 cell}
@@ -78,18 +78,18 @@ In the previous code we are making use of numeric trigger codes instead of the e
 
 The problem we encounter is that, although in the derivative we do have the MaxFiltered fif file:
 
-    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
+    sub-15_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
 
 according to BIDS we would also have expected its sidecars, but these are missing:
 
-    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
-    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
+    sub-15_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
+    sub-15_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
 
 {% include markup/end %}
 
 ## Reading in raw data from disk
 
-In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-01_data.mat` from the `derivatives/raw2erp/sub-01` folder:
+In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-15_data.mat` from the `derivatives/raw2erp/sub-15` folder:
 
     rundata = cell(1,6);
     for run_nr = 1:6
@@ -281,6 +281,8 @@ For the visualisation of the gradiometers, we first compute the magnitude of the
     cfg.layout = 'neuromag306cmb_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
+### ERPs on the electrodes
+
 Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/plotting/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electrode positions, which were digitized with a Polhemus.
 
     % create an EEG channel layout on-the-fly and visualize the eeg data
@@ -291,6 +293,8 @@ Just like plotting the MEG data, we can plot the EEG data. Since EEG data is rec
     cfg        = [];
     cfg.layout = layout_eeg;
     figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+
+### Plotting MEG and EEG together
 
 It is possible to visualize the data of the different channel types within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts.
 
@@ -426,8 +430,8 @@ Rather than looking at the average and go to the thresholded statistics straight
 This results in the data being represented in a 3D array that is trials by channels by time: the dimord is `rpt_chan_time`. We can look at the time-locked response over all trials in a single channe; this is often called an ERP image.
 
     figure
-    subplot(2,1,1); imagesc(squeeze(avg_all.trial(:,367,:)))
-    subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
+    subplot(2,1,1); imagesc(squeeze(avg_trials.trial(:,367,:)))
+    subplot(2,1,2); plot(avg_trials.time, mean(squeeze(avg_trials.trial(:,367,:)),1)); axis tight
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_raw2erp/figure11.png" width="600" %}
 
@@ -435,9 +439,9 @@ _Figure: the ERP image of channel EEG065._
 
 It would get more interesting if we were to sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
 
-    [triggercode, order] = sort(avg_all.trialinfo(:,1));
+    [triggercode, order] = sort(avg_trials.trialinfo(:,1));
 
     figure
-    subplot(2,1,1); imagesc(squeeze(avg_all.trial(order,367,:)))
-    subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
+    subplot(2,1,1); imagesc(squeeze(avg_trials.trial(order,367,:)))
+    subplot(2,1,2); plot(avg_trials.time, mean(squeeze(avg_trials.trial(:,367,:)),1)); axis tight
 {% include markup/end %}
