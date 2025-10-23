@@ -46,7 +46,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-01` folder, and can also be loaded from there:
 
-    subj = datainfo_subject(1);
+    subj = datainfo_subject(15);
 
     subj.trl = cell(6,1);
     for run_nr = 1:6

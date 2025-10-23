@@ -38,7 +38,7 @@ Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1
 
 ### Download and install a recent FieldTrip version
 
-Please download the most recent version of the FieldTrip toolbox from [here](/download) or from [GitHub](https://github.com/fieldtrip/fieldtrip/tags). As we did some last miniute bugfixes to make all tutorials run smoothly, you should have version [20221207](https://github.com/fieldtrip/fieldtrip/releases/tag/20221207) or later.
+Please download the most recent version of the FieldTrip toolbox from [here](/download) or from [GitHub](https://github.com/fieldtrip/fieldtrip/tags). As we did some last minute bugfixes to make all tutorials run smoothly, you should have version [20221207](https://github.com/fieldtrip/fieldtrip/releases/tag/20221207) or later.
 
 Please read [this FAQ](/faq/installation/) on how to set your path. After adding the FieldTrip main directory to your path, you should type `ft_defaults` which will add the required subdirectories (which depend on your MATLAB version). We recommend to put `ft_defaults` in your MATLAB [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file.
 
@@ -47,7 +47,7 @@ Please read [this FAQ](/faq/installation/) on how to set your path. After adding
 We will use a small `datainfo_subject.m` function that specifies the input and output data files for each participant. You can download that from the `code` folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/). Please organize the workshop data and code as follows:
 
 ```bash
-/Volumes/SamsungT7/practicalmeeg2022/
+/Volumes/SamsungT3/practicalmeeg2022/
 ├── README
 ├── code
 │   ├── README.md
@@ -71,7 +71,7 @@ We will use a small `datainfo_subject.m` function that specifies the input and o
     └── sourceanalysis
 ```
 
-The `/Volumes/SamsungT7/practicalmeeg2022` directory is where I have the data on my laptop (actually on an external SSD), for you that would be somewhere else. There should be a code directory with (at least) the `datainfo_subject.m` function, there should be the `ds000117-pruned` directory with the raw data in subdirectories, and there should be a `derivatives` directory with one subdirectory per analysis step.
+The `/Volumes/SamsungT3/practicalmeeg2022` directory is where I have the data on my laptop (actually on an external SSD), for you that would be somewhere else. There should be a code directory with (at least) the `datainfo_subject.m` function, there should be the `ds000117-pruned` directory with the raw data in subdirectories, and there should be a `derivatives` directory with one subdirectory per analysis step.
 
 The derivatives directory contains (or will contain) the results of the analysis, you can download precomputed results as .mat files from our download server. For some steps that is not needed and you will compute them yourself, but for some lengthy analysis you will continue to work with the precomputed results of the previous step.
 

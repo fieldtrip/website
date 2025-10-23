@@ -32,7 +32,7 @@ To localize and reconstruct the activity of the sources we will perform the foll
 
 The aim is to reconstruct the sources underlying the event-related field that results from presentation of pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2025/handson_sourceanalysis).
 
-    subj = datainfo_subject(1);
+    subj = datainfo_subject(15);
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
     load(filename, 'data');
 

@@ -12,9 +12,9 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/preproc/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/preproc/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/preproc/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
 
 {% include markup/yellow %}
-Note the difference between on the one hand _Quality Assessment_ and on the other hand _Quality Assurance (or Control)_. The first is the critical appraisal of the quality of the data, to document potential problems and to judge and decide on remedies. The second aims to ensure that the quality of the data that enters follow-up analysis meets the criteria you have set.
+Note the difference between _Quality Assessment (QA)_ and _Quality Control (QC)_. The first is the critical appraisal of the data, to document potential problems and to judge and decide on remedies. The second aims to ensure that the quality of the data that enters follow-up analysis meets the criteria you have set and implements the remedies.
 
-Quality Assessment could for example be to observe "the data of subject X is really bad". Quality Assurance could for example be that "subject X is excluded from the subsequent analysis", or "the data of subject X needs to be cleaned".
+Quality Assessment could for example be to observe "the data of subject X is really bad". Quality Control could then for example be that "subject X is excluded from the subsequent analysis", or "the data of subject X needs to be cleaned".
 
 We have recently launched an EU COST Action on [Improving Neuroimaging Data for Sharing](https://indos-costaction.github.io) (INDoS) in which QA and QC will be further investigated, and invite you to get involved!
 {% include markup/end %}
@@ -53,7 +53,7 @@ Sometimes it is difficult to say whether something is signal or noise, for examp
 
 We start with the raw data that we preprocessed in the [previous tutorial](/workshop/practicalmeeg2025/handson_raw2erp/)
 
-    subj = datainfo_subject(1);
+    subj = datainfo_subject(15);
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
     load(filename, 'data')
 

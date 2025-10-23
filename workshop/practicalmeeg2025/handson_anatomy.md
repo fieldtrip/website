@@ -35,7 +35,7 @@ The coordinate system in which the MEG sensors are expressed is defined based on
 
 First, we extract the positions of the landmarks from the subject's MRI metadata .json file and we read the anatomical MRI.
 
-    subj = datainfo_subject(1);
+    subj = datainfo_subject(15);
 
     coordinates = ft_read_json(subj.fidfile);
     mri_orig    = ft_read_mri(subj.mrifile);
@@ -308,7 +308,7 @@ We now create a source model and save it to a .mat file to be readily available 
 
 Importantly, before proceeding any further, we want to check whether the headmodel and sourcemodel are nicely aligned to each other and to the sensor array:
 
-    subj = datainfo_subject(1);
+    subj = datainfo_subject(15);
     hdr  = ft_read_header(subj.megfile{1}, 'coilaccuracy', 0);
     grad = ft_convert_units(hdr.grad, 'mm');
 
