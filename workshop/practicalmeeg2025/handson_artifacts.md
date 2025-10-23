@@ -66,7 +66,7 @@ This data structure is about 1.5 GB large and should fit in the RAM of your comp
       Name      Size                 Bytes  Class     Attributes
       data      1x1             1465245106  struct
 
-The complete data represented in double precision would amount to approximately 50\*60\*1100\*404\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 404 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
+The complete data represented in double precision would amount to approximately 50\*60\*1100\*403\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 403 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
 
 Please have a look at the tutorial on making a [memory efficient analysis pipeline](/tutorial/scripting/memory) for more information.
 {% include markup/end %}
@@ -93,19 +93,23 @@ _Figure; The single-trial responses for the VEOG channel_
 Besides there being many channels, there are also many trials. Visualizing them on a small computer screen might be hard. Remember: if you are working with large data, you better use a large computer (screen, memory, disk).
 {% include markup/end %}
 
-Please scroll to the VEOG channel by clicking about 40 times on the `>>` button which takes you 10 channels further and then clicking a few times on the `>` or `<` button. The EOG channels are located _after_ all EEG channels, and _before_ the STI channels. You can see that there are quite some blinks. You can also recognize that in the first 100 trials or so there are very few blinks, but that after trial 200 or so they start occuring more frequently. Remember that there are about 100 trials per block/run, and there are 6 runs in total.
+Please scroll to the VEOG channel by clicking about 40 times on the `>>` button which takes you 10 channels further and then clicking a few times on the `>` or `<` button. The EOG channels are located _after_ all EEG channels, and _before_ the STI channels. If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA. For nowe, please navigate back to the VEOG channel.
 
-If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA.
+If you are processing sub-15, you will see some blinks, but not too many. For example, trial 40 has two blinks in short succession. If you are processing sub-01, you will see that there are quite some blinks. You can also recognize that in the first 100 trials or so there are very few blinks, but that after trial 200 or so they start occuring more frequently. Remember that there are about 100 trials per block/run, and there are 6 runs in total. This participant is clearly showing some block-dependent effects in the artifacts.
 
 We might want to decide that we want to exclude trials with blinks from further analysis. You can click on trials to exclude. However, you will realize that this involves a lot of clicking, as there are so many trials. In the next section we will automate the detection of blinks, but for now please select a few trials with blinks and click `quit`. This returns a data structure with slightly fewer trials. However, it also specifies where the artifacts were that you identified:
 
     >> disp(data_clean.cfg.artfctdef.channel.artifact)
-           71401       71910
-           73441       73950
-           83131       83640
-           86191       86700
-           89251       89760
-          112201      112710
+            19891       20400
+            126481      126990
+            126991      127500
+            134131      134640
+            137191      137700
+            152491      153000
+            164221      164730
+            181051      181560
+            208081      208590
+            ...
 
 This `artifact` matrix is very comparable to the `trl` matrix that **[ft_definetrial](/reference/ft_definetrial)** returns. In this case it contains the begin and endsample of each artifact that was detected using the "channel" method in **[ft_rejectvisual](/reference/ft_rejectvisual)**.
 
@@ -130,15 +134,16 @@ Finding the EOG channels in between the 400 other channels is annoying. We can u
 Again the output data excludes those trials that were rejected, however we don't want to reject them only for the OEG channels, we want to reject them for the complete MEG+EEG data structure. For that we can use the list of artifact that was detected
 
     >> disp(data_eog_clean.cfg.artfctdef.channel.artifact)
-           26011       26520
-           73441       73950
-           83131       83640
-           86191       86700
-           89251       89760
-          108631      109140
-          154021      154530
-          339661      340170
-          ...
+        10711       11220
+        19891       20400
+        103021      103530
+        134131      134640
+        152491      153000
+        165751      166260
+        181051      181560
+        326911      327420
+        327421      327930
+        ...
 
     % remove the marked segments from the complete MEG+EEG data structure
     cfg = [];
@@ -161,15 +166,18 @@ _Figure; Automatic detection of artifacts using the EOG channels_
 Rather than returning a cleaned-up data structure, this function returns a configuration structure that details where the artifacts are located
 
     >> disp(cfg.artfctdef.eog.artifact)
-          26011       26041
-          26267       26520
-          73441       73528
-          83465       83640
-          86191       86362
-          89322       89457
-          ...
+        11143       11210
+        19891       20100
+        41736       41811
+        63090       63165
+        74881       74952
+        95793       95868
+        99713       99783
+        100362      100470
+        100882      100949
+        ...
 
-You can see that it identified many blinks. As before, we can use the detected blinks to remove the affected segments from the data.
+You can see that without changing the threshold it identified around 90 blinks. As before, we can use the detected blinks to remove the affected segments from the data.
 
     % remember it for later inspection
     cfg_automatic_eog.artfctdef = cfg.artfctdef;
@@ -191,7 +199,7 @@ Using the following code, use all EEG channels instead of the dedicated EOG chan
     cfg.artfctdef.eog.cutoff = 20;
     cfg = ft_artifact_eog(cfg, data);
 
-The artifact score is computed by preprocessing each channel, z-transforming it,and summing over all channels. Therefore it depends on the number of channels that "see" the artifact. Consequently, a different threshold is needed for the cutoff depending on the number of channels. Are you finding the same artifacts as before?
+The artifact score is computed by preprocessing each channel, z-transforming it, and summing over all channels. Therefore it depends on the number of channels that "see" the artifact. Consequently, a different threshold is needed for the cutoff depending on the number of channels. Are you finding the same artifacts as before?
 {% include markup/end %}
 
 ### Simple thresholding to identify artifacts
@@ -364,16 +372,17 @@ For each of the channel types, the magnitude of the metric is different and espe
     cfg.artfctdef.megplanar.artifact = data_megplanar_clean.cfg.artfctdef.summary.artifact;
 
     % inspect and adjust the marked segments
-    cfg.channel = 'megmag'; % look only at the 102 magnetometers
+    cfg.channel = 'eeg'; % look only at the EEG channels
     cfg = ft_databrowser(cfg, data);
 
     % remove the marked segments
-    cfg = rmfield(cfg, 'channel'); % this is not an option for ft_rejectartifact
+    cfg = rmfield(cfg, 'channel'); % this is not a valid option for ft_rejectartifact
+    cfg = rmfield(cfg, 'trl'); % this is not a valid option for ft_rejectartifact
     data_clean = ft_rejectartifact(cfg, data);
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_artifacts/figure5.png" width="400" %}
 
-_Figure; ft_databrowser shows the magnetometer channels and all identified artifacts_
+_Figure; ft_databrowser shows the EEG channels and the identified artifacts_
 
 ## A closer look at when the artifacts happen
 
@@ -474,11 +483,11 @@ Using the previously determined `cfg_automatic_threshold`, which does not mark t
 
 _Figure; Occurence of artifacts over time in the trial, i.e., relative to the stimulus_
 
-It is clear that most blinks happened at the start and especially towards the end of the trial. Looking at this, we can conclude that the participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
+It is clear that most blinks happened towards the end of the trial. Looking at this, we can conclude that the participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
 
 ## Removing the eye and heart artifacts
 
-Rather than excluding the data segments affected by artifacts from further analysis, we can also subtract the contribution of the artifacts from the data. This is in principle the same as what we do when we apply a band-stop filter to remove the line noise.
+Rather than rejecting trials and thereby excluding the data segments affected by artifacts from further analysis, we can also subtract the contribution of the artifacts from the data. This is in principle the same as what we do when we apply a band-stop filter to remove the line noise.
 
 The strategy for this is to use **[ft_componentanalysis](/reference/ft_componentanalysis)** to make an ICA composition. By inspecting the component topographies and time courses we can identify which components reflect the artifacts. Using **[ft_rejectcomponent](/reference/ft_rejectcomponent)** we can back-project the components back to the channels, minus those components that capture the artifactual signal contributions.
 

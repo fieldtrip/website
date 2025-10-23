@@ -57,7 +57,7 @@ This data structure is about 1.5 GB large and should fit in the RAM of your comp
       Name      Size                 Bytes  Class     Attributes
       data      1x1             1465245106  struct
 
-The complete data represented in double precision would amount to approximately 50\*60\*1100\*404\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 404 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
+The complete data represented in double precision would amount to approximately 50\*60\*1100\*403\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 403 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
 
 Please have a look at the tutorial on making a [memory efficient analysis pipeline](/tutorial/scripting/memory) for more information.
 {% include markup/end %}
