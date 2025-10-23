@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39654263'
+- idtype: doi
+  value: 10.1177/17470218241308560
+- idtype: pmcid
+  value: PMC12531393
+authors:
+- authtype: Author
+  name: Beck V
+- authtype: Author
+  name: Brooks JL
+- authtype: Author
+  name: Stephens R
+epubdate: 2025 Jan 13
+fulljournalname: Quarterly Journal of Experimental Psychology (2006)
+issue: '11'
+pages: 2390-2402
+pmclivedate: 2025/10/18
+printpubdate: ''
+pubdate: 2025 Jan 13
+sortdate: 2025/01/13 00:00
+source: Q J Exp Psychol (Hove)
+title: The effect of swearing on error-related negativity as an indicator for state
+  disinhibition
+uid: '12531393'
+volume: '78'
