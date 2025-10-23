@@ -203,7 +203,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
     cfg.trials = ismember(data.trialinfo(:,1), [Famous Unfamiliar]);
     avg_faces  = ft_timelockanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
     % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
     % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
