@@ -129,6 +129,10 @@ To creation of a state-of-the-art source model based on the cortical sheet is de
 
 The generation of a source model based on the cortical sheet can be rather time consuming, so we are **not going to do that** here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the aforementioned tutorial. Below, the code is referenced that was used to generate the source models. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be to tweak a set of shell scripts `ft_freesurferscript.sh` and `ft_postfreesurferscript.sh` that are located in `fieldtrip/bin`, and execute those on your own computer. This requires a Linux or macOS environment with FreeSurfer and HCP workbench installed.
 
+{% include markup/yellow %}
+We don't expect you to bring a Linux computer or run this during the PracticalMEEG hands-on session. The results of these steps are shared with you in the `derivatives/anatomy/sub-15/freesurfer` directory, which is available from the [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/). Please scroll down a bit to continue with the hands-on.
+{% include markup/end %}
+
 In contrast to the [source model tutorial](/tutorial/source/sourcemodel) that is written for CTF data, the input MRI image here coregistered to the Neuromag MEG coordinate system. This coordinate system is sufficiently similar to the coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
 
     % this part creates a FreeSurfer output base directory and fills it with
@@ -188,7 +192,7 @@ That is, a bunch of files, which exist in an 'rh' and 'lh' version. Each of the 
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_anatomy/figure3.png" width="400" %}
 
-_Figure: The pial surface extracted by freesurfer_
+_Figure: The pial surface extracted by FreeSurfer_
 
 Inspecting the variable 'pial', you will see something like this:
 
