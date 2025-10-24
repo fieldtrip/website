@@ -306,12 +306,13 @@ With the spatial filters computed from the covariance matrix estimated from all 
     cfg = [];
     cfg.operation = 'abs';
     cfg.parameter = 'mom';
-    source_famous = ft_math(cfg, source_famous_orig);
+    source_famous     = ft_math(cfg, source_famous_orig);
     source_unfamiliar = ft_math(cfg, source_unfamiliar_orig);
     source_scrambled  = ft_math(cfg, source_scrambled_orig);
 
-    cfg           = [];
-    cfg.parameter = 'mom';
+    cfg = [];
+    cfg.parameter   = 'mom';
+    cfg.data_labels = {'Famous', 'Unfamiliar', 'Scrambled'};
     ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
 
 You can also investigate the difference between the 'famous' and 'scrambled' conditions:
@@ -321,9 +322,10 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg.parameter = 'mom';
     source_diff   = ft_math(cfg, source_famous, source_scrambled);
 
-    cfg           = [];
-    cfg.parameter = 'mom';
-    cfg.has_diff  = true;
+    cfg = [];
+    cfg.parameter   = 'mom';
+    cfg.has_diff    = true;
+    cfg.data_labels = {'Famous', 'Unfamiliar', 'Scrambled'};
     ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
 
 ## Virtual channel at the maximum location
