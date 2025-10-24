@@ -99,7 +99,7 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
 
 Alternatively, you can also use the [sub-01_data.mat](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/derivatives/sensoranalysis/sub-01/sub-01_data.mat) data file that is shared on our download server.
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data.mat', subj.name));
     % save(filename, 'data');
     load(filename, 'data');
 

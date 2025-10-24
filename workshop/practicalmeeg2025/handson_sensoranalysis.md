@@ -102,7 +102,7 @@ The execution of the following piece of code takes some time. You may want to sk
 
 By storing the results of all computations systematically, we can also easily go back to the data that was computed previously and that in this case is available from the download server.
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data.mat', subj.name));
     % save(filename, 'data');
     % load(filename, 'data');
 
@@ -405,7 +405,7 @@ K is the number of tapers applied; the more, the greater the smoothing.
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqhigh_scrambled = ft_freqanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_mtmconvol', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_mtmconvol.mat', subj.name));
     % save(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
     % load(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
 
@@ -464,7 +464,7 @@ Calculate TFRs using Morlet wavelet
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freq_scrambled = ft_freqanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_wavelet', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_wavelet.mat', subj.name));
     % save(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
     % load(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
 

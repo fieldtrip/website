@@ -33,7 +33,7 @@ To localize and reconstruct the activity of the sources we will perform the foll
 The aim is to reconstruct the sources underlying the event-related field that results from presentation of pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2022/handson_sourceanalysis).
 
     subj = datainfo_subject(1);
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data.mat', subj.name));
     load(filename, 'data');
 
 In this tutorial, we are only going to use the MEG data for the source reconstruction. Therefore, we proceed by selecting the MEG channels from the epoched data.
@@ -152,9 +152,9 @@ For a beamformer analysis, we need to predefine a set of dipole locations to be 
 Finally, with the beamformer solution on the cortical surface, it can be easily compared to a MNE solution, should one be inclined to do so. It is important to note that 1) the metric units of the geometric objects are identical to one another, and 2) to use here the gradiometer array from the whitened data, because we will also use the whitened data for the source reconstruction. With respect to point 1, FieldTrip will check for this, but to be sure, we ensure the equality of metric units explicitly.
 
     % obtain the necessary ingredients for obtaining a forward model
-    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel', subj.name));
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel.mat', subj.name));
     load(filename);
-    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel', subj.name));
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel.mat', subj.name));
     load(filename);
 
     headmodel   = ft_convert_units(headmodel,   tlckw.grad.unit);
@@ -190,7 +190,7 @@ With the forward model and the covariance (as average across trials) computed, w
     cfg.sourcemodel = leadfield_meg;
     source          = ft_sourceanalysis(cfg, tlckw);
 
-    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv', subj.name));
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv.mat', subj.name));
     % save(filename, 'source', 'tlckw');
     % load(filename, 'source', 'tlckw');
 
@@ -223,7 +223,7 @@ With the source structure computed, we can inspect the fields of the variable so
 The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in November 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
     wb_dir   = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
-    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
+    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii.mat', subj.name));
     inflated = ft_read_headshape({filename strrep(filename, '.L.', '.R.')});
     inflated = ft_determine_units(inflated);
     inflated.coordsys = 'neuromag';
