@@ -111,7 +111,7 @@ The prewhitening operator is defined as the inverse of the matrix square root of
 #### Exercise 1
 
 {% include markup/skyblue %}
-Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with [imagesc](https://nl.mathworks.com/help/matlab/ref/imagesc.html) after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
+Select the 200 ms baseline from the `dataw_meg` structure, compute the covariance, and inspect the covariance matrix with [imagesc](https://nl.mathworks.com/help/matlab/ref/imagesc.html) after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
 A byproduct of the magnetometers and gradiometers being represented at a similar scale, is the possibility to do a quick-and-dirty artifact identification (and rejection) using **[ft_rejectvisual](/reference/ft_rejectvisual)**. The prewhitened data is scaled to have (approximately) unit-amplitude, which makes the threshold for identification of artifacts easier to set, and does not require a different threshold for magnetometers and gradiometers.
@@ -124,6 +124,10 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.method = 'summary';
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
+
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_dataw_meg', subj.name));
+    % save(filename, 'dataw_meg');
+    % load(filename, 'dataw_meg');
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_sourceanalysis/figure3.png" width="600" height="600"%}
 
@@ -321,3 +325,87 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg.parameter = 'mom';
     cfg.has_diff  = true;
     ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
+
+## Virtual channel at the maximum location
+
+Rather than looking all over the cortex, we can also use the LCMV beamformer to look at the activity at a single specific location, for example the position with the maximum difference between conditions in a specific time window.
+
+    mom = cat(1,source.avg.mom{:});
+
+    sel = nearest(source.time,[0.16 0.17]);
+    M   = zeros(size(sourcemodel.pos,1),1);
+    M(sourcemodel.inside) = abs(mean(mom(:,sel(1):sel(2)),2));
+    figure; ft_plot_mesh(sourcemodel, 'vertexcolor', M);
+    h = light('position', [0 -1 0]); lighting gouraud; material dull; drawnow;
+
+    [~,ix] = max(M);
+
+    ft_hastoolbox('cellfunction', 1); % this contains a bunch of functions that operate on cell-arrays
+    data_vc = keepfields(dataw_meg, {'time' 'fsample' 'trialinfo'});
+    assert(isequal(leadfield_meg.label, dataw_meg.label));
+    data_vc.trial = source.avg.filter{ix}*dataw_meg.trial;
+    data_vc.label = {'virtualchannel'};
+
+    % split the 3 conditions
+    cfg        = [];
+    cfg.preproc.demean = 'yes';
+    cfg.preproc.baselinewindow = [-0.1 0];
+
+    cfg.trials = ismember(data_vc.trialinfo(:,1), Famous);
+    avg_famous = ft_timelockanalysis(cfg, data_vc);
+
+    cfg.trials = ismember(data_vc.trialinfo(:,1), Unfamiliar);
+    avg_unfamiliar = ft_timelockanalysis(cfg, data_vc);
+
+    cfg.trials = ismember(data_vc.trialinfo(:,1), Scrambled);
+    avg_scrambled = ft_timelockanalysis(cfg, data_vc);
+
+    cfg.trials = ismember(data_vc.trialinfo(:,1), Famous) | ismember(data_vc.trialinfo(:,1), Unfamiliar);
+    avg_faces  = ft_timelockanalysis(cfg, data_vc);
+
+    figure;plot(avg_famous.time, [eye(3);-.5 -.5 1]*[avg_famous.avg;avg_unfamiliar.avg;avg_scrambled.avg]);
+    legend({'famous';'unfamiliar';'scrambled';'faces vs. scrambled'});
+
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_virtualchannel', subj.name));
+    % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces', 'ix', 'data_vc');
+    % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces', 'ix', 'data_vc');
+
+## Virtual channels based on an atlas
+
+Rather than using a dense mesh of dipoles, or zooming in the time series of a single dipole, we can also use an anatomical atlas to compute averages over parcels. This allows to represent the activity in each parcel as a virtual channel, and we can represent this in the same way as ERP data would be represented on EEG channels.
+
+    load atlas_subparc374_8k.mat
+
+    cfg = [];
+    cfg.method = 'surface';
+    cfg.funparameter = 'parcellation';
+    cfg.funcolormap = rand(length(atlas.parcellationlabel), 3);
+    ft_sourceplot(cfg, atlas)
+
+    atlas.pos = source_famous.pos;
+    atlas = rmfield(atlas,'unit'); % it is not in mm any more
+
+    cfg = [];
+    cfg.method     = 'eig';
+    cfg.parameter  = 'mom';
+    avg_famous     = ft_sourceparcellate(cfg, source_famous,     atlas);
+    avg_unfamiliar = ft_sourceparcellate(cfg, source_unfamiliar, atlas);
+    avg_scrambled  = ft_sourceparcellate(cfg, source_scrambled,  atlas);
+
+    cfg = [];
+    cfg.operation  = 'abs';
+    cfg.parameter  = 'mom';
+    avg_famous     = ft_math(cfg, avg_famous);
+    avg_unfamiliar = ft_math(cfg, avg_unfamiliar);
+    avg_scrambled  = ft_math(cfg, avg_scrambled);
+
+    % remnove part of the provenance to keep the data structure small
+    avg_famous.cfg     = removefields(avg_famous.cfg,     'previous');
+    avg_unfamiliar.cfg = removefields(avg_unfamiliar.cfg, 'previous');
+    avg_scrambled.cfg  = removefields(avg_scrambled.cfg,  'previous');
+
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_source_parc', subj.name));
+    % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled');
+    % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled');
+
+In the next tutorial on [group-level statistics](/workshop/practicalmeeg2025/handson_groupanalysis) we will continue with these parcellated time series.

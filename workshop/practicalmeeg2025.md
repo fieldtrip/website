@@ -46,27 +46,26 @@ We will use a small `datainfo_subject.m` function that specifies the input and o
 
 ```bash
 /Volumes/SamsungT3/practicalmeeg2025/
-├── README.txt
 ├── code
-│   ├── README.md
-│   ├── atlas_subparc374_8k.mat
 │   ├── datainfo_subject.m
+│   ├── atlas_subparc374_8k.mat
 │   └── ...
-└── ds000117-pruned (this can be either sub-01 or sub-15, see below)
+└── ds000117-pruned
 │   ├── CHANGES
 │   ├── README
 │   ├── dataset_description.json
-│   ├── derivatives
 │   ├── participants.tsv
+│   ├── derivatives
 │   ├── stimuli
 │   ├── sub-01
+│   ├── sub-02
 │   └── ...
 └── derivatives
-    ├── anatomy
-    ├── groupanalysis
     ├── raw2erp
     ├── sensoranalysis
-    └── sourceanalysis
+    ├── anatomy
+    ├── sourceanalysis
+    └── groupanalysis
 ```
 
 The `/Volumes/SamsungT3/practicalmeeg2025` directory is where I have the data on my laptop (actually on an external SSD), for you that would be somewhere else. There should be a code directory with (at least) the `datainfo_subject.m` function, there should be the `ds000117-pruned` directory with the raw data in subdirectories, and there should be a `derivatives` directory with one subdirectory per analysis step.

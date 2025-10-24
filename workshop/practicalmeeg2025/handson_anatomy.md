@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 This tutorial describes how to construct a volume conduction model of the head (aka head model) and a source model, based on an individual subject's MRI. These two geometrical objects are necessary ingredients, in combination with a specification of the MEG/EEG sensor array, for the construction of a forward model.
 
-We will use the anatomical images that belong to the same subject whose data were analyzed in the previous tutorials ([From raw data to ERP](/workshop/practicalmeeg2025/handson_raw2erp), [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/practicalmeeg2025/handson_sensoranalysis)), thus using anatomical data of subject 1 of the [multimodal face recognition dataset](/workshop/practicalmeeg2025/dataset).
+We will use the anatomical images that belong to the same subject whose data were analyzed in the previous tutorials ([From raw data to ERP](/workshop/practicalmeeg2025/handson_raw2erp), [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/practicalmeeg2025/handson_sensoranalysis)), thus using anatomical data of subject 15 of the [multimodal face recognition dataset](/workshop/practicalmeeg2025/dataset).
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
 
