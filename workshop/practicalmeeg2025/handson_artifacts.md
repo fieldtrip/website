@@ -19,7 +19,7 @@ Quality Assessment could for example be to observe "the data of subject X is rea
 We have recently launched an EU COST Action on [Improving Neuroimaging Data for Sharing](https://indos-costaction.github.io) (INDoS) in which QA and QC will be further investigated, and invite you to get involved!
 {% include markup/end %}
 
-In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2025), the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstrucion works quite well to suppress the contribution of the eye activity.
+In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2025), the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction works quite well to suppress the contribution of the eye activity.
 
 However, if we had planned other types of analysis, such as connectivity, then dealing with EOG and especially ECG artifacts would have been more important. Furthermore, to increase the sensitivity of finding the effects of interest, a cleanup of the data would have been good. However, for didactical reasons, and since we don't have the time for a complete and thorough analysis of all 16 subjects, we will not deal with artifacts outside of this tutorial. This tutorial demonstrates on the basis of subject 15 how we can detect and deal with artifacts; following this tutorial you may want to go back to [computing ERPs/ERFs](/workshop/practicalmeeg2025/handson_raw2erp) and look how the cleaning affects the results.
 
@@ -297,7 +297,7 @@ Since there are many trials (about 800 in total), going through all of them can 
 
     cfg = ft_databrowser(cfg, data);
 
-Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you zoom out, you will notice that the jups are so short that it becomes difficult to see them on a low-resolution screen. Again, marking all of those blinks would be a lot of work.
+Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you zoom out, you will notice that the jumps are so short that it becomes difficult to see them on a low-resolution screen. Again, marking all of those blinks would be a lot of work.
 
 We can also use the automatically identified artifact segments and visualize them in **[ft_databrowser](/reference/ft_databrowser)**.
 
