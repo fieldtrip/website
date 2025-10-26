@@ -267,7 +267,7 @@ We can use the **[ft_databrowser](/reference/ft_databrowser)** function to inspe
     cfg.ylim = [-100 100]*1e-6;
     cfg = ft_databrowser(cfg, data);
 
-You should reduce the vertical shale, and go to trial 125. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
+You should reduce the vertical scale, and go to trial 40. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_artifacts/figure3.png" width="400" %}
 
