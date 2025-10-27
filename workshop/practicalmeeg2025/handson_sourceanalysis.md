@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial you will learn about applying beamformer techniques in the time domain, using MEG data from an Neuromag/Elekta/MEGIN system. Using beamformers on Neuromag/Elekta/MEGIN data is somewhat more challenging than using beamformers on (for instance) CTF data. This is for two reasons: 1) Elekta MEG data consists of signals of different sensor types (magnetometers and planar gradiometers), and 2) the data are often heavily rank-deficient due to the application of the Maxfilter to clean the data of (movement) artifacts.
 
-It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [head- and sourcemodel tutorial](/workshop/practicalmeeg2025/handson_anatomy).
+It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [anatomy tutorial](/workshop/practicalmeeg2025/handson_anatomy).
 
 This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/source/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/source/minimumnormestimate)).
 

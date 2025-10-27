@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.
 
-Here, we will work on the Face recognition [dataset](/workshop/meg-uk-2015/dataset). This tutorial is a continuation from the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp).
+Here, we will work on the face recognition [dataset](/workshop/meg-uk-2015/dataset). This tutorial is a continuation from the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp).
 
 ## Background
 

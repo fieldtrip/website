@@ -11,12 +11,12 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 This tutorial describes how to construct a volume conduction model of the head (aka head model) and a source model, based on an individual subject's MRI. These two geometrical objects are necessary ingredients, in combination with a specification of the MEG/EEG sensor array, for the construction of a forward model.
 
-We will use the anatomical images that belong to the same subject whose data were analyzed in the previous tutorials ([From raw data to ERP](/workshop/practicalmeeg2025/handson_raw2erp), [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/practicalmeeg2025/handson_sensoranalysis)), thus using anatomical data of subject 15 of the [multimodal face recognition dataset](/workshop/practicalmeeg2025/dataset).
+We will use the anatomical images that belong to the same subject whose data were analyzed in the previous [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) and [sensoranalysis tutorial](/workshop/practicalmeeg2025/handson_sensoranalysis)), thus using anatomical data of subject 15 of the [multimodal face recognition dataset](/workshop/practicalmeeg2025/dataset).
 
-This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/source/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/source/minimumnormestimate) tutorials.
+This tutorial will **not** show how to do the source reconstruction itself for that you should continue with the [sourceanalysis tutorial](/workshop/practicalmeeg2025/handson_sourceanalysis) tutorial.
 
 {% include markup/green %}
-The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/source/headmodel_eeg).
+The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in that, you should go to another tutorial that explains how to make an [EEG headmodel](/tutorial/source/headmodel_eeg).
 {% include markup/end %}
 
 ## Background
@@ -55,7 +55,7 @@ Next, we can inspect the location of the landmarks in the anatomical image.
     cfg.flip = 'no';
     ft_sourceplot(cfg, mri_orig);
 
-If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels.
+If the contrast of the image is a bit low, you can use the 'shift+' keys to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels.
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_anatomy/figure1.png" width="400" %}
 
@@ -130,7 +130,9 @@ To creation of a state-of-the-art source model based on the cortical sheet is de
 The generation of a source model based on the cortical sheet can be rather time consuming, so we are **not going to do that** here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the aforementioned tutorial. Below, the code is referenced that was used to generate the source models. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be to tweak a set of shell scripts `ft_freesurferscript.sh` and `ft_postfreesurferscript.sh` that are located in `fieldtrip/bin`, and execute those on your own computer. This requires a Linux or macOS environment with FreeSurfer and HCP workbench installed.
 
 {% include markup/yellow %}
-We don't expect you to bring a Linux computer or run this during the PracticalMEEG hands-on session. The results of these steps are shared with you in the `derivatives/anatomy/sub-15/freesurfer` directory, which is available from the [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/). Please scroll down a bit to continue with the hands-on.
+We don't expect you to bring a Linux computer or run this during the PracticalMEEG hands-on session. The results of these steps are shared with you in the `derivatives/anatomy/sub-15/freesurfer` directory, which is available from the [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/).
+
+Please scroll down a bit to continue with the hands-on, and skip the FreeSurfer section.
 {% include markup/end %}
 
 In contrast to the [source model tutorial](/tutorial/source/sourcemodel) that is written for CTF data, the input MRI image here coregistered to the Neuromag MEG coordinate system. This coordinate system is sufficiently similar to the coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
@@ -163,7 +165,7 @@ In contrast to the [source model tutorial](/tutorial/source/sourcemodel) that is
     cmd_str    = sprintf('echo "%s %s %s %s" | qsub -l walltime=20:00:00,mem=8gb -N sub-%02d', scriptname, subj_dir, subj.name, templ_dir, subj.id);
     system(cmd_str);
 
-The result of the `ft_freesurferscript.sh` is a 'standard' set of FreeSurfer generated files, which in this case are stored in the `freesurfer/sub-15` directory. Relevant for our subsequent endeavours are the files located in the `freesurfer/sub-15/surf` folder. Checking the content of such a surf folder, which can be done by typing:
+The result of the `ft_freesurferscript.sh` is a "standard" set of FreeSurfer generated files, which in this case are stored in the `freesurfer/sub-15` directory. Relevant for our subsequent endeavours are the files located in the `freesurfer/sub-15/surf` folder. Checking the content of such a surf folder, which can be done by typing:
 
     ls
 
@@ -180,7 +182,7 @@ on the MATLAB command line, you see something like this:
     lh.defect_chull    lh.pial             lh.smoothwm.K2.crv  lh.white           rh.curv.pial         rh.orig            rh.smoothwm.K.crv   rh.volume
     lh.defect_labels   lh.qsphere.nofix    lh.smoothwm.S.crv   lh.white.preaparc  rh.defect_borders    rh.orig.nofix      rh.smoothwm.K1.crv  rh.w-g.pct.mgh
 
-That is, a bunch of files, which exist in an 'rh' and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualize them in the following way:
+That is, a bunch of files, which exist in an "rh" and "lh" version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualize them in the following way:
 
     pial = ft_read_headshape({'lh.pial' 'rh.pial'});
     figure;
