@@ -218,7 +218,9 @@ Subsequently you can look at the time course of the components. The heart-relate
 
 Again you write down the components that represent artifacts.
 
-Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horizontal movements and which reflects blinks.
+{% include markup/yellow %}
+Note that ICA eye components in MEG look different than those in EEG, that is due to the projection of the dipoles on the channels being rotated 90 degrees in MEG relative to EEG. Nevertheless, they clearly project on the frontal channels and you can identify them in combination with the component time series.
+{% include markup/end %}
 
 ## Identifying bad channels
 
