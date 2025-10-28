@@ -259,6 +259,7 @@ avgovercortex
 avgovertime
 avgref
 avgtime
+Ávila
 avr
 avw
 axials
@@ -962,6 +963,7 @@ Cristiano
 criterium
 critval
 Crivello
+CRNL
 cron
 Cronenberg
 crossfreq
@@ -2447,6 +2449,7 @@ ITAB
 Italia
 itc
 iteratively
+IUSS
 iuwcvar
 Iván
 ivar
@@ -3757,6 +3760,7 @@ passcode
 pathname
 Pathophysiology
 PatientName
+Pavia
 paxinos
 Paxinos
 pc
@@ -5088,6 +5092,7 @@ trackconfig
 trackusage
 tragus
 Tragus
+trainEErs
 Trainings
 transcranial
 Transcranial
