@@ -4,7 +4,7 @@ tags: [practicalmeeg2025, meg, timelock, statistics, plotting, mmfaces]
 ---
 
 {% include markup/skyblue %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2025) in October 2025  and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics) and an updated version of the corresponding tutorial for [PracticalMEEG in 2022](/workshop/practicalmeeg2022) and for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2025) in October 2025 and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics) and an updated version of the corresponding tutorial for [PracticalMEEG in 2022](/workshop/practicalmeeg2022) and for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -13,7 +13,7 @@ This tutorial provides an introduction into different options for statistical an
 
 To introduce the issue of multiple comparisons, we will start with an analysis for a single hand-picked channel/parcel analysis. After that we will consider analyses that take all virtual channels and all timepoints into account. We will start with some basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the FieldTrip **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
 
-This tutorial uses the same [multimodal faces](/workshop/practicalmeeg2025/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 20 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants.
+This tutorial uses the same [multimodal faces](/workshop/practicalmeeg2025/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 16 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants.
 
 Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on high-density volumetric or cortical sheet source reconstruction results. However, FieldTrip does have similar statistical options for this as well: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function.
 
@@ -32,7 +32,7 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/stats
 
 ## Procedure
 
-To do parametric or non-parametric statistics on virtual-channel event-related fields in a within-subject design, we will use the dataset of 20 subjects that has been preprocessed, source-reconstructed, and averaged over cortical parcels.
+To do parametric or non-parametric statistics on virtual-channel event-related fields in a within-subject design, we will use the dataset of 16 subjects that has been preprocessed, source-reconstructed, and averaged over cortical parcels.
 
 We will perform the following steps in this tutorial:
 
@@ -49,7 +49,7 @@ To begin with we will load the source reconstructed and parcellated results from
     % load individual subject data
     clear subj
     iSub = 0;
-    for k = [1:8 10:16]
+    for k = [1:16]
       iSub = iSub+1;
       subj(iSub) = datainfo_subject(k);
     end
@@ -164,7 +164,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 
     figure;
     for iSub = 1:numel(subj)
-      subplot(3, 5, iSub)
+      subplot(4, 4, iSub)
       % use the rectangle to indicate the time range used later
       rectangle('Position', [time(1) 0 (time(2)-time(1)) ymax], 'FaceColor', [1 1 1]*0.9);
       hold on;
@@ -213,7 +213,7 @@ In practice you should _not_ guide your statistical analysis by a visual inspect
 
 #### T-test with MATLAB function
 
-You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.4332 and a p-value of 0.029.
+You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.3933 and a p-value of 0.0302.
 
     % dependent samples ttest
     famous_minus_scrambled = values_famous - values_scrambled;
@@ -234,7 +234,7 @@ You can do the same thing in FieldTrip (which does not require the statistics to
     cfg.alpha = 0.05;
     cfg.correctm = 'no';
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -303,10 +303,10 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 #### Bonferroni correction with MATLAB function
 
     % with Bonferroni correction for multiple comparisons
-    famous_minus_scrambled = zeros(1, 15);
+    famous_minus_scrambled = zeros(1, 16);
 
     for iChan = 1:374
-      for iSub = 1:15
+      for iSub = 1:16
         famous_minus_scrambled(iSub) = ...
           mean(avg_famous{iSub}.avg(iChan, timesel)) - ...
           mean(avg_scrambled{iSub}.avg(iChan, timesel));
@@ -327,7 +327,7 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
     cfg.alpha = 0.05;
     cfg.correctm = 'bonferroni';
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -357,7 +357,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
     cfg.correcttail = 'prob';
     cfg.numrandomization = 1000;
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -420,7 +420,7 @@ If your channels in the data are close to each other, you can also use the featu
     cfg.correcttail = 'prob';
     cfg.numrandomization = 500;
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
