@@ -52,7 +52,7 @@ The following code reads and visualizes the topographical magnetic field distrib
     % plot topographical distribution of Neuromag coil frequencies
     figure; hold on;
     cfg = [];
-    cfg.layout = 'neuromag306mag.lay';
+    cfg.layout = 'neuromag306mag_helmet.mat';
     subplot(2,3,1); hold on;
     cfg.xlim = [293 293];
     cfg.comment = '293 Hz';
