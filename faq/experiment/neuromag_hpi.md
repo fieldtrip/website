@@ -20,12 +20,12 @@ The following code reads and visualizes the digitized positions of the HPI coils
 
     % visualize the digitized positions of the head position indicator coils
     shape = ft_read_headshape(dataset, 'coordsys', 'dewar');
-    for c = 1:size(shape.pnt,1)
+    for c = 1:size(shape.pos,1)
       if ~isempty(strfind(shape.label{c},'hpi'))
           hold on;
-          plot3(shape.pnt(c,1),shape.pnt(c,2),shape.pnt(c,3), 'ro', 'MarkerSize', 12, 'LineWidth', 3);
+          plot3(shape.pos(c,1),shape.pos(c,2),shape.pos(c,3), 'ro', 'MarkerSize', 12, 'LineWidth', 3);
           hold on;
-          text(shape.pnt(c,1),shape.pnt(c,2),shape.pnt(c,3), sscanf(shape.label{c},'hpi_%s'));
+          text(shape.pos(c,1),shape.pos(c,2),shape.pos(c,3), sscanf(shape.label{c},'hpi_%s'));
       end
     end
 
