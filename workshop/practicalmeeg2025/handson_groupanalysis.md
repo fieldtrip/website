@@ -260,11 +260,11 @@ In the previous paragraph we picked a channel/parcel and time window by hand aft
 
     clear h p
 
-    famous_minus_scrambled = zeros(1, 15);
+    famous_minus_scrambled = zeros(1, 16);
 
     % loop over channels
     for iChan = 1:374
-      for iSub = 1:15
+      for iSub = 1:16
         famous_minus_scrambled(iSub) = ...
           mean(avg_famous{iSub}.avg(iChan, timesel)) - ...
           mean(avg_scrambled{iSub}.avg(iChan, timesel));
