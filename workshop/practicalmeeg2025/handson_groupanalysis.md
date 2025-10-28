@@ -4,7 +4,7 @@ tags: [practicalmeeg2025, meg, timelock, statistics, plotting, mmfaces]
 ---
 
 {% include markup/skyblue %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2025) in October 2025  and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics) and an updated version of the corresponding tutorial for [PracticalMEEG in 2022](/workshop/practicalmeeg2022) and for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2025) in October 2025 and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/stats/eventrelatedstatistics) and an updated version of the corresponding tutorial for [PracticalMEEG in 2022](/workshop/practicalmeeg2022) and for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -49,7 +49,7 @@ To begin with we will load the source reconstructed and parcellated results from
     % load individual subject data
     clear subj
     iSub = 0;
-    for k = [1:8 10:16]
+    for k = [1:16]
       iSub = iSub+1;
       subj(iSub) = datainfo_subject(k);
     end
@@ -165,7 +165,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 
     figure;
     for iSub = 1:numel(subj)
-      subplot(3, 5, iSub)
+      subplot(4, 4, iSub)
       % use the rectangle to indicate the time range used later
       rectangle('Position', [time(1) 0 (time(2)-time(1)) ymax], 'FaceColor', [1 1 1]*0.9);
       hold on;
@@ -214,7 +214,7 @@ In practice you should _not_ guide your statistical analysis by a visual inspect
 
 #### T-test with MATLAB function
 
-You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.4332 and a p-value of 0.029.
+You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.3933 and a p-value of 0.0302.
 
     % dependent samples ttest
     famous_minus_scrambled = values_famous - values_scrambled;
@@ -235,7 +235,7 @@ You can do the same thing in FieldTrip (which does not require the statistics to
     cfg.alpha = 0.05;
     cfg.correctm = 'no';
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -304,10 +304,10 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 #### Bonferroni correction with MATLAB function
 
     % with Bonferroni correction for multiple comparisons
-    famous_minus_scrambled = zeros(1, 15);
+    famous_minus_scrambled = zeros(1, 16);
 
     for iChan = 1:374
-      for iSub = 1:15
+      for iSub = 1:16
         famous_minus_scrambled(iSub) = ...
           mean(avg_famous{iSub}.avg(iChan, timesel)) - ...
           mean(avg_scrambled{iSub}.avg(iChan, timesel));
@@ -328,7 +328,7 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
     cfg.alpha = 0.05;
     cfg.correctm = 'bonferroni';
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -358,7 +358,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
     cfg.correcttail = 'prob';
     cfg.numrandomization = 1000;
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
@@ -421,7 +421,7 @@ If your channels in the data are close to each other, you can also use the featu
     cfg.correcttail = 'prob';
     cfg.numrandomization = 500;
 
-    Nsub = 15;
+    Nsub = 16;
     cfg.design(1, 1:2*Nsub) = [ones(1, Nsub) 2*ones(1, Nsub)];
     cfg.design(2, 1:2*Nsub) = [1:Nsub 1:Nsub];
     cfg.ivar = 1; % the 1st row in cfg.design contains the independent variable
