@@ -19,15 +19,15 @@ Quality Assessment could for example be to observe "the data of subject X is rea
 We have recently launched an EU COST Action on [Improving Neuroimaging Data for Sharing](https://indos-costaction.github.io) (INDoS) in which QA and QC will be further investigated, and invite you to get involved!
 {% include markup/end %}
 
-In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2025) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well suppress the contribution of the eye activity.
+In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2025), the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction works quite well to suppress the contribution of the eye activity.
 
 However, if we had planned other types of analysis, such as connectivity, then dealing with EOG and especially ECG artifacts would have been more important. Furthermore, to increase the sensitivity of finding the effects of interest, a cleanup of the data would have been good. However, for didactical reasons, and since we don't have the time for a complete and thorough analysis of all 16 subjects, we will not deal with artifacts outside of this tutorial. This tutorial demonstrates on the basis of subject 15 how we can detect and deal with artifacts; following this tutorial you may want to go back to [computing ERPs/ERFs](/workshop/practicalmeeg2025/handson_raw2erp) and look how the cleaning affects the results.
 
 Since the data is very large, with more than 400 channels at 1100Hz for a total recording duration of 50 minutes, the strategy that we follow is to first define the segments with **[ft_definetrial](/reference/ft_definetrial)** and then only reading the segments of interest with **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-An alternative strategy that often is preferred for smaller datasets that completely fit in memory of your computer is to read in the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and only later to cut out the segments of interest using **[ft_definetrial](/reference/ft_definetrial)** **[ft_redefinetrial](/reference/ft_redefinetrial)**. That approach is explained in a [separate tutorial](/tutorial/preproc/continuous).
+An alternative strategy that often is preferred for smaller datasets that completely fit in memory of your computer is to read in the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and only later to cut out the segments of interest using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_redefinetrial](/reference/ft_redefinetrial)**. That approach is explained in a [separate tutorial](/tutorial/preproc/continuous).
 
-There are some differences between first segmenting and then detecting artifacts or detecting the artifacts in the continuous representation of the data. An important difference is that when you only look at segments of interest (aka trials), you won't see artifacts that happen in between the trials. It might be that you instructed your participant to blink whenever there is no fixation cross on the screen, or that you allowed your participant some time to relax (and possibly some movement) in between blocks in your experiment. When only looking at the segments of interest, you won't see (and probably won't care) the corresponding artifacts.
+There are some differences between first segmenting and then detecting artifacts, or detecting the artifacts in the continuous representation of the data. An important difference is that when you only look at segments of interest (aka trials), you won't see artifacts that happen in between the trials. It might be that you instructed your participant to blink whenever there is no fixation cross on the screen, or that you allowed your participant some time to relax (and possibly some movement) in between blocks in your experiment. When only looking at the segments of interest, you won't see (and probably won't care) the corresponding artifacts.
 
 When you process the data continuously, you may see artifacts at the start of the recording but prior to the start of the actual experiment when the subject is still moving around. You may also see other movement related artifacts at time windows when the subject was not engaged in the task, for example between blocks. With a continuous representation of the data you will also see more eye blinks and movements, which can be beneficial to improve the quality of the ICA decomposition.
 
@@ -45,7 +45,7 @@ There can be situations where the external artifacts are influenced by behaviour
 
 ### Artifacts due to behaviour or physiology
 
-These are for example due to the contribution of sources that we as neuroscientists in general are not interested in, such as the regular contraction of the heart muscle, the contraction of muscles in the neck and clenching of the jaws, movements of the tongue, movements of the eyes. Each of these causes electrophysiological contributions to the EEG or MEG signal; you should however consider that your noise may be someone else's signal, e.g., a cardiologist will consider the ECG as the most interesting feature of the signal.
+These are for example due to the contribution of sources that we as neuroscientists in general are not interested in, such as the regular contraction of the heart muscle, the contraction of muscles in the neck, biting or chewing and clenching of the jaws, movements of the tongue, movements of the eyes. Each of these causes electrophysiological contributions to the EEG or MEG signal; you should however consider that your noise may be someone else's signal, e.g., a cardiologist will consider the ECG ❤️ as the most interesting feature of the signal.
 
 Sometimes it is difficult to say whether something is signal or noise, for example with interictal spikes in intracranial EEG (ECoG and sEEG) recordings: detecting and localizing the epilepsy is _the_ reason why the iEEG electrodes were implanted in the first place, and the doctors mainly care about that part of the signal and hope that it will be well captured in the recordings. However, if the patient volunteered to participate in your experiment, you are likely not interested in the spikes and mostly care about the signal contributions from unaffected brain regions and cognitive processes.
 
@@ -55,7 +55,7 @@ We start with the raw data that we preprocessed in the [previous tutorial](/work
 
     subj = datainfo_subject(15);
     
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data.mat', subj.name));
     load(filename, 'data')
 
 {% include markup/skyblue %}
@@ -89,13 +89,25 @@ This function allows you to click on a trial to remove it from the data. It retu
 
 _Figure; The single-trial responses for the VEOG channel_
 
-{% include markup/yellow %}
-Besides there being many channels, there are also many trials. Visualizing them on a small computer screen might be hard. Remember: if you are working with large data, you better use a large computer (screen, memory, disk).
-{% include markup/end %}
-
 Please scroll to the VEOG channel by clicking about 40 times on the `>>` button which takes you 10 channels further and then clicking a few times on the `>` or `<` button. The EOG channels are located _after_ all EEG channels, and _before_ the STI channels. If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA. For now, please navigate back to the VEOG channel.
 
-If you are processing sub-15, you will see some blinks, but not too many. For example, trial 40 has two blinks in short succession. If you are processing sub-01, you will see that there are quite some blinks. You can also recognize that in the first 100 trials or so there are very few blinks, but that after trial 200 or so they start occuring more frequently. Remember that there are about 100 trials per block/run, and there are 6 runs in total. This participant is clearly showing some block-dependent effects in the artifacts.
+{% include markup/yellow %}
+Besides there being many channels, there are also many trials. Visualizing them on a small computer screen might be hard. Remember: if you are working with large data, you better use a large computer (screen, memory, disk).
+
+If you cannot comfortably get this on your screen, you can have a look at the following:
+
+    cfg = [];
+    cfg.trials = 1:100;
+    cfg.channel = 'EOG';
+    data_100 = ft_selectdata(cfg, data);
+
+    cfg = [];
+    cfg.method = 'channel';
+    data_clean = ft_rejectvisual(cfg, data_100); % only EOG channels for the first 100 trials
+
+{% include markup/end %}
+
+If you are processing subject 15, you will see some blinks, but not too many. For example, trial 40 has two blinks in short succession. If you are processing subject 1, you will see that there are quite some blinks. You can also recognize that for subject 1 in the first 100 trials or so there are very few blinks, but that after trial 200 or so they start occuring more frequently. Remember that there are about 100 trials per block/run, and there are 6 runs in total. This participant is clearly showing some block-dependent effects in the artifacts.
 
 We might want to decide that we want to exclude trials with blinks from further analysis. You can click on trials to exclude. However, you will realize that this involves a lot of clicking, as there are so many trials. In the next section we will automate the detection of blinks, but for now please select a few trials with blinks and click `quit`. This returns a data structure with slightly fewer trials. However, it also specifies where the artifacts were that you identified:
 
@@ -119,6 +131,18 @@ Had the data structure contained the `sampleinfo` field with a specification how
 In this case you may have noticed _"Warning: reconstructing sampleinfo by assuming that the trials are consecutive segments of a continuous recording"_. This indicates that the original sampleinfo is not present, hence the artifacts are expressed relative to the data in memory.
 
 In this case the original `sampleinfo` is not present since the data was compiled over 6 files on disk. Furthermore, the data was resampled from 1100 to 300 Hz, so the samples that we now work with do not map back to the files on disk.
+
+To keep track of the trials that you retain and the ones you remove, you can add an additional column with the trial number, which after cleaning can be used to look up the remaining trial numbers.
+
+    % add the trial number as column 2
+    data.trialinfo(:,2) = 1:length(data.trial);
+    
+    cfg = [];
+    cfg.method = 'channel';
+    data_clean = ft_rejectvisual(cfg, data);
+
+    % look at the trial numbers 
+    disp(data_clean.trialinfo)
 {% include markup/end %}
 
 Finding the EOG channels in between the 400 other channels is annoying. We can use the following code to make a data structure that only contains the EOG channels and use that to identify artifacts.
@@ -240,9 +264,10 @@ We can use the **[ft_databrowser](/reference/ft_databrowser)** function to inspe
 
     cfg = [];
     cfg.channel = 'EOG';
+    cfg.ylim = [-100 100]*1e-6;
     cfg = ft_databrowser(cfg, data);
 
-You should reduce the vertical shale, and go to trial 125. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
+You should reduce the vertical scale, and go to trial 40. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_artifacts/figure3.png" width="400" %}
 
@@ -254,27 +279,25 @@ Since there are many trials (about 800 in total), going through all of them can 
 
     cfg = [];
     cfg.channel = 'EOG';
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % this will cause jumps between trials
     cfg.blocksize = 30;
-    cfg.ylim = [-200 200]*1e-6;
+    cfg.ylim = [-100 100]*1e-6;
 
-    % to get you started here are some that I marked
+    % here are some that I marked to get you started
     cfg.artfctdef.visual.artifact = [
-           52484       52546
-           63142       63542
-           67315       67479
-           69299       69409
-           70303       70388
-           70877       70993
-           71821       71961
-           73430       73540
-           75916       76014
-           80548       80682
-           ];
+        11075       11292
+        19794       20357
+        23325       23585
+        41714       41888
+        65204       65393
+        66127       66373
+        100383      100600
+        103452      103626
+        ];
 
     cfg = ft_databrowser(cfg, data);
 
-Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you jump to about 300 seconds in the data, you can see that the blink frequency is increasing. Again, marking all of those blinks would be a lot of work.
+Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you zoom out, you will notice that the jumps are so short that it becomes difficult to see them on a low-resolution screen. Again, marking all of those blinks would be a lot of work.
 
 We can also use the automatically identified artifact segments and visualize them in **[ft_databrowser](/reference/ft_databrowser)**.
 
@@ -282,7 +305,7 @@ We can also use the automatically identified artifact segments and visualize the
     cfg.channel = 'EOG';
     cfg.continuous = 'yes';
     cfg.blocksize = 30;
-    cfg.ylim = [-200 200]*1e-6;
+    cfg.ylim = [-100 100]*1e-6;
 
     % reuse the automatic artifacts from above
     cfg.artfctdef.eog       = cfg_automatic_eog.artfctdef.eog;
@@ -401,13 +424,13 @@ Using the following code we can count how many trials we originally had in each 
     Unfamiliar  = [13 14 15];
     Scrambled   = [17 18 19];
 
-    sum(ismember(data.trialinfo, Famous))
-    sum(ismember(data.trialinfo, Unfamiliar))
-    sum(ismember(data.trialinfo, Scrambled))
+    sum(ismember(data.trialinfo(:,1), Famous))
+    sum(ismember(data.trialinfo(:,1), Unfamiliar))
+    sum(ismember(data.trialinfo(:,1), Scrambled))
 
-    sum(ismember(data_clean.trialinfo, Famous))
-    sum(ismember(data_clean.trialinfo, Unfamiliar))
-    sum(ismember(data_clean.trialinfo, Scrambled))
+    sum(ismember(data_clean.trialinfo(:,1), Famous))
+    sum(ismember(data_clean.trialinfo(:,1), Unfamiliar))
+    sum(ismember(data_clean.trialinfo(:,1), Scrambled))
 
 #### Exercise 3
 

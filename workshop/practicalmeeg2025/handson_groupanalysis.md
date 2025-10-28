@@ -54,6 +54,7 @@ To begin with we will load the source reconstructed and parcellated results from
       subj(iSub) = datainfo_subject(k);
     end
 
+    clear avg_famous avg_unfamiliar avg_scrambled
     for k = 1:numel(subj)
       filename = fullfile(subj(k).outputpath, 'sourceanalysis', subj(k).name, sprintf('%s_source_parc', subj(k).name));
 
@@ -77,7 +78,7 @@ To begin with we will load the source reconstructed and parcellated results from
       clear dum
     end
 
-On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the ft_XXXstatistics functions have been designed).
+On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments, which is how the ft_XXXstatistics functions have been designed.
 
 ## Parametric statistics
 

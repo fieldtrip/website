@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial you will learn about applying beamformer techniques in the time domain, using MEG data from an Neuromag/Elekta/MEGIN system. Using beamformers on Neuromag/Elekta/MEGIN data is somewhat more challenging than using beamformers on (for instance) CTF data. This is for two reasons: 1) Elekta MEG data consists of signals of different sensor types (magnetometers and planar gradiometers), and 2) the data are often heavily rank-deficient due to the application of the Maxfilter to clean the data of (movement) artifacts.
 
-It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [head- and sourcemodel tutorial](/workshop/practicalmeeg2025/handson_anatomy).
+It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [anatomy tutorial](/workshop/practicalmeeg2025/handson_anatomy).
 
 This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/source/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/source/minimumnormestimate)).
 
@@ -33,7 +33,7 @@ To localize and reconstruct the activity of the sources we will perform the foll
 The aim is to reconstruct the sources underlying the event-related field that results from presentation of pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2025/handson_sourceanalysis).
 
     subj = datainfo_subject(15);
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data.mat', subj.name));
     load(filename, 'data');
 
 In this tutorial, we are only going to use the MEG data for the source reconstruction. Therefore, we proceed by selecting the MEG channels from the epoched data.
@@ -125,7 +125,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
 
-    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_dataw_meg', subj.name));
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_dataw_meg.mat', subj.name));
     % save(filename, 'dataw_meg');
     % load(filename, 'dataw_meg');
 
@@ -156,9 +156,9 @@ For a beamformer analysis, we need to predefine a set of dipole locations to be 
 Finally, with the beamformer solution on the cortical surface, it can be easily compared to a MNE solution, should one be inclined to do so. It is important to note that 1) the metric units of the geometric objects are identical to one another, and 2) to use here the gradiometer array from the whitened data, because we will also use the whitened data for the source reconstruction. With respect to point 1, FieldTrip will check for this, but to be sure, we ensure the equality of metric units explicitly.
 
     % obtain the necessary ingredients for obtaining a forward model
-    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel', subj.name));
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel.mat', subj.name));
     load(filename);
-    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel', subj.name));
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel.mat', subj.name));
     load(filename);
 
     headmodel   = ft_convert_units(headmodel,   tlckw.grad.unit);
@@ -194,7 +194,7 @@ With the forward model and the covariance (as average across trials) computed, w
     cfg.sourcemodel = leadfield_meg;
     source          = ft_sourceanalysis(cfg, tlckw);
 
-    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv', subj.name));
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv.mat', subj.name));
     % save(filename, 'source', 'tlckw');
     % load(filename, 'source', 'tlckw');
 
@@ -227,7 +227,7 @@ With the source structure computed, we can inspect the fields of the variable so
 The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in November 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
     wb_dir   = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
-    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
+    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii.mat', subj.name));
     inflated = ft_read_headshape({filename strrep(filename, '.L.', '.R.')});
     inflated = ft_determine_units(inflated);
     inflated.coordsys = 'neuromag';
@@ -368,7 +368,7 @@ Rather than looking all over the cortex, we can also use the LCMV beamformer to 
     figure;plot(avg_famous.time, [eye(3);-.5 -.5 1]*[avg_famous.avg;avg_unfamiliar.avg;avg_scrambled.avg]);
     legend({'famous';'unfamiliar';'scrambled';'faces vs. scrambled'});
 
-    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_virtualchannel', subj.name));
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_virtualchannel.mat', subj.name));
     % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces', 'ix', 'data_vc');
     % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces', 'ix', 'data_vc');
 
@@ -406,7 +406,7 @@ Rather than using a dense mesh of dipoles, or zooming in the time series of a si
     avg_unfamiliar.cfg = removefields(avg_unfamiliar.cfg, 'previous');
     avg_scrambled.cfg  = removefields(avg_scrambled.cfg,  'previous');
 
-    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_source_parc', subj.name));
+    filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name, sprintf('%s_source_parc.mat', subj.name));
     % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled');
     % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled');
 

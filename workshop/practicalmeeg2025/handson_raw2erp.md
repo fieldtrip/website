@@ -29,15 +29,15 @@ In this tutorial, the data is contained in 6 different fif files, one for every 
 
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
 
-We use the `datainfo_subject` function, which is provided in the [code](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/code/) folder associated with this workshop. If we do the following:
+We use the `datainfo_subject` function, which is provided in the code folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2025/). If we do the following:
 
     subj = datainfo_subject(15);
 
-We obtain a structure that looks like this:
+we obtain a structure that looks like this:
 
      subj =
      struct with fields:
-                 id: 1
+                 id: 15
                name: 'sub-15'
             mrifile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.nii.gz'
             fidfile: '/Volumes/SamsungT3/practicalmeeg2025/ds000117-pruned/sub-15/ses-mri/anat/sub-15_ses-mri_acq-mprage_T1w.json'
@@ -73,7 +73,7 @@ We can now run the following chunk of code:
 
     end % for each run
 
-{% include markup/red %}
+{% include markup/green %}
 In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the derivative dataset is NOT perfectly following the BIDS standard since, MEG and EEG derivatives are not yet formally finalized. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
 The problem we encounter is that, although in the derivative we do have the MaxFiltered fif file:
@@ -85,28 +85,56 @@ according to BIDS we would also have expected its sidecars, but these are missin
     sub-15_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
     sub-15_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
 
+Nevertheless, you _can_ have a look at the content of the BIDS events.tsv files using the MATLAB editor
+
+    edit(subj.eventsfile{1})
+
+or by reading it as a MATLAB table using **[ft_read_tsv](/reference/fileio/ft_read_tsv)**
+
+    events = ft_read_tsv(subj.eventsfile{1});
+
+    >> disp(events)
+    10x6 table
+
+        onset     duration    onset_sample      stim_type       trigger       stim_file    
+        ______    ________    ____________    ______________    _______    ________________
+        23.715       0           26087        {'Unfamiliar'}      13       {'meg/u072.bmp'}
+        26.906       0           29597        {'Unfamiliar'}      14       {'meg/u072.bmp'}
+        30.231       0           33254        {'Famous'    }       5       {'meg/f124.bmp'}
+        33.522       0           36874        {'Unfamiliar'}      13       {'meg/u063.bmp'}
+        36.679       0           40347        {'Unfamiliar'}      14       {'meg/u063.bmp'}
+        39.886       0           43875        {'Unfamiliar'}      13       {'meg/u085.bmp'}
+        43.161       0           47477        {'Unfamiliar'}      14       {'meg/u085.bmp'}
+        46.452       0           51097        {'Famous'    }       5       {'meg/f148.bmp'}
+        49.575       0           54533        {'Scrambled' }      17       {'meg/s144.bmp'}
+        52.833       0           58116        {'Scrambled' }      18       {'meg/s144.bmp'}
+        ...
+
+If we would put a bit of extra effort in curating the dataset and copying the events.tsv files from the "raw" to the "meg_derivatives", then we could have used **[ft_trialfun_bids](/reference/trialfun/ft_trialfun_bids)** instead of **[ft_trialfun_general](/reference/trialfun/ft_trialfun_general)** with numeric codes.
 {% include markup/end %}
 
 ## Reading in raw data from disk
 
-In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-15_data.mat` from the `derivatives/raw2erp/sub-15` folder:
+In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument.
+
+The following piece of code takes some time (and quite some RAM) to run, so if your computer is not up to this, you can also skip this step, and load in the `sub-15_data.mat` from the `derivatives/raw2erp/sub-15` folder.
 
     rundata = cell(1,6);
     for run_nr = 1:6
 
-      cfg         = [];
+      cfg = [];
       cfg.dataset = subj.megfile{run_nr};
       cfg.trl     = subj.trl{run_nr};
 
       % MEG specific settings
-      cfg.channel = 'MEG';
-      cfg.demean  = 'yes';
+      cfg.channel      = 'MEG';
+      cfg.demean       = 'yes';
       cfg.coilaccuracy = 0;
-      cfg.bpfilter = 'yes';
-      cfg.bpfilttype = 'firws';
-      cfg.bpfreq  = [1 40];
-      cfg.padding = 3;
-      data_meg    = ft_preprocessing(cfg);
+      cfg.bpfilter     = 'yes';
+      cfg.bpfilttype   = 'firws';
+      cfg.bpfreq       = [1 40];
+      cfg.padding      = 3;
+      data_meg         = ft_preprocessing(cfg);
 
       % EEG specific settings
       cfg.channel    = {'EEG' '-EEG061' '-EEG062' '-EEG063' '-EEG064'}; % exclude EOG/ECG/etc hard coded assumed to be this list
@@ -121,24 +149,24 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
       % EEG063    ECG     V    cardiac
 
       % settings for EOG and ECG channels
-      cfg.channel = {'EEG061' 'EEG062' 'EEG063'};
-      cfg.demean  = 'yes';
-      cfg.reref   = 'no';
+      cfg.channel  = {'EEG061' 'EEG062' 'EEG063'};
+      cfg.demean   = 'yes';
+      cfg.reref    = 'no';
       cfg.bpfilter = 'no';
       
       % use a one-to-one montage to rename the channels, see FT_APPLY_MONTAGE
-      cfg.montage.labelold = {'EEG061' 'EEG062' 'EEG063'};
-      cfg.montage.labelnew = {'HEOG' 'VEOG' 'ECG'};
-      cfg.montage.tra      = eye(3);
-      data_exg    = ft_preprocessing(cfg);
+      cfg.montage.labelold  = {'EEG061' 'EEG062' 'EEG063'};
+      cfg.montage.labelnew  = {'HEOG' 'VEOG' 'ECG'};
+      cfg.montage.tra       = eye(3);
+      data_exg              = ft_preprocessing(cfg);
 
       % settings for all other channels
-      cfg.channel = {'all', '-MEG', '-EEG'};
-      cfg.montage = []; % remove the previously applied montage
-      cfg.demean  = 'no';
-      cfg.reref   = 'no';
+      cfg.channel  = {'all', '-MEG', '-EEG'};
+      cfg.montage  = []; % remove the previously applied montage
+      cfg.demean   = 'no';
+      cfg.reref    = 'no';
       cfg.bpfilter = 'no';
-      data_other  = ft_preprocessing(cfg);
+      data_other   = ft_preprocessing(cfg);
 
       cfg            = [];
       cfg.resamplefs = 300;
@@ -152,15 +180,17 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
       clear data_meg data_eeg data_exg data_other
     end % for each run
 
-    data = ft_appenddata([], rundata{:});
-    clear rundata;
+    cfg = [];
+    cfg.keepsampleinfo = 'no';
+    data = ft_appenddata(cfg, rundata{:});
+    clear rundata
 
     % we could save it to disk, or when skipping the code above we can read it from disk
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
-    % save(filename, 'data');
-    % load(filename, 'data');
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data.mat', subj.name));
+    % save(filename, 'data')
+    % load(filename, 'data')
 
-The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** four times per run, with channel type specific processing options. Note the exclusion of a subset of the EEG channels which correspond to non-brain recording EEG signals (EOG/ECG etc.). The EEG data are average-referenced, the other channels are not. After the data for each group of channels has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
+The above piece of code uses **[ft_preprocessing](/reference/ft_preprocessing)** four times per run, with channel-type specific processing options. Note the exclusion of a subset of the EEG channels which correspond to non-brain recordings of ExG signals (HEOG/VEOG/ECG). The EEG data are average-referenced, the other channels are not. After the data for each group of channels has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
 
 {% include markup/yellow %}
 There is no advantage in resampling the data other than saving some memory. If your computer is big enough to handle your data, we recommend not to resample as there can be some annoying side effects. The anti-aliasing filter can affect your data, and post-hoc bookeeping of events (which are indicated with sample numbers) gets more complicated.
@@ -168,7 +198,7 @@ There is no advantage in resampling the data other than saving some memory. If y
 In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
 {% include markup/end %}
 
-{% include markup/skyblue %}
+{% include markup/red %}
 The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like this
 
     cfg            = [];
@@ -203,9 +233,9 @@ Once the data has been epoched and filtered, we can proceed with computing event
     cfg.trials = ismember(data.trialinfo(:,1), [Famous Unfamiliar]);
     avg_faces  = ft_timelockanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
-    % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
-    % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock.mat', subj.name));
+    % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces')
+    % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces')
 
 ## Visualisation of the ERFs and ERPs
 
@@ -228,18 +258,19 @@ To find a specific channel, we can use the following
 
     find(strcmp(avg_famous.label, 'EEG065'))
 
-and to plot the 'EEG065' channel channel we can do
+and to plot the EEG065 channel channel we can do
 
     plot(avg_famous.time, avg_famous.avg(367,:), 'b')
     hold on
     plot(avg_unfamiliar.time, avg_unfamiliar.avg(367,:), 'r')
     plot(avg_scrambled.time, avg_scrambled.avg(367,:), 'g')
+    legend({'Famous', 'Unfamiliar', 'Scrambled'});
 
-The same figure can be achieved using the following code
+A similar figure can be achieved using the following code
 
     cfg = [];
     cfg.channel = 'EEG065';
-    ft_singleplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled)
+    figure; ft_singleplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
 ### ERFs on the magnetometers
 
@@ -368,6 +399,7 @@ Use the following code to compute and plot the ERP together with the standard de
     hold on
     plot(avg_famous.time, avg_plus_sd, 'b:')
     plot(avg_famous.time, avg_minus_sd, 'b:')
+    title('average plus and minus the SD')
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_raw2erp/figure7.png" width="600" %}
 
@@ -384,6 +416,7 @@ The standard deviation is quite large, among others because we have not yet perf
     hold on
     plot(avg_famous.time, avg_plus_sem, 'b:')
     plot(avg_famous.time, avg_minus_sem, 'b:')
+    title('average plus and minus the SEM')
 
 {% include image src="/assets/img/workshop/practicalmeeg2025/handson_raw2erp/figure8.png" width="600" %}
 
@@ -408,7 +441,7 @@ You can thresholded the ERP using the SEM to highlight parts of the time series:
     significant = abs(avg) > 2*sqrt(avg_famous.var(367,:))./sqrt(avg_famous.dof(367,:));
 
     figure
-    ft_plot_vector(avg_famous.time, avg, 'highlight', significant, 'highlightstyle', 'thickness', 'color', 'b');
+    ft_plot_vector(avg_famous.time, avg, 'highlight', significant, 'highlightstyle', 'thickness', 'color', 'b')
     axis tight
     grid on
 

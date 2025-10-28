@@ -155,7 +155,7 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
     clear rundata;
 
     % we could save it to disk, or when skipping the code above we can read it from disk
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data.mat', subj.name));
     % save(filename, 'data');
     % load(filename, 'data');
 
@@ -202,7 +202,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
     cfg.trials = ismember(data.trialinfo(:,1), [Famous Unfamiliar]);
     avg_faces  = ft_timelockanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock.mat', subj.name));
     % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
     % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 

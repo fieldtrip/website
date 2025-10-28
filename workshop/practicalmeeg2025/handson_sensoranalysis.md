@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.
 
-Here, we will work on the Face recognition [dataset](/workshop/meg-uk-2015/dataset). This tutorial is a continuation from the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp).
+Here, we will work on the face recognition [dataset](/workshop/meg-uk-2015/dataset). This tutorial is a continuation from the [raw2erp tutorial](/workshop/practicalmeeg2025/handson_raw2erp).
 
 ## Background
 
@@ -102,7 +102,7 @@ The execution of the following piece of code takes some time. You may want to sk
 
 By storing the results of all computations systematically, we can also easily go back to the data that was computed previously and that in this case is available from the download server.
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data.mat', subj.name));
     % save(filename, 'data');
     % load(filename, 'data');
 
@@ -405,7 +405,7 @@ K is the number of tapers applied; the more, the greater the smoothing.
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqhigh_scrambled = ft_freqanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_mtmconvol', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_mtmconvol.mat', subj.name));
     % save(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
     % load(filename, 'freqlow_famous', 'freqlow_unfamiliar', 'freqlow_scrambled', 'freqhigh_famous', 'freqhigh_unfamiliar', 'freqhigh_scrambled');
 
@@ -443,7 +443,7 @@ Inspect the resulting TFR, using interactive plotting. Note: don't forget to NOT
 
 ### Morlet wavelets
 
-An alternative to calculating TFRs with the multitaper method is to use Morlet wavelets. The approach is equivalent to calculating TFRs with time windows that depend on frequency using a taper with a Gaussian shape. The commands below illustrate how to do this. One crucial parameter to set is cfg.width. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ([Tallon-Baudry and Bertrand (1999)](<https://doi.org/10.1016/S1364-6613(99)01299-1>)).
+An alternative to calculating TFRs with the multitaper method is to use Morlet wavelets. The approach is equivalent to calculating TFRs with time windows that depend on frequency using a taper with a Gaussian shape. The commands below illustrate how to do this. One crucial parameter to set is cfg.width. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/(width\*2) (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/(7\*2) = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ([Tallon-Baudry and Bertrand (1999)](<https://doi.org/10.1016/S1364-6613(99)01299-1>)).
 
 Calculate TFRs using Morlet wavelet
 
@@ -464,7 +464,7 @@ Calculate TFRs using Morlet wavelet
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freq_scrambled = ft_freqanalysis(cfg, data);
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_wavelet', subj.name));
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_freq_wavelet.mat', subj.name));
     % save(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
     % load(filename, 'freq_famous', 'freq_unfamiliar', 'freq_scrambled');
 
