@@ -15,7 +15,9 @@ Oct 28-31, 2025.
 
 ## Who
 
-The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) and [Songyun Bai](https://www.ru.nl/en/people/bai-s) from the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/en/donders-institute) in Nijmegen, the Netherlands.
+The FieldTrip hands-on tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) and [Songyun Bai](https://www.ru.nl/en/people/bai-s) from the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/en/donders-institute) in Nijmegen, the Netherlands.
+
+Furthermore, we are glad with the trainEErs that help with the tutorials: Cristina Gil Ávila (Univ. Madrid, Spain), Paolo Canal (IUSS Pavia, Italy), and Judith Nicolas (CRNL, France).
 
 There will also be other experts from MNE-Python, Brainstorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
 
