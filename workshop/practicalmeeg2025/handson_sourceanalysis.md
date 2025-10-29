@@ -227,7 +227,7 @@ With the source structure computed, we can inspect the fields of the variable so
 The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in November 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
     wb_dir   = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
-    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii.mat', subj.name));
+    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
     inflated = ft_read_headshape({filename strrep(filename, '.L.', '.R.')});
     inflated = ft_determine_units(inflated);
     inflated.coordsys = 'neuromag';
