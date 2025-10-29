@@ -334,9 +334,10 @@ Rather than looking all over the cortex, we can also use the LCMV beamformer to 
 
     mom = cat(1,source.avg.mom{:});
 
-    sel = nearest(source.time,[0.16 0.17]);
-    M   = zeros(size(sourcemodel.pos,1),1);
-    M(sourcemodel.inside) = abs(mean(mom(:,sel(1):sel(2)),2));
+    tbeg = nearest(source.time, 0.16);
+    tend = nearest(source.time, 0.17);
+    M    = zeros(size(sourcemodel.pos,1),1);
+    M(sourcemodel.inside) = abs(mean(mom(:,tbeg:tend),2));
     figure; ft_plot_mesh(sourcemodel, 'vertexcolor', M);
     h = light('position', [0 -1 0]); lighting gouraud; material dull; drawnow;
 
