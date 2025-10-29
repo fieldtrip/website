@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41137432'
+- idtype: doi
+  value: 10.1111/ejn.70284
+- idtype: pmcid
+  value: PMC12552801
+authors:
+- authtype: Author
+  name: Turker A
+- authtype: Author
+  name: Ogmen H
+- authtype: Author
+  name: Kafaligonul H
+epubdate: 2025 Oct 24
+fulljournalname: The European Journal of Neuroscience
+issue: '8'
+pages: e70284
+pmclivedate: 2025/10/26
+printpubdate: 2025 Oct
+pubdate: 2025 Oct 24
+sortdate: 2025/10/24 00:00
+source: Eur J Neurosci
+title: 'Cortical Dynamics Underlying Perceived Visibility: An Event‐Related Potential
+  Investigation of Forward Masking'
+uid: '12552801'
+volume: '62'

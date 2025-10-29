@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41118355'
+- idtype: doi
+  value: 10.1371/journal.pone.0333820
+- idtype: pmcid
+  value: PMC12539695
+authors:
+- authtype: Author
+  name: Dekydtspotter L
+- authtype: Author
+  name: Miller AK
+- authtype: Author
+  name: Meinert K
+- authtype: Author
+  name: Cha JH
+- authtype: Author
+  name: Ahn JH
+- authtype: Author
+  name: Swanson K
+- authtype: Author
+  name: Xiong Y
+epubdate: 2025 Oct 21
+fulljournalname: PLOS One
+issue: '10'
+pages: e0333820
+pmclivedate: 2025/10/22
+printpubdate: ''
+pubdate: 2025 Oct 21
+sortdate: 2025/10/21 00:00
+source: PLoS One
+title: 'Cortical γ-oscillations implement basic language operations: Evidence from
+  electroencephalography in anaphora during english filler-gap dependency processing'
+uid: '12539695'
+volume: '20'

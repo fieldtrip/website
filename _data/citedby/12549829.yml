@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41130943'
+- idtype: doi
+  value: 10.1038/s41467-025-64397-9
+- idtype: pmcid
+  value: PMC12549829
+authors:
+- authtype: Author
+  name: Liang J
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Wei X
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Liu K
+- authtype: Author
+  name: Shi Z
+- authtype: Author
+  name: Tao TH
+- authtype: Author
+  name: Zhou Z
+epubdate: 2025 Oct 23
+fulljournalname: Nature Communications
+issue: ''
+pages: '9366'
+pmclivedate: 2025/10/25
+printpubdate: ''
+pubdate: 2025 Oct 23
+sortdate: 2025/10/23 00:00
+source: Nat Commun
+title: Silk-enabled conformal intraventricular interfaces for minimally invasive neural
+  recordings
+uid: '12549829'
+volume: '16'

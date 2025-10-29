@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '41123592'
+- idtype: doi
+  value: 10.7554/eLife.99383
+- idtype: pmcid
+  value: PMC12543324
+authors:
+- authtype: Author
+  name: Teng X
+- authtype: Author
+  name: Zhang RY
+epubdate: 2025 Oct 22
+fulljournalname: eLife
+issue: ''
+pages: RP99383
+pmclivedate: 2025/10/23
+printpubdate: ''
+pubdate: 2025 Oct 22
+sortdate: 2025/10/22 00:00
+source: eLife
+title: Sequential temporal anticipation characterized by neural power modulation and
+  in recurrent neural networks
+uid: '12543324'
+volume: '13'

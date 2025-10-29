@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41132591'
+- idtype: doi
+  value: 10.3389/fnins.2025.1654827
+- idtype: pmcid
+  value: PMC12540398
+authors:
+- authtype: Author
+  name: Zheng Y
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Tong Q
+- authtype: Author
+  name: Tian B
+- authtype: Author
+  name: Su P
+- authtype: Author
+  name: Xu Y
+- authtype: Author
+  name: Wang D
+epubdate: 2025 Oct 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1654827'
+pmclivedate: 2025/10/23
+printpubdate: ''
+pubdate: 2025 Oct 8
+sortdate: 2025/10/08 00:00
+source: Front Neurosci
+title: EEG synchronization signatures for decoding attentional states during continuous
+  force control
+uid: '12540398'
+volume: '19'

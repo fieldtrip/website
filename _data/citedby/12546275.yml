@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '41140957'
+- idtype: doi
+  value: 10.3389/fpsyt.2025.1695916
+- idtype: pmcid
+  value: PMC12546275
+authors:
+- authtype: Author
+  name: Kesebir S
+- authtype: Author
+  name: Demirer RM
+epubdate: 2025 Oct 9
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1695916'
+pmclivedate: 2025/10/24
+printpubdate: ''
+pubdate: 2025 Oct 9
+sortdate: 2025/10/09 00:00
+source: Front Psychiatry
+title: 'Serum lactate and LDH are related with theta and gamma activities in bipolar
+  disorder: a band-specific metabolic coupling'
+uid: '12546275'
+volume: '16'

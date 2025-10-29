@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40755170'
+- idtype: doi
+  value: 10.1002/aur.70097
+- idtype: pmcid
+  value: PMC12541682
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Sujawal M
+- authtype: Author
+  name: Bernotaite Z
+- authtype: Author
+  name: Cunnings I
+- authtype: Author
+  name: Liu F
+epubdate: 2025 Aug 4
+fulljournalname: Autism Research
+issue: '10'
+pages: 2011-2030
+pmclivedate: 2025/10/23
+printpubdate: 2025 Oct
+pubdate: 2025 Aug 4
+sortdate: 2025/08/04 00:00
+source: Autism Res
+title: 'Auditory and Semantic Processing of Speech‐in‐Noise in Autism: A Behavioral
+  and EEG Study'
+uid: '12541682'
+volume: '18'

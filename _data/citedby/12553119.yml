@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '41141130'
+- idtype: doi
+  value: 10.7759/cureus.93173
+- idtype: pmcid
+  value: PMC12553119
+authors:
+- authtype: Author
+  name: Kimura A
+epubdate: 2025 Sep 25
+fulljournalname: Cureus
+issue: '9'
+pages: e93173
+pmclivedate: 2025/10/26
+printpubdate: ''
+pubdate: 2025 Sep 25
+sortdate: 2025/09/25 00:00
+source: Cureus
+title: 'Triangular Neural Synchronization Patterns in Visual Impairment: A Comprehensive
+  Case Series Exploring Multi-node Network Dynamics and the Neural Triangle Index'
+uid: '12553119'
+volume: '17'

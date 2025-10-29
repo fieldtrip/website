@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41127682'
+- idtype: doi
+  value: 10.1038/s44220-025-00457-9
+- idtype: pmcid
+  value: PMC7618272
+- idtype: MID
+  value: EMS208687
+authors:
+- authtype: Author
+  name: Arbab T
+- authtype: Author
+  name: Bais MN
+- authtype: Author
+  name: Figee M
+- authtype: Author
+  name: Bergfeld IO
+- authtype: Author
+  name: Schuurman PR
+- authtype: Author
+  name: van den Munckhof P
+- authtype: Author
+  name: Willuhn I
+- authtype: Author
+  name: Denys D
+epubdate: 2025 Jul 24
+fulljournalname: Nature. Mental health
+issue: '8'
+pages: 889-898
+pmclivedate: 2025/10/22
+printpubdate: ''
+pubdate: 2025 Jul 24
+sortdate: 2025/07/24 00:00
+source: Nat Ment Health
+title: Intracranial electrophysiological biomarkers of compulsivity in obsessive–compulsive
+  disorder
+uid: '7618272'
+volume: '3'

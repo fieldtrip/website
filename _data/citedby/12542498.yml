@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40811040'
+- idtype: doi
+  value: 10.1093/scan/nsaf085
+- idtype: pmcid
+  value: PMC12542498
+authors:
+- authtype: Author
+  name: Wu H
+- authtype: Author
+  name: Rao X
+- authtype: Author
+  name: Cai ZG
+epubdate: 2025 Aug 14
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf085
+pmclivedate: 2025/10/23
+printpubdate: ''
+pubdate: 2025 Aug 14
+sortdate: 2025/08/14 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Probabilistic adaptation of language comprehension for individual speakers:
+  evidence from neural oscillations'
+uid: '12542498'
+volume: '20'

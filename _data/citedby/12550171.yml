@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41141427'
+- idtype: doi
+  value: 10.1016/j.ynpai.2025.100196
+- idtype: pmcid
+  value: PMC12550171
+authors:
+- authtype: Author
+  name: Storey F
+- authtype: Author
+  name: Prokhorenko M
+- authtype: Author
+  name: Keaser ML
+- authtype: Author
+  name: Skippen P
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Seminowicz DA
+- authtype: Author
+  name: Mazaheri A
+epubdate: 2025 Sep 10
+fulljournalname: Neurobiology of Pain
+issue: ''
+pages: '100196'
+pmclivedate: 2025/10/25
+printpubdate: ''
+pubdate: 2025 Sep 10
+sortdate: 2025/09/10 00:00
+source: Neurobiol Pain
+title: Individual differences in cognitive performance under pain linked to region-specific
+  alpha power modulations
+uid: '12550171'
+volume: '18'
