@@ -325,7 +325,7 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg = [];
     cfg.parameter   = 'mom';
     cfg.has_diff    = true;
-    cfg.data_labels = {'Famous', 'Unfamiliar', 'Scrambled'};
+    cfg.data_labels = {'Famous', 'Scrambled', 'Difference'};
     ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
 
 ## Virtual channel at the maximum location
