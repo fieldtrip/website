@@ -84,7 +84,7 @@ power over a frequency range defined in **freq_norm**.
 
     freq_oi   = [8 15];   % frequency range of interest
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
-    foi_norm  = nearest(base_sedation.freq, freq_norm);
+    foi_norm  = [nearest(base_sedation.freq, freq_norm(1)) nearest(base_sedation.freq, freq_norm(2))];
 
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
     base_sedation.powspctrm_b = bsxfun(@rdivide, base_sedation.powspctrm, common_denominator);     mild_sedation.powspctrm_b = bsxfun(@rdivide, mild_sedation.powspctrm, common_denominator);
