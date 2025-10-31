@@ -5,7 +5,7 @@ tags: [practicalmeeg2025, meg, timelock, statistics, plotting, mmfaces]
 
 Thios is a very brief demonstration on how to do MVPA with FIeldTrip. A more elaborate tutorial can be found [here](/tutorial/stats/mvpa_light).
 
-This tutorial is based on the MVPA-Light toolbox, which is a stand-alone MATLAB toolbox for multivariate pattern analysis involving classification or regression. An alternative toolbox that works well with FieldTrip is [ADAM](https://github.com/fahrenfort/ADAM), which has a [tutorial paper](https://doi.org/10.3389/fnins.2018.00368) on the same data as we use here.
+This tutorial is based on the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox, which is a stand-alone MATLAB toolbox for multivariate pattern analysis involving classification or regression. An alternative toolbox that works well with FieldTrip is [ADAM](https://github.com/fahrenfort/ADAM), which has a [tutorial paper](https://doi.org/10.3389/fnins.2018.00368) on the same data as we use here.
 
 The MVPA-Light toolbox features cross-validation, various classifiers, regression models, performance metrics, as well as nested preprocessing and hyperparameter selection. FieldTrip provides a high-level interface to its functions so you do not need to directly interact with the toolbox. However, it needs to be installed and included in MATLAB’s search path. To this end, follow the [installation instructions](https://github.com/treder/MVPA-Light#installation-) on its GitHub page.
 
