@@ -29,7 +29,7 @@ There will also be other experts from MNE-Python, Brainstorm and EEGLAB with the
 - [Creation of headmodels and sourcemodels for source reconstruction](/workshop/practicalmeeg2025/handson_anatomy)
 - [Reconstructing source activity using beamformers](/workshop/practicalmeeg2025/handson_sourceanalysis)
 - [Group-level statistics with parametric and non-parametric methods](/workshop/practicalmeeg2025/handson_groupanalysis)
-- [multi-variate pattern analysis](/workshop/practicalmeeg2025/handson_mvpa)
+- [Multi-variate pattern analysis (MVPA)](/workshop/practicalmeeg2025/handson_mvpa)
 
 ## How to prepare
 

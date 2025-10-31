@@ -1,5 +1,5 @@
 ---
-title: MVPA analysis
+title: Multi-variate pattern analysis (MVPA)
 tags: [practicalmeeg2025, meg, timelock, statistics, plotting, mmfaces]
 ---
 
