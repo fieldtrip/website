@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38317012'
+- idtype: doi
+  value: 10.1038/s41380-024-02405-y
+- idtype: pmcid
+  value: PMC12574714
+- idtype: MID
+  value: NIHMS2118503
+authors:
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Hassan U
+- authtype: Author
+  name: Bruss JE
+- authtype: Author
+  name: Oya H
+- authtype: Author
+  name: Uitermarkt BD
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Gander PE
+- authtype: Author
+  name: Howard MA III
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Boes AD
+epubdate: 2024 Feb 5
+fulljournalname: Molecular psychiatry
+issue: '5'
+pages: 1228-1240
+pmclivedate: 2025/10/31
+printpubdate: 2024 May
+pubdate: 2024 Feb 5
+sortdate: 2024/02/05 00:00
+source: Mol Psychiatry
+title: Effects of transcranial magnetic stimulation on the human brain recorded with
+  intracranial electrocorticography
+uid: '12574714'
+volume: '29'

@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '40101145'
+- idtype: doi
+  value: 10.1093/brain/awaf107
+- idtype: pmcid
+  value: PMC12588683
+authors:
+- authtype: Author
+  name: Hughes NC
+- authtype: Author
+  name: Qian H
+- authtype: Author
+  name: Doss DJ
+- authtype: Author
+  name: Makhoul GS
+- authtype: Author
+  name: Zargari M
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Fulton JN
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Dawant BM
+- authtype: Author
+  name: Englot DJ
+- authtype: Author
+  name: Constantinidis C
+- authtype: Author
+  name: Williams Roberson S
+- authtype: Author
+  name: Bick SK
+epubdate: 2025 Mar 18
+fulljournalname: Brain
+issue: '11'
+pages: 3958-3972
+pmclivedate: 2025/11/06
+printpubdate: ''
+pubdate: 2025 Mar 18
+sortdate: 2025/03/18 00:00
+source: Brain
+title: Reward circuit local field potential modulations precede risk taking
+uid: '12588683'
+volume: '148'

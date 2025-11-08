@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '41189957'
+- idtype: doi
+  value: 10.1093/braincomms/fcaf403
+- idtype: pmcid
+  value: PMC12582361
+authors:
+- authtype: Author
+  name: Firestone E
+- authtype: Author
+  name: Uda H
+- authtype: Author
+  name: Kuroda N
+- authtype: Author
+  name: Sakakura K
+- authtype: Author
+  name: Sonoda M
+- authtype: Author
+  name: Ueda R
+- authtype: Author
+  name: Kitazawa Y
+- authtype: Author
+  name: Lee MH
+- authtype: Author
+  name: Jeong JW
+- authtype: Author
+  name: Luat AF
+- authtype: Author
+  name: Cools MJ
+- authtype: Author
+  name: Sood S
+- authtype: Author
+  name: Asano E
+epubdate: 2025 Oct 15
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcaf403
+pmclivedate: 2025/11/04
+printpubdate: ''
+pubdate: 2025 Oct 15
+sortdate: 2025/10/15 00:00
+source: Brain Commun
+title: Normative high-frequency oscillation phase–amplitude coupling and effective
+  connectivity under sevoflurane
+uid: '12582361'
+volume: '7'

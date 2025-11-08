@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '39785823'
+- idtype: doi
+  value: 10.1097/WNP.0000000000001141
+- idtype: pmcid
+  value: PMC12570617
+authors:
+- authtype: Author
+  name: Degano G
+- authtype: Author
+  name: Misirocchi F
+- authtype: Author
+  name: Rigoni I
+- authtype: Author
+  name: Kaplan PW
+- authtype: Author
+  name: Quintard H
+- authtype: Author
+  name: Vulliémoz S
+- authtype: Author
+  name: Schaller K
+- authtype: Author
+  name: Kleinschmidt A
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: De Stefano P
+epubdate: 2025 Jan 9
+fulljournalname: Journal of Clinical Neurophysiology
+issue: '7'
+pages: 626-632
+pmclivedate: 2025/10/30
+printpubdate: 2025 Nov
+pubdate: 2025 Jan 9
+sortdate: 2025/01/09 00:00
+source: J Clin Neurophysiol
+title: Electrophysiological Signatures of Alpha Coma
+uid: '12570617'
+volume: '42'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41168222'
+- idtype: doi
+  value: 10.1038/s41539-025-00373-8
+- idtype: pmcid
+  value: PMC12575758
+authors:
+- authtype: Author
+  name: Nardi F
+- authtype: Author
+  name: Faisal AA
+- authtype: Author
+  name: Haar S
+epubdate: 2025 Oct 30
+fulljournalname: NPJ Science of Learning
+issue: ''
+pages: '73'
+pmclivedate: 2025/11/01
+printpubdate: ''
+pubdate: 2025 Oct 30
+sortdate: 2025/10/30 00:00
+source: NPJ Sci Learn
+title: Motor learning mechanisms are not modified by feedback manipulations in a real-world
+  task
+uid: '12575758'
+volume: '10'

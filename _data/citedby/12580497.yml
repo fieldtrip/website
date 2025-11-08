@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '41177973'
+- idtype: doi
+  value: 10.1111/psyp.70172
+- idtype: pmcid
+  value: PMC12580497
+authors:
+- authtype: Author
+  name: Ramírez‐Benítez ER
+- authtype: Author
+  name: Ruiz‐Contreras AE
+- authtype: Author
+  name: Mondragón‐Maya A
+- authtype: Author
+  name: Solís‐Vivanco R
+epubdate: 2025 Nov 2
+fulljournalname: Psychophysiology
+issue: '11'
+pages: e70172
+pmclivedate: 2025/11/04
+printpubdate: 2025 Nov
+pubdate: 2025 Nov 2
+sortdate: 2025/11/02 00:00
+source: Psychophysiology
+title: 'The Effect of Attentional Locus on Multisensory Congruence: An ERP Study'
+uid: '12580497'
+volume: '62'

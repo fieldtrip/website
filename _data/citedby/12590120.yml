@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41022567'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0489-25.2025
+- idtype: pmcid
+  value: PMC12590120
+authors:
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Wieske RE
+- authtype: Author
+  name: Prada J
+- authtype: Author
+  name: Gramann K
+- authtype: Author
+  name: Haendel BF
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: e0489252025
+pmclivedate: 2025/11/07
+printpubdate: 2025 Nov 5
+pubdate: 2025 Nov 5
+sortdate: 2025/11/05 00:00
+source: J Neurosci
+title: Walking Modulates Active Auditory Sensing
+uid: '12590120'
+volume: '45'

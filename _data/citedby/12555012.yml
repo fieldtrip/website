@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41061718'
+- idtype: doi
+  value: 10.1088/1741-2552/ae10e0
+- idtype: pmcid
+  value: PMC12555012
+authors:
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Duan C
+- authtype: Author
+  name: Daida A
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Kanai S
+- authtype: Author
+  name: Lu M
+- authtype: Author
+  name: Hussain S
+- authtype: Author
+  name: Staba RJ
+- authtype: Author
+  name: Nariai H
+- authtype: Author
+  name: Roychowdhury V
+epubdate: 2025 Oct 27
+fulljournalname: Journal of Neural Engineering
+issue: '5'
+pages: '056040'
+pmclivedate: 2025/10/28
+printpubdate: 2025 Oct 1
+pubdate: 2025 Oct 27
+sortdate: 2025/10/27 00:00
+source: J Neural Eng
+title: 'PyHFO 2.0: an open-source platform for deep learning—based clinical high-frequency
+  oscillations analysis'
+uid: '12555012'
+volume: '22'

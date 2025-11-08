@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '39965098'
+- idtype: doi
+  value: 10.1093/brain/awaf063
+- idtype: pmcid
+  value: PMC12588680
+authors:
+- authtype: Author
+  name: Hofman K
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Sil T
+- authtype: Author
+  name: Pellegrini F
+- authtype: Author
+  name: Haufe S
+- authtype: Author
+  name: Pozzi N
+- authtype: Author
+  name: Palmisano C
+- authtype: Author
+  name: Isaias IU
+- authtype: Author
+  name: Koprich JB
+- authtype: Author
+  name: Brotchie JM
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Matthies C
+- authtype: Author
+  name: Reich MM
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Volkmann J
+- authtype: Author
+  name: Ip CW
+epubdate: 2025 Feb 18
+fulljournalname: Brain
+issue: '11'
+pages: 4058-4071
+pmclivedate: 2025/11/06
+printpubdate: ''
+pubdate: 2025 Feb 18
+sortdate: 2025/02/18 00:00
+source: Brain
+title: Low β predicts motor output and cell degeneration in the A53T Parkinson’s disease
+  rat model
+uid: '12588680'
+volume: '148'

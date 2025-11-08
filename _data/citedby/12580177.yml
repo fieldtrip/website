@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41189627'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1657049
+- idtype: pmcid
+  value: PMC12580177
+authors:
+- authtype: Author
+  name: Koop MM
+- authtype: Author
+  name: Rosenfeldt AB
+- authtype: Author
+  name: Berki V
+- authtype: Author
+  name: Bazyk A
+- authtype: Author
+  name: Davidson S
+- authtype: Author
+  name: Malan NS
+- authtype: Author
+  name: Nagel S
+- authtype: Author
+  name: Walter BL
+- authtype: Author
+  name: Liao JY
+- authtype: Author
+  name: Alberts JL
+epubdate: 2025 Oct 20
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1657049'
+pmclivedate: 2025/11/04
+printpubdate: ''
+pubdate: 2025 Oct 20
+sortdate: 2025/10/20 00:00
+source: Front Hum Neurosci
+title: A novel methodological approach to understanding the cortical and subcortical
+  effects of aerobic exercise in Parkinson’s disease
+uid: '12580177'
+volume: '19'

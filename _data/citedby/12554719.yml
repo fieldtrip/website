@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '41158669'
+- idtype: doi
+  value: 10.3389/fphys.2025.1658174
+- idtype: pmcid
+  value: PMC12554719
+authors:
+- authtype: Author
+  name: Lyu Q
+- authtype: Author
+  name: Qin Y
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Liu Q
+- authtype: Author
+  name: Tu N
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Huo Z
+- authtype: Author
+  name: Song X
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Zhang W
+- authtype: Author
+  name: Cao X
+- authtype: Author
+  name: Lu E
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Jia S
+- authtype: Author
+  name: He L
+- authtype: Author
+  name: Wang G
+epubdate: 2025 Oct 13
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '1658174'
+pmclivedate: 2025/10/28
+printpubdate: ''
+pubdate: 2025 Oct 13
+sortdate: 2025/10/13 00:00
+source: Front Physiol
+title: Coherence analysis of peripheral blood flow signals is a potential method for
+  evaluating autonomic nervous system function
+uid: '12554719'
+volume: '16'
