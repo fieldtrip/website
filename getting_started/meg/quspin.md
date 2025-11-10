@@ -14,4 +14,4 @@ The QuSpin acquisition software records the raw data in the `.lvm` format, which
 
 ## Coregistration
 
-QuSpin uses a semi-flexible cap or helmet, which consists of multiple pannels. To record the position and orientation of the sensors relative to each other, and to coregister the sensors with the head of the participant, QuSpin uses the [HALO](https://doi.org/10.1162/imag_a_00535), a circular printed circuit board (PCB) containing 16 independently controllable electromagnetic coils, which is mounted above the head like an aureola.
+QuSpin uses a semi-flexible cap or helmet, which consists of multiple panels. To record the position and orientation of the sensors relative to each other, and to coregister the sensors with the head of the participant, QuSpin uses the [HALO](https://doi.org/10.1162/imag_a_00535), a circular printed circuit board (PCB) containing 16 independently controllable electromagnetic coils, which is mounted above the head like an aureola.

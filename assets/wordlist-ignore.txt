@@ -238,6 +238,7 @@ Auer
 Auksztulewicz
 Aula
 aulogo
+aureola
 Authen
 autocompilation
 Autocompile
@@ -4078,6 +4079,7 @@ queueing
 quickcap
 quikcap
 Quraan
+quspin
 QuSpin
 Qx
 Qy
