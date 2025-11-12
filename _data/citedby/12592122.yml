@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41209401'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1626000
+- idtype: pmcid
+  value: PMC12592122
+authors:
+- authtype: Author
+  name: Lu Y
+- authtype: Author
+  name: Yang W
+- authtype: Author
+  name: Wu S
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Wei J
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Huai Y
+epubdate: 2025 Oct 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1626000'
+pmclivedate: 2025/11/08
+printpubdate: ''
+pubdate: 2025 Oct 24
+sortdate: 2025/10/24 00:00
+source: Front Hum Neurosci
+title: 'Exploring neural activity changes during motor imagery-based brain-computer
+  interface training with robotic hand for upper limb rehabilitation in ischemic stroke
+  patients: a pilot study'
+uid: '12592122'
+volume: '19'

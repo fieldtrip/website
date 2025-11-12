@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41211102'
+- idtype: doi
+  value: 10.1162/IMAG.a.974
+- idtype: pmcid
+  value: PMC12592382
+authors:
+- authtype: Author
+  name: Codina T
+- authtype: Author
+  name: Blankertz B
+- authtype: Author
+  name: von Lühmann A
+epubdate: 2025 Nov 5
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.974
+pmclivedate: 2025/11/08
+printpubdate: ''
+pubdate: 2025 Nov 5
+sortdate: 2025/11/05 00:00
+source: Imaging Neurosci (Camb)
+title: 'Multimodal fNIRS–EEG sensor fusion: Review of data-driven methods and perspective
+  for naturalistic brain imaging'
+uid: '12592382'
+volume: '3'

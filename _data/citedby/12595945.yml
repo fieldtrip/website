@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40288702'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2025.121240
+- idtype: pmcid
+  value: PMC12595945
+- idtype: MID
+  value: NIHMS2120727
+authors:
+- authtype: Author
+  name: Jurva A
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Qian H
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Jacobs ML
+- authtype: Author
+  name: Dhima K
+- authtype: Author
+  name: Englot DJ
+- authtype: Author
+  name: Roberson SW
+- authtype: Author
+  name: Bick SK
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2025 Apr 25
+fulljournalname: NeuroImage
+issue: ''
+pages: '121240'
+pmclivedate: 2025/11/09
+printpubdate: 2025 Jun
+pubdate: 2025 Apr 25
+sortdate: 2025/04/25 00:00
+source: Neuroimage
+title: Increased frontoparietal activity related to lower performance in neuropsychological
+  assessment of working memory
+uid: '12595945'
+volume: '313'

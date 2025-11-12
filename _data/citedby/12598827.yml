@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41182013'
+- idtype: doi
+  value: 10.1167/jov.25.13.2
+- idtype: pmcid
+  value: PMC12598827
+authors:
+- authtype: Author
+  name: Leys G
+- authtype: Author
+  name: Chen CY
+- authtype: Author
+  name: von Leupoldt A
+- authtype: Author
+  name: Ritchie JB
+- authtype: Author
+  name: Op de Beeck H
+epubdate: 2025 Nov 3
+fulljournalname: Journal of Vision
+issue: '13'
+pages: '2'
+pmclivedate: 2025/11/11
+printpubdate: ''
+pubdate: 2025 Nov 3
+sortdate: 2025/11/03 00:00
+source: J Vis
+title: 'Representational dynamics of the main dimensions of object space: Face/body
+  selectivity aligns temporally with animal taxonomy but not with animacy'
+uid: '12598827'
+volume: '25'

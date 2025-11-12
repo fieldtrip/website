@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '40644374'
+- idtype: doi
+  value: 10.1162/JOCN.a.69
+- idtype: pmcid
+  value: PMC12594519
+authors:
+- authtype: Author
+  name: Flaten E
+- authtype: Author
+  name: Trainor L
+epubdate: 2025 Dec 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '12'
+pages: 2652-2675
+pmclivedate: 2025/11/08
+printpubdate: ''
+pubdate: 2025 Dec 1
+sortdate: 2025/12/01 00:00
+source: J Cogn Neurosci
+title: Investigating Generalizability of Top–Down Neural Representation of Meter in
+  Infancy
+uid: '12594519'
+volume: '37'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41178935'
+- idtype: doi
+  value: 10.1162/IMAG.a.973
+- idtype: pmcid
+  value: PMC12576845
+authors:
+- authtype: Author
+  name: Akbarian F
+- authtype: Author
+  name: Gyurkovics M
+- authtype: Author
+  name: D’hooghe MB
+- authtype: Author
+  name: D’haeseleer M
+- authtype: Author
+  name: Nagels G
+- authtype: Author
+  name: Van Schependom J
+epubdate: 2025 Oct 30
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.973
+pmclivedate: 2025/11/01
+printpubdate: ''
+pubdate: 2025 Oct 30
+sortdate: 2025/10/30 00:00
+source: Imaging Neurosci (Camb)
+title: Task-induced 1/f slope modulation as a paradigm-independent marker of cognitive
+  control in multiple sclerosis
+uid: '12576845'
+volume: '3'

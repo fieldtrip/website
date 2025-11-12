@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '41202141'
+- idtype: doi
+  value: 10.1126/sciadv.adx8191
+- idtype: pmcid
+  value: PMC12594192
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: van Ede F
+epubdate: 2025 Nov 7
+fulljournalname: Science Advances
+issue: '45'
+pages: eadx8191
+pmclivedate: 2025/11/08
+printpubdate: ''
+pubdate: 2025 Nov 7
+sortdate: 2025/11/07 00:00
+source: Sci Adv
+title: Concurrent selection of internal goals and external sensations during visual
+  search
+uid: '12594192'
+volume: '11'

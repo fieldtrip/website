@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '39925332'
+- idtype: doi
+  value: 10.1111/jsr.70000
+- idtype: pmcid
+  value: PMC12592824
+authors:
+- authtype: Author
+  name: Salfi F
+- authtype: Author
+  name: D'Atri A
+- authtype: Author
+  name: Arnone B
+- authtype: Author
+  name: Corigliano D
+- authtype: Author
+  name: Amicucci G
+- authtype: Author
+  name: Viselli L
+- authtype: Author
+  name: Naccarato F
+- authtype: Author
+  name: Festucci F
+- authtype: Author
+  name: Tempesta D
+- authtype: Author
+  name: Ferrara M
+epubdate: 2025 Feb 10
+fulljournalname: Journal of Sleep Research
+issue: '6'
+pages: e70000
+pmclivedate: 2025/11/08
+printpubdate: 2025 Dec
+pubdate: 2025 Feb 10
+sortdate: 2025/02/10 00:00
+source: J Sleep Res
+title: Promoting vocabulary learning during sleep at home using closed‐loop targeted
+  memory reactivation
+uid: '12592824'
+volume: '34'
