@@ -175,7 +175,8 @@ The simbio implementation is kindly provided by [Carsten Wolters](http://www.uni
 
 ### fieldtrip/external/duneuro
 
-The original MATLAB interface to [DUNEuro](https://www.medizin.uni-muenster.de/duneuro/startseite.html) is kindly provided by the 
+The original MATLAB interface to [DUNEuro](https://www.medizin.uni-muenster.de/duneuro/startseite.html) is kindly provided by [Carsten Wolters](http://www.uni-muenster.de/OCCMuenster/members/carsten-wolters.html) and colleages.
+
 - based on mex-files
 - source code is not provided
 - direct interaction with data from within MATLAB.
