@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41230010'
+- idtype: doi
+  value: 10.3389/fpsyt.2025.1580636
+- idtype: pmcid
+  value: PMC12603810
+authors:
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Jurgiel J
+- authtype: Author
+  name: Dillon A
+- authtype: Author
+  name: Piacentini J
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Loo SK
+epubdate: 2025 Oct 28
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1580636'
+pmclivedate: 2025/11/12
+printpubdate: ''
+pubdate: 2025 Oct 28
+sortdate: 2025/10/28 00:00
+source: Front Psychiatry
+title: EEG power modulation in the sensorimotor regions is critical to motor tic suppression
+uid: '12603810'
+volume: '16'

@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '41230416'
+- idtype: doi
+  value: 10.1162/IMAG.a.985
+- idtype: pmcid
+  value: PMC12603661
+authors:
+- authtype: Author
+  name: Mehra C
+- authtype: Author
+  name: Beyh A
+- authtype: Author
+  name: Laiou P
+- authtype: Author
+  name: Garces P
+- authtype: Author
+  name: Jones EJ
+- authtype: Author
+  name: Mason L
+- authtype: Author
+  name: Buitelaar J
+- authtype: Author
+  name: Johnson MH
+- authtype: Author
+  name: Murphy D
+- authtype: Author
+  name: Loth E
+- authtype: Author
+  name: Dell’Acqua F
+- authtype: Author
+  name: Ewen JB
+- authtype: Author
+  name: Richardson MP
+- authtype: Author
+  name: O’Muircheartaigh J
+epubdate: 2025 Nov 10
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.985
+pmclivedate: 2025/11/12
+printpubdate: ''
+pubdate: 2025 Nov 10
+sortdate: 2025/11/10 00:00
+source: Imaging Neurosci (Camb)
+title: 'Zero-phase-delay synchrony between interacting neural populations: implications
+  for functional connectivity-derived biomarkers'
+uid: '12603661'
+volume: '3'

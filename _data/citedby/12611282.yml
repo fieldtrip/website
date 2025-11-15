@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41222577'
+- idtype: doi
+  value: 10.7554/eLife.101071
+- idtype: pmcid
+  value: PMC12611282
+authors:
+- authtype: Author
+  name: Frelih T
+- authtype: Author
+  name: Matkovič A
+- authtype: Author
+  name: Mlinarič T
+- authtype: Author
+  name: Bon J
+- authtype: Author
+  name: Repovš G
+epubdate: 2025 Nov 12
+fulljournalname: eLife
+issue: ''
+pages: RP101071
+pmclivedate: 2025/11/13
+printpubdate: ''
+pubdate: 2025 Nov 12
+sortdate: 2025/11/12 00:00
+source: eLife
+title: Modulation of aperiodic EEG activity provides sensitive index of cognitive
+  state changes during working memory task
+uid: '12611282'
+volume: '13'

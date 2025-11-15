@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41213808'
+- idtype: doi
+  value: 10.1523/ENEURO.0139-25.2025
+- idtype: pmcid
+  value: PMC12604550
+authors:
+- authtype: Author
+  name: Aparicio PL
+- authtype: Author
+  name: Walker JD
+- authtype: Author
+  name: MacLean JN
+- authtype: Author
+  name: Hatsopoulos NG
+epubdate: 2025 Nov 6
+fulljournalname: eNeuro
+issue: '11'
+pages: ENEURO.0139-25.2025
+pmclivedate: 2025/11/12
+printpubdate: ''
+pubdate: 2025 Nov 6
+sortdate: 2025/11/06 00:00
+source: eNeuro
+title: Spatially Extensive LFP Correlations Identify Slow-Wave Sleep in Marmoset Sensorimotor
+  Cortex
+uid: '12604550'
+volume: '12'

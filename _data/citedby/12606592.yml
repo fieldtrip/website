@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40983228'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2025.121452
+- idtype: pmcid
+  value: PMC12606592
+- idtype: MID
+  value: NIHMS2116705
+authors:
+- authtype: Author
+  name: Ponasso GN
+- authtype: Author
+  name: Drumm DA
+- authtype: Author
+  name: Wang A
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Makaroff SN
+- authtype: Author
+  name: Raij T
+epubdate: 2025 Sep 20
+fulljournalname: NeuroImage
+issue: ''
+pages: '121452'
+pmclivedate: 2025/11/13
+printpubdate: 2025 Oct 15
+pubdate: 2025 Sep 20
+sortdate: 2025/09/20 00:00
+source: Neuroimage
+title: High-definition MEG source estimation using the reciprocal boundary element
+  fast multipole method
+uid: '12606592'
+volume: '320'

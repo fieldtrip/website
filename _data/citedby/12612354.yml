@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1111/psyp.70185
+- idtype: pmcid
+  value: PMC12612354
+authors:
+- authtype: Author
+  name: Nikolaev AR
+- authtype: Author
+  name: Johansson R
+- authtype: Author
+  name: Bramão I
+- authtype: Author
+  name: Johansson M
+epubdate: 2025 Nov 12
+fulljournalname: Psychophysiology
+issue: '11'
+pages: e70185
+pmclivedate: 2025/11/14
+printpubdate: 2025 Nov
+pubdate: 2025 Nov 12
+sortdate: 2025/11/12 00:00
+source: Psychophysiology
+title: Neural Dynamics of Relational Memory Retrieval Across Eye Movements
+uid: '12612354'
+volume: '62'

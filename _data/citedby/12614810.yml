@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41191715'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1013629
+- idtype: pmcid
+  value: PMC12614810
+authors:
+- authtype: Author
+  name: Liardi A
+- authtype: Author
+  name: Rosas FE
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Blackburne G
+- authtype: Author
+  name: Bor D
+- authtype: Author
+  name: Mediano PA
+epubdate: 2025 Nov 5
+fulljournalname: PLOS Computational Biology
+issue: '11'
+pages: e1013629
+pmclivedate: 2025/11/14
+printpubdate: ''
+pubdate: 2025 Nov 5
+sortdate: 2025/11/05 00:00
+source: PLoS Comput Biol
+title: Null models for comparing information decomposition across complex systems
+uid: '12614810'
+volume: '21'
