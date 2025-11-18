@@ -25,9 +25,7 @@ Typically, a detector optode can detect light that originates from multiple sour
 
 ### Dataset information
 
-The data used in this tutorial is available from our download server on <https://download.fieldtriptoolbox.org/tutorial/nirs_multichannel/>.
-
-For the XML file you probably have to _right-click_ and use the _save-as_ option, otherwise it will display the XML content in your browser.
+The data used in this tutorial is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/nirs_multichannel). For the XML file you have to _right-click_ and use the _save-as_ option, otherwise it will display the XML content in your browser.
 
 You should now have the following files in your folder:
 

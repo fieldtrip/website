@@ -29,7 +29,7 @@ The recorded and later processed fNIRS signal is comparable to fMRI in that sens
 
 In this dataset the motor cortex was probed using an Oxymon MK III system of Artinis Medical Systems. The optodes were placed over the motor cortex, and subsequently the subject was asked to perform finger tapping. Alongside the recordings from the brain, we recorded an event channel with annotations describing what the participant was doing. In the event channel, an 'A' was recorded at the moment the participant started finger tapping, and a 'B' was recorded at the moment the participant stopped tapping. This motor task was repeated for a total of 12 times and all data was saved, including the event channel, in an `.oxy3` file.
 
-The data used in this tutorial is available from our download server on <https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/>. Specifically, you should download [motor_cortex.oxy3](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/motor_cortex.oxy3) and [optodetemplates.xml](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/optodetemplates.xml). For the XML file please _right-click_ and use the _save-as_ option.
+The data used in this tutorial is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel). Specifically, you should download [motor_cortex.oxy3](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/motor_cortex.oxy3) and [optodetemplates.xml](https://download.fieldtriptoolbox.org/tutorial/nirs_singlechannel/optodetemplates.xml). For the XML file please _right-click_ and use the _save-as_ option.
 
 ## Procedure
 

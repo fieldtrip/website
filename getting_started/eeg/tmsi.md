@@ -6,7 +6,9 @@ redirect_from:
     - /getting_started/tmsi/
 ---
 
-[Twente Medical Systems International](https://www.tmsi.com) or TMSi is a Dutch company with a focusses on EEG amplifiers. Some of the TMSi amplifiers are or have been used by other companies under their own brand names, notably the [Refa](https://www.tmsi.com/products/refa/) system which was integrated by ANT Neuro and by BrainProducts in their own system. TMSi also has its own acquisition software for its amplifiers, Polybench, which is probably the software that you are using if you purchased your EEG hardware directly from TMSi. The remainder of this page deals with the EEG data recorded using Polybench.
+[Twente Medical Systems International](https://www.tmsi.com) or TMSi is a Dutch company with a focusses on EEG amplifiers. Some of the TMSi amplifiers are or have been used by other companies under their own brand names, notably the [Refa](https://www.tmsi.com/products/refa/) system which was integrated by ANT Neuro and by BrainProducts in their own systems.
+
+TMSi has its own acquisition software for its amplifiers, Polybench, which is probably the software that you are using if you purchased your EEG hardware directly from TMSi. The remainder of this page deals with the EEG data recorded using Polybench.
 
 The Polybench acquisition software writes the data to the `.Poly5` file format. To read the data in the normal and recommended fashion, you would do
 

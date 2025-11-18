@@ -6,7 +6,11 @@ redirect_from:
     - /getting_started/egi/
 ---
 
-Please add information if you're using EGI/Philips/Magstim data and want to share info with other FieldTrip users.
+{% include markup/green %}
+Electrical Geodesics Inc. (EGI) was a company specialized in high density EEG systems using their geodesic net with wet sponges as ellectrodes. It was acquired by Philips in 2017, and in 2020 sold to Magstim. It currently again operates under the name [EGI](https://www.egi.com), which is also the name we continued to use in FieldTrip code and documentation.
+{% include markup/end %}
+
+Please add information if you're using an EGI/Philips/Magstim system and/or data and want to share info with other FieldTrip users.
 
 ## Introduction to the EGI file formats
 
@@ -15,11 +19,11 @@ Net Station can export data to several data formats that FieldTrip can read in.
 - Data in the .egis, .sbin, and .mff formats can be read in by FieldTrip. We don't have details on how well they work, and what the known issues are.
 - For the simple binary (.raw) format only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
 - After exporting to EDF/EDF+ (.edf) all channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
-- Other formats like .ave, .gave, .ses are not supported, but the data can be read by exporting to one of the supported formats.
+- Other formats like .ave, .gave, .ses are not supported, but the data can be read by first exporting to one of the supported formats.
 
 ## Meta File Format (mff)
 
-The beta version of NetStation 4.5 (and up) writes data in mff, which is supported by FieldTrip as of 2011. FieldTrip reads in the data of all signals (hdEEG-net, PIB, etc). Data sets containing multiple epochs are supported, FieldTrip keeps track of the offset to the start of the recording for all epochs. Also events are read in, and also with discontinuous epochs aligning of events to data works.
+The beta version of NetStation 4.5 (and up) writes data in .mff format, which is supported by FieldTrip as of 2011. FieldTrip reads in the data of all signals (hdEEG-net, PIB, etc). Data sets containing multiple epochs are supported, FieldTrip keeps track of the offset to the start of the recording for all epochs. Also events are read in, and also with discontinuous epochs aligning of events to data works.
 
 The initial (v1) implementation was made by Ingrid Nieuwenhuis. It works for quite a few datasets but also has a number of known limitations (a.o. not full reading of info from triggers/events).
 
