@@ -1,6 +1,4 @@
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
+- link: /tutorial/sensor/preprocessing_erp.md
+  title: Preprocessing of EEG data and computing ERPs
+- link: /faq/other/datasets.md
+  title: Which datasets are used in the documentation and where are they used?

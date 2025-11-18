@@ -1,12 +1,8 @@
-- title:  Streaming realtime data from Neuralynx
-  link:  /development/realtime/neuralynx
-
-- title:  How can I deal with a discontinuous Neuralynx LFP recording?
-  link:  /faq/preproc/dataformat/discontinuous_neuralynx
-
-- title:  Getting started with Neuralynx data
-  link:  /getting_started/intracranial/neuralynx
-
-- title:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/intracranial/neuralynx_fcdc
-
+- link: /getting_started/intracranial/neuralynx.md
+  title: Getting started with Neuralynx data
+- link: /getting_started/intracranial/neuralynx_fcdc.md
+  title: Getting started with Neuralynx data recorded at the Donders Institute
+- link: /faq/preproc/dataformat/discontinuous_neuralynx.md
+  title: How can I deal with a discontinuous Neuralynx LFP recording?
+- link: /development/realtime/neuralynx.md
+  title: Streaming realtime data from Neuralynx

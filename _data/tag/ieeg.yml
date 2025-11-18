@@ -1,18 +1,12 @@
-- title:  Analysis of high-gamma band signals in human ECoG
-  link:  /example/spectral/ecog_ny
-
-- title:  Getting started with human ECoG data
-  link:  /getting_started/intracranial/human_ecog
-
-- title:  Getting started with BioImage Suite
-  link:  /getting_started/othersoftware/bioimage
-
-- title:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/intracranial/human_ecog
-
-- title:  Analysis of monkey ECoG recordings
-  link:  /tutorial/intracranial/monkey_ecog
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/intracranial/mouse_eeg
-
+- link: /example/spectral/ecog_ny.md
+  title: Analysis of high-gamma band signals in human ECoG
+- link: /tutorial/intracranial/human_ecog.md
+  title: Analysis of human ECoG and sEEG recordings
+- link: /tutorial/intracranial/monkey_ecog.md
+  title: Analysis of monkey ECoG recordings
+- link: /tutorial/intracranial/mouse_eeg.md
+  title: Channel and source analysis of mouse EEG
+- link: /getting_started/othersoftware/bioimage.md
+  title: Getting started with BioImage Suite
+- link: /getting_started/intracranial/human_ecog.md
+  title: Getting started with human ECoG data

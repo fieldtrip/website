@@ -1,18 +1,12 @@
-- title:  How to incorporate head movements in MEG analysis
-  link:  /example/sensor/headmovement_meg
-
-- title:  Using general linear modeling on time series data
-  link:  /example/stats/glm_timeseries
-
-- title:  Using general linear modeling over trials
-  link:  /example/stats/glm_trials
-
-- title:  Using general linear modeling to analyze NIRS timeseries data
-  link:  /example/stats/nirs_glm
-
-- title:  Getting started with LIMO MEEG
-  link:  /getting_started/othersoftware/limo
-
-- title:  SPM Sensor-level stats demo
-  link:  /workshop/meg-uk-2015/spm_stats
-
+- link: /getting_started/othersoftware/limo.md
+  title: Getting started with LIMO MEEG
+- link: /example/sensor/headmovement_meg.md
+  title: How to incorporate head movements in MEG analysis
+- link: /workshop/meg-uk-2015/spm_stats.md
+  title: SPM Sensor-level stats demo
+- link: /example/stats/glm_timeseries.md
+  title: Using general linear modeling on time series data
+- link: /example/stats/glm_trials.md
+  title: Using general linear modeling over trials
+- link: /example/stats/nirs_glm.md
+  title: Using general linear modeling to analyze NIRS timeseries data

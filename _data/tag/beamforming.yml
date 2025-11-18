@@ -1,9 +1,6 @@
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/source/beamforming
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
-
+- link: /workshop/aarhus2015/beamformingerf.md
+  title: Beamforming evoked fields and potentials in combined MEG/EEG data
+- link: /workshop/oslo2019/beamforming.md
+  title: Beamforming oscillatory responses in MEG data
+- link: /tutorial/source/beamforming.md
+  title: Beamforming oscillatory responses in combined MEG/EEG data

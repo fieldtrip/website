@@ -1,15 +1,10 @@
-- title:  Release and quality control
-  link:  /development/releasing
-
-- title:  Testing
-  link:  /development/testing
-
-- title:  I am having problems downloading
-  link:  /faq/organization/download_ftpproblem
-
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/organization/fieldtrip_downloadversion
-
-- title:  Which version of FieldTrip should I download?
-  link:  /faq/other/download_version
-
+- link: /faq/organization/download_ftpproblem.md
+  title: I am having problems downloading
+- link: /development/releasing.md
+  title: Release and quality control
+- link: /development/testing.md
+  title: Testing
+- link: /faq/organization/fieldtrip_downloadversion.md
+  title: Which version of FieldTrip should I download?
+- link: /faq/other/download_version.md
+  title: Which version of FieldTrip should I download?

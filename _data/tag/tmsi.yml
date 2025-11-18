@@ -1,6 +1,4 @@
-- title:  Streaming realtime data from TMSI EEG amplifiers
-  link:  /development/realtime/tmsi
-
-- title:  Getting started with TMSi data
-  link:  /getting_started/eeg/tmsi
-
+- link: /getting_started/eeg/tmsi.md
+  title: Getting started with TMSi data
+- link: /development/realtime/tmsi.md
+  title: Streaming realtime data from TMSI EEG amplifiers

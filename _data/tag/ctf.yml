@@ -1,51 +1,34 @@
-- title:  MEG dataformats
-  link:  /dataformat/meg
-
-- title:  Streaming realtime data from CTF
-  link:  /development/realtime/ctf
-
-- title:  Converting an example MEG dataset for sharing in BIDS
-  link:  /example/other/bids_meg
-
-- title:  Fixing a missing channel
-  link:  /example/preproc/fixing_a_missing_sensor
-
-- title:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-  link:  /example/sensor/megrealign
-
-- title:  How can I change the head localization in a CTF dataset?
-  link:  /faq/experiment/ctf_changeheadloc
-
-- title:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/other/anonymization_ctf
-
-- title:  Why should I set continuous to yes for CTF data?
-  link:  /faq/preproc/dataformat/continuous
-
-- title:  I am having problems reading the CTF .hc headcoordinates file
-  link:  /faq/preproc/dataformat/ctf_fixhc
-
-- title:  How can I fix a corrupt CTF meg4 file?
-  link:  /faq/preproc/dataformat/ctf_fixmeg4
-
-- title:  How can I fix a corrupt CTF res4 header file?
-  link:  /faq/preproc/dataformat/ctf_fixres4
-
-- title:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/preproc/dataformat/ctf_readcorrupted
-
-- title:  How does the CTF higher-order gradiometer work?
-  link:  /faq/preproc/dataformat/ctf_syntheticgradient
-
-- title:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/source/anat_dicom2ctf
-
-- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/source/anat_landmarks
-
-- title:  Getting started with CTF data
-  link:  /getting_started/meg/ctf
-
-- title:  Template 3-D gradiometer descriptions
-  link:  /template/gradiometer
-
+- link: /example/other/bids_meg.md
+  title: Converting an example MEG dataset for sharing in BIDS
+- link: /example/preproc/fixing_a_missing_sensor.md
+  title: Fixing a missing channel
+- link: /getting_started/meg/ctf.md
+  title: Getting started with CTF data
+- link: /faq/source/anat_landmarks.md
+  title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+- link: /faq/other/anonymization_ctf.md
+  title: How can I anonymize or deidentify a CTF dataset?
+- link: /faq/experiment/ctf_changeheadloc.md
+  title: How can I change the head localization in a CTF dataset?
+- link: /faq/source/anat_dicom2ctf.md
+  title: How can I convert an anatomical MRI from DICOM into CTF format?
+- link: /faq/preproc/dataformat/ctf_fixmeg4.md
+  title: How can I fix a corrupt CTF meg4 file?
+- link: /faq/preproc/dataformat/ctf_fixres4.md
+  title: How can I fix a corrupt CTF res4 header file?
+- link: /faq/preproc/dataformat/ctf_readcorrupted.md
+  title: How can I read corrupted (unsaved) CTF data?
+- link: /faq/preproc/dataformat/ctf_syntheticgradient.md
+  title: How does the CTF higher-order gradiometer work?
+- link: /faq/preproc/dataformat/ctf_fixhc.md
+  title: I am having problems reading the CTF .hc headcoordinates file
+- link: /example/sensor/megrealign.md
+  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+- link: /dataformat/meg.md
+  title: MEG dataformats
+- link: /development/realtime/ctf.md
+  title: Streaming realtime data from CTF
+- link: /template/gradiometer.md
+  title: Template 3-D gradiometer descriptions
+- link: /faq/preproc/dataformat/continuous.md
+  title: Why should I set continuous to yes for CTF data?

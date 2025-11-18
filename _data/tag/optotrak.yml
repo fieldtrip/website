@@ -1,3 +1,2 @@
-- title:  Converting an example motion tracking dataset for sharing in BIDS
-  link:  /example/other/bids_motion
-
+- link: /example/other/bids_motion.md
+  title: Converting an example motion tracking dataset for sharing in BIDS

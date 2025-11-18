@@ -1,12 +1,9 @@
-- title:  Getting started with reading raw EEG or MEG data
-  link:  /example/preproc/raw_meeg
-
-- title:  Making your own trialfun for conditional trial definition
-  link:  /example/preproc/trialfun
-
-- title:  Is it possible to keep track of trial-specific information in my analysis pipeline?
-  link:  /faq/preproc/events/trialinfo
-
-- title:  FieldTrip Walkthrough
-  link:  /walkthrough
-
+- link: /walkthrough.md
+  title: FieldTrip Walkthrough
+- link: /example/preproc/raw_meeg.md
+  title: Getting started with reading raw EEG or MEG data
+- link: /faq/preproc/events/trialinfo.md
+  title: Is it possible to keep track of trial-specific information in my analysis
+    pipeline?
+- link: /example/preproc/trialfun.md
+  title: Making your own trialfun for conditional trial definition

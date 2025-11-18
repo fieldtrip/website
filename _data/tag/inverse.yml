@@ -1,6 +1,5 @@
-- title:  Inverse source parameter estimates from EEG/MEG data
-  link:  /development/module/inverse
-
-- title:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-  link:  /faq/source/inspect_geometries
-
+- link: /faq/source/inspect_geometries.md
+  title: How can I visualize the different geometrical objects that are needed for
+    forward and inverse computations?
+- link: /development/module/inverse.md
+  title: Inverse source parameter estimates from EEG/MEG data

@@ -1,3 +1,2 @@
-- title:  Compute EEG leadfields using a concentric spheres headmodel
-  link:  /example/source/concentricspheres
-
+- link: /example/source/concentricspheres.md
+  title: Compute EEG leadfields using a concentric spheres headmodel

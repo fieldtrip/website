@@ -1,9 +1,6 @@
-- title:  MEG dataformats
-  link:  /dataformat/meg
-
-- title:  Getting started with BTi/4D data
-  link:  /getting_started/meg/bti
-
-- title:  Template 3-D gradiometer descriptions
-  link:  /template/gradiometer
-
+- link: /getting_started/meg/bti.md
+  title: Getting started with BTi/4D data
+- link: /dataformat/meg.md
+  title: MEG dataformats
+- link: /template/gradiometer.md
+  title: Template 3-D gradiometer descriptions

@@ -1,27 +1,16 @@
-- title:  Spike and LFP dataformats
-  link:  /dataformat/spike
-
-- title:  Getting started with animal electrophysiology data, including spikes
-  link:  /getting_started/intracranial/animal
-
-- title:  Getting started with Blackrock data
-  link:  /getting_started/intracranial/blackrock
-
-- title:  Getting started with Cyberkinetics data
-  link:  /getting_started/intracranial/cyberkinetics
-
-- title:  Getting started with Neuralynx data
-  link:  /getting_started/intracranial/neuralynx
-
-- title:  Getting started with Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/intracranial/neuralynx_fcdc
-
-- title:  Getting started with Plexon data
-  link:  /getting_started/intracranial/plexon
-
-- title:  Importing your data
-  link:  /reading_data
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-
+- link: /getting_started/intracranial/blackrock.md
+  title: Getting started with Blackrock data
+- link: /getting_started/intracranial/cyberkinetics.md
+  title: Getting started with Cyberkinetics data
+- link: /getting_started/intracranial/neuralynx.md
+  title: Getting started with Neuralynx data
+- link: /getting_started/intracranial/neuralynx_fcdc.md
+  title: Getting started with Neuralynx data recorded at the Donders Institute
+- link: /getting_started/intracranial/plexon.md
+  title: Getting started with Plexon data
+- link: /getting_started/intracranial/animal.md
+  title: Getting started with animal electrophysiology data, including spikes
+- link: /tutorial/intro/introduction.md
+  title: Introduction to the FieldTrip toolbox
+- link: /dataformat/spike.md
+  title: Spike and LFP dataformats

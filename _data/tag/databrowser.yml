@@ -1,6 +1,5 @@
-- title:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/matlab/databrowser_crash
-
-- title:  How can I use the databrowser?
-  link:  /faq/plotting/databrowser
-
+- link: /faq/plotting/databrowser.md
+  title: How can I use the databrowser?
+- link: /faq/matlab/databrowser_crash.md
+  title: The databrowser crashes and destroys the whole MATLAB session, how can I
+    resolve this?

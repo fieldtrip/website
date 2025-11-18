@@ -1,9 +1,6 @@
-- title:  Converting an example eyetracker dataset for sharing in BIDS
-  link:  /example/other/bids_eyetracker
-
-- title:  Combine MEG with Eyelink eyetracker data
-  link:  /example/preproc/meg_eyelink
-
-- title:  Getting started with SR-Research EyeLink eye-tracker data
-  link:  /getting_started/eyetracker/eyelink
-
+- link: /example/preproc/meg_eyelink.md
+  title: Combine MEG with Eyelink eyetracker data
+- link: /example/other/bids_eyetracker.md
+  title: Converting an example eyetracker dataset for sharing in BIDS
+- link: /getting_started/eyetracker/eyelink.md
+  title: Getting started with SR-Research EyeLink eye-tracker data

@@ -1,12 +1,8 @@
-- title:  Independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/preproc/ica_eog
-
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  Automatic artifact rejection
-  link:  /tutorial/preproc/automatic_artifact_rejection
-
-- title:  Cleaning artifacts using ICA
-  link:  /tutorial/preproc/ica_artifact_cleaning
-
+- link: /tutorial/preproc/automatic_artifact_rejection.md
+  title: Automatic artifact rejection
+- link: /tutorial/preproc/ica_artifact_cleaning.md
+  title: Cleaning artifacts using ICA
+- link: /example/preproc/ica_eog.md
+  title: Independent component analysis (ICA) to remove EOG artifacts
+- link: /faq/other/datasets.md
+  title: Which datasets are used in the documentation and where are they used?

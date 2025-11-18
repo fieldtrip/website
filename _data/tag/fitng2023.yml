@@ -1,6 +1,5 @@
-- title:  Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Neuroimaging Group
-  link:  /workshop/fitng2023
-
-- title:  Analysis script to perform the group analysis
-  link:  /workshop/fitng2023/do_group_analysis
-
+- link: /workshop/fitng2023/do_group_analysis.md
+  title: Analysis script to perform the group analysis
+- link: /workshop/fitng2023.md
+  title: Interactive Virtual Workshop organized by the Fetal, Infant, & Toddler Neuroimaging
+    Group

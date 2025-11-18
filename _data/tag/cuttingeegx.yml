@@ -1,9 +1,6 @@
-- title:  CuttingEEG X workshop at the Donders
-  link:  /workshop/cuttingeegx
-
-- title:  SQUIDs versus OPMs
-  link:  /workshop/cuttingeegx/squids_vs_opms
-
-- title:  Test your MATLAB and FieldTrip installation in advance
-  link:  /workshop/cuttingeegx/test_installation
-
+- link: /workshop/cuttingeegx.md
+  title: CuttingEEG X workshop at the Donders
+- link: /workshop/cuttingeegx/squids_vs_opms.md
+  title: SQUIDs versus OPMs
+- link: /workshop/cuttingeegx/test_installation.md
+  title: Test your MATLAB and FieldTrip installation in advance

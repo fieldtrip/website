@@ -1,6 +1,4 @@
-- title:  Localizing the sources underlying the difference in event-related fields
-  link:  /example/source/difference_erf
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-
+- link: /workshop/aarhus2015/beamformingerf.md
+  title: Beamforming evoked fields and potentials in combined MEG/EEG data
+- link: /example/source/difference_erf.md
+  title: Localizing the sources underlying the difference in event-related fields

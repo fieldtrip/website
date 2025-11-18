@@ -1,24 +1,18 @@
-- title:  Detect the muscle activity in an EMG channel and use that as trial definition
-  link:  /example/preproc/trialdef_emg
-
-- title:  Making your own trialfun for conditional trial definition
-  link:  /example/preproc/trialfun
-
-- title:  What is the relation between "events" (such as triggers) and "trials"?
-  link:  /faq/preproc/events/eventsversustrials
-
-- title:  How can I transform trigger values from bits to decimal representation with a trialfun?
-  link:  /faq/preproc/events/trialfun_bit2decimal
-
-- title:  Is it possible to keep track of trial-specific information in my analysis pipeline?
-  link:  /faq/preproc/events/trialinfo
-
-- title:  How can I check or decipher the sequence of triggers in my data?
-  link:  /faq/preproc/events/triggers
-
-- title:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/sensor/preprocessing_erp
-
-- title:  FieldTrip Walkthrough
-  link:  /walkthrough
-
+- link: /example/preproc/trialdef_emg.md
+  title: Detect the muscle activity in an EMG channel and use that as trial definition
+- link: /walkthrough.md
+  title: FieldTrip Walkthrough
+- link: /faq/preproc/events/triggers.md
+  title: How can I check or decipher the sequence of triggers in my data?
+- link: /faq/preproc/events/trialfun_bit2decimal.md
+  title: How can I transform trigger values from bits to decimal representation with
+    a trialfun?
+- link: /faq/preproc/events/trialinfo.md
+  title: Is it possible to keep track of trial-specific information in my analysis
+    pipeline?
+- link: /example/preproc/trialfun.md
+  title: Making your own trialfun for conditional trial definition
+- link: /tutorial/sensor/preprocessing_erp.md
+  title: Preprocessing of EEG data and computing ERPs
+- link: /faq/preproc/events/eventsversustrials.md
+  title: What is the relation between "events" (such as triggers) and "trials"?

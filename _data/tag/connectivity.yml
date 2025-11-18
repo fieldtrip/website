@@ -1,36 +1,24 @@
-- title:  Connectivity estimates for EEG/MEG time series data
-  link:  /development/module/connectivity
-
-- title:  Conditional Granger causality in the frequency domain
-  link:  /example/spectral/granger_conditional
-
-- title:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/spectral/datatype_freq
-
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
-- title:  Whole brain connectivity and network analysis
-  link:  /tutorial/connectivity/networkanalysis
-
-- title:  Whole brain connectivity and network analysis
-  link:  /tutorial/connectivity/networkanalysis_eeg
-
-- title:  Whole brain connectivity and network analysis
-  link:  /tutorial/connectivity/networkanalysis_old
-
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti2015/simulation
-
-- title:  FieldTrip connectivity demo
-  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
-
+- link: /tutorial/connectivity/coherence.md
+  title: Analysis of corticomuscular coherence
+- link: /tutorial/connectivity/connectivity_sensor_source.md
+  title: Analysis of sensor- and source-level connectivity
+- link: /example/spectral/granger_conditional.md
+  title: Conditional Granger causality in the frequency domain
+- link: /development/module/connectivity.md
+  title: Connectivity estimates for EEG/MEG time series data
+- link: /tutorial/connectivity/connectivity_aef.md
+  title: Connectivity in auditory evoked responses
+- link: /tutorial/connectivity/connectivityextended.md
+  title: Extended analysis of sensor- and source-level connectivity
+- link: /workshop/meg-uk-2015/fieldtrip-connectivity-demo.md
+  title: FieldTrip connectivity demo
+- link: /faq/spectral/datatype_freq.md
+  title: In what way can frequency domain data be represented in FieldTrip?
+- link: /workshop/chieti2015/simulation.md
+  title: Simulating and estimating, what about model (mis)match?
+- link: /tutorial/connectivity/networkanalysis.md
+  title: Whole brain connectivity and network analysis
+- link: /tutorial/connectivity/networkanalysis_old.md
+  title: Whole brain connectivity and network analysis
+- link: /tutorial/connectivity/networkanalysis_eeg.md
+  title: Whole brain connectivity and network analysis

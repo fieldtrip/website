@@ -1,3 +1,2 @@
-- title:  How can I debug my analysis script if a FieldTrip function gives an error?
-  link:  /faq/development/matlab_debugging
-
+- link: /faq/development/matlab_debugging.md
+  title: How can I debug my analysis script if a FieldTrip function gives an error?

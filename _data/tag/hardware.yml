@@ -1,6 +1,4 @@
-- title:  Where can I find open hardware for MEG and EEG?
-  link:  /faq/other/open_hardware
-
-- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/source/anat_landmarks
-
+- link: /faq/source/anat_landmarks.md
+  title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+- link: /faq/other/open_hardware.md
+  title: Where can I find open hardware for MEG and EEG?

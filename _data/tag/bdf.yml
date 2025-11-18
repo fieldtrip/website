@@ -1,6 +1,4 @@
-- title:  Example analysis pipeline for BioSemi data
-  link:  /example/other/biosemi
-
-- title:  Getting started with BioSemi BDF data
-  link:  /getting_started/eeg/biosemi
-
+- link: /example/other/biosemi.md
+  title: Example analysis pipeline for BioSemi data
+- link: /getting_started/eeg/biosemi.md
+  title: Getting started with BioSemi BDF data

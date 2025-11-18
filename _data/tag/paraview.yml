@@ -1,6 +1,5 @@
-- title:  Getting started with ParaView
-  link:  /getting_started/othersoftware/paraview
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-
+- link: /tutorial/source/headmodel_eeg_fem.md
+  title: Creating a FEM volume conduction model of the head for source reconstruction
+    of EEG data
+- link: /getting_started/othersoftware/paraview.md
+  title: Getting started with ParaView

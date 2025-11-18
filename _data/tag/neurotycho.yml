@@ -1,6 +1,4 @@
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  Analysis of monkey ECoG recordings
-  link:  /tutorial/intracranial/monkey_ecog
-
+- link: /tutorial/intracranial/monkey_ecog.md
+  title: Analysis of monkey ECoG recordings
+- link: /faq/other/datasets.md
+  title: Which datasets are used in the documentation and where are they used?

@@ -1,6 +1,4 @@
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms/tms-eeg
-
+- link: /tutorial/tms/tms-eeg.md
+  title: Dealing with TMS-EEG datasets
+- link: /faq/other/datasets.md
+  title: Which datasets are used in the documentation and where are they used?

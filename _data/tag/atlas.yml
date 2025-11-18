@@ -1,6 +1,4 @@
-- title:  Create atlas-based MNI-aligned grids in individual head coordinates
-  link:  /example/source/sourcemodel_aligned2mni_atlas
-
-- title:  Template anatomical atlases and parcellation schemes
-  link:  /template/atlas
-
+- link: /example/source/sourcemodel_aligned2mni_atlas.md
+  title: Create atlas-based MNI-aligned grids in individual head coordinates
+- link: /template/atlas.md
+  title: Template anatomical atlases and parcellation schemes

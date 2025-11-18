@@ -1,6 +1,4 @@
-- title:  How to select the correct SPM toolbox?
-  link:  /faq/matlab/spmversion
-
-- title:  Getting started with SPM
-  link:  /getting_started/othersoftware/spm
-
+- link: /getting_started/othersoftware/spm.md
+  title: Getting started with SPM
+- link: /faq/matlab/spmversion.md
+  title: How to select the correct SPM toolbox?

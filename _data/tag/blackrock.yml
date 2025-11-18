@@ -1,6 +1,4 @@
-- title:  Getting started with Blackrock data
-  link:  /getting_started/intracranial/blackrock
-
-- title:  Getting started with Cyberkinetics data
-  link:  /getting_started/intracranial/cyberkinetics
-
+- link: /getting_started/intracranial/blackrock.md
+  title: Getting started with Blackrock data
+- link: /getting_started/intracranial/cyberkinetics.md
+  title: Getting started with Cyberkinetics data

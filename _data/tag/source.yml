@@ -1,165 +1,118 @@
-- title:  How to import data from MNE-Python and FreeSurfer
-  link:  /example/other/import_mne
-
-- title:  Plotting the result of source reconstruction on a cortical mesh
-  link:  /example/plotting/plotting_source_surface
-
-- title:  Common filters in beamforming
-  link:  /example/source/beamformer_commonfilter
-
-- title:  Use your own forward leadfield model in an inverse beamformer computation
-  link:  /example/source/beamformer_ownforward
-
-- title:  Testing BEM created EEG lead fields
-  link:  /example/source/bem_evaluation
-
-- title:  Compute forward simulated data with the low-level ft_compute_leadfield
-  link:  /example/source/compute_leadfield
-
-- title:  Check the quality of the anatomical coregistration
-  link:  /example/source/coregistration_quality_control
-
-- title:  Localizing the sources underlying the difference in event-related fields
-  link:  /example/source/difference_erf
-
-- title:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/source/dipolefit_somatosensory_erf
-
-- title:  Align EEG electrode positions to BEM headmodel
-  link:  /example/source/electrodes2bem
-
-- title:  How to create a head model if you do not have an individual MRI
-  link:  /example/source/fittemplate
-
-- title:  Make MEG leadfields using different headmodels
-  link:  /example/source/headmodel_various
-
-- title:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/source/simulateddata
-
-- title:  Compute forward simulated data and apply a beamformer scan
-  link:  /example/source/simulateddata_beamformer
-
-- title:  Compute forward simulated data and apply a dipole fit
-  link:  /example/source/simulateddata_dipolefit
-
-- title:  Create MNI-aligned grids in individual head coordinates
-  link:  /example/source/sourcemodel_aligned2mni
-
-- title:  Create atlas-based MNI-aligned grids in individual head coordinates
-  link:  /example/source/sourcemodel_aligned2mni_atlas
-
-- title:  Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
-  link:  /example/source/sourcemodel_fem_centroids
-
-- title:  Create a template source model aligned to MNI space
-  link:  /example/source/sourcemodel_mnitemplate
-
-- title:  Combined EEG and MEG source reconstruction
-  link:  /example/source/sourcerecon_meeg
-
-- title:  Symmetric dipole pairs for beamforming
-  link:  /example/source/symmetry
-
-- title:  Source statistics
-  link:  /example/stats/source_statistics
-
-- title:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/source/anat_coreg
-
-- title:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/source/anat_landmarks
-
-- title:  Where is the anterior commissure?
-  link:  /faq/source/anterior_commissure
-
-- title:  How can I fine-tune my BEM volume conduction model?
-  link:  /faq/source/bem_finetune
-
-- title:  What is the conductivity of the brain, CSF, skull and skin tissue?
-  link:  /faq/source/conductivity_defaults
-
-- title:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/source/coordsys
-
-- title:  What kind of volume conduction models of the head (head models) are implemented?
-  link:  /faq/source/datatype_headmodel
-
-- title:  Where can I find the dipoli command-line executable?
-  link:  /faq/source/dipoli_filelocation
-
-- title:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
-  link:  /faq/source/inspect_geometries
-
-- title:  How can I determine the anatomical label of a source or electrode?
-  link:  /faq/source/label_lookup
-
-- title:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
-  link:  /faq/source/sensors_accuracy
-
-- title:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/source/sourcerecon_avgref
-
-- title:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
-  link:  /faq/source/sourcerecon_checkalignment
-
-- title:  Can I restrict the source reconstruction to the grey matter?
-  link:  /faq/source/sourcerecon_greymatter
-
-- title:  Can I do combined EEG and MEG source reconstruction?
-  link:  /faq/source/sourcerecon_meeg
-
-- title:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
-  link:  /faq/source/sourcerecon_outside
-
-- title:  Why is there a rim around the brain for which the source reconstruction is not computed?
-  link:  /faq/source/sourcerecon_rim
-
-- title:  Reference documentation
-  link:  /reference
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-
-- title:  Connectivity in auditory evoked responses
-  link:  /tutorial/connectivity/connectivity_aef
-
-- title:  Channel and source analysis of mouse EEG
-  link:  /tutorial/intracranial/mouse_eeg
-
-- title:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/intro/introduction
-
-- title:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/source/beamformer
-
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
-
-- title:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_bem
-
-- title:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/source/headmodel_eeg_fem
-
-- title:  Creating a volume conduction model of the head for source reconstruction of MEG data
-  link:  /tutorial/source/headmodel_meg
-
-- title:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/source/minimumnormestimate
-
-- title:  Creating a source model for source reconstruction of MEG or EEG data
-  link:  /tutorial/source/sourcemodel
-
-- title:  Computation of virtual MEG channels in source-space
-  link:  /tutorial/source/virtual_sensors
-
-- title:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
-
+- link: /example/source/electrodes2bem.md
+  title: Align EEG electrode positions to BEM headmodel
+- link: /tutorial/connectivity/coherence.md
+  title: Analysis of corticomuscular coherence
+- link: /workshop/oslo2019/beamforming.md
+  title: Beamforming oscillatory responses in MEG data
+- link: /faq/source/sourcerecon_meeg.md
+  title: Can I do combined EEG and MEG source reconstruction?
+- link: /faq/source/sourcerecon_greymatter.md
+  title: Can I restrict the source reconstruction to the grey matter?
+- link: /tutorial/intracranial/mouse_eeg.md
+  title: Channel and source analysis of mouse EEG
+- link: /example/source/coregistration_quality_control.md
+  title: Check the quality of the anatomical coregistration
+- link: /example/source/sourcerecon_meeg.md
+  title: Combined EEG and MEG source reconstruction
+- link: /example/source/beamformer_commonfilter.md
+  title: Common filters in beamforming
+- link: /tutorial/source/virtual_sensors.md
+  title: Computation of virtual MEG channels in source-space
+- link: /example/source/simulateddata_beamformer.md
+  title: Compute forward simulated data and apply a beamformer scan
+- link: /example/source/simulateddata_dipolefit.md
+  title: Compute forward simulated data and apply a dipole fit
+- link: /example/source/simulateddata.md
+  title: Compute forward simulated data using ft_dipolesimulation
+- link: /example/source/compute_leadfield.md
+  title: Compute forward simulated data with the low-level ft_compute_leadfield
+- link: /tutorial/connectivity/connectivity_aef.md
+  title: Connectivity in auditory evoked responses
+- link: /example/source/sourcemodel_aligned2mni.md
+  title: Create MNI-aligned grids in individual head coordinates
+- link: /example/source/sourcemodel_mnitemplate.md
+  title: Create a template source model aligned to MNI space
+- link: /example/source/sourcemodel_aligned2mni_atlas.md
+  title: Create atlas-based MNI-aligned grids in individual head coordinates
+- link: /tutorial/source/headmodel_eeg_bem.md
+  title: Creating a BEM volume conduction model of the head for source reconstruction
+    of EEG data
+- link: /tutorial/source/headmodel_eeg_fem.md
+  title: Creating a FEM volume conduction model of the head for source reconstruction
+    of EEG data
+- link: /tutorial/source/sourcemodel.md
+  title: Creating a source model for source reconstruction of MEG or EEG data
+- link: /tutorial/source/headmodel_meg.md
+  title: Creating a volume conduction model of the head for source reconstruction
+    of MEG data
+- link: /example/source/dipolefit_somatosensory_erf.md
+  title: Fit a dipole to the tactile ERF after mechanical stimulation
+- link: /faq/source/anat_landmarks.md
+  title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+- link: /faq/source/coordsys.md
+  title: How are the different head and MRI coordinate systems defined?
+- link: /faq/source/sourcerecon_checkalignment.md
+  title: How can I check whether the grid that I have is aligned to the segmented
+    volume and to the sensor gradiometer?
+- link: /faq/source/label_lookup.md
+  title: How can I determine the anatomical label of a source or electrode?
+- link: /faq/source/bem_finetune.md
+  title: How can I fine-tune my BEM volume conduction model?
+- link: /faq/source/inspect_geometries.md
+  title: How can I visualize the different geometrical objects that are needed for
+    forward and inverse computations?
+- link: /faq/source/anat_coreg.md
+  title: How to coregister an anatomical MRI with the gradiometer or electrode positions?
+- link: /example/source/fittemplate.md
+  title: How to create a head model if you do not have an individual MRI
+- link: /example/other/import_mne.md
+  title: How to import data from MNE-Python and FreeSurfer
+- link: /tutorial/intro/introduction.md
+  title: Introduction to the FieldTrip toolbox
+- link: /faq/source/sourcerecon_outside.md
+  title: Is it good or bad to have dipole locations outside of the brain for which
+    the source reconstruction is computed?
+- link: /faq/source/sensors_accuracy.md
+  title: Is it important to have accurate measurements of electrode locations for
+    EEG source reconstruction?
+- link: /tutorial/source/electrode.md
+  title: Localizing electrodes using a 3D-scanner
+- link: /tutorial/source/beamformer.md
+  title: Localizing oscillatory sources using beamformer techniques
+- link: /example/source/difference_erf.md
+  title: Localizing the sources underlying the difference in event-related fields
+- link: /tutorial/source/beamformingextended.md
+  title: Localizing visual gamma and cortico-muscular coherence using DICS
+- link: /example/source/headmodel_various.md
+  title: Make MEG leadfields using different headmodels
+- link: /example/plotting/plotting_source_surface.md
+  title: Plotting the result of source reconstruction on a cortical mesh
+- link: /reference.md
+  title: Reference documentation
+- link: /references_methods.md
+  title: References to implemented methods
+- link: /tutorial/source/minimumnormestimate.md
+  title: Source reconstruction of event-related fields using minimum-norm estimation
+- link: /example/stats/source_statistics.md
+  title: Source statistics
+- link: /example/source/symmetry.md
+  title: Symmetric dipole pairs for beamforming
+- link: /example/source/bem_evaluation.md
+  title: Testing BEM created EEG lead fields
+- link: /example/source/sourcemodel_fem_centroids.md
+  title: Use an MNI-aligned grid with a FEM headmodel in individual head coordinates
+- link: /example/source/beamformer_ownforward.md
+  title: Use your own forward leadfield model in an inverse beamformer computation
+- link: /faq/source/conductivity_defaults.md
+  title: What is the conductivity of the brain, CSF, skull and skin tissue?
+- link: /faq/source/datatype_headmodel.md
+  title: What kind of volume conduction models of the head (head models) are implemented?
+- link: /faq/source/dipoli_filelocation.md
+  title: Where can I find the dipoli command-line executable?
+- link: /faq/source/anterior_commissure.md
+  title: Where is the anterior commissure?
+- link: /faq/source/sourcerecon_rim.md
+  title: Why is there a rim around the brain for which the source reconstruction is
+    not computed?
+- link: /faq/source/sourcerecon_avgref.md
+  title: Why should I use an average reference for EEG source reconstruction?

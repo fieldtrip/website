@@ -1,9 +1,6 @@
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti2015/simulation
-
+- link: /tutorial/connectivity/connectivity_sensor_source.md
+  title: Analysis of sensor- and source-level connectivity
+- link: /tutorial/connectivity/connectivityextended.md
+  title: Extended analysis of sensor- and source-level connectivity
+- link: /workshop/chieti2015/simulation.md
+  title: Simulating and estimating, what about model (mis)match?

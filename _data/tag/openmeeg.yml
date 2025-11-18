@@ -1,3 +1,2 @@
-- title:  How do I install the OpenMEEG binaries
-  link:  /faq/source/openmeeg
-
+- link: /faq/source/openmeeg.md
+  title: How do I install the OpenMEEG binaries

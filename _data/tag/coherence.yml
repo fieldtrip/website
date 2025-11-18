@@ -1,36 +1,24 @@
-- title:  Correlation analysis of fMRI data
-  link:  /example/other/fmri_correlationanalysis
-
-- title:  Effect of SNR on Coherence
-  link:  /example/spectral/coherence_snr
-
-- title:  What is the difference between coherence and coherency?
-  link:  /faq/spectral/coherence_coherency
-
-- title:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/spectral/datatype_freq
-
-- title:  How can I compute inter-trial coherence?
-  link:  /faq/spectral/itc
-
-- title:  How to interpret the sign of the phase slope index?
-  link:  /faq/spectral/phaseslopeindex
-
-- title:  References to implemented methods
-  link:  /references_methods
-
-- title:  Analysis of corticomuscular coherence
-  link:  /tutorial/connectivity/coherence
-
-- title:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivity_sensor_source
-
-- title:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity/connectivityextended
-
-- title:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/source/beamformingextended
-
-- title:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti2015/simulation
-
+- link: /tutorial/connectivity/coherence.md
+  title: Analysis of corticomuscular coherence
+- link: /tutorial/connectivity/connectivity_sensor_source.md
+  title: Analysis of sensor- and source-level connectivity
+- link: /example/other/fmri_correlationanalysis.md
+  title: Correlation analysis of fMRI data
+- link: /example/spectral/coherence_snr.md
+  title: Effect of SNR on Coherence
+- link: /tutorial/connectivity/connectivityextended.md
+  title: Extended analysis of sensor- and source-level connectivity
+- link: /faq/spectral/itc.md
+  title: How can I compute inter-trial coherence?
+- link: /faq/spectral/phaseslopeindex.md
+  title: How to interpret the sign of the phase slope index?
+- link: /faq/spectral/datatype_freq.md
+  title: In what way can frequency domain data be represented in FieldTrip?
+- link: /tutorial/source/beamformingextended.md
+  title: Localizing visual gamma and cortico-muscular coherence using DICS
+- link: /references_methods.md
+  title: References to implemented methods
+- link: /workshop/chieti2015/simulation.md
+  title: Simulating and estimating, what about model (mis)match?
+- link: /faq/spectral/coherence_coherency.md
+  title: What is the difference between coherence and coherency?

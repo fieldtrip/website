@@ -1,3 +1,2 @@
-- title:  Rereference EEG and iEEG data
-  link:  /example/preproc/rereference
-
+- link: /example/preproc/rereference.md
+  title: Rereference EEG and iEEG data

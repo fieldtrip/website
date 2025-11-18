@@ -1,3 +1,2 @@
-- title:  Forward computation of EEG/MEG source models
-  link:  /development/module/forward
-
+- link: /development/module/forward.md
+  title: Forward computation of EEG/MEG source models

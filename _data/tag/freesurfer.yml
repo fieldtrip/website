@@ -1,3 +1,2 @@
-- title:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/intracranial/human_ecog
-
+- link: /tutorial/intracranial/human_ecog.md
+  title: Analysis of human ECoG and sEEG recordings

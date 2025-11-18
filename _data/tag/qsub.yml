@@ -1,18 +1,12 @@
-- title:  Distributed computing
-  link:  /development/distributed
-
-- title:  Distributed computing using a Linux compute cluster
-  link:  /development/module/qsub
-
-- title:  What are the different approaches I can take for distributed computing?
-  link:  /faq/distcomp/distributed_computing
-
-- title:  How to get started with distributed computing using qsub?
-  link:  /faq/distcomp/distributed_qsub
-
-- title:  How to compile MATLAB code into stand-alone executables?
-  link:  /faq/distcomp/matlab_compile
-
-- title:  Speeding up your analysis using distributed computing with qsub
-  link:  /tutorial/scripting/distributedcomputing_qsub
-
+- link: /development/distributed.md
+  title: Distributed computing
+- link: /development/module/qsub.md
+  title: Distributed computing using a Linux compute cluster
+- link: /faq/distcomp/matlab_compile.md
+  title: How to compile MATLAB code into stand-alone executables?
+- link: /faq/distcomp/distributed_qsub.md
+  title: How to get started with distributed computing using qsub?
+- link: /tutorial/scripting/distributedcomputing_qsub.md
+  title: Speeding up your analysis using distributed computing with qsub
+- link: /faq/distcomp/distributed_computing.md
+  title: What are the different approaches I can take for distributed computing?

@@ -1,3 +1,2 @@
-- title:  Preprocessing of EEG/MEG time series data
-  link:  /development/module/preproc
-
+- link: /development/module/preproc.md
+  title: Preprocessing of EEG/MEG time series data

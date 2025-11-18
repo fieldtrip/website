@@ -1,24 +1,17 @@
-- title:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/other/datasets
-
-- title:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
-- title:  Convert the EEG sedation dataset for sharing in BIDS
-  link:  /workshop/madrid2019/bids_sedation
-
-- title:  Details on the resting-state EEG dataset recorded with different sedation levels
-  link:  /workshop/madrid2019/eeg_sedation
-
-- title:  Cleaning and processing resting-state EEG
-  link:  /workshop/madrid2019/tutorial_cleaning
-
-- title:  Time-frequency and spectral analysis
-  link:  /workshop/madrid2019/tutorial_freq
-
-- title:  Cluster-based permutation tests on resting-state EEG power spectra
-  link:  /workshop/madrid2019/tutorial_stats
-
-- title:  Frequency analysis of resting state EEG data
-  link:  /workshop/nigeria2025/frequency
-
+- link: /workshop/madrid2019/tutorial_cleaning.md
+  title: Cleaning and processing resting-state EEG
+- link: /workshop/madrid2019/tutorial_stats.md
+  title: Cluster-based permutation tests on resting-state EEG power spectra
+- link: /workshop/madrid2019/bids_sedation.md
+  title: Convert the EEG sedation dataset for sharing in BIDS
+- link: /workshop/madrid2019/eeg_sedation.md
+  title: Details on the resting-state EEG dataset recorded with different sedation
+    levels
+- link: /workshop/madrid2019.md
+  title: FieldTrip workshop in Madrid
+- link: /workshop/nigeria2025/frequency.md
+  title: Frequency analysis of resting state EEG data
+- link: /workshop/madrid2019/tutorial_freq.md
+  title: Time-frequency and spectral analysis
+- link: /faq/other/datasets.md
+  title: Which datasets are used in the documentation and where are they used?

@@ -1,3 +1,2 @@
-- title:  Streaming realtime EEG data to and from Arduino
-  link:  /development/realtime/arduino
-
+- link: /development/realtime/arduino.md
+  title: Streaming realtime EEG data to and from Arduino

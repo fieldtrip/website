@@ -1,3 +1,2 @@
-- title:  Streaming realtime data from OpenBCI
-  link:  /development/realtime/openbci
-
+- link: /development/realtime/openbci.md
+  title: Streaming realtime data from OpenBCI

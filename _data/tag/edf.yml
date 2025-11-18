@@ -1,9 +1,7 @@
-- title:  How can I read all channels from an EDF file that contains multiple sampling rates?
-  link:  /faq/preproc/dataformat/edf2fieldtrip
-
-- title:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/eeg/edf
-
-- title:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sensor/sleep
-
+- link: /tutorial/sensor/sleep.md
+  title: Extracting the brain state and events from continuous sleep EEG
+- link: /getting_started/eeg/edf.md
+  title: Getting started with EDF (European Data Format) data
+- link: /faq/preproc/dataformat/edf2fieldtrip.md
+  title: How can I read all channels from an EDF file that contains multiple sampling
+    rates?

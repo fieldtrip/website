@@ -1,3 +1,2 @@
-- title:  Streaming realtime fMRI from Siemens scanners
-  link:  /getting_started/realtime/fmri
-
+- link: /getting_started/realtime/fmri.md
+  title: Streaming realtime fMRI from Siemens scanners

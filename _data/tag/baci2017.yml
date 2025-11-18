@@ -1,9 +1,6 @@
-- title:  Solving the EEG forward problem using BEM and FEM
-  link:  /workshop/baci2017/forwardproblem
-
-- title:  Solving the EEG inverse problem
-  link:  /workshop/baci2017/inverseproblem
-
-- title:  Preprocessing of EEG data
-  link:  /workshop/baci2017/preprocessing
-
+- link: /workshop/baci2017/preprocessing.md
+  title: Preprocessing of EEG data
+- link: /workshop/baci2017/forwardproblem.md
+  title: Solving the EEG forward problem using BEM and FEM
+- link: /workshop/baci2017/inverseproblem.md
+  title: Solving the EEG inverse problem

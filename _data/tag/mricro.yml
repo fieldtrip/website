@@ -1,3 +1,2 @@
-- title:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/source/epilepsy
-
+- link: /tutorial/source/epilepsy.md
+  title: Virtual channel analysis of epilepsy MEG data

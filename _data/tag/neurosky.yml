@@ -1,3 +1,2 @@
-- title:  Streaming realtime data from Neurosky ThinkCap
-  link:  /development/realtime/neurosky
-
+- link: /development/realtime/neurosky.md
+  title: Streaming realtime data from Neurosky ThinkCap

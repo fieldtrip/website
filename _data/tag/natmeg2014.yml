@@ -1,21 +1,15 @@
-- title:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/sensor/preprocessing
-
-- title:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/sensor/timefrequency
-
-- title:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/source/beamforming
-
-- title:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/source/dipolefitting
-
-- title:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /tutorial/stats/statistics
-
-- title:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg2014
-
-- title:  Details of the auditory oddball combined MEG/EEG dataset
-  link:  /workshop/natmeg2014/meg_audodd
-
+- link: /tutorial/source/beamforming.md
+  title: Beamforming oscillatory responses in combined MEG/EEG data
+- link: /workshop/natmeg2014/meg_audodd.md
+  title: Details of the auditory oddball combined MEG/EEG dataset
+- link: /tutorial/source/dipolefitting.md
+  title: Dipole fitting of combined MEG/EEG data
+- link: /workshop/natmeg2014.md
+  title: FieldTrip course at the NatMEG in Stockholm
+- link: /tutorial/sensor/preprocessing.md
+  title: Preprocessing and event-related activity in combined MEG/EEG data
+- link: /tutorial/stats/statistics.md
+  title: Statistical analysis and multiple comparison correction for combined MEG/EEG
+    data
+- link: /tutorial/sensor/timefrequency.md
+  title: Time-frequency analysis of combined MEG/EEG data

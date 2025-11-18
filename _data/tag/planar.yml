@@ -1,6 +1,4 @@
-- title:  Find the orientation of planar gradiometers
-  link:  /example/other/planar_orientation
-
-- title:  The correct pipeline order for combining planar MEG channels
-  link:  /example/sensor/combineplanar_pipelineorder
-
+- link: /example/other/planar_orientation.md
+  title: Find the orientation of planar gradiometers
+- link: /example/sensor/combineplanar_pipelineorder.md
+  title: The correct pipeline order for combining planar MEG channels

@@ -1,15 +1,10 @@
-- title:  Advanced MEG/EEG toolkit at the Donders
-  link:  /workshop/toolkit2024
-
-- title:  Code of Conduct
-  link:  /workshop/toolkit2024/code_of_conduct
-
-- title:  Test your MATLAB and FieldTrip installation in advance
-  link:  /workshop/toolkit2024/test_installation
-
-- title:  Code of Conduct
-  link:  /workshop/toolkit2025/code_of_conduct
-
-- title:  Test your MATLAB and FieldTrip installation in advance
-  link:  /workshop/toolkit2025/test_installation
-
+- link: /workshop/toolkit2024.md
+  title: Advanced MEG/EEG toolkit at the Donders
+- link: /workshop/toolkit2024/code_of_conduct.md
+  title: Code of Conduct
+- link: /workshop/toolkit2025/code_of_conduct.md
+  title: Code of Conduct
+- link: /workshop/toolkit2024/test_installation.md
+  title: Test your MATLAB and FieldTrip installation in advance
+- link: /workshop/toolkit2025/test_installation.md
+  title: Test your MATLAB and FieldTrip installation in advance

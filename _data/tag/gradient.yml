@@ -1,3 +1,2 @@
-- title:  The correct pipeline order for combining planar MEG channels
-  link:  /example/sensor/combineplanar_pipelineorder
-
+- link: /example/sensor/combineplanar_pipelineorder.md
+  title: The correct pipeline order for combining planar MEG channels

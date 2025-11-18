@@ -1,6 +1,4 @@
-- title:  FieldTrip workshop in Aarhus
-  link:  /workshop/aarhus2015
-
-- title:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus2015/beamformingerf
-
+- link: /workshop/aarhus2015/beamformingerf.md
+  title: Beamforming evoked fields and potentials in combined MEG/EEG data
+- link: /workshop/aarhus2015.md
+  title: FieldTrip workshop in Aarhus

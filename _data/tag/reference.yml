@@ -1,6 +1,4 @@
-- title:  How should I refer to FieldTrip in my publication?
-  link:  /faq/organization/fieldtrip_reference
-
-- title:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/source/sourcerecon_avgref
-
+- link: /faq/organization/fieldtrip_reference.md
+  title: How should I refer to FieldTrip in my publication?
+- link: /faq/source/sourcerecon_avgref.md
+  title: Why should I use an average reference for EEG source reconstruction?

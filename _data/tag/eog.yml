@@ -1,3 +1,2 @@
-- title:  Combine MEG with Eyelink eyetracker data
-  link:  /example/preproc/meg_eyelink
-
+- link: /example/preproc/meg_eyelink.md
+  title: Combine MEG with Eyelink eyetracker data

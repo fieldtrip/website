@@ -1,24 +1,16 @@
-- title:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/other/capmapping
-
-- title:  How can I inspect the electrode impedances of my BrainVision data?
-  link:  /faq/preproc/dataformat/impedancecheck
-
-- title:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/source/fiducial
-
-- title:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/source/fiducials_definition
-
-- title:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/source/sensors_definition
-
-- title:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/source/structuresensor
-
-- title:  Template 3-D electrode sets
-  link:  /template/electrode
-
-- title:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/source/electrode
-
+- link: /faq/other/capmapping.md
+  title: Can I compare EEG channels between different electrode caps?
+- link: /faq/source/sensors_definition.md
+  title: How are electrodes, magnetometers or gradiometers described?
+- link: /faq/preproc/dataformat/impedancecheck.md
+  title: How can I inspect the electrode impedances of my BrainVision data?
+- link: /faq/source/fiducials_definition.md
+  title: How should I report the positions of the fiducial points on the head?
+- link: /faq/source/fiducial.md
+  title: How should I specify the fiducials for electrode realignment?
+- link: /tutorial/source/electrode.md
+  title: Localizing electrodes using a 3D-scanner
+- link: /faq/source/structuresensor.md
+  title: Should I use a Polhemus or a Structure Sensor to record electrode positions?
+- link: /template/electrode.md
+  title: Template 3-D electrode sets
