@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41218082'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1013659
+- idtype: pmcid
+  value: PMC12622836
+authors:
+- authtype: Author
+  name: Tewarie PK
+- authtype: Author
+  name: Abeysuriya R
+- authtype: Author
+  name: Panda R
+- authtype: Author
+  name: Nùñez P
+- authtype: Author
+  name: Vitello MM
+- authtype: Author
+  name: van der Lande G
+- authtype: Author
+  name: Gosseries O
+- authtype: Author
+  name: Thibaut A
+- authtype: Author
+  name: Laureys S
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Annen J
+epubdate: 2025 Nov 11
+fulljournalname: PLOS Computational Biology
+issue: '11'
+pages: e1013659
+pmclivedate: 2025/11/18
+printpubdate: ''
+pubdate: 2025 Nov 11
+sortdate: 2025/11/11 00:00
+source: PLoS Comput Biol
+title: Individual trajectories for recovery of neocortical activity in disorders of
+  consciousness
+uid: '12622836'
+volume: '21'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41238786'
+- idtype: doi
+  value: 10.1038/s41598-025-24232-z
+- idtype: pmcid
+  value: PMC12618595
+authors:
+- authtype: Author
+  name: Cai Q
+- authtype: Author
+  name: Thomas H
+- authtype: Author
+  name: Hyde V
+- authtype: Author
+  name: Laguna PL
+- authtype: Author
+  name: McNabb CB
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Jones DK
+- authtype: Author
+  name: Messaritaki E
+epubdate: 2025 Nov 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '40052'
+pmclivedate: 2025/11/16
+printpubdate: ''
+pubdate: 2025 Nov 14
+sortdate: 2025/11/14 00:00
+source: Sci Rep
+title: Decoding brain structure-function dynamics in health and in psychosis via an
+  autoencoder
+uid: '12618595'
+volume: '15'
