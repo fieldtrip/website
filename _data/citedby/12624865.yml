@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41263010'
+- idtype: doi
+  value: 10.1093/sleepadvances/zpaf073
+- idtype: pmcid
+  value: PMC12624865
+authors:
+- authtype: Author
+  name: Kasties V
+- authtype: Author
+  name: Meier N
+- authtype: Author
+  name: Moser NH
+- authtype: Author
+  name: Sassenburg R
+- authtype: Author
+  name: Karlen W
+- authtype: Author
+  name: Ferster ML
+- authtype: Author
+  name: Fattinger S
+- authtype: Author
+  name: Maric A
+- authtype: Author
+  name: Huber R
+epubdate: 2025 Oct 17
+fulljournalname: 'Sleep Advances: A Journal of the Sleep Research Society'
+issue: '4'
+pages: zpaf073
+pmclivedate: 2025/11/19
+printpubdate: ''
+pubdate: 2025 Oct 17
+sortdate: 2025/10/17 00:00
+source: Sleep Adv
+title: Optimizing automated phase-targeted auditory stimulation protocols for procedural
+  memory consolidation during sleep in a home setting
+uid: '12624865'
+volume: '6'

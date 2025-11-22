@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41262557'
+- idtype: doi
+  value: 10.1162/IMAG.a.1013
+- idtype: pmcid
+  value: PMC12624365
+authors:
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Qiu S
+- authtype: Author
+  name: He H
+epubdate: 2025 Nov 17
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1013
+pmclivedate: 2025/11/19
+printpubdate: ''
+pubdate: 2025 Nov 17
+sortdate: 2025/11/17 00:00
+source: Imaging Neurosci (Camb)
+title: Enhancing visual brain-computer interface through V1-targeted RTMS by modulating
+  visual attention
+uid: '12624365'
+volume: '3'

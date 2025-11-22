@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41258409'
+- idtype: doi
+  value: 10.1038/s44271-025-00334-2
+- idtype: pmcid
+  value: PMC12630853
+authors:
+- authtype: Author
+  name: Ameen MS
+- authtype: Author
+  name: Jacobs J
+- authtype: Author
+  name: Schabus M
+- authtype: Author
+  name: Hoedlmoser K
+- authtype: Author
+  name: Donoghue T
+epubdate: 2025 Nov 19
+fulljournalname: Communications Psychology
+issue: ''
+pages: '160'
+pmclivedate: 2025/11/21
+printpubdate: ''
+pubdate: 2025 Nov 19
+sortdate: 2025/11/19 00:00
+source: Commun Psychol
+title: Temporally resolved analyses of aperiodic features track neural dynamics during
+  sleep
+uid: '12630853'
+volume: '3'

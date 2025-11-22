@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '41026861'
+- idtype: doi
+  value: 10.1093/scan/nsaf101
+- idtype: pmcid
+  value: PMC12628313
+authors:
+- authtype: Author
+  name: Moerel D
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Chin JL
+- authtype: Author
+  name: Ciardo F
+- authtype: Author
+  name: Nijhuis P
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Smit S
+- authtype: Author
+  name: Varlet M
+epubdate: 2025 Sep 30
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf101
+pmclivedate: 2025/11/20
+printpubdate: ''
+pubdate: 2025 Sep 30
+sortdate: 2025/09/30 00:00
+source: Soc Cogn Affect Neurosci
+title: Neural decoding of competitive decision-making in Rock–Paper–Scissors
+uid: '12628313'
+volume: '20'
