@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/green %}
-Electrical Geodesics Inc. (EGI) was a company specialized in high density EEG systems using their geodesic net with wet sponges as ellectrodes. It was acquired by Philips in 2017, and in 2020 sold to Magstim. It currently again operates under the name [EGI](https://www.egi.com), which is also the name we continued to use in FieldTrip code and documentation.
+Electrical Geodesics Inc. (EGI) was a company specialized in high density EEG systems using their geodesic net with wet sponges as electrodes. It was acquired by Philips in 2017, and in 2020 sold to Magstim. It currently again operates under the name [EGI](https://www.egi.com), which is also the name we continued to use in FieldTrip code and documentation.
 {% include markup/end %}
 
 Please add information if you're using an EGI/Philips/Magstim system and/or data and want to share info with other FieldTrip users.

@@ -20,7 +20,7 @@ The data used in this example is available from our [download server](https://do
 
 ### Data in the .lvm format
 
-The .lvm files are ASCII text files with a header, followed by a tabular section with the data for each channel and sample. The .lvm files do not contain information on the location and orientation of the sensors. Reading these large ASCCI files is relatively inefficient, hence we recommend to read them as continuous data into memory in one go, and then segment them.
+The .lvm files are ASCII text files with a header, followed by a tabular section with the data for each channel and sample. The .lvm files do not contain information on the location and orientation of the sensors. Reading these large ASCII files is relatively inefficient, hence we recommend to read them as continuous data into memory in one go, and then segment them.
 
     cfg = [];
     cfg.dataset = 'VEP-raw.lvm';
