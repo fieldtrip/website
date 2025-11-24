@@ -17,6 +17,15 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 {% include youtube id="CPj4jJACeIs" %}
 
+## PracticalMEEG, Aix-en-Provence (October 2025)
+
+- [Get to know your data]https://www.youtube.com/watch?v=qt1CWUD128w() - Robert Oostenveld
+- [Tune in to your frequency space analysis](https://www.youtube.com/watch?v=DGPHTxguGvQ) - Natalie Schaworonkow
+- [Source level analysis I: Getting to source level maps](https://www.youtube.com/watch?v=AevlaqiqYLU) - John C Mosher
+- [Source level analysis II. Analysing source time-series](https://www.youtube.com/watch?v=iVKMQBdtR3s) - Guiomar Niso
+- [Get and report results with confidence I. Univariate approach](https://www.youtube.com/watch?v=c73hTMkfW5A) - Arnaud Delorme
+- [AI use in M/EEG analyses: How to be a (good) practitioner in LLM era](https://www.youtube.com/watch?v=BR_fogPfl5k) - Sylvain Chevallier
+
 ## African Brain Data Network EEG workshop, Nigeria (June 2025)
 
 - [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4) by Mikkel Vinding
@@ -87,6 +96,8 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 
 ## Workshop at BRAMS Institute, Montreal (2012)
 
+Julian Keil held a local workshop at the BRAMS Institute in Montreal covering the basic steps in FieldTrip. He recorded the whole session and put the videos online at <http://vimeo.com/user11934546/videos>. The accompanying MATLAB script can be found at <http://pastebin.com/yskmVKAh>.
+
 - [EEG Data Analysis Part 1](http://vimeo.com/43116694) by Julian Keil
 - [EEG Data Analysis Part 2](http://vimeo.com/43120640) by Julian Keil
 - [EEG Data Analysis Part 3 - Basics](http://vimeo.com/45658196) by Julian Keil
@@ -95,6 +106,8 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 - [EEG Data Analysis Part 6 - Basics](http://vimeo.com/45902548) by Julian Keil
 
 ## FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)
+
+The FieldTrip workshop presented in the context of the Human Connectome Project at Washington University in St. Louis  were recorded. After repeated efforts to increase the audio quality, the sound remains rather poor.
 
 - [An introduction to MEG and the FieldTrip toolbox](http://vimeo.com/21604990) by Robert Oostenveld
 - [Fundamentals of the analysis of neuronal oscillations](http://vimeo.com/21701689) by Jan-Mathijs Schoffelen
@@ -106,6 +119,10 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 ### FieldTrip videos
 
 We have a [YouTube channel](https://www.youtube.com/fieldtriptoolbox) on which we post our own video material and on which we link to relevant material from others.
+
+### CuttingEEG videos
+
+[CuttingEEG](https://cuttingeeg.org) regularly organizes scientific and training events, which are often recorded and which they share on their [YouTube channel](https://www.youtube.com/@cuttingeeg4866/playlists).
 
 ### NatMEG videos
 
