@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41249149'
+- idtype: doi
+  value: 10.1038/s41467-025-64987-7
+- idtype: pmcid
+  value: PMC12623485
+authors:
+- authtype: Author
+  name: Yang F
+- authtype: Author
+  name: Yuan P
+- authtype: Author
+  name: Shen L
+- authtype: Author
+  name: Zhou K
+- authtype: Author
+  name: He S
+- authtype: Author
+  name: Jiang Y
+epubdate: 2025 Nov 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '10058'
+pmclivedate: 2025/11/19
+printpubdate: ''
+pubdate: 2025 Nov 17
+sortdate: 2025/11/17 00:00
+source: Nat Commun
+title: Visual awareness sharpens and accelerates attentional sampling through enhancing
+  inhibitory neural modulation in the attention network
+uid: '12623485'
+volume: '16'

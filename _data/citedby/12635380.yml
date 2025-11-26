@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41266387'
+- idtype: doi
+  value: 10.1038/s41598-025-24702-4
+- idtype: pmcid
+  value: PMC12635380
+authors:
+- authtype: Author
+  name: Roffet F
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Delrieux C
+- authtype: Author
+  name: Patow G
+epubdate: 2025 Nov 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '41005'
+pmclivedate: 2025/11/22
+printpubdate: ''
+pubdate: 2025 Nov 20
+sortdate: 2025/11/20 00:00
+source: Sci Rep
+title: 'Deep learning and whole-brain networks for biomarker discovery: modeling the
+  dynamics of brain fluctuations in resting-state and cognitive tasks'
+uid: '12635380'
+volume: '15'
