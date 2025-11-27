@@ -17,7 +17,7 @@ For questions that are **not suitable** for the public email list or as GitHub i
 
 If needed, you can also contact us via regular mail:
 
-Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld  
+Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld and Jan Mathijs Schoffelen
 Radboud University  
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
