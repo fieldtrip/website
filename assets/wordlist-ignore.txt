@@ -118,6 +118,7 @@ analyse
 analysed
 Analysed
 analysi
+Analysing
 ANALYSISNAME
 analysispipeline
 analysisprotocol
@@ -4372,6 +4373,7 @@ scandip
 scd
 SCD
 Schäfer
+Schaworonkow
 Scheeringa
 Schelter
 Scherg
