@@ -697,6 +697,7 @@ checksize
 Cheng
 chennu
 Chennu
+Chevallier
 Cheveigne
 Chéveigné
 Cheyne
@@ -2734,6 +2735,7 @@ Liu
 LiveMEEG
 LKrxdrntWcQ
 LLC
+LLM
 Llevant
 lm
 LM
@@ -3700,6 +3702,8 @@ osx
 OSX
 ot
 othe
+otherdata
+othersoftware
 Ou
 ous
 outputargs
