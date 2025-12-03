@@ -1,0 +1,73 @@
+articleids:
+- idtype: pmid
+  value: '41289341'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003481
+- idtype: pmcid
+  value: PMC12646405
+authors:
+- authtype: Author
+  name: Dede AJ
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Gray SM
+- authtype: Author
+  name: Kelly JP
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Vahidi P
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Wu JY
+- authtype: Author
+  name: Lam SK
+- authtype: Author
+  name: Raskin JS
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Kim McManus O
+- authtype: Author
+  name: Sattar S
+- authtype: Author
+  name: Shaikhouni A
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Weber PB
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Roland JL
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Girgis F
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Ofen N
+- authtype: Author
+  name: Johnson EL
+epubdate: 2025 Nov 25
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3003481
+pmclivedate: 2025/11/26
+printpubdate: ''
+pubdate: 2025 Nov 25
+sortdate: 2025/11/25 00:00
+source: PLoS Biol
+title: Episodic memory involves transient and sparse connectivity aligned to both
+  internal and external events
+uid: '12646405'
+volume: '23'

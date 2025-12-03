@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41279367'
+- idtype: doi
+  value: 10.1101/2025.10.25.684527
+- idtype: pmcid
+  value: PMC12633289
+authors:
+- authtype: Author
+  name: Servetnik MV
+- authtype: Author
+  name: Wolff MJ
+- authtype: Author
+  name: Chunharas C
+- authtype: Author
+  name: Rademaker RL
+epubdate: 2025 Oct 26
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.10.25.684527
+pmclivedate: 2025/11/21
+printpubdate: ''
+pubdate: 2025 Oct 26
+sortdate: 2025/10/26 00:00
+source: bioRxiv
+title: Visual representations in the human brain rely on a reference frame that is
+  in between allocentric and retinocentric coordinates
+uid: '12633289'
+volume: ''

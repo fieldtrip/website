@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41312377'
+- idtype: doi
+  value: 10.1016/j.isci.2025.113874
+- idtype: pmcid
+  value: PMC12648984
+authors:
+- authtype: Author
+  name: Dupont W
+- authtype: Author
+  name: Dornier V
+- authtype: Author
+  name: Palluel-Germain R
+- authtype: Author
+  name: Robin A
+- authtype: Author
+  name: Lachaux JP
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Minotti L
+- authtype: Author
+  name: Vidal JR
+- authtype: Author
+  name: Perrone-Bertolotti M
+epubdate: 2025 Oct 28
+fulljournalname: iScience
+issue: '11'
+pages: '113874'
+pmclivedate: 2025/11/27
+printpubdate: ''
+pubdate: 2025 Oct 28
+sortdate: 2025/10/28 00:00
+source: iScience
+title: 'Reading about sensations recruits the posterior insula: An intracranial EEG
+  study'
+uid: '12648984'
+volume: '28'

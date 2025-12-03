@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41091135'
+- idtype: doi
+  value: 10.1111/nyas.70101
+- idtype: pmcid
+  value: PMC12645268
+authors:
+- authtype: Author
+  name: Virtala P
+- authtype: Author
+  name: Navarrete‐Arroyo S
+- authtype: Author
+  name: Partanen E
+- authtype: Author
+  name: Huotilainen M
+- authtype: Author
+  name: Kujala T
+epubdate: 2025 Oct 15
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: 204-219
+pmclivedate: 2025/11/26
+printpubdate: 2025 Nov
+pubdate: 2025 Oct 15
+sortdate: 2025/10/15 00:00
+source: Ann N Y Acad Sci
+title: Neural Discrimination of Temporal Patterns—Associations to Dyslexia Risk, Language
+  Abilities, and Music Activities
+uid: '12645268'
+volume: '1553'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '41309707'
+- idtype: doi
+  value: 10.1038/s41598-025-26291-8
+- idtype: pmcid
+  value: PMC12660935
+authors:
+- authtype: Author
+  name: Sevilla-García M
+- authtype: Author
+  name: Quivira-Lopesino A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Pusil S
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Fiedler P
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Cebolla AM
+- authtype: Author
+  name: Cheron G
+- authtype: Author
+  name: Brauns K
+- authtype: Author
+  name: Stahn AC
+- authtype: Author
+  name: Funke ME
+epubdate: 2025 Nov 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '42314'
+pmclivedate: 2025/11/29
+printpubdate: ''
+pubdate: 2025 Nov 27
+sortdate: 2025/11/27 00:00
+source: Sci Rep
+title: 'Brain power comparison between microgravity and head-down tilt bed rest: an
+  electroencephalography approach'
+uid: '12660935'
+volume: '15'

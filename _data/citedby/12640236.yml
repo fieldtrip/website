@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40900650'
+- idtype: doi
+  value: 10.1093/scan/nsaf089
+- idtype: pmcid
+  value: PMC12640236
+authors:
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Zatorre RJ
+epubdate: 2025 Sep 3
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsaf089
+pmclivedate: 2025/11/23
+printpubdate: ''
+pubdate: 2025 Sep 3
+sortdate: 2025/09/03 00:00
+source: Soc Cogn Affect Neurosci
+title: Visual congruency of performers’ movements enhances vocal music reward through
+  Mu entrainment
+uid: '12640236'
+volume: '20'

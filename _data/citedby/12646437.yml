@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41289230'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003479
+- idtype: pmcid
+  value: PMC12646437
+authors:
+- authtype: Author
+  name: Moerel D
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Smit S
+- authtype: Author
+  name: Varlet M
+epubdate: 2025 Nov 25
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3003479
+pmclivedate: 2025/11/26
+printpubdate: ''
+pubdate: 2025 Nov 25
+sortdate: 2025/11/25 00:00
+source: PLoS Biol
+title: Collaborative rule learning promotes interbrain information alignment
+uid: '12646437'
+volume: '23'

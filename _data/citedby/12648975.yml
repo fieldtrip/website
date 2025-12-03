@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41312449'
+- idtype: doi
+  value: 10.1016/j.nbscr.2025.100136
+- idtype: pmcid
+  value: PMC12648975
+authors:
+- authtype: Author
+  name: Schulz P
+- authtype: Author
+  name: Stecher HI
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2025 Nov 7
+fulljournalname: Neurobiology of Sleep and Circadian Rhythms
+issue: ''
+pages: '100136'
+pmclivedate: 2025/11/27
+printpubdate: ''
+pubdate: 2025 Nov 7
+sortdate: 2025/11/07 00:00
+source: Neurobiol Sleep Circadian Rhythms
+title: 'Chronotype in alpha-tACS: Preliminary evidence hints at sleep quality modulation
+  of aftereffects in evening types in the morning'
+uid: '12648975'
+volume: '19'

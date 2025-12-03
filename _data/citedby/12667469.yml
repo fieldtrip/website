@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41020476'
+- idtype: doi
+  value: 10.1002/advs.202507878
+- idtype: pmcid
+  value: PMC12667469
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Fernández‐Rubio G
+- authtype: Author
+  name: Andersen MH
+- authtype: Author
+  name: Malvaso C
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Testa C
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Rosso M
+epubdate: 2025 Sep 29
+fulljournalname: Advanced Science
+issue: '44'
+pages: e07878
+pmclivedate: 2025/12/02
+printpubdate: ''
+pubdate: 2025 Sep 29
+sortdate: 2025/09/29 00:00
+source: Adv Sci (Weinh)
+title: BROAD‐NESS Uncovers Dual‐Stream Mechanisms Underlying Predictive Coding in
+  Auditory Memory Networks
+uid: '12667469'
+volume: '12'

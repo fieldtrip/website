@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41290886'
+- idtype: doi
+  value: 10.1038/s41598-025-25921-5
+- idtype: pmcid
+  value: PMC12647911
+authors:
+- authtype: Author
+  name: Zou J
+- authtype: Author
+  name: Qi H
+- authtype: Author
+  name: Yang C
+- authtype: Author
+  name: Fan C
+- authtype: Author
+  name: Dong Y
+epubdate: 2025 Nov 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '41861'
+pmclivedate: 2025/11/27
+printpubdate: ''
+pubdate: 2025 Nov 25
+sortdate: 2025/11/25 00:00
+source: Sci Rep
+title: Classifying schizophrenia subtypes via resting-state EEG complexity networks
+uid: '12647911'
+volume: '15'

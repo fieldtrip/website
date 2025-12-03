@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41306659'
+- idtype: doi
+  value: 10.3389/fneur.2025.1617317
+- idtype: pmcid
+  value: PMC12644071
+authors:
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Zhang W
+- authtype: Author
+  name: Liu SX
+- authtype: Author
+  name: Han B
+- authtype: Author
+  name: Chen Q
+epubdate: 2025 Nov 11
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1617317'
+pmclivedate: 2025/11/26
+printpubdate: ''
+pubdate: 2025 Nov 11
+sortdate: 2025/11/11 00:00
+source: Front Neurol
+title: Reproducibility of temporally evolving seizure patterns and network connectivity
+  in focal epilepsy
+uid: '12644071'
+volume: '16'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '40423710'
+- idtype: doi
+  value: 10.1007/s00787-025-02745-2
+- idtype: pmcid
+  value: PMC12647258
+authors:
+- authtype: Author
+  name: Shner-Livne G
+- authtype: Author
+  name: Barak N
+- authtype: Author
+  name: Shitrit I
+- authtype: Author
+  name: Abend R
+- authtype: Author
+  name: Shechner T
+epubdate: 2025 May 27
+fulljournalname: European Child & Adolescent Psychiatry
+issue: '11'
+pages: 3387-3399
+pmclivedate: 2025/11/27
+printpubdate: '2025'
+pubdate: 2025 May 27
+sortdate: 2025/05/27 00:00
+source: Eur Child Adolesc Psychiatry
+title: Developmental differences in threat learning are associated with changes in
+  frontal-central theta activity
+uid: '12647258'
+volume: '34'

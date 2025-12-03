@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41300189'
+- idtype: doi
+  value: 10.3390/brainsci15111182
+- idtype: pmcid
+  value: PMC12650380
+authors:
+- authtype: Author
+  name: Nikolin S
+- authtype: Author
+  name: Wang M
+- authtype: Author
+  name: Moffa A
+- authtype: Author
+  name: Huang H
+- authtype: Author
+  name: Xu M
+- authtype: Author
+  name: Pande SR
+- authtype: Author
+  name: Martin D
+epubdate: 2025 Oct 31
+fulljournalname: Brain Sciences
+issue: '11'
+pages: '1182'
+pmclivedate: 2025/11/27
+printpubdate: ''
+pubdate: 2025 Oct 31
+sortdate: 2025/10/31 00:00
+source: Brain Sci
+title: An Investigation of the Modulating Effects of Sensory Stimulation and Transcranial
+  Magnetic Stimulation on Memory-Related Brain Activity
+uid: '12650380'
+volume: '15'
