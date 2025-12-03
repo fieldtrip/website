@@ -61,7 +61,7 @@ The raw data is available on our download server, together with the script to co
       cfg.ses = [];
       cfg.run = [];
       cfg.task = 'auditoryoddball';
-      cfg.datatype = 'nirs';
+      cfg.suffix = 'nirs';
 
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';
@@ -123,7 +123,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
       cfg.ses = [];
       cfg.run = [];
       cfg.task = 'listenandrepeat';
-      cfg.datatype = 'nirs';
+      cfg.suffix = 'nirs';
 
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = 'Defenderfer 2019; fNIRS data files for event-related vocoding/background noise study';
@@ -170,7 +170,7 @@ The raw data is available on our download server, together with the script to co
       cfg.ses = [];
       cfg.run = [];
       cfg.task = 'auditoryoddball';
-      cfg.datatype = 'nirs';
+      cfg.suffix = 'nirs';
 
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';

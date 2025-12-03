@@ -46,7 +46,7 @@ cfg.dataset_description.DatasetDOI          = 'n/a';
 cfg.method = 'copy'; % the original data is in a BIDS -compliant format and can simply be copied
 
 cfg.bidsroot = './bids';  % write to the present working directory
-cfg.datatype = 'emg';
+cfg.suffix = 'emg';
 cfg.sub = 'NT05';
 
 % these are general fields

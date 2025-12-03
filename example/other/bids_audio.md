@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io)  does currently not specify how to represent audio recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
+The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent audio recordings, but an extension with audio data is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 {% include markup/end %}
 
 In language studies, and especially speech production experiments, audio might be recorded on itself or along with other measurements, e.g., physiological signals from the brain. The audio can be used to monitor the subjects responses to a task, or can be off-line annotated/segmented in sentences, words or phonemes. Neither the audio recording (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.
@@ -24,7 +24,7 @@ The example includes the audio recording under the “original” directory. It 
 
 In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIfTI), you probably want to keep a copy of the original data, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the audio file but only copying and renaming it, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
-```
+```matlab
 cfg = [];
 
 cfg.InstitutionName             = 'Radboud University';
@@ -49,7 +49,7 @@ cfg.TaskDescription = 'The subject was instructed to speak a random sentence int
 cfg.method    = 'copy'; % the audio should simply be copied, not converted
 cfg.dataset   = './original/short_sentence.mp3';
 cfg.bidsroot  = './bids';
-cfg.datatype  = 'audio';
+cfg.suffix    = 'audio';
 cfg.sub       = '01';
 cfg.task      = 'speech';
 

@@ -93,7 +93,7 @@ for subindx=1:numel(subj)
     cfg.run = runindx;
     cfg.dataset = anonname; % this is the intermediate name
     
-    cfg.datatype = 'meg';
+    cfg.suffix = 'meg';
     cfg.method = 'copy'; % the original data is in a BIDS-compliant format and can simply be copied
     
     cfg.InstitutionName             = 'Radboud University';

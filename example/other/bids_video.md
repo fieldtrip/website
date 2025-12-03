@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent video recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
+The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent video recordings, but an extension with video data is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 {% include markup/end %}
 
 In many experiments video data can be recorded along with other measurements. This is often used to off-line screen the subjects behavior and to annotate the video, i.e. note the time segments with specific (desired or undesired) behavior. Neither the video recording  (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.
@@ -22,7 +22,7 @@ The example includes the original video recording under the “original” direc
 
 In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIfTI), you probably want to keep a copy of the original data, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the video file, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
-```
+```matlab
 cfg = [];
 
 cfg.InstitutionName             = 'Radboud University';
@@ -47,7 +47,7 @@ cfg.TaskDescription = 'The subject was walking, stopping, turning, etcetera, whi
 cfg.method    = 'copy'; % video should simply be copied, not converted
 cfg.dataset   = './original/Video_20190411_210224.mp4';
 cfg.bidsroot  = './bids';
-cfg.datatype  = 'video';
+cfg.suffix    = 'video';
 cfg.sub       = '01';
 cfg.task      = 'walking';
 

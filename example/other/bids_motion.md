@@ -55,7 +55,7 @@ cfg.dataset = './original/self_test_30April2015_ADA.c3d';  % exported from Quali
 % cfg.dataset = './original/self_test_30April2015_ADA.tsv'; % alternative export format
 
 cfg.bidsroot = './bids';  % write to the present working directory
-cfg.datatype = 'motion';
+cfg.suffix = 'motion';
 cfg.sub = 'S01';
 
 % these are general fields
@@ -158,7 +158,7 @@ cfg.dataset = './original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv';  % e
 % cfg.dataset = './original/self_test_30April2015_ADA.tsv'; % alternative export format
 
 cfg.bidsroot = './bids';  % write to the present working directory
-cfg.datatype = 'motion';
+cfg.suffix = 'motion';
 cfg.sub = 'S01';
 
 % these are general fields
@@ -284,7 +284,7 @@ cfg.scans.acq_time = datetime('now');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% call data2bids for tracking system "HTCVive"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-cfg.datatype = 'motion';
+cfg.suffix = 'motion';
 
 % this is used in the filename
 cfg.tracksys = 'HTCVive';
@@ -347,7 +347,7 @@ data2bids(cfg, motionDataHTCVive);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% call data2bids for tracking system "PhaseSpace"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-cfg.datatype = 'motion';
+cfg.suffix = 'motion';
 
 cfg.tracksys = 'PhaseSpace';
 
@@ -477,7 +477,7 @@ data2bids(cfg, motionDataPhaseSpace);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% call data2bids for the EEG data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-cfg.datatype = 'eeg';
+cfg.suffix = 'eeg';
 
 % update these fields
 cfg.tracksys = [];
@@ -537,7 +537,7 @@ cfg.TaskDescription = 'Walking in a corridor';
 cfg.task = 'walking';
 
 cfg.bidsroot = './bids';  % write to the present working directory
-cfg.datatype = 'motion';
+cfg.suffix = 'motion';
 
 %% we can export c3d files, here for subject one
 cfg.sub = 'S01';

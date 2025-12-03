@@ -68,7 +68,7 @@ cfg.dataset_description.DatasetDOI          = 'n/a';
 cfg.method    = 'convert'; % the eyelink-specific format is not supported, convert it to plain TSV
 cfg.dataset   = './original/ashcal.asc';
 cfg.bidsroot  = './bids';  % write to the working directory
-cfg.datatype  = 'eyetracker';
+cfg.suffix    = 'eyetracker';
 cfg.task      = 'calibration';
 
 % this is general metadata that ends up in the _eyetracker.json file
@@ -205,7 +205,7 @@ for i=1:numel(subjid)
 
     % these are used to construct the directory and file name
     cfg.bidsroot = targetpath;
-    cfg.datatype = 'eyetracker';
+    cfg.suffix = 'eyetracker';
     cfg.sub = subjid{i};
     cfg.run = run;
     cfg.task = 'adaptation';
@@ -227,7 +227,7 @@ The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be r
 
 In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g., units, origin, calibration procedure), the metadata is very sparse.
 
-```
+```matlab
 filename = {
   'original/pp23671_rest1_samples.txt'
   'original/pp23671_task1_samples.txt'
@@ -261,7 +261,7 @@ cfg.ManufacturerModelName = 'iView X MRI-LR';
 
 cfg.method    = 'convert'; % the SMI-specific format is not supported, convert it to plain TSV
 cfg.bidsroot  = './bids';  % write to the working directory
-cfg.datatype  = 'eyetracker';
+cfg.suffix    = 'eyetracker';
 
 for i=1:4
   cfg.dataset   = filename{i};

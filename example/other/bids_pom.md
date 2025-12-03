@@ -385,7 +385,7 @@ for i=1:numel(filename)
  cfg.bidsroot = targetpath;
  cfg.sub = sub;
  cfg.task = task;
- cfg.datatype = 'emg';
+ cfg.suffix = 'emg';
 
  cfg.participant.age = nan;
  cfg.participant.sex = 'n/a';
@@ -416,7 +416,7 @@ for i=1:numel(filename)
 
  % specify the type and target location
  cfg.bidsroot = targetpath;
- cfg.datatype = 'events';
+ cfg.suffix = 'events';
  cfg.sub = sub;
  switch task
  case 'prac1'
@@ -463,7 +463,7 @@ for i=1:numel(filename)
 
  % specify the type and target location
  cfg.bidsroot = targetpath;
- cfg.datatype = 'events';
+ cfg.suffix = 'events';
  cfg.sub = sub;
  cfg.task = 'motor';
  cfg.acq = 'log'; % this is needed to distinguish the different recordings of the events
@@ -499,7 +499,7 @@ for i=1:numel(filename)
 
  % specify the type and target location
  cfg.bidsroot = targetpath;
- cfg.datatype = 'eyetracker';
+ cfg.suffix = 'eyetracker';
  cfg.sub = sub;
  switch task
  case 'rest1'

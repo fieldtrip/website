@@ -43,7 +43,7 @@ for i=1:length(datainfo)
 
   cfg = [];
   cfg.dataset = fullfile(sourcedata, [filename '.set']);
-  cfg.datatype = 'eeg';
+  cfg.suffix = 'eeg';
 
   % copying would have also been an option, but the BrainVision format is more widely supported
   cfg.method = 'convert';

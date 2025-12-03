@@ -28,7 +28,7 @@ If your EEG data is in a format supported by BIDS, you only have to rename the f
 
 Rather than starting with 10 real EEG recordings, we can download a publicly available EEG file and copy it multiple times, pretending that this file contains the EEG data for each of our subjects. You can download the dataset from the EEGLAB website at <https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set>.
 
-```
+```matlab
 sub = {'01', '02', '03', '04', '05', '06', '07', '08', '09', '10'};
 
 % for subject 3 the age is unknown, for subject 2 the sex is not specified
@@ -39,7 +39,7 @@ for subindx=1:numel(sub)
 
   cfg = [];
   cfg.method    = 'copy';
-  cfg.datatype  = 'eeg';
+  cfg.suffix    = 'eeg';
 
   % specify the input file name, here we are using the same file for every subject
   cfg.dataset   = 'Eeglab_data.set';
@@ -104,7 +104,7 @@ for subindx=1:numel(sub)
 
       cfg = [];
       cfg.method    = 'convert';
-      cfg.datatype  = 'eeg';
+      cfg.suffix    = 'eeg';
 
       % specify the input file name, here we are using the same file for every subject
       cfg.dataset   = 'Eeglab_data.set';
