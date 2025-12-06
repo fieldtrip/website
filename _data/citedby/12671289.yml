@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41341990'
+- idtype: doi
+  value: 10.2196/47881
+- idtype: pmcid
+  value: PMC12671289
+authors:
+- authtype: Author
+  name: Amigó-Vega J
+- authtype: Author
+  name: Ottenhoff MC
+- authtype: Author
+  name: Verwoert M
+- authtype: Author
+  name: Kubben P
+- authtype: Author
+  name: Herff C
+epubdate: 2023 Oct 24
+fulljournalname: JMIR Neurotechnology
+issue: ''
+pages: e47881
+pmclivedate: 2025/12/03
+printpubdate: ''
+pubdate: 2023 Oct 24
+sortdate: 2023/10/24 00:00
+source: JMIR Neurotechnol
+title: 'The Easy and Versatile Neural Recording Platform (T-REX): Design and Development
+  Study'
+uid: '12671289'
+volume: '2'

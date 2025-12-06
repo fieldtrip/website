@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41252455'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003495
+- idtype: pmcid
+  value: PMC12674556
+authors:
+- authtype: Author
+  name: Ainsworth M
+- authtype: Author
+  name: Galeazzi JM
+- authtype: Author
+  name: Pedreira C
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Buckley MJ
+epubdate: 2025 Nov 18
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3003495
+pmclivedate: 2025/12/04
+printpubdate: ''
+pubdate: 2025 Nov 18
+sortdate: 2025/11/18 00:00
+source: PLoS Biol
+title: Transient frontopolar cortex stimulation induces prolonged disruption to counterfactual
+  processing
+uid: '12674556'
+volume: '23'

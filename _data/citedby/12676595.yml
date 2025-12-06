@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.34133/research.0960
+- idtype: pmcid
+  value: PMC12676595
+authors:
+- authtype: Author
+  name: Ye H
+- authtype: Author
+  name: Song P
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Zhai Y
+- authtype: Author
+  name: Chang C
+- authtype: Author
+  name: Bao X
+- authtype: Author
+  name: Tanigawa H
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Chen P
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Wen W
+- authtype: Author
+  name: Pérez-González D
+- authtype: Author
+  name: Malmierca MS
+- authtype: Author
+  name: Yu X
+epubdate: 2025 Nov 6
+fulljournalname: Research
+issue: ''
+pages: 0960
+pmclivedate: 2025/12/05
+printpubdate: ''
+pubdate: 2025 Nov 6
+sortdate: 2025/11/06 00:00
+source: Research (Wash D C)
+title: 'Hierarchical Temporal Processing in the Primate Thalamocortical System: Insights
+  from Nonlinguistic Structured Stimuli'
+uid: '12676595'
+volume: '8'
