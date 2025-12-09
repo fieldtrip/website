@@ -6,9 +6,9 @@ redirect_from:
     - /getting_started/bids/
 ---
 
-[BIDS](https://bids.neuroimaging.io), the Brain Imaging Data Structure, is a community driven standard to organize neuroimaging data _and_ metadata to make it easier to analyze, archive and share. BIDS is not a data format on itself, but rather a standardized directory structure with standardized file names and agreements on the strategy on sharing metadata to make the dataset more [FAIR](https://www.go-fair.org/fair-principles/).
+[BIDS](https://www.bids-standard.org), the Brain Imaging Data Structure, is a community driven standard to organize neuroimaging data _and_ metadata to make it easier to analyze, archive and share. BIDS is not a data format on itself, but rather a standardized directory structure with standardized file names and agreements on the strategy on sharing metadata to make the dataset more [FAIR](https://www.go-fair.org/fair-principles/).
 
-To read more about BIDS, please see the [website](https://bids.neuroimaging.io) or look up the details in the [specification](https://bids-specification.readthedocs.io/).
+To read more about BIDS, please see the [website](https://www.bids-standard.org) or look up the details in the [specification](https://bids-specification.readthedocs.io/).
 
 ## Reading data from a BIDS dataset
 

@@ -6,7 +6,7 @@ redirect_from:
     - /example/bids_behavioral/
 ---
 
-Although [BIDS](https://bids.neuroimaging.io) was initiated for brain imaging data, possibly recorded while the participant was performing a task including stimuli and responses, it also allows for representing behavioural data that is recorded on its own. For example, you might run an experiment with NBS Presentation, PsychToolbox, or PsychoPy, in which you are only recording the behavioural responses to the stimuli.
+Although [BIDS](https://www.bids-standard.org) was initiated for brain imaging data, possibly recorded while the participant was performing a task including stimuli and responses, it also allows for representing behavioural data that is recorded on its own. For example, you might run an experiment with NBS Presentation, PsychToolbox, or PsychoPy, in which you are only recording the behavioural responses to the stimuli.
 
 The [BIDS specification](https://bids-specification.readthedocs.io/) explains how behavioral events (and their timing) can be represented.
 

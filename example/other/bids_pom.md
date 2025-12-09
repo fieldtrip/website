@@ -6,7 +6,7 @@ redirect_from:
     - /example/bids_pom/
 ---
 
-The [BIDS standard](https://bids.neuroimaging.io) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. When studying cognition and/or behavior in relation to the brain, it is common to use multiple pieces of equipment at the same time. For the offline analysis of the biological activity in the brain in relation to the behaviour, we rely on the equipment recording digital data on disk. Each of the pieces of equipment has its own way of recording data and its own file formats. When we represent all data in BIDS, we combine all these recordings in a uniform fashion to facilitate the interpretation and (re)use of the data.
+The [BIDS standard](https://www.bids-standard.org) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. When studying cognition and/or behavior in relation to the brain, it is common to use multiple pieces of equipment at the same time. For the offline analysis of the biological activity in the brain in relation to the behaviour, we rely on the equipment recording digital data on disk. Each of the pieces of equipment has its own way of recording data and its own file formats. When we represent all data in BIDS, we combine all these recordings in a uniform fashion to facilitate the interpretation and (re)use of the data.
 
 Here are some pieces of equipment that we use at the Donders Institute _and_ that record data to disk, together with a short description of the data that they record.
 
@@ -530,7 +530,7 @@ All measurements that were performed are represented in the `_scans.tsv` file. T
 | beh/sub-POM1FM0023671_task-motor_acq-txt_events.tsv         | n/a                 |
 | beh/sub-POM1FM0023671_task-motor_acq-smi_eyetracker.tsv     | n/a                 |
 
-Contrary to most simple examples of functional MRI data on the [BIDS website](https://bids.neuroimaging.io), where the presentation log file is converted into an `_events.tsv` that is placed besides the functional `_bold.nii.gz` file as a "sidecar", here we represent the behavioral data explicitly in the `beh` folder. This allows the behavioral data to also be expressed in relation to the eyetracker data, or in relation to the EMG data.
+Contrary to most simple examples of functional MRI data on the [BIDS website](https://www.bids-standard.org), where the presentation log file is converted into an `_events.tsv` that is placed besides the functional `_bold.nii.gz` file as a "sidecar", here we represent the behavioral data explicitly in the `beh` folder. This allows the behavioral data to also be expressed in relation to the eyetracker data, or in relation to the EMG data.
 
 {% include markup/yellow %}
 We use the strategy that _each recording_ of data to disk is as important as _any other recording_. e.g., for people studying eye movements the eyetracker data is the most important, for people studying tremor the EMG might be the most important, and neuroimaging people would consider the MR data as the most important.

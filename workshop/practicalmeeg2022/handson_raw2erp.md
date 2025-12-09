@@ -73,7 +73,7 @@ We can now run the following chunk of code:
     end % for each run
 
 {% include markup/red %}
-In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
+In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://www.bids-standard.org/bep021).
 
 Although we have the MaxFiltered fif file with the data and original trigger codes
 

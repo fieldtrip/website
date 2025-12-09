@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent audio recordings, but an extension with audio data is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
+The [BIDS standard](https://www.bids-standard.org) does currently not specify how to represent audio recordings, but an extension is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 {% include markup/end %}
 
 In language studies, and especially speech production experiments, audio might be recorded on itself or along with other measurements, e.g., physiological signals from the brain. The audio can be used to monitor the subjects responses to a task, or can be off-line annotated/segmented in sentences, words or phonemes. Neither the audio recording (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.

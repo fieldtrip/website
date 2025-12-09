@@ -8,7 +8,7 @@ redirect_from:
 
 {% include markup/skyblue %}
 
-The general description of how MEG data can be shared in the [BIDS format](https://bids.neuroimaging.io) is described in the paper [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://doi.org/10.1038/sdata.2018.110) by Guiomar Niso, et al. Scientific Data volume 5, Article number: 180110 (2018). The BIDS standard itself with all details can be found on <https://bids-standard.org>.
+The general description of how MEG data can be shared in the [BIDS format](https://www.bids-standard.org) is described in the paper [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://doi.org/10.1038/sdata.2018.110) by Guiomar Niso, et al. Scientific Data volume 5, Article number: 180110 (2018). The BIDS standard itself with all details can be found on <https://bids-standard.org>.
  
 {% include markup/end %}
 

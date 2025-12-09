@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent video recordings, but an extension with video data is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
+The [BIDS standard](https://www.bids-standard.org) does currently not specify how to represent video recordings, but an extension is discussed [here](https://github.com/bids-standard/bids-specification/pull/2231). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 {% include markup/end %}
 
 In many experiments video data can be recorded along with other measurements. This is often used to off-line screen the subjects behavior and to annotate the video, i.e. note the time segments with specific (desired or undesired) behavior. Neither the video recording  (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.

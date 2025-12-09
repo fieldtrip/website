@@ -35,7 +35,7 @@ You can subsequently write the data back to disk with
 Note that in the additional options to **[ft_write_data](/reference/fileio/ft_write_data)** you should specify the file format.
 
 {% include /markup/blue %}
-We recommend the BrainVision `.vhdr` format, which results in a triple of files (vhdr/vmrk/eeg). This is also one of the formats recommended by [BIDS](https://bids.neuroimaging.io).
+We recommend the BrainVision `.vhdr` format, which results in a triple of files (vhdr/vmrk/eeg). This is also one of the formats recommended by [BIDS](https://www.bids-standard.org).
 {% include /markup/end %}
 
 The **[ft_write_data](/reference/fileio/ft_write_data)** function can export data to the following file formats.

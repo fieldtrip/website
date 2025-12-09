@@ -6,12 +6,12 @@ redirect_from:
     - /example/bids_eeg/
 ---
 
-This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the [BIDS standard](https://bids.neuroimaging.io).  
+This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the [BIDS standard](https://www.bids-standard.org).  
 
 {% include markup/yellow %}
 If you want to share data, there are multiple things to consider. For example the file format of the data, the place to share the data (openneuro/zenodo/figshare/dataverse), the access mechanism for the data (ftp/http/sftp), the license or data use agreement, whether all data or only part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 
-In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use BIDS. Please see the [BIDS website](https://bids.neuroimaging.io) for background information and the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details on the file and directory organization.
+In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use BIDS. Please see the [BIDS website](https://www.bids-standard.org) for background information and the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details on the file and directory organization.
 {% include markup/end %}
 
 We will describe two approaches: in the first the data files are is kept in their original format, in the second approaches the files are explicitly converted to BrainVision (the recommended format for EEG data in BIDS). Prior to conversion the data (in principle) comprises 10 files, one EEG file per subject. After conversion there are 52 or 72 files for the two approaches, which includes the EEG data and the sidecar files with metadata.

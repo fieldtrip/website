@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent EMG recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
+The [BIDS standard](https://www.bids-standard.org) does currently not specify how to represent EMG recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
 {% include markup/end %}
 
 EMG is often recorded along with other experiments, such as MEG or functional MRI recordings, but can also be recorded by itself. EMG can for example be used to check compliance with the task, to detect movements and compute reaction times, or to check the activation pattern of specific muscles in a task.

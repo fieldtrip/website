@@ -7,18 +7,12 @@ redirect_from:
 ---
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).
+The [BIDS standard](https://www.bids-standard.org) does currently not specify how to represent eye tracker data, but an extension is discussed [here](https://github.com/bids-standard/bids-specification/discussions/2218). This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 {% include markup/end %}
 
-Eye tracking data can be stored in the BIDS representation similar to [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). This not only includes the gaze position, pupil diameter, but also allows for presentation (stimulus and response events) and saccades to be represented in the events.tsv file.
+Eye tracking data can be stored in the BIDS representation similar to [physiological data](https://bids-specification.readthedocs.io/en/latest/modality-specific-files/physiological-recordings.html). This not only includes continuously sampled variables like the gaze position and pupil diameter to be stored in the physio.tsv file, but also allows for presentation (stimulus and response events) and saccades to be represented in the physioevents.tsv file.
 
-Rather than storing the eye tracker data as generic physiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an `_eyetracker.tsv` file, with an associated `_eyetracker.json` file with metadata details on the equipment and experiment.
-
-{% include markup/skyblue %}
-Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
-{% include markup/end %}
-
-If the online analysis in the eye tracker software also detects blinks, saccades, and other events with a distinct time (i.e. non-continuous), those can also be added to the `_events.tsv` file.
+The physio.json file should contain additional metadata information such as whether both eyes or only one was tracked, the sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
 
 {% include markup/green %}
 All data for the following examples is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/).
@@ -42,7 +36,9 @@ FieldTrip can read the EyeLink `.asc` format. The gaze and/or pupil diameter are
 
 ### Short example
 
-```
+The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/eyelink_short).
+
+```matlab
 %% this is an example with a short calibration recording
 
 % the same data is converted multiple times to demonstrate the directory layout and the participants
@@ -65,13 +61,14 @@ cfg.dataset_description.Funding             = 'n/a';
 cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 cfg.dataset_description.DatasetDOI          = 'n/a';
 
-cfg.method    = 'convert'; % the eyelink-specific format is not supported, convert it to plain TSV
 cfg.dataset   = './original/ashcal.asc';
+cfg.method    = 'convert'; % the eyelink EDF format is not supported, convert the ASC to plain TSV
 cfg.bidsroot  = './bids';  % write to the working directory
-cfg.suffix    = 'eyetracker';
+cfg.suffix    = 'physio';
 cfg.task      = 'calibration';
 
-% this is general metadata that ends up in the _eyetracker.json file
+% this is general metadata that ends up in the _physio.json file
+cfg.PhysioType            = 'eyetrack';
 cfg.TaskDescription       = 'Short calibration procedure';
 cfg.Manufacturer          = 'SR Research';
 cfg.ManufacturerModelName = 'Eyelink 1000';
@@ -97,8 +94,13 @@ data2bids(cfg);
 
 ### Long example
 
-```
-%% this section specifies the data files
+The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/eyelink_long).
+
+```matlab
+%% this section specifies the datafiles
+
+% The raw sourcedata for this example can be downloaded from
+% https://doi.org/10.34973/3mdw-jn48 as Experiment 2.
 
 filename = {
   '1_TO_1.asc'
@@ -107,52 +109,52 @@ filename = {
   '2_fh_2.asc'
   '3_ac_1.asc'
   '3_ac_2.asc'
-  '4_ym_1.asc'
-  '4_ym_2.asc'
-  '5_kj_1.asc'
-  '5_kj_2.asc'
-  '6_BS_1.asc'
-  '6_BS_2.asc'
-  '7_aa_1.asc'
-  '7_aa_2.asc'
-  '8_SG_1.asc'
-  '8_sg_2.asc'
-  '9_TE_1.asc'
-  '9_TE_2.asc'
-  '9_te_11.asc'
-  '10_es_1.asc'
-  '10_es_2.asc'
-  '11_AR_1.asc'
-  '11_AR_2.asc'
-  '12_LK_1.asc'
-  '12_LK_11.asc'
-  '12_LK_2.asc'
-  '12_LK_22.asc'
-  '13_JL_1.asc'
-  '13_JL_2.asc'
-  '14_vs_1.asc'
-  '14_vs_2.asc'
-  '15_CL_1.asc'
-  '15_CL_2.asc'
-  '16_MN_1.asc'
-  '16_MN_2.asc'
-  '17_NT_1.asc'
-  '17_NT_2.asc'
-  '18_CL_11.asc'
-  '18_CL_2.asc'
-  '19_AE_1.asc'
-  '19_AE_2.asc'
-  '20_AK_2.asc'
-  '20_PK_1.asc'
-  '21_SY_1.asc'
-  '21_SY_2.asc'
-  '22_VG_1.asc'
-  '22_VG_21.asc'
-  '22_VG_22.asc'
-  '23_DK_2.asc'
-  '23_dk_1.asc'
-  '24_TS_1.asc'
-  '24_TS_2.asc'
+  % '4_ym_1.asc'
+  % '4_ym_2.asc'
+  % '5_kj_1.asc'
+  % '5_kj_2.asc'
+  % '6_BS_1.asc'
+  % '6_BS_2.asc'
+  % '7_aa_1.asc'
+  % '7_aa_2.asc'
+  % '8_SG_1.asc'
+  % '8_sg_2.asc'
+  % '9_TE_1.asc'
+  % '9_TE_2.asc'
+  % '9_te_11.asc'
+  % '10_es_1.asc'
+  % '10_es_2.asc'
+  % '11_AR_1.asc'
+  % '11_AR_2.asc'
+  % '12_LK_1.asc'
+  % '12_LK_11.asc'
+  % '12_LK_2.asc'
+  % '12_LK_22.asc'
+  % '13_JL_1.asc'
+  % '13_JL_2.asc'
+  % '14_vs_1.asc'
+  % '14_vs_2.asc'
+  % '15_CL_1.asc'
+  % '15_CL_2.asc'
+  % '16_MN_1.asc'
+  % '16_MN_2.asc'
+  % '17_NT_1.asc'
+  % '17_NT_2.asc'
+  % '18_CL_11.asc'
+  % '18_CL_2.asc'
+  % '19_AE_1.asc'
+  % '19_AE_2.asc'
+  % '20_AK_2.asc'
+  % '20_PK_1.asc'
+  % '21_SY_1.asc'
+  % '21_SY_2.asc'
+  % '22_VG_1.asc'
+  % '22_VG_21.asc'
+  % '22_VG_22.asc'
+  % '23_DK_2.asc'
+  % '23_dk_1.asc'
+  % '24_TS_1.asc'
+  % '24_TS_2.asc'
   };
 
 % The filenames have a sequence number and a two-letter subject identifier in them. The case of the
@@ -184,7 +186,7 @@ cfg.dataset_description.Name                = 'Visual Stability: predictive rema
 cfg.dataset_description.BIDSVersion         = 'unofficial extension';
 
 % optional for dataset_description.json
-cfg.dataset_description.Authors             = {'Tao He', 'Matthias Fritsche', 'Floris de Lange'};
+cfg.dataset_description.Authors             = 'Tao He, Matthias Fritsche, Floris de Lange';
 cfg.dataset_description.DatasetDOI          = 'http://hdl.handle.net/11633/di.dccn.DSC_3018034.01_694';
 cfg.dataset_description.License             = 'RU-DI-HD-1.0';
 cfg.dataset_description.Acknowledgements    = 'n/a';
@@ -193,28 +195,31 @@ cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 
 for i=1:numel(subjid)
   fileselection = find(contains(filename, ['_'  subjid{i} '_'], 'IgnoreCase', true));
-
+  
   for j=1:numel(fileselection)
     [p, f, x] = fileparts(filename{fileselection(j)});  % split the path, filename and extension
     part = split(f, '_');                               % split the filename
     run = str2double(part{3});
-
+    
     % this is the data in ASCII format
     cfg.dataset = fullfile(sourcepath, [f x]);
     cfg.method = 'convert';
-
+    
     % these are used to construct the directory and file name
     cfg.bidsroot = targetpath;
-    cfg.suffix = 'eyetracker';
     cfg.sub = subjid{i};
     cfg.run = run;
     cfg.task = 'adaptation';
+    cfg.suffix = 'physio';
 
+    % this ends up in the physio.json file
+    cfg.physio.PhysioType = 'eyetrack';
+    
     % this is additional information that ends up in the sidecar JSON file
     cfg.TaskDescription = 'orientation adaptation paradigm';
-
+    
     data2bids(cfg);
-
+    
   end % for fileselection
 end % for subjid
 ```
@@ -226,6 +231,8 @@ The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be r
 ### Example
 
 In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g., units, origin, calibration procedure), the metadata is very sparse.
+
+The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/smi).
 
 ```matlab
 filename = {
@@ -261,22 +268,24 @@ cfg.ManufacturerModelName = 'iView X MRI-LR';
 
 cfg.method    = 'convert'; % the SMI-specific format is not supported, convert it to plain TSV
 cfg.bidsroot  = './bids';  % write to the working directory
-cfg.suffix    = 'eyetracker';
+cfg.suffix    = 'physio';
 
 for i=1:4
   cfg.dataset   = filename{i};
-
+  
   % split the filename to get the subject identifier and the task
   [p, f, x] = fileparts(filename{i});
   piece = split(f, '_');
-
+  
   cfg.sub   = piece{1};
   cfg.task  = piece{2};
-
+  
   data2bids(cfg);
 end
 ```
 
 ## TOBII
 
-The data from the TOBII eye tracker can be exported in `.tsv` or in `.xlsx` format. Moreover, the data can be exported to either have a file for each subject, or with all the subjects in one file. Both formats are included in the example. The TOBI studio software allows to add additional information in the exported files.
+We currently do not have a complete example for converting TOBII eye tracker data to BIDS, but have colllected some information that is posted here for reference.
+
+The data from the TOBII eye tracker can be exported in `.tsv` or in `.xlsx` format. Moreover, the data can be exported to either have a file for each subject, or with all the subjects in one file. The TOBI studio software allows to add additional information in the exported files.
