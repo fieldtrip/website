@@ -286,6 +286,6 @@ end
 
 ## TOBII
 
-We currently do not have a complete example for converting TOBII eye tracker data to BIDS, but have colllected some information that is posted here for reference.
+We currently do not have a complete example for converting TOBII eye tracker data to BIDS, but have collected some information that is posted here for reference.
 
 The data from the TOBII eye tracker can be exported in `.tsv` or in `.xlsx` format. Moreover, the data can be exported to either have a file for each subject, or with all the subjects in one file. The TOBI studio software allows to add additional information in the exported files.
