@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40930211'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2025.102823
+- idtype: pmcid
+  value: PMC12679280
+- idtype: MID
+  value: NIHMS2111609
+authors:
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Mishra A
+- authtype: Author
+  name: Markowitz N
+- authtype: Author
+  name: Espinal E
+- authtype: Author
+  name: Keshishian M
+- authtype: Author
+  name: Mesgarani N
+- authtype: Author
+  name: Schroeder C
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Bickel S
+epubdate: 2025 Sep 8
+fulljournalname: Progress in neurobiology
+issue: ''
+pages: '102823'
+pmclivedate: ''
+printpubdate: 2025 Oct
+pubdate: 2025 Sep 8
+sortdate: 2025/09/08 00:00
+source: Prog Neurobiol
+title: Neural entrainment by speech in human auditory cortex revealed by intracranial
+  recordings
+uid: '12679280'
+volume: '253'
