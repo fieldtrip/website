@@ -1,0 +1,75 @@
+articleids:
+- idtype: pmid
+  value: '39547412'
+- idtype: doi
+  value: 10.1016/j.bpsc.2024.10.019
+- idtype: pmcid
+  value: PMC12694767
+- idtype: MID
+  value: NIHMS2035702
+authors:
+- authtype: Author
+  name: Hacker C
+- authtype: Author
+  name: Mocchi MM
+- authtype: Author
+  name: Xiao J
+- authtype: Author
+  name: Metzger B
+- authtype: Author
+  name: Adkinson J
+- authtype: Author
+  name: Pascuzzi B
+- authtype: Author
+  name: Mathura R
+- authtype: Author
+  name: Oswalt D
+- authtype: Author
+  name: Watrous A
+- authtype: Author
+  name: Bartoli E
+- authtype: Author
+  name: Allawala A
+- authtype: Author
+  name: Pirtle V
+- authtype: Author
+  name: Fan X
+- authtype: Author
+  name: Danstrom I
+- authtype: Author
+  name: Shofty B
+- authtype: Author
+  name: Banks G
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Armenta-Salas M
+- authtype: Author
+  name: Mirpour K
+- authtype: Author
+  name: Mathew S
+- authtype: Author
+  name: Cohn J
+- authtype: Author
+  name: Borton D
+- authtype: Author
+  name: Goodman W
+- authtype: Author
+  name: Pouratian N
+- authtype: Author
+  name: Sheth SA
+- authtype: Author
+  name: Bijanki KR
+epubdate: 2024 Nov 14
+fulljournalname: Biological psychiatry. Cognitive neuroscience and neuroimaging
+issue: '2'
+pages: 186-194
+pmclivedate: ''
+printpubdate: 2025 Feb
+pubdate: 2024 Nov 14
+sortdate: 2024/11/14 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Aperiodic (1/f) neural activity robustly tracks symptom severity changes in
+  treatment-resistant depression
+uid: '12694767'
+volume: '10'

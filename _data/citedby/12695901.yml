@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41366218'
+- idtype: doi
+  value: 10.1038/s41597-025-06397-4
+- idtype: pmcid
+  value: PMC12695901
+authors:
+- authtype: Author
+  name: Habersetzer T
+- authtype: Author
+  name: Steuer S
+- authtype: Author
+  name: Radeloff A
+- authtype: Author
+  name: Meyer BT
+epubdate: 2025 Dec 9
+fulljournalname: Scientific Data
+issue: ''
+pages: '1938'
+pmclivedate: 2025/12/12
+printpubdate: ''
+pubdate: 2025 Dec 9
+sortdate: 2025/12/09 00:00
+source: Sci Data
+title: MEG-SCANS - A comprehensive magnetoencephalography speech dataset with Stories,
+  Chirps and Noisy Sentences
+uid: '12695901'
+volume: '12'

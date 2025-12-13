@@ -1,0 +1,72 @@
+articleids:
+- idtype: pmid
+  value: '41273103'
+- idtype: doi
+  value: 10.1177/15459683251363241
+- idtype: pmcid
+  value: PMC12686178
+authors:
+- authtype: Author
+  name: Harquel S
+- authtype: Author
+  name: Cadic-Melchior A
+- authtype: Author
+  name: Morishita T
+- authtype: Author
+  name: Fleury L
+- authtype: Author
+  name: Ceroni M
+- authtype: Author
+  name: Menoud P
+- authtype: Author
+  name: Brügger J
+- authtype: Author
+  name: Beanato E
+- authtype: Author
+  name: Meyer NH
+- authtype: Author
+  name: Evangelista GG
+- authtype: Author
+  name: Egger P
+- authtype: Author
+  name: Van de Ville D
+- authtype: Author
+  name: Blanke O
+- authtype: Author
+  name: Micera S
+- authtype: Author
+  name: Léger B
+- authtype: Author
+  name: Adolphsen J
+- authtype: Author
+  name: Jagella C
+- authtype: Author
+  name: Mühl A
+- authtype: Author
+  name: Constantin C
+- authtype: Author
+  name: Alvarez V
+- authtype: Author
+  name: Vuadens P
+- authtype: Author
+  name: Turlan JL
+- authtype: Author
+  name: Bonvin C
+- authtype: Author
+  name: Koch PJ
+- authtype: Author
+  name: Wessel MJ
+- authtype: Author
+  name: Hummel FC
+epubdate: 2025 Aug 26
+fulljournalname: Neurorehabilitation and Neural Repair
+issue: '12'
+pages: 983-996
+pmclivedate: 2025/12/10
+printpubdate: ''
+pubdate: 2025 Aug 26
+sortdate: 2025/08/26 00:00
+source: Neurorehabil Neural Repair
+title: Brain Oscillatory Modes as a Proxy of Stroke Recovery
+uid: '12686178'
+volume: '39'
