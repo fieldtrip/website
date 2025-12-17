@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41292732'
+- idtype: doi
+  value: 10.1101/2025.11.14.688528
+- idtype: pmcid
+  value: PMC12642474
+authors:
+- authtype: Author
+  name: Kerr KG
+- authtype: Author
+  name: Boebinger SE
+- authtype: Author
+  name: Mirdamadi JL
+- authtype: Author
+  name: Protzak J
+- authtype: Author
+  name: Borich MR
+- authtype: Author
+  name: Ting LH
+epubdate: 2025 Nov 16
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.11.14.688528
+pmclivedate: 2025/11/25
+printpubdate: ''
+pubdate: 2025 Nov 16
+sortdate: 2025/11/16 00:00
+source: bioRxiv
+title: Cortical response to balance perturbation is more sensitive in modern dancers
+  than nondancers during biomechanically similar balance recovery
+uid: '12642474'
+volume: ''

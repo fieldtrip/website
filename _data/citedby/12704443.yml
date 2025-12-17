@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/nc/niaf059
+- idtype: pmcid
+  value: PMC12704443
+authors:
+- authtype: Author
+  name: Shinagawa K
+- authtype: Author
+  name: Tanaka Y
+- authtype: Author
+  name: Terasawa Y
+- authtype: Author
+  name: Umeda S
+epubdate: 2025 Dec 15
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niaf059
+pmclivedate: 2025/12/16
+printpubdate: ''
+pubdate: 2025 Dec 15
+sortdate: 2025/12/15 00:00
+source: Neurosci Conscious
+title: Brain–body interactions associated with the transition from mind wandering
+  to awareness of its occurrence
+uid: '12704443'
+volume: '2025'
