@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/frsle.2023.1294957
+- idtype: pmcid
+  value: PMC12713973
+authors:
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Zeller CJ
+- authtype: Author
+  name: Wicki K
+- authtype: Author
+  name: Nissen C
+- authtype: Author
+  name: Züst MA
+epubdate: 2024 Jan 5
+fulljournalname: Frontiers in Sleep
+issue: ''
+pages: '1294957'
+pmclivedate: 2025/12/19
+printpubdate: ''
+pubdate: 2024 Jan 5
+sortdate: 2024/01/05 00:00
+source: Front Sleep
+title: Acoustic stimulation during slow wave sleep shows delayed effects on memory
+  performance in older adults
+uid: '12713973'
+volume: '2'

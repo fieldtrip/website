@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41332681'
+- idtype: doi
+  value: 10.1101/2025.11.19.689311
+- idtype: pmcid
+  value: PMC12667938
+authors:
+- authtype: Author
+  name: Bojanek EK
+- authtype: Author
+  name: Lang ER
+- authtype: Author
+  name: Adams HR
+- authtype: Author
+  name: Vermilion J
+- authtype: Author
+  name: Augustine EF
+- authtype: Author
+  name: Brima T
+- authtype: Author
+  name: Nasimjonova S
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2025 Nov 20
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.11.19.689311
+pmclivedate: 2025/12/02
+printpubdate: ''
+pubdate: 2025 Nov 20
+sortdate: 2025/11/20 00:00
+source: bioRxiv
+title: 'Longitudinal Exploration of Auditory Sensory-Perceptual Processing in CLN3
+  Disease (Juvenile Neuronal Ceroid Lipofuscinosis (Batten disease)): A High-Density
+  Auditory Evoked Potential (AEP) Study'
+uid: '12667938'
+volume: ''

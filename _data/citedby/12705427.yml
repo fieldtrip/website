@@ -1,0 +1,71 @@
+articleids:
+- idtype: pmid
+  value: '41249493'
+- idtype: doi
+  value: 10.1038/s41591-025-04035-5
+- idtype: pmcid
+  value: PMC12705427
+authors:
+- authtype: Author
+  name: Choi W
+- authtype: Author
+  name: Nho YH
+- authtype: Author
+  name: Qiu L
+- authtype: Author
+  name: Chang A
+- authtype: Author
+  name: Campos G
+- authtype: Author
+  name: Seilheimer RL
+- authtype: Author
+  name: Wilent WB
+- authtype: Author
+  name: Bakalov D
+- authtype: Author
+  name: Firdous N
+- authtype: Author
+  name: Kerr M
+- authtype: Author
+  name: Joshi D
+- authtype: Author
+  name: Maze G
+- authtype: Author
+  name: Topalovic U
+- authtype: Author
+  name: Batista D
+- authtype: Author
+  name: Suthana N
+- authtype: Author
+  name: Amaro A
+- authtype: Author
+  name: Hayes MR
+- authtype: Author
+  name: Cajigas I
+- authtype: Author
+  name: Cristancho M
+- authtype: Author
+  name: Allison KC
+- authtype: Author
+  name: Pesaran B
+- authtype: Author
+  name: Scangos KW
+- authtype: Author
+  name: Gold JI
+- authtype: Author
+  name: Wadden TA
+- authtype: Author
+  name: Halpern CH
+epubdate: 2025 Nov 17
+fulljournalname: Nature Medicine
+issue: '12'
+pages: 4038-4043
+pmclivedate: 2025/12/17
+printpubdate: '2025'
+pubdate: 2025 Nov 17
+sortdate: 2025/11/17 00:00
+source: Nat Med
+title: Brain activity associated with breakthrough food preoccupation in an individual
+  on tirzepatide
+uid: '12705427'
+volume: '31'

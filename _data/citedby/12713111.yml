@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/IMAG.a.1051
+- idtype: pmcid
+  value: PMC12713111
+authors:
+- authtype: Author
+  name: Kidder A
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Grootswagers T
+epubdate: 2025 Dec 17
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1051
+pmclivedate: 2025/12/19
+printpubdate: ''
+pubdate: 2025 Dec 17
+sortdate: 2025/12/17 00:00
+source: Imaging Neurosci (Camb)
+title: 'Mapping object space dimensions: New insights from temporal dynamics'
+uid: '12713111'
+volume: '3'
