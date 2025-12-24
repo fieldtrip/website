@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/sleepadvances/zpaf085
+- idtype: pmcid
+  value: PMC12721382
+authors:
+- authtype: Author
+  name: Wick AZ
+- authtype: Author
+  name: Rasch B
+epubdate: 2025 Nov 25
+fulljournalname: 'Sleep Advances: A Journal of the Sleep Research Society'
+issue: '4'
+pages: zpaf085
+pmclivedate: 2025/12/23
+printpubdate: ''
+pubdate: 2025 Nov 25
+sortdate: 2025/11/25 00:00
+source: Sleep Adv
+title: 'Musical harmony is processed during sleep: a proof-of-concept study'
+uid: '12721382'
+volume: '6'

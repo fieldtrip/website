@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37478152'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002178
+- idtype: pmcid
+  value: PMC12716320
+authors:
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Steingräber N
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Gross J
+epubdate: 2023 Jul 21
+fulljournalname: PLOS Biology
+issue: '7'
+pages: e3002178
+pmclivedate: 2025/12/20
+printpubdate: ''
+pubdate: 2023 Jul 21
+sortdate: 2023/07/21 00:00
+source: PLoS Biol
+title: Spatiotemporal dynamics characterise spectral connectivity profiles of continuous
+  speaking and listening
+uid: '12716320'
+volume: '21'

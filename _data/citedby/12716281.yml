@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41417679'
+- idtype: doi
+  value: 10.1093/cercor/bhaf247
+- idtype: pmcid
+  value: PMC12716281
+authors:
+- authtype: Author
+  name: Murali S
+- authtype: Author
+  name: Agayby B
+- authtype: Author
+  name: Schmid MC
+- authtype: Author
+  name: Händel BF
+epubdate: 2025 Dec 19
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: bhaf247
+pmclivedate: 2025/12/20
+printpubdate: ''
+pubdate: 2025 Dec 19
+sortdate: 2025/12/19 00:00
+source: Cereb Cortex
+title: Multiunit and oscillatory activity in macaque V1 is modulated by blinking in
+  a context-dependent way
+uid: '12716281'
+volume: '35'

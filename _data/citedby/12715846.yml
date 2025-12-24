@@ -1,0 +1,79 @@
+articleids:
+- idtype: pmid
+  value: '41285049'
+- idtype: doi
+  value: 10.1088/1741-2552/ae2359
+- idtype: pmcid
+  value: PMC12715846
+authors:
+- authtype: Author
+  name: Lampert F
+- authtype: Author
+  name: Baker MR
+- authtype: Author
+  name: Jensen MA
+- authtype: Author
+  name: Ayyoubi AH
+- authtype: Author
+  name: Bentler C
+- authtype: Author
+  name: Bowersock JL
+- authtype: Author
+  name: Esteller R
+- authtype: Author
+  name: Herron JA
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Kipke DR
+- authtype: Author
+  name: Kovach CK
+- authtype: Author
+  name: Kremen V
+- authtype: Author
+  name: Mivalt F
+- authtype: Author
+  name: Neimat JS
+- authtype: Author
+  name: Netoff TI
+- authtype: Author
+  name: Opri E
+- authtype: Author
+  name: Rockhill A
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Sellers KK
+- authtype: Author
+  name: Staff NP
+- authtype: Author
+  name: Swamy CP
+- authtype: Author
+  name: Viswanathan A
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Denison T
+- authtype: Author
+  name: Hermes D
+- authtype: Author
+  name: Ince NF
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Worrell GA
+- authtype: Author
+  name: Miller KJ
+epubdate: 2025 Dec 19
+fulljournalname: Journal of Neural Engineering
+issue: '6'
+pages: '061005'
+pmclivedate: 2025/12/20
+printpubdate: 2025 Dec 1
+pubdate: 2025 Dec 19
+sortdate: 2025/12/19 00:00
+source: J Neural Eng
+title: 'Adaptive neuromodulation dialogues: navigating current challenges and emerging
+  innovations in neuromodulation system development'
+uid: '12715846'
+volume: '22'
