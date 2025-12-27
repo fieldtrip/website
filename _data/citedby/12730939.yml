@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41440101'
+- idtype: doi
+  value: 10.3390/brainsci15121305
+- idtype: pmcid
+  value: PMC12730939
+authors:
+- authtype: Author
+  name: Warren TS
+- authtype: Author
+  name: Shende SA
+- authtype: Author
+  name: Ashrafi J
+- authtype: Author
+  name: Clements GM
+- authtype: Author
+  name: Mudar RA
+epubdate: 2025 Dec 3
+fulljournalname: Brain Sciences
+issue: '12'
+pages: '1305'
+pmclivedate: 2025/12/25
+printpubdate: ''
+pubdate: 2025 Dec 3
+sortdate: 2025/12/03 00:00
+source: Brain Sci
+title: Resting-State EEG Power and Aperiodic Activity in Individuals with Mild Cognitive
+  Impairment and Cognitively Healthy Controls
+uid: '12730939'
+volume: '15'

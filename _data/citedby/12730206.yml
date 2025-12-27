@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41440065'
+- idtype: doi
+  value: 10.3390/brainsci15121269
+- idtype: pmcid
+  value: PMC12730206
+authors:
+- authtype: Author
+  name: Aydin A
+- authtype: Author
+  name: Yildirim A
+- authtype: Author
+  name: Kara O
+- authtype: Author
+  name: Mwenda Z
+epubdate: 2025 Nov 26
+fulljournalname: Brain Sciences
+issue: '12'
+pages: '1269'
+pmclivedate: 2025/12/25
+printpubdate: ''
+pubdate: 2025 Nov 26
+sortdate: 2025/11/26 00:00
+source: Brain Sci
+title: 'Mixed-Frequency rTMS Rapidly Modulates Multiscale EEG Biomarkers of Excitation–Inhibition
+  Balance in Autism Spectrum Disorder: A Single-Case Report'
+uid: '12730206'
+volume: '15'

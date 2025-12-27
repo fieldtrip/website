@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '41445560'
+- idtype: doi
+  value: 10.1162/IMAG.a.1042
+- idtype: pmcid
+  value: PMC12723407
+authors:
+- authtype: Author
+  name: Schofield H
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Kennett E
+- authtype: Author
+  name: Rivero GR
+- authtype: Author
+  name: Gibson J
+- authtype: Author
+  name: Tyler A
+- authtype: Author
+  name: Tanner Z
+- authtype: Author
+  name: Worcester F
+- authtype: Author
+  name: Hayward T
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2025 Dec 23
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1042
+pmclivedate: 2025/12/24
+printpubdate: ''
+pubdate: 2025 Dec 23
+sortdate: 2025/12/23 00:00
+source: Imaging Neurosci (Camb)
+title: Towards a 384-channel magnetoencephalography system based on optically pumped
+  magnetometers
+uid: '12723407'
+volume: '3'

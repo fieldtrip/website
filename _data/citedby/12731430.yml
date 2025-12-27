@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '41439833'
+- idtype: doi
+  value: 10.3390/clockssleep7040068
+- idtype: pmcid
+  value: PMC12731430
+authors:
+- authtype: Author
+  name: Baselgia S
+- authtype: Author
+  name: Beck J
+- authtype: Author
+  name: Rasch B
+epubdate: 2025 Dec 3
+fulljournalname: Clocks & Sleep
+issue: '4'
+pages: '68'
+pmclivedate: 2025/12/25
+printpubdate: ''
+pubdate: 2025 Dec 3
+sortdate: 2025/12/03 00:00
+source: Clocks Sleep
+title: Anticipation of Stress and Relaxation Dynamically Impacts Sleep
+uid: '12731430'
+volume: '7'

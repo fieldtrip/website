@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41431245'
+- idtype: doi
+  value: 10.1002/brb3.70981
+- idtype: pmcid
+  value: PMC12723073
+authors:
+- authtype: Author
+  name: Fernández‐Linsenbarth I
+- authtype: Author
+  name: Mijancos‐Martínez G
+- authtype: Author
+  name: Ruiz‐Gómez SJ
+- authtype: Author
+  name: Bachiller A
+- authtype: Author
+  name: Osorio‐Iriarte E
+- authtype: Author
+  name: Beño‐Ruiz‐de‐la‐Sierra RM
+- authtype: Author
+  name: Arjona‐Valladares A
+- authtype: Author
+  name: Roig‐Herrero A
+- authtype: Author
+  name: Molina V
+epubdate: 2025 Dec 22
+fulljournalname: Brain and Behavior
+issue: '12'
+pages: e70981
+pmclivedate: 2025/12/24
+printpubdate: ''
+pubdate: 2025 Dec 22
+sortdate: 2025/12/22 00:00
+source: Brain Behav
+title: 'Transcranial Magnetic Stimulation‐Induced Modulation of Functional Connectivity
+  in Healthy Controls: A TMS–EEG Graph Study'
+uid: '12723073'
+volume: '15'
