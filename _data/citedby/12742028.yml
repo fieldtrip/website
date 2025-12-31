@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41451954'
+- idtype: doi
+  value: 10.1002/hbm.70440
+- idtype: pmcid
+  value: PMC12742028
+authors:
+- authtype: Author
+  name: Röhr H
+- authtype: Author
+  name: Atad DA
+- authtype: Author
+  name: Trautwein F
+- authtype: Author
+  name: Mediano PA
+- authtype: Author
+  name: Dor‐Ziderman Y
+- authtype: Author
+  name: Schweitzer Y
+- authtype: Author
+  name: Berkovich‐Ohana A
+- authtype: Author
+  name: Schmidt S
+- authtype: Author
+  name: van Vugt MK
+epubdate: 2025 Dec 26
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: e70440
+pmclivedate: 2025/12/27
+printpubdate: ''
+pubdate: 2025 Dec 26
+sortdate: 2025/12/26 00:00
+source: Hum Brain Mapp
+title: 'Decoding the Self: Single‐Trial Prediction of Self‐Boundary Meditation States
+  From Magnetoencephalography Recordings'
+uid: '12742028'
+volume: '47'

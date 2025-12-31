@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1111/ejn.70371
+- idtype: pmcid
+  value: PMC12746538
+authors:
+- authtype: Author
+  name: Kosachenko AI
+- authtype: Author
+  name: Syttykov DI
+- authtype: Author
+  name: Tarasov DA
+- authtype: Author
+  name: Kotyusov AI
+- authtype: Author
+  name: Kasanov D
+- authtype: Author
+  name: Malykh S
+- authtype: Author
+  name: Kotchoubey B
+- authtype: Author
+  name: Pavlov YG
+epubdate: 2025 Dec 29
+fulljournalname: The European Journal of Neuroscience
+issue: '1'
+pages: e70371
+pmclivedate: 2025/12/30
+printpubdate: 2026 Jan
+pubdate: 2025 Dec 29
+sortdate: 2025/12/29 00:00
+source: Eur J Neurosci
+title: Temporal Structure of Item Presentation Modulates Brain Oscillations in Verbal
+  Working Memory
+uid: '12746538'
+volume: '63'
