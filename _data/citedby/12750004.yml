@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41436519'
+- idtype: doi
+  value: 10.1038/s41598-025-30373-y
+- idtype: pmcid
+  value: PMC12750004
+authors:
+- authtype: Author
+  name: Giannini G
+- authtype: Author
+  name: Nierhaus T
+- authtype: Author
+  name: Soldatova P
+- authtype: Author
+  name: Blankenburg F
+epubdate: 2025 Dec 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '44677'
+pmclivedate: 2025/12/31
+printpubdate: ''
+pubdate: 2025 Dec 23
+sortdate: 2025/12/23 00:00
+source: Sci Rep
+title: Behavioural and electrophysiological correlates of sensory attenuation in the
+  somatosensory and auditory modality within a virtual reality setup
+uid: '12750004'
+volume: '15'

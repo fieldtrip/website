@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41310168'
+- idtype: doi
+  value: 10.1038/s41598-025-29256-z
+- idtype: pmcid
+  value: PMC12749660
+authors:
+- authtype: Author
+  name: Muduroglu-Kirmizibekmez A
+- authtype: Author
+  name: Onder A
+- authtype: Author
+  name: Ozdemir MY
+- authtype: Author
+  name: Gurerk G
+- authtype: Author
+  name: Aydin S
+- authtype: Author
+  name: Eryigit OY
+- authtype: Author
+  name: Guloglu MO
+- authtype: Author
+  name: Kara I
+epubdate: 2025 Nov 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '45450'
+pmclivedate: 2025/12/31
+printpubdate: ''
+pubdate: 2025 Nov 27
+sortdate: 2025/11/27 00:00
+source: Sci Rep
+title: 'Feeding the mind: preliminary insights into the effects of Anthocyanin-Rich
+  Extract from black carrots on brain activity and gut microbiota in patients with
+  cognitive impairments'
+uid: '12749660'
+volume: '15'

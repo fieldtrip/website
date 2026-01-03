@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41310110'
+- idtype: doi
+  value: 10.1038/s41598-025-28583-5
+- idtype: pmcid
+  value: PMC12748784
+authors:
+- authtype: Author
+  name: Spadone S
+- authtype: Author
+  name: Sestieri C
+- authtype: Author
+  name: Capotosto P
+- authtype: Author
+  name: Baldassarre A
+- authtype: Author
+  name: Sensi SL
+- authtype: Author
+  name: Della Penna S
+epubdate: 2025 Nov 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '45486'
+pmclivedate: 2025/12/31
+printpubdate: ''
+pubdate: 2025 Nov 27
+sortdate: 2025/11/27 00:00
+source: Sci Rep
+title: 'SmartERD: a pipeline for referencing subjects to a common peak in the analysis
+  of ERD dynamics'
+uid: '12748784'
+volume: '15'

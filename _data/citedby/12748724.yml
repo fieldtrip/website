@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41429790'
+- idtype: doi
+  value: 10.1038/s41539-025-00392-5
+- idtype: pmcid
+  value: PMC12748724
+authors:
+- authtype: Author
+  name: Levy O
+- authtype: Author
+  name: Shadi T
+- authtype: Author
+  name: Korisky A
+- authtype: Author
+  name: Bleichner MG
+- authtype: Author
+  name: Zion Golumbic E
+epubdate: 2025 Dec 22
+fulljournalname: NPJ Science of Learning
+issue: ''
+pages: '92'
+pmclivedate: 2025/12/31
+printpubdate: ''
+pubdate: 2025 Dec 22
+sortdate: 2025/12/22 00:00
+source: NPJ Sci Learn
+title: Differential effects of external noise and situational interest on neurophysiological
+  responses during video based learning
+uid: '12748724'
+volume: '10'

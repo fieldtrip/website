@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '40889547'
+- idtype: doi
+  value: 10.1016/j.neulet.2025.138371
+- idtype: pmcid
+  value: PMC12755096
+- idtype: MID
+  value: NIHMS2109181
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Maxwell GL
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: 2025 Sep 3
+fulljournalname: Neuroscience letters
+issue: ''
+pages: '138371'
+pmclivedate: 2026/01/01
+printpubdate: 2025 Oct 25
+pubdate: 2025 Sep 3
+sortdate: 2025/09/03 00:00
+source: Neurosci Lett
+title: Directional flow of brain connections and neurodevelopmental outcomes in healthy
+  full-term newborns
+uid: '12755096'
+volume: '866'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41257681'
+- idtype: doi
+  value: 10.1186/s12888-025-07629-y
+- idtype: pmcid
+  value: PMC12755004
+authors:
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Shao Z
+- authtype: Author
+  name: Deng H
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Wang C
+epubdate: 2025 Nov 15
+fulljournalname: BMC Psychiatry
+issue: ''
+pages: '1206'
+pmclivedate: 2026/01/01
+printpubdate: ''
+pubdate: 2025 Nov 15
+sortdate: 2025/11/15 00:00
+source: BMC Psychiatry
+title: 'Alcohol cue processing alters delta-band functional connectivity and theta-band
+  network topology in alcohol use disorder: a task-based EEG study'
+uid: '12755004'
+volume: '25'

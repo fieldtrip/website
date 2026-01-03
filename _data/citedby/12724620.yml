@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '41446192'
+- idtype: doi
+  value: 10.64898/2025.12.20.692681
+- idtype: pmcid
+  value: PMC12724620
+authors:
+- authtype: Author
+  name: Kakusa B
+- authtype: Author
+  name: Gopal JR
+- authtype: Author
+  name: Forman L
+- authtype: Author
+  name: Hartford JW
+- authtype: Author
+  name: Brennan T
+- authtype: Author
+  name: Pantis S
+- authtype: Author
+  name: Persad AR
+- authtype: Author
+  name: Cline CC
+- authtype: Author
+  name: Buch VP
+- authtype: Author
+  name: Parvizi J
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Keller CJ
+epubdate: 2025 Dec 21
+fulljournalname: bioRxiv
+issue: ''
+pages: 2025.12.20.692681
+pmclivedate: 2025/12/24
+printpubdate: ''
+pubdate: 2025 Dec 21
+sortdate: 2025/12/21 00:00
+source: bioRxiv
+title: Distinct neural temporal architectures encode rapid social expressions and
+  sustained internal mood states
+uid: '12724620'
+volume: ''
