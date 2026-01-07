@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '41445664'
+- idtype: doi
+  value: 10.64898/2025.12.17.25342490
+- idtype: pmcid
+  value: PMC12724019
+authors:
+- authtype: Author
+  name: Hatano K
+- authtype: Author
+  name: Kuroda N
+- authtype: Author
+  name: Uda H
+- authtype: Author
+  name: Sakakura K
+- authtype: Author
+  name: Cools MJ
+- authtype: Author
+  name: Luat AF
+- authtype: Author
+  name: Osawa SI
+- authtype: Author
+  name: Nemoto H
+- authtype: Author
+  name: Ukishiro K
+- authtype: Author
+  name: Endo H
+- authtype: Author
+  name: Nakasato N
+- authtype: Author
+  name: Takayama Y
+- authtype: Author
+  name: Iijima K
+- authtype: Author
+  name: Iwasaki M
+- authtype: Author
+  name: Asano E
+epubdate: 2025 Dec 19
+fulljournalname: medRxiv
+issue: ''
+pages: 2025.12.17.25342490
+pmclivedate: 2025/12/24
+printpubdate: ''
+pubdate: 2025 Dec 19
+sortdate: 2025/12/19 00:00
+source: medRxiv
+title: Internal and External Validation of Comprehensive High-Frequency Activity Biomarkers
+  for Epilepsy Surgery
+uid: '12724019'
+volume: ''

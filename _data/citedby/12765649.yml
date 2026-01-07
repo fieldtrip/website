@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41486007'
+- idtype: doi
+  value: 10.1111/ejn.70380
+- idtype: pmcid
+  value: PMC12765649
+authors:
+- authtype: Author
+  name: van Haren JJ
+- authtype: Author
+  name: Schröder J
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: De Martino F
+epubdate: 2026 Jan 4
+fulljournalname: The European Journal of Neuroscience
+issue: '1'
+pages: e70380
+pmclivedate: 2026/01/06
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 4
+sortdate: 2026/01/04 00:00
+source: Eur J Neurosci
+title: Tonal Surprisal and Contextual Shifts Evoke Distinct Pupil Dilation During
+  Dynamic Sound Sequences
+uid: '12765649'
+volume: '63'
