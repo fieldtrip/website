@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/IMAG.a.1082
+- idtype: pmcid
+  value: PMC12776616
+authors:
+- authtype: Author
+  name: Kachlicka M
+- authtype: Author
+  name: Symons A
+- authtype: Author
+  name: Dick F
+- authtype: Author
+  name: Saito K
+- authtype: Author
+  name: Tierney A
+epubdate: 2026 Jan 6
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1082
+pmclivedate: 2026/01/08
+printpubdate: ''
+pubdate: 2026 Jan 6
+sortdate: 2026/01/06 00:00
+source: Imaging Neurosci (Camb)
+title: Early neural encoding of pitch drives cue weighting during speech perception
+uid: '12776616'
+volume: '4'
