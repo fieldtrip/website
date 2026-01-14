@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/IMAG.a.1086
+- idtype: pmcid
+  value: PMC12794311
+authors:
+- authtype: Author
+  name: Arrigoni E
+- authtype: Author
+  name: Bolognini N
+- authtype: Author
+  name: Pisoni A
+- authtype: Author
+  name: Guidali G
+epubdate: 2026 Jan 9
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1086
+pmclivedate: 2026/01/13
+printpubdate: ''
+pubdate: 2026 Jan 9
+sortdate: 2026/01/09 00:00
+source: Imaging Neurosci (Camb)
+title: 'Cortical markers of PAS-induced long-term potentiation and depression in the
+  motor system: A TMS-EEG Registered Report'
+uid: '12794311'
+volume: '4'

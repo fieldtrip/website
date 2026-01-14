@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41523215'
+- idtype: doi
+  value: 10.1162/IMAG.a.1073
+- idtype: pmcid
+  value: PMC12784219
+authors:
+- authtype: Author
+  name: Harmening N
+- authtype: Author
+  name: von Lühmann A
+- authtype: Author
+  name: Blankertz B
+epubdate: 2026 Jan 8
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1073
+pmclivedate: 2026/01/10
+printpubdate: ''
+pubdate: 2026 Jan 8
+sortdate: 2026/01/08 00:00
+source: Imaging Neurosci (Camb)
+title: Data-driven head model individualization from digitized electrode positions
+  or photogrammetry improves M/EEG source localization accuracy
+uid: '12784219'
+volume: '4'
