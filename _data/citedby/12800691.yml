@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41442276'
+- idtype: doi
+  value: 10.1016/j.xpro.2025.104276
+- idtype: pmcid
+  value: PMC12800691
+authors:
+- authtype: Author
+  name: Yan YH
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Huang T
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Zhao D
+- authtype: Author
+  name: Yuan TF
+epubdate: 2025 Dec 22
+fulljournalname: STAR Protocols
+issue: '1'
+pages: '104276'
+pmclivedate: 2026/01/15
+printpubdate: ''
+pubdate: 2025 Dec 22
+sortdate: 2025/12/22 00:00
+source: STAR Protoc
+title: Protocol to investigate neurophysiological link between resting-state brain
+  activity and clinical symptoms in methamphetamine use disorder
+uid: '12800691'
+volume: '7'

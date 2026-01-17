@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '40272781'
+- idtype: doi
+  value: 10.1152/jn.00544.2024
+- idtype: pmcid
+  value: PMC12799196
+- idtype: MID
+  value: NIHMS2079982
+authors:
+- authtype: Author
+  name: Salminen J
+- authtype: Author
+  name: Liu C
+- authtype: Author
+  name: Pliner EM
+- authtype: Author
+  name: Tenerowicz M
+- authtype: Author
+  name: Roy A
+- authtype: Author
+  name: Richer N
+- authtype: Author
+  name: Hwang J
+- authtype: Author
+  name: Hass CJ
+- authtype: Author
+  name: Clark DJ
+- authtype: Author
+  name: Seidler RD
+- authtype: Author
+  name: Manini TM
+- authtype: Author
+  name: Cruz-Almeida Y
+- authtype: Author
+  name: Ferris DP
+epubdate: 2025 Apr 24
+fulljournalname: Journal of neurophysiology
+issue: '6'
+pages: 1761-1794
+pmclivedate: 2026/01/14
+printpubdate: 2025 Jun 1
+pubdate: 2025 Apr 24
+sortdate: 2025/04/24 00:00
+source: J Neurophysiol
+title: Gait Speed Related Changes in Electrocortical Activity in Younger and Older
+  Adults
+uid: '12799196'
+volume: '133'

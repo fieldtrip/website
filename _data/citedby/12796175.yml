@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41521188'
+- idtype: doi
+  value: 10.1038/s41598-025-33707-y
+- idtype: pmcid
+  value: PMC12796175
+authors:
+- authtype: Author
+  name: Dindorf C
+- authtype: Author
+  name: Dully J
+- authtype: Author
+  name: Simon S
+- authtype: Author
+  name: Perchthaler D
+- authtype: Author
+  name: Becker S
+- authtype: Author
+  name: Ehmann H
+- authtype: Author
+  name: Heitmann K
+- authtype: Author
+  name: Stetter B
+- authtype: Author
+  name: Diers C
+- authtype: Author
+  name: Fröhlich M
+epubdate: 2026 Jan 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1326'
+pmclivedate: 2026/01/14
+printpubdate: ''
+pubdate: 2026 Jan 11
+sortdate: 2026/01/11 00:00
+source: Sci Rep
+title: Human-centered evaluation of statistical parametric mapping and explainable
+  machine learning for outlier detection in plantar pressure data
+uid: '12796175'
+volume: '16'
