@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39173191'
+- idtype: doi
+  value: 10.1113/JP286639
+- idtype: pmcid
+  value: PMC12810243
+authors:
+- authtype: Author
+  name: Marino M
+- authtype: Author
+  name: Mantini D
+epubdate: 2024 Aug 22
+fulljournalname: The Journal of Physiology
+issue: '2'
+pages: 783-812
+pmclivedate: 2026/01/17
+printpubdate: 2026 Jan 15
+pubdate: 2024 Aug 22
+sortdate: 2024/08/22 00:00
+source: J Physiol
+title: 'Human brain imaging with high‐density electroencephalography: Techniques and
+  applications'
+uid: '12810243'
+volume: '604'

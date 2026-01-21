@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/IMAG.a.1103
+- idtype: pmcid
+  value: PMC12813862
+authors:
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Maÿe A
+- authtype: Author
+  name: Daume J
+- authtype: Author
+  name: Xue G
+- authtype: Author
+  name: Engel AK
+epubdate: 2026 Jan 16
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1103
+pmclivedate: 2026/01/20
+printpubdate: ''
+pubdate: 2026 Jan 16
+sortdate: 2026/01/16 00:00
+source: Imaging Neurosci (Camb)
+title: Oscillatory multi-timescale mechanisms underlying audiovisual sequence prediction
+uid: '12813862'
+volume: '4'

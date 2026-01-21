@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/nc/niaf065
+- idtype: pmcid
+  value: PMC12814967
+authors:
+- authtype: Author
+  name: Pavlov YG
+- authtype: Author
+  name: Menger NS
+- authtype: Author
+  name: Keil A
+- authtype: Author
+  name: Kotchoubey B
+epubdate: 2026 Jan 19
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niaf065
+pmclivedate: 2026/01/20
+printpubdate: ''
+pubdate: 2026 Jan 19
+sortdate: 2026/01/19 00:00
+source: Neurosci Conscious
+title: Contingency awareness shapes neural responses in fear conditioning
+uid: '12814967'
+volume: '2026'

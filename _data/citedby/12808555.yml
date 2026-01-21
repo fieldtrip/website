@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '41540513'
+- idtype: doi
+  value: 10.1111/psyp.70229
+- idtype: pmcid
+  value: PMC12808555
+authors:
+- authtype: Author
+  name: Mijancos‐Martínez G
+- authtype: Author
+  name: Bachiller A
+- authtype: Author
+  name: Fernández‐Linsenbarth I
+- authtype: Author
+  name: Ruiz‐Gómez SJ
+- authtype: Author
+  name: Romero S
+- authtype: Author
+  name: Molina V
+- authtype: Author
+  name: Mañanas MÁ
+epubdate: 2026 Jan 15
+fulljournalname: Psychophysiology
+issue: '1'
+pages: e70229
+pmclivedate: 2026/01/17
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 15
+sortdate: 2026/01/15 00:00
+source: Psychophysiology
+title: Assessing SICI Cortical Inhibition With DLPFC TMS‐EEG Using Different ISI Values
+uid: '12808555'
+volume: '63'
