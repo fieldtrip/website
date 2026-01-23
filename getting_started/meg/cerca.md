@@ -140,7 +140,7 @@ The `_HelmConfig.tsv` file specifies the channel names (based on the name of the
     % Create layout from the HelmConfig.tsv file
     layout = [];
     layout.pos(:,1) = HelmConfig.Layx(sensor_slot_mapping);
-    layout.pos(:,2) = HelmConfig.Layy(sensor_slot_mapping)];
+    layout.pos(:,2) = HelmConfig.Layy(sensor_slot_mapping);
     layout.label    = HC_slotnames(sensor_slot_mapping);
     layout.width    = repmat(0.02,size(layout.pos,1),1);
     layout.height   = repmat(0.02,size(layout.pos,1),1);
