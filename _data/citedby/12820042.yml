@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41554723'
+- idtype: doi
+  value: 10.1038/s41467-026-68473-6
+- idtype: pmcid
+  value: PMC12820042
+authors:
+- authtype: Author
+  name: Liu Z
+- authtype: Author
+  name: Johansson M
+- authtype: Author
+  name: Bramão I
+epubdate: 2026 Jan 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '752'
+pmclivedate: 2026/01/22
+printpubdate: ''
+pubdate: 2026 Jan 19
+sortdate: 2026/01/19 00:00
+source: Nat Commun
+title: Episodic events are flexibly encoded in both integrated and separated neural
+  representations
+uid: '12820042'
+volume: '17'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2025.1704482
+- idtype: pmcid
+  value: PMC12823878
+authors:
+- authtype: Author
+  name: Bastola S
+- authtype: Author
+  name: Pruitt T
+- authtype: Author
+  name: Davenport EM
+- authtype: Author
+  name: Maldjian JA
+- authtype: Author
+  name: Liu H
+- authtype: Author
+  name: Alexandrakis G
+epubdate: 2026 Jan 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1704482'
+pmclivedate: 2026/01/23
+printpubdate: ''
+pubdate: 2026 Jan 8
+sortdate: 2026/01/08 00:00
+source: Front Hum Neurosci
+title: Transcranial 1064-nm laser photobiomodulation modulates frequency-specific
+  cortical source dynamics and functional connectivity in healthy adults
+uid: '12823878'
+volume: '19'

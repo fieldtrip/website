@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '41547910'
+- idtype: doi
+  value: 10.1038/s41467-026-68404-5
+- idtype: pmcid
+  value: PMC12820272
+authors:
+- authtype: Author
+  name: van Schalkwijk FJ
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2026 Jan 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '746'
+pmclivedate: 2026/01/22
+printpubdate: ''
+pubdate: 2026 Jan 17
+sortdate: 2026/01/17 00:00
+source: Nat Commun
+title: Aperiodic 1/f noise drives ripple activity in humans
+uid: '12820272'
+volume: '17'

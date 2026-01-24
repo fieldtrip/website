@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1111/ejn.70402
+- idtype: pmcid
+  value: PMC12821571
+authors:
+- authtype: Author
+  name: Hanzal S
+- authtype: Author
+  name: Learmonth G
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Harvey M
+epubdate: 2026 Jan 21
+fulljournalname: The European Journal of Neuroscience
+issue: '2'
+pages: e70402
+pmclivedate: 2026/01/22
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 21
+sortdate: 2026/01/21 00:00
+source: Eur J Neurosci
+title: 'Strategy and Motivation, Rather Than Fatigue, Drive Age‐Related Differences
+  in Sustained Attention Performance: Evidence for Decoupled Beta‐Band Oscillations'
+uid: '12821571'
+volume: '63'

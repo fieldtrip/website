@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '41435615'
+- idtype: doi
+  value: 10.1016/j.clinph.2025.2111475
+- idtype: pmcid
+  value: PMC12820947
+- idtype: MID
+  value: NIHMS2129584
+authors:
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Chinappen DM
+- authtype: Author
+  name: Wodeyar A
+- authtype: Author
+  name: Kinard EA
+- authtype: Author
+  name: Goodman SK
+- authtype: Author
+  name: Shi W
+- authtype: Author
+  name: Baxter BS
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Kramer MA
+- authtype: Author
+  name: Chu CJ
+epubdate: 2025 Dec 7
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: '2111475'
+pmclivedate: 2026/01/22
+printpubdate: ''
+pubdate: 2025 Dec 7
+sortdate: 2025/12/07 00:00
+source: Clin Neurophysiol
+title: Auditory-evoked changes in slow oscillations and spindles correlate with memory
+  consolidation in children with epilepsy and controls
+uid: '12820947'
+volume: '183'

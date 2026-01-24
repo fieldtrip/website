@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41448514'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2025.121677
+- idtype: pmcid
+  value: PMC12817620
+- idtype: MID
+  value: NIHMS2136825
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Tatz JR
+- authtype: Author
+  name: Tsang EW
+- authtype: Author
+  name: Hassan U
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Jiang J
+epubdate: 2025 Dec 23
+fulljournalname: NeuroImage
+issue: ''
+pages: '121677'
+pmclivedate: 2026/01/21
+printpubdate: 2026 Jan
+pubdate: 2025 Dec 23
+sortdate: 2025/12/23 00:00
+source: Neuroimage
+title: 'A practical preprocessing pipeline for concurrent TMS-iEEG: Critical steps
+  and methodological considerations'
+uid: '12817620'
+volume: '325'

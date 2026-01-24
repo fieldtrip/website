@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41567610'
+- idtype: doi
+  value: 10.1117/1.NPh.13.1.015005
+- idtype: pmcid
+  value: PMC12818463
+authors:
+- authtype: Author
+  name: Mollison AA
+- authtype: Author
+  name: Rodriguez ER
+- authtype: Author
+  name: Metzger A
+- authtype: Author
+  name: Shader MJ
+epubdate: 2026 Jan 20
+fulljournalname: Neurophotonics
+issue: '1'
+pages: '015005'
+pmclivedate: 2026/01/21
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 20
+sortdate: 2026/01/20 00:00
+source: Neurophotonics
+title: Group-level test–retest reliability assessment using systemic physiology augmented
+  functional near-infrared spectroscopy during a passive-listening task
+uid: '12818463'
+volume: '13'
