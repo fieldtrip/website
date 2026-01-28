@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41585495'
+- idtype: doi
+  value: 10.1016/j.isci.2025.114571
+- idtype: pmcid
+  value: PMC12828603
+authors:
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Mayer J
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2025 Dec 29
+fulljournalname: iScience
+issue: '2'
+pages: '114571'
+pmclivedate: 2026/01/24
+printpubdate: ''
+pubdate: 2025 Dec 29
+sortdate: 2025/12/29 00:00
+source: iScience
+title: Auricular transcutaneous vagus nerve stimulation alters directed cortical communication
+  during intentional actions
+uid: '12828603'
+volume: '29'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41574685'
+- idtype: doi
+  value: 10.1111/ejn.70401
+- idtype: pmcid
+  value: PMC12828869
+authors:
+- authtype: Author
+  name: Feld GB
+- authtype: Author
+  name: Niethard N
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Gebhardt S
+- authtype: Author
+  name: Kleist L
+- authtype: Author
+  name: Brugger K
+- authtype: Author
+  name: Fritsche A
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Ngo HV
+- authtype: Author
+  name: Hallschmid M
+epubdate: 2026 Jan 23
+fulljournalname: The European Journal of Neuroscience
+issue: '2'
+pages: e70401
+pmclivedate: 2026/01/24
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 23
+sortdate: 2026/01/23 00:00
+source: Eur J Neurosci
+title: Electrical Synapses Contribute to Sleep‐Dependent Declarative Memory Retention
+uid: '12828869'
+volume: '63'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '40892981'
+- idtype: doi
+  value: 10.1162/JOCN.a.95
+- idtype: pmcid
+  value: PMC12829885
+authors:
+- authtype: Author
+  name: Hoddinott JD
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Grahn JA
+epubdate: 2026 Feb 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '2'
+pages: 406-421
+pmclivedate: 2026/01/24
+printpubdate: ''
+pubdate: 2026 Feb 1
+sortdate: 2026/02/01 00:00
+source: J Cogn Neurosci
+title: Experience-driven Predictability Does Not Influence Neural Entrainment to the
+  Beat
+uid: '12829885'
+volume: '38'
