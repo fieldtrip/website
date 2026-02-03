@@ -11,6 +11,24 @@ redirect_from:
 This page describes how we do the conversion at the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen and some of the items described here are specific to us, such as the directory layout and the precise definition of the ear landmarks, but most of this description applies in general.
 {% include markup/end %}
 
+At the DCCN we use earmolds that come in a variety of sizes to position the MEG head localiser coils just outside the left and right ear . For the MRI we use the same earmolds, but now with small MRI markers.
+
+{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_1.jpg" width="400" %}
+
+{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_2.jpg" width="400" %}
+
+{% include markup/red %}
+Note that the photo above is incorrect and misleading: it shows one of the markers plugged into the earmold on the _inside_, whereas in reality they are plugged into the mold on the _outside_, facing away from the ear. The markers are too big to fit in the ear canal.
+
+In the MRI below you can see the small dot (the marker) with the yellow arrow hovering outside the ear; the silicone earmold itself is not visible on the MRI.
+{% include markup/end %}
+
+On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
+
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials1.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials2.png" width="150" %}
+{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials3.png" width="150" %}
+
 ## Doing it the new and easy way
 
 You don't have to use the CTF software to convert the DICOM images and to assign the coordinate system. Please do refer to the pictures below for the definition of the fiducial locations, which have not changed.
@@ -49,7 +67,7 @@ The earphone of the MRI scanner has a large (~1 cm) vitamine E marker built in o
 
 ### Directory structure
 
-To keep your data files organized, it is advised that you use a logical directory structure, e.g
+To keep your data files organized, it is advised that you use a logical directory structure, for example:
 
 | directory                | contents                                |
 | ------------------------ | --------------------------------------- |
@@ -60,11 +78,11 @@ To keep your data files organized, it is advised that you use a logical director
 
 Where '\$subjectcode' is the coded name of your subject data, for instance: subject_01.
 
-Do the following before starting.the actual conversion procedure
+Do the following before starting the actual conversion procedure
 
 - Create a directory '\$subjectcode'
-- Create the directory structure as depicted in the format outline.
-- Copy MRI data set to '/\$subjectcode/dicom'.
+- Create the directory structure as depicted in the format outline
+- Copy MRI data set to '/\$subjectcode/dicom'
 - Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a 'misc' directory that you should create in '\$subjectcode/dicom'.
 - Analyze files are only created when using older CTF software versions (e.g., 4.17)
 
@@ -72,7 +90,7 @@ Now that you have prepared the directory structure for the subject data, you can
 
 ### Convert from DICOM to CTF .mri file
 
-- Start MRIViewer. At the moment (Jan11) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing 'MRIViewer' in the command line.
+- Start MRIViewer. At the moment (January 2011) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing 'MRIViewer' in the command line.
 - Press file -> Import DICOM series...
 - Find the .ima files in '/home/.../\$subjectcode/dicom', select the first one, and press OK. This opens all .ima files
 - A new window will open ('Save MRI file') asking you to name the .mri file that will be created
@@ -80,40 +98,20 @@ Now that you have prepared the directory structure for the subject data, you can
 
 ### Assign the head coordinate system
 
-While still in MRIViewer, perform the following action
-
-- Mark the fiducials (left + right ear, nasion) in comparison to where the MEG coils are.
-
-At the DCCN we use ear-molds that come in a variety of sizes to position the MEG head localiser coils just outside the left and right ear . For the MRI we use the same ear-molds, but now with small MRI markers.
-
-{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_1.jpg" width="400" %}
-
-{% include image src="/assets/img/faq/anat_dicom2ctf/ear_molds_2.jpg" width="400" %}
-
-{% include markup/red %}
-Note that the photo above is incorrect and misleading: it shows one of the markers plugged into the earmold on the _inside_, whereas in reality they are plugged into the mold on the _outside_, facing away from the ear. The markers would actually also be too big to fit in the ear canal.
-
-In the MRI below you can see the small dot (the marker) with the yellow arrow hovering outside the ear; the silicone earmold itself is not visible on the MRI.
-{% include markup/end %}
-
-On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
-
-{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials1.png" width="150" %}
-{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials2.png" width="150" %}
-{% include image src="/assets/img/faq/anat_dicom2ctf/fiducials3.png" width="150" %}
+While still in MRIViewer, mark the fiducials (left + right ear, nasion) in comparison to where the MEG coils are.
 
 The most elegant way to identify the markers would include:
 
-- double click on one of the slices to zoom in.
+- double click on one of the slices to zoom in
 - click with your mouse at the voxels where you want to put a marker (an orange cross appears)
-- click with your right mouse and hold the button to get a drop down menu where you click fiducials and choose one of the three options.
-- you can check all marked fiducials under options and then fiduciary points to see if you have done them all.
+- click with your right mouse and hold the button to get a drop down menu where you click fiducials and choose one of the three options
+- you can check all marked fiducials under options and then fiduciary points to see if you have done them all
 - Save the changes in the MRI file ('File> Save')
 - Make the .mri file compatible with FieldTrip: choose File -> Convert to CTF v2 format and replace the .mri file
 
 ### Create a headshape
 
-Transform the head shape somewhat by applying the following thing
+Transform the head shape somewhat by applying the following things:
 
 - choose Options and brain/headshape to get a new menu
 - in that menu, select under Extract: head shape
@@ -127,8 +125,7 @@ Close the brain/head shape extraction dialog by clicking File->close. When asked
 
 ### Create a default single-sphere model
 
-In the main window of the MRIViewer, click on fit to head shape" It should give an error of around 5% or less. Save the single-sphere headmodel in the same directory as the .mri is in, this will create an .hdm file (File -> Save head model as). You should also save the changes in the MRI file (File, Save). Now you can finally close
-MRlViewer.
+In the main window of the MRIViewer, click on fit to head shape" It should give an error of around 5% or less. Save the single-sphere headmodel in the same directory as the .mri is in, this will create an .hdm file (File -> Save head model as). You should also save the changes in the MRI file (File, Save). Now you can finally close MRlViewer.
 
 Please note that for most FieldTrip analyses you will not be using a single-sphere volume conduction model, but it might be handy to have the single-sphere head model.
 
