@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41596051'
+- idtype: doi
+  value: 10.3390/bioengineering13010119
+- idtype: pmcid
+  value: PMC12837361
+authors:
+- authtype: Author
+  name: Liang A
+- authtype: Author
+  name: Cui Z
+- authtype: Author
+  name: Shi Y
+- authtype: Author
+  name: Qu C
+- authtype: Author
+  name: Wei Z
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Ning X
+- authtype: Author
+  name: Ni X
+- authtype: Author
+  name: Fang J
+epubdate: 2026 Jan 20
+fulljournalname: Bioengineering
+issue: '1'
+pages: '119'
+pmclivedate: 2026/01/28
+printpubdate: ''
+pubdate: 2026 Jan 20
+sortdate: 2026/01/20 00:00
+source: Bioengineering (Basel)
+title: Atypical Resting-State and Task-Evoked EEG Signatures in Children with Developmental
+  Language Disorder
+uid: '12837361'
+volume: '13'

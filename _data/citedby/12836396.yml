@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41608057'
+- idtype: doi
+  value: 10.1162/IMAG.a.1101
+- idtype: pmcid
+  value: PMC12836396
+authors:
+- authtype: Author
+  name: Hakim U
+- authtype: Author
+  name: Noah JA
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Gunasekara N
+- authtype: Author
+  name: Hamilton A
+- authtype: Author
+  name: Pinti P
+- authtype: Author
+  name: Tachtsidis I
+- authtype: Author
+  name: Hirsch J
+epubdate: 2026 Jan 23
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: IMAG.a.1101
+pmclivedate: 2026/01/28
+printpubdate: ''
+pubdate: 2026 Jan 23
+sortdate: 2026/01/23 00:00
+source: Imaging Neurosci (Camb)
+title: Investigating face processing in online interactions via UK–US hyperscanning
+  using fNIRS
+uid: '12836396'
+volume: '4'

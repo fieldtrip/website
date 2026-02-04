@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41564671'
+- idtype: doi
+  value: 10.1016/j.nicl.2026.103946
+- idtype: pmcid
+  value: PMC12859201
+authors:
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Solar KG
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Zamyadi R
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Da Costa L
+- authtype: Author
+  name: Rhind SG
+- authtype: Author
+  name: Jetly R
+- authtype: Author
+  name: Dunkley BT
+epubdate: 2026 Jan 13
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103946'
+pmclivedate: 2026/02/01
+printpubdate: ''
+pubdate: 2026 Jan 13
+sortdate: 2026/01/13 00:00
+source: Neuroimage Clin
+title: 'The structural, functional, and neurophysiological connectome of mild traumatic
+  brain injury: A DTI, fMRI and MEG multimodal clustering and data fusion study'
+uid: '12859201'
+volume: '49'

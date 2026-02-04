@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41605837'
+- idtype: doi
+  value: 10.1111/psyp.70230
+- idtype: pmcid
+  value: PMC12852066
+authors:
+- authtype: Author
+  name: Flaten E
+- authtype: Author
+  name: Carrillo C
+- authtype: Author
+  name: Trainor L
+epubdate: 2026 Jan 28
+fulljournalname: Psychophysiology
+issue: '2'
+pages: e70230
+pmclivedate: 2026/01/30
+printpubdate: 2026 Feb
+pubdate: 2026 Jan 28
+sortdate: 2026/01/28 00:00
+source: Psychophysiology
+title: 'Western Adults'' Neural Responses to an Ambiguous Rhythm: Effects of Priming
+  With and Without Active Attention'
+uid: '12852066'
+volume: '63'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41611738'
+- idtype: doi
+  value: 10.1038/s41598-025-30718-7
+- idtype: pmcid
+  value: PMC12855899
+authors:
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: Cabrera-Álvarez J
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Santos A
+- authtype: Author
+  name: Maestú F
+epubdate: 2026 Jan 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3905'
+pmclivedate: 2026/01/31
+printpubdate: ''
+pubdate: 2026 Jan 29
+sortdate: 2026/01/29 00:00
+source: Sci Rep
+title: Dynamics of brain connectivity across the Alzheimer’s disease spectrum through
+  magnetoencephalography
+uid: '12855899'
+volume: '16'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41608473'
+- idtype: doi
+  value: 10.3389/fpsyt.2025.1696748
+- idtype: pmcid
+  value: PMC12835626
+authors:
+- authtype: Author
+  name: Antón-Toro LF
+- authtype: Author
+  name: Shpakivska-Bilan D
+- authtype: Author
+  name: López-Abad L
+- authtype: Author
+  name: Del Cerro-León A
+- authtype: Author
+  name: Uceta M
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: García-Moreno LM
+- authtype: Author
+  name: Maestú F
+epubdate: 2026 Jan 13
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1696748'
+pmclivedate: 2026/01/28
+printpubdate: ''
+pubdate: 2026 Jan 13
+sortdate: 2026/01/13 00:00
+source: Front Psychiatry
+title: Adolescent predisposition to binge drinking is associated with differences
+  in inhibitory control MEG event-related fields
+uid: '12835626'
+volume: '16'

@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '40764405'
+- idtype: doi
+  value: 10.1038/s41562-025-02268-5
+- idtype: pmcid
+  value: PMC12846920
+authors:
+- authtype: Author
+  name: Pacheco-Estefan D
+- authtype: Author
+  name: Bouyeure A
+- authtype: Author
+  name: Jacob G
+- authtype: Author
+  name: Fellner MC
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Frazzini V
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Güntürkün O
+- authtype: Author
+  name: Shen L
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Han B
+- authtype: Author
+  name: Chen Q
+- authtype: Author
+  name: Axmacher N
+epubdate: 2025 Aug 5
+fulljournalname: Nature Human Behaviour
+issue: '1'
+pages: 29-48
+pmclivedate: 2026/01/29
+printpubdate: '2026'
+pubdate: 2025 Aug 5
+sortdate: 2025/08/05 00:00
+source: Nat Hum Behav
+title: Representational dynamics during extinction of fear memories in the human brain
+uid: '12846920'
+volume: '10'

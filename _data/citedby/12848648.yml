@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '41603188'
+- idtype: doi
+  value: 10.1111/ejn.70394
+- idtype: pmcid
+  value: PMC12848648
+authors:
+- authtype: Author
+  name: Kakaei E
+- authtype: Author
+  name: Schlecht A
+- authtype: Author
+  name: Hauser TU
+epubdate: 2026 Jan 28
+fulljournalname: The European Journal of Neuroscience
+issue: '2'
+pages: e70394
+pmclivedate: 2026/01/29
+printpubdate: 2026 Jan
+pubdate: 2026 Jan 28
+sortdate: 2026/01/28 00:00
+source: Eur J Neurosci
+title: Increased Baseline Pupil Size Linked to Uncertainty Avoidance in Decision Making
+uid: '12848648'
+volume: '63'
