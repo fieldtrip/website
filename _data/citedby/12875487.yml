@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41642755'
+- idtype: doi
+  value: 10.1371/journal.pbio.3003600
+- idtype: pii
+  value: PBIOLOGY-D-25-00734
+- idtype: pmcid
+  value: PMC12875487
+authors:
+- authtype: Author
+  name: Bianco R
+- authtype: Author
+  name: Tóth B
+- authtype: Author
+  name: Bigand F
+- authtype: Author
+  name: Nguyen T
+- authtype: Author
+  name: Sziller I
+- authtype: Author
+  name: Háden GP
+- authtype: Author
+  name: Winkler I
+- authtype: Author
+  name: Novembre G
+epubdate: 2026 Feb 5
+fulljournalname: PLoS biology
+issue: '2'
+pages: e3003600
+pmclivedate: 2026/02/06
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/02/05 00:00
+source: PLoS Biol
+title: Human newborns form musical predictions based on rhythmic but not melodic structure.
+uid: '12875487'
+volume: '24'

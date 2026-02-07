@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41611795'
+- idtype: pmcid
+  value: PMC12865020
+- idtype: doi
+  value: 10.1038/s41598-026-37418-w
+- idtype: pii
+  value: 10.1038/s41598-026-37418-w
+authors:
+- authtype: Author
+  name: Gordon PC
+- authtype: Author
+  name: Metsomaa J
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Ziemann U
+epubdate: 2026 Jan 30
+fulljournalname: Scientific reports
+issue: '1'
+pages: '4317'
+pmclivedate: 2026/02/04
+printpubdate: ''
+pubdate: 2026 Jan 30
+sortdate: 2026/01/30 00:00
+source: Sci Rep
+title: Investigating the effects of TMS-related somatosensory inputs on TMS-evoked
+  potentials provides evidence against significant interaction.
+uid: '12865020'
+volume: '16'

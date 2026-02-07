@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '41641382'
+- idtype: pmcid
+  value: PMC12867537
+- idtype: doi
+  value: 10.1063/5.0287165
+- idtype: pii
+  value: '5.0287165'
+authors:
+- authtype: Author
+  name: Lassi M
+- authtype: Author
+  name: Dalise S
+- authtype: Author
+  name: Privitera L
+- authtype: Author
+  name: Giannini N
+- authtype: Author
+  name: Mancuso M
+- authtype: Author
+  name: Azzollini V
+- authtype: Author
+  name: Ciapetti T
+- authtype: Author
+  name: Grippo A
+- authtype: Author
+  name: Micera S
+- authtype: Author
+  name: Cecchi F
+- authtype: Author
+  name: Mazzoni A
+- authtype: Author
+  name: Chisari C
+- authtype: Author
+  name: Bandini A
+epubdate: 2026 Feb 2
+fulljournalname: APL bioengineering
+issue: '1'
+pages: 016108
+pmclivedate: 2026/02/04
+printpubdate: ''
+pubdate: 2026 Mar
+sortdate: 2026/02/02 00:00
+source: APL Bioeng
+title: Enhancing upper limb motor recovery prediction after acute stroke using EEG
+  and subacute data.
+uid: '12867537'
+volume: '10'

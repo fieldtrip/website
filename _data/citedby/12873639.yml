@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41500836'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1089-25.2025
+- idtype: pii
+  value: JNEUROSCI.1089-25.2025
+- idtype: pmcid
+  value: PMC12873639
+authors:
+- authtype: Author
+  name: Peviani VC
+- authtype: Author
+  name: Elmas HO
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Miller LE
+epubdate: 2026 Feb 4
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '5'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Feb 4
+sortdate: 2026/02/04 00:00
+source: J Neurosci
+title: 'The Spatial Coding of Touch Is Defined in Intrinsic, Limb-Specific Coordinates:
+  An EEG Study.'
+uid: '12873639'
+volume: '46'

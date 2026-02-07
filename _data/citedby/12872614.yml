@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '41620439'
+- idtype: doi
+  value: 10.1038/s41398-026-03822-z
+- idtype: pii
+  value: 10.1038/s41398-026-03822-z
+- idtype: pmcid
+  value: PMC12872614
+authors:
+- authtype: Author
+  name: Gong Q
+- authtype: Author
+  name: Fu X
+- authtype: Author
+  name: Feng D
+- authtype: Author
+  name: Rao S
+- authtype: Author
+  name: Pütz B
+- authtype: Author
+  name: Müller-Myhsok B
+- authtype: Author
+  name: Wei L
+- authtype: Author
+  name: Shen C
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Chen W
+- authtype: Author
+  name: Yang K
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Lv X
+- authtype: Author
+  name: Yan Z
+- authtype: Author
+  name: Luo D
+- authtype: Author
+  name: Wei P
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Chen W
+epubdate: 2026 Jan 31
+fulljournalname: Translational psychiatry
+issue: '1'
+pages: '57'
+pmclivedate: 2026/02/06
+printpubdate: ''
+pubdate: 2026 Jan 31
+sortdate: 2026/01/31 00:00
+source: Transl Psychiatry
+title: Randomized, double-blind, sham-controlled pilot trial of theta-band transcranial
+  alternating current stimulation during cognitive training in mild Alzheimer's disease.
+uid: '12872614'
+volume: '16'

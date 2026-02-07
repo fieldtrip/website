@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41622250'
+- idtype: pmcid
+  value: PMC12864999
+- idtype: doi
+  value: 10.1038/s41598-025-33761-6
+- idtype: pii
+  value: 10.1038/s41598-025-33761-6
+authors:
+- authtype: Author
+  name: Ostrowski J
+- authtype: Author
+  name: Maack MC
+- authtype: Author
+  name: Rose M
+epubdate: 2026 Feb 1
+fulljournalname: Scientific reports
+issue: '1'
+pages: '4346'
+pmclivedate: 2026/02/04
+printpubdate: ''
+pubdate: 2026 Feb 1
+sortdate: 2026/02/01 00:00
+source: Sci Rep
+title: Disentangling the functional roles of pre-stimulus oscillations in crossmodal
+  associative memory formation via sensory entrainment.
+uid: '12864999'
+volume: '16'

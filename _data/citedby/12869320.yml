@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41647264'
+- idtype: pmcid
+  value: PMC12869320
+- idtype: doi
+  value: 10.1162/IMAG.a.1123
+- idtype: pii
+  value: IMAG.a.1123
+authors:
+- authtype: Author
+  name: Abdellahi MEA
+- authtype: Author
+  name: Rakowska M
+- authtype: Author
+  name: Treder MS
+- authtype: Author
+  name: Lewis PA
+epubdate: 2026 Feb 3
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/02/05
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/03 00:00
+source: Imaging Neurosci (Camb)
+title: Targeted memory reactivation elicits temporally compressed reactivation linked
+  to spindles.
+uid: '12869320'
+volume: '4'

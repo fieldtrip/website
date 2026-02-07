@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '41419333'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0742-24.2025
+- idtype: pii
+  value: JNEUROSCI.0742-24.2025
+- idtype: pmcid
+  value: PMC12873648
+authors:
+- authtype: Author
+  name: Glynos NG
+- authtype: Author
+  name: Huels ER
+- authtype: Author
+  name: Groenhout T
+- authtype: Author
+  name: Raghu A
+- authtype: Author
+  name: Nelson A
+- authtype: Author
+  name: Kim Y
+- authtype: Author
+  name: Zeid AM
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Mashour GA
+- authtype: Author
+  name: Kennedy RT
+- authtype: Author
+  name: Pal D
+epubdate: 2026 Feb 4
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '5'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Feb 4
+sortdate: 2026/02/04 00:00
+source: J Neurosci
+title: Neurochemical and Neurophysiological Effects of Intravenous Administration
+  of N,N-Dimethyltryptamine in Rats.
+uid: '12873648'
+volume: '46'

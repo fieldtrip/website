@@ -1,0 +1,27 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.114697
+- idtype: pmcid
+  value: PMC12874592
+- idtype: pii
+  value: S2589-0042(26)00072-6
+authors:
+- authtype: Author
+  name: Bai S
+- authtype: Author
+  name: Menétrey MQ
+- authtype: Author
+  name: Pascucci D
+epubdate: 2026 Jan 14
+fulljournalname: iScience
+issue: '2'
+pages: ''
+pmclivedate: 2026/02/06
+printpubdate: ''
+pubdate: 2026 Feb 20
+sortdate: 2026/01/14 00:00
+source: iScience
+title: What is next? Predictable visual sequences are encoded with anticipatory biases
+  and reduced neural responses.
+uid: '12874592'
+volume: '29'

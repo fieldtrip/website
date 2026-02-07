@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '41419330'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0364-25.2025
+- idtype: pii
+  value: JNEUROSCI.0364-25.2025
+- idtype: pmcid
+  value: PMC12873642
+authors:
+- authtype: Author
+  name: Shikauchi Y
+- authtype: Author
+  name: Takemi M
+- authtype: Author
+  name: Tomasevic L
+- authtype: Author
+  name: Kitazono J
+- authtype: Author
+  name: Siebner HR
+- authtype: Author
+  name: Oizumi M
+epubdate: 2026 Feb 4
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '5'
+pages: ''
+pmclivedate: 2026/02/06
+printpubdate: ''
+pubdate: 2026 Feb 4
+sortdate: 2026/02/04 00:00
+source: J Neurosci
+title: Quantifying State-Dependent Control Properties of Brain Dynamics from Perturbation
+  Responses.
+uid: '12873642'
+volume: '46'
