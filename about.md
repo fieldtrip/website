@@ -10,7 +10,7 @@ FieldTrip is the MATLAB software toolbox for MEG, EEG and iEEG analysis. It offe
 
 The FieldTrip toolbox is released free of charge as [open source software](https://en.wikipedia.org/wiki/Open_source) under the GNU [general public license](https://www.gnu.org/copyleft/gpl.html).
 
-FieldTrip is being developed and maintained at the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/donders), part of the [Radboud University](https://www.ru.nl) in Nijmegen, the Netherlands in close collaboration with [collaborating institutes](/external_links#collaborating_institutes). The development of FieldTrip currently receives support from [the Netherlands Organization for Scientific Research (NWO)](https://www.nwo.nl) and has previously been supported by the [ChildBrain](https://www.childbrain.eu) project, the [Human Connectome](https://humanconnectome.org) project and by [BrainGain](https://www.braingain.nl).
+FieldTrip is being developed and maintained at the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/donders), part of the [Radboud University](https://www.ru.nl) in Nijmegen, the Netherlands in close collaboration with [collaborating institutes](/external_links#collaborating_institutes). The development of FieldTrip has previously been financially supported by the [Netherlands Organization for Scientific Research (NWO)](https://www.nwo.nl), the [ChildBrain](https://www.childbrain.eu) project, the [Human Connectome](https://humanconnectome.org) project and by [BrainGain](https://www.braingain.nl).
 
 The development is led by Robert Oostenveld and Jan-Mathijs Schoffelen, and receives many valuable contributions from present and past colleagues from the Donders and many contributors over the world.
 
