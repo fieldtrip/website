@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '41314941'
+- idtype: pmcid
+  value: PMC12881671
+- idtype: doi
+  value: 10.1016/j.bja.2025.10.038
+- idtype: pii
+  value: S0007-0912(25)00776-7
+authors:
+- authtype: Author
+  name: Wehrman JJ
+- authtype: Author
+  name: Casey C
+- authtype: Author
+  name: Redinbaugh MJ
+- authtype: Author
+  name: Muller E
+- authtype: Author
+  name: Munn B
+- authtype: Author
+  name: Payne T
+- authtype: Author
+  name: Tanabe S
+- authtype: Author
+  name: Mohanta S
+- authtype: Author
+  name: Filbey W
+- authtype: Author
+  name: Raz A
+- authtype: Author
+  name: Banks MI
+- authtype: Author
+  name: Pearce RA
+- authtype: Author
+  name: Shine JM
+- authtype: Author
+  name: Saalmann YB
+- authtype: Author
+  name: Sanders RD
+epubdate: 2025 Nov 27
+fulljournalname: British journal of anaesthesia
+issue: '2'
+pages: 573-583
+printpubdate: 2026 Feb
+pubdate: 2026 Feb
+sortdate: 2026/02/01 00:00
+source: Br J Anaesth
+title: Thalamic contributions to predictive coding and disconnected consciousness
+  in human volunteers.
+uid: '12881671'
+volume: '136'

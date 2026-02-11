@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41608594'
+- idtype: pmcid
+  value: PMC12835495
+- idtype: doi
+  value: 10.34133/cbsystems.0507
+- idtype: pii
+  value: '0507'
+authors:
+- authtype: Author
+  name: Lin L
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Qing W
+- authtype: Author
+  name: Kuet MT
+- authtype: Author
+  name: Zhao H
+- authtype: Author
+  name: Ye F
+- authtype: Author
+  name: Rong W
+- authtype: Author
+  name: Li W
+- authtype: Author
+  name: Hu X
+epubdate: 2026 Jan 27
+fulljournalname: Cyborg and bionic systems (Washington, D.C.)
+issue: ''
+pages: '0507'
+pmclivedate: 2026/01/28
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/01/27 00:00
+source: Cyborg Bionic Syst
+title: Sensorimotor Integration by Targeted Priming in Muscles with Electromyography-Driven
+  Electro-vibro-feedback in Robot-Assisted Wrist/Hand Rehabilitation after Stroke.
+uid: '12835495'
+volume: '7'
