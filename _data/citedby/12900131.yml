@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.3390/s26031001
+- idtype: pmcid
+  value: PMC12900131
+authors:
+- authtype: Author
+  name: Duraisingam A
+- authtype: Author
+  name: Soria D
+- authtype: Author
+  name: Palaniappan R
+epubdate: 2026 Feb 3
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '3'
+pages: ''
+pmclivedate: 2026/02/13
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/02/03 00:00
+source: Sensors (Basel)
+title: 'Oscillatory Correlates of Habituation: EEG Evidence of Sustained Frontal Theta
+  Activity to Food Cues.'
+uid: '12900131'
+volume: '26'

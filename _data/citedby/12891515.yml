@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41507592'
+- idtype: pmcid
+  value: PMC12891515
+- idtype: doi
+  value: 10.1038/s42003-025-09481-y
+- idtype: pii
+  value: 10.1038/s42003-025-09481-y
+authors:
+- authtype: Author
+  name: Kwon S
+- authtype: Author
+  name: Lubinus C
+- authtype: Author
+  name: Kell CA
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Rimmele JM
+epubdate: 2026 Jan 8
+fulljournalname: Communications biology
+issue: '1'
+pages: '205'
+pmclivedate: 2026/02/12
+printpubdate: ''
+pubdate: 2026 Jan 8
+sortdate: 2026/01/08 00:00
+source: Commun Biol
+title: Effects of speech periodicity and speech rate on auditory-motor coupling during
+  speech comprehension.
+uid: '12891515'
+volume: '9'

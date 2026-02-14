@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '35667341'
+- idtype: MID
+  value: NIHMS2137630
+- idtype: pmcid
+  value: PMC12887847
+- idtype: doi
+  value: 10.1016/j.clinph.2022.05.010
+- idtype: pii
+  value: S1388-2457(22)00276-0
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Hitchings L
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Larry Maxwell G
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: 2022 May 21
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 21-28
+pmclivedate: 2026/02/11
+printpubdate: 2022 Aug
+pubdate: 2022 Aug
+sortdate: 2022/08/01 00:00
+source: Clin Neurophysiol
+title: Electroencephalogram in low-risk term newborns predicts neurodevelopmental
+  metrics at age two years.
+uid: '12887847'
+volume: '140'

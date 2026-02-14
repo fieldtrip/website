@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41208681'
+- idtype: pmcid
+  value: PMC12887927
+- idtype: doi
+  value: 10.1111/add.70246
+authors:
+- authtype: Author
+  name: Del Cerro-León A
+- authtype: Author
+  name: Uceta M
+- authtype: Author
+  name: Shpakivska-Bilan D
+- authtype: Author
+  name: Suárez-Méndez I
+- authtype: Author
+  name: Peribáñez-Baz H
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: García-Moreno LM
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Antón-Toro LF
+epubdate: 2025 Nov 10
+fulljournalname: Addiction (Abingdon, England)
+issue: '3'
+pages: 606-616
+pmclivedate: 2026/02/11
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Addiction
+title: 'Electrophysiological sexual dimorphism as an early risk marker of alcohol
+  use in adolescence: A longitudinal neuroimaging study.'
+uid: '12887927'
+volume: '121'

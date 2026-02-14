@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.3390/ijms27031567
+- idtype: pmcid
+  value: PMC12898290
+authors:
+- authtype: Author
+  name: Neklyudova A
+- authtype: Author
+  name: Lind K
+- authtype: Author
+  name: Portnova G
+- authtype: Author
+  name: Golovina K
+- authtype: Author
+  name: Mitina MI
+- authtype: Author
+  name: Manakhov AD
+- authtype: Author
+  name: Sysoeva O
+epubdate: 2026 Feb 5
+fulljournalname: International Journal of Molecular Sciences
+issue: '3'
+pages: ''
+pmclivedate: 2026/02/13
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/02/05 00:00
+source: Int J Mol Sci
+title: Neurophysiological Profiles in a Family with Multiple SHANK3-Related Phelan–McDermid
+  Syndrome Cases.
+uid: '12898290'
+volume: '27'

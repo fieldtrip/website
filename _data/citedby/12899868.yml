@@ -1,0 +1,27 @@
+articleids:
+- idtype: doi
+  value: 10.3390/s26030855
+- idtype: pmcid
+  value: PMC12899868
+authors:
+- authtype: Author
+  name: Chung V
+- authtype: Author
+  name: Chopin L
+- authtype: Author
+  name: Karadayi J
+- authtype: Author
+  name: Grèzes J
+epubdate: 2026 Jan 28
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '3'
+pages: ''
+pmclivedate: 2026/02/13
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/01/28 00:00
+source: Sensors (Basel)
+title: Validity of the Polar H10 for Continuous Measures of Heart Rate and Heart Rate
+  Synchrony Analysis.
+uid: '12899868'
+volume: '26'

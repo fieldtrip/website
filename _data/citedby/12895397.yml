@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '38412745'
+- idtype: MID
+  value: NIHMS2137706
+- idtype: pmcid
+  value: PMC12895397
+- idtype: doi
+  value: 10.1016/j.clinph.2024.02.009
+- idtype: pii
+  value: S1388-2457(24)00024-5
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Hitchings L
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Larry Maxwell G
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: 2024 Feb 15
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 68-74
+pmclivedate: 2026/02/13
+printpubdate: 2024 Apr
+pubdate: 2024 Apr
+sortdate: 2024/04/01 00:00
+source: Clin Neurophysiol
+title: Association of brain functional connectivity with neurodevelopmental outcomes
+  in healthy full-term newborns.
+uid: '12895397'
+volume: '160'

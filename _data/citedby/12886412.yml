@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41675689'
+- idtype: pmcid
+  value: PMC12886412
+- idtype: doi
+  value: 10.3389/fnins.2025.1662068
+authors:
+- authtype: Author
+  name: Dolezalova I
+- authtype: Author
+  name: Chladek J
+- authtype: Author
+  name: Macek M
+- authtype: Author
+  name: Chrastina J
+- authtype: Author
+  name: Škvařilova T
+- authtype: Author
+  name: Burilova P
+- authtype: Author
+  name: Erben S
+- authtype: Author
+  name: Zatloukalova E
+- authtype: Author
+  name: Brazdil M
+epubdate: 2026 Jan 27
+fulljournalname: Frontiers in neuroscience
+issue: ''
+pages: '1662068'
+pmclivedate: 2026/02/11
+printpubdate: ''
+pubdate: '2025'
+sortdate: 2026/01/27 00:00
+source: Front Neurosci
+title: 'Complex network behavior in epileptic patients treated with Vagus Nerve Stimulation
+  (VNS): VNS responders exhibit a unique pattern, different from VNS non-responders
+  and healthy controls.'
+uid: '12886412'
+volume: '19'
