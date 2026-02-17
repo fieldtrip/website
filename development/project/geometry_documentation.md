@@ -4,7 +4,6 @@ title: Clean up the documentation on head modeling, anatomical processing, etc.
 
 {% include /shared/development/warning.md %}
 
-
 there are now sections at
 
 - https://www.fieldtriptoolbox.org/example/create_bem_headmodel_for_eeg -> has been deleted

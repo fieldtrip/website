@@ -4,7 +4,6 @@ title: What is the best way to homogenize data using z-scores?
 
 {% include /shared/development/warning.md %}
 
-
 Z-scores are being used as a means to 'normalize' the data before doing over-subjects statistics. However, there are many ways of implementing this and at the moment there is not much consensus what the best method is.
 
 ## Objectives

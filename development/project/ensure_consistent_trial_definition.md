@@ -4,7 +4,6 @@ title: Ensure consistent trial definition
 
 {% include /shared/development/warning.md %}
 
-
 There are certain functions that rely on the trl somewhere hidden in the config. After resampledata the trl is invalid. Simulated data also does not have a trl. No idea what appenddata does, but is probably also related...
 
 All functions that take preprocessed/raw data as input should deal with this trl=problem in a consistent fashion.

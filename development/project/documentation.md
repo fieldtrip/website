@@ -4,7 +4,6 @@ title: Ensure consistency of the documentation
 
 {% include /shared/development/warning.md %}
 
-
 ## Tutorials
 
 #### Preprocessing - trigger based trial selection

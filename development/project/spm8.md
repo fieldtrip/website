@@ -4,7 +4,6 @@ title: Integration with SPM8
 
 {% include /shared/development/warning.md %}
 
-
     1) support of arbitrary EEG montages (elec.tra)
     2) scaling of electrophysiological data
     3) common coregistration function for FT and SPM

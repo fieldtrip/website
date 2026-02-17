@@ -4,7 +4,6 @@ title: Handling of continuous data
 
 {% include /shared/development/warning.md %}
 
-
 ## Introduction
 
 At the moment most of the FieldTrip functions work with segmented data in memory. The segments or trials are specified by **[ft_definetrial](/reference/ft_definetrial)** and the segments are read with **[ft_preprocessing](/reference/ft_preprocessing)**. This also affects artifact detection, which is largely done prior to preprocessing, using data that still resides on disk.

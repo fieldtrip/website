@@ -4,7 +4,6 @@ title: Modularise ft_connectivityanalysis
 
 {% include /shared/development/warning.md %}
 
-
 Goal: convert ft_connectivityanalysis into a module, to facilitate collaboration with Tim Mullen's EEGLAB connectivity module.
 
 Action plan (from the FT side):

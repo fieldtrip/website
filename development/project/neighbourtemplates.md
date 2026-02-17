@@ -4,7 +4,6 @@ title: Neighbour templates
 
 {% include /shared/development/warning.md %}
 
-
 This project has been completed and it's result can be found here:
 
 - <http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors>

@@ -4,7 +4,6 @@ title: Document grad.tra, modifications to it, and effects on inverse
 
 {% include /shared/development/warning.md %}
 
-
 ## Resolution: see faq
 
 - [faq/how_are_electrodes_magnetometers_or_gradiometers_described](/faq/source/sensors_definition)

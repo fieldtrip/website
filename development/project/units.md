@@ -4,7 +4,6 @@ title: Ensure consistent units throughout fieldtrip
 
 {% include /shared/development/warning.md %}
 
-
 Goal: to consistently deal with spatial units.
 
 Plan: investigate at which locations knowledge about the units is assumed/needed/appended to the data. at some places there could be even hard coded conversions. Build in explicit check-and-error, or correction when two objects are combined with different units.

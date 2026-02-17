@@ -4,7 +4,6 @@ title: Replicate functionality of MNE software
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 to replicate the functionality of MNE software in FieldTrip. The same functions will be usable for researchers at the Donders Institute without learning how to use a new software (MNE). Therefore, the project is focusing on adapting the functions to the requirements and to technical facilities of this institute.

@@ -4,7 +4,6 @@ title: Switch from SPM2 to SPM8
 
 {% include /shared/development/warning.md %}
 
-
 It would be nice to get rid of the spm2 dependency and switch to spm8 instead. The following FieldTrip functions depend on spm
 
     jansch@mentat001> grep -l spm_ *.m private/*.m fileio/*.m forward/*.m inverse/*.m

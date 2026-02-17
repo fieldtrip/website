@@ -4,7 +4,6 @@ title: Check the correctness of the implementation of the algorithms
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 The functions should be tested regularly on correctness, therefore test scripts are needed. These scripts should cover

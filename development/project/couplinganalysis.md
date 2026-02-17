@@ -5,7 +5,6 @@ title: Implement a function which computes a variety of bivariate coupling measu
 {% include /shared/development/warning.md %}
 
 
-
 The goal is to create a multi-purpose function which takes raw/timelock/freq/source/mvar data as an input and computes coupling measures such as
 
 1.  coherence

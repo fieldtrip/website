@@ -4,7 +4,6 @@ title: Implement function that checks consistency of cfgs
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 1.  For the user: input cfgs should be adjusted when necessary and possible, and feedback (warning/error) should be given when **required** options are missing or when **forbidden** or **deprecated** options are used. This should replace the current 'backward compatibility' code.

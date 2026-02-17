@@ -4,7 +4,6 @@ title: Implement support for a separation of data into a signal and noise subspa
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 1.  Allow the suppression of a known noise-subspace in inverse modelling

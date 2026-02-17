@@ -4,7 +4,6 @@ title: Refurbishing the FORWARD module
 
 {% include /shared/development/warning.md %}
 
-
 The forward module routines generate leadfields which are used used in different contexts (e.g., beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.
 
 Let's list some of the the methods currently supported by FieldTrip (in parentheses which modality they are used for):

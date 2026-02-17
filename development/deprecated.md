@@ -4,7 +4,6 @@ title: Deprecated functions and options
 
 {% include /shared/development/warning.md %}
 
-
 {% include markup/skyblue %}
 Definition of **[deprecation](https://en.wikipedia.org/wiki/Deprecated)**
 (_From Wikipedia, the free encyclopedia_)

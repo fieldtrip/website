@@ -4,7 +4,6 @@ title: Restructure the directory layout
 
 {% include /shared/development/warning.md %}
 
-
 The directory layout has been changed per 23 September 2008. The new layout makes the FieldTrip modules explicit (i.e. fileio, forwinv, preproc) and allows external toolboxes to be included in the release/zipfile without confusion about the different licenses and/or contributors to the external code.
 
 The new layout also makes the use of templates (for layout and cortical surfaces), statfuns and trialfuns explicit by putting them in their own directories.

@@ -4,7 +4,6 @@ title: FieldTrip/SIMBIO integration plan
 
 {% include /shared/development/warning.md %}
 
-
 The goal is to integrate the SIMBIO FEM model into FieldTrip.
 
 this involves ft_prepare_vol_sens and ft_compute_leadfield

@@ -4,7 +4,6 @@ title: Code coverage
 
 {% include /shared/development/warning.md %}
 
-
 Using the `untested_functions` command for **[ft_test](/reference/utilities/ft_test)**, we can find which high-level FieldTrip functions are not directly called by any test scripts, i.e., which functions seem to have no coverage at all.
 
     ft_test untested_functions

@@ -4,7 +4,6 @@ title: Provide an interface to the FNS software for FDM modelling
 
 {% include /shared/development/warning.md %}
 
-
 The Finite Difference Neuroelectromagnetic Modeling Software (FNS) is a toolbox developed by Hung Dang (Please send your comments and suggestions to hungptit@gmail.com) and has the interesting feature of building forward models based on volumetric features of the volume conductor.
 
 ## Goals

@@ -4,7 +4,6 @@ title: Implement a common distributed computing backend
 
 {% include /shared/development/warning.md %}
 
-
 ## Core idea
 
 Standardize distributed computing ~~at the DCCN~~ from within open source MATLAB toolboxes, through the use of developed functions such as Torque (qsubfeval, qsubcellfun) or peer-to-peer computing (peerfeval, peercellfun).

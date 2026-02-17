@@ -4,7 +4,6 @@ title: How to deal with the forward model units?
 
 {% include /shared/development/warning.md %}
 
-
 See also [this small reminder](/development/project/units)
 
 This refers to a bug submitted by V.Litvak, suggesting to give the lead field a default unit, or at least to have a default when the user wants to deal with the absolute values of the leadfields. (See also the [bug #686](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686))

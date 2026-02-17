@@ -4,7 +4,6 @@ title: Redesign and implement a common statistical backend for various data type
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 - Add support for each major statistical method to each of the data objects (source, freq, timelock)

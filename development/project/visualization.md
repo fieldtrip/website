@@ -4,7 +4,6 @@ title: Visualization concept for 4D bivariate data
 
 {% include /shared/development/warning.md %}
 
-
 ## Goals
 
 1. Provide the various plotting functions with a unified (as much as possible) way to handle chan_chan_freq_time data.

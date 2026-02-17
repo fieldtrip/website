@@ -4,7 +4,6 @@ title: Add support for reading data from any file format supported by neuroshare
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 - should be general function that can work with any of the formats supported by neuroshare

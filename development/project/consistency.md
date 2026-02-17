@@ -4,7 +4,6 @@ title: Check the consistency between the documentation and the implementations
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 - the reference documentation should be included in the m-files (i.e., `help functionname`)

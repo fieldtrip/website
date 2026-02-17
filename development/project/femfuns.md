@@ -4,7 +4,6 @@ title: Implementation of realistic electrode properties in forward volume conduc
 
 {% include /shared/development/warning.md %}
 
-
 ## Description
 
 In applications like epilepsy and brain-computer interface, electrocorticography electrode grids are often implanted in patients to detect normal and abnormal brain activity. For both applications, there is the need for assessing the sensitivity of current or newly-designed ECoG grids, whether the sensitivity could be improved, and how to eventually optimize the grid. These investigations can be conducted numerically, with adequate and adapted volume conduction models.

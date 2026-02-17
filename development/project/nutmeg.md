@@ -6,7 +6,6 @@ redirect_from:
 
 {% include /shared/development/warning.md %}
 
-
     1) Identify pieces of code in common and avoid replication
     2) NUTMEG can call FieldTrip's fileio
     3) NUTMEG can call FieldTrip's forward (including the change to treating reference electrodes as separate)

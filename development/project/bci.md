@@ -4,7 +4,6 @@ title: Implement online data processing and classification for BCI
 
 {% include /shared/development/warning.md %}
 
-
 Note: real-time analysis of EEG and MEG data is currently in development within the F.C. Donders Centre. Not all functionality in FieldTrip will be immediately released to the general public. If you think something is missing in the release version that should be there, or if you want to have a pre-release of specific code, you can [contact](/support) us.
 
 The following BCI input agents are desired

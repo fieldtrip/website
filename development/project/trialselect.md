@@ -4,7 +4,6 @@ title: Implement trial selection option
 
 {% include /shared/development/warning.md %}
 
-
 Consistent implementation of option for trial selection in all relevant functions (such as plotting functions, functions that handle raw data, etc.).
 
 ## Objectives

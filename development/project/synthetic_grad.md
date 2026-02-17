@@ -4,7 +4,6 @@ title: Implement support for CTF synthetic gradiometers
 
 {% include /shared/development/warning.md %}
 
-
 ## Objectives
 
 1.  Improve accuracy of source reconstructions for synthetic gradient data

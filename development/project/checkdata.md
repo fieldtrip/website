@@ -4,7 +4,6 @@ title: Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives
 
 {% include /shared/development/warning.md %}
 
-
 - Ad sourceanalysis:
 
 the bookkeeping of the data is quite complicated. Identify commonalities and differences between different inputs (time-domain data vs. frequency-domain data), and the different methods (pcc vs. dics initially, also lcmv eventually). For this, a more consistent representation of the data from the input side is required. Candidate function to take care of this will be checkdata. After calling checkdata, the input data will be converted into something containing a covariance/csd, and potentially trial-data (timelocked or fourier coefficients). This will make prepare_freq_matrices superfluous eventually.
