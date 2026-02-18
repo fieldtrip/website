@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41694474'
+- idtype: pmcid
+  value: PMC12903129
+- idtype: doi
+  value: 10.1162/IMAG.a.1136
+- idtype: pii
+  value: IMAG.a.1136
+authors:
+- authtype: Author
+  name: Sumner P
+- authtype: Author
+  name: Powell G
+- authtype: Author
+  name: Price A
+- authtype: Author
+  name: Thomas H
+- authtype: Author
+  name: Reed LS
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Hedge C
+- authtype: Author
+  name: Singh KD
+epubdate: 2026 Feb 12
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/02/14
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/12 00:00
+source: Imaging Neurosci (Camb)
+title: 'Sensory sensitivity and visual discomfort are not associated with altered
+  gamma oscillations: A test of the excitation-inhibition hypothesis.'
+uid: '12903129'
+volume: '4'

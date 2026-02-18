@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41700307'
+- idtype: pmcid
+  value: PMC12906648
+- idtype: doi
+  value: 10.1002/dad2.70275
+- idtype: pii
+  value: DAD270275
+authors:
+- authtype: Author
+  name: Benussi A
+- authtype: Author
+  name: Cantoni V
+- authtype: Author
+  name: Palacino F
+- authtype: Author
+  name: Altomare D
+- authtype: Author
+  name: Moretti DV
+- authtype: Author
+  name: Manganotti P
+- authtype: Author
+  name: Borroni B
+epubdate: 2026 Feb 15
+fulljournalname: Alzheimer's & dementia (Amsterdam, Netherlands)
+issue: '1'
+pages: e70275
+pmclivedate: 2026/02/16
+printpubdate: ''
+pubdate: 2026 Jan-Mar
+sortdate: 2026/02/15 00:00
+source: Alzheimers Dement (Amst)
+title: EEG network reorganization across Alzheimer's disease, frontotemporal dementia,
+  and dementia with Lewy bodies.
+uid: '12906648'
+volume: '18'

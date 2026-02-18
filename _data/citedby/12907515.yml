@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '41693256'
+- idtype: doi
+  value: 10.1002/hbm.70470
+- idtype: pmcid
+  value: PMC12907515
+authors:
+- authtype: Author
+  name: Zhu T
+- authtype: Author
+  name: Sack AT
+- authtype: Author
+  name: Leunissen I
+epubdate: ''
+fulljournalname: Human brain mapping
+issue: '3'
+pages: e70470
+pmclivedate: 2026/02/17
+printpubdate: 2026 Feb 15
+pubdate: 2026 Feb 15
+sortdate: 2026/02/15 00:00
+source: Hum Brain Mapp
+title: Phase-Specific Dual-Site Beta Transcranial Alternating Current Stimulation
+  Differentially Influences Functional Connectivity Associated With Motor Inhibition
+  Performance.
+uid: '12907515'
+volume: '47'

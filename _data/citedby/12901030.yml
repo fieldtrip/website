@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41673398'
+- idtype: pmcid
+  value: PMC12901030
+- idtype: doi
+  value: 10.1038/s41467-026-69379-z
+- idtype: pii
+  value: 10.1038/s41467-026-69379-z
+authors:
+- authtype: Author
+  name: Siems M
+- authtype: Author
+  name: Cao Y
+- authtype: Author
+  name: Tohidi-Moghaddam M
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Tsetsos K
+epubdate: 2026 Feb 11
+fulljournalname: Nature communications
+issue: '1'
+pages: '1587'
+pmclivedate: 2026/02/14
+printpubdate: ''
+pubdate: 2026 Feb 11
+sortdate: 2026/02/11 00:00
+source: Nat Commun
+title: Rhythmic sampling of multiple decision alternatives in the human brain.
+uid: '12901030'
+volume: '17'

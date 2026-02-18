@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41592345'
+- idtype: pmcid
+  value: PMC12903115
+- idtype: doi
+  value: 10.1088/1741-2552/ae3e16
+authors:
+- authtype: Author
+  name: Phillips AR
+- authtype: Author
+  name: Vakilna YS
+- authtype: Author
+  name: EPMoghaddam D
+- authtype: Author
+  name: Banta A
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Aazhang B
+epubdate: 2026 Feb 13
+fulljournalname: Journal of neural engineering
+issue: '1'
+pages: ''
+pmclivedate: 2026/02/14
+printpubdate: ''
+pubdate: 2026 Feb 13
+sortdate: 2026/02/13 00:00
+source: J Neural Eng
+title: 'Inferring neural sources from electroencephalography: foundations and frontiers.'
+uid: '12903115'
+volume: '23'
