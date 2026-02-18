@@ -7,16 +7,16 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Active projects
 
-- [Code coverage](/development/project/code_coverage)
-- [Toolbox code review](/development/project/code_review)
+- [Write tutorial for OPM helmet design](/development/project/opm_helmet_design)
 - [Improve artifact handling](/development/project/artifacts)
 - [Improve integration with other toolboxes](/development/project/integration)
-- [Improve regression testing](/development/project/regression)
-- [Implement a common distributed computing backend](/development/project/distributed)
-- [Implementation of realistic electrode properties in forward volume conduction models](/development/project/femfuns)
 
 ## Stale projects
 
+- [Implement a common distributed computing backend](/development/project/distributed)
+- [Implementation of realistic electrode properties in forward volume conduction models](/development/project/femfuns)
+- [Code coverage](/development/project/code_coverage)
+- [Toolbox code review](/development/project/code_review)
 - [Cleanup private functions](/development/project/cleanup_private_functions)
 - [Describe how to create design matrix](/development/project/design)
 - [Document grad.tra, modifications to it, and effects on inverse](/development/project/tra)
@@ -30,6 +30,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Closed Projects
 
+- [Improve regression testing](/development/project/regression) (done)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne) (done -> see [getting started section](/getting_started/othersoftware/mne/))
 - [Add stripped spm2 and other toolboxes as external dependencies](/development/project/external_dependencies) (done)
 - [Add support for reading data from any file format supported by neuroshare](/development/project/read_neuroshare) (will not be done, outdated)
