@@ -1,0 +1,27 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.114757
+- idtype: pmcid
+  value: PMC12907112
+- idtype: pii
+  value: S2589-0042(26)00132-X
+authors:
+- authtype: Author
+  name: Yang W
+- authtype: Author
+  name: Xiang S
+- authtype: Author
+  name: Huang B
+epubdate: 2026 Jan 21
+fulljournalname: iScience
+issue: '2'
+pages: ''
+pmclivedate: 2026/02/17
+printpubdate: ''
+pubdate: 2026 Feb 20
+sortdate: 2026/01/21 00:00
+source: iScience
+title: Decoding P300 as a shared neural mechanism for oddball target detection and
+  working memory updating.
+uid: '12907112'
+volume: '29'
