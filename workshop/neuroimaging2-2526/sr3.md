@@ -1,6 +1,6 @@
 ---
 title: SR3 - Source reconstruction
-tags: [neuroimaging2-2425]
+tags: [neuroimaging2-2526]
 ---
 
 ## 6 Fitting EEG/MEG activity with dipole models

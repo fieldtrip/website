@@ -1,6 +1,6 @@
 ---
 title: SR4 - Source reconstruction
-tags: [neuroimaging2-2425]
+tags: [neuroimaging2-2526]
 ---
 
 ## 7 Modelling EEG/MEG activity using distributed sources

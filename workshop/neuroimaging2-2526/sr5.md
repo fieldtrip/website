@@ -1,6 +1,6 @@
 ---
 title: SR5 - Source reconstruction
-tags: [neuroimaging2-2425]
+tags: [neuroimaging2-2526]
 ---
 
 ## 8 Reconstructing EEG/MEG activity using beamforming

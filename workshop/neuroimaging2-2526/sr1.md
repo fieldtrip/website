@@ -1,6 +1,6 @@
 ---
 title: SR1 - Source reconstruction
-tags: [neuroimaging2-2425]
+tags: [neuroimaging2-2526]
 ---
 
 ## 1 The biophysical forward model and linear mixing
