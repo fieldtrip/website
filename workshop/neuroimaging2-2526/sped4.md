@@ -1,6 +1,6 @@
 ---
 title: SPED4 - Time-frequency analysis in practice using FieldTrip
-tags: [neuroimaging2-2425]
+tags: [neuroimaging2-2526]
 ---
 
 ## Introduction
@@ -9,7 +9,9 @@ This is an adapted version of the [general FieldTrip tutorial on time-frequency 
 
 Some of the concepts convered here should by now be familiar to you, while some other concepts will be new. The main purpose of this week's tutorial is to show you how spectral and time-frequency data analysis is done when using a typical, widely used, analysis toolbox. This is in contrast to previous weeks, in which the focus was much more on implementing the basic methods yourself and understanding their intricacies. Specifically, this tutorial will cover the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. The tutorial also shows how to visualize the results.
 
-Please collect all the code you write for this tutorial in a single MATLAB live script file, which you can hand in via Brightspace. Ensure that your answers to the exercises are in separate text or code cells with clear labels ("**Exercise 1**" etc. in bold face will do). Also please start new code cells in your live script for each snippet of code provided here in the tutorial. You can break up a code cell by typing three dashes on a code line (`---`). Make sure all code cells are executed and the relevant plots are embedded.
+### Handing in the hands-on: practicalities
+
+The results of this hands-on session should be handed in via Brightspace. Please hand in two files: a Matlab script (\*.m) that contains the code you wrote (and/or copied). In that file, please separate all code using code cells (remember `%% code cell header` etc. to split code cells). Each code cell should correspond to one analysis step and/or exercise (if the exercise involves writing/adapting code). In addition to the Matlab script, please copy (figure menu Edit > Copy Figure) the relevant output plots to a separate document (paste in e.g. Word), and write the text-based answers to exercise questions in that document as well. This file should also be handed in (as PDF or Word).
 
 ## Details on the dataset
 
@@ -20,8 +22,6 @@ In the study applied here, the subjects were seated in a relaxed position under 
 MEG signals were recorded with a 151-channel CTF system. In addition, the EOG was recorded to later discard trials contaminated by eye movements and blinks. The ongoing MEG and EOG signals were lowpass filtered at 100 Hz, digitized at 300 Hz and stored for off-line analysis. To measure the head position with respect to the sensors, three coils were placed at anatomical landmarks of the head (nasion, left and right ear canal). While the subjects were seated under the MEG helmet, the positions of the coils were determined before and after the experiment by measuring the magnetic signals produced by currents passed through the coils.
 
 The MEG data are stored as epochs or trials of fixed length around each stimulus trigger.
-
-There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
 ## Background on time-frequency analysis
 
@@ -49,7 +49,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
-In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I, II ... and so on. If you are interested in a detailed description about how to visualize the results, look at the [visualization](#visualization) part.
+In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I, II ... and so on.
 
 ## Preprocessing
 
@@ -98,15 +98,22 @@ Some trials have previously been identified as artifactual (due to for example e
 
     data_all = ft_preprocessing(cfg);
 
-We now select one of the conditions from the dataset for time-frequency analysis:
+For subsequent analysis we extract the trials of the fully incongruent condition and the fully congruent condition to separate data structures.
 
     cfg = [];
     cfg.trials = data_all.trialinfo == 3;
     dataFIC = ft_redefinetrial(cfg, data_all);
 
-If you want, you can save the data to disk in order to easily continue later on, without having to read in all data again:
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 9;
+    dataFC = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk, to easily continue later on, without having to read in all data again:
 
     save dataFIC dataFIC
+    save dataFC dataFC
+
+We will first go through several options for time-frequency analysis by analysing the data of the fully incongruent condition (`dataFIC`). Then, we'll briefly go into comparing conditions, partly in preparation for the later hands-on session on (cluster-based permutation) statistics.
 
 ## TFR I: Hanning taper, fixed window length
 
@@ -156,7 +163,7 @@ To facilitate understanding of the output of `ft_freqanalysis`, it is instructiv
 
 ## Visualization with FieldTrip code
 
-As discussed in the videos and lecture, biological signals are often dominated by a strong so-called "1/f" component. In order to visualize and interpret task-related *changes* in oscillatory activity with respect to a baseline window, it is therefore recommended to perform baseline normalization.
+As discussed in the lectures, biological signals are often dominated by a strong so-called "1/f" component. In order to visualize and interpret task-related *changes* in oscillatory activity with respect to a baseline window, it is therefore recommended to perform baseline normalization.
 
 In general there are two possibilities for normalizing:
 
@@ -204,7 +211,7 @@ From the previous figure you can see that there is an increase in power around 1
     ft_topoplotTFR(cfg, TFRhann);
 
 {% include markup/skyblue %}
-**Exercise 4**: By default, FieldTrip plotting functions support an interactive mode. This interactive mode does not work in combination with Matlab Live scripts. Therefore: also execute the code for `ft_multiplotTFR` in the Matlab command window directly. That allows you to drag a box around sensors of interest, click that box, and you'll get an average TFR for those sensors only. In the resulting TFR plot, drag a box around a time/frequency window of interest, and you'll see a topographical plot. From that topoplot, you can again select sensors and go to an averaged TFR, etc. Optionally see also the [plotting tutorial](/tutorial/plotting) for more details. Play around with interactive mode and reflect briefly on what you see.
+**Exercise 4**: By default, FieldTrip plotting functions support an interactive mode. (Note: This interactive mode does not work in combination with Matlab "Live scripts", if you happen to be using these.) The interactive mode allows you to drag a box around sensors of interest, click that box, and you'll get an average TFR for those sensors only. In the resulting TFR plot, drag a box around a time/frequency window of interest, and you'll see a topographical plot. From that topoplot, you can again select sensors and go to an averaged TFR, etc. Optionally see also the [plotting tutorial](/tutorial/plotting) for more details. Play around with interactive mode after `ft_multiplotTFR` and reflect briefly on what you see.
 {% include markup/end%}
 
 {% include markup/skyblue %}
@@ -216,7 +223,7 @@ From the previous figure you can see that there is an increase in power around 1
 It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies, leading to increased sensitivity to short-lived effects. However, an increased temporal resolution is at the expense of frequency resolution.
 
 {% include markup/skyblue %}
-**Exercise 6**: Why is it the case that increased temporal resolution is at the expence of frequency resolution?
+**Exercise 6**: Why is it the case that increased temporal resolution is at the expense of frequency resolution?
 {% include markup/end%}
 
 We will here show how to perform a frequency-dependent time-window analysis, using a sliding window Hanning taper based approach. The approach is very similar to wavelet analysis. A wavelet analysis performed with a Morlet wavelet mainly differs by applying a Gaussian shaped taper (see [Time-frequency analysis IV](#time-frequency-analysis-iv)).
@@ -253,13 +260,13 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
 ## TFR III: Morlet wavelets
 
-As discussed in detail in the videos, lectures, and last week's assignment, a common way to calculate TFRs is convolution with Morlet wavelets. The approach is equivalent to calculating TFRs with sliding time windows that depend on frequency using a taper with a Gaussian shape.
+As discussed in detail in the lectures, a common way to calculate TFRs is convolution with Morlet wavelets. The approach is equivalent to calculating TFRs with sliding time windows that depend on frequency using a taper with a Gaussian shape.
 
 {% include markup/skyblue %}
 **Exercise 8**: Why are the two approaches equivalent? (Approach 1: slide a time window over your data, multiply the data in each window with a Gaussian, then FFT; approach 2: construct a wavelet by multiplying a complex sinusoid with a Gaussian window, and convolve that wavelet with your data.)
 {% include markup/end%}
 
-The commands below illustrate how to do Morlet-wavelet based analysis in FieldTrip. One crucial parameter to set is `cfg.width`. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to `F/width*2` (so, at 30 Hz and a width of 7, the spectral bandwidth is `30/7*2 = 8.6 Hz`) while the wavelet duration is equal to `width/F/pi` (in this case, `7/30/pi = 0.074s = 74ms`) ([Tallon-Baudry and Bertrand (1999)](https://doi.org/10.1016/S1364-6613(99)01299-1)).
+The commands below illustrate how to do Morlet-wavelet based analysis in FieldTrip. One crucial parameter to set is `cfg.width`. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa.
 
 Calculate TFRs using Morlet wavelet convolution:
 
@@ -272,7 +279,7 @@ Calculate TFRs using Morlet wavelet convolution:
     cfg.toi        = -0.5:0.05:1.5;
     TFRwave = ft_freqanalysis(cfg, dataFIC);
 
-Plot the result (again, recommended to do this in the command window directly because of interactive move):
+Plot the result:
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -294,12 +301,10 @@ Multitapers (literally: multiple tapers per time window of interest) are sometim
 
 Time-frequency analysis based on multitapers is also performed by **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are 'tapered'. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). Note that this is not necessary, but up to the researcher to decide. The arguments for the chosen parameters are as follows:
 
-- `cfg.foi`, the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
+- `cfg.foi`, the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased (smaller steps) at the expense of computation time and redundancy, but leading to smoother plots.
 - `cfg.toi`, the time-interval of interest. This vector determines the center times for the time windows for which the power values should be calculated. The setting `cfg.toi = -0.5:0.05:1.5` results in power values from -0.5 to 1.5 s in steps of 50 ms. A finer time resolution will give redundant information and longer computation times, but a smoother graphical output.
 - `cfg.t_ftimwin` is the length of the sliding time-window in seconds. We have chosen `cfg.t_ftimwin = 5./cfg.foi`, i.e. 5 cycles per time-window. When choosing this parameter it is important that a full number of cycles fit within the time-window for a given frequency.
-- `cfg.tapsmofrq` determines the width of frequency smoothing in Hz. We have chosen `cfg.tapsmofrq = cfg.foi*0.4`, i.e. the smoothing will increase with frequency. Specifying larger values will result in more frequency smoothing. For less smoothing you can specify smaller values, however, the following relation determined by the Shannon number must hold (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
-`K = 2*tw*fw-1`,
-where K is required to be larger than 0. K is the number of tapers applied; the more, the greater the smoothing.
+- `cfg.tapsmofrq` determines the width of frequency smoothing in Hz. We have chosen `cfg.tapsmofrq = cfg.foi*0.4`, i.e. the smoothing will increase with frequency. Specifying larger values will result in more frequency smoothing. For less smoothing you can specify smaller values.
 
 These settings result in the following characteristics as a function of the frequencies of interest:
 
@@ -338,18 +343,6 @@ Plot the result (again in the command window for interactive plotting):
 ### Multitapering as a hack around the time-frequency uncertainty principle?
 
 A final more detailed note on what multitapering actually does. While the fundamental trade-off between time- and frequency-resolution cannot be broken, multitapering offers a sort of "hack" to artificially reduce one *without* increasing the other. Sometimes we want to smooth over different frequencies, which is another way of saying that sometimes we *want* to reduce our frequency resolution. For example, we might know that, from a cognitive/physiological perspective, the exact same phenomenon is reflected in slightly different frequency bands across participants. By now you may have the (correct) intuition that in order to do this, we should reduce our time window or wavelet width (since that increases time resolution and thereby decreases frequency resolution a.k.a. increases frequency smoothing). However, we may also know, again from a cognitive/physiological perspective, that the exact same phenomenon is not always present at the exact same time points across participants, or even across trials! So here, actually, increasing our temporal resolution (a.k.a. decreasing time smoothing) is not what we want, because also that reduces our subsequent statistical sensitivity. Multitapering offers a way to reduce our frequency resolution (increase smoothing) while keeping the time window the same. Note that this is not a magical way around the "uncertainty principle", as it can only *increase* smoothing beyond that which is inherent in the time window, it cannot decrease it (i.e., increase frequency resolution) beyond that which is dictated by the time window length.
-
-## Optional further reading
-
-Here are links to other documentation that deals with frequency and time-frequency analysis.
-
-### Frequently asked questions
-
-{% include seealso category="faq" tag1="freq" %}
-
-### Examples
-
-{% include seealso category="example" tag1="freq" %}
 
 ## References
 
