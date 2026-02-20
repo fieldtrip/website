@@ -1,0 +1,38 @@
+---
+title: Neuroimaging II - Electrophysiological Methods
+tags: [neuroimaging2-2526]
+---
+
+This course is about the analysis of EEG- and MEG-data. The objective of the course is to introduce the student to the most important analysis methods for this type of data.
+
+{% include markup/yellow %}
+This course is given every year as part of the [Cognitive Neuroscience](https://www.ru.nl/en/education/masters/cognitive-neuroscience-research) research master.
+
+The version that you are looking at is for the academic year 2025/2026.
+{% include markup/end %}
+
+## Assignments
+
+This course consists of three parts. Note that some of these parts the assignments are not found here but on [Brightspace](https://brightspace.ru.nl/d2l/home/576894).
+
+### Signal processing (SPED)
+
+- [SPED1](/workshop/neuroimaging2-2526/sped1)
+- [SPED2](/workshop/neuroimaging2-2526/sped2)
+- [SPED3](/workshop/neuroimaging2-2526/sped3)
+- [SPED4](/workshop/neuroimaging2-2526/sped4)
+
+### Source reconstruction (SR)
+
+- [SR1](/workshop/neuroimaging2-2526/sr1)
+- [SR2](/workshop/neuroimaging2-2526/sr2)
+- [SR3](/workshop/neuroimaging2-2526/sr3)
+- [SR4](/workshop/neuroimaging2-2526/sr4)
+- [SR5](/workshop/neuroimaging2-2526/sr5)
+
+### Statistical testing (SED)
+
+- [SED1](/workshop/neuroimaging2-2526/sed1)
+- [SED2](/workshop/neuroimaging2-2526/sed2)
+- [SED3](/workshop/neuroimaging2-2526/sed3)
+- [SED4](/workshop/neuroimaging2-2526/sed4)
