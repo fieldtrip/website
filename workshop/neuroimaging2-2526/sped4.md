@@ -98,22 +98,15 @@ Some trials have previously been identified as artifactual (due to for example e
 
     data_all = ft_preprocessing(cfg);
 
-For subsequent analysis we extract the trials of the fully incongruent condition and the fully congruent condition to separate data structures.
+For subsequent analysis in this hands-on, we extract the trials of the fully incongruent condition:
 
     cfg = [];
     cfg.trials = data_all.trialinfo == 3;
     dataFIC = ft_redefinetrial(cfg, data_all);
 
-    cfg = [];
-    cfg.trials = data_all.trialinfo == 9;
-    dataFC = ft_redefinetrial(cfg, data_all);
-
 Subsequently you can save the data to disk, to easily continue later on, without having to read in all data again:
 
     save dataFIC dataFIC
-    save dataFC dataFC
-
-We will first go through several options for time-frequency analysis by analysing the data of the fully incongruent condition (`dataFIC`). Then, we'll briefly go into comparing conditions, partly in preparation for the later hands-on session on (cluster-based permutation) statistics.
 
 ## TFR I: Hanning taper, fixed window length
 
@@ -343,6 +336,13 @@ Plot the result (again in the command window for interactive plotting):
 ### Multitapering as a hack around the time-frequency uncertainty principle?
 
 A final more detailed note on what multitapering actually does. While the fundamental trade-off between time- and frequency-resolution cannot be broken, multitapering offers a sort of "hack" to artificially reduce one *without* increasing the other. Sometimes we want to smooth over different frequencies, which is another way of saying that sometimes we *want* to reduce our frequency resolution. For example, we might know that, from a cognitive/physiological perspective, the exact same phenomenon is reflected in slightly different frequency bands across participants. By now you may have the (correct) intuition that in order to do this, we should reduce our time window or wavelet width (since that increases time resolution and thereby decreases frequency resolution a.k.a. increases frequency smoothing). However, we may also know, again from a cognitive/physiological perspective, that the exact same phenomenon is not always present at the exact same time points across participants, or even across trials! So here, actually, increasing our temporal resolution (a.k.a. decreasing time smoothing) is not what we want, because also that reduces our subsequent statistical sensitivity. Multitapering offers a way to reduce our frequency resolution (increase smoothing) while keeping the time window the same. Note that this is not a magical way around the "uncertainty principle", as it can only *increase* smoothing beyond that which is inherent in the time window, it cannot decrease it (i.e., increase frequency resolution) beyond that which is dictated by the time window length.
+
+<!---
+## Comparing conditions and the planar gradient transformation
+
+The CTF system on which these data were recorded has axial gradiometers. As you'll recall from the lectures, these measure the magnetic gradient perpendicular to the scalp. With the 'right-hand rule' in mind, you will appreciate that the axial magnetic gradient results in positive blobs on one side of an underlying electromagnetic dipole, and negative blobs on the other side. Instead of the axial magnetic gradient, we can also consider the planar magnetic gradient, which is more or less analogous to the magnetic gradient parallel to the scalp. When comparing conditions, and especially when averaging across participants, the planar gradient has the clear benefit over axial gradient that the maximum is located directly above the underlying source (dipole). FieldTrip has algorithms that transform axial to planar gradient, to facilitate such interpretation. Before we contrast conditions, apply this transform:
+-->
+
 
 ## References
 
