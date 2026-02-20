@@ -49,11 +49,11 @@ In the following we will be using [Autodesk Fusion](https://www.autodesk.com/pro
 
 For this helmet design we start with a sphere designed in Fusion. The center of the sphere is at the origin, and the radius is 100 mm. Furthermore, we have created a hemisphere shell that has an inner radius of 100 mm and a thickness of 10 mm. The sphere represents the head and the hemisphere shell that fits exactly around it acts as the helmet.
 
-The figure below shows the sphere/head (red) with the hemisphere/helmet (grey), with a cut-out cross section so that you can see that they perfectly align. 
+The figure below shows the sphere/head (red) with the hemisphere/helmet (grey), with a cut-out cross section so that you can see that they perfectly align.
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/figure1.png" width="600" %}
 
-The STL file of the spherical head and hemisphere shell are available from our [download server](https://download.fieldtriptoolbox/org/tutorial/opm_helmet_design).
+The STL file of the spherical head and hemisphere shell are available from our [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design).
 
 We read the two STL files into MATLAB and plot them together with the axes of the coordinate system. For this we use **[ft_read_headshape](/reference/fileio/ft_read_headshape)** which is a general function to read meshes, point clouds, 3D scans, etcetera.
 
@@ -64,6 +64,8 @@ We read the two STL files into MATLAB and plot them together with the axes of th
     ft_plot_mesh(headshape, 'facecolor', 'skin_light', 'axes', true)
     ft_plot_mesh(helmet, 'facecolor', [0.7 0.7 0.7]) % grey
     ft_headlight % or lighting phong; camlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/spherical1.png" width="600" %}
 
 The units of the geometrical objects are correctly recognized as 'mm'. We can also specify in which [head coordinate system](/faq/coordsys) they are specified, which will ensure the correct labels along the axes.
 
@@ -101,6 +103,8 @@ We can add the anatomical landmarks (often referred to as fiducials) to the head
     alpha 0.5 % slightly transparent
     ft_headlight
 
+{% include image src="/assets/img/tutorial/opm_helmet_design/spherical2.png" width="600" %}
+
 Subsequently we call **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to automatically determine the electrode positions.
 
     % this places a lot of electrodes, see https://doi.org/10.1016/s1388-2457(00)00527-7
@@ -112,6 +116,10 @@ Subsequently we call **[ft_electrodeplacement](/reference/ft_electrodeplacement)
     cfg.method = '1020';
     cfg.feedback = 'yes';
     elec = ft_electrodeplacement(cfg, headshape);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/spherical3.png" width="600" %}
+
+Note that the head is now rotated about 90 degrees around the z-axis and that it is looking towards the left of the screen, whereas previously we had rotated it so that the x-axis (going through the nose) was pointing towards the right.
 
 In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)** which reads the STL models for the sensor, the sensor holder, and for a "cutting tool" that will be used to make a hole in the helmet on the location where the sensor holder needs to be glued. The ft_sensorplacement will translate the STL objects to each of the selected electrode locations on the head shape, rotate the STL object such that it is perpendicular to the surface, and then move it outward a little bit.
 
@@ -144,6 +152,8 @@ This returns a cell-array for each of the objects which we can plot in MATLAB:
     end
     ft_headlight
 
+{% include image src="/assets/img/tutorial/opm_helmet_design/spherical4.png" width="600" %}
+
 Subsequently we export the translated and rotated objects to STL files, so that we can combine them with the shell to make the 3D model of the complete helmet.
 
     for i=1:numel(sensor)
@@ -158,13 +168,15 @@ Subsequently we export the translated and rotated objects to STL files, so that 
 
 This results in 19 channels times 3 files, so 57 STL files on disk. In principle you only need the cuttingtool files, since the sensors don't need to be printed (these are basically only dummies for visualisation purposes), and multiple sensor holders can be 3D printed from the original sensor STL file without translatiopns and rotations.
 
-In the 3rd secction of this tutorial we will explain how to combine the shell and the cuttingtool for the final helmet design.
+In part 4 of this tutorial we will explain how to combine the different STL files into the final helmet design.
 
 ### Flattened spherical helmet
 
 This is again a helmet that starts with a design in Fusion (or your 3D design software of choice). It consists of a sphere, that to the bottom is extended with a cylinder and subsequently flattened on the left and right hemisphere. As before, there is a STL model for the headshape and an STL model for the shell that forms the helmet.  
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/figure2.png" width="600" %}
+
+The STL file are again available from our [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design).
 
     headshape = ft_read_headshape('flattenedspherical-head.stl')
     helmet = ft_read_headshape('flattenedspherical-helmet.stl')
@@ -195,6 +207,8 @@ In the previous spherical helmet design , we had a hemisphere and hence the lowe
     alpha 0.5 % slightly transparent
     ft_headlight
 
+{% include image src="/assets/img/tutorial/opm_helmet_design/flattenedspherical1.png" width="600" %}
+
 You should check that the LPA and RPA landmarks are on the flat pieces that represent the temples, as it is easy to get it wrong and have them 90 degrees rotated relative to the model. Furthermore, you can see in the image that the landmarks are now slightly _below_ the axes. That is in general not what we want, since the axes of the coordinate system pass through the fiducials. We could use **[ft_transform_geometry](/reference/ft_transform_geometry)** to move the head (and helmet) 10 mm up, and then give the fiducials a z-coordinate of 0 instead of -10. However, since it does not significantly affect the following steps, we will leave it like this and continue.
 
     % specify the XYZ coordinate system as ALS, i.e. anterior-left-superior
@@ -212,6 +226,8 @@ Again we can distribute the electrode positions over the head surface.
     cfg.method = '1020';
     cfg.feedback = 'yes';
     elec = ft_electrodeplacement(cfg, headshape);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/flattenedspherical2.png" width="600" %}
 
 We make the same selection of 19 positions and use those to place the OPM sensors.
 
@@ -231,10 +247,26 @@ We make the same selection of 19 positions and use those to place the OPM sensor
     cfg.template = 'fieldline_cuttingtool.stl';
     cuttingtool = ft_sensorplacement(cfg, headshape);
 
+We use the same code as before to plot the headshape, helmet and sensors.
+
+    figure
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'axes', 1);
+    ft_plot_mesh(helmet, 'facecolor', 'lightgray', 'facealpha', 0.5);
+
+    for i=1:numel(sensor)
+        disp(chansel{i});
+        ft_plot_headshape(sensor(i), 'facecolor', 'r', 'facealpha', 1);
+        ft_plot_headshape(holder(i), 'facecolor', 'g', 'facealpha', 1);
+        ft_plot_headshape(hole(i), 'facecolor', 'b', 'facealpha', 0.5);
+    end
+    ft_headlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/flattenedspherical3.png" width="600" %}
+
 {% include markup/blue %}
 #### Exercise
 
-Use the same for-loop as before to plot the headshape, helmet, sensor holders and sensors. The template STL file for the individual OPM sensor not only consists of a 13x15x35 mm rectangular block, but also has a small off-center protrusion that represents where the cable is attached. The biaxial FieldLine v3 sensors have the laser pointing in the x-direction and can record the field along the y- and z-axis, which are the intermediate (15 mm) and long axes (35 mm). It is obvious that you will place the sensor with the cable pointing outward, but along the x- and y-direction in principle it fits in two ways, rotated 180 degrees.
+The template STL file for the individual OPM sensor not only consists of a 13x15x35 mm rectangular block, but also has a small off-center protrusion that represents where the cable is attached. The biaxial FieldLine v3 sensors have the laser pointing in the x-direction and can record the field along the y- and z-axis, which are the intermediate (15 mm) and long axes (35 mm). It is obvious that you will place the sensor with the cable pointing outward, but the sensor in principle fits in two ways, rotated 180 degrees around its own z-axis.
 
 What is the consequence on the signals that you record if you were to rotate the sensor 180 degrees?
 
@@ -253,69 +285,61 @@ Again we write the translated and rotated sensor positions to STL files.
         ft_write_headshape(filename, sensor(i), 'fileformat', 'stl');
     end
 
+In part 4 of this tutorial we will explain how to combine the different STL files into the final helmet design.
+
 ### Individualized based on MRI
 
-    mri = ft_read_mri('/Users/roboos/data/Subject01.mri');
+We start by reading the individual anatomical MRI, either from a NIFTI file or from DICOM files. With **[ft_determine_coordsys](/reference/ft_determine_coordsys)** we can see that - alhough the axes are indicated as "unknown" - the x-axis goes through the nasion and the y-axis goes through the pre-auricular points, consistent with the [CTF coordinate system](/faq/coordsys).
+
+    mri = ft_read_mri('individual.nii');
 
     ft_determine_coordsys(mri, 'interactive', 'no')
     rotate3d
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual1.png" width="600" %}
 
-    % disp(mri.fid.label)
-    %     {'nas'}
-    %     {'lpa'}
-    %     {'rpa'}
-    % 
-    % disp(mri.fid.pos)
-    %   116.0061   -0.0000   -0.0000
-    %    -1.2560   71.9129    0.0000
-    %     1.2560  -71.9129   -0.0000
+In the next step we have to determine the locaiton of the anatomical landmarks. We will use the nasion and left and right pre-auricular points to align the MRI with the desired coordinate system (which is not strictly needed here, as it already appears to be aligned), but we need the anatomical landmarks and also the inion for the sensor placement.
+
+By clicking in the image, we can see the voxel indices which we write down and store in the script.
 
     cfg = [];
     cfg.method = 'ortho';
-    cfg.location = [0 0 0];
-    cfg.locationcoordinates = 'head';
-    cfg.flip = 'no';  % to determine the voxel indices
+    cfg.flip = 'no'; % important for identifying voxel indices
     ft_sourceplot(cfg, mri);
 
-%%
+    nas_vox = [ 102 217 123 ];
+    ini_vox = [ 90   18 104 ];
+    lpa_vox = [ 20  135 103 ];
+    rpa_vox = [ 173 121  95 ];
 
-    % cfg = [];
-    % cfg.method = 'interactive';
-    % cfg.viewmode = 'surface'; % or ortho
-    % mri_realigned = ft_volumerealign(cfg, mri)
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual2.png" width="600" %}
 
-    % the original CTF coregistration was done with vitamine E markers in the ear canal
-    % at the same position of the MEG head localizer coils 
-    left_fid  = [ 29 145 155];
-    right_fid = [144 142 158];
-
-    % we now want to use the pre-auricular points rather than the ear canal
-    % these are given as voxel indices, ranging from [1 1 1] to [256 256 256]
-    nas_vox = [  87   60  116 ];
-    lpa_vox = [  29  130  158 ];
-    rpa_vox = [ 144  127  158 ];
-    ini_vox = [  88  214  155 ];
+Although the MRI already seemed to be aligned with the CTF coordinate system, we use three of the anatomical landmarks anyway to ensure that it is properly aligned.
 
     cfg = [];
     cfg.method = 'fiducial';
+    cfg.coordsys = 'ctf';
     cfg.fiducial.nas = nas_vox;
     cfg.fiducial.lpa = lpa_vox;
     cfg.fiducial.rpa = rpa_vox;
-    cfg.coordsys = 'ctf';
     mri_realigned = ft_volumerealign(cfg, mri);
 
-%%
+We also want to know what the positions of the four landmarks are in head coordinates. We can check the position of each of the anatomical landmarks by using `cfg.location` in **[ft_sourceplot](/reference/ft_sourceplot)**, where `cfg.locationcoordinates` allows us to specify whether the three numbers are to be interpreted as (x, y, z) in head coordinates, or as (i, j, k) in voxel coordinates. The function **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)** allows us to apply a geometrical transformatino on a Nx3 set of points or on a geometrical object like a mesh.
+
+    nas = ft_transform_geometry(mri.transform, nas_vox);
+    ini = ft_transform_geometry(mri.transform, ini_vox);
+    lpa = ft_transform_geometry(mri.transform, lpa_vox);
+    rpa = ft_transform_geometry(mri.transform, rpa_vox);
 
     cfg = [];
     cfg.method = 'ortho';
-    cfg.location = [0 0 0];
+    cfg.location = nas; % nas, ini, lpa, rpa
     cfg.locationcoordinates = 'head';
-    cfg.flip = 'yes';
     ft_sourceplot(cfg, mri_realigned);
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual3.png" width="600" %}
+
+The axes of the coordinate system are not aligned with the voxels in the MRI volume. Furthermore, we don't know for sure that the voxels are isotropic, i.e., uniform in size. For the subsequent image processing we want the voxels to be exactly 1x1x1 mm hence we reslice the MRI.
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
@@ -325,15 +349,17 @@ Again we write the translated and rotated sensor positions to STL files.
     cfg.location = [0 0 0];
     cfg.locationcoordinates = 'head';
     ft_sourceplot(cfg, mri_resliced);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual4.png" width="600" %}
+
+Looking at the resliced image, we see that the head does not fit so well within the "box" that was automatically fitted around it. The `cfg` structure in the output of the function usually contains the details used in the computation, so we can take that as starting point. We can modify the range and shift the box to the back (and hence the head to the front).
 
     disp(mri_resliced.cfg)
 
-%%
-
     cfg = [];
-    cfg.xrange = [ -97.5000 157.5000] - 20;
+    cfg.xrange = [ -97.5000 157.5000] - 30;
     cfg.yrange = [-127.5000 127.5000];
-    cfg.zrange = [ -87.5000 167.5000] - 10;
+    cfg.zrange = [ -87.5000 167.5000] - 5;
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
 
     cfg = [];
@@ -342,38 +368,22 @@ Again we write the translated and rotated sensor positions to STL files.
     cfg.locationcoordinates = 'head';
     ft_sourceplot(cfg, mri_resliced);
 
-%%
+We plot it again, and repeat it until we are happy with what we see.
 
-    nas = ft_warp_apply(mri_realigned.transform, nas_vox)
-    lpa = ft_warp_apply(mri_realigned.transform, lpa_vox)
-    rpa = ft_warp_apply(mri_realigned.transform, rpa_vox)
-    ini = ft_warp_apply(mri_realigned.transform, ini_vox)
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual5.png" width="600" %}
 
-    cfg = [];
-    cfg.method = 'ortho';
-    cfg.location = ini; % also try nas, lpa, rpa
-    cfg.locationcoordinates = 'head';
-    ft_sourceplot(cfg, mri_resliced);
-
-%%
-
-    ft_determine_coordsys(mri_resliced, 'interactive', 'no')
-    rotate3d
-
-%%
+Subsequently, we proceed by segmenting the scalp and by creating a mesh that describes the outline of the scalp.
 
     cfg = [];
     cfg.output = 'scalp';
     mri_segmented = ft_volumesegment(cfg, mri_resliced);
-
-%%
 
     cfg = [];
     cfg.method = 'projectmesh';
     cfg.numvertices = 4000;
     headshape = ft_prepare_mesh(cfg, mri_segmented);
 
-%%
+If we add the previously determined anatomical landmarks to the headshape structure, the **[ft_plot_headshape](/reference/ft_plot_headshape)** function will add those to the figure.
 
     headshape.fid.pos = [
         nas
@@ -389,23 +399,29 @@ Again we write the translated and rotated sensor positions to STL files.
         'ini'
     };
 
-    fidcolor = 'k';
-
     figure
-    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'fidmarker', '.', 'fidcolor', fidcolor, 'fidlabel', true, 'fidsize', 24)
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.7, 'fidmarker', 'o', 'fidcolor', 'k', 'fidlabel', true, 'fidsize', 24)
     ft_headlight
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual6.png" width="600" %}
+
+The segmented scalp is represented as a binary array, which when plotted shows as a black-and white image. We can use tools from the MATLAB image processing tool box to adjust the segmentation.
 
     cfg = [];
     cfg.funparameter = 'scalp';
     ft_sourceplot(cfg, mri_segmented)
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual7.png" width="600" %}
+
+We need a helmet around the head that gives a little bit of space, so we will "inflate" the scalp segmentation by one voxel (which is 1 mm) to make an airgap. Furthermore, we "inflate" the airgap again with 5 voxels to make a 5 mm thick shell all around the head.
+
+Since we don't need the helmet shell to go all the way down, we mark the lowest 50 slices of the MRI as "not-scalp". Then we use the MATLAB **[imdilate](https://nl.mathworks.com/help/images/ref/imdilate.html)** function to dilate or inflate the binary image.
 
     mri_segmented.scalp(:,:,1:50) = 0;
-    mri_segmented.airgap = imdilate(mri_segmented.scalp,  strel('sphere', 3));
-    mri_segmented.helmet = imdilate(mri_segmented.airgap, strel('sphere', 7));
+    mri_segmented.airgap = imdilate(mri_segmented.scalp,  strel('sphere', 1));
+    mri_segmented.helmet = imdilate(mri_segmented.airgap, strel('sphere', 5));
+
+The `mri_segmented` structure now contains three binary volumes that largely overlap. For visualisation purposes we can change those into a single one with an indexed representation, i.e. where the tissues are not binary, but marked as 1, 2, 3. See **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)** for details.
 
     mri_indexed = ft_checkdata(mri_segmented, 'segmentationstyle', 'indexed');
 
@@ -416,31 +432,43 @@ Again we write the translated and rotated sensor positions to STL files.
     cfg.atlas = mri_indexed;
     ft_sourceplot(cfg, mri_indexed)
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual8.png" width="600" %}
+
+From the segmented airgap and helmet, we construct surface meshes that describe the inside of the helmet (i.e. the outside of the airgap volume) and the outside of the helmet.
 
     cfg = [];
-    cfg.method = 'isosurface';
-    cfg.numvertices = inf;
+    cfg.method = 'projectmesh';
+    cfg.numvertices = 4000;
+
     cfg.tissue = 'airgap'; % this makes a surface from the outside of the "airgap" part
-    inner = ft_prepare_mesh(cfg, mri_segmented);
+    tmp = removefields(mri_segmented, {'scalp', 'helmet'}); % FIXME this is a hack that should be resolved
+    inside = ft_prepare_mesh(cfg, tmp);
+
     cfg.tissue = 'helmet';
-    outer = ft_prepare_mesh(cfg, mri_segmented);
+    tmp = removefields(mri_segmented, {'scalp', 'airgap'}); % FIXME this is a hack that should be resolved
+    outside = ft_prepare_mesh(cfg, tmp);
 
-%%
-
-    figure
-    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_plot_mesh(inner, 'facecolor', 'r', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_headlight
-    rotate3d
+We can plot the meshes that describe the inside and outside of the helmet. 
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_plot_mesh(outer, 'facecolor', 'g', 'facealpha', 0.5, 'edgecolor', 'none');
+    ft_plot_mesh(inside, 'facecolor', 'r', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_headlight
     rotate3d
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual9.png" width="600" %}
+
+    figure
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
+    ft_plot_mesh(outside, 'facecolor', 'g', 'facealpha', 0.5, 'edgecolor', 'none');
+    ft_headlight
+    rotate3d
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual10.png" width="600" %}
+
+You can see that they extends all the way to the nose, and that the bottom is closed; that is something we will fix later by editing the mesh in Fusion.
+
+The next step is to determine the desired position of the sensors. As before, we will here use the 10-20 EEG electrode placement scheme.
 
     cfg = [];
     cfg.fiducial.nas = nas;
@@ -449,6 +477,10 @@ Again we write the translated and rotated sensor positions to STL files.
     cfg.fiducial.rpa = rpa;
     cfg.method = '1020';
     elec = ft_electrodeplacement(cfg, headshape);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual11.png" width="600" %}
+
+We take a subset of 19 electrode positions and use those to position the STL model of the sensors, the sensor holders, and the holes relative to the headshape and helmet.
 
     chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
 
@@ -459,37 +491,46 @@ Again we write the translated and rotated sensor positions to STL files.
 
     cfg.template = 'fieldline_sensor.stl';
     sensor = ft_sensorplacement(cfg, headshape);
+
     cfg.template = 'fieldline_holder.stl';
     holder = ft_sensorplacement(cfg, headshape);
-    cfg.template = 'fieldline_cuttingtool.stl';
-    cuttingtool = ft_sensorplacement(cfg, headshape);
 
-%%
+    cfg.template = 'fieldline_hole.stl';
+    hole = ft_sensorplacement(cfg, headshape);
+
+We can plot the head with the outside of the helmet and all STL objects in one figure to check their spatial alignment.
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', 1);
-    ft_plot_mesh(outer, 'facecolor', 'lightgray', 'facealpha', 0.5);
+    ft_plot_mesh(outside, 'facecolor', 'lightgray', 'facealpha', 0.5, 'edgecolor', 'none');
 
     for i=1:numel(sensor)
         ft_plot_headshape(sensor(i), 'facecolor', 'r', 'facealpha', 1);
         ft_plot_headshape(holder(i), 'facecolor', 'g', 'facealpha', 1);
-        ft_plot_headshape(cuttingtool(i), 'facecolor', 'b', 'facealpha', 0.5);
-        end
+        ft_plot_headshape(hole(i), 'facecolor', 'b', 'facealpha', 0.5);
+    end
     ft_headlight
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/individual12.png" width="600" %}
 
-    mkdir individualized
+If we are happy with the sensor distribution, we can export all geometrical objects to SLT files for later postprocessing in Fusion (see part 4).
+
+    mkdir individual
+
+    ft_write_headshape('individual/helmet-inside.stl', inside, 'fileformat', 'stl');
+    ft_write_headshape('individual/helmet-outside.stl', outside, 'fileformat', 'stl');
 
     for i=1:numel(sensor)
-        disp(chansel{i});
-        filename = sprintf('individualized/sensor-%s.stl', chansel{i});
+    disp(chansel{i});
+        filename = sprintf('individual/sensor-%s.stl', chansel{i});
         ft_write_headshape(filename, sensor(i), 'fileformat', 'stl');
-        filename = sprintf('individualized/holder-%s.stl', chansel{i});
-        ft_write_headshape(filename, sensor(i), 'fileformat', 'stl');
-        filename = sprintf('individualized/cuttingtool-%s.stl', chansel{i});
-        ft_write_headshape(filename, sensor(i), 'fileformat', 'stl');
+        filename = sprintf('individual/holder-%s.stl', chansel{i});
+        ft_write_headshape(filename, holder(i), 'fileformat', 'stl');
+        filename = sprintf('individual/hole-%s.stl', chansel{i});
+        ft_write_headshape(filename, hole(i), 'fileformat', 'stl');
     end
+
+In part 4 of this tutorial we will explain how to combine the different STL files into the final helmet design.
 
 ### Individualized based on 3D scan
 
