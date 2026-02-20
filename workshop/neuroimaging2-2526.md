@@ -13,7 +13,7 @@ The version that you are looking at is for the academic year 2025/2026.
 
 ## Assignments
 
-This course consists of three parts. Note that some of these parts the assignments are not found here but on [Brightspace](https://brightspace.ru.nl/d2l/home/502448).
+This course consists of three parts. Note that some of these parts the assignments are not found here but on [Brightspace](https://brightspace.ru.nl/d2l/home/576894).
 
 ### Signal processing (SPED)
 
