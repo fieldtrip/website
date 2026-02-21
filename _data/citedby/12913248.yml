@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41703344'
+- idtype: pmcid
+  value: PMC12913248
+- idtype: doi
+  value: 10.1007/s10548-026-01178-7
+- idtype: pii
+  value: 10.1007/s10548-026-01178-7
+authors:
+- authtype: Author
+  name: Depuydt E
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: De Letter M
+- authtype: Author
+  name: van Mierlo P
+- authtype: Author
+  name: Piai V
+epubdate: 2026 Feb 17
+fulljournalname: Brain topography
+issue: '2'
+pages: '24'
+pmclivedate: 2026/02/19
+printpubdate: ''
+pubdate: 2026 Feb 17
+sortdate: 2026/02/17 00:00
+source: Brain Topogr
+title: The Impact of Brain Tumors and Craniotomy Lesions on Scalp EEG.
+uid: '12913248'
+volume: '39'

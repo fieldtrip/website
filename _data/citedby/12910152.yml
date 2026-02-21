@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41699858'
+- idtype: pmcid
+  value: PMC12910152
+- idtype: doi
+  value: 10.1111/acer.70252
+authors:
+- authtype: Author
+  name: Thomas VFU
+- authtype: Author
+  name: Cruz SM
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Marinkovic K
+epubdate: ''
+fulljournalname: Alcohol, clinical & experimental research
+issue: '2'
+pages: e70252
+pmclivedate: 2026/02/18
+printpubdate: 2026 Feb
+pubdate: 2026 Feb
+sortdate: 2026/02/01 00:00
+source: Alcohol Clin Exp Res (Hoboken)
+title: Oscillatory and behavioral indices of cognitive control dysregulation in young
+  adult binge drinkers are influenced by sex differences.
+uid: '12910152'
+volume: '50'

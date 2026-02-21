@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41710158'
+- idtype: pmcid
+  value: PMC12910608
+- idtype: doi
+  value: 10.3389/fnins.2026.1733633
+authors:
+- authtype: Author
+  name: Toth C
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Bocca LF
+- authtype: Author
+  name: Baker K
+- authtype: Author
+  name: Hogue O
+- authtype: Author
+  name: Tiefenbach J
+- authtype: Author
+  name: Negrey J
+- authtype: Author
+  name: Cunningham D
+- authtype: Author
+  name: Machado AG
+- authtype: Author
+  name: Baker KB
+epubdate: 2026 Jan 29
+fulljournalname: Frontiers in neuroscience
+issue: ''
+pages: '1733633'
+pmclivedate: 2026/02/18
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/01/29 00:00
+source: Front Neurosci
+title: Evaluation of the myogenic effects of subthalamic nucleus deep brain stimulation
+  at near therapeutic amplitudes.
+uid: '12910608'
+volume: '20'

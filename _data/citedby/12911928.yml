@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41575179'
+- idtype: pmcid
+  value: PMC12911928
+- idtype: doi
+  value: 10.1093/ijnp/pyag002
+- idtype: pii
+  value: '8439611'
+authors:
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Beste C
+epubdate: ''
+fulljournalname: The international journal of neuropsychopharmacology
+issue: '2'
+pages: ''
+pmclivedate: 2026/02/18
+printpubdate: 2026 Feb 2
+pubdate: 2026 Feb 2
+sortdate: 2026/02/02 00:00
+source: Int J Neuropsychopharmacol
+title: Auricular transcutaneous vagus nerve stimulation stabilizes event segmentation
+  through modulation of working memory representations.
+uid: '12911928'
+volume: '29'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.1093/braincomms/fcag022
+- idtype: pmcid
+  value: PMC12917543
+authors:
+- authtype: Author
+  name: Stier C
+- authtype: Author
+  name: Loose M
+- authtype: Author
+  name: Loew C
+- authtype: Author
+  name: Segovia-Oropeza M
+- authtype: Author
+  name: Baek S
+- authtype: Author
+  name: Lerche H
+- authtype: Author
+  name: Focke NKN
+epubdate: 2026 Jan 27
+fulljournalname: Brain Communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/02/20
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/01/27 00:00
+source: Brain Commun
+title: Comprehensive evaluation of EEG spatial sampling, head modelling and parcellation
+  effects on network alterations in idiopathic generalized epilepsy.
+uid: '12917543'
+volume: '8'

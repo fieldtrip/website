@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41606206'
+- idtype: pmcid
+  value: PMC12909909
+- idtype: doi
+  value: 10.1038/s41598-026-36958-5
+- idtype: pii
+  value: 10.1038/s41598-026-36958-5
+authors:
+- authtype: Author
+  name: Fornari L
+- authtype: Author
+  name: Janssen TWP
+- authtype: Author
+  name: Davidesco I
+- authtype: Author
+  name: Krabbendam L
+- authtype: Author
+  name: van Atteveldt N
+epubdate: 2026 Jan 28
+fulljournalname: Scientific reports
+issue: '1'
+pages: '6464'
+pmclivedate: 2026/02/18
+printpubdate: ''
+pubdate: 2026 Jan 28
+sortdate: 2026/01/28 00:00
+source: Sci Rep
+title: Testing the causal relationship between interpersonal closeness and inter-brain
+  synchrony.
+uid: '12909909'
+volume: '16'
