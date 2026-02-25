@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41577447'
+- idtype: pmcid
+  value: PMC12925663
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0720-25.2026
+- idtype: pii
+  value: JNEUROSCI.0720-25.2026
+authors:
+- authtype: Author
+  name: Das S
+- authtype: Author
+  name: Meyyappan S
+- authtype: Author
+  name: Bekker EM
+- authtype: Author
+  name: Corina S
+- authtype: Author
+  name: Ding M
+- authtype: Author
+  name: Mangun GR
+epubdate: 2026 Feb 18
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '7'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Feb 18
+sortdate: 2026/02/18 00:00
+source: J Neurosci
+title: 'The Ventral Attention Network Mediates Attentional Reorienting to Cross-Modal
+  Expectancy Violations: Evidence from EEG and fMRI.'
+uid: '12925663'
+volume: '46'

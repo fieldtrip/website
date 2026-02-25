@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41558965'
+- idtype: pmcid
+  value: PMC12925658
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0765-25.2025
+- idtype: pii
+  value: JNEUROSCI.0765-25.2025
+authors:
+- authtype: Author
+  name: Tomassini A
+- authtype: Author
+  name: Torricelli F
+- authtype: Author
+  name: Fadiga L
+- authtype: Author
+  name: D'Ausilio A
+epubdate: 2026 Feb 18
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '7'
+pages: ''
+pmclivedate: 2026/02/23
+printpubdate: ''
+pubdate: 2026 Feb 18
+sortdate: 2026/02/18 00:00
+source: J Neurosci
+title: Alpha and Beta Corticomotor Phase Dynamics Shape Visuomotor Control on a Single-Trial
+  Basis.
+uid: '12925658'
+volume: '46'

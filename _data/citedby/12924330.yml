@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41580792'
+- idtype: pmcid
+  value: PMC12924330
+- idtype: doi
+  value: 10.1186/s13195-026-01962-4
+- idtype: pii
+  value: 10.1186/s13195-026-01962-4
+authors:
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Wei T
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Zhou S
+- authtype: Author
+  name: Liu L
+- authtype: Author
+  name: Tang Y
+epubdate: 2026 Jan 24
+fulljournalname: Alzheimer's research & therapy
+issue: '1'
+pages: ''
+pmclivedate: 2026/02/22
+printpubdate: ''
+pubdate: 2026 Jan 24
+sortdate: 2026/01/24 00:00
+source: Alzheimers Res Ther
+title: Surrogates of glymphatic metrics decline and coupled sleep rhythms disruption
+  in Alzheimer's disease.
+uid: '12924330'
+volume: '18'

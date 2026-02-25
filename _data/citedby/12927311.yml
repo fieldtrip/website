@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.114893
+- idtype: pmcid
+  value: PMC12927311
+- idtype: pii
+  value: S2589-0042(26)00268-3
+authors:
+- authtype: Author
+  name: Mockevičius A
+- authtype: Author
+  name: Griškova-Bulanova I
+epubdate: 2026 Feb 4
+fulljournalname: iScience
+issue: '3'
+pages: ''
+pmclivedate: 2026/02/24
+printpubdate: ''
+pubdate: 2026 Mar 20
+sortdate: 2026/02/04 00:00
+source: iScience
+title: The ability to drive cortical networks in the low gamma range differs between
+  sexes.
+uid: '12927311'
+volume: '29'

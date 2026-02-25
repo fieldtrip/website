@@ -1,0 +1,31 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fspor.2026.1660332
+- idtype: pmcid
+  value: PMC12928708
+authors:
+- authtype: Author
+  name: Li JX
+- authtype: Author
+  name: Qin XY
+- authtype: Author
+  name: Huang W
+- authtype: Author
+  name: Zhang XW
+- authtype: Author
+  name: Bao SC
+- authtype: Author
+  name: Liu Y
+epubdate: 2026 Feb 10
+fulljournalname: Frontiers in Sports and Active Living
+issue: ''
+pages: ''
+pmclivedate: 2026/02/24
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/10 00:00
+source: Front Sports Act Living
+title: 'Cortical inhibition and activation during sensorimotor tasks in an aquatic
+  environment: a pilot EEG study based on expert-novice paradigm.'
+uid: '12928708'
+volume: '8'

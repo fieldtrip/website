@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '41724664'
+- idtype: doi
+  value: 10.1002/alz.71235
+- idtype: pmcid
+  value: PMC12927940
+authors:
+- authtype: Author
+  name: You JC
+- authtype: Author
+  name: Bender AC
+- authtype: Author
+  name: Berezuk C
+- authtype: Author
+  name: Noriega-Makarskyy DT
+- authtype: Author
+  name: Baena A
+- authtype: Author
+  name: Munera D
+- authtype: Author
+  name: Pardilla-Delgado E
+- authtype: Author
+  name: Ramirez-Gomez L
+- authtype: Author
+  name: Aguillon D
+- authtype: Author
+  name: Giudicessi A
+- authtype: Author
+  name: Martinez JE
+- authtype: Author
+  name: Cronin-Golom A
+- authtype: Author
+  name: Lam AD
+- authtype: Author
+  name: Quiroz YT
+epubdate: ''
+fulljournalname: 'Alzheimer''s & dementia : the journal of the Alzheimer''s Association'
+issue: '2'
+pages: e71235
+pmclivedate: 2026/02/24
+printpubdate: 2026 Feb
+pubdate: 2026 Feb
+sortdate: 2026/02/01 00:00
+source: Alzheimers Dement
+title: Long-term forgetting, sleep, and tau in autosomal-dominant Alzheimer's disease.
+uid: '12927940'
+volume: '22'

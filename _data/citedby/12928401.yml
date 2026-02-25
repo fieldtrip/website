@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.1371/journal.pbio.3003664
+- idtype: pmcid
+  value: PMC12928401
+authors:
+- authtype: Author
+  name: Redding ZV
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Fiebelkorn IC
+epubdate: 2026 Feb 23
+fulljournalname: PLOS Biology
+issue: '2'
+pages: ''
+pmclivedate: 2026/02/24
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/02/23 00:00
+source: PLoS Biol
+title: Frequency-specific attentional mechanisms phasically modulate the influence
+  of distractors on task performance.
+uid: '12928401'
+volume: '24'

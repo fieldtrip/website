@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35367805'
+- idtype: MID
+  value: NIHMS2142440
+- idtype: pmcid
+  value: PMC12927270
+- idtype: doi
+  value: 10.1016/j.clinph.2022.02.024
+- idtype: pii
+  value: S1388-2457(22)00194-8
+authors:
+- authtype: Author
+  name: McGuinness I
+- authtype: Author
+  name: Abou-Khalil B
+- authtype: Author
+  name: Rubinov M
+- authtype: Author
+  name: Gallagher MJ
+epubdate: 2022 Mar 15
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 97-107
+pmclivedate: 2026/02/24
+printpubdate: 2022 Jun
+pubdate: 2022 Jun
+sortdate: 2022/06/01 00:00
+source: Clin Neurophysiol
+title: Network connectivity in primary generalized tonic-clonic seizures.
+uid: '12927270'
+volume: '138'

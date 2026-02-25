@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '41727312'
+- idtype: MID
+  value: NIHMS2139624
+- idtype: pmcid
+  value: PMC12921556
+- idtype: doi
+  value: 10.1038/s43586-025-00399-7
+- idtype: pii
+  value: '31'
+authors:
+- authtype: Author
+  name: Williams NP
+- authtype: Author
+  name: Voroslakos M
+- authtype: Author
+  name: Shi D
+- authtype: Author
+  name: Pwint MY
+- authtype: Author
+  name: Lanzio V
+- authtype: Author
+  name: Mao H
+- authtype: Author
+  name: Zolotavin P
+- authtype: Author
+  name: Yoon E
+- authtype: Author
+  name: Stieglitz T
+- authtype: Author
+  name: Xie C
+- authtype: Author
+  name: Harris TD
+- authtype: Author
+  name: Schwartz AB
+- authtype: Author
+  name: Cui XT
+epubdate: 2025 May 8
+fulljournalname: Nature reviews. Methods primers
+issue: ''
+pages: ''
+pmclivedate: 2026/02/21
+printpubdate: '2025'
+pubdate: '2025'
+sortdate: 2025/01/01 00:00
+source: Nat Rev Methods Primers
+title: In vivo microelectrode arrays for neuroscience.
+uid: '12921556'
+volume: '5'
