@@ -6,21 +6,21 @@ title: OPM helmet design
 
 ## Introduction
 
-Measuring MEG with OPMs allow for flexible sensor placement. This is a significant departure from the rigidity of traditional SQUID-based systems, which confine participants within a fixed sensor array. With OPMs, researchers can now tailor the magnetometer configuration to an individual's unique head shape and size, a benefit that is particularly impactful when studying children or patient populations. The flexible placement allows positioning the sensors close to the scalp and to brain regions expected to be activated.
+Measuring MEG with OPMs allows for flexible sensor placement. This is a significant departure from the rigidity of traditional SQUID-based systems, which confine participants within a fixed sensor array. With OPMs, researchers can now tailor the magnetometer configuration to an individual's unique head shape and size, a benefit that is particularly impactful when studying children or patient populations. The flexible placement allows sensors to be positioned close to the scalp and to brain regions expected to be activated.
 
-The flexible OPM sensor placement opens the door for a range of novel experimental paradigms, as subjects are no longer tethered to a single, bulky dewar; they can potentially move, interact, and perform tasks in a much more naturalistic environment, thereby capturing brain activity that is more representative of real-world cognition. It should be noted, however, that OPMs in a helmet or cap that moves along with the participant will pick up considerable artifacts due to the OPMs moving and/or rotating through the residual magnetic field in the MSR. Extra shielding of the MSR with 3 instead of 2 layers of mu metal, and/or the use of nulling coils can reduce, but completely eliminate these movement-related artifacts. Although denoising algorithms like HFC and AMM can help to clean the data from the artifacts caused by the movements, it should also always be considered whether the measurement is not better done with a head-fixed setup.
+The flexible OPM sensor placement opens the door for a range of novel experimental paradigms, as subjects are no longer tethered to a single, bulky dewar; they can potentially move, interact, and perform tasks in a much more naturalistic environment, thereby capturing brain activity that is more representative of real-world cognition. It should be noted, however, that OPMs in a helmet or cap that moves along with the participant will pick up considerable artifacts due to the OPMs moving and/or rotating through the residual magnetic field in the MSR. Extra shielding of the MSR with 3 instead of 2 layers of mu metal, and/or the use of nulling coils can reduce, but not completely eliminate these movement-related artifacts. Although denoising algorithms like HFC and AMM can help to clean the data from the artifacts caused by the movements, it should also always be considered whether the measurement is not better done with a head-fixed setup.
 
-This tutorial aims for designing OPM arrays with relatively uniform whole whole-head coverage. It does not include forward simulations of how a hypothetical dipole in the brain is visible on the OPM sensor array, and also does not cover how to place (a limited set of) OPMs to specifically target activity in a particular brain area. Furthermore, this tutorial will not discuss how OPM recordings are processed.
+This tutorial aims to design OPM arrays with relatively uniform whole-head coverage. It does not include forward simulations of how a hypothetical dipole in the brain is visible on the OPM sensor array, and also does not cover how to place (a limited set of) OPMs to specifically target activity in a particular brain area. Furthermore, this tutorial will not discuss how OPM recordings are processed.
 
 ## Background
 
 OPMs differ in size, depending on the manufacturer, but in general can be conceived as a rectangular box with a cable attached. For the FieldLine system, for example, the individual sensors are 13x15x35 mm. The OPMs are placed in holders which can in principle be mounted on a flexible cap just like EEG electrodes, but this comes with the potential disadvantage that the sensor orientations are not fixed and might vary depending on the head orientation and movements. With a fixed/rigid helmet as demonstrated in this tutorial, the position _and_ orientation of all sensors is well-defined.
 
-The tutorial demonstrates the placement of FieldLine sensors, but is equally applicable to the sensors from QuSpin, Mag4health, or other companies. The OPM sensors and the holders are modeled (outside of MATLAB) as STL files; these sensors and holders are then distributed over the shell that forms the helmet. Furtermore, additional geometrical objects can be modeled as STL files and can be used as "tools" in the fabrication process to make holes in the helmet, or to add a small rim to facilitate glueing the sensor holder to the shell.
+The tutorial demonstrates the placement of FieldLine sensors, but is equally applicable to the sensors from QuSpin, Mag4health, or other companies. The OPM sensors and the holders are modeled (outside of MATLAB) as STL files; these sensors and holders are then distributed over the shell that forms the helmet. Furthermore, additional geometrical objects can be modeled as STL files and can be used as "tools" in the fabrication process to make holes in the helmet, or to add a small rim to facilitate gluing the sensor holder to the shell.
 
 ## Procedure
 
-In this tutorial we separate the design of the complete OPM helmet into two parts: the shell, i.e. the basic helmet-shaped outline that fits around the head, and the sensor holders that are printed seperately and that are glued into place. We will cover the process of designing custom OPM helmets for well defined geometries (like a sphere), for individual participants, and to accomodate specific populations. Furthermore, it demonstrates how a given number of OPM sensors can be distributed over the helmet and how sensor orientations/rotations can be optimized. Finally it discusses how the STL design files can be combined to make a model that can be 3D printed.
+In this tutorial we separate the design of the complete OPM helmet into two parts: the shell, i.e. the basic helmet-shaped outline that fits around the head, and the sensor holders that are printed separately and that are glued into place. We will cover the process of designing custom OPM helmets for well-defined geometries (like a sphere), for individual participants, and to accommodate specific populations. Furthermore, it demonstrates how a given number of OPM sensors can be distributed over the helmet and how sensor orientations/rotations can be optimized. Finally, it discusses how the STL design files can be combined to make a model that can be 3D printed.
 
 In part 1 we use different approaches to make the overall helmet shape.
 
@@ -35,12 +35,12 @@ In part 2 we demonstrate different procedures to distribute the OPM sensors over
 - based on an equidistant sensor distribution
 - by interactively clicking to specify the sensor positions
 
-In part 3 we look at the sensor orientation, i.e., how the sensors are rorated around their own axes. This is not too relevant for mono-axial and tri-axial sensors, but is highly relevant for bi-axial OPMs like the FieldLine v3 and Mag4Health sensors.
+In part 3 we look at the sensor orientation, i.e., how the sensors are rotated around their own axes. This is not too relevant for mono-axial and tri-axial sensors, but is highly relevant for bi-axial OPMs like the FieldLine v3 and Mag4Health sensors.
 
 In part 4 we will discuss how the STL design files that have been generated are combined into a complete helmet design that can be 3D printed.
 
 {% include markup/yellow %}
-In the following we will be using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/). You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. Alternatively, you could also [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software.
+In the following we will be using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/). You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. Alternatively, you could also use [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software.
 {% include markup/end %}
 
 ## Part 1 - different helmet shapes
@@ -67,7 +67,7 @@ We read the two STL files into MATLAB and plot them together with the axes of th
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/spherical1.png" width="600" %}
 
-The units of the geometrical objects are correctly recognized as 'mm'. We can also specify in which [head coordinate system](/faq/coordsys) they are specified, which will ensure the correct labels along the axes.
+The units of the geometrical objects are correctly recognized as 'mm'. We can also specify in which [head coordinate system](/faq/source/coordsys) they are specified, which will ensure the correct labels along the axes.
 
     % the CTF coordinate system has X towards the nose and Y towards the left
     headshape.coordsys = 'ctf'; 
@@ -105,7 +105,7 @@ We can add the anatomical landmarks (often referred to as fiducials) to the head
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/spherical2.png" width="600" %}
 
-Subsequently we call **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to automatically determine the electrode positions.
+Subsequently, we call **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to automatically determine the electrode positions.
 
     % this places a lot of electrodes, see https://doi.org/10.1016/s1388-2457(00)00527-7
     cfg = [];
@@ -121,7 +121,7 @@ Subsequently we call **[ft_electrodeplacement](/reference/ft_electrodeplacement)
 
 Note that the head is now rotated about 90 degrees around the z-axis and that it is looking towards the left of the screen, whereas previously we had rotated it so that the x-axis (going through the nose) was pointing towards the right.
 
-In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)** which reads the STL models for the sensor, the sensor holder, and for a "cutting tool" that will be used to make a hole in the helmet on the location where the sensor holder needs to be glued. The ft_sensorplacement will translate the STL objects to each of the selected electrode locations on the head shape, rotate the STL object such that it is perpendicular to the surface, and then move it outward a little bit.
+In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)**, which reads the STL models for the sensor, the sensor holder, and for a "cutting tool" that will be used to make a hole in the helmet on the location where the sensor holder needs to be glued. The `ft_sensorplacement` function will translate the STL objects to each of the selected electrode locations on the head shape, rotate the STL object such that it is perpendicular to the surface, and then move it outward a little bit.
 
     chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
 
@@ -139,31 +139,36 @@ In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)**
     cfg.template = 'fieldline_hole.stl';
     [tmpcfg, hole] = ft_sensorplacement(cfg, headshape);
 
-This returns a cell-array for each of the objects which we can plot in MATLAB:
+This returns a cell-array for each of the objects, which we can plot in MATLAB:
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', true);
     ft_plot_mesh(helmet, 'facecolor', 'lightgray', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_plot_mesh(holder, 'facecolor', 'g', 'facealpha', 1, 'edgecolor', 'none');
-    ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(padding, 'facecolor', 'm', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_headlight
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/spherical4.png" width="600" %}
 
 Subsequently we export the translated and rotated objects to STL files, so that we can combine them with the shell to make the 3D model of the complete helmet.
 
+    mkdir spherical
+
     for i=1:numel(sensor)
         disp(chansel{i});
-        filename = sprintf('spherical-sensor-%s.stl', chansel{i});
+        filename = sprintf('spherical/sensor-%s.stl', chansel{i});
         ft_write_headshape(filename, sensor(i), 'fileformat', 'stl');
-        filename = sprintf('spherical-holder-%s.stl', chansel{i});
+        filename = sprintf('spherical/holder-%s.stl', chansel{i});
         ft_write_headshape(filename, holder(i), 'fileformat', 'stl');
-        filename = sprintf('spherical-hole-%s.stl', chansel{i});
+        filename = sprintf('spherical/hole-%s.stl', chansel{i});
         ft_write_headshape(filename, hole(i), 'fileformat', 'stl');
+        filename = sprintf('spherical/padding-%s.stl', chansel{i});
+        ft_write_headshape(filename, padding(i), 'fileformat', 'stl');
     end
 
-This results in 19 channels times 3 files, so 57 STL files on disk. In principle you only need the hole files, since the sensors don't need to be printed (these are basically only dummies for visualisation purposes), and multiple sensor holders can be 3D printed from the original sensor STL file without translatiopns and rotations.
+This results in 19 channels times 4 files, so 76 STL files on disk. In principle you only need the hole files, since the sensors don't need to be printed (these are basically only dummies for visualisation purposes), and multiple sensor holders can be 3D printed from the original sensor STL file without translations and rotations.
 
 In part 4 of this tutorial we will explain how to combine the different STL files into the final helmet design.
 
@@ -173,12 +178,12 @@ This is again a helmet that starts with a design in Fusion (or your 3D design so
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/figure2.png" width="600" %}
 
-The STL file are again available from our [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design).
+The STL files are again available from our [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design).
 
     headshape = ft_read_headshape('flattenedspherical-head.stl')
     helmet = ft_read_headshape('flattenedspherical-helmet.stl')
 
-In the previous spherical helmet design , we had a hemisphere and hence the lowest sensors on the plane spanned by FPz-T7-T8-Oz needed to be _above_ the mid-plane of the sphere. Now the head and helmet extend further down, so we can also place the anatomical landmarks a bit lower. You could also design the helmet such that it is tilted, i.e. higher up at the front and further down at the back, and place the anatomical landmarks correspondingly. But here we continue with a straight helmet with the anatomical landmarks in the same plane with z = -10.
+In the previous spherical helmet design, we had a hemisphere and hence the lowest sensors on the plane spanned by FPz-T7-T8-Oz needed to be _above_ the mid-plane of the sphere. Now the head and helmet extend further down, so we can also place the anatomical landmarks a bit lower. You could also design the helmet such that it is tilted, i.e. higher up at the front and further down at the back, and place the anatomical landmarks correspondingly. But here we continue with a straight helmet, with the anatomical landmarks in the same plane with z = -10.
 
     nas = [+100 0 -10];
     ini = [-100 0 -10];
@@ -251,7 +256,8 @@ We use the same code as before to plot the headshape, helmet and sensors.
     ft_plot_mesh(helmet, 'facecolor', 'lightgray', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_plot_mesh(holder, 'facecolor', 'g', 'facealpha', 1, 'edgecolor', 'none');
-    ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(padding, 'facecolor', 'm', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_headlight
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/flattenedspherical3.png" width="600" %}
@@ -282,7 +288,7 @@ In part 4 of this tutorial we will explain how to combine the different STL file
 
 ### Individualized based on MRI
 
-We start by reading the individual anatomical MRI, either from a NIFTI file or from DICOM files. With **[ft_determine_coordsys](/reference/ft_determine_coordsys)** we can see that - alhough the axes are indicated as "unknown" - the x-axis goes through the nasion and the y-axis goes through the pre-auricular points, consistent with the [CTF coordinate system](/faq/coordsys).
+We start by reading the individual anatomical MRI, either from a NIFTI file or from DICOM files. With **[ft_determine_coordsys](/reference/ft_determine_coordsys)** we can see that - although the axes are indicated as "unknown" - the x-axis goes through the nasion and the y-axis goes through the pre-auricular points, consistent with the [CTF coordinate system](/faq/coordsys).
 
     mri = ft_read_mri('individual.nii');
 
@@ -291,7 +297,7 @@ We start by reading the individual anatomical MRI, either from a NIFTI file or f
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual1.png" width="600" %}
 
-In the next step we have to determine the locaiton of the anatomical landmarks. We will use the nasion and left and right pre-auricular points to align the MRI with the desired coordinate system (which is not strictly needed here, as it already appears to be aligned), but we need the anatomical landmarks and also the inion for the sensor placement.
+In the next step we have to determine the location of the anatomical landmarks. We will use the nasion and left and right pre-auricular points to align the MRI with the desired coordinate system (which is not strictly needed here, as it already appears to be aligned), but we need the anatomical landmarks and also the inion for the sensor placement.
 
 By clicking in the image, we can see the voxel indices which we write down and store in the script.
 
@@ -317,7 +323,7 @@ Although the MRI already seemed to be aligned with the CTF coordinate system, we
     cfg.fiducial.rpa = rpa_vox;
     mri_realigned = ft_volumerealign(cfg, mri);
 
-We also want to know what the positions of the four landmarks are in head coordinates. We can check the position of each of the anatomical landmarks by using `cfg.location` in **[ft_sourceplot](/reference/ft_sourceplot)**, where `cfg.locationcoordinates` allows us to specify whether the three numbers are to be interpreted as (x, y, z) in head coordinates, or as (i, j, k) in voxel coordinates. The function **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)** allows us to apply a geometrical transformatino on a Nx3 set of points or on a geometrical object like a mesh.
+We also want to know what the positions of the four landmarks are in head coordinates. We can check the position of each of the anatomical landmarks by using `cfg.location` in **[ft_sourceplot](/reference/ft_sourceplot)**, where `cfg.locationcoordinates` allows us to specify whether the three numbers are to be interpreted as (x, y, z) in head coordinates, or as (i, j, k) in voxel coordinates. The function **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)** allows us to apply a geometrical transformation on a Nx3 set of points or on a geometrical object like a mesh.
 
     nas = ft_transform_geometry(mri.transform, nas_vox);
     ini = ft_transform_geometry(mri.transform, ini_vox);
@@ -398,7 +404,7 @@ If we add the previously determined anatomical landmarks to the headshape struct
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual6.png" width="600" %}
 
-The segmented scalp is represented as a binary array, which when plotted shows as a black-and white image. We can use tools from the MATLAB image processing tool box to adjust the segmentation.
+The segmented scalp is represented as a binary array, which when plotted shows as a black-and-white image. We can use tools from the MATLAB Image Processing Toolbox to adjust the segmentation.
 
     cfg = [];
     cfg.funparameter = 'scalp';
@@ -459,7 +465,7 @@ We can plot the meshes that describe the inside and outside of the helmet.
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual10.png" width="600" %}
 
-You can see that they extends all the way to the nose, and that the bottom is closed; that is something we will fix later by editing the mesh in Fusion.
+You can see that they extend all the way to the nose, and that the bottom is closed; that is something we will fix later by editing the mesh in Fusion.
 
 The next step is to determine the desired position of the sensors. As before, we will here use the 10-20 EEG electrode placement scheme.
 
@@ -498,12 +504,13 @@ We can plot the head with the outside of the helmet and all STL objects in one f
     ft_plot_mesh(outside, 'facecolor', 'lightgray', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_plot_mesh(holder, 'facecolor', 'g', 'facealpha', 1, 'edgecolor', 'none');
-    ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(hole, 'facecolor', 'b', 'facealpha', 0.5, 'edgecolor', 'none');
+    % ft_plot_mesh(padding, 'facecolor', 'm', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_headlight
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual12.png" width="600" %}
 
-If we are happy with the sensor distribution, we can export all geometrical objects to SLT files for later postprocessing in Fusion (see part 4).
+If we are happy with the sensor distribution, we can export all geometrical objects to STL files for postprocessing (see part 4).
 
     mkdir individual
 
@@ -518,6 +525,8 @@ If we are happy with the sensor distribution, we can export all geometrical obje
         ft_write_headshape(filename, holder(i), 'fileformat', 'stl');
         filename = sprintf('individual/hole-%s.stl', chansel{i});
         ft_write_headshape(filename, hole(i), 'fileformat', 'stl');
+        filename = sprintf('individual/padding-%s.stl', chansel{i});
+        ft_write_headshape(filename, padding(i), 'fileformat', 'stl');
     end
 
 In part 4 of this tutorial we will explain how to combine the different STL files into the final helmet design.
@@ -528,9 +537,9 @@ FIXME for this we need another subject that can be 3D scanned while wearing a sw
 
 ### Adapted to percentile of population
 
-Rather than making an individualized helmet for each subject, you can also make a helmet that fits your whole population, or a large fraction of your population. This is of course what the OPM companies try to achieve with their helmets, but if you are working with a specific population, for example 4-year olds, then the OPM companies might not have the right size helmet for you. The following section shows how a series of anatomical MRIs can pe processed and combined to make a helmet that will fit a certain eprcentile of your population - in this case 90%.
+Rather than making an individualized helmet for each subject, you can also make a helmet that fits your whole population, or a large fraction of your population. This is of course what the OPM companies try to achieve with their helmets, but if you are working with a specific population, for example 4-year-olds, then the OPM companies might not have the right size helmet for you. The following section shows how a series of anatomical MRIs can be processed and combined to make a helmet that will fit a certain percentile of your population - in this case 90%.
 
-This approach does assume that you have imaging data avaialble for your population. If you don't have the scans for your specific subjects (which is quite likely, especially if they are babies or kids), then you may be able to use an existing database with age-matched anatomical MRI data, for example the [Neurodevelopmental MRI Database](https://jerlab.sc.edu/projects/neurodevelopmental-mri-database/) from John E. Richards.
+This approach does assume that you have imaging data available for your population. If you don't have the scans for your specific subjects (which is quite likely, especially if they are babies or kids), then you may be able to use an existing database with age-matched anatomical MRI data, for example the [Neurodevelopmental MRI Database](https://jerlab.sc.edu/projects/neurodevelopmental-mri-database/) from John E. Richards.
 
 In this case we are not going to use a large database with MRIs, but rather a small set to demonstrate the principle. This set of MRIs was constructed by taking an individual subject's MRI and scaling, rotating and translating that, to create some variability in the head size and in the position relative to the MRI scanner field-of-view.
 
@@ -683,9 +692,9 @@ The nasion point is in both cases along the x-axis since the y- and z-value are 
 
 ## Part 3 - sensor orientation and rotation
 
-Besides determining _where_ to place the sensors on the head or helmet, we also need to deciode how teh sensors should be oriented. By default ft_sensorplacement will orient the sensors (and sensor holders, etc.) perpendicular to the headshape surface. This defines two of the three rotations, but still leaves the rotation around the (radial) axis to be determined.
+Besides determining _where_ to place the sensors on the head or helmet, we also need to decide how the sensors should be oriented. By default `ft_sensorplacement` will orient the sensors (and sensor holders, etc.) perpendicular to the headshape surface. This defines two of the three rotations, but still leaves the rotation around the (radial) axis to be determined.
 
-In general the orientation and rotation are determined by a rotation around the z-axis, followed by a rotation arount the y- and x-axis. Since rotations are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order in which they are applied matters. These rotations can be specified as `cfg.rotz`, `cfg.roty` and `cfg.rotx`, respectively. Note that ft_sensorplacement also returns the cfg structure as it was used in the placement, so if you did not explicitly specify the rotations in the input `cfg`, the output `cfg` will have the rotations, which allows you to change them and re-run the placement. 
+In general the orientation and rotation are determined by a rotation around the z-axis, followed by a rotation around the y- and x-axis. Since rotations are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order in which they are applied matters. These rotations can be specified as `cfg.rotz`, `cfg.roty` and `cfg.rotx`, respectively. Note that `ft_sensorplacement` also returns the `cfg` structure as it was used in the placement, so if you did not explicitly specify the rotations in the input `cfg`, the output `cfg` will have the rotations, which allows you to change them and re-run the placement.
 
 ### Sensor orientation relative to the head
 
@@ -795,7 +804,7 @@ Return to the individual MRI-based helmet design and use the radial direction as
 
 ### Sensor rotation around its axis
 
-Biaxial OPM sensors typically record the signal in one radial direcion (i.e., perpendicular to the surface) and one tangential direction, which is also the most optimal configuration (see Schoffelen et al. 2025 [Optimal configuration of on-scalp OPMs with fixed channel counts](https://doi.org/10.1162/imag.a.22)). For the tangential direction you have to choose how to rotate the sensor around its axes. An optimal sampling of the environmental noise (useful for noise suppression) is obtained with alternating directions of neighbouring sensors, where the tangential axis of a sensor is 90 degrees rotated relative to that of its neighbours.
+Biaxial OPM sensors typically record the signal in one radial direction (i.e., perpendicular to the surface) and one tangential direction, which is also the most optimal configuration (see Schoffelen et al. 2025 [Optimal configuration of on-scalp OPMs with fixed channel counts](https://doi.org/10.1162/imag.a.22)). For the tangential direction you have to choose how to rotate the sensor around its axes. An optimal sampling of the environmental noise (useful for noise suppression) is obtained with alternating directions of neighbouring sensors, where the tangential axis of a sensor is 90 degrees rotated relative to that of its neighbours.
 
 We can use the rotation around the z-axis to determine how sensors are rotated around their own radial axis:
 
@@ -845,15 +854,19 @@ To get a nice distribution of sensor positions, orientations relative to the sca
 
 FIXME show how to plot the labels
 
-## Part 4 - putting it together
+## Part 4 - putting the helmet design together
 
-Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/), which is the software we are most familar with. You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. However, you can also [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software. The required characteristics of the software are that it should be able to read and write STL files, and that it should be able to combine different geometries by means of (Boolean) addition and subtraction. For example, we have the STL file of the basic helmet shape from an MRI and the software should be able to cut off the lower part to accomodate the face, ears and neck. Furthermore, it should be able to remove material from the helmet shell based on the cutting tool "holes" that are defined as STL files.
+Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/), which is the software we are most familiar with. You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. However, you can also use [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software. The required characteristics of the software are that it should be able to read and write STL files, and that it should be able to combine different geometries by means of (Boolean) addition and subtraction. For example, we have the STL file of the basic helmet shape from an MRI and the software should be able to cut off the lower part to accommodate the face, ears and neck. Furthermore, it should be able to remove material from the helmet shell based on the cutting tool "holes" that are defined as STL files.
 
-FIXME insert soime screenshots and explanation
+FIXME insert some screenshots and explanation
+
+### Padding
+
+The padding is an STL object that is used to make the helmet locally thicker or to give it more "body" at the location wher ethe sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding STL object will be mainly fall inside the helmet and will largely be cut away by the hole STL object.
 
 ## Part 5 - making grad structure and a layout
 
-To reconstruct the sources underlying the MEG recordings and for some of the denoising algorithms (specifically ft_denoise_hfc, ft_denoise_amm, and ft_denoise_sss) you need the specification of the [sensor definition](/faq/source/sensors_definition/). Although OPMs are commonly magnetometers, in FieldTrip we refer to this sensor definition as the `grad` structure. If you read in data from a SQUID MEG recording, you will get the grad structure in the raw data representation. If you read in data from an OPM MEG recording (for example a fif file), you might also get the grad structure in the raw data representation. In some cases the sensor positions are known to the OPM system (for example with the FieldLine smart helmet) or have been added by postprocessing the recording with custom software to add the sensor localization (for example with the QuSpin Halo). If you use a custom designed and 3D printed OPM helmet, the OPM acquisition software will record the MEG signals just fine, but does not know where the sensors are or what their orientation is. Hence you have to construct a `grad` structure to complement teh subsequent analysis.
+To reconstruct the sources underlying the MEG recordings and for some of the denoising algorithms (specifically `ft_denoise_hfc`, `ft_denoise_amm`, and `ft_denoise_sss`) you need the specification of the [sensor definition](/faq/source/sensors_definition/). Although OPMs are commonly magnetometers, in FieldTrip we refer to this sensor definition as the `grad` structure. If you read in data from a SQUID MEG recording, you will get the `grad` structure in the raw data representation. If you read in data from an OPM MEG recording (for example a fif file), you might also get the `grad` structure in the raw data representation. In some cases the sensor positions are known to the OPM system (for example with the FieldLine smart helmet) or have been added by postprocessing the recording with custom software to add the sensor localization (for example with the QuSpin Halo). If you use a custom designed and 3D-printed OPM helmet, the OPM acquisition software will record the MEG signals just fine, but does not know where the sensors are or what their orientation is. Hence you have to construct a `grad` structure to complement the subsequent analysis.
 
 FIXME document how to obtain the grad structure
 
