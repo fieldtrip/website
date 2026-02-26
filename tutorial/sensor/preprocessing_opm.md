@@ -393,7 +393,7 @@ Prior to adding the channels that were not recorded, we had the following labels
 
      timelock.label'
      ans =
-       1x24 cell array
+       1x24 cell-array
        Columns 1 through 10
          {'FL30'}    {'FL21'}    {'FL20'}    {'FL23'}    {'FL36'}    {'FL35'}    {'FL34'}    {'FL84'}    {'FL30_2'}    {'FL38'}
        Columns 11 through 20
@@ -405,7 +405,7 @@ After adding the fake channels with NaN values, we get a full ERF structure that
 
      timelock_full.label'
      ans =
-       1x111 cell array
+       1x111 cell-array
        Columns 1 through 10
          {'FL30'}    {'FL21'}    {'FL20'}    {'FL23'}    {'FL36'}    {'FL35'}    {'FL34'}    {'FL84'}    {'FL30_2'}    {'FL38'}
        Columns 11 through 20

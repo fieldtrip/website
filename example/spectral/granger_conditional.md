@@ -129,7 +129,7 @@ However, we clearly want a multivariate approach. Also, we need to define channe
     gdata.g2_multi_reg_conditional = ft_connectivityanalysis(grangercfg, freqdata2);
 
 ## Evaluation
-The label combinations are 6x2 cell arrays, containing all 2-permutations
+The label combinations are 6x2 cell-arrays, containing all 2-permutations
 tuplets from the channels. How to interpret this?
 Is the combination a, b representing F<sub>a&rarr;b|c</sub>?
 Let's check this. In scenario 2, we should clearly see a higher causality

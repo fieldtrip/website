@@ -33,7 +33,7 @@ where the channels correspond to the time-varying positions of of the reconstruc
 
     >> data.label
     ans =
-      192x1 cell array
+      192x1 cell-array
         {'pHipOrigin_x'             }
         {'pHipOrigin_y'             }
         {'pHipOrigin_z'             }

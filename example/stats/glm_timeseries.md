@@ -51,7 +51,7 @@ We also read the events from the original file, we need the timing to make the G
 
     disp(unique({event.value}))
     ans =
-       1x41 cell array
+       1x41 cell-array
        Columns 1 through 6
          {'S  1'}    {'S 12'}    {'S 13'}    {'S 21'}    {'S 27'}    {'S111'}
        Columns 7 through 12

@@ -13,7 +13,7 @@ We start by reading the header (which we need for the sampling frequency) and th
     hdr   = ft_read_header(dataset, 'checkmaxfilter', 'no');
     event = ft_read_event(dataset, 'checkmaxfilter', 'no');
 
-The "event" variable is a structure array, in which each element represent one event.
+The "event" variable is a structure-array, in which each element represent one event.
 
     >> event
 

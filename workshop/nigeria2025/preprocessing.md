@@ -163,7 +163,7 @@ The header has the details on the channel names and the sampling rate, which you
 
     disp(hdr)
 
-The events are a structure array, i.e., a list of structures. Each event correspond to "something" that happened during the recording, such as a trigger or marker.
+The events are a structure-array, i.e., a list of structures. Each event correspond to "something" that happened during the recording, such as a trigger or marker.
 
     for i=1:10
       disp('----------------------')

@@ -416,7 +416,7 @@ The headshape method is easiest for the pre-auricular points, as you can recogni
        20.4483   67.4268    3.3728
        16.4416  -70.3234    2.5651
     disp(fiducials.label)
-      4x1 cell array
+      4x1 cell-array
         {'nas'}
         {'ini'}
         {'lpa'}

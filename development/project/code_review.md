@@ -239,7 +239,7 @@ The main drawback of the current implementation of preamble and postamble is tha
 
 A related drawback is their use of assignin, evalin and worker scripts, which makes it hard to follow what happens, and where. And the use of assignin and evalin also makes that currently, nested functions cannot be used in any function that calls preamble or postamble. Because the use evalin and assignin is not compatible with nested functions, as also stated in the documentation: <https://nl.mathworks.com/help/matlab/matlab_prog/resolve-error-attempt-to-add-variable-to-a-static-workspace.html>. Even though regular functions and subfunctions are usually to be preferred over nested functions, not being able to use nested functions at all is an unnecessary restriction.
 
-From a first look at what the preamble and postamble worker scripts try to achieve, it seems possible to rework them to a version 2 implementation, that does show transparantly what variables are added / edited in the calling function’s workspace. The final implementation could have a single function call for each of preamble and postamble. That call takes multiple cell arrays as input, one for each preamble ‘script’ that should be executed, followed by any other input data needed by that particular ‘script’. The special cfg input would be a shared first input. The call will return cfg, and for the preamble a single variable that holds any extra info needed by the postambles, and the extra variables that are requested from the loadvar option as varargout output towards named variables in the caller function. The final implementation does not have to do any assignin calls or addition of extra variables under the hood. And most likely it will not even need to call evalin. Another result will be that the functions that use preamble and postamble, can get rid of the separate ft_nargin, ft_nargout and ft_revision variables.
+From a first look at what the preamble and postamble worker scripts try to achieve, it seems possible to rework them to a version 2 implementation, that does show transparantly what variables are added / edited in the calling function’s workspace. The final implementation could have a single function call for each of preamble and postamble. That call takes multiple cell-arrays as input, one for each preamble ‘script’ that should be executed, followed by any other input data needed by that particular ‘script’. The special cfg input would be a shared first input. The call will return cfg, and for the preamble a single variable that holds any extra info needed by the postambles, and the extra variables that are requested from the loadvar option as varargout output towards named variables in the caller function. The final implementation does not have to do any assignin calls or addition of extra variables under the hood. And most likely it will not even need to call evalin. Another result will be that the functions that use preamble and postamble, can get rid of the separate ft_nargin, ft_nargout and ft_revision variables.
 
 An intermediate step in the implementation, that could be kept also in the final situation to provide backward compatibility, would be to convert the worker scripts into regular functions, called in a regular fashion from preamble / postamble. And do all the interaction with the caller workspace only in preamble / postamble themselves through assignin and evalin (to get variable values from the caller) calls. Only one struct-type variable would be added to the caller workspace, to hold all the information that needs to be passed on from preamble to postamble.
 
@@ -560,7 +560,7 @@ What the analysis function would look like with the v2 of preamble / postamble
     input will
     % not be used to name variables. The input is meant to indicate the
     number
-    % of arguments, and whether they are a cell array or separate
+    % of arguments, and whether they are a cell-array or separate
     variables.
     if p_amble.ft_abort
     return
@@ -589,7 +589,7 @@ What the analysis function would look like with the v2 of preamble / postamble
     % scalar, this can also be a vector of numbers.
     % The number input would be a required input, and have a scalar 0 to
     % indicate no input data used. It can be followed by an optional input
-    % string / chararray 'vararg' to indicate that the input is a cell array.
+    % string / chararray 'vararg' to indicate that the input is a cell-array.
 
     % and sometimes a small code piece after the postamble
 

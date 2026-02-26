@@ -292,7 +292,7 @@ This yields a _[freq x time]_ matrix of classification accuracies. However, we a
 - `cfg.features = 'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
 - `cfg.features = 'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
 - `cfg.features = []`: in this case, a search is performed across all dimensions yielding a _[chan x freq x time]_ array.
-- `cfg.features = {'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding a _[time x 1]_ vector.
+- `cfg.features = {'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell-array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding a _[time x 1]_ vector.
 
 ### Exercise 4
 
@@ -392,7 +392,7 @@ and then applied to both train and test data. This assures that no information
 from the test set flows into the processing of the train set. The available preprocessing functions
 are listed in the [preprocess folder](https://github.com/treder/MVPA-Light/tree/master/preprocess) on the GitHub page.
 You can specify an operation by omitting `mv_preprocess_`. For instance, the file `mv_preprocess_demean` corresponds to the string `'demean'`.
-We can follow up the z-score with a Principal Components Analysis (PCA) by providing both strings as a cell array
+We can follow up the z-score with a Principal Components Analysis (PCA) by providing both strings as a cell-array
 
     cfg.mvpa.preprocess = {'zscore' 'pca'};
 
@@ -403,7 +403,7 @@ in PCA the number of PCs is such a parameter. Its default value is 20. Studying 
 
 we see that the parameter `n` controls the number of PCs. To change it,
 you can use the `cfg.preprocess_param` field. Since our preprocessing pipeline contains
-two operations `cfg.preprocess_param` is a cell array with two elements.
+two operations `cfg.preprocess_param` is a cell-array with two elements.
 PCA is the second preprocessing operation, so we need to set the second cell. We can provide parameters as key-value pairs.
 For instance, to set the number of PCs `n = 10` we write:
 

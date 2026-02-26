@@ -332,7 +332,7 @@ Let's have a look at the output of _sourcemodel_and_leadfield_
 - _unit_ contains the unit of _pos_
 - _inside_ contains a logical vector indicating whether the source is a source or not
 - _cfg_ contains information about the call of _ft_prepare_leadfield_
-- _leadfield_ a cell array, where each cell (3528) contains a matrix of 128 rows (n channels) and 3 columns (\_xyz-coordinates). (The ones that are outside the brain are empty though). For each channel-orientation pair, you get the electric potential measured given that the relevant source has an activation of 1 Am
+- _leadfield_ a cell-array, where each cell (3528) contains a matrix of 128 rows (n channels) and 3 columns (\_xyz-coordinates). (The ones that are outside the brain are empty though). For each channel-orientation pair, you get the electric potential measured given that the relevant source has an activation of 1 Am
 - _label_ contains the electrode names
 - _leadfielddimord_ indicates the dimension. Each cell is a position, which contains a matrix ordered by channels x orientations (_xyz_)
 

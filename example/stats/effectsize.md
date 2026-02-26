@@ -378,7 +378,7 @@ For the channels it is similar, except that we form a Boolean column-vector to f
 
     inference.label(any(inference.mask,2))
     ans =
-      18x1 cell array
+      18x1 cell-array
         {'MLF23'}
         {'MLF33'}
         {'MLF34'}
