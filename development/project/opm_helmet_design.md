@@ -1,5 +1,7 @@
 ---
 title: OPM helmet design
+category: tutorial
+tags: [opm]
 ---
 
 {% include /shared/development/warning.md %}
@@ -121,7 +123,7 @@ Subsequently, we call **[ft_electrodeplacement](/reference/ft_electrodeplacement
 
 Note that the head is now rotated about 90 degrees around the z-axis and that it is looking towards the left of the screen, whereas previously we had rotated it so that the x-axis (going through the nose) was pointing towards the right.
 
-In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)**, which reads the STL models for the sensor, the sensor holder, and for a "cutting tool" that will be used to make a hole in the helmet on the location where the sensor holder needs to be glued. The `ft_sensorplacement` function will translate the STL objects to each of the selected electrode locations on the head shape, rotate the STL object such that it is perpendicular to the surface, and then move it outward a little bit.
+In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)**, which reads the STL models for the sensor, the sensor holder, and for a "cutting tool" that will be used to make a hole in the helmet on the location where the sensor holder needs to be glued. The **[ft_sensorplacement](/reference/ft_sensorplacement)** function will translate the STL objects to each of the selected electrode locations on the head shape, rotate the STL object such that it is perpendicular to the surface, and then move it outward a little bit.
 
     chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
 
@@ -447,7 +449,7 @@ From the segmented airgap and helmet, we construct surface meshes that describe 
     tmp = removefields(mri_segmented, {'scalp', 'airgap'}); % FIXME this is a hack that should be resolved
     outside = ft_prepare_mesh(cfg, tmp);
 
-We can plot the meshes that describe the inside and outside of the helmet. 
+We can plot the meshes that describe the inside and outside of the helmet.
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
@@ -585,29 +587,33 @@ The individual subjects' MRIs have all been aligned to the CTF coordinate system
 
 Note however that the fiducial locations are not identical, since some heads are smaller than others.
 
-    >> fiducial{2}
+    >> fiducial{1}
     struct with fields:
+        nas: [82.8648 -2.8422e-14 0]
         ini: [-94.3201 1.0090 29.7481]
         lpa: [2.9110 68.1849 -1.4211e-14]
-        nas: [82.8648 -2.8422e-14 0]
         rpa: [-2.9110 -68.1849 -7.1054e-15]
 
     >> fiducial{2}
     struct with fields:
+        nas: [80.3743 2.8422e-14 1.4211e-14]
         ini: [-91.2260 1.1314 32.6141]
         lpa: [2.2625 75.9092 2.1316e-14]
-        nas: [80.3743 2.8422e-14 1.4211e-14]
         rpa: [-2.2625 -75.9092 7.1054e-15]
 
-The nasion point is in both cases along the x-axis since the y- and z-value are zero (up to some numerical precision error).
+For subject 1 the head is slightly larger than for subject 2. The nasion is in both cases along the x-axis, since its y- and z-value are zero (up to some numerical precision error).
+
+We can check the position of the nasion, or of any of the other anatomical landmarks.
 
     cfg = [];
     cfg.method = 'ortho';
     cfg.location = fiducial{3}.nas;
     cfg.locationcoordinates = 'head';
-    ft_sourceplot(cfg, mri{3});
+    ft_sourceplot(cfg, mri{1});
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/population1.png" width="600" %}
+
+We reslice all of the MRIs so that the voxels are isotropic and aligned with the head coordinate system. Furthermore, as before, we segment the MRIs to get the head or scalp surface.
 
     mri_resliced = {};
     mri_segmented = {};
@@ -626,15 +632,17 @@ The nasion point is in both cases along the x-axis since the y- and z-value are 
         mri_segmented{i} = ft_volumesegment(cfg, mri_resliced{i});
     end
 
-%%
+We can check the segmentation, again by specifically looking at the cross-section of one of the anatomical landmarks.
 
     cfg = [];
     cfg.method = 'ortho';
-    cfg.location = fiducial{4}.nas;
+    cfg.location = fiducial{1}.nas;
     cfg.funparameter = 'scalp';
-    ft_sourceplot(cfg, mri_segmented{4});
+    ft_sourceplot(cfg, mri_segmented{1});
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/population2.png" width="600" %}
+
+Now that we know which voxes correspond to the head, we can combine the binary segmentations which have the value of 0 for air and 1 for the head or scalp. To do that, we simply copy the one from subject 1, and for each of the subsequent subjects we add the segmentation. The consequence is that for a voxel that is part of the scalp segmentation in all 10 subjects, the summed value will be 10, whereas if a voxel is part of the scalp segmentation in half of the subjects, the summed value is 5. After summing them, we divide by the total number of subjects to get for each voxel the fraction of subjects that the voxel is part of the scalp segmentation.
 
     mri_averaged = rmfield(mri_segmented{1}, 'cfg');
     for i=2:nsubj
@@ -648,10 +656,14 @@ The nasion point is in both cases along the x-axis since the y- and z-value are 
     cfg.funparameter = 'scalp';
     ft_sourceplot(cfg, mri_averaged);
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/population3.png" width="600" %}
+
+To determine the volume that would accomodate 90% of the participants, we have to determine which voxels are less than 10% probable to be part of the scalp. I.e., the outermost voxels with low scalp probabilities are removed, whereas if the scalp probability is 10% or higher, we retain the voxels.
 
     mri_90percentile       = mri_averaged;
-    mri_90percentile.scalp = mri_averaged.scalp>=0.9;
+    mri_90percentile.scalp = mri_averaged.scalp>=0.1;
+
+This again results in a binary or boolean volume with a head outline that should fit 90% of our participants.
 
     cfg = [];
     cfg.method = 'ortho';
@@ -659,46 +671,238 @@ The nasion point is in both cases along the x-axis since the y- and z-value are 
     cfg.funparameter = 'scalp';
     ft_sourceplot(cfg, mri_90percentile);
 
-%%
+{% include image src="/assets/img/tutorial/opm_helmet_design/population4.png" width="600" %}
 
+We can use a similar trick to make the outline of the scalp perfectly symmetric. We flip the segmented scalp along the 2nd dimension (the y-axis), and combine it with the original using a logical "or" operation.
+
+    % make it perfectly symmetric
+    mri_90percentile.scalp =  mri_90percentile.scalp | flip(mri_90percentile.scalp, 2);
+
+From here on the code is largely the same as for processing the individual anatomical MRI, so we make the inside and outside of the helmet using imdilate.
+
+    % we now do the same as for the individual MRI
     mri_segmented = mri_90percentile;
 
-    % we now do the same as with the individual MRI
+    % we still need to make the headshape mesh, so don't modify the scalp segmentation directly
+    tmp = mri_segmented.scalp;
+    tmp(:,:,1:50) = 0;
 
-    mri_segmented.scalp(:,:,1:50) = 0;
-    mri_segmented.airgap = imdilate(mri_segmented.scalp,  strel('sphere', 3));
-    mri_segmented.helmet = imdilate(mri_segmented.airgap, strel('sphere', 7));
+    mri_segmented.airgap = imdilate(tmp,                  strel('sphere', 1));
+    mri_segmented.helmet = imdilate(mri_segmented.airgap, strel('sphere', 5));
 
-    mri_indexed = ft_checkdata(mri_segmented, 'segmentationstyle', 'indexed');
+And as before we make the meshes for the headshape, the inside, and the outside of the helmet.
 
     cfg = [];
-    cfg.funparameter = 'tissue';
-    cfg.location = [0 0 0];
-    cfg.locationcoordinates = 'head';
-    cfg.atlas = mri_indexed;
-    ft_sourceplot(cfg, mri_indexed)
+    cfg.method = 'projectmesh';
+    cfg.numvertices = 4000;
 
-    % from here on it continues as with the individual segmented MRI
+    cfg.tissue = 'scalp';
+    headshape = ft_prepare_mesh(cfg, mri_segmented);
+
+    cfg.tissue = 'airgap'; % this makes a surface from the outside of the "airgap" part
+    tmp = removefields(mri_segmented, {'scalp', 'helmet'}); % FIXME this is a hack that should be resolved
+    inside = ft_prepare_mesh(cfg, tmp);
+
+    cfg.tissue = 'helmet';
+    tmp = removefields(mri_segmented, {'scalp', 'airgap'}); % FIXME this is a hack that should be resolved
+    outside = ft_prepare_mesh(cfg, tmp);
+
+Now that we have the headshape and the inside and ourside of the helmet, again accomodating for a 1mm gap on the insider of the helmet, we have to distribute the sensors over the headshape and helmet. Since all participants have different head sizes, their anatomical landmarks are also at different locations.
+
+    figure
+    ft_plot_axes([], 'unit', 'mm', 'coordsys', 'als');
+    for i=1:nsubj
+        ft_plot_mesh(fiducial{i}.nas, 'vertexcolor', 'k');
+        ft_plot_mesh(fiducial{i}.lpa, 'vertexcolor', 'k');
+        ft_plot_mesh(fiducial{i}.rpa, 'vertexcolor', 'k');
+        ft_plot_mesh(fiducial{i}.ini, 'vertexcolor', 'k');
+    end
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/population5.png" width="600" %}
+
+As for the segmentations, we can compute the average location of all anatomical landmarks.
+
+    nas_avg = fiducial{1}.nas;
+    ini_avg = fiducial{1}.ini;
+    lpa_avg = fiducial{1}.lpa;
+    rpa_avg = fiducial{1}.rpa;
+
+    for i=2:nsubj
+        nas_avg = nas_avg + fiducial{i}.nas;
+        ini_avg = ini_avg + fiducial{i}.ini;
+        lpa_avg = lpa_avg + fiducial{i}.lpa;
+        rpa_avg = rpa_avg + fiducial{i}.rpa;
+    end
+
+    nas_avg = nas_avg/nsubj;
+    ini_avg = ini_avg/nsubj;
+    lpa_avg = lpa_avg/nsubj;
+    rpa_avg = rpa_avg/nsubj;
+
+    % average the position of left and right ear
+    tmp1 = (lpa_avg + [1 -1 1] .* rpa_avg)/2;
+    tmp2 = (rpa_avg + [1 -1 1] .* lpa_avg)/2;
+    % now we can safely overwrite them
+    lpa_avg = tmp1;
+    rpa_avg = tmp2;
+
+    % the nose and inion should be exactly on the y=0 plane
+    nas_avg(2) = 0;
+    ini_avg(2) = 0;
+
+We can plot the averaged anatomical landmark positions together with the polulation headshape.
+
+    headshape.fid.pos = [
+        nas_avg
+        ini_avg
+        lpa_avg
+        rpa_avg
+        ];
+
+    headshape.fid.label = {
+        'nas'
+        'ini'
+        'lpa'
+        'rpa'
+        };
+
+    figure
+    ft_plot_headshape(headshape, 'axes', 'on', 'facecolor', 'skin', 'facealpha', 0.5, 'fidmarker', '.', 'fidcolor', 'k', 'fidlabel', true, 'fidsize', 24)
+    ft_headlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/population6.png" width="600" %}
+
+If you look carefully, you will see that the landmarks are not on the scalp surface, but slightly inside.
+
+{% include markup/blue %}
+#### Excercise
+
+Explain why the landmarks are not on the surface.
+{% include markup/end %}
+
+Although the **[ft_electrodeplacement](/reference/ft_electrodeplacement)** function will project them on the surface, the projected nasion landmark will not be on the nasion but on the nearest surface point, which happens to be on the side of the nose. This subsequently causes the 10-20 placement scheme to fail. We can shift all anatomical landmarks outward a little bit to ensure that the projections onto the surface are correct.
+
+    cfg = [];
+    cfg.fiducial.nas = nas_avg + [+10 0 0];
+    cfg.fiducial.ini = ini_avg + [-10 0 0];
+    cfg.fiducial.lpa = lpa_avg + [0 +10 0];
+    cfg.fiducial.rpa = rpa_avg + [0 -10 0];
+    cfg.method = '1020';
+    elec = ft_electrodeplacement(cfg, headshape);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/population7.png" width="600" %}
+
+From this point on the code is the same as above, so we use **[ft_sensorplacement](/reference/ft_sensorplacement)** to rotate and translate the STL models to the desired sensor positions, we can visualize the result, and export it to STL files for postprocessing.
 
 ## Part 2 - sensor distributions
 
 ### 10-20 distribution
 
+In all examples above we used the **[ft_electrodeplacement](/reference/ft_electrodeplacement)** function to determine the positions of the extended 10-20 system on the scalp, took a subset of those positions, and rotated and translated the sensors, sensor holders, etcetera to those positions. This is a very powerful and flexible way, since there are more than 300 locations in the [5% electrode placement scheme](https://doi.org/10.1016/s1388-2457(00)00527-7).
+
+The selection was made using the **[ft_channelselection](/reference/utilities/ft_channelselection)** helper function, which knows some default channel groups like 'eeg1020'. Furthermore, we excluded FPz and Oz, since we already have their close neighbours on both sides.
+
+    chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
+
+We could also have specified it as follows
+
+    chansel = {'Fp1', 'Fp2', 'F7', 'F3', 'Fz', 'F4', 'F8', 'T7', 'C3', 'Cz', 'C4', 'T8', 'P7', 'P3', 'Pz', 'P4', 'P8', 'O1', 'O2'};
+
+and similarly you can make your own list, for example by hand-picking locations from a 2D representation of all positions.
+
+    cfg = [];
+    cfg.layout = 'eeg1005';
+    cfg.channel = {'all'}; % modify this to your selection
+    cfg.skipcomnt = 'yes';
+    cfg.skipscale = 'yes';
+    cfg.feedback = 'yes';
+    layout = ft_prepare_layout(cfg);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/distribution1.png" width="600" %}
+
+With the `cfg.feedback` option this creates a figure, but you could also use **[ft_plot_layout](/reference/plotting/ft_plot_layout)** to have more control over the figure. Note that in this simple 2D layout the anatomical location of the electrodes is not correct with respect to the schematic nose and ears, as T9 and T10 should be in front of the ears, more or less on the same location as LPA and RPA.
+
 ### Equidistant
+
+We can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to make an approximate equidistant arragement of an arbitrary number of OPM sensor locations. We can demonstrate this on the sperical headshape, but it works just as well on a realistic individual or population-based headshape.
+
+    headshape = ft_read_headshape('spherical-head.stl');
+    headshape.coordsys = 'ctf';
+
+The mesh describing the sphere has over 28k triangles. To speed up the plotting, we can reduce the number of triangles while still retaining the overall spherical shape.
+
+    [headshape.tri, headshape.pos] = reducepatch(headshape.tri, headshape.pos, 800);
+
+As before, we specify the position of the anatomical landmarks to distribute the electrode positions.
+
+    nas = [+100 0 0];
+    ini = [-100 0 0];
+    lpa = [0 +100 0];
+    rpa = [0 -100 0];
+
+    cfg = [];
+    cfg.fiducial.nas = nas;
+    cfg.fiducial.ini = ini;
+    cfg.fiducial.lpa = lpa;
+    cfg.fiducial.rpa = rpa;
+    cfg.method = 'equidistant';
+    cfg.maxiter = 500;
+    cfg.feedback = 'yes';
+    elec = ft_electrodeplacement(cfg, headshape);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/distribution2.png" width="600" %}
+
+This results in an iteratively updating figure that shows the electrode positions over the left hemisphere. The positions are repeatedly updated to make the distance between them as equal as possible. There are a number of positions that remain fixed, which correspond to Fpz, Oz, T7 and T8. During optimization the electrodes are not allowed to go below the sideline over the ear, or across the midline. After optimization, the positions are copied to the right hemisphere and labels are assigned.
+
+We can plot the positions together with their labels using **[ft_plot_sens](/reference/ft_plot_sens)**. The position labeled with "1" corresponds to the "Fpz" position in the 10-20 system.
+
+    {% include image src="/assets/img/tutorial/opm_helmet_design/distribution3.png" width="600" %}
+
+The total number of positions must be specified by you. The number of positions along the midline (running over the vertex) and over the sideline (above the ear) can also be specified.
+
+After determining the equidistant positions, you would proceed just as before with the **[ft_sensorplacement](/reference/ft_sensorplacement)** function to place the OPM sensors, sensor holders, etcetera.
 
 ### From a template
 
+The two sections above demonstrate how we can construct sensor positions on basis of distributing electrode positions. We could similarly start with [template electrode](/template/electrode) locations from FieldTrip, or from other software like EEGLAB. The **[ft_electroderealign](/reference/ft_electroderealign)** function can be used to translate, rotate and scale the electrodes such that they fit on your head surface.
+
+Again, after determining the positions from the template, you would proceed just as before with the **[ft_sensorplacement](/reference/ft_sensorplacement)** function to place the OPM sensors, sensor holders, etcetera.
+
 ### Interactive manual specification
+
+If you have a headshape, you can also use the "headshape" method in **[ft_electrodeplacement](/reference/ft_electrodeplacement)** This will show the headshape and allows you to click to manually specify where the positions are to be placed. This approach is described in more detail in the [tutorial on electrode placement](/tutorial/source/electrode).
 
 ## Part 3 - sensor orientation and rotation
 
-Besides determining _where_ to place the sensors on the head or helmet, we also need to decide how the sensors should be oriented. By default `ft_sensorplacement` will orient the sensors (and sensor holders, etc.) perpendicular to the headshape surface. This defines two of the three rotations, but still leaves the rotation around the (radial) axis to be determined.
+Besides determining _where_ to place the sensors on the head or helmet, we also need to decide how the sensors should be oriented. By default **[ft_sensorplacement](/reference/ft_sensorplacement)** will orient the sensors (and sensor holders, etc.) perpendicular to the headshape surface. This defines two of the three rotations, but still leaves the rotation around the (radial) axis to be determined.
 
-In general the orientation and rotation are determined by a rotation around the z-axis, followed by a rotation around the y- and x-axis. Since rotations are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order in which they are applied matters. These rotations can be specified as `cfg.rotz`, `cfg.roty` and `cfg.rotx`, respectively. Note that `ft_sensorplacement` also returns the `cfg` structure as it was used in the placement, so if you did not explicitly specify the rotations in the input `cfg`, the output `cfg` will have the rotations, which allows you to change them and re-run the placement.
+Let's first have a look at the sensor holder and how it is defined in 3D space.
+
+    sensor = ft_read_headshape('fieldline_sensor.stl');
+    holder = ft_read_headshape('fieldline_holder.stl');
+
+    figure
+    ft_plot_mesh(sensor, 'facecolor', 'r', 'edgecolor', 'none')
+    ft_plot_mesh(holder, 'facecolor', 'lightgray', 'edgecolor', 'none')
+    ft_plot_axes([], 'unit', 'mm')
+    ft_headlight
+
+    axis on; grid on
+    xlabel('x')
+    ylabel('y')
+    zlabel('z')
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/orientation1.png" width="600" %}
+
+The sensor is 15x13x35 mm, where the 15 mm length corresponds to x, the 13 mm to x, and the 35 mm length to z. The sensor is "decorated" with a small piece of the cable sticking out and a small dent corresponding to a screw hole. The cable is on the -x side, the screwhole is on the +x side. The bottom of the sensor holder is flush with the z=0 plane. The sensor itself is 1 mm shifted upwards, in the positive z-direction.
+
+The ft_sensorplacement function operates by shifting the object that is specified in `cfg.template` (so for example the sensor, or the sensor holder) with `cfg.outwardshift` in the positive z-direction. Subsequently the object is rotated so that it is perpendicular to the surface, and finally it is translated to its final position.
+
+In general the orientation and rotation are determined by a rotation around the z-axis, followed by a rotation around the y- and x-axis. Since rotations are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order in which they are applied matters. These rotations can be specified as `cfg.rotz`, `cfg.roty` and `cfg.rotx`, respectively. Note that **[ft_sensorplacement](/reference/ft_sensorplacement)** also returns the `cfg` structure as it was used in the placement, so if you did not explicitly specify the rotations in the input `cfg`, the output `cfg` will have the rotations, which allows you to change them and re-run the placement.
 
 ### Sensor orientation relative to the head
 
-By default the sensor is oriented perpendicular to the headshape, and no explicit rotation around its z-axis is done. 
+By default the sensor is oriented perpendicular to the headshape, and no explicit rotation around its z-axis is done.
 
     headshape = ft_read_headshape('spherical-head.stl')
 
@@ -713,7 +917,7 @@ By default the sensor is oriented perpendicular to the headshape, and no explici
     cfg.fiducial.lpa = lpa;
     cfg.fiducial.rpa = rpa;
     cfg.method = '1020';
-    cfg.feedback = 'yes';
+    cfg.feedback = 'no';
     elec = ft_electrodeplacement(cfg, headshape);
 
     chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
@@ -730,11 +934,17 @@ By default the sensor is oriented perpendicular to the headshape, and no explici
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_headlight
 
+{% include image src="/assets/img/tutorial/opm_helmet_design/orientation2.png" width="600" %}
+
 The output configuration contains the rotations around the three axes that were used.
 
-    disp(outcfg)
+    >> disp(outcfg)
+        ...
+        rotx: [19×1 double]
+        roty: [19×1 double]
+        rotz: [19×1 double]
 
-We can also specify that we don't want any rotations at all
+We could explicitly specify that we don't want any rotations at all with
 
     cfg = [];
     cfg.rotx = zeros(19,1);
@@ -750,6 +960,8 @@ We can also specify that we don't want any rotations at all
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', 1);
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_headlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/orientation3.png" width="600" %}
 
 or that we want to rotate all sensors in a particular direction.
 
@@ -767,6 +979,8 @@ or that we want to rotate all sensors in a particular direction.
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', 1);
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_headlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/orientation4.png" width="600" %}
 
 In the individual helmet design we identified that the sensors close to the ears had an orientation that was suboptimal, due to the low resolution mesh having a bump close to the ear, and due to some compression of the soft tissue by the sound-isolating headphone. We can identify the two sensors on T7 and T8, and change those accordingly:
 
@@ -790,7 +1004,7 @@ In the individual helmet design we identified that the sensors close to the ears
 Return to the individual MRI-based helmet design and update the orientation of the T7 and T8 sensor such that they are along the y-axis.
 {% include markup/end %}
 
-As an alternative to specifying the rotations, you can specify the orientation of each of the electrodes in the input `elec` structure. This is similar to specifying the coil orientation for MEG sensor arrays, and for electrodes also used in ft_plot_sens when you show the electrode as a disc. The following takes the line connecting the point (0,0,40), which is more or less in between T7 and T8, and each of the electrodes, and uses that line to determine the orientation of each electrode.)
+As an alternative to specifying the rotations, you can specify the orientation of each of the electrodes in the input `elec` structure. This is similar to specifying the coil orientation for MEG sensor arrays, and for electrodes also used in **[ft_plot_sens](/reference/ft_plot_sens)** when you show the electrode as a disc. The following takes the line connecting the point (0,0,40), which is more or less in between T7 and T8, and each of the electrodes, and uses that line to determine the orientation of each electrode.)
 
     for i=1:numel(elec1020.label)
         elec.elecori(i,:) = elec.elecpos(i,:) - [0 0 40];
@@ -823,12 +1037,16 @@ We can use the rotation around the z-axis to determine how sensors are rotated a
     ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 1, 'edgecolor', 'none');
     ft_headlight
 
+{% include image src="/assets/img/tutorial/opm_helmet_design/orientation5.png" width="600" %}
+
 Of course this is best combined with first determining the overall orientation (rotation around x and y), then plotting, and then writing down how much you want each sensor to be rotated around its own axis.
 
     % this is what you would write down by hand
     correction = {
-        'Cz'    0 0 0
-        }
+        'Cz'    0 0   0
+        'T7'    0 0 -30
+        'T8'    0 0 +30
+        };
 
     cfg = [];
     cfg.elec = elec1020;
@@ -850,32 +1068,191 @@ Of course this is best combined with first determining the overall orientation (
 
     % ... the remainder would be the same as before
 
-To get a nice distribution of sensor positions, orientations relative to the scalp, and rotations around their own axis, you will probably want to iterate multiple times and plot in between.
+To get a nice distribution of sensor positions, orientations relative to the scalp, and rotations around their own axis, you will probably want to iterate multiple times and plot them in between.
 
-FIXME show how to plot the labels
+### Plotting sensors together with their label
+
+You can use the following piece of code to identify which of the sensors needs to be rotated. It plots the OPM sensors together with the electrode positions on which they are based, with (very large) the label that corresponds to each of the positions.
+
+    figure
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', 1);
+    ft_plot_mesh(sensor, 'facecolor', 'r', 'facealpha', 0.5, 'edgecolor', 'none');
+    ft_headlight
+
+    chanindx = match_str(elec.label, chansel);
+    ft_plot_sens(elec, 'chanindx', chanindx, 'label', 'label', 'fontsize', 30)
 
 ## Part 4 - putting the helmet design together
 
 Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/), which is the software we are most familiar with. You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. However, you can also use [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software. The required characteristics of the software are that it should be able to read and write STL files, and that it should be able to combine different geometries by means of (Boolean) addition and subtraction. For example, we have the STL file of the basic helmet shape from an MRI and the software should be able to cut off the lower part to accommodate the face, ears and neck. Furthermore, it should be able to remove material from the helmet shell based on the cutting tool "holes" that are defined as STL files.
 
-FIXME insert some screenshots and explanation
-
-### Padding
-
+{% include markup/green %}
 The padding is an STL object that is used to make the helmet locally thicker or to give it more "body" at the location wher ethe sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding STL object will be mainly fall inside the helmet and will largely be cut away by the hole STL object.
+{% include markup/end %}
 
-## Part 5 - making grad structure and a layout
+FIXME here I should add screenshots and an explanation of the process in Fusion
 
-To reconstruct the sources underlying the MEG recordings and for some of the denoising algorithms (specifically `ft_denoise_hfc`, `ft_denoise_amm`, and `ft_denoise_sss`) you need the specification of the [sensor definition](/faq/source/sensors_definition/). Although OPMs are commonly magnetometers, in FieldTrip we refer to this sensor definition as the `grad` structure. If you read in data from a SQUID MEG recording, you will get the `grad` structure in the raw data representation. If you read in data from an OPM MEG recording (for example a fif file), you might also get the `grad` structure in the raw data representation. In some cases the sensor positions are known to the OPM system (for example with the FieldLine smart helmet) or have been added by postprocessing the recording with custom software to add the sensor localization (for example with the QuSpin Halo). If you use a custom designed and 3D-printed OPM helmet, the OPM acquisition software will record the MEG signals just fine, but does not know where the sensors are or what their orientation is. Hence you have to construct a `grad` structure to complement the subsequent analysis.
+## Part 5 - making the grad structure and layout
 
-FIXME document how to obtain the grad structure
+To reconstruct the sources underlying the MEG recordings and for some of the denoising algorithms (specifically **[ft_denoise_hfc](/reference/ft_denoise_hfc)**, **[ft_denoise_amm](/reference/ft_denoise_amm)**, and **[ft_denoise_sss](/reference/ft_denoise_sss)**) you need the specification of the [sensor definition](/faq/source/sensors_definition/). Although OPMs are commonly magnetometers, in FieldTrip we refer to this sensor definition as the `grad` structure. If you read in data from a SQUID MEG recording, you will get the `grad` structure in the raw data representation. 
 
-For visualisation of the topographic distribution of the ERFs or TFRs you need a layout that maps the 3D sensor positions onto a 2D plane. For that you can use the `grad` structure, as explained in [this tutorial](/tutorial/plotting/layout/).
+If you read in data from an OPM MEG recording (for example a fif file), you might also get the `grad` structure in the raw data representation. In some cases the sensor positions are known to the OPM system (for example with the FieldLine smart helmet) or have been added by postprocessing the recording with custom software to add the sensor localization (for example with the QuSpin Halo). 
+
+If you use a custom designed and 3D-printed OPM helmet, the OPM acquisition software will record the MEG signals just fine, but does not know where the sensors are or what their orientation is. Hence you have to construct a `grad` structure to complement the subsequent analysis.
+
+### Grad for source modelling
+
+To demonstrate this, we will again start with the spherical configuration
+
+    headshape = ft_read_headshape('spherical-head.stl');
+    headshape.coordsys = 'ctf';
+
+    nas = [+100 0 0];
+    ini = [-100 0 0];
+    lpa = [0 +100 0];
+    rpa = [0 -100 0];
+
+    cfg = [];
+    cfg.fiducial.nas = nas;
+    cfg.fiducial.ini = ini;
+    cfg.fiducial.lpa = lpa;
+    cfg.fiducial.rpa = rpa;
+    cfg.method = '1020';
+    cfg.feedback = 'no';
+    elec = ft_electrodeplacement(cfg, headshape);
+
+    chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
+
+    cfg = [];
+    cfg.elec = elec;
+    cfg.channel = chansel;
+    cfg.template = 'fieldline_sensor.stl';
+    cfg.outwardshift = 2; % two mm away from the surface
+    [outcfg, sensor] = ft_sensorplacement(cfg, headshape);
+
+Note that we shift the sensor 2 mm away from the headshape.
+
+We now repeat the placement, but rather than reading the 15x13x35 mm sensor geometry from the STL file, we specify a single OPM sensor that consists of three channels corresponding to the x, y, and z-direction.
+
+    opm_single = [];
+    opm_single.label = {
+        'x'
+        'y'
+        'z'
+    };
+    opm_single.coilpos = [
+        0 0 0
+        0 0 0
+        0 0 0
+    ];
+    opm_single.coilori = [
+        1 0 0
+        0 1 0
+        0 0 1
+    ];
+    opm_single.tra = eye(3);
+
+We copy the OPM sensor for each of the channels and rotate and translate it as before.
+
+    cfg = [];
+    cfg.elec = elec;
+    cfg.channel = chansel;
+    cfg.template = opm_single;
+    cfg.outwardshift = 2 + 1 + 5; % IMPORTANT see below
+    [outcfg, opm_all] = ft_sensorplacement(cfg, headshape);
+
+In the previous call we moved the sensor 2 mm away from the headshape. The STL design of the **sensor holder** has its bottom flush with the z=0 plane, and the STL design of the **sensor** itself has the sensor 1 mm shifted along the +z direction since there is a 1 mm rim to keep the sensor in place in the holder. Finally, the sensitive spot in the sensor is not at the bottom, but has an offset of 5 mm away from the bottom. Consequently, the outwardshift needs to be specified as 2+1+5.
+
+Whereas we start with 19 sensors, since each sensor in this example is assumed to have three sensitive axes, each sensor contributes **three** channels to the grad structure. Each channel has a coilpos, coilori and label, as described in this [frequently asked question](/faq/source/sensors_definition/). Note that FieldTrip uses the phrase "coils" just as for SQUID sensors, even though the OPM does not have coils.
+
+The output `opm_all` is a structure array with 19 OPM _sensors_, where each sensor represents three _channels_. We combine all of them into a single `grad` structure.
+
+    grad = [];
+    grad.label = {};
+    grad.coilpos = zeros(0,3);
+    grad.coilori = zeros(0,3);
+    for i=1:length(chansel)
+        lab{1} = [outcfg.channel{i} '_' all_opm(i).label{1}]; % _x
+        lab{2} = [outcfg.channel{i} '_' all_opm(i).label{2}]; % _y
+        lab{3} = [outcfg.channel{i} '_' all_opm(i).label{3}]; % _z
+        grad.label = cat(1, grad.label, lab(:));
+        grad.coilpos = cat(1, grad.coilpos, all_opm(i).coilpos);
+        grad.coilori = cat(1, grad.coilori, all_opm(i).coilori);
+    end
+    grad.tra = eye(length(grad.label));
+
+We can plot the resulting OPM sensor positions for all channels with ft_plot_sens.
+
+    figure
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', 1);
+    ft_plot_sens(grad);
+    ft_headlight
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/grad.png" width="600" %}
+
+or only with the z-oriented channels, including their labels.
+
+    ft_plot_sens(grad, 'chanindx', endsWith(grad.label, 'z'), 'label', 'label')
+
+### Layout for plotting
+
+For 2D visualisation of the topographic distribution of the ERFs or TFRs you need a layout that maps the 3D sensor positions onto a 2D plane. For that you can use the `grad` structure, as explained in the [layout tutorial](/tutorial/plotting/layout/). 
+
+Here is a short piece of code to make a simple layout.
+
+    cfg = [];
+    cfg.grad = grad; % this contains x, y, and z channels
+    cfg.channel = grad.label(endsWith(grad.label, 'z'));
+    cfg.rotate = 90;
+    cfg.feedback = 'yes';
+    layout = ft_prepare_layout(cfg);
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/layout1.png" width="600" %}
+
+More elaborate options are explained in the [layout tutorial](/tutorial/plotting/layout), and you may want to put some effort in making a really nice layout with a helmet shaped mask and outline, as you can see for some of the [template layouts](/template/layout).
+
+The layout above only includes the radially oriented channels, i.e., the channels in the z-direction, as the field distribution on these is the easiest to interpret. It is in principle possible to make layouts for all sensor orientations:
+
+    cfg = [];
+    cfg.grad = grad; % this contains x, y, and z channels
+    cfg.rotate = 90;
+    cfg.feedback = 'no';
+
+    cfg.channel = grad.label(endsWith(grad.label, 'x'));
+    layout_x = ft_prepare_layout(cfg);
+
+    cfg.channel = grad.label(endsWith(grad.label, 'y'));
+    layout_y = ft_prepare_layout(cfg);
+
+    cfg.channel = grad.label(endsWith(grad.label, 'z'));
+    layout_z = ft_prepare_layout(cfg);
+
+    cfg = [];
+    layout_xyz = ft_appendlayout(cfg, layout_x, layout_y, layout_z);
+
+    figure
+    ft_plot_layout(layout_xyz)
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/layout2.png" width="600" %}
+
+{% include markup/yellow %}
+The channels in the x and y-direction are sensitive for magnetic fields in the x and y-direction of the sensor itself, which is not neccessarily in the x or y-direction of the head coordinates or of the figure on screen. The layout above that combines the channels in the x, y, and z-orientations might therefore be usefull for multiplotting (e.g. plotting an ERF at every sensor location), but should **not** be used for topoplotting.
+{% include markup/end %}
 
 ## Summary and conclusion
 
-What has been covered?
+This tutorial explains how to design 3D‑printable OPM helmets. We started by creating helmet shells from spherical geometric templates, from individual MRIs, or for population averages. We then looked at different ways of distributing OPM sensors using extended 10–20, equidistant, or interactive placement. In part 3 we looked at optimizing sensor orientations and rotations (important for bi‑ and tri-axial sensors) and in part 4 we assembled the actual helmet to be 3D printed by combining the shell, the holes and the sensor holders. Finally in the last part we constructed the grad structure for source modelling, and the layout for topographic plotting.
 
-What has not been covered but is relevant in the context of the tutorial?
+Throughout this tutorial we have mostly been working with a relatively simple geometry and with a small number of sensors to keep the procedure simple and fast. However, by combining part 1, 2, and 3 in a smart way, you can design arbitrarily complex OPM helmets for many sensors.
 
-Provide links to suggested further reading, related FAQs and example scripts.
+Not covered in this tutorial is how to do the actual 3D printing; for that we recommend that you team up with someone who has experience with that, or that you involve your technical support group or a 3D printing company. Important in the 3D design is that tolerances are considered (i.e. how tight is the fit of the components), that additional features of the helmet are added, like holes for the ears, or slits to attach a chin strap, and that sharp edjes are avoided where possible by using fillets.
+
+Also not covered in this tutorial is how to do the coregistration of the OPM sensors with the anatomical MRI or how to preprocess and analyze the OPM data in sensor and source space}; for that we have separate tutorials.
+
+### See also these tutorials
+
+{% include seealso category="tutorial" tag1="opm" %}
+
+### See also these "getting started" pages with vendor specific details
+
+{% include seealso category="getting_started" tag1="opm" %}
