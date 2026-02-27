@@ -267,7 +267,7 @@ We use the same code as before to plot the headshape, helmet and sensors.
 {% include markup/blue %}
 #### Exercise
 
-The template STL file for the individual OPM sensor not only consists of a 13x15x35 mm rectangular block, but also has a small off-center protrusion that represents where the cable is attached. The biaxial FieldLine v3 sensors have the laser pointing in the x-direction and can record the field along the y- and z-axis, which are the intermediate (15 mm) and long axes (35 mm). It is obvious that you will place the sensor with the cable pointing outward, but the sensor in principle fits in two ways, rotated 180 degrees around its own z-axis.
+The template STL file for the individual OPM sensor not only consists of a 13x15x35 mm rectangular block, but also has a small off-center protrusion that represents where the cable is attached. The bi-axial FieldLine v3 sensors have the laser pointing in the x-direction and can record the field along the y- and z-axis, which are the intermediate (15 mm) and long axes (35 mm). It is obvious that you will place the sensor with the cable pointing outward, but the sensor in principle fits in two ways, rotated 180 degrees around its own z-axis.
 
 What is the consequence on the signals that you record if you were to rotate the sensor 180 degrees?
 
@@ -414,7 +414,7 @@ The segmented scalp is represented as a binary array, which when plotted shows a
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual7.png" width="600" %}
 
-We need a helmet around the head that gives a little bit of space, so we will "inflate" the scalp segmentation by one voxel (which is 1 mm) to make an airgap. Furthermore, we "inflate" the airgap again with 5 voxels to make a 5 mm thick shell all around the head.
+We need a helmet around the head that gives a little bit of space, so we will "inflate" the scalp segmentation by one voxel (which is 1 mm) to make an air gap. Furthermore, we "inflate" the air gap again with 5 voxels to make a 5 mm thick shell all around the head.
 
 Since we don't need the helmet shell to go all the way down, we mark the lowest 50 slices of the MRI as "not-scalp". Then we use the MATLAB **[imdilate](https://nl.mathworks.com/help/images/ref/imdilate.html)** function to dilate or inflate the binary image.
 
@@ -435,7 +435,7 @@ The `mri_segmented` structure now contains three binary volumes that largely ove
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual8.png" width="600" %}
 
-From the segmented airgap and helmet, we construct surface meshes that describe the inside of the helmet (i.e. the outside of the airgap volume) and the outside of the helmet.
+From the segmented air gap and helmet, we construct surface meshes that describe the inside of the helmet (i.e. the outside of the air gap volume) and the outside of the helmet.
 
     cfg = [];
     cfg.method = 'projectmesh';
@@ -642,7 +642,7 @@ We can check the segmentation, again by specifically looking at the cross-sectio
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/population2.png" width="600" %}
 
-Now that we know which voxes correspond to the head, we can combine the binary segmentations which have the value of 0 for air and 1 for the head or scalp. To do that, we simply copy the one from subject 1, and for each of the subsequent subjects we add the segmentation. The consequence is that for a voxel that is part of the scalp segmentation in all 10 subjects, the summed value will be 10, whereas if a voxel is part of the scalp segmentation in half of the subjects, the summed value is 5. After summing them, we divide by the total number of subjects to get for each voxel the fraction of subjects that the voxel is part of the scalp segmentation.
+Now that we know which voxels correspond to the head, we can combine the binary segmentations which have the value of 0 for air and 1 for the head or scalp. To do that, we simply copy the one from subject 1, and for each of the subsequent subjects we add the segmentation. The consequence is that for a voxel that is part of the scalp segmentation in all 10 subjects, the summed value will be 10, whereas if a voxel is part of the scalp segmentation in half of the subjects, the summed value is 5. After summing them, we divide by the total number of subjects to get for each voxel the fraction of subjects that the voxel is part of the scalp segmentation.
 
     mri_averaged = rmfield(mri_segmented{1}, 'cfg');
     for i=2:nsubj
@@ -658,7 +658,7 @@ Now that we know which voxes correspond to the head, we can combine the binary s
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/population3.png" width="600" %}
 
-To determine the volume that would accomodate 90% of the participants, we have to determine which voxels are less than 10% probable to be part of the scalp. I.e., the outermost voxels with low scalp probabilities are removed, whereas if the scalp probability is 10% or higher, we retain the voxels.
+To determine the volume that would accommodate 90% of the participants, we have to determine which voxels are less than 10% probable to be part of the scalp. I.e., the outermost voxels with low scalp probabilities are removed, whereas if the scalp probability is 10% or higher, we retain the voxels.
 
     mri_90percentile       = mri_averaged;
     mri_90percentile.scalp = mri_averaged.scalp>=0.1;
@@ -707,7 +707,7 @@ And as before we make the meshes for the headshape, the inside, and the outside 
     tmp = removefields(mri_segmented, {'scalp', 'airgap'}); % FIXME this is a hack that should be resolved
     outside = ft_prepare_mesh(cfg, tmp);
 
-Now that we have the headshape and the inside and ourside of the helmet, again accomodating for a 1mm gap on the insider of the helmet, we have to distribute the sensors over the headshape and helmet. Since all participants have different head sizes, their anatomical landmarks are also at different locations.
+Now that we have the headshape and the inside and outside of the helmet, again accomodating for a 1mm gap on the insider of the helmet, we have to distribute the sensors over the headshape and helmet. Since all participants have different head sizes, their anatomical landmarks are also at different locations.
 
     figure
     ft_plot_axes([], 'unit', 'mm', 'coordsys', 'als');
@@ -750,7 +750,7 @@ As for the segmentations, we can compute the average location of all anatomical 
     nas_avg(2) = 0;
     ini_avg(2) = 0;
 
-We can plot the averaged anatomical landmark positions together with the polulation headshape.
+We can plot the averaged anatomical landmark positions together with the population headshape.
 
     headshape.fid.pos = [
         nas_avg
@@ -775,7 +775,7 @@ We can plot the averaged anatomical landmark positions together with the polulat
 If you look carefully, you will see that the landmarks are not on the scalp surface, but slightly inside.
 
 {% include markup/blue %}
-#### Excercise
+#### Exercise
 
 Explain why the landmarks are not on the surface.
 {% include markup/end %}
@@ -824,7 +824,7 @@ With the `cfg.feedback` option this creates a figure, but you could also use **[
 
 ### Equidistant
 
-We can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to make an approximate equidistant arragement of an arbitrary number of OPM sensor locations. We can demonstrate this on the sperical headshape, but it works just as well on a realistic individual or population-based headshape.
+We can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to make an approximate equidistant arragement of an arbitrary number of OPM sensor locations. We can demonstrate this on the spherical headshape, but it works just as well on a realistic individual or population-based headshape.
 
     headshape = ft_read_headshape('spherical-head.stl');
     headshape.coordsys = 'ctf';
@@ -894,9 +894,9 @@ Let's first have a look at the sensor holder and how it is defined in 3D space.
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/orientation1.png" width="600" %}
 
-The sensor is 15x13x35 mm, where the 15 mm length corresponds to x, the 13 mm to x, and the 35 mm length to z. The sensor is "decorated" with a small piece of the cable sticking out and a small dent corresponding to a screw hole. The cable is on the -x side, the screwhole is on the +x side. The bottom of the sensor holder is flush with the z=0 plane. The sensor itself is 1 mm shifted upwards, in the positive z-direction.
+The sensor is 15x13x35 mm, where the 15 mm length corresponds to x, the 13 mm to x, and the 35 mm length to z. The sensor is "decorated" with a small piece of the cable sticking out and a small dent corresponding to a screw hole. The cable is on the -x side, the screw hole is on the +x side. The bottom of the sensor holder is flush with the z=0 plane. The sensor itself is 1 mm shifted upwards, in the positive z-direction.
 
-The ft_sensorplacement function operates by shifting the object that is specified in `cfg.template` (so for example the sensor, or the sensor holder) with `cfg.outwardshift` in the positive z-direction. Subsequently the object is rotated so that it is perpendicular to the surface, and finally it is translated to its final position.
+The **[ft_sensorplacement](/reference/ft_sensorplacement)** function operates by shifting the object that is specified in `cfg.template` (so for example the sensor, or the sensor holder) with `cfg.outwardshift` in the positive z-direction. Subsequently the object is rotated so that it is perpendicular to the surface, and finally it is translated to its final position.
 
 In general the orientation and rotation are determined by a rotation around the z-axis, followed by a rotation around the y- and x-axis. Since rotations are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order in which they are applied matters. These rotations can be specified as `cfg.rotz`, `cfg.roty` and `cfg.rotx`, respectively. Note that **[ft_sensorplacement](/reference/ft_sensorplacement)** also returns the `cfg` structure as it was used in the placement, so if you did not explicitly specify the rotations in the input `cfg`, the output `cfg` will have the rotations, which allows you to change them and re-run the placement.
 
@@ -1018,7 +1018,7 @@ Return to the individual MRI-based helmet design and use the radial direction as
 
 ### Sensor rotation around its axis
 
-Biaxial OPM sensors typically record the signal in one radial direction (i.e., perpendicular to the surface) and one tangential direction, which is also the most optimal configuration (see Schoffelen et al. 2025 [Optimal configuration of on-scalp OPMs with fixed channel counts](https://doi.org/10.1162/imag.a.22)). For the tangential direction you have to choose how to rotate the sensor around its axes. An optimal sampling of the environmental noise (useful for noise suppression) is obtained with alternating directions of neighbouring sensors, where the tangential axis of a sensor is 90 degrees rotated relative to that of its neighbours.
+Bi-axial OPM sensors typically record the signal in one radial direction (i.e., perpendicular to the surface) and one tangential direction, which is also the most optimal configuration (see Schoffelen et al. 2025 [Optimal configuration of on-scalp OPMs with fixed channel counts](https://doi.org/10.1162/imag.a.22)). For the tangential direction you have to choose how to rotate the sensor around its axes. An optimal sampling of the environmental noise (useful for noise suppression) is obtained with alternating directions of neighbouring sensors, where the tangential axis of a sensor is 90 degrees rotated relative to that of its neighbours.
 
 We can use the rotation around the z-axis to determine how sensors are rotated around their own radial axis:
 
@@ -1087,7 +1087,7 @@ You can use the following piece of code to identify which of the sensors needs t
 Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com/products/fusion-360/), which is the software we are most familiar with. You can sign up as a student or educator and get an educational license for free, or you can sign up for a free personal license. However, you can also use [SolidWorks](https://www.solidworks.com), [FreeCAD](https://www.freecad.org), [Blender](https://www.blender.org), or other 3D design software. The required characteristics of the software are that it should be able to read and write STL files, and that it should be able to combine different geometries by means of (Boolean) addition and subtraction. For example, we have the STL file of the basic helmet shape from an MRI and the software should be able to cut off the lower part to accommodate the face, ears and neck. Furthermore, it should be able to remove material from the helmet shell based on the cutting tool "holes" that are defined as STL files.
 
 {% include markup/green %}
-The padding is an STL object that is used to make the helmet locally thicker or to give it more "body" at the location wher ethe sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding STL object will be mainly fall inside the helmet and will largely be cut away by the hole STL object.
+The padding is an STL object that is used to make the helmet locally thicker or to give it more "body" at the location where the sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding STL object will be mainly fall inside the helmet and will largely be cut away by the hole STL object.
 {% include markup/end %}
 
 FIXME here I should add screenshots and an explanation of the process in Fusion
@@ -1236,7 +1236,7 @@ The layout above only includes the radially oriented channels, i.e., the channel
 {% include image src="/assets/img/tutorial/opm_helmet_design/layout2.png" width="600" %}
 
 {% include markup/yellow %}
-The channels in the x and y-direction are sensitive for magnetic fields in the x and y-direction of the sensor itself, which is not neccessarily in the x or y-direction of the head coordinates or of the figure on screen. The layout above that combines the channels in the x, y, and z-orientations might therefore be usefull for multiplotting (e.g. plotting an ERF at every sensor location), but should **not** be used for topoplotting.
+The channels in the x and y-direction are sensitive for magnetic fields in the x and y-direction of the sensor itself, which is not necessarily in the x or y-direction of the head coordinates or of the figure on screen. The layout above that combines the channels in the x, y, and z-orientations might therefore be useful for multiplotting (e.g. plotting an ERF at every sensor location), but should **not** be used for topoplotting.
 {% include markup/end %}
 
 ## Summary and conclusion
@@ -1245,7 +1245,7 @@ This tutorial explains how to design 3D‑printable OPM helmets. We started by c
 
 Throughout this tutorial we have mostly been working with a relatively simple geometry and with a small number of sensors to keep the procedure simple and fast. However, by combining part 1, 2, and 3 in a smart way, you can design arbitrarily complex OPM helmets for many sensors.
 
-Not covered in this tutorial is how to do the actual 3D printing; for that we recommend that you team up with someone who has experience with that, or that you involve your technical support group or a 3D printing company. Important in the 3D design is that tolerances are considered (i.e. how tight is the fit of the components), that additional features of the helmet are added, like holes for the ears, or slits to attach a chin strap, and that sharp edjes are avoided where possible by using fillets.
+Not covered in this tutorial is how to do the actual 3D printing; for that we recommend that you team up with someone who has experience with that, or that you involve your technical support group or a 3D printing company. Important in the 3D design is that tolerances are considered (i.e. how tight is the fit of the components), that additional features of the helmet are added, like holes for the ears, or slits to attach a chin strap, and that sharp edges are avoided where possible by using fillets.
 
 Also not covered in this tutorial is how to do the coregistration of the OPM sensors with the anatomical MRI or how to preprocess and analyze the OPM data in sensor and source space}; for that we have separate tutorials.
 

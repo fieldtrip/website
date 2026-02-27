@@ -100,6 +100,7 @@ Ambrogioni
 amd
 Amerio
 AmerioPietro
+amm
 AMM
 amongst
 amphigh
@@ -244,6 +245,7 @@ Authen
 autocompilation
 Autocompile
 autocorrelation
+Autodesk
 Autonoma
 autorecon
 autoregressive
@@ -1764,6 +1766,7 @@ fixtimeaxes
 fixtrialdef
 flac
 Flandin
+flattenedspherical
 flattopwin
 flavours
 flexors
@@ -1825,6 +1828,7 @@ Fransestraat
 Fransform
 fread
 Frederik
+FreeCAD
 freesurfer
 Freesurfer
 FreeSurfer
@@ -2331,6 +2335,7 @@ imfill
 img
 immunities
 imopen
+impactful
 impedancecheck
 impedances
 implemenations
@@ -3627,6 +3632,7 @@ Ogundipe
 ohbm
 OHBM
 ok
+olds
 Omniplex
 omri
 onepass
@@ -3711,6 +3717,7 @@ ous
 outputargs
 outputdata
 outputfile
+outwardshift
 overallocates
 overdetermined
 overfitting
@@ -4049,6 +4056,7 @@ PUBLICDATA
 pubmed
 Pubmed
 PubMed
+pubyear
 Putamen
 putpose
 pVaY
@@ -4450,6 +4458,7 @@ sensoranalysis
 sensordata
 sensorimotor
 sensorlocations
+sensorplacement
 sensorrealign
 sensortypes
 sensorygating
@@ -4592,6 +4601,7 @@ softwares
 Sogo
 Soldevilla
 Solidworks
+SolidWorks
 somatosensation
 somatosensor
 someFieldOrSubStruct

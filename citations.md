@@ -3,7 +3,7 @@ title: Citations to the FieldTrip reference paper
 tags: [literature]
 ---
 
-_These are open-access papers on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357) that cite FieldTrip, you can find a more complete list incluiding restricted-access papers on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
+_These are open-access papers on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357) that cite FieldTrip, you can find a more complete list including restricted-access papers on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
 
 {% assign years = "2026,2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011" | split: "," %}
 {% for year in years %}
