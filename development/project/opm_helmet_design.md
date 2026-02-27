@@ -707,7 +707,7 @@ And as before we make the meshes for the headshape, the inside, and the outside 
     tmp = removefields(mri_segmented, {'scalp', 'airgap'}); % FIXME this is a hack that should be resolved
     outside = ft_prepare_mesh(cfg, tmp);
 
-Now that we have the headshape and the inside and outside of the helmet, again accomodating for a 1mm gap on the insider of the helmet, we have to distribute the sensors over the headshape and helmet. Since all participants have different head sizes, their anatomical landmarks are also at different locations.
+Now that we have the headshape and the inside and outside of the helmet, again accommodating for a 1mm gap on the insider of the helmet, we have to distribute the sensors over the headshape and helmet. Since all participants have different head sizes, their anatomical landmarks are also at different locations.
 
     figure
     ft_plot_axes([], 'unit', 'mm', 'coordsys', 'als');
@@ -824,7 +824,7 @@ With the `cfg.feedback` option this creates a figure, but you could also use **[
 
 ### Equidistant
 
-We can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to make an approximate equidistant arragement of an arbitrary number of OPM sensor locations. We can demonstrate this on the spherical headshape, but it works just as well on a realistic individual or population-based headshape.
+We can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to make an approximate equidistant arrangement of an arbitrary number of OPM sensor locations. We can demonstrate this on the spherical headshape, but it works just as well on a realistic individual or population-based headshape.
 
     headshape = ft_read_headshape('spherical-head.stl');
     headshape.coordsys = 'ctf';
@@ -1247,7 +1247,7 @@ Throughout this tutorial we have mostly been working with a relatively simple ge
 
 Not covered in this tutorial is how to do the actual 3D printing; for that we recommend that you team up with someone who has experience with that, or that you involve your technical support group or a 3D printing company. Important in the 3D design is that tolerances are considered (i.e. how tight is the fit of the components), that additional features of the helmet are added, like holes for the ears, or slits to attach a chin strap, and that sharp edges are avoided where possible by using fillets.
 
-Also not covered in this tutorial is how to do the coregistration of the OPM sensors with the anatomical MRI or how to preprocess and analyze the OPM data in sensor and source space}; for that we have separate tutorials.
+Also not covered in this tutorial is how to do the coregistration of the OPM sensors with the anatomical MRI or how to preprocess and analyze the OPM data in sensor and source space; for that we have separate tutorials.
 
 ### See also these tutorials
 
