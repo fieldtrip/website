@@ -24,10 +24,10 @@ Primary use cases for the integration of FieldTrip and MNE-Python are
 
 FieldTrip and MNE-Python have similar but not identical processing pipelines. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](/reference/utilities/ft_datatype_timelock)**). In MNE-Python, the whole continuous recording is imported (with the **Raw** class), then trials are extracted with the **Epochs** class and finally trials are averaged into the **Evoked** class. To recap, this is the correspondence between datatypes in the two package
 
-| Conceptual                                   | FieldTrip                                               | MNE-Python                                                                  |
-| -------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Conceptual                                   | FieldTrip                                                         | MNE-Python                                                                  |
+| -------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | one continuous segment of data               | [ft_datatype_raw](/reference/utilities/ft_datatype_raw)           | Raw                                                                         |
-| multiple segments of data, e.g., trials       | [ft_datatype_raw](/reference/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
+| multiple segments of data, e.g., trials      | [ft_datatype_raw](/reference/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C)   |
 | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/utilities/ft_datatype_timelock) | Evoked                                                                      |
 
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.
