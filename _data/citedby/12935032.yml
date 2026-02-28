@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '41739931'
+- idtype: pmcid
+  value: PMC12935032
+- idtype: doi
+  value: 10.1126/sciadv.adw1599
+authors:
+- authtype: Author
+  name: Belkhir JR
+- authtype: Author
+  name: Garcea FE
+- authtype: Author
+  name: Navarrete E
+- authtype: Author
+  name: Chernoff BL
+- authtype: Author
+  name: Sims MH
+- authtype: Author
+  name: Haber S
+- authtype: Author
+  name: Mallela AN
+- authtype: Author
+  name: Pease M
+- authtype: Author
+  name: Smith SO
+- authtype: Author
+  name: Hintz EB
+- authtype: Author
+  name: Aung T
+- authtype: Author
+  name: Reedy EM
+- authtype: Author
+  name: Walter K
+- authtype: Author
+  name: Schmidt T
+- authtype: Author
+  name: Gonzalez-Martinez J
+- authtype: Author
+  name: Amankulor N
+- authtype: Author
+  name: Pilcher WH
+- authtype: Author
+  name: Mahon BZ
+epubdate: 2026 Feb 25
+fulljournalname: Science advances
+issue: '9'
+pages: eadw1599
+pmclivedate: 2026/02/26
+printpubdate: 2026 Feb 27
+pubdate: 2026 Feb 27
+sortdate: 2026/02/27 00:00
+source: Sci Adv
+title: Causal parametric language mapping with electrical stimulation during awake
+  neurosurgery.
+uid: '12935032'
+volume: '12'

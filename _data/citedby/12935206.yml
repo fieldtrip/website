@@ -1,0 +1,65 @@
+articleids:
+- idtype: pmid
+  value: '41739818'
+- idtype: pmcid
+  value: PMC12935206
+- idtype: doi
+  value: 10.1371/journal.pone.0342770
+- idtype: pii
+  value: PONE-D-25-67620
+authors:
+- authtype: Author
+  name: Gibbons M
+- authtype: Author
+  name: McBride EG
+- authtype: Author
+  name: Holenarasipura Venkatasubbaiah R
+- authtype: Author
+  name: Khalili-Ardali M
+- authtype: Author
+  name: Kuyat JR
+- authtype: Author
+  name: Gale S
+- authtype: Author
+  name: LaFehr V
+- authtype: Author
+  name: Vogler NW
+- authtype: Author
+  name: Kheirkhah Ravandi M
+- authtype: Author
+  name: Tsai MJ
+- authtype: Author
+  name: Bennett C
+- authtype: Author
+  name: Sridhar A
+- authtype: Author
+  name: Hardcastle B
+- authtype: Author
+  name: Cabasco H
+- authtype: Author
+  name: Koch C
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Olsen S
+- authtype: Author
+  name: Neimark Geffen M
+- authtype: Author
+  name: Panagiotaropoulos TI
+- authtype: Author
+  name: Saalmann YB
+epubdate: 2026 Feb 25
+fulljournalname: PloS one
+issue: '2'
+pages: e0342770
+pmclivedate: 2026/02/26
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/25 00:00
+source: PLoS One
+title: Protocol for testing global neuronal workspace and integrated information theories
+  of consciousness in non-human primates and mice.
+uid: '12935206'
+volume: '21'

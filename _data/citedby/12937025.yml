@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.1093/nc/niag004
+- idtype: pmcid
+  value: PMC12937025
+authors:
+- authtype: Author
+  name: Lu Y
+- authtype: Author
+  name: Wu L
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Huai Y
+epubdate: 2026 Feb 26
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: ''
+pmclivedate: 2026/02/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/26 00:00
+source: Neurosci Conscious
+title: Rapid eye movement sleep displays distinct fractal dynamics between phasic
+  and tonic states.
+uid: '12937025'
+volume: '2026'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: doi
+  value: 10.1162/IMAG.a.1145
+- idtype: pmcid
+  value: PMC12938738
+authors:
+- authtype: Author
+  name: Biswas A
+- authtype: Author
+  name: Aggarwal S
+- authtype: Author
+  name: Sharma K
+- authtype: Author
+  name: Ray S
+epubdate: 2026 Feb 25
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/02/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/25 00:00
+source: Imaging Neurosci (Camb)
+title: Simultaneous enhancement of stimulus-induced and stimulus-free gamma in open-eye
+  meditators.
+uid: '12938738'
+volume: '4'

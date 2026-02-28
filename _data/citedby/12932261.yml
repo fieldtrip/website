@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41662983'
+- idtype: pmcid
+  value: PMC12932261
+- idtype: doi
+  value: 10.1016/j.neuroimage.2026.121794
+- idtype: pii
+  value: S1053-8119(26)00112-6
+authors:
+- authtype: Author
+  name: Lucarelli D
+- authtype: Author
+  name: Guidali G
+- authtype: Author
+  name: Guidotti R
+- authtype: Author
+  name: Pieramico G
+- authtype: Author
+  name: Bolognini N
+- authtype: Author
+  name: Romani GL
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2026 Feb 7
+fulljournalname: NeuroImage
+issue: ''
+pages: '121794'
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Neuroimage
+title: 'Pulse waveform and current direction alter network-level TMS-induced functional
+  connectivity: Evidence from TMS-EEG.'
+uid: '12932261'
+volume: '328'

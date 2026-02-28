@@ -1,0 +1,27 @@
+articleids:
+- idtype: doi
+  value: 10.3390/bs16020294
+- idtype: pmcid
+  value: PMC12938518
+authors:
+- authtype: Author
+  name: Yeh C
+- authtype: Author
+  name: Wicinski K
+- authtype: Author
+  name: Rowland CF
+- authtype: Author
+  name: Pereira Soares SM
+epubdate: 2026 Feb 19
+fulljournalname: Behavioral Sciences
+issue: '2'
+pages: ''
+pmclivedate: 2026/02/27
+printpubdate: ''
+pubdate: 2026 Feb
+sortdate: 2026/02/19 00:00
+source: Behav Sci (Basel)
+title: 'Cognate Effects on Bilingual Lexical–Semantic Processing in Children: Insights
+  from ERPs.'
+uid: '12938518'
+volume: '16'
