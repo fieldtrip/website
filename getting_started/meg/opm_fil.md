@@ -12,16 +12,16 @@ Optically Pumped Magnetometers offer an exiting opportunity to advance the recor
 On GitHub you can also find the [neurofractal/analyse_OPMEG](https://github.com/neurofractal/analyse_OPMEG) repository, which contains a bunch of scripts and functions to analyse OPM data using the FieldTrip toolbox.
 {% include markup/end %}
 
-This is how the test dataset looks like. It consists of multiple files, that are largely organized to [BIDS](https://bids-specification.readthedocs.io/en/stable/). The data was recorded during median nerve stimulation of the left wrist, the sensors were placed over the right hemisphere.
+This is how the test dataset looks like. It consists of multiple files, that are largely organized to [BIDS](https://bids-specification.readthedocs.io/en/stable/). The data was recorded during median nerve stimulation of the left wrist, the sensors were placed over the right hemisphere. The data used in this example is available from our [download server](https://download.fieldtriptoolbox.org/getting_started/opm_fil).
 
-    channelsfile  = 'testData/channels.tsv';
-    coordsysfile  = 'testData/coordsystem.json';
-    datafile      = 'testData/meg.bin';
-    headerfile    = 'testData/meg.json';
-    positionsfile = 'testData/positions.tsv';
+    channelsfile  = 'test_channels.tsv';
+    coordsysfile  = 'test_coordsystem.json';
+    datafile      = 'test_meg.bin';
+    headerfile    = 'test_meg.json';
+    positionsfile = 'test_positions.tsv';
 
-    mrifile       = 'testData/T1w.nii';
-    cortexfile    = 'testData/testCustom.gii';
+    mrifile       = 'test_T1w.nii';
+    cortexfile    = 'test_testCustom.gii';
 
 Note that the data and headerinformation is scattered over multiple files, similar to BrainVision (vhdr,vmrk,eeg) and other formats. In FieldTrip we use cfg.dataset to indicate such a collection; in this case cfg.dataset can either refer to the headerfile or to the datafile.
 
