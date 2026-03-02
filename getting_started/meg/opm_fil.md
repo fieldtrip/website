@@ -38,9 +38,6 @@ This uses the `opm_fil` function in fieldtrip/fileio/private. Since the file for
 You can also process the data in the usual way using **[ft_preprocessing](/reference/ft_preprocessing)** or visualize it with **[ft_databrowser](/reference/ft_databrowser)**. The following returns the data in a continuous representation.
 
     cfg = [];
-    cfg.headerformat = 'opm_fil';
-    cfg.dataformat = 'opm_fil';
-    cfg.eventformat = 'opm_fil';
     cfg.dataset = datafile;
     data = ft_preprocessing(cfg);
 
@@ -49,14 +46,14 @@ You can also process the data in the usual way using **[ft_preprocessing](/refer
 The data contains a trigger channel that is sampled at the same speed as all other channels. Events are detected and returned using **[ft_read_event](/reference/fileio/ft_read_event)** as usual, and you can use **[ft_definetrial](/reference/ft_definetrial)** to define trials.
 
     cfg = [];
-    cfg.headerformat = 'opm_fil';
-    cfg.dataformat = 'opm_fil';
-    cfg.eventformat = 'opm_fil';
-    cfg.dataset = datafile;
-    cfg.trialdef.eventtype = '?';
+    cfg.dataset  = datafile;
+    cfg.trialfun = 'ft_trialfun_show';
     ft_definetrial(cfg); % let us look at the event types and values
 
-    cfg.trialdef.eventtype = 'TRIG1';
+    cfg = [];
+    cfg.dataset  = datafile;
+    cfg.trialfun = 'ft_trialfun_general'; 
+    cfg.trialdef.eventtype  = 'TRIG1';
     cfg.trialdef.eventvalue = 16;
     cfg.trialdef.prestim = 0.1;
     cfg.trialdef.poststim = 0.3;
