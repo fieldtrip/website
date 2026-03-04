@@ -1,8 +1,8 @@
-- link: /tutorial/connectivity/coherence.md
+- link: /tutorial/connectivity/coherence
   title: Analysis of corticomuscular coherence
-- link: /example/other/bids_emg.md
+- link: /example/other/bids_emg
   title: Converting an example EMG dataset for sharing in BIDS
-- link: /example/preproc/trialdef_emg.md
+- link: /example/preproc/trialdef_emg
   title: Detect the muscle activity in an EMG channel and use that as trial definition
-- link: /tutorial/sensor/sleep.md
+- link: /tutorial/sensor/sleep
   title: Extracting the brain state and events from continuous sleep EEG

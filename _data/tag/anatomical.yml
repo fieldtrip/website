@@ -1,4 +1,4 @@
-- link: /faq/plotting/anat_plottingconvention.md
+- link: /faq/plotting/anat_plottingconvention
   title: What is the plotting convention for anatomical MRIs?
-- link: /faq/plotting/anat_upsidedownplotting.md
+- link: /faq/plotting/anat_upsidedownplotting
   title: Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?

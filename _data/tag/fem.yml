@@ -1,4 +1,4 @@
-- link: /example/source/fem.md
+- link: /example/source/fem
   title: Compute EEG leadfields using a FEM headmodel
-- link: /example/source/sourcemodel_fem_centroids.md
+- link: /example/source/sourcemodel_fem_centroids
   title: Use an MNI-aligned grid with a FEM headmodel in individual head coordinates

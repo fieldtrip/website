@@ -1,22 +1,22 @@
-- link: /workshop/practicalmeeg2022/handson_artifacts.md
+- link: /workshop/practicalmeeg2025/handson_artifacts
   title: Dealing with artifacts
-- link: /workshop/practicalmeeg2025/handson_artifacts.md
+- link: /workshop/practicalmeeg2022/handson_artifacts
   title: Dealing with artifacts
-- link: /faq/preproc/artifact/ica_crash.md
+- link: /faq/preproc/artifact/ica_crash
   title: I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why
     is that?
-- link: /example/preproc/ica_ecg.md
+- link: /example/preproc/ica_ecg
   title: Independent component analysis (ICA) to remove ECG artifacts
-- link: /example/preproc/ica_eog.md
+- link: /example/preproc/ica_eog
   title: Independent component analysis (ICA) to remove EOG artifacts
-- link: /faq/preproc/artifact/ica_rereference.md
+- link: /faq/preproc/artifact/ica_rereference
   title: Should I rereference prior to or after ICA for artifact removal?
-- link: /faq/matlab/databrowser_crash.md
+- link: /faq/matlab/databrowser_crash
   title: The databrowser crashes and destroys the whole MATLAB session, how can I
     resolve this?
-- link: /example/preproc/dss_ecg.md
+- link: /example/preproc/dss_ecg
   title: Use denoising source separation (DSS) to remove ECG artifacts
-- link: /faq/preproc/artifact/ica_eyeblink_topo.md
+- link: /faq/preproc/artifact/ica_eyeblink_topo
   title: Why does my ICA eyeblink component look strange?
-- link: /faq/preproc/artifact/ica_complexvalues.md
+- link: /faq/preproc/artifact/ica_complexvalues
   title: Why does my ICA output contain complex numbers?

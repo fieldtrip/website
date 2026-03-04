@@ -1,20 +1,20 @@
-- link: /example/plotting/nirs_layout.md
+- link: /example/plotting/nirs_layout
   title: Creating a layout for plotting NIRS optodes and channels
-- link: /getting_started/eeg/1020.md
+- link: /getting_started/eeg/1020
   title: Getting started with 20%, 10% and 5% electrode arrangements
-- link: /getting_started/eeg/brainvision.md
+- link: /getting_started/eeg/brainvision
   title: Getting started with BrainVision Analyzer and Easycap
-- link: /faq/source/sensors_definition.md
+- link: /faq/source/sensors_definition
   title: How are electrodes, magnetometers or gradiometers described?
-- link: /faq/plotting/layout_creation.md
+- link: /faq/plotting/layout_creation
   title: How do I construct a layout file for the plotting functions?
-- link: /tutorial/plotting/channel_source.md
+- link: /tutorial/plotting/channel_source
   title: Plotting data at the channel and source level
-- link: /tutorial/plotting/layout.md
+- link: /tutorial/plotting/layout
   title: Specifying the channel layout for plotting
-- link: /template/layout.md
+- link: /template/layout
   title: Template 2-D layouts for plotting
-- link: /faq/plotting/layout_magandgrad.md
+- link: /faq/plotting/layout_magandgrad
   title: What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
-- link: /faq/plotting/layout_fileformat.md
+- link: /faq/plotting/layout_fileformat
   title: What is the format of the layout file which is used for plotting?

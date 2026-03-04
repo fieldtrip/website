@@ -1,4 +1,4 @@
-- link: /faq/matlab/compiled.md
+- link: /faq/matlab/compiled
   title: Can I use FieldTrip without MATLAB license?
-- link: /faq/matlab/compile.md
+- link: /faq/matlab/compile
   title: How can I compile the mex files and command-line executables?

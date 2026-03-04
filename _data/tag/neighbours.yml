@@ -1,15 +1,15 @@
-- link: /tutorial/stats/cluster_permutation_timelock.md
+- link: /tutorial/stats/cluster_permutation_timelock
   title: Cluster-based permutation tests on event-related fields
-- link: /tutorial/stats/cluster_permutation_freq.md
+- link: /tutorial/stats/cluster_permutation_freq
   title: Cluster-based permutation tests on time-frequency data
-- link: /example/stats/neighbours.md
+- link: /example/stats/neighbours
   title: Defining electrodes as neighbours for cluster-level statistics
-- link: /example/preproc/fixing_a_missing_sensor.md
+- link: /example/preproc/fixing_a_missing_sensor
   title: Fixing a missing channel
-- link: /tutorial/stats/eventrelatedstatistics.md
+- link: /tutorial/stats/eventrelatedstatistics
   title: Parametric and non-parametric statistics on event-related fields
-- link: /template/neighbours.md
+- link: /template/neighbours
   title: Templates for defining neighbouring channels
-- link: /example/stats/samplesize.md
+- link: /example/stats/samplesize
   title: Using simulations to estimate the sample size for cluster-based permutation
     test

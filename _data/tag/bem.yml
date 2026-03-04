@@ -1,4 +1,4 @@
-- link: /example/source/bem.md
+- link: /example/source/bem
   title: Compute EEG leadfields using a BEM headmodel
-- link: /faq/source/sticking_out.md
+- link: /faq/source/sticking_out
   title: Is it OK for vertices/dipoles to stick out of the volume conductor?

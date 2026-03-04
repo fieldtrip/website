@@ -1,8 +1,8 @@
-- link: /getting_started/othersoftware/paraview.md
+- link: /getting_started/othersoftware/paraview
   title: Getting started with ParaView
-- link: /getting_started/othersoftware/seg3d.md
+- link: /getting_started/othersoftware/seg3d
   title: Getting started with Seg3D
-- link: /getting_started/othersoftware/simnibs.md
+- link: /getting_started/othersoftware/simnibs
   title: Getting started with SimNIBS
-- link: /faq/source/datatype_segmentation.md
+- link: /faq/source/datatype_segmentation
   title: How is a segmentation defined?

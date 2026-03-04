@@ -1,12 +1,12 @@
-- link: /workshop/oslo2019.md
+- link: /workshop/oslo2019
   title: FieldTrip workshop in Oslo
-- link: /workshop/oslo2019/forward_modeling.md
+- link: /workshop/oslo2019/forward_modeling
   title: Forward modeling for EEG source reconstruction
-- link: /workshop/oslo2019/introduction.md
+- link: /workshop/oslo2019/introduction
   title: Preprocessing and event-related potentials in EEG data
-- link: /workshop/oslo2019/statistics.md
+- link: /workshop/oslo2019/statistics
   title: Statistical analysis and multiple comparison correction for EEG data
-- link: /workshop/oslo2019/timefrequency.md
+- link: /workshop/oslo2019/timefrequency
   title: Time-frequency analysis of EEG data
-- link: /faq/other/datasets.md
+- link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?

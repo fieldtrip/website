@@ -1,12 +1,12 @@
-- link: /download.md
+- link: /download
   title: Download the FieldTrip toolbox
-- link: /faq/development/trackchanges.md
+- link: /faq/development/trackchanges
   title: How can I keep track of changes to the code?
-- link: /faq/organization/download_ftpproblem.md
+- link: /faq/organization/download_ftpproblem
   title: I am having problems downloading
-- link: /faq/organization/download_donders.md
+- link: /faq/organization/download_donders
   title: I am working at the Donders, should I also download FieldTrip?
-- link: /faq/organization/fieldtrip_downloadversion.md
+- link: /faq/organization/fieldtrip_downloadversion
   title: Which version of FieldTrip should I download?
-- link: /faq/other/download_version.md
+- link: /faq/other/download_version
   title: Which version of FieldTrip should I download?

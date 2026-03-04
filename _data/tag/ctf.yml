@@ -1,34 +1,34 @@
-- link: /example/other/bids_meg.md
+- link: /example/other/bids_meg
   title: Converting an example MEG dataset for sharing in BIDS
-- link: /example/preproc/fixing_a_missing_sensor.md
+- link: /example/preproc/fixing_a_missing_sensor
   title: Fixing a missing channel
-- link: /getting_started/meg/ctf.md
+- link: /getting_started/meg/ctf
   title: Getting started with CTF data
-- link: /faq/source/anat_landmarks.md
+- link: /faq/source/anat_landmarks
   title: How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-- link: /faq/other/anonymization_ctf.md
+- link: /faq/other/anonymization_ctf
   title: How can I anonymize or deidentify a CTF dataset?
-- link: /faq/experiment/ctf_changeheadloc.md
+- link: /faq/experiment/ctf_changeheadloc
   title: How can I change the head localization in a CTF dataset?
-- link: /faq/source/anat_dicom2ctf.md
+- link: /faq/source/anat_dicom2ctf
   title: How can I convert an anatomical MRI from DICOM into CTF format?
-- link: /faq/preproc/dataformat/ctf_fixmeg4.md
+- link: /faq/preproc/dataformat/ctf_fixmeg4
   title: How can I fix a corrupt CTF meg4 file?
-- link: /faq/preproc/dataformat/ctf_fixres4.md
+- link: /faq/preproc/dataformat/ctf_fixres4
   title: How can I fix a corrupt CTF res4 header file?
-- link: /faq/preproc/dataformat/ctf_readcorrupted.md
+- link: /faq/preproc/dataformat/ctf_readcorrupted
   title: How can I read corrupted (unsaved) CTF data?
-- link: /faq/preproc/dataformat/ctf_syntheticgradient.md
+- link: /faq/preproc/dataformat/ctf_syntheticgradient
   title: How does the CTF higher-order gradiometer work?
-- link: /faq/preproc/dataformat/ctf_fixhc.md
+- link: /faq/preproc/dataformat/ctf_fixhc
   title: I am having problems reading the CTF .hc headcoordinates file
-- link: /example/sensor/megrealign.md
+- link: /example/sensor/megrealign
   title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-- link: /dataformat/meg.md
+- link: /dataformat/meg
   title: MEG dataformats
-- link: /development/realtime/ctf.md
+- link: /development/realtime/ctf
   title: Streaming realtime data from CTF
-- link: /template/gradiometer.md
+- link: /template/gradiometer
   title: Template 3-D gradiometer descriptions
-- link: /faq/preproc/dataformat/continuous.md
+- link: /faq/preproc/dataformat/continuous
   title: Why should I set continuous to yes for CTF data?

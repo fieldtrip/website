@@ -1,6 +1,6 @@
-- link: /example/other/fmri_correlationanalysis.md
+- link: /example/other/fmri_correlationanalysis
   title: Correlation analysis of fMRI data
-- link: /getting_started/otherdata/fmri.md
+- link: /getting_started/otherdata/fmri
   title: Getting started with fMRI timeseries data
-- link: /getting_started/realtime/fmri.md
+- link: /getting_started/realtime/fmri
   title: Streaming realtime fMRI from Siemens scanners

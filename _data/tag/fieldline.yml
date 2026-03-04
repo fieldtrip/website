@@ -1,6 +1,6 @@
-- link: /tutorial/source/coregistration_opm.md
+- link: /tutorial/source/coregistration_opm
   title: Coregistration of Optically Pumped Magnetometer (OPM) data
-- link: /getting_started/meg/fieldline.md
+- link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
-- link: /tutorial/sensor/preprocessing_opm.md
+- link: /tutorial/sensor/preprocessing_opm
   title: Preprocessing of Optically Pumped Magnetometer (OPM) data

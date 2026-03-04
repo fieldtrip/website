@@ -34,7 +34,7 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
                         alltags[tag] = []
                     item = {}
                     item['title'] = page['title']
-                    item['link'] = os.path.join(root,file)
+                    item['link'] = os.path.join(root,file[:-3]) # minus the .md extension
                     item['link'] = item['link'].replace(rootdir, '')
                     alltags[tag].append(item)
 

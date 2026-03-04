@@ -1,17 +1,17 @@
-- link: /workshop/madrid2019/tutorial_cleaning.md
+- link: /workshop/madrid2019/tutorial_cleaning
   title: Cleaning and processing resting-state EEG
-- link: /workshop/madrid2019/tutorial_stats.md
+- link: /workshop/madrid2019/tutorial_stats
   title: Cluster-based permutation tests on resting-state EEG power spectra
-- link: /workshop/madrid2019/bids_sedation.md
+- link: /workshop/madrid2019/bids_sedation
   title: Convert the EEG sedation dataset for sharing in BIDS
-- link: /workshop/madrid2019/eeg_sedation.md
+- link: /workshop/madrid2019/eeg_sedation
   title: Details on the resting-state EEG dataset recorded with different sedation
     levels
-- link: /workshop/madrid2019.md
+- link: /workshop/madrid2019
   title: FieldTrip workshop in Madrid
-- link: /workshop/nigeria2025/frequency.md
+- link: /workshop/nigeria2025/frequency
   title: Frequency analysis of resting state EEG data
-- link: /workshop/madrid2019/tutorial_freq.md
+- link: /workshop/madrid2019/tutorial_freq
   title: Time-frequency and spectral analysis
-- link: /faq/other/datasets.md
+- link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?

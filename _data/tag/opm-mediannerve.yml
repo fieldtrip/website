@@ -1,6 +1,6 @@
-- link: /getting_started/meg/fieldline.md
+- link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
-- link: /tutorial/sensor/preprocessing_opm.md
+- link: /tutorial/sensor/preprocessing_opm
   title: Preprocessing of Optically Pumped Magnetometer (OPM) data
-- link: /faq/other/datasets.md
+- link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?

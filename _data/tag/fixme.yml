@@ -1,8 +1,8 @@
-- link: /development/guideline/code.md
+- link: /development/guideline/code
   title: Code guidelines
-- link: /example/source/beamformer_commonfilter.md
+- link: /example/source/beamformer_commonfilter
   title: Common filters in beamforming
-- link: /example/source/dipolefit_somatosensory_erf.md
+- link: /example/source/dipolefit_somatosensory_erf
   title: Fit a dipole to the tactile ERF after mechanical stimulation
-- link: /tutorial/source/beamformer_lcmv.md
+- link: /tutorial/source/beamformer_lcmv
   title: Localizing sources using beamformer techniques

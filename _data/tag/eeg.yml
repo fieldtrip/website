@@ -1,118 +1,118 @@
-- link: /example/source/electrodes2bem.md
+- link: /example/source/electrodes2bem
   title: Align EEG electrode positions to BEM headmodel
-- link: /example/spectral/ecog_ny.md
+- link: /example/spectral/ecog_ny
   title: Analysis of high-gamma band signals in human ECoG
-- link: /faq/other/capmapping.md
+- link: /faq/other/capmapping
   title: Can I compare EEG channels between different electrode caps?
-- link: /faq/source/sourcerecon_meeg.md
+- link: /faq/source/sourcerecon_meeg
   title: Can I do combined EEG and MEG source reconstruction?
-- link: /tutorial/stats/mvpa_light.md
+- link: /tutorial/stats/mvpa_light
   title: Classification of event-related MEG data using MVPA-Light
-- link: /tutorial/stats/cluster_permutation_timelock.md
+- link: /tutorial/stats/cluster_permutation_timelock
   title: Cluster-based permutation tests on event-related fields
-- link: /tutorial/stats/cluster_permutation_freq.md
+- link: /tutorial/stats/cluster_permutation_freq
   title: Cluster-based permutation tests on time-frequency data
-- link: /example/source/sourcerecon_meeg.md
+- link: /example/source/sourcerecon_meeg
   title: Combined EEG and MEG source reconstruction
-- link: /example/source/bem.md
+- link: /example/source/bem
   title: Compute EEG leadfields using a BEM headmodel
-- link: /example/source/fem.md
+- link: /example/source/fem
   title: Compute EEG leadfields using a FEM headmodel
-- link: /example/source/concentricspheres.md
+- link: /example/source/concentricspheres
   title: Compute EEG leadfields using a concentric spheres headmodel
-- link: /example/source/simulateddata_dipolefit.md
+- link: /example/source/simulateddata_dipolefit
   title: Compute forward simulated data and apply a dipole fit
-- link: /example/source/simulateddata.md
+- link: /example/source/simulateddata
   title: Compute forward simulated data using ft_dipolesimulation
-- link: /example/source/compute_leadfield.md
+- link: /example/source/compute_leadfield
   title: Compute forward simulated data with the low-level ft_compute_leadfield
-- link: /tutorial/source/headmodel_eeg_bem.md
+- link: /tutorial/source/headmodel_eeg_bem
   title: Creating a BEM volume conduction model of the head for source reconstruction
     of EEG data
-- link: /tutorial/source/headmodel_eeg_fem.md
+- link: /tutorial/source/headmodel_eeg_fem
   title: Creating a FEM volume conduction model of the head for source reconstruction
     of EEG data
-- link: /tutorial/tms/tms-eeg.md
+- link: /tutorial/tms/tms-eeg
   title: Dealing with TMS-EEG datasets
-- link: /workshop/nigeria2025/erp.md
+- link: /workshop/nigeria2025/erp
   title: Event-related potentials
-- link: /example/other/biosemi.md
+- link: /example/other/biosemi
   title: Example analysis pipeline for BioSemi data
-- link: /tutorial/sensor/sleep.md
+- link: /tutorial/sensor/sleep
   title: Extracting the brain state and events from continuous sleep EEG
-- link: /walkthrough.md
+- link: /walkthrough
   title: FieldTrip Walkthrough
-- link: /workshop/nigeria2025/frequency.md
+- link: /workshop/nigeria2025/frequency
   title: Frequency analysis of resting state EEG data
-- link: /getting_started/eeg/1020.md
+- link: /getting_started/eeg/1020
   title: Getting started with 20%, 10% and 5% electrode arrangements
-- link: /getting_started/eeg/antneuro.md
+- link: /getting_started/eeg/antneuro
   title: Getting started with ANT-Neuro, ASA and EEProbe data
-- link: /getting_started/eeg/biosemi.md
+- link: /getting_started/eeg/biosemi
   title: Getting started with BioSemi BDF data
-- link: /getting_started/eeg/brainvision.md
+- link: /getting_started/eeg/brainvision
   title: Getting started with BrainVision Analyzer and Easycap
-- link: /getting_started/eeg/edf.md
+- link: /getting_started/eeg/edf
   title: Getting started with EDF (European Data Format) data
-- link: /getting_started/othersoftware/eeglab.md
+- link: /getting_started/othersoftware/eeglab
   title: Getting started with EEGLAB
-- link: /getting_started/eeg/egi.md
+- link: /getting_started/eeg/egi
   title: Getting started with EGI/Philips/Magstim data
-- link: /getting_started/othersoftware/limo.md
+- link: /getting_started/othersoftware/limo
   title: Getting started with LIMO MEEG
-- link: /getting_started/othersoftware/mne.md
+- link: /getting_started/othersoftware/mne
   title: Getting started with MNE-Python
-- link: /getting_started/eeg/nicolet.md
+- link: /getting_started/eeg/nicolet
   title: Getting started with Nicolet data
-- link: /getting_started/eeg/tmsi.md
+- link: /getting_started/eeg/tmsi
   title: Getting started with TMSi data
-- link: /example/preproc/raw_meeg.md
+- link: /example/preproc/raw_meeg
   title: Getting started with reading raw EEG or MEG data
-- link: /faq/source/sensors_definition.md
+- link: /faq/source/sensors_definition
   title: How are electrodes, magnetometers or gradiometers described?
-- link: /faq/preproc/dataformat/impedancecheck.md
+- link: /faq/preproc/dataformat/impedancecheck
   title: How can I inspect the electrode impedances of my BrainVision data?
-- link: /faq/preproc/datahandling/mergedata.md
+- link: /faq/preproc/datahandling/mergedata
   title: How can I merge two datasets that were acquired simultaneously with different
     amplifiers?
-- link: /faq/source/datatype_segmentation.md
+- link: /faq/source/datatype_segmentation
   title: How is a segmentation defined?
-- link: /faq/source/fiducial.md
+- link: /faq/source/fiducial
   title: How should I specify the fiducials for electrode realignment?
-- link: /faq/source/anat_coreg.md
+- link: /faq/source/anat_coreg
   title: How to coregister an anatomical MRI with the gradiometer or electrode positions?
-- link: /faq/preproc/dataformat/neuroscan.md
+- link: /faq/preproc/dataformat/neuroscan
   title: I have problems reading in NeuroScan .cnt files. How can I fix this?
-- link: /tutorial/preproc/artifacts.md
+- link: /tutorial/preproc/artifacts
   title: Introduction on dealing with artifacts
-- link: /tutorial/intro/introduction.md
+- link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
-- link: /faq/source/sensors_accuracy.md
+- link: /faq/source/sensors_accuracy
   title: Is it important to have accurate measurements of electrode locations for
     EEG source reconstruction?
-- link: /example/plotting/video_eeg.md
+- link: /example/plotting/video_eeg
   title: Making a synchronous movie of EEG or NIRS combined with video recordings
-- link: /tutorial/stats/eventrelatedstatistics.md
+- link: /tutorial/stats/eventrelatedstatistics
   title: Parametric and non-parametric statistics on event-related fields
-- link: /tutorial/preproc/continuous.md
+- link: /tutorial/preproc/continuous
   title: Preprocessing - Reading continuous EEG and MEG data
-- link: /workshop/nigeria2025/preprocessing.md
+- link: /workshop/nigeria2025/preprocessing
   title: Preprocessing of EEG data
-- link: /tutorial/sensor/preprocessing_erp.md
+- link: /tutorial/sensor/preprocessing_erp
   title: Preprocessing of EEG data and computing ERPs
-- link: /references_methods.md
+- link: /references_methods
   title: References to implemented methods
-- link: /example/preproc/rereference.md
+- link: /example/preproc/rereference
   title: Rereference EEG and iEEG data
-- link: /tutorial/plotting/layout.md
+- link: /tutorial/plotting/layout
   title: Specifying the channel layout for plotting
-- link: /template/layout.md
+- link: /template/layout
   title: Template 2-D layouts for plotting
-- link: /example/source/bem_evaluation.md
+- link: /example/source/bem_evaluation
   title: Testing BEM created EEG lead fields
-- link: /tutorial/sensor/timefrequencyanalysis.md
+- link: /tutorial/sensor/timefrequencyanalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /example/source/beamformer_ownforward.md
+- link: /example/source/beamformer_ownforward
   title: Use your own forward leadfield model in an inverse beamformer computation
-- link: /faq/source/sourcerecon_avgref.md
+- link: /faq/source/sourcerecon_avgref
   title: Why should I use an average reference for EEG source reconstruction?

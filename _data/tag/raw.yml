@@ -1,49 +1,49 @@
-- link: /tutorial/preproc/automatic_artifact_rejection.md
+- link: /tutorial/preproc/automatic_artifact_rejection
   title: Automatic artifact rejection
-- link: /tutorial/preproc/ica_artifact_cleaning.md
+- link: /tutorial/preproc/ica_artifact_cleaning
   title: Cleaning artifacts using ICA
-- link: /tutorial/stats/cluster_permutation_freq.md
+- link: /tutorial/stats/cluster_permutation_freq
   title: Cluster-based permutation tests on time-frequency data
-- link: /example/other/fmri_correlationanalysis.md
+- link: /example/other/fmri_correlationanalysis
   title: Correlation analysis of fMRI data
-- link: /walkthrough.md
+- link: /walkthrough
   title: FieldTrip Walkthrough
-- link: /example/preproc/raw_meeg.md
+- link: /example/preproc/raw_meeg
   title: Getting started with reading raw EEG or MEG data
-- link: /faq/other/anonymization_brainvision.md
+- link: /faq/other/anonymization_brainvision
   title: How can I anonymize or deidentify a BrainVision dataset?
-- link: /faq/other/anonymization_ctf.md
+- link: /faq/other/anonymization_ctf
   title: How can I anonymize or deidentify a CTF dataset?
-- link: /faq/preproc/events/inspect_events.md
+- link: /faq/preproc/events/inspect_events
   title: How can I find out what eventvalues and eventtypes there are in my data?
-- link: /faq/preproc/dataformat/ctf_fixmeg4.md
+- link: /faq/preproc/dataformat/ctf_fixmeg4
   title: How can I fix a corrupt CTF meg4 file?
-- link: /faq/preproc/dataformat/ctf_fixres4.md
+- link: /faq/preproc/dataformat/ctf_fixres4
   title: How can I fix a corrupt CTF res4 header file?
-- link: /faq/preproc/datahandling/mergedata.md
+- link: /faq/preproc/datahandling/mergedata
   title: How can I merge two datasets that were acquired simultaneously with different
     amplifiers?
-- link: /faq/preproc/events/preproc_continuous.md
+- link: /faq/preproc/events/preproc_continuous
   title: How can I process continuous data without triggers?
-- link: /faq/preproc/dataformat/ctf_readcorrupted.md
+- link: /faq/preproc/dataformat/ctf_readcorrupted
   title: How can I read corrupted (unsaved) CTF data?
-- link: /faq/preproc/dataformat/ctf_fixhc.md
+- link: /faq/preproc/dataformat/ctf_fixhc
   title: I am having problems reading the CTF .hc headcoordinates file
-- link: /faq/preproc/dataformat/neuroscan.md
+- link: /faq/preproc/dataformat/neuroscan
   title: I have problems reading in NeuroScan .cnt files. How can I fix this?
-- link: /tutorial/intro/introduction.md
+- link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
-- link: /example/preproc/trialfun.md
+- link: /example/preproc/trialfun
   title: Making your own trialfun for conditional trial definition
-- link: /tutorial/preproc/continuous.md
+- link: /tutorial/preproc/continuous
   title: Preprocessing - Reading continuous EEG and MEG data
-- link: /tutorial/preproc/preprocessing.md
+- link: /tutorial/preproc/preprocessing
   title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- link: /tutorial/sensor/preprocessing.md
+- link: /tutorial/sensor/preprocessing
   title: Preprocessing and event-related activity in combined MEG/EEG data
-- link: /faq/preproc/datahandling/writedata_matbin.md
+- link: /faq/preproc/datahandling/writedata_matbin
   title: Reading is slow, can I write my raw data to a more efficient file format?
-- link: /tutorial/preproc/visual_artifact_rejection.md
+- link: /tutorial/preproc/visual_artifact_rejection
   title: Visual or manual artifact rejection
-- link: /faq/preproc/datahandling/dataformat.md
+- link: /faq/preproc/datahandling/dataformat
   title: What dataformats are supported?

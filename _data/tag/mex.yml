@@ -1,15 +1,15 @@
-- link: /faq/matlab/compiled.md
+- link: /faq/matlab/compiled
   title: Can I use FieldTrip without MATLAB license?
-- link: /faq/matlab/compile.md
+- link: /faq/matlab/compile
   title: How can I compile the mex files and command-line executables?
-- link: /faq/matlab/compile_windows.md
+- link: /faq/matlab/compile_windows
   title: How can I compile the mex files on 64-bit Windows?
-- link: /faq/matlab/compile_osx.md
+- link: /faq/matlab/compile_osx
   title: How can I compile the mex files on macOS?
-- link: /faq/matlab/spmversion.md
+- link: /faq/matlab/spmversion
   title: How to select the correct SPM toolbox?
-- link: /faq/matlab/matlab_mexinvalid.md
+- link: /faq/matlab/matlab_mexinvalid
   title: MATLAB complains about a missing or invalid mex file, what should I do?
-- link: /faq/matlab/mex_osx.md
+- link: /faq/matlab/mex_osx
   title: MATLAB complains that mexmaci64 cannot be opened because the developer cannot
     be verified

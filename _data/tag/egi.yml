@@ -1,6 +1,6 @@
-- link: /workshop/nigeria2025/frequency.md
+- link: /workshop/nigeria2025/frequency
   title: Frequency analysis of resting state EEG data
-- link: /getting_started/eeg/egi.md
+- link: /getting_started/eeg/egi
   title: Getting started with EGI/Philips/Magstim data
-- link: /faq/preproc/dataformat/egi_nojvm.md
+- link: /faq/preproc/dataformat/egi_nojvm
   title: How can I read EGI mff data without the JVM?

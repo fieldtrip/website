@@ -1,47 +1,47 @@
-- link: /tutorial/stats/cluster_permutation_timelock.md
+- link: /tutorial/stats/cluster_permutation_timelock
   title: Cluster-based permutation tests on event-related fields
-- link: /tutorial/stats/cluster_permutation_freq.md
+- link: /tutorial/stats/cluster_permutation_freq
   title: Cluster-based permutation tests on time-frequency data
-- link: /example/source/bem.md
+- link: /example/source/bem
   title: Compute EEG leadfields using a BEM headmodel
-- link: /example/source/fem.md
+- link: /example/source/fem
   title: Compute EEG leadfields using a FEM headmodel
-- link: /example/source/concentricspheres.md
+- link: /example/source/concentricspheres
   title: Compute EEG leadfields using a concentric spheres headmodel
-- link: /example/stats/effectsize.md
+- link: /example/stats/effectsize
   title: Computing and reporting the effect size
-- link: /tutorial/source/headmodel_eeg_bem.md
+- link: /tutorial/source/headmodel_eeg_bem
   title: Creating a BEM volume conduction model of the head for source reconstruction
     of EEG data
-- link: /tutorial/source/headmodel_eeg_fem.md
+- link: /tutorial/source/headmodel_eeg_fem
   title: Creating a FEM volume conduction model of the head for source reconstruction
     of EEG data
-- link: /tutorial/source/sourcemodel.md
+- link: /tutorial/source/sourcemodel
   title: Creating a source model for source reconstruction of MEG or EEG data
-- link: /tutorial/source/headmodel_meg.md
+- link: /tutorial/source/headmodel_meg
   title: Creating a volume conduction model of the head for source reconstruction
     of MEG data
-- link: /tutorial/meg_language.md
+- link: /tutorial/meg_language
   title: Details of the MEG language dataset
-- link: /tutorial/sensor/eventrelatedaveraging.md
+- link: /tutorial/sensor/eventrelatedaveraging
   title: Event-related averaging and MEG planar gradient
-- link: /tutorial/source/beamformer.md
+- link: /tutorial/source/beamformer
   title: Localizing oscillatory sources using beamformer techniques
-- link: /tutorial/stats/eventrelatedstatistics.md
+- link: /tutorial/stats/eventrelatedstatistics
   title: Parametric and non-parametric statistics on event-related fields
-- link: /tutorial/preproc/continuous.md
+- link: /tutorial/preproc/continuous
   title: Preprocessing - Reading continuous EEG and MEG data
-- link: /tutorial/preproc/preprocessing.md
+- link: /tutorial/preproc/preprocessing
   title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- link: /tutorial/source/minimumnormestimate.md
+- link: /tutorial/source/minimumnormestimate
   title: Source reconstruction of event-related fields using minimum-norm estimation
-- link: /tutorial/scripting/distributedcomputing_parfor.md
+- link: /tutorial/scripting/distributedcomputing_parfor
   title: Speeding up your analysis using distributed computing with parfor
-- link: /tutorial/scripting/distributedcomputing_qsub.md
+- link: /tutorial/scripting/distributedcomputing_qsub
   title: Speeding up your analysis using distributed computing with qsub
-- link: /tutorial/sensor/timefrequencyanalysis.md
+- link: /tutorial/sensor/timefrequencyanalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /tutorial/preproc/visual_artifact_rejection.md
+- link: /tutorial/preproc/visual_artifact_rejection
   title: Visual or manual artifact rejection
-- link: /faq/other/datasets.md
+- link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?

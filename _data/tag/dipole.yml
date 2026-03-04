@@ -1,12 +1,12 @@
-- link: /example/source/simulateddata_beamformer.md
+- link: /example/source/simulateddata_beamformer
   title: Compute forward simulated data and apply a beamformer scan
-- link: /example/source/simulateddata_dipolefit.md
+- link: /example/source/simulateddata_dipolefit
   title: Compute forward simulated data and apply a dipole fit
-- link: /example/source/simulateddata.md
+- link: /example/source/simulateddata
   title: Compute forward simulated data using ft_dipolesimulation
-- link: /example/source/compute_leadfield.md
+- link: /example/source/compute_leadfield
   title: Compute forward simulated data with the low-level ft_compute_leadfield
-- link: /tutorial/source/dipolefitting.md
+- link: /tutorial/source/dipolefitting
   title: Dipole fitting of combined MEG/EEG data
-- link: /example/source/dipolefit_somatosensory_erf.md
+- link: /example/source/dipolefit_somatosensory_erf
   title: Fit a dipole to the tactile ERF after mechanical stimulation

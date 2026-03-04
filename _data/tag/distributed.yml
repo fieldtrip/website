@@ -1,4 +1,4 @@
-- link: /development/distributed.md
+- link: /development/distributed
   title: Distributed computing
-- link: /development/module/qsub.md
+- link: /development/module/qsub
   title: Distributed computing using a Linux compute cluster

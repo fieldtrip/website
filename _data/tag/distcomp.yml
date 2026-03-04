@@ -1,8 +1,8 @@
-- link: /faq/distcomp/distributed_matlab.md
+- link: /faq/distcomp/distributed_matlab
   title: How to get started with the MATLAB distributed computing toolbox?
-- link: /tutorial/scripting/distributedcomputing_parfor.md
+- link: /tutorial/scripting/distributedcomputing_parfor
   title: Speeding up your analysis using distributed computing with parfor
-- link: /tutorial/scripting/distributedcomputing_qsub.md
+- link: /tutorial/scripting/distributedcomputing_qsub
   title: Speeding up your analysis using distributed computing with qsub
-- link: /faq/distcomp/distributed_computing.md
+- link: /faq/distcomp/distributed_computing
   title: What are the different approaches I can take for distributed computing?

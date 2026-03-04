@@ -1,9 +1,9 @@
-- link: /faq/spectral/freqanalysis_phasedefinition.md
+- link: /faq/spectral/freqanalysis_phasedefinition
   title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet'
     and 'mtmfft'?
-- link: /faq/spectral/tfr_strangedemean.md
+- link: /faq/spectral/tfr_strangedemean
   title: Why does my TFR look strange (part I, demeaning)?
-- link: /faq/spectral/tfr_strangedetrend.md
+- link: /faq/spectral/tfr_strangedetrend
   title: Why does my TFR look strange (part II, detrending)?
-- link: /faq/spectral/freqanalysis_foimismatchmtmconvol.md
+- link: /faq/spectral/freqanalysis_foimismatchmtmconvol
   title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?

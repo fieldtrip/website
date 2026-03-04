@@ -1,8 +1,8 @@
-- link: /about.md
+- link: /about
   title: About the FieldTrip project
-- link: /citations.md
+- link: /citations
   title: Citations to the FieldTrip reference paper
-- link: /references_methods.md
+- link: /references_methods
   title: References to implemented methods
-- link: /references_papers.md
+- link: /references_papers
   title: Review papers and teaching material

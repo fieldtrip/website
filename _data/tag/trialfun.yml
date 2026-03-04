@@ -1,18 +1,18 @@
-- link: /example/preproc/trialdef_emg.md
+- link: /example/preproc/trialdef_emg
   title: Detect the muscle activity in an EMG channel and use that as trial definition
-- link: /walkthrough.md
+- link: /walkthrough
   title: FieldTrip Walkthrough
-- link: /faq/preproc/events/triggers.md
+- link: /faq/preproc/events/triggers
   title: How can I check or decipher the sequence of triggers in my data?
-- link: /faq/preproc/events/trialfun_bit2decimal.md
+- link: /faq/preproc/events/trialfun_bit2decimal
   title: How can I transform trigger values from bits to decimal representation with
     a trialfun?
-- link: /faq/preproc/events/trialinfo.md
+- link: /faq/preproc/events/trialinfo
   title: Is it possible to keep track of trial-specific information in my analysis
     pipeline?
-- link: /example/preproc/trialfun.md
+- link: /example/preproc/trialfun
   title: Making your own trialfun for conditional trial definition
-- link: /tutorial/sensor/preprocessing_erp.md
+- link: /tutorial/sensor/preprocessing_erp
   title: Preprocessing of EEG data and computing ERPs
-- link: /faq/preproc/events/eventsversustrials.md
+- link: /faq/preproc/events/eventsversustrials
   title: What is the relation between "events" (such as triggers) and "trials"?

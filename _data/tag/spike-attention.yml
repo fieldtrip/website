@@ -1,6 +1,6 @@
-- link: /tutorial/intracranial/spikefield.md
+- link: /tutorial/intracranial/spikefield
   title: Preprocessing and analysis of spike and local field potential data
-- link: /tutorial/intracranial/spike.md
+- link: /tutorial/intracranial/spike
   title: Preprocessing and analysis of spike-train data
-- link: /faq/other/datasets.md
+- link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?

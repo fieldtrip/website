@@ -1,8 +1,8 @@
-- link: /workshop/chieti2015.md
+- link: /workshop/chieti2015
   title: FieldTrip workshop in Chieti
-- link: /workshop/chieti2015/virtualchannel.md
+- link: /workshop/chieti2015/virtualchannel
   title: MEG virtual channels and seed-based connectivity
-- link: /workshop/chieti2015/wholebrain.md
+- link: /workshop/chieti2015/wholebrain
   title: MEG whole-brain connectivity
-- link: /workshop/chieti2015/simulation.md
+- link: /workshop/chieti2015/simulation
   title: Simulating and estimating, what about model (mis)match?

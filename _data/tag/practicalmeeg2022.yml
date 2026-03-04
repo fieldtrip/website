@@ -1,16 +1,16 @@
-- link: /workshop/practicalmeeg2022/handson_anatomy.md
+- link: /workshop/practicalmeeg2022/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/practicalmeeg2022/handson_artifacts.md
+- link: /workshop/practicalmeeg2022/handson_artifacts
   title: Dealing with artifacts
-- link: /workshop/practicalmeeg2022/handson_groupanalysis.md
+- link: /workshop/practicalmeeg2022/handson_groupanalysis
   title: Group-level statistics with parametric and non-parametric methods
-- link: /workshop/practicalmeeg2022/dataset.md
+- link: /workshop/practicalmeeg2022/dataset
   title: Multimodal faces dataset
-- link: /workshop/practicalmeeg2022.md
+- link: /workshop/practicalmeeg2022
   title: PracticalMEEG workshop in Aix-en-Provence
-- link: /workshop/practicalmeeg2022/handson_raw2erp.md
+- link: /workshop/practicalmeeg2022/handson_raw2erp
   title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/practicalmeeg2022/handson_sourceanalysis.md
+- link: /workshop/practicalmeeg2022/handson_sourceanalysis
   title: Reconstructing source activity using beamformers
-- link: /workshop/practicalmeeg2022/handson_sensoranalysis.md
+- link: /workshop/practicalmeeg2022/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets

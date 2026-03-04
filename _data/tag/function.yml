@@ -1,6 +1,6 @@
-- link: /faq/matlab/matlab_privatefunctions.md
+- link: /faq/matlab/matlab_privatefunctions
   title: MATLAB does not see the functions in the "private" directory
-- link: /faq/development/fieldtrip_functioncall.md
+- link: /faq/development/fieldtrip_functioncall
   title: What does a typical call to a FieldTrip function look like?
-- link: /faq/matlab/privatefunctions_why.md
+- link: /faq/matlab/privatefunctions_why
   title: Why are so many of the interesting functions in the private directories?

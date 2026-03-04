@@ -1,10 +1,10 @@
-- link: /walkthrough.md
+- link: /walkthrough
   title: FieldTrip Walkthrough
-- link: /example/other/checkconfig.md
+- link: /example/other/checkconfig
   title: How to use ft_checkconfig
-- link: /configuration.md
+- link: /configuration
   title: Index of all configuration options
-- link: /tutorial/intro/introduction.md
+- link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
-- link: /reference.md
+- link: /reference
   title: Reference documentation

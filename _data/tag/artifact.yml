@@ -1,40 +1,40 @@
-- link: /tutorial/preproc/automatic_artifact_rejection.md
+- link: /tutorial/preproc/automatic_artifact_rejection
   title: Automatic artifact rejection
-- link: /tutorial/preproc/ica_artifact_cleaning.md
+- link: /tutorial/preproc/ica_artifact_cleaning
   title: Cleaning artifacts using ICA
-- link: /example/preproc/meg_eyelink.md
+- link: /example/preproc/meg_eyelink
   title: Combine MEG with Eyelink eyetracker data
-- link: /workshop/practicalmeeg2022/handson_artifacts.md
+- link: /workshop/practicalmeeg2025/handson_artifacts
   title: Dealing with artifacts
-- link: /workshop/practicalmeeg2025/handson_artifacts.md
+- link: /workshop/practicalmeeg2022/handson_artifacts
   title: Dealing with artifacts
-- link: /faq/preproc/artifact/artifact_representation.md
+- link: /faq/preproc/artifact/artifact_representation
   title: How can I consistently represent artifacts in my data?
-- link: /faq/preproc/artifact/artifact_padding.md
+- link: /faq/preproc/artifact/artifact_padding
   title: How can I interpret the different types of padding in FieldTrip?
-- link: /faq/plotting/databrowser.md
+- link: /faq/plotting/databrowser
   title: How can I use the databrowser?
-- link: /faq/preproc/artifact/preproc_padding.md
+- link: /faq/preproc/artifact/preproc_padding
   title: How does the filter padding in preprocessing work?
-- link: /example/sensor/headmovement_meg.md
+- link: /example/sensor/headmovement_meg
   title: How to incorporate head movements in MEG analysis
-- link: /faq/plotting/opacityrendering.md
+- link: /faq/plotting/opacityrendering
   title: I am getting strange artifacts in figures that use opacity
-- link: /example/preproc/ica_ecg.md
+- link: /example/preproc/ica_ecg
   title: Independent component analysis (ICA) to remove ECG artifacts
-- link: /example/preproc/ica_eog.md
+- link: /example/preproc/ica_eog
   title: Independent component analysis (ICA) to remove EOG artifacts
-- link: /tutorial/preproc/artifacts.md
+- link: /tutorial/preproc/artifacts
   title: Introduction on dealing with artifacts
-- link: /example/preproc/dss_ecg.md
+- link: /example/preproc/dss_ecg
   title: Use denoising source separation (DSS) to remove ECG artifacts
-- link: /tutorial/preproc/visual_artifact_rejection.md
+- link: /tutorial/preproc/visual_artifact_rejection
   title: Visual or manual artifact rejection
-- link: /faq/preproc/artifact/preproc_filtertypes.md
+- link: /faq/preproc/artifact/preproc_filtertypes
   title: What kind of filters can I apply to my data?
-- link: /faq/spectral/tfr_strangedemean.md
+- link: /faq/spectral/tfr_strangedemean
   title: Why does my TFR look strange (part I, demeaning)?
-- link: /faq/spectral/tfr_strangedetrend.md
+- link: /faq/spectral/tfr_strangedetrend
   title: Why does my TFR look strange (part II, detrending)?
-- link: /faq/preproc/artifact/dftfilter_residual.md
+- link: /faq/preproc/artifact/dftfilter_residual
   title: Why is there a residual 50Hz line-noise component after applying a DFT filter?
