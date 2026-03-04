@@ -300,7 +300,7 @@ missing = setdiff(layout.label, append_opm.label);
 
 % missing =
 % 
-%   8×1 cell-array
+%   8x1 cell-array
 % 
 %     {'L101_bz'}
 %     {'L105_bz'}

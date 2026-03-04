@@ -31,7 +31,7 @@ The EEG potential is in first instance computed on the locations specified in `e
 
 ## The definition of MEG sensors
 
-The gradiometer definition generally consists of multiple coils per channel, e.g., two coils for a 1st order axial gradiometer, in which the orientations of the bottom and top coil are opposite. Each coil is described separately and a `grad.tra` matrix is used to define how the forward computed magnetic field is combined over the coils to generate the MEG gradient of each channel. The gradiometer definition consists of the following fields as of September 23, 201
+The gradiometer definition generally consists of multiple coils per channel, e.g., two coils for a 1st order axial gradiometer, in which the orientations of the bottom and top coil are opposite. Each coil is described separately and a `grad.tra` matrix is used to define how the forward computed magnetic field is combined over the coils to generate the MEG gradient of each channel. The gradiometer definition consists of the following fields.
 
     grad.coilpos   = Mx3 matrix with the position of each coil
     grad.coilori   = Mx3 matrix with the orientation of each coil
