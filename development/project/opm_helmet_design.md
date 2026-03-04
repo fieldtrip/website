@@ -35,7 +35,7 @@ In part 2 we demonstrate different procedures to distribute the OPM sensors over
 
 - based on the 10-20 placement scheme for EEG
 - based on an equidistant distribution
-- using termplates, for example existing EEG electrode distributions
+- using templates, for example existing EEG electrode distributions
 - by interactively clicking to specify the sensor positions
 
 In part 3 we look at how the sensor orientation and rotation can be optimized. This is not relevant for mono-axial sensors, but is especially important for bi-axial OPMs, like the FieldLine v3 and Mag4Health sensors.
@@ -690,7 +690,7 @@ The `scalp` field in the averaged segmentation now contains fractional values be
 {% include image src="/assets/img/tutorial/opm_helmet_design/population3.png" width="600" %}
 
 {% include markup/yellow %}
-For the actual MEG regording in the lab the subjects will stick their head all the way in the helmet, hence they will be be wearing the helmet such that their vertex is flush with the top of the helmet. We could therefore improve the helmet design by determining the vertex position in every individual MRI and vertically shifting the MRIs so that the vertices are aligned prior to computing the averaged scalp segmentation. However, that falls outside the scope of this tutorial.
+For the actual MEG recording in the lab the subjects will stick their head all the way in the helmet, hence the top of their head (vertex) will be flush with the top of the inside of the helmet. We could therefore improve the population helmet design by determining the vertex position in every individual MRI and vertically shifting the MRIs to align the vertex of all individuals prior to computing the averaged scalp segmentation. However, that falls outside the scope of this tutorial.
 {% include markup/end %}
 
 To determine the volume that would accommodate 90% of the participants, we have to determine which voxels are less than 10% probable to be part of the scalp. I.e., the outermost voxels with low scalp probabilities are removed, whereas if the scalp probability is 10% or higher, we retain the voxels.
