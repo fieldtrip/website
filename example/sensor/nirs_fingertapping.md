@@ -397,7 +397,7 @@ and we map the right, left, and foot condition onto condition codes 1, 2, and 3.
 
 ## Plot the averaged responses
 
-_Running this script for some of the subjects, I noticed that the the data of subject 1 is very nice, even without artifact removal. The data of subjects 2 and 3 is not so nice their results would probably improve by including some additional cleaning and artifact removal in the script._
+_Running this script for some of the subjects, I noticed that the data of subject 1 is very nice, even without artifact removal. The data of subjects 2 and 3 is not so nice their results would probably improve by including some additional cleaning and artifact removal in the script._
 
     cfg = [];
     cfg.layout = layout;

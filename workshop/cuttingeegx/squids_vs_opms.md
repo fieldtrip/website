@@ -668,7 +668,7 @@ transform_scan2face   = scan_face_aligned.cfg.transform;
 transform_helmet2face = transform_scan2face/transform_scan2helmet; 
 ```
 
-The transformation matrix ```'transform_helmet2face'``` can now be used to coregister the the OPM sensors with the MRI, which aligns the OPM sensors with head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor file. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet. 
+The transformation matrix ```'transform_helmet2face'``` can now be used to coregister the OPM sensors with the MRI, which aligns the OPM sensors with head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor file. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet. 
 
 ```
 %% Read and combine the sensors from the six recordings

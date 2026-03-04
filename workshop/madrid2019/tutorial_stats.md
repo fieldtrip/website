@@ -383,7 +383,7 @@ corresponding to a false alarm rate of 0.05 in a two-sided test.\*
   the permutation distribution. Remember that
   **[ft_freqstatistics](/reference/ft_freqstatistics)** approximates the
   permutation distribution by means of a histogram with a Monte Carlo approximation of the true permutation distribution. In this tutorial,
-  we use cfg.numrandomization = 500 to keep the computational time low. In general you should set this to a higher value (1000 or up). If it turns out that estimated p-value is very close to the the critical
+  we use cfg.numrandomization = 500 to keep the computational time low. In general you should set this to a higher value (1000 or up). If it turns out that estimated p-value is very close to the critical
   alpha-level (0.05 or 0.01), you should increase this number.
 
 - We use **cfg.design** to store information about the independent variable

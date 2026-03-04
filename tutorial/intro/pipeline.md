@@ -208,7 +208,7 @@ In the end we'll end up with a collection of several function calls that are org
 
 {% include image src="/assets/img/tutorial/scripting/figure1.png" width="600" %}
 
-Interactive or manual steps are often required for the the visual inspection and identification of artifacts, to identify artifactual ICA components, to localize electrodes in a 3D scan, to coregister the data with an MRI, and for quality control. Separating the interactive/manual steps from the non-interactive steps allows us to automate the non-interactive parts. This is called _batching_.
+Interactive or manual steps are often required for the visual inspection and identification of artifacts, to identify artifactual ICA components, to localize electrodes in a 3D scan, to coregister the data with an MRI, and for quality control. Separating the interactive/manual steps from the non-interactive steps allows us to automate the non-interactive parts. This is called _batching_.
 
 Large datasets often require quite some processing time, hence it is convenient to run a batch of analysis steps overnight. The worst that can happen is that the next morning you'll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the [try-catch](https://www.mathworks.com/help/matlab/ref/try.html) syntax in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will simply continue. For example:
 

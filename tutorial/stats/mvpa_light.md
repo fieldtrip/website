@@ -39,7 +39,7 @@ Note that the classification is performed for a single subject using single tria
 
 ## Classification in the 0.5-0.7 s interval
 
-We will use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** to determine the classification accuracy between the three classes FIC, FC, and IC. As features, the average activity in each MEG channel in the the 0.5-0.7 s interval is used. In each trial, this yields 149 features for the classifier, one feature per MEG channel. Let us first determine the number of trials in each class:
+We will use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** to determine the classification accuracy between the three classes FIC, FC, and IC. As features, the average activity in each MEG channel in the 0.5-0.7 s interval is used. In each trial, this yields 149 features for the classifier, one feature per MEG channel. Let us first determine the number of trials in each class:
 
     nFIC = numel(dataFIC_LP.trial);
     nFC = numel(dataFC_LP.trial);

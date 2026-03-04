@@ -223,7 +223,7 @@ Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065),
 {% include markup/yellow %}
 Starting from version 20210114 the implementation of **[ft_specest_irasa](/reference/specest/ft_specest_irasa)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for estimating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
 
-If you have used the previous implementation of IRASA, we recommend you to adapt your analysis script according the the following points:
+If you have used the previous implementation of IRASA, we recommend you to adapt your analysis script according the following points:
 
 - The current implementation enables IRASA and FFT for estimating both the fractal and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](/reference/ft_freqanalysis)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
 

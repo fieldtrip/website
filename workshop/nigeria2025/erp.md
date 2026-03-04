@@ -217,7 +217,7 @@ Please click on channel 46 to exclude that from further analysis. It appears to 
 Can you spot which channels are noisier than others? Using the mouse and clicking, you can select channels that you want to remove from the data.
 {% include markup/end %}
 
-The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns the clean data with the bad channels and trials removed and you do not have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue working with the cleaned data, but for now we will only save the list of channel names of the the bad channels and continue with our data inspection.
+The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns the clean data with the bad channels and trials removed and you do not have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue working with the cleaned data, but for now we will only save the list of channel names of the bad channels and continue with our data inspection.
 
     bad_chan = setdiff(data.label, data_clean.label);
 

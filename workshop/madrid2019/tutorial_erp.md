@@ -280,7 +280,7 @@ the clean data with the bad channels and trials removed and you do not have to c
 **[ft_rejectartifact](/reference/ft_rejectartifact)** or
 **[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue
 working with the cleaned data, but for now we will only save the list of channel
-names of the the bad channels and continue with our data inspection.
+names of the bad channels and continue with our data inspection.
 
     bad_chan = setdiff(data.label, data_clean.label);
 

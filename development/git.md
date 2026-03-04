@@ -358,7 +358,7 @@ The following figure gives a graphical summary of some of the steps and terms.
 
 ### Edits to existing webpages.
 
-Simple edits to the website can be made through the online github interface. At the bottom of each page there's an "edit this page on GitHub" link, which takes you to github, and allows you to make changes in the the markdown files. Once you commit the changes, a Pull Request is generated automatically.
+Simple edits to the website can be made through the online github interface. At the bottom of each page there's an "edit this page on GitHub" link, which takes you to github, and allows you to make changes in the markdown files. Once you commit the changes, a Pull Request is generated automatically.
 
 ### Creation of new content.
 

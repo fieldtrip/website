@@ -71,7 +71,7 @@ The DSS code wants a `params` structure which contains peak time points, express
     cfg.cellmode          = 'yes';
     comp = ft_componentanalysis(cfg, meg);
 
-The output comp contains the identified components. You can use ft_databrowser to plot all components at once and decide which components to reject. Unlike ICA, where the order of the components is rather random, usually the first (and second) components are the ones to be rejected. This is because, given the default settings, DSS iteratively searches for the the 'sources' that contain the required features, in this case: 'are heartbeat like'. Thus, the first component looks most like a heartbeat signal, followed by the second one, etc.
+The output comp contains the identified components. You can use ft_databrowser to plot all components at once and decide which components to reject. Unlike ICA, where the order of the components is rather random, usually the first (and second) components are the ones to be rejected. This is because, given the default settings, DSS iteratively searches for the 'sources' that contain the required features, in this case: 'are heartbeat like'. Thus, the first component looks most like a heartbeat signal, followed by the second one, etc.
 
     cfg = [];
     cfg.layout = 'CTF275_helmet.mat'; % specify the layout file that should be used for plotting

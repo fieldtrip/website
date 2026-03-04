@@ -219,7 +219,7 @@ In the transverse montage for the 1020 EEG system the electrodes are chained fro
 
 Using the `cfg.montage` option, you can specify an arbitrarily complex "montage". All of the previous methods (except for the median) could in principle be implemented with this, and some of them actually use a montage "under the hood" that is constructed on the fly with **[ft_prepare_montage](/reference/ft_prepare_montage)**.
 
-A montage, also known as a "linear derivation" or as a "re-referencing scheme" specifies a linear mapping from the (old) channels in the original data to the new channels in the rereferenced data. Basically it is implemented by a matrix multiplication, following some shuffling of the the rows of the data matrix. The montage is explained in more detail in the **[ft_prepare_montage](/reference/ft_prepare_montage)**  and **[ft_apply_montage](/reference/forward/ft_apply_montage)** functions.
+A montage, also known as a "linear derivation" or as a "re-referencing scheme" specifies a linear mapping from the (old) channels in the original data to the new channels in the rereferenced data. Basically it is implemented by a matrix multiplication, following some shuffling of the rows of the data matrix. The montage is explained in more detail in the **[ft_prepare_montage](/reference/ft_prepare_montage)**  and **[ft_apply_montage](/reference/forward/ft_apply_montage)** functions.
 
 As an example, a bipolar montage could look like this:
 

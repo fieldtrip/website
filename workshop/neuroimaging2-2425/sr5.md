@@ -47,7 +47,7 @@ source location at a time. This difference with distributed source modeling
 has some important consequences, which we will return to later in these exercises.
 The key feature of beamforming is that no prior assumption about the number
 of sources is made. Rather, for each location that we choose to evaluate, we
-ask ourselves the question: 'What would the the best estimate of the dipole
+ask ourselves the question: 'What would the best estimate of the dipole
 moment at this location?’ It turns out, that if we assume the underlying sources
 to be uncorrelated over time we can get quite good estimates of our sources’
 activation time courses using beamforming._

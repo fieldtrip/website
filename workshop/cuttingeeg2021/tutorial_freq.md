@@ -319,7 +319,7 @@ The intention is to identify time points at which the blinks occurred, expressed
 
 #### Peak detection of blinks
 
-In this step, the approximate onsets of eye blinks are identified. This is based on a semi-automatic procedure, where the the eog channel is bandpass filtered, rectified, z-scored, and thresholded.
+In this step, the approximate onsets of eye blinks are identified. This is based on a semi-automatic procedure, where the eog channel is bandpass filtered, rectified, z-scored, and thresholded.
 
     cfg                                  = [];
     cfg.artfctdef.zvalue.channel         = 'EOGv';

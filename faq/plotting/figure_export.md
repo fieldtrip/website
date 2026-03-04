@@ -11,7 +11,7 @@ Here are some tips from various users/developers:
 
 - Save in `.eps` format, these can be easily edited in Adobe Illustrator etc.
 
-- Use the function [saveSameSize](http://www.mathworks.com/matlabcentral/fileexchange/17868-savesamesize) from the MathWorks File Exchange. This function saves the the figure like it looks on-screen.
+- Use the function [saveSameSize](http://www.mathworks.com/matlabcentral/fileexchange/17868-savesamesize) from the MathWorks File Exchange. This function saves the figure like it looks on-screen.
 
 - Use the function [export_fig](http://www.mathworks.com/matlabcentral/fileexchange/23629-exportfig) from the MathWorks File Exchange for advanced saving options.
 

@@ -416,7 +416,7 @@ To properly write up your results in a manuscript, you should check the guidelin
 
 ## Summary and suggested further reading
 
-This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the channels that contribute to a significant difference.
+This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the channels that contribute to a significant difference.
 
 After this gentle introduction in statistics with FieldTrip, you can continue with the [Cluster-based permutation tests on event-related fields](/tutorial/stats/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/stats/cluster_permutation_freq) tutorials. These give a more detailed description of non-parametric statistical testing with a cluster-based approach.
 

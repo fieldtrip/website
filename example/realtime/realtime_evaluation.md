@@ -233,7 +233,7 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
 
 2) We now start the MEG data acquisition, on Acq.
 
-3) Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
+3) Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
 
     clear all;
     close all;
