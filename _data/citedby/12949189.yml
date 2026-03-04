@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40990179'
+- idtype: pmcid
+  value: PMC12949189
+- idtype: doi
+  value: 10.1113/EP093171
+authors:
+- authtype: Author
+  name: Albertson AJ
+- authtype: Author
+  name: Landsness EC
+- authtype: Author
+  name: Eisfelder M
+- authtype: Author
+  name: Young BM
+- authtype: Author
+  name: Judge B
+- authtype: Author
+  name: Brier MR
+- authtype: Author
+  name: Euler MJ
+- authtype: Author
+  name: Cramer SC
+- authtype: Author
+  name: Lee JM
+- authtype: Author
+  name: Lohse KR
+epubdate: 2025 Sep 24
+fulljournalname: Experimental physiology
+issue: '3'
+pages: 1210-1227
+pmclivedate: 2026/03/01
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Exp Physiol
+title: Stroke and motor outcomes are associated with regional and age-specific changes
+  in periodic and aperiodic cortical activity.
+uid: '12949189'
+volume: '111'

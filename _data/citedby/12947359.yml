@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41620638'
+- idtype: pmcid
+  value: PMC12947359
+- idtype: doi
+  value: 10.1186/s11689-026-09675-3
+- idtype: pii
+  value: 10.1186/s11689-026-09675-3
+authors:
+- authtype: Author
+  name: Di Dona G
+- authtype: Author
+  name: Zamfira DA
+- authtype: Author
+  name: De Benedetto F
+- authtype: Author
+  name: Turri C
+- authtype: Author
+  name: Venturini C
+- authtype: Author
+  name: Venniro L
+- authtype: Author
+  name: Perani D
+- authtype: Author
+  name: Ronconi L
+epubdate: 2026 Jan 31
+fulljournalname: Journal of neurodevelopmental disorders
+issue: '1'
+pages: ''
+pmclivedate: 2026/02/28
+printpubdate: ''
+pubdate: 2026 Jan 31
+sortdate: 2026/01/31 00:00
+source: J Neurodev Disord
+title: A new effective treatment for dyslexia based on dorsal visual stream neuromodulation.
+uid: '12947359'
+volume: '18'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41767711'
+- idtype: pmcid
+  value: PMC12946018
+- idtype: doi
+  value: 10.3389/fnhum.2026.1716564
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Feng J
+- authtype: Author
+  name: Zhao Y
+- authtype: Author
+  name: Hong H
+- authtype: Author
+  name: Gu Q
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Shi A
+- authtype: Author
+  name: Wang J
+epubdate: 2026 Feb 13
+fulljournalname: Frontiers in human neuroscience
+issue: ''
+pages: '1716564'
+pmclivedate: 2026/02/28
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/13 00:00
+source: Front Hum Neurosci
+title: Post-stroke dysphagia is associated with abnormal gamma power and phase synchronisation
+  during swallowing.
+uid: '12946018'
+volume: '20'

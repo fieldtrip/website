@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '39531276'
+- idtype: MID
+  value: NIHMS2137871
+- idtype: pmcid
+  value: PMC12947164
+- idtype: doi
+  value: 10.1097/WNP.0000000000001131
+- idtype: pii
+  value: 00004691-202507000-00006
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Maxwell GL
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: 2024 Nov 12
+fulljournalname: 'Journal of clinical neurophysiology : official publication of the
+  American Electroencephalographic Society'
+issue: '5'
+pages: 422-427
+pmclivedate: 2026/02/28
+printpubdate: ''
+pubdate: 2024 Nov 12
+sortdate: 2024/11/12 00:00
+source: J Clin Neurophysiol
+title: Asymmetry of Directed Brain Connectivity at Birth in Low-Risk Full-Term Newborns.
+uid: '12947164'
+volume: '42'

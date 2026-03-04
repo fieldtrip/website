@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41723930'
+- idtype: pmcid
+  value: PMC12945646
+- idtype: doi
+  value: 10.1016/j.nicl.2026.103975
+- idtype: pii
+  value: S2213-1582(26)00034-3
+authors:
+- authtype: Author
+  name: Rempel S
+- authtype: Author
+  name: Böttcher A
+- authtype: Author
+  name: Beyer N
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Beste C
+epubdate: 2026 Feb 20
+fulljournalname: NeuroImage. Clinical
+issue: ''
+pages: '103975'
+pmclivedate: 2026/02/28
+printpubdate: ''
+pubdate: 2026 Feb 20
+sortdate: 2026/02/20 00:00
+source: Neuroimage Clin
+title: Theta-Alpha Dysregulation reveals impaired endogenous cognitive control in
+  adolescent Obsessive-Compulsive disorder.
+uid: '12945646'
+volume: '49'

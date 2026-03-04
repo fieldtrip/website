@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.1162/IMAG.a.1150
+- idtype: pmcid
+  value: PMC12951642
+authors:
+- authtype: Author
+  name: von Haugwitz L
+- authtype: Author
+  name: Wascher E
+- authtype: Author
+  name: Larra MF
+epubdate: 2026 Feb 27
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/03/03
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/27 00:00
+source: Imaging Neurosci (Camb)
+title: Cardiac phase modulates behavior and response related lateralization in visual
+  spatial conflicts during change detection.
+uid: '12951642'
+volume: '4'
