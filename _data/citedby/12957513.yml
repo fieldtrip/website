@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41775735'
+- idtype: pmcid
+  value: PMC12957513
+- idtype: doi
+  value: 10.1038/s41598-026-36434-0
+- idtype: pii
+  value: 10.1038/s41598-026-36434-0
+authors:
+- authtype: Author
+  name: Diambra L
+- authtype: Author
+  name: Hutber A
+- authtype: Author
+  name: Drakeford-Hafeez Z
+- authtype: Author
+  name: Mi R
+- authtype: Author
+  name: Tsirka V
+- authtype: Author
+  name: Capurro A
+epubdate: 2026 Mar 3
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/05
+printpubdate: ''
+pubdate: 2026 Mar 3
+sortdate: 2026/03/03 00:00
+source: Sci Rep
+title: A principal component entropy metric for assessing global synchronicity in
+  EEG signals.
+uid: '12957513'
+volume: '16'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41770742'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1014043
+- idtype: pii
+  value: PCOMPBIOL-D-25-02246
+- idtype: pmcid
+  value: PMC12970966
+authors:
+- authtype: Author
+  name: Lodema DY
+- authtype: Author
+  name: van Dellen HJ
+- authtype: Author
+  name: de Haan W
+- authtype: Author
+  name: van Hest M
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: van Dellen E
+epubdate: 2026 Mar 2
+fulljournalname: PLoS computational biology
+issue: '3'
+pages: e1014043
+pmclivedate: 2026/03/10
+printpubdate: ''
+pubdate: 2026 Mar
+sortdate: 2026/03/02 00:00
+source: PLoS Comput Biol
+title: 'EEG-Pype: An accessible MNE-Python pipeline with graphical user interface
+  for preprocessing and analysis of resting-state electroencephalography data.'
+uid: '12970966'
+volume: '22'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41728324'
+- idtype: pmcid
+  value: PMC12919100
+- idtype: doi
+  value: 10.64898/2026.02.06.26345635
+- idtype: pii
+  value: 2026.02.06.26345635
+authors:
+- authtype: Author
+  name: Baradarantohidi E
+- authtype: Author
+  name: Nagarajan SS
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Haufe S
+epubdate: 2026 Feb 9
+fulljournalname: 'medRxiv : the preprint server for health sciences'
+issue: ''
+pages: ''
+pmclivedate: 2026/02/20
+printpubdate: ''
+pubdate: 2026 Feb 9
+sortdate: 2026/02/09 00:00
+source: medRxiv
+title: Abnormal hippocampo-cortical theta-gamma phase-amplitude coupling in Alzheimer's
+  disease.
+uid: '12919100'
+volume: ''
