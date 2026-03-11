@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41758661'
+- idtype: pmcid
+  value: PMC12956831
+- idtype: doi
+  value: 10.1073/pnas.2513547123
+authors:
+- authtype: Author
+  name: Huang Z
+- authtype: Author
+  name: Bisby JA
+- authtype: Author
+  name: Burgess N
+- authtype: Author
+  name: Bush D
+epubdate: 2026 Feb 27
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '9'
+pages: e2513547123
+pmclivedate: 2026/03/05
+printpubdate: 2026 Mar 3
+pubdate: 2026 Mar 3
+sortdate: 2026/03/03 00:00
+source: Proc Natl Acad Sci U S A
+title: Human hippocampal theta-gamma coupling coordinates sequential planning during
+  navigation.
+uid: '12956831'
+volume: '123'

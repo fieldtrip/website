@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41770797'
+- idtype: pmcid
+  value: PMC12965688
+- idtype: doi
+  value: 10.1371/journal.pbio.3003675
+- idtype: pii
+  value: PBIOLOGY-D-25-04038
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Weng L
+- authtype: Author
+  name: Lin X
+- authtype: Author
+  name: Tu Y
+- authtype: Author
+  name: Peng W
+epubdate: 2026 Mar 2
+fulljournalname: PLoS biology
+issue: '3'
+pages: e3003675
+pmclivedate: 2026/03/07
+printpubdate: ''
+pubdate: 2026 Mar
+sortdate: 2026/03/02 00:00
+source: PLoS Biol
+title: Dynamic expectation strength and precision shape human pain perception through
+  shared and dissociable α-oscillatory mechanisms.
+uid: '12965688'
+volume: '24'

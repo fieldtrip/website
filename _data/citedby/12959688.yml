@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41779729'
+- idtype: pmcid
+  value: PMC12959688
+- idtype: doi
+  value: 10.1371/journal.pone.0343916
+- idtype: pii
+  value: PONE-D-25-45066
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Jensen O
+epubdate: 2026 Mar 4
+fulljournalname: PloS one
+issue: '3'
+pages: e0343916
+pmclivedate: 2026/03/05
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/04 00:00
+source: PLoS One
+title: Rapid invisible frequency tagging (RIFT) does not evoke intermodulation components
+  in the neural response.
+uid: '12959688'
+volume: '21'

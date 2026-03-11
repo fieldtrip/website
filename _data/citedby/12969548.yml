@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41800588'
+- idtype: doi
+  value: 10.1111/psyp.70271
+- idtype: pmcid
+  value: PMC12969548
+authors:
+- authtype: Author
+  name: Kingir E
+- authtype: Author
+  name: Chakraborty S
+- authtype: Author
+  name: Schwiedrzik CM
+- authtype: Author
+  name: Wilke M
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e70271
+pmclivedate: 2026/03/10
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Psychophysiology
+title: Disentangling Respiratory Phase-Dependent and Phase-Independent Components
+  of Anticipatory Cardiac Deceleration.
+uid: '12969548'
+volume: '63'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41795283'
+- idtype: pmcid
+  value: PMC12967738
+- idtype: doi
+  value: 10.1111/ejn.70450
+authors:
+- authtype: Author
+  name: Navarrete-Arroyo S
+- authtype: Author
+  name: Nie P
+- authtype: Author
+  name: Virtala P
+- authtype: Author
+  name: Kujala T
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '5'
+pages: e70450
+pmclivedate: 2026/03/09
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Eur J Neurosci
+title: The Effects of Maturation and Dyslexia Risk on Neural Speech-Sound Encoding
+  and Discrimination at Preschool Stage.
+uid: '12967738'
+volume: '63'
