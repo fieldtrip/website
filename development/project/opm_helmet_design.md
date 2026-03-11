@@ -881,6 +881,7 @@ As before, we specify the position of the anatomical landmarks to distribute the
     cfg.fiducial.lpa = lpa;
     cfg.fiducial.rpa = rpa;
     cfg.method = 'equidistant';
+    cfg.numelec = 64;
     cfg.maxiter = 500;
     cfg.feedback = 'yes';
     elec = ft_electrodeplacement(cfg, headshape);
