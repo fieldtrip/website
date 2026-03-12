@@ -20,6 +20,7 @@ FieldTrip has direct support for all data file formats that are used in BIDS. Th
   - [CTF](/getting_started/meg/ctf)
   - [Neuromag/Elekta/Megin](/getting_started/meg/neuromag)
   - [BTi/4D](/getting_started/meg/bti)
+  - OPM data from FieldLine, Cerca and Mag4Health that is stored in the fif format
 - EEG
   - [BrainVision](/getting_started/eeg/brainvision)
   - [European Data Format](/getting_started/eeg/edf) (`.edf`)
@@ -30,17 +31,12 @@ FieldTrip has direct support for all data file formats that are used in BIDS. Th
   - [European Data Format](/getting_started/eeg/edf) (`.edf`)
   - [Neurodata Without Borders](/getting_started/intracranial/nwb) (`.nwb`)
   - Multiscale Electrophysiology File Format
-
-Furthermore, there are a number of BIDS extension proposals (so called BEPs) that are likely to be part of the BIDS specification in the near future. Some of these are:
-
-- PET, see <http://bids.neuroimaging.io/bep009>
-  - NIfTI format (`.nii` and `.nii.gz`)
-- NIRS, see <http://bids.neuroimaging.io/bep030>
+- NIRS
   - [SNIRF](/getting_started/nirs/snirf)
-- motion capture, see <http://bids.neuroimaging.io/bep029>
+- motion capture
   - tab-separated files (`.tsv`)
 
-When you read raw data that is represented in the BIDS organization, the corresponding sidecar files are also read. In the case of MEG, EEG and iEEG that means that the corresponding json file and the `_channels.tsv` file are read. Channel names in the original (binary) file format will be overruled with those in the channels file. Also the `_events.tsv` file will be read, events that are in the original (binary) file will be replaced by those from the events file.
+When you read raw data that is represented in BIDS, the corresponding sidecar files are also read. In the case of MEG, EEG and iEEG that means that the corresponding json file and the `_channels.tsv` file are read. Channel names in the original (binary) file format will be overruled with those in the channels file. Also the `_events.tsv` file will be read, events that are in the original (binary) file will be replaced by those from the events file.
 
 If you want to avoid reading the channels and/or events from the BIDS sidecar files, you can specify in the low-level functions the `readbids` or `cfg.readbids` option as 'no'.
 
