@@ -1,0 +1,73 @@
+articleids:
+- idtype: doi
+  value: 10.1093/braincomms/fcag043
+- idtype: pmcid
+  value: PMC12980577
+authors:
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Benelli A
+- authtype: Author
+  name: Cinti A
+- authtype: Author
+  name: Cortese R
+- authtype: Author
+  name: Serbina A
+- authtype: Author
+  name: Kulapurathazhe AJ
+- authtype: Author
+  name: Saed S
+- authtype: Author
+  name: Luchetti L
+- authtype: Author
+  name: Cudeiro J
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: de Mauro A
+- authtype: Author
+  name: Neri F
+- authtype: Author
+  name: Stromillo ML
+- authtype: Author
+  name: Baldi TL
+- authtype: Author
+  name: d'Aurizio N
+- authtype: Author
+  name: Battaglini M
+- authtype: Author
+  name: Plantone D
+- authtype: Author
+  name: Righi D
+- authtype: Author
+  name: Massucco E
+- authtype: Author
+  name: Giannotta A
+- authtype: Author
+  name: Lomi F
+- authtype: Author
+  name: Scoccia A
+- authtype: Author
+  name: Lai G
+- authtype: Author
+  name: Ulivelli M
+- authtype: Author
+  name: Ghilardi MF
+- authtype: Author
+  name: De Stefano N
+- authtype: Author
+  name: Rossi S
+epubdate: 2026 Mar 12
+fulljournalname: Brain Communications
+issue: '2'
+pages: ''
+pmclivedate: 2026/03/13
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/12 00:00
+source: Brain Commun
+title: Linking movement-related beta oscillations to cortical excitability, structural
+  damage, and fatigue in multiple sclerosis.
+uid: '12980577'
+volume: '8'

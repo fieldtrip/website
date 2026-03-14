@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40696071'
+- idtype: pmcid
+  value: PMC12972424
+- idtype: doi
+  value: 10.1007/s11357-025-01799-z
+- idtype: pii
+  value: 10.1007/s11357-025-01799-z
+authors:
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Binns M
+- authtype: Author
+  name: Chow R
+- authtype: Author
+  name: Rabi R
+- authtype: Author
+  name: Anderson ND
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Freedman M
+- authtype: Author
+  name: Alain C
+epubdate: 2025 Jul 22
+fulljournalname: GeroScience
+issue: '2'
+pages: 2545-2562
+pmclivedate: 2026/03/11
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Geroscience
+title: Neural features underlying high-accuracy classification of amnestic mild cognitive
+  impairment using multi-sensory-evoked potentials.
+uid: '12972424'
+volume: '48'

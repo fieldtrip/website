@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '40536754'
+- idtype: pmcid
+  value: PMC12972167
+- idtype: doi
+  value: 10.1007/s11357-025-01743-1
+- idtype: pii
+  value: 10.1007/s11357-025-01743-1
+authors:
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: Ramirez-Toraño F
+- authtype: Author
+  name: Alfonsín S
+- authtype: Author
+  name: Spuch C
+- authtype: Author
+  name: Comis-Tuche M
+- authtype: Author
+  name: Maestú F
+epubdate: 2025 Jun 19
+fulljournalname: GeroScience
+issue: '1'
+pages: 1357-1369
+pmclivedate: 2026/03/11
+printpubdate: 2026 Feb
+pubdate: 2026 Feb
+sortdate: 2026/02/01 00:00
+source: Geroscience
+title: Plasma p-tau231 and NfL differently associate with functional connectivity
+  patterns in cognitively unimpaired individuals.
+uid: '12972167'
+volume: '48'

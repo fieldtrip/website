@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41571515'
+- idtype: pmcid
+  value: PMC12976553
+- idtype: doi
+  value: 10.1016/j.neurot.2026.e00835
+- idtype: pii
+  value: S1878-7479(26)00005-X
+authors:
+- authtype: Author
+  name: Cheng I
+- authtype: Author
+  name: Jung A
+- authtype: Author
+  name: Labeit B
+- authtype: Author
+  name: Dziewas R
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: Suntrup-Krueger S
+epubdate: 2026 Jan 21
+fulljournalname: 'Neurotherapeutics : the journal of the American Society for Experimental
+  NeuroTherapeutics'
+issue: '1'
+pages: e00835
+pmclivedate: 2026/03/12
+printpubdate: 2026 Jan
+pubdate: 2026 Jan
+sortdate: 2026/01/01 00:00
+source: Neurotherapeutics
+title: 'Metaplasticity in swallowing system via cross-modal neurostimulation: A randomized
+  crossover trial with magnetoencephalography.'
+uid: '12976553'
+volume: '23'

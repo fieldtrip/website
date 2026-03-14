@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41702719'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1560-25.2026
+- idtype: pii
+  value: JNEUROSCI.1560-25.2026
+- idtype: pmcid
+  value: PMC12981286
+authors:
+- authtype: Author
+  name: Cavanah PJ
+- authtype: Author
+  name: Fiebelkorn IC
+epubdate: 2026 Mar 11
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '10'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Mar 11
+sortdate: 2026/03/11 00:00
+source: J Neurosci
+title: A Shared Theta-Rhythmic Process for Selective Sampling of Environmental Information
+  and Internally Stored Information.
+uid: '12981286'
+volume: '46'
