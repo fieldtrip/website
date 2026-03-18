@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '41687692'
+- idtype: MID
+  value: NIHMS2151686
+- idtype: pmcid
+  value: PMC12989813
+- idtype: doi
+  value: 10.1016/j.neuroimage.2026.121802
+- idtype: pii
+  value: S1053-8119(26)00120-5
+authors:
+- authtype: Author
+  name: Keihani A
+- authtype: Author
+  name: Donati FL
+- authtype: Author
+  name: Russo S
+- authtype: Author
+  name: Parmigiani S
+- authtype: Author
+  name: Solbiati M
+- authtype: Author
+  name: Casali AG
+- authtype: Author
+  name: Fecchio M
+- authtype: Author
+  name: Chaichian O
+- authtype: Author
+  name: Rothwell J
+- authtype: Author
+  name: Massimini M
+- authtype: Author
+  name: Rocchi L
+- authtype: Author
+  name: Rosanova M
+- authtype: Author
+  name: Ferrarelli F
+epubdate: 2026 Feb 11
+fulljournalname: NeuroImage
+issue: ''
+pages: '121802'
+pmclivedate: 2026/03/17
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Neuroimage
+title: 'Recognizing EEG responses to active TMS vs. sham stimulations in different
+  TMS-EEG datasets: A machine learning approach.'
+uid: '12989813'
+volume: '328'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41702880'
+- idtype: pmcid
+  value: PMC12987997
+- idtype: doi
+  value: 10.1038/s41398-026-03910-0
+- idtype: pii
+  value: 10.1038/s41398-026-03910-0
+authors:
+- authtype: Author
+  name: Azza Y
+- authtype: Author
+  name: Kammerer MK
+- authtype: Author
+  name: Ngo-Dehning HV
+- authtype: Author
+  name: Ehsanifard M
+- authtype: Author
+  name: Junghanns K
+- authtype: Author
+  name: Wilhelm I
+epubdate: 2026 Feb 17
+fulljournalname: Translational psychiatry
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/15
+printpubdate: ''
+pubdate: 2026 Feb 17
+sortdate: 2026/02/17 00:00
+source: Transl Psychiatry
+title: 'Sleep to remember, sleep to protect: increased sleep spindle and theta activity
+  predict fewer intrusive memories after analogue trauma.'
+uid: '12987997'
+volume: '16'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '41821061'
+- idtype: pmcid
+  value: PMC12982682
+- idtype: doi
+  value: 10.1111/infa.70081
+authors:
+- authtype: Author
+  name: Düfeld A
+- authtype: Author
+  name: Jessen S
+epubdate: ''
+fulljournalname: 'Infancy : the official journal of the International Society on Infant
+  Studies'
+issue: '2'
+pages: e70081
+pmclivedate: 2026/03/14
+printpubdate: 2026 Mar-Apr
+pubdate: 2026 Mar-Apr
+sortdate: 2026/03/01 00:00
+source: Infancy
+title: How Does Paternal Odor Influence Perception of Fearful and Happy Faces in Infancy?
+uid: '12982682'
+volume: '31'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41663918'
+- idtype: doi
+  value: 10.1186/s11689-026-09677-1
+- idtype: pii
+  value: 10.1186/s11689-026-09677-1
+- idtype: pmcid
+  value: PMC12990423
+authors:
+- authtype: Author
+  name: Nicklas PR
+- authtype: Author
+  name: Cruz LN
+- authtype: Author
+  name: Terilli C
+- authtype: Author
+  name: Bojanek EK
+- authtype: Author
+  name: De Sanctis P
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2026 Feb 10
+fulljournalname: Journal of neurodevelopmental disorders
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/17
+printpubdate: ''
+pubdate: 2026 Feb 10
+sortdate: 2026/02/10 00:00
+source: J Neurodev Disord
+title: 'A symphony of functioning: exploring the interplay of cognition, movement,
+  and visual demands in adolescents on the autism spectrum using mobile brain-body
+  imaging (MoBI).'
+uid: '12990423'
+volume: '18'

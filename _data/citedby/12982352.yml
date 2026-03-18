@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41834909'
+- idtype: pmcid
+  value: PMC12982352
+- idtype: doi
+  value: 10.3389/fnhum.2026.1754371
+authors:
+- authtype: Author
+  name: Potts AA
+- authtype: Author
+  name: Garcia Dominguez L
+- authtype: Author
+  name: Gold D
+- authtype: Author
+  name: McAndrews MP
+- authtype: Author
+  name: Wennberg R
+epubdate: 2026 Feb 27
+fulljournalname: Frontiers in human neuroscience
+issue: ''
+pages: '1754371'
+pmclivedate: 2026/03/14
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/02/27 00:00
+source: Front Hum Neurosci
+title: 'Complex motor imagery in elite female ice hockey players: a cortical arena
+  of imagination revealed by magnetoencephalography.'
+uid: '12982352'
+volume: '20'
