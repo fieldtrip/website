@@ -1,0 +1,24 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fpubh.2026.1767357
+- idtype: pmcid
+  value: PMC12999586
+authors:
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Ma T
+- authtype: Author
+  name: Zuoqiu S
+epubdate: 2026 Mar 5
+fulljournalname: Frontiers in Public Health
+issue: ''
+pages: ''
+pmclivedate: 2026/03/20
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/05 00:00
+source: Front Public Health
+title: EEG response and productivity outcome under changing indoor environment.
+uid: '12999586'
+volume: '14'

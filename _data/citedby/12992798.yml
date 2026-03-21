@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '41611735'
+- idtype: pmcid
+  value: PMC12992798
+- idtype: doi
+  value: 10.1038/s41531-025-01243-1
+- idtype: pii
+  value: 10.1038/s41531-025-01243-1
+authors:
+- authtype: Author
+  name: Issabekov G
+- authtype: Author
+  name: Al-Fatly B
+- authtype: Author
+  name: Mousavi M
+- authtype: Author
+  name: Roediger J
+- authtype: Author
+  name: Köhler R
+- authtype: Author
+  name: Habets J
+- authtype: Author
+  name: de Almeida Marcelino AL
+- authtype: Author
+  name: Tuncer MS
+- authtype: Author
+  name: Krause P
+- authtype: Author
+  name: Astalosch M
+- authtype: Author
+  name: Kübler-Weller D
+- authtype: Author
+  name: Spies C
+- authtype: Author
+  name: Spindler P
+- authtype: Author
+  name: Faust K
+- authtype: Author
+  name: Truckenmueller P
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Steiner LA
+epubdate: 2026 Jan 29
+fulljournalname: NPJ Parkinson's disease
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/18
+printpubdate: ''
+pubdate: 2026 Jan 29
+sortdate: 2026/01/29 00:00
+source: NPJ Parkinsons Dis
+title: The graded effect of propofol in electrophysiology-guided navigation during
+  deep brain stimulation surgery.
+uid: '12992798'
+volume: '12'

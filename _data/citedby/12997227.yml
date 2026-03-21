@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41832895'
+- idtype: pmcid
+  value: PMC12997227
+- idtype: doi
+  value: 10.1016/j.nicl.2026.103984
+- idtype: pii
+  value: S2213-1582(26)00043-4
+authors:
+- authtype: Author
+  name: Brückner RI
+- authtype: Author
+  name: Özyurt J
+- authtype: Author
+  name: Thiel CM
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Kasten FH
+epubdate: 2026 Mar 6
+fulljournalname: NeuroImage. Clinical
+issue: ''
+pages: '103984'
+pmclivedate: 2026/03/19
+printpubdate: ''
+pubdate: 2026 Mar 6
+sortdate: 2026/03/06 00:00
+source: Neuroimage Clin
+title: Reduced task-induced frontal midline theta activity in chronic stroke patients
+  compared to healthy older adults - An MEG study.
+uid: '12997227'
+volume: '50'

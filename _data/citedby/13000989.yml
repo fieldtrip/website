@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41714145'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1648-25.2026
+- idtype: pii
+  value: JNEUROSCI.1648-25.2026
+- idtype: pmcid
+  value: PMC13000989
+authors:
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Dauphin M
+- authtype: Author
+  name: Niedernhuber M
+- authtype: Author
+  name: Spitschan M
+- authtype: Author
+  name: Meyer MP
+- authtype: Author
+  name: Cajochen C
+- authtype: Author
+  name: Bekinschtein T
+- authtype: Author
+  name: Canales-Johnson A
+epubdate: 2026 Mar 18
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '11'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Mar 18
+sortdate: 2026/03/18 00:00
+source: J Neurosci
+title: 'Delayed, Reduced, and Redundant: Information Processing of Prediction Errors
+  during Human Sleep.'
+uid: '13000989'
+volume: '46'

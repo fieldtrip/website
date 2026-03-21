@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41802861'
+- idtype: doi
+  value: 10.1523/ENEURO.0300-25.2026
+- idtype: pii
+  value: ENEURO.0300-25.2026
+- idtype: pmcid
+  value: PMC13001713
+authors:
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Bai Y
+- authtype: Author
+  name: Ni G
+- authtype: Author
+  name: Teng X
+epubdate: 2026 Mar 17
+fulljournalname: eNeuro
+issue: '3'
+pages: ''
+pmclivedate: 2026/03/20
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/17 00:00
+source: eNeuro
+title: Short-Term Perceptual Training Modulates Neural Responses to Deepfake Speech
+  But Does Not Improve Behavioral Discrimination.
+uid: '13001713'
+volume: '13'

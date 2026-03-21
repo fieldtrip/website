@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41638913'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0271-25.2026
+- idtype: pii
+  value: JNEUROSCI.0271-25.2026
+- idtype: pmcid
+  value: PMC13000990
+authors:
+- authtype: Author
+  name: Eisenhauer S
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Krieger-Redwood K
+- authtype: Author
+  name: Aveyard R
+- authtype: Author
+  name: Jackson RL
+- authtype: Author
+  name: Cornelissen PL
+- authtype: Author
+  name: Smallwood J
+- authtype: Author
+  name: Jefferies E
+epubdate: 2026 Mar 18
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '11'
+pages: ''
+pmclivedate: 2026/03/20
+printpubdate: ''
+pubdate: 2026 Mar 18
+sortdate: 2026/03/18 00:00
+source: J Neurosci
+title: 'Controlled Retrieval Relies on Directed Interactions between Semantic Control
+  Regions and Visual Cortex: MEG Evidence from Oscillatory Dynamics.'
+uid: '13000990'
+volume: '46'

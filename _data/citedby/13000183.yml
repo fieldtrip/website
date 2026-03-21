@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41741622'
+- idtype: doi
+  value: 10.1038/s44271-026-00427-6
+- idtype: pii
+  value: 10.1038/s44271-026-00427-6
+- idtype: pmcid
+  value: PMC13000183
+authors:
+- authtype: Author
+  name: Merkel C
+- authtype: Author
+  name: Merkel M
+- authtype: Author
+  name: Hopf JM
+- authtype: Author
+  name: Schoenfeld MA
+epubdate: 2026 Feb 25
+fulljournalname: Communications psychology
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/20
+printpubdate: ''
+pubdate: 2026 Feb 25
+sortdate: 2026/02/25 00:00
+source: Commun Psychol
+title: Shape-transitions of a morphing illusory contour can be decoded during multiple-object
+  tracking from the ongoing EEG.
+uid: '13000183'
+volume: '4'
