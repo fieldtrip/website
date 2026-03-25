@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41860413'
+- idtype: pmcid
+  value: PMC13004040
+- idtype: doi
+  value: 10.1111/ejn.70466
+authors:
+- authtype: Author
+  name: Shahsavari Baboukani P
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Østergaard J
+- authtype: Author
+  name: Eskelund K
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '6'
+pages: e70466
+pmclivedate: 2026/03/21
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Eur J Neurosci
+title: Parietal Alpha-Band Connectivity Tracks Listening Effort in Hearing-Aid Users
+  Under Competing Speech and Noise.
+uid: '13004040'
+volume: '63'

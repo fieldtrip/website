@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '40731281'
+- idtype: pmcid
+  value: PMC13003287
+- idtype: doi
+  value: 10.1111/jsr.70161
+authors:
+- authtype: Author
+  name: Champetier P
+- authtype: Author
+  name: Hamel A
+- authtype: Author
+  name: André C
+- authtype: Author
+  name: Ourry V
+- authtype: Author
+  name: Lacroix T
+- authtype: Author
+  name: Rehel S
+- authtype: Author
+  name: Chauveau L
+- authtype: Author
+  name: Haudry S
+- authtype: Author
+  name: Bertran F
+- authtype: Author
+  name: de la Sayette V
+- authtype: Author
+  name: Vivien D
+- authtype: Author
+  name: Chételat G
+- authtype: Author
+  name: Lutz A
+- authtype: Author
+  name: Rauchs G
+- authtype: CollectiveName
+  name: Medit‐Ageing Research Group
+epubdate: 2025 Jul 29
+fulljournalname: Journal of sleep research
+issue: '2'
+pages: e70161
+pmclivedate: 2026/03/21
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: J Sleep Res
+title: EEG Brain Rhythms During Resting-State Wakefulness and Sleep in Elderly Expert
+  Meditators.
+uid: '13003287'
+volume: '35'
