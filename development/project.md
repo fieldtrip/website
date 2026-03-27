@@ -7,7 +7,6 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Active projects
 
-- [Write tutorial for OPM helmet design](/development/project/opm_helmet_design)
 - [Improve artifact handling](/development/project/artifacts)
 - [Improve integration with other toolboxes](/development/project/integration)
 
@@ -30,6 +29,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Closed Projects
 
+- [Write tutorial for OPM helmet design](/development/project/opm_helmet_design) (done)
 - [Improve regression testing](/development/project/regression) (done)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne) (done -> see [getting started section](/getting_started/othersoftware/mne/))
 - [Add stripped spm2 and other toolboxes as external dependencies](/development/project/external_dependencies) (done)
