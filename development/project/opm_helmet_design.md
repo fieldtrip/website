@@ -537,7 +537,7 @@ We can plot the head with the outside of the helmet and all STL objects in one f
 {% include image src="/assets/img/tutorial/opm_helmet_design/individual12.png" width="600" %}
 
 {% include markup/yellow %}
-If you look closely at the 3D figure, you can see that the sensors located at T7 and T8 are tilted to the front. This is due to them being placed on the flank of the bump caused by the low resolution ear. Furthermore, the sound-isolating headphones used during the MRI scan caused some indentation of the cheeks. For now we leave it like this, but in part 3 you will learn how to optimize the sensor orientations.
+If you look closely at the 3D figure, you can see that the sensors located at T7 and T8 are tilted to the front. This is due to them being placed on the flank of the bump caused by the (low resolution) ear. Furthermore, the sound-isolating headphones used during the MRI scan caused some indentation on the cheeks. For now we leave it like this, but in part 3 you will learn how to optimize the sensor orientations.
 {% include markup/end %}
 
 If we are (for now) happy with the sensor distribution, we can export all geometrical objects to STL files for postprocessing, which is explained in part 4.
@@ -1129,7 +1129,58 @@ Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com
 The padding is an STL file that is used to make the helmet locally thicker or to give it more "body" at the location where the sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding will be mainly fall inside the helmet and will largely be cut away by the hole STL file.
 {% include markup/end %}
 
-FIXME here I should add screenshots and an explanation of the process in Fusion
+In Fusion you start with importing the STL files for the inside and outside of the helmet, the hole, the sensor holder and the sensor itself. Optionally you should also import the STL file for the padding. In the spherical and flattened sphere examples above we started with a helmet that was designed in Fusion, so importing the inside and outside helmet surface only applies to the individual MRI and population-based headshape derived helmets. 
+
+You can use the STL files that you created yourself, or the ones that we have shared on the [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design/). It can help to get a quick overview of all the STL files by using 3D visualisation software like [MeshLab](https://www.meshlab.net).
+
+{% include markup/yellow %}
+Since you don't have the original Fusion design for the spherical helmet or for the flattened sphere, you should read the `spherical-helmet.stl` or the `flattenedspherical-helmet.stl` files.
+{% include markup/end %}
+
+After importing all STL objects, you have to convert each of them from a "mesh" into a "solid".
+
+### Making the helmet
+
+For the individual MRI and population-based headshape derived helmets, you then have to use the "combine" tool to make a binary intersection between the solid outside and the solid inside objects; this will result in a hollow outline of the helmet.
+
+You can use "inspect -> section analysis" to visualize a cut-through of the head and/or helmet.
+
+Under the "construct" option, you then make a "plane at angle" around the axis that connects the left and right ear, and subsequently relative to this make an "offset plane". This results in an angled offset plane. Using the "split body" tool you cut off the lower part of the hollow helmet outline.
+
+Once you have the helmet, you are at the same level as where we started with the spherical and flattened sphere examples.
+
+### Cutting holes for the sensor holders
+
+Using the "combine" tool you can combine objects as if you are adding them or subtracting them from each other. So we select the helmet shape and use the "combine" tool to **add** the padding to the helmet, and subsequently use the "combine" tool to **subtract** the solid representing the hole from the helmet.
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/fusion.gif" %}
+
+Adding the padding has no effect for the spherical example here, as the helmet is 10 mm thick. If you imagine the helmet being much thinner (and hence lighter) and also strongly curved, the flat cutout of the sensor holder could result a hole with not enough surface where the helmet touches the sensor holder. In that case the padding object adds a bit of "meat", ensuring that the hole is well defined and that the sensor holder can be glued properly into the helmet.
+
+The sensor holder and the sensor itself are actually not needed, since we don't combine them with the helmet in the same 3D model. We only use them here for visual inspection.
+
+The result is a 3D model for the helmet with the holes that fit the sensor holders.
+
+{% include image src="/assets/img/tutorial/opm_helmet_design/fusion_spherical.png" %}
+
+### Adding decoration
+
+Very likely you will want to make small modifications to the helmet and/or add some additional features, like
+
+- fillets along the rim to remove the sharp edges
+- slots for a chin-strap
+- clips for cable management
+- suspension eye bolts or lugs
+
+Also, you may want to cut out extra space around the ears, or to add protruding markers or fiducials for coregistration using a 3D scanner or Polhemus. See also the tutorial on [coregistration of OPM data](/tutorial/source/coregistration_opm).
+
+### Printing the helmet and the holders
+
+The helmet can be printed using an [FDM printer](https://en.wikipedia.org/wiki/Fused_filament_fabrication). If you have a large enough 3D printer it can be printed in one piece, or if it is too large your 3D printing software has options to cut it into pieces that you can print seperately and glue together.
+
+The holders are printed seperately and are later glued into the corresponding holes in the helmet. This allows printing the sensor holders nicely aligned at a 90 degree angle on the build plate, resulting in a more accurate geometry and them being stronger. Furthermore, by printing them seperately you will also need less support material.
+
+You can print the sensor holders with [FDM](https://en.wikipedia.org/wiki/Fused_filament_fabrication), or you may want to use an [SLA printer](https://en.wikipedia.org/wiki/Stereolithography). SLA printers have a smaller build volume, but are more precise and result in stronger and smoother surfaces than FDM printers, so the sensors will nicely slide into the holders.
 
 ## Part 5 - making the grad structure and layout
 
