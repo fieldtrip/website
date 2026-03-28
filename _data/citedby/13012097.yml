@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41849399'
+- idtype: pmcid
+  value: PMC13012097
+- idtype: doi
+  value: 10.1073/pnas.2510731123
+authors:
+- authtype: Author
+  name: Väyrynen T
+- authtype: Author
+  name: Tuunanen J
+- authtype: Author
+  name: Helakari H
+- authtype: Author
+  name: Elabasy A
+- authtype: Author
+  name: Korhonen V
+- authtype: Author
+  name: Huotari N
+- authtype: Author
+  name: Piispala J
+- authtype: Author
+  name: Kallio M
+- authtype: Author
+  name: Nedergaard M
+- authtype: Author
+  name: Kiviniemi V
+epubdate: 2026 Mar 18
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '12'
+pages: e2510731123
+pmclivedate: 2026/03/25
+printpubdate: 2026 Mar 24
+pubdate: 2026 Mar 24
+sortdate: 2026/03/24 00:00
+source: Proc Natl Acad Sci U S A
+title: Sleep alters neurovascular and hydrodynamic coupling in the human brain.
+uid: '13012097'
+volume: '123'

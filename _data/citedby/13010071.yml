@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '41884601'
+- idtype: pmcid
+  value: PMC13010071
+- idtype: doi
+  value: 10.1093/braincomms/fcag077
+- idtype: pii
+  value: fcag077
+authors:
+- authtype: Author
+  name: Timmsen LS
+- authtype: Author
+  name: Haverland B
+- authtype: Author
+  name: Wolf S
+- authtype: Author
+  name: Stagg CJ
+- authtype: Author
+  name: Feldheim J
+- authtype: Author
+  name: Luu TV
+- authtype: Author
+  name: Schulz R
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Schwab BC
+epubdate: 2026 Mar 11
+fulljournalname: Brain communications
+issue: '2'
+pages: fcag077
+pmclivedate: 2026/03/25
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/11 00:00
+source: Brain Commun
+title: Roles of beta synchronization for motor skill acquisition change after stroke.
+uid: '13010071'
+volume: '8'

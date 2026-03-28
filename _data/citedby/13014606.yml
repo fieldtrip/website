@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40039455'
+- idtype: MID
+  value: NIHMS2147971
+- idtype: pmcid
+  value: PMC13014606
+- idtype: doi
+  value: 10.1109/EMBC53108.2024.10782686
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Maxwell GL
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: ''
+fulljournalname: Annual International Conference of the IEEE Engineering in Medicine
+  and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International
+  Conference
+issue: ''
+pages: 1-4
+pmclivedate: 2026/03/26
+printpubdate: 2024 Jul
+pubdate: 2024 Jul
+sortdate: 2024/07/01 00:00
+source: Annu Int Conf IEEE Eng Med Biol Soc
+title: Brainstem and Deep Gray Nuclei Modulate Brain Network Efficiency in Low-risk
+  Term Newborns.
+uid: '13014606'
+volume: '2024'
