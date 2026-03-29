@@ -42,3 +42,18 @@
   anchors.add('h5');
   anchors.add('h6');
 </script>
+
+<!-- Open Science Assistant (OSA) chat widget -->
+<!-- AI assistant trained on FieldTrip documentation, tutorials, and FAQs -->
+<!-- https://github.com/OpenScience-Collective/osa -->
+<script src="https://demo.osc.earth/osa-chat-widget.js"></script>
+<script>
+  OSAChatWidget.setConfig({
+    communityId: 'fieldtrip',
+    suggestedQuestions: [
+      'How do I get started with FieldTrip?',
+      'How do I preprocess and filter my MEG/EEG data?',
+      'How do I do beamforming source localization?'
+    ]
+  });
+</script>
