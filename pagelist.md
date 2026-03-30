@@ -1,42 +1,41 @@
 ---
-title: Website menu
+title: Pagelist
 ---
 
-
-{% assign menu = site.data.menu %}
-{% if menu %}
+{% assign pagelist = site.data.pagelist %}
+{% if pagelist %}
 <ul>
-{% for item in menu %}
+{% for item in pagelist %}
 {% if item.link %}
 <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {% else %}
 <li>{{ item.title }}</li>
 {% endif %}
 
-{% assign menu = item.menu %}
-{% if menu %}
+{% assign pagelist = item.pagelist %}
+{% if pagelist %}
 <ul>
-{% for item in menu %}
+{% for item in pagelist %}
 {% if item.link %}
 <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {% else %}
 <li>{{ item.title }}</li>
 {% endif %}
 
-{% assign menu = item.menu %}
-{% if menu %}
+{% assign pagelist = item.pagelist %}
+{% if pagelist %}
 <ul>
-{% for item in menu %}
+{% for item in pagelist %}
 {% if item.link %}
 <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {% else %}
 <li>{{ item.title }}</li>
 {% endif %}
 
-{% assign menu = item.menu %}
-{% if menu %}
+{% assign pagelist = item.pagelist %}
+{% if pagelist %}
 <ul>
-{% for item in menu %}
+{% for item in pagelist %}
 {% if item.link %}
 <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {% else %}

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 #
-# This script updates the _data/menu.yaml file. It will recursively 
+# This script updates the _data/pagelist.yaml file. It will recursively 
 # walk the directory structure and build a tree of the directories
-# and files. The tree will then be converted to a menu structure.
+# and files. The tree will then be converted to a pagelist structure.
 #
 # Installation:
 #   conda create -n website python==3.10
@@ -14,7 +14,7 @@ import frontmatter
 import yaml
 
 rootdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)));
-print(f"Updating menu in {rootdir}")
+print(f"Updating pagelist in {rootdir}")
 
 
 def build_tree(paths):
@@ -30,7 +30,7 @@ def build_tree(paths):
 
 
 def tree_to_menu(tree, base=""):
-    menu = []
+    pagelist = []
     for key, subtree in sorted(tree.items()):
         if key.endswith('.md'):
             filename =f"{rootdir}/{base}/{key}".replace("//", "/")
@@ -53,15 +53,15 @@ def tree_to_menu(tree, base=""):
         else:
             item["nav_order"] = 0
         if subtree:
-            item["menu"] = tree_to_menu(subtree, f"{base}/{key}")
+            item["pagelist"] = tree_to_menu(subtree, f"{base}/{key}")
         if key.endswith('.md') and os.path.exists(dirname) and os.path.exists(filename):
             pass
         elif "nav_exclude" in page and page["nav_exclude"]:
             pass
         else:
-            menu.append(item)
-    menu.sort(key=lambda x: (x["nav_order"], x["title"]))
-    return menu
+            pagelist.append(item)
+    pagelist.sort(key=lambda x: (x["nav_order"], x["title"]))
+    return pagelist
 
 
 paths = []
@@ -80,10 +80,10 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
 # Build the tree structure
 tree = build_tree(paths)
 
-# Convert tree to menu format
-menu = tree_to_menu(tree)
+# Convert tree to pagelist format
+pagelist = tree_to_menu(tree)
 
 # Output the result as YAML
-# print(yaml.dump(menu, sort_keys=False))
-with os.fdopen(os.open(f"{rootdir}/_data/menu.yml", os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644), 'w') as f:
-    f.write(yaml.dump(menu, sort_keys=False))
+# print(yaml.dump(pagelist, sort_keys=False))
+with os.fdopen(os.open(f"{rootdir}/_data/pagelist.yml", os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644), 'w') as f:
+    f.write(yaml.dump(pagelist, sort_keys=False))
