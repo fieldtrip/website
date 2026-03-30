@@ -1,4 +1,4 @@
-name: Update tags and categories
+name: Update tags, categories and pagelist
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-tags-and-categories:
+  update-tags-categories-and-pagelist:
     runs-on: ubuntu-latest
     
     permissions:
@@ -26,17 +26,18 @@ jobs:
       with:
         python-version: '3.10'
     
-    # Step 3: Install the Python package
-    - name: Install Python package
+    # Step 3: Install the required Python packages
+    - name: Install Python packages
       run: |
         python -m pip install --upgrade pip
         pip install python-frontmatter pyyaml
     
-    # Step 4: Do something with the repository
+    # Step 4: Update the tags, categories and pagelist
     - name: Process repository
       run: |
         python _scripts/update-tags.py
         python _scripts/update-categories.py
+        python _scripts/update-pagelist.py
 
     # Step 5: Configure Git
     - name: Configure Git
