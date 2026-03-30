@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-categories-and-tags:
+  update-tags-and-categories:
     runs-on: ubuntu-latest
     
     permissions:
