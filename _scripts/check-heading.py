@@ -13,6 +13,9 @@
 # Installation:
 #   conda create -n website python==3.10
 #   conda activate website
+#
+# Use as:
+#   python _scripts/check-heading.py
 
 import os
 import re

@@ -8,6 +8,9 @@
 #   conda create -n website python==3.10
 #   conda activate website
 #   pip install python-frontmatter pyyaml
+#
+# Use as:
+#   python _scripts/update-pagelist.py
 
 import os
 import frontmatter

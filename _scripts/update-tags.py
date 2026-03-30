@@ -11,6 +11,9 @@
 #   conda create -n website python==3.10
 #   conda activate website
 #   pip install python-frontmatter pyyaml
+#
+# Use as:
+#   python _scripts/update-tags.py
 
 import os
 import frontmatter
