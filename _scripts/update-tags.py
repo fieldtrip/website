@@ -44,3 +44,7 @@ for tag in alltags:
 for tag in alltags:
     with open(f"{rootdir}/_data/tag/{tag}.yml", 'w') as file:
         yaml.dump(alltags[tag], file)
+
+for tag in alltags:
+    with open(f"{rootdir}/tag/{tag}.md", 'w') as file:
+        file.write(f"---\nlayout: tag\ntag: {tag}\n---\n")

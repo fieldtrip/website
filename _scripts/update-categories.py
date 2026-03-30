@@ -44,3 +44,7 @@ for category in allcategories:
 for category in allcategories:
     with open(f"{rootdir}/_data/category/{category}.yml", 'w') as file:
         yaml.dump(allcategories[category], file)
+
+for category in allcategories:
+    with open(f"{rootdir}/category/{category}.md", 'w') as file:
+        file.write(f"---\nlayout: category\ncategory: {category}\n---\n")
