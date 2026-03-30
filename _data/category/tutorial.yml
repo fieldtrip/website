@@ -41,8 +41,8 @@
     of MEG data
 - link: /tutorial/tms/tms-eeg
   title: Dealing with TMS-EEG datasets
-- link: /development/project/opm_helmet_design
-  title: Designing an OPM helmet
+- link: /tutorial/sensor/opm_helmet_design
+  title: Designing a custom 3D printed OPM helmet
 - link: /tutorial/source/dipolefitting
   title: Dipole fitting of combined MEG/EEG data
 - link: /tutorial/sensor/eventrelatedaveraging
@@ -108,9 +108,9 @@
   title: Virtual channel analysis of epilepsy MEG data
 - link: /tutorial/preproc/visual_artifact_rejection
   title: Visual or manual artifact rejection
-- link: /tutorial/connectivity/networkanalysis
-  title: Whole brain connectivity and network analysis
 - link: /tutorial/connectivity/networkanalysis_eeg
   title: Whole brain connectivity and network analysis
 - link: /tutorial/connectivity/networkanalysis_old
+  title: Whole brain connectivity and network analysis
+- link: /tutorial/connectivity/networkanalysis
   title: Whole brain connectivity and network analysis
