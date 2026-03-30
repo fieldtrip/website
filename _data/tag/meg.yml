@@ -1,74 +1,64 @@
-- link: /tutorial/connectivity/coherence
-  title: Analysis of corticomuscular coherence
-- link: /tutorial/preproc/automatic_artifact_rejection
-  title: Automatic artifact rejection
-- link: /workshop/oslo2019/beamforming
-  title: Beamforming oscillatory responses in MEG data
-- link: /faq/source/sourcerecon_meeg
-  title: Can I do combined EEG and MEG source reconstruction?
-- link: /tutorial/stats/mvpa_light
-  title: Classification of event-related MEG data using MVPA-Light
-- link: /tutorial/preproc/ica_artifact_cleaning
-  title: Cleaning artifacts using ICA
-- link: /tutorial/stats/cluster_permutation_timelock
-  title: Cluster-based permutation tests on event-related fields
-- link: /tutorial/stats/cluster_permutation_freq
-  title: Cluster-based permutation tests on time-frequency data
-- link: /example/source/sourcerecon_meeg
-  title: Combined EEG and MEG source reconstruction
-- link: /example/source/beamformer_commonfilter
-  title: Common filters in beamforming
-- link: /tutorial/source/virtual_sensors
-  title: Computation of virtual MEG channels in source-space
-- link: /example/source/simulateddata_beamformer
-  title: Compute forward simulated data and apply a beamformer scan
-- link: /tutorial/connectivity/connectivity_aef
-  title: Connectivity in auditory evoked responses
+- link: /dataformat/meg
+  title: MEG dataformats
 - link: /example/other/bids_meg
   title: Converting an example MEG dataset for sharing in BIDS
-- link: /example/source/sourcemodel_aligned2mni
-  title: Create MNI-aligned grids in individual head coordinates
-- link: /example/source/sourcemodel_mnitemplate
-  title: Create a template source model aligned to MNI space
-- link: /example/source/sourcemodel_aligned2mni_atlas
-  title: Create atlas-based MNI-aligned grids in individual head coordinates
-- link: /tutorial/source/sourcemodel
-  title: Creating a source model for source reconstruction of MEG or EEG data
-- link: /tutorial/source/headmodel_meg
-  title: Creating a volume conduction model of the head for source reconstruction
-    of MEG data
-- link: /workshop/practicalmeeg2022/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/paris2019/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /tutorial/sensor/eventrelatedaveraging
-  title: Event-related averaging and MEG planar gradient
-- link: /walkthrough
-  title: FieldTrip Walkthrough
-- link: /example/source/dipolefit_somatosensory_erf
-  title: Fit a dipole to the tactile ERF after mechanical stimulation
-- link: /example/source/sphere_fitting
-  title: Fitting a template MRI to the MEG Polhemus head shape
 - link: /example/preproc/fixing_a_missing_sensor
   title: Fixing a missing channel
-- link: /workshop/paris2019/handson_raw2erp
-  title: From raw data to ERP
-- link: /getting_started/meg/bti
-  title: Getting started with BTi/4D data
+- link: /example/preproc/raw_meeg
+  title: Getting started with reading raw EEG or MEG data
+- link: /example/sensor/headmovement_meg
+  title: How to incorporate head movements in MEG analysis
+- link: /example/sensor/megrealign
+  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+- link: /example/source/beamformer_commonfilter
+  title: Common filters in beamforming
+- link: /example/source/dipolefit_somatosensory_erf
+  title: Fit a dipole to the tactile ERF after mechanical stimulation
+- link: /example/source/headmodel_various
+  title: Make MEG leadfields using different headmodels
+- link: /example/source/neuromag_aligned2mni
+  title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
+- link: /example/source/simulateddata_beamformer
+  title: Compute forward simulated data and apply a beamformer scan
+- link: /example/source/sourcemodel_aligned2mni
+  title: Create MNI-aligned grids in individual head coordinates
+- link: /example/source/sourcemodel_aligned2mni_atlas
+  title: Create atlas-based MNI-aligned grids in individual head coordinates
+- link: /example/source/sourcemodel_mnitemplate
+  title: Create a template source model aligned to MNI space
+- link: /example/source/sourcerecon_meeg
+  title: Combined EEG and MEG source reconstruction
+- link: /example/source/sphere_fitting
+  title: Fitting a template MRI to the MEG Polhemus head shape
+- link: /example/stats/source_statistics
+  title: Source statistics
+- link: /faq/experiment/headlocalizer
+  title: How can I monitor a subject's head position during a MEG session?
+- link: /faq/preproc/datahandling/mergedata
+  title: How can I merge two datasets that were acquired simultaneously with different
+    amplifiers?
+- link: /faq/source/anat_coreg
+  title: How to coregister an anatomical MRI with the gradiometer or electrode positions?
+- link: /faq/source/anat_dicom2ctf
+  title: How can I convert an anatomical MRI from DICOM into CTF format?
+- link: /faq/source/datatype_segmentation
+  title: How is a segmentation defined?
+- link: /faq/source/headcast
+  title: What material is used for the flexible MEG headcasts?
+- link: /faq/source/sensors_definition
+  title: How are electrodes, magnetometers or gradiometers described?
+- link: /faq/source/sourcerecon_meeg
+  title: Can I do combined EEG and MEG source reconstruction?
 - link: /getting_started/meg/babysquid
   title: Getting started with BabySQUID data
-- link: /getting_started/meg/ctf
-  title: Getting started with CTF data
+- link: /getting_started/meg/bti
+  title: Getting started with BTi/4D data
 - link: /getting_started/meg/cerca
   title: Getting started with Cerca OPM data
+- link: /getting_started/meg/ctf
+  title: Getting started with CTF data
 - link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
-- link: /getting_started/othersoftware/limo
-  title: Getting started with LIMO MEEG
-- link: /getting_started/othersoftware/mne
-  title: Getting started with MNE-Python
 - link: /getting_started/meg/neuromag
   title: Getting started with Neuromag/Elekta/Megin data
 - link: /getting_started/meg/opm_fil
@@ -79,86 +69,96 @@
   title: Getting started with Ricoh data
 - link: /getting_started/meg/yokogawa
   title: Getting started with Yokogawa data
-- link: /example/preproc/raw_meeg
-  title: Getting started with reading raw EEG or MEG data
+- link: /getting_started/othersoftware/limo
+  title: Getting started with LIMO MEEG
+- link: /getting_started/othersoftware/mne
+  title: Getting started with MNE-Python
 - link: /getting_started/realtime/headlocalizer
   title: Getting started with real-time head localization in MEG
-- link: /workshop/paris2019/handson_groupanalysis
-  title: Group analysis
-- link: /workshop/practicalmeeg2022/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /faq/source/sensors_definition
-  title: How are electrodes, magnetometers or gradiometers described?
-- link: /faq/source/anat_dicom2ctf
-  title: How can I convert an anatomical MRI from DICOM into CTF format?
-- link: /faq/preproc/datahandling/mergedata
-  title: How can I merge two datasets that were acquired simultaneously with different
-    amplifiers?
-- link: /faq/experiment/headlocalizer
-  title: How can I monitor a subject's head position during a MEG session?
-- link: /faq/source/datatype_segmentation
-  title: How is a segmentation defined?
-- link: /faq/source/anat_coreg
-  title: How to coregister an anatomical MRI with the gradiometer or electrode positions?
-- link: /example/sensor/headmovement_meg
-  title: How to incorporate head movements in MEG analysis
-- link: /example/sensor/megrealign
-  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-- link: /tutorial/preproc/artifacts
-  title: Introduction on dealing with artifacts
+- link: /references_methods
+  title: References to implemented methods
+- link: /template/layout
+  title: Template 2-D layouts for plotting
+- link: /tutorial/connectivity/coherence
+  title: Analysis of corticomuscular coherence
+- link: /tutorial/connectivity/connectivity_aef
+  title: Connectivity in auditory evoked responses
 - link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
+- link: /tutorial/plotting/layout
+  title: Specifying the channel layout for plotting
+- link: /tutorial/preproc/artifacts
+  title: Introduction on dealing with artifacts
+- link: /tutorial/preproc/automatic_artifact_rejection
+  title: Automatic artifact rejection
+- link: /tutorial/preproc/ica_artifact_cleaning
+  title: Cleaning artifacts using ICA
+- link: /tutorial/preproc/preprocessing
+  title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
+- link: /tutorial/preproc/visual_artifact_rejection
+  title: Visual or manual artifact rejection
+- link: /tutorial/sensor/eventrelatedaveraging
+  title: Event-related averaging and MEG planar gradient
+- link: /tutorial/sensor/sensor_analysis
+  title: Sensor-level ERF, TFR and connectivity analyses
+- link: /tutorial/sensor/timefrequencyanalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /tutorial/source/beamformer
   title: Localizing oscillatory sources using beamformer techniques
 - link: /tutorial/source/beamformingextended
   title: Localizing visual gamma and cortico-muscular coherence using DICS
-- link: /dataformat/meg
-  title: MEG dataformats
-- link: /example/source/headmodel_various
-  title: Make MEG leadfields using different headmodels
-- link: /workshop/practicalmeeg2025/handson_mvpa
-  title: Multi-variate pattern analysis (MVPA)
-- link: /tutorial/stats/eventrelatedstatistics
-  title: Parametric and non-parametric statistics on event-related fields
-- link: /tutorial/preproc/preprocessing
-  title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- link: /workshop/practicalmeeg2022/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/practicalmeeg2025/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /example/source/neuromag_aligned2mni
-  title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
-- link: /workshop/oxford2019/sensor_analysis_plusminus
-  title: Reading in data and performing sensor-level ERF and TFR analyses
-- link: /workshop/practicalmeeg2022/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /workshop/paris2019/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /workshop/practicalmeeg2025/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /references_methods
-  title: References to implemented methods
-- link: /tutorial/sensor/sensor_analysis
-  title: Sensor-level ERF, TFR and connectivity analyses
+- link: /tutorial/source/headmodel_meg
+  title: Creating a volume conduction model of the head for source reconstruction
+    of MEG data
 - link: /tutorial/source/minimumnormestimate
   title: Source reconstruction of event-related fields using minimum-norm estimation
-- link: /example/stats/source_statistics
-  title: Source statistics
-- link: /tutorial/plotting/layout
-  title: Specifying the channel layout for plotting
-- link: /template/layout
-  title: Template 2-D layouts for plotting
-- link: /tutorial/sensor/timefrequencyanalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /workshop/practicalmeeg2022/handson_sensoranalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /tutorial/source/sourcemodel
+  title: Creating a source model for source reconstruction of MEG or EEG data
+- link: /tutorial/source/virtual_sensors
+  title: Computation of virtual MEG channels in source-space
+- link: /tutorial/stats/cluster_permutation_freq
+  title: Cluster-based permutation tests on time-frequency data
+- link: /tutorial/stats/cluster_permutation_timelock
+  title: Cluster-based permutation tests on event-related fields
+- link: /tutorial/stats/eventrelatedstatistics
+  title: Parametric and non-parametric statistics on event-related fields
+- link: /tutorial/stats/mvpa_light
+  title: Classification of event-related MEG data using MVPA-Light
+- link: /walkthrough
+  title: FieldTrip Walkthrough
+- link: /workshop/oslo2019/beamforming
+  title: Beamforming oscillatory responses in MEG data
+- link: /workshop/oxford2019/sensor_analysis_plusminus
+  title: Reading in data and performing sensor-level ERF and TFR analyses
+- link: /workshop/paris2019/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/paris2019/handson_groupanalysis
+  title: Group analysis
+- link: /workshop/paris2019/handson_raw2erp
+  title: From raw data to ERP
 - link: /workshop/paris2019/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/paris2019/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2022/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2022/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
+- link: /workshop/practicalmeeg2022/handson_sensoranalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/practicalmeeg2022/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2025/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_mvpa
+  title: Multi-variate pattern analysis (MVPA)
+- link: /workshop/practicalmeeg2025/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
 - link: /workshop/practicalmeeg2025/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /tutorial/preproc/visual_artifact_rejection
-  title: Visual or manual artifact rejection
-- link: /faq/source/headcast
-  title: What material is used for the flexible MEG headcasts?
+- link: /workshop/practicalmeeg2025/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers

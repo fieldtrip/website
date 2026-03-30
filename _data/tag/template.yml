@@ -1,22 +1,22 @@
+- link: /faq/stats/neighbours_neuromag
+  title: Why are there multiple neighbour templates for the Neuromag306 system?
+- link: /template
+  title: Template models and data
 - link: /template/anatomy
   title: Anatomical templates for visualizing source reconstructed activity
-- link: /template/layout
-  title: Template 2-D layouts for plotting
+- link: /template/atlas
+  title: Template anatomical atlases and parcellation schemes
+- link: /template/dewar
+  title: Template MEG dewar shapes
 - link: /template/electrode
   title: Template 3-D electrode sets
 - link: /template/gradiometer
   title: Template 3-D gradiometer descriptions
-- link: /template/dewar
-  title: Template MEG dewar shapes
-- link: /template/atlas
-  title: Template anatomical atlases and parcellation schemes
 - link: /template/headmodel
   title: Template head models for EEG volume conduction modeling
-- link: /template
-  title: Template models and data
-- link: /template/sourcemodel
-  title: Template models for source reconstruction
+- link: /template/layout
+  title: Template 2-D layouts for plotting
 - link: /template/neighbours
   title: Templates for defining neighbouring channels
-- link: /faq/stats/neighbours_neuromag
-  title: Why are there multiple neighbour templates for the Neuromag306 system?
+- link: /template/sourcemodel
+  title: Template models for source reconstruction

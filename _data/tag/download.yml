@@ -2,10 +2,10 @@
   title: Download the FieldTrip toolbox
 - link: /faq/development/trackchanges
   title: How can I keep track of changes to the code?
-- link: /faq/organization/download_ftpproblem
-  title: I am having problems downloading
 - link: /faq/organization/download_donders
   title: I am working at the Donders, should I also download FieldTrip?
+- link: /faq/organization/download_ftpproblem
+  title: I am having problems downloading
 - link: /faq/organization/fieldtrip_downloadversion
   title: Which version of FieldTrip should I download?
 - link: /faq/other/download_version

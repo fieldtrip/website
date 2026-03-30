@@ -2,7 +2,7 @@
   title: Accessing the FieldTrip source code through CVS
 - link: /development/svn
   title: Accessing the FieldTrip source code through SVN
-- link: /faq/development/trackchanges
-  title: How can I keep track of changes to the code?
 - link: /faq/development/svnversusgit
   title: Why was FieldTrip maintained in SVN and not in Git?
+- link: /faq/development/trackchanges
+  title: How can I keep track of changes to the code?

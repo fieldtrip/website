@@ -4,9 +4,9 @@
   title: Accessing the FieldTrip source code through Git
 - link: /development/svn
   title: Accessing the FieldTrip source code through SVN
+- link: /faq/development/svnversusgit
+  title: Why was FieldTrip maintained in SVN and not in Git?
 - link: /faq/development/trackchanges
   title: How can I keep track of changes to the code?
 - link: /faq/organization/datasharing
   title: How should I share example data with the email list or developers?
-- link: /faq/development/svnversusgit
-  title: Why was FieldTrip maintained in SVN and not in Git?

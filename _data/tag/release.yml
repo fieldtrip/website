@@ -1,9 +1,9 @@
-- link: /faq/organization/download_ftpproblem
-  title: I am having problems downloading
 - link: /development/releasing
   title: Release and quality control
 - link: /development/testing
   title: Testing
+- link: /faq/organization/download_ftpproblem
+  title: I am having problems downloading
 - link: /faq/organization/fieldtrip_downloadversion
   title: Which version of FieldTrip should I download?
 - link: /faq/other/download_version

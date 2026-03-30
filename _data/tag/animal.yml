@@ -2,7 +2,7 @@
   title: Analysis of monkey ECoG recordings
 - link: /tutorial/intracranial/mouse_eeg
   title: Channel and source analysis of mouse EEG
-- link: /tutorial/intracranial/spikefield
-  title: Preprocessing and analysis of spike and local field potential data
 - link: /tutorial/intracranial/spike
   title: Preprocessing and analysis of spike-train data
+- link: /tutorial/intracranial/spikefield
+  title: Preprocessing and analysis of spike and local field potential data

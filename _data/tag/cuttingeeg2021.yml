@@ -1,6 +1,6 @@
-- link: /workshop/cuttingeeg2021/bids_language
-  title: Convert the EEG language dataset for sharing in BIDS
 - link: /workshop/cuttingeeg2021
   title: FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
+- link: /workshop/cuttingeeg2021/bids_language
+  title: Convert the EEG language dataset for sharing in BIDS
 - link: /workshop/cuttingeeg2021/tutorial_freq
   title: Time-frequency analysis on short and long timescales

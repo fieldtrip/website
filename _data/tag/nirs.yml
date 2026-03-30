@@ -1,30 +1,30 @@
-- link: /example/sensor/nirs_speech
-  title: Analyzing NIRS data recorded during listening to and repeating speech
-- link: /example/sensor/nirs_fingertapping
-  title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
 - link: /example/other/bids_nirs
   title: Converting an example NIRS dataset for sharing in BIDS
 - link: /example/plotting/nirs_layout
   title: Creating a layout for plotting NIRS optodes and channels
+- link: /example/plotting/video_eeg
+  title: Making a synchronous movie of EEG or NIRS combined with video recordings
+- link: /example/sensor/nirs_fingertapping
+  title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+- link: /example/sensor/nirs_speech
+  title: Analyzing NIRS data recorded during listening to and repeating speech
+- link: /example/stats/nirs_glm
+  title: Using general linear modeling to analyze NIRS timeseries data
 - link: /getting_started/nirs/artinis
   title: Getting started with Artinis NIRS data
 - link: /getting_started/nirs/hitachi
   title: Getting started with Hitachi NIRS data
-- link: /getting_started/othersoftware/homer
-  title: Getting started with Homer
 - link: /getting_started/nirs/nirx
   title: Getting started with NIRx NIRS data
-- link: /getting_started/nirs/snirf
-  title: Getting started with SNIRF data
 - link: /getting_started/nirs/shimadzu
   title: Getting started with Shimadzu NIRS data
-- link: /example/plotting/video_eeg
-  title: Making a synchronous movie of EEG or NIRS combined with video recordings
+- link: /getting_started/nirs/snirf
+  title: Getting started with SNIRF data
+- link: /getting_started/othersoftware/homer
+  title: Getting started with Homer
 - link: /tutorial/nirs/nirs_multichannel
   title: Preprocessing and averaging of multi-channel NIRS data
 - link: /tutorial/nirs/nirs_singlechannel
   title: Preprocessing and averaging of single-channel NIRS data
 - link: /tutorial/plotting/layout
   title: Specifying the channel layout for plotting
-- link: /example/stats/nirs_glm
-  title: Using general linear modeling to analyze NIRS timeseries data

@@ -1,38 +1,38 @@
-- link: /tutorial/stats/mvpa_light
-  title: Classification of event-related MEG data using MVPA-Light
-- link: /tutorial/stats/cluster_permutation_timelock
-  title: Cluster-based permutation tests on event-related fields
-- link: /tutorial/sensor/eventrelatedaveraging
-  title: Event-related averaging and MEG planar gradient
 - link: /example/source/dipolefit_somatosensory_erf
   title: Fit a dipole to the tactile ERF after mechanical stimulation
-- link: /workshop/paris2019/handson_raw2erp
-  title: From raw data to ERP
-- link: /workshop/paris2019/handson_groupanalysis
-  title: Group analysis
-- link: /workshop/practicalmeeg2022/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /tutorial/intro/introduction
-  title: Introduction to the FieldTrip toolbox
-- link: /workshop/practicalmeeg2025/handson_mvpa
-  title: Multi-variate pattern analysis (MVPA)
-- link: /tutorial/stats/eventrelatedstatistics
-  title: Parametric and non-parametric statistics on event-related fields
-- link: /tutorial/sensor/preprocessing_erp
-  title: Preprocessing of EEG data and computing ERPs
-- link: /workshop/practicalmeeg2022/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/practicalmeeg2025/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/oxford2019/sensor_analysis_plusminus
-  title: Reading in data and performing sensor-level ERF and TFR analyses
+- link: /faq/preproc/artifact/preproc_filtertypes
+  title: What kind of filters can I apply to my data?
 - link: /reference
   title: Reference documentation
+- link: /tutorial/intro/introduction
+  title: Introduction to the FieldTrip toolbox
+- link: /tutorial/sensor/eventrelatedaveraging
+  title: Event-related averaging and MEG planar gradient
+- link: /tutorial/sensor/preprocessing_erp
+  title: Preprocessing of EEG data and computing ERPs
 - link: /tutorial/sensor/sensor_analysis
   title: Sensor-level ERF, TFR and connectivity analyses
 - link: /tutorial/source/minimumnormestimate
   title: Source reconstruction of event-related fields using minimum-norm estimation
-- link: /faq/preproc/artifact/preproc_filtertypes
-  title: What kind of filters can I apply to my data?
+- link: /tutorial/stats/cluster_permutation_timelock
+  title: Cluster-based permutation tests on event-related fields
+- link: /tutorial/stats/eventrelatedstatistics
+  title: Parametric and non-parametric statistics on event-related fields
+- link: /tutorial/stats/mvpa_light
+  title: Classification of event-related MEG data using MVPA-Light
+- link: /workshop/oxford2019/sensor_analysis_plusminus
+  title: Reading in data and performing sensor-level ERF and TFR analyses
+- link: /workshop/paris2019/handson_groupanalysis
+  title: Group analysis
+- link: /workshop/paris2019/handson_raw2erp
+  title: From raw data to ERP
+- link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2022/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_mvpa
+  title: Multi-variate pattern analysis (MVPA)
+- link: /workshop/practicalmeeg2025/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs

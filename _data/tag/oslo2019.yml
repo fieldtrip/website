@@ -1,7 +1,7 @@
-- link: /workshop/oslo2019/beamforming
-  title: Beamforming oscillatory responses in MEG data
 - link: /workshop/oslo2019
   title: FieldTrip workshop in Oslo
+- link: /workshop/oslo2019/beamforming
+  title: Beamforming oscillatory responses in MEG data
 - link: /workshop/oslo2019/forward_modeling
   title: Forward modeling for EEG source reconstruction
 - link: /workshop/oslo2019/introduction

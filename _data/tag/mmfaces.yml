@@ -1,56 +1,56 @@
-- link: /workshop/practicalmeeg2022/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/paris2019/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/practicalmeeg2022/handson_artifacts
-  title: Dealing with artifacts
-- link: /workshop/practicalmeeg2025/handson_artifacts
-  title: Dealing with artifacts
+- link: /faq/other/datasets
+  title: Which datasets are used in the documentation and where are they used?
 - link: /tutorial/mmfaces
   title: Details on the multimodal faces dataset
+- link: /workshop/meg-uk-2015
+  title: MEG-UK 2015 meeting
+- link: /workshop/meg-uk-2015/dataset
+  title: Multimodal faces dataset
 - link: /workshop/meg-uk-2015/fieldtrip-beamformer-demo
   title: FieldTrip beamformer demo
 - link: /workshop/meg-uk-2015/fieldtrip-connectivity-demo
   title: FieldTrip connectivity demo
 - link: /workshop/meg-uk-2015/fieldtrip-stats-demo
   title: FieldTrip stats demo
-- link: /workshop/paris2019/handson_raw2erp
-  title: From raw data to ERP
-- link: /workshop/paris2019/handson_groupanalysis
-  title: Group analysis
-- link: /workshop/practicalmeeg2022/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
-- link: /workshop/meg-uk-2015
-  title: MEG-UK 2015 meeting
-- link: /workshop/practicalmeeg2025/handson_mvpa
-  title: Multi-variate pattern analysis (MVPA)
-- link: /workshop/practicalmeeg2022/dataset
-  title: Multimodal faces dataset
 - link: /workshop/paris2019/dataset
   title: Multimodal faces dataset
-- link: /workshop/meg-uk-2015/dataset
-  title: Multimodal faces dataset
-- link: /workshop/practicalmeeg2025/dataset
-  title: Multimodal faces dataset
-- link: /workshop/practicalmeeg2022/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/practicalmeeg2025/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
-- link: /workshop/practicalmeeg2022/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /workshop/paris2019/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /workshop/practicalmeeg2025/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
-- link: /workshop/practicalmeeg2022/handson_sensoranalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/paris2019/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/paris2019/handson_groupanalysis
+  title: Group analysis
+- link: /workshop/paris2019/handson_raw2erp
+  title: From raw data to ERP
 - link: /workshop/paris2019/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/paris2019/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2022/dataset
+  title: Multimodal faces dataset
+- link: /workshop/practicalmeeg2022/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2022/handson_artifacts
+  title: Dealing with artifacts
+- link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2022/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
+- link: /workshop/practicalmeeg2022/handson_sensoranalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/practicalmeeg2022/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2025/dataset
+  title: Multimodal faces dataset
+- link: /workshop/practicalmeeg2025/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2025/handson_artifacts
+  title: Dealing with artifacts
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_mvpa
+  title: Multi-variate pattern analysis (MVPA)
+- link: /workshop/practicalmeeg2025/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
 - link: /workshop/practicalmeeg2025/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /faq/other/datasets
-  title: Which datasets are used in the documentation and where are they used?
+- link: /workshop/practicalmeeg2025/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers

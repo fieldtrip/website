@@ -1,90 +1,33 @@
-- link: /tutorial/connectivity/connectivity_sensor_source
-  title: Analysis of sensor- and source-level connectivity
+- link: /example/other/fmri_correlationanalysis
+  title: Correlation analysis of fMRI data
+- link: /example/source/beamformer_commonfilter
+  title: Common filters in beamforming
+- link: /example/spectral/coherence_snr
+  title: Effect of SNR on Coherence
+- link: /example/spectral/crossfreq
+  title: Cross-frequency analysis
+- link: /example/spectral/effects_of_tapering
+  title: Effects of tapering for power estimates
+- link: /example/spectral/fourier
+  title: Fourier analysis of neuronal oscillations and synchronization
+- link: /example/spectral/granger_conditional
+  title: Conditional Granger causality in the frequency domain
+- link: /example/spectral/phase_reset
+  title: Simulate an oscillatory signal with phase resetting
 - link: /example/spectral/ssvep
   title: Analyze steady-state visual evoked potentials (SSVEPs)
 - link: /example/stats/stats_besa
   title: Apply non-parametric statistics with clustering on TFRs of power that were
     computed with BESA
-- link: /tutorial/stats/mvpa_light
-  title: Classification of event-related MEG data using MVPA-Light
-- link: /tutorial/stats/cluster_permutation_freq
-  title: Cluster-based permutation tests on time-frequency data
-- link: /example/source/beamformer_commonfilter
-  title: Common filters in beamforming
-- link: /example/spectral/granger_conditional
-  title: Conditional Granger causality in the frequency domain
-- link: /tutorial/connectivity/connectivity_aef
-  title: Connectivity in auditory evoked responses
-- link: /example/other/fmri_correlationanalysis
-  title: Correlation analysis of fMRI data
-- link: /example/spectral/crossfreq
-  title: Cross-frequency analysis
+- link: /faq/preproc/artifact/preproc_filtertypes
+  title: What kind of filters can I apply to my data?
+- link: /faq/spectral/datatype_freq
+  title: In what way can frequency domain data be represented in FieldTrip?
 - link: /faq/spectral/evoked_vs_induced
   title: Does it make sense to subtract the ERP prior to time frequency analysis,
     to distinguish evoked from induced power?
-- link: /example/spectral/coherence_snr
-  title: Effect of SNR on Coherence
-- link: /example/spectral/effects_of_tapering
-  title: Effects of tapering for power estimates
-- link: /tutorial/connectivity/connectivityextended
-  title: Extended analysis of sensor- and source-level connectivity
-- link: /walkthrough
-  title: FieldTrip Walkthrough
-- link: /example/spectral/fourier
-  title: Fourier analysis of neuronal oscillations and synchronization
-- link: /faq/spectral/tfr_continuous
-  title: How can I do time-frequency analysis on continuous data?
-- link: /faq/stats/behavior_cosinefit
-  title: How can I test whether a behavioral measure is phasic?
-- link: /faq/spectral/mtmconvol
-  title: How does mtmconvol work?
-- link: /faq/spectral/datatype_freq
-  title: In what way can frequency domain data be represented in FieldTrip?
-- link: /tutorial/intro/introduction
-  title: Introduction to the FieldTrip toolbox
-- link: /tutorial/source/beamformer
-  title: Localizing oscillatory sources using beamformer techniques
-- link: /tutorial/stats/eventrelatedstatistics
-  title: Parametric and non-parametric statistics on event-related fields
-- link: /workshop/oxford2019/sensor_analysis_plusminus
-  title: Reading in data and performing sensor-level ERF and TFR analyses
-- link: /reference
-  title: Reference documentation
-- link: /references_methods
-  title: References to implemented methods
-- link: /tutorial/sensor/sensor_analysis
-  title: Sensor-level ERF, TFR and connectivity analyses
-- link: /example/spectral/phase_reset
-  title: Simulate an oscillatory signal with phase resetting
-- link: /workshop/chieti2015/simulation
-  title: Simulating and estimating, what about model (mis)match?
-- link: /tutorial/sensor/timefrequencyanalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /workshop/practicalmeeg2022/handson_sensoranalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /workshop/paris2019/handson_sensoranalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /workshop/practicalmeeg2025/handson_sensoranalysis
-  title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /faq/spectral/freqanalysis_phasedefinition
-  title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet'
-    and 'mtmfft'?
-- link: /faq/spectral/freqanalysis_paddinginsufficient
-  title: What does "padding not sufficient for requested frequency resolution" mean?
-- link: /faq/spectral/timefreqtradeoff
-  title: What is meant by time-frequency trade off?
-- link: /faq/preproc/artifact/preproc_filtertypes
-  title: What kind of filters can I apply to my data?
-- link: /faq/spectral/freqanalysis_foinoninteger
-  title: Why am I not getting integer frequencies?
 - link: /faq/spectral/freq_before_combine
   title: Why do I need to run ft_freqanalysis before ft_combineplanar?
-- link: /faq/spectral/tfr_nans
-  title: Why does my TFR contain NaNs?
-- link: /faq/spectral/tfr_strangedemean
-  title: Why does my TFR look strange (part I, demeaning)?
-- link: /faq/spectral/tfr_strangedetrend
-  title: Why does my TFR look strange (part II, detrending)?
 - link: /faq/spectral/freqanalysis_foimismatchmtmconvol
   title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalysis?
 - link: /faq/spectral/freqanalysis_foimismatchmtmfft
@@ -92,6 +35,63 @@
 - link: /faq/spectral/freqanalysis_foimismatchwavelet
   title: Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly
     'wltconvol') in ft_freqanalysis?
+- link: /faq/spectral/freqanalysis_foinoninteger
+  title: Why am I not getting integer frequencies?
+- link: /faq/spectral/freqanalysis_paddinginsufficient
+  title: What does "padding not sufficient for requested frequency resolution" mean?
+- link: /faq/spectral/freqanalysis_phasedefinition
+  title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet'
+    and 'mtmfft'?
+- link: /faq/spectral/mtmconvol
+  title: How does mtmconvol work?
+- link: /faq/spectral/tfr_continuous
+  title: How can I do time-frequency analysis on continuous data?
+- link: /faq/spectral/tfr_nans
+  title: Why does my TFR contain NaNs?
+- link: /faq/spectral/tfr_strangedemean
+  title: Why does my TFR look strange (part I, demeaning)?
+- link: /faq/spectral/tfr_strangedetrend
+  title: Why does my TFR look strange (part II, detrending)?
+- link: /faq/spectral/timefreqtradeoff
+  title: What is meant by time-frequency trade off?
 - link: /faq/spectral/why_largest_peak_spectrum
   title: Why is the largest peak in the spectrum at the frequency which is 1/segment
     length?
+- link: /faq/stats/behavior_cosinefit
+  title: How can I test whether a behavioral measure is phasic?
+- link: /reference
+  title: Reference documentation
+- link: /references_methods
+  title: References to implemented methods
+- link: /tutorial/connectivity/connectivity_aef
+  title: Connectivity in auditory evoked responses
+- link: /tutorial/connectivity/connectivity_sensor_source
+  title: Analysis of sensor- and source-level connectivity
+- link: /tutorial/connectivity/connectivityextended
+  title: Extended analysis of sensor- and source-level connectivity
+- link: /tutorial/intro/introduction
+  title: Introduction to the FieldTrip toolbox
+- link: /tutorial/sensor/sensor_analysis
+  title: Sensor-level ERF, TFR and connectivity analyses
+- link: /tutorial/sensor/timefrequencyanalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /tutorial/source/beamformer
+  title: Localizing oscillatory sources using beamformer techniques
+- link: /tutorial/stats/cluster_permutation_freq
+  title: Cluster-based permutation tests on time-frequency data
+- link: /tutorial/stats/eventrelatedstatistics
+  title: Parametric and non-parametric statistics on event-related fields
+- link: /tutorial/stats/mvpa_light
+  title: Classification of event-related MEG data using MVPA-Light
+- link: /walkthrough
+  title: FieldTrip Walkthrough
+- link: /workshop/chieti2015/simulation
+  title: Simulating and estimating, what about model (mis)match?
+- link: /workshop/oxford2019/sensor_analysis_plusminus
+  title: Reading in data and performing sensor-level ERF and TFR analyses
+- link: /workshop/paris2019/handson_sensoranalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/practicalmeeg2022/handson_sensoranalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets
+- link: /workshop/practicalmeeg2025/handson_sensoranalysis
+  title: Time-frequency analysis using Hanning window, multitapers and wavelets

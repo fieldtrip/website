@@ -1,7 +1,7 @@
-- link: /tutorial/sensor/sleep
-  title: Extracting the brain state and events from continuous sleep EEG
-- link: /getting_started/eeg/edf
-  title: Getting started with EDF (European Data Format) data
 - link: /faq/preproc/dataformat/edf2fieldtrip
   title: How can I read all channels from an EDF file that contains multiple sampling
     rates?
+- link: /getting_started/eeg/edf
+  title: Getting started with EDF (European Data Format) data
+- link: /tutorial/sensor/sleep
+  title: Extracting the brain state and events from continuous sleep EEG

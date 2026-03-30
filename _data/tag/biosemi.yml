@@ -1,8 +1,8 @@
-- link: /example/other/biosemi
-  title: Example analysis pipeline for BioSemi data
-- link: /getting_started/eeg/biosemi
-  title: Getting started with BioSemi BDF data
 - link: /development/realtime/biosemi
   title: Streaming realtime data from BioSemi ActiveTwo EEG amplifier
+- link: /example/other/biosemi
+  title: Example analysis pipeline for BioSemi data
 - link: /faq/preproc/dataformat/biosemi_reference
   title: Why should I start with rereferencing for BioSemi EEG data?
+- link: /getting_started/eeg/biosemi
+  title: Getting started with BioSemi BDF data

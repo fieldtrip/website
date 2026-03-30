@@ -1,3 +1,7 @@
+- link: /dataformat/spike
+  title: Spike and LFP dataformats
+- link: /getting_started/intracranial/animal
+  title: Getting started with animal electrophysiology data, including spikes
 - link: /getting_started/intracranial/blackrock
   title: Getting started with Blackrock data
 - link: /getting_started/intracranial/cyberkinetics
@@ -10,13 +14,9 @@
   title: Getting started with Neurodata Without Borders (NWB) data
 - link: /getting_started/intracranial/plexon
   title: Getting started with Plexon data
-- link: /getting_started/intracranial/animal
-  title: Getting started with animal electrophysiology data, including spikes
-- link: /tutorial/intro/introduction
-  title: Introduction to the FieldTrip toolbox
-- link: /tutorial/intracranial/spikefield
-  title: Preprocessing and analysis of spike and local field potential data
 - link: /tutorial/intracranial/spike
   title: Preprocessing and analysis of spike-train data
-- link: /dataformat/spike
-  title: Spike and LFP dataformats
+- link: /tutorial/intracranial/spikefield
+  title: Preprocessing and analysis of spike and local field potential data
+- link: /tutorial/intro/introduction
+  title: Introduction to the FieldTrip toolbox

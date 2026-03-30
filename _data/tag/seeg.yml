@@ -1,8 +1,8 @@
-- link: /tutorial/intracranial/human_ecog
-  title: Analysis of human ECoG and sEEG recordings
-- link: /getting_started/othersoftware/bioimage
-  title: Getting started with BioImage Suite
 - link: /getting_started/intracranial/human_ecog
   title: Getting started with human ECoG data
+- link: /getting_started/othersoftware/bioimage
+  title: Getting started with BioImage Suite
+- link: /tutorial/intracranial/human_ecog
+  title: Analysis of human ECoG and sEEG recordings
 - link: /tutorial/plotting/layout
   title: Specifying the channel layout for plotting

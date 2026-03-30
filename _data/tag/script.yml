@@ -1,10 +1,10 @@
-- link: /tutorial/intro/pipeline
-  title: Creating a clean analysis pipeline
-- link: /tutorial/scripting/memory
-  title: Making a memory efficient analysis pipeline
 - link: /example/other/reproducescript
   title: Making your analysis pipeline reproducible using reproducescript
+- link: /tutorial/intro/pipeline
+  title: Creating a clean analysis pipeline
 - link: /tutorial/scripting/distributedcomputing_parfor
   title: Speeding up your analysis using distributed computing with parfor
 - link: /tutorial/scripting/distributedcomputing_qsub
   title: Speeding up your analysis using distributed computing with qsub
+- link: /tutorial/scripting/memory
+  title: Making a memory efficient analysis pipeline

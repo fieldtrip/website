@@ -1,8 +1,8 @@
-- link: /tutorial/source/coregistration_opm
-  title: Coregistration of Optically Pumped Magnetometer (OPM) data
 - link: /example/other/opm_sensors
   title: Designing 3D printed helmets for different OPM sensor types
 - link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
 - link: /tutorial/sensor/preprocessing_opm
   title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+- link: /tutorial/source/coregistration_opm
+  title: Coregistration of Optically Pumped Magnetometer (OPM) data

@@ -1,9 +1,5 @@
-- link: /tutorial/source/coregistration_opm
-  title: Coregistration of Optically Pumped Magnetometer (OPM) data
 - link: /example/other/opm_sensors
   title: Designing 3D printed helmets for different OPM sensor types
-- link: /tutorial/sensor/opm_helmet_design
-  title: Designing a custom 3D printed OPM helmet
 - link: /getting_started/meg/cerca
   title: Getting started with Cerca OPM data
 - link: /getting_started/meg/fieldline
@@ -12,7 +8,11 @@
   title: Getting started with OPM data recorded at the FIL
 - link: /getting_started/meg/quspin
   title: Getting started with QuSpin OPM data
-- link: /tutorial/sensor/preprocessing_opm
-  title: Preprocessing of Optically Pumped Magnetometer (OPM) data
 - link: /template/layout
   title: Template 2-D layouts for plotting
+- link: /tutorial/sensor/opm_helmet_design
+  title: Designing a custom 3D printed OPM helmet
+- link: /tutorial/sensor/preprocessing_opm
+  title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+- link: /tutorial/source/coregistration_opm
+  title: Coregistration of Optically Pumped Magnetometer (OPM) data

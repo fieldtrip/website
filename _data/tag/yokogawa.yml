@@ -1,6 +1,6 @@
-- link: /getting_started/meg/yokogawa
-  title: Getting started with Yokogawa data
 - link: /dataformat/meg
   title: MEG dataformats
+- link: /getting_started/meg/yokogawa
+  title: Getting started with Yokogawa data
 - link: /template/gradiometer
   title: Template 3-D gradiometer descriptions
