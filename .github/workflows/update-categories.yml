@@ -37,7 +37,7 @@ jobs:
       run: |
         # Your processing logic here
         # Example: Run a script that modifies files
-        python website/_scripts/update-categories.py
+        python _scripts/update-categories.py
         
         # Or run your installed package to process something
         # your-package-command --input ./ --output ./
