@@ -75,6 +75,8 @@
   title: Cross-frequency analysis
 - link: /example/stats/neighbours
   title: Defining electrodes as neighbours for cluster-level statistics
+- link: /example/other/opm_sensors
+  title: Designing 3D printed helmets for different OPM sensor types
 - link: /example/preproc/trialdef_emg
   title: Detect the muscle activity in an EMG channel and use that as trial definition
 - link: /example/preproc/filter_characteristics
