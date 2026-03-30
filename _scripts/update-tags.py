@@ -39,7 +39,7 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
                     alltags[tag].append(item)
 
 for tag in alltags:
-    alltags[tag].sort(key=lambda x: x['title'])
+    alltags[tag].sort(key=lambda x: x['link'])
 
 for tag in alltags:
     with open(f"{rootdir}/_data/tag/{tag}.yml", 'w') as file:

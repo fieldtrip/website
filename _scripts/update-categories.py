@@ -39,7 +39,7 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
                     allcategories[category].append(item)
 
 for category in allcategories:
-    allcategories[category].sort(key=lambda x: x['title'])
+    allcategories[category].sort(key=lambda x: x['link'])
 
 for category in allcategories:
     with open(f"{rootdir}/_data/category/{category}.yml", 'w') as file:
