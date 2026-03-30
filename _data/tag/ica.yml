@@ -1,6 +1,6 @@
-- link: /workshop/practicalmeeg2025/handson_artifacts
-  title: Dealing with artifacts
 - link: /workshop/practicalmeeg2022/handson_artifacts
+  title: Dealing with artifacts
+- link: /workshop/practicalmeeg2025/handson_artifacts
   title: Dealing with artifacts
 - link: /faq/preproc/artifact/ica_crash
   title: I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why

@@ -58,13 +58,13 @@
   title: Simulate an oscillatory signal with phase resetting
 - link: /workshop/chieti2015/simulation
   title: Simulating and estimating, what about model (mis)match?
-- link: /workshop/practicalmeeg2025/handson_sensoranalysis
+- link: /tutorial/sensor/timefrequencyanalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /workshop/practicalmeeg2022/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /workshop/paris2019/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /tutorial/sensor/timefrequencyanalysis
+- link: /workshop/practicalmeeg2025/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /faq/spectral/freqanalysis_phasedefinition
   title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet'

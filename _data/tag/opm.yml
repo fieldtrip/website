@@ -1,7 +1,7 @@
 - link: /tutorial/source/coregistration_opm
   title: Coregistration of Optically Pumped Magnetometer (OPM) data
-- link: /development/project/opm_helmet_design
-  title: Designing an OPM helmet
+- link: /tutorial/sensor/opm_helmet_design
+  title: Designing a custom 3D printed OPM helmet
 - link: /getting_started/meg/cerca
   title: Getting started with Cerca OPM data
 - link: /getting_started/meg/fieldline

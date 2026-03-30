@@ -13,9 +13,9 @@
   title: Getting started with LIMO MEEG
 - link: /workshop/paris2019/handson_groupanalysis
   title: Group analysis
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
 - link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
   title: Group-level statistics with parametric and non-parametric methods
 - link: /faq/stats/clusterstats_interpretation
   title: How NOT to interpret results from a cluster-based permutation test

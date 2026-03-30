@@ -4,9 +4,9 @@
   title: Cleaning artifacts using ICA
 - link: /example/preproc/meg_eyelink
   title: Combine MEG with Eyelink eyetracker data
-- link: /workshop/practicalmeeg2025/handson_artifacts
-  title: Dealing with artifacts
 - link: /workshop/practicalmeeg2022/handson_artifacts
+  title: Dealing with artifacts
+- link: /workshop/practicalmeeg2025/handson_artifacts
   title: Dealing with artifacts
 - link: /faq/preproc/artifact/artifact_representation
   title: How can I consistently represent artifacts in my data?

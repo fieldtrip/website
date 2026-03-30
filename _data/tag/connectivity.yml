@@ -16,9 +16,9 @@
   title: In what way can frequency domain data be represented in FieldTrip?
 - link: /workshop/chieti2015/simulation
   title: Simulating and estimating, what about model (mis)match?
-- link: /tutorial/connectivity/networkanalysis
-  title: Whole brain connectivity and network analysis
 - link: /tutorial/connectivity/networkanalysis_eeg
   title: Whole brain connectivity and network analysis
 - link: /tutorial/connectivity/networkanalysis_old
+  title: Whole brain connectivity and network analysis
+- link: /tutorial/connectivity/networkanalysis
   title: Whole brain connectivity and network analysis

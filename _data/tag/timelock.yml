@@ -10,9 +10,9 @@
   title: From raw data to ERP
 - link: /workshop/paris2019/handson_groupanalysis
   title: Group analysis
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
 - link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
   title: Group-level statistics with parametric and non-parametric methods
 - link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
@@ -22,9 +22,9 @@
   title: Parametric and non-parametric statistics on event-related fields
 - link: /tutorial/sensor/preprocessing_erp
   title: Preprocessing of EEG data and computing ERPs
-- link: /workshop/practicalmeeg2025/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
 - link: /workshop/practicalmeeg2022/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
+- link: /workshop/practicalmeeg2025/handson_raw2erp
   title: Preprocessing raw data and computing ERPs/ERFs
 - link: /workshop/oxford2019/sensor_analysis_plusminus
   title: Reading in data and performing sensor-level ERF and TFR analyses

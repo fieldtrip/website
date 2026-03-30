@@ -1,10 +1,10 @@
 - link: /tutorial/source/sourcemodel
   title: Creating a source model for source reconstruction of MEG or EEG data
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/practicalmeeg2022/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/paris2019/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2025/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /faq/source/sticking_out
   title: Is it OK for vertices/dipoles to stick out of the volume conductor?

@@ -31,11 +31,11 @@
 - link: /tutorial/source/headmodel_meg
   title: Creating a volume conduction model of the head for source reconstruction
     of MEG data
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/practicalmeeg2022/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/paris2019/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2025/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /example/source/sphere_fitting
   title: Fitting a template MRI to the MEG Polhemus head shape

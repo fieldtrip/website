@@ -37,11 +37,11 @@
 - link: /tutorial/source/headmodel_meg
   title: Creating a volume conduction model of the head for source reconstruction
     of MEG data
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/practicalmeeg2022/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/paris2019/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
+- link: /workshop/practicalmeeg2025/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /tutorial/sensor/eventrelatedaveraging
   title: Event-related averaging and MEG planar gradient
@@ -85,9 +85,9 @@
   title: Getting started with real-time head localization in MEG
 - link: /workshop/paris2019/handson_groupanalysis
   title: Group analysis
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
 - link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
   title: Group-level statistics with parametric and non-parametric methods
 - link: /faq/source/sensors_definition
   title: How are electrodes, magnetometers or gradiometers described?
@@ -124,19 +124,19 @@
   title: Parametric and non-parametric statistics on event-related fields
 - link: /tutorial/preproc/preprocessing
   title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
-- link: /workshop/practicalmeeg2025/handson_raw2erp
-  title: Preprocessing raw data and computing ERPs/ERFs
 - link: /workshop/practicalmeeg2022/handson_raw2erp
+  title: Preprocessing raw data and computing ERPs/ERFs
+- link: /workshop/practicalmeeg2025/handson_raw2erp
   title: Preprocessing raw data and computing ERPs/ERFs
 - link: /example/source/neuromag_aligned2mni
   title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
 - link: /workshop/oxford2019/sensor_analysis_plusminus
   title: Reading in data and performing sensor-level ERF and TFR analyses
-- link: /workshop/practicalmeeg2025/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
 - link: /workshop/practicalmeeg2022/handson_sourceanalysis
   title: Reconstructing source activity using beamformers
 - link: /workshop/paris2019/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2025/handson_sourceanalysis
   title: Reconstructing source activity using beamformers
 - link: /references_methods
   title: References to implemented methods
@@ -150,13 +150,13 @@
   title: Specifying the channel layout for plotting
 - link: /template/layout
   title: Template 2-D layouts for plotting
-- link: /workshop/practicalmeeg2025/handson_sensoranalysis
+- link: /tutorial/sensor/timefrequencyanalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /workshop/practicalmeeg2022/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /workshop/paris2019/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
-- link: /tutorial/sensor/timefrequencyanalysis
+- link: /workshop/practicalmeeg2025/handson_sensoranalysis
   title: Time-frequency analysis using Hanning window, multitapers and wavelets
 - link: /tutorial/preproc/visual_artifact_rejection
   title: Visual or manual artifact rejection

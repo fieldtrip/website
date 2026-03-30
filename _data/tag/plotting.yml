@@ -23,9 +23,9 @@
   title: Event-related averaging and MEG planar gradient
 - link: /workshop/paris2019/handson_groupanalysis
   title: Group analysis
-- link: /workshop/practicalmeeg2025/handson_groupanalysis
-  title: Group-level statistics with parametric and non-parametric methods
 - link: /workshop/practicalmeeg2022/handson_groupanalysis
+  title: Group-level statistics with parametric and non-parametric methods
+- link: /workshop/practicalmeeg2025/handson_groupanalysis
   title: Group-level statistics with parametric and non-parametric methods
 - link: /faq/stats/sensors_neighbours
   title: How can I define neighbouring sensors?

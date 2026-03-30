@@ -1,12 +1,12 @@
-- link: /workshop/practicalmeeg2025/handson_anatomy
-  title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/practicalmeeg2022/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/paris2019/handson_anatomy
   title: Creation of headmodels and sourcemodels for source reconstruction
-- link: /workshop/practicalmeeg2025/handson_sourceanalysis
-  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2025/handson_anatomy
+  title: Creation of headmodels and sourcemodels for source reconstruction
 - link: /workshop/practicalmeeg2022/handson_sourceanalysis
   title: Reconstructing source activity using beamformers
 - link: /workshop/paris2019/handson_sourceanalysis
+  title: Reconstructing source activity using beamformers
+- link: /workshop/practicalmeeg2025/handson_sourceanalysis
   title: Reconstructing source activity using beamformers
