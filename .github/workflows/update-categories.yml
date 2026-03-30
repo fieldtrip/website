@@ -1,4 +1,4 @@
-name: Update categories
+name: Update tags and categories
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-categories-and-commit:
+  update-categories-and-tags:
     runs-on: ubuntu-latest
     
     permissions:
@@ -35,13 +35,9 @@ jobs:
     # Step 4: Do something with the repository
     - name: Process repository
       run: |
-        # Your processing logic here
-        # Example: Run a script that modifies files
+        python _scripts/update-tags.py
         python _scripts/update-categories.py
-        
-        # Or run your installed package to process something
-        # your-package-command --input ./ --output ./
-    
+
     # Step 5: Configure Git
     - name: Configure Git
       run: |
