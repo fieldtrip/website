@@ -15,9 +15,13 @@ This tutorial aims to design OPM arrays with relatively uniform whole-head cover
 
 ## Background
 
-OPMs differ in size, depending on the manufacturer, but in general can be conceived as a rectangular box with a cable attached. For the FieldLine system, for example, the individual sensors are 15x13x35 mm. The OPMs are placed in holders which can in principle be mounted on a flexible cap just like EEG electrodes, but this comes with the potential disadvantage that the sensor orientations are not fixed and might vary depending on the head orientation and movements. With a fixed/rigid helmet as demonstrated in this tutorial, the position _and_ orientation of all sensors is well-defined.
+OPMs differ in size, depending on the manufacturer, but in general can be conceived as a rectangular box with a cable attached. For the FieldLine system, for example, the individual sensors are 15x13x35 mm. The OPMs are placed in holders which can in principle be mounted on a flexible cap just like EEG electrodes, but this comes with the potential disadvantage that the sensor orientations are not fixed and might vary depending on the head orientation and movements. With a rigid helmet as demonstrated in this tutorial, the position _and_ orientation of all sensors is well-defined.
 
-The tutorial demonstrates the placement of FieldLine sensors, but is equally applicable to the sensors from QuSpin, Mag4health, or other companies. The OPM sensors and the holders are modeled (outside of MATLAB) as STL files; these sensors and holders are then distributed over the shell that forms the helmet. Furthermore, additional geometrical objects can be modeled as STL files and can be used as "tools" in the fabrication process to make holes in the helmet, or to add a small rim to facilitate gluing the sensor holder to the shell.
+This tutorial demonstrates the placement of FieldLine sensors, but is equally applicable to the sensors from QuSpin, Cerca, Mag4Health, or other companies. The OPM sensors and the holders are modeled (outside of MATLAB) as STL files; these sensors and holders are then distributed over the shell that forms the helmet. Furthermore, additional geometrical objects can be modeled as STL files and can be used as "tools" in the fabrication process to make holes in the helmet, or to add a small rim to facilitate gluing the sensor holder to the shell.
+
+{% include markup/green %}
+We also have an example script that shows the [OPM sensor placement procedure for other sensor types](/example/other/opm_sensors).
+{% include markup/end %}
 
 ## Procedure
 

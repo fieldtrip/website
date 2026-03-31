@@ -145,6 +145,6 @@ The design can be visualised on and downloaded from <https://a360.co/4s48B4G>. T
 
 ## QuSpin and Cerca sensors
 
-We don't have a design for the QuSpin and Cerca Magnetics sensors yet. You could take the FieldLine or the Mag4Health design above and rescale it to fit the sensors, or you could start with an OPM sensor holder design from scratch.
+We don't have a design for the QuSpin and Cerca Magnetics sensors yet. If you do make such a design, please consider sharing it with other researchers. You can [contact us](/support) to have it added here.
 
-If you do make a design, please consider sharing it with other researchers. You can [contact us](/support) to have it added here.
+For now, you could take the FieldLine or the Mag4Health design above and rescale it to fit the sensors, or you could start with an OPM sensor holder design from scratch.
