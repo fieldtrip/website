@@ -1,0 +1,56 @@
+name: Update citations
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'  # Every Sunday at 06:00 UTC
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Required to push changes back
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0  # Fetch all history for proper commits
+
+    # Step 2: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # Step 3: Install the required Python packages
+    - name: Install Python packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pyyaml
+
+    # Step 4: update the citations
+    - name: Update citations
+      run: |
+        cd _data/citedby
+        python ../../_scripts/update-citations.py
+
+    # Step 5: Configure Git
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    # Step 6: Commit changes
+    - name: Commit changes
+      run: |
+        git add .
+        git diff --quiet && git diff --staged --quiet || git commit -m "Automated citation update by GitHub Action"
+
+    # Step 7: Push changes back
+    - name: Push changes
+      run: |
+        git push origin HEAD:${GITHUB_REF#refs/heads/}
