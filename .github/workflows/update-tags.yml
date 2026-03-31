@@ -1,8 +1,8 @@
 name: Update tags, categories and pagelist
 
 on:
-  push:
-    branches: [ main, master ]
+  schedule:
+    - cron: '0 2 * * *'  # Every day at 02:00 UTC  
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
