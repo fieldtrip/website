@@ -2,7 +2,7 @@ name: Update tags, categories and pagelist
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # Every day at 02:00 UTC  
+    - cron: '0 2 * * *'  # Every night at 02:00 UTC
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
