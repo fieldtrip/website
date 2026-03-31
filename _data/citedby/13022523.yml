@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41735056'
+- idtype: pmcid
+  value: PMC13022523
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1151-25.2026
+- idtype: pii
+  value: JNEUROSCI.1151-25.2026
+authors:
+- authtype: Author
+  name: Warden ACM
+- authtype: Author
+  name: Cruse D
+- authtype: Author
+  name: McAllister CJ
+- authtype: Author
+  name: MacDonald HJ
+epubdate: 2026 Mar 25
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '12'
+pages: ''
+pmclivedate: 2026/03/28
+printpubdate: ''
+pubdate: 2026 Mar 25
+sortdate: 2026/03/25 00:00
+source: J Neurosci
+title: 'β-Bursting as a Sensitive Neural Marker of Inhibitory Control in Healthy Older
+  Adults: A Linear Mixed-Effects Modeling and Threshold-Free Cluster Approach.'
+uid: '13022523'
+volume: '46'

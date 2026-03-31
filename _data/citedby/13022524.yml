@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41708333'
+- idtype: pmcid
+  value: PMC13022524
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0674-25.2026
+- idtype: pii
+  value: JNEUROSCI.0674-25.2026
+authors:
+- authtype: Author
+  name: Noorman S
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Heilbron M
+- authtype: Author
+  name: Sergent C
+- authtype: Author
+  name: Zantvoord JB
+- authtype: Author
+  name: van Gaal S
+- authtype: Author
+  name: Stein T
+epubdate: 2026 Mar 25
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '12'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Mar 25
+sortdate: 2026/03/25 00:00
+source: J Neurosci
+title: Effects of Expectation, Attention, and NMDA Receptor Blockade on Feedforward
+  and Feedback Processing.
+uid: '13022524'
+volume: '46'

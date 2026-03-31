@@ -1,0 +1,37 @@
+articleids:
+- idtype: doi
+  value: 10.1093/noajnl/vdag071
+- idtype: pmcid
+  value: PMC13035068
+authors:
+- authtype: Author
+  name: Stark A
+- authtype: Author
+  name: Gorbachuk M
+- authtype: Author
+  name: Machetanz K
+- authtype: Author
+  name: Leao MT
+- authtype: Author
+  name: Liebsch M
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Honegger J
+- authtype: Author
+  name: Tatagiba M
+- authtype: Author
+  name: Naros G
+epubdate: 2026 Mar 15
+fulljournalname: Neuro-Oncology Advances
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/31
+printpubdate: ''
+pubdate: 2026 Jan-Dec
+sortdate: 2026/03/15 00:00
+source: Neurooncol Adv
+title: Increased cortical excitability to transcranial magnetic stimulation at the
+  brain-tumor interface of IDH1-mutant gliomas.
+uid: '13035068'
+volume: '8'

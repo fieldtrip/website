@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41892614'
+- idtype: pmcid
+  value: PMC13023663
+- idtype: doi
+  value: 10.3390/brainsci16030271
+- idtype: pii
+  value: brainsci16030271
+authors:
+- authtype: Author
+  name: Yi L
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Zhou H
+- authtype: Author
+  name: Lin C
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Xiang X
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Huang M
+- authtype: Author
+  name: Wang X
+epubdate: 2026 Feb 28
+fulljournalname: Brain sciences
+issue: '3'
+pages: ''
+pmclivedate: 2026/03/28
+printpubdate: ''
+pubdate: 2026 Feb 28
+sortdate: 2026/02/28 00:00
+source: Brain Sci
+title: 'Time Overestimation Devalues Future Rewards: Electroencephalogram Evidence
+  from Intertemporal Choice.'
+uid: '13023663'
+volume: '16'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41735401'
+- idtype: pmcid
+  value: PMC13031271
+- idtype: doi
+  value: 10.1038/s41598-026-40959-9
+- idtype: pii
+  value: 10.1038/s41598-026-40959-9
+authors:
+- authtype: Author
+  name: Ideriha T
+- authtype: Author
+  name: Ushiyama J
+epubdate: 2026 Feb 24
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/29
+printpubdate: ''
+pubdate: 2026 Feb 24
+sortdate: 2026/02/24 00:00
+source: Sci Rep
+title: Switching on the behavioral and neural rhythmicity to retrieve memories when
+  the number of retained items exceeds four.
+uid: '13031271'
+volume: '16'

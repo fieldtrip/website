@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41888165'
+- idtype: pmcid
+  value: PMC13022407
+- idtype: doi
+  value: 10.1038/s41598-026-37700-x
+- idtype: pii
+  value: 10.1038/s41598-026-37700-x
+authors:
+- authtype: Author
+  name: Gordon Y
+- authtype: Author
+  name: Karvat G
+- authtype: Author
+  name: Dagan N
+- authtype: Author
+  name: Landau AN
+epubdate: 2026 Mar 26
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/03/28
+printpubdate: ''
+pubdate: 2026 Mar 26
+sortdate: 2026/03/26 00:00
+source: Sci Rep
+title: Neural tracking at theta predicts drumming-induced altered states of consciousness.
+uid: '13022407'
+volume: '16'

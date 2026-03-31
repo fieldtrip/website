@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41892603'
+- idtype: pmcid
+  value: PMC13023585
+- idtype: doi
+  value: 10.3390/brainsci16030258
+- idtype: pii
+  value: brainsci16030258
+authors:
+- authtype: Author
+  name: Fan J
+- authtype: Author
+  name: Li B
+- authtype: Author
+  name: Liu F
+- authtype: Author
+  name: Jiao F
+- authtype: Author
+  name: Chi A
+- authtype: Author
+  name: Yao S
+epubdate: 2026 Feb 25
+fulljournalname: Brain sciences
+issue: '3'
+pages: ''
+pmclivedate: 2026/03/28
+printpubdate: ''
+pubdate: 2026 Feb 25
+sortdate: 2026/02/25 00:00
+source: Brain Sci
+title: 'The Effect of Music Stimulation on Resting-State Brain Functional Networks
+  Following Exhaustive Endurance Exercise: An EEG Study.'
+uid: '13023585'
+volume: '16'
