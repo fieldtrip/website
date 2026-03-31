@@ -7,7 +7,7 @@ redirect_from:
     - /faq/download_version/
 ---
 
-Our [download server](https://download.fieldtriptoolbox.org/) holds recent versions of the FieldTrip toolbox code, corresponding to [tagged versions](https://github.com/fieldtrip/fieldtrip/tags) on GitHub. In general we also archive the latest released version of every year on <https://download.fieldtriptoolbox.org/historical/>, which correspond to the persistently archived versions on [Zenodo](https://zenodo.org/records/10495308). 
+Our [download server](https://download.fieldtriptoolbox.org/) holds recent versions of the FieldTrip toolbox code, corresponding to [tagged versions](https://github.com/fieldtrip/fieldtrip/tags) on GitHub. In general we also archive the latest released version of every year on <https://download.fieldtriptoolbox.org/historical/>, which correspond to the persistently archived versions on [Zenodo](https://zenodo.org/records/10495308).
 
 If you are looking for a specific version not listed here, you can look at the tagged versions at <https://github.com/fieldtrip/fieldtrip/tags>. These tagged versions are generated following the development, test and release cycle described [here](/development/releasing).
 

@@ -54,7 +54,7 @@ Finally we can plot it, just like a regular time-frequency representation
     axis xy
     title('inter-trial linear coherence');
 
-For interpretation of the ITC metric, we recommend the following paper for caveats: van Diepen, R. M., & Mazaheri, A. (2018). _The caveats of observing inter-trial phase-coherence in cognitive neuroscience._ Scientific reports, 8(1), 1-9. 
+For interpretation of the ITC metric, we recommend the following paper for caveats: van Diepen, R. M., & Mazaheri, A. (2018). _The caveats of observing inter-trial phase-coherence in cognitive neuroscience._ Scientific reports, 8(1), 1-9.
 
 ## Reference
 

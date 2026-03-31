@@ -362,7 +362,7 @@ Load in the precomputed geometric data that is needed for source
 reconstruction: the forward model (leadfields), as well as the volume
 conductor model of the head, and the electrodes. Strictly speaking, once
 the forward model is available, the other objects are not needed anymore,
-but FieldTrip expects them to be present in the cfg. 
+but FieldTrip expects them to be present in the cfg.
 
     load(fullfile(path_data,'templates','headmodel.mat'));
     load(fullfile(path_data,'templates','leadfield.mat'));

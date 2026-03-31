@@ -6,12 +6,11 @@ redirect_from:
     - /faq/ica_eyeblink_topo/
 ---
 
-Using 64-channel Brainvision data, it could happen that a IC, which in its timecourse clearly presents as an eyeblink component, shows a topographical mixing matrix that looks strange. 
+Using 64-channel Brainvision data, it could happen that a IC, which in its timecourse clearly presents as an eyeblink component, shows a topographical mixing matrix that looks strange.
 
 {% include image src="/assets/img/faq/ica_eyeblink_topo/topo_strange01.png" width="600" %}
 
-In a slightly other visualization it becomes clear that there's something off with the mixing. 
-For instance, the Iz electrode at the back gets a very high mixing weight. 
+In a slightly other visualization it becomes clear that there's something off with the mixing. For instance, the Iz electrode at the back gets a very high mixing weight.
 
 {% include image src="/assets/img/faq/ica_eyeblink_topo/topo_strange02.png" width="400" %}
 
@@ -20,4 +19,3 @@ The most likely cause for this is that something has gone wrong with the labelli
 {% include image src="/assets/img/faq/ica_eyeblink_topo/topo_fixed.png" width="600" %}
 
 Based on this, we can conclude that indeed the connector cables were accidentally swapped during the recording. This means that there is a mismatch in how the electrodes are labeled in the ```.vhdr``` file. This could - in principle - be solved by manually updating the header file (it's a text-file anyway. Alternatively - and perhaps preferred - you can/need to rename the channels, either after reading the data using **[ft_preprocessing](/reference/ft_preprocessing)**, or by directly using a [montage](/faq/preproc/datahandling/rename_channels) in the cfg for **[ft_preprocessing](/reference/ft_preprocessing)**.
-

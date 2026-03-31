@@ -21,7 +21,7 @@ The vmrk file will have a line like this
 
     Mk1=New Segment,,1,1,0,20190705163846757252 
 
-where 20190705 is the date of recording and the rest the time (i.e., this recording was started at 16:38 in the afternoon). 
+where 20190705 is the date of recording and the rest the time (i.e., this recording was started at 16:38 in the afternoon).
 
 ## Scrubbing or shifting the dates
 
@@ -58,6 +58,6 @@ Alternatively, you can use the following code to anonymize the BrainVision recor
 
     ft_write_data(inputfile, dat, 'dataformat', 'brainvision_eeg', 'header', hdr, 'event', event)
 
-This reads and writes the data. The original header information in `hdr.orig` contains the full ASCII description and therefore is potentially identifying. Hence we remove it prior to  passing it on to **[ft_write_data](/reference/fileio/ft_write_data)**. 
+This reads and writes the data. The original header information in `hdr.orig` contains the full ASCII description and therefore is potentially identifying. Hence we remove it prior to  passing it on to **[ft_write_data](/reference/fileio/ft_write_data)**.
 
 A disadvantage of this approach is that there can be additional information such as filter settings, electrode positions, and impedance measurements in the `.vhdr` file that are not read or represented in the `hdr` structure, and hence also not written. Also comments in the `.vhdr` file (starting with a semicolon) will be removed by this as well.

@@ -28,7 +28,7 @@ To acquire a measurement for each of the 144 helmet slots, we divided the experi
 
 ### The dataset used in this tutorial
 
-The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field. 
+The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field.
 
 We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)).
 
@@ -102,7 +102,7 @@ data_squid_clean = ft_rejectvisual(cfg, data_squid);
 save data_squid_clean data_squid_clean
 ```
 
-We start by removing trials that have higher variance (bottom-left plot). Based on our data, a reasonable threshold to choose is 8e-25 Tesla-squared. Next, we assess the channel variance (top-right plot). Removing trials with high variance resulted in reducing the channel variance too, so no need to reject any channels. 
+We start by removing trials that have higher variance (bottom-left plot). Based on our data, a reasonable threshold to choose is 8e-25 Tesla-squared. Next, we assess the channel variance (top-right plot). Removing trials with high variance resulted in reducing the channel variance too, so no need to reject any channels.
 
 {% include image src="/assets/img/workshop/cuttingeegx/cuttingeegx_ft_rejectvisual.png" width="500" %}
 
@@ -195,7 +195,7 @@ end
 save data_opm_hfc data_opm_hfc
 ```
 
-We will now manually remove trials with high variance. 
+We will now manually remove trials with high variance.
 
 ```
 %% Removing artifacts manually
@@ -237,7 +237,7 @@ load avg_opm avg_opm
 
 avg_opm_rename = avg_opm;
 
-% 9 sensors were fixed across all runs. Note L101 was not working so we do not need to rename it. 
+% 9 sensors were fixed across all runs. Note L101 was not working so we do not need to rename it.
 for k = 2:6
     index = find(ismember(avg_opm(k).label, {'R101_bz', 'L108_bz','R503_bz','L503_bz','L507_bz','R507_bz','R212_bz','L212_bz'})); % 2 in the back, 2 right, 2 left, 1 front, 1 top
     for i = 1:length(index)
@@ -668,7 +668,7 @@ transform_scan2face   = scan_face_aligned.cfg.transform;
 transform_helmet2face = transform_scan2face/transform_scan2helmet; 
 ```
 
-The transformation matrix ```'transform_helmet2face'``` can now be used to coregister the OPM sensors with the MRI, which aligns the OPM sensors with head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor file. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet. 
+The transformation matrix ```'transform_helmet2face'``` can now be used to coregister the OPM sensors with the MRI, which aligns the OPM sensors with head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor file. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet.
 
 ```
 %% Read and combine the sensors from the six recordings

@@ -1128,7 +1128,7 @@ Throughout this tutorial we are using [Autodesk Fusion](https://www.autodesk.com
 The padding is an STL file that is used to make the helmet locally thicker or to give it more "body" at the location where the sensor holder needs to be glued in. This is needed if you have a thin and lightweight helmet shell and if the sensor holder is placed somewhere with a lot of curvature. The padding will be mainly fall inside the helmet and will largely be cut away by the hole STL file.
 {% include markup/end %}
 
-In Fusion you start with importing the STL files for the inside and outside of the helmet, the hole, the sensor holder and the sensor itself. Optionally you should also import the STL file for the padding. In the spherical and flattened sphere examples above we started with a helmet that was designed in Fusion, so importing the inside and outside helmet surface only applies to the individual MRI and population-based headshape derived helmets. 
+In Fusion you start with importing the STL files for the inside and outside of the helmet, the hole, the sensor holder and the sensor itself. Optionally you should also import the STL file for the padding. In the spherical and flattened sphere examples above we started with a helmet that was designed in Fusion, so importing the inside and outside helmet surface only applies to the individual MRI and population-based headshape derived helmets.
 
 You can use the STL files that you created yourself, or the ones that we have shared on the [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design/). It can help to get a quick overview of all the STL files by using 3D visualisation software like [MeshLab](https://www.meshlab.net).
 
@@ -1175,9 +1175,9 @@ Also, you may want to cut out extra space around the ears, or to add protruding 
 
 ### Printing the helmet and the holders
 
-The helmet can be printed using an [FDM printer](https://en.wikipedia.org/wiki/Fused_filament_fabrication). If you have a large enough 3D printer it can be printed in one piece, or if it is too large your 3D printing software has options to cut it into pieces that you can print seperately and glue together.
+The helmet can be printed using an [FDM printer](https://en.wikipedia.org/wiki/Fused_filament_fabrication). If you have a large enough 3D printer it can be printed in one piece, or if it is too large your 3D printing software has options to cut it into pieces that you can print separately and glue together.
 
-The holders are printed seperately and are later glued into the corresponding holes in the helmet. This allows printing the sensor holders nicely aligned at a 90 degree angle on the build plate, resulting in a more accurate geometry and them being stronger. Furthermore, by printing them seperately you will also need less support material.
+The holders are printed separately and are later glued into the corresponding holes in the helmet. This allows printing the sensor holders nicely aligned at a 90 degree angle on the build plate, resulting in a more accurate geometry and them being stronger. Furthermore, by printing them separately you will also need less support material.
 
 You can print the sensor holders with [FDM](https://en.wikipedia.org/wiki/Fused_filament_fabrication), or you may want to use an [SLA printer](https://en.wikipedia.org/wiki/Stereolithography). SLA printers have a smaller build volume, but are more precise and result in stronger and smoother surfaces than FDM printers, so the sensors will nicely slide into the holders.
 
@@ -1289,7 +1289,7 @@ or only with the z-oriented channels, including their labels.
 
 ### Layout for plotting
 
-For 2D visualisation of the topographic distribution of the ERFs or TFRs you need a layout that maps the 3D sensor positions onto a 2D plane. For that you can use the `grad` structure, as explained in the [layout tutorial](/tutorial/plotting/layout/). 
+For 2D visualisation of the topographic distribution of the ERFs or TFRs you need a layout that maps the 3D sensor positions onto a 2D plane. For that you can use the `grad` structure, as explained in the [layout tutorial](/tutorial/plotting/layout/).
 
 Here is a short piece of code to make a simple layout.
 
@@ -1326,7 +1326,7 @@ The layout above only includes the radially oriented channels, i.e., the channel
     figure
     ft_plot_layout(layout_xyz)
 
-If you use this layout with **[ft_multiplotER](/reference/ft_multiplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, you will automatically see the three "heads" with the different sensor orientations side-by-side. 
+If you use this layout with **[ft_multiplotER](/reference/ft_multiplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, you will automatically see the three "heads" with the different sensor orientations side-by-side.
 
 {% include image src="/assets/img/tutorial/opm_helmet_design/layout2.png" width="600" %}
 

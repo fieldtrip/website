@@ -2,7 +2,7 @@
 #
 # This script will recursively walk the directory structure of a Jekyll website 
 # and check all markdown files for correct use of the headings as indicated 
-# with one or more hashes (#). 
+# with one or more hashes (#).
 # 
 # H1 headings should not be present, since those are automatically added as 
 # page title by the layout.

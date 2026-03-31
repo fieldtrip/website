@@ -37,7 +37,7 @@ The result we get by running this command are:
 
 A more complete and detailed code coverage can be obtained with line-by-line coverage of the high-level FieldTrip functions. To do that we first create a test case that includes of the FieldTrip tests, which ensures all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav).
 
-To generate the report as an HTML file we used the `ReportCoverageFor` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. 
+To generate the report as an HTML file we used the `ReportCoverageFor` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function.
 
 All of that can be done with the code below
 
@@ -101,7 +101,7 @@ else
 end
 ```
 
-With the code above saved as a local `inspect_codecoverage.m` function, we run it using the [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) MATLAB function. 
+With the code above saved as a local `inspect_codecoverage.m` function, we run it using the [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) MATLAB function.
 
 Additionally, we define the functions we want to find the coverage for. Here I opt only for the high-level FieldTrip functions:
 
@@ -133,9 +133,9 @@ end
 runtests('inspect_codecoverage.m', 'ReportCoverageFor', sourceFunctions);
 ```
 
-Using the code above we determined the "full" coverage provided by all the 955 `test_xxx` scripts. We also determined the "partial" coverage provided by the 202 `test_ft_xxx` scripts. 
+Using the code above we determined the "full" coverage provided by all the 955 `test_xxx` scripts. We also determined the "partial" coverage provided by the 202 `test_ft_xxx` scripts.
 
-It was found that the line-by-line full coverage is **41 %**, which can and can be found [here](/assets/coverage/full/). The line-by-line partial coverage is **37 %**, which can be found [here](/assets/coverage/partial/). 
+It was found that the line-by-line full coverage is **41 %**, which can and can be found [here](/assets/coverage/full/). The line-by-line partial coverage is **37 %**, which can be found [here](/assets/coverage/partial/).
 
 This reveals that the `test_ft_xxx` scripts already provide most of the current coverage. The remaining test scripts (especially the `test_bugXXX` and `test_issueXXX`) were more designed for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) and can be continued to be used for that.
 {% include markup/end %}
@@ -146,7 +146,7 @@ A future goal is to also find the coverage of FieldTrip functions that are part 
 
 ## Alternative way
 
-Another way to find the line-by-line coverage is by adding an instance of the [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html) class to a test runner. This is part of the [class-based unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/class-based-unit-tests.html). 
+Another way to find the line-by-line coverage is by adding an instance of the [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html) class to a test runner. This is part of the [class-based unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/class-based-unit-tests.html).
 
 First create the `inspect_codecoverage.m` function as above and put it inside a new folder `codecoverage` at the root level. Then run in the command window:
 

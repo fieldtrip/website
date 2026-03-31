@@ -36,7 +36,7 @@ sudo xattr -r -d com.apple.quarantine LOCATION_OF_FIELDTRIP
 sudo find 'LOCATION_OF_FIELDTRIP' -name \*.mexmaci64 -exec spctl --add {} \;
 ```
 
-where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip. 
+where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip.
 
 Following `sudo` you will have to give your administrator password.
 

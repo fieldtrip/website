@@ -51,7 +51,7 @@ For demonstration purposes we start with a very simple spherical helmet that is 
 
 ## FieldLine sensors
 
-For the first version of the Donders baby OPM system we have designed the following FieldLine sensor holders. 
+For the first version of the Donders baby OPM system we have designed the following FieldLine sensor holders.
 
 {% include image src="/assets/img/example/opm_sensors/fieldline_socket.png" width="200" %}
 
@@ -96,7 +96,7 @@ The design can be visualised on and downloaded from <https://a360.co/4m1oIPg>. T
 
 ## Mag4Health sensors
 
-For the Mag4Health sensors we have adapted the design from Mag4Health to give them a flat and square base to facilitate glueing them into the holes in the helmet. The OPM sensors can slide in the holder, and the ring is used to fixate the sensor at a certain depth. 
+For the Mag4Health sensors we have adapted the design from Mag4Health to give them a flat and square base to facilitate gluing them into the holes in the helmet. The OPM sensors can slide in the holder, and the ring is used to fixate the sensor at a certain depth.
 
 {% include image src="/assets/img/example/opm_sensors/mag4health_socket.png" width="200" %}
 

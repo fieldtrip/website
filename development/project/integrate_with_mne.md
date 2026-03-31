@@ -94,7 +94,7 @@ Then we can use FieldTrip to read the file.
 
 So, ''data_mp'' is of type ''datatype_raw'', containing a single trial.
 
-Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip. The mappings string indicates how the indexed events map onto the events in the original FieldTrip style event structure. 
+Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip. The mappings string indicates how the indexed events map onto the events in the original FieldTrip style event structure.
 
 ### datatype_raw (many trials) `<->` Epochs
 
@@ -156,7 +156,7 @@ And then in MATLAB
     
 where ''data_mp'' contains the data organized in multiple trials.
 
-Alternatively, one could also use the FieldTrip function [ft_definetrial](/reference/ft_definetrial/. 
+Alternatively, one could also use the FieldTrip function [ft_definetrial](/reference/ft_definetrial).
 
     fiff_file = 'mne_python-epo.fif';
     
@@ -168,7 +168,7 @@ Alternatively, one could also use the FieldTrip function [ft_definetrial](/refer
 
     data_mp                = ft_preprocessing(cfg);
     
-Now ''data_mp'' contains the data organized in multiple trials including condition labels according to the original event naming scheme. Currently, this route is a bit less efficient in terms of time, because the low-level reading functions (''ft_read_header'', and ''ft_read_event''), load the full data matrix each time they are called. This can be sped up a little bit, by loading the hdr outside the calls to ''ft_definetrial'' and ''ft_preprocessing'', and passing it in the ''cfg''. 
+Now ''data_mp'' contains the data organized in multiple trials including condition labels according to the original event naming scheme. Currently, this route is a bit less efficient in terms of time, because the low-level reading functions (''ft_read_header'', and ''ft_read_event''), load the full data matrix each time they are called. This can be sped up a little bit, by loading the hdr outside the calls to ''ft_definetrial'' and ''ft_preprocessing'', and passing it in the ''cfg''.
 
 ### datatype_timelock `<->` Evoked
 
