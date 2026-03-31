@@ -28,9 +28,9 @@ The help of all FieldTrip functions is listed in the [reference](/reference) doc
 To explain what the input and output data structures of the function are, please document it as
 
     Use as
-
-[output] = ft_xxxxxx(cfg, input)
-[output] = ft_xxxxxx(cfg, input1, input2)
+    
+    [output] = ft_xxxxxx(cfg, input)
+    [output] = ft_xxxxxx(cfg, input1, input2)
 
 where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/utilities/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
 
