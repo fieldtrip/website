@@ -35,8 +35,7 @@ jobs:
     # Step 4: update the citations
     - name: Update citations
       run: |
-        cd _data/citedby
-        python ../../_scripts/update-citations.py
+        python _scripts/update-citations.py
 
     # Step 5: Configure Git
     - name: Configure Git
