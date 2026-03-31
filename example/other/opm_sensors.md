@@ -133,7 +133,7 @@ The design can be visualised on and downloaded from <https://a360.co/4s48B4G>. T
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 1, 'axes', true);
     ft_plot_mesh(helmet, 'facecolor', 'lightgray', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_plot_mesh(sensor, 'facecolor', 'red', 'facealpha', 1, 'edgecolor', 'none');
+    ft_plot_mesh(sensor, 'facecolor', 'darkgray', 'facealpha', 1, 'edgecolor', 'none');
     ft_plot_mesh(holder, 'facecolor', 'limegreen', 'facealpha', 1, 'edgecolor', 'none');
     ft_plot_mesh(ring, 'facecolor', 'darkgreen', 'facealpha', 1, 'edgecolor', 'none');
     % ft_plot_mesh(hole, 'facecolor', 'y', 'facealpha', 0.5, 'edgecolor', 'none');
