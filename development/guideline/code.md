@@ -314,8 +314,8 @@ Here is a list of MATLAB release dates; a complete list can be found on [Wikiped
 
 | version number | release name | release date |
 | -------------- | ------------ | ------------ |
-| MATLAB 9.9     | R2020b       | 17 Sep 2020 |
-| MATLAB 9.8     | R2020a       | 19 Mar 2020 |
+| MATLAB 9.9     | R2020b       | 17 Sep 2020  |
+| MATLAB 9.8     | R2020a       | 19 Mar 2020  |
 | MATLAB 9.6     | R2019a       | 20 Mar 2019  |
 | MATLAB 9.5     | R2018b       | 12 Sep 2018  |
 | MATLAB 9.4     | R2018a       | 15 Mar 2018  |
@@ -353,9 +353,9 @@ To facilitate supporting older MATLAB versions, below we list some known incompa
 
 FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex files are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
-In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` Bash script is used to copy the updated mex files to all required (private) directories.
+In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.py` Python script is is executed as a GitHub action to copy the updated mex files to all required (private) directories.
 
-If the mex file is part of a collection of related mex files and only present on a single location (e.g., fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
+If the mex file is part of a collection of related mex files and only present on a single location (e.g., `fieldtrip/@config/private`), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
 For Unix-like platforms (Linux and macOS), it it also possible to compile all mex files from the Unix shell command line interface (on macOS called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
@@ -420,9 +420,9 @@ FieldTrip functions should not rely on the channels being represented in a parti
 
 In this case we aim at imposing the following behavior of the function:
 
-1.  The order of the channels in the first data argument will be the one that determines the order of the channels in the output: it will always override the order specified in the cfg (in cfg.channel).
-2.  The order of the channels in the data overrides the order in the auxiliary information (such as sensor definitions).
-3.  When multiple data structures of equivalent type are present in the input: the order of the channels in the N'th data argument is more important than the order of the channels in the (N+1)'th data argument.
+1. The order of the channels in the first data argument will be the one that determines the order of the channels in the output: it will always override the order specified in the cfg (in cfg.channel).
+2. The order of the channels in the data overrides the order in the auxiliary information (such as sensor definitions).
+3. When multiple data structures of equivalent type are present in the input: the order of the channels in the N'th data argument is more important than the order of the channels in the (N+1)'th data argument.
 
 ## Add copyrights
 
