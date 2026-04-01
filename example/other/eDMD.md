@@ -8,9 +8,9 @@ redirect_from:
 
 This software provides a FieldTrip-integrated implementation of the Extended Dynamic Mode Decomposition (eDMD) algorithm for multi-channel neural data (MEG, EEG, and iEEG) analysis. eDMD is a data-driven method that generates an approximation to the Koopman operator over a set of observable functions. The **[project repository](https://github.com/DchavezGH/ft_edmdanalysis)**  contains additional information and the function code. 
 
-The frequency content of the neural data is deduced from the eDMD modes. Power associated with these frequencies is also calculated. By binning the frequency content into relevant neural bands (alpha, beta, gamma...), peak frequencies per band are calculated, as well as total power per band. Through the mode decomposition inherent to eDMD, the user can reconstruct the data dynamics from the initial snapshot. The function offers several possibilities for the set of observable functions: Random Fourier features (RFF), Hermite polynomials, polynomial basis, and the identity observable.
+The frequency content of the neural data is deduced from the eDMD modes. Power associated with these frequencies is also calculated. By binning the frequency content into relevant neural bands (alpha, beta, gamma...), peak frequencies per band are calculated, as well as total power per band. Through the mode decomposition inherent to eDMD, the user can reconstruct the data dynamics from the initial snapshot. The function offers several possibilities for the set of observable functions: Random Fourier features (RFF), Hermite polynomials, polynomial basis, and the identity observable. The package is meant to integrate with the user's FieldTrip pipeline, enabling them to incorporate nonlinear methods into existing workflows.
 
-The package is meant to integrate with the user's FieldTrip pipeline, enabling them to incorporate nonlinear methods into existing workflows.
+An overview of eDMD and its relation to the Koopman operator can be found in **[Matthew O. Williams' paper](https://link.springer.com/article/10.1007/s00332-015-9258-5)**. A manuscript on our own eDMD algorithm is still in preparation. 
 
 ## Installation
 
