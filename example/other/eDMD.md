@@ -339,7 +339,10 @@ Plot binned power, marking the boundaries of the bins:
 n = numel(binned_peak.freq);
 x_centers = (1:n) + 0.5;
 figure;
-plot(x_centers, squeeze(binned_peak.powspctrm), '_', 'MarkerSize', 40)
+plot(x_centers, squeeze(binned_peak.powspctrm), '_', ...
+    'MarkerSize', 50, ...
+    'LineWidth', 6, ...
+    'LineStyle', 'none')
 hold on
 edges = 1:(n+1);
 h = xline(edges, 'k:');
