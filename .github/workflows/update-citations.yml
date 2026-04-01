@@ -2,7 +2,7 @@ name: Update citations
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Every night at 04:00 UTC
+    - cron: '0 4 * * 1,4'  # Runs at 04:00 UTC, only on Monday and Thursday
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
