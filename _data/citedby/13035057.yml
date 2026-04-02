@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37924807'
+- idtype: MID
+  value: NIHMS1984148
+- idtype: pmcid
+  value: PMC13035057
+- idtype: doi
+  value: 10.1016/j.cub.2023.10.021
+- idtype: pii
+  value: S0960-9822(23)01379-9
+authors:
+- authtype: Author
+  name: Dikeçligil GN
+- authtype: Author
+  name: Yang AI
+- authtype: Author
+  name: Sanghani N
+- authtype: Author
+  name: Lucas T
+- authtype: Author
+  name: Chen HI
+- authtype: Author
+  name: Davis KA
+- authtype: Author
+  name: Gottfried JA
+epubdate: 2023 Nov 3
+fulljournalname: 'Current biology : CB'
+issue: '24'
+pages: 5275-5287.e5
+pmclivedate: 2026/03/31
+printpubdate: 2023 Dec 18
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: Curr Biol
+title: Odor representations from the two nostrils are temporally segregated in human
+  piriform cortex.
+uid: '13035057'
+volume: '33'

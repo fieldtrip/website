@@ -1,0 +1,31 @@
+articleids:
+- idtype: doi
+  value: 10.1162/IMAG.a.1182
+- idtype: pmcid
+  value: PMC13037661
+authors:
+- authtype: Author
+  name: Zheng Y
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Zheng L
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Zhuo Y
+epubdate: 2026 Mar 30
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/04/01
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/30 00:00
+source: Imaging Neurosci (Camb)
+title: Multidimensional dynamic characterization and decoding of finger movements
+  using magnetoencephalography.
+uid: '13037661'
+volume: '4'

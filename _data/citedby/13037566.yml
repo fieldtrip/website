@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '41638627'
+- idtype: MID
+  value: NIHMS2158446
+- idtype: pmcid
+  value: PMC13037566
+- idtype: doi
+  value: 10.1016/j.brs.2026.103045
+- idtype: pii
+  value: S1935-861X(26)00022-7
+authors:
+- authtype: Author
+  name: Tran H
+- authtype: Author
+  name: Mohanty B
+- authtype: Author
+  name: Hjelle N
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: DeNicola A
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Wischnewski M
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Vitek J
+- authtype: Author
+  name: Johnson L
+- authtype: Author
+  name: Opitz A
+epubdate: 2026 Feb 2
+fulljournalname: Brain stimulation
+issue: '2'
+pages: '103045'
+pmclivedate: 2026/04/01
+printpubdate: 2026 Mar-Apr
+pubdate: 2026 Mar-Apr
+sortdate: 2026/03/01 00:00
+source: Brain Stimul
+title: Transcranial alternating current stimulation can disrupt or reestablish neural
+  entrainment in parkinsonian motor cortex.
+uid: '13037566'
+volume: '19'
