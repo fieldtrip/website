@@ -1,17 +1,17 @@
 ---
-title: Testing
+title: Regression and unit testing
 tags: [development, testing, release]
 redirect_from:
   - /development/dashboard/
 ---
 
-To make sure everything works correctly, we use [regression testing](https://en.wikipedia.org/wiki/Regression_testing). This way, we can be confident that when we add, modify, or remove a function, we won't break the existing ones. Testing also helps us find and fix any issues early on, ensuring that FieldTrip functions smoothly for all users. We use nightly testing as part of the [release](/development/releasing) procedure.
+To make sure everything works correctly, we use [regression testing](https://en.wikipedia.org/wiki/Regression_testing) and [unit testing](https://en.wikipedia.org/wiki/Unit_testing). This way we can be confident that when we add, modify, or remove a function, we won't break anything. Testing also helps us find and fix any issues early on, ensuring that FieldTrip functions keep on running smoothly. We use nightly testing as part of the [release](/development/releasing) procedure.
 
 FieldTrip is a toolbox with many functions, designed to be compatible with each other. This means that one function often relies on the output of another function. Functions are categorized as [high, low-level, or private](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions), with high-level functions depending on low-level and private functions. The regression testing mainly focusses on high- and low-level functions that users can call from their analysis scripts.
 
 ## How are the tests organized in FieldTrip?
 
-All the test scripts (technically they are functions) are located in [`fieldtrip/test` directory](https://github.com/fieldtrip/fieldtrip/tree/master/test). Tests are called as `test_xxx.m` when they can run without user interaction, or `inspect_xxx.m` when user interaction is needed, e.g., judging whether the figure is correct, clicking on a button, or closing a figure to continue the analysis.
+All the test scripts (technically they are functions) are located in the [`fieldtrip/test`](https://github.com/fieldtrip/fieldtrip/tree/master/test) directory. Tests are called as `test_xxx.m` when they can run without user interaction, or `inspect_xxx.m` when user interaction is needed, e.g., judging whether the figure is correct, clicking on a button, or closing a figure to continue the analysis.
 
 The test scripts are further split into [unit tests](https://en.wikipedia.org/wiki/Unit_testing) related to specific FieldTrip function, tests related to tutorial and example documentation on the website, and tests related to bugs, issues or pull requests.
 
@@ -37,9 +37,9 @@ Test data that is related to a specific GitHub or Bugzilla issue is named corres
 
 ### Failed and obsolete tests
 
-The directory `fieldtrip/test/invalid` contains failed and obsolete tests. These usually relate to bugs that were hard to reproduce and/or could not be fixed directly, and to obsolete tests for functionality that is not important anymore. This directory exists for historical reasons and the tests that it includes are not considered for automatic execution.
+The [`fieldtrip/test/invalid`](https://github.com/fieldtrip/fieldtrip/tree/master/test/invalid) directory contains failed and obsolete tests. These usually relate to bugs that were hard to reproduce and/or could not be fixed directly, and to obsolete tests for functionality that is not important anymore. This directory exists for historical reasons and the tests that it includes are not considered for automatic execution.
 
-### Requirements and dependencies
+## Requirements and dependencies
 
 In the beginning of each test script a list of dependencies is provided. An example of this list is:
 
@@ -49,22 +49,25 @@ In the beginning of each test script a list of dependencies is provided. An exam
     % DEPENDENCY ft_definetrial ft_preprocessing
 
 This helps to select an appropriate subset of tests to run based on:
-1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
-2. **MEM**: MEM stands for memory, and it represents the amount of memory required for a test to run.
-3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
-4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive. There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). For example, in FieldTrip you can run:
-    
-        ft_test find_dependency test_bug46
 
-    to find what are the direct dependencies of test_bug46.
+1. **WALLTIME**: The duration that a test approximately takes. This is usually more than the actual duration, since it also includes some time to start MATLAB and optionally to load the test data.
+2. **MEM**: The amount of memory required for a test to run.
+3. **DATA**: Whether the test requires any data from disk. The specification `DATA no` means that the test doesn't need any external data to run, `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/), and `DATA private` means that it needs data that is only available to the development team in the DCCN.
+4. **DEPENDENCY**: The dependencies, i.e. the high- or low-level FieldTrip functions to which the test script is particularly sensitive.
+
+There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). You can run:
+
+    ft_test find_dependency test_bug103
+
+to find what are the direct dependencies of test_bug103.
 
 ## Running existing tests
 
-Running a FieldTrip test is as easy as writing the name of the test in the command line. For example, to run one of the tests, you would type:
+Running a FieldTrip test is as easy as writing the name of the test in the command line. For example, you would type:
 
     test_bug103
 
-More background information about this test and others that are named `test_bugXXX` can be found on [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=103). Tests that are named `test_issueXXX` have more information in a [GitHub issue](https://github.com/fieldtrip/fieldtrip/issues), and those named `test_pullXXX` have more information in a [GitHub pull request](https://github.com/fieldtrip/fieldtrip/pull).
+More background information about this test and others that are named `test_bugXXX` can be found on [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=103). Tests that are named `test_issueXXX` have more information in a corresponding [GitHub issue](https://github.com/fieldtrip/fieldtrip/issues), and those named `test_pullXXX` have more information in a [GitHub pull request](https://github.com/fieldtrip/fieldtrip/pull).
 
 ## Finding tests
 
@@ -176,22 +179,22 @@ When you create a new test script, you should always include a _list of requirem
     % MEM 2gb
     % DATA public
     % DEPENDENCY ft_definetrial ft_preprocessing
- 
+
 Regarding the list of dependencies:
 
 #### Memory & Walltime
 
 Test that are executed automatically (i.e., files with the name `test_xxx.m`) MUST include the amount of memory that the execution takes and the duration that the test script runs. This is needed to schedule the test scripts on the [Donders compute cluster](https://hpc.dccn.nl).
 
-The memory should include the amount that MATLAB takes itself (which is about 2gb); it does not have to be very accurate, rounding it up to the nearest GB is fine. The time should include the time that MATLAB itself takes to start (which is about 30-60 seconds), but also the time that it takes to load data, etcetera. Again, there is no reason to make this very tight, if it is too short the execution of the test job might be aborted before it has completed. We suggest using for example 10 or 20 minutes, or 1 or 2 hours.
+The required memory should include the amount that MATLAB takes itself (which is about 2gb); it does not have to be very accurate, rounding it up to the nearest GB is fine. The required time should include the time that MATLAB takes itself to start (which is about 30-60 seconds), but also the time that it takes to load data, etcetera. Again, there is no reason to make this very tight, if it is too short the execution of the test job might be aborted before it has completed. We suggest using for example 10 or 20 minutes, or 1 or 2 hours.
 
 #### Data usage
 
-You SHOULD include a line that lists whether your test script uses private, public, or no data. In case you contribute a test script that requires data, please [share it with the developers](/faq/organization/datasharing) or attach it to the pull request.
+Test scripts SHOULD include a line that lists whether your test script uses private, public, or no data. In case you contribute a test script that requires data, please [share it with the developers](/faq/organization/datasharing) or attach it to the pull request.
 
 #### Dependency on other FieldTrip functions
 
-All test scripts SHOULD ideally include a line that lists the dependencies, i.e. (high- or low-level) toolbox functions to which the test script is particularly sensitive. This allows to quickly search for existing test scripts and evaluate them upon changing the specific toolbox function.
+Test scripts SHOULD include a line that lists the dependencies, i.e. (high- or low-level) toolbox functions to which the test script is particularly sensitive. This allows to quickly search for existing test scripts and to specifically evaluate those when changing something to the dependency.
 
 ## Working with data
 
@@ -199,10 +202,10 @@ Some test scripts use simulated data generated in the test script and don't need
 
 For test scripts that do read data from disk, data files must be present on the DCCN central storage. There are two types of test data: private and public.
 
-Private test data is stored in the directory `/home/common/matlab/fieldtrip/data/test`, which on the DCCN Windows desktops is available on `H:\common\matlab\fieldtrip\data\test`. This is only available to users inside the DCCN.
+Private test data is stored in the directory `/project/3031000.02/test`, which on the DCCN Windows desktops is available on `P:\3031000.02\test`. This is only available to users inside the DCCN.
 
-Public test data is stored in the directory `/home/common/matlab/fieldtrip/data/ftp`, which on the Donders Windows desktops is available on `H:\common\matlab\fieldtrip\data\ftp`. This data is also available from the [download server](https://download.fieldtriptoolbox.org/).
+Public test data is stored in the directory `/project/3031000.02/external/download`, which on the DCCN Windows desktops is available on `P:\3031000.02\external\download`. This data is also available from the [download server](https://download.fieldtriptoolbox.org/).
 
 {% include markup/skyblue %}
-Note that test scripts that depend on public data or that do not require any data can be executed by everyone. If needed, the **[dccnpath](/reference/utilities/dccnpath)** function will download the public data automatically.
+Note that test scripts that do not require any data or those that depend on public data can be executed by everyone. If needed, the **[dccnpath](/reference/utilities/dccnpath)** function will download public data automatically.
 {% include markup/end %}
