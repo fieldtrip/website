@@ -714,6 +714,9 @@
     - title: Translating characters received on a serial port to FieldTrip events
       link: /development/realtime/serial_event/
       nav_order: 0
+  - title: Regression and unit testing
+    link: /development/testing/
+    nav_order: 0
   - title: Release and quality control
     link: /development/releasing/
     nav_order: 0
@@ -722,9 +725,6 @@
     nav_order: 0
   - title: Software architecture
     link: /development/architecture/
-    nav_order: 0
-  - title: Testing
-    link: /development/testing/
     nav_order: 0
 - title: Documentation
   link: /documentation/

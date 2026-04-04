@@ -72,7 +72,7 @@
 - link: /development/svn
   title: Accessing the FieldTrip source code through SVN
 - link: /development/testing
-  title: Testing
+  title: Regression and unit testing
 - link: /faq/development/svnversusgit
   title: Why was FieldTrip maintained in SVN and not in Git?
 - link: /faq/development/trackchanges

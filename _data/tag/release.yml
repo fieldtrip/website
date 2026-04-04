@@ -1,7 +1,7 @@
 - link: /development/releasing
   title: Release and quality control
 - link: /development/testing
-  title: Testing
+  title: Regression and unit testing
 - link: /faq/organization/download_ftpproblem
   title: I am having problems downloading
 - link: /faq/organization/fieldtrip_downloadversion
