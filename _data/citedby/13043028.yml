@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '40261301'
+- idtype: pmcid
+  value: PMC13043028
+- idtype: doi
+  value: 10.1177/09567976251331041
+authors:
+- authtype: Author
+  name: Ter Bekke M
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Holler J
+epubdate: 2025 Apr 22
+fulljournalname: Psychological science
+issue: '4'
+pages: 237-248
+pmclivedate: 2026/04/02
+printpubdate: 2025 Apr
+pubdate: 2025 Apr
+sortdate: 2025/04/01 00:00
+source: Psychol Sci
+title: Co-Speech Hand Gestures Are Used to Predict Upcoming Meaning.
+uid: '13043028'
+volume: '36'

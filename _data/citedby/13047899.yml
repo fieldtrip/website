@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41702567'
+- idtype: MID
+  value: NIHMS2156586
+- idtype: pmcid
+  value: PMC13047899
+- idtype: doi
+  value: 10.1111/jsr.70314
+authors:
+- authtype: Author
+  name: Subramanian G
+- authtype: Author
+  name: Zelano C
+- authtype: Author
+  name: Paller KA
+- authtype: Author
+  name: Schechtman E
+epubdate: 2026 Feb 17
+fulljournalname: Journal of sleep research
+issue: ''
+pages: e70314
+pmclivedate: 2026/04/04
+printpubdate: ''
+pubdate: 2026 Feb 17
+sortdate: 2026/02/17 00:00
+source: J Sleep Res
+title: Concurrent Presentation of Memory-Related Odours and Sounds Nullified Sleep
+  Reactivation Benefits.
+uid: '13047899'
+volume: ''

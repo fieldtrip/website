@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41927775'
+- idtype: doi
+  value: 10.1038/s41598-026-46182-w
+- idtype: pii
+  value: 10.1038/s41598-026-46182-w
+- idtype: pmcid
+  value: PMC13049087
+authors:
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2026 Apr 2
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/05
+printpubdate: ''
+pubdate: 2026 Apr 2
+sortdate: 2026/04/02 00:00
+source: Sci Rep
+title: How the influence of cingulate-lingual interactions on event segmentation changes
+  from early to late adolescence.
+uid: '13049087'
+volume: '16'

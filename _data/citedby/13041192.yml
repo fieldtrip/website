@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41919726'
+- idtype: pmcid
+  value: PMC13041192
+- idtype: doi
+  value: 10.1111/ejn.70471
+authors:
+- authtype: Author
+  name: Carreño-Muñoz MI
+- authtype: Author
+  name: Ciancone Chama A
+- authtype: Author
+  name: Chehrazi P
+- authtype: Author
+  name: Chattopadhyaya B
+- authtype: Author
+  name: Di Cristo G
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: e70471
+pmclivedate: 2026/04/02
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Eur J Neurosci
+title: Sub-Anesthetic Ketamine Administration Decreases Deviance Detection Responses
+  at the Cellular, Population- and Mesoscale Levels.
+uid: '13041192'
+volume: '63'

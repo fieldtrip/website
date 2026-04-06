@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '41336675'
+- idtype: MID
+  value: NIHMS2160892
+- idtype: pmcid
+  value: PMC13047893
+- idtype: doi
+  value: 10.1109/EMBC58623.2025.11252773
+authors:
+- authtype: Author
+  name: Bengtsson AN
+- authtype: Author
+  name: Jenz ST
+- authtype: Author
+  name: Drew Beauchamp JA
+- authtype: Author
+  name: Acosta AM
+- authtype: Author
+  name: Courtney CA
+- authtype: Author
+  name: Yao J
+- authtype: Author
+  name: Chien ET
+- authtype: Author
+  name: Sereika M
+- authtype: Author
+  name: Joshi D
+- authtype: Author
+  name: Heckman CJ
+- authtype: Author
+  name: Dewald JPA
+epubdate: ''
+fulljournalname: Annual International Conference of the IEEE Engineering in Medicine
+  and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International
+  Conference
+issue: ''
+pages: 1-5
+pmclivedate: 2026/04/04
+printpubdate: 2025 Jul
+pubdate: 2025 Jul
+sortdate: 2025/07/01 00:00
+source: Annu Int Conf IEEE Eng Med Biol Soc
+title: A novel protocol to investigate the monoaminergic relationship between descending
+  nociceptive and motor unit neuromodulation.
+uid: '13047893'
+volume: '2025'

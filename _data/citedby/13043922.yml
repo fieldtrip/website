@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41735460'
+- idtype: pmcid
+  value: PMC13043922
+- idtype: doi
+  value: 10.1038/s44172-026-00611-w
+- idtype: pii
+  value: 10.1038/s44172-026-00611-w
+authors:
+- authtype: Author
+  name: Schreiner L
+- authtype: Author
+  name: Sieghartsleitner S
+- authtype: Author
+  name: Kapeller C
+- authtype: Author
+  name: Jordan M
+- authtype: Author
+  name: Scharinger J
+- authtype: Author
+  name: Spataro R
+- authtype: Author
+  name: Pretl H
+- authtype: Author
+  name: Guger C
+epubdate: 2026 Feb 24
+fulljournalname: Communications engineering
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/03
+printpubdate: ''
+pubdate: 2026 Feb 24
+sortdate: 2026/02/24 00:00
+source: Commun Eng
+title: 'Increasing EEG electrode density improves decoding of visual categories and
+  source localization: an exploratory ultra-high-density EEG study.'
+uid: '13043922'
+volume: '5'

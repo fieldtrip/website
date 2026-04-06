@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '41512485'
+- idtype: MID
+  value: NIHMS2136245
+- idtype: pmcid
+  value: PMC13042267
+- idtype: doi
+  value: 10.1016/j.clinph.2026.2111502
+- idtype: pii
+  value: S1388-2457(26)00001-5
+authors:
+- authtype: Author
+  name: Kojima K
+- authtype: Author
+  name: Liu C
+- authtype: Author
+  name: Ehrlich S
+- authtype: Author
+  name: Dillon H
+- authtype: Author
+  name: Blankenship C
+- authtype: Author
+  name: Motlagh Zadeh L
+- authtype: Author
+  name: Vannest J
+- authtype: Author
+  name: Hunter L
+- authtype: Author
+  name: Nagarajan S
+- authtype: Author
+  name: Moore DR
+epubdate: 2026 Jan 2
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: '2111502'
+pmclivedate: 2026/04/02
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Clin Neurophysiol
+title: Reduced neural speech tracking in adolescents with listening difficulty.
+uid: '13042267'
+volume: '183'

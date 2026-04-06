@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.115336
+- idtype: pmcid
+  value: PMC13049676
+- idtype: pii
+  value: S2589-0042(26)00711-X
+authors:
+- authtype: Author
+  name: Otake H
+- authtype: Author
+  name: Senta N
+- authtype: Author
+  name: Ushiba J
+- authtype: Author
+  name: Takemi M
+epubdate: 2026 Mar 11
+fulljournalname: iScience
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/05
+printpubdate: ''
+pubdate: 2026 Apr 17
+sortdate: 2026/03/11 00:00
+source: iScience
+title: Neural correlates of individual differences in motor learning under reinforcement
+  contexts.
+uid: '13049676'
+volume: '29'
