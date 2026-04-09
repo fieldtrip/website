@@ -1,0 +1,105 @@
+articleids:
+- idtype: pmid
+  value: '40050699'
+- idtype: MID
+  value: NIHMS2068114
+- idtype: pmcid
+  value: PMC13055889
+- idtype: doi
+  value: 10.1038/s41592-025-02614-5
+- idtype: pii
+  value: 10.1038/s41592-025-02614-5
+authors:
+- authtype: Author
+  name: Windolf C
+- authtype: Author
+  name: Yu H
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Meszéna D
+- authtype: Author
+  name: Muñoz W
+- authtype: Author
+  name: Boussard J
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Caprara I
+- authtype: Author
+  name: Jamali M
+- authtype: Author
+  name: Kfir Y
+- authtype: Author
+  name: Xu D
+- authtype: Author
+  name: Chung JE
+- authtype: Author
+  name: Sellers KK
+- authtype: Author
+  name: Ye Z
+- authtype: Author
+  name: Shaker J
+- authtype: Author
+  name: Lebedeva A
+- authtype: Author
+  name: Raghavan RT
+- authtype: Author
+  name: Trautmann E
+- authtype: Author
+  name: Melin M
+- authtype: Author
+  name: Couto J
+- authtype: Author
+  name: Garcia S
+- authtype: Author
+  name: Coughlin B
+- authtype: Author
+  name: Elmaleh M
+- authtype: Author
+  name: Christianson D
+- authtype: Author
+  name: Greenlee JDW
+- authtype: Author
+  name: Horváth C
+- authtype: Author
+  name: Fiáth R
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Long MA
+- authtype: Author
+  name: Movshon JA
+- authtype: Author
+  name: Shadlen MN
+- authtype: Author
+  name: Churchland MM
+- authtype: Author
+  name: Churchland AK
+- authtype: Author
+  name: Steinmetz NA
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Schweitzer JS
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Paninski L
+- authtype: Author
+  name: Varol E
+epubdate: 2025 Mar 6
+fulljournalname: Nature methods
+issue: '4'
+pages: 788-800
+pmclivedate: 2026/04/08
+printpubdate: 2025 Apr
+pubdate: 2025 Apr
+sortdate: 2025/04/01 00:00
+source: Nat Methods
+title: 'DREDge: robust motion correction for high-density extracellular recordings
+  across species.'
+uid: '13055889'
+volume: '22'

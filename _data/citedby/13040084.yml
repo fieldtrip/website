@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '41928907'
+- idtype: pmcid
+  value: PMC13040084
+- idtype: doi
+  value: 10.34133/research.1215
+- idtype: pii
+  value: '1215'
+authors:
+- authtype: Author
+  name: Backhaus H
+- authtype: Author
+  name: Pinzuti E
+- authtype: Author
+  name: Altahini S
+- authtype: Author
+  name: Dietrich A
+- authtype: Author
+  name: Tsutsui KI
+- authtype: Author
+  name: Sasaki T
+- authtype: Author
+  name: Kitajo K
+- authtype: Author
+  name: Ruffini N
+- authtype: Author
+  name: Wierczeiko A
+- authtype: Author
+  name: Tevosian M
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Stroh A
+- authtype: Author
+  name: Tüscher O
+epubdate: 2026 Apr 1
+fulljournalname: Research (Washington, D.C.)
+issue: ''
+pages: '1215'
+pmclivedate: 2026/04/02
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/01 00:00
+source: Research (Wash D C)
+title: 'A Translational Neural Network Mechanism of Resilience: Top-Down Control and
+  Plasticity of the Visual Cortex Relates to Resilient Outcome and Performance.'
+uid: '13040084'
+volume: '9'
