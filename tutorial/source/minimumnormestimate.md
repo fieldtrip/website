@@ -104,7 +104,7 @@ The source space, the volume conduction model and the position of the sensors ar
     cfg         = [];
     cfg.grad    = tlckFC.grad;   % sensor information
     cfg.channel = tlckFC.label;  % the used channels
-    cfg.grid    = sourcemodel;   % source points
+    cfg.sourcemodel = sourcemodel;   % source points
     cfg.headmodel = headmodel;   % volume conduction model
     cfg.singleshell.batchsize = 5000; % speeds up the computation
     leadfield   = ft_prepare_leadfield(cfg);
@@ -125,7 +125,7 @@ You do not have to specify of the noise-covariance matrix separately, because it
 
     cfg               = [];
     cfg.method        = 'mne';
-    cfg.grid          = leadfield;
+    cfg.sourcemodel   = leadfield;
     cfg.headmodel     = headmodel;
     cfg.mne.prewhiten = 'yes';
     cfg.mne.lambda    = 3;
