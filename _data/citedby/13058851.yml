@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41958633'
+- idtype: pmcid
+  value: PMC13058851
+- idtype: doi
+  value: 10.1162/IMAG.a.1199
+- idtype: pii
+  value: IMAG.a.1199
+authors:
+- authtype: Author
+  name: Weng Y
+- authtype: Author
+  name: Borst JP
+- authtype: Author
+  name: Akyürek EG
+epubdate: 2026 Apr 7
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/04/09
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/07 00:00
+source: Imaging Neurosci (Camb)
+title: Sustained alpha oscillations serve attentional prioritization in working memory,
+  not maintenance.
+uid: '13058851'
+volume: '4'

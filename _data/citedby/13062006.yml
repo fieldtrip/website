@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41946900'
+- idtype: pmcid
+  value: PMC13062006
+- idtype: doi
+  value: 10.1038/s41598-026-47886-9
+- idtype: pii
+  value: 10.1038/s41598-026-47886-9
+authors:
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Wicki K
+- authtype: Author
+  name: Teunissen CE
+- authtype: Author
+  name: Züst MA
+epubdate: 2026 Apr 7
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/10
+printpubdate: ''
+pubdate: 2026 Apr 7
+sortdate: 2026/04/07 00:00
+source: Sci Rep
+title: Deep sleep slow wave-spindle coupling is selectively linked to plasma amyloid-β
+  levels in older adults in clinical trials.
+uid: '13062006'
+volume: '16'

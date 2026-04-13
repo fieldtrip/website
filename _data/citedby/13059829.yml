@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '41656173'
+- idtype: MID
+  value: NIHMS2156588
+- idtype: pmcid
+  value: PMC13059829
+- idtype: doi
+  value: 10.1111/jsr.70281
+authors:
+- authtype: Author
+  name: Narayan G
+- authtype: Author
+  name: Babineaux G 3rd
+- authtype: Author
+  name: Cho M
+- authtype: Author
+  name: Murugavel S
+- authtype: Author
+  name: Lu T
+- authtype: Author
+  name: Lew NJ
+- authtype: Author
+  name: Aquino Argueta S
+- authtype: Author
+  name: Schechtman E
+epubdate: 2026 Feb 8
+fulljournalname: Journal of sleep research
+issue: ''
+pages: e70281
+pmclivedate: 2026/04/09
+printpubdate: ''
+pubdate: 2026 Feb 8
+sortdate: 2026/02/08 00:00
+source: J Sleep Res
+title: Odor-Cued Targeted Reactivation Was Unable to Selectively Benefit Declarative
+  Memories During Sleep.
+uid: '13059829'
+volume: ''

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41764300'
+- idtype: pmcid
+  value: PMC13066404
+- idtype: doi
+  value: 10.1038/s41531-026-01295-x
+- idtype: pii
+  value: 10.1038/s41531-026-01295-x
+authors:
+- authtype: Author
+  name: Lanir-Azaria S
+- authtype: Author
+  name: Nir Y
+- authtype: Author
+  name: Tauman R
+- authtype: Author
+  name: Zitser J
+- authtype: Author
+  name: Giladi N
+epubdate: 2026 Feb 28
+fulljournalname: NPJ Parkinson's disease
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/11
+printpubdate: ''
+pubdate: 2026 Feb 28
+sortdate: 2026/02/28 00:00
+source: NPJ Parkinsons Dis
+title: 'Beyond RBD: covert REM sleep abnormalities in Parkinson''s disease.'
+uid: '13066404'
+volume: '12'

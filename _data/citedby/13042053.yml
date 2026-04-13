@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41929196'
+- idtype: pmcid
+  value: PMC13042053
+- idtype: doi
+  value: 10.64898/2026.02.24.707753
+- idtype: pii
+  value: 2026.02.24.707753
+authors:
+- authtype: Author
+  name: Fulvio JM
+- authtype: Author
+  name: Postle BR
+epubdate: 2026 Mar 23
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/04/02
+printpubdate: ''
+pubdate: 2026 Mar 23
+sortdate: 2026/03/23 00:00
+source: bioRxiv
+title: Prioritization in working memory reduces interference via a beta band-linked
+  transformation of the not-selected item.
+uid: '13042053'
+volume: ''

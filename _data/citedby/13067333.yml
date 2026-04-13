@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41493199'
+- idtype: pmcid
+  value: PMC13067333
+- idtype: doi
+  value: 10.1002/mds.70165
+authors:
+- authtype: Author
+  name: Burke R
+- authtype: Author
+  name: Schoenfeld MJ
+- authtype: Author
+  name: Moll CKE
+- authtype: Author
+  name: Gulberti A
+- authtype: Author
+  name: Pötter-Nerger M
+- authtype: Author
+  name: Engel AK
+epubdate: 2026 Jan 6
+fulljournalname: 'Movement disorders : official journal of the Movement Disorder Society'
+issue: '4'
+pages: 992-1003
+pmclivedate: 2026/04/11
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Mov Disord
+title: Modulation of Non-Rhythmic Temporal Prediction by Subthalamic Nucleus Deep
+  Brain Stimulation (STN-DBS) in Parkinson's Disease.
+uid: '13067333'
+volume: '41'

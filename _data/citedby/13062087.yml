@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '41946728'
+- idtype: pmcid
+  value: PMC13062087
+- idtype: doi
+  value: 10.1038/s41467-026-71604-8
+- idtype: pii
+  value: 10.1038/s41467-026-71604-8
+authors:
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Saltafossi M
+- authtype: Author
+  name: Berther T
+- authtype: Author
+  name: Balestrieri E
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Kluger DS
+epubdate: 2026 Apr 7
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/10
+printpubdate: ''
+pubdate: 2026 Apr 7
+sortdate: 2026/04/07 00:00
+source: Nat Commun
+title: Respiration as a dynamic modulator of sensory sampling.
+uid: '13062087'
+volume: '17'

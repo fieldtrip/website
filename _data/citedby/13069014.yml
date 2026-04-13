@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41963461'
+- idtype: doi
+  value: 10.1038/s42003-025-09444-3
+- idtype: pii
+  value: 10.1038/s42003-025-09444-3
+- idtype: pmcid
+  value: PMC13069014
+authors:
+- authtype: Author
+  name: Facca M
+- authtype: Author
+  name: Del Felice A
+- authtype: Author
+  name: Bertoldo A
+epubdate: 2026 Apr 10
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/12
+printpubdate: ''
+pubdate: 2026 Apr 10
+sortdate: 2026/04/10 00:00
+source: Commun Biol
+title: Decoupling of neurophysiological activity from structure mirrors global microarchitectural
+  and neuromodulatory trends.
+uid: '13069014'
+volume: '9'
