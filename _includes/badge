@@ -13,3 +13,6 @@
 {%- endif -%}
 <a href="https://www.ncbi.nlm.nih.gov/labs/pmc/articles/{{ pmcid }}"> <img src="https://shields.io/static/v1?label=PMCID&message={{ pmcid }}&color=cc3300"> </a>
 {%- endif -%}
+{%- if include.jstor != nil -%}
+<a href="https://www.jstor.org/stable/{{ include.jstor }}"> <img src="https://shields.io/static/v1?label=JSTOR&message={{ include.jstor }}&color=ff6600"> </a>
+{%- endif -%}
