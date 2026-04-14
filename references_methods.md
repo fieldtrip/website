@@ -11,12 +11,6 @@ This list is far from complete, FieldTrip implements many more algorithms that h
 
 If you know of references to original work that is not listed here, please send a [pull request](/development/git) to add them to this page. When possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. You can also link to an online pdf version of the manuscript.
 
-Please check [Sherpa Romeo](http://www.sherpa.ac.uk/romeo/) for the copyright conditions and whether you are allowed to
-
-1.  release the publisher version, i.e. the final online pdf version from Elsevier or so
-2.  release a [self-archived](http://www.eprints.org/openaccess/self-faq/#self-archiving) version, i.e. your own pdf (or word) document as it has been accepted for publication
-3.  not release a copy of the manuscript that is freely available to everyone
-
 ## EEG and MEG forward modeling
 
 ### Forward model solution for MEG, single homogenous sphere
@@ -200,3 +194,5 @@ Van Gerven, M.A.J., Jensen, O. [Attention Modulations of Posterior Alpha as a Co
 ## Intracranial EEG analysis
 
 Stolk A., Griffin S., van der Meij R., Dewar C., Saez I., Piantoni G., Schoffelen J.M., Knight R.T., Oostenveld R. [Integrated Analysis of Anatomical and Electrophysiological Human Intracranial Data.](https://www.ncbi.nlm.nih.gov/pubmed/29988107) Nature Protocols. 2018; 13(7):1699-1723
+
+Mercier MR, Dubarry AS, Tadel F, Avanzini P, Axmacher N, Cellier D, Vecchio MD, Hamilton LS, Hermes D, Kahana MJ, Knight RT, Llorens A, Megevand P, Melloni L, Miller KJ, Piai V, Puce A, Ramsey NF, Schwiedrzik CM, Smith SE, Stolk A, Swann NC, Vansteensel MJ, Voytek B, Wang L, Lachaux JP, Oostenveld R. [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438). Neuroimage. 2022 Jul 2;260:119438. doi:10.1016/j.neuroimage.2022.119438.
