@@ -18,9 +18,9 @@
         </div>
         <div class="col-sm-8 main-page-content">
           <h1>Pages in the category "{{ page.category }}"</h1>
-          {% if site.data.category[page.category] != nill %}
+          {% if site.data.categories[page.category] != nill %}
             <ul>
-              {% assign list = site.data.category[page.category] | sort_natural: "title" %}
+              {% assign list = site.data.categories[page.category] | sort_natural: "title" %}
               {% for item in list %}
                 <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
                   {{ item.title }}

@@ -30,14 +30,14 @@ r = requests.get(url)
 d = json.loads(r.text)
 
 # the list that it returns does not contain PMIDs but rather PMCIDs
-citedby = d['linksets'][0]['linksetdbs'][0]['links']
+citations = d['linksets'][0]['linksetdbs'][0]['links']
 
 # only keep the IDs that do not have a file
 keep = []
-for pmcid in citedby:
-    filename = '_data/citedby/' + pmcid + '.yml'
+for pmcid in citations:
+    filename = '_data/citations/' + pmcid + '.yml'
     keep.append(not os.path.isfile(filename))
-remaining = list(compress(citedby, keep))
+remaining = list(compress(citations, keep))
 
 while len(remaining):
     
@@ -60,7 +60,7 @@ while len(remaining):
         for pmcid in d['result']['uids']:
             print(pmcid)
             publication = d['result'][pmcid]
-            filename = '_data/citedby/' + pmcid + '.yml'
+            filename = '_data/citations/' + pmcid + '.yml'
             f = open(filename, "w")
             n = f.write(yaml.dump(publication, allow_unicode=True))
             f.close()

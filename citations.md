@@ -9,7 +9,7 @@ _These are open-access papers on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/212533
 {% for year in years %}
 
 {% assign counter = 0 %}
-{% for item in site.data.citedby %}
+{% for item in site.data.citations %}
   {% assign pubyear = item[1].pubdate | split: " " | first %}
   {% if pubyear == year %}
     {% assign counter = counter | plus: 1 %}
@@ -19,7 +19,7 @@ _These are open-access papers on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/212533
 ## {{ year }} - {{counter}} papers
 
 <ul>
-{% for item in site.data.citedby %}
+{% for item in site.data.citations %}
   {% assign pubyear = item[1].pubdate | split: " " | first %}
   {% if pubyear == year %}
     {% assign title = item[1].title %}

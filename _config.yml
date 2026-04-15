@@ -82,6 +82,7 @@ exclude:
   - README.md
   - COPYING.md
   - Gemfile*
+  - _scripts/*
 # the following section can be commented out to speed up the build process for testing
 #  - assets/img/*
 #  - dataformat/*

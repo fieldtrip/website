@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# This script will update the tag files in _data/tag/ with the tags found in the
+# This script will update the tag files in _data/tags/ with the tags found in the
 # frontmatter of the markdown files in the site.
 #
 # The script will walk the directory tree starting from the directory where it is
@@ -45,9 +45,9 @@ for tag in alltags:
     alltags[tag].sort(key=lambda x: x['link'])
 
 for tag in alltags:
-    with open(f"{rootdir}/_data/tag/{tag}.yml", 'w') as file:
+    with open(f"{rootdir}/_data/tags/{tag}.yml", 'w') as file:
         yaml.dump(alltags[tag], file)
 
 for tag in alltags:
-    with open(f"{rootdir}/tag/{tag}.md", 'w') as file:
+    with open(f"{rootdir}/tags/{tag}.md", 'w') as file:
         file.write(f"---\nlayout: tag\ntag: {tag}\n---\n")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# This script will update the category files in _data/category/ with the categories found in the
+# This script will update the category files in _data/categories/ with the categories found in the
 # frontmatter of the markdown files in the site.
 #
 # The script will walk the directory tree starting from the directory where it is
@@ -45,9 +45,9 @@ for category in allcategories:
     allcategories[category].sort(key=lambda x: x['link'])
 
 for category in allcategories:
-    with open(f"{rootdir}/_data/category/{category}.yml", 'w') as file:
+    with open(f"{rootdir}/_data/categories/{category}.yml", 'w') as file:
         yaml.dump(allcategories[category], file)
 
 for category in allcategories:
-    with open(f"{rootdir}/category/{category}.md", 'w') as file:
+    with open(f"{rootdir}/categories/{category}.md", 'w') as file:
         file.write(f"---\nlayout: category\ncategory: {category}\n---\n")
