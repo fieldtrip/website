@@ -1,0 +1,4 @@
+name: nonlinearassociation
+description: The nonlinear association function calculates a delay-dependent nonlinear association coefficient (h²) between MEG/EEG channels by fitting piecewise linear regressions to signal scatterplots across time lags, providing a measure that detects both linear and nonlinear relationships where the classical correlation ratio equals the squared Pearson coefficient for purely linear dependencies.
+url: https://github.com/fieldtrip/contrib-nonlinearassociation
+authors: Inge Westmijse
