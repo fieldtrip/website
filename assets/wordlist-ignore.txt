@@ -100,6 +100,7 @@ Ambrogioni
 amd
 Amerio
 AmerioPietro
+Amjad
 amm
 AMM
 amongst
@@ -251,6 +252,7 @@ autorecon
 autoregressive
 avalanching
 Avanto
+Avanzini
 averagesfreq
 avery
 Aveyard
@@ -267,12 +269,14 @@ avgtime
 avr
 avw
 axials
+Axmacher
 axonal
 ba
 babysquid
 BabySquid
 BabySQUID
 Baccala
+Baccalá
 baci
 BACI
 backend
@@ -469,6 +473,7 @@ BlueSMiRF
 bluetooth
 BMS
 bmt
+bmte
 BN
 BNCI
 bnd
@@ -529,6 +534,7 @@ Brewermap
 briack
 Brightspace
 brik
+Brillinger
 Brismar
 britta
 Britta
@@ -572,6 +578,7 @@ Buzsáki
 BV
 BVA
 bvery
+Bvrf
 bwlabeln
 bx
 by
@@ -639,6 +646,7 @@ CED
 cellfun
 Cellfun
 CELLFUN
+Cellier
 centOS
 CentOS
 centrale
@@ -743,6 +751,7 @@ clf
 clientrequest
 clim
 Clin
+clinph
 CLK
 clocktick
 clockticks
@@ -760,6 +769,7 @@ clusterstatistics
 clusterstats
 clusterSum
 clusting
+CMA
 cmake
 CMake
 cmb
@@ -1052,6 +1062,7 @@ DANDI
 dap
 DAQ
 Darccey
+Darcey
 darkgray
 dat
 dataA
@@ -1260,6 +1271,7 @@ dll
 DLL
 dlls
 DLLs
+DM
 dma
 DMA
 dmarequest
@@ -1764,6 +1776,7 @@ fixpath
 fixres
 fixtimeaxes
 fixtrialdef
+FJ
 flac
 Flandin
 flattenedspherical
@@ -1995,6 +2008,7 @@ GitHub
 gitlab
 GitLab
 GJ
+GL
 Glessner
 Gligorijevic
 glioma
@@ -2065,6 +2079,7 @@ GRK
 Groesbeek
 Groppe
 groupanalysis
+groupwise
 Groupwise
 gsn
 GSN
@@ -2090,6 +2105,8 @@ Hajonides
 Halchenko
 halfspace
 Halgren
+Hallett
+Halliday
 Hämäläinen
 Hamer
 handson
@@ -2111,6 +2128,7 @@ Hawes
 Hb
 hBEX
 hbf
+hbm
 HBM
 HBN
 HbO
@@ -2488,6 +2506,8 @@ Jessen
 Jeun
 Jeung
 JeungSein
+JF
+JH
 Jiang
 Jichai
 Jinbo
@@ -2503,6 +2523,7 @@ JL
 JM
 JM's
 jn
+jneumeth
 JNEUROSCI
 Joachim
 JobI
@@ -2524,10 +2545,12 @@ jpsth
 JPSTH
 JQ
 JRE
+JS
 Jscript
 json
 JSON
 jsonlab
+jstor
 JuBrain
 judgement
 Judgement
@@ -2584,6 +2607,7 @@ Khz
 Killiani
 Killiany
 Kimmo
+KJ
 KK
 kL
 Klanke
@@ -2594,6 +2618,7 @@ kloosterman
 Kloosterman
 klopt
 Knosche
+Knösche
 Knsche
 Knuutila
 koehler
@@ -2605,6 +2630,7 @@ Konstantinos
 Korhonen
 Kosciessa
 Kousik
+Krämer
 Krebber
 Krienen
 Kringelbach
@@ -2871,6 +2897,7 @@ Marqui
 marseille
 Marseille
 Martine
+Martinerie
 Martinistrasse
 Martinos
 marvin
@@ -2947,6 +2974,7 @@ mc
 McCabe
 McCann
 mclust
+MCM
 MCP
 MCPE
 mcpiastra
@@ -2997,6 +3025,7 @@ mentats
 MEP
 merchantability
 MERCHANTABILITY
+Mercier
 mergedata
 meshinfl
 meshingproblem
@@ -3135,6 +3164,7 @@ modus
 moet
 moeten
 Mohlberg
+Mol
 Molec
 Molinaro
 Moller
@@ -3464,6 +3494,7 @@ nii
 niix
 Nijmegen
 Nikulin
+nimg
 NIN
 nINT
 Nipy
@@ -3843,6 +3874,7 @@ phsspreadfac
 physioevents
 Physionet
 PhysioNet
+PhysRevLett
 Piai
 pial
 Piantoni
@@ -4020,6 +4052,7 @@ projectnoise
 prolate
 propofol
 Propofol
+Protoc
 psd
 pseudoinverse
 pseudonimized
@@ -4183,6 +4216,7 @@ Reis
 rejectartifact
 rejectcomponent
 rejecteog
+rejective
 Rejective
 rejectjump
 rejectmuscle
@@ -4379,6 +4413,7 @@ scalings
 scalpcouplingindex
 scalpcurrentdensity
 scalponly
+Scand
 scandip
 scd
 SCD
@@ -4387,6 +4422,7 @@ Schaworonkow
 Scheeringa
 Schelter
 Scherg
+Schlögl
 Schmiedek
 Schnitzler
 schoffelen
@@ -4511,6 +4547,7 @@ shoutout
 showcallinfo
 showlabels
 Siapas
+sici
 sideeffect
 siemens
 Siemensap
@@ -4893,6 +4930,7 @@ Syst
 Tabachnick
 tabel
 TacStimRegressConfound
+Tadel
 taht
 Tak
 tal
@@ -4907,6 +4945,7 @@ targetting
 Taugagreining
 tba
 TBD
+TBME
 tcdf
 tcp
 TCP
@@ -5294,6 +5333,7 @@ Vanhoecke
 varargin
 Varargin
 varargout
+Varela
 variational
 Variational
 Värri
@@ -5391,6 +5431,7 @@ volumewrite
 volumeXXX
 Von
 voor
+Vorbach
 VORtech
 Vorwerk
 vOSfabsDUNg
@@ -5410,6 +5451,7 @@ vtk
 vtpm
 VTPM
 vTWCys
+VV
 wa
 Waalkade
 waivable
@@ -5442,6 +5484,7 @@ webpages
 websitepedia
 Weder
 Weigle
+Weinheim
 Weisz
 wel
 Welch's
@@ -5453,6 +5496,7 @@ WeTransfer
 wf
 wfmesh
 WFU
+Wheaton
 wher
 Whereare
 whitespace
@@ -5594,6 +5638,7 @@ Zhou
 Zhuo
 zi
 ZI
+Ziehe
 zigbee
 Zijdenbos
 zijn
