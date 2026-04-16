@@ -1,6 +1,6 @@
 name: NutmegTrip
 authors: Sarang Dalal
-desciption: NutmegTrip is a graphical user interface that lets FieldTrip results be explored with a NutMEG-style interactive interface.
+description: NutmegTrip is a graphical user interface that lets FieldTrip results be explored with a NutMEG-style interactive interface.
 url: https://github.com/fieldtrip/contrib-nutmegtrip
 doi: 10.3389/fnins.2020.00710
 pmid: 16012626

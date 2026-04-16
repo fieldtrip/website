@@ -1,6 +1,6 @@
 name: "[MEG]PLS"
-authors: Michael J Cheung, Natasa Kovačević, Zainab Fatima, Bratislav Mišić, Anthony R McIntosh
-description: "[MEG]PLS is an open-source, modular MATLAB pipeline that integrates MEG data preprocessing, source reconstruction (using multiple head models and beamforming algorithms), and multivariate partial least squares statistics within a unified framework, offering both a graphical user interface and command-line options for analyzing distributed spatiotemporal neural patterns related to groups, tasks, or behavior.
+authors: Michael J Cheung, Natasa Kovačević, Zainab Fatima, Bratislav Mišić and Anthony R McIntosh
+description: "[MEG]PLS is an open-source, modular MATLAB pipeline that integrates MEG data preprocessing, source reconstruction (using multiple head models and beamforming algorithms), and multivariate partial least squares statistics within a unified framework, offering both a graphical user interface and command-line options for analyzing distributed spatiotemporal neural patterns related to groups, tasks, or behavior."
 url: http://meg-pls.weebly.com
 doi: 10.1016/j.neuroimage.2015.08.045
 pmid: 26318525
