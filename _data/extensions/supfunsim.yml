@@ -1,0 +1,7 @@
+name: supFunSim
+authors: Krzysztof Rykaczewski, Jan Nikadon, Włodzisław Duch and Tomasz Piotrowski
+description: The supFunSim library is a modular, object-oriented MATLAB toolbox built on FieldTrip that provides accurate EEG forward modeling and a suite of advanced spatial filters (including LCMV, eigenspace LCMV, nulling, and MV-PURE variants) for source reconstruction, along with source-level directed connectivity analysis via partial directed coherence.
+url: https://github.com/nikadon/supFunSim
+doi: 10.1007/s12021-020-09464-w
+pmid: 32564239
+pmcid: PMC7782389

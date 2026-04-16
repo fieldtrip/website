@@ -1,4 +1,4 @@
 name: realtime_hilbert
+authors: Marco Rotonda
 description: The realtime_hilbert extension is a real-time neurofeedback application that estimates EEG gamma phase synchronization between intrahemispheric electrode pairs (F3-P3 and F4-P4) to drive a visual feedback interface, while performing online artifact rejection of EOG and EMG signals.
 url: https://github.com/fieldtrip/contrib-realtime_hilbert
-authors: Marco Rotonda

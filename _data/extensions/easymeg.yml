@@ -1,0 +1,7 @@
+name: EasyMEG
+authors: Chunlan Yang, Wenxiao Wu, Yingnan Nie, Qun Wang and Jiechuan Ren
+description: EasyMEG is a FieldTrip-based toolbox with a user-friendly graphical user interface (GUI) that integrates a full suite of MEG analysis functions—including preprocessing, time-lock analysis, time-frequency analysis, source analysis, and plotting—to enable researchers without programming experience to perform complete MEG data processing workflows without writing scripts.
+url: https://github.com/Tonywu2018/EasyMEG
+doi: 10.1016/j.cmpb.2019.105199
+pmid: 31743827
+
