@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '41968537'
+- idtype: pmcid
+  value: PMC13071237
+- idtype: doi
+  value: 10.1111/ejn.70481
+authors:
+- authtype: Author
+  name: Hołubowska ZA
+- authtype: Author
+  name: Teng X
+- authtype: Author
+  name: Larrouy-Maestri P
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: e70481
+pmclivedate: 2026/04/14
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Eur J Neurosci
+title: Neural and Behavioral Tracking of Musical Phrases Occurs Without Temporal Regularity.
+uid: '13071237'
+volume: '63'

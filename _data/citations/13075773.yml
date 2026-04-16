@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41887794'
+- idtype: pmcid
+  value: PMC13075773
+- idtype: doi
+  value: 10.1523/ENEURO.0076-26.2026
+- idtype: pii
+  value: ENEURO.0076-26.2026
+authors:
+- authtype: Author
+  name: Fuentes-Guerra Á
+- authtype: Author
+  name: Martín-Arévalo E
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: González-García C
+epubdate: 2026 Apr 9
+fulljournalname: eNeuro
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/14
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/09 00:00
+source: eNeuro
+title: Exogenously Driven Neural Reactivation of Spatially Matching Visual Working-Memory
+  Contents.
+uid: '13075773'
+volume: '13'

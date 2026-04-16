@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '41427497'
+- idtype: pmcid
+  value: PMC13075616
+- idtype: doi
+  value: 10.1002/epi.70061
+authors:
+- authtype: Author
+  name: Roehri N
+- authtype: Author
+  name: De Stefano P
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Marquis R
+- authtype: Author
+  name: Lagarde S
+- authtype: Author
+  name: Momjian S
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Vulliemoz S
+epubdate: 2025 Dec 22
+fulljournalname: Epilepsia
+issue: '4'
+pages: 1992-2006
+pmclivedate: 2026/04/14
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Epilepsia
+title: 'Scalp-negative medial temporal interictal epileptic discharges alter large-scale
+  brain networks: A simultaneous high-density electroencephalographic and intracranial
+  electroencephalographic study.'
+uid: '13075616'
+volume: '67'

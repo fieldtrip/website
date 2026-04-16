@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41701555'
+- idtype: MID
+  value: NIHMS2150725
+- idtype: pmcid
+  value: PMC13077945
+- idtype: doi
+  value: 10.1152/jn.00606.2025
+authors:
+- authtype: Author
+  name: Kerr KG
+- authtype: Author
+  name: Boebinger SE
+- authtype: Author
+  name: Mirdamadi JL
+- authtype: Author
+  name: Protzak J
+- authtype: Author
+  name: Borich MR
+- authtype: Author
+  name: Ting LH
+epubdate: 2026 Feb 17
+fulljournalname: Journal of neurophysiology
+issue: '4'
+pages: 842-851
+pmclivedate: 2026/04/15
+printpubdate: 2026 Apr 1
+pubdate: 2026 Apr 1
+sortdate: 2026/04/01 00:00
+source: J Neurophysiol
+title: Cortical response to balance perturbation is more sensitive in modern dancers
+  than nondancers during biomechanically similar balance recovery.
+uid: '13077945'
+volume: '135'
