@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #
-# This script will update the tag files in _data/tags/ with the tags found in the
-# frontmatter of the markdown files in the site.
+# This script will check all the tags in the frontmatter of the markdown 
+# files in the site and update the corresponding YAML and markdown files 
+# in the _data/tags/ and tag/ directories.
 #
 # The script will walk the directory tree starting from the directory where it is
 # located and will look for markdown files. If a file has a 'tags' field in the
@@ -44,10 +45,12 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
 for tag in alltags:
     alltags[tag].sort(key=lambda x: x['link'])
 
+# update the yaml files
 for tag in alltags:
     with open(f"{rootdir}/_data/tags/{tag}.yml", 'w') as file:
         yaml.dump(alltags[tag], file)
 
+# update the markdown files
 for tag in alltags:
-    with open(f"{rootdir}/tags/{tag}.md", 'w') as file:
+    with open(f"{rootdir}/tag/{tag}.md", 'w') as file:
         file.write(f"---\nlayout: tag\ntag: {tag}\n---\n")

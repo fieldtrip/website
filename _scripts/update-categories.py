@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #
-# This script will update the category files in _data/categories/ with the categories found in the
-# frontmatter of the markdown files in the site.
+# This script will check all the categories in the frontmatter of the markdown 
+# files in the site and update the corresponding YAML and markdown files 
+# in the _data/categories/ and category/ directories.
 #
 # The script will walk the directory tree starting from the directory where it is
 # located and will look for markdown files. If a file has a 'category' field in the
@@ -44,10 +45,12 @@ for (root,dirs,files) in os.walk(rootdir, topdown=True):
 for category in allcategories:
     allcategories[category].sort(key=lambda x: x['link'])
 
+# update the yaml files
 for category in allcategories:
     with open(f"{rootdir}/_data/categories/{category}.yml", 'w') as file:
         yaml.dump(allcategories[category], file)
 
+# update the markdown files
 for category in allcategories:
-    with open(f"{rootdir}/categories/{category}.md", 'w') as file:
+    with open(f"{rootdir}/category/{category}.md", 'w') as file:
         file.write(f"---\nlayout: category\ncategory: {category}\n---\n")
