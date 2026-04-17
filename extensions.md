@@ -15,6 +15,6 @@ To have your own extension listed here, please contact the FieldTrip maintainers
 {% for item in extensions %}
 <h2>{{ item[1].name }}</h2>
 <p>{{ item[1].description }}</p>
-<p>This extension was authored by {{ item[1].authors }}.<//p>
+<p>This extension was authored by {{ item[1].authors }}.</p>
 <p>For more info see <a href="{{ item[1].url }}">here</a >.</p>
 {% endfor %}
