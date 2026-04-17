@@ -1062,6 +1062,9 @@
     - title: Using reproducescript on a full study
       link: /example/other/reproducescript_andersen/
       nav_order: 0
+- title: Extensions
+  link: /extensions/
+  nav_order: 0
 - title: External links
   link: /external_links/
   nav_order: 0
