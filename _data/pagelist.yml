@@ -808,9 +808,6 @@
     - title: Measuring the timing delay and jitter for a real-time application
       link: /example/realtime/realtime_evaluation/
       nav_order: 0
-    - title: Realtime neurofeedback application based on Hilbert phase estimation
-      link: /example/realtime/ft_realtime_hilbert/
-      nav_order: 0
   - title: Examples for sensor-level analysis
     link: /example/sensor/
     nav_order: 0
