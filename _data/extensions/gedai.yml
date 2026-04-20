@@ -1,0 +1,5 @@
+name: GEDAI
+authors: Tomas Ros, Victor Férat, Yingqi Huang, Cristina Colangelo, Seyed Mostafa Kia, Thomas Wolfers, Serge Vulliemoz, and Abele Michela
+description: The Generalized EigenDecomposition for Advanced Interference suppression (GEDAI) toolbox implements unsupervised EEG denoising based on leadfield filtering.
+url: https://github.com/neurotuning/GEDAI-master
+doi: 10.1101/2025.10.04.680449
