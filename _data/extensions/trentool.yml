@@ -1,0 +1,5 @@
+name: TRENTOOL
+description: TRENTOOL is a MATLAB toolbox for the analysis of directed interactions in multivariate time series based on transfer entropy (TE) estimation.
+authors: Michael Lindner, Raul Vicente, Viola Priesemann and Michael Wibral
+url: https://github.com/trentool/TRENTOOL3
+doi: 10.1186/1471-2202-12-119
