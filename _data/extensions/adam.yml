@@ -1,4 +1,4 @@
 name: ADAM
-description: ADAM is an toolbox for multivariate analyses on EEG and/or MEG data using backward decoding (BDM) and forward encoding models (FEM).
+description: The Amsterdam Decoding And Modeling (ADAM) toolbox implements multivariate analyses on EEG and/or MEG data using backward decoding (BDM) and forward encoding models (FEM).
 authors: Johannes Fahrenfort
 url: https://github.com/fahrenfort/ADAM
