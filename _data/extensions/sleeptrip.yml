@@ -1,0 +1,4 @@
+name: SleepTrip
+authors: Frederik D. Weber
+description: SleepTrip is a branch of FieldTrip that adds functionality to analyse sleep EEG and MEG data such as power analysis, sleep spindles, slow waves and other events.
+url: https://github.com/Frederik-D-Weber/sleeptrip
