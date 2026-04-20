@@ -1,0 +1,4 @@
+name: extended dynamic mode decomposition (eDMD)
+authors: David Chavez-Huerta
+description: This software provides a FieldTrip-integrated implementation of the Extended Dynamic Mode Decomposition (eDMD) algorithm for multi-channel neural data (MEG, EEG and iEEG) over several function dictionaries. eDMD is a data-driven method that generates an approximation to the Koopman operator.
+url: https://github.com/DchavezGH/ft_edmdanalysis
