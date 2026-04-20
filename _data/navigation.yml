@@ -4,6 +4,9 @@
 - name: Documentation
   link: /documentation
 
+- name: Extensions
+  link: /extensions
+
 - name: Support
   link: /support
 
