@@ -1,0 +1,5 @@
+name: modified multiscale entropy (mMSE)
+authors: Julian Kosciessa, Niels Kloosterman, Douglas Garrett
+description: Modified multiscale entropy quantifies the dynamics of temporal irregularity of time-domain electrophysiological signals at short and long timescales.
+url: https://github.com/LNDG/mMSE
+doi: 10.1101/834614, 10.1371/journal.pcbi.1007885
