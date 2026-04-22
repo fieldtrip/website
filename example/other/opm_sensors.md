@@ -6,6 +6,8 @@ category: example
 
 This example shows how to design a 3D printed helmet with different OPM sensor types. The initial part deals with reading the helmet design and distributing the sensors. This is the same as the tutorial for [designing a custom 3D printed OPM helmet](/tutorial/sensor/opm_helmet_design). The second part shows how to distribute the sensor holders (and holes) over the helmet.
 
+The STL files used in this example are available from our [download server](https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design/).
+
 ## Helmet and sensor distribution
 
 For demonstration purposes we start with a very simple spherical helmet that is 10 mm thick, and a small number of OPM sensor locations.
