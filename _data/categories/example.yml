@@ -36,6 +36,8 @@
   title: How to import data from MNE-Python and FreeSurfer
 - link: /example/other/opm_sensors
   title: Designing 3D printed helmets for different OPM sensor types
+- link: /example/other/opm_straighthelmet
+  title: Designing an OPM helmet with a straight opening at the bottom
 - link: /example/other/planar_orientation
   title: Find the orientation of planar gradiometers
 - link: /example/other/reproducescript

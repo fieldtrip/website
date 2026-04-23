@@ -1035,6 +1035,9 @@
     - title: Designing 3D printed helmets for different OPM sensor types
       link: /example/other/opm_sensors/
       nav_order: 0
+    - title: Designing an OPM helmet with a straight opening at the bottom
+      link: /example/other/opm_straighthelmet/
+      nav_order: 0
     - title: Example analysis pipeline for BioSemi data
       link: /example/other/biosemi/
       nav_order: 0
