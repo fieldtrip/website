@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '41432255'
+- idtype: pmcid
+  value: PMC13089512
+- idtype: doi
+  value: 10.1093/sleep/zsaf409
+- idtype: pii
+  value: '8402463'
+authors:
+- authtype: Author
+  name: Viselli L
+- authtype: Author
+  name: Salfi F
+- authtype: Author
+  name: Naccarato F
+- authtype: Author
+  name: Arnone B
+- authtype: Author
+  name: Corigliano D
+- authtype: Author
+  name: Amicucci G
+- authtype: Author
+  name: Festucci F
+- authtype: Author
+  name: Colombo C
+- authtype: Author
+  name: Cellini N
+- authtype: Author
+  name: Tempesta D
+- authtype: Author
+  name: Ferrara M
+- authtype: Author
+  name: D'Atri A
+epubdate: ''
+fulljournalname: Sleep
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/18
+printpubdate: 2026 Apr 16
+pubdate: 2026 Apr 16
+sortdate: 2026/04/16 00:00
+source: Sleep
+title: Experimentally induced REM sleep fragmentation affects psychophysiological
+  habituation to emotional stimuli.
+uid: '13089512'
+volume: '49'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42011176'
+- idtype: pmcid
+  value: PMC13091735
+- idtype: doi
+  value: 10.1016/j.isci.2026.115489
+- idtype: pii
+  value: S2589-0042(26)00864-3
+authors:
+- authtype: Author
+  name: Brickwedde M
+- authtype: Author
+  name: Anders P
+- authtype: Author
+  name: Krüger P
+- authtype: Author
+  name: Sander T
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2026 Mar 26
+fulljournalname: iScience
+issue: '5'
+pages: '115489'
+pmclivedate: 2026/04/20
+printpubdate: ''
+pubdate: 2026 May 15
+sortdate: 2026/03/26 00:00
+source: iScience
+title: Optically pumped magnetometers enhance neuroimaging performance-An EEG, OPM,
+  and SQUID-MEG study.
+uid: '13091735'
+volume: '29'

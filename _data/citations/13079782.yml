@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '41974688'
+- idtype: pmcid
+  value: PMC13079782
+- idtype: doi
+  value: 10.1038/s41467-026-71600-y
+- idtype: pii
+  value: 10.1038/s41467-026-71600-y
+authors:
+- authtype: Author
+  name: Strube A
+- authtype: Author
+  name: Büchel C
+epubdate: 2026 Apr 14
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/16
+printpubdate: ''
+pubdate: 2026 Apr 14
+sortdate: 2026/04/14 00:00
+source: Nat Commun
+title: Temporal predictions shape somatosensory perception.
+uid: '13079782'
+volume: '17'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42006358'
+- idtype: pmcid
+  value: PMC13091004
+- idtype: doi
+  value: 10.1016/j.isci.2026.115126
+- idtype: pii
+  value: S2589-0042(26)00501-8
+authors:
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Mignot C
+- authtype: Author
+  name: Weise S
+- authtype: Author
+  name: Hummel T
+epubdate: 2026 Feb 21
+fulljournalname: iScience
+issue: '4'
+pages: '115126'
+pmclivedate: 2026/04/19
+printpubdate: ''
+pubdate: 2026 Apr 17
+sortdate: 2026/02/21 00:00
+source: iScience
+title: Gamma and beta oscillatory signatures of the human olfactory bulb encode odor
+  valence and sampling.
+uid: '13091004'
+volume: '29'

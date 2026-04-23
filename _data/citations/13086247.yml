@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '41839570'
+- idtype: pmcid
+  value: PMC13086247
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1694-25.2025
+- idtype: pii
+  value: JNEUROSCI.1694-25.2025
+authors:
+- authtype: Author
+  name: Pinggal E
+- authtype: Author
+  name: Jackson J
+- authtype: Author
+  name: Kusztor A
+- authtype: Author
+  name: Chapman D
+- authtype: Author
+  name: Windt J
+- authtype: Author
+  name: Drummond SPA
+- authtype: Author
+  name: Silk TJ
+- authtype: Author
+  name: Bellgrove MA
+- authtype: Author
+  name: Andrillon T
+epubdate: 2026 Apr 15
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '15'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Apr 15
+sortdate: 2026/04/15 00:00
+source: J Neurosci
+title: Sleep-Like Slow Waves during Wakefulness Mediate Attention and Vigilance Difficulties
+  in Adult Attention-Deficit/Hyperactivity Disorder.
+uid: '13086247'
+volume: '46'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '41945608'
+- idtype: pmcid
+  value: PMC13095118
+- idtype: doi
+  value: 10.1371/journal.pbio.3003740
+- idtype: pii
+  value: PBIOLOGY-D-26-00116
+authors:
+- authtype: Author
+  name: He X
+- authtype: Author
+  name: Büchel PK
+- authtype: Author
+  name: Faghel-Soubeyrand S
+- authtype: Author
+  name: Klingspohr J
+- authtype: Author
+  name: Kehl MS
+- authtype: Author
+  name: Staresina BP
+epubdate: 2026 Apr 7
+fulljournalname: PLoS biology
+issue: '4'
+pages: e3003740
+pmclivedate: 2026/04/21
+printpubdate: ''
+pubdate: 2026 Apr
+sortdate: 2026/04/07 00:00
+source: PLoS Biol
+title: Sleep strengthens successor representations of learned sequences in humans.
+uid: '13095118'
+volume: '24'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41839734'
+- idtype: doi
+  value: 10.14814/phy2.70734
+- idtype: pmcid
+  value: PMC13097348
+authors:
+- authtype: Author
+  name: Elliott GM
+- authtype: Author
+  name: Robertson MM
+- authtype: Author
+  name: Locklear CE
+- authtype: Author
+  name: Robinson DL
+- authtype: Author
+  name: Sheridan MA
+- authtype: Author
+  name: Boettiger CA
+epubdate: ''
+fulljournalname: Physiological reports
+issue: '6'
+pages: e70734
+pmclivedate: 2026/04/22
+printpubdate: 2026 Mar
+pubdate: 2026 Mar
+sortdate: 2026/03/01 00:00
+source: Physiol Rep
+title: Reduced central alpha power at rest is associated with the risk of alcohol-induced
+  blackout and frequency of non-REM parasomnia episodes in adults.
+uid: '13097348'
+volume: '14'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41794924'
+- idtype: doi
+  value: 10.1038/s41467-026-70346-x
+- idtype: pii
+  value: 10.1038/s41467-026-70346-x
+- idtype: pmcid
+  value: PMC13096217
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Bruss J
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Wu K
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Etkin A
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Jiang J
+epubdate: 2026 Mar 8
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/22
+printpubdate: ''
+pubdate: 2026 Mar 8
+sortdate: 2026/03/08 00:00
+source: Nat Commun
+title: Multimodal evidence for hippocampal engagement and modulation by functional
+  connectivity-guided parietal TMS.
+uid: '13096217'
+volume: '17'

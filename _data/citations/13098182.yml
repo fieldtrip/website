@@ -1,0 +1,42 @@
+articleids:
+- idtype: doi
+  value: 10.1093/braincomms/fcag041
+- idtype: pmcid
+  value: PMC13098182
+authors:
+- authtype: Author
+  name: Cardenas AR
+- authtype: Author
+  name: Ramirez-Villegas JF
+- authtype: Author
+  name: Kovach CK
+- authtype: Author
+  name: Gander PE
+- authtype: Author
+  name: Cole RC
+- authtype: Author
+  name: Grossbach AJ
+- authtype: Author
+  name: Kawasaki H
+- authtype: Author
+  name: Greenlee JDW
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Nourski KV
+- authtype: Author
+  name: Banks MI
+- authtype: Author
+  name: Voss MW
+epubdate: 2026 Mar 9
+fulljournalname: Brain Communications
+issue: '2'
+pages: ''
+pmclivedate: 2026/04/22
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/03/09 00:00
+source: Brain Commun
+title: Exercise enhances hippocampal-cortical ripple interactions in the human brain.
+uid: '13098182'
+volume: '8'

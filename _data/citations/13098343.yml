@@ -1,0 +1,43 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.cnp.2026.04.005
+- idtype: pmcid
+  value: PMC13098343
+- idtype: pii
+  value: S2467-981X(26)00031-4
+authors:
+- authtype: Author
+  name: Uehara T
+- authtype: Author
+  name: Barcelon EA
+- authtype: Author
+  name: Shigeto H
+- authtype: Author
+  name: Mukaino T
+- authtype: Author
+  name: Okadome T
+- authtype: Author
+  name: Mukae N
+- authtype: Author
+  name: Sakata A
+- authtype: Author
+  name: Murai H
+- authtype: Author
+  name: Tobimatsu S
+- authtype: Author
+  name: Isobe N
+- authtype: Author
+  name: Kira JI
+epubdate: 2026 Apr 8
+fulljournalname: Clinical Neurophysiology Practice
+issue: ''
+pages: 321-31
+pmclivedate: 2026/04/22
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/08 00:00
+source: Clin Neurophysiol Pract
+title: Hippocampal interictal discharges induce frontal spindles and enhance spindle–slow
+  oscillation coupling in temporal lobe epilepsy.
+uid: '13098343'
+volume: '11'

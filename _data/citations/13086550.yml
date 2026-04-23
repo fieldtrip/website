@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41942272'
+- idtype: pmcid
+  value: PMC13086550
+- idtype: doi
+  value: 10.1523/ENEURO.0342-25.2026
+- idtype: pii
+  value: ENEURO.0342-25.2026
+authors:
+- authtype: Author
+  name: García-Lázaro HG
+- authtype: Author
+  name: Teng S
+epubdate: 2026 Apr 16
+fulljournalname: eNeuro
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/18
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/16 00:00
+source: eNeuro
+title: Neural and Behavioral Correlates of Evidence Accumulation in Human Click-Based
+  Echolocation.
+uid: '13086550'
+volume: '13'
