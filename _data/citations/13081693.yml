@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41867056'
+- idtype: pmcid
+  value: PMC13081693
+- idtype: doi
+  value: 10.1002/hbm.70498
+authors:
+- authtype: Author
+  name: Soyuhos O
+- authtype: Author
+  name: Scarpa A
+- authtype: Author
+  name: Baldauf D
+epubdate: ''
+fulljournalname: Human brain mapping
+issue: '5'
+pages: e70498
+pmclivedate: 2026/04/16
+printpubdate: 2026 Apr 1
+pubdate: 2026 Apr 1
+sortdate: 2026/04/01 00:00
+source: Hum Brain Mapp
+title: Distinct Resting-State Connectomes for Face and Scene Perception Predict Individual
+  Task Performance.
+uid: '13081693'
+volume: '47'

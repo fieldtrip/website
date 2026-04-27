@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41364885'
+- idtype: MID
+  value: NIHMS2116100
+- idtype: pmcid
+  value: PMC13103918
+- idtype: doi
+  value: 10.1212/WNL.0000000000214459
+authors:
+- authtype: Author
+  name: Bender AC
+- authtype: Author
+  name: Berezuk C
+- authtype: Author
+  name: Pellerin KR
+- authtype: Author
+  name: You JC
+- authtype: Author
+  name: Sarkis RA
+- authtype: Author
+  name: Lam AD
+epubdate: 2025 Dec 9
+fulljournalname: Neurology
+issue: '1'
+pages: e214459
+pmclivedate: 2026/04/24
+printpubdate: 2026 Jan 13
+pubdate: 2026 Jan 13
+sortdate: 2026/01/13 00:00
+source: Neurology
+title: Association of Sleep Spindle Activity With Cognitive Decline in Early Clinical
+  Stages of Alzheimer Disease.
+uid: '13103918'
+volume: '106'

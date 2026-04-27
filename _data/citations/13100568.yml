@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '42015609'
+- idtype: pmcid
+  value: PMC13100568
+- idtype: doi
+  value: 10.1111/psyp.70303
+authors:
+- authtype: Author
+  name: Popov T
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '4'
+pages: e70303
+pmclivedate: 2026/04/23
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Psychophysiology
+title: Misinterpreting Electrophysiology in Human Cognitive Neuroscience.
+uid: '13100568'
+volume: '63'
