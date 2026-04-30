@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41813873'
+- idtype: pmcid
+  value: PMC13111595
+- idtype: doi
+  value: 10.1038/s42003-026-09834-1
+- idtype: pii
+  value: 10.1038/s42003-026-09834-1
+authors:
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Culham JC
+- authtype: Author
+  name: Mohsenzadeh Y
+epubdate: 2026 Mar 11
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/04/28
+printpubdate: ''
+pubdate: 2026 Mar 11
+sortdate: 2026/03/11 00:00
+source: Commun Biol
+title: Distinct perceptual and conceptual representations of natural actions along
+  the lateral and dorsal visual streams.
+uid: '13111595'
+volume: '9'

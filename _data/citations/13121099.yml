@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42045133'
+- idtype: doi
+  value: 10.1111/ejn.70521
+- idtype: pmcid
+  value: PMC13121099
+authors:
+- authtype: Author
+  name: Soldic D
+- authtype: Author
+  name: Martín-Buro MC
+- authtype: Author
+  name: López-García D
+- authtype: Author
+  name: Del Pino AB
+- authtype: Author
+  name: Fernandes-Magalhaes R
+- authtype: Author
+  name: Ferrera D
+- authtype: Author
+  name: Peláez I
+- authtype: Author
+  name: Carretié L
+- authtype: Author
+  name: Mercado F
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '9'
+pages: e70521
+pmclivedate: 2026/04/29
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Eur J Neurosci
+title: Multivariate Pattern Analysis Identifies Potential Intertrial Resting-State
+  EEG Biomarkers in Fibromyalgia.
+uid: '13121099'
+volume: '63'

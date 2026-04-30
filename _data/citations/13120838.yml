@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '41956898'
+- idtype: pmcid
+  value: PMC13120838
+- idtype: doi
+  value: 10.1523/ENEURO.0346-25.2026
+- idtype: pii
+  value: ENEURO.0346-25.2026
+authors:
+- authtype: Author
+  name: Fulvio JM
+- authtype: Author
+  name: Postle BR
+epubdate: 2026 Apr 27
+fulljournalname: eNeuro
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/28
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/27 00:00
+source: eNeuro
+title: Effects of TMS on the Decoding and Electrophysiology of Priority in Working
+  Memory.
+uid: '13120838'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.3390/bioengineering13040430
+- idtype: pmcid
+  value: PMC13113903
+authors:
+- authtype: Author
+  name: Han X
+- authtype: Author
+  name: Emara Y
+- authtype: Author
+  name: Zhang A
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Zhang Y
+epubdate: 2026 Apr 7
+fulljournalname: Bioengineering
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/28
+printpubdate: ''
+pubdate: 2026 Apr
+sortdate: 2026/04/07 00:00
+source: Bioengineering (Basel)
+title: 'Configurable Modular EEG Classification Framework with Multiscale Features
+  and Ensemble Learning: A Reproducible Evaluation for Schizophrenia Detection.'
+uid: '13113903'
+volume: '13'
