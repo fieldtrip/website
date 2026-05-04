@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42057539'
+- idtype: pmcid
+  value: PMC13129412
+- idtype: doi
+  value: 10.1002/hbm.70537
+authors:
+- authtype: Author
+  name: Elmers J
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Beste C
+epubdate: ''
+fulljournalname: Human brain mapping
+issue: '7'
+pages: e70537
+pmclivedate: 2026/05/01
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Hum Brain Mapp
+title: Directed Communication in Theta and Alpha Networks Supports Content Handling
+  in Working Memory.
+uid: '13129412'
+volume: '47'

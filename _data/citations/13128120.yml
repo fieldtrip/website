@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42054483'
+- idtype: pmcid
+  value: PMC13128120
+- idtype: doi
+  value: 10.1371/journal.pone.0345719
+- idtype: pii
+  value: PONE-D-24-57770
+authors:
+- authtype: Author
+  name: Ruiz-Blais S
+- authtype: Author
+  name: Bernardi NF
+- authtype: Author
+  name: Intartaglia B
+- authtype: Author
+  name: Snow S
+- authtype: Author
+  name: Lehmann A
+epubdate: 2026 Apr 29
+fulljournalname: PloS one
+issue: '4'
+pages: e0345719
+pmclivedate: 2026/04/30
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/29 00:00
+source: PLoS One
+title: 'Neural and cardiorespiratory responses in vocalization and slow breathing:
+  Contrasting brain and autonomic responses.'
+uid: '13128120'
+volume: '21'

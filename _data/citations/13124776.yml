@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42047880'
+- idtype: pmcid
+  value: PMC13124776
+- idtype: doi
+  value: 10.1007/s10548-026-01208-4
+- idtype: pii
+  value: 10.1007/s10548-026-01208-4
+authors:
+- authtype: Author
+  name: Yilmaz N
+- authtype: Author
+  name: Canli M
+- authtype: Author
+  name: Demiralp T
+epubdate: 2026 Apr 28
+fulljournalname: Brain topography
+issue: '4'
+pages: ''
+pmclivedate: 2026/04/30
+printpubdate: ''
+pubdate: 2026 Apr 28
+sortdate: 2026/04/28 00:00
+source: Brain Topogr
+title: 'Electrophysiological Evaluation of Mirrored Hand Movements in Virtual Reality:
+  A Proof of Concept for Virtual Mirror Therapy.'
+uid: '13124776'
+volume: '39'

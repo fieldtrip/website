@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41916754'
+- idtype: pmcid
+  value: PMC13129650
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0318-25.2026
+- idtype: pii
+  value: JNEUROSCI.0318-25.2026
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Alexopoulou ZS
+- authtype: Author
+  name: Kong S
+- authtype: Author
+  name: Zonneveld A
+- authtype: Author
+  name: van Ede F
+epubdate: 2026 Apr 29
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '17'
+pages: ''
+pmclivedate: 2026/05/01
+printpubdate: ''
+pubdate: 2026 Apr 29
+sortdate: 2026/04/29 00:00
+source: J Neurosci
+title: Sparse Spatial Scaffolding for Visual Working Memory.
+uid: '13129650'
+volume: '46'
