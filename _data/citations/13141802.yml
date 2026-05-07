@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42061047'
+- idtype: doi
+  value: 10.1016/j.nicl.2026.103998
+- idtype: pii
+  value: S2213-1582(26)00057-4
+- idtype: pmcid
+  value: PMC13141802
+authors:
+- authtype: Author
+  name: Limburg R
+- authtype: Author
+  name: Kopp MB
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+- authtype: Author
+  name: Prochnow A
+epubdate: 2026 Apr 26
+fulljournalname: NeuroImage. Clinical
+issue: ''
+pages: '103998'
+pmclivedate: 2026/05/06
+printpubdate: ''
+pubdate: 2026 Apr 26
+sortdate: 2026/04/26 00:00
+source: Neuroimage Clin
+title: Altered neural oscillatory dynamics underlie reduced anticipatory schema use
+  during event segmentation in adolescents with High-Functioning Autism Spectrum disorder.
+uid: '13141802'
+volume: '50'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '42088009'
+- idtype: pmcid
+  value: PMC13137303
+- idtype: doi
+  value: 10.3389/fpsyt.2026.1727711
+authors:
+- authtype: Author
+  name: Kesebir S
+- authtype: Author
+  name: Demirer RM
+epubdate: 2026 Apr 20
+fulljournalname: Frontiers in psychiatry
+issue: ''
+pages: '1727711'
+pmclivedate: 2026/05/05
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/20 00:00
+source: Front Psychiatry
+title: 'Mitochondrial dysfunction in EEG: high-beta specific metabolic/oxidative coupling
+  with lactate in mania-predominant polarity.'
+uid: '13137303'
+volume: '17'
