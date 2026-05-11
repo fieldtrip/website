@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42039506'
+- idtype: pmcid
+  value: PMC13105035
+- idtype: doi
+  value: 10.64898/2026.04.11.717895
+- idtype: pii
+  value: 2026.04.11.717895
+authors:
+- authtype: Author
+  name: Tolley N
+- authtype: Author
+  name: Zhou DW
+- authtype: Author
+  name: Soplata AE
+- authtype: Author
+  name: Daniels DS
+- authtype: Author
+  name: Duecker K
+- authtype: Author
+  name: Pujol CF
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Jones SR
+epubdate: 2026 Apr 13
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/04/24
+printpubdate: ''
+pubdate: 2026 Apr 13
+sortdate: 2026/04/13 00:00
+source: bioRxiv
+title: Uncovering putative neural mechanisms of neurotherapeutic impacts on EEG using
+  the Human Neocortical Neurosolver.
+uid: '13105035'
+volume: ''

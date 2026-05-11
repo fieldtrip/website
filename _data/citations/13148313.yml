@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '42090499'
+- idtype: pmcid
+  value: PMC13148313
+- idtype: doi
+  value: 10.1126/sciadv.aea3775
+authors:
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Wu Y
+- authtype: Author
+  name: Wei M
+- authtype: Author
+  name: Ma J
+- authtype: Author
+  name: Lin J
+- authtype: Author
+  name: Chen G
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Wang R
+- authtype: Author
+  name: Zhu Y
+- authtype: Author
+  name: Chen Q
+- authtype: Author
+  name: Peng B
+- authtype: Author
+  name: Zou Y
+- authtype: Author
+  name: Zhang B
+- authtype: Author
+  name: Zhou W
+- authtype: Author
+  name: Lu Z
+epubdate: 2026 May 6
+fulljournalname: Science advances
+issue: '19'
+pages: eaea3775
+pmclivedate: 2026/05/07
+printpubdate: 2026 May 8
+pubdate: 2026 May 8
+sortdate: 2026/05/08 00:00
+source: Sci Adv
+title: SHANK3 mutations disrupt olfactory valence coding across species, with cortical
+  amygdala mechanisms identified in mice.
+uid: '13148313'
+volume: '12'

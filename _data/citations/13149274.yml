@@ -1,0 +1,28 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fnint.2026.1747838
+- idtype: pmcid
+  value: PMC13149274
+authors:
+- authtype: Author
+  name: Xu J
+- authtype: Author
+  name: Jia S
+- authtype: Author
+  name: Jing Y
+- authtype: Author
+  name: Li H
+epubdate: 2026 Apr 23
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/05/08
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/23 00:00
+source: Front Integr Neurosci
+title: High serum uric acid levels explains the negative impact of the altitude adaptation
+  index on the brain electroencephalographic Microstate D under high-altitude hypoxic
+  conditions.
+uid: '13149274'
+volume: '20'

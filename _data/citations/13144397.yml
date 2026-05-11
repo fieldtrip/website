@@ -1,0 +1,68 @@
+articleids:
+- idtype: pmid
+  value: '42086570'
+- idtype: pmcid
+  value: PMC13144397
+- idtype: doi
+  value: 10.1038/s41467-026-71962-3
+- idtype: pii
+  value: 10.1038/s41467-026-71962-3
+authors:
+- authtype: Author
+  name: Lyons T
+- authtype: Author
+  name: Spriggs M
+- authtype: Author
+  name: Kerkelä L
+- authtype: Author
+  name: Rosas FE
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Mediano PAM
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Oestreich L
+- authtype: Author
+  name: Pagni BA
+- authtype: Author
+  name: Zeifman RJ
+- authtype: Author
+  name: Hampshire A
+- authtype: Author
+  name: Trender W
+- authtype: Author
+  name: Douglass HM
+- authtype: Author
+  name: Girn M
+- authtype: Author
+  name: Godfrey K
+- authtype: Author
+  name: Kettner H
+- authtype: Author
+  name: Sharif F
+- authtype: Author
+  name: Espasiano L
+- authtype: Author
+  name: Gazzaley A
+- authtype: Author
+  name: Wall MB
+- authtype: Author
+  name: Erritzoe D
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: Carhart-Harris RL
+epubdate: 2026 May 5
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/07
+printpubdate: ''
+pubdate: 2026 May 5
+sortdate: 2026/05/05 00:00
+source: Nat Commun
+title: Human brain changes after first psilocybin use.
+uid: '13144397'
+volume: '17'

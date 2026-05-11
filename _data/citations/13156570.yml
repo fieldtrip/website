@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.115708
+- idtype: pmcid
+  value: PMC13156570
+- idtype: pii
+  value: S2589-0042(26)01083-7
+authors:
+- authtype: Author
+  name: Pesci UG
+- authtype: Author
+  name: Cuomo G
+- authtype: Author
+  name: Era V
+- authtype: Author
+  name: Candidi M
+epubdate: 2026 Apr 10
+fulljournalname: iScience
+issue: '5'
+pages: ''
+pmclivedate: 2026/05/10
+printpubdate: ''
+pubdate: 2026 May 15
+sortdate: 2026/04/10 00:00
+source: iScience
+title: Integrating multiple sensory modalities during dyadic interactions drives self-other
+  distinction at the behavioral and electrocortical level.
+uid: '13156570'
+volume: '29'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42096460'
+- idtype: pmcid
+  value: PMC13152139
+- idtype: doi
+  value: 10.1371/journal.pone.0347647
+- idtype: pii
+  value: PONE-D-25-59260
+authors:
+- authtype: Author
+  name: Gimple S
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Branco MP
+epubdate: 2026 May 7
+fulljournalname: PloS one
+issue: '5'
+pages: e0347647
+pmclivedate: 2026/05/08
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/07 00:00
+source: PLoS One
+title: Temporal responses in sensorimotor cortex during hand movements.
+uid: '13152139'
+volume: '21'
