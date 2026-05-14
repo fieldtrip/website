@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42106549'
+- idtype: pmcid
+  value: PMC13157490
+- idtype: doi
+  value: 10.1038/s41598-026-52434-6
+- idtype: pii
+  value: 10.1038/s41598-026-52434-6
+authors:
+- authtype: Author
+  name: Brilliant
+- authtype: Author
+  name: Schierholz I
+- authtype: Author
+  name: Sandmann P
+- authtype: Author
+  name: Kral A
+epubdate: 2026 May 9
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/11
+printpubdate: ''
+pubdate: 2026 May 9
+sortdate: 2026/05/09 00:00
+source: Sci Rep
+title: Alpha oscillatory activity reveals focused-attentional disparity between cochlear
+  implant users and normal hearing listeners.
+uid: '13157490'
+volume: '16'

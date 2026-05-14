@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41885585'
+- idtype: pmcid
+  value: PMC13157346
+- idtype: doi
+  value: 10.1093/scan/nsag023
+- idtype: pii
+  value: '8541720'
+authors:
+- authtype: Author
+  name: He Y
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Li P
+epubdate: ''
+fulljournalname: Social cognitive and affective neuroscience
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/11
+printpubdate: 2026 Jan 21
+pubdate: 2026 Jan 21
+sortdate: 2026/01/21 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Learn how to be effective: neural and computational insights into charity
+  efficiency learning.'
+uid: '13157346'
+volume: '21'

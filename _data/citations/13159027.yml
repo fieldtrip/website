@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42125202'
+- idtype: pmcid
+  value: PMC13159027
+- idtype: doi
+  value: 10.1162/IMAG.a.1218
+- idtype: pii
+  value: IMAG.a.1218
+authors:
+- authtype: Author
+  name: Christiano OR
+- authtype: Author
+  name: Michelmann S
+epubdate: 2026 May 8
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/05/12
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/08 00:00
+source: Imaging Neurosci (Camb)
+title: Reliability and signal comparison of OPM-MEG, fMRI & iEEG in a repeated movie
+  viewing paradigm.
+uid: '13159027'
+volume: '4'

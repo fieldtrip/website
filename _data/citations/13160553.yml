@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42112568'
+- idtype: pmcid
+  value: PMC13160553
+- idtype: doi
+  value: 10.7554/eLife.106050
+- idtype: pii
+  value: '106050'
+authors:
+- authtype: Author
+  name: Brickwedde M
+- authtype: Author
+  name: Limachya R
+- authtype: Author
+  name: Markiewicz R
+- authtype: Author
+  name: Sutton E
+- authtype: Author
+  name: Postzich C
+- authtype: Author
+  name: Shapiro K
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Mazaheri A
+epubdate: 2026 May 11
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/05/12
+printpubdate: ''
+pubdate: 2026 May 11
+sortdate: 2026/05/11 00:00
+source: Elife
+title: Cross-modal interaction of human alpha activity does not reflect inhibition
+  of early sensory processing in a frequency-tagging study using EEG and MEG.
+uid: '13160553'
+volume: '14'
