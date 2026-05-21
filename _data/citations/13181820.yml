@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42158341'
+- idtype: pmcid
+  value: PMC13181820
+- idtype: doi
+  value: 10.1162/IMAG.a.1232
+- idtype: pii
+  value: IMAG.a.1232
+authors:
+- authtype: Author
+  name: Schipper K
+- authtype: Author
+  name: Hassan M
+- authtype: Author
+  name: Draganski B
+- authtype: Author
+  name: Ruggeri P
+- authtype: Author
+  name: Barral J
+epubdate: 2026 May 15
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/05/19
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/15 00:00
+source: Imaging Neurosci (Camb)
+title: Beta burst dynamics in the motor cortex are reshaped through sensorimotor refinement.
+uid: '13181820'
+volume: '4'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41536211'
+- idtype: pmcid
+  value: PMC12885349
+- idtype: doi
+  value: 10.1017/S0033291725103024
+- idtype: pii
+  value: S0033291725103024
+authors:
+- authtype: Author
+  name: Linnhoff S
+- authtype: Author
+  name: Cohen Kadosh R
+- authtype: Author
+  name: Zaehle T
+epubdate: 2026 Jan 15
+fulljournalname: Psychological medicine
+issue: ''
+pages: e21
+pmclivedate: 2026/05/15
+printpubdate: ''
+pubdate: 2026 Jan 15
+sortdate: 2026/01/15 00:00
+source: Psychol Med
+title: EEG-based frontal excitation/inhibition balance as an objective biomarker for
+  cognitive fatigue across multiple sclerosis and Long COVID.
+uid: '12885349'
+volume: '56'

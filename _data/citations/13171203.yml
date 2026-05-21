@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42137739'
+- idtype: pmcid
+  value: PMC13171203
+- idtype: doi
+  value: 10.1162/NOL.a.249
+- idtype: pii
+  value: NOL.a.249
+authors:
+- authtype: Author
+  name: Henke L
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Meyer L
+epubdate: 2026 May 5
+fulljournalname: Neurobiology of language (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/05/14
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/05 00:00
+source: Neurobiol Lang (Camb)
+title: How Low-Frequency Neural Activity Structures Language in Time.
+uid: '13171203'
+volume: '7'

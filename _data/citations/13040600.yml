@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '40888367'
+- idtype: pmcid
+  value: PMC13040600
+- idtype: doi
+  value: 10.1017/S0033291725101566
+- idtype: pii
+  value: S0033291725101566
+authors:
+- authtype: Author
+  name: Zeng S
+- authtype: Author
+  name: Sit HF
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Bottary R
+- authtype: Author
+  name: Pace-Schott EF
+- authtype: Author
+  name: Cunningham TJ
+- authtype: Author
+  name: Li SX
+- authtype: Author
+  name: Hu X
+epubdate: 2025 Sep 1
+fulljournalname: Psychological medicine
+issue: ''
+pages: e260
+pmclivedate: 2026/05/15
+printpubdate: ''
+pubdate: 2025 Sep 1
+sortdate: 2025/09/01 00:00
+source: Psychol Med
+title: Impaired emotional memory dissipation in insomnia disorder.
+uid: '13040600'
+volume: '55'

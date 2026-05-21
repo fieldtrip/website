@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41985540'
+- idtype: pmcid
+  value: PMC13172737
+- idtype: doi
+  value: 10.1088/1741-2552/ae5fd7
+authors:
+- authtype: Author
+  name: Dembny K
+- authtype: Author
+  name: Farooqi H
+- authtype: Author
+  name: Herman AB
+- authtype: Author
+  name: Netoff TI
+- authtype: Author
+  name: Darrow DP
+epubdate: 2026 May 14
+fulljournalname: Journal of neural engineering
+issue: '3'
+pages: ''
+pmclivedate: 2026/05/15
+printpubdate: ''
+pubdate: 2026 May 14
+sortdate: 2026/05/14 00:00
+source: J Neural Eng
+title: Metric validation for detection of delayed and directed coupling.
+uid: '13172737'
+volume: '23'

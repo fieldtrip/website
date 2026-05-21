@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42152873'
+- idtype: pmcid
+  value: PMC13180155
+- idtype: doi
+  value: 10.1177/20552076261452437
+- idtype: pii
+  value: '10.1177_20552076261452437'
+authors:
+- authtype: Author
+  name: Chen YT
+- authtype: Author
+  name: Cheng CH
+- authtype: Author
+  name: Chuang LL
+- authtype: Author
+  name: Chen CC
+- authtype: Author
+  name: Hsieh YW
+epubdate: 2026 May 15
+fulljournalname: Digital health
+issue: ''
+pages: '20552076261452437'
+pmclivedate: 2026/05/18
+printpubdate: ''
+pubdate: 2026 Jan-Dec
+sortdate: 2026/05/15 00:00
+source: Digit Health
+title: Unilateral and bilateral digital mirror visual feedback with different movement
+  types modulate mu oscillations in individuals with stroke.
+uid: '13180155'
+volume: '12'

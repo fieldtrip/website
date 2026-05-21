@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42141016'
+- idtype: pmcid
+  value: PMC13179325
+- idtype: doi
+  value: 10.1038/s41598-026-46149-x
+- idtype: pii
+  value: 10.1038/s41598-026-46149-x
+authors:
+- authtype: Author
+  name: Nara S
+- authtype: Author
+  name: Becker L
+- authtype: Author
+  name: Hillebrand L
+- authtype: Author
+  name: Xiang R
+- authtype: Author
+  name: Kaiser D
+epubdate: 2026 May 15
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/17
+printpubdate: ''
+pubdate: 2026 May 15
+sortdate: 2026/05/15 00:00
+source: Sci Rep
+title: Dynamic neural representations of scene beauty are relatively unaffected by
+  stimulus timing and task.
+uid: '13179325'
+volume: '16'

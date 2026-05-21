@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '41862572'
+- idtype: pmcid
+  value: PMC13168568
+- idtype: doi
+  value: 10.1038/s42003-026-09865-8
+- idtype: pii
+  value: 10.1038/s42003-026-09865-8
+authors:
+- authtype: Author
+  name: Tezcan F
+- authtype: Author
+  name: Ten Oever S
+- authtype: Author
+  name: Bai F
+- authtype: Author
+  name: Te Rietmolen N
+- authtype: Author
+  name: Martin AE
+epubdate: 2026 Mar 20
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/14
+printpubdate: ''
+pubdate: 2026 Mar 20
+sortdate: 2026/03/20 00:00
+source: Commun Biol
+title: Linguistic structure and language familiarity sharpen phoneme encoding in the
+  brain.
+uid: '13168568'
+volume: '9'

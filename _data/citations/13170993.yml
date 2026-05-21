@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42127316'
+- idtype: pmcid
+  value: PMC13170993
+- idtype: doi
+  value: 10.1111/nyas.70290
+authors:
+- authtype: Author
+  name: Møller C
+- authtype: Author
+  name: Celma-Miralles A
+- authtype: Author
+  name: Borges HB
+- authtype: Author
+  name: Stupacher J
+- authtype: Author
+  name: Christensen CB
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kidmose P
+epubdate: ''
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: e70290
+pmclivedate: 2026/05/14
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Ann N Y Acad Sci
+title: 'Polyrhythms in the Brain: Metrical Priming, Acoustic Balance, and Perceptual
+  Biases.'
+uid: '13170993'
+volume: '1559'

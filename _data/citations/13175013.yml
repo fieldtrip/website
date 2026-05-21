@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '41963088'
+- idtype: pmcid
+  value: PMC13175013
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1967-25.2026
+- idtype: pii
+  value: JNEUROSCI.1967-25.2026
+authors:
+- authtype: Author
+  name: Yeh LC
+- authtype: Author
+  name: Peelen MV
+- authtype: Author
+  name: Kaiser D
+epubdate: 2026 May 13
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '19'
+pages: ''
+printpubdate: ''
+pubdate: 2026 May 13
+sortdate: 2026/05/13 00:00
+source: J Neurosci
+title: Spatiotemporal Representations of Contextual Associations for Real-World Objects.
+uid: '13175013'
+volume: '46'

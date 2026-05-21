@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41539359'
+- idtype: MID
+  value: NIHMS2156369
+- idtype: pmcid
+  value: PMC13182688
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2026.109359
+- idtype: pii
+  value: S0028-3932(26)00005-9
+authors:
+- authtype: Author
+  name: Nakamura M
+- authtype: Author
+  name: Rossi E
+epubdate: 2026 Jan 13
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '109359'
+pmclivedate: 2026/05/19
+printpubdate: 2026 Mar 12
+pubdate: 2026 Mar 12
+sortdate: 2026/03/12 00:00
+source: Neuropsychologia
+title: 'Neural signatures of word learning: How individual differences shape ERPs
+  and oscillations in the early stages of learning a new language.'
+uid: '13182688'
+volume: '223'

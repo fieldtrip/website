@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '41845389'
+- idtype: pmcid
+  value: PMC13169634
+- idtype: doi
+  value: 10.1186/s12916-026-04771-6
+- idtype: pii
+  value: 10.1186/s12916-026-04771-6
+authors:
+- authtype: Author
+  name: Mazzoni N
+- authtype: Author
+  name: Kurz EM
+- authtype: Author
+  name: Cellini N
+- authtype: Author
+  name: Ciringione L
+- authtype: Author
+  name: Calderan M
+- authtype: Author
+  name: Gallitto G
+- authtype: Author
+  name: de Falco S
+- authtype: Author
+  name: Venuti P
+- authtype: Author
+  name: Zinke K
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Caria A
+epubdate: 2026 Mar 18
+fulljournalname: BMC medicine
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/14
+printpubdate: ''
+pubdate: 2026 Mar 18
+sortdate: 2026/03/18 00:00
+source: BMC Med
+title: Aperiodic and periodic neural activity during sleep in autism spectrum disorders.
+uid: '13169634'
+volume: '24'

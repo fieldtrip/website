@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '42149088'
+- idtype: pmcid
+  value: PMC13182764
+- idtype: doi
+  value: 10.1111/psyp.70318
+authors:
+- authtype: Author
+  name: Ahmadi Ghomroudi P
+- authtype: Author
+  name: Scaltritti M
+- authtype: Author
+  name: Monachesi B
+- authtype: Author
+  name: Jalali A
+- authtype: Author
+  name: Wongupparaj P
+- authtype: Author
+  name: Job R
+- authtype: Author
+  name: Grecucci A
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '5'
+pages: e70318
+pmclivedate: 2026/05/19
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Psychophysiology
+title: EEG Based Decoding of the Perception and Regulation of Taboo Words.
+uid: '13182764'
+volume: '63'
