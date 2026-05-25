@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '42066395'
+- idtype: MID
+  value: NIHMS2172476
+- idtype: pmcid
+  value: PMC13170611
+- idtype: doi
+  value: 10.1016/j.yebeh.2026.111074
+- idtype: pii
+  value: S1525-5050(26)00195-2
+authors:
+- authtype: Author
+  name: Gjini K
+- authtype: Author
+  name: Vogel J
+- authtype: Author
+  name: Almane D
+- authtype: Author
+  name: Jones J
+- authtype: Author
+  name: Hermann B
+- authtype: Author
+  name: Nair V
+- authtype: Author
+  name: Prabhakaran V
+- authtype: Author
+  name: Struck AF
+epubdate: 2026 Apr 30
+fulljournalname: 'Epilepsy & behavior : E&B'
+issue: ''
+pages: '111074'
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Epilepsy Behav
+title: Dynamic causal modeling of effective connectivity generating a reduced auditory
+  deviance detection in juvenile myoclonic epilepsy.
+uid: '13170611'
+volume: '181'

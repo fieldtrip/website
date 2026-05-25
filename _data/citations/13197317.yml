@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42171820'
+- idtype: doi
+  value: 10.1007/s10548-026-01210-w
+- idtype: pii
+  value: 10.1007/s10548-026-01210-w
+- idtype: pmcid
+  value: PMC13197317
+authors:
+- authtype: Author
+  name: Ramne M
+- authtype: Author
+  name: Lendaro E
+epubdate: 2026 May 22
+fulljournalname: Brain topography
+issue: '4'
+pages: ''
+pmclivedate: 2026/05/24
+printpubdate: ''
+pubdate: 2026 May 22
+sortdate: 2026/05/22 00:00
+source: Brain Topogr
+title: 'Resting-State Theta and Alpha Oscillations in Amputation and Phantom Limb
+  Pain: A Pre-Registered High-Density EEG Study.'
+uid: '13197317'
+volume: '39'

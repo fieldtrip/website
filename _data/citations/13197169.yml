@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42120201'
+- idtype: pmcid
+  value: PMC13197169
+- idtype: doi
+  value: 10.1523/ENEURO.0316-25.2026
+- idtype: pii
+  value: ENEURO.0316-25.2026
+authors:
+- authtype: Author
+  name: Seghezzi S
+- authtype: Author
+  name: Haggard P
+epubdate: 2026 May 22
+fulljournalname: eNeuro
+issue: '5'
+pages: ''
+pmclivedate: 2026/05/23
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/22 00:00
+source: eNeuro
+title: Neural Mechanisms of Self-Generated Action Sequences.
+uid: '13197169'
+volume: '13'

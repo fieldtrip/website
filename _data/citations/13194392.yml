@@ -1,0 +1,37 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fnins.2026.1815732
+- idtype: pmcid
+  value: PMC13194392
+authors:
+- authtype: Author
+  name: Feng C
+- authtype: Author
+  name: Ni H
+- authtype: Author
+  name: Zhu Z
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Zheng Z
+- authtype: Author
+  name: Ming W
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Xu K
+- authtype: Author
+  name: Zhu J
+epubdate: 2026 May 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/05/23
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/08 00:00
+source: Front Neurosci
+title: Dataset of chronic intracranial EEG of epilepsy patients via responsive neurostimulation
+  system.
+uid: '13194392'
+volume: '20'

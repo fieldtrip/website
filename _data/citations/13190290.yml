@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '41620577'
+- idtype: pmcid
+  value: PMC13190290
+- idtype: doi
+  value: 10.1038/s41380-025-03433-y
+- idtype: pii
+  value: 10.1038/s41380-025-03433-y
+authors:
+- authtype: Author
+  name: Varella-Branco E
+- authtype: Author
+  name: Shephard E
+- authtype: Author
+  name: Toledo VHC
+- authtype: Author
+  name: Ramos IC
+- authtype: Author
+  name: Lacerda ECM
+- authtype: Author
+  name: Carvalho LLM
+- authtype: Author
+  name: Fiuza MA
+- authtype: Author
+  name: Paschalidis M
+- authtype: Author
+  name: Costa CIS
+- authtype: Author
+  name: Girardi ACS
+- authtype: Author
+  name: Krepischi ACV
+- authtype: Author
+  name: Casella EB
+- authtype: Author
+  name: Polanczyk G
+- authtype: Author
+  name: Griesi-Oliveira K
+- authtype: Author
+  name: Papes F
+- authtype: Author
+  name: Alvizi L
+- authtype: Author
+  name: Kobayashi GS
+- authtype: Author
+  name: Dos Santos E Passos Bueno MR
+epubdate: 2026 Jan 31
+fulljournalname: Molecular psychiatry
+issue: '6'
+pages: 3033-3048
+pmclivedate: 2026/05/22
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Mol Psychiatry
+title: '"SHANK3 deficiency alters early progenitor dynamics and reveals shared pathways
+  with neurodegeneration".'
+uid: '13190290'
+volume: '31'

@@ -1,0 +1,85 @@
+articleids:
+- idtype: pmid
+  value: '40993190'
+- idtype: pmcid
+  value: PMC13190260
+- idtype: doi
+  value: 10.1038/s41551-025-01467-9
+- idtype: pii
+  value: 10.1038/s41551-025-01467-9
+authors:
+- authtype: Author
+  name: Merk T
+- authtype: Author
+  name: Köhler RM
+- authtype: Author
+  name: Brotons TM
+- authtype: Author
+  name: Vossberg SR
+- authtype: Author
+  name: Peterson V
+- authtype: Author
+  name: Lyra LF
+- authtype: Author
+  name: Vanhoecke J
+- authtype: Author
+  name: Chikermane M
+- authtype: Author
+  name: Binns TS
+- authtype: Author
+  name: Li N
+- authtype: Author
+  name: Walton A
+- authtype: Author
+  name: Neudorfer C
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Sisterson N
+- authtype: Author
+  name: Busch J
+- authtype: Author
+  name: Lofredi R
+- authtype: Author
+  name: Habets J
+- authtype: Author
+  name: Huebl J
+- authtype: Author
+  name: Zhu G
+- authtype: Author
+  name: Yin Z
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Merkl A
+- authtype: Author
+  name: Bajbouj M
+- authtype: Author
+  name: Krause P
+- authtype: Author
+  name: Faust K
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Mark Richardson R
+- authtype: Author
+  name: Neumann WJ
+epubdate: 2025 Sep 24
+fulljournalname: Nature biomedical engineering
+issue: '5'
+pages: 852-869
+pmclivedate: 2026/05/22
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Nat Biomed Eng
+title: Invasive neurophysiology and whole brain connectomics for neural decoding in
+  patients with brain implants.
+uid: '13190260'
+volume: '10'
