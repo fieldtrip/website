@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fnhum.2026.1791453
+- idtype: pmcid
+  value: PMC13201523
+authors:
+- authtype: Author
+  name: Yadav A
+- authtype: Author
+  name: Banerjee A
+- authtype: Author
+  name: Roy D
+epubdate: 2026 May 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/05/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/12 00:00
+source: Front Hum Neurosci
+title: Differential role of beta band activity in a dual-task working memory paradigm
+  under internally vs. externally directed cognition.
+uid: '13201523'
+volume: '20'

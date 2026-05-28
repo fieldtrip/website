@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41684330'
+- idtype: doi
+  value: 10.1002/mds.70232
+- idtype: pmcid
+  value: PMC13206430
+authors:
+- authtype: Author
+  name: Lamoš M
+- authtype: Author
+  name: Žáčková A
+- authtype: Author
+  name: Ulčák D
+- authtype: Author
+  name: Gurka B
+- authtype: Author
+  name: Brzuchanski D
+- authtype: Author
+  name: Šmahovská L
+- authtype: Author
+  name: Bočková M
+epubdate: 2026 Feb 13
+fulljournalname: 'Movement disorders : official journal of the Movement Disorder Society'
+issue: '5'
+pages: 1163-1172
+pmclivedate: 2026/05/27
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: Mov Disord
+title: Local Field Aperiodic Spectral Power Modulated by Deep Brain Stimulation in
+  Parkinson's Disease.
+uid: '13206430'
+volume: '41'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41992340'
+- idtype: doi
+  value: 10.1186/s12993-026-00331-3
+- idtype: pii
+  value: 10.1186/s12993-026-00331-3
+- idtype: pmcid
+  value: PMC13202991
+authors:
+- authtype: Author
+  name: Ding Z
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: Tian Y
+epubdate: 2026 Apr 16
+fulljournalname: 'Behavioral and brain functions : BBF'
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/27
+printpubdate: ''
+pubdate: 2026 Apr 16
+sortdate: 2026/04/16 00:00
+source: Behav Brain Funct
+title: 'How time pressure disrupts inhibitory control: neural dissociations between
+  interference and response inhibition.'
+uid: '13202991'
+volume: '22'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.3390/s26103187
+- idtype: pmcid
+  value: PMC13210765
+authors:
+- authtype: Author
+  name: Hu X
+- authtype: Author
+  name: Kang M
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Shi T
+- authtype: Author
+  name: Shi X
+- authtype: Author
+  name: Fu Y
+- authtype: Author
+  name: Gong A
+epubdate: 2026 May 18
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '10'
+pages: ''
+pmclivedate: 2026/05/27
+printpubdate: ''
+pubdate: 2026 May
+sortdate: 2026/05/18 00:00
+source: Sensors (Basel)
+title: 'Design and Experimental Investigation of a Multi-Level Heartbeat Sound Feedback-Based
+  Neurofeedback System: Neural Mechanisms.'
+uid: '13210765'
+volume: '26'

@@ -1,0 +1,23 @@
+articleids:
+- idtype: doi
+  value: 10.3390/brainsci16050439
+- idtype: pmcid
+  value: PMC13204789
+authors:
+- authtype: Author
+  name: Liaukovich K
+- authtype: Author
+  name: Martynova O
+epubdate: 2026 Apr 22
+fulljournalname: Brain Sciences
+issue: '5'
+pages: ''
+pmclivedate: 2026/05/27
+printpubdate: ''
+pubdate: 2026 May
+sortdate: 2026/04/22 00:00
+source: Brain Sci
+title: Does Sound Timing Organization Matter? How Time Interval Influences the Perception
+  of Closely Spaced Frequencies.
+uid: '13204789'
+volume: '16'
