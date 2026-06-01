@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fnhum.2026.1748993
+- idtype: pmcid
+  value: PMC13219378
+authors:
+- authtype: Author
+  name: Kizilisik S
+- authtype: Author
+  name: Duman D
+- authtype: Author
+  name: Zitouni A
+- authtype: Author
+  name: Campanella S
+- authtype: Author
+  name: Aarabi A
+- authtype: Author
+  name: Akounach M
+- authtype: Author
+  name: Mouras H
+epubdate: 2026 May 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/05/30
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/15 00:00
+source: Front Hum Neurosci
+title: 'Brain signature of food and alcohol stimuli processing: a comparative EEG
+  study.'
+uid: '13219378'
+volume: '20'

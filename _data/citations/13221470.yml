@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '42215489'
+- idtype: doi
+  value: 10.1038/s41597-026-07350-9
+- idtype: pii
+  value: 10.1038/s41597-026-07350-9
+- idtype: pmcid
+  value: PMC13221470
+authors:
+- authtype: Author
+  name: Liu L
+- authtype: Author
+  name: Ferrante O
+- authtype: Author
+  name: Ghafari T
+- authtype: Author
+  name: Hetenyi D
+- authtype: Author
+  name: Yang S
+- authtype: Author
+  name: Hirschhorn R
+- authtype: Author
+  name: Gorska-Klimowska U
+- authtype: Author
+  name: Sripad P
+- authtype: Author
+  name: Taheriyan F
+- authtype: Author
+  name: Brown T
+- authtype: Author
+  name: Das D
+- authtype: Author
+  name: Kahraman K
+- authtype: Author
+  name: Bonacchi N
+- authtype: Author
+  name: Pitts M
+- authtype: Author
+  name: Mudrik L
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Luo H
+- authtype: Author
+  name: Melloni L
+epubdate: 2026 May 29
+fulljournalname: Scientific data
+issue: '1'
+pages: ''
+pmclivedate: 2026/05/31
+printpubdate: ''
+pubdate: 2026 May 29
+sortdate: 2026/05/29 00:00
+source: Sci Data
+title: An open multi-center MEG-EEG dataset for studying conscious visual perception.
+uid: '13221470'
+volume: '13'

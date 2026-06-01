@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.1117/1.NPh.13.2.025010
+- idtype: pmcid
+  value: PMC13218833
+authors:
+- authtype: Author
+  name: Kota S
+- authtype: Author
+  name: Norasteh S
+- authtype: Author
+  name: Liu H
+- authtype: Author
+  name: Bhandari EJ
+- authtype: Author
+  name: Liu YL
+- authtype: Author
+  name: Zhang R
+- authtype: Author
+  name: Chalak LF
+epubdate: 2026 May 28
+fulljournalname: Neurophotonics
+issue: '2'
+pages: ''
+pmclivedate: 2026/05/30
+printpubdate: 2026 Apr
+pubdate: 2026 Apr
+sortdate: 2026/04/01 00:00
+source: Neurophotonics
+title: Data-driven wavelet coherence approach to assess neurovascular coupling in
+  neonatal hypoxic–ischemic encephalopathy.
+uid: '13218833'
+volume: '13'

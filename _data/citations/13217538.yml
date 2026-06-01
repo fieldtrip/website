@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41997874'
+- idtype: pmcid
+  value: PMC13217538
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1958-25.2026
+- idtype: pii
+  value: JNEUROSCI.1958-25.2026
+authors:
+- authtype: Author
+  name: Ren Y
+- authtype: Author
+  name: Cui ME
+- authtype: Author
+  name: Herrmann B
+epubdate: 2026 May 27
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '21'
+pages: ''
+printpubdate: ''
+pubdate: 2026 May 27
+sortdate: 2026/05/27 00:00
+source: J Neurosci
+title: Attentional Disengagement during External and Internal Distractions Reduces
+  Neural Speech Tracking in Background Noise.
+uid: '13217538'
+volume: '46'

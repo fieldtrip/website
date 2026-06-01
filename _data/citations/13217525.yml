@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42031564'
+- idtype: pmcid
+  value: PMC13217525
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0590-25.2026
+- idtype: pii
+  value: JNEUROSCI.0590-25.2026
+authors:
+- authtype: Author
+  name: Spagna A
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Bartolomeo P
+epubdate: 2026 May 27
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '21'
+pages: ''
+printpubdate: ''
+pubdate: 2026 May 27
+sortdate: 2026/05/27 00:00
+source: J Neurosci
+title: Beta and Gamma Dynamics in Attentional Networks Predict Conscious Reports.
+uid: '13217525'
+volume: '46'

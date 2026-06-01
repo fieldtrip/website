@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42114012'
+- idtype: pmcid
+  value: PMC13214026
+- idtype: doi
+  value: 10.1073/pnas.2514098123
+authors:
+- authtype: Author
+  name: Helfrich JD
+- authtype: Author
+  name: Szaflarski J
+- authtype: Author
+  name: Nævra MCJ
+- authtype: Author
+  name: Romunstad L
+- authtype: Author
+  name: Walker MP
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2026 May 11
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '21'
+pages: e2514098123
+printpubdate: 2026 May 26
+pubdate: 2026 May 26
+sortdate: 2026/05/26 00:00
+source: Proc Natl Acad Sci U S A
+title: Spectral mapping reveals a resemblance of the anesthetic brain state to both
+  sleep and coma.
+uid: '13214026'
+volume: '123'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42213694'
+- idtype: pmcid
+  value: PMC13221048
+- idtype: doi
+  value: 10.1371/journal.pbio.3003810
+- idtype: pii
+  value: PBIOLOGY-D-25-03721
+authors:
+- authtype: Author
+  name: Nordén F
+- authtype: Author
+  name: Zanettin I
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Arshamian A
+- authtype: Author
+  name: Lundström JN
+epubdate: 2026 May 29
+fulljournalname: PLoS biology
+issue: '5'
+pages: e3003810
+pmclivedate: 2026/05/30
+printpubdate: ''
+pubdate: 2026 May
+sortdate: 2026/05/29 00:00
+source: PLoS Biol
+title: Olfactory bulb-cortex oscillations encode perceived odor intensity rather than
+  concentration.
+uid: '13221048'
+volume: '24'
