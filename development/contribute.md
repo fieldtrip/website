@@ -21,6 +21,11 @@ You can share your MATLAB code with us and help us to integrate it into the Fiel
 
 If your contribution is considerable, for example a completely new algorithm, there are some additional requirements: your code contribution must be in FieldTrip style, the algorithm must be of broad interest (i.e. more than a single lab), must be maintainable and must be documented not only with help in the code, but also on the website as a tutorial or as example script.
 
+If the contribution is a self-contained method, graphical interface, pipeline,
+or toolbox style project that will be maintained by its original authors, it may
+be more appropriate to publish it as a separate [FieldTrip extension](/development/extension)
+and request a listing on the [extensions page](/extensions).
+
 {% include markup/skyblue %}
 When you contribute code, please consider the [code guidelines](/development/guideline/code) to keep it consistent and compatible with the existing implementation. Also try to adhere to the existing representation of the data in the [data structures](/faq/development/datatype).
 {% include markup/end %}
