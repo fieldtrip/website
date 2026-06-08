@@ -1609,6 +1609,9 @@
     - title: Time-frequency analysis using Hanning window, multitapers and wavelets
       link: /workshop/practicalmeeg2025/handson_sensoranalysis/
       nav_order: 0
+  - title: Pre-conference workshop in Nairobi, Kenya
+    link: /workshop/kenya2026/
+    nav_order: 0
   - title: Realtime MEG BCI hands-on session in Nijmegen
     link: /workshop/realtime/
     nav_order: 0
