@@ -19,6 +19,7 @@ We are considering and/or concretely planning to have FieldTrip workshops in
 
 Previous FieldTrip workshops took place at
 
+- 2026, [ALMA pre-conference workshop](/workshop/kenya2026) - Nairobi, Kenya
 - 2025, [PracticalMEEG](/workshop/practicalmeeg2025) - Aix-en-Provence, France
 - 2025, [African Brain Data Network](/workshop/nigeria2025) - Port Harcourt, Nigeria
 - 2025, [MEG/EEG toolkit](/workshop/toolkit2025) - Nijmegen, NL
