@@ -83,7 +83,9 @@ exclude:
   - COPYING.md
   - Gemfile*
   - _scripts/*
-# the following section can be commented out to speed up the build process for testing
+# the following section can be uncommented to speed up the build process for testing
+#  - citations.md
+#  - pagelist.md
 #  - assets/img/*
 #  - dataformat/*
 #  - development/*

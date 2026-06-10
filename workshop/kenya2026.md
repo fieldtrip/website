@@ -3,6 +3,8 @@ title: Pre-conference workshop in Nairobi, Kenya
 tags: [kenia2026]
 ---
 
+{% include image src="/assets/img/workshop/kenya2026/alma.png" link="https://almaafrica.org" width=200 %}
+
 Preceding the [Institute for Human Development International Conference](https://www.aku.edu/ihd/Pages/ihd-conference.aspx), a pre-conference EEG/ERP  [workshop](https://www.aku.edu/ihd/Pages/pre-conference-workshops.aspx) was organized by [ALMA](https://almaafrica.org) where Robert Oostenveld presented.  
 
 When: 8 June 2026  
@@ -17,9 +19,13 @@ This page lists all materials used/generated during that workshop for the attend
 2. [Analysis of EEG and ERPs](https://download.fieldtriptoolbox.org/workshop/kenya2026/slides/2%20-%20analysis%20of%20EEG%20and%20ERPs.pdf)
 3. [Research questions for EEG and ERPs](https://download.fieldtriptoolbox.org/workshop/kenya2026/slides/3%20-%20research%20questions%20for%20EEG%20and%20ERPs.pdf)
 
+{% include markup/yellow %}
+Last year in Port Harcour (Nigeria) we presented a week-long workshop that more-or-less covered the same topics, but in more detail. The [slides](/workshop/nigeria2025/#slides) presented there are also shared, and many of the presentations were recorded on [video](/workshop/nigeria2025/#video-recordings). So if you want to go in more detail into something, you can check those out.
+{% include markup/end %}
+
 ## EEG demonstration
 
-Following the EEG introduction lecture, we did a live EEG demonstration with the [MBrainTrain](https://mbraintrain.com) Smarting 24-channel wireless EEG system of the Institute for Human Development. Following capping of a volunteer from the audience and preparation of the EEG, three short experiments (four recordings) were done:
+Following the EEG introduction lecture, we did a live EEG demonstration with the [MBrainTrain](https://mbraintrain.com) Smarting 24-channel wireless EEG system of the Institute for Human Development. Following capping of a volunteer from the audience and preparation of the EEG and stimulus presentation laptop, three short experiments (four recordings) were done:
 
 1. resting state eyes open and eyes closed
 2. visual oddball experiment
