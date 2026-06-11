@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42204888'
+- idtype: doi
+  value: 10.1002/brb3.71507
+- idtype: pmcid
+  value: PMC13240049
+authors:
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Brinyark HE
+- authtype: Author
+  name: Chatfield R
+- authtype: Author
+  name: Vaddiparti A
+- authtype: Author
+  name: Smith RJ
+- authtype: Author
+  name: Cox BC
+epubdate: ''
+fulljournalname: Brain and behavior
+issue: '6'
+pages: e71507
+pmclivedate: 2026/06/06
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Brain Behav
+title: Anti-Seizure Medications Alter Functional and Effective Connectivity as Measured
+  With Intracranial Electroencephalography.
+uid: '13240049'
+volume: '16'

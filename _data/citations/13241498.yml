@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42248945'
+- idtype: doi
+  value: 10.1038/s41598-026-53388-5
+- idtype: pii
+  value: 10.1038/s41598-026-53388-5
+- idtype: pmcid
+  value: PMC13241498
+authors:
+- authtype: Author
+  name: Stetza L
+- authtype: Author
+  name: Kayser C
+epubdate: 2026 Jun 5
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/06/07
+printpubdate: ''
+pubdate: 2026 Jun 5
+sortdate: 2026/06/05 00:00
+source: Sci Rep
+title: Spontaneous perceptual reversals are accompanied by systematic changes in pupil
+  size but not respiration phase.
+uid: '13241498'
+volume: '16'

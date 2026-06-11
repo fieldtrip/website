@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '41873221'
+- idtype: doi
+  value: 10.4097/kja.25686
+- idtype: pii
+  value: kja.25686
+- idtype: pmcid
+  value: PMC13247345
+authors:
+- authtype: Author
+  name: Bae J
+- authtype: Author
+  name: Bae MI
+- authtype: Author
+  name: Han DW
+- authtype: Author
+  name: Kwon J
+- authtype: Author
+  name: Song Y
+epubdate: 2026 Mar 24
+fulljournalname: Korean journal of anesthesiology
+issue: '3'
+pages: 318-331
+pmclivedate: 2026/06/10
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Korean J Anesthesiol
+title: Age-dependent electroencephalogram alterations under remimazolam anesthesia.
+uid: '13247345'
+volume: '79'

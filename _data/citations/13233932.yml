@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42045067'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0994-25.2026
+- idtype: pii
+  value: JNEUROSCI.0994-25.2026
+- idtype: pmcid
+  value: PMC13233932
+authors:
+- authtype: Author
+  name: Della Penna F
+- authtype: Author
+  name: Zaccaro A
+- authtype: Author
+  name: Bayram B
+- authtype: Author
+  name: Bubbico F
+- authtype: Author
+  name: Perrucci MG
+- authtype: Author
+  name: Costantini M
+- authtype: Author
+  name: Ferri F
+epubdate: 2026 Jun 3
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '22'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Jun 3
+sortdate: 2026/06/03 00:00
+source: J Neurosci
+title: 'Breathing Strategies to Influence Perception: Evidence for Interoceptive and
+  Exteroceptive Active Sensing.'
+uid: '13233932'
+volume: '46'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '41568908'
+- idtype: pmcid
+  value: PMC13225244
+- idtype: doi
+  value: 10.1097/j.pain.0000000000003917
+- idtype: pii
+  value: 00006396-990000000-01111
+authors:
+- authtype: Author
+  name: Hewitt D
+- authtype: Author
+  name: Tong S
+- authtype: Author
+  name: Schreiber S
+- authtype: Author
+  name: Seymour B
+epubdate: 2026 Jan 21
+fulljournalname: Pain
+issue: '6'
+pages: 1318-1330
+pmclivedate: 2026/06/02
+printpubdate: 2026 Jun 1
+pubdate: 2026 Jun 1
+sortdate: 2026/06/01 00:00
+source: Pain
+title: Tonic pain modulates neural correlates of associative phasic pain memories.
+uid: '13225244'
+volume: '167'

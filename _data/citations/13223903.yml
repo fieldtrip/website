@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '42220293'
+- idtype: pmcid
+  value: PMC13223903
+- idtype: doi
+  value: 10.22514/jofph.2026.041
+- idtype: pii
+  value: S2333-0384(26)00470-8
+authors:
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Han Y
+- authtype: Author
+  name: Huang M
+- authtype: Author
+  name: Gao Z
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Ma X
+- authtype: Author
+  name: Zhang Q
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Tan B
+- authtype: Author
+  name: He J
+epubdate: 2026 May 12
+fulljournalname: Journal of oral & facial pain and headache
+issue: '3'
+pages: 118-129
+pmclivedate: 2026/06/02
+printpubdate: 2026 May
+pubdate: 2026 May
+sortdate: 2026/05/01 00:00
+source: J Oral Facial Pain Headache
+title: Identifying neural oscillation and phase synchronization abnormalities in migraine
+  and their predictive values in transcranial magnetic stimulation.
+uid: '13223903'
+volume: '40'

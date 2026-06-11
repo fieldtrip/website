@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42245133'
+- idtype: pmcid
+  value: PMC13229979
+- idtype: doi
+  value: 10.3389/fnagi.2026.1790156
+authors:
+- authtype: Author
+  name: Schoenfeld MJ
+- authtype: Author
+  name: Burke R
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+epubdate: 2026 May 20
+fulljournalname: Frontiers in aging neuroscience
+issue: ''
+pages: '1790156'
+pmclivedate: 2026/06/04
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/20 00:00
+source: Front Aging Neurosci
+title: 'Predicting time across age: comparing performance and neural dynamics of younger
+  and older adults in a temporal prediction task.'
+uid: '13229979'
+volume: '18'
