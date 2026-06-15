@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42000887'
+- idtype: doi
+  value: 10.1038/s41598-026-47916-6
+- idtype: pii
+  value: 10.1038/s41598-026-47916-6
+- idtype: pmcid
+  value: PMC13254254
+authors:
+- authtype: Author
+  name: Santhana Gopalan PR
+- authtype: Author
+  name: Hämäläinen J
+- authtype: Author
+  name: Penttonen M
+- authtype: Author
+  name: Nokia MS
+epubdate: 2026 Apr 18
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/06/12
+printpubdate: ''
+pubdate: 2026 Apr 18
+sortdate: 2026/04/18 00:00
+source: Sci Rep
+title: Impact of cardiac cycle and respiratory rhythm phase on visual attention in
+  healthy young and older adults.
+uid: '13254254'
+volume: '16'

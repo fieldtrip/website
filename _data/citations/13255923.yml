@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42115002'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0039-26.2026
+- idtype: pii
+  value: JNEUROSCI.0039-26.2026
+- idtype: pmcid
+  value: PMC13255923
+authors:
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Wei PH
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Shan Y
+- authtype: Author
+  name: Zhao G
+- authtype: Author
+  name: Cui Z
+epubdate: 2026 Jun 10
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '23'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Jun 10
+sortdate: 2026/06/10 00:00
+source: J Neurosci
+title: Long-Range White-Matter Pathways Enable Efficient Spontaneous Neural Activity
+  Propagation in the Human Brain.
+uid: '13255923'
+volume: '46'

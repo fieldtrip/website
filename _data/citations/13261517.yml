@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '42241479'
+- idtype: doi
+  value: 10.1093/schbul/sbaf239
+- idtype: pii
+  value: '8702484'
+- idtype: pmcid
+  value: PMC13261517
+authors:
+- authtype: Author
+  name: Tavella A
+- authtype: Author
+  name: Valt C
+- authtype: Author
+  name: Berchio C
+- authtype: Author
+  name: Stolfa G
+- authtype: Author
+  name: Altamura M
+- authtype: Author
+  name: Andriola I
+- authtype: Author
+  name: Antonucci LA
+- authtype: Author
+  name: Barrasso G
+- authtype: Author
+  name: D'Ambrosio E
+- authtype: Author
+  name: Di Sciascio G
+- authtype: Author
+  name: Marsella V
+- authtype: Author
+  name: Sambuco N
+- authtype: Author
+  name: Saponaro A
+- authtype: Author
+  name: Pergola G
+- authtype: Author
+  name: Bertolino A
+epubdate: ''
+fulljournalname: Schizophrenia bulletin
+issue: '3'
+pages: ''
+printpubdate: 2026 Apr 10
+pubdate: 2026 Apr 10
+sortdate: 2026/04/10 00:00
+source: Schizophr Bull
+title: Magnetoencephalographic Microstates Reveal Disrupted Brain Activity Patterns
+  in Schizophrenia Controlling for Treatment-Related Modulations.
+uid: '13261517'
+volume: '52'

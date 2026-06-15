@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41882306'
+- idtype: doi
+  value: 10.3758/s13415-025-01394-x
+- idtype: pii
+  value: 10.3758/s13415-025-01394-x
+- idtype: pmcid
+  value: PMC13260159
+authors:
+- authtype: Author
+  name: Kopaeva E
+- authtype: Author
+  name: Blomberg J
+- authtype: Author
+  name: Roll M
+epubdate: 2026 Mar 25
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '3'
+pages: 1101-1122
+pmclivedate: 2026/06/13
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Mood modulations of emotional word processing: A predictive perspective view
+  of EEG data.'
+uid: '13260159'
+volume: '26'

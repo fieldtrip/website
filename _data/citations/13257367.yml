@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40409386'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2025.121288
+- idtype: pii
+  value: S1053-8119(25)00291-5
+- idtype: pmcid
+  value: PMC13257367
+- idtype: MID
+  value: NIHMS2176223
+authors:
+- authtype: Author
+  name: Kang JU
+- authtype: Author
+  name: Mattar L
+- authtype: Author
+  name: Vergara J
+- authtype: Author
+  name: Gobo VE
+- authtype: Author
+  name: Rey HG
+- authtype: Author
+  name: Heilbronner SR
+- authtype: Author
+  name: Watrous AJ
+- authtype: Author
+  name: Hayden BY
+- authtype: Author
+  name: Sheth SA
+- authtype: Author
+  name: Bartoli E
+epubdate: 2025 May 21
+fulljournalname: NeuroImage
+issue: ''
+pages: '121288'
+pmclivedate: 2026/06/12
+printpubdate: 2025 Jul 15
+pubdate: 2025 Jul 15
+sortdate: 2025/07/15 00:00
+source: Neuroimage
+title: Parietal cortex is recruited by frontal and cingulate areas to support action
+  monitoring and updating during stopping.
+uid: '13257367'
+volume: '315'

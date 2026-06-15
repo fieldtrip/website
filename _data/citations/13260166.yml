@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '41507655'
+- idtype: doi
+  value: 10.3758/s13415-025-01382-1
+- idtype: pii
+  value: 10.3758/s13415-025-01382-1
+- idtype: pmcid
+  value: PMC13260166
+authors:
+- authtype: Author
+  name: Camara CF
+- authtype: Author
+  name: Halder S
+- authtype: Author
+  name: de Klerk CCJM
+- authtype: Author
+  name: Sel A
+epubdate: 2026 Jan 8
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '3'
+pages: 1237-1250
+pmclivedate: 2026/06/13
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Individual differences in the empathic experience of pain: An EEG and machine
+  learning approach.'
+uid: '13260166'
+volume: '26'

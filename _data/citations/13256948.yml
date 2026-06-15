@@ -1,0 +1,31 @@
+articleids:
+- idtype: doi
+  value: 10.1093/braincomms/fcag202
+- idtype: pmcid
+  value: PMC13256948
+authors:
+- authtype: Author
+  name: Isla Cainzos S
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Borggrewe M
+- authtype: Author
+  name: Altjohann HM
+- authtype: Author
+  name: Magnus T
+- authtype: Author
+  name: Biskamp J
+epubdate: 2026 Jun 2
+fulljournalname: Brain Communications
+issue: '3'
+pages: ''
+pmclivedate: 2026/06/12
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/02 00:00
+source: Brain Commun
+title: Timed microglia depletion promotes functional network reorganization and motor
+  recovery after stroke.
+uid: '13256948'
+volume: '8'

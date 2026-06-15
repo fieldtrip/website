@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41957277'
+- idtype: doi
+  value: 10.1038/s42003-026-09992-2
+- idtype: pii
+  value: 10.1038/s42003-026-09992-2
+- idtype: pmcid
+  value: PMC13249964
+authors:
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Arora K
+- authtype: Author
+  name: Theeuwes J
+- authtype: Author
+  name: Van der Stigchel S
+- authtype: Author
+  name: Gayet S
+- authtype: Author
+  name: Chota S
+epubdate: 2026 Apr 9
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/06/11
+printpubdate: ''
+pubdate: 2026 Apr 9
+sortdate: 2026/04/09 00:00
+source: Commun Biol
+title: Dynamic competition between bottom-up saliency and top-down goals in early
+  visual cortex.
+uid: '13249964'
+volume: '9'
