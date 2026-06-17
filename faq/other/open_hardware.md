@@ -30,6 +30,10 @@ Tim Bardouille has shared [instructions](https://github.com/tbardouille/MEG_bios
 
 David Hairston and Alfred Yu have shared the [instructions](https://osf.io/qrka2/) for fabricating a phantom for EEG and similar electrophysiology recordings.
 
+## Auditory stimulation system for EEG
+
+Alexandra Corneyllie and colleagues have shared an open stimulation system for auditory EEG experiments based on a [Raspberry Pi](https://www.raspberrypi.com/) and [HifiBerry](https://www.hifiberry.com/) sound card, controlled with Python. The system achieves high timing accuracy and sound quality, and provides trigger output via the parallel port. See the [paper](https://doi.org/10.1523/ENEURO.0524-20.2021) and the [code and design details on GitHub](https://github.com/PyOpenProto/PyOpenProto).
+
 ## MRI hardware
 
 Although this FieldTrip website is not the most logical place to search for or to document open MRI software and hardware, we do want to point out the review paper on [Open-source magnetic resonance imaging](https://doi.org/10.1002/nbm.5052) by Lukas Winter and colleagues. It provides links to open software and hardware resources, for example the [Open Source Imaging Initiative](https://gitlab.com/osii).
