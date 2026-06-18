@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41241082'
+- idtype: doi
+  value: 10.1016/j.jaac.2025.11.003
+- idtype: pii
+  value: S0890-8567(25)02183-5
+- idtype: pmcid
+  value: PMC7619170
+- idtype: MID
+  value: EMS213418
+authors:
+- authtype: Author
+  name: Kong Y
+- authtype: Author
+  name: Yuan X
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Dang C
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Huang J
+- authtype: Author
+  name: Guo J
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Song Y
+epubdate: 2025 Nov 13
+fulljournalname: Journal of the American Academy of Child and Adolescent Psychiatry
+issue: ''
+pages: ''
+pmclivedate: 2026/06/16
+printpubdate: ''
+pubdate: 2025 Nov 13
+sortdate: 2025/11/13 00:00
+source: J Am Acad Child Adolesc Psychiatry
+title: Altered Processing of Auditory Distractions Under Competing Inputs in Children
+  With Attention-Deficit/Hyperactivity Disorder.
+uid: '7619170'
+volume: ''

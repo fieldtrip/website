@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42050491'
+- idtype: doi
+  value: 10.1186/s12888-026-08096-9
+- idtype: pii
+  value: 10.1186/s12888-026-08096-9
+- idtype: pmcid
+  value: PMC13267391
+authors:
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Lan X
+- authtype: Author
+  name: Li W
+- authtype: Author
+  name: Luo Z
+- authtype: Author
+  name: Liu G
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Yao Y
+- authtype: Author
+  name: Wu A
+- authtype: Author
+  name: Zhou Y
+epubdate: 2026 Apr 28
+fulljournalname: BMC psychiatry
+issue: '1'
+pages: ''
+pmclivedate: 2026/06/16
+printpubdate: ''
+pubdate: 2026 Apr 28
+sortdate: 2026/04/28 00:00
+source: BMC Psychiatry
+title: Alpha-band fronto-limbic hyperconnectivity in adolescents with major depression
+  and suicidal ideation.
+uid: '13267391'
+volume: '26'
