@@ -1,0 +1,35 @@
+articleids:
+- idtype: doi
+  value: 10.1162/IMAG.a.1269
+- idtype: pmcid
+  value: PMC13271153
+authors:
+- authtype: Author
+  name: Mallus FA
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Dinga R
+- authtype: Author
+  name: Kia MS
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Michela A
+- authtype: Author
+  name: Ros T
+- authtype: Author
+  name: Wolfers T
+epubdate: 2026 Jun 15
+fulljournalname: Imaging Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/06/17
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/15 00:00
+source: Imaging Neurosci (Camb)
+title: 'From early to contemporary normative modeling: Mapping individual differences
+  in neurophysiological signals.'
+uid: '13271153'
+volume: '4'
