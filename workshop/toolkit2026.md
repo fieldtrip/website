@@ -19,7 +19,7 @@ You can now pre-register [here](https://www.ru.nl/en/donders-institute/services/
 
 Note that the tentative program below still might change a bit.
 
-### Monday May 19, 2025
+### Monday October 12, 2026
 
 | 09:00-09:30 | Registration and coffee |
 | 09:30-10:00 | Welcome and personal introduction round |
@@ -31,41 +31,41 @@ Note that the tentative program below still might change a bit.
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
-### Tuesday May 20, 2025
+### Tuesday October 13, 2026
 
-| 09:00-10:30 | Time frequency analysis of power - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/03_frequency.pdf) by Jan-Mathijs Schoffelen (NOTE: LOCATION=RED ROOM)|
+| 09:00-10:30 | Denoising of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/03_frequency.pdf) by Jan-Mathijs Schoffelen
 | 10:30-10:45 | Coffee Break |
-| 10:45-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/sensor/timefrequencyanalysis) |
+| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
-| 14:30-15:45 | Forward and inverse - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/04_forward_inverse.pdf) by Robert |
+| 14:30-15:45 | Coregistration of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/04_forward_inverse.pdf) by Robert |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 18:30-22:00 | Drinks & dinner, eetbar [Mikmak](https://www.eetbarmikmak.nl), which is located [here](https://www.google.nl/maps/place/Kelfkensbos+45,+6511+TB+Nijmegen) |
 
-### Wednesday May 21, 2025
+### Wednesday October 14, 2026
 
 | 09:00-09:30 | Morning chill or workout |
 | 09:30-11:00 | Special interest [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/05_infant_eeg.pdf): The beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/06_beamforming.pdf) by Britta Westner |
+| 11:15-12:30 | Forward and inverse modelling of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/06_beamforming.pdf) by Robert |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Beamforming - [hands-on](/tutorial/source/beamformer) |
+| 13:30-15:45 | Inverse modelling - [hands-on](/tutorial/source/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
-### Thursday May 22, 2025
+### Thursday October 15, 2026
 
 | 09:00-09:30 | Morning chill or workout |
 | 09:45-11:00 | New methods for experimental design and analysis - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/07_new_methods.pdf) by JM |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/08_statistics.pdf) by JM |
+| 11:15-12:30 | Custom helmet design for OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/08_statistics.pdf) by Robert |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Statistics - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
+| 13:30-15:45 | ??? - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
-### Friday May 23, 2025
+### Friday October 16, 2026
 
 | 09:00-09:30 | Morning chill or workout |
 | 09:45-11:00 | Open science and good practices - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/09_open_science.pdf) by Robert |
