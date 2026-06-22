@@ -1,0 +1,41 @@
+articleids:
+- idtype: doi
+  value: 10.3389/fnsys.2026.1805778
+- idtype: pmcid
+  value: PMC13275346
+authors:
+- authtype: Author
+  name: Bondi E
+- authtype: Author
+  name: Carbone F
+- authtype: Author
+  name: Schiena G
+- authtype: Author
+  name: Massalha Y
+- authtype: Author
+  name: Marra M
+- authtype: Author
+  name: Di Consoli L
+- authtype: Author
+  name: Mazzocut-Mis M
+- authtype: Author
+  name: Gaggioli A
+- authtype: Author
+  name: Chirico A
+- authtype: Author
+  name: Brambilla P
+- authtype: Author
+  name: Maggioni E
+epubdate: 2026 Jun 4
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/06/19
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/04 00:00
+source: Front Syst Neurosci
+title: 'The neurobiological basis of the awe experience in affective disorders: an
+  exploratory EEG study.'
+uid: '13275346'
+volume: '20'

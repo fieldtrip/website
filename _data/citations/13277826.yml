@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42313885'
+- idtype: doi
+  value: 10.2196/99833
+- idtype: pii
+  value: v15i1e99833
+- idtype: pmcid
+  value: PMC13277826
+authors:
+- authtype: Author
+  name: Duport A
+- authtype: Author
+  name: Phylactou P
+- authtype: Author
+  name: Diotalevi G
+- authtype: Author
+  name: Arseneau D
+- authtype: Author
+  name: Ngoc Minh Pham T
+- authtype: Author
+  name: Lowndes A
+- authtype: Author
+  name: Espin-Garcia O
+- authtype: Author
+  name: Seminowicz DA
+- authtype: Author
+  name: Schabrun SM
+epubdate: 2026 Jun 18
+fulljournalname: JMIR research protocols
+issue: ''
+pages: e99833
+pmclivedate: 2026/06/19
+printpubdate: ''
+pubdate: 2026 Jun 18
+sortdate: 2026/06/18 00:00
+source: JMIR Res Protoc
+title: 'Understanding Motor Adaptation in the Transition to Sustained Pain: Protocol
+  for a Longitudinal Experimental Study.'
+uid: '13277826'
+volume: '15'

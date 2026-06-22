@@ -1,0 +1,39 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.ynirp.2026.100333
+- idtype: pmcid
+  value: PMC13282526
+- idtype: pii
+  value: S2666-9560(26)00016-4
+authors:
+- authtype: Author
+  name: Bick J
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Laughlin H
+- authtype: Author
+  name: Jimenez Ortiz A
+- authtype: Author
+  name: Galvan A
+- authtype: Author
+  name: Vaughn K
+- authtype: Author
+  name: Price C
+- authtype: Author
+  name: Landry S
+- authtype: Author
+  name: DeMaster D
+epubdate: 2026 Mar 22
+fulljournalname: 'Neuroimage: Reports'
+issue: '2'
+pages: ''
+pmclivedate: 2026/06/21
+printpubdate: ''
+pubdate: 2026 Jun
+sortdate: 2026/03/22 00:00
+source: Neuroimage Rep
+title: 'Atypical neural responses to dynamically changing facial expressions correlate
+  with behavioral risk in toddlers born preterm: Evidence from an ERP study.'
+uid: '13282526'
+volume: '6'
