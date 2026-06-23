@@ -1,10 +1,7 @@
 ---
 title: SQUIDs versus OPMs
-tags: [cuttingeegx]
+tags: [cuttingeegx, opm]
 ---
-
-_This page is still under construction_
-
 
 ## Introduction
 
@@ -354,7 +351,7 @@ print -dpng cuttingeegx_topo_no-interp_opm.png
 Plot the topography including NaNs, then compare it with the topography where you excluded NaNs.
 {% include markup/end %}
 
-## Coregistration 
+## Coregistration
 
 ### SQUID
 We are now going to coregister the anatomical MRI to the SQUID coordinate system. We read the MRI, SQUID channels and the Polhemus headshape in memory. We recommend converting all quantities to SI units to ensure consistent units throughout your pipeline.
