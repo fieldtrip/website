@@ -1147,6 +1147,9 @@
     - title: Test your MATLAB and FieldTrip installation in advance
       link: /workshop/toolkit2025/test_installation/
       nav_order: 0
+  - title: Advanced MEG/EEG toolkit at the Donders
+    link: /workshop/toolkit2026/
+    nav_order: 0
   - title: Advanced analysis and source modeling of EEG and MEG data
     link: /workshop/toolkit2015/
     nav_order: 0
