@@ -2,6 +2,9 @@
   title: Designing 3D printed helmets for different OPM sensor types
 - link: /example/other/opm_straighthelmet
   title: Designing an OPM helmet with a straight opening at the bottom
+- link: /faq/other/opm_selection
+  title: How do I select 32 OPM sensor positions from the 144 slots in the FieldLine
+    Beta2 smart helmet?
 - link: /getting_started/meg/cerca
   title: Getting started with Cerca OPM data
 - link: /getting_started/meg/fieldline
@@ -18,3 +21,5 @@
   title: Preprocessing of Optically Pumped Magnetometer (OPM) data
 - link: /tutorial/source/coregistration_opm
   title: Coregistration of Optically Pumped Magnetometer (OPM) data
+- link: /workshop/cuttingeegx/squids_vs_opms
+  title: SQUIDs versus OPMs

@@ -122,6 +122,9 @@
   title: Where can I find open access MEG/EEG data?
 - link: /faq/other/open_hardware
   title: Where can I find open hardware for MEG and EEG?
+- link: /faq/other/opm_selection
+  title: How do I select 32 OPM sensor positions from the 144 slots in the FieldLine
+    Beta2 smart helmet?
 - link: /faq/other/showcallinfo
   title: How do I prevent FieldTrip from printing the time and memory after each function
     call?
