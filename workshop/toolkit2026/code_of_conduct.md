@@ -1,6 +1,6 @@
 ---
 title: Code of Conduct
-tags: [toolkit2025]
+tags: [toolkit2026]
 ---
 
 The FieldTrip team is dedicated to providing a harassment-free toolkit experience for everyone. We do not tolerate harassment of toolkit participants in any form. This Code of Conduct applies to all of the toolkit's spaces, including public channels, private channels and direct messages. Anyone who violates this code of conduct may be sanctioned or expelled from these spaces at the discretion of the toolkit organizers.

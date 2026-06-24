@@ -15,7 +15,7 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2026, [MEG/OPM toolkit](https://www.ru.nl/en/donders-institute/services/donders-toolkits) - Nijmegen, NL
+- 2026, [MEG/OPM toolkit](/workshop/toolkit2026) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 

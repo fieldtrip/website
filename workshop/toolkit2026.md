@@ -1,19 +1,15 @@
 ---
-title: Advanced MEG/EEG toolkit at the Donders
+title: Advanced MEG/OPM toolkit at the Donders
 tags: [toolkit2026]
 ---
 
-NOTE: THIS NEEDS TO BE UPDATED
+From October 12-16 2026 we will host our annual MEG/OPM Tool-kit course in Nijmegen. This year will be the first time with a strong focus on OPMs. During the 5-day toolkit course we will teach you advanced MEG data analysis skills. Among others, pre-processing, source reconstruction and statistics will be covered. Furthermore, we will give special attention to new OPM-specific methods for denoising, coregistration and for custom helmet design.
 
+The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of SQUID-MEG and OPM-MEG data using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own MEG data under supervision of experienced tutors.
 
+There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that we will **not cover EEG analysis** and that we will focus on MEG methods using both SQUID and OPM systems.  
 
-From October 12-16 2026 we will host our annual MEG/EEG Tool-kit course in Nijmegen. During this 5-day toolkit course we will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction, analysis methods such as RSA and TRFs, and various statistical methods will be covered. Furthermore, we will give special attention to new opportunities in experimental design and measurements with Optically Pumped Magnetometer (OPM) systems and mobile EEG.
-
-The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own data under supervision of experienced tutors.
-
-There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that the course is specifically aimed at participants that already have designed and conducted their own experiment(s) and already have data that they can bring along for analysis. This means that first year PhD students, as well as master students, should consider taking the course at a somewhat later career stage.
-
-You can now pre-register [here](https://www.ru.nl/en/donders-institute/services/donders-toolkits). The deadline for pre-registration is April 11, 2025. We will inform you as to whether you obtained a place in this course not later than April 22, 2025.
+You will soon be able to pre-register [here](https://www.ru.nl/en/donders-institute/services/donders-toolkits). The deadline for pre-registration is TBD. We will inform you as to whether you obtained a place in this course not later than TBD.
 
 ## Program
 
@@ -23,58 +19,57 @@ Note that the tentative program below still might change a bit.
 
 | 09:00-09:30 | Registration and coffee |
 | 09:30-10:00 | Welcome and personal introduction round |
-| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/02_introduction.pdf) by Robert Oostenveld |
+| 10:00-11:00 | Introduction to MEG/OPM and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | EEG, MEG and OPM lab demonstrations |
+| 11:15-12:30 | MEG and OPM lab demonstrations |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Pre-processing - [hands-on](/tutorial/sensor/eventrelatedaveraging) |
+| 13:30-15:45 | Pre-processing of MEG/OPM data - [hands-on](/tutorial/sensor/eventrelatedaveraging) and/or [hands-on](/tutorial/sensor/preprocessing_opm) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
 ### Tuesday October 13, 2026
 
-| 09:00-10:30 | Denoising of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/03_frequency.pdf) by Jan-Mathijs Schoffelen
+| 09:00-10:30 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
 | 10:30-10:45 | Coffee Break |
-| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/timefrequencyanalysis) |
+| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/opm_denoising) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
-| 14:30-15:45 | Coregistration of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/04_forward_inverse.pdf) by Robert |
+| 14:30-15:45 | Coregistration of OPM-MEG data - lecture by Robert Oostenveld |
 | 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
-| 18:30-22:00 | Drinks & dinner, eetbar [Mikmak](https://www.eetbarmikmak.nl), which is located [here](https://www.google.nl/maps/place/Kelfkensbos+45,+6511+TB+Nijmegen) |
+| 16:00-17:30 | OPM coregistration - [hands-on](/tutorial/source/coregistration_opm) |
+| 18:30-22:00 | Drinks & dinner, TBA |
 
 ### Wednesday October 14, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:30-11:00 | Special interest [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/05_infant_eeg.pdf): The beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
+| 09:30-11:00 | Special interest lecture - Developmental research using EEG and OPMs - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Forward and inverse modelling of OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/06_beamforming.pdf) by Robert |
+| 11:15-12:30 | Source reconstruction of MEG data - lecture by Robert Oostenveld |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Inverse modelling - [hands-on](/tutorial/source/beamformer) |
+| 13:30-15:45 | Source reconstruction of MEG data - [hands-on](/tutorial/source/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
 ### Thursday October 15, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | New methods for experimental design and analysis - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/07_new_methods.pdf) by JM |
+| 09:45-11:00 | Custom helmet design for OPM-MEG data - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Custom helmet design for OPM-MEG data - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/08_statistics.pdf) by Robert |
+| 11:15-12:30 | OPM helmet design - [hands-on](/tutorial/sensor/opm_helmet_design) |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | ??? - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
-| 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
+| 13:30-14:30 | Statistics using non-parametric randomization techniques - lecture by Robert Oostenveld |
+| 14:30-17:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
 
 ### Friday October 16, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Open science and good practices - [lecture](https://download.fieldtriptoolbox.org/workshop/toolkit2025/slides/09_open_science.pdf) by Robert |
+| 09:45-11:00 | Open science and good practices - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | FieldTrip playground, apply your newly acquired knowledge and skills |
-| 15:45-16:00 | Tea Break |
-| 16:00-16:30 | Evaluation and testimonials |
+| 13:30-15:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
+| 15:30-15:45 | Tea Break |
+| 15:45-16:00 | Evaluation and testimonials |
 
 ## Practicalities
 
@@ -82,19 +77,19 @@ This will be an in-person event with no possibilities for hybrid or online atten
 
 ### Wifi access
 
-If you need wifi access and you don't have a eduroam account through your institution, it is possible to get a visitor access. This needs to be renewed each day. Please follow the instructions on [this intranet page](https://intranet.donders.ru.nl/index.php?id=eva).
+If you need wifi access and you don't have a eduroam account through your institution, it is possible to get a visitor access. We will organize this with you on-site.
 
 ### Playground sessions: bring-your-own-data
 
-A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on the laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
+A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own MEG data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on the laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
 
 ### Test your installation in advance
 
-For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2025/test_installation), and download the data that we will need during the hands-on sessions. Before running this test, we recommend that you prepare your laptop as per the instructions in the next section, which explains in some more detail what needs to be downloaded in advance, as well as how you can easily obtain (and install) a copy of FieldTrip on your computer.
+For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2026/test_installation), and download the data that we will need during the hands-on sessions. Before running this test, we recommend that you prepare your laptop as per the instructions in the next section, which explains in some more detail what needs to be downloaded in advance, as well as how you can easily obtain (and install) a copy of FieldTrip on your computer.
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, >= 2020a/b).
+For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, so R2021b or later).
 
 To ensure that everything runs smoothly, we recommend that you set up your computer with a clean and well-tested version of FieldTrip, and download the data that are needed for the hands-on sessions in advance.
 
@@ -102,22 +97,22 @@ To ensure that everything runs smoothly, we recommend that you set up your compu
 You can either 'click around' using web browsers and/or explorer windows to grab the data that are needed, or instead (less work, at least if it works) execute the MATLAB code below.
 {% include markup/end %}
 
-To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20250310), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
+To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260901), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
 ```
 % create a folder that will contain the code and the data, and change directory
-mkdir('toolkit2025');
-cd('toolkit2025');
+mkdir('toolkit2026');
+cd('toolkit2026');
 
 % download and unzip fieldtrip into the newly created folder
-url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20250310.zip';
+url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260901.zip';
 unzip(url_fieldtrip);
 ```
 
 Upon completion of this step, the folder structure should look something like this: 
 
 ```bash
-fieldtrip-20250310/
+fieldtrip-20260901/
 |-- bin
 |-- compat
 |-- connectivity
@@ -144,10 +139,10 @@ fieldtrip-20250310/
 If you have downloaded and unzipped by hand, it could be that there's an 'extra folder layer' in your directory structure. We recommend that you remove this extra layer, i.e. move all content one level up.
 {% include markup/end %}
 
-Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2025``` folder, which you created in the previous step.
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2026``` folder, which you created in the previous step.
 
 ```
-% create a folder (within toolkit2025) that will contain the data, to keep a clean structure
+% create a folder (within toolkit2026) that will contain the data, to keep a clean structure
 mkdir('data');
 cd('data');
 
@@ -155,53 +150,21 @@ cd('data');
 url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
 unzip(url_subject01);
 
-% next, create for each of the tutorials a folder, and download the data
-mkdir('eventrelatedaveraging');
-cd('eventrelatedaveraging');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging';
-fnames = {'dataFC_LP.mat' 'dataFIC_LP.mat' 'dataIC_LP.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
-
-mkdir('timefrequencyanalysis');
-cd('timefrequencyanalysis');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis';
-fnames = {'dataFIC.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
-
-mkdir('beamformer');
-cd('beamformer');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
-fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
-
-mkdir('cluster_permutation_timelock');
-cd('cluster_permutation_timelock');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
-fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat' 'stat_ERF_planar_FICvsFC.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../../');
+%  the rest of the instructions will follow later  ...
 ```
+
 At this stage, you ideally have a directory structure that looks like the following one:
+
 ```bash
 .
 |-- data
 |   |-- Subject01.ds
 |   |-- beamformer
 |   |-- cluster_permutation_timelock
-|   |-- eventrelatedaveraging
-|   `-- timefrequencyanalysis
-`-- fieldtrip-20250310
+|   |-- opm_denoising
+|   |-- coregistration_opm
+|   `-- opm_helmet_design
+`-- fieldtrip-20260901
     |-- bin
     |-- compat
     |-- connectivity
@@ -223,17 +186,18 @@ At this stage, you ideally have a directory structure that looks like the follow
     |-- trialfun
     `-- utilities
 ```
+
 So, if you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
 
 ```
-% change into the 'toolkit2025' folder and then do the following
+% change into the 'toolkit2026' folder and then do the following
 restoredefaultpath
-addpath('fieldtrip-20250310');
+addpath('fieldtrip-20260901');
 addpath(genpath('data'));
 ft_defaults;
 ```
 
-The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20250310` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20260901` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI. You can find more information about startup files in the MATLAB documentation.
@@ -243,4 +207,4 @@ Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories
 
 ## Code of conduct
 
-Please spend a couple of minutes to have a look at our [Code of Conduct](/workshop/toolkit2025/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
+Please spend a couple of minutes to have a look at our [Code of Conduct](/workshop/toolkit2026/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
