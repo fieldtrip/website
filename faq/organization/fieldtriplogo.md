@@ -4,12 +4,10 @@ tags: [logo]
 category: faq
 redirect_from:
     - /faq/can_i_use_the_fieldtrip_logo_on_my_poster/
-
-redirect_from:
     - /faq/fieldtriplogo/
 ---
 
-Yes you can, and it is much appreciated! Below you can find the logo bitmap in different qualities and in Encapsulated Postscript (eps) format.
+Sure you can, and it is much appreciated! Below you can find the logo bitmap in different qualities and in Encapsulated Postscript (eps) format.
 
 - [fieldtriplogo-50.png](/assets/img/fieldtriplogo-50.png)
 - [fieldtriplogo-75.png](/assets/img/fieldtriplogo-75.png)

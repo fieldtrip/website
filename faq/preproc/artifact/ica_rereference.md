@@ -41,7 +41,7 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 
 In the following, the code used to generate above figures is provided. The example data used in this example can be downloaded [here](https://download.fieldtriptoolbox.org/example/rereference/).
 
-```
+```matlab
 load data_selectedTrial % load data
 load ../fieldtrip/template/layout/acticap-64ch-standard2.mat % load electrode layout
 

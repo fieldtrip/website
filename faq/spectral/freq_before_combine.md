@@ -8,7 +8,7 @@ redirect_from:
 
 The reason for this is that when you square a sine wave, its frequency will be doubled. If you use ft_combineplanar with the default combination method, 'Pythagoras' will be performed on the horizontal and vertical components of the planar gradient, which involves squaring the signals. As a consequence, periodic components in the original spectrum will shift their peaks to higher frequencies. Moreover, if there is more than a single peak in the spectrum, multiplicative effects might occur, which leads to additional spectral peaks at sum (and difference) frequencies of the original signal components. Also, if some of the peaks are at a frequency higher than half the Nyquist frequency, aliasing may occur (since doubling the frequency after squaring moves the peak beyond Nyquist). These things are demonstrated by the code below. The correct order for the computation of spectral quantities on synthetic planar gradient data is to execute ft_freqanalysis first, and ft_combineplanar second.
 
-```
+```matlab
 timeaxis = (0:999)./1000;
 freqaxis = 0:500;
 

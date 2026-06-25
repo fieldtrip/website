@@ -17,7 +17,7 @@ If you have a dataset from a subject with a known name, you can search on the Li
 
 George O'Neill from the FIl shared the following code to scrub identifying information from a CTF dataset.
 
-```
+```matlab
 function go_anonymiseDs(input,output)
 % Note// input and output filenames must include filepaths
 

@@ -23,7 +23,7 @@ When you use **[ft_resampledata](/reference/ft_resampledata)** on typical data, 
 
 The below code can be used to explore the different methods and to illustrate the effect of aliasing using simulated signals that prove problematic for the default filtering.
 
-```
+```matlab
 fs = 500;
 nchan = 1;
 nrpt  = 32;
@@ -103,7 +103,7 @@ ylabel('power');
 
 If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the default `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power that is due to the aliasing. This aliasing can be avoided by an explicit lowpass filtering step prior to the resampling.
 
-```
+```matlab
 % add a very high amplitude broad-band component
 data_hf_broad = data;
 for k = 1:nchan
@@ -177,7 +177,7 @@ ylabel('power');
 
 The above example is an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method.
 
-```
+```matlab
 % add a very high amplitude narrowband component
 data_hf_narrow = data;
 for k = 1:nchan

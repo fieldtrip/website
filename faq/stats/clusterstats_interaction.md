@@ -17,7 +17,7 @@ We assume you have the output of your time-locked or frequency analysis for each
 
 From these 4 data structures, you now make 2 difference data structures in the following way:
 
-```
+```matlab
 cfg = [];
 cfg.parameter = 'powspctrm';
 cfg.operation = 'subtract';
@@ -38,7 +38,7 @@ Here it is assumed that you have the output of your time-locked or frequency ana
 
 From these KL data structures, you now could make K(L-1) difference data structures in the following way:
 
-```
+```matlab
 cfg = [];
 cfg.operation = 'subtract';
 cfg.parameter = 'powspctrm';

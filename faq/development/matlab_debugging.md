@@ -31,16 +31,8 @@ For example, the following will result in an error because of the invalid input 
     >> cfg.debug = 'saveonerror'
     >> ft_timelockanalysis(cfg, [])
 
-redirect_from:
-    - /faq/matlab_debugging/
----
-
     An error was detected while executing ft_timelockanalysis
     Saving debug information to /private/tmp/ft_timelockanalysis_20140719T103549.mat
-
-redirect_from:
-    - /faq/matlab_debugging/
----
 
     Error using ft_checkdata (line 442)
     This function requires raw+comp or raw data as input.
