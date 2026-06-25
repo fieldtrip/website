@@ -102,79 +102,73 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 1. Preprocess the MEG data, for instance pertaining to an ERF analysis at the sensor level. Note the `cfg.keeptrials='yes'` option when calling **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-    ```matlab
-    % define trials
-    cfg = [];
-    cfg.dataset = 'TacStimRegressConfound.ds';
-    cfg.trialdef.eventtype = 'UPPT001';
-    cfg.trialdef.eventvalue = 4;
-    cfg.trialdef.prestim = 0.2;
-    cfg.trialdef.poststim = 0.3;
-    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
-    cfg = ft_definetrial(cfg);
+        % define trials
+        cfg = [];
+        cfg.dataset = 'TacStimRegressConfound.ds';
+        cfg.trialdef.eventtype = 'UPPT001';
+        cfg.trialdef.eventvalue = 4;
+        cfg.trialdef.prestim = 0.2;
+        cfg.trialdef.poststim = 0.3;
+        cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
+        cfg = ft_definetrial(cfg);
 
-    % preprocess the MEG data
-    cfg.channel = {'MEG'};
-    cfg.demean = 'yes';
-    cfg.baselinewindow = [-0.2 0];
-    cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
-    data = ft_preprocessing(cfg);
+        % preprocess the MEG data
+        cfg.channel = {'MEG'};
+        cfg.demean = 'yes';
+        cfg.baselinewindow = [-0.2 0];
+        cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
+        data = ft_preprocessing(cfg);
 
-    % timelock analysis
-    cfg = [];
-    cfg.keeptrials = 'yes';
-    timelock = ft_timelockanalysis(cfg, data);
-    ````
+        % timelock analysis
+        cfg = [];
+        cfg.keeptrials = 'yes';
+        timelock = ft_timelockanalysis(cfg, data);
 
 2. Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below at the end of this page) gives us these parameters. By demeaning we obtain the deviations relative to the average head position and orientation.
 
-    ```matlab
-    % define the same trials, now for the HLC channels
-    cfg = [];
-    cfg.dataset = 'TacStimRegressConfound.ds';
-    cfg.trialdef.eventtype = 'UPPT001';
-    cfg.trialdef.eventvalue = 4;
-    cfg.trialdef.prestim = 0.2;
-    cfg.trialdef.poststim = 0.3;
-    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
-    cfg = ft_definetrial(cfg);
+        % define the same trials, now for the HLC channels
+        cfg = [];
+        cfg.dataset = 'TacStimRegressConfound.ds';
+        cfg.trialdef.eventtype = 'UPPT001';
+        cfg.trialdef.eventvalue = 4;
+        cfg.trialdef.prestim = 0.2;
+        cfg.trialdef.poststim = 0.3;
+        cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
+        cfg = ft_definetrial(cfg);
 
-    % preprocess the headposition data
-    cfg.channel = { ...
-      'HLC0011', 'HLC0012', 'HLC0013', ...
-      'HLC0021', 'HLC0022', 'HLC0023', ...
-      'HLC0031', 'HLC0032', 'HLC0033'
-    };
-    headpos = ft_preprocessing(cfg);
+        % preprocess the headposition data
+        cfg.channel = { ...
+          'HLC0011', 'HLC0012', 'HLC0013', ...
+          'HLC0021', 'HLC0022', 'HLC0023', ...
+          'HLC0031', 'HLC0032', 'HLC0033'
+        };
+        headpos = ft_preprocessing(cfg);
 
-    % calculate the mean coil position per trial
-    ntrials = size(headpos.sampleinfo,1);
-    for t = 1:ntrials
-        coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
-        coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
-        coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
-    end
+        % calculate the mean coil position per trial
+        ntrials = size(headpos.sampleinfo,1);
+        for t = 1:ntrials
+            coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
+            coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
+            coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
+        end
 
-    % calculate the headposition and orientation per trial
-    cc = circumcenter(coil1, coil2, coil3)
+        % calculate the headposition and orientation per trial
+        cc = circumcenter(coil1, coil2, coil3)
 
-    % demean to obtain translations and rotations from the average position and orientation
-    % transpose to construct a nsamples-by-nregressors matrix 
-    cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
-    ```
+        % demean to obtain translations and rotations from the average position and orientation
+        % transpose to construct a nsamples-by-nregressors matrix 
+        cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
 
 3. Fit the head movement regressors to the data and remove the variance that can be explained by these confounds.
 
-    ```matlab
-    % add head movements to the regressorlist. also add the constant (at the end; column 7)
-    confound = [cc_dem ones(size(cc_dem,1),1)];
+        % add head movements to the regressorlist. also add the constant (at the end; column 7)
+        confound = [cc_dem ones(size(cc_dem,1),1)];
 
-    % regress out headposition confounds
-    cfg = [];
-    cfg.confound = confound;
-    cfg.reject = [1:6]; % keeping the constant (nr 7)
-    regr = ft_regressconfound(cfg, timelock);
-    ```
+        % regress out headposition confounds
+        cfg = [];
+        cfg.confound = confound;
+        cfg.reject = [1:6]; % keeping the constant (nr 7)
+        regr = ft_regressconfound(cfg, timelock);
 
 The following figure from the [Stolk et al. 2013](https://doi.org/10.1016/j.neuroimage.2012.11.047) paper shows the statistical results in a single-subject analysis of baseline vs. task activity contrasts. With **[ft_regressconfound](/reference/ft_regressconfound)**, the sensor-level statistical sensitivity was increased after tactile stimulation (40-50 ms; note the more extreme t-scores in the upper panel). Similarly, the source-level statistical sensitivity was increased after visual stimulation (0-500 ms; 65Hz; lower panel).
 

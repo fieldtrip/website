@@ -321,30 +321,28 @@ Using this procedure should improve timing.
 
 Note that triggers are called markers in LSL, and that the `nominal_srate` should be set to zero.
 
-```matlab
-% instantiate the library
-disp('Loading library...');
-lib = lsl_loadlib();
-disp(lsl_library_version(lib));
+    % instantiate the library
+    disp('Loading library...');
+    lib = lsl_loadlib();
+    disp(lsl_library_version(lib));
 
-% make a new stream outlet
-disp('Creating a new streaminfo...');
-info = lsl_streaminfo(lib, 'BioSemi', 'EEG', 8, 100, 'cf_float32', 'my_laptop');
+    % make a new stream outlet
+    disp('Creating a new streaminfo...');
+    info = lsl_streaminfo(lib, 'BioSemi', 'EEG', 8, 100, 'cf_float32', 'my_laptop');
 
-disp('Opening an outlet...');
-outlet = lsl_outlet(info);
+    disp('Opening an outlet...');
+    outlet = lsl_outlet(info);
 
-% send markers to the outlet
-disp('Now transmitting markers...');
-markers = {'fixation', 'stimulus', 'response', '1', '2', '4'};
-while true
-  pause(rand()*3);
-  % pick a random marker
-  mrk = markers{min(length(markers), 1+floor(rand()*(length(markers))))};
-  disp(['now sending ' mrk]);
-  outlet.push_sample({mrk});   % note that the string is wrapped into a cell-array
-end
-```
+    % send markers to the outlet
+    disp('Now transmitting markers...');
+    markers = {'fixation', 'stimulus', 'response', '1', '2', '4'};
+    while true
+      pause(rand()*3);
+      % pick a random marker
+      mrk = markers{min(length(markers), 1+floor(rand()*(length(markers))))};
+      disp(['now sending ' mrk]);
+      outlet.push_sample({mrk});   % note that the string is wrapped into a cell-array
+    end
 
 #### Sending triggers using serial ports (incl. USB)
 
@@ -352,282 +350,278 @@ At the Donders we are using trigger boxes that are based on the Arduino Uno or A
 
 The following code can be used with PsychToolbox or generic MATLAB to send triggers over a USB cable via a Bitsi to an EEG system.
 
-```matlab
-% this uses the Bitsi MATLAB object to send triggers to a Bitsi device
+    % this uses the Bitsi MATLAB object to send triggers to a Bitsi device
 
-% for a Windows computer this would be "COM1" or so
-b = Bitsi('/dev/cu.usbmodem1101');
+    % for a Windows computer this would be "COM1" or so
+    b = Bitsi('/dev/cu.usbmodem1101');
 
-while 1
-  for i=1:8
-    fprintf('bit %d, decimal value %d\n', i, 2^(i-1))
-    b.sendTrigger(2^(i-1))
-    pause(0.5)
-  end
-end
-```
+    while 1
+      for i=1:8
+        fprintf('bit %d, decimal value %d\n', i, 2^(i-1))
+        b.sendTrigger(2^(i-1))
+        pause(0.5)
+      end
+    end
 
 The following code is the Bitsi helper object, it should be stored in a file that is called `Bitsi.m` (note the capitalization).
 
-```matlab
-% Class "Bitsi"
-%
-% %Constructor%
-%
-% Bitsi(comport)
-%
-% When creating a new 'bitsi' object, you can specify to which comport it
-% is connected. On windows computers, this is usually something like
-% 'com1'.
-% When using an empty string for 'comport', the object will run in testing
-% mode. In this case it's not required to have the BITSI physically
-% connected to the computer. Responses will be read from the keyboard.
-%
-% *Methods*
-% - sendTrigger(code)
-% - getResponse(timeout, return_after_response)
-% - clearResponses()
-% - numberOfResponses()
-% - close()
-%
-%
-%
-% *sendTrigger(code)*
-% code - trigger code, allowed codes 1 - 255. This code is sent to the
-% BITSI which will output it on it's parallel output port. The code will be
-% reset after 10 miliseconds.
-%
-% * [response time] = getResponse(timeout, return_after_response)*
-%
-% This function will take maximally 'timeout' seconds to execute
-% return_after_response - allowed values: true or false
-%
-% False:
-% If return_after_response equals false, getResponse will wait for a fixed
-% duration (timeout) and record the first response during the wait. The
-% first response and it's timeout will be returned after the specified
-% timeout.
-%
-%   <     timeout     >
-%   +-----------------+
-%   |          A      |
-% --+          |      +----------------
-%
-%
-%
-% True:
-% This method will return as soon as there is a response. Both
-% the response and the timestamp of the response will be returned.
-% If 'timeout' seconds have been expired without a response, a response
-% of 0 will be returned.
-%
-%   <    timeout     >
-%   +-----------+
-%   |          A|
-% --+          |+----------------
-%
-%
-%
-% *Example*
-%
-%  b = Bitsi('com1');
-%
-%  b.sendTrigger(20);
-%
-%  ... do more stuff here
-%
-%  [r t] = b.getResponse(10, false);
-%
-%  b.close();
-%
-%
-% If the constructor is called with an empty com port string, no serial connection will be
-% established. The serial commands will be echo'd to stdout:
-%
-%  b = Bitsi('')
-%  ...
-%
-%
+    % Class "Bitsi"
+    %
+    % %Constructor%
+    %
+    % Bitsi(comport)
+    %
+    % When creating a new 'bitsi' object, you can specify to which comport it
+    % is connected. On windows computers, this is usually something like
+    % 'com1'.
+    % When using an empty string for 'comport', the object will run in testing
+    % mode. In this case it's not required to have the BITSI physically
+    % connected to the computer. Responses will be read from the keyboard.
+    %
+    % *Methods*
+    % - sendTrigger(code)
+    % - getResponse(timeout, return_after_response)
+    % - clearResponses()
+    % - numberOfResponses()
+    % - close()
+    %
+    %
+    %
+    % *sendTrigger(code)*
+    % code - trigger code, allowed codes 1 - 255. This code is sent to the
+    % BITSI which will output it on it's parallel output port. The code will be
+    % reset after 10 miliseconds.
+    %
+    % * [response time] = getResponse(timeout, return_after_response)*
+    %
+    % This function will take maximally 'timeout' seconds to execute
+    % return_after_response - allowed values: true or false
+    %
+    % False:
+    % If return_after_response equals false, getResponse will wait for a fixed
+    % duration (timeout) and record the first response during the wait. The
+    % first response and it's timeout will be returned after the specified
+    % timeout.
+    %
+    %   <     timeout     >
+    %   +-----------------+
+    %   |          A      |
+    % --+          |      +----------------
+    %
+    %
+    %
+    % True:
+    % This method will return as soon as there is a response. Both
+    % the response and the timestamp of the response will be returned.
+    % If 'timeout' seconds have been expired without a response, a response
+    % of 0 will be returned.
+    %
+    %   <    timeout     >
+    %   +-----------+
+    %   |          A|
+    % --+          |+----------------
+    %
+    %
+    %
+    % *Example*
+    %
+    %  b = Bitsi('com1');
+    %
+    %  b.sendTrigger(20);
+    %
+    %  ... do more stuff here
+    %
+    %  [r t] = b.getResponse(10, false);
+    %
+    %  b.close();
+    %
+    %
+    % If the constructor is called with an empty com port string, no serial connection will be
+    % established. The serial commands will be echo'd to stdout:
+    %
+    %  b = Bitsi('')
+    %  ...
+    %
+    %
 
-classdef Bitsi<handle % extend handle so that properties are modifiable (weird matlab behavior)
+    classdef Bitsi<handle % extend handle so that properties are modifiable (weird matlab behavior)
 
-  properties (SetAccess = public)
-    serobj;
-    debugmode = false;
-    validResponses = 1:255;
-    triggerLog = [];
-  end
-
-  methods
-    function B = Bitsi(comport)
-      if (strcmp(comport, ''))
-        fprintf('Bitsi: No Com port given, running in testing mode...\n')
-        B.debugmode = true;
-
-        KbName('UnifyKeyNames');
+      properties (SetAccess = public)
+        serobj;
+        debugmode = false;
+        validResponses = 1:255;
+        triggerLog = [];
       end
 
-      if (not(B.debugmode))
-        delete(serialportfind);
-        B.serobj = serialport(comport, 115200);
+      methods
+        function B = Bitsi(comport)
+          if (strcmp(comport, ''))
+            fprintf('Bitsi: No Com port given, running in testing mode...\n')
+            B.debugmode = true;
 
-        % serial port configuration
-        set(B.serobj, 'Parity',          'none');
-        set(B.serobj, 'Databits',        8);       % number of data bits
-        set(B.serobj, 'StopBits',        1);       % number of stop bits
-        %set(B.serobj, 'Terminator',      'CR/LF'); % line ending character
-        % see also:
-        % http://www.mathworks.com/matlabcentral/newsreader/view_original/292759
+            KbName('UnifyKeyNames');
+          end
 
-        %set(B.serobj, 'InputBufferSize', 1);       % set read buffBuffer for read
-        set(B.serobj, 'FlowControl',     'none');   %
+          if (not(B.debugmode))
+            delete(serialportfind);
+            B.serobj = serialport(comport, 115200);
 
-        % open the serial port
-        % fopen(B.serobj);
+            % serial port configuration
+            set(B.serobj, 'Parity',          'none');
+            set(B.serobj, 'Databits',        8);       % number of data bits
+            set(B.serobj, 'StopBits',        1);       % number of stop bits
+            %set(B.serobj, 'Terminator',      'CR/LF'); % line ending character
+            % see also:
+            % http://www.mathworks.com/matlabcentral/newsreader/view_original/292759
 
-        % since matlab pulls the DTR line, the arduino will reset
-        % so we have to wait for the initialization of the controller
-        oldState = pause('query');
-        pause on;
-        pause(2.5);
-        pause(oldState);
+            %set(B.serobj, 'InputBufferSize', 1);       % set read buffBuffer for read
+            set(B.serobj, 'FlowControl',     'none');   %
 
-        % read all bytes available at the serial port
-        status = '[nothing]';
+            % open the serial port
+            % fopen(B.serobj);
 
-        if B.serobj.BytesAvailable > 0
-          status = fread(B.serobj, B.serobj.BytesAvailable);
+            % since matlab pulls the DTR line, the arduino will reset
+            % so we have to wait for the initialization of the controller
+            oldState = pause('query');
+            pause on;
+            pause(2.5);
+            pause(oldState);
+
+            % read all bytes available at the serial port
+            status = '[nothing]';
+
+            if B.serobj.BytesAvailable > 0
+              status = fread(B.serobj, B.serobj.BytesAvailable);
+            end
+
+            %fprintf('BITSI says: %s', char(status));
+            %fprintf('\n');
+          end
         end
 
-        %fprintf('BITSI says: %s', char(status));
-        %fprintf('\n');
-      end
-    end
+        function sendTrigger(B, code)
+          % checking code range
+          if code > 255
+            fprintf('Bitsi: Error, code should not exeed 255\n');
+            return;
+          end
 
-    function sendTrigger(B, code)
-      % checking code range
-      if code > 255
-        fprintf('Bitsi: Error, code should not exeed 255\n');
-        return;
-      end
+          %             if code < 1
+          %                 fprintf('Bitsi: Error, code should be bigger than 0\n');
+          %             end
 
-      %             if code < 1
-      %                 fprintf('Bitsi: Error, code should be bigger than 0\n');
-      %             end
+          %fprintf('Bitsi: trigger code %i\n', code);
 
-      %fprintf('Bitsi: trigger code %i\n', code);
+          % log trigger
+          B.triggerLog(end+1).value = code;
+          B.triggerLog(end).timestamp = GetSecs();
 
-      % log trigger
-      B.triggerLog(end+1).value = code;
-      B.triggerLog(end).timestamp = GetSecs();
-
-      if ~B.debugmode
-        fwrite(B.serobj, code)
-      end
-    end
-
-
-    function x = numberOfResponses(B)
-      x = B.serobj.BytesAvailable;
-    end
-
-
-    function clearResponses(B)
-      if ~B.debugmode
-        numberOfBytes = B.serobj.BytesAvailable;
-        if numberOfBytes > 0
-          fread(B.serobj, numberOfBytes);
+          if ~B.debugmode
+            fwrite(B.serobj, code)
+          end
         end
-      end
-    end
 
 
-    function [response, rt] = getResponse(B, timeout, return_after_response)
-      response = 0;
-      startTime = GetSecs;
+        function x = numberOfResponses(B)
+          x = B.serobj.BytesAvailable;
+        end
 
-      % start stopwatch
-      tic
-      if (B.debugmode)
-        while toc < timeout
-          % poll the state of the keyboard
-          [keyisdown, when, keyCode] = KbCheck;
 
-          % if there wasn't a response before and there is a
-          % keyboard press available
-          if response == 0 && keyisdown
-            rt = when - startTime;
-            response = find(keyCode);
-
-            if return_after_response
-              break;
+        function clearResponses(B)
+          if ~B.debugmode
+            numberOfBytes = B.serobj.BytesAvailable;
+            if numberOfBytes > 0
+              fread(B.serobj, numberOfBytes);
             end
           end
         end
 
-        % if no response yet after timeout
-        if (response == 0)
-          rt = GetSecs - startTime;
-        end
-      else
 
-        % depending on 'return_after_response' this loop will run
-        % for timeout seconds or until a response is given
-        while toc < timeout
+        function [response, rt] = getResponse(B, timeout, return_after_response)
+          response = 0;
+          startTime = GetSecs;
 
-          % if there wasn't a response before and there is a
-          % serial character available
-          if response == 0 && B.serobj.BytesAvailable > 0
+          % start stopwatch
+          tic
+          if (B.debugmode)
+            while toc < timeout
+              % poll the state of the keyboard
+              [keyisdown, when, keyCode] = KbCheck;
 
-            response = fread(B.serobj, 1);
+              % if there wasn't a response before and there is a
+              % keyboard press available
+              if response == 0 && keyisdown
+                rt = when - startTime;
+                response = find(keyCode);
 
-            % allow only characters present in the
-            % validResponses array
-            if (any(B.validResponses == response))
-
-              rt = GetSecs - startTime;
-              %fprintf('Bitsi: response code %i\n', response);
-
-              if (return_after_response)
-                break;
+                if return_after_response
+                  break;
+                end
               end
-
-            else
-              response = 0;
             end
 
+            % if no response yet after timeout
+            if (response == 0)
+              rt = GetSecs - startTime;
+            end
+          else
+
+            % depending on 'return_after_response' this loop will run
+            % for timeout seconds or until a response is given
+            while toc < timeout
+
+              % if there wasn't a response before and there is a
+              % serial character available
+              if response == 0 && B.serobj.BytesAvailable > 0
+
+                response = fread(B.serobj, 1);
+
+                % allow only characters present in the
+                % validResponses array
+                if (any(B.validResponses == response))
+
+                  rt = GetSecs - startTime;
+                  %fprintf('Bitsi: response code %i\n', response);
+
+                  if (return_after_response)
+                    break;
+                  end
+
+                else
+                  response = 0;
+                end
+
+              end
+            end
+
+            % if no response yet after timeout
+            if (response == 0)
+              rt = GetSecs - startTime;
+            end
+
+            % now we waited 'duration' seconds and there might be a
+            % button captured, there may be some additional responses
+            % in the serial buffer
+            B.clearResponses();
           end
         end
 
-        % if no response yet after timeout
-        if (response == 0)
-          rt = GetSecs - startTime;
+
+        % close
+        function close(B)
+          if (not(B.debugmode))
+            fclose(B.serobj);
+            delete(B.serobj);
+          end
         end
-
-        % now we waited 'duration' seconds and there might be a
-        % button captured, there may be some additional responses
-        % in the serial buffer
-        B.clearResponses();
       end
     end
 
-
-    % close
-    function close(B)
-      if (not(B.debugmode))
-        fclose(B.serobj);
-        delete(B.serobj);
-      end
+    function timestamp = GetSecs()
+    switch (computer)
+      case 'MACA64'
+        timestamp = clock_gettime_nsec_np()/1e9; % implemented as a mex file
+      otherwise
+        error('not implemented')
     end
-  end
-end
-
-function timestamp = GetSecs()
-switch (computer)
-  case 'MACA64'
-    timestamp = clock_gettime_nsec_np()/1e9; % implemented as a mex file
-  otherwise
-    error('not implemented')
-end
-end
-```
+    end

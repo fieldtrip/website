@@ -17,13 +17,11 @@ We assume you have the output of your time-locked or frequency analysis for each
 
 From these 4 data structures, you now make 2 difference data structures in the following way:
 
-```matlab
-cfg = [];
-cfg.parameter = 'powspctrm';
-cfg.operation = 'subtract';
-GAdiff11_12 = ft_math(cfg, GA11, GA12);
-GAdiff21_22 = ft_math(cfg, GA21, GA22);
-```
+    cfg = [];
+    cfg.parameter = 'powspctrm';
+    cfg.operation = 'subtract';
+    GAdiff11_12 = ft_math(cfg, GA11, GA12);
+    GAdiff21_22 = ft_math(cfg, GA21, GA22);
 
 The objective is now to statistically compare GAdiff11_12 and GAdiff21_22. Because we will be comparing two differences, we will be testing an interaction effect. Using a cluster-based permutation test, we have to choose the appropriate statfun, depending on whether this comparison involves a within-subjects or a between-subjects factor. In a full within-subjects design, it involves a within-subject factor, and in a mixed between-within-subjects design, it involves a between-subjects factor (remember that the first factor in the design is the between-subjects factor). In the form of a recipe:
 
@@ -38,16 +36,14 @@ Here it is assumed that you have the output of your time-locked or frequency ana
 
 From these KL data structures, you now could make K(L-1) difference data structures in the following way:
 
-```matlab
-cfg = [];
-cfg.operation = 'subtract';
-cfg.parameter = 'powspctrm';
-for k = 1:K
-  for l = 2:L
-    GAdiff{k,l-1} = ft_math(cfg, GA{k,l-1}, GA{k,l});
-  end
-end
-```
+    cfg = [];
+    cfg.operation = 'subtract';
+    cfg.parameter = 'powspctrm';
+    for k = 1:K
+      for l = 2:L
+        GAdiff{k,l-1} = ft_math(cfg, GA{k,l-1}, GA{k,l});
+      end
+    end
 
 The objective is now to statistically compare the K(L-1) difference arrays GAdiffk1_kl. Because we will be comparing differences, we will be testing an interaction effect. Using a cluster-based permutation test, we have to choose the appropriate test-statistic, implemented in a statfun, depending on whether this comparison involves a within-subjects or a between-subjects factor. In a full within-subjects design, it involves a within-subject factor, and in a mixed between-within-subjects design, it involves a between-subjects factor (remember that the first factor in the design is the between-subjects factor).
 

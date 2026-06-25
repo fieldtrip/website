@@ -9,10 +9,8 @@ redirect_from:
 
 When you try to use FieldTrip on macOS Catalina or later, you may get an error like
 
-```matlab
-"ft_getopt.mexmaci64" cannot be opened because the developer cannot be verified.
-macOS cannot verify that this app is free from malware.
-```
+    "ft_getopt.mexmaci64" cannot be opened because the developer cannot be verified.
+    macOS cannot verify that this app is free from malware.
 
 {% include image src="/assets/img/faq/mex_osx/screenshot.png" width="400" %}
 

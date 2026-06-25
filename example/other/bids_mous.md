@@ -278,210 +278,208 @@ done
 
 ### Step 6: create the sidecar files for each dataset in MATLAB
 
-```matlab
-bidsroot = '/project/3011020.13/bids';
-subject  = dir(fullfile(bidsroot, 'sub-*'));
-subject  = {subject.name};
+    bidsroot = '/project/3011020.13/bids';
+    subject  = dir(fullfile(bidsroot, 'sub-*'));
+    subject  = {subject.name};
 
-% exception
+    % exception
 
-% trigger issue, causes mismatch in the alignment when using the default
-exceptions_meg(1).subject   = {'sub-V1077'};
-exceptions_meg(1).pres_type = 'Picture';
-exceptions_meg(1).pres_val  = '8*';
-exceptions_meg(1).trig_val  = 8;
-exceptions_meg(1).skip      = 'none';
+    % trigger issue, causes mismatch in the alignment when using the default
+    exceptions_meg(1).subject   = {'sub-V1077'};
+    exceptions_meg(1).pres_type = 'Picture';
+    exceptions_meg(1).pres_val  = '8*';
+    exceptions_meg(1).trig_val  = 8;
+    exceptions_meg(1).skip      = 'none';
 
-% trigger issue, causes mismatch in the alignment when using the default
-exceptions_meg(2).subject   = {'sub-A2009';'sub-A2014';'sub-A2029';...
-                             'sub-A2031';'sub-A2033';'sub-A2035';...
-                             'sub-A2037';'sub-A2040';'sub-A2041';...
-                             'sub-A2042';'sub-A2046';'sub-A2047';...
-                             'sub-A2051';'sub-A2053';'sub-A2056';...
-                             'sub-A2057';'sub-A2059';'sub-A2064';...
-                             'sub-A2066'};
-exceptions_meg(2).pres_type = 'Nothing';
-exceptions_meg(2).pres_val  = '6 t*';
-exceptions_meg(2).trig_val  = 6;
-exceptions_meg(2).skip      = 'none';
+    % trigger issue, causes mismatch in the alignment when using the default
+    exceptions_meg(2).subject   = {'sub-A2009';'sub-A2014';'sub-A2029';...
+                                 'sub-A2031';'sub-A2033';'sub-A2035';...
+                                 'sub-A2037';'sub-A2040';'sub-A2041';...
+                                 'sub-A2042';'sub-A2046';'sub-A2047';...
+                                 'sub-A2051';'sub-A2053';'sub-A2056';...
+                                 'sub-A2057';'sub-A2059';'sub-A2064';...
+                                 'sub-A2066'};
+    exceptions_meg(2).pres_type = 'Nothing';
+    exceptions_meg(2).pres_val  = '6 t*';
+    exceptions_meg(2).trig_val  = 6;
+    exceptions_meg(2).skip      = 'none';
 
-% level-mode trigger issue, requires events to be fixed
-exceptions_meg(3).subject   = {'sub-A2039' 'sub-A2050'};
-exceptions_meg(3).extra     = 'fix_events';
-exceptions_meg(3).pres_type = 'Nothing';
-exceptions_meg(3).pres_val  = '8 t*';
-exceptions_meg(3).trig_val  = 8;
+    % level-mode trigger issue, requires events to be fixed
+    exceptions_meg(3).subject   = {'sub-A2039' 'sub-A2050'};
+    exceptions_meg(3).extra     = 'fix_events';
+    exceptions_meg(3).pres_type = 'Nothing';
+    exceptions_meg(3).pres_val  = '8 t*';
+    exceptions_meg(3).trig_val  = 8;
 
-passed = true(numel(subject),6);
-for i=1:numel(subject)
+    passed = true(numel(subject),6);
+    for i=1:numel(subject)
 
-anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
-func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
-dwi  = dir(fullfile(bidsroot, subject{i}, 'dwi',  '*.nii'));
-meg  = dir(fullfile(bidsroot, subject{i}, 'meg',  '*.ds'));
+    anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
+    func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
+    dwi  = dir(fullfile(bidsroot, subject{i}, 'dwi',  '*.nii'));
+    meg  = dir(fullfile(bidsroot, subject{i}, 'meg',  '*.ds'));
 
-catfile = @(p, f) fullfile(p, f);
+    catfile = @(p, f) fullfile(p, f);
 
-anat = cellfun(catfile, {anat.folder}, {anat.name}, 'UniformOutput', 0);
-func = cellfun(catfile, {func.folder}, {func.name}, 'UniformOutput', 0);
-dwi  = cellfun(catfile, {dwi.folder},  {dwi.name},  'UniformOutput', 0);
-meg  = cellfun(catfile, {meg.folder},  {meg.name},  'UniformOutput', 0);
+    anat = cellfun(catfile, {anat.folder}, {anat.name}, 'UniformOutput', 0);
+    func = cellfun(catfile, {func.folder}, {func.name}, 'UniformOutput', 0);
+    dwi  = cellfun(catfile, {dwi.folder},  {dwi.name},  'UniformOutput', 0);
+    meg  = cellfun(catfile, {meg.folder},  {meg.name},  'UniformOutput', 0);
 
-dataset = cat(1, anat(:), func(:), dwi(:), meg(:));
+    dataset = cat(1, anat(:), func(:), dwi(:), meg(:));
 
-for j=1:numel(dataset)
-  cfg = [];
-  cfg.dataset                     = dataset{j};
+    for j=1:numel(dataset)
+      cfg = [];
+      cfg.dataset                     = dataset{j};
 
-  cfg.mri.writesidecar            = 'merge';
-  cfg.meg.writesidecar            = 'replace';
-  cfg.channels.writesidecar       = 'replace';
-  cfg.events.writesidecar         = 'replace';
-  cfg.coordsystem.writesidecar    = 'replace';
+      cfg.mri.writesidecar            = 'merge';
+      cfg.meg.writesidecar            = 'replace';
+      cfg.channels.writesidecar       = 'replace';
+      cfg.events.writesidecar         = 'replace';
+      cfg.coordsystem.writesidecar    = 'replace';
 
-  cfg.InstitutionName             = 'Radboud University';
-  cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
-  cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+      cfg.InstitutionName             = 'Radboud University';
+      cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+      cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
 
-  if contains(cfg.dataset, 'task-rest')
-    cfg.TaskName = 'Resting state';
-  elseif contains(cfg.dataset, 'task-visual')
-    cfg.TaskName = 'Visual language task';
-  elseif  contains(cfg.dataset, 'task-auditory')
-    cfg.TaskName = 'Auditory language task';
-  end
+      if contains(cfg.dataset, 'task-rest')
+        cfg.TaskName = 'Resting state';
+      elseif contains(cfg.dataset, 'task-visual')
+        cfg.TaskName = 'Visual language task';
+      elseif  contains(cfg.dataset, 'task-auditory')
+        cfg.TaskName = 'Auditory language task';
+      end
 
-  if endsWith(cfg.dataset, '.ds')
-    % these are task-dependent
-    pres_type = [];
-    pres_val  = [];
-    trig_val  = [];
-    skip      = [];
+      if endsWith(cfg.dataset, '.ds')
+        % these are task-dependent
+        pres_type = [];
+        pres_val  = [];
+        trig_val  = [];
+        skip      = [];
 
-    % these settings work most of the time
-    if contains(cfg.dataset, 'task-auditory')
-      pres_type = 'Nothing';
-      pres_val  = '3 Audi*';
-      trig_val  = 3;
-    elseif contains(cfg.dataset, 'task-visual')
-      pres_type = 'Picture';
-      pres_val  = '6*';
-      trig_val  = 6;
-    end
+        % these settings work most of the time
+        if contains(cfg.dataset, 'task-auditory')
+          pres_type = 'Nothing';
+          pres_val  = '3 Audi*';
+          trig_val  = 3;
+        elseif contains(cfg.dataset, 'task-visual')
+          pres_type = 'Picture';
+          pres_val  = '6*';
+          trig_val  = 6;
+        end
 
-    % this aims to deal with the exceptions
-    for k = 1:numel(exceptions_meg)
-      if ismember(subject{i}, exceptions_meg(k).subject)
-        pres_type = ft_getopt(exceptions_meg(k), 'pres_type', pres_type);
-        pres_val  = ft_getopt(exceptions_meg(k), 'pres_val',  pres_val);
-        trig_val  = ft_getopt(exceptions_meg(k), 'trig_val',  trig_val);
-        skip      = ft_getopt(exceptions_meg(k), 'skip',      skip);
+        % this aims to deal with the exceptions
+        for k = 1:numel(exceptions_meg)
+          if ismember(subject{i}, exceptions_meg(k).subject)
+            pres_type = ft_getopt(exceptions_meg(k), 'pres_type', pres_type);
+            pres_val  = ft_getopt(exceptions_meg(k), 'pres_val',  pres_val);
+            trig_val  = ft_getopt(exceptions_meg(k), 'trig_val',  trig_val);
+            skip      = ft_getopt(exceptions_meg(k), 'skip',      skip);
 
-        if ~isempty(exceptions_meg(k).extra)
-          switch exceptions_meg(k).extra
-            case 'fix_events'
-              % this requires you to have the mous github repository on your path
-              if contains(cfg.dataset, 'auditory')
-                event = mous_read_event_audio(cfg.dataset);
-                for kk = 1:numel(event)
-                  event(kk).duration = [];
-                end
-                cfg.trigger.event = event;
+            if ~isempty(exceptions_meg(k).extra)
+              switch exceptions_meg(k).extra
+                case 'fix_events'
+                  % this requires you to have the mous github repository on your path
+                  if contains(cfg.dataset, 'auditory')
+                    event = mous_read_event_audio(cfg.dataset);
+                    for kk = 1:numel(event)
+                      event(kk).duration = [];
+                    end
+                    cfg.trigger.event = event;
+                  end
+                otherwise
               end
-            otherwise
+            end
           end
         end
-      end
-    end
 
-    if contains(cfg.dataset, 'task-auditory') || contains(cfg.dataset, 'task-visual')
-      if isempty(skip)
-        if contains(cfg.dataset, 'run-1')
-          skip = 'last';
-        elseif contains(cfg.dataset, 'run-2')
-          skip = 'first';
-        else
-          skip = 'none';
+        if contains(cfg.dataset, 'task-auditory') || contains(cfg.dataset, 'task-visual')
+          if isempty(skip)
+            if contains(cfg.dataset, 'run-1')
+              skip = 'last';
+            elseif contains(cfg.dataset, 'run-2')
+              skip = 'first';
+            else
+              skip = 'none';
+            end
+          end
+
+          % this only applies to MEG task data
+          pfile = dir(fullfile(bidsroot, 'sourcedata', 'meg', [subject{i}(5:end) '*.log']));
+          cfg.presentationfile   = fullfile(pfile.folder, pfile.name);
+          cfg.trigger.eventtype  = 'UPPT001';
+          cfg.presentation.skip  = skip;
+          cfg.trigger.eventvalue = trig_val;
+          cfg.presentation.eventtype  = pres_type;
+          cfg.presentation.eventvalue = pres_val;
         end
-      end
 
-      % this only applies to MEG task data
-      pfile = dir(fullfile(bidsroot, 'sourcedata', 'meg', [subject{i}(5:end) '*.log']));
-      cfg.presentationfile   = fullfile(pfile.folder, pfile.name);
-      cfg.trigger.eventtype  = 'UPPT001';
-      cfg.presentation.skip  = skip;
-      cfg.trigger.eventvalue = trig_val;
-      cfg.presentation.eventtype  = pres_type;
-      cfg.presentation.eventvalue = pres_val;
-    end
+        cfg.meg.DigitizedLandmarks      = true;
+        cfg.meg.DigitizedHeadPoints     = true;
+        cfg.meg.PowerLineFrequency      = 50;
+        cfg.meg.DewarPosition           = 'upright';
+        cfg.meg.SoftwareFilters         = 'n/a';
 
-    cfg.meg.DigitizedLandmarks      = true;
-    cfg.meg.DigitizedHeadPoints     = true;
-    cfg.meg.PowerLineFrequency      = 50;
-    cfg.meg.DewarPosition           = 'upright';
-    cfg.meg.SoftwareFilters         = 'n/a';
+        % this will be specified on basis of the CTF dataset header
+        % cfg.coordsystem.MEGCoordinateSystem
+        % cfg.coordsystem.MEGCoordinateUnits
+        cfg.coordsystem.MEGCoordinateSystemDescription = 'CTF coordinates relative to the localizer coils, with the localizer coils at nasion and left and right ear canal';
 
-    % this will be specified on basis of the CTF dataset header
-    % cfg.coordsystem.MEGCoordinateSystem
-    % cfg.coordsystem.MEGCoordinateUnits
-    cfg.coordsystem.MEGCoordinateSystemDescription = 'CTF coordinates relative to the localizer coils, with the localizer coils at nasion and left and right ear canal';
+        % this will be specified on basis of the CTF dataset header
+        % cfg.coordsystem.HeadCoilCoordinates
+        % cfg.coordsystem.HeadCoilCoordinateSystem
+        % cfg.coordsystem.HeadCoilCoordinateUnits
+        cfg.coordsystem.HeadCoilCoordinateSystemDescription = 'CTF coordinates relative to the localizer coils, with the localizer coils at nasion and left and right ear canal';
+        cfg.coordsystem.IntendedFor = sprintf('anat/%s_space-CTF_T1w.nii', subject{i});
 
-    % this will be specified on basis of the CTF dataset header
-    % cfg.coordsystem.HeadCoilCoordinates
-    % cfg.coordsystem.HeadCoilCoordinateSystem
-    % cfg.coordsystem.HeadCoilCoordinateUnits
-    cfg.coordsystem.HeadCoilCoordinateSystemDescription = 'CTF coordinates relative to the localizer coils, with the localizer coils at nasion and left and right ear canal';
-    cfg.coordsystem.IntendedFor = sprintf('anat/%s_space-CTF_T1w.nii', subject{i});
+        cfg.coordsystem.DigitizedHeadPoints = sprintf('%s_headshape.pos', subject{i});
+        cfg.coordsystem.DigitizedHeadPointsCoordinateSystem = 'CTF';
+        cfg.coordsystem.DigitizedHeadPointsCoordinateUnits = 'cm';
+        cfg.coordsystem.DigitizedHeadPointsCoordinateSystemDescription = 'CTF coordinates relative to the nasion and left and right pre-auricular points';
 
-    cfg.coordsystem.DigitizedHeadPoints = sprintf('%s_headshape.pos', subject{i});
-    cfg.coordsystem.DigitizedHeadPointsCoordinateSystem = 'CTF';
-    cfg.coordsystem.DigitizedHeadPointsCoordinateUnits = 'cm';
-    cfg.coordsystem.DigitizedHeadPointsCoordinateSystemDescription = 'CTF coordinates relative to the nasion and left and right pre-auricular points';
+        % cfg.coordsystem.AnatomicalLandmarkCoordinates
+        % cfg.coordsystem.AnatomicalLandmarkCoordinateSystem
+        % cfg.coordsystem.AnatomicalLandmarkCoordinateUnits
+        % cfg.coordsystem.AnatomicalLandmarkCoordinateSystemDescription
 
-    % cfg.coordsystem.AnatomicalLandmarkCoordinates
-    % cfg.coordsystem.AnatomicalLandmarkCoordinateSystem
-    % cfg.coordsystem.AnatomicalLandmarkCoordinateUnits
-    % cfg.coordsystem.AnatomicalLandmarkCoordinateSystemDescription
+        cfg.coordsystem.FiducialsDescription = [ ...
+          'Coregistration was initially done using the approximate position of the '...
+          'head localizer coils in the anatomical MRI and subsequently refined using the full '...
+          'headshape measured with the Polhemus. The positions of the head localizer coils at '...
+          'the ear canals (relative to the Polhemus coordinates) is included in the headshape file. '...
+          'CTF coordinates in the MEG data and in the coregistered anatomical MRI are specified '...
+          'relative to the localizer coils at nasion and left and right ear canal.'...
+          ];
 
-    cfg.coordsystem.FiducialsDescription = [ ...
-      'Coregistration was initially done using the approximate position of the '...
-      'head localizer coils in the anatomical MRI and subsequently refined using the full '...
-      'headshape measured with the Polhemus. The positions of the head localizer coils at '...
-      'the ear canals (relative to the Polhemus coordinates) is included in the headshape file. '...
-      'CTF coordinates in the MEG data and in the coregistered anatomical MRI are specified '...
-      'relative to the localizer coils at nasion and left and right ear canal.'...
-      ];
+      elseif endsWith(cfg.dataset, '.nii')
+        % this only applies to anatomical MR data
+        if contains(cfg.dataset, 'anat')
+          cfg.mri.deface = 'yes';
+        end
 
-  elseif endsWith(cfg.dataset, '.nii')
-    % this only applies to anatomical MR data
-    if contains(cfg.dataset, 'anat')
-      cfg.mri.deface = 'yes';
-    end
+        if contains(cfg.dataset, 'space-CTF')
+          % these are added by dcm2niix to the original MRI, but differ for the coregistered anatomical MRI
+          cfg.mri.ConversionSoftware = 'FieldTrip';
+          cfg.mri.ConversionSoftwareVersion = ft_version;
+        end
 
-    if contains(cfg.dataset, 'space-CTF')
-      % these are added by dcm2niix to the original MRI, but differ for the coregistered anatomical MRI
-      cfg.mri.ConversionSoftware = 'FieldTrip';
-      cfg.mri.ConversionSoftwareVersion = ft_version;
-    end
+        if contains(cfg.dataset, 'task-auditory') || contains(cfg.dataset, 'task-visual')
+          % this only applies to fMRI task data
+          pfile = dir(fullfile(bidsroot, 'sourcedata', 'mri_task', [subject{i}(5:end) '*.log']));
+          cfg.presentationfile = fullfile(pfile.folder, pfile.name);
+          cfg.presentation.eventtype = 'Pulse';
+          cfg.presentation.eventvalue = [];
+        end
 
-    if contains(cfg.dataset, 'task-auditory') || contains(cfg.dataset, 'task-visual')
-      % this only applies to fMRI task data
-      pfile = dir(fullfile(bidsroot, 'sourcedata', 'mri_task', [subject{i}(5:end) '*.log']));
-      cfg.presentationfile = fullfile(pfile.folder, pfile.name);
-      cfg.presentation.eventtype = 'Pulse';
-      cfg.presentation.eventvalue = [];
-    end
+      end % if MEG or MRI
 
-  end % if MEG or MRI
+      data2bids(cfg)
 
-  data2bids(cfg)
+      save_all_figures('/project_ext/3011020.13/bids/code');
+      close all % figures
 
-  save_all_figures('/project_ext/3011020.13/bids/code');
-  close all % figures
-
-end % for each dataset
-end % for each subject
-```
+    end % for each dataset
+    end % for each subject
 
 <br>
 

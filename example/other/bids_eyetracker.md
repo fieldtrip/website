@@ -38,191 +38,187 @@ FieldTrip can read the EyeLink `.asc` format. The gaze and/or pupil diameter are
 
 The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/eyelink_short).
 
-```matlab
-%% this is an example with a short calibration recording
+    %% this is an example with a short calibration recording
 
-% the same data is converted multiple times to demonstrate the directory layout and the participants
+    % the same data is converted multiple times to demonstrate the directory layout and the participants
 
-cfg = [];
+    cfg = [];
 
-cfg.InstitutionName             = 'Radboud University';
-cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
-cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+    cfg.InstitutionName             = 'Radboud University';
+    cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+    cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
 
-% required for dataset_description.json
-cfg.dataset_description.Name        = 'Eyelink example';
-cfg.dataset_description.BIDSVersion = 'unofficial extension';
+    % required for dataset_description.json
+    cfg.dataset_description.Name        = 'Eyelink example';
+    cfg.dataset_description.BIDSVersion = 'unofficial extension';
 
-% optional for dataset_description.json
-cfg.dataset_description.License             = 'n/a';
-cfg.dataset_description.Authors             = 'n/a';
-cfg.dataset_description.Acknowledgements    = 'n/a';
-cfg.dataset_description.Funding             = 'n/a';
-cfg.dataset_description.ReferencesAndLinks  = 'n/a';
-cfg.dataset_description.DatasetDOI          = 'n/a';
+    % optional for dataset_description.json
+    cfg.dataset_description.License             = 'n/a';
+    cfg.dataset_description.Authors             = 'n/a';
+    cfg.dataset_description.Acknowledgements    = 'n/a';
+    cfg.dataset_description.Funding             = 'n/a';
+    cfg.dataset_description.ReferencesAndLinks  = 'n/a';
+    cfg.dataset_description.DatasetDOI          = 'n/a';
 
-cfg.dataset   = './original/ashcal.asc';
-cfg.method    = 'convert'; % the eyelink EDF format is not supported, convert the ASC to plain TSV
-cfg.bidsroot  = './bids';  % write to the working directory
-cfg.suffix    = 'physio';
-cfg.task      = 'calibration';
+    cfg.dataset   = './original/ashcal.asc';
+    cfg.method    = 'convert'; % the eyelink EDF format is not supported, convert the ASC to plain TSV
+    cfg.bidsroot  = './bids';  % write to the working directory
+    cfg.suffix    = 'physio';
+    cfg.task      = 'calibration';
 
-% this is general metadata that ends up in the _physio.json file
-cfg.PhysioType            = 'eyetrack';
-cfg.TaskDescription       = 'Short calibration procedure';
-cfg.Manufacturer          = 'SR Research';
-cfg.ManufacturerModelName = 'Eyelink 1000';
+    % this is general metadata that ends up in the _physio.json file
+    cfg.PhysioType            = 'eyetrack';
+    cfg.TaskDescription       = 'Short calibration procedure';
+    cfg.Manufacturer          = 'SR Research';
+    cfg.ManufacturerModelName = 'Eyelink 1000';
 
-% convert the data from the first (and only one) subject
-cfg.sub = '01';
-cfg.participants.age = 23;
-cfg.participants.sex = 'M';
-data2bids(cfg);
+    % convert the data from the first (and only one) subject
+    cfg.sub = '01';
+    cfg.participants.age = 23;
+    cfg.participants.sex = 'M';
+    data2bids(cfg);
 
-% convert the same data again, pretending that it is subject 2
-cfg.sub = '02';
-cfg.participants.age = 25;
-cfg.participants.sex = 'F';
-data2bids(cfg);
+    % convert the same data again, pretending that it is subject 2
+    cfg.sub = '02';
+    cfg.participants.age = 25;
+    cfg.participants.sex = 'F';
+    data2bids(cfg);
 
-% convert the same data again, pretending that it is subject 3
-cfg.sub = '03';
-cfg.participants.age = 31;
-cfg.participants.sex = 'M';
-data2bids(cfg);
-```
+    % convert the same data again, pretending that it is subject 3
+    cfg.sub = '03';
+    cfg.participants.age = 31;
+    cfg.participants.sex = 'M';
+    data2bids(cfg);
 
 ### Long example
 
 The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/eyelink_long).
 
-```matlab
-%% this section specifies the datafiles
+    %% this section specifies the datafiles
 
-% The raw sourcedata for this example can be downloaded from
-% https://doi.org/10.34973/3mdw-jn48 as Experiment 2.
+    % The raw sourcedata for this example can be downloaded from
+    % https://doi.org/10.34973/3mdw-jn48 as Experiment 2.
 
-filename = {
-  '1_TO_1.asc'
-  '1_TO_2.asc'
-  '2_FH_1.asc'
-  '2_fh_2.asc'
-  '3_ac_1.asc'
-  '3_ac_2.asc'
-  % '4_ym_1.asc'
-  % '4_ym_2.asc'
-  % '5_kj_1.asc'
-  % '5_kj_2.asc'
-  % '6_BS_1.asc'
-  % '6_BS_2.asc'
-  % '7_aa_1.asc'
-  % '7_aa_2.asc'
-  % '8_SG_1.asc'
-  % '8_sg_2.asc'
-  % '9_TE_1.asc'
-  % '9_TE_2.asc'
-  % '9_te_11.asc'
-  % '10_es_1.asc'
-  % '10_es_2.asc'
-  % '11_AR_1.asc'
-  % '11_AR_2.asc'
-  % '12_LK_1.asc'
-  % '12_LK_11.asc'
-  % '12_LK_2.asc'
-  % '12_LK_22.asc'
-  % '13_JL_1.asc'
-  % '13_JL_2.asc'
-  % '14_vs_1.asc'
-  % '14_vs_2.asc'
-  % '15_CL_1.asc'
-  % '15_CL_2.asc'
-  % '16_MN_1.asc'
-  % '16_MN_2.asc'
-  % '17_NT_1.asc'
-  % '17_NT_2.asc'
-  % '18_CL_11.asc'
-  % '18_CL_2.asc'
-  % '19_AE_1.asc'
-  % '19_AE_2.asc'
-  % '20_AK_2.asc'
-  % '20_PK_1.asc'
-  % '21_SY_1.asc'
-  % '21_SY_2.asc'
-  % '22_VG_1.asc'
-  % '22_VG_21.asc'
-  % '22_VG_22.asc'
-  % '23_DK_2.asc'
-  % '23_dk_1.asc'
-  % '24_TS_1.asc'
-  % '24_TS_2.asc'
-  };
+    filename = {
+      '1_TO_1.asc'
+      '1_TO_2.asc'
+      '2_FH_1.asc'
+      '2_fh_2.asc'
+      '3_ac_1.asc'
+      '3_ac_2.asc'
+      % '4_ym_1.asc'
+      % '4_ym_2.asc'
+      % '5_kj_1.asc'
+      % '5_kj_2.asc'
+      % '6_BS_1.asc'
+      % '6_BS_2.asc'
+      % '7_aa_1.asc'
+      % '7_aa_2.asc'
+      % '8_SG_1.asc'
+      % '8_sg_2.asc'
+      % '9_TE_1.asc'
+      % '9_TE_2.asc'
+      % '9_te_11.asc'
+      % '10_es_1.asc'
+      % '10_es_2.asc'
+      % '11_AR_1.asc'
+      % '11_AR_2.asc'
+      % '12_LK_1.asc'
+      % '12_LK_11.asc'
+      % '12_LK_2.asc'
+      % '12_LK_22.asc'
+      % '13_JL_1.asc'
+      % '13_JL_2.asc'
+      % '14_vs_1.asc'
+      % '14_vs_2.asc'
+      % '15_CL_1.asc'
+      % '15_CL_2.asc'
+      % '16_MN_1.asc'
+      % '16_MN_2.asc'
+      % '17_NT_1.asc'
+      % '17_NT_2.asc'
+      % '18_CL_11.asc'
+      % '18_CL_2.asc'
+      % '19_AE_1.asc'
+      % '19_AE_2.asc'
+      % '20_AK_2.asc'
+      % '20_PK_1.asc'
+      % '21_SY_1.asc'
+      % '21_SY_2.asc'
+      % '22_VG_1.asc'
+      % '22_VG_21.asc'
+      % '22_VG_22.asc'
+      % '23_DK_2.asc'
+      % '23_dk_1.asc'
+      % '24_TS_1.asc'
+      % '24_TS_2.asc'
+      };
 
-% The filenames have a sequence number and a two-letter subject identifier in them. The case of the
-% identifier is not totally consistent. Furthermore, some subjects have two, some
-% have three recordings.
+    % The filenames have a sequence number and a two-letter subject identifier in them. The case of the
+    % identifier is not totally consistent. Furthermore, some subjects have two, some
+    % have three recordings.
 
-sourcepath = './original/ascData';
-targetpath = './bids';
+    sourcepath = './original/ascData';
+    targetpath = './bids';
 
-%% find the unique subject identifiers
+    %% find the unique subject identifiers
 
-subjid = {};
-for i=1:numel(filename)
-  part = split(filename{i}, '_');
-  subjid{end+1} = upper(part{2});
-end
-subjid = unique(subjid, 'stable'); % keep them in the original order
+    subjid = {};
+    for i=1:numel(filename)
+      part = split(filename{i}, '_');
+      subjid{end+1} = upper(part{2});
+    end
+    subjid = unique(subjid, 'stable'); % keep them in the original order
 
-%% loop over subjects and convert the datafiles for each subject
+    %% loop over subjects and convert the datafiles for each subject
 
-cfg = [];
+    cfg = [];
 
-cfg.InstitutionName             = 'Radboud University';
-cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
-cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+    cfg.InstitutionName             = 'Radboud University';
+    cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+    cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
 
-% required for dataset_description.json
-cfg.dataset_description.Name                = 'Visual Stability: predictive remapping of features beyond saccadic targets';
-cfg.dataset_description.BIDSVersion         = 'unofficial extension';
+    % required for dataset_description.json
+    cfg.dataset_description.Name                = 'Visual Stability: predictive remapping of features beyond saccadic targets';
+    cfg.dataset_description.BIDSVersion         = 'unofficial extension';
 
-% optional for dataset_description.json
-cfg.dataset_description.Authors             = 'Tao He, Matthias Fritsche, Floris de Lange';
-cfg.dataset_description.DatasetDOI          = 'http://hdl.handle.net/11633/di.dccn.DSC_3018034.01_694';
-cfg.dataset_description.License             = 'RU-DI-HD-1.0';
-cfg.dataset_description.Acknowledgements    = 'n/a';
-cfg.dataset_description.Funding             = 'n/a';
-cfg.dataset_description.ReferencesAndLinks  = 'n/a';
+    % optional for dataset_description.json
+    cfg.dataset_description.Authors             = 'Tao He, Matthias Fritsche, Floris de Lange';
+    cfg.dataset_description.DatasetDOI          = 'http://hdl.handle.net/11633/di.dccn.DSC_3018034.01_694';
+    cfg.dataset_description.License             = 'RU-DI-HD-1.0';
+    cfg.dataset_description.Acknowledgements    = 'n/a';
+    cfg.dataset_description.Funding             = 'n/a';
+    cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 
-for i=1:numel(subjid)
-  fileselection = find(contains(filename, ['_'  subjid{i} '_'], 'IgnoreCase', true));
-  
-  for j=1:numel(fileselection)
-    [p, f, x] = fileparts(filename{fileselection(j)});  % split the path, filename and extension
-    part = split(f, '_');                               % split the filename
-    run = str2double(part{3});
-    
-    % this is the data in ASCII format
-    cfg.dataset = fullfile(sourcepath, [f x]);
-    cfg.method = 'convert';
-    
-    % these are used to construct the directory and file name
-    cfg.bidsroot = targetpath;
-    cfg.sub = subjid{i};
-    cfg.run = run;
-    cfg.task = 'adaptation';
-    cfg.suffix = 'physio';
+    for i=1:numel(subjid)
+      fileselection = find(contains(filename, ['_'  subjid{i} '_'], 'IgnoreCase', true));
 
-    % this ends up in the physio.json file
-    cfg.physio.PhysioType = 'eyetrack';
-    
-    % this is additional information that ends up in the sidecar JSON file
-    cfg.TaskDescription = 'orientation adaptation paradigm';
-    
-    data2bids(cfg);
-    
-  end % for fileselection
-end % for subjid
-```
+      for j=1:numel(fileselection)
+        [p, f, x] = fileparts(filename{fileselection(j)});  % split the path, filename and extension
+        part = split(f, '_');                               % split the filename
+        run = str2double(part{3});
+
+        % this is the data in ASCII format
+        cfg.dataset = fullfile(sourcepath, [f x]);
+        cfg.method = 'convert';
+
+        % these are used to construct the directory and file name
+        cfg.bidsroot = targetpath;
+        cfg.sub = subjid{i};
+        cfg.run = run;
+        cfg.task = 'adaptation';
+        cfg.suffix = 'physio';
+
+        % this ends up in the physio.json file
+        cfg.physio.PhysioType = 'eyetrack';
+
+        % this is additional information that ends up in the sidecar JSON file
+        cfg.TaskDescription = 'orientation adaptation paradigm';
+
+        data2bids(cfg);
+
+      end % for fileselection
+    end % for subjid
 
 ## SMI
 
@@ -234,55 +230,53 @@ In the following example we are converting two runs of eye tracker data for two 
 
 The data for this example is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/smi).
 
-```matlab
-filename = {
-  'original/pp23671_rest1_samples.txt'
-  'original/pp23671_task1_samples.txt'
-  'original/pp31237_rest1_samples.txt'
-  'original/pp31237_task1_samples.txt'
-  };
+    filename = {
+      'original/pp23671_rest1_samples.txt'
+      'original/pp23671_task1_samples.txt'
+      'original/pp31237_rest1_samples.txt'
+      'original/pp31237_task1_samples.txt'
+      };
 
-% note that the original filename includes the subject identifier and the task
-% these are used further down and included in the output
+    % note that the original filename includes the subject identifier and the task
+    % these are used further down and included in the output
 
-cfg = [];
+    cfg = [];
 
-cfg.InstitutionName             = 'Radboud University';
-cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
-cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+    cfg.InstitutionName             = 'Radboud University';
+    cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+    cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
 
-% required for dataset_description.json
-cfg.dataset_description.Name        = 'SMI example';
-cfg.dataset_description.BIDSVersion = 'unofficial extension';
+    % required for dataset_description.json
+    cfg.dataset_description.Name        = 'SMI example';
+    cfg.dataset_description.BIDSVersion = 'unofficial extension';
 
-% optional for dataset_description.json
-cfg.dataset_description.License             = 'n/a';
-cfg.dataset_description.Authors             = 'n/a';
-cfg.dataset_description.Acknowledgements    = 'n/a';
-cfg.dataset_description.Funding             = 'n/a';
-cfg.dataset_description.ReferencesAndLinks  = 'n/a';
-cfg.dataset_description.DatasetDOI          = 'n/a';
+    % optional for dataset_description.json
+    cfg.dataset_description.License             = 'n/a';
+    cfg.dataset_description.Authors             = 'n/a';
+    cfg.dataset_description.Acknowledgements    = 'n/a';
+    cfg.dataset_description.Funding             = 'n/a';
+    cfg.dataset_description.ReferencesAndLinks  = 'n/a';
+    cfg.dataset_description.DatasetDOI          = 'n/a';
 
-cfg.Manufacturer          = 'SMI';
-cfg.ManufacturerModelName = 'iView X MRI-LR';
+    cfg.Manufacturer          = 'SMI';
+    cfg.ManufacturerModelName = 'iView X MRI-LR';
 
-cfg.method    = 'convert'; % the SMI-specific format is not supported, convert it to plain TSV
-cfg.bidsroot  = './bids';  % write to the working directory
-cfg.suffix    = 'physio';
+    cfg.method    = 'convert'; % the SMI-specific format is not supported, convert it to plain TSV
+    cfg.bidsroot  = './bids';  % write to the working directory
+    cfg.suffix    = 'physio';
 
-for i=1:4
-  cfg.dataset   = filename{i};
-  
-  % split the filename to get the subject identifier and the task
-  [p, f, x] = fileparts(filename{i});
-  piece = split(f, '_');
-  
-  cfg.sub   = piece{1};
-  cfg.task  = piece{2};
-  
-  data2bids(cfg);
-end
-```
+    for i=1:4
+      cfg.dataset   = filename{i};
+
+      % split the filename to get the subject identifier and the task
+      [p, f, x] = fileparts(filename{i});
+      piece = split(f, '_');
+
+      cfg.sub   = piece{1};
+      cfg.task  = piece{2};
+
+      data2bids(cfg);
+    end
 
 ## TOBII
 

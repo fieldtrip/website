@@ -30,15 +30,13 @@ For the hands-on sessions we assume that you have a computer with a relatively r
 
 To get the most recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20241025), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you can do the following in the MATLAB command window (less work and more robust):
 
-```matlab
-% create a folder that will contain the code and the data, and change directory
-mkdir('cuttingeegx');
-cd('cuttingeegx');
+    % create a folder that will contain the code and the data, and change directory
+    mkdir('cuttingeegx');
+    cd('cuttingeegx');
 
-% download and unzip fieldtrip into the newly created folder
-url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20241025.zip';
-unzip(url_fieldtrip);
-```
+    % download and unzip fieldtrip into the newly created folder
+    url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20241025.zip';
+    unzip(url_fieldtrip);
 
 Upon completion of this step, the folder structure should look something like this:
 
@@ -85,78 +83,76 @@ Next, we proceed with downloading the relevant data from the FieldTrip [download
 
 Please do ensure that your present working directory is the `cuttingeegx` which you created in the previous step. Open a new m-file in the MATLAB editor, copy-and-paste the following code and run the whole script. Note: to properly run the function `recursive_download`, do not paste this code into the command line window and do not run the code line-by-line:
 
-```matlab
-% Create a folder (within cuttingeegx) to contain the data
-mkdir('data');
-cd('data');
+    % Create a folder (within cuttingeegx) to contain the data
+    mkdir('data');
+    cd('data');
 
-% Download the SQUID and OPM dataset
-url = 'https://download.fieldtriptoolbox.org/workshop/cuttingeegx';
-recursive_download(url, pwd)
+    % Download the SQUID and OPM dataset
+    url = 'https://download.fieldtriptoolbox.org/workshop/cuttingeegx';
+    recursive_download(url, pwd)
 
-function recursive_download(webLocation, localFolder)
+    function recursive_download(webLocation, localFolder)
 
-    % RECURSIVE_DOWNLOAD downloads a complete directory from a RESTful web service
-    %
-    % Use as
-    %   recursive_download(webLocation, localFolder)
-    %
-    % See also WEBREAD, WEBSAVE, UNTAR, UNZIP, GUNZIP
-    
-    % Copyright (C) 2023, Konstantinos Tsilimparis
-    %
-    % This file is part of FieldTrip, see http://www.fieldtriptoolbox.org
-    % for the documentation and details.
-    %
-    %    FieldTrip is free software: you can redistribute it and/or modify
-    %    it under the terms of the GNU General Public License as published by
-    %    the Free Software Foundation, either version 3 of the License, or
-    %    (at your option) any later version.
-    %
-    %    FieldTrip is distributed in the hope that it will be useful,
-    %    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    %    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    %    GNU General Public License for more details.
-    %
-    %    You should have received a copy of the GNU General Public License
-    %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
-    %
-    % $Id$
-    
-    % Read the HTML content of the URL
-    htmlContent = webread(webLocation);
-    pattern = '<a href="([^"]+)">';
-    matches = regexp(htmlContent, pattern, 'tokens');
-    
-    % Iterate over the matches
-    for i = 2:numel(matches) % Ignore i=1, which is the parent directory link: '../'
-      item = matches{i}{1};
-    
-      if endsWith(item, '/') % It is a folder
-        % Create the necessary directories if they do not exist
-        subfolder = fullfile(localFolder, item);
-        if ~isfolder(subfolder)
-          mkdir(subfolder);
+        % RECURSIVE_DOWNLOAD downloads a complete directory from a RESTful web service
+        %
+        % Use as
+        %   recursive_download(webLocation, localFolder)
+        %
+        % See also WEBREAD, WEBSAVE, UNTAR, UNZIP, GUNZIP
+
+        % Copyright (C) 2023, Konstantinos Tsilimparis
+        %
+        % This file is part of FieldTrip, see http://www.fieldtriptoolbox.org
+        % for the documentation and details.
+        %
+        %    FieldTrip is free software: you can redistribute it and/or modify
+        %    it under the terms of the GNU General Public License as published by
+        %    the Free Software Foundation, either version 3 of the License, or
+        %    (at your option) any later version.
+        %
+        %    FieldTrip is distributed in the hope that it will be useful,
+        %    but WITHOUT ANY WARRANTY; without even the implied warranty of
+        %    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        %    GNU General Public License for more details.
+        %
+        %    You should have received a copy of the GNU General Public License
+        %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
+        %
+        % $Id$
+
+        % Read the HTML content of the URL
+        htmlContent = webread(webLocation);
+        pattern = '<a href="([^"]+)">';
+        matches = regexp(htmlContent, pattern, 'tokens');
+
+        % Iterate over the matches
+        for i = 2:numel(matches) % Ignore i=1, which is the parent directory link: '../'
+          item = matches{i}{1};
+
+          if endsWith(item, '/') % It is a folder
+            % Create the necessary directories if they do not exist
+            subfolder = fullfile(localFolder, item);
+            if ~isfolder(subfolder)
+              mkdir(subfolder);
+            end
+
+            % Recursively download the subfolder
+            subWebLocation = strcat(webLocation, '/', item);
+            recursive_download(subWebLocation, subfolder);
+
+          else % It is a file
+            % Create the necessary directories if they do not exist
+            if ~isfolder(localFolder)
+              mkdir(localFolder);
+            end
+
+            % Download the file
+            fileUrl = strcat(webLocation, '/', item);
+            localFilePath = fullfile(localFolder, item);
+            websave(localFilePath, fileUrl);
+          end
         end
-    
-        % Recursively download the subfolder
-        subWebLocation = strcat(webLocation, '/', item);
-        recursive_download(subWebLocation, subfolder);
-    
-      else % It is a file
-        % Create the necessary directories if they do not exist
-        if ~isfolder(localFolder)
-          mkdir(localFolder);
-        end
-    
-        % Download the file
-        fileUrl = strcat(webLocation, '/', item);
-        localFilePath = fullfile(localFolder, item);
-        websave(localFilePath, fileUrl);
-      end
     end
-end
-```
 
 At this stage, you should have a directory structure like this:
 
@@ -192,13 +188,11 @@ cuttingeegx/data/
 
 Whenever starting a fresh MATLAB session, to configure the right FieldTrip paths, execute the following:
 
-```matlab
-% change into the 'cuttingeegx' folder and then do the following
-restoredefaultpath
-addpath('fieldtrip-20241025')
-addpath(genpath('data'))
-ft_defaults
-```
+    % change into the 'cuttingeegx' folder and then do the following
+    restoredefaultpath
+    addpath('fieldtrip-20241025')
+    addpath(genpath('data'))
+    ft_defaults
 
 The `restoredefaultpath` command sets the path to the MATLAB default, clearing any custom toolboxes that you may have but that we don't need today. The `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 

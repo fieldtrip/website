@@ -78,24 +78,18 @@ or using `LD_LIBRARY_PATH` on Linux.
 
 You can test the actual path that MATLAB will use by
 
-```matlab
-system('echo $PATH');
-system('echo $DYLD_LIBRARY_PATH'); % or LD_LIBRARY_PATH on Linux
-```
+    system('echo $PATH');
+    system('echo $DYLD_LIBRARY_PATH'); % or LD_LIBRARY_PATH on Linux
 
 If it is not appropriate, you can do
 
-```matlab
-setenv('PATH', ['/opt/openmeeg/bin:' getenv('PATH')]);
-setenv('DYLD_LIBRARY_PATH', ['/opt/openmeeg/lib:' getenv('DYLD_LIBRARY_PATH')]);
-```
+    setenv('PATH', ['/opt/openmeeg/bin:' getenv('PATH')]);
+    setenv('DYLD_LIBRARY_PATH', ['/opt/openmeeg/lib:' getenv('DYLD_LIBRARY_PATH')]);
 
 in MATLAB on macOS, or
 
-```matlab
-setenv('PATH', ['/opt/openmeeg/bin:' getenv('PATH')]);
-setenv('LD_LIBRARY_PATH', ['/opt/openmeeg/lib:' getenv('LD_LIBRARY_PATH')]);
-```
+    setenv('PATH', ['/opt/openmeeg/bin:' getenv('PATH')]);
+    setenv('LD_LIBRARY_PATH', ['/opt/openmeeg/lib:' getenv('LD_LIBRARY_PATH')]);
 
 on Linux.
 

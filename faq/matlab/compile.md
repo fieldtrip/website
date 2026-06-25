@@ -38,10 +38,8 @@ Some of the simple mex files come with a corresponding m-file that automatically
 
 The realtime buffer mex file is compiled on the MATLAB command line with
 
-```matlab
-cd realtime/buffer/matlab
-compile
-```
+    cd realtime/buffer/matlab
+    compile
 
 The command line utilities and the library can be compiled on the Unix command line with
 

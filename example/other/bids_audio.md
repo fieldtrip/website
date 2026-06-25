@@ -24,34 +24,32 @@ The example includes the audio recording under the “original” directory. It 
 
 In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIfTI), you probably want to keep a copy of the original data, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the audio file but only copying and renaming it, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
-```matlab
-cfg = [];
+    cfg = [];
 
-cfg.InstitutionName             = 'Radboud University';
-cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
-cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+    cfg.InstitutionName             = 'Radboud University';
+    cfg.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+    cfg.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
 
-% this is required for dataset_description.json
-cfg.dataset_description.Name                = 'Audio example';
-cfg.dataset_description.BIDSVersion         = 'unofficial extension';
+    % this is required for dataset_description.json
+    cfg.dataset_description.Name                = 'Audio example';
+    cfg.dataset_description.BIDSVersion         = 'unofficial extension';
 
-% this is optional for dataset_description.json
-cfg.dataset_description.License             = 'n/a';
-cfg.dataset_description.Authors             = 'n/a';
-cfg.dataset_description.Acknowledgements    = 'n/a';
-cfg.dataset_description.Funding             = 'n/a';
-cfg.dataset_description.ReferencesAndLinks  = 'n/a';
-cfg.dataset_description.DatasetDOI          = 'n/a';
+    % this is optional for dataset_description.json
+    cfg.dataset_description.License             = 'n/a';
+    cfg.dataset_description.Authors             = 'n/a';
+    cfg.dataset_description.Acknowledgements    = 'n/a';
+    cfg.dataset_description.Funding             = 'n/a';
+    cfg.dataset_description.ReferencesAndLinks  = 'n/a';
+    cfg.dataset_description.DatasetDOI          = 'n/a';
 
-% provide some metadata about the task that was performed
-cfg.TaskDescription = 'The subject was instructed to speak a random sentence into the microphone';
+    % provide some metadata about the task that was performed
+    cfg.TaskDescription = 'The subject was instructed to speak a random sentence into the microphone';
 
-cfg.method    = 'copy'; % the audio should simply be copied, not converted
-cfg.dataset   = './original/short_sentence.mp3';
-cfg.bidsroot  = './bids';
-cfg.suffix    = 'audio';
-cfg.sub       = '01';
-cfg.task      = 'speech';
+    cfg.method    = 'copy'; % the audio should simply be copied, not converted
+    cfg.dataset   = './original/short_sentence.mp3';
+    cfg.bidsroot  = './bids';
+    cfg.suffix    = 'audio';
+    cfg.sub       = '01';
+    cfg.task      = 'speech';
 
-data2bids(cfg);
-```
+    data2bids(cfg);

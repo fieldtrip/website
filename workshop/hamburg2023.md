@@ -83,12 +83,10 @@ start MATLAB. To ensure that the right version of FieldTrip is used, and
  not another version (such as the one included in SPM or EEGLAB), you
 type in the MATLAB command window
 
-```matlab
-restoredefaultpath
-cd path_to_directory/fieldtrip-xxxxxxxx
-addpath(pwd)
-ft_defaults
-```
+    restoredefaultpath
+    cd path_to_directory/fieldtrip-xxxxxxxx
+    addpath(pwd)
+    ft_defaults
 
 Please do NOT use the graphical path management tool from MATLAB.
 In this hands-on session we’ll manage the path from the command line,
@@ -109,6 +107,4 @@ check the present working directory.
 
 After installing FieldTrip to your path, you change into the data directory
 
-```matlab
-cd path_to_directory/data
-```
+    cd path_to_directory/data

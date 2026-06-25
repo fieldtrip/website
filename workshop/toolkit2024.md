@@ -105,15 +105,13 @@ You can either 'click around' using web browsers and/or explorer windows to grab
 
 To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20240417), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
-```matlab
-% create a folder that will contain the code and the data, and change directory
-mkdir('toolkit2024');
-cd('toolkit2024');
+    % create a folder that will contain the code and the data, and change directory
+    mkdir('toolkit2024');
+    cd('toolkit2024');
 
-% download and unzip fieldtrip into the newly created folder
-url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20240417.zip';
-unzip(url_fieldtrip);
-```
+    % download and unzip fieldtrip into the newly created folder
+    url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20240417.zip';
+    unzip(url_fieldtrip);
 
 Upon completion of this step, the folder structure should look something like this: 
 
@@ -147,52 +145,50 @@ If you have downloaded and unzipped by hand, it could be that there's an 'extra 
 
 Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the `toolkit2024` folder, which you created in the previous step.
 
-```matlab
-% create a folder (within toolkit2024) that will contain the data, to keep a clean structure
-mkdir('data');
-cd('data');
+    % create a folder (within toolkit2024) that will contain the data, to keep a clean structure
+    mkdir('data');
+    cd('data');
 
-% then download and unzip the Subject01 dataset
-url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
-unzip(url_subject01);
+    % then download and unzip the Subject01 dataset
+    url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
+    unzip(url_subject01);
 
-% next, create for each of the tutorials a folder, and download the data
-mkdir('eventrelatedaveraging');
-cd('eventrelatedaveraging');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging';
-fnames = {'dataFC_LP.mat' 'dataFIC_LP.mat' 'dataIC_LP.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
+    % next, create for each of the tutorials a folder, and download the data
+    mkdir('eventrelatedaveraging');
+    cd('eventrelatedaveraging');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging';
+    fnames = {'dataFC_LP.mat' 'dataFIC_LP.mat' 'dataIC_LP.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
 
-mkdir('timefrequencyanalysis');
-cd('timefrequencyanalysis');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis';
-fnames = {'dataFIC.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
+    mkdir('timefrequencyanalysis');
+    cd('timefrequencyanalysis');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis';
+    fnames = {'dataFIC.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
 
-mkdir('beamformer');
-cd('beamformer');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
-fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../');
+    mkdir('beamformer');
+    cd('beamformer');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
+    fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
 
-mkdir('cluster_permutation_timelock');
-cd('cluster_permutation_timelock');
-url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
-fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat' 'stat_ERF_planar_FICvsFC.mat'};
-for k = 1:numel(fnames)
-  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-end
-cd('../../');
-```
+    mkdir('cluster_permutation_timelock');
+    cd('cluster_permutation_timelock');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
+    fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat' 'stat_ERF_planar_FICvsFC.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../../');
 
 At this stage, you ideally have a directory structure that looks like the following one:
 
@@ -229,13 +225,11 @@ At this stage, you ideally have a directory structure that looks like the follow
 
 So, if you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
 
-```matlab
-% change into the 'toolkit2024' folder and then do the following
-restoredefaultpath
-addpath('fieldtrip-20240417');
-addpath(genpath('data'));
-ft_defaults;
-```
+    % change into the 'toolkit2024' folder and then do the following
+    restoredefaultpath
+    addpath('fieldtrip-20240417');
+    addpath(genpath('data'));
+    ft_defaults;
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20240417` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
