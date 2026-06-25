@@ -19,7 +19,7 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 ## PracticalMEEG, Aix-en-Provence (October 2025)
 
-- [Get to know your data]https://www.youtube.com/watch?v=qt1CWUD128w() - Robert Oostenveld
+- [Get to know your data](https://www.youtube.com/watch?v=qt1CWUD128w) - Robert Oostenveld
 - [Tune in to your frequency space analysis](https://www.youtube.com/watch?v=DGPHTxguGvQ) - Natalie Schaworonkow
 - [Source level analysis I: Getting to source level maps](https://www.youtube.com/watch?v=AevlaqiqYLU) - John C Mosher
 - [Source level analysis II. Analysing source time-series](https://www.youtube.com/watch?v=iVKMQBdtR3s) - Guiomar Niso
