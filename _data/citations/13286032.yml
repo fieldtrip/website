@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '40250436'
+- idtype: doi
+  value: 10.1016/j.cub.2025.03.077
+- idtype: pii
+  value: S0960-9822(25)00393-8
+- idtype: pmcid
+  value: PMC13286032
+- idtype: MID
+  value: NIHMS2075191
+authors:
+- authtype: Author
+  name: Tsunada J
+- authtype: Author
+  name: Eliades SJ
+epubdate: 2025 Apr 17
+fulljournalname: 'Current biology : CB'
+issue: '10'
+pages: 2307-2322.e3
+pmclivedate: 2026/06/23
+printpubdate: 2025 May 19
+pubdate: 2025 May 19
+sortdate: 2025/05/19 00:00
+source: Curr Biol
+title: Frontal-auditory cortical interactions and sensory prediction during vocal
+  production in marmoset monkeys.
+uid: '13286032'
+volume: '35'

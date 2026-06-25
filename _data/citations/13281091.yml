@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42339413'
+- idtype: pmcid
+  value: PMC13281091
+- idtype: doi
+  value: 10.3389/fcogn.2024.1375919
+authors:
+- authtype: Author
+  name: Borden CK
+- authtype: Author
+  name: McHail DG
+- authtype: Author
+  name: Blacker KJ
+epubdate: 2024 Apr 10
+fulljournalname: Frontiers in cognition
+issue: ''
+pages: '1375919'
+pmclivedate: 2026/06/23
+printpubdate: ''
+pubdate: '2024'
+sortdate: 2024/04/10 00:00
+source: Front Cognit
+title: The time course of hypoxia effects using an aviation survival trainer.
+uid: '13281091'
+volume: '3'

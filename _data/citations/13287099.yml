@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '41770305'
+- idtype: doi
+  value: 10.1007/s00421-026-06172-2
+- idtype: pii
+  value: 10.1007/s00421-026-06172-2
+- idtype: pmcid
+  value: PMC13287099
+authors:
+- authtype: Author
+  name: Veldman MP
+- authtype: Author
+  name: Kwant JZ
+- authtype: Author
+  name: Lommerse J
+- authtype: Author
+  name: Feenstra M
+- authtype: Author
+  name: Lamoth CJC
+- authtype: Author
+  name: Volkers AHM
+- authtype: Author
+  name: Drenth H
+- authtype: Author
+  name: Zuidema S
+- authtype: Author
+  name: Bautmans I
+- authtype: Author
+  name: Hobbelen H
+epubdate: 2026 Mar 2
+fulljournalname: European journal of applied physiology
+issue: '6'
+pages: 3495-3504
+pmclivedate: 2026/06/24
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Eur J Appl Physiol
+title: Neurophysiological correlates of passive movements are speed- and type-dependent.
+uid: '13287099'
+volume: '126'

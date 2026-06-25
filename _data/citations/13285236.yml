@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41842763'
+- idtype: doi
+  value: 10.1002/epi.70195
+- idtype: pmcid
+  value: PMC13285236
+authors:
+- authtype: Author
+  name: Fan JM
+- authtype: Author
+  name: Tadayon E
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Findlay AM
+- authtype: Author
+  name: Knowlton RC
+- authtype: Author
+  name: Rao VR
+- authtype: Author
+  name: Nagarajan SS
+epubdate: 2026 Mar 17
+fulljournalname: Epilepsia
+issue: '6'
+pages: 3023-3033
+pmclivedate: 2026/06/23
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Epilepsia
+title: Thalamic connectivity mirrors spatial maps of network dysfunction in nonlesional
+  focal epilepsy.
+uid: '13285236'
+volume: '67'

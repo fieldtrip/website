@@ -1,0 +1,33 @@
+articleids:
+- idtype: doi
+  value: 10.2196/76245
+- idtype: pmcid
+  value: PMC13290105
+authors:
+- authtype: Author
+  name: Ha J
+- authtype: Author
+  name: Bok J
+- authtype: Author
+  name: Lee Y
+- authtype: Author
+  name: Kim YS
+- authtype: Author
+  name: Kim JS
+- authtype: Author
+  name: Kim HJ
+- authtype: Author
+  name: Jang Y
+epubdate: 2026 Jun 23
+fulljournalname: JMIR mHealth and uHealth
+issue: ''
+pages: ''
+pmclivedate: 2026/06/24
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/23 00:00
+source: JMIR Mhealth Uhealth
+title: 'Noninvasive Electrophysiological Biomarkers of Olfactory Responses Across
+  Cognitive States in Alzheimer Dementia: Cross-Sectional Study.'
+uid: '13290105'
+volume: '14'

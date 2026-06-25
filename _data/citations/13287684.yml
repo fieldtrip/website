@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '42014723'
+- idtype: doi
+  value: 10.1038/s41467-026-71502-z
+- idtype: pii
+  value: 10.1038/s41467-026-71502-z
+- idtype: pmcid
+  value: PMC13287684
+authors:
+- authtype: Author
+  name: Szabó JP
+- authtype: Author
+  name: Hegedüs P
+- authtype: Author
+  name: Laszlovszky T
+- authtype: Author
+  name: Halász L
+- authtype: Author
+  name: Miklós G
+- authtype: Author
+  name: Király B
+- authtype: Author
+  name: Perczel G
+- authtype: Author
+  name: Bokodi V
+- authtype: Author
+  name: Entz L
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Tamás G
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Erőss L
+- authtype: Author
+  name: Hangya B
+epubdate: 2026 Apr 21
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/06/24
+printpubdate: ''
+pubdate: 2026 Apr 21
+sortdate: 2026/04/21 00:00
+source: Nat Commun
+title: Neurons of the human subthalamic nucleus engage with local delta frequency
+  processes during action cancellation.
+uid: '13287684'
+volume: '17'

@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '41804684'
+- idtype: doi
+  value: 10.1002/epi.70191
+- idtype: pmcid
+  value: PMC13285261
+authors:
+- authtype: Author
+  name: Heers M
+- authtype: Author
+  name: Afnan J
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Grova C
+- authtype: Author
+  name: Altenmüller DM
+- authtype: Author
+  name: Steinhoff BJ
+- authtype: Author
+  name: Dümpelmann M
+- authtype: Author
+  name: Demerath T
+- authtype: Author
+  name: Urbach H
+- authtype: Author
+  name: Ethofer S
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Lerche H
+- authtype: Author
+  name: Li Hegner Y
+epubdate: 2026 Mar 10
+fulljournalname: Epilepsia
+issue: '6'
+pages: 2992-3008
+pmclivedate: 2026/06/23
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Epilepsia
+title: Sleep magnetoencephalography enhances detection and source imaging of seizures
+  and fast oscillations in focal cortical dysplasia.
+uid: '13285261'
+volume: '67'
