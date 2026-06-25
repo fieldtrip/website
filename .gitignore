@@ -9,5 +9,6 @@ assets/pdf
 assets/root
 assets/coverage
 assets/*.dic
+.opencode/**
 *.pptx
 *.bak
