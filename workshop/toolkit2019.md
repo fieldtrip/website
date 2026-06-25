@@ -1,5 +1,6 @@
 ---
 title: Advanced MEG/EEG toolkit at the Donders
+tags: [toolkit2019]
 ---
 
 On 8-12 April 2019 we will host the “Advanced MEG/EEG toolkit” at the Donders Institute in Nijmegen.

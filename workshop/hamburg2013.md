@@ -1,5 +1,6 @@
 ---
 title: FieldTrip workshop in Hamburg in 2013
+tags: [hamburg2013]
 ---
 
 ## When

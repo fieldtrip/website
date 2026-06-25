@@ -1,5 +1,6 @@
 ---
 title: Toolkit of Cognitive Neuroscience - EEG/MEG
+tags: [toolkit2014]
 ---
 
 - Where: Donders Institute, Radboud University Nijmegen

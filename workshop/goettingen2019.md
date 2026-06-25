@@ -1,5 +1,6 @@
 ---
 title: FieldTrip Workshop in Göttingen in 2019
+tags: [goettingen2019]
 ---
 
 The Clinic for Clinical Neurophysiology (Georg-August University) in Göttingen Germany will be hosting a FieldTrip Course on MEG Analysis

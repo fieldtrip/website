@@ -1,6 +1,6 @@
 ---
 title: Pre-conference workshop in Nairobi, Kenya
-tags: [kenia2026]
+tags: [kenya2026]
 ---
 
 {% include image src="/assets/img/workshop/kenya2026/alma.png" link="https://almaafrica.org" width=200 %}

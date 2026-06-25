@@ -1,5 +1,6 @@
 ---
 title: ChildBrain pre-conference workshop in Leuven, Belgium
+tags: [leuven2019]
 ---
 
 - By whom: Raul Granados, Simon Homölle
