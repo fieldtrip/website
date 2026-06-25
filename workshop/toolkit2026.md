@@ -89,7 +89,7 @@ For the hands-on sessions we assume that you will work on your own laptop comput
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, so R2021b or later).
+For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, so R2021a or later).
 
 To ensure that everything runs smoothly, we recommend that you set up your computer with a clean and well-tested version of FieldTrip, and download the data that are needed for the hands-on sessions in advance.
 
@@ -97,9 +97,11 @@ To ensure that everything runs smoothly, we recommend that you set up your compu
 You can either 'click around' using web browsers and/or explorer windows to grab the data that are needed, or instead (less work, at least if it works) execute the MATLAB code below.
 {% include markup/end %}
 
+### Download and install FieldTrip
+
 To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260901), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
-```
+```matlab
 % create a folder that will contain the code and the data, and change directory
 mkdir('toolkit2026');
 cd('toolkit2026');
@@ -139,9 +141,11 @@ fieldtrip-20260901/
 If you have downloaded and unzipped by hand, it could be that there's an 'extra folder layer' in your directory structure. We recommend that you remove this extra layer, i.e. move all content one level up.
 {% include markup/end %}
 
-Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2026``` folder, which you created in the previous step.
+### Download and install the tutorial data
 
-```
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the `toolkit2026` folder, which you created in the previous step.
+
+```matlab
 % create a folder (within toolkit2026) that will contain the data, to keep a clean structure
 mkdir('data');
 cd('data');
@@ -187,9 +191,11 @@ At this stage, you ideally have a directory structure that looks like the follow
     `-- utilities
 ```
 
-So, if you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
+### Set up MATLAB
 
-```
+If you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
+
+```matlab
 % change into the 'toolkit2026' folder and then do the following
 restoredefaultpath
 addpath('fieldtrip-20260901');

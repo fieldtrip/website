@@ -24,13 +24,13 @@ If you don't have a eduroam account through your institution, it is possible to 
 
 ### MATLAB
 
-For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, so >= 2019a/b).
+For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, so R2019a or later).
 
 ### FieldTrip
 
 To get the most recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20241025), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you can do the following in the MATLAB command window (less work and more robust):
 
-```
+```matlab
 % create a folder that will contain the code and the data, and change directory
 mkdir('cuttingeegx');
 cd('cuttingeegx');
@@ -85,7 +85,7 @@ Next, we proceed with downloading the relevant data from the FieldTrip [download
 
 Please do ensure that your present working directory is the `cuttingeegx` which you created in the previous step. Open a new m-file in the MATLAB editor, copy-and-paste the following code and run the whole script. Note: to properly run the function `recursive_download`, do not paste this code into the command line window and do not run the code line-by-line:
 
-```
+```matlab
 % Create a folder (within cuttingeegx) to contain the data
 mkdir('data');
 cd('data');
@@ -192,7 +192,7 @@ cuttingeegx/data/
 
 Whenever starting a fresh MATLAB session, to configure the right FieldTrip paths, execute the following:
 
-```
+```matlab
 % change into the 'cuttingeegx' folder and then do the following
 restoredefaultpath
 addpath('fieldtrip-20241025')
