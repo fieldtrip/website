@@ -1154,6 +1154,9 @@
     - title: Code of Conduct
       link: /workshop/toolkit2026/code_of_conduct/
       nav_order: 0
+    - title: Test your MATLAB and FieldTrip installation in advance
+      link: /workshop/toolkit2026/test_installation/
+      nav_order: 0
   - title: Advanced analysis and source modeling of EEG and MEG data
     link: /workshop/toolkit2015/
     nav_order: 0
@@ -1622,6 +1625,16 @@
   - title: Realtime MEG BCI hands-on session in Nijmegen
     link: /workshop/realtime/
     nav_order: 0
+  - title: SDG Global Summer School in Hangzhou, China
+    link: /workshop/hangzhou2026/
+    nav_order: 0
+    pagelist:
+    - title: Channel-level analysis of MEG and OPM data
+      link: /workshop/hangzhou2026/channelanalysis/
+      nav_order: 0
+    - title: Source-level analysis of MEG and OPM data
+      link: /workshop/hangzhou2026/sourceanalysis/
+      nav_order: 0
   - title: Summerschool on brain networks
     link: /workshop/groesbeek2013/
     nav_order: 0
