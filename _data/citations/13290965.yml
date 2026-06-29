@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '41644859'
+- idtype: doi
+  value: 10.1007/s10439-026-03977-2
+- idtype: pii
+  value: 10.1007/s10439-026-03977-2
+- idtype: pmcid
+  value: PMC13290965
+authors:
+- authtype: Author
+  name: Zaylaa A
+- authtype: Author
+  name: Dax J
+- authtype: Author
+  name: Sippel K
+- authtype: Author
+  name: Semeia L
+- authtype: Author
+  name: Frohlich J
+- authtype: Author
+  name: Gallard A
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Eswaran H
+- authtype: Author
+  name: Birkenfeld AL
+- authtype: Author
+  name: Preissl H
+epubdate: 2026 Feb 5
+fulljournalname: Annals of biomedical engineering
+issue: '7'
+pages: 2110-2128
+pmclivedate: 2026/06/25
+printpubdate: 2026 Jul
+pubdate: 2026 Jul
+sortdate: 2026/07/01 00:00
+source: Ann Biomed Eng
+title: 'Enhancing Fetal Brain Imaging: ALPS-FMEG Technique Achieves Accurate Signal
+  Extraction by Mitigating Movement Artifacts.'
+uid: '13290965'
+volume: '54'

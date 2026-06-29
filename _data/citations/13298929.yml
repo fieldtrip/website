@@ -1,0 +1,90 @@
+articleids:
+- idtype: pmid
+  value: '42348515'
+- idtype: doi
+  value: 10.1371/journal.pone.0348957
+- idtype: pii
+  value: PONE-D-26-06613
+- idtype: pmcid
+  value: PMC13298929
+authors:
+- authtype: Author
+  name: van Leeuwen AM
+- authtype: Author
+  name: Welzel J
+- authtype: Author
+  name: D'Ascanio I
+- authtype: Author
+  name: Lang C
+- authtype: Author
+  name: Vinod V
+- authtype: Author
+  name: Görrisen P
+- authtype: Author
+  name: Geritz J
+- authtype: Author
+  name: Hansen C
+- authtype: Author
+  name: Gazit E
+- authtype: Author
+  name: Tov SS
+- authtype: Author
+  name: Prusak R
+- authtype: Author
+  name: Casadei I
+- authtype: Author
+  name: Contri A
+- authtype: Author
+  name: Tampellini F
+- authtype: Author
+  name: Pellicciari L
+- authtype: Author
+  name: Lopane G
+- authtype: Author
+  name: Buonaura GC
+- authtype: Author
+  name: Palmerini L
+- authtype: Author
+  name: Zahid N
+- authtype: Author
+  name: Mehwish M
+- authtype: Author
+  name: Ratanapongleka M
+- authtype: Author
+  name: Razee H
+- authtype: Author
+  name: von Wegner F
+- authtype: Author
+  name: van Wijk BCM
+- authtype: Author
+  name: Bruijn SM
+- authtype: Author
+  name: Ravi DK
+- authtype: Author
+  name: Okubo Y
+- authtype: Author
+  name: Singh NB
+- authtype: Author
+  name: Brodie M
+- authtype: Author
+  name: La Porta F
+- authtype: Author
+  name: Hausdorff JM
+- authtype: Author
+  name: Maetzler W
+- authtype: Author
+  name: van Dieën JH
+epubdate: 2026 Jun 25
+fulljournalname: PloS one
+issue: '6'
+pages: e0348957
+pmclivedate: 2026/06/26
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/25 00:00
+source: PLoS One
+title: 'Steps against the burden of Parkinson''s disease (StepuP): Protocol of a randomized
+  controlled trial elucidating the biomechanical and neurophysiological mechanisms
+  of a speed dependent treadmill training intervention.'
+uid: '13298929'
+volume: '21'

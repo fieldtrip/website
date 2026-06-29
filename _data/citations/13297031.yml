@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42348311'
+- idtype: doi
+  value: 10.1111/psyp.70339
+- idtype: pmcid
+  value: PMC13297031
+authors:
+- authtype: Author
+  name: Chiu HS
+- authtype: Author
+  name: Hubbard RJ
+- authtype: Author
+  name: Federmeier KD
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '6'
+pages: e70339
+pmclivedate: 2026/06/26
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Psychophysiology
+title: Probing Prediction-Related Processes in Language Using an EEG Word Stem Completion
+  Paradigm.
+uid: '13297031'
+volume: '63'

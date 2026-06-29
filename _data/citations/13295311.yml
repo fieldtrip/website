@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42351846'
+- idtype: doi
+  value: 10.3390/bioengineering13060599
+- idtype: pii
+  value: bioengineering13060599
+- idtype: pmcid
+  value: PMC13295311
+authors:
+- authtype: Author
+  name: Wang W
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Cao F
+- authtype: Author
+  name: An N
+- authtype: Author
+  name: Gao Z
+- authtype: Author
+  name: Xiang M
+- authtype: Author
+  name: Li W
+epubdate: 2026 May 22
+fulljournalname: Bioengineering (Basel, Switzerland)
+issue: '6'
+pages: ''
+pmclivedate: 2026/06/26
+printpubdate: ''
+pubdate: 2026 May 22
+sortdate: 2026/05/22 00:00
+source: Bioengineering (Basel)
+title: Environment-Driven Synthetic Baseline Analysis and Optimization in Joint Measurement
+  OPM-MEG Arrays.
+uid: '13295311'
+volume: '13'

@@ -1,0 +1,71 @@
+articleids:
+- idtype: pmid
+  value: '42358667'
+- idtype: pmcid
+  value: PMC13290761
+- idtype: doi
+  value: 10.3389/fncir.2026.1814667
+authors:
+- authtype: Author
+  name: Rabbani H
+- authtype: Author
+  name: Das I
+- authtype: Author
+  name: Mandal AS
+- authtype: Author
+  name: Nelson T
+- authtype: Author
+  name: Hadar P
+- authtype: Author
+  name: Hsueh B
+- authtype: Author
+  name: Ciordia R
+- authtype: Author
+  name: Coughlin BF
+- authtype: Author
+  name: Peng E
+- authtype: Author
+  name: Cleary DR
+- authtype: Author
+  name: Collins KL
+- authtype: Author
+  name: Raslan AMT
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Choi BD
+- authtype: Author
+  name: Cosgrove GR
+- authtype: Author
+  name: Dayeh SA
+- authtype: Author
+  name: Jones PS
+- authtype: Author
+  name: Tiwana HK
+- authtype: Author
+  name: Dunn GP
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Bi WL
+- authtype: Author
+  name: Tobochnik S
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Cahill DP
+- authtype: Author
+  name: Paulk AC
+epubdate: 2026 Jun 10
+fulljournalname: Frontiers in neural circuits
+issue: ''
+pages: '1814667'
+pmclivedate: 2026/06/25
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/10 00:00
+source: Front Neural Circuits
+title: A modular and flexible pipeline for intraoperative electrode reconstruction
+  and localization in patients with brain lesions.
+uid: '13290761'
+volume: '20'

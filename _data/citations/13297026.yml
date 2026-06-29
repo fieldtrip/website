@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42348169'
+- idtype: doi
+  value: 10.1111/psyp.70345
+- idtype: pmcid
+  value: PMC13297026
+authors:
+- authtype: Author
+  name: Stern E
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Capilla A
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '6'
+pages: e70345
+pmclivedate: 2026/06/26
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Psychophysiology
+title: 'sBOSC: A Method for Source-Level Identification of Neural Oscillations in
+  Electromagnetic Brain Signals.'
+uid: '13297026'
+volume: '63'

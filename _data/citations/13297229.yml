@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42352570'
+- idtype: doi
+  value: 10.3390/brainsci16060561
+- idtype: pii
+  value: brainsci16060561
+- idtype: pmcid
+  value: PMC13297229
+authors:
+- authtype: Author
+  name: Ljulj H
+- authtype: Author
+  name: Lehner K
+- authtype: Author
+  name: Wyse-Sookoo K
+- authtype: Author
+  name: Arginteanu T
+- authtype: Author
+  name: Mills KA
+- authtype: Author
+  name: Salimpour Y
+- authtype: Author
+  name: Anderson WS
+epubdate: 2026 May 26
+fulljournalname: Brain sciences
+issue: '6'
+pages: ''
+pmclivedate: 2026/06/26
+printpubdate: ''
+pubdate: 2026 May 26
+sortdate: 2026/05/26 00:00
+source: Brain Sci
+title: 'Electrocorticography During Deep Brain Stimulation Surgery for Movement Disorders:
+  Single-Center Experience.'
+uid: '13297229'
+volume: '16'

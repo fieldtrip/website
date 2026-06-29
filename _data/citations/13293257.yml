@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42341187'
+- idtype: doi
+  value: 10.1093/cercor/bhag077
+- idtype: pii
+  value: '8715673'
+- idtype: pmcid
+  value: PMC13293257
+authors:
+- authtype: Author
+  name: Truzzi A
+- authtype: Author
+  name: Rico-Picó J
+- authtype: Author
+  name: Rueda MR
+- authtype: Author
+  name: Cusack R
+epubdate: ''
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '6'
+pages: ''
+pmclivedate: 2026/06/25
+printpubdate: 2026 Jun 2
+pubdate: 2026 Jun 2
+sortdate: 2026/06/02 00:00
+source: Cereb Cortex
+title: The longitudinal development of intrinsic timescales in infancy and their relation
+  to alpha brain rhythm.
+uid: '13293257'
+volume: '36'
