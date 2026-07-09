@@ -155,8 +155,7 @@ The **[ft_multiplotER](/reference/ft_multiplotER)** function with 'butterfly' vi
 #### Exercise
 
 {% include markup/skyblue %}
-Exploring the topographies of low-frequency power often reveals spatially structured ambient noise patterns. These smooth topographies are candidate components for SSP-based noise suppression. The figure that you have just created is interactive, so you can left-click and drag to select a certain frequency range that can be displayed topographically. Explore the spectra by selecting several frequency ranges and evaluate the topographical distribution. 
-{% include markup/end %}
+Exploring the topographies of low-frequency power often reveals spatially structured ambient noise patterns. These smooth topographies are candidate components for SSP-based noise suppression. The figure that you have just created is interactive, so you can left-click and drag to select a certain frequency range that can be displayed topographically. Explore the spectra by selecting several frequency ranges and evaluate the topographical distribution.{% include markup/end %}
 
 To identify spatial noise components, we can also perform principal component analysis (PCA):
 
@@ -178,8 +177,7 @@ The **[ft_componentanalysis](/reference/ft_componentanalysis)** function perform
 #### Exercise
 
 {% include markup/skyblue %}
-Examine the PCA components in the icabrowser interface. Which components show smooth spatial patterns that are characteristic of ambient noise? Which components show more focal patterns that might represent sensor-specific noise?
-{% include markup/end %}
+Examine the PCA components in the icabrowser interface. Which components show smooth spatial patterns that are characteristic of ambient noise? Which components show more focal patterns that might represent sensor-specific noise?{% include markup/end %}
 
 {% include markup/yellow %}
 Note: Some of the PCs may show smooth patterns, but they are not necessarily the first ordered PCs. For example, component 2 might be not a good candidate for SSP. This indicates that the quality of the (emptyroom) recording may be insufficient to automatically capture the main noise components in the first few PCs. This is relevant for the algorithmic implementation of the SSP-algorithm below, which will remove the first 'N' spatial components from the data.
@@ -219,8 +217,7 @@ Here we applied a bandpass filter (1-80 Hz) and a bandstop filter (58-62 Hz) to 
 #### Exercise
 
 {% include markup/skyblue %}
-Examine the topographies and time courses of the PCs, and compare them to the PCs obtained from the unfiltered data. What has changed? How many components would you identify as candidates for the SSP?
-{% include markup/end %}
+Examine the topographies and time courses of the PCs, and compare them to the PCs obtained from the unfiltered data. What has changed? How many components would you identify as candidates for the SSP?{% include markup/end %}
 
 ## Loading and preprocessing the task data
 
@@ -306,8 +303,7 @@ ft_topoplotER(cfg, tlck, tlck_ssp1, tlck_ssp2);
 #### Exercise
 
 {% include markup/skyblue %}
-Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the emptyroom data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
-{% include markup/end %}
+Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the emptyroom data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?{% include markup/end %}
 
 ## Denoising with HFC
 
@@ -342,9 +338,7 @@ The **[ft_denoise_amm](/reference/ft_denoise_amm)** function applies AMM with a 
 #### Exercise
 
 {% include markup/skyblue %}
-Compute the ERF for the HFC and AMM denoised data, and explore the result of the cleaning. If time and enthusiasm permits, you can also play around with the parameters of the cleaning (e.g. `cfg.order` for HFC and/or `cfg.amm.thr` for AMM), and evaluate the effect on the resulting ERFs. Consult the help section of the respective functions for more information.
-
-{% include markup/end %}
+Compute the ERF for the HFC and AMM denoised data, and explore the result of the cleaning. If time and enthusiasm permits, you can also play around with the parameters of the cleaning (e.g. `cfg.order` for HFC and/or `cfg.amm.thr` for AMM), and evaluate the effect on the resulting ERFs. Consult the help section of the respective functions for more information.{% include markup/end %}
 
 ## Summary and conclusion
 
