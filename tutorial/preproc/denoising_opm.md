@@ -7,13 +7,6 @@ redirect_from:
     - /tutorial/denoising_opm/
 ---
 
-
-### The dataset used in this tutorial
-
-OPM recordings were done using a FieldLine v3 system comprised of between 131 and 133 OPMs sensitive in the radial (or axial) direction. The OPMs were placed in a FieldLine beta-2 smart helmet, which allows them to be slided inwards, touching the scalp surface. Moreover, using the smart helmet allows for automatic coregistration of the OPM sensors (relative to the helmet), resulting in data with accurate position information of the individual sensors. The data used here have been further processed to be coregistered to the participant's head based coordinate system. To this end, a separate recording had been performed, during which the HPI-coils attached to the participant were localised. Subsequently the channel position information in the recordings (expressed in smart helmet coordinates) were replaced with the channel positions in head coordinates. Here we will explore the emptyroom recording, and a recording during which visual stimuli were presented in the left upper visual quadrant.
-
-The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm/) from our download server.
-
 ## Introduction
 
 Optically pumped magnetometers (OPMs) offer flexible and wearable MEG recordings, but are particularly susceptible to environmental noise and movement artifacts. This tutorial demonstrates how to apply various denoising techniques to OPM data using FieldTrip, with a focus on visual evoked field (VEF) recordings.
@@ -60,9 +53,9 @@ FieldTrip has implementations of the mentioned denoising strategies. Here, we wi
 - **[ft_denoise_amm](/reference/ft_denoise_amm)**: Automatic Movement Masking for motion artifacts
 
 
-{% include markup/green %}
-In this tutorial we will use recordings made with a whole head FieldLine OPM system, consisting of ~130 sensors. In addition to having full head/brain coverage, this number of sensors also allows for a detailed view of the ambient sources that contribute to the MEG-signals. We will focus on an emptyroom recording, where the helmet was placed at the same location as the subject. We also use task data, where a visual stimulus was presented in the left upper hemifield, eliciting a VEF in the occipital sensors.
-{% include markup/end %}
+### The dataset used in this tutorial
+
+OPM recordings were done using a FieldLine v3 system comprised of between 131 and 133 OPMs sensitive in the radial (or axial) direction. The OPMs were placed in a FieldLine beta-2 smart helmet, which allows them to be slided inwards, touching the scalp surface. Moreover, using the smart helmet allows for automatic coregistration of the OPM sensors (relative to the helmet), resulting in data with accurate position information of the individual sensors. The data used here have been further processed to be coregistered to the participant's head based coordinate system. To this end, a separate recording had been performed, during which the HPI-coils attached to the participant were localised. Subsequently the channel position information in the recordings (expressed in smart helmet coordinates) were replaced with the channel positions in head coordinates. Here we will explore the emptyroom recording, and a recording during which visual stimuli were presented in the left upper visual quadrant.
 
 ## Procedure
 
