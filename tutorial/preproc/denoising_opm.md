@@ -1,7 +1,7 @@
 ---
 title: Denoising OPM data
 category: tutorial
-tags: [opm, denoising]
+tags: [opm]
 weight: 56
 redirect_from:
     - /tutorial/denoising_opm/
@@ -20,7 +20,7 @@ In this tutorial you will learn:
 - How to characterize and analyze empty-room noise data
 - How to apply signal space projection (SSP) for noise suppression
 - How to use harmonic field correction (HFC) for environmental noise removal
-- How to apply automatic movement masking (AMM) for motion artifact cleaning
+- How to apply adaptive multipole modeling (AMM) for motion artifact cleaning
 - How to compare the effectiveness of different denoising approaches
 
 This tutorial assumes that you are familiar with the basic FieldTrip preprocessing workflow and have some experience with MEG data analysis. It focuses specifically on denoising techniques for OPM data. For a more general introduction to OPM data processing, see the [OPM preprocessing tutorial](/tutorial/sensor/opm_preprocessing).
@@ -45,7 +45,7 @@ The denoising techniques that we are going to explore in this tutorial are so-ca
 
 **Adaptive multipole modeling (AMM)** is a variant of SSS, using slightly different heuristics, such as the basis functions for the model. It requires geometric information of the sensors.
 
-**Dual signal subspace projection (DSSP)** uses - just like SSS and AMM - a combination of a spatial model and temporal regression for cleaning. It requires geometric information of the sensors and a volume conduction model and brain source model for biophysical forward modeling.FieldTrip provides several denoising algorithms specifically designed for OPM data:
+**Dual signal subspace projection (DSSP)** uses - just like SSS and AMM - a combination of a spatial model and temporal regression for cleaning. It requires geometric information of the sensors and a volume conduction model and brain source model for biophysical forward modeling.
 
 FieldTrip has implementations of the mentioned denoising strategies. Here, we will explore the effect of some of those strategies.
 - **[ft_denoise_ssp](/reference/ft_denoise_ssp)**: Signal Space Projection for removing noise components
@@ -105,7 +105,7 @@ subplot(122); plot(freq_er.freq, freq_er.powspctrm); xlim([0 500]);
 
 Here we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with multitaper frequency estimation and Hanning taper to compute the power spectrum. The **[ft_math](/reference/ft_math)** function applies a log10 transformation to make the spectral peaks more visible. The two subplots show the spectrum in different frequency ranges: 0-80 Hz (left) for the neural signal range, and 0-500 Hz (right) to capture higher frequency noise.
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum1.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum1.png" width="500" %}
 
 {% include markup/yellow %}
 The power spectrum of the empty-room data helps identify characteristic noise peaks. In a well-shielded MSR, you might see peaks at line noise frequencies (50/60 Hz and harmonics), but residual environmental noise may still be present, especially at lower frequencies.
@@ -134,7 +134,7 @@ subplot(121); plot(freq_er.freq, freq_er.powspctrm); xlim([0 80]);
 subplot(122); plot(freq_er.freq, freq_er.powspctrm); xlim([0 500]);
 ```
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum2.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum2.png" width="500" %}
 
 The **[ft_redefinetrial](/reference/ft_redefinetrial)** function cuts the continuous data into 2-second segments, which helps reduce the memory requirements and improves the spectral estimation.
 
@@ -150,10 +150,11 @@ ft_multiplotER(cfg, freq_er);
 
 The **[ft_multiplotER](/reference/ft_multiplotER)** function with 'butterfly' viewmode shows all sensor traces overlaid, with the 'spatial' linecolor option coloring each sensor differently. This helps identify sensors with unusual noise patterns.
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum3.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum3.png" width="500" %}
 
-{% include markup/blue %}
 #### Exercise
+
+{% include markup/skyblue %}
 Exploring the topographies of low-frequency power often reveals spatially structured ambient noise patterns. These smooth topographies are candidate components for SSP-based noise suppression. The figure that you have just created is interactive, so you can left-click and drag to select a certain frequency range that can be displayed topographically. Explore the spectra by selecting several frequency ranges and evaluate the topographical distribution. 
 {% include markup/end %}
 
@@ -170,13 +171,13 @@ cfg.layout = 'fieldlinebeta2bz_helmet.mat';
 [rej, art] = ft_icabrowser(cfg, comp_er);
 ```
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca1.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca1.png" width="500" %}
 
 The **[ft_componentanalysis](/reference/ft_componentanalysis)** function performs PCA on the empty-room data. The **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)** function provides an interactive interface to visualize the components and identify noise-related topographies. This function is not in the 'core' FieldTrip folder, but has been contributed by external contributors.
 
-{% include markup/blue %}
 #### Exercise
 
+{% include markup/skyblue %}
 Examine the PCA components in the icabrowser interface. Which components show smooth spatial patterns that are characteristic of ambient noise? Which components show more focal patterns that might represent sensor-specific noise?
 {% include markup/end %}
 
@@ -211,13 +212,13 @@ cfg.layout = 'fieldlinebeta2bz_helmet.mat';
 [rej, art] = ft_icabrowser(cfg, comp_er);
 ```
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca1.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca2.png" width="500" %}
 
 Here we applied a bandpass filter (1-80 Hz) and a bandstop filter (58-62 Hz) to remove line noise using **[ft_preprocessing](/reference/ft_preprocessing)**. 
 
-{% include markup/blue %}
 #### Exercise
 
+{% include markup/skyblue %}
 Examine the topographies and time courses of the PCs, and compare them to the PCs obtained from the unfiltered data. What has changed? How many components would you identify as candidates for the SSP?
 {% include markup/end %}
 
@@ -266,7 +267,7 @@ ft_multiplotER(cfg, tlck);
 
 The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function computes the average ERF across trials, and we visualize it with **[ft_multiplotER](/reference/ft_multiplotER)** in butterfly mode.
 
-{% include image src="/assets/img/tutorial/denoising_opm/erf_nodenoise.png" width="800" %}
+{% include image src="/assets/img/tutorial/denoising_opm/erf_nodenoise.png" width="500" %}
 
 ## Step 3 - Denoising with SSP
 
@@ -298,14 +299,13 @@ cfg        = [];
 cfg.layout = 'fieldlinebeta2bz_helmet.mat';
 cfg.figure = 'subplot';
 ft_topoplotER(cfg, tlck, tlck_ssp1, tlck_ssp2);
-`````
+```
 
+{% include image src="/assets/img/tutorial/denoising_opm/erf_comparison.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/denoising_opm/erf_comparison.png" width="800" %}
-
-{% include markup/blue %}
 #### Exercise
 
+{% include markup/skyblue %}
 Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the empty-room data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
 {% include markup/end %}
 
@@ -339,10 +339,9 @@ data_amm = ft_denoise_amm(cfg, data);
 
 The **[ft_denoise_amm](/reference/ft_denoise_amm)** function applies AMM with a threshold parameter that determines the correlation cutoff used to define noise components in the temporal filtering step. The lower this value, the more (potentially neural) signal will be removed. 
 
-{% include markup/blue %}
-
 #### Exercise
 
+{% include markup/skyblue %}
 Compute the ERF for the HFC and AMM denoised data, and explore the result of the cleaning. If time and enthusiasm permits, you can also play around with the parameters of the cleaning (e.g. `cfg.order` for HFC and/or `cfg.amm.thr` for AMM), and evaluate the effect on the resulting ERFs. Consult the help section of the respective functions for more information.
 
 {% include markup/end %}
@@ -368,8 +367,6 @@ Each method has its strengths and weaknesses:
 ### See also these frequently asked questions
 
 {% include seealso category="faq" tag1="opm" %}
-
-{% include seealso category="faq" tag1="denoising" %}
 
 ### See also these example scripts
 
