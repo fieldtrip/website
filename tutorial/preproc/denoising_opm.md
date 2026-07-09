@@ -17,7 +17,7 @@ This tutorial focusses on the (software-based) denoising of OPM data and evaluat
 
 In this tutorial you will learn:
 
-- How to characterize and analyze empty-room noise data
+- How to characterize and analyze emptyroom noise data
 - How to apply signal space projection (SSP) for noise suppression
 - How to use harmonic field correction (HFC) for environmental noise removal
 - How to apply adaptive multipole modeling (AMM) for motion artifact cleaning
@@ -61,15 +61,15 @@ OPM recordings were done using a FieldLine v3 system comprised of between 131 an
 
 The tutorial follows these steps:
 
-- Load and analyze empty-room data to characterize the noise environment, using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)**.
+- Load and analyze emptyroom data to characterize the noise environment, using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)**.
 - Preprocess and explore the task data, using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_multiplotER](/reference/ft_multiplotER)**.
-- Apply SSP denoising using empty-room data and task data for comparison, using **[ft_denoise_ssp](/reference/ft_denoise_ssp)**, visualizing the results with **[ft_topoplotER](/reference/ft_topoplotER)**
+- Apply SSP denoising using emptyroom data and task data for comparison, using **[ft_denoise_ssp](/reference/ft_denoise_ssp)**, visualizing the results with **[ft_topoplotER](/reference/ft_topoplotER)**
 - Apply HFC denoising for environmental noise removal, using **[ft_denoise_hfc](/reference/ft_denoise_hfc)**
 - Apply AMM denoising for movement artifact correction, using **[ft_denoise_amm](/reference/ft_denoise_amm)**
 
-## Analyzing the empty-room recording
+## Analyzing the emptyroom recording
 
-We start by loading the empty-room recording. This allows us to characterize the noise environment and identify potential noise components that can be removed from the task data.
+We start by loading the emptyroom data. This allows us to characterize the noise environment and identify potential noise components that can be removed from the task data.
 
 ```matlab
 %%
@@ -82,7 +82,7 @@ cfg.dataset = dataset;
 data_er     = ft_preprocessing(cfg);
 ```
 
-The empty-room data is loaded using **[ft_preprocessing](/reference/ft_preprocessing)** with default settings. This gives us a first look at the raw data structure.
+The emptyroom data is loaded using **[ft_preprocessing](/reference/ft_preprocessing)** with default settings. This gives us a first look at the raw data structure.
 
 Next, we perform frequency analysis to examine the spectral characteristics of the noise:
 
@@ -103,12 +103,12 @@ subplot(121); plot(freq_er.freq, freq_er.powspctrm); xlim([0 80]);
 subplot(122); plot(freq_er.freq, freq_er.powspctrm); xlim([0 500]);
 ```
 
-Here we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with multitaper frequency estimation and Hanning taper to compute the power spectrum. The **[ft_math](/reference/ft_math)** function applies a log10 transformation to make the spectral peaks more visible. The two subplots show the spectrum in different frequency ranges: 0-80 Hz (left) for the neural signal range, and 0-500 Hz (right) to capture higher frequency noise.
+Here we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with multitaper frequency estimation and Hanning taper to compute the power spectrum. The **[ft_math](/reference/ft_math)** function applies a log10 transformation to make the spectral peaks more visible. The two subplots show the spectrum in different frequency ranges: 0-80 Hz (left) for the lower frequency range, mostly relevant for our neural signal analysis,  and the full  0-500 Hz (right).
 
 {% include image src="/assets/img/tutorial/denoising_opm/emptyroom_spectrum1.png" width="500" %}
 
 {% include markup/yellow %}
-The power spectrum of the empty-room data helps identify characteristic noise peaks. In a well-shielded MSR, you might see peaks at line noise frequencies (50/60 Hz and harmonics), but residual environmental noise may still be present, especially at lower frequencies.
+The power spectrum of the emptyroom data helps identify characteristic noise peaks. In a well-shielded MSR, you might see peaks at line noise frequencies (50/60 Hz and harmonics), but residual environmental noise may still be present, especially at lower frequencies.
 {% include markup/end %}
 
 To reduce the variance in the spectrum, we can cut the data into shorter segments, compute the spectrum per segment, and then average across segments. This is very similar to Welch's periodogram method:
@@ -158,7 +158,7 @@ The **[ft_multiplotER](/reference/ft_multiplotER)** function with 'butterfly' vi
 Exploring the topographies of low-frequency power often reveals spatially structured ambient noise patterns. These smooth topographies are candidate components for SSP-based noise suppression. The figure that you have just created is interactive, so you can left-click and drag to select a certain frequency range that can be displayed topographically. Explore the spectra by selecting several frequency ranges and evaluate the topographical distribution. 
 {% include markup/end %}
 
-To identify spatial noise components, we can perform principal component analysis (PCA):
+To identify spatial noise components, we can also perform principal component analysis (PCA):
 
 ```matlab
 cfg = [];
@@ -171,9 +171,9 @@ cfg.layout = 'fieldlinebeta2bz_helmet.mat';
 [rej, art] = ft_icabrowser(cfg, comp_er);
 ```
 
-{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca1.png" width="500" %}
+The **[ft_componentanalysis](/reference/ft_componentanalysis)** function performs PCA on the emptyroom data. The **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)** function provides an interactive interface to visualize the components and identify noise-related topographies. This function is not in the 'core' FieldTrip folder, but has been contributed by external contributors.
 
-The **[ft_componentanalysis](/reference/ft_componentanalysis)** function performs PCA on the empty-room data. The **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)** function provides an interactive interface to visualize the components and identify noise-related topographies. This function is not in the 'core' FieldTrip folder, but has been contributed by external contributors.
+{% include image src="/assets/img/tutorial/denoising_opm/emptyroom_pca1.png" width="500" %}
 
 #### Exercise
 
@@ -182,10 +182,10 @@ Examine the PCA components in the icabrowser interface. Which components show sm
 {% include markup/end %}
 
 {% include markup/yellow %}
-Note: Some of the PCs may show smooth patterns, but they are not necessarily the first ordered PCs. For example, component 2 might be not a good candidate for SSP. This indicates that the quality of the (empty-room) recording may be insufficient to automatically capture the main noise components in the first few PCs. This is relevant for the algorithmic implementation of the SSP-algorithm below, which will remove the first 'N' spatial components from the data.
+Note: Some of the PCs may show smooth patterns, but they are not necessarily the first ordered PCs. For example, component 2 might be not a good candidate for SSP. This indicates that the quality of the (emptyroom) recording may be insufficient to automatically capture the main noise components in the first few PCs. This is relevant for the algorithmic implementation of the SSP-algorithm below, which will remove the first 'N' spatial components from the data.
 {% include markup/end %}
 
-The previous analysis showed that the raw empty-room data might be too noisy to reliably identify the main noise components in the first 'N' PCs. Part of this may be caused by high variance noise characteristics, e.g. powerline related artifacts may be sensor specific. We can improve this by applying appropriate filters:
+The previous analysis showed that the raw emptyroom data might be too noisy to reliably identify the main noise components in the first 'N' PCs. Part of this may be caused by high variance noise characteristics, e.g. powerline related artifacts may be sensor specific. We can improve this by applying appropriate filters:
 
 ```matlab
 cfg = [];
@@ -271,7 +271,7 @@ The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function computes 
 
 ## Denoising with SSP
 
-Signal Space Projection (SSP) is a technique that removes noise components by projecting the data onto a subspace orthogonal to the noise components. Often these noise components are modelled as the largest principal components, i.e. spatial components that explain most of the variance in the data. We demonstrate two approaches: using the task data itself for SSP estimation, and using the empty-room data.
+Signal Space Projection (SSP) is a technique that removes noise components by projecting the data onto a subspace orthogonal to the noise components. Often these noise components are modelled as the largest principal components, i.e. spatial components that explain most of the variance in the data. We demonstrate two approaches: using the task data itself for SSP estimation, and using the emptyroom data.
 
 ```matlab
 % compute the SSPs on-the-fly and clean the task data
@@ -282,7 +282,7 @@ data_ssp1 = ft_denoise_ssp(cfg, data, data);    % use the data itself for the ss
 data_ssp2 = ft_denoise_ssp(cfg, data, data_er); % use the emptyroom data for the ssp estimation
 ```
 
-The **[ft_denoise_ssp](/reference/ft_denoise_ssp)** function applies SSP denoising. In the first call, we use the task data itself as both the data to be cleaned and the reference for estimating the noise components. In the second call, we use the empty-room data as the reference for noise estimation.
+The **[ft_denoise_ssp](/reference/ft_denoise_ssp)** function applies SSP denoising. In the first call, we use the task data itself as both the data to be cleaned and the reference for estimating the noise components. In the second call, we use the emptyroom data as the reference for noise estimation.
 
 Now we can compare the result of the two different ways of cleaning by computing the ERF and displaying the results together
 
@@ -306,7 +306,7 @@ ft_topoplotER(cfg, tlck, tlck_ssp1, tlck_ssp2);
 #### Exercise
 
 {% include markup/skyblue %}
-Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the empty-room data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
+Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the emptyroom data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
 {% include markup/end %}
 
 ## Denoising with HFC
@@ -350,8 +350,8 @@ Compute the ERF for the HFC and AMM denoised data, and explore the result of the
 
 This tutorial demonstrated several denoising techniques for OPM data:
 
-1. **Empty-room analysis**: Characterizing the noise environment is crucial for understanding what types of noise need to be addressed.
-2. **SSP denoising**: Effective for removing spatially structured noise components, with the option to use either the task data or empty-room data for noise estimation.
+1. **Emptyroom analysis**: Characterizing the noise environment is crucial for understanding what types of noise need to be addressed.
+2. **SSP denoising**: Effective for removing spatially structured noise components, with the option to use either the task data or emptyroom data for noise estimation.
 3. **HFC denoising** and **AMM denoising**: Denoising strategies that have a few more 'knobs to tweak'
 
 Each method has its strengths and weaknesses:
