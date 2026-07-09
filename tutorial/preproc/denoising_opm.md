@@ -61,13 +61,13 @@ OPM recordings were done using a FieldLine v3 system comprised of between 131 an
 
 The tutorial follows these steps:
 
-1. Load and analyze empty-room data to characterize the noise environment
-2. Preprocess and explore the task data
-3. Apply SSP denoising using empty-room data and task data for comparison
-4. Apply HFC denoising for environmental noise removal
-5. Apply AMM denoising for movement artifact correction
+- Load and analyze empty-room data to characterize the noise environment, using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)**.
+- Preprocess and explore the task data, using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_multiplotER](/reference/ft_multiplotER)**.
+- Apply SSP denoising using empty-room data and task data for comparison, using **[ft_denoise_ssp](/reference/ft_denoise_ssp)**, visualizing the results with **[ft_topoplotER](/reference/ft_topoplotER)**
+- Apply HFC denoising for environmental noise removal, using **[ft_denoise_hfc](/reference/ft_denoise_hfc)**
+- Apply AMM denoising for movement artifact correction, using **[ft_denoise_amm](/reference/ft_denoise_amm)**
 
-## Step 1 - Analyzing the empty-room recording
+## Analyzing the empty-room recording
 
 We start by loading the empty-room recording. This allows us to characterize the noise environment and identify potential noise components that can be removed from the task data.
 
@@ -222,7 +222,7 @@ Here we applied a bandpass filter (1-80 Hz) and a bandstop filter (58-62 Hz) to 
 Examine the topographies and time courses of the PCs, and compare them to the PCs obtained from the unfiltered data. What has changed? How many components would you identify as candidates for the SSP?
 {% include markup/end %}
 
-## Step 2 - Loading and preprocessing the task data
+## Loading and preprocessing the task data
 
 Now we load the visual evoked field (VEF) task data:
 
@@ -269,7 +269,7 @@ The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function computes 
 
 {% include image src="/assets/img/tutorial/denoising_opm/erf_nodenoise.png" width="500" %}
 
-## Step 3 - Denoising with SSP
+## Denoising with SSP
 
 Signal Space Projection (SSP) is a technique that removes noise components by projecting the data onto a subspace orthogonal to the noise components. Often these noise components are modelled as the largest principal components, i.e. spatial components that explain most of the variance in the data. We demonstrate two approaches: using the task data itself for SSP estimation, and using the empty-room data.
 
@@ -309,7 +309,7 @@ ft_topoplotER(cfg, tlck, tlck_ssp1, tlck_ssp2);
 Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the empty-room data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
 {% include markup/end %}
 
-## Step 4 - Denoising with HFC
+## Denoising with HFC
 
 Harmonic Field Correction (HFC) is specifically designed for OPM data to remove environmental noise by modeling the low spatial frequency components of the magnetic field, since these low spatial frequency components originate from a location far away from the sensor array:
 
@@ -326,7 +326,7 @@ The **[ft_denoise_hfc](/reference/ft_denoise_hfc)** function applies HFC denoisi
 HFC is particularly effective for removing spatially smooth environmental noise that affects all sensors. The order parameter controls the number of spherical harmonic functions used to model the noise. Higher orders can capture more complex noise patterns but may also remove neural signal.
 {% include markup/end %}
 
-## Step 5 - Denoising with AMM
+## Denoising with AMM
 
 Adaptive Multipole Modelling (AMM) identifies and removes ambient artifacts in a two-step procedure. It applies a spatial model, using heuristics similar to HFC, followed a temporal filtering step, whereby residual signal components that are highly correlated with the ambient noise are removed on a segment-by-segment basis. Thus, strictly speaking, the spatial filter changes over time, making this technique similar in spirit to the tSSS algorithm:
 
