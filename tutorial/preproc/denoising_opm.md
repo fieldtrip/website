@@ -3,6 +3,8 @@ title: Denoising OPM data
 category: tutorial
 tags: [opm, denoising]
 weight: 56
+redirect_from:
+    - /tutorial/denoising_opm/
 ---
 
 
