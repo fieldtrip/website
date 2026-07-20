@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42348323'
+- idtype: doi
+  value: 10.1556/2006.2025.00344
+- idtype: pii
+  value: 2006.2025.00344
+- idtype: pmcid
+  value: PMC13371773
+authors:
+- authtype: Author
+  name: Aviram-Friedman R
+- authtype: Author
+  name: Baz G
+- authtype: Author
+  name: Kafri L
+- authtype: Author
+  name: Alyagon U
+- authtype: Author
+  name: Zangen A
+epubdate: 2026 Jun 24
+fulljournalname: Journal of behavioral addictions
+issue: '2'
+pages: 915-920
+pmclivedate: 2026/07/16
+printpubdate: 2026 Jul 15
+pubdate: 2026 Jul 15
+sortdate: 2026/06/24 00:00
+source: J Behav Addict
+title: 'Neuronal inhibitory mechanisms in overweight/obesity and food/eating addiction:
+  The role of frontal brain coherence, dysregulated eating, and depressive symptoms.'
+uid: '13371773'
+volume: '15'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.isci.2026.116601
+- idtype: pmcid
+  value: PMC13378391
+- idtype: pii
+  value: S2589-0042(26)01976-0
+authors:
+- authtype: Author
+  name: Roüast NM
+- authtype: Author
+  name: Kumral D
+- authtype: Author
+  name: Gais S
+- authtype: Author
+  name: Schönauer M
+epubdate: 2026 Jun 25
+fulljournalname: iScience
+issue: '7'
+pages: ''
+pmclivedate: 2026/07/18
+printpubdate: ''
+pubdate: 2026 Jul 17
+sortdate: 2026/06/25 00:00
+source: iScience
+title: Random auditory stimulation during sleep disturbs traveling slow waves and
+  declarative memory.
+uid: '13378391'
+volume: '29'

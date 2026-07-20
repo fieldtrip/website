@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '42465729'
+- idtype: pmcid
+  value: PMC13373790
+- idtype: doi
+  value: 10.1093/braincomms/fcag255
+- idtype: pii
+  value: fcag255
+authors:
+- authtype: Author
+  name: Rave J
+- authtype: Author
+  name: Hanert A
+- authtype: Author
+  name: Tabi YA
+- authtype: Author
+  name: Fiedler Y
+- authtype: Author
+  name: Philippen S
+- authtype: Author
+  name: Granert O
+- authtype: Author
+  name: Leypoldt F
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Burgalossi A
+- authtype: Author
+  name: Schönfeld R
+- authtype: Author
+  name: Finke C
+- authtype: Author
+  name: Bartsch T
+epubdate: 2026 Jul 6
+fulljournalname: Brain communications
+issue: '4'
+pages: fcag255
+pmclivedate: 2026/07/17
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/07/06 00:00
+source: Brain Commun
+title: Impaired consolidation of spatial memory during sleep in patients with leucine-rich
+  glioma-inactivated 1-associated limbic encephalitis.
+uid: '13373790'
+volume: '8'

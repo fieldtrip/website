@@ -1,0 +1,25 @@
+articleids:
+- idtype: doi
+  value: 10.1111/psyp.70357
+- idtype: pmcid
+  value: PMC13373996
+authors:
+- authtype: Author
+  name: Kerzel D
+- authtype: Author
+  name: Oxner M
+- authtype: Author
+  name: Müller MM
+epubdate: 2026 Jul 16
+fulljournalname: Psychophysiology
+issue: '7'
+pages: ''
+pmclivedate: 2026/07/17
+printpubdate: 2026 Jul
+pubdate: 2026 Jul
+sortdate: 2026/07/01 00:00
+source: Psychophysiology
+title: Eccentricity Differentially Modulates Electrophysiological Indices of Saliency
+  (Ppc) and Attention (N2pc) in Visual Search.
+uid: '13373996'
+volume: '63'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42466358'
+- idtype: pmcid
+  value: PMC13373315
+- idtype: doi
+  value: 10.1155/da/4012249
+- idtype: pii
+  value: DA4012249
+authors:
+- authtype: Author
+  name: Han S
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Zheng B
+- authtype: Author
+  name: Luo Y
+- authtype: Author
+  name: Xu P
+epubdate: 2026 Jul 15
+fulljournalname: Depression and anxiety
+issue: ''
+pages: '4012249'
+pmclivedate: 2026/07/17
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/07/15 00:00
+source: Depress Anxiety
+title: 'Disrupted Global Brain Dynamics in Adolescents With Comorbid Anxiety and Depression:
+  Neural Mechanisms and Classification Based on EEG Microstates.'
+uid: '13373315'
+volume: '2026'

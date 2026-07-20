@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42465655'
+- idtype: pmcid
+  value: PMC13375213
+- idtype: doi
+  value: 10.17816/CP15784
+- idtype: pii
+  value: 2712-7672_2026_7_2_CP15784
+authors:
+- authtype: Author
+  name: Chang XN
+- authtype: Author
+  name: Othman A
+- authtype: Author
+  name: Yusoff N
+- authtype: Author
+  name: Zulkifly MFM
+epubdate: 2026 Jun 25
+fulljournalname: Consortium psychiatricum
+issue: '2'
+pages: 48-59
+pmclivedate: 2026/07/17
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/06/25 00:00
+source: Consort Psychiatr
+title: 'Effects of Mandala Coloring on Alpha Brain Activity and Anxiety Symptoms among
+  Students at Universiti Sains Malaysia: A Randomized Controlled Trial.'
+uid: '13375213'
+volume: '7'
