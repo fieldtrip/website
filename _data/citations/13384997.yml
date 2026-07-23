@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41826747'
+- idtype: doi
+  value: 10.3758/s13415-026-01420-6
+- idtype: pii
+  value: 10.3758/s13415-026-01420-6
+- idtype: pmcid
+  value: PMC13384997
+authors:
+- authtype: Author
+  name: Hunter M
+- authtype: Author
+  name: Skippen P
+- authtype: Author
+  name: Templio SL
+- authtype: Author
+  name: Barker D
+- authtype: Author
+  name: Michie PT
+- authtype: Author
+  name: Karayanidis F
+epubdate: 2026 Mar 13
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '4'
+pages: 1630-1650
+pmclivedate: 2026/07/22
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Cogn Affect Behav Neurosci
+title: Are neural and behavioural measures of cognitive control associated with adaptive
+  and maladaptive risk-taking in adolescence and young adulthood?
+uid: '13384997'
+volume: '26'

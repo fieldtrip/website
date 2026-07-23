@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '42465309'
+- idtype: pmcid
+  value: PMC13370933
+- idtype: doi
+  value: 10.64898/2026.07.08.737286
+- idtype: pii
+  value: 2026.07.08.737286
+authors:
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Yao J
+- authtype: Author
+  name: Abdi-Sargezeh B
+- authtype: Author
+  name: Sharma A
+- authtype: Author
+  name: Lasbareilles C
+- authtype: Author
+  name: Ho RTL
+- authtype: Author
+  name: Cheung JTS
+- authtype: Author
+  name: Denison T
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Zhu MM
+- authtype: Author
+  name: Liu S
+- authtype: Author
+  name: Starr PA
+- authtype: Author
+  name: Little S
+- authtype: Author
+  name: Oswal A
+epubdate: 2026 Jul 9
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/16
+printpubdate: ''
+pubdate: 2026 Jul 9
+sortdate: 2026/07/09 00:00
+source: bioRxiv
+title: Device-embedded accelerometry complements neural signals for tracking parkinsonian
+  motor states.
+uid: '13370933'
+volume: ''

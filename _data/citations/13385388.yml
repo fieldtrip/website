@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42476972'
+- idtype: doi
+  value: 10.1038/s41467-026-75345-6
+- idtype: pii
+  value: 10.1038/s41467-026-75345-6
+- idtype: pmcid
+  value: PMC13385388
+authors:
+- authtype: Author
+  name: Kerrén C
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Doeller CF
+epubdate: 2026 Jul 20
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/22
+printpubdate: ''
+pubdate: 2026 Jul 20
+sortdate: 2026/07/20 00:00
+source: Nat Commun
+title: Hippocampal ripples initiate cortical dimensionality expansion for memory retrieval.
+uid: '13385388'
+volume: '17'

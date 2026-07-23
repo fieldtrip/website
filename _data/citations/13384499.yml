@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42474294'
+- idtype: doi
+  value: 10.7554/eLife.110320
+- idtype: pii
+  value: '110320'
+- idtype: pmcid
+  value: PMC13384499
+authors:
+- authtype: Author
+  name: Zheng G
+- authtype: Author
+  name: Han S
+epubdate: 2026 Jul 20
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/07/21
+printpubdate: ''
+pubdate: 2026 Jul 20
+sortdate: 2026/07/20 00:00
+source: Elife
+title: Neural categorization of visual words of alphabetic and non-alphabetic languages.
+uid: '13384499'
+volume: '15'
