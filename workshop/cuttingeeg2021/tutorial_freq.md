@@ -13,6 +13,12 @@ We assume that you are already familiar with the basic concepts of EEG processin
 
 In case EEG, preprocessing, spectral analysis and FieldTrip are new to you, we recommend you watch some of the [video lectures](/video).
 
+## The dataset used in this tutorial
+
+The EEG dataset used in this tutorial was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. The data is also used elsewhere on this website for other [tutorials and examples](/tag/eeg-language), but in this tutorial we will specifically be using the [curated version](/workshop/cuttingeeg2021/bids_language) in which the data has been organized according to the [BIDS standard](/example/other/bids). This is especially relevant here, as it allows us to use explicitly coded stimulus descriptions instead of numerical trigger codes.
+
+The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; the "EOGv" and "EOGh" channels are computed after acquisition using rereferencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 for the scalp EEG electrodes plus one EOGH and one EOGV channel. More details on the experiment and data can be found [here](/tutorial/eeg_language).
+
 ## Procedure
 
 This tutorial comprises four sections that can in principle be executed (mostly) independently from each other, but we recommend going through them sequentially.
@@ -21,12 +27,6 @@ This tutorial comprises four sections that can in principle be executed (mostly)
 2. Epoching, TFRs, difference, visualization
 3. Excursion: EOG removal to reduce confounds
 4. Continuous analysis, chunked spectral decomposition
-
-## The dataset used in this tutorial
-
-The EEG dataset used in this tutorial was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. The data is also used elsewhere on this website for other [tutorials and examples](/tag/eeg-language), but in this tutorial we will specifically be using the [curated version](/workshop/cuttingeeg2021/bids_language) in which the data has been organized according to the [BIDS standard](/example/other/bids). This is especially relevant here, as it allows us to use explicitly coded stimulus descriptions instead of numerical trigger codes.
-
-The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; the "EOGv" and "EOGh" channels are computed after acquisition using rereferencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 for the scalp EEG electrodes plus one EOGH and one EOGV channel. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 ## Epoching, ERPs, difference, visualization
 
