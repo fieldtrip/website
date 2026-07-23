@@ -1,0 +1,67 @@
+articleids:
+- idtype: pmid
+  value: '42447610'
+- idtype: doi
+  value: 10.1016/j.dcn.2026.101781
+- idtype: pii
+  value: S1878-9293(26)00123-4
+- idtype: pmcid
+  value: PMC13382642
+authors:
+- authtype: Author
+  name: González Carpinteiro A
+- authtype: Author
+  name: Nasser H
+- authtype: Author
+  name: Pedoux A
+- authtype: Author
+  name: Devisscher L
+- authtype: Author
+  name: Cai K
+- authtype: Author
+  name: Elbaz N
+- authtype: Author
+  name: Ghozland C
+- authtype: Author
+  name: Guéret L
+- authtype: Author
+  name: Neumane S
+- authtype: Author
+  name: Leprince Y
+- authtype: Author
+  name: Lefebvre A
+- authtype: Author
+  name: Hertz-Pannier L
+- authtype: Author
+  name: Heneau A
+- authtype: Author
+  name: Frérot A
+- authtype: Author
+  name: Sibony O
+- authtype: Author
+  name: Delanoë C
+- authtype: Author
+  name: Barbu-Roth M
+- authtype: Author
+  name: Alison M
+- authtype: Author
+  name: Delorme R
+- authtype: Author
+  name: Biran V
+- authtype: Author
+  name: Dubois J
+- authtype: Author
+  name: Adibpour P
+epubdate: 2026 Jul 10
+fulljournalname: Developmental cognitive neuroscience
+issue: ''
+pages: '101781'
+pmclivedate: 2026/07/21
+printpubdate: ''
+pubdate: 2026 Jul 10
+sortdate: 2026/07/10 00:00
+source: Dev Cogn Neurosci
+title: 'Characterization of aperiodic and theta activity in preterm infants using
+  EEG: Insights into cerebral maturation and inter-individual variability.'
+uid: '13382642'
+volume: '81'

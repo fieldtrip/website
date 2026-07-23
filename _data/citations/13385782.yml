@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42191684'
+- idtype: doi
+  value: 10.1038/s41398-026-04135-x
+- idtype: pii
+  value: 10.1038/s41398-026-04135-x
+- idtype: pmcid
+  value: PMC13385782
+authors:
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Song M
+- authtype: Author
+  name: Sheng J
+- authtype: Author
+  name: Yan R
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Lu Q
+epubdate: 2026 May 26
+fulljournalname: Translational psychiatry
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/22
+printpubdate: ''
+pubdate: 2026 May 26
+sortdate: 2026/05/26 00:00
+source: Transl Psychiatry
+title: 'Sad emotion processing-related theta oscillation patterns link suicide attempt
+  to childhood trauma in depression: evidence from MEG.'
+uid: '13385782'
+volume: '16'
