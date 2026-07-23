@@ -127,10 +127,10 @@ If you want to force epoched data to be interpreted as continuous data, you can 
 
 If you zoom in and look in detail at the SCLK01 channel, you can see that there are small jumps every 3 seconds. These are due to the data being discontinuous on disk, i.e. only the 3 second segments around each stimulus are stored on disk and the data in-between the trials is not stored. Consequently the MEG channels will also have small jumps every 3 seconds and hence this particular dataset should **not be interpreted** as a continuous recording. Many other CTF recordings are stored on disk with data segments of 10 seconds each; these can be interpreted as continuous as there are no gaps between the long segments.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 When doing continuous MEG data acquisition (which is the default at the Donders and many other labs), the CTF acquisition software by default writes data to disk in 10-second segments. These segments are continuous, so between subsequent segments there is no time gap and there are no missing samples or jumps in the signal. Regretfully, FieldTrip is not able to distinguish these pseudo-continuous files from properly epoched files which **do** have a gap and a jump in the signals between the trials/segments (as in Subject01.ds above).
 
-If your CTF data contains 10-second epochs, it is very likely that it is a pseudocontinuous recording and you shuold use the `cfg.continuous = 'yes'`  option. 
+If your CTF data contains 10-second epochs, it is very likely that it is a pseudocontinuous recording and you shuold use the `cfg.continuous = 'yes'` option.
 {% include markup/end %}
 
 ## Preprocessing, filtering and rereferencing
