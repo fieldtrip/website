@@ -25,13 +25,14 @@ See also the [frequently asked questions](/faq) and [example scripts](/example).
 
 ## Source reconstruction
 
+- [Localizing electrodes using a 3D-scanner](/tutorial/source/electrode)
+- [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/source/coregistration_opm)
 - [Construct a headmodel for MEG source analysis](/tutorial/source/headmodel_meg)
 - [Construct a BEM headmodel for EEG source analysis](/tutorial/source/headmodel_eeg_bem)
 - [Construct a FEM headmodel for EEG source analysis](/tutorial/source/headmodel_eeg_fem)
 - [Creating a source model for MEG or EEG source analysis](/tutorial/source/sourcemodel)
-- [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/source/coregistration_opm)
 - [Comparing MEG sensitivity maps for SQUID and OPM sensor arrays](/tutorial/source/sensitivity_maps)
-- [Localizing electrodes using a 3D-scanner](/tutorial/source/electrode)
+- [Using a MEG phantom for validation and OPM calibration](/tutorial/source/opm_phantom)
 - [Localizing oscillatory sources in MEG data using a beamformer](/tutorial/source/beamformer)
 - [Beamforming oscillatory responses in combined MEG/EEG data](/tutorial/source/beamforming)
 - [Localizing visual gamma and cortico-muscular coherence](/tutorial/source/beamformingextended)
