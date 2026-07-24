@@ -23,6 +23,8 @@
   title: Preprocessing of Optically Pumped Magnetometer (OPM) data
 - link: /tutorial/source/coregistration_opm
   title: Coregistration of Optically Pumped Magnetometer (OPM) data
+- link: /tutorial/source/opm_phantom
+  title: Using a MEG phantom for validation and OPM calibration
 - link: /tutorial/source/sensitivity_maps
   title: Comparing MEG sensitivity maps for SQUID and OPM sensor arrays
 - link: /workshop/cuttingeegx/squids_vs_opms
