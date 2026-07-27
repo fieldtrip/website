@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42230612'
+- idtype: pmcid
+  value: PMC13392092
+- idtype: doi
+  value: 10.1038/s41467-026-73916-1
+- idtype: pii
+  value: 10.1038/s41467-026-73916-1
+authors:
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Theeuwes J
+- authtype: Author
+  name: Wang B
+epubdate: 2026 Jun 2
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/24
+printpubdate: ''
+pubdate: 2026 Jun 2
+sortdate: 2026/06/02 00:00
+source: Nat Commun
+title: Learned statistical regularity modulates anticipatory micro-saccades toward
+  suppressed distractor locations.
+uid: '13392092'
+volume: '17'

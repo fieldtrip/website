@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42466936'
+- idtype: pmcid
+  value: PMC13390729
+- idtype: doi
+  value: 10.1167/jov.26.7.9
+- idtype: pii
+  value: '2818357'
+authors:
+- authtype: Author
+  name: Giorjiani GM
+- authtype: Author
+  name: Rawal A
+- authtype: Author
+  name: Rademaker RL
+epubdate: ''
+fulljournalname: Journal of vision
+issue: '7'
+pages: '9'
+pmclivedate: 2026/07/23
+printpubdate: 2026 Jul 1
+pubdate: 2026 Jul 1
+sortdate: 2026/07/01 00:00
+source: J Vis
+title: Better performance when recalling speed from object motion compared to texture
+  motion.
+uid: '13390729'
+volume: '26'

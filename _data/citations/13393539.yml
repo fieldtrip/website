@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42386518'
+- idtype: pmcid
+  value: PMC13393539
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0176-26.2026
+- idtype: pii
+  value: JNEUROSCI.0176-26.2026
+authors:
+- authtype: Author
+  name: Wang 王思思 S
+- authtype: Author
+  name: van Ede F
+epubdate: 2026 Jul 22
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '29'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Jul 22
+sortdate: 2026/07/22 00:00
+source: J Neurosci
+title: Proactive Visual and Motor Prioritization Differentially Scale with Cue Reliability.
+uid: '13393539'
+volume: '46'

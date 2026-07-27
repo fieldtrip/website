@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '42469381'
+- idtype: pmcid
+  value: PMC13396468
+- idtype: doi
+  value: 10.1038/s41746-026-02948-0
+- idtype: pii
+  value: 10.1038/s41746-026-02948-0
+authors:
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Gong X
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Yang C
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Yuan Y
+- authtype: Author
+  name: Shuai M
+- authtype: Author
+  name: Lyu S
+- authtype: Author
+  name: Han H
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Zhang J
+epubdate: 2026 Jul 17
+fulljournalname: NPJ digital medicine
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/25
+printpubdate: ''
+pubdate: 2026 Jul 17
+sortdate: 2026/07/17 00:00
+source: NPJ Digit Med
+title: Individualized prediction of heroin cue-induced craving using task-based EEG
+  functional connectivity.
+uid: '13396468'
+volume: '9'

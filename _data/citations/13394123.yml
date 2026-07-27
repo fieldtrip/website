@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42011727'
+- idtype: pmcid
+  value: PMC13394123
+- idtype: doi
+  value: 10.1002/acn3.70369
+authors:
+- authtype: Author
+  name: Qi W
+- authtype: Author
+  name: Lee K
+- authtype: Author
+  name: Nix KC
+- authtype: Author
+  name: Menchaca M
+- authtype: Author
+  name: Shé X
+- authtype: Author
+  name: Santa Maria L
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: He Z
+- authtype: Author
+  name: Baumer FM
+epubdate: 2026 Apr 21
+fulljournalname: Annals of clinical and translational neurology
+issue: ''
+pages: ''
+pmclivedate: 2026/07/24
+printpubdate: ''
+pubdate: 2026 Apr 21
+sortdate: 2026/04/21 00:00
+source: Ann Clin Transl Neurol
+title: Elevated Connectivity During Language Processing Is Associated With Cognitive
+  Performance in SeLECTS.
+uid: '13394123'
+volume: ''

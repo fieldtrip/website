@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42218120'
+- idtype: pmcid
+  value: PMC13392403
+- idtype: doi
+  value: 10.1038/s41467-026-73553-8
+- idtype: pii
+  value: 10.1038/s41467-026-73553-8
+authors:
+- authtype: Author
+  name: Karvat G
+- authtype: Author
+  name: Crespo-García M
+- authtype: Author
+  name: Vishne G
+- authtype: Author
+  name: Anderson MC
+- authtype: Author
+  name: Landau AN
+epubdate: 2026 May 30
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/24
+printpubdate: ''
+pubdate: 2026 May 30
+sortdate: 2026/05/30 00:00
+source: Nat Commun
+title: Universal rhythmic architecture uncovers two modes of neural dynamics.
+uid: '13392403'
+volume: '17'

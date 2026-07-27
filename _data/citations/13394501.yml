@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42132132'
+- idtype: pmcid
+  value: PMC13394501
+- idtype: doi
+  value: 10.1002/epi4.70255
+authors:
+- authtype: Author
+  name: Gefferie SR
+- authtype: Author
+  name: Jiménez-Jiménez D
+- authtype: Author
+  name: Visser GH
+- authtype: Author
+  name: Helling RM
+- authtype: Author
+  name: van den Maagdenberg AMJM
+- authtype: Author
+  name: Sander JW
+- authtype: Author
+  name: Balestrini S
+- authtype: Author
+  name: Thijs RD
+epubdate: 2026 May 14
+fulljournalname: Epilepsia open
+issue: ''
+pages: ''
+pmclivedate: 2026/07/24
+printpubdate: ''
+pubdate: 2026 May 14
+sortdate: 2026/05/14 00:00
+source: Epilepsia Open
+title: Impact of cenobamate on cortical responses to transcranial magnetic stimulation
+  in people with drug-resistant focal epilepsy.
+uid: '13394501'
+volume: ''
