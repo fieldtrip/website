@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42512464'
+- idtype: doi
+  value: 10.3390/brainsci16070689
+- idtype: pii
+  value: brainsci16070689
+- idtype: pmcid
+  value: PMC13407327
+authors:
+- authtype: Author
+  name: Gangwani R
+- authtype: Author
+  name: Mark JI
+- authtype: Author
+  name: Zadrozny S
+- authtype: Author
+  name: Cassidy JM
+epubdate: 2026 Jun 30
+fulljournalname: Brain sciences
+issue: '7'
+pages: ''
+pmclivedate: 2026/07/29
+printpubdate: ''
+pubdate: 2026 Jun 30
+sortdate: 2026/06/30 00:00
+source: Brain Sci
+title: Corticomuscular Coherence in Post-Stroke Motor Function and Recovery.
+uid: '13407327'
+volume: '16'

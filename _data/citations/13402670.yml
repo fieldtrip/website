@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '42503508'
+- idtype: pmcid
+  value: PMC13402670
+- idtype: doi
+  value: 10.1038/s41378-026-01391-1
+- idtype: pii
+  value: 10.1038/s41378-026-01391-1
+authors:
+- authtype: Author
+  name: Ramachandran S
+- authtype: Author
+  name: Gao H
+- authtype: Author
+  name: Lee K
+- authtype: Author
+  name: Zolotavin P
+- authtype: Author
+  name: Bray K
+- authtype: Author
+  name: Yeh CY
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Luan L
+- authtype: Author
+  name: Xie C
+- authtype: Author
+  name: Yu K
+- authtype: Author
+  name: He B
+epubdate: 2026 Jul 27
+fulljournalname: Microsystems & nanoengineering
+issue: '1'
+pages: ''
+pmclivedate: 2026/07/28
+printpubdate: ''
+pubdate: 2026 Jul 27
+sortdate: 2026/07/27 00:00
+source: Microsyst Nanoeng
+title: High pressure transcranial focused ultrasound stimulation induces parameter-dependent
+  cell-type specific effects.
+uid: '13402670'
+volume: '12'

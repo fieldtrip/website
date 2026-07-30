@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42517464'
+- idtype: doi
+  value: 10.1111/psyp.70366
+- idtype: pmcid
+  value: PMC13411194
+authors:
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Zhou J
+- authtype: Author
+  name: Zhang X
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '7'
+pages: e70366
+pmclivedate: 2026/07/29
+printpubdate: 2026 Jul
+pubdate: 2026 Jul
+sortdate: 2026/07/01 00:00
+source: Psychophysiology
+title: 'Spatial and Temporal Characteristics of Distractor-Induced Repulsion Effect
+  in Visual Working Memory: A Behavioral and ERP Study.'
+uid: '13411194'
+volume: '63'
