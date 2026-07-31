@@ -268,20 +268,55 @@ The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function computes 
 
 {% include image src="/assets/img/tutorial/denoising_opm/erf_nodenoise.png" width="500" %}
 
+The most striking feature of the above image is antiphasic waxing and waning pattern of the sets of green (frontal) and purple (occipital) sensors. If we select an early latency time window (by left clicking and dragging on top  of the open figure) around the first green peak (i.e. around time point 0), we obtain a topography that looks like this:
+
+{% include image src="/assets/img/tutorial/denoising_opm/erf_0to25ms.png" width="500" %}
+
+Clearly, this looks very much like the topography of one of the principal components identified in the emptyroom data. Also if we now zoom in on the latency between 70 and 75 ms, we obtain a topography that looks like this:
+
+{% include image src="/assets/img/tutorial/denoising_opm/erf_70to75ms.png" width="500" %}
+
+Here, we may observe - albeit faintly - a dipolar visual evoked field pattern with right hemispheric dominance.
+
+Another way of evaluating the quality of the ERF, is to express the single trial data at each time point as a T-statistic against 0. One way to do this would be to use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** using single trial data in the input. 
+
+```matlab
+cfg            = [];
+cfg.channel    = 'MEG';
+cfg.keeptrials = 'yes';
+tlck_trials    = ft_timelockanalysis(cfg, data);
+
+tlck_trials0 = tlck_trials;
+tlck_trials0.trial(:) = 0;
+
+nrpt   = numel(data.trial);
+design = [ones(1,nrpt) ones(1,nrpt)*2; 1:nrpt 1:nrpt];
+
+cfg           = [];
+cfg.method    = 'analytic';
+cfg.statistic = 'depsamplesT';
+cfg.design    = design;
+stat = ft_timelockstatistics(cfg, tlck_trials, tlck_trials0);
+```
+
+Here, we have created two data structures, one containing the single trial data in a 3-dimensional #trial x #channel x #time point matrix, and the other one containing a matrix with all zeros. This is needed, because the low-level FieldTrip functions that compute test statistics expect data from 2 conditions in the input. Using a data object with all zeros allows us to compute a T-statistic 'against 0'. Note that the T-statistic has not been computed here to assess statistical significance, it's used as a metric to quantify the reliability with which the averaged signals deviate from 0.
+
+
+
 ## Denoising with SSP
 
-Signal Space Projection (SSP) is a technique that removes noise components by projecting the data onto a subspace orthogonal to the noise components. Often these noise components are modelled as the largest principal components, i.e. spatial components that explain most of the variance in the data. We demonstrate two approaches: using the task data itself for SSP estimation, and using the emptyroom data.
+Signal Space Projection (SSP) is a technique that removes noise components by projecting the data onto a subspace orthogonal to the noise components. Often these noise components are modelled as the largest principal components, i.e. spatial components that explain most of the variance in the data. We demonstrate two approaches: using the task data itself for SSP estimation, and using the emptyroom data. In the previous section we have seen that even after averaging across multiple trials, the ERF still shows large amplitude fluctuations with a spatial topography that is similar to what we observed in the emptyroom measurement. 
 
 ```matlab
 % compute the SSPs on-the-fly and clean the task data
 cfg = [];
-cfg.channel = 'MEG';
+cfg.channel    = 'MEG';
 cfg.refchannel = 'MEG';
 data_ssp1 = ft_denoise_ssp(cfg, data, data);    % use the data itself for the ssp estimation
 data_ssp2 = ft_denoise_ssp(cfg, data, data_er); % use the emptyroom data for the ssp estimation
 ```
 
-The **[ft_denoise_ssp](/reference/ft_denoise_ssp)** function applies SSP denoising. In the first call, we use the task data itself as both the data to be cleaned and the reference for estimating the noise components. In the second call, we use the emptyroom data as the reference for noise estimation.
+The **[ft_denoise_ssp](/reference/ft_denoise_ssp)** function applies SSP denoising. In the first call, we use the task data itself as both the data to be cleaned and the reference for estimating the noise components. In the second call, we use the emptyroom data as the reference for noise estimation. 
 
 Now we can compare the result of the two different ways of cleaning by computing the ERF and displaying the results together
 
