@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42538772'
+- idtype: doi
+  value: 10.1111/psyp.70370
+- idtype: pmcid
+  value: PMC13428188
+authors:
+- authtype: Author
+  name: Girard JR
+- authtype: Author
+  name: Bishop A
+- authtype: Author
+  name: Hassall CD
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '8'
+pages: e70370
+pmclivedate: 2026/08/02
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Psychophysiology
+title: Song Familiarity Relies on Evidence Accumulation.
+uid: '13428188'
+volume: '63'

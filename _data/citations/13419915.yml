@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42529957'
+- idtype: pmcid
+  value: PMC13419915
+- idtype: doi
+  value: 10.1111/nyas.70349
+authors:
+- authtype: Author
+  name: Malvaso C
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Rosso M
+- authtype: Author
+  name: Serra E
+- authtype: Author
+  name: Rudi V
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Testa C
+- authtype: Author
+  name: Bonetti L
+epubdate: ''
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: e70349
+pmclivedate: 2026/07/31
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Ann N Y Acad Sci
+title: FREQ-NESS Reveals Age-Related Differences in Frequency-Resolved Brain Networks
+  During Auditory Recognition and Resting State.
+uid: '13419915'
+volume: '1562'

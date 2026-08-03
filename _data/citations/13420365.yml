@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42442955'
+- idtype: pmcid
+  value: PMC13420365
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0218-26.2026
+- idtype: pii
+  value: JNEUROSCI.0218-26.2026
+authors:
+- authtype: Author
+  name: Ahmed F
+- authtype: Author
+  name: Zheng Q
+- authtype: Author
+  name: Mcllwain J
+- authtype: Author
+  name: Jabeen T
+- authtype: Author
+  name: Lau BK
+epubdate: 2026 Jul 29
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '30'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Jul 29
+sortdate: 2026/07/29 00:00
+source: J Neurosci
+title: Infant Cortical Tracking of Speech Shows Emerging Spatial Release from Masking
+  in the First Year of Life.
+uid: '13420365'
+volume: '46'

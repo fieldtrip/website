@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42529694'
+- idtype: pmcid
+  value: PMC13418524
+- idtype: doi
+  value: 10.1162/NETN.a.554
+- idtype: pii
+  value: NETN.a.554
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Sanz Perl Y
+- authtype: Author
+  name: Feng J
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2026 Jul 20
+fulljournalname: Network neuroscience (Cambridge, Mass.)
+issue: '3'
+pages: 630-654
+pmclivedate: 2026/07/30
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/07/20 00:00
+source: Netw Neurosci
+title: 'The turbulent brain: Modeling vortex interactions for understanding human
+  cognition.'
+uid: '13418524'
+volume: '10'

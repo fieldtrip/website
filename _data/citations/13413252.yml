@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42521328'
+- idtype: pmcid
+  value: PMC13413252
+- idtype: doi
+  value: 10.1111/psyp.70341
+authors:
+- authtype: Author
+  name: Flösch KP
+- authtype: Author
+  name: Flaisch T
+- authtype: Author
+  name: Steinhauser M
+- authtype: Author
+  name: Schupp HT
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '7'
+pages: e70341
+pmclivedate: 2026/07/30
+printpubdate: 2026 Jul
+pubdate: 2026 Jul
+sortdate: 2026/07/01 00:00
+source: Psychophysiology
+title: The Brain Signature of Reward Processing During Cooperative Gaming.
+uid: '13413252'
+volume: '63'

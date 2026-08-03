@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42392871'
+- idtype: pmcid
+  value: PMC13420367
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0363-26.2026
+- idtype: pii
+  value: JNEUROSCI.0363-26.2026
+authors:
+- authtype: Author
+  name: Alameda C
+- authtype: Author
+  name: Avancini C
+- authtype: Author
+  name: Sanabria D
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Ciria LF
+epubdate: 2026 Jul 29
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '30'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Jul 29
+sortdate: 2026/07/29 00:00
+source: J Neurosci
+title: Drowsiness Alters the Neural Dynamics But Not the Core Computations of Multisensory
+  Integration.
+uid: '13420367'
+volume: '46'

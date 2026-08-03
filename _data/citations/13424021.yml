@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42530654'
+- idtype: pmcid
+  value: PMC13424021
+- idtype: doi
+  value: 10.1007/s00429-026-03167-9
+- idtype: pii
+  value: 10.1007/s00429-026-03167-9
+authors:
+- authtype: Author
+  name: Cavallo ND
+- authtype: Author
+  name: Papallo S
+- authtype: Author
+  name: Chianese M
+- authtype: Author
+  name: Donisi L
+- authtype: Author
+  name: Baiano C
+- authtype: Author
+  name: Santangelo G
+- authtype: Author
+  name: Trojano L
+- authtype: Author
+  name: Esposito F
+epubdate: 2026 Jul 30
+fulljournalname: Brain structure & function
+issue: '7'
+pages: ''
+pmclivedate: 2026/08/01
+printpubdate: ''
+pubdate: 2026 Jul 30
+sortdate: 2026/07/30 00:00
+source: Brain Struct Funct
+title: Resting-state EEG connectome topology and social norm processing in healthy
+  young adults.
+uid: '13424021'
+volume: '231'

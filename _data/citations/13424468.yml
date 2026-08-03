@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '41649740'
+- idtype: pmcid
+  value: PMC13424468
+- idtype: doi
+  value: 10.1007/s10339-026-01331-x
+- idtype: pii
+  value: 10.1007/s10339-026-01331-x
+authors:
+- authtype: Author
+  name: Berger A
+- authtype: Author
+  name: Kiefer M
+epubdate: 2026 Feb 6
+fulljournalname: Cognitive processing
+issue: '3'
+pages: 615-628
+pmclivedate: 2026/08/01
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Cogn Process
+title: Task cue transparency shapes cognitive and visual demands in task preparation.
+uid: '13424468'
+volume: '27'

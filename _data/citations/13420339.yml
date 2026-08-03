@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42409641'
+- idtype: pmcid
+  value: PMC13420339
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1513-25.2026
+- idtype: pii
+  value: JNEUROSCI.1513-25.2026
+authors:
+- authtype: Author
+  name: Menghi N
+- authtype: Author
+  name: Balestrieri E
+- authtype: Author
+  name: Grignolio D
+- authtype: Author
+  name: Coricelli G
+- authtype: Author
+  name: Hickey C
+epubdate: 2026 Jul 29
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '30'
+pages: ''
+pmclivedate: 2026/07/31
+printpubdate: ''
+pubdate: 2026 Jul 29
+sortdate: 2026/07/29 00:00
+source: J Neurosci
+title: Temporal Dynamics of EEG Reflect Continuous Error Correction during Force Control.
+uid: '13420339'
+volume: '46'
