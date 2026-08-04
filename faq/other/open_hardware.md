@@ -22,9 +22,13 @@ Mainak Jas has shared a [paper](https://doi.org/10.3390/s25092759) with correspo
 
 QuSpin has documented in a [Google doc](https://docs.google.com/document/d/1e3LUfdOmUhHHBT-lbirucRoW1TdrYyMxdaS1W-6WDjA/edit?tab=t.0) a simple procedure for installing residual field nulling coils in along the walls of an MSR. This can be used with their [coil driver](https://quspin.com/low-noise-coil-driver/), but you can also make your own low-noise coil driver.
 
+## OPM baby helmet
+
+For the first infant OPM project at the Donders we designed and 3-D printed a bowl-shaped OPM helmet for 32 FieldLine sensors (64 channels). The design of this helmet is share on [Thingiverse](https://www.thingiverse.com/thing:7353567). We have followed up this first infant OPM helmet with another design for variable head sizes. That design is not yet shared, you can ask us for details if you are interested.
+
 ## MEG phantoms
 
-Tim Bardouille has shared [instructions](https://github.com/tbardouille/MEG_biosignal_phantom) to construct a dry phantom for MEG. It is resembles the Neuromag/Elekta/MEGIN phantom, is based on a PCB, and results in magnetic fields that can be fitted as a equivalent current dipole in a spherical volume conductor.
+Tim Bardouille has shared [instructions](https://github.com/tbardouille/MEG_biosignal_phantom) to construct a dry phantom for MEG. It is resembles the Neuromag/Elekta/MEGIN phantom, is based on a PCB, and results in magnetic fields that can be fitted as a equivalent current dipole in a spherical volume conductor. This open hardware project has now been joined by the MEG/OPM labs at the Donders and the Karolinska institutes.
 
 ## EEG phantoms
 
