@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '42350816'
+- idtype: doi
+  value: 10.1038/s41593-026-02345-6
+- idtype: pii
+  value: 10.1038/s41593-026-02345-6
+- idtype: pmcid
+  value: PMC13433285
+authors:
+- authtype: Author
+  name: Frank D
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Hellerstedt R
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Li N
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Gil-Nagel A
+- authtype: Author
+  name: Toledano R
+- authtype: Author
+  name: Friston KJ
+- authtype: Author
+  name: Strange BA
+epubdate: 2026 Jun 25
+fulljournalname: Nature neuroscience
+issue: '8'
+pages: 1987-1998
+pmclivedate: 2026/08/05
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Nat Neurosci
+title: Human hippocampal ripples tune cortical responses based on predicted uncertainty.
+uid: '13433285'
+volume: '29'

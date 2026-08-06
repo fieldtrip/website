@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42185369'
+- idtype: doi
+  value: 10.1038/s41598-026-47785-z
+- idtype: pii
+  value: 10.1038/s41598-026-47785-z
+- idtype: pmcid
+  value: PMC13434803
+authors:
+- authtype: Author
+  name: Rodas De León NE
+- authtype: Author
+  name: Bortfeld H
+- authtype: Author
+  name: Backer KC
+epubdate: 2026 May 25
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/05
+printpubdate: ''
+pubdate: 2026 May 25
+sortdate: 2026/05/25 00:00
+source: Sci Rep
+title: Modulations of the P3b effect as a function of bilingual language experience.
+uid: '13434803'
+volume: '16'

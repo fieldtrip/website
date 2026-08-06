@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42523258'
+- idtype: pmcid
+  value: PMC13404649
+- idtype: doi
+  value: 10.64898/2026.07.13.738235
+- idtype: pii
+  value: 2026.07.13.738235
+authors:
+- authtype: Author
+  name: Levy O
+- authtype: Author
+  name: Waxman R
+- authtype: Author
+  name: Okada S
+- authtype: Author
+  name: Ben-Abu O
+- authtype: Author
+  name: Zion-Golumbic E
+epubdate: 2026 Jul 17
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/28
+printpubdate: ''
+pubdate: 2026 Jul 17
+sortdate: 2026/07/17 00:00
+source: bioRxiv
+title: 'Bouncing back: Transient, but not long-lasting, effects of background disturbances
+  on speech processing.'
+uid: '13404649'
+volume: ''
