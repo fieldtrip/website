@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42324257'
+- idtype: pmcid
+  value: PMC13439065
+- idtype: doi
+  value: 10.1038/s41467-026-74747-w
+- idtype: pii
+  value: 10.1038/s41467-026-74747-w
+authors:
+- authtype: Author
+  name: Cecchi R
+- authtype: Author
+  name: Gluth S
+- authtype: Author
+  name: Palminteri S
+epubdate: 2026 Jun 21
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/06
+printpubdate: ''
+pubdate: 2026 Jun 21
+sortdate: 2026/06/21 00:00
+source: Nat Commun
+title: Attention modulates value normalization in human reinforcement learning by
+  shaping reward encoding.
+uid: '13439065'
+volume: '17'

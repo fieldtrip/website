@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42409642'
+- idtype: pmcid
+  value: PMC13446082
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0306-26.2026
+- idtype: pii
+  value: JNEUROSCI.0306-26.2026
+authors:
+- authtype: Author
+  name: Giannini G
+- authtype: Author
+  name: Grundei M
+- authtype: Author
+  name: Blankenburg F
+epubdate: 2026 Aug 5
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '31'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Aug 5
+sortdate: 2026/08/05 00:00
+source: J Neurosci
+title: Does Stimulus-Preceding Negativity Reflect Predictions in a Somatosensory Roving
+  Paradigm?
+uid: '13446082'
+volume: '46'

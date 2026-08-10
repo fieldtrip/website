@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42569459'
+- idtype: pmcid
+  value: PMC13449928
+- idtype: doi
+  value: 10.1162/IMAG.a.1319
+- idtype: pii
+  value: IMAG.a.1319
+authors:
+- authtype: Author
+  name: Saluja K
+- authtype: Author
+  name: Roy D
+- authtype: Author
+  name: Banerjee A
+epubdate: 2026 Jul 29
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/08/08
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/07/29 00:00
+source: Imaging Neurosci (Camb)
+title: 'When the inner clock fades: Interoceptive decline and consolidation of phase
+  resetting in cortical rhythms by cardiac events underlie healthy lifespan aging.'
+uid: '13449928'
+volume: '4'

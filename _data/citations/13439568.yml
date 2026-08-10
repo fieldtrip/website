@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '42270631'
+- idtype: pmcid
+  value: PMC13439568
+- idtype: doi
+  value: 10.1038/s41467-026-73967-4
+- idtype: pii
+  value: 10.1038/s41467-026-73967-4
+authors:
+- authtype: Author
+  name: Sonkusare S
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Weirich C
+- authtype: Author
+  name: Feng Y
+- authtype: Author
+  name: Liu W
+- authtype: Author
+  name: Yang R
+- authtype: Author
+  name: Mandali A
+- authtype: Author
+  name: Sallie S
+- authtype: Author
+  name: Casero V
+- authtype: Author
+  name: Cao C
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Voon V
+epubdate: 2026 Jun 10
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/06
+printpubdate: ''
+pubdate: 2026 Jun 10
+sortdate: 2026/06/10 00:00
+source: Nat Commun
+title: Adaptive shifts in amygdala-hippocampal theta coupling govern aversive learning
+  and extinction.
+uid: '13439568'
+volume: '17'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42536666'
+- idtype: pmcid
+  value: PMC13446743
+- idtype: doi
+  value: 10.1371/journal.pbio.3003924
+- idtype: pii
+  value: PBIOLOGY-D-26-00649
+authors:
+- authtype: Author
+  name: Lubinus C
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Rimmele JM
+epubdate: 2026 Jul 31
+fulljournalname: PLoS biology
+issue: '7'
+pages: e3003924
+pmclivedate: 2026/08/07
+printpubdate: ''
+pubdate: 2026 Jul
+sortdate: 2026/07/31 00:00
+source: PLoS Biol
+title: Endogenous auditory and motor brain rhythms predict individual speech tracking.
+uid: '13446743'
+volume: '24'

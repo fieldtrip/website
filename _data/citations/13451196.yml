@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '42567925'
+- idtype: doi
+  value: 10.1038/s42003-026-10751-6
+- idtype: pii
+  value: 10.1038/s42003-026-10751-6
+- idtype: pmcid
+  value: PMC13451196
+authors:
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: von Itter J
+- authtype: Author
+  name: Jung A
+- authtype: Author
+  name: Labeit B
+- authtype: Author
+  name: Cheng I
+- authtype: Author
+  name: Claus I
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Dziewas R
+- authtype: Author
+  name: Suntrup-Krueger S
+epubdate: 2026 Aug 7
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/09
+printpubdate: ''
+pubdate: 2026 Aug 7
+sortdate: 2026/08/07 00:00
+source: Commun Biol
+title: Frequency-specific cortical subnetworks support fast human swallowing.
+uid: '13451196'
+volume: '9'
