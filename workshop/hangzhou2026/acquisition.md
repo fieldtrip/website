@@ -31,6 +31,10 @@ If you have not yet done so, [install FieldTrip](/getting_started/installation) 
     addpath(pwd)
     ft_defaults
 
+{% include markup/red %}
+The code below uses the **[ft_version](/reference/utilities/ft_version)** function to determine where you installed fieldtrip, so that it works regardless of whether you installed it either in the directory `fieldtrip`, or in `fieldtrip-xxxxxxxx` (where `xxxxxxxx` is the year, month and day) or in `fieldtrip-20260812` or so.
+{% include markup/end %}
+
 ### Download the data and sensor model
 
 The anatomical MRI and cortical sheet are included in the `fieldtrip/template` directory. The 3D model of the FieldLine OPM sensor is not included with FieldTrip, but can be downloaded from the [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/acquisition). Download the `stl` files and place them jointly in a directory, for example on your Desktop. The STL models are needed for planning the OPM sensor placement; the sensor positions and orientations for the analysis are contained in the `grad` structure that we will construct further on.
@@ -39,7 +43,9 @@ The anatomical MRI and cortical sheet are included in the `fieldtrip/template` d
 
 We read the colin27 template MRI, which is a high-quality average MRI of a single person's brain, created by combining 27 scans of the same individual and aligning them to the MNI152 atlas.
 
-    mri = ft_read_mri('fieldtrip/template/anatomy/single_subj_T1_1mm.nii');
+    [ftver, ftpath] = ft_version;
+    mri = ft_read_mri(fullfile(ftpath, 'template/anatomy/single_subj_T1_1mm.nii'));
+    mri.coordsys = 'mni';
 
 The resulting `mri` structure contains the anatomical volume together with the geometrical transformation between voxel and head coordinates, and the specification of the coordinate system and the units. The coordinate system of this template is `spm`, which is equivalent to the MNI coordinate system, and the units are in mm. You can inspect the data with **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)**.
 
@@ -54,21 +60,42 @@ We can visualize the anatomy in the standard three orthogonal slices with **[ft_
 
 ## Segmenting the anatomical MRI
 
-For the head surface we need to segment the anatomy, i.e. to determine for every voxel whether it belongs to the scalp or not. We use **[ft_volumesegment](/reference/ft_volumesegment)**.
+For the head surface we need to segment the anatomy, i.e. to determine for every voxel whether it belongs to the head or not. We use **[ft_volumesegment](/reference/ft_volumesegment)** and ask for the scalp (and all tissues underneath).
 
     cfg = [];
     cfg.output = 'scalp';
     mri_segmented = ft_volumesegment(cfg, mri);
 
-The result is a structure with a binary `scalp` field. We can visualize it with **[ft_sourceplot](/reference/ft_sourceplot)**, plotting the segmentation as the "functional" parameter on top of the anatomy.
+    % we can keep the original anatomy
+    mri_segmented.anatomy = mri.anatomy;
+
+The result is a structure with a binary `scalp` field. We can visualize it with **[ft_sourceplot](/reference/ft_sourceplot)**, plotting the scalp segmentation as the "functional" parameter on top of the anatomy.
 
     figure
     cfg = [];
     cfg.method = 'ortho';
     cfg.funparameter = 'scalp';
+    cfg.funcolormap = 'jet';
     ft_sourceplot(cfg, mri_segmented);
 
-{% include image src="/assets/img/workshop/hangzhou2026/acquisition_segmentation.png" width="600" %}
+{% include image src="/assets/img/workshop/hangzhou2026/acquisition_segmentation1.png" width="600" %}
+
+{% include markup/yellow %}
+The original colin27 template MRI has a sort of bar at the top of the head which complicates the segmentation. Hence we will procede with a precomputed segmentation in which the bar has been removed. This also includes the brain and skull.
+{% include markup/end %}
+
+    [ftver, ftpath] = ft_version;
+    mri_segmented = ft_read_mri(fullfile(ftpath, 'template/headmodel/standard_seg.mat'));
+    mri_segmented.seglabel = {'scalp', 'skull', 'brain'}; % this was actually determined in the following figure
+
+    figure
+    cfg = [];
+    cfg.method = 'ortho';
+    cfg.funparameter = 'seg'; % it is now called "seg"
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg, mri_segmented);
+
+{% include image src="/assets/img/workshop/hangzhou2026/acquisition_segmentation2.png" width="600" %}
 
 ## Making a mesh of the head surface
 
@@ -77,12 +104,13 @@ We now construct a surface mesh that describes the outer surface of the scalp. T
     cfg = [];
     cfg.method = 'projectmesh';
     cfg.numvertices = 4000;
+    cfg.tissue = 'scalp';
     headshape = ft_prepare_mesh(cfg, mri_segmented);
 
 We plot the head surface mesh.
 
     figure
-    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
+    ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.8, 'edgecolor', [0.5 0.5 0.5]);
     ft_headlight
     view([90 0])
 
@@ -90,16 +118,28 @@ We plot the head surface mesh.
 
 ## Visualize the head surface together with the cortical sheet and anatomical labeling
 
-To relate the sensor positions to the underlying brain anatomy, we also need the cortical surface. For this we could use FreeSurfer, but as that takes a lot of time to run, here we continue with a decimated version of the cortical surface which we read with **[ft_read_headshape](/reference/ft_read_headshape)**.
+To relate the sensor positions to the underlying brain anatomy, we also need the cortical surface. For this we could use FreeSurfer, but as that takes a lot of time to run, here we continue with a decimated version of the cortical surface with 20484 vertices, which we read with **[ft_read_headshape](/reference/ft_read_headshape)**.
 
-    cortex = ft_read_headshape('fieldtrip/template/sourcemodel/cortex_20484.surf.gii');
+    [ftver, ftpath] = ft_version;
+    cortex = ft_read_headshape(fullfile(ftpath, 'template/sourcemodel/cortex_20484.surf.gii'));
     cortex = ft_convert_units(cortex, 'mm');
 
 To color the cortex with anatomical labels, we use the Automated Anatomical Labeling (AAL) atlas, which is included as a template atlas in FieldTrip.
 
-    atlas = ft_read_atlas('fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
+    [ftver, ftpath] = ft_version;
+    atlas = ft_read_atlas(fullfile(ftpath, 'template/atlas/aal/ROI_MNI_V4.nii'));
 
-The atlas is a volumetric segmentation in MNI coordinates with 116 different tissue labels. For each vertex of the cortical surface we determine in which atlas voxel it is located. To do that, we apply the inverse of the transformation matrix of the atlas to go from head coordinates to atlas voxel coordinates, and subsequently look up the integer value of the atlas at that voxel.
+The atlas is a volumetric segmentation in MNI coordinates with 116 different tissue labels. You can plot the color-coded regions with the following code:
+
+    figure
+    cfg = [];
+    cfg.funparameter = 'tissue';
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg, atlas);
+
+{% include image src="/assets/img/workshop/hangzhou2026/acquisition_atlas.png" width="600" %}
+
+For each vertex of the cortical surface we determine in which atlas voxel it is located. To do that, we apply the inverse of the transformation matrix of the atlas to go from head coordinates to atlas voxel coordinates, and subsequently look up the integer value of the atlas at that voxel.
 
     vox = ft_warp_apply(inv(atlas.transform), cortex.pos);
     tissue = zeros(size(cortex.pos,1),1);
@@ -114,8 +154,9 @@ We can now plot the head surface together with the cortical sheet, colored accor
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.2, 'edgecolor', 'none');
-    ft_plot_mesh(cortex, 'vertexcolor', tissue, 'facealpha', 0.8)
-    ft_colormap('jet')
+    ft_plot_mesh(cortex, 'vertexcolor', tissue, 'facealpha', 0.8, 'material', 'dull')
+    ft_colormap(rand(116,3))
+    ft_headlight
     colorbar
     view([-90 0])
 
@@ -123,7 +164,9 @@ We can now plot the head surface together with the cortical sheet, colored accor
 
 ## Making an individual OPM helmet
 
-Now that we have the head shape, we can design the helmet. The idea is that the helmet is placed at a fixed distance from the head, leaving a small air gap. Starting from the scalp segmentation, we inflate the scalp with the image processing function `imdilate` to get an air gap of one voxel (1 mm) and then the helmet shell of 5 mm.
+Now that we have the head shape, we can design the helmet. The idea is that the helmet is placed at a fixed distance from the head, leaving a small gap for the hair and some air. Starting from the scalp segmentation, we inflate the scalp with the image processing function `imdilate` to get an air gap of one voxel (1 mm) and then the helmet shell of 5 mm.
+
+    mri_segmented = ft_checkdata(mri_segmented, 'segmentationstyle', 'probabilistic')
 
     mri_segmented.airgap = imdilate(mri_segmented.scalp, strel('sphere', 1));
     mri_segmented.helmet = imdilate(mri_segmented.airgap, strel('sphere', 5));
@@ -153,7 +196,7 @@ We plot the outside of the helmet together with the head shape.
 {% include image src="/assets/img/workshop/hangzhou2026/acquisition_helmet.png" width="600" %}
 
 {% include markup/yellow %}
-The helmet mesh extends all the way to the nose and the bottom is closed. In the full [OPM helmet design tutorial](/tutorial/sensor/opm_helmet_design) the face, ears and neck are subsequently cut out of the helmet, and holes for the sensor holders and a chin strap are added, using 3D design software.
+The helmet mesh extends all the way to the nose and the bottom is closed. In the full [OPM helmet design tutorial](/tutorial/sensor/opm_helmet_design) the face, ears and neck are subsequently cut out of the helmet, and holes for the sensor holders and a chin strap are added, using 3D design software like Fusion or SolidWorks.
 {% include markup/end %}
 
 ## Placing OPM sensors according to the 10-20 system
@@ -163,10 +206,14 @@ The helmet mesh extends all the way to the nose and the bottom is closed. In the
 To position the sensors at the locations of the extended 10-20 system, **[ft_electrodeplacement](/reference/ft_electrodeplacement)** needs the position of the anatomical landmarks. For the colin27 template the following approximate positions apply (in mm, MNI coordinates). For an individual MRI you would determine these interactively, e.g. by clicking on the MRI in **[ft_sourceplot](/reference/ft_sourceplot)**.
 
     headshape.coordsys = 'mni';
-    nas = [-2.0 89.5 -23.0];
-    ini = [-18.0 -113.5 21.0];
-    lpa = [88.5 -53.0 -49.0];
-    rpa = [-88.5 -49.0 -49.0];
+
+    nas = [  0.0083   86.8110  -39.9830];
+    ini = [  0.0045 -118.5650  -23.0780];
+    lpa = [-86.0761  -19.9897  -47.9860];
+    rpa = [ 85.7939  -20.0093  -48.0310];
+
+    headshape.fid.label = {'nas', 'ini', 'lpa', 'rpa'};
+    headshape.fid.pos = [nas; ini; lpa; rpa];
 
 ### Placing the 10-20 electrode positions
 
@@ -177,11 +224,11 @@ We place all positions of the extended 10-20 system on the head shape.
     cfg.fiducial.ini = ini;
     cfg.fiducial.lpa = lpa;
     cfg.fiducial.rpa = rpa;
-    cfg.method = '1020';
-    cfg.feedback = 'no';
+    cfg.method = '1020'; % this results in the 5% system, see Oostenveld et al 2001
+    cfg.feedback = 'yes';
     elec = ft_electrodeplacement(cfg, headshape);
 
-This results in more than 300 electrode positions on the head shape, since the extended 10-20 system includes the positions halfway between the 10-20 positions. We take the standard 10-20 montage with 19 positions, excluding Fpz and Oz. The actual number of sensors depends on the OPM system you have, here we use a small set to keep it simple.
+This results in more than 300 electrode positions on the head shape, not only including the 20% positions but also the 10% and the 5% positions. We take the standard 10-20 montage with 19 positions, excluding Fpz and Oz. The actual number of sensors depends on the OPM system you have, here we use a small set to keep it simple.
 
     chansel = ft_channelselection({'eeg1020', '-Fpz', '-Oz'}, elec.label);
 
@@ -194,20 +241,31 @@ We plot the 19 electrode positions on the head surface.
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_plot_sens(elec19, 'label', 'label', 'fontsize', 8);
+    ft_headlight
     view([90 0])
 
 {% include image src="/assets/img/workshop/hangzhou2026/acquisition_electrodes.png" width="600" %}
 
 ### Placing the OPM sensors on the helmet
 
-We use **[ft_sensorplacement](/reference/ft_sensorplacement)** to rotate and translate the 3D model of the sensor to each of the 19 selected positions. The function shifts the object with `cfg.outwardshift` in the direction perpendicular to the surface, and subsequently translates it to the final position. The bottom of the sensor holder is placed halfway in the 5 mm thick helmet wall, which is 1 mm above the scalp, hence the `cfg.outwardshift` of `5/2 + 1` mm.
+We use **[ft_sensorplacement](/reference/ft_sensorplacement)** to rotate and translate the 3D model of the sensor to each of the 19 selected positions. The function shifts the object with `cfg.outwardshift` in the direction perpendicular to the surface, and subsequently translates it to the final position. The bottom of the sensor holder is placed halfway in the 5 mm thick helmet wall, which is 1 mm above the scalp, hence the `cfg.outwardshift` of `1 + 5/2` mm.
 
     cfg = [];
     cfg.elec = elec;
     cfg.channel = chansel;
+    cfg.outwardshift = 1 + 5/2;
+
     cfg.template = 'fieldline_sensor.stl';
-    cfg.outwardshift = 5/2 + 1;
     [outcfg, sensor] = ft_sensorplacement(cfg, headshape);
+
+    cfg.template = 'fieldline_holder.stl';
+    [outcfg, holder] = ft_sensorplacement(cfg, headshape);
+
+    cfg.template = 'fieldline_padding.stl';
+    [outcfg, padding] = ft_sensorplacement(cfg, headshape);
+
+    cfg.template = 'fieldline_hole.stl';
+    [outcfg, hole] = ft_sensorplacement(cfg, headshape);
 
 We plot the sensors on the helmet.
 
@@ -242,13 +300,13 @@ For the analysis we need a `grad` structure that specifies for each channel the 
     ];
     opm_single.tra = eye(3);
 
-We again use **[ft_sensorplacement](/reference/ft_sensorplacement)**, but now with this sensor template rather than with the STL model. The `cfg.outwardshift` needs to be `2 + 1 + 5` mm: the sensor holder is placed 2 mm away from the head surface, the sensitive spot of the sensor is located 1 mm above the bottom of the sensor enclosure, and the OPM measures the field at a spot 5 mm from the bottom of the enclosure.
+We again use **[ft_sensorplacement](/reference/ft_sensorplacement)**, but now with this sensor template rather than with the STL model. The `cfg.outwardshift` needs to be `1 + 5/2 + 1 + 5` mm: the air gap is 1 mm, the bottom of the sensor holder is halfway in the 5 mm thick helmet wall, the bottom of the sensor is located 1 mm above the bottom of the holder, and the OPM sensor measures the field at a spot 5 mm from its bottom.
 
     cfg = [];
     cfg.elec = elec;
     cfg.channel = chansel;
     cfg.template = opm_single;
-    cfg.outwardshift = 2 + 1 + 5;
+    cfg.outwardshift = 1 + 5/2 + 1 + 5;
     [outcfg, opm_all] = ft_sensorplacement(cfg, headshape);
 
 The output `opm_all` is a structure array with one element for each of the 19 sensors, where each sensor represents three channels. We combine all channels into a single `grad` structure.
@@ -282,6 +340,7 @@ For the topographic maps and the sensitivity it is often easier to look at only 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
     ft_plot_sens(grad, 'chanindx', endsWith(grad.label, 'z'), 'label', 'label', 'fontsize', 8);
+    ft_headlight
     view([90 0])
 
 {% include image src="/assets/img/workshop/hangzhou2026/acquisition_grad_z.png" width="600" %}
@@ -308,11 +367,12 @@ For the FieldLine v3 OPM sensors it is recommended to only work with the two ori
 
 If you have a FieldLine Beta2 smart helmet, the positions of all 144 slots in the helmet are available as a template gradiometer definition, and you can select the slots in which to place your OPM sensors in exactly the same way, for example every 4th slot.
 
-    grad = ft_read_sens('fieldtrip/template/gradiometer/fieldlinebeta2.mat');
+    [ftver, ftpath] = ft_version;
+    grad = ft_read_sens(fullfile(ftpath, 'template/gradiometer/fieldlinebeta2.mat'));
     grad = ft_convert_units(grad, 'm');
 
     cfg = [];
-    cfg.channel = 1:4:144; % select every 4th slot
+    cfg.channel = 1:4:144; % select every 4th slot, this gives 144/4=32 sensors 
     selected = ft_electrodeselection(cfg, grad);
 
 For the interactive selection of sensor positions, e.g. by clicking on a 3D rendering of the helmet with all sensors, you can also use **[ft_electrodeselection](/reference/ft_electrodeselection)** with the 3D model of the sensors as input. See the example on [selecting a subset of OPM sensor positions](/example/other/opm_selection) for details.
@@ -325,7 +385,8 @@ To see how well the selected sensor positions cover the brain, we compute the se
 
 We use the template head model that is included with FieldTrip, and compute a single-shell volume conduction model of the brain.
 
-    mri_seg = ft_read_mri('fieldtrip/template/headmodel/standard_seg.mat');
+    [ftver, ftpath] = ft_version;
+    mri_seg = ft_read_mri(fullfile(ftpath, 'template/headmodel/standard_seg.mat'));
     mri_seg.coordsys = 'mni';
     mri_seg.seglabel = {'scalp', 'skull', 'brain'};
 
@@ -338,7 +399,8 @@ We use the template head model that is included with FieldTrip, and compute a si
 
 We use the same template cortical sheet as before as the source model.
 
-    sourcemodel = ft_read_headshape('fieldtrip/template/sourcemodel/cortex_20484.surf.gii');
+    [ftver, ftpath] = ft_version;
+    sourcemodel = ft_read_headshape(fullfile(ftpath, 'template/sourcemodel/cortex_20484.surf.gii'));
 
 ### Leadfields
 
@@ -405,10 +467,12 @@ We now compute the sensitivity for both arrays.
 
 We plot the relative sensitivity (the sensitivity scaled to the most sensitive source) for the full array with all 19 sensors.
 
+    maxval = max(sens_z.free);
+
     figure
-    ft_plot_mesh(sourcemodel, 'vertexcolor', sens_z.free ./ max(sens_z.free))
+    ft_plot_mesh(sourcemodel, 'vertexcolor', sens_z.free ./ maxval)
     ft_plot_sens(ft_convert_units(grad_z, 'mm'), 'label', 'label', 'fontsize', 8)
-    ft_colormap('-RdBu')
+    ft_colormap('jet')
     clim([0 1])
     colorbar
     title('relative sensitivity, full array')
@@ -419,9 +483,9 @@ We plot the relative sensitivity (the sensitivity scaled to the most sensitive s
 and for the subset with only 6 sensors over the sensorimotor cortex.
 
     figure
-    ft_plot_mesh(sourcemodel, 'vertexcolor', sens_sub.free ./ max(sens_sub.free))
+    ft_plot_mesh(sourcemodel, 'vertexcolor', sens_sub.free ./ maxval)
     ft_plot_sens(ft_convert_units(grad_sub, 'mm'), 'label', 'label', 'fontsize', 8)
-    ft_colormap('-RdBu')
+    ft_colormap('jet')
     clim([0 1])
     colorbar
     title('relative sensitivity, subset')
@@ -431,14 +495,7 @@ and for the subset with only 6 sensors over the sensorimotor cortex.
 
 You can see that the full array covers the whole brain, whereas the subset of 6 sensors is only sensitive to the source locations in the sensorimotor cortex, which is what we aimed for.
 
-We can also plot the sensitivity as a function of the distance of the source to the nearest sensor, which shows that the sensitivity drops off with increasing distance from the sensors.
-
-    figure
-    plot(sens_z.distance * 1e3, sens_z.free ./ max(sens_z.free), '.')
-    xlabel('distance (mm)')
-    ylabel('relative sensitivity, orientation free')
-
-{% include image src="/assets/img/workshop/hangzhou2026/acquisition_sensitivity_distance.png" width="600" %}
+The advantage of a small but well-placed sensor array like the one with 6 radial OPM sensors is that we can quite well record activity from the region of interest, but the lack of sensitivity to other brain regions means that we cannot tell anything about the presence or absence of activity elsewhere.
 
 ## Summary and suggested further reading
 
@@ -446,12 +503,10 @@ In this tutorial we planned the acquisition of OPM-MEG data. We read and segment
 
 ## See also
 
-For more information, see also
-
-- the tutorial on [designing a custom 3D printed OPM helmet](/tutorial/sensor/opm_helmet_design), which covers the 3D printing of the helmet in more detail
-- the example on [selecting a subset of OPM sensor positions](/example/other/opm_selection), which covers the interactive selection and a paper print-out of the selected channels
-- the tutorial on the [sensitivity maps](/tutorial/source/sensitivity_maps) for different sensor arrays
+For more information, see also the following tutorials:
 
 {% include seealso category="tutorial" tag1="opm" %}
+
+and the following examples:
 
 {% include seealso category="example" tag1="opm" %}
