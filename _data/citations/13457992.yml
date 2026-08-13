@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42576376'
+- idtype: doi
+  value: 10.1111/infa.70114
+- idtype: pmcid
+  value: PMC13457992
+authors:
+- authtype: Author
+  name: Ghilardi T
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Monroy CD
+- authtype: Author
+  name: Gerson SA
+- authtype: Author
+  name: Hunnius S
+epubdate: ''
+fulljournalname: 'Infancy : the official journal of the International Society on Infant
+  Studies'
+issue: '4'
+pages: e70114
+pmclivedate: 2026/08/12
+printpubdate: 2026 Jul-Aug
+pubdate: 2026 Jul-Aug
+sortdate: 2026/07/01 00:00
+source: Infancy
+title: 'Statistics in Motion: Does the Infant Motor System Predict Actions Based on
+  Their Transitional Probability?'
+uid: '13457992'
+volume: '31'

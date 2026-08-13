@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '42575945'
+- idtype: doi
+  value: 10.1038/s43856-026-01846-6
+- idtype: pii
+  value: 10.1038/s43856-026-01846-6
+- idtype: pmcid
+  value: PMC13458760
+authors:
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Hernandez-Urbina V
+- authtype: Author
+  name: Doherty L
+- authtype: Author
+  name: Bahmani H
+- authtype: Author
+  name: Holtkamp M
+- authtype: Author
+  name: Steinbart D
+- authtype: Author
+  name: Diall AD
+- authtype: Author
+  name: Hebel JM
+- authtype: Author
+  name: Brandt C
+- authtype: Author
+  name: Cloppenborg T
+- authtype: Author
+  name: Doll A
+- authtype: Author
+  name: Müschenich M
+epubdate: 2026 Aug 10
+fulljournalname: Communications medicine
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/12
+printpubdate: ''
+pubdate: 2026 Aug 10
+sortdate: 2026/08/10 00:00
+source: Commun Med (Lond)
+title: High-frequency visual stimulation can increase medial temporal lobe ripple
+  oscillation density.
+uid: '13458760'
+volume: '6'
