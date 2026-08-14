@@ -37,7 +37,7 @@ The code below uses the **[ft_version](/reference/utilities/ft_version)** functi
 
 ### Download the data and sensor model
 
-The anatomical MRI and cortical sheet are included in the `fieldtrip/template` directory. The 3D model of the FieldLine OPM sensor is not included with FieldTrip, but can be downloaded from the [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/acquisition). Download the `stl` files and place them jointly in a directory, for example on your Desktop. The STL models are needed for planning the OPM sensor placement; the sensor positions and orientations for the analysis are contained in the `grad` structure that we will construct further on.
+The anatomical MRI and cortical sheet are included in the `fieldtrip/template` directory. The 3D model of the FieldLine OPM sensor is not included with FieldTrip, but can be downloaded from the [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/acquisition). Download the `stl` files and place them jointly in a directory, for example on your Desktop. The STL models are needed for planning the OPM sensor placement; the sensor positions and orientations for the analysis are contained in the `grad_xyz` structure that we will construct further on.
 
 ## Reading and visualizing the anatomical MRI
 
@@ -280,7 +280,7 @@ We plot the sensors on the helmet.
 
 ### Constructing the gradiometer definition
 
-For the analysis we need a `grad` structure that specifies for each channel the position, orientation and label. We assume that each OPM sensor measures the magnetic field in three orthogonal directions, which we will call x, y and z. We define a single OPM sensor with three channels as a template.
+For the analysis we need a `grad_xyz` structure that specifies for each channel the position, orientation and label. We assume that each OPM sensor measures the magnetic field in three orthogonal directions, which we will call x, y and z. We define a single OPM sensor with three channels as a template.
 
     opm_single = [];
     opm_single.label = {
@@ -309,27 +309,27 @@ We again use **[ft_sensorplacement](/reference/ft_sensorplacement)**, but now wi
     cfg.outwardshift = 1 + 5/2 + 1 + 5;
     [outcfg, opm_all] = ft_sensorplacement(cfg, headshape);
 
-The output `opm_all` is a structure array with one element for each of the 19 sensors, where each sensor represents three channels. We combine all channels into a single `grad` structure.
+The output `opm_all` is a structure array with one element for each of the 19 sensors, where each sensor represents three channels. We combine all channels into a single `grad_xyz` structure.
 
-    grad = [];
-    grad.label = {};
-    grad.coilpos = zeros(0,3);
-    grad.coilori = zeros(0,3);
+    grad_xyz = [];
+    grad_xyz.label = {};
+    grad_xyz.coilpos = zeros(0,3);
+    grad_xyz.coilori = zeros(0,3);
     for i=1:length(chansel)
         lab{1} = [outcfg.channel{i} '_' opm_all(i).label{1}]; % _x
         lab{2} = [outcfg.channel{i} '_' opm_all(i).label{2}]; % _y
         lab{3} = [outcfg.channel{i} '_' opm_all(i).label{3}]; % _z
-        grad.label = cat(1, grad.label, lab(:));
-        grad.coilpos = cat(1, grad.coilpos, opm_all(i).coilpos);
-        grad.coilori = cat(1, grad.coilori, opm_all(i).coilori);
+        grad_xyz.label = cat(1, grad_xyz.label, lab(:));
+        grad_xyz.coilpos = cat(1, grad_xyz.coilpos, opm_all(i).coilpos);
+        grad_xyz.coilori = cat(1, grad_xyz.coilori, opm_all(i).coilori);
     end
-    grad.tra = eye(length(grad.label));
+    grad_xyz.tra = eye(length(grad_xyz.label));
 
-We plot the resulting `grad` structure with all 57 channels (19 sensors times 3 orientations).
+We plot the resulting `grad_xyz` structure with all 57 channels (19 sensors times 3 orientations).
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_plot_sens(grad);
+    ft_plot_sens(grad_xyz);
     ft_headlight
     view([90 0])
 
@@ -339,7 +339,7 @@ For the topographic maps and the sensitivity it is often easier to look at only 
 
     figure
     ft_plot_headshape(headshape, 'facecolor', 'skin', 'facealpha', 0.5, 'edgecolor', 'none');
-    ft_plot_sens(grad, 'chanindx', endsWith(grad.label, 'z'), 'label', 'label', 'fontsize', 8);
+    ft_plot_sens(grad_xyz, 'chanindx', endsWith(grad_xyz.label, 'z'), 'label', 'label', 'fontsize', 8);
     ft_headlight
     view([90 0])
 
@@ -349,17 +349,17 @@ For the topographic maps and the sensitivity it is often easier to look at only 
 
 Not all of the sensor positions that we made are equally useful for a specific research question. Depending on your research question you may want to position the available sensors uniformly over the whole head, or more clustered over a specific brain region. The selection of channels is done with **[ft_electrodeselection](/reference/ft_electrodeselection)**, which works both on the channel labels and on the channel indices.
 
-First we select the radially oriented channels. In the `grad` structure each OPM sensor contributes an `x`, a `y` and a `z` channel at the same position, and the channels that we will use for the sensitivity analysis are the radially oriented ones, i.e. those with the `_z` suffix.
+First we select the radially oriented channels. In the `grad_xyz` structure each OPM sensor contributes an `x`, a `y` and a `z` channel at the same position, and the channels that we will use for the sensitivity analysis are the radially oriented ones, i.e. those with the `_z` suffix.
 
     cfg = [];
-    cfg.channel = endsWith(grad.label, '_z');
-    grad_z = ft_electrodeselection(cfg, grad);
+    cfg.channel = endsWith(grad_xyz.label, '_z');
+    grad_z = ft_electrodeselection(cfg, grad_xyz);
 
 As an example of a research question, let us assume that we are interested in the sensorimotor cortex, and hence want to cover the central and parietal cortex with a small number of sensors. We select the channels at C3, Cz, C4, P3, Pz and P4.
 
     cfg = [];
     cfg.channel = {'C3_z', 'Cz_z', 'C4_z', 'P3_z', 'Pz_z', 'P4_z'};
-    grad_sub = ft_electrodeselection(cfg, grad_z);
+    grad_sel = ft_electrodeselection(cfg, grad_z);
 
 {% include markup/yellow %}
 For the FieldLine v3 OPM sensors it is recommended to only work with the two orientations `by` and `bz`, since the sensitivity of the `bx` channel is along the direction of the laser and is very noisy. In the design above we therefore work with the `_z` channels, which correspond to the `bz` orientation.
@@ -368,12 +368,12 @@ For the FieldLine v3 OPM sensors it is recommended to only work with the two ori
 If you have a FieldLine Beta2 smart helmet, the positions of all 144 slots in the helmet are available as a template gradiometer definition, and you can select the slots in which to place your OPM sensors in exactly the same way, for example every 4th slot.
 
     [ftver, ftpath] = ft_version;
-    grad = ft_read_sens(fullfile(ftpath, 'template/gradiometer/fieldlinebeta2.mat'));
-    grad = ft_convert_units(grad, 'm');
+    fieldlinebeta2 = ft_read_sens(fullfile(ftpath, 'template/gradiometer/fieldlinebeta2.mat'));
+    fieldlinebeta2 = ft_convert_units(fieldlinebeta2, 'm');
 
     cfg = [];
     cfg.channel = 1:4:144; % select every 4th slot, this gives 144/4=32 sensors 
-    selected = ft_electrodeselection(cfg, grad);
+    fieldlinebeta2_sel = ft_electrodeselection(cfg, fieldlinebeta2);
 
 For the interactive selection of sensor positions, e.g. by clicking on a 3D rendering of the helmet with all sensors, you can also use **[ft_electrodeselection](/reference/ft_electrodeselection)** with the 3D model of the sensors as input. See the example on [selecting a subset of OPM sensor positions](/example/other/opm_selection) for details.
 
@@ -415,7 +415,7 @@ We compute the leadfields for the full array and for the subset of 6 sensors, us
     cfg.grad = ft_convert_units(grad_z, 'm');
     lf_z = ft_prepare_leadfield(cfg);
 
-    cfg.grad = ft_convert_units(grad_sub, 'm');
+    cfg.grad = ft_convert_units(grad_sel, 'm');
     lf_sub = ft_prepare_leadfield(cfg);
 
 ### Compute the sensitivity
@@ -460,7 +460,7 @@ We now compute the sensitivity for both arrays.
     sens_z = ft_sensitivitymap(cfg, lf_z);
 
     cfg = [];
-    cfg.grad = ft_convert_units(grad_sub, 'm');
+    cfg.grad = ft_convert_units(grad_sel, 'm');
     sens_sub = ft_sensitivitymap(cfg, lf_sub);
 
 ### Plot the sensitivity maps
@@ -484,7 +484,7 @@ and for the subset with only 6 sensors over the sensorimotor cortex.
 
     figure
     ft_plot_mesh(sourcemodel, 'vertexcolor', sens_sub.free ./ maxval)
-    ft_plot_sens(ft_convert_units(grad_sub, 'mm'), 'label', 'label', 'fontsize', 8)
+    ft_plot_sens(ft_convert_units(grad_sel, 'mm'), 'label', 'label', 'fontsize', 8)
     ft_colormap('jet')
     clim([0 1])
     colorbar
@@ -493,13 +493,19 @@ and for the subset with only 6 sensors over the sensorimotor cortex.
 
 {% include image src="/assets/img/workshop/hangzhou2026/acquisition_sensitivity_subset.png" width="600" %}
 
-You can see that the full array covers the whole brain, whereas the subset of 6 sensors is only sensitive to the source locations in the sensorimotor cortex, which is what we aimed for.
+You can see that the full array covers the whole brain, whereas the subset of 6 sensors is only sensitive to the source locations in the sensorimotor cortex, which is what we aimed for. So a small OPM system with 6 channels can quite well record activity from a limited brain region, whereas an OPM system with 57 channels (or more) is able to record from the whole brain.
 
-The advantage of a small but well-placed sensor array like the one with 6 radial OPM sensors is that we can quite well record activity from the region of interest, but the lack of sensitivity to other brain regions means that we cannot tell anything about the presence or absence of activity elsewhere.
+#### Exercise
+
+{% include markup/skyblue %}
+Consider the sensitivity difference of the whole-head OPM system for superficial and for deep sources. Is that what you expected?
+{% include markup/end %}
+
+The advantage of a small but well-placed sensor array like the one with 6 radial OPM channels is that we can quite well record activity from the region of interest, but the lack of sensitivity to other brain regions means that we cannot tell anything about the presence or absence of activity elsewhere.
 
 ## Summary and suggested further reading
 
-In this tutorial we planned the acquisition of OPM-MEG data. We read and segmented the colin27 template MRI, made a mesh of the head surface, and visualized it together with the template cortical sheet and the AAL anatomical labels. We designed an OPM helmet by inflating the scalp segmentation, placed OPM sensors at the 19 positions of the standard 10-20 system, and constructed the `grad` structure that specifies the position and orientation of all 57 channels. Finally, we selected a subset of 6 sensors over the sensorimotor cortex and plotted the sensitivity map for both the full array and the subset, which showed how the selection of sensor positions determines the brain regions that the sensor array is sensitive to.
+In this tutorial we planned the acquisition of OPM-MEG data. We read and segmented the colin27 template MRI, made a mesh of the head surface, and visualized it together with the template cortical sheet and the AAL anatomical labels. We designed an OPM helmet by inflating the scalp segmentation, placed OPM sensors at the 19 positions of the standard 10-20 system, and constructed the `grad_xyz` structure that specifies the position and orientation of all 57 channels (19 sensors times 3 orientations). Finally, we selected a subset of 6 channels over the sensorimotor cortex and plotted the sensitivity map for both the full array and the subset, which showed how the selection of sensor positions determines the brain regions that the sensor array is sensitive to.
 
 ## See also
 
