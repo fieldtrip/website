@@ -5,7 +5,7 @@ tags: [hangzhou2026]
 
 ## Introduction
 
-Traditional MEG systems use superconducting quantum interference devices (SQUIDs), which require expensive cryogenic cooling with liquid helium and involve placing the sensors 1.5-2 cm from the scalp. Optically pumped magnetometers (OPMs), a new generation of MEG, eliminate the need for cryogenic cooling, allowing sensors to be placed closer to the scalp. OPMs are small individual sensors that allow the researcher to choose where to place them over the head. These sensors are held in place by 3D-printed helmets, which can be customized for each subject.
+Traditional MEG systems use superconducting quantum interference devices (SQUIDs), which require expensive cryogenic cooling with liquid helium and involve placing the sensors at least 2 cm from the scalp. Optically pumped magnetometers (OPMs), a new generation of MEG, eliminate the need for cryogenic cooling, allowing sensors to be placed closer to the scalp. OPMs are small individual sensors that allow the researcher to choose where to place them over the head. These sensors are held in place by 3D-printed helmets, which can be customized for each subject.
 
 Even though both the SQUID and the OPM systems detect the brain's magnetic fields, their data analysis steps differ a bit. In this tutorial we explore the differences in preprocessing and coregistration between the two systems.
 
@@ -31,7 +31,7 @@ The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 sy
 
 We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)).
 
-The dataset can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026).
+The dataset can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/analysis).
 
 ## Setup
 
@@ -46,13 +46,13 @@ If you have not yet done so, [install FieldTrip](/getting_started/installation) 
 
 ### Download the data
 
-Download the `sub-01` directory from the [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026), and `cd` into the directory that contains it. The file paths used in this tutorial are relative to your current working directory. The data is organized as follows:
+Download the content of the `analysis` directory from the [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026), and `cd` into the `analysis` directory. The file paths used in this tutorial are relative to your current working directory. The data is organized according to the [BIDS standard](https://www.bids-standard.org/) as follows:
 
-    sub-01/anat
-    sub-01/meg/opm
-    sub-01/meg/squid
+    sub-01/ses-anat
+    sub-01/ses-opm
+    sub-01/ses-squid
 
-The directory `sub-01/anat` contains the anatomical MRI, `sub-01/meg/opm` contains the six OPM recordings (in fif format) together with the optical 3D scan and the template of the FieldLine helmet, and `sub-01/meg/squid` contains the SQUID recording (in the form of a CTF `.ds` directory) together with the Polhemus head shape.
+The directory `sub-01/ses-anat/anat` contains the anatomical MRI, `sub-01/ses-opm/meg` contains the six OPM recordings (in fif format) together with the optical 3D scan and the template of the FieldLine helmet, and `sub-01/ses-squid/meg` contains the SQUID recording (in the form of a CTF `.ds` directory) together with the Polhemus head shape.
 
 ## Procedure
 
@@ -80,7 +80,7 @@ For the OPMs we will take the following steps:
 - Append sensors from the six runs using **[ft_appendsens](/reference/ft_appendsens)**
 - Plot the 3D sensor topography for a specified latency with **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**
 
-{% include image src="/assets/img/workshop/hangzhou2026/analysis_flow_chart.png" width="800" height="1000" %}
+{% include image src="/assets/img/workshop/hangzhou2026/analysis_flow_chart.jpg" width="800" height="1000" %}
 
 ## Preprocessing & computing ERFs
 
@@ -89,7 +89,7 @@ For the OPMs we will take the following steps:
 We begin by reading the SQUID data and defining trials. We select trials in which left median nerve stimulation occurred (trigger code = 1). In the experiment, the inter-trial interval ranged from 800-1200 ms, so it makes sense to select a 200 ms prestimulus and 400 ms poststimulus window.
 
     cfg                     = [];
-    cfg.dataset             = 'sub-01/meg/squid/sub-01_ses-01_task-MedianNervesStim_squid.ds';
+    cfg.dataset             = 'sub-01/ses-squid/meg/sub-01_ses-squid_task-MedianNervesStim_meg.ds';
     cfg.trialdef.eventtype  = 'UPPT001';
     cfg.trialdef.eventvalue = 1;
     cfg.trialdef.prestim    = 0.2;
@@ -102,17 +102,11 @@ We begin by reading the SQUID data and defining trials. We select trials in whic
     cfg.continuous     = 'yes';
     data_squid         = ft_preprocessing(cfg);
 
-    save data_squid data_squid
-
 The summary method in **[ft_rejectvisual](/reference/ft_rejectvisual)** allows you to manually remove trials and/or channels that have high variance.
-
-    load data_squid data_squid
 
     cfg              = [];
     cfg.method       = 'summary';
     data_squid_clean = ft_rejectvisual(cfg, data_squid);
-
-    save data_squid_clean data_squid_clean
 
 We start by removing trials that have higher variance (bottom-left plot). Based on our data, a reasonable threshold to choose is 8e-25 Tesla-squared. Next, we assess the channel variance (top-right plot). Removing trials with high variance resulted in reducing the channel variance too, so no need to reject any channels.
 
@@ -120,20 +114,16 @@ We start by removing trials that have higher variance (bottom-left plot). Based 
 
 We then calculate the ERFs:
 
-    load data_squid_clean data_squid_clean
-
     cfg       = [];
     avg_squid = ft_timelockanalysis(cfg, data_squid_clean);
 
-    save avg_squid avg_squid
-
 We plot the activity from all the sensors.
-
-    load avg_squid avg_squid
 
     cfg = [];
     cfg.layout = 'CTF275_helmet';
     ft_multiplotER(cfg, avg_squid); % use interactively
+
+{% include image src="/assets/img/workshop/hangzhou2026/analysis_multiplot.png" width="500" %}
 
 {% include markup/skyblue %}
 Interactive mode: Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'. Can you find the time window that the dipolar activity at the right primary somatosensory area appears?
@@ -141,20 +131,18 @@ Interactive mode: Explore the event-related potential by dragging boxes around (
 
 We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topoplotER)**.
 
-    load avg_squid avg_squid
-
     cfg = [];
     cfg.xlim = [0.035 0.050];
     cfg.layout = 'CTF275_helmet';
     ft_topoplotER(cfg, avg_squid);
 
-    print -dpng analysis_topo_squid.png
-
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo_squid.png" width="500" %}
 
 ### OPM
 
-    d = dir('sub-01/meg/opm/*.fif');
+The OPM recordings are done sequentially over 6 runs, each corresponding to a single fif file.
+
+    d = dir('sub-01/ses-opm/meg/*.fif');
 
     for i = 1:6 % 6 experimental runs
         cfg                     = [];
@@ -171,24 +159,19 @@ We can also plot this dipolar pattern with **[ft_topoplotER](/reference/ft_topop
         data_opm(i)        = ft_preprocessing(cfg);
     end
 
+    % save a copy to disk, as this step takes quite some time
     save data_opm data_opm
 
 OPMs are magnetometers, which are more sensitive to the environmental noise than the SQUID gradiometers. To remove some of the environmental noise, several algorithmic denoising techniques have been proposed ([Seymour et al., 2022](https://www.sciencedirect.com/science/article/pii/S1053811921011058)). In this tutorial we will apply homogeneous field correction (HFC) ([Tierney et al., 2021](https://www.sciencedirect.com/science/article/pii/S1053811921007576)).
 
-    load data_opm data_opm
-
     for i = 1:6
-        data_opm_nohdr(i) = rmfield(data_opm(i), 'hdr'); % this is needed so that ft_denoise_hfc() works
+        data_opm_nohdr(i) = rmfield(data_opm(i), 'hdr'); % this is needed so that FT_DENOISE_HFC works
 
         cfg               = [];
         data_opm_hfc(i)   = ft_denoise_hfc(cfg, data_opm_nohdr(i));
     end
 
-    save data_opm_hfc data_opm_hfc
-
 We will now manually remove trials with high variance.
-
-    load data_opm_hfc data_opm_hfc
 
     for i = 1:6
         cfg                   = [];
@@ -196,24 +179,18 @@ We will now manually remove trials with high variance.
         data_opm_hfc_clean(i) = ft_rejectvisual(cfg, data_opm_hfc(i));
     end
 
-    save data_opm_hfc_clean data_opm_hfc_clean
+#### Excercise
 
 {% include markup/skyblue %}
 For the SQUID-based recordings, we removed trials with variance above the threshold of 8e-25 Tesla-squared. Is it possible to use the same threshold for the OPMs? If not, why and does this affect the quality of the OPM signal? Remember that (i) OPMs are magnetometers, and (ii) they are placed closer to the scalp than the SQUIDs.
 {% include markup/end %}
-
-    load data_opm_hfc_clean data_opm_hfc_clean
 
     for i = 1:6
         cfg        = [];
         avg_opm(i) = ft_timelockanalysis(cfg, data_opm_hfc_clean(i));
     end
 
-    save avg_opm avg_opm
-
-Before concatenating the six runs, we need to rename duplicate channels. Duplicates arise for three reasons: (i) 9 sensors were fixed across all runs, (ii) some sensors in the sixth run were in the same slot as the fifth run due to limited remaining free slots, and (iii) errors by the researcher placing a sensor in the same slot between runs. During the recording an Excel sheet was used to keep track in which slot each sensor was placed. We use that information to rename the channels.
-
-    load avg_opm avg_opm
+Before concatenating the six runs, we need to rename duplicate channels. Duplicates arise for three reasons: (i) 9 sensors remained fixed and were used across all runs, (ii) some sensors in the sixth run were in the same slot as the fifth run due to limited remaining free slots, and (iii) errors by the researcher placing a sensor in the same slot between runs. During the recording an Excel sheet was used to keep track in which slot each sensor was placed. We use that information to rename the channels.
 
     avg_opm_rename = avg_opm;
 
@@ -248,11 +225,7 @@ Before concatenating the six runs, we need to rename duplicate channels. Duplica
         end
     end
 
-    save avg_opm_rename avg_opm_rename
-
 We concatenate the ERFs across the six runs to simulate a single experiment with 144 sensors (note: there are some missing sensors, so in the end we do not have 144 sensors).
-
-    load avg_opm_rename avg_opm_rename
 
     cfg           = [];
     cfg.appenddim = 'chan';
@@ -262,11 +235,7 @@ We concatenate the ERFs across the six runs to simulate a single experiment with
     append_opm.avg = append_opm.trial;
     append_opm     = rmfield(append_opm, 'trial');
 
-    save append_opm append_opm
-
 There are some missing sensors. To avoid interpolation or extrapolation artifacts in the topography, we can add NaNs for the missing sensors and then tell **[ft_topoplotER](/reference/ft_topoplotER)** to exclude those using the `cfg.interpolatenan = 'no'` option.
-
-    load append_opm append_opm
 
     % read the layout of the FieldLine beta2 helmet with all 144 slots
     cfg = [];
@@ -295,17 +264,11 @@ There are some missing sensors. To avoid interpolation or extrapolation artifact
     append_opm_nan.label = cat(1, append_opm_nan.label(:), missing(:));
     append_opm_nan.avg   = cat(1, append_opm_nan.avg, nan(numel(missing), numel(append_opm_nan.time)));
 
-    save append_opm_nan append_opm_nan
-
-    load append_opm_nan append_opm_nan
-
     cfg            = [];
     cfg.layout     = 'fieldlinebeta2bz_helmet';
     cfg.showlabels = 'yes';
     cfg.ylim       = 'maxabs';
     ft_multiplotER(cfg, append_opm_nan);
-
-    load append_opm_nan append_opm_nan
 
     cfg                = [];
     cfg.xlim           = [0.035 0.050];
@@ -316,9 +279,9 @@ There are some missing sensors. To avoid interpolation or extrapolation artifact
     cfg.interpolatenan = 'no';
     ft_topoplotER(cfg, append_opm_nan);
 
-    print -dpng analysis_topo_opm.png
-
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo_opm.png" width="500" %}
+
+#### Excercise
 
 {% include markup/skyblue %}
 Plot the topography including NaNs, then compare it with the topography where you excluded NaNs.
@@ -330,17 +293,13 @@ Plot the topography including NaNs, then compare it with the topography where yo
 
 We are now going to coregister the anatomical MRI to the SQUID coordinate system. We read the MRI, the SQUID channels and the Polhemus head shape in memory. We recommend converting all quantities to SI units to ensure consistent units throughout your pipeline.
 
-    mri    = ft_read_mri('sub-01/anat/sub-01_acq-mprage_T1w.nii');
-    ctf275 = ft_read_sens('sub-01/meg/squid/sub-01_ses-01_task-MedianNervesStim_squid.ds', 'senstype', 'meg');
-    shape  = ft_read_headshape('sub-01/meg/squid/sub-01_ses-01_headshape.pos');
+    mri    = ft_read_mri('sub-01/ses-mri/anat/sub-01_acq-mprage_T1w.nii');
+    ctf275 = ft_read_sens('sub-01/ses-squid/meg/sub-01_ses-squid_task-MedianNervesStim_meg.ds', 'senstype', 'meg');
+    shape  = ft_read_headshape('sub-01/ses-squid/meg/sub-01_ses-squid_headshape.pos');
 
     mri    = ft_convert_units(mri, 'm');
     ctf275 = ft_convert_units(ctf275, 'm');
     shape  = ft_convert_units(shape, 'm');
-
-    save mri mri
-    save ctf275 ctf275
-    save shape shape
 
 {% include markup/skyblue %}
 To understand coregistration, you first need to know what [coordinate systems](/faq/source/coordsys) are. Coregistration is about aligning data that is initially expressed in different coordinate systems into a single coordinate system.
@@ -350,44 +309,46 @@ Start by plotting the MRI, the SQUID sensors, and the Polhemus head shape to see
 
 We coregister the MRI to the SQUIDs by converting the MRI coordinate system to match that of the SQUIDs. In other words, we ensure that the three fiducials (nasion, LPA and RPA) defined in the MRI coordinate system become aligned to the same three fiducials defined in the SQUID coordinate system.
 
-    load shape shape
-    load ctf275 ctf275
-
     % assign the 'ctf' coordinate system to the MRI
     cfg              = [];
     cfg.method       = 'interactive';
     cfg.coordsys     = 'ctf'; % ALS coordinate system
     mri_realigned1   = ft_volumerealign(cfg, mri);
 
-    save mri_realigned1 mri_realigned1
+    % save mri_realigned1 mri_realigned1
+
+{% include image src="/assets/img/workshop/hangzhou2026/analysis_realigned1.png" width="500" %}
 
 To refine the coregistration, we can also coregister the Polhemus head shape with the skin surface that is extracted from the previously aligned MRI. Now not only the fiducials but also other skin surface points acquired with the Polhemus are used for the alignment.
-
-    load mri_realigned1 mri_realigned1
 
     cfg = [];
     cfg.method = 'headshape';
     cfg.headshape.headshape = shape;
     mri_realigned2 = ft_volumerealign(cfg, mri_realigned1);
 
-    % check
+{% include image src="/assets/img/workshop/hangzhou2026/analysis_realigned2.png" width="500" %}
+
+Although you can, you don't have to make adjustments to the initial alignment. The alignment with the fiducials is a good starting point for the ICP.
+
+    % run once more to check
     cfg = [];
     cfg.method = 'headshape';
     cfg.headshape.headshape = shape;
     cfg.headshape.icp = 'no';
     ft_volumerealign(cfg, mri_realigned2);
 
-    save mri_realigned2 mri_realigned2
+    % save mri_realigned2 mri_realigned2
 
 Let's plot the sensor topography in 3D using **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**. This will help us visualize where the sensors are positioned relative to the head. To make this clearer, we'll also display the scalp and brain surfaces.
 
 First, we'll prepare the surface mesh of the scalp and brain:
 
-    load mri_realigned2 mri_realigned2
-
     cfg                = [];
     cfg.output         = {'brain', 'scalp'};
     mri_segmented      = ft_volumesegment(cfg, mri_realigned2);
+
+    % save it, we will reuse it later
+    save mri_segmented mri_segmented
 
     cfg                = [];
     cfg.tissue         = {'brain'};
@@ -397,29 +358,21 @@ First, we'll prepare the surface mesh of the scalp and brain:
     cfg.tissue         = {'scalp'};
     mesh_scalp         = ft_prepare_mesh(cfg, mri_segmented);
 
-    save mesh_brain mesh_brain
-    save mesh_scalp mesh_scalp
-
 Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seconds, along with the brain and scalp:
-
-    load mesh_brain mesh_brain
-    load mesh_scalp mesh_scalp
-    load avg_squid avg_squid
-    load ctf275 ctf275
 
     % do not select the reference sensors
     index  = startsWith(ctf275.label, 'M');
     pos275 = ctf275.chanpos(index, :);
 
     % average the activity of interest in the time window [0.035 0.050] sec
-    I1 = nearest(avg_squid.time, 0.035);
-    I2 = nearest(avg_squid.time, 0.050);
+    t1 = nearest(avg_squid.time, 0.035);
+    t2 = nearest(avg_squid.time, 0.050);
 
-    selected_avg = mean(avg_squid.avg(:, I1:I2), 2);
+    selected_avg = mean(avg_squid.avg(:, t1:t2), 2);
 
     % plot
     figure
-    ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none')
+    ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none', 'axes', true)
     hold on
     ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none')
     hold on
@@ -427,15 +380,13 @@ Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seco
     camlight
     view([90 0])
 
-    print -dpng analysis_topo3d_squid.png
-
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo3d_squid.png" width="500" %}
 
 ### OPM
 
-We will coregister the OPMs with the MRI using an optical 3D scanner which captures the participant's facial features along with the OPM helmet. First we read and plot the optical scan:
+We will coregister the OPMs with the MRI using a scan from an optical 3D scanner which captures the participant's facial features along with the OPM helmet. First we read and plot the optical scan:
 
-    scan      = ft_read_headshape('sub-01/meg/opm/sub-01-ses-01_opticalscan.obj');
+    scan      = ft_read_headshape('sub-01/ses-opm/meg/sub-01_ses-opm_opticalscan.obj');
     scan.unit = 'm'; % assign the correct unit
 
     figure
@@ -446,7 +397,7 @@ We will coregister the OPMs with the MRI using an optical 3D scanner which captu
     material dull
     light
 
-We assign a head-based coordinate system to the scan, using the fiducial method in which we click on the nasion, LPA and RPA in the displayed scan.
+We assign an initial coarse head-based coordinate system to the 3D scan, using the fiducial method in which we click on the nasion, LPA and RPA in the displayed scan.
 
     cfg          = [];
     cfg.method   = 'fiducial';
@@ -462,8 +413,6 @@ We assign a head-based coordinate system to the scan, using the fiducial method 
     material dull
     light
 
-    save scan_aligned scan_aligned
-
 We remove irrelevant parts such as the body and cables. We use the **[ft_defacemesh](/reference/ft_defacemesh)** function with a bounding box to keep only the desired head area.
 
     cfg           = [];
@@ -471,16 +420,17 @@ We remove irrelevant parts such as the body and cables. We use the **[ft_defacem
     cfg.selection = 'inside';
     scan_head     = ft_defacemesh(cfg, scan_aligned);
 
+    % save scan_head scan_head
+
+For "rotate" you specify [-30, 0, 0], for scale [0.2, 0.3, 0.2], and for translate [0, 40, 20]. Then you press "quit".
+
     figure
     hold on
-    ft_plot_headshape(scan_head);
-    ft_plot_axes(scan_head);
+    ft_plot_headshape(scan_head, 'axes', true);
     view([125 10]);
     lighting gouraud
     material dull
-    light
-
-    print -dpng analysis_scan_head.png
+    ft_headlight
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_head.png" width="500" %}
 
@@ -491,42 +441,21 @@ We isolate the face region from the 3D scan using a bounding box. We will later 
     cfg.selection = 'inside';
     scan_face     = ft_defacemesh(cfg, scan_head);
 
+    % save scan_face scan_face
+
     figure
     hold on
-    ft_plot_headshape(scan_face);
-    ft_plot_axes(scan_face);
+    ft_plot_headshape(scan_face, 'axes', true);
     view([125 10]);
     lighting gouraud
     material dull
-    light
-
-    print -dpng analysis_scan_face.png
+    ft_headlight
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_face.png" width="500" %}
 
-Next, we isolate the helmet region from the 3D scan using a bounding box. We will later align this helmet with the reference helmet (i.e., the 3D model of the actual FieldLine helmet).
-
-    cfg           = [];
-    cfg.method    = 'box';
-    cfg.selection = 'outside';
-    scan_helmet   = ft_defacemesh(cfg, scan_head);
-
-    figure
-    hold on
-    ft_plot_headshape(scan_helmet);
-    ft_plot_axes(scan_helmet);
-    view([125 10]);
-    lighting gouraud
-    material dull
-    light
-
-    print -dpng analysis_scan_helmet.png
-
-{% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_helmet.png" width="500" %}
-
 We load the MRI. As the same participant took part in both the SQUID and the OPM recordings, we can reuse the segmented MRI from the SQUID analysis to save time:
 
-    load mri_segmented mri_segmented % from the SQUID analysis
+    load mri_segmented % from the SQUID analysis
 
 We align the face from the 3D scan with the face extracted from the MRI.
 
@@ -543,7 +472,7 @@ We align the face from the 3D scan with the face extracted from the MRI.
     cfg.meshstyle     = {'edgecolor', 'k', 'facecolor', 'skin'};
     scan_face_aligned = ft_meshrealign(cfg, scan_face);
 
-    save scan_face_aligned scan_face_aligned
+    % save scan_face_aligned scan_face_aligned
 
     figure
     hold on
@@ -552,23 +481,21 @@ We align the face from the 3D scan with the face extracted from the MRI.
     view([125 10]);
     lighting gouraud
     material dull
-    light
-
-    print -dpng analysis_scan_face_aligned.png
+    ft_headlight
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_face_aligned.png" width="500" %}
 
-We align the helmet from the 3D scan with the reference helmet. For this we use the 3D model of the actual FieldLine helmet. The reference helmet only contains the rim around the face.
+We align the whole head (including helmet) from the 3D scan with the reference helmet. For this we use the 3D model of the actual FieldLine helmet. The reference helmet only contains the rim around the face.
 
-    helmet_rim = ft_read_headshape('sub-01/meg/opm/fieldlinebeta2_helmet_rim.mat');
+    helmet_rim = ft_read_headshape('sub-01/ses-opm/meg/fieldlinebeta2_helmet_rim.mat');
 
     cfg                   = [];
     cfg.method            = 'interactive';
     cfg.headshape         = helmet_rim;
     cfg.meshstyle         = {'edgecolor', 'none', 'facecolor', [1 0.5 0.5]};
-    scan_helmet_aligned   = ft_meshrealign(cfg, scan_helmet);
+    scan_helmet_aligned   = ft_meshrealign(cfg, scan_head);
 
-    save scan_helmet_aligned scan_helmet_aligned
+    % save scan_helmet_aligned scan_helmet_aligned
 
     figure
     hold on
@@ -577,9 +504,7 @@ We align the helmet from the 3D scan with the reference helmet. For this we use 
     view([145 10]);
     lighting gouraud
     material dull
-    light
-
-    print -dpng analysis_scan_helmet_aligned.png
+    ft_headlight
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_helmet_aligned.png" width="500" %}
 
@@ -593,63 +518,58 @@ Now we can use the transformation that aligns the face from the 3D scan with the
 
 The transformation matrix `transform_helmet2face` can now be used to coregister the OPM sensors with the MRI, which aligns the OPM sensors with the head-based coordinate system. Before applying the transformation, we need to read the OPM sensors from the six fif files and combine them into a single sensor structure. In the FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet.
 
-    d = dir('sub-01/meg/opm/*.fif');
+    d = dir('sub-01/ses-opm/meg/*.fif');
 
     for i = 1:6
         sensfile = fullfile(d(i).folder, d(i).name);
-        sens(i)  = ft_read_sens(sensfile);
+        grad_opm(i)  = ft_read_sens(sensfile);
     end
 
-    save sens sens
+    % save grad_opm grad_opm
 
-    cfg              = [];
-    sens_combined    = ft_appendsens(cfg, sens(1), sens(2), sens(3), sens(4), sens(5), sens(6)); % removes the duplicate channels
+    cfg               = [];
+    grad_opm_combined = ft_appendsens(cfg, grad_opm(1), grad_opm(2), grad_opm(3), grad_opm(4), grad_opm(5), grad_opm(6)); % removes the duplicate channels
 
-    save sens_combined sens_combined
+    % save grad_opm_combined grad_opm_combined
 
 We apply the transformation to align the OPM sensors with the head-based coordinate system.
 
-    fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, sens_combined);
+    fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, grad_opm_combined);
 
-    save fieldlinebeta2_head fieldlinebeta2_head
+    % save fieldlinebeta2_head fieldlinebeta2_head
 
     figure
     hold on
     ft_plot_sens(fieldlinebeta2_head, 'label', 'off');
-    ft_plot_headshape(mri_face, 'facecolor', [0.5 0.5 1], 'facealpha', 0.4, 'edgecolor', 'none');
+    ft_plot_headshape(mri_face, 'facecolor', [0.5 0.5 1], 'facealpha', 0.8, 'edgecolor', 'none');
     view([125 10]);
     lighting gouraud
     material dull
-    light
-
-    print -dpng analysis_fieldlinebeta2_head.png
+    ft_headlight
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_fieldlinebeta2_head.png" width="500" %}
 
-Lastly, we plot the 3D sensor topography for the time window [0.035, 0.050] seconds, along with the scalp:
+{% include markup/yellow %}
+The alignment here is not optimal yet, the sensors are not on the scalp. Ideally, the model for the sensors should hover uniformely 5 mm above the scalp, since the sensitive pickup point from each sensor is 5 mm from its bottom.
+{% include markup/end %}
 
-    load mesh_brain mesh_brain % from the SQUID analysis
-    load mesh_scalp mesh_scalp % from the SQUID analysis
-    load fieldlinebeta2_head fieldlinebeta2_head
-    load append_opm append_opm
+Lastly, we plot the 3D sensor topography for the time window from 35 to 50 ms, along with the scalp:
 
     [i_avg, i_sens] = match_str(append_opm.label, fieldlinebeta2_head.label);
 
     % average the activity of interest in the time window [0.035 0.050] sec
-    I1 = nearest(append_opm.time, 0.035);
-    I2 = nearest(append_opm.time, 0.050);
+    t1 = nearest(append_opm.time, 0.035);
+    t2 = nearest(append_opm.time, 0.050);
 
-    selected_avg = mean(append_opm.avg(:, I1:I2), 2);
+    selected_avg = mean(append_opm.avg(:, t1:t2), 2);
 
     % plot
     figure
-    ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none')
+    ft_plot_mesh(mesh_scalp, 'facealpha', 0.2, 'facecolor', 'skin', 'edgecolor', 'none')
     hold on
     ft_plot_topo3d(fieldlinebeta2_head.chanpos(i_sens, :), selected_avg(i_avg), 'facealpha', 1)
-    camlight
+    ft_headlight
     view([90 0])
-
-    print -dpng analysis_topo3d_opm.png
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo3d_opm.png" width="500" %}
 
@@ -667,11 +587,10 @@ In this tutorial we analyzed OPM-MEG data from a left median nerve stimulation e
 
 ## See also
 
-For more information, see also
-
-- the hands-on session on [planning the acquisition of OPM-MEG data](/workshop/hangzhou2026/acquisition), which covers the design of the OPM sensor array
-- the tutorial on [preprocessing of OPM data](/tutorial/sensor/preprocessing_opm/), which covers the preprocessing of OPM-MEG data in more detail
-- the tutorial on [coregistration of OPM data](/tutorial/source/coregistration_opm/), which covers alternative coregistration methods in more detail
-- the FAQ on [how the different head and MRI coordinate systems are defined](/faq/source/coordsys)
+For more information, see also the following tutorials:
 
 {% include seealso category="tutorial" tag1="opm" %}
+
+and the following examples:
+
+{% include seealso category="example" tag1="opm" %}
