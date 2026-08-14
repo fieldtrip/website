@@ -21,13 +21,14 @@ The first lecture introduces the physical principles underlying OPM sensors and 
 
 ## Lecture 2 — Analysis Methods: Preprocessing, Sensor-Level Analysis, and Beamforming
 
-The second lecture walks through the full analysis pipeline for OPM-MEG data, from raw recordings to source-localised results. After an overview of preprocessing steps — artefact identification and rejection, handling of movement, and channel-level data inspection — the lecture covers sensor-level analysis of event-related fields and time-frequency responses. The core of the session is dedicated to beamformer source reconstruction. Beamformers are spatially adaptive filters that estimate neural activity at each point in the brain by minimising interference from other locations. The lecture explains the principles behind the linearly constrained minimum variance (LCMV) beamformer for time-domain analysis and the DICS approach for oscillatory, frequency-domain data; it covers the construction of forward models (head model, source model, and lead field matrix) that are required as inputs, and discusses strategies for defining appropriate active and baseline contrast windows. The session concludes with an overview of how source estimates can be visualised and interpreted, and where common pitfalls arise.
+The second lecture walks through the full analysis pipeline for OPM-MEG data, from raw recordings to source-localised results. After an overview of preprocessing steps — artefact identification and rejection, handling of movement, and channel-level data inspection — the lecture covers sensor-level analysis of event-related fields and time-frequency responses. The core of the session is dedicated to beamformer source reconstruction. Beamformers are spatially adaptive filters that estimate neural activity at each point in the brain by minimising interference from other locations. The lecture explains the principles behind the linearly constrained minimum variance (LCMV) beamformer for time-domain analysis and the DICS approach for oscillatory, frequency-domain data; it covers the construction of forward models (head model, source model, and lead field matrix) that are required as inputs, and discusses strategies for defining appropriate active and baseline contrast windows. The session concludes with an overview of how source estimates can be visualised and interpreted.
 
 ## Hands-On Sessions
 
 Both lectures are accompanied by guided hands-on sessions using MATLAB and FieldTrip. Participants will preprocess an example OPM-MEG dataset, compute event-related fields and time-frequency representations at the sensor level, and apply a beamformer to localise oscillatory sources. All scripts and data will be made available before the workshop. Participants are expected to bring their own laptops with MATLAB and a recent version of FieldTrip installed.
 
-Course material and tutorial data will be distributed through this website at a later moment, and will also be available on USB sticks for on-site participants.
+- [Hands-on session on acquisition](/workshop/hangzhou2026/acquisition)
+- [Hands-on session on analysis](/workshop/hangzhou2026/analysis)
 
 ## Who Should Attend
 
