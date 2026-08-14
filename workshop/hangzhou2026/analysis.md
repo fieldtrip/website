@@ -25,16 +25,6 @@ In this tutorial we will use recordings made with 32 OPM sensors placed in an ad
 
 To acquire a measurement for each of the 144 helmet slots, we divided the experiment into six runs. To maintain the participant's head fixed between runs, we kept 9 sensors around the participant's head fixed for all the runs. The remaining 23 sensors were moved to different helmet slots in each run to cover the whole scalp as homogeneously as possible.
 
-### The dataset used in this tutorial
-
-The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field.
-
-We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)).
-
-The dataset can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/analysis).
-
-## Setup
-
 ### Install and start FieldTrip
 
 If you have not yet done so, [install FieldTrip](/getting_started/installation) and start it with
@@ -43,6 +33,14 @@ If you have not yet done so, [install FieldTrip](/getting_started/installation) 
     cd path_to_directory/fieldtrip-xxxxxxxx
     addpath(pwd)
     ft_defaults
+
+### The dataset used in this tutorial
+
+The data for this tutorial was recorded with a 32-sensor FieldLine HEDscan v3 system with a so-called smart helmet. Each OPM sensor has one channel that measures the normal component of the magnetic field.
+
+We perform a left median nerve stimulation experiment on a single participant in both the SQUID and the OPM system. We expect to find a dipole 20 ms post-stimulation in the right primary somatosensory area ([Andersen & Dalal, 2021](https://pubmed.ncbi.nlm.nih.gov/34089874/); [Buchner et al., 1994](https://link.springer.com/article/10.1007/BF01211175)).
+
+The dataset can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/hangzhou2026/analysis).
 
 ### Download the data
 
