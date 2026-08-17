@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42460540'
+- idtype: pmcid
+  value: PMC13471935
+- idtype: doi
+  value: 10.1002/aur.70314
+authors:
+- authtype: Author
+  name: Matyjek M
+- authtype: Author
+  name: Faraco SS
+- authtype: Author
+  name: Martin CA
+- authtype: Author
+  name: Cuello MT
+epubdate: 2026 Jul 16
+fulljournalname: 'Autism research : official journal of the International Society
+  for Autism Research'
+issue: '8'
+pages: e70314
+pmclivedate: 2026/08/14
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Autism Res
+title: Task-Related Aperiodic EEG (1/f) Activity in Autism.
+uid: '13471935'
+volume: '19'

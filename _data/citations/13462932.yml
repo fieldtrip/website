@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42566467'
+- idtype: pmcid
+  value: PMC13462932
+- idtype: doi
+  value: 10.1073/pnas.2528246123
+authors:
+- authtype: Author
+  name: Lotlikar MS
+- authtype: Author
+  name: Ayotte B
+- authtype: Author
+  name: Choi A
+- authtype: Author
+  name: Seo F
+- authtype: Author
+  name: Robertson EM
+- authtype: Author
+  name: Maso FD
+- authtype: Author
+  name: Roig M
+epubdate: 2026 Aug 7
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '32'
+pages: e2528246123
+pmclivedate: 2026/08/13
+printpubdate: 2026 Aug 11
+pubdate: 2026 Aug 11
+sortdate: 2026/08/11 00:00
+source: Proc Natl Acad Sci U S A
+title: 'Protecting episodic memory after sleep loss: Similar benefits of exercise
+  and naps via distinct neural contributions.'
+uid: '13462932'
+volume: '123'

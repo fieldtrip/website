@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42401540'
+- idtype: pmcid
+  value: PMC13470483
+- idtype: doi
+  value: 10.1038/s41467-026-75265-5
+- idtype: pii
+  value: 10.1038/s41467-026-75265-5
+authors:
+- authtype: Author
+  name: Baratin C
+- authtype: Author
+  name: Pessiglione M
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Robin A
+- authtype: Author
+  name: Minotti L
+- authtype: Author
+  name: Becq GJC
+- authtype: Author
+  name: Bastin J
+epubdate: 2026 Jul 4
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/14
+printpubdate: ''
+pubdate: 2026 Jul 4
+sortdate: 2026/07/04 00:00
+source: Nat Commun
+title: Closed-loop readout of anterior insula high-gamma activity steers value-based
+  decisions.
+uid: '13470483'
+volume: '17'

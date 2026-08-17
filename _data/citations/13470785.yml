@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42586792'
+- idtype: pmcid
+  value: PMC13470785
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2386-24.2026
+- idtype: pii
+  value: 46/32/e2386242026
+authors:
+- authtype: Author
+  name: Jovellar DB
+- authtype: Author
+  name: Turrini S
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Roy O
+- authtype: Author
+  name: Santarnecchi E
+- authtype: Author
+  name: Ziemann U
+epubdate: 2026 Aug 12
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '32'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Aug 12
+sortdate: 2026/08/12 00:00
+source: J Neurosci
+title: Real-Time Brain-State-Coupled Corticocortical Paired Associative Stimulation
+  of Cognitive Networks.
+uid: '13470785'
+volume: '46'

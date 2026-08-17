@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42236532'
+- idtype: pmcid
+  value: PMC13469618
+- idtype: doi
+  value: 10.1038/s41598-026-53424-4
+- idtype: pii
+  value: 10.1038/s41598-026-53424-4
+authors:
+- authtype: Author
+  name: Adamczyk AK
+- authtype: Author
+  name: Wyczesany M
+epubdate: 2026 Jun 3
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/14
+printpubdate: ''
+pubdate: 2026 Jun 3
+sortdate: 2026/06/03 00:00
+source: Sci Rep
+title: 'Cognitive control networks causally support implicit emotion regulation: evidence
+  from dlPFC stimulation and directed functional connectivity.'
+uid: '13469618'
+volume: '16'

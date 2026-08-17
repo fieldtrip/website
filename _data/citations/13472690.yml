@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42477882'
+- idtype: pmcid
+  value: PMC13472690
+- idtype: doi
+  value: 10.1093/scan/nsag061
+- idtype: pii
+  value: '8738597'
+authors:
+- authtype: Author
+  name: Sturm S
+- authtype: Author
+  name: Blasco-Oliver M
+- authtype: Author
+  name: SanMiguel I
+epubdate: ''
+fulljournalname: Social cognitive and affective neuroscience
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/14
+printpubdate: 2026 Jan 21
+pubdate: 2026 Jan 21
+sortdate: 2026/01/21 00:00
+source: Soc Cogn Affect Neurosci
+title: Action-effect proximity, order, and predictability differentially modulate
+  electrophysiological responses and explicit judgements of agency.
+uid: '13472690'
+volume: '21'

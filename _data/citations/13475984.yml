@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '42574470'
+- idtype: pmcid
+  value: PMC13475984
+- idtype: doi
+  value: 10.1371/journal.pbio.3003948
+- idtype: pii
+  value: PBIOLOGY-D-26-01302
+authors:
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Bott FS
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Bruna N
+- authtype: Author
+  name: Zebhauser PT
+- authtype: Author
+  name: Ploner M
+epubdate: 2026 Aug 10
+fulljournalname: PLoS biology
+issue: '8'
+pages: e3003948
+pmclivedate: 2026/08/15
+printpubdate: ''
+pubdate: 2026 Aug
+sortdate: 2026/08/10 00:00
+source: PLoS Biol
+title: Neural encoding of pain is robust within but unstable between individuals.
+uid: '13475984'
+volume: '24'

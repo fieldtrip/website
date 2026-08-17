@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42583934'
+- idtype: pmcid
+  value: PMC13466540
+- idtype: doi
+  value: 10.7554/eLife.103956
+- idtype: pii
+  value: '103956'
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Zou Q
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Gao JH
+- authtype: Author
+  name: Liu Y
+epubdate: 2026 Aug 12
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/08/13
+printpubdate: ''
+pubdate: 2026 Aug 12
+sortdate: 2026/08/12 00:00
+source: Elife
+title: Human brain-wide activation of sleep rhythms.
+uid: '13466540'
+volume: '14'

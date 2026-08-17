@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42574458'
+- idtype: pmcid
+  value: PMC13475979
+- idtype: doi
+  value: 10.1371/journal.pbio.3003935
+- idtype: pii
+  value: PBIOLOGY-D-25-03103
+authors:
+- authtype: Author
+  name: Varlet M
+- authtype: Author
+  name: Lenc T
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Keller PE
+epubdate: 2026 Aug 10
+fulljournalname: PLoS biology
+issue: '8'
+pages: e3003935
+pmclivedate: 2026/08/15
+printpubdate: ''
+pubdate: 2026 Aug
+sortdate: 2026/08/10 00:00
+source: PLoS Biol
+title: Lateralised neural mechanisms facilitate auditory self-other distinction and
+  coordination in human dyads.
+uid: '13475979'
+volume: '24'
