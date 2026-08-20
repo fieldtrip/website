@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42614911'
+- idtype: pmcid
+  value: PMC13483082
+- idtype: doi
+  value: 10.1162/IMAG.a.1335
+- idtype: pii
+  value: IMAG.a.1335
+authors:
+- authtype: Author
+  name: Bilgen G
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: ElShafei A
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Haegens S
+epubdate: 2026 Aug 17
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/08/19
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/08/17 00:00
+source: Imaging Neurosci (Camb)
+title: Functionally distinct alpha components are differentially modulated by attention
+  and affect behavior.
+uid: '13483082'
+volume: '4'

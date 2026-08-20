@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42611698'
+- idtype: doi
+  value: 10.1002/advs.77103
+- idtype: pmcid
+  value: PMC13484735
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Sanz Perl Y
+- authtype: Author
+  name: Greenstein N
+- authtype: Author
+  name: Chandaria S
+- authtype: Author
+  name: Scholes G
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2026 Aug 18
+fulljournalname: Advanced science (Weinheim, Baden-Wurttemberg, Germany)
+issue: ''
+pages: e77103
+pmclivedate: 2026/08/19
+printpubdate: ''
+pubdate: 2026 Aug 18
+sortdate: 2026/08/18 00:00
+source: Adv Sci (Weinh)
+title: Quantum-Like Dynamics in Whole-Brain Models of the Human Connectome.
+uid: '13484735'
+volume: ''

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42426016'
+- idtype: pmcid
+  value: PMC13478490
+- idtype: doi
+  value: 10.1038/s41467-026-75359-0
+- idtype: pii
+  value: 10.1038/s41467-026-75359-0
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Koenig L
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: He BJ
+epubdate: 2026 Jul 9
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/18
+printpubdate: ''
+pubdate: 2026 Jul 9
+sortdate: 2026/07/09 00:00
+source: Nat Commun
+title: Neural mechanisms of time-forward predictions for naturalistic auditory tone
+  sequences.
+uid: '13478490'
+volume: '17'
