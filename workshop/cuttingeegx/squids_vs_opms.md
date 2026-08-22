@@ -69,7 +69,7 @@ We begin by loading the SQUID data and defining trials. We select trials in whic
 %% Preprocessing & trial definition
 
 cfg                     = [];
-cfg.dataset             = 'sub-01_ses-01_task-MedianNervesStim_squid.ds'; % add the whole path to your meg file
+cfg.dataset             = 'sub-01_ses-squid_task-MedianNervesStim_meg.ds'; % add the whole path to your meg file
 cfg.trialdef.eventtype  = 'UPPT001';
 cfg.trialdef.eventvalue = [1]; 
 cfg.trialdef.prestim    = 0.2; 
@@ -360,8 +360,8 @@ We are now going to coregister the anatomical MRI to the SQUID coordinate system
 %% Loading files & converting to SI units
 
 mri    = ft_read_mri('sub-01_acq-mprage_T1w.nii');
-ctf275 = ft_read_sens('sub-01_ses-01_task-MedianNervesStim_squid.ds', 'senstype', 'meg');
-shape  = ft_read_headshape('sub-01_ses-01_headshape.pos');
+ctf275 = ft_read_sens('sub-01_ses-squid_task-MedianNervesStim_meg.ds', 'senstype', 'meg');
+shape  = ft_read_headshape('sub-01_ses-squid_headshape.pos');
 
 mri    = ft_convert_units(mri, 'm');
 ctf275 = ft_convert_units(ctf275, 'm');
@@ -489,7 +489,7 @@ We will coregister the OPMs with the MRI using an optical 3D scanner which captu
 ```
 %% Loading files
 
-scan      = ft_read_headshape('sub-01-ses-01_opticalscan.obj');
+scan      = ft_read_headshape('sub-01_ses-opm_opticalscan.obj');
 scan.unit = 'm'; % assign the correct unit
 
 figure; hold on;

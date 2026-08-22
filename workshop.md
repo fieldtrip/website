@@ -15,11 +15,11 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2026, [SDG summer school](/workshop/hangzhou2026) - Hangzhou, China
 - 2026, [MEG/OPM toolkit](/workshop/toolkit2026) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
+- 2026, [SDG summer school](/workshop/hangzhou2026) - Hangzhou, China
 - 2026, [ALMA pre-conference workshop](/workshop/kenya2026) - Nairobi, Kenya
 - 2025, [PracticalMEEG](/workshop/practicalmeeg2025) - Aix-en-Provence, France
 - 2025, [African Brain Data Network](/workshop/nigeria2025) - Port Harcourt, Nigeria

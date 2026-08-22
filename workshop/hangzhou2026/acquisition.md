@@ -1,6 +1,6 @@
 ---
 title: Planning the acquisition of OPM-MEG data 
-tags: [hangzhou2026]
+tags: [hangzhou2026, opm]
 ---
 
 ## Introduction

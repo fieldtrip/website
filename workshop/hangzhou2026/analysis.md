@@ -1,6 +1,6 @@
 ---
 title: Analysis of OPM-MEG data 
-tags: [hangzhou2026]
+tags: [hangzhou2026, opm]
 ---
 
 ## Introduction
@@ -375,7 +375,7 @@ Now, we'll plot the 3D sensor topography for the time window [0.035, 0.050] seco
     ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none')
     hold on
     ft_plot_topo3d(pos275, selected_avg, 'facealpha', 0.9)
-    camlight
+    ft_headlight
     view([90 0])
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo3d_squid.png" width="500" %}
@@ -401,6 +401,8 @@ We assign an initial coarse head-based coordinate system to the 3D scan, using t
     cfg.method   = 'fiducial';
     cfg.coordsys = 'neuromag';
     scan_aligned = ft_meshrealign(cfg, scan);
+
+    % save scan_aligned scan_aligned
 
     figure
     hold on
@@ -428,7 +430,7 @@ For "rotate" you specify [-30, 0, 0], for scale [0.2, 0.3, 0.2], and for transla
     view([125 10]);
     lighting gouraud
     material dull
-    ft_headlight
+    light
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_scan_head.png" width="500" %}
 

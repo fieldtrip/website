@@ -258,7 +258,7 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
     cfg.colorbar      = 'no';
     ft_sourceplot(cfg, source);
     view([-90 30]);
-    light;
+    light
 
 {% include image src="/assets/img/tutorial/networkanalysis/figure4.png" width="400" %}
 
