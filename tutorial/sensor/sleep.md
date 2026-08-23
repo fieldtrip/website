@@ -614,7 +614,7 @@ From this R-wave samples we can also compute a continuous heart rate signal.
     % let us place the heart rate in between the beats
     heart_time = (heart_time(1:end-1) + heart_time(2:end)) / 2;
 
-    figure;
+    figure
     plot(heart_time, heart_rate)
     xlabel('time (s)');
     ylabel('heart rate (bpm)');

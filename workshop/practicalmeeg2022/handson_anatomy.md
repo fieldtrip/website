@@ -179,7 +179,7 @@ on the MATLAB command line, you see something like this:
 That is, a bunch of files, which exist in an 'rh' and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualize them in the following way:
 
     pial = ft_read_headshape({'lh.pial' 'rh.pial'});
-    figure;
+    figure
     ft_plot_mesh(pial, 'vertexcolor', pial.sulc);
     h1 = light('position',[-1 0 0]);
     h2 = light('position',[1 0 0]);
@@ -270,7 +270,7 @@ We can have a look at some files in a bit more detail:
     very_inflated = ft_read_headshape('sub-01.L.very_inflated.8k_fs_LR.surf.gii');
     sphere        = ft_read_headshape('sub-01.L.sphere.8k_fs_LR.surf.gii');
 
-    figure;
+    figure
     h1 = subplot(2,3,1); ft_plot_mesh(white,'vertexcolor',white.thickness); lighting gouraud; material dull;light
     h2 = subplot(2,3,2); ft_plot_mesh(midthickness,'vertexcolor',white.thickness); lighting gouraud; material dull;light
     h3 = subplot(2,3,3); ft_plot_mesh(pial,'vertexcolor',white.thickness); lighting gouraud; material dull;light

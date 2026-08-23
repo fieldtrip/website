@@ -20,7 +20,7 @@ The following script demonstrates how you can determine the filter characteristi
     f(3,:) = ft_preproc_lowpassfilter(s, 1000, 100);
     f(4,:) = ft_preproc_lowpassfilter(s, 1000, 50);
 
-    figure;
+    figure
     subplot(1,2,1);
     plot(t, f-repmat((0:3)',1,1000)); grid on; set(gca, 'ylim', [-3.5 0.5]); xlabel('time (s)'); ylabel(str);
     subplot(1,2,2);
@@ -37,7 +37,7 @@ The following script demonstrates how you can determine the filter characteristi
     f(3,:) = ft_preproc_lowpassfilter(s, 1000, 50, 8);
     f(4,:) = ft_preproc_lowpassfilter(s, 1000, 50, 16);
 
-    figure;
+    figure
     subplot(1,2,1);
     plot(t, f-repmat((0:3)',1,1000)); grid on; set(gca, 'ylim', [-3.5 0.5]); xlabel('time (s)'); ylabel(str);
     subplot(1,2,2);
@@ -54,7 +54,7 @@ The following script demonstrates how you can determine the filter characteristi
     f(3,:) = ft_preproc_lowpassfilter(s, 1000, 50, [], 'fir');
     f(4,:) = nan;
 
-    figure;
+    figure
     subplot(1,2,1);
     plot(t, f-repmat((0:3)',1,1000)); grid on; set(gca, 'ylim', [-3.5 0.5]); xlabel('time (s)'); ylabel(str);
     subplot(1,2,2);
@@ -71,7 +71,7 @@ The following script demonstrates how you can determine the filter characteristi
     f(3,:) = ft_preproc_lowpassfilter(s, 1000, 50, [], 'but', 'onepass-reverse');
     f(4,:) = ft_preproc_lowpassfilter(s, 1000, 50, [], 'but', 'twopass');
 
-    figure;
+    figure
     subplot(1,2,1);
     plot(t, f-repmat((0:3)',1,1000)); grid on; set(gca, 'ylim', [-3.5 0.5]); xlabel('time (s)'); ylabel(str);
     subplot(1,2,2);

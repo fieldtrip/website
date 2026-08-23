@@ -25,8 +25,8 @@ The reason for this is that when you square a sine wave, its frequency will be d
     fdata = fdata./sum(fdata); %normalise to sum 1
     fdata_combined = fdata_combined./sum(fdata_combined);
 
-    figure;
-    hold on;
+    figure
+    hold on
     plot(freqaxis, fdata(1:501));
     plot(freqaxis, fdata_combined(1:501));
     legend({'first fft, then combine' 'first combine, then fft'});

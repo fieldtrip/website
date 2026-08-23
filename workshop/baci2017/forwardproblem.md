@@ -138,9 +138,9 @@ If the electrodes are not well aligned with the mesh, we can realign them with:
 
 Check the alignment visually.
 
-    figure;
+    figure
     ft_plot_axes(mesh_bem)
-    hold on;
+    hold on
     ft_plot_mesh(mesh_bem.bnd(1), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor', 'skin', 'facealpha',0.5, 'edgealpha',0.1)
     ft_plot_sens(elec, 'style', '.k');
 

@@ -264,7 +264,7 @@ We cut the data into 10-second segments with 80% overlap and compute the average
     cfg.pad       = 10;
     freq          = ft_freqanalysis(cfg, data_segmented);
 
-    figure;
+    figure
     plot(freq.freq, log10(mean(freq.powspctrm)));
     xlabel('frequency (Hz)');
     ylabel('log_10 power')
@@ -294,7 +294,7 @@ To focus on the signals of the specific HPI-coils, we bandpass filter the data i
     data14         = ft_selectdata(cfg, data14);
 
     %% look at 2 seconds of the data
-    figure;
+    figure
     plot(data08.time{1}, data08.trial{1});
     xlim([4 6]);
     xlabel('time (s)');

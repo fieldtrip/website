@@ -478,7 +478,7 @@ Rather than `cfg.method='montecarlo'`, we could also have used another method, s
     shaded_area = {[0, 0, 1], [1 0 0], [0, 0, 0]};
 
     % Plot the ERP of the channel with maximum effect size of positive Cluster
-    figure;
+    figure
 
     % Condition 1
     subplot(1,2,1)

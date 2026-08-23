@@ -108,7 +108,7 @@ Let's plot the results and see if there's a difference
     cfg.xlim    = [0.5 1];
     cfg.ylim    = [8 12];
 
-    figure;
+    figure
     subplot(321);ft_topoplotTFR(cfg, freq_axial_avg);title('axial');colorbar;
     subplot(323);ft_topoplotTFR(cfg, freq_combined_avg1);title('combined-then-average');colorbar;
     subplot(325);ft_topoplotTFR(cfg, freq_combined_avg2);title('average-then-combined');colorbar;
@@ -172,7 +172,7 @@ Let's visualize and compare the result
     cfg.channel = 'MEG';
     cfg.xlim    = [0.5 1];
 
-    figure;
+    figure
     subplot(421);ft_topoplotER(cfg, data_axial_avg);    title('axial');colorbar;
     subplot(423);ft_topoplotER(cfg, data_combined_avg1);title('combined then average');colorbar;
     subplot(425);ft_topoplotER(cfg, data_combined_avg2);title('average axial then planar+combined');colorbar;

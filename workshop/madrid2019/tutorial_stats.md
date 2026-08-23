@@ -558,11 +558,11 @@ selection is orthogonal to the EEG contrast we will test.
     drowsy_group = find(hit_rate(:,3)<70);
     respon_group = setxor(1:size(covariates,1),drowsy_group);
 
-    figure;
+    figure
     plot(hit_rate(respon_group,:)','-^b','MarkerFaceColor','b');
-    hold on;
+    hold on
     plot(hit_rate(drowsy_group,:)','marker','^','color',[0 0.5 0],'MarkerFaceColor',[0 0.5 0])
-    hold off;
+    hold off
     ylabel('Perceptual hit rate (%)');
     set(gca,'XTickLabel',{'baseline','','mild','','moderate','','recovery'});
 
@@ -682,7 +682,7 @@ analysis:
 
 We can also plot power spectra for each group separately, as a function of sedative state. Let us first plot them for the frontal region of interest:
 
-    figure;
+    figure
 
     subplot(2,4,1); loglog(base_sedation_respon.freq,...
       [squeeze(mean(mean(base_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
@@ -961,7 +961,7 @@ Compute the means
     sem_b_d = sem(b_d.(parameter),1);
     sem_m_d = sem(m_d.(parameter),1);
 
-    figure;
+    figure
 
     errorbar([1 2],[x_b_r,x_m_r]',[sem_b_r,sem_m_r(1)],'-rs');
     ylabel(parameter);

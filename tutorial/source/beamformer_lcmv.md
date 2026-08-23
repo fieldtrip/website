@@ -179,7 +179,7 @@ Now prepare the source model. Here one has the option to make a 'normalized grid
     sourcemodel     = ft_prepare_sourcemodel(cfg);
 
     % make a figure of the single subject headmodel, and grid positions
-    figure;
+    figure
     ft_plot_sens(grad, 'style', '*b');
     ft_plot_headmodel(headmodel, 'edgecolor', 'none'); alpha 0.4;
     ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));

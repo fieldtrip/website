@@ -367,7 +367,7 @@ We now calculate the raw effect in the average with planar gradient data using t
 
 Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels contributing to the largest cluster
 
-    figure;
+    figure
     timestep      = 0.05; %(in seconds)
     sampling_rate = dataFC_LP.fsample;
     sample_count  = length(stat.time);
@@ -497,7 +497,7 @@ With the output, we can now create the plots
     cfg.parameter = 'avg';
     GA_FICvsFC    = ft_math(cfg, GA_FIC, GA_FC);
 
-    figure;
+    figure
     % define parameters for plotting
     timestep      = 0.05; %(in seconds)
     sampling_rate = dataFIC_LP.fsample;

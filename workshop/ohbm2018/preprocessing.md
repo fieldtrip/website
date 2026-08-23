@@ -212,7 +212,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft
 
     % plot single trial together with global mean field power
     h1 = plot(EEG_avg.time,signal_EEG,'color',[0,0,0.5]);
-    hold on;
+    hold on
     h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_singleploter.png" width="600" %}
@@ -228,7 +228,7 @@ _Figure 2: Representation of single trial (blue) and the global mean field power
 
     % plot single trial together with global mean field power
     h1 = plot(MEG_avg.time,signal_MEG,'color',[0,0,0.5]);
-    hold on;
+    hold on
     h2 = plot(MEG_avg.time,scale*MEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_singleploter.png" width="600" %}

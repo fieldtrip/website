@@ -88,8 +88,8 @@ Now we use **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute the powe
 
 We can plot the power spectra of channel 61 using the standard MATLAB plot function.
 
-    figure;
-    hold on;
+    figure
+    hold on
     plot(base_freq1.freq, base_freq1.powspctrm(61,:))
     plot(base_freq2.freq, base_freq2.powspctrm(61,:))
     plot(base_freq4.freq, base_freq4.powspctrm(61,:))

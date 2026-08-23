@@ -27,7 +27,7 @@ The image on disk has an ugly aliasing artifact at the top, causing the standard
     cfg.numvertices = [3000 2000 1000];
     bnd0            = ft_prepare_mesh(cfg, segmentedmri0);
 
-    figure;
+    figure
     ft_plot_mesh(bnd0(3), 'facecolor',[0.4 0.4 0.4]);
     view([0 0]);
 
@@ -48,7 +48,7 @@ Adjusting the settings for the segmentation is helpful in this case, but will no
     cfg.numvertices = [3000 2000 1000];
     bnd             = ft_prepare_mesh(cfg, segmentedmri);
 
-    figure;
+    figure
     ft_plot_mesh(bnd(3), 'facecolor',[0.4 0.4 0.4]);
     view([0 0]);
 
@@ -101,7 +101,7 @@ _Figure 3. Inhomogeneous anatomical image_
 
 The above already throws a warning that the segmentation is not star-shaped, which is an indication that something fishy might be going on. This is corroborated by the figure that is generated below:
 
-    figure;
+    figure
     ft_plot_mesh(bnd2(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
 
@@ -123,7 +123,7 @@ As mentioned above, the bias in the image can be corrected as follows:
     cfg.numvertices = [3000 2000 1000];
     bnd3            = ft_prepare_mesh(cfg, segmentedmri3);
 
-    figure;
+    figure
     ft_plot_mesh(bnd3(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
     

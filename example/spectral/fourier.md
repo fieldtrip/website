@@ -61,21 +61,21 @@ particularly important when we later compute the coherence spectrum between two 
     ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
     sinwav = sin(ind);
     coswav = cos(ind);
-    figure;
+    figure
     plot(sinwav);
-    hold on;
+    hold on
     plot(coswav,'r');
 
     % get the FFT of the waves and plot the real and imaginary components
     fftsin = fft(sinwav);
-    figure;
+    figure
     subplot(2,1,1);
     plot(real(fftsin));
     subplot(2,1,2);
     plot(imag(fftsin),'r');
 
     fftcos = fft(coswav);
-    figure;
+    figure
     subplot(2,1,1);
     plot(real(fftcos));
     subplot(2,1,2);
@@ -90,7 +90,7 @@ _Figure: The Fourier transform of the sine wave. The result of the Fourier trans
 _Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel)._
 
     % calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
-    figure;
+    figure
     subplot(2,1,1);
     sigsinwav = sinwav;
     plot(sigsinwav .* coswav)
@@ -98,18 +98,18 @@ _Figure: The Fourier transform of the cosine wave. The result of the Fourier tra
     plot(sigsinwav .* sinwav)
     coscmpsin = sum(sigsinwav .* coswav)
     sincmpsin = sum(sigsinwav .* sinwav)
-    figure;
+    figure
     plot([0,coscmpsin],[0,sincmpsin]);
     set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
-    figure;
+    figure
     subplot(2,1,1);
     plot(coswav .* coswav)
     subplot(2,1,2);
     plot(coswav .* sinwav)
     coscmpcos = sum(coswav .* coswav)
     sincmpcos = sum(coswav .* sinwav)
-    figure;
+    figure
     plot([0,coscmpcos],[0,sincmpcos]);
     set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
@@ -121,7 +121,7 @@ _Figure: The Fourier transform of the cosine wave. The result of the Fourier tra
     phs = 45 ./360; % the relative phase advance in fraction of radiants
     ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
     wav = sin(ind);
-    figure;
+    figure
     plot(wav);
 
 {% include image src="/assets/img/example/fourier/figure3.png" %}
@@ -130,7 +130,7 @@ _Figure: A 20 Hz cosine wave shifted 45 degrees._
 
     % get the FFT of the wave
     fftwav = fft(wav);
-    figure;
+    figure
     subplot(2,1,1);
     plot(real(fftwav));
     subplot(2,1,2);
@@ -141,14 +141,14 @@ _Figure: A 20 Hz cosine wave shifted 45 degrees._
 _Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees._
 
     % calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
-    figure;
+    figure
     subplot(2,1,1);
     plot(wav .* coswav)
     subplot(2,1,2);
     plot(wav .* sinwav)
     coscmpwav = sum(wav .* coswav)
     sincmpwav = sum(wav .* sinwav)
-    figure;
+    figure
     plot([0,coscmpwav],[0,sincmpwav]);
     set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
@@ -160,19 +160,19 @@ _Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees._
     phs = 0; % the relative phase advance in fraction of radiants
     ind = ((0 : (len.*smpfrq -1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
     wav = sin(ind);
-    figure;
+    figure
     plot(wav);
 
     % get the FFT of the wave
     fftwav = fft(wav);
-    figure;
+    figure
     subplot(2,1,1);
     plot(real(fftwav));
     subplot(2,1,2);
     plot(imag(fftwav),'r');
 
     % calculate the FFT result OF THE SIGNAL FREQUENCY "by hand"
-    figure;
+    figure
     subplot(2,1,1);
     plot(wav .* coswav)
     subplot(2,1,2);
@@ -206,7 +206,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
     coswav = cos(ind);
     figure('name','sin&cos');
     plot(sinwav);
-    hold on;
+    hold on
     plot(coswav,'r');
 
 {% include image src="/assets/img/example/fourier/figure5.png" %}
@@ -315,11 +315,11 @@ constant phase difference.
     % calculate coherence
     coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
 
-    figure;
+    figure
     plot(squeeze(wav(:,:,1)));
-    figure;
+    figure
     plot(squeeze(wav(:,:,2)));
-    figure;
+    figure
     plot(coh);
 
 {% include image src="/assets/img/example/fourier/figure7.png" %}
@@ -364,11 +364,11 @@ _Figure: Coherence spectrum for two 10 Hz signals with a random phase difference
     % calculate coherence
     coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
 
-    figure;
+    figure
     plot(squeeze(wav(:,:,1)));
-    figure;
+    figure
     plot(squeeze(wav(:,:,2)));
-    figure;
+    figure
     plot(coh);
 
 {% include image src="/assets/img/example/fourier/figure8.png" %}

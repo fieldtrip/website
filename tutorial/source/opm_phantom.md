@@ -142,7 +142,7 @@ To verify that all 24 coils are active and producing signals at their expected f
     cfg.foilim = [1 30];
     freq = ft_freqanalysis(cfg, data_segmented);
 
-    figure;
+    figure
     plot(freq.freq, log10(mean(freq.powspctrm)));
     xlabel('frequency (Hz)');
     ylabel('log_10 power');

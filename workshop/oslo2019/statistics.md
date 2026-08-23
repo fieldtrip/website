@@ -487,7 +487,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
 
     stats = {stat_t_freq stat_t_bonferroni_freq stat_t_cluster_freq};
     n_tests = length(stats);
-    h = figure;
+    h = figure
     for test_index = 1:n_tests
 
         subplot(1, 3, test_index)

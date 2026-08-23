@@ -317,7 +317,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
     cfg.ylim     = [-3e-13 3e-13];
     cfg.channel  = 'MEG0211';
 
-    figure;
+    figure
     ft_singleplotER(cfg, ERF_standard, ERF_oddball, ERF_diff);
     legend({'Standard';'Oddball';'Difference'});
 
@@ -338,7 +338,7 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg.marker          = 'off';
     cfg.colorbar        = 'southoutside';
 
-    figure;
+    figure
     subplot(1,3,1);
     ft_topoplotER(cfg, ERF_standard);
     title('Standard');
@@ -386,7 +386,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim     = [0 8e-12];
     cfg.xlim     = [-0.2 0.6];
 
-    figure;
+    figure
     ft_multiplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
     legend({'Standard', 'Oddball', 'Difference'});
 
@@ -411,7 +411,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
     cfg.ylim       = [0 8e-12];
     cfg.channel    = 'MEG0222+0223';
 
-    figure;
+    figure
     ft_singleplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
     legend({'Standard', 'Oddball', 'Difference'});
 
@@ -432,7 +432,7 @@ Now we are going to look at the topographical spread of the field by using
     cfg.marker          = 'off';
     cfg.colorbar        = 'southoutside';
 
-    figure;
+    figure
     subplot(1,3,1);
     ft_topoplotER(cfg, ERF_standard_cmb);
     title('Standard');
@@ -597,7 +597,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim     = [-3e-6 3e-6];
     cfg.xlim     = [-0.2 0.6];
 
-    figure;
+    figure
     ft_multiplotER(cfg, ERP_standard, ERP_oddball, ERP_diff);
 
     set(gcf,'Position',[1 1 1239 945]);
@@ -619,7 +619,7 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
     cfg.ylim       = [-8e-6 8e-6];
     cfg.channel    = 'EEG020';
 
-    figure;
+    figure
     ft_singleplotER(cfg, ERP_standard, ERP_oddball, ERP_diff);
     legend({'Standard';'Oddball';'Difference'});
 
@@ -649,7 +649,7 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg.marker          = 'off';
     cfg.colorbar        = 'southoutside';
 
-    figure;
+    figure
     subplot(1,3,1);
     ft_topoplotER(cfg,ERP_standard);
     title('Standard');
@@ -706,7 +706,7 @@ To plot the scalp current density results, use the following code
     cfg.marker          = 'off';
     cfg.colorbar        = 'southoutside';
 
-    figure;
+    figure
     subplot(1,3,1);
     ft_topoplotER(cfg,scd_ERP_standard);
     title('Standard');

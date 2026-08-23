@@ -82,7 +82,7 @@ redirect_from:
     shape   = ft_convert_units(shape, 'cm');
 
     % % Plot for inspection
-    % h=figure;
+    % h=figure
     % ft_plot_headshape(shape)
     % ft_plot_sens(grad, 'style', '*g');
     % view([1 0 0])

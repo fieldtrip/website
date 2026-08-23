@@ -139,7 +139,7 @@ There are three ways of graphically representing the data: 1) time-frequency plo
     cfg.layout       = 'neuromag306mag.lay';
     cfg.channel      = 'MEG*1';
 
-    figure;
+    figure
     ft_multiplotTFR(cfg, TFR_left_MEG);
     print -dpng natmeg_freq3.png
 
@@ -158,7 +158,7 @@ Something interesting seems to happen at channel MEG1041. To make a plot of a si
     cfg.zlim         = [-1e-26 1e-26];
     cfg.channel      = 'MEG1041';
 
-    figure;
+    figure
     ft_singleplotTFR(cfg, TFR_left_MEG);
     print -dpng natmeg_freq4.png
 
@@ -178,7 +178,7 @@ From the previous figure you can see that there is an increase in power around 1
     cfg.layout       = 'neuromag306mag.lay';
     cfg.channel      = 'MEG*1';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_left_MEG);
     print -dpng natmeg_freq5.png
 
@@ -202,7 +202,7 @@ Perhaps we should now also look at the beta-rebound after a response of the othe
     cfg.layout       = 'neuromag306mag.lay';
     cfg.channel      = 'MEG*1';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_right_MEG);
     print -dpng natmeg_freq6.png
 
@@ -226,7 +226,7 @@ Until now we have been using an (absolute) baseline. However, because we have tw
     cfg.layout       = 'neuromag306mag.lay';
     cfg.channel      = 'MEG*1';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_diff_MEG);
     print -dpng natmeg_freq7.png
 
@@ -357,7 +357,7 @@ Great! Now lets plot the EEG and see what we get.
     cfg.marker       = 'on';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_left_EEG);
     print -dpng natmeg_freq9.png
 
@@ -379,7 +379,7 @@ In fact, we are now encountering an aspect of EEG recordings we haven't seen in 
     cfg.zlim         = [-1.2 1.2];
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_left_EEG);
     print -dpng natmeg_freq10.png
 
@@ -412,7 +412,7 @@ This will at the same time solved the above problem. Can you say why?
     cfg.marker       = 'on';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_diff_EEG);
     print -dpng natmeg_freq11.png
 
@@ -433,7 +433,7 @@ Finally, lets take a look at how the topography looks when we use the MEG planar
     cfg.marker       = 'on';
     cfg.layout       = 'neuromag306planar.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_left_MEG);
     print -dpng natmeg_freq12.png
 
@@ -459,7 +459,7 @@ In fact, we are now plotting the two different gradiometers together. You can se
     cfg.marker       = 'on';
     cfg.layout       = 'neuromag306cmb.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_left_MEG_comb);
     print -dpng natmeg_freq13.png
 
@@ -486,7 +486,7 @@ Finally, let's plot the difference between conditions using the combined gradiom
     cfg.marker       = 'on';
     cfg.layout       = 'neuromag306cmb.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, TFR_diff_MEG_comb);
     print -dpng natmeg_freq14.png
 

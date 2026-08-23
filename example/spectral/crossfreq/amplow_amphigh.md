@@ -51,7 +51,7 @@ title: Amplow_amphigh
 
 ## What does the signal look like?
 
-    figure;
+    figure
     sel = 1:2000;
     subplot(3,3,1); plot(data.trial{1}(1,sel)); title(data.label{1})
     subplot(3,3,2); plot(data.trial{1}(2,sel)); title(data.label{2})
@@ -94,7 +94,7 @@ title: Amplow_amphigh
     cfg.keeptrials = 'yes';
 
     freq1 = ft_freqanalysis(cfg,data);
-    figure;
+    figure
     imagesc(freq1.time, freq1.freq, squeeze(freq1.powspctrm(1,1,:,:))); axis xy
     print -dpng amplow_amphigh_fig3.png
 

@@ -500,7 +500,7 @@ In MATLAB:
     bnd_mne.pnt=[src(1).rr; src(2).rr];
     bnd_mne.tri=[src(1).use_tris; src(2).use_tris + size(src(1).rr,1)];
 
-    figure;
+    figure
     ft_plot_mesh(bnd_mne)
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/mesh_bnd_ts_mne.jpg" width="750" %}

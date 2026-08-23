@@ -160,14 +160,14 @@ We can check the coregistration by loading the head mesh and plotting it togethe
     % matlab
     mesh = ft_read_headshape('m2m_Subject01/Subject01.msh');
 
-    figure;
-    hold on;
+    figure
+    hold on
     ft_plot_mesh(mesh,'surfaceonly','yes','vertexcolor', 'none', ...
         'edgecolor','none','facecolor','skin');
-    camlight;
+    camlight
     ft_plot_sens(elec,'elecshape','sphere');
     view(150, 26);
-    hold off;
+    hold off
 
 Which should look something like the image below. As we are fitting template positions, the fit is not perfect.
 

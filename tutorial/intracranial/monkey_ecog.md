@@ -163,7 +163,7 @@ After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectc
     cfg.fontsize  = 12;
     cfg.layout    = lay;
     % cfg.zlim    = [-.5 .5];
-    figure;
+    figure
     ft_multiplotTFR(cfg, tfrbl);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/figure5.png" width="400" %}
@@ -196,7 +196,7 @@ Typically, visual grating tasks reliably elicit sustained gamma band response ~6
     tfrhfbl = ft_freqbaseline(cfg, tfrhf);
 
     % plot
-    figure;
+    figure
     cfg         = [];
     cfg.xlim    = [0.18 0.87]
     cfg.ylim    = [53 80];
@@ -253,7 +253,7 @@ Now we plot the coherence of a reference electrode with maximal gamma power rela
     cfg.highlightcolor  = [1 0 1];
     cfg.highlightsize   = 12;
     cfg.highlightfontsize =12;
-    figure;
+    figure
     ft_topoplotER(cfg,coh);
     title('ICOH')
 
@@ -281,7 +281,7 @@ Finally, we use **[ft_networkanalysis](/reference/ft_networkanalysis)** to illus
     cfg.colorbar    = 'yes';
     cfg.interactive = 'no';
     cfg.marker      = 'off';
-    figure;
+    figure
     ft_topoplotTFR(cfg, deg);
     title('NODE DEGREE')
 

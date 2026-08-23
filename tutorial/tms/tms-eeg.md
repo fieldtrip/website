@@ -224,7 +224,7 @@ We will now plot the data for all channels in separate windows. You can use the 
     close all
 
     for i=1:numel(data_tms_avg.label)                   % Loop through all channels
-        figure;
+        figure
         plot(data_tms_avg.time, data_tms_avg.avg(i,:)); % Plot this channel versus time
         xlim([-0.1 0.6]);     % Here we can specify the limits of what to plot on the x-axis
         ylim([-23 15]);       % Here we can specify the limits of what to plot on the y-axis
@@ -239,7 +239,7 @@ We will have a closer look at channel 17, which is close to the site of stimulat
 
     channel = '17';
 
-    figure;
+    figure
     i = find(strcmp(channel, data_tms_avg.label));
     plot(data_tms_avg.time, data_tms_avg.avg(i,:));   % Plot data
     xlim([-0.1 0.6]);    % Here we can specify the limits of what to plot on the x-axis
@@ -261,7 +261,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
 
     channel = '17';
 
-    figure;
+    figure
     channel_idx = find(strcmp(channel, data_tms_avg.label));
     plot(data_tms_avg.time, data_tms_avg.avg(channel_idx,:));  % Plot all data
     xlim([-0.1 0.6]);    % Here we can specify the limits of what to plot on the x-axis
@@ -469,7 +469,7 @@ We are now going to have a look at the time course of the components to identify
 
 We can now browse the averaged data in the same way we browsed our channel data. The segments that we have excluded will be plotted as gaps. As with our channel data, you can either browse through the channels with **[ft_databrowser](/reference/ft_databrowser)** but also with MATLAB's built-in plotting functions. Please be aware that if we are using **[ft_databrowser](/reference/ft_databrowser)** do browse averaged data (i.e. output from **[ft_timelockanalysis](/reference/ft_timelockanalysis)**) we can only browse through channels as there are no trials.
 
-    figure;
+    figure
     cfg = [];
     cfg.viewmode = 'butterfly';
     ft_databrowser(cfg, comp_tms_avg);
@@ -484,7 +484,7 @@ Try to plot the components using MATLAB's built-in plot function. Which do you p
 
 As ICA is in principle a spatial filter, we can inspect how each component loads spatially onto our original channel data. For this purpose we will use **[ft_topoplotIC](/reference/ft_topoplotIC)**.
 
-    figure;
+    figure
     cfg           = [];
     cfg.component = [1:60];
     cfg.comment   = 'no';
@@ -565,7 +565,7 @@ We can now have a look at the current status of our data.
 
     % Plot all channels
     for i=1:numel(data_tms_clean_avg.label) % Loop through all channels
-        figure;
+        figure
         plot(data_tms_clean_avg.time, data_tms_clean_avg.avg(i,:),'b'); % Plot all data
         xlim([-0.1 0.6]); % Here we can specify the limits of what to plot on the x-axis
         title(['Channel ' data_tms_clean_avg.label{i}]);
@@ -761,7 +761,7 @@ We will now plot both conditions and their difference using **[ft_singleplotER](
 A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you can select a time range in your plotting window and click on it to produce a topographical representation of your amplitudes at that time point if you've specified a layout. You can also use the function **[ft_topoplotER](/reference/ft_topoplotER)** for this.
 
     %% Plotting topographies
-    figure;
+    figure
     cfg = [];
     cfg.layout = 'easycapM10';
     cfg.xlim = 0:0.05:0.55; % Here we've specified a vector between 0 and 0.55 seconds in steps of 0.05 seconds. A topoplot will be created for each time point specified here.
@@ -885,7 +885,7 @@ Now that we've calculated the TFRs for both conditions and their differences we 
     cfg.xlim = [-0.1 1.0];
     cfg.zlim = [-1.5 1.5];
     cfg.layout = 'easycapM10';
-    figure;
+    figure
 
     ft_multiplotTFR(cfg, difference_freq);
 

@@ -82,10 +82,10 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
     cfg.baselinetype = 'absolute';
     cfg.layout       = 'neuromag306mag.lay';
 
-    figure;
+    figure
     ft_multiplotTFR(cfg, TFR_left);
 
-    figure;
+    figure
     ft_multiplotTFR(cfg, TFR_right);
 
 ### Compute contrast between response hands

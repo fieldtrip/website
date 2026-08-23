@@ -29,7 +29,7 @@ If you don't want the DC-component to be removed prior to spectral transformatio
         cfg1.length = L(k);
         freq{1,k} = ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
     end
-    figure;
+    figure
     subplot(1,2,1); hold on;
     for k = 1:4
         plot(freq{k}.freq,log10(freq{k}.powspctrm));
@@ -42,7 +42,7 @@ If you don't want the DC-component to be removed prior to spectral transformatio
         cfg1.length = L(k);
         freq{1,k}=ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
     end
-    subplot(1,2,2);hold on;
+    subplot(1,2,2); hold on;
     for k = 1:4
         plot(freq{k}.freq,log10(freq{k}.powspctrm));
     end

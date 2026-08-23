@@ -288,9 +288,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg.colmin          = 0.8;
     cfg.spacemin        = 75;
     cfg.spacemax        = 150;
-    figure;
+    figure
     ft_sliceinterp(cfg, sourceinterp{1, 2});
-    figure;
+    figure
     ft_sliceinterp(cfg, sourceinterp{2, 3}); % etcetera...
 
 **Correlations between the leadfields computed based on the FieldTrip localspheres model based on the CTF headshape and the realistic single-shell headmodel**
@@ -314,5 +314,5 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg              = [];
     cfg.interactive  = 'yes';
     cfg.funparameter = 'brainmask';
-    figure;
+    figure
     ft_sourceplot(cfg, mri);

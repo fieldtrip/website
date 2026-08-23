@@ -62,8 +62,8 @@ cfg.operation     = 'x2-x1';
 oscillatory = ft_math(cfg, fractal, original);
 
 % display the spectra in log-log scale
-figure();
-hold on;
+figure
+hold on
 plot(log10(original.freq), log10(original.powspctrm),'k');
 plot(log10(fractal.freq), log10(fractal.powspctrm));
 plot(log10(fractal.freq), log10(oscillatory.powspctrm));
@@ -145,7 +145,7 @@ Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://
     oscillatory = ft_math(cfg, fractal, original);
 
     % extract alpha and beta frequency bands
-    figure;
+    figure
     plot(oscillatory.freq, mean(oscillatory.powspctrm), ...
         'linewidth', 3, 'color', [.3 .3 .3])
     f = fit(oscillatory.freq', mean(oscillatory.powspctrm)', 'gauss3');

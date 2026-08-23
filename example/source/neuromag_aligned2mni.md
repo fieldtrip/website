@@ -155,5 +155,5 @@ When you have then estimated the sources which happens in NM or CTF space, you h
     cfg.funcolormap    = 'jet';
     cfg.method         = 'ortho';
 
-    figure;
+    figure
     ft_sourceplot(cfg, sdint)

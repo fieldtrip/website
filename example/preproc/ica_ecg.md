@@ -167,7 +167,7 @@ A second way of finding which components contain the ECG artifacts is through ca
     fdcomp         = ft_connectivityanalysis(cfg, freq);
 
     % look at the coherence spectrum between all components and the ECG
-    figure;
+    figure
     subplot(2,1,1); plot(fdcomp.freq, abs(fdcomp.cohspctrm));
     subplot(2,1,2); imagesc(abs(fdcomp.cohspctrm));
 

@@ -51,7 +51,7 @@ The following function can be used to plot the results of source reconstruction 
       maskval = cfg.mask;
     end
 
-    figure;
+    figure
 
     h1 = patch('Vertices', surf.pnt, 'Faces', surf.tri, 'FaceVertexCData', backgcolor , 'FaceColor', 'interp');
     %set(h1, 'EdgeColor', 'none');

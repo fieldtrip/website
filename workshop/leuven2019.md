@@ -199,9 +199,9 @@ And now we will fit it to the head surface.
 
 Check the alignment visually.
 
-    figure;
+    figure
     ft_plot_axes(mesh_bem(1))
-    hold on;
+    hold on
     ft_plot_mesh(mesh_bem,'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
     ft_plot_sens(elec,'style', '.k');

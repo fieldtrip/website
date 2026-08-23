@@ -468,7 +468,7 @@ I2 = (prestim + 0.050) * sampling_rate;
 selected_avg = mean(avg_squid.avg(:, I1:I2), 2);
 
 % Plot
-figure;
+figure
 ft_plot_mesh(mesh_scalp, 'facealpha', 0.5, 'facecolor', 'skin', 'edgecolor', 'none', 'edgecolor', 'skin' )
 hold on
 ft_plot_mesh(mesh_brain, 'facecolor', 'brain', 'edgecolor', 'none');
@@ -728,7 +728,7 @@ I2 = (prestim+0.050)*sampling_rate;
 selected_avg = mean(append_opm.avg(:, I1:I2), 2);
 
 % Plot
-figure;
+figure
 ft_plot_mesh(mesh_scalp, 'facealpha', 0.05, 'facecolor', 'skin', 'edgecolor', 'none', 'edgecolor', 'skin' )
 hold on
 ft_plot_topo3d(fieldlinebeta2_head.chanpos(i_sens,:), selected_avg(i_avg), 'facealpha', 1)

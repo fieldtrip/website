@@ -55,7 +55,7 @@ You could make the same plot by the following code, using the MATLAB plot comman
 
     selected_data = avgFC.avg(9,241:601); % MLC24 is the 9th channel, -0.2 to 1.0 is sample 241 to 601
     selected_time = avgFC.time(241:601);
-    figure;
+    figure
     plot(selected_time, selected_data)
     xlim([-0.2 1.0])
     ylim([-1e-13 3e-13])
@@ -168,7 +168,7 @@ Note that the layout contains all 151 MEG channels; the one channel missing in t
 
 All channels are squeezed in a circle and the nose and ears are indicated at the top and sides. The actual 3-D layout of the MEG channels in the CTF system is more complex than the circular arrangement suggested by the flat 2-D layout. This is a generic challenge for projections onto a 2-D plane and also applies to cartography. We can plot the bottom coil of the CTF gradiometer channels with
 
-    figure;
+    figure
     ft_plot_sens(avgFC.grad, 'chantype', 'meggrad')
     ft_plot_axes(avgFC.grad)
     view(-90, 90) % you should rotate the figure to get a good 3-D feel of the channel locations.

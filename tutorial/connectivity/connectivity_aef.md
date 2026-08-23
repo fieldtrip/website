@@ -104,13 +104,13 @@ Now we can average over trials using **[ft_timelockanalysis](/reference/ft_timel
 
     cfg=[];
     cfg.layout = '4D148.lay';
-    figure;
+    figure
     ft_multiplotER(cfg,tlk);
 
     cfg=[];
     cfg.channel = {'A77'};
     cfg.xlim    = [-.2 1];
-    figure;
+    figure
     subplot(2,2,1);ft_singleplotER(cfg,tlk);
     cfg =[];
     cfg.layout = '4D148.lay';
@@ -148,7 +148,7 @@ Subsequently we plot and evaluate the result.
     cfg=[];
     cfg.channel = {'A77'};
     cfg.xlim    = [-.2 1];
-    figure;
+    figure
     subplot(2,2,1);ft_singleplotTFR(cfg,tfrbl);
     cfg =[];
     cfg.layout = '4D148.lay';
@@ -242,7 +242,7 @@ Now we can plot the result in a similar way as illustrated above. The difference
     cfg.maskstyle     = 'outline';
     cfg.zlim = [-5 5]
     cfg.xlim    = [0 .7];
-    figure;
+    figure
     subplot(2,2,1);ft_singleplotTFR(cfg,stat);
     cfg =[];
     cfg.layout = '4D148.lay';
@@ -286,7 +286,7 @@ We will start with loading a precomputed headmodel [here](https://download.field
     cfg.headmodel        = vol;
     template_grid  = ft_prepare_sourcemodel(cfg);
 
-    figure;
+    figure
     ft_plot_mesh(template_grid.pos(template_grid.inside,:));
     hold on
     ft_plot_headmodel(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
@@ -747,7 +747,7 @@ Now we compute the source wave forms, plot and evaluate the result.
 
     cfg=[];
     tlkvc=ft_timelockanalysis(cfg, virtsensparcel);
-    figure;
+    figure
     for i=1:length(tlkvc.label)
         cfg=[];
         cfg.channel = tlkvc.label{i};
@@ -776,7 +776,7 @@ First, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** much in the same
 
 Now we can plot and evaluate the result of the power estimates essentially confirming the pattern we already observed.
 
-    figure;
+    figure
     for i=1:length(tfr.label)
         cfg=[];
         cfg.channel = tfr.label{i};
@@ -805,7 +805,7 @@ and restructure the output such that it can be plotted with an appropriate plott
     coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
 
     %% and plot the result
-    figure;
+    figure
     for i=1:length(coh.label)
         cfg=[];
         cfg.channel = coh.label{i};
@@ -833,7 +833,7 @@ A property of volume conduction is that it is instantaneously. As a consequence 
     coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
 
     %% and plot the result
-    figure;
+    figure
     for i=1:length(coh.label)
         cfg=[];
         cfg.channel = coh.label{i};

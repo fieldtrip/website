@@ -43,7 +43,7 @@ title: Phalow_amphigh
 ## What does the signal look like?
 
     data = ft_freqsimulation(cfg);
-    figure;
+    figure
     sel = 1:1000;
     subplot(3,3,1); plot(data.trial{1}(1,sel)); title(data.label{1})
     subplot(3,3,2); plot(data.trial{1}(2,sel)); title(data.label{2})

@@ -64,7 +64,7 @@ If we explore the second and the third synthetic gradiometers, things become ver
 
 {% include image src="/assets/img/faq/ctf_syntheticgradient/g2brv.png" %}
 
-    figure;
+    figure
     subplot(2,2,[1 3]);imagesc(grad.balance.G3BR.tra);
     title('Third order gradiometer forward solution');
     xlim([0 175]);colorbar;

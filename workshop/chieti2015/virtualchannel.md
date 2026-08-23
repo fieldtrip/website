@@ -96,7 +96,7 @@ We want to visualize the various geometrical objects that we read into memory. F
 
     %% plot volume and channels
     figure
-    hold on;
+    hold on
     ft_plot_sens(data.grad, 'coil', 'yes', 'coilsize', 10);
     ft_plot_headmodel(headmodel);
 
@@ -242,7 +242,7 @@ You should use the interactive functionality of the **[ft_multiplotTFR](/referen
 
 Another way of looking at the dynamics in this channel-time-frequency representation is by making a movi
 
-    figure;
+    figure
     cfg = [];
     cfg.zlim = 'maxabs';
     cfg.layout = '4d248.lay';

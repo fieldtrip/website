@@ -95,7 +95,7 @@ cfg.operation = 'log10';
 cfg.parameter = 'powspctrm';
 freq_er = ft_math(cfg, freq_er);
 
-figure;
+figure
 subplot(121); plot(freq_er.freq, freq_er.powspctrm); xlim([0 80]);
 subplot(122); plot(freq_er.freq, freq_er.powspctrm); xlim([0 500]);
 ```
@@ -126,7 +126,7 @@ cfg.operation = 'log10';
 cfg.parameter = 'powspctrm';
 freq_er = ft_math(cfg, freq_er);
 
-figure;
+figure
 subplot(121); plot(freq_er.freq, freq_er.powspctrm); xlim([0 80]);
 subplot(122); plot(freq_er.freq, freq_er.powspctrm); xlim([0 500]);
 ```

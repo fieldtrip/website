@@ -218,7 +218,7 @@ The atlas is described in Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) [Pro
            tissue: [182x218x182 double]
          coordsys: 'mni'
 
-    >> figure;
+    >> figure
     >> subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
     >> subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
     >> subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))

@@ -141,7 +141,7 @@ In the first step we re-segment the data into left and right hand responses usin
     cfg.fontsize = 6;
     cfg.layout = 'neuromag306mag.lay';
     cfg.xlim = [0.040553 0.062673];
-    figure;
+    figure
     subplot(2,2,1);ft_topoplotER(cfg, tlk);
 
     cfg.channel = {'MEG0431'}
@@ -526,7 +526,7 @@ Now we will use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **
 
 Now we can plot the result.
 
-    figure;
+    figure
     for i=1:length(tlkvc.label)
       cfg = [];
       cfg.channel   = tlkvc.label{i};
@@ -739,7 +739,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 
 ##### Plot the result
 
-    figure;
+    figure
     for i=1:length(tlkvc.label)
       cfg=[];
       cfg.channel = tlkvc.label{i};

@@ -163,7 +163,7 @@ We will analyze the spectral content of the data using **[ft_freqanalysis](/refe
     datapow_planar   = ft_freqanalysis(cfg, planar);
 
     %% plot the topography and the spectrum
-    figure;
+    figure
 
     cfg        = [];
     cfg.layout = 'CTF275_helmet.mat';
@@ -191,7 +191,7 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
     load sourcemodel_4k
 
     %% visualize the coregistration of sensors, headmodel, and sourcemodel.
-    figure;
+    figure
 
     % make the headmodel surface transparent
     ft_plot_headmodel(hdm, 'edgecolor', 'none'); alpha 0.4

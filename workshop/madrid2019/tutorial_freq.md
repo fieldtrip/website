@@ -174,7 +174,7 @@ make a plot of a single channel use the function
         cfg.channel      = '1';
         cfg.layout       = 'easycapM10.mat';
 
-        figure;
+        figure
         subplot(211); ft_singleplotTFR(cfg, TFRhann_visc); title('visual stim');
         subplot(212); ft_singleplotTFR(cfg, TFRhann_audc); title('auditory stim');
 
@@ -198,7 +198,7 @@ topography of this power increase use the function
         cfg.ylim         = [3 8];
         cfg.marker       = 'on';
         cfg.layout       = 'easycapM10.mat';
-        figure;
+        figure
         subplot(211);ft_topoplotTFR(cfg, TFRhann_visc); title('visual stim');
         subplot(212);ft_topoplotTFR(cfg, TFRhann_audc); title('auditory stim');
 
@@ -260,7 +260,7 @@ Plot the result
     cfg.layout       = 'easycapM10.mat';
     cfg.channel      = '1';
     cfg.interactive  = 'no';
-    figure;
+    figure
     subplot(211);ft_singleplotTFR(cfg, TFRwave_visc); title('visual stim');
     subplot(212);ft_singleplotTFR(cfg, TFRwave_audc); title('auditory stim');
 
@@ -338,7 +338,7 @@ using a boxcar window
 
 Let us plot the power spectra of channel 61 using the standard MATLAB plot function.
 
-    figure;
+    figure
     hold on;
     plot(base_freq1.freq, base_freq1.powspctrm(61,:))
     plot(base_freq2.freq, base_freq2.powspctrm(61,:))

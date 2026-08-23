@@ -101,8 +101,8 @@ The field `spectr_left.powspctrm` contains the power values for each specified f
 
 We can visualize the power spectra from both conditions in one plot using MATLAB's plotting function.
 
-    figure;
-    hold on;
+    figure
+    hold on
     plot(spectr_left.freq, (spectr_left.powspctrm), 'linewidth', 2)
     plot(spectr_left.freq, (spectr_right.powspctrm), 'linewidth', 2)
     legend('Button press left', 'Button press right')
@@ -165,11 +165,11 @@ Let's first look at the topographical representation of the power changes in a s
     cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, tfr_left);
     title('Left hand reaction');
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, tfr_right);
     title('Right hand reaction');
 
@@ -195,11 +195,11 @@ Let's take a look at what happens when instead of an absolute baseline we use a 
     cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, tfr_left);
     title('Left hand reaction');
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, tfr_right);
     title('Right hand reaction');
 
@@ -216,7 +216,7 @@ This looks better! We can also plot the time-resolved activity using **[ft_singl
     cfg.layout   = 'natmeg_customized_eeg1005.lay';
     cfg.channel  = 'EEG126';
 
-    figure;
+    figure
     ft_singleplotTFR(cfg, tfr_left);
     title('Left hand reaction');
 
@@ -242,7 +242,7 @@ We now want to collapse the information of both conditions by comparing them. On
     cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-    figure;
+    figure
     ft_topoplotTFR(cfg, tfr_difference);
     title('Left vs right hand reaction');
 
@@ -290,7 +290,7 @@ As for our first analysis, we want to look at the difference between the conditi
     cfg.layout   = 'natmeg_customized_eeg1005.lay';
     cfg.channel  = 'EEG126';
 
-    figure;
+    figure
     ft_singleplotTFR(cfg, wave_difference);
     title('Left vs right hand reaction');
 

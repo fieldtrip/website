@@ -84,7 +84,7 @@ In the following, the code used to generate above figures is provided. The examp
     [sortedVal, sortedInd] = sort(diag(correlation_abs(max_inds, :)), 'descend');
     mean_diag_corr = num2str(mean(diag(correlation_abs(max_inds(sortedInd), sortedInd))),3);
 
-    figure;
+    figure
     imagesc(correlation_abs);
     axis square
     colorbar;
@@ -92,7 +92,7 @@ In the following, the code used to generate above figures is provided. The examp
     title(['correlation between ICs obtained from the two strategies'])
 
     % plot
-    figure;
+    figure
     imagesc(correlation_abs(max_inds(sortedInd), sortedInd));
     axis square
     colorbar;

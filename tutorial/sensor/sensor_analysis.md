@@ -53,8 +53,8 @@ Which channel is the 130th channel?
 Time point 0 in all trials corresponds to the onset of the visual stimulation. Trials end when the visual stimulus changed its speed, which is when the subject had to move their wrist (so the data for the actual movement is not in the trials). The visual stimulus speed change happened at an unpredictable time after t=0, so not all trials are the same length. To see this, plot some trials like this:
 
     for k = 1:10
-    plot(data_left.time{k}, data_left.trial{k}(130,:)+k*1.5e-12);
-    hold on;
+        plot(data_left.time{k}, data_left.trial{k}(130,:)+k*1.5e-12);
+        hold on
     end
     plot([0 0], [0 1], 'k');
     ylim([0 11*1.5e-12]);
@@ -306,7 +306,7 @@ Non-time-resolved spectra (such as our coherence spectrum) can be visualized usi
     cfg.layout          = 'CTF151_helmet.mat';
     cfg.showlabels      = 'no';
     cfg.interactive     = 'yes';
-    figure;
+    figure
     ft_multiplotER(cfg, conn);
 
 Again, this is an interactive plot, so click around it to get a nice overview of the exact spectrum and the topography of the peak (which is in the beta frequency range).

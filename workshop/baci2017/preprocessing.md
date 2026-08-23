@@ -201,7 +201,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft
 
     % plot single trial together with global mean field power
     h1 = plot(EEG_avg.time,signal, 'color',[0,0,0.5]);
-    hold on;
+    hold on
     h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg, 'color',[1,0,0], 'linewidth',1);
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/baci_sep_singleploter.png" width="600" %}

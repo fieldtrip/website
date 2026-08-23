@@ -63,8 +63,8 @@ The following code shows how to extract spectral features from simulated data.
     oscillatory = ft_math(cfg, fractal, original);
 
     % display the spectra in log-log scale
-    figure();
-    hold on;
+    figure
+    hold on
     plot(log10(original.freq), log10(original.powspctrm),'k');
     plot(log10(fractal.freq), log10(fractal.powspctrm));
     plot(log10(fractal.freq), log10(oscillatory.powspctrm));

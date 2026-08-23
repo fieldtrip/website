@@ -404,7 +404,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     'reproduce_Subject01/20210112T113621_ft_timelockanalysis_output_timelock.mat', 'reproduce_Subject01/20210112T113625_ft_timelockanalysis_output_timelock.mat', 'reproduce_Subject01/20210112T113616_ft_timelockanalysis_output_timelock.mat'
     };
     cfg.outputfile = 'reproduce_Subject01/20210112T113634_ft_multiplotER_output';
-    figure;
+    figure
     ft_multiplotER(cfg);
 
     %%
@@ -495,7 +495,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113616_ft_timelockanalysis_output_timelock.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113708_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
     %%
@@ -509,7 +509,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113621_ft_timelockanalysis_output_timelock.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113712_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
     %%
@@ -523,7 +523,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113625_ft_timelockanalysis_output_timelock.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113716_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
     %%
@@ -537,7 +537,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113657_ft_combineplanar_output_data.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113721_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
     %%
@@ -551,7 +551,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113701_ft_combineplanar_output_data.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113726_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
     %%
@@ -565,7 +565,7 @@ This is the resulting code in the file `project/example2/reproduce_Subject01/scr
     cfg.trackmeminfo = 'yes';
     cfg.inputfile = { 'reproduce_Subject01/20210112T113704_ft_combineplanar_output_data.mat' };
     cfg.outputfile = 'reproduce_Subject01/20210112T113731_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
 #### Group reproduced analysis
@@ -592,7 +592,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
     'reproduce_Group/20210112T114236_ft_multiplotER_input_varargin_1.mat', 'reproduce_Group/20210112T114236_ft_multiplotER_input_varargin_2.mat', 'reproduce_Group/20210112T114236_ft_multiplotER_input_varargin_3.mat', 'reproduce_Group/20210112T114236_ft_multiplotER_input_varargin_4.mat'
     };
     cfg.outputfile = 'reproduce_Group/20210112T114246_ft_multiplotER_output';
-    figure;
+    figure
     ft_multiplotER(cfg);
 
     %%
@@ -615,7 +615,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
     'reproduce_Group/20210112T114253_ft_multiplotER_input_varargin_1.mat', 'reproduce_Group/20210112T114253_ft_multiplotER_input_varargin_2.mat', 'reproduce_Group/20210112T114253_ft_multiplotER_input_varargin_3.mat', 'reproduce_Group/20210112T114253_ft_multiplotER_input_varargin_4.mat'
     };
     cfg.outputfile = 'reproduce_Group/20210112T114303_ft_multiplotER_output';
-    figure;
+    figure
     ft_multiplotER(cfg);
 
     %%
@@ -638,7 +638,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
     'reproduce_Group/20210112T114310_ft_multiplotER_input_varargin_1.mat', 'reproduce_Group/20210112T114310_ft_multiplotER_input_varargin_2.mat', 'reproduce_Group/20210112T114310_ft_multiplotER_input_varargin_3.mat', 'reproduce_Group/20210112T114310_ft_multiplotER_input_varargin_4.mat'
     };
     cfg.outputfile = 'reproduce_Group/20210112T114321_ft_multiplotER_output';
-    figure;
+    figure
     ft_multiplotER(cfg);
 
     %%
@@ -708,7 +708,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
     'reproduce_Group/20210112T114330_ft_math_output_data.mat', 'reproduce_Group/20210112T114333_ft_math_output_data.mat', 'reproduce_Group/20210112T114337_ft_math_output_data.mat', 'reproduce_Group/20210112T114340_ft_math_output_data.mat'
     };
     cfg.outputfile = 'reproduce_Group/20210112T114351_ft_multiplotER_output';
-    figure;
+    figure
     ft_multiplotER(cfg);
 
     %%

@@ -156,7 +156,7 @@ The reproducescript functionality copies the input data to a function and the ou
     cfg.inputfile = {
      'reproduce/20210112T113333_ft_topoplotER_input_varargin_1.mat' };
     cfg.outputfile = 'reproduce/20210112T113338_ft_topoplotER_output';
-    figure;
+    figure
     ft_topoplotER(cfg);
 
 Note that the fields from the cfg input to **[ft_definetrial](/reference/ft_definetrial)** are repeated as input to **[ft_preprocessing](/reference/ft_preprocessing)** because the configuration in the original script was not emptied. There are also additional fields created by **[ft_definetrial](/reference/ft_definetrial)**. If these fields exceed a certain printed size, which would make them unwieldy to include inline in a script (e.g., `cfg.trl`, which normally consists of a [Ntrials x 3] matrix specifying the relevant sections of the data on disk), these too are saved on disk instead of being printed in the standardized script. One last thing that should stand out is the comment “a new input variable is entering the pipeline here ...”. This points to the mat-file subsequently specified in cfg.inputfile to **[ft_topoplotER](/reference/ft_topoplotER)**. The data structure in this file was not originally created by a FieldTrip function but comes from another source: in this case it consists of the data in which originates from the T to fT unit conversion step (see the original code at the top of the page). Thus, this comment puts an emphasis on the fact that a data structure with unknown provenance enters the pipeline. See the section below on [Note on using functions outside of the FieldTrip ecosystem](/example/reproducescript/#note-on-using-functions-outside-of-the-fieldtrip-ecosystem) for how to work with _reproducescript_ and non-FieldTrip code.

@@ -171,7 +171,7 @@ It is not clear for me when you have to define the option grid.inside and grid.o
     cfg.method = 'mne';
     mne1 = ft_sourceanalysis(cfg,average);
 
-    figure;
+    figure
     mne1.avg.pow(100,30)
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/plot_mne1.jpg" width="400" %}
@@ -189,7 +189,7 @@ Trying to understand the results above, we looked at the phantom data in detail.
     load vol;
     load grid;
 
-    figure;
+    figure
     ft_plot_sens(grad);
     ft_plot_mesh(grid.pos);
 
@@ -513,7 +513,7 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
     % plot the new grid with the missing points in different color (red)
 
     ft_plot_mesh(grid.pos(griddiff,:), 'vertexcolor', 'red');
-    hold on;
+    hold on
     ft_plot_mesh(grid.pos(gridnew,:));
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/griddiff_mne_ft.jpg" width="450" %}

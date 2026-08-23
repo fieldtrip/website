@@ -142,7 +142,7 @@ We will analyze the spectral content of the data using **[ft_freqanalysis](/refe
     fft_data_planar = ft_freqanalysis(cfg, planar);
 
     %% plot the topography and the spectrum
-    figure;
+    figure
 
     cfg = [];
     cfg.layout = 'CTF275.lay';
@@ -376,7 +376,7 @@ Subsequently, we will compute the difference between high and low alpha conditio
     diff_axial  = ft_math(cfg, fft_data_high,        fft_data_low);
 
     %% plot the topography of the difference along with the spectra
-    figure;
+    figure
 
     cfg = [];
     cfg.layout = 'CTF275.lay';

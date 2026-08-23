@@ -575,7 +575,7 @@ Again we plot all geometrical data to check their alignment.
 At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and the discontinuity that occurs after the 68th value reflects the effects of Maxfilter, which has reconstructed the data based on (typically) about 80 components.
 
     [u,s,v] = svd(cov_matrix.cov);
-    figure;
+    figure
     semilogy(diag(s),'o-');
 
 {% include image src="/assets/img/tutorial/epilepsy/figure12.png" width="700" %}

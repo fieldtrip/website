@@ -72,9 +72,9 @@ Instead of using the low-level reading functions for reading and handling the da
 
 The historical development and continuous push for improvements causes FieldTrip to supports three different codebases to read in Yokogawa file
 
-1.  _external\yokogawa_ by the Yokogawa company, old version
-2.  _external\sqdproject_ by Shantanu Ray, ISR, University of Maryland
-3.  _externalyokogawa_meg_reader_ by the Yokogawa company, latest version
+1. _external\yokogawa_ by the Yokogawa company, old version
+2. _external\sqdproject_ by Shantanu Ray, ISR, University of Maryland
+3. _externalyokogawa_meg_reader_ by the Yokogawa company, latest version
 
 The initial implementation was based on the first external toolbox. It turned out that especially on windows computers it was too slow to work efficiently, that is why we looked into an alternative. The second Sqdproject toolbox is more memory and time efficient for reading the data and it can be used in conjunction to the first (for reading the header and meta information) by also adding sqdproject to the MATLAB path.
 
@@ -94,21 +94,21 @@ After reading the data with:
 
 We can make a plot of one of the trigger channels
 
-    figure;
+    figure
     plot(data(161,1:100000);
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers1.png" width="300" %}
 
 zooming in a bit
 
-    figure;
+    figure
     plot(data(161,1:10000);
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers2.png" width="300" %}
 
 zooming in even more using the MATLAB figure magnifying glass on the top left corner of one trigger event
 
-    figure;
+    figure
     plot(data(161,1:10000,'.-');
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers3.png" width="300" %}
@@ -210,7 +210,7 @@ layout.outline              = ctf151.outline;
 layout.mask                 = ctf151.mask;
 
 % plot the custom layout
-figure;
+figure
 ft_plot_layout(layout, 'box', 1);
 ```
 
@@ -343,7 +343,7 @@ Because the gradiometer coordinates are in cm, and the MRI derived geometrical o
 
 Plot sensors, fiducials and headmodel to doublecheck
 
-    figure;
+    figure
     plot3(coil_cm.pnt(:,1), ...
         coil_cm.pnt(:,2), ....
         coil_cm.pnt(:,3),'r.','MarkerSize',25);
@@ -521,7 +521,7 @@ Interpolate for plotting on MRI
 
 Plot results
 
-    figure;
+    figure
     cfg                 = [];
     cfg.method          = 'ortho';
     cfg.interactive     = 'yes';

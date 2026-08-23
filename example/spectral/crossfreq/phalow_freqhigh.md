@@ -37,7 +37,7 @@ title: Phalow_freqhigh
 
 ## What does the signal look like?
 
-    figure;
+    figure
     sel = 1:1000;
     subplot(3,3,1); plot(data.trial{1}(1,sel)); title(data.label{1})
     subplot(3,3,2); plot(data.trial{1}(2,sel)); title(data.label{2})
@@ -100,7 +100,7 @@ title: Phalow_freqhigh
     pow_26Hz = squeeze(freq1.powspctrm(1,1,13,:));
     pow_28Hz = squeeze(freq1.powspctrm(1,1,14,:));
     pow_30Hz = squeeze(freq1.powspctrm(1,1,15,:));
-    figure;
+    figure
     subplot(3,4,1); plot(freq1.time(1:1000),pow_10Hz(1:1000));title('pow @ 10 Hz');ylim([0 0.4])
     subplot(3,4,2); plot(freq1.time(1:1000),pow_12Hz(1:1000));title('pow @ 12 Hz');ylim([0 0.4])
     subplot(3,4,3); plot(freq1.time(1:1000),pow_14Hz(1:1000));title('pow @ 14 Hz');ylim([0 0.4])
@@ -155,7 +155,7 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
     data_bp = ft_preprocessing(cfg,data);
 
     % check
-    figure;
+    figure
     sel = 1:1000;
     plot(data.trial{1}(1,sel))
     hold on
@@ -170,7 +170,7 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
     data_H = ft_preprocessing(cfg,data_bp);
 
     % check
-    figure;
+    figure
     sel = 1:1000;
     plot(data.trial{1}(7,sel));
     hold on
@@ -188,7 +188,7 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
     data_diff = ft_preprocessing(cfg,data_H);
 
     % check
-    figure;
+    figure
     sel = 1:3000;
     plot(data_diff.trial{1}(1,sel),'r')
     print -dpng phalow_freqhigh_fig10.png

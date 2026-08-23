@@ -111,7 +111,7 @@ It is important that the template scalp surface only contains features that are 
 
 We visualize both meshes:
 
-    figure;
+    figure
     ft_plot_mesh(template.bnd(1));
     ft_plot_mesh(polhemus);
 
@@ -136,7 +136,7 @@ The Polhemus has facial details which are not in the template scalp surface, and
 
 We have another look how well the surfaces match
 
-    figure;
+    figure
     ft_plot_mesh(defaced_template);
     ft_plot_mesh(defaced_polhemus);
 
@@ -166,7 +166,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     cfg.method       = 'openmeeg';
     headmodel_sphere = ft_prepare_headmodel(cfg, template_fit_sphere.bnd);
 
-    figure;
+    figure
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 
@@ -177,7 +177,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     cfg.method        = 'openmeeg';
     headmodel_surface = ft_prepare_headmodel(cfg, template_fit_surface);
 
-    figure;
+    figure
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 

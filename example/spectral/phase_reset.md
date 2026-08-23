@@ -24,11 +24,11 @@ The following code simulates a clean oscillating signal with a phase reset at ti
     s = 0.2*s+i;
     d(i,:) = s; % remember the signal on each repetition
     plot(t, s);
-    hold on;
+    hold on
     end
     axis auto
 
-    figure;
+    figure
     plot(t, mean(d,1))
 
 {% include image src="/assets/img/example/phase_reset/phase_reset_narrowband.png" width="400" %}
@@ -54,11 +54,11 @@ The following code also includes a small "random walk" in the phase, i.e. the si
     s = 0.2*s+i;
     d(i,:) = s; % remember the signal on each repetition
     plot(t, s);
-    hold on;
+    hold on
     end
     axis auto
 
-    figure;
+    figure
     plot(t, mean(d,1))
 
 {% include image src="/assets/img/example/phase_reset/phase_reset_broadband.png" width="400" %}

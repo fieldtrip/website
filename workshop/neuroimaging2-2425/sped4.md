@@ -143,7 +143,7 @@ The field `TFRhann.powspctrm` contains the temporal evolution of the raw power v
 To facilitate understanding of the output of `ft_freqanalysis`, it is instructive to first plot it all in the same way we did before using `imagesc`. To do this, we need to first average over channels to obtain a 2D matrix.
 
     pow_allchan = squeeze(mean(TFRhann.powspctrm, 1));
-    figure;
+    figure
     imagesc(TFRhann.time, TFRhann.freq, pow_allchan);
     axis xy;
     colorbar();

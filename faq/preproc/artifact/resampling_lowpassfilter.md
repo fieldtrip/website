@@ -85,7 +85,7 @@ The below code can be used to explore the different methods and to illustrate th
 
     cmap = ft_colormap('Set1');
 
-    figure; hold on;
+    figure; hold on
     plot(freq1.freq, (log10(freq1.powspctrm)), 'color', cmap(2,:), 'linewidth', 2);
     plot(freq2.freq, (log10(freq2.powspctrm)), 'color', cmap(3,:), 'linewidth', 2);
     plot(freq3.freq, (log10(freq3.powspctrm)), 'color', cmap(4,:), 'linewidth', 2);

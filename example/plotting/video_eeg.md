@@ -33,7 +33,7 @@ increment = 1; % stepwise in seconds
 
 % make a figure with the desired size, see https://en.wikipedia.org/wiki/Display_resolution
 close all
-figh = figure;
+figh = figure
 
 set(figh, 'position', [10 10 1280 720]);
 % set(figh, 'WindowState', 'maximized');

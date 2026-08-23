@@ -162,12 +162,12 @@ From the grand average plot we can zoom in on our comparison of interest and onl
     % Scaling of the vertical axis for the plots below
     ymax = 10;
 
-    figure;
+    figure
     for iSub = 1:numel(subj)
       subplot(3, 5, iSub)
       % use the rectangle to indicate the time range used later
       rectangle('Position', [time(1) 0 (time(2)-time(1)) ymax], 'FaceColor', [1 1 1]*0.9);
-      hold on;
+      hold on
       % plot the lines in front of the rectangle
       plot(avg_famous{iSub}.time, avg_famous{iSub}.avg(chan, :));
       plot(avg_scrambled{iSub}.time, avg_scrambled{iSub}.avg(chan, :), 'r');

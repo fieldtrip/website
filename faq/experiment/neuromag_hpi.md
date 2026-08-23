@@ -22,9 +22,9 @@ The following code reads and visualizes the digitized positions of the HPI coils
     shape = ft_read_headshape(dataset, 'coordsys', 'dewar');
     for c = 1:size(shape.pos,1)
       if ~isempty(strfind(shape.label{c},'hpi'))
-          hold on;
+          hold on
           plot3(shape.pos(c,1),shape.pos(c,2),shape.pos(c,3), 'ro', 'MarkerSize', 12, 'LineWidth', 3);
-          hold on;
+          hold on
           text(shape.pos(c,1),shape.pos(c,2),shape.pos(c,3), sscanf(shape.label{c},'hpi_%s'));
       end
     end
@@ -50,7 +50,7 @@ The following code reads and visualizes the topographical magnetic field distrib
     freq = ft_freqanalysis(cfg, data);
 
     % plot topographical distribution of Neuromag coil frequencies
-    figure;
+    figure
     cfg = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
     cfg.zlim = [0 1e-22]; % the coil signals' magnitude is a few orders larger than typical brain signals

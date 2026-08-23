@@ -287,8 +287,9 @@ Below we plot the averaged O2Hb and HHb traces from A-10 seconds to A+35 seconds
     time = data_timelock.time;
     O2Hb = data_timelock.avg(1,:);
     HHb  = data_timelock.avg(2,:);
-    figure;
-    plot(time,O2Hb,'r'); hold on;
+    figure
+    plot(time,O2Hb,'r'); 
+    hold on
     plot(time,HHb,'b');
     legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 

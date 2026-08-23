@@ -281,7 +281,7 @@ In the same way you can make layouts for all other shafts
     cfg.channel = 'ROC*';
     layoutROC = ft_prepare_layout(cfg, freq);
 
-    figure;
+    figure
     ft_plot_layout(layoutLAM)
 
 {% include image src="/assets/img/tutorial/layout/figure8.png" width="400" %}
@@ -294,7 +294,7 @@ You can combine the layouts using **[ft_appendlayout](/reference/ft_appendlayout
     cfg = [];
     layoutR = ft_appendlayout(cfg, layoutRAM, layoutRHH, layoutRTH, layoutROC);
 
-    figure;
+    figure
     ft_plot_layout(layoutL);
 
 {% include image src="/assets/img/tutorial/layout/figure9.png" width="400" %}
@@ -307,7 +307,7 @@ And subsequently combine the left- and right-hemisphere layouts for the sEEG sha
     cfg.distance = 0.1; % tweak the distance a bit
     layoutShafts = ft_appendlayout(cfg, layoutL, layoutR);
 
-    figure;
+    figure
     ft_plot_layout(layoutShafts);
 
 {% include image src="/assets/img/tutorial/layout/figure10.png" width="400" %}
@@ -329,7 +329,7 @@ You can construct a layout for these ECoG grids by specifying 'ordered' and the 
     cfg.height = 1/8; % scale the LPG and LTG grid consistently
     layoutLPG = ft_prepare_layout(cfg, freq);
 
-    figure;
+    figure
     ft_plot_layout(layoutLPG);
 
 {% include image src="/assets/img/tutorial/layout/figure12.png" width="400" %}
@@ -340,7 +340,7 @@ You can construct a layout for these ECoG grids by specifying 'ordered' and the 
     cfg.height = 1/8; % scale the LPG and LTG grid consistently
     layoutLTG = ft_prepare_layout(cfg, freq);
 
-    figure;
+    figure
     ft_plot_layout(layoutLTG);
 
 {% include image src="/assets/img/tutorial/layout/figure13.png" width="400" %}
