@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42289738'
+- idtype: pmcid
+  value: PMC13495166
+- idtype: doi
+  value: 10.1186/s40359-026-04996-3
+- idtype: pii
+  value: 10.1186/s40359-026-04996-3
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Yu Q
+- authtype: Author
+  name: Guo M
+- authtype: Author
+  name: Cao J
+epubdate: 2026 Jun 15
+fulljournalname: BMC psychology
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/22
+printpubdate: ''
+pubdate: 2026 Jun 15
+sortdate: 2026/06/15 00:00
+source: BMC Psychol
+title: 'High social anxiety is associated with attenuated cognitive-control modulation
+  in a mixed threat-neutral context: evidence from ERPs and time-frequency analysis.'
+uid: '13495166'
+volume: '14'

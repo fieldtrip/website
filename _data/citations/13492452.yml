@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42509159'
+- idtype: pmcid
+  value: PMC13492452
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0133-26.2026
+- idtype: pii
+  value: JNEUROSCI.0133-26.2026
+authors:
+- authtype: Author
+  name: Thielking E
+- authtype: Author
+  name: Ramsey H
+- authtype: Author
+  name: Samaha J
+- authtype: Author
+  name: Andrillon T
+- authtype: Author
+  name: Iemi L
+epubdate: 2026 Aug 19
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '33'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Aug 19
+sortdate: 2026/08/19 00:00
+source: J Neurosci
+title: Opposite Effects of Alpha Oscillations on Mind-Wandering with Eyes Open and
+  Closed.
+uid: '13492452'
+volume: '46'

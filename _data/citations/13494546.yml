@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42276070'
+- idtype: pmcid
+  value: PMC13494546
+- idtype: doi
+  value: 10.1016/j.crmeth.2026.101481
+- idtype: pii
+  value: S2667-2375(26)00181-5
+authors:
+- authtype: Author
+  name: Jendritza P
+- authtype: Author
+  name: Liljemalm R
+- authtype: Author
+  name: Stieglitz T
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Lewis CM
+epubdate: 2026 Jun 11
+fulljournalname: Cell reports methods
+issue: '8'
+pages: '101481'
+pmclivedate: 2026/08/22
+printpubdate: 2026 Aug 17
+pubdate: 2026 Aug 17
+sortdate: 2026/08/17 00:00
+source: Cell Rep Methods
+title: A hybrid micro-ECoG for functionally targeted multi-site and multi-scale investigation.
+uid: '13494546'
+volume: '6'

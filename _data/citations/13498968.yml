@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42630118'
+- idtype: doi
+  value: 10.1002/cns.71101
+- idtype: pmcid
+  value: PMC13498968
+authors:
+- authtype: Author
+  name: Zhang K
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Xu Z
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Lv C
+- authtype: Author
+  name: Zhang B
+- authtype: Author
+  name: Jin H
+- authtype: Author
+  name: Bie L
+epubdate: ''
+fulljournalname: CNS neuroscience & therapeutics
+issue: '8'
+pages: e71101
+pmclivedate: 2026/08/23
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: CNS Neurosci Ther
+title: Early High-Frequency Network Reorganization After Spinal Cord Stimulation Is
+  Linked to Long-Term Recovery in Disorders of Consciousness.
+uid: '13498968'
+volume: '32'

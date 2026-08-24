@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42623338'
+- idtype: pmcid
+  value: PMC13492753
+- idtype: doi
+  value: 10.1371/journal.pbio.3003899
+- idtype: pii
+  value: PBIOLOGY-D-26-00325
+authors:
+- authtype: Author
+  name: Moffat R
+- authtype: Author
+  name: Dumas G
+- authtype: Author
+  name: Cross ES
+epubdate: 2026 Aug 20
+fulljournalname: PLoS biology
+issue: '8'
+pages: e3003899
+pmclivedate: 2026/08/21
+printpubdate: ''
+pubdate: 2026 Aug
+sortdate: 2026/08/20 00:00
+source: PLoS Biol
+title: Social interactions between people of same and different generations shape
+  longitudinal changes in interpersonal neural synchrony, loneliness, and social connection.
+uid: '13492753'
+volume: '24'

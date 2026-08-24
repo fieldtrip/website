@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42613983'
+- idtype: pmcid
+  value: PMC13487411
+- idtype: doi
+  value: 10.1002/epi4.70343
+authors:
+- authtype: Author
+  name: Kuroda N
+- authtype: Author
+  name: Firestone E
+- authtype: Author
+  name: Cereda GS
+- authtype: Author
+  name: Medel-Matus JS
+- authtype: Author
+  name: Viana PF
+- authtype: Author
+  name: Galanopoulou AS
+- authtype: Author
+  name: Asano E
+epubdate: 2026 Aug 19
+fulljournalname: Epilepsia open
+issue: ''
+pages: ''
+pmclivedate: 2026/08/20
+printpubdate: ''
+pubdate: 2026 Aug 19
+sortdate: 2026/08/19 00:00
+source: Epilepsia Open
+title: 'EEG CONNECT: A proposed reporting checklist for EEG-based connectivity studies
+  in clinical epilepsy research.'
+uid: '13487411'
+volume: ''

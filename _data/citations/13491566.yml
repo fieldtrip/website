@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42621832'
+- idtype: pmcid
+  value: PMC13491566
+- idtype: doi
+  value: 10.1111/desc.70271
+authors:
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Ommen SV
+- authtype: Author
+  name: Mazuka R
+- authtype: Author
+  name: Burnham D
+- authtype: Author
+  name: Nazzi T
+epubdate: ''
+fulljournalname: Developmental science
+issue: '5'
+pages: e70271
+pmclivedate: 2026/08/21
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Dev Sci
+title: Cortical Tracking of Speech Across Rhythm Classes in English-, French-, and
+  Japanese-Learning 4- and 8-Month-Old Infants.
+uid: '13491566'
+volume: '29'
