@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '42481515'
+- idtype: pmcid
+  value: PMC13500481
+- idtype: doi
+  value: 10.1038/s41467-026-75826-8
+- idtype: pii
+  value: 10.1038/s41467-026-75826-8
+authors:
+- authtype: Author
+  name: Zheng N
+- authtype: Author
+  name: Yang PF
+- authtype: Author
+  name: Phipps MA
+- authtype: Author
+  name: Kusunose J
+- authtype: Author
+  name: Mishra A
+- authtype: Author
+  name: Xia J
+- authtype: Author
+  name: Rodriguez W
+- authtype: Author
+  name: Newton AT
+- authtype: Author
+  name: Dawant BM
+- authtype: Author
+  name: Gore JC
+- authtype: Author
+  name: Caskey CF
+- authtype: Author
+  name: Chen LM
+epubdate: 2026 Jul 21
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/08/25
+printpubdate: ''
+pubdate: 2026 Jul 21
+sortdate: 2026/07/21 00:00
+source: Nat Commun
+title: Transcranial focused ultrasound modulates spiking, LFP, and BOLD activity in
+  the primate thalamus.
+uid: '13500481'
+volume: '17'

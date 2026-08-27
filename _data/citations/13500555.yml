@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42639005'
+- idtype: pmcid
+  value: PMC13500555
+- idtype: doi
+  value: 10.3389/fnins.2026.1825171
+authors:
+- authtype: Author
+  name: Levy A
+- authtype: Author
+  name: Boot E
+- authtype: Author
+  name: Jacquot M
+- authtype: Author
+  name: Gaeta G
+- authtype: Author
+  name: Parkkinen E
+- authtype: Author
+  name: Mari T
+- authtype: Author
+  name: Tachtsidis I
+epubdate: 2026 Aug 10
+fulljournalname: Frontiers in neuroscience
+issue: ''
+pages: '1825171'
+pmclivedate: 2026/08/25
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/08/10 00:00
+source: Front Neurosci
+title: 'Shedding light on imagined scents: an fNIRS feasibility study of olfactory
+  mental imagery and semantic cueing.'
+uid: '13500555'
+volume: '20'
