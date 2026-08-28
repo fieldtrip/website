@@ -297,11 +297,18 @@ cfg.method    = 'analytic';
 cfg.statistic = 'depsamplesT';
 cfg.design    = design;
 stat = ft_timelockstatistics(cfg, tlck_trials, tlck_trials0);
+
+cfg        = [];
+cfg.layout = 'fieldlinebeta2bz_helmet.mat';
+cfg.linecolor = 'spatial';
+cfg.viewmode = 'butterfly';
+cfg.parameter = 'stat';
+ft_multiplotER(cfg, stat);
 ```
 
-Here, we have created two data structures, one containing the single trial data in a 3-dimensional #trial x #channel x #time point matrix, and the other one containing a matrix with all zeros. This is needed, because the low-level FieldTrip functions that compute test statistics expect data from 2 conditions in the input. Using a data object with all zeros allows us to compute a T-statistic 'against 0'. Note that the T-statistic has not been computed here to assess statistical significance, it's used as a metric to quantify the reliability with which the averaged signals deviate from 0.
+In the above, we have created two data structures, one containing the single trial data in a 3-dimensional #trial x #channel x #time point matrix, and the other one containing a matrix with all zeros. This is needed, because the low-level FieldTrip functions that compute test statistics expect data from 2 conditions in the input. Using a data object with all zeros allows us to compute a T-statistic 'against 0'. Note that the T-statistic has not been computed here to assess statistical significance, it's used as a metric to quantify the reliability with which the averaged signals deviate from 0.
 
-
+{% include image src="/assets/img/tutorial/denoising_opm/erf_nodenoise_tstat.png" width="500" %}
 
 ## Denoising with SSP
 
@@ -341,6 +348,42 @@ ft_topoplotER(cfg, tlck, tlck_ssp1, tlck_ssp2);
 
 {% include markup/skyblue %}
 Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses. Which approach do you think will preserve more neural signal? Why might using the emptyroom data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
+{% include markup/end %}
+
+```matlab
+cfg            = [];
+cfg.channel    = 'MEG';
+cfg.keeptrials = 'yes';
+tlck_trials_ssp1 = ft_timelockanalysis(cfg, data_ssp1);
+tlck_trials_ssp2 = ft_timelockanalysis(cfg, data_ssp2);
+
+tlck_trials0 = tlck_trials_ssp1;
+tlck_trials0.trial(:) = 0;
+
+nrpt   = numel(data.trial);
+design = [ones(1,nrpt) ones(1,nrpt)*2; 1:nrpt 1:nrpt];
+
+cfg           = [];
+cfg.method    = 'analytic';
+cfg.statistic = 'depsamplesT';
+cfg.design    = design;
+stat_ssp1 = ft_timelockstatistics(cfg, tlck_trials_ssp1, tlck_trials0);
+stat_ssp2 = ft_timelockstatistics(cfg, tlck_trials_ssp2, tlck_trials0);
+
+cfg        = [];
+cfg.layout = 'fieldlinebeta2bz_helmet.mat';
+cfg.figure = 'subplot';
+cfg.parameter = 'stat';
+cfg.xlim   = [0.07 0.075];
+ft_topoplotER(cfg, stat, stat_ssp1, stat_ssp2);
+```
+
+{% include image src="/assets/img/tutorial/denoising_opm/erf_comparison_stat.png" width="500" %}
+
+#### Exercise
+
+{% include markup/skyblue %}
+Explore the effect of the SSP by interactively selecting sensors from the topographies to display the time courses of the T-statistics. Which approach do you think will preserve more neural signal? Why might using the emptyroom data for SSP estimation be advantageous or disadvantageous compared to using the task data itself?
 {% include markup/end %}
 
 ## Denoising with HFC
