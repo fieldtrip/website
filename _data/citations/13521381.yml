@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '42658809'
+- idtype: pmcid
+  value: PMC13521381
+- idtype: doi
+  value: 10.1371/journal.pbio.3003938
+- idtype: pii
+  value: PBIOLOGY-D-25-04021
+authors:
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Kaur M
+- authtype: Author
+  name: Clayden B
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Cairney SA
+epubdate: 2026 Aug 27
+fulljournalname: PLoS biology
+issue: '8'
+pages: e3003938
+pmclivedate: 2026/08/28
+printpubdate: ''
+pubdate: 2026 Aug
+sortdate: 2026/08/27 00:00
+source: PLoS Biol
+title: Theta oscillations tag episodic memories for sleep-dependent consolidation.
+uid: '13521381'
+volume: '24'

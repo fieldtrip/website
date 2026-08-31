@@ -1,0 +1,60 @@
+articleids:
+- idtype: pmid
+  value: '42618786'
+- idtype: pmcid
+  value: PMC13518247
+- idtype: doi
+  value: 10.1038/s41586-026-10910-z
+- idtype: pii
+  value: 10.1038/s41586-026-10910-z
+authors:
+- authtype: Author
+  name: Stoliker D
+- authtype: Author
+  name: Novelli L
+- authtype: Author
+  name: Khajehnejad M
+- authtype: Author
+  name: Biabani M
+- authtype: Author
+  name: Greaves MD
+- authtype: Author
+  name: Barta T
+- authtype: Author
+  name: Williams M
+- authtype: Author
+  name: Chopra S
+- authtype: Author
+  name: Bazin O
+- authtype: Author
+  name: Simonsson O
+- authtype: Author
+  name: Chambers R
+- authtype: Author
+  name: Barrett FS
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Preller KH
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Seth AK
+- authtype: Author
+  name: Sundram S
+- authtype: Author
+  name: Egan GF
+- authtype: Author
+  name: Razi A
+epubdate: 2026 Aug 19
+fulljournalname: Nature
+issue: '8129'
+pages: 936-947
+pmclivedate: 2026/08/28
+printpubdate: 2026 Aug
+pubdate: 2026 Aug
+sortdate: 2026/08/01 00:00
+source: Nature
+title: Psychedelics align brain activity with context.
+uid: '13518247'
+volume: '656'

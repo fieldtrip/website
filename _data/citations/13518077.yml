@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42657401'
+- idtype: pmcid
+  value: PMC13518077
+- idtype: doi
+  value: 10.1162/OPMI.a.372
+- idtype: pii
+  value: OPMI.a.372
+authors:
+- authtype: Author
+  name: Sánchez-López M
+- authtype: Author
+  name: Isasi-Isasmendi A
+- authtype: Author
+  name: Bickel B
+- authtype: Author
+  name: Santesteban M
+epubdate: 2026 Jul 17
+fulljournalname: 'Open mind : discoveries in cognitive science'
+issue: ''
+pages: 1092-1117
+pmclivedate: 2026/08/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/07/17 00:00
+source: Open Mind (Camb)
+title: 'Broadening the Agent Preference Hypothesis Through Experiencers: Eye-Tracking
+  and EEG Evidence of Proto-Agents and Proto-Patients.'
+uid: '13518077'
+volume: '10'

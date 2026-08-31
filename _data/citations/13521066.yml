@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42662512'
+- idtype: pmcid
+  value: PMC13521066
+- idtype: doi
+  value: 10.1016/j.isci.2026.117041
+- idtype: pii
+  value: S2589-0042(26)02419-3
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Obleser J
+epubdate: 2026 Aug 19
+fulljournalname: iScience
+issue: '9'
+pages: '117041'
+pmclivedate: 2026/08/28
+printpubdate: ''
+pubdate: 2026 Sep 18
+sortdate: 2026/08/19 00:00
+source: iScience
+title: 'Spatial attention in the moving brain: Dissociable roles of neural alpha oscillations
+  and head rotation.'
+uid: '13521066'
+volume: '29'
