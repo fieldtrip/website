@@ -67,4 +67,4 @@ In general: if your original data is in a different format than the BIDS represe
 
 This example also shows how to add annotations of the video to the `_events.tsv` file. If you do not have annotations (yet), you would leave the `cfg.events` field empty.
 
-In case you would have multiple subsequent videos in a single session, you would use `cfg.run=1, 2, ...` to specify the successive recordings.
+In case you would have multiple subsequent videos in a single session, you would use `cfg.run` to specify the successive video files.

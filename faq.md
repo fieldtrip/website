@@ -5,7 +5,7 @@ category: faq
 
 On this page you can find answers to a variety of FieldTrip and MATLAB related questions.
 
-We invite you to [add your own](/development/contribute) tutorials to the website, considering the [documentation guidelines](/development/guideline/documentation). Whenever you explain somebody in person or over email how to do something with FieldTrip, please consider whether you could use the website for this, allowing others to learn from it as well.
+We invite you to [add your own](/development/contribute) frequently asked questions to the website, considering the [documentation guidelines](/development/guideline/documentation). Whenever you explain somebody in person or over email how to do something with FieldTrip, please consider whether you could use the website for this, allowing others to learn from it as well.
 
 See also the [tutorials](/tutorial) and [example scripts](/example).
 

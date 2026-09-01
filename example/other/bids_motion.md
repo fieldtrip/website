@@ -6,10 +6,10 @@ redirect_from:
     - /example/bids_motion/
 ---
 
-{% include markup/red %}
-Motion data is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) as of version 1.9.0.
+Motion data is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) as of version 1.9.0. It is introduced and explained in the paper Sein Jeung, Helena Cockx, Stefan Appelhoff, Timotheus Berg, Klaus Gramann, Sören Grothkopp, Elke Warmerdam, Clint Hansen, Robert Oostenveld, BIDS Maintainers & Julius Welzel [Motion-BIDS: an extension to the brain imaging data structure to organize motion data for reproducible research](https://doi.org/10.1038/s41597-024-03559-8). Scientific Data (2024).
 
-This example predates the official merge of motion data in the BIDS standard. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - might therefore not yet be fully up to date with the official standard.
+{% include markup/red %}
+The examples below predate the official merge of motion data in the BIDS standard. The support that is implemented in the **[data2bids](/reference/data2bids)** function - might therefore not yet be fully up to date with the official standard.
 {% include markup/end %}
 
 There are numerous companies that manufacture research-oriented motion capture systems, such as Polhemus, Qualisys, NDI Polaris, X-Sens, etc. Furthermore, there are multiple technologies that are used for motion tracking, such as optical cameras (often with IR markers), electromagnetic tracking, or using inertial measurement units (IMUs). Optical and electromagnetic tracking systems result in measurements that can directly be interpreted as the position of the marker, which changes over time. Systems based on IMUs record signals from multiple accelerometers, gyroscopes, and (sometimes) magnetometers; the raw data from these systems requires further processing before it can be interpreted as position.
