@@ -11,6 +11,8 @@
   title: Getting started with FieldLine OPM data
 - link: /getting_started/meg/opm_fil
   title: Getting started with OPM data recorded at the FIL
+- link: /getting_started/meg/quanmag
+  title: Getting started with QuanMag OPM data
 - link: /getting_started/meg/quspin
   title: Getting started with QuSpin OPM data
 - link: /template/layout

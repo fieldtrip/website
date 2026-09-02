@@ -2492,6 +2492,9 @@
     - title: Getting started with QuSpin OPM data
       link: /getting_started/meg/quspin/
       nav_order: 0
+    - title: Getting started with QuanMag OPM data
+      link: /getting_started/meg/quanmag/
+      nav_order: 0
     - title: Getting started with Ricoh data
       link: /getting_started/meg/ricoh/
       nav_order: 0
