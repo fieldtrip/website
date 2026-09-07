@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42133227'
+- idtype: doi
+  value: 10.1007/s12264-026-01624-3
+- idtype: pii
+  value: 10.1007/s12264-026-01624-3
+- idtype: pmcid
+  value: PMC13545165
+authors:
+- authtype: Author
+  name: Xie M
+- authtype: Author
+  name: Wu H
+- authtype: Author
+  name: Bao H
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Han J
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Qin P
+epubdate: 2026 May 14
+fulljournalname: Neuroscience bulletin
+issue: '9'
+pages: 2042-2056
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Neurosci Bull
+title: Task-Dependent Heart-Brain Interactions Regulate Human Self-Awareness.
+uid: '13545165'
+volume: '42'

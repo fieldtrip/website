@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42304049'
+- idtype: pmcid
+  value: PMC13538531
+- idtype: doi
+  value: 10.1038/s41598-026-55712-5
+- idtype: pii
+  value: 10.1038/s41598-026-55712-5
+authors:
+- authtype: Author
+  name: Er A
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Marchand-Pauvert V
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Marrelec G
+epubdate: 2026 Jun 16
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/04
+printpubdate: ''
+pubdate: 2026 Jun 16
+sortdate: 2026/06/16 00:00
+source: Sci Rep
+title: Effects of pharmacological modulation of cortical excitability on resting-state
+  EEG PAC in humans.
+uid: '13538531'
+volume: '16'

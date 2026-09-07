@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42532846'
+- idtype: pmcid
+  value: PMC13540612
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0047-26.2026
+- idtype: pii
+  value: JNEUROSCI.0047-26.2026
+authors:
+- authtype: Author
+  name: Castelblanco Riveros CA
+- authtype: Author
+  name: Angeli PA
+- authtype: Author
+  name: van der Meer MAA
+- authtype: Author
+  name: Bujarski KA
+- authtype: Author
+  name: Robertson CE
+epubdate: 2026 Sep 2
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '35'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Sep 2
+sortdate: 2026/09/02 00:00
+source: J Neurosci
+title: Hippocampal Theta Distinguishes between Memory-Guided and Exploratory Saccades
+  in Humans.
+uid: '13540612'
+volume: '46'

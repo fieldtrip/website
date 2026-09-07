@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42699506'
+- idtype: pmcid
+  value: PMC13543444
+- idtype: doi
+  value: 10.1162/IMAG.a.1353
+- idtype: pii
+  value: IMAG.a.1353
+authors:
+- authtype: Author
+  name: Woelk SP
+- authtype: Author
+  name: Alexander NA
+- authtype: Author
+  name: O'Neill GC
+- authtype: Author
+  name: Garfinkel SN
+- authtype: Author
+  name: Barnes GR
+epubdate: 2026 Sep 3
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/09/05
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/03 00:00
+source: Imaging Neurosci (Camb)
+title: Model-based cardiac field artefact correction for OP-MEG.
+uid: '13543444'
+volume: '4'

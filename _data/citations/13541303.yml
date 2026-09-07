@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42689526'
+- idtype: pmcid
+  value: PMC13541303
+- idtype: doi
+  value: 10.7554/eLife.108408
+- idtype: pii
+  value: '108408'
+authors:
+- authtype: Author
+  name: Clausner T
+- authtype: Author
+  name: Marques JP
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Bonnefond M
+epubdate: 2026 Sep 3
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/09/04
+printpubdate: ''
+pubdate: 2026 Sep 3
+sortdate: 2026/09/03 00:00
+source: Elife
+title: Frequency and laminar profile of feature-specific visual activity revealed
+  by interleaved EEG-fMRI.
+uid: '13541303'
+volume: '14'

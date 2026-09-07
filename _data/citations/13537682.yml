@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '42647585'
+- idtype: pmcid
+  value: PMC13537682
+- idtype: doi
+  value: 10.1371/journal.pbio.3003966
+- idtype: pii
+  value: PBIOLOGY-D-26-00756
+authors:
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Song P
+- authtype: Author
+  name: Ye H
+- authtype: Author
+  name: Lao-Rodríguez AB
+- authtype: Author
+  name: Zhang Q
+- authtype: Author
+  name: Zhai Y
+- authtype: Author
+  name: Bao X
+- authtype: Author
+  name: Mehmood I
+- authtype: Author
+  name: Tanigawa H
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Pérez-González D
+- authtype: Author
+  name: Malmierca MS
+- authtype: Author
+  name: Yu X
+epubdate: 2026 Aug 26
+fulljournalname: PLoS biology
+issue: '8'
+pages: e3003966
+pmclivedate: 2026/09/03
+printpubdate: ''
+pubdate: 2026 Aug
+sortdate: 2026/08/26 00:00
+source: PLoS Biol
+title: Behavioral engagement and stimulus regularities coordinate auditory-prefrontal
+  network activity.
+uid: '13537682'
+volume: '24'
