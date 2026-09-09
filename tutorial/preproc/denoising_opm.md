@@ -53,7 +53,7 @@ Here, we will explore the effect of some of those strategies.
 
 OPM recordings were done using a FieldLine v3 system comprised of between 131 and 133 OPMs sensitive in the radial (or axial) direction. The OPMs were placed in a FieldLine beta-2 smart helmet, which allows them to be slided inwards, touching the scalp surface. Moreover, using the smart helmet allows for automatic coregistration of the OPM sensors (relative to the helmet), resulting in data with accurate position information of the individual sensors. The data used here have been further processed to be coregistered to the participant's head based coordinate system. To this end, a separate recording had been performed, during which the HPI-coils attached to the participant were localised. Subsequently the channel position information in the recordings (expressed in smart helmet coordinates) were replaced with the channel positions in head coordinates. Here we will explore the emptyroom recording, and a recording during which visual stimuli were presented in the left upper visual quadrant.
 
-The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/denoising_opm/) from our download server.
+The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/denoising_opm/) from our download server. You need to download the zip-file, and unpack it.
 
 ## Procedure
 
@@ -70,7 +70,7 @@ The tutorial follows these steps:
 We start by loading the emptyroom data. This allows us to characterize the noise environment and identify potential noise components that can be removed from the task data.
 
 ```matlab
-datadir = 'sub-001/ses-opm01/meg'; % NOTE this needs to be changed to match your computer
+datadir = '<PATH-TO>/tutorialdata/sub-001/ses-opm01/meg'; % NOTE this needs to be changed to match your computer
 dataset = fullfile(datadir, 'sub-001_ses-opm01_task-emptyroom_meg.fif');
 
 % first pass for exploration, to evaluate the power spectrum, and perform PCA
