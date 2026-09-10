@@ -33,7 +33,7 @@ Note that the tentative program below still might change a bit.
 
 | 09:00-10:30 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
 | 10:30-10:45 | Coffee Break |
-| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/opm_denoising) |
+| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/denoising_opm) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
 | 14:30-15:45 | Coregistration of OPM-MEG data - lecture by Robert Oostenveld |
