@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42702808'
+- idtype: pmcid
+  value: PMC13547579
+- idtype: doi
+  value: 10.1002/brb3.71678
+authors:
+- authtype: Author
+  name: Blücher M
+- authtype: Author
+  name: Armagan N
+- authtype: Author
+  name: Osswald AC
+- authtype: Author
+  name: Mengel A
+- authtype: Author
+  name: Vogelgesang A
+- authtype: Author
+  name: Ruhnau J
+- authtype: Author
+  name: Fleischmann R
+epubdate: ''
+fulljournalname: Brain and behavior
+issue: '9'
+pages: e71678
+pmclivedate: 2026/09/08
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Brain Behav
+title: Quantitative EEG-Based Detection of Poststroke Delirium Endotypes and Their
+  Association With Biomarkers of Inflammation.
+uid: '13547579'
+volume: '16'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42704658'
+- idtype: pmcid
+  value: PMC13549623
+- idtype: doi
+  value: 10.7554/eLife.110795
+- idtype: pii
+  value: '110795'
+authors:
+- authtype: Author
+  name: Shin JD
+- authtype: Author
+  name: Satchell M
+- authtype: Author
+  name: Miller P
+- authtype: Author
+  name: Jadhav SP
+epubdate: 2026 Sep 7
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/09/08
+printpubdate: ''
+pubdate: 2026 Sep 7
+sortdate: 2026/09/07 00:00
+source: Elife
+title: REM sleep prefrontal high-frequency oscillation chains mediate distinct cortical
+  - hippocampal reactivation patterns compared to NREM sleep.
+uid: '13549623'
+volume: '15'

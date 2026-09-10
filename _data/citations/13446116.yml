@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38820468'
+- idtype: pmcid
+  value: PMC13446116
+- idtype: doi
+  value: 10.1212/WNL.0000000000209451
+authors:
+- authtype: Author
+  name: Gong R
+- authtype: Author
+  name: Roth RW
+- authtype: Author
+  name: Chang AJ
+- authtype: Author
+  name: Sinha N
+- authtype: Author
+  name: Parashos A
+- authtype: Author
+  name: Davis KA
+- authtype: Author
+  name: Kuzniecky R
+- authtype: Author
+  name: Bonilha L
+- authtype: Author
+  name: Gleichgerrcht E
+epubdate: 2024 May 31
+fulljournalname: Neurology
+issue: '12'
+pages: e209451
+pmclivedate: 2026/09/08
+printpubdate: 2024 Jun 25
+pubdate: 2024 Jun 25
+sortdate: 2024/06/25 00:00
+source: Neurology
+title: EEG Ictal Power Dynamics, Function-Structure Associations, and Epilepsy Surgical
+  Outcomes.
+uid: '13446116'
+volume: '102'

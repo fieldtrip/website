@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42315873'
+- idtype: pmcid
+  value: PMC13547293
+- idtype: doi
+  value: 10.1038/s41598-026-57256-0
+- idtype: pii
+  value: 10.1038/s41598-026-57256-0
+authors:
+- authtype: Author
+  name: Şen-Alpay S
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Timmerman RH
+- authtype: Author
+  name: Keitel A
+epubdate: 2026 Jun 18
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/08
+printpubdate: ''
+pubdate: 2026 Jun 18
+sortdate: 2026/06/18 00:00
+source: Sci Rep
+title: Pupil- and gaze dynamics track emotion content in naturalistic speech.
+uid: '13547293'
+volume: '16'

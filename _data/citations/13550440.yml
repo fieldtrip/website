@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42321332'
+- idtype: doi
+  value: 10.1038/s41598-026-57532-z
+- idtype: pii
+  value: 10.1038/s41598-026-57532-z
+- idtype: pmcid
+  value: PMC13550440
+authors:
+- authtype: Author
+  name: Alipour M
+- authtype: Author
+  name: van Drongelen W
+- authtype: Author
+  name: Malerba P
+- authtype: Author
+  name: Voss J
+- authtype: Author
+  name: Satzer D
+epubdate: 2026 Jun 19
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/09
+printpubdate: ''
+pubdate: 2026 Jun 19
+sortdate: 2026/06/19 00:00
+source: Sci Rep
+title: Predictability of sleep slow oscillation emergence and spatial extent from
+  pre-onset neural dynamics.
+uid: '13550440'
+volume: '16'
