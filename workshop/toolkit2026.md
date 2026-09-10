@@ -101,20 +101,20 @@ You can either 'click around' using web browsers and/or explorer windows to grab
 
 ### Download and install FieldTrip
 
-To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260901), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
+To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260904), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
     % create a folder that will contain the code and the data, and change directory
     mkdir('toolkit2026');
     cd('toolkit2026');
 
     % download and unzip fieldtrip into the newly created folder
-    url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260901.zip';
+    url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
     unzip(url_fieldtrip);
 
 Upon completion of this step, the folder structure should look something like this: 
 
 ```bash
-fieldtrip-20260901/
+fieldtrip-20260904/
 |-- bin
 |-- compat
 |-- connectivity
@@ -163,10 +163,10 @@ At this stage, you ideally have a directory structure that looks like the follow
 |   |-- Subject01.ds
 |   |-- beamformer
 |   |-- cluster_permutation_timelock
-|   |-- opm_denoising
 |   |-- coregistration_opm
+|   |-- denoising_opm
 |   `-- opm_helmet_design
-`-- fieldtrip-20260901
+`-- fieldtrip-20260904
     |-- bin
     |-- compat
     |-- connectivity
@@ -195,11 +195,11 @@ If you from now on - that is for the duration of the toolkit - *ALWAYS* execute 
 
     % change into the 'toolkit2026' folder and then do the following
     restoredefaultpath
-    addpath('fieldtrip-20260901');
+    addpath('fieldtrip-20260904');
     addpath(genpath('data'));
     ft_defaults;
 
-The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20260901` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20260904` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI. You can find more information about startup files in the MATLAB documentation.
