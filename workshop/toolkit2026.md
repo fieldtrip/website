@@ -33,7 +33,7 @@ Note that the tentative program below still might change a bit.
 
 | 09:00-10:30 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
 | 10:30-10:45 | Coffee Break |
-| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/sensor/denoising_opm) |
+| 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/preproc/denoising_opm) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | hands-on (continued) |
 | 14:30-15:45 | Coregistration of OPM-MEG data - lecture by Robert Oostenveld |
@@ -153,7 +153,50 @@ Next, we proceed with downloading the relevant data. The data that are used in t
     url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
     unzip(url_subject01);
 
-    %  the rest of the instructions will follow later  ...
+    % we also need to download some other data for the respective hands on sessions:
+    mkdir('preprocessing_opm');
+    cd('preprocessing_opm');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm';
+    fnames = {'MedianNerve_StimBreakStim2min_Pos1.fif' 'MedianNerve_StimBreakStim2min_Pos2.fif'                             'MedianNerve_StimBreakStim2min_Pos3.fif'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
+
+    mkdir('denoising_opm');
+    cd('denoising_opm');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip';
+    unzip(url_tutorial);
+    cd('../');
+
+    mkdir('coregistration_opm');
+    cd('coregistration_opm');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/coregistration_opm';
+    fnames = {'example1_head_markers.pos' 'example2_magneticphantom_HPIplusdipoleset6_raw.fif' 'example3_anatomical.nii' 'example3_face_helmet.obj' 'example3_face_helmet_aligned.mat' 'example3_mri_realigned.mat' 'fieldlinebeta2_helmet_rim.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
+    
+    mkdir('beamformer');
+    cd('beamformer');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
+    fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../');
+
+    %% FIXME OPM_HELMET_DESIGN FILES SHOULD BE DOWNLOADED -> WHICH ONES? %%
+    
+    mkdir('cluster_permutation_timelock');
+    cd('cluster_permutation_timelock');
+    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
+    fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat'             'stat_ERF_planar_FICvsFC.mat'};
+    for k = 1:numel(fnames)
+      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+    end
+    cd('../../');
 
 At this stage, you ideally have a directory structure that looks like the following one:
 
