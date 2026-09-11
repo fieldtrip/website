@@ -119,8 +119,10 @@ The field `cfg.trl` represents the trials or segments of interest. We proceed by
 Rather than reading only the segments of interest, we can also start by reading the whole continuous recording into memory and then segment it.
 
     cfg = [];
-    cfg.lpfilter = 'yes';
-    cfg.lpfreq = 0.5;
+    cfg.hpfilter = 'yes';
+    cfg.hpfreq = 0.5;
+    cfg.hpfilttype = 'firws';
+    cfg.usefftfilt = 'yes';
     cfg.channel = '00*';
     cfg.dataset = 'MedianNerve_StimBreakStim2min_Pos1.fif';
     data_pos1_continuous = ft_preprocessing(cfg);
