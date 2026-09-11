@@ -148,7 +148,7 @@ In the next step, we use **[ft_sensorplacement](/reference/ft_sensorplacement)**
     [tmpcfg, hole] = ft_sensorplacement(cfg, headshape);
 
     cfg.template = 'fieldline_padding.stl';
-    [tmpcfg, hole] = ft_sensorplacement(cfg, headshape);
+    [tmpcfg, padding] = ft_sensorplacement(cfg, headshape);
 
 This returns a cell-array for each of the objects, which we can plot in MATLAB:
 
