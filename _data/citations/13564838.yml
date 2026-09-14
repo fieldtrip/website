@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '42726864'
+- idtype: doi
+  value: 10.1126/sciadv.aec6658
+- idtype: pmcid
+  value: PMC13564838
+authors:
+- authtype: Author
+  name: Songlin Q
+- authtype: Author
+  name: Gegenfurtner KR
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Cao H
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Wang W
+- authtype: Author
+  name: Chen J
+epubdate: 2026 Sep 11
+fulljournalname: Science advances
+issue: '37'
+pages: eaec6658
+pmclivedate: 2026/09/12
+printpubdate: 2026 Sep 11
+pubdate: 2026 Sep 11
+sortdate: 2026/09/11 00:00
+source: Sci Adv
+title: A unifying principle of chromatic coding across biological and artificial systems.
+uid: '13564838'
+volume: '12'

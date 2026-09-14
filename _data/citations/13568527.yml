@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42678993'
+- idtype: pmcid
+  value: PMC13568527
+- idtype: doi
+  value: 10.1371/journal.pbio.3003979
+- idtype: pii
+  value: PBIOLOGY-D-26-00939
+authors:
+- authtype: Author
+  name: Pang Y
+- authtype: Author
+  name: Zhou D
+- authtype: Author
+  name: Peng Z
+- authtype: Author
+  name: Liu W
+- authtype: Author
+  name: Huang R
+- authtype: Author
+  name: Seger CA
+- authtype: Author
+  name: Chen Q
+epubdate: 2026 Sep 1
+fulljournalname: PLoS biology
+issue: '9'
+pages: e3003979
+pmclivedate: 2026/09/12
+printpubdate: ''
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: PLoS Biol
+title: Impaired midfrontal‑motor theta phase synchronization characterizes maladaptive
+  motivational behavior in people with obsessive‑compulsive disorder.
+uid: '13568527'
+volume: '24'

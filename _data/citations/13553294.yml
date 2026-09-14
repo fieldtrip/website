@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42319042'
+- idtype: pmcid
+  value: PMC13553294
+- idtype: doi
+  value: 10.1093/sleep/zsag168
+- idtype: pii
+  value: '8711626'
+authors:
+- authtype: Author
+  name: Aleman-Zapata A
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Özsezer P
+- authtype: Author
+  name: Agarwal K
+- authtype: Author
+  name: Rayan A
+- authtype: Author
+  name: Navarro-Lobato I
+- authtype: Author
+  name: Genzel L
+epubdate: ''
+fulljournalname: Sleep
+issue: '9'
+pages: ''
+pmclivedate: 2026/09/10
+printpubdate: 2026 Sep 9
+pubdate: 2026 Sep 9
+sortdate: 2026/09/09 00:00
+source: Sleep
+title: Deltas' and spindles' cross-area synchronization and ripple subtypes.
+uid: '13553294'
+volume: '49'

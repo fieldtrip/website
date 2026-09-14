@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42715214'
+- idtype: doi
+  value: 10.1371/journal.pone.0347189
+- idtype: pii
+  value: PONE-D-26-04009
+- idtype: pmcid
+  value: PMC13557387
+authors:
+- authtype: Author
+  name: Komal K
+- authtype: Author
+  name: Cleary F
+- authtype: Author
+  name: Narayanan RP
+- authtype: Author
+  name: Wells JSG
+- authtype: Author
+  name: Buiatti M
+- authtype: Author
+  name: Bennett L
+epubdate: 2026 Sep 9
+fulljournalname: PloS one
+issue: '9'
+pages: e0347189
+pmclivedate: 2026/09/10
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/09 00:00
+source: PLoS One
+title: Design and validation of a modular smart headband with embroidered electrodes
+  for comfortable EEG monitoring.
+uid: '13557387'
+volume: '21'

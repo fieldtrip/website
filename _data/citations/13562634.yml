@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42324345'
+- idtype: pmcid
+  value: PMC13562634
+- idtype: doi
+  value: 10.1038/s41598-026-58505-y
+- idtype: pii
+  value: 10.1038/s41598-026-58505-y
+authors:
+- authtype: Author
+  name: Navas MC
+- authtype: Author
+  name: Ferrelli I
+- authtype: Author
+  name: Pedreira ME
+- authtype: Author
+  name: Fernández RS
+- authtype: Author
+  name: Bavassi L
+epubdate: 2026 Jun 22
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/12
+printpubdate: ''
+pubdate: 2026 Jun 22
+sortdate: 2026/06/22 00:00
+source: Sci Rep
+title: Remoteness sensitive theta network dynamics during early autobiographical memory
+  access.
+uid: '13562634'
+volume: '16'

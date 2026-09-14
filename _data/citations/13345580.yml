@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '42428137'
+- idtype: pmcid
+  value: PMC13345580
+- idtype: doi
+  value: 10.64898/2026.06.27.26356691
+- idtype: pii
+  value: 2026.06.27.26356691
+authors:
+- authtype: Author
+  name: Ji B
+- authtype: Author
+  name: Hadar P
+- authtype: Author
+  name: Frauscher B
+- authtype: Author
+  name: Agashe S
+- authtype: Author
+  name: Southwell D
+- authtype: Author
+  name: Jaber K
+- authtype: Author
+  name: Esmaeili B
+- authtype: Author
+  name: Hakimian S
+- authtype: Author
+  name: Grannan BL
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Salami P
+epubdate: 2026 Jun 30
+fulljournalname: 'medRxiv : the preprint server for health sciences'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/09
+printpubdate: ''
+pubdate: 2026 Jun 30
+sortdate: 2026/06/30 00:00
+source: medRxiv
+title: Nucleus-specific thalamic involvement in seizure networks differentiates neuromodulation
+  outcomes.
+uid: '13345580'
+volume: ''
