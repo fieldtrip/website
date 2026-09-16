@@ -1256,7 +1256,7 @@ We specify the single OPM sensor as the template, which cause it to be copied fo
     cfg.channel = chansel;
     cfg.template = opm_single;
     cfg.outwardshift = 2 + 1 + 5; % IMPORTANT see below
-    [outcfg, opm_all] = ft_sensorplacement(cfg, headshape);
+    [outcfg, all_opm] = ft_sensorplacement(cfg, headshape);
 
 In the previous example in the tutorial we moved the STL model for the sensor 2 mm away from the headshape. The STL design of the **sensor holder** has its bottom flush with the z=0 plane, and the STL design of the **sensor** itself has the sensor 1 mm shifted upwards along the +z direction, since there is a 1 mm rim to keep the sensor in place in the holder. Finally, the sensitive spot in the sensor where the field is actually detected is not at the bottom of the sensor enclosure, but has a 5 mm offset from the bottom. Consequently, the `cfg.outwardshift` needs to be specified as 2+1+5.
 
@@ -1264,6 +1264,7 @@ Whereas we start with only 19 sensors in this tutorial, since each sensor in thi
 
 The output `opm_all` is a structure array with 19 OPM _sensors_, where each sensor represents three _channels_. We combine all of them into a single `grad` structure.
 
+    lab = {};
     grad = [];
     grad.label = {};
     grad.coilpos = zeros(0,3);
