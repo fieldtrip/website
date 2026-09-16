@@ -1047,7 +1047,7 @@ Return to the individual MRI-based helmet design and update the orientation of t
 
 As an alternative to specifying the rotations around the z-, y- and x-axis, you can specify the orientation of each of the electrodes in the input `elec` structure. This is similar to specifying the coil orientation for MEG sensor arrays, and for electrodes also used in **[ft_plot_sens](/reference/ft_plot_sens)** when you show the electrode as a disc. The following takes the line connecting the point (0,0,40), which is more or less in between T7 and T8, and each of the electrodes, and uses that line to determine the orientation of each electrode.)
 
-    for i=1:numel(elec1020.label)
+    for i=1:numel(elec.label)
         elec.elecori(i,:) = elec.elecpos(i,:) - [0 0 40];
         elec.elecori(i,:) = elec.elecori(i,:) / norm(elec.elecori(i,:)); % unit length
     end
@@ -1091,7 +1091,7 @@ Of course this is best combined with first determining the overall orientation (
         };
 
     cfg = [];
-    cfg.elec = elec1020;
+    cfg.elec = elec;
     cfg.channel = chansel;  % subset of 19 locations
     cfg.rotx = outcfg.rotx; % 19x1 vector
     cfg.roty = outcfg.roty; % 19x1 vector
