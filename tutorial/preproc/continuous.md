@@ -130,7 +130,7 @@ If you zoom in and look in detail at the SCLK01 channel, you can see that there 
 {% include markup/yellow %}
 When doing continuous MEG data acquisition (which is the default at the Donders and many other labs), the CTF acquisition software by default writes data to disk in 10-second segments. These segments are continuous, so between subsequent segments there is no time gap and there are no missing samples or jumps in the signal. Regretfully, FieldTrip is not able to distinguish these pseudo-continuous files from properly epoched files which **do** have a gap and a jump in the signals between the trials/segments (as in Subject01.ds above).
 
-If your CTF data contains 10-second epochs, it is very likely that it is a pseudocontinuous recording and you shuold use the `cfg.continuous = 'yes'` option.
+If your CTF data contains 10-second epochs, it is very likely that it is a pseudocontinuous recording and you should use the `cfg.continuous = 'yes'` option.
 {% include markup/end %}
 
 ## Preprocessing, filtering and rereferencing

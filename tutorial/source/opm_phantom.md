@@ -16,7 +16,7 @@ Conventional SQUID-based MEG systems have fixed sensor arrays inside a cryogenic
 This tutorial demonstrates three use cases for a spherical MEG phantom equipped with 24 magnetic dipole coils:
 
 1. **System validation** — testing whether an MEG system correctly localizes known magnetic sources, for comparing SQUID and OPM systems.
-2. **Channel ampitude calibration** — determining the sensitivity of each MEG sensor using the known coil positions.
+2. **Channel amplitude calibration** — determining the sensitivity of each MEG sensor using the known coil positions.
 3. **MEG sensor localization** — using the phantom to establish the geometry of an OPM sensor array by fitting dipoles to the known coil positions.
 
 {% include markup/yellow %}
@@ -257,7 +257,7 @@ The procedure for fitting a dipole to each coil is the same as the procedure use
 
 {% include image src="/assets/img/tutorial/opm_phantom/figure6.png" width="600" %}
 
-For each of the PCA copmponents we di a grid search over all dipole positions within the sphere, which is then followed by a non-linear optimization during which the dipole drifts from the optimal 1 cm grid location to the actual location where the topographic error is minimal.
+For each of the PCA components we di a grid search over all dipole positions within the sphere, which is then followed by a non-linear optimization during which the dipole drifts from the optimal 1 cm grid location to the actual location where the topographic error is minimal.
 
     % the real heamodel for the magnetic dipole forward computations is an infinite empty space
     real_headmodel = [];
@@ -521,7 +521,7 @@ In the upper right corner there is one coil for which this channel has a large v
 
 ### Correcting the channel gain
 
-Now that we know that the channel gain is not as ideal as we would like it to be, we can correct for this. Ideally this is done by the manufacturer, who can modify the channel gain settings in the hardware or acquisition software. But if that is not possible, we can also do it ourselves using a so-called montage. See the **[ft_prepare_montage](/reference/ft_prepare_montage)** and **[ft_apply_montage](/reference/utilities/ft_apply_montage)** functions, or rearch here on the website for the use of a montage. FieldTrip uses the montage for multiple purposes, but basically it is used to do a matrix multiplication of the `montage.tra` matrix with the data matrix, keeping track of the channel names and ordering (which may be different).
+Now that we know that the channel gain is not as ideal as we would like it to be, we can correct for this. Ideally this is done by the manufacturer, who can modify the channel gain settings in the hardware or acquisition software. But if that is not possible, we can also do it ourselves using a so-called montage. See the **[ft_prepare_montage](/reference/ft_prepare_montage)** and **[ft_apply_montage](/reference/utilities/ft_apply_montage)** functions, or search here on the website for the use of a montage. FieldTrip uses the montage for multiple purposes, but basically it is used to do a matrix multiplication of the `montage.tra` matrix with the data matrix, keeping track of the channel names and ordering (which may be different).
 
 We construct a montage that has one-divided-by-the-gain on the diagonal. This will result in channel 207 being multiplied with 1/1.14.
 

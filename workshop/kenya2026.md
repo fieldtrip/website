@@ -35,7 +35,7 @@ Note that the oddball experiments were not designed for scientific rigor, but mo
 
 The eyes open and closed conditions were both recorded for 2 minutes.
 
-The stimulus presentation scripts were implemented with [Psychopy](https://psychopy.org/) and are together with a number of demonstration scripts shared on our [download server](https://download.fieldtriptoolbox.org/workshop/kenya2026/psychopy). We used LSL for the synchronization of the oddball experiments. The scripts `visual5.py` and `auditory3.py` were the ones used for the actual recording. Eash presented 150 stimuli, with an ITI of about 1 second, resulting in about 2.5 minutes of data for each.
+The stimulus presentation scripts were implemented with [Psychopy](https://psychopy.org/) and are together with a number of demonstration scripts shared on our [download server](https://download.fieldtriptoolbox.org/workshop/kenya2026/psychopy). We used LSL for the synchronization of the oddball experiments. The scripts `visual5.py` and `auditory3.py` were the ones used for the actual recording. 150 stimuli were presented both both conditions, with an ITI of about 1 second, resulting in about 2.5 minutes of data for each recording.
 
 The EEG data is stored in the [XDF](https://github.com/sccn/xdf) format and also available from [download server](https://download.fieldtriptoolbox.org/workshop/kenya2026/data). We recorded `sub02` on the day of the workshop itself, and recorded the EEG data of another volunteer `sub01` with the same experimental paradigms while preparing the on day before.
 
@@ -45,8 +45,8 @@ The data analysis scripts were implemented in FieldTrip based on the data of `su
 
 The eyes open versus eyes closed contrast showed the expected alpha increase for both subjects, and especially clear in the live data when subject 2 closed their eyes.
 
-The auditory task had the expected overall AEP and somewhat of a discernable ERP difference wave for both subjects.
+The auditory task had the expected overall AEP and somewhat of a discernible ERP difference wave for both subjects.
 
 The visual task showed the expected VEP for subject 1, but not a clear ERP difference wave. The visual task for subject 2 did not show the expected VEP, but a later (300 ms) ERP component, and no clear ERP difference wave.
 
-The ERP difference waves not being clear was actually expected, guven the short duration of the experiments and the small number of trials (especially following rejection of trials with eye artifacts). CLeaning the data with ICA would probably have been the better strategy, but did not fit within the limited time of the workshop.
+The ERP difference waves not being clear was actually expected, given the short duration of the experiments and the small number of trials (especially following rejection of trials with eye artifacts). Cleaning the data with ICA would probably have been the better strategy, but did not fit within the limited time of the workshop.

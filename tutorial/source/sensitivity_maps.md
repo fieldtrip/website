@@ -18,7 +18,7 @@ This tutorial does not cover how to use the sensitivity maps for actual source r
 
 The strength of the measured MEG signal is determined by the magnitude of the leadfield at a certain channel for a given dipole position and orientation. The leadfield **matrix** represents these magnitudes for all channels (and optionally for all three orientations), and it can be plotted topographically over the MEG helmet. By computing the singular value decomposition (SVD) of the leadfield matrix at each source location, we can quantify the sensitivity as a function of position across the cortex.
 
-We know that in the orientation of the dentritic tree of the neurons that we pick up with EEG and MEG is perpendicular to the cortical sheet. This can be used as constraint for source reconstruction, althogh often in practice this is not done as it requires an accurate individual cortical sheet and good coregistration of the MEG sensors with the head. However, in these simulations we can use the cortical orientation constraint. For each source position, we can compute two measures:
+We know that in the orientation of the dendritic tree of the neurons that we pick up with EEG and MEG is perpendicular to the cortical sheet. This can be used as constraint for source reconstruction, although often in practice this is not done as it requires an accurate individual cortical sheet and good coregistration of the MEG sensors with the head. However, in these simulations we can use the cortical orientation constraint. For each source position, we can compute two measures:
 
 - **Free-orientation sensitivity**: the largest singular value of the full 3-column leadfield matrix, representing the maximum sensitivity achievable with optimal dipole orientation.
 - **Fixed-orientation sensitivity**: the norm of the leadfield projected onto the known cortical surface normal, representing the sensitivity for sources oriented perpendicular to the cortical surface.
@@ -238,7 +238,7 @@ We compute the leadfield for each of the sensor arrangements. The `inside` field
 
 ## Compute sensitivity from the leadfield
 
-We compute the sensitivity maps by looping over all source positions and by computing the sensitivity for each dipole using the SVD. For free orientation we take the largest singular value of the full leadfield matrix. For fixed orientation we project the leadfield onto the known cortical surface normal and compute its norm. Since we need to compute the sensitivity maps for multiple senmsor arrays, it is convenient to make that code in a separate function.
+We compute the sensitivity maps by looping over all source positions and by computing the sensitivity for each dipole using the SVD. For free orientation we take the largest singular value of the full leadfield matrix. For fixed orientation we project the leadfield onto the known cortical surface normal and compute its norm. Since we need to compute the sensitivity maps for multiple sensor arrays, it is convenient to make that code in a separate function.
 
 Copy the following code and paste it in a local MATLAB file `ft_sensitivitymap.m` that you save on your own computer.
 
@@ -338,7 +338,7 @@ The sensitivity decreases for the deeper sources. We can also plot the sensitivi
 
 #### Absolute sensitivity (fixed orientation)
 
-The relative sensitivity is scaled relative to that of the most sensitive dipole, which is useful to compare the sensitivity over the cortical sheet. However, if we want to compare the sensitivity between different sensor arrays, we need to use the absolute sensitivy. The leadfield values are in T/Am. To convert these to the more intuitive fT/nAm, we multiply by 1e15 (T to fT) and divide by 1e-9 (A to nA), which is equivalent to multiplying by 1e6.
+The relative sensitivity is scaled relative to that of the most sensitive dipole, which is useful to compare the sensitivity over the cortical sheet. However, if we want to compare the sensitivity between different sensor arrays, we need to use the absolute sensitivity. The leadfield values are in T/Am. To convert these to the more intuitive fT/nAm, we multiply by 1e15 (T to fT) and divide by 1e-9 (A to nA), which is equivalent to multiplying by 1e6.
 
     figure
     title('absolute sensitivity, orientation fixed (fT / nAm)')
@@ -412,7 +412,7 @@ Then convert to SI units.
 
 OPM sensors are flexible in their placement and the FieldLine smart helmet allows each OPM sensor to slide inwards so that the bottom of the sensor touches the scalp. The FieldLine template sensor positions therefore need to be shifted inwards to match the real distance to the scalp and brain. To determine the amount by which to shift the sensors towards the scalp, we compute the distance of each sensor to the nearest point on the (high-resolution) scalp surface. Subsequently we shift the sensors inward along their orientation vectors.
 
-The FieldLine sensor has a 5 mm standoff distance: the center of the cell (where the laser is) is offset 5 mm from the base of the sensor housing. So the position where the measurement is done (and the leadfield is modelled) should be 5 mm from the scalp surface.
+The FieldLine sensor has a 5 mm standoff distance: the center of the cell (where the laser is) is offset 5 mm from the base of the sensor housing. So the position where the measurement is done (and the leadfield is modeled) should be 5 mm from the scalp surface.
 
     % estimate the distance to the scalp
     d = nan(144,1);
@@ -462,9 +462,9 @@ We proceed by computing the leadfield and the sensitivity maps for the FieldLine
 
 We could now use the same code as above to plot the distance of the dipoles in the sourcemodel to the sensors (which is considerably closer than for the CTF systems) and the relative sensitivities. However, more interesting is to directly compare the OPM sensitivity to that of the 275-channel CTF system.
 
-### Compare CTf and OPM sensitivity maps
+### Compare CTF and OPM sensitivity maps
 
-We can compare the abosolute sensitivity of the CTF275 and FieldLine beta2 side by side.
+We can compare the absolute sensitivity of the CTF275 and FieldLine beta2 side by side.
 
     figure
 
@@ -492,7 +492,7 @@ We can compare the abosolute sensitivity of the CTF275 and FieldLine beta2 side 
 
 The 275-channel CTF system has a maximum absolute sensitivity of about 60 fT/nAm and with the 144 axial sensors in FieldLine beta2 smart helmet we would obtain a maximum absolute sensitivity of approximately 120 fT/nAm. The FieldLine v3 sensors furthermore allow for recording in the tangential direction, which means that with 144 sensors you can record 288 channels. If we were to take that into account, the sensitivity of the OPM system would be even larger, especially for the superficial dipoles.
 
-However, what we have ignored so far is that the different sensors also have different intrinsic noise characteristics (the OPMs are more noisy) and different sensitivities to the environmental noise (the CTF sensors are axial gradiometers, the OPMs are magnetometers). A full analysis of the signal-to-noise ratio and the effect of the different sensor characteristics and arrangements falls ourtside the scope of this tutorial. The paper by Schoffelen et al (2025) on ["Optimal configuration of on-scalp OPMs with fixed channel counts"](https://doi.org/10.1162/imag.a.22) does a more thorough job and computes the effect that different sensor arrangements have on the sensitivity, also considering sensor noise, environmental noise, and head-movement related noise. The code for those simulations is shared on <https://github.com/schoffelen/opm_simulations>. Also the paper by Iivanainen et al (2017) on ["Measuring MEG closer to the brain: Performance of on-scalp sensor arrays"](https://doi.org/10.1016/j.neuroimage.2016.12.048) deals with this.
+However, what we have ignored so far is that the different sensors also have different intrinsic noise characteristics (the OPMs are more noisy) and different sensitivities to the environmental noise (the CTF sensors are axial gradiometers, the OPMs are magnetometers). A full analysis of the signal-to-noise ratio and the effect of the different sensor characteristics and arrangements falls outside the scope of this tutorial. The paper by Schoffelen et al (2025) on ["Optimal configuration of on-scalp OPMs with fixed channel counts"](https://doi.org/10.1162/imag.a.22) does a more thorough job and computes the effect that different sensor arrangements have on the sensitivity, also considering sensor noise, environmental noise, and head-movement related noise. The code for those simulations is shared on <https://github.com/schoffelen/opm_simulations>. Also the paper by Iivanainen et al (2017) on ["Measuring MEG closer to the brain: Performance of on-scalp sensor arrays"](https://doi.org/10.1016/j.neuroimage.2016.12.048) deals with this.
 
 ## Summary and conclusion
 

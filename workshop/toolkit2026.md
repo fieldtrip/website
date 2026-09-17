@@ -11,7 +11,7 @@ There is a limited number of places available for this toolkit. The selection of
 
 ## Registration
 
-You can [pre-register here](https://www.ru.nl/en/donders-institute/agenda/donders-meg-opm-toolkit). The deadline for pre-registration is the 25th of Augus. In the week following registration closure we will inform you as to whether you obtained a place in this course. If you need to secure your place more in advance, for example due to visum requirements or making travel plans, please let us know so that we can review your application earlier.
+You can [pre-register here](https://www.ru.nl/en/donders-institute/agenda/donders-meg-opm-toolkit). The deadline for pre-registration is the 25th of August. In the week following registration closure we will inform you as to whether you obtained a place in this course. If you need to secure your place more in advance, for example due to visum requirements or making travel plans, please let us know so that we can review your application earlier.
 
 ## Program
 

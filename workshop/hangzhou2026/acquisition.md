@@ -89,7 +89,7 @@ The result is a structure with a binary `scalp` field. We can visualize it with 
 {% include image src="/assets/img/workshop/hangzhou2026/acquisition_segmentation1.png" width="600" %}
 
 {% include markup/yellow %}
-The original colin27 template MRI has a sort of bar at the top of the head which complicates the segmentation. Hence we will procede with a precomputed segmentation in which the bar has been removed. This also includes the brain and skull.
+The original colin27 template MRI has a sort of bar at the top of the head which complicates the segmentation. Hence we will proceed with a precomputed segmentation in which the bar has been removed. This also includes the brain and skull.
 {% include markup/end %}
 
     [ftver, ftpath] = ft_version;

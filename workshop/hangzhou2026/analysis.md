@@ -177,7 +177,7 @@ We will now manually remove trials with high variance.
         data_opm_hfc_clean(i) = ft_rejectvisual(cfg, data_opm_hfc(i));
     end
 
-#### Excercise
+#### Exercise
 
 {% include markup/skyblue %}
 For the SQUID-based recordings, we removed trials with variance above the threshold of 8e-25 Tesla-squared. Is it possible to use the same threshold for the OPMs? If not, why and does this affect the quality of the OPM signal? Remember that (i) OPMs are magnetometers, and (ii) they are placed closer to the scalp than the SQUIDs.
@@ -279,7 +279,7 @@ There are some missing sensors. To avoid interpolation or extrapolation artifact
 
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_topo_opm.png" width="500" %}
 
-#### Excercise
+#### Exercise
 
 {% include markup/skyblue %}
 Plot the topography including NaNs, then compare it with the topography where you excluded NaNs.
@@ -550,7 +550,7 @@ We apply the transformation to align the OPM sensors with the head-based coordin
 {% include image src="/assets/img/workshop/hangzhou2026/analysis_fieldlinebeta2_head.png" width="500" %}
 
 {% include markup/yellow %}
-The alignment here is not optimal yet, the sensors are not on the scalp. Ideally, the model for the sensors should hover uniformely 5 mm above the scalp, since the sensitive pickup point from each sensor is 5 mm from its bottom.
+The alignment here is not optimal yet, the sensors are not on the scalp. Ideally, the model for the sensors should hover uniformly 5 mm above the scalp, since the sensitive pickup point from each sensor is 5 mm from its bottom.
 {% include markup/end %}
 
 Lastly, we plot the 3D sensor topography for the time window from 35 to 50 ms, along with the scalp:

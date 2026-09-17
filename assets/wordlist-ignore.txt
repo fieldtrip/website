@@ -42,6 +42,7 @@ ActiveX
 Actiview
 ACTvsBL
 actvsblT
+Adachi
 addpath
 ades
 ADES
@@ -162,6 +163,7 @@ ANOVAs
 anr
 Ansems
 anterio
+antiphasic
 Antipolis
 antneuro
 Antonakakis
@@ -170,6 +172,7 @@ AnyWave
 aparc
 api
 APIs
+Appelhoff
 appenddata
 appenddim
 appendfreq
@@ -228,6 +231,7 @@ asynchrony
 aTHA
 atlasbasedmnigrid
 atlascoordinates
+atlasses
 AtlasViewer
 attL
 attR
@@ -427,6 +431,7 @@ Biomag
 BIOMAG
 Biomagnetic
 Biomagnetism
+biomagnetometer
 biomechanics
 Biomed
 BioMed
@@ -485,6 +490,7 @@ bookeeping
 boolean
 bootcamp
 Borland
+Borna
 Boto
 bottommeg
 bounderies
@@ -602,6 +608,7 @@ camlight
 CamTwist
 cancelled
 CanonicalBrain
+Cao
 capacitive
 Capitan
 capmapping
@@ -928,6 +935,7 @@ coregistrate
 coregistration
 coregistring
 cornerpoint
+Corneyllie
 correctm
 correcttail
 correlationanalysis
@@ -1054,6 +1062,7 @@ d'Action
 d'Annunzio
 da
 DAC
+DACQ
 Dahls
 Dalal
 Daly
@@ -1172,6 +1181,7 @@ Demarchi
 demixing
 dendritic
 denoise
+denoised
 denoising
 deoxy
 deoxygenated
@@ -1327,6 +1337,8 @@ dSPM
 DSPs
 dss
 DSS
+dssp
+DSSP
 dT
 DtbIPw
 dtf
@@ -1383,6 +1395,7 @@ ecgscale
 ecgtimelock
 Echallier
 Ecker
+ECNU
 ecog
 EcoG
 ECoG
@@ -1453,6 +1466,7 @@ electrod
 electrodenormalize
 electrodeplacement
 electroderealign
+electrodeselection
 Electroencephalogr
 ElectroEncephaloGraphic
 electromyography
@@ -1483,6 +1497,8 @@ EMGrgt
 emgscale
 emotiv
 Emotiv
+emptyroom
+Emptyroom
 EMSE
 emsize
 enableedit
@@ -1759,6 +1775,7 @@ Fisca
 Fischl
 Fisiologia
 FIT'NG
+fitlm
 fitng
 fitsphere
 fittemplate
@@ -1943,6 +1960,7 @@ GAk
 GAkl
 GAKL
 gam
+Gao
 Garrido
 Gaspelin
 gaussian
@@ -2031,6 +2049,7 @@ Gnd
 GND
 Gnumex
 goback
+goettingen
 goin
 Golland
 Gonçalves
@@ -2046,6 +2065,7 @@ gradiometers
 gradmul
 gradscale
 graining
+Gramann
 Gramfort
 gramm
 Granados
@@ -2078,6 +2098,7 @@ gris
 GRK
 Groesbeek
 Groppe
+Grothkopp
 groupanalysis
 groupwise
 Groupwise
@@ -2110,6 +2131,7 @@ Halliday
 Hämäläinen
 Hamer
 handson
+hangzhou
 hann
 Hann
 hannel
@@ -2123,6 +2145,7 @@ hardcoded
 harddrive
 Hari
 Hartmann
+Hashimoto
 hastoolbox
 Hawes
 Hb
@@ -2207,6 +2230,7 @@ HGP
 HGPs
 hh
 HHb
+HifiBerry
 highlightchannel
 highlightcolor
 highlightfacecolor
@@ -2317,6 +2341,7 @@ icasso
 ICM
 ico
 icoh
+icosahedral
 icosahedron
 icp
 ICP
@@ -2335,6 +2360,7 @@ ify
 ight
 IID
 IIR
+Iivanainen
 Ikkai
 Ilmoniemi
 ima
@@ -2476,6 +2502,7 @@ ITAB
 Italia
 itc
 iteratively
+ITI
 IUSS
 iuwcvar
 Iván
@@ -2759,6 +2786,7 @@ lin
 Lindeløv
 Lindenberger
 LInear
+linecolor
 linenoise
 Lingnau
 linkprop
@@ -2846,6 +2874,7 @@ magmul
 Magnes
 Magnetics
 magnetoencephalogram
+magnetoencephalograph
 magnetoencephalography
 Magnetoencephalography
 Magnetometry
@@ -2926,7 +2955,6 @@ MATLABPATH
 matlabpool
 MATLABROOT
 MATLABs
-MATLAB’s
 matlabXXXX
 matnwb
 matNWB
@@ -3204,6 +3232,7 @@ mpib
 mprage
 MPRAGE
 MRC
+mrdivide
 mri
 MRIConverter
 mricro
@@ -3217,6 +3246,7 @@ MRIViewer
 mrk
 MRlViewer
 MRO
+MRP
 mrprot
 MRT
 mrtrix
@@ -3263,6 +3293,8 @@ multiplotTFR
 multiplotting
 multiplotXXX
 multiplotXXXs
+multipole
+Multipole
 multiscale
 Multiscale
 Multisensory
@@ -3311,6 +3343,7 @@ mySQL
 MyTemp
 N'th
 na
+nA
 Näätänen
 NAc
 NAI
@@ -3383,6 +3416,7 @@ NELECx
 Nelken
 nella
 Nencki
+neo
 neocortex
 neocortical
 Nervus
@@ -3496,6 +3530,7 @@ Nijmegen
 Nikulin
 nimg
 NIN
+Ning
 nINT
 Nipy
 Nir
@@ -3521,6 +3556,7 @@ Nobelparken
 nocon
 NODATA
 nodejs
+nodenoise
 nofilter
 noisecov
 Noisetools
@@ -3765,6 +3801,7 @@ oxymon
 Oxymon
 Oxysoft
 OxySoft
+Oyama
 packageless
 paddinginsufficient
 padtype
@@ -3839,6 +3876,7 @@ Pennartz
 Pentusa
 perc
 peri
+periodogram
 perisylvian
 Perkel
 permalink
@@ -3935,6 +3973,7 @@ Polimeni
 Polloniniet
 Polyanska
 Polybench
+polyfit
 polygraphic
 polyimide
 polymicrogyria
@@ -3982,6 +4021,7 @@ powdimord
 powerbook
 PowerBook
 powerestimate
+powerline
 powerpoint
 Powerpoint
 powerspectra
@@ -4054,6 +4094,7 @@ propofol
 Propofol
 Protoc
 psd
+pseudocontinuous
 pseudoinverse
 pseudonimized
 pseudonomized
@@ -4073,6 +4114,7 @@ Psychologie
 Psychophysics
 psychophysiological
 Psychophysiological
+Psychopy
 PsychoPy
 psychtoolbox
 Psychtoolbox
@@ -4100,6 +4142,7 @@ Pz
 qc
 qform
 qGain
+Qi
 Qianqian
 qindow
 Qing
@@ -4118,6 +4161,8 @@ qsublist
 qualisys
 Qualisys
 Quandt's
+quanmag
+QuanMag
 quantile
 quantiles
 quarantaine
@@ -4446,6 +4491,7 @@ scriptingcheckcode
 scrollbars
 SCS
 sdata
+SDG
 SDK
 SDKs
 sdma
@@ -4489,6 +4535,7 @@ SEM
 semiology
 Senkowski
 sensGain
+sensitivitymap
 SensoMotoric
 sensoranalysis
 sensordata
@@ -4604,6 +4651,7 @@ SL
 SLA
 Slepian
 slicence
+slided
 SlideShare
 slidingrange
 slighty
@@ -4645,6 +4693,7 @@ somatosensor
 someFieldOrSubStruct
 Songyun
 Sónia
+Sören
 sortable
 sortdate
 sortindex
@@ -5008,6 +5057,7 @@ Thesen
 Thieme
 Thilo
 thingie
+Thingiverse
 thinkcap
 ThinkCap
 thinkgear
@@ -5017,6 +5067,7 @@ Thorlabs
 thresholded
 thresholding
 Thresholding
+throughs
 Thut
 tia
 TiA
@@ -5069,6 +5120,7 @@ timewindow
 timewindows
 Timmer
 Timmermann
+Timotheus
 timreq
 timwin
 TINNET
@@ -5198,10 +5250,12 @@ trls
 tro
 tsh
 Tsilimparis
+Tsinghua
 tsk
 tsl
 tsr
 tSSS
+tstat
 tsv
 TSV
 tt
@@ -5241,6 +5295,7 @@ UCSF
 Uddén
 udp
 UDP
+Uehara
 UESTC
 ug
 ui
@@ -5352,6 +5407,7 @@ Vectorview
 VectorView
 Veelen
 Veen
+VEF
 Velden
 veog
 vEOG
@@ -5395,6 +5451,7 @@ Visualise
 visualised
 visualising
 visualvc
+visum
 visuomotor
 vitamine
 Vitoria
@@ -5462,6 +5519,7 @@ walkthrough
 Walkthrough
 walltime
 Wanrooij
+Warmerdam
 WARNINGs
 WashU
 Wass
@@ -5560,6 +5618,7 @@ Xeon
 xfm
 xgrid
 Xia
+Xiang
 Xiaochen
 Xie
 xlabel
@@ -5618,6 +5677,7 @@ yrVfVtCUE
 ysis
 Yu
 Yuchtman
+Yumoto
 YutaMouse
 yy
 YY

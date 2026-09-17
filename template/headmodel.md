@@ -35,11 +35,11 @@ Accompanying electrode positions according to the 10-20, the 10-10 and the 10-5 
 
 ## standard_mri.mat
 
-This complements the standard BEM head model. The original construction of the averaged "“colin27”" MRI is detailed in [here](https://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27) and in the publication from Holmes et al. in [J Comput Assist Tomogr. 1998 Mar-Apr;22(2):324-33](http://www.ncbi.nlm.nih.gov/pubmed/9530404).
+This complements the standard BEM head model. The original construction of the averaged "colin27" MRI is detailed in [here](https://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27) and in the publication from Holmes et al. in [J Comput Assist Tomogr. 1998 Mar-Apr;22(2):324-33](http://www.ncbi.nlm.nih.gov/pubmed/9530404).
 
 The relation of the "colin27" MRI to the Talairach-Tournoux atlas and to the MNI and SPM templates is described in detail [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach). A small excerpt follows:
 
-_One of the MNI lab members, Colin Holmes, was scanned 27 times, and the scans were coregistered and averaged to create a very high detail MRI dataset of one brain. This average was also matched to the MNI305, to create the image known as "colin27". \[The colin27 image\] is used in the MNI brainweb simulator. SPM96 used colin27 as its standard template. \[...\] SPM96 and later contains a 2mm resolution copy of the same image, in the canonical directory of the SPM distribution. In SPM96 this is called T1 in later distributions it is called single_subj_T1._
+_One of the MNI lab members, Colin \[...\], was scanned 27 times, and the scans were coregistered and averaged to create a very high detail MRI dataset of one brain. This average was also matched to the MNI305, to create the image known as "colin27". \[The colin27 image\] is used in the MNI brainweb simulator. SPM96 used colin27 as its standard template. \[...\] SPM96 and later contains a 2mm resolution copy of the same image, in the canonical directory of the SPM distribution. In SPM96 this is called T1 in later distributions it is called single_subj_T1._
 
 You can load and visualize it with
 
