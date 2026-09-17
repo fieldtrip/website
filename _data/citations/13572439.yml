@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '42733070'
+- idtype: pmcid
+  value: PMC13572439
+- idtype: doi
+  value: 10.1038/s41467-026-76593-2
+- idtype: pii
+  value: 10.1038/s41467-026-76593-2
+authors:
+- authtype: Author
+  name: Baratin C
+- authtype: Author
+  name: Lopez-Persem A
+- authtype: Author
+  name: Kahane P
+- authtype: Author
+  name: Minotti L
+- authtype: Author
+  name: Hammer J
+- authtype: Author
+  name: Marusič P
+- authtype: Author
+  name: Nica A
+- authtype: Author
+  name: Rheims S
+- authtype: Author
+  name: Maillard L
+- authtype: Author
+  name: Denuelle M
+- authtype: Author
+  name: Barbeau E
+- authtype: Author
+  name: Chanteloup-Forêt B
+- authtype: Author
+  name: Pessiglione M
+- authtype: Author
+  name: Becq G
+- authtype: Author
+  name: Bastin J
+epubdate: 2026 Aug 14
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/15
+printpubdate: ''
+pubdate: 2026 Aug 14
+sortdate: 2026/08/14 00:00
+source: Nat Commun
+title: Complementary and opponent value signals in the human brain support choosing
+  the best and avoiding the worst.
+uid: '13572439'
+volume: '17'

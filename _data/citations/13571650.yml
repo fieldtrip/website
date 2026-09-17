@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42733837'
+- idtype: pmcid
+  value: PMC13571650
+- idtype: doi
+  value: 10.1016/j.isci.2026.117436
+- idtype: pii
+  value: S2589-0042(26)02814-2
+authors:
+- authtype: Author
+  name: Cinca-Tomás MT
+- authtype: Author
+  name: Kosteletou-Kassotaki E
+- authtype: Author
+  name: Costa-Faidella J
+- authtype: Author
+  name: Escera C
+- authtype: Author
+  name: Domínguez-Borràs J
+epubdate: 2026 Sep 4
+fulljournalname: iScience
+issue: '9'
+pages: '117436'
+pmclivedate: 2026/09/14
+printpubdate: ''
+pubdate: 2026 Sep 18
+sortdate: 2026/09/04 00:00
+source: iScience
+title: An auditory "low road" for threat processing in humans sensitive to fast temporal
+  cues.
+uid: '13571650'
+volume: '29'

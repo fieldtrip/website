@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '40928747'
+- idtype: pmcid
+  value: PMC12421888
+- idtype: doi
+  value: 10.1093/cercor/bhaf234
+- idtype: pii
+  value: '8250575'
+authors:
+- authtype: Author
+  name: Zeidman P
+- authtype: Author
+  name: Ashburner J
+- authtype: Author
+  name: Barnes G
+- authtype: Author
+  name: Kowalczyk O
+- authtype: Author
+  name: Lambert C
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Nichols TE
+- authtype: Author
+  name: Parr T
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Friston K
+epubdate: ''
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '8'
+pages: ''
+pmclivedate: 2025/09/11
+printpubdate: 2025 Aug 1
+pubdate: 2025 Aug 1
+sortdate: 2025/08/01 00:00
+source: Cereb Cortex
+title: SPM-30 years and beyond.
+uid: '12421888'
+volume: '35'

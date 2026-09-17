@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42331961'
+- idtype: pmcid
+  value: PMC13572377
+- idtype: doi
+  value: 10.1038/s41598-026-59189-0
+- idtype: pii
+  value: 10.1038/s41598-026-59189-0
+authors:
+- authtype: Author
+  name: Sghirripa S
+- authtype: Author
+  name: Graetz L
+- authtype: Author
+  name: Semmler JG
+- authtype: Author
+  name: Sutton R
+- authtype: Author
+  name: Williams EER
+- authtype: Author
+  name: Goldsworthy MR
+epubdate: 2026 Jun 22
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/15
+printpubdate: ''
+pubdate: 2026 Jun 22
+sortdate: 2026/06/22 00:00
+source: Sci Rep
+title: Age-related differences in alpha power for distractor inhibition during visual
+  working memory.
+uid: '13572377'
+volume: '16'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42331932'
+- idtype: doi
+  value: 10.1038/s41598-026-58885-1
+- idtype: pii
+  value: 10.1038/s41598-026-58885-1
+- idtype: pmcid
+  value: PMC13575132
+authors:
+- authtype: Author
+  name: Kuratko D
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Vejmola C
+- authtype: Author
+  name: Dusek F
+- authtype: Author
+  name: Kucera F
+- authtype: Author
+  name: Wójcik DK
+- authtype: Author
+  name: Palenicek T
+- authtype: Author
+  name: Lacik J
+epubdate: 2026 Jun 22
+fulljournalname: Scientific reports
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/16
+printpubdate: ''
+pubdate: 2026 Jun 22
+sortdate: 2026/06/22 00:00
+source: Sci Rep
+title: 'Forward model of rat electroencephalogram: influence of inhomogeneous and
+  anisotropic skull.'
+uid: '13575132'
+volume: '16'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42599800'
+- idtype: MID
+  value: NIHMS2206927
+- idtype: pmcid
+  value: PMC13573638
+- idtype: doi
+  value: 10.1016/j.celrep.2026.117845
+- idtype: pii
+  value: S2211-1247(26)00923-X
+authors:
+- authtype: Author
+  name: Iwane F
+- authtype: Author
+  name: Hayward W
+- authtype: Author
+  name: Karunathilake IMD
+- authtype: Author
+  name: Buch ER
+- authtype: Author
+  name: Cohen LG
+epubdate: 2026 Aug 14
+fulljournalname: Cell reports
+issue: '8'
+pages: '117845'
+pmclivedate: 2026/09/15
+printpubdate: ''
+pubdate: 2026 Aug 14
+sortdate: 2026/08/14 00:00
+source: Cell Rep
+title: Hippocampal skill memory expansion drives online performance dynamics during
+  skill learning.
+uid: '13573638'
+volume: '45'

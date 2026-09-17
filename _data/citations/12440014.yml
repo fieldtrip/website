@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '40964323'
+- idtype: pmcid
+  value: PMC12440014
+- idtype: doi
+  value: 10.1101/2025.09.09.674189
+- idtype: pii
+  value: 2025.09.09.674189
+authors:
+- authtype: Author
+  name: Marsh DC
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Aquino KM
+- authtype: Author
+  name: Pakenham DO
+- authtype: Author
+  name: Wilson R
+- authtype: Author
+  name: Panchuelo RS
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Mayhew SD
+- authtype: Author
+  name: Francis ST
+- authtype: Author
+  name: Mullinger KJ
+epubdate: 2025 Oct 1
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2025/10/07
+printpubdate: ''
+pubdate: 2025 Oct 1
+sortdate: 2025/10/01 00:00
+source: bioRxiv
+title: 'Cortical-layer EEG-fMRI at 7T: experimental setup and analysis pipeline to
+  elucidate generating mechanisms of alpha oscillations.'
+uid: '12440014'
+volume: ''
