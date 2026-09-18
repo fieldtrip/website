@@ -145,58 +145,84 @@ If you have downloaded and unzipped by hand, it could be that there's an 'extra 
 
 Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the `toolkit2026` folder, which you created in the previous step.
 
-    % create a folder (within toolkit2026) that will contain the data, to keep a clean structure
-    mkdir('data');
-    cd('data');
-
-    % then download and unzip the Subject01 dataset
-    url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
-    unzip(url_subject01);
-
-    % we also need to download some other data for the respective hands on sessions:
-    mkdir('preprocessing_opm');
-    cd('preprocessing_opm');
-    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm';
-    fnames = {'MedianNerve_StimBreakStim2min_Pos1.fif' 'MedianNerve_StimBreakStim2min_Pos2.fif'                             'MedianNerve_StimBreakStim2min_Pos3.fif'};
-    for k = 1:numel(fnames)
-      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-    end
+		% download and unzip fieldtrip into the newly created folder
+		fprintf('downloading and unzipping fieldtrip\n');
+		url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
+		unzip(url_fieldtrip);
+		
+		% create a folder (within toolkit2026) that will contain the data, to keep a clean structure
+		fprintf('creating data folder\n');
+    datadir = fullfile(pwdg;
+    mkdir(datadir);
+		cd(datadir);
+		
+		% then download and unzip the Subject01 dataset
+		fprintf('downloading data\n');
+		url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
+		unzip(url_subject01);
+		
+		% we also need to download some other data for the respective hands on sessions:
+		mkdir('preprocessing_opm');
+		cd('preprocessing_opm');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm';
+		fnames = {'MedianNerve_StimBreakStim2min_Pos1.fif' 'MedianNerve_StimBreakStim2min_Pos2.fif' 'MedianNerve_StimBreakStim2min_Pos3.fif'};
+		for k = 1:numel(fnames)
+		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+		end
+		cd(datadir);
+		
+		mkdir('denoising_opm');
+		cd('denoising_opm');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip';
+		unzip(url_tutorial);
+		cd(datadir);
+		
+		mkdir('coregistration_opm');
+		cd('coregistration_opm');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/coregistration_opm';
+		fnames = {'example1_head_markers.pos' 'example2_magneticphantom_HPIplusdipoleset6_raw.fif' 'example3_anatomical.nii' 'example3_face_helmet.obj' 'example3_face_helmet_aligned.mat' 'example3_mri_realigned.mat' 'fieldlinebeta2_helmet_rim.mat'};
+		for k = 1:numel(fnames)
+		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+		end
+		cd(datadir);
+		
+		mkdir('beamformer');
+		cd('beamformer');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
+		fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
+		for k = 1:numel(fnames)
+		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+		end
+		cd(datadir);
+		
+		mkdir('opm_helmet_design');
+		cd('opm_helmet_design');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design';
+		fnames = {'spherical-head.stl' 'spherical-helmet.stl' 'individual.nii' 'flattenedspherical-head.stl' 'flattenedspherical-helmet.stl' 'fieldline_sensor.stl' 'fieldline_padding.stl' 'fieldline_hole.stl' 'fieldline_holder.stl'};
+		for k = 1:numel(fnames)
+		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+		end
+		mkdir('population');
+		cd('population');
+		fnames = {};
+		for k = 1:10
+		  fnames{end+1} = sprintf('population/fiducial%03d.mat',k);
+		  fnames{end+1} = sprintf('population/subject%03d.nii',k);
+		end
+		for k = 1:numel(fnames)
+		  websave(strrep(fnames{k}, 'population/', ''), fullfile(url_tutorial, fnames{k}));
+		end
+		cd(datadir);
+		
+		mkdir('cluster_permutation_timelock');
+		cd('cluster_permutation_timelock');
+		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
+		fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat'             'stat_ERF_planar_FICvsFC.mat'};
+		for k = 1:numel(fnames)
+		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+		end
+		cd(datadir);
     cd('../');
-
-    mkdir('denoising_opm');
-    cd('denoising_opm');
-    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip';
-    unzip(url_tutorial);
-    cd('../');
-
-    mkdir('coregistration_opm');
-    cd('coregistration_opm');
-    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/coregistration_opm';
-    fnames = {'example1_head_markers.pos' 'example2_magneticphantom_HPIplusdipoleset6_raw.fif' 'example3_anatomical.nii' 'example3_face_helmet.obj' 'example3_face_helmet_aligned.mat' 'example3_mri_realigned.mat' 'fieldlinebeta2_helmet_rim.mat'};
-    for k = 1:numel(fnames)
-      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-    end
-    cd('../');
-    
-    mkdir('beamformer');
-    cd('beamformer');
-    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
-    fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
-    for k = 1:numel(fnames)
-      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-    end
-    cd('../');
-
-    %% FIXME OPM_HELMET_DESIGN FILES SHOULD BE DOWNLOADED -> WHICH ONES? %%
-    
-    mkdir('cluster_permutation_timelock');
-    cd('cluster_permutation_timelock');
-    url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
-    fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat'             'stat_ERF_planar_FICvsFC.mat'};
-    for k = 1:numel(fnames)
-      websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-    end
-    cd('../../');
 
 At this stage, you ideally have a directory structure that looks like the following one:
 
