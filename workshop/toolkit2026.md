@@ -104,8 +104,8 @@ You can either 'click around' using web browsers and/or explorer windows to grab
 To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260904), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
     % create a folder that will contain the code and the data, and change directory
-    mkdir('toolkit2026');
-    cd('toolkit2026');
+		mkdir('toolkit2026');
+		cd('toolkit2026');
 
     % download and unzip fieldtrip into the newly created folder
     url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
@@ -152,8 +152,8 @@ Next, we proceed with downloading the relevant data. The data that are used in t
 		
 		% create a folder (within toolkit2026) that will contain the data, to keep a clean structure
 		fprintf('creating data folder\n');
-    datadir = fullfile(pwdg;
-    mkdir(datadir);
+    datadir = fullfile(pwd, 'data');
+		mkdir(datadir);
 		cd(datadir);
 		
 		% then download and unzip the Subject01 dataset
