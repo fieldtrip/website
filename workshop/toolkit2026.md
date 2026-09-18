@@ -222,7 +222,7 @@ Next, we proceed with downloading the relevant data. The data that are used in t
 		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
 		end
 		cd(datadir);
-    cd('../');
+		cd('../');
 
 At this stage, you ideally have a directory structure that looks like the following one:
 
