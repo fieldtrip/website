@@ -152,7 +152,7 @@ Next, we proceed with downloading the relevant data. The data that are used in t
 		
 		% create a folder (within toolkit2026) that will contain the data, to keep a clean structure
 		fprintf('creating data folder\n');
-    datadir = fullfile(pwd, 'data');
+		datadir = fullfile(pwd, 'data');
 		mkdir(datadir);
 		cd(datadir);
 		
