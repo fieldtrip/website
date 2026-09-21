@@ -1,0 +1,31 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.xcrm.2026.103001
+- idtype: pmcid
+  value: PMC13589497
+- idtype: pii
+  value: S2666-3791(26)00418-0
+authors:
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Alijanpourotaghsara A
+- authtype: Author
+  name: Mirpour K
+- authtype: Author
+  name: Chilukuri S
+- authtype: Author
+  name: Pouratian N
+epubdate: 2026 Aug 21
+fulljournalname: Cell Reports Medicine
+issue: '9'
+pages: ''
+pmclivedate: 2026/09/20
+printpubdate: ''
+pubdate: 2026 Sep 15
+sortdate: 2026/08/21 00:00
+source: Cell Rep Med
+title: Cortical-to-pallidal beta cascade underlies network pathophysiology in Parkinson’s
+  disease.
+uid: '13589497'
+volume: '7'

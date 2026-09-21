@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42757397'
+- idtype: pmcid
+  value: PMC13585373
+- idtype: doi
+  value: 10.1117/1.NPh.13.3.035009
+- idtype: pii
+  value: '260069'
+authors:
+- authtype: Author
+  name: Koch C
+- authtype: Author
+  name: Abdalmalak A
+- authtype: Author
+  name: Orpella J
+- authtype: Author
+  name: Rottenberg J
+- authtype: Author
+  name: Jackson ES
+epubdate: 2026 Sep 15
+fulljournalname: Neurophotonics
+issue: '3'
+pages: 035009
+pmclivedate: 2026/09/18
+printpubdate: 2026 Jul
+pubdate: 2026 Jul
+sortdate: 2026/07/01 00:00
+source: Neurophotonics
+title: Single-subject detection of speech network activation using functional near-infrared
+  spectroscopy.
+uid: '13585373'
+volume: '13'

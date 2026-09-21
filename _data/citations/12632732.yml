@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '41282158'
+- idtype: pmcid
+  value: PMC12632732
+- idtype: doi
+  value: 10.21203/rs.3.rs-7697136/v1
+- idtype: pii
+  value: rs.3.rs-7697136
+authors:
+- authtype: Author
+  name: Nicklas P
+- authtype: Author
+  name: Cruz L
+- authtype: Author
+  name: Tirelli C
+- authtype: Author
+  name: Bojanek E
+- authtype: Author
+  name: De Sanctis P
+- authtype: Author
+  name: Freedman E
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe J
+epubdate: 2025 Oct 12
+fulljournalname: Research square
+issue: ''
+pages: ''
+pmclivedate: 2025/11/21
+printpubdate: ''
+pubdate: 2025 Oct 12
+sortdate: 2025/10/12 00:00
+source: Res Sq
+title: 'A symphony of functioning: Assessing the interplay of cognition, movement,
+  and visual processing in adolescents on the autism spectrum using mobile brain-body
+  imaging (MoBI).'
+uid: '12632732'
+volume: ''

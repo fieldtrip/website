@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42761331'
+- idtype: pmcid
+  value: PMC13586878
+- idtype: doi
+  value: 10.1016/j.isci.2026.117484
+- idtype: pii
+  value: S2589-0042(26)02863-4
+authors:
+- authtype: Author
+  name: Yun S
+- authtype: Author
+  name: Kim Y
+- authtype: Author
+  name: Jeong J
+- authtype: Author
+  name: Kim YJ
+epubdate: 2026 Sep 12
+fulljournalname: iScience
+issue: '10'
+pages: '117484'
+pmclivedate: 2026/09/19
+printpubdate: ''
+pubdate: 2026 Oct 16
+sortdate: 2026/09/12 00:00
+source: iScience
+title: Retrospective attention reveals a decaying theta rhythm in conscious access
+  to a preceding stimulus.
+uid: '13586878'
+volume: '29'

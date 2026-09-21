@@ -1,0 +1,31 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.xpro.2026.104833
+- idtype: pmcid
+  value: PMC13584030
+- idtype: pii
+  value: S2666-1667(26)00486-7
+authors:
+- authtype: Author
+  name: Zeng X
+- authtype: Author
+  name: Zhou T
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Hasegawa I
+- authtype: Author
+  name: Tanigawa H
+epubdate: 2026 Sep 9
+fulljournalname: STAR Protocols
+issue: '3'
+pages: ''
+pmclivedate: 2026/09/18
+printpubdate: ''
+pubdate: 2026 Sep 18
+sortdate: 2026/09/09 00:00
+source: STAR Protoc
+title: Protocol for mapping frequency-specific information transfer between cortical
+  areas using ECoG and Granger causality.
+uid: '13584030'
+volume: '7'

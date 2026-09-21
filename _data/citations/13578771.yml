@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42750824'
+- idtype: pmcid
+  value: PMC13578771
+- idtype: doi
+  value: 10.34133/research.1427
+- idtype: pii
+  value: '1427'
+authors:
+- authtype: Author
+  name: Shen L
+- authtype: Author
+  name: Yu T
+- authtype: Author
+  name: Lan Y
+- authtype: Author
+  name: Hu R
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Jiang Y
+epubdate: 2026 Sep 16
+fulljournalname: Research (Washington, D.C.)
+issue: ''
+pages: '1427'
+pmclivedate: 2026/09/17
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/16 00:00
+source: Research (Wash D C)
+title: Altered Hierarchical Visual Rhythm Tracking in Early Deafness.
+uid: '13578771'
+volume: '9'

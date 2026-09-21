@@ -1,0 +1,26 @@
+articleids:
+- idtype: doi
+  value: 10.1016/j.dcn.2026.101816
+- idtype: pmcid
+  value: PMC13589063
+- idtype: pii
+  value: S1878-9293(26)00158-1
+authors:
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Fernandez-Merino L
+- authtype: Author
+  name: Molinaro N
+epubdate: 2026 Sep 8
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/09/20
+printpubdate: ''
+pubdate: 2026 Oct
+sortdate: 2026/09/08 00:00
+source: Dev Cogn Neurosci
+title: Neural encoding of infant-directed speech during infants' first year of life.
+uid: '13589063'
+volume: '81'

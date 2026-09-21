@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42538311'
+- idtype: pmcid
+  value: PMC13583328
+- idtype: doi
+  value: 10.1523/ENEURO.0328-25.2026
+- idtype: pii
+  value: ENEURO.0328-25.2026
+authors:
+- authtype: Author
+  name: Nguyen TTN
+- authtype: Author
+  name: Ficco L
+- authtype: Author
+  name: Thornton IM
+- authtype: Author
+  name: Ramon M
+epubdate: 2026 Sep 11
+fulljournalname: eNeuro
+issue: '9'
+pages: ''
+pmclivedate: 2026/09/18
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/11 00:00
+source: eNeuro
+title: Objective Neural Markers of Identity Familiarization via Passive Exposure and
+  Fast Periodic Visual Stimulation EEG.
+uid: '13583328'
+volume: '13'
