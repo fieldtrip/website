@@ -92,6 +92,7 @@ alleen
 allsubj
 allsubjFC
 allsubjFIC
+alma
 Almalinux
 ALPHAMAP
 ALS
@@ -2242,6 +2243,7 @@ highpass
 highpassfilter
 highres
 hightened
+Higuchi
 hilbert
 Hillebrand
 Hillyard
@@ -2620,6 +2622,7 @@ keeptrial
 keeptrials
 keepunused
 Keil
+kenya
 Kessler
 ketamine
 keypress
@@ -4282,6 +4285,7 @@ repo
 reponses
 reportable
 ReportGenerator
+repositioned
 reproducescript
 reproducibility
 Reproduciblity
@@ -4491,6 +4495,7 @@ scriptingcheckcode
 scrollbars
 SCS
 sdata
+sdg
 SDG
 SDK
 SDKs
@@ -5705,6 +5710,7 @@ Zijdenbos
 zijn
 Zilles
 zipfile
+ZJU
 zlim
 Zollei
 zou

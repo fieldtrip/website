@@ -20,7 +20,7 @@ This page lists all materials used/generated during that workshop for the attend
 3. [Research questions for EEG and ERPs](https://download.fieldtriptoolbox.org/workshop/kenya2026/slides/3%20-%20research%20questions%20for%20EEG%20and%20ERPs.pdf)
 
 {% include markup/yellow %}
-Last year in Port Harcour (Nigeria) we presented a week-long workshop that more-or-less covered the same topics, but in more detail. The [slides](/workshop/nigeria2025/#slides) presented there are also shared, and many of the presentations were recorded on [video](/workshop/nigeria2025/#video-recordings). So if you want to go in more detail into something, you can check those out.
+Last year in Port Harcourt (Nigeria) we presented a week-long workshop that more-or-less covered the same topics, but in more detail. The [slides](/workshop/nigeria2025/#slides) presented there are also shared, and many of the presentations were recorded on [video](/workshop/nigeria2025/#video-recordings). So if you want to go in more detail into something, you can check those out.
 {% include markup/end %}
 
 ## EEG demonstration
