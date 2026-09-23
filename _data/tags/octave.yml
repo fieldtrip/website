@@ -1,2 +1,4 @@
 - link: /faq/matlab/octave
   title: Can I use Octave instead of MATLAB?
+- link: /faq/spectral/dpss_without_toolbox
+  title: How to deal with dpss errors when you don't have the Signal Processing Toolbox?

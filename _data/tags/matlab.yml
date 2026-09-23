@@ -41,6 +41,8 @@
   title: How fast is the FieldTrip buffer for realtime data streaming?
 - link: /faq/source/dipoli_filelocation
   title: Where can I find the dipoli command-line executable?
+- link: /faq/spectral/dpss_without_toolbox
+  title: How to deal with dpss errors when you don't have the Signal Processing Toolbox?
 - link: /tutorial/intro/introduction
   title: Introduction to the FieldTrip toolbox
 - link: /tutorial/intro/pipeline

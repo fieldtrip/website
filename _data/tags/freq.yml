@@ -23,6 +23,8 @@
   title: What kind of filters can I apply to my data?
 - link: /faq/spectral/datatype_freq
   title: In what way can frequency domain data be represented in FieldTrip?
+- link: /faq/spectral/dpss_without_toolbox
+  title: How to deal with dpss errors when you don't have the Signal Processing Toolbox?
 - link: /faq/spectral/evoked_vs_induced
   title: Does it make sense to subtract the ERP prior to time frequency analysis,
     to distinguish evoked from induced power?

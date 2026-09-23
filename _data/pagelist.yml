@@ -2153,6 +2153,10 @@
     - title: How does mtmconvol work?
       link: /faq/spectral/mtmconvol/
       nav_order: 0
+    - title: How to deal with dpss errors when you don't have the Signal Processing
+        Toolbox?
+      link: /faq/spectral/dpss_without_toolbox/
+      nav_order: 0
     - title: How to interpret the sign of the phase slope index?
       link: /faq/spectral/phaseslopeindex/
       nav_order: 0
