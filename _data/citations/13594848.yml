@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42774925'
+- idtype: pmcid
+  value: PMC13594848
+- idtype: doi
+  value: 10.1016/j.isci.2026.117523
+- idtype: pii
+  value: S2589-0042(26)02902-0
+authors:
+- authtype: Author
+  name: Nardi F
+- authtype: Author
+  name: Arora A
+- authtype: Author
+  name: Faisal AA
+- authtype: Author
+  name: Haar S
+epubdate: 2026 Sep 15
+fulljournalname: iScience
+issue: '10'
+pages: '117523'
+pmclivedate: 2026/09/23
+printpubdate: ''
+pubdate: 2026 Oct 16
+sortdate: 2026/09/15 00:00
+source: iScience
+title: Isolating error-based and reward-based learning in a real-world task via gradual
+  perturbations in embodied VR.
+uid: '13594848'
+volume: '29'

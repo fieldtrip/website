@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42765003'
+- idtype: pmcid
+  value: PMC13590235
+- idtype: doi
+  value: 10.1093/braincomms/fcag351
+- idtype: pii
+  value: fcag351
+authors:
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Beste C
+- authtype: Author
+  name: Prochnow A
+epubdate: 2026 Sep 12
+fulljournalname: Brain communications
+issue: '5'
+pages: fcag351
+pmclivedate: 2026/09/21
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/12 00:00
+source: Brain Commun
+title: Time-resolved aperiodic dynamics in event segmentation in attention-deficit/hyperactivity
+  disorder.
+uid: '13590235'
+volume: '8'

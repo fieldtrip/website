@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '42078879'
+- idtype: pmcid
+  value: PMC13131867
+- idtype: doi
+  value: 10.21203/rs.3.rs-9316385/v1
+- idtype: pii
+  value: rs.3.rs-9316385
+authors:
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Tafreshi A
+- authtype: Author
+  name: Neudorfer C
+- authtype: Author
+  name: Nanda P
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Babapoor-Farrokhran S
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Camprodon J
+- authtype: Author
+  name: Dougherty D
+- authtype: Author
+  name: Cusin C
+- authtype: Author
+  name: Richardson R
+epubdate: 2026 Apr 20
+fulljournalname: Research square
+issue: ''
+pages: ''
+pmclivedate: 2026/05/01
+printpubdate: ''
+pubdate: 2026 Apr 20
+sortdate: 2026/04/20 00:00
+source: Res Sq
+title: Pallidal alpha activity is an electrophysiological biomarker of symptom severity
+  in obsessive-compulsive disorder.
+uid: '13131867'
+volume: ''

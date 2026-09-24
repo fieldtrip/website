@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42771790'
+- idtype: doi
+  value: 10.1093/cercor/bhag133
+- idtype: pii
+  value: '8828961'
+- idtype: pmcid
+  value: PMC13596737
+authors:
+- authtype: Author
+  name: Czepiel AM
+- authtype: Author
+  name: Bradley H
+- authtype: Author
+  name: Vanden Bosch der Nederlanden CM
+- authtype: Author
+  name: Johnson EK
+epubdate: ''
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '9'
+pages: ''
+pmclivedate: 2026/09/23
+printpubdate: 2026 Sep 1
+pubdate: 2026 Sep 1
+sortdate: 2026/09/01 00:00
+source: Cereb Cortex
+title: Accent type modulates frequency-specific neural tracking of speech.
+uid: '13596737'
+volume: '36'

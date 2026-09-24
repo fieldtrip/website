@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '42182441'
+- idtype: pmcid
+  value: PMC13192648
+- idtype: doi
+  value: 10.64898/2026.05.10.724153
+- idtype: pii
+  value: 2026.05.10.724153
+authors:
+- authtype: Author
+  name: Gray SM
+- authtype: Author
+  name: Dede AJO
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Girgis F
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Auguste KI
+- authtype: Author
+  name: Shaikhouni A
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Johnson EL
+epubdate: 2026 May 11
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/05/22
+printpubdate: ''
+pubdate: 2026 May 11
+sortdate: 2026/05/11 00:00
+source: bioRxiv
+title: Opposing effects of slow and fast theta synchrony on working memory in the
+  human hippocampal-orbitofrontal network.
+uid: '13192648'
+volume: ''

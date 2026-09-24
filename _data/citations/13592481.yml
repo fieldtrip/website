@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42299691'
+- idtype: pmcid
+  value: PMC13592481
+- idtype: doi
+  value: 10.1002/epi.70332
+authors:
+- authtype: Author
+  name: Soni S
+- authtype: Author
+  name: Brochu K
+- authtype: Author
+  name: Federico P
+- authtype: Author
+  name: Hader W
+- authtype: Author
+  name: Kam JWY
+- authtype: Author
+  name: Girgis F
+epubdate: 2026 Jun 16
+fulljournalname: Epilepsia
+issue: '9'
+pages: 4758-4773
+pmclivedate: 2026/09/22
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Epilepsia
+title: Mindfulness meditation increases interictal epileptiform discharges in meditation-naïve
+  surgical epilepsy patients.
+uid: '13592481'
+volume: '67'

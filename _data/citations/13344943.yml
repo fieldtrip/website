@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42427541'
+- idtype: pmcid
+  value: PMC13344943
+- idtype: doi
+  value: 10.64898/2026.07.02.736059
+- idtype: pii
+  value: 2026.07.02.736059
+authors:
+- authtype: Author
+  name: Hashimoto H
+- authtype: Author
+  name: Jude JJ
+- authtype: Author
+  name: Levi-Aharoni H
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Simeral JD
+- authtype: Author
+  name: Hochberg LR
+- authtype: Author
+  name: Rubin DB
+epubdate: 2026 Jul 3
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/09
+printpubdate: ''
+pubdate: 2026 Jul 3
+sortdate: 2026/07/03 00:00
+source: bioRxiv
+title: Learning-related population dynamics in right and left dorsal premotor cortex
+  during typing skill acquisition.
+uid: '13344943'
+volume: ''

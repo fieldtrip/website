@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42367934'
+- idtype: pmcid
+  value: PMC13307936
+- idtype: doi
+  value: 10.64898/2026.03.16.712233
+- idtype: pii
+  value: 2026.03.16.712233
+authors:
+- authtype: Author
+  name: Morakabati NR
+- authtype: Author
+  name: Thiha AS
+- authtype: Author
+  name: Schechtman E
+epubdate: 2026 Jul 26
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/28
+printpubdate: ''
+pubdate: 2026 Jul 26
+sortdate: 2026/07/26 00:00
+source: bioRxiv
+title: EEG-based classification models reveal differential neural processing of words
+  and images.
+uid: '13307936'
+volume: ''

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42764544'
+- idtype: pmcid
+  value: PMC13591062
+- idtype: doi
+  value: 10.1111/ejn.70694
+authors:
+- authtype: Author
+  name: Bühler MA
+- authtype: Author
+  name: Fung J
+- authtype: Author
+  name: Lamontagne A
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '6'
+pages: e70694
+pmclivedate: 2026/09/22
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Eur J Neurosci
+title: Effects of Optic Flow on Electrocortical Dynamics During Walking and Stepping
+  Over Virtual Obstacles.
+uid: '13591062'
+volume: '64'

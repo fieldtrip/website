@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42465432'
+- idtype: pmcid
+  value: PMC13370454
+- idtype: doi
+  value: 10.1101/2024.09.05.610266
+- idtype: pii
+  value: 2024.09.05.610266
+authors:
+- authtype: Author
+  name: Haast RA
+- authtype: Author
+  name: Kai J
+- authtype: Author
+  name: Taha A
+- authtype: Author
+  name: Liu V
+- authtype: Author
+  name: Kasa LW
+- authtype: Author
+  name: Gilmore G
+- authtype: Author
+  name: Guye M
+- authtype: Author
+  name: Khan AR
+- authtype: Author
+  name: Lau JC
+epubdate: 2026 Jul 10
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/16
+printpubdate: ''
+pubdate: 2026 Jul 10
+sortdate: 2026/07/10 00:00
+source: bioRxiv
+title: Mapping the topographic organization of the human zona incerta using diffusion
+  MRI.
+uid: '13370454'
+volume: ''

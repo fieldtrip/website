@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '42291779'
+- idtype: pmcid
+  value: PMC13259922
+- idtype: doi
+  value: 10.1038/s44220-026-00669-7
+- idtype: pii
+  value: '669'
+authors:
+- authtype: Author
+  name: Vignando M
+- authtype: Author
+  name: Ffytche D
+- authtype: Author
+  name: Mazibuko N
+- authtype: Author
+  name: Palma G
+- authtype: Author
+  name: Bhat A
+- authtype: Author
+  name: Montagnese M
+- authtype: Author
+  name: Dave S
+- authtype: Author
+  name: Tai YF
+- authtype: Author
+  name: Batzu L
+- authtype: Author
+  name: Leta V
+- authtype: Author
+  name: Chaudhuri KR
+- authtype: Author
+  name: Williams Gray CH
+- authtype: Author
+  name: Mehta MA
+epubdate: 2026 Jun 10
+fulljournalname: Nature. Mental health
+issue: '6'
+pages: 994-1009
+pmclivedate: 2026/06/13
+printpubdate: '2026'
+pubdate: '2026'
+sortdate: 2026/01/01 00:00
+source: Nat Ment Health
+title: Deviations in effective connectivity explain different hallucination subtypes
+  in Parkinson's disease psychosis.
+uid: '13259922'
+volume: '4'

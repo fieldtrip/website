@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42039434'
+- idtype: pmcid
+  value: PMC13105088
+- idtype: doi
+  value: 10.64898/2026.04.14.718407
+- idtype: pii
+  value: 2026.04.14.718407
+authors:
+- authtype: Author
+  name: Jiricek S
+- authtype: Author
+  name: Chien VSC
+- authtype: Author
+  name: Schmidt H
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Marecek R
+- authtype: Author
+  name: Mantini D
+- authtype: Author
+  name: Hlinka J
+epubdate: 2026 Apr 16
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/04/24
+printpubdate: ''
+pubdate: 2026 Apr 16
+sortdate: 2026/04/16 00:00
+source: bioRxiv
+title: Resting-state EEG alpha-BOLD coupling spatially follows cortical cell-type
+  and receptor gradients.
+uid: '13105088'
+volume: ''

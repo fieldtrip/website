@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42282788'
+- idtype: pmcid
+  value: PMC13252200
+- idtype: doi
+  value: 10.1101/2025.11.13.686780
+- idtype: pii
+  value: 2025.11.13.686780
+authors:
+- authtype: Author
+  name: Iwane F
+- authtype: Author
+  name: Hayward W
+- authtype: Author
+  name: Karunathilake IMD
+- authtype: Author
+  name: Buch ER
+- authtype: Author
+  name: Cohen LG
+epubdate: 2026 Jun 3
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/06/11
+printpubdate: ''
+pubdate: 2026 Jun 3
+sortdate: 2026/06/03 00:00
+source: bioRxiv
+title: Skill Memory Expansion Shapes Micro-Scale Dynamics of Skill Learning.
+uid: '13252200'
+volume: ''

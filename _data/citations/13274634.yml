@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42318288'
+- idtype: MID
+  value: NIHMS2180982
+- idtype: pmcid
+  value: PMC13274634
+- idtype: doi
+  value: 10.1016/j.reia.2025.202683
+- idtype: pii
+  value: '202683'
+authors:
+- authtype: Author
+  name: Dwyer P
+- authtype: Author
+  name: Sillas A
+- authtype: Author
+  name: Saron CD
+- authtype: Author
+  name: Rivera SM
+epubdate: 2025 Aug 16
+fulljournalname: Research in autism
+issue: ''
+pages: ''
+pmclivedate: 2026/06/18
+printpubdate: 2025 Sep
+pubdate: 2025 Sep
+sortdate: 2025/09/01 00:00
+source: Res Autism
+title: 'Investigating autistic hyperfocus and monotropism: Limited convergence of
+  event-related potentials, laboratory tasks, and questionnaire responses.'
+uid: '13274634'
+volume: '127'

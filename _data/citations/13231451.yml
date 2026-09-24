@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42244910'
+- idtype: pmcid
+  value: PMC13231451
+- idtype: doi
+  value: 10.1093/braincomms/fcag130
+- idtype: pii
+  value: fcag130
+authors:
+- authtype: Author
+  name: Whitmarsh S
+- authtype: Author
+  name: Nguyen-Michel VH
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Mathon B
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Frazzini V
+- authtype: Author
+  name: Navarro V
+epubdate: 2026 Apr 30
+fulljournalname: Brain communications
+issue: '3'
+pages: fcag130
+pmclivedate: 2026/06/04
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/04/30 00:00
+source: Brain Commun
+title: Sleep increases firing rate modulation during interictal epileptiform discharges
+  in mesial temporal structures.
+uid: '13231451'
+volume: '8'

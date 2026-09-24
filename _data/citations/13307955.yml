@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '42367980'
+- idtype: pmcid
+  value: PMC13307955
+- idtype: doi
+  value: 10.1101/2024.07.03.601959
+- idtype: pii
+  value: 2024.07.03.601959
+authors:
+- authtype: Author
+  name: West CL
+- authtype: Author
+  name: Imai F
+- authtype: Author
+  name: Bastos G
+- authtype: Author
+  name: Hornick MA
+- authtype: Author
+  name: Rachmany L
+- authtype: Author
+  name: Duran A
+- authtype: Author
+  name: Nadeem S
+- authtype: Author
+  name: Ricci D
+- authtype: Author
+  name: Rader Groves AM
+- authtype: Author
+  name: Wargo JA
+- authtype: Author
+  name: Leeuwen NV
+- authtype: Author
+  name: Sershen H
+- authtype: Author
+  name: Vinod KY
+- authtype: Author
+  name: Peterka DS
+- authtype: Author
+  name: Hamm JP
+epubdate: 2026 Jun 15
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/06/27
+printpubdate: ''
+pubdate: 2026 Jun 15
+sortdate: 2026/06/15 00:00
+source: bioRxiv
+title: Psychedelics relax predictive processing in the post-acute period by remodeling
+  cortico-cortical feedback circuits.
+uid: '13307955'
+volume: ''

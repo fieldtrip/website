@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42039406'
+- idtype: pmcid
+  value: PMC13104858
+- idtype: doi
+  value: 10.64898/2026.04.06.716826
+- idtype: pii
+  value: 2026.04.06.716826
+authors:
+- authtype: Author
+  name: Cravo F
+- authtype: Author
+  name: Rodriguez R
+- authtype: Author
+  name: Nieto-Castañón A
+- authtype: Author
+  name: Noble S
+epubdate: 2026 Apr 16
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/04/24
+printpubdate: ''
+pubdate: 2026 Apr 16
+sortdate: 2026/04/16 00:00
+source: bioRxiv
+title: The Incremental Cluster Threshold-Free Cluster Enhancement Algorithm for Functional
+  Connectivity Analysis.
+uid: '13104858'
+volume: ''
