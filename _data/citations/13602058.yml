@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42787703'
+- idtype: pmcid
+  value: PMC13602058
+- idtype: doi
+  value: 10.1016/j.ynirp.2026.100407
+- idtype: pii
+  value: S2666-9560(26)00090-5
+authors:
+- authtype: Author
+  name: Kokue T
+- authtype: Author
+  name: Sasaki R
+- authtype: Author
+  name: Sugawara K
+epubdate: 2026 Sep 17
+fulljournalname: Neuroimage. Reports
+issue: '4'
+pages: '100407'
+pmclivedate: 2026/09/25
+printpubdate: ''
+pubdate: 2026 Dec
+sortdate: 2026/09/17 00:00
+source: Neuroimage Rep
+title: 'Timing-dependent inhibitory effects of peripheral somatosensory inputs on
+  the primary motor cortex: A transcranial magnetic stimulation-electroencephalography
+  study.'
+uid: '13602058'
+volume: '6'

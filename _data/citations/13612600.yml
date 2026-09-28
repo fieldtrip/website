@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42463646'
+- idtype: pmcid
+  value: PMC13612600
+- idtype: doi
+  value: 10.1038/s41398-026-04268-z
+- idtype: pii
+  value: 10.1038/s41398-026-04268-z
+authors:
+- authtype: Author
+  name: Hosler J
+- authtype: Author
+  name: Coxon J
+- authtype: Author
+  name: Hendrikse J
+epubdate: 2026 Jul 17
+fulljournalname: Translational psychiatry
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/26
+printpubdate: ''
+pubdate: 2026 Jul 17
+sortdate: 2026/07/17 00:00
+source: Transl Psychiatry
+title: Gamma and beta power and the 1/f slope vary across a spectrum of depression
+  severity.
+uid: '13612600'
+volume: '16'

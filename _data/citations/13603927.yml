@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42792567'
+- idtype: doi
+  value: 10.3390/biology15181622
+- idtype: pii
+  value: biology15181622
+- idtype: pmcid
+  value: PMC13603927
+authors:
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Eom TH
+epubdate: 2026 Sep 15
+fulljournalname: Biology
+issue: '18'
+pages: ''
+pmclivedate: 2026/09/25
+printpubdate: ''
+pubdate: 2026 Sep 15
+sortdate: 2026/09/15 00:00
+source: Biology (Basel)
+title: 'From EEG Source Localization to Brain Network Analysis: A Computational Neuroscience
+  Perspective.'
+uid: '13603927'
+volume: '15'

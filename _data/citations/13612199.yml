@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '42798370'
+- idtype: pmcid
+  value: PMC13612199
+- idtype: doi
+  value: 10.3389/fnhum.2026.1922766
+authors:
+- authtype: Author
+  name: Ono K
+epubdate: 2026 Sep 11
+fulljournalname: Frontiers in human neuroscience
+issue: ''
+pages: '1922766'
+pmclivedate: 2026/09/26
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/11 00:00
+source: Front Hum Neurosci
+title: Groove strength is associated with cortical β suppression and tapping stability.
+uid: '13612199'
+volume: '20'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42338771'
+- idtype: pmcid
+  value: PMC13271129
+- idtype: doi
+  value: 10.3389/fcogn.2026.1806052
+authors:
+- authtype: Author
+  name: Oomen P
+- authtype: Author
+  name: Geffen R
+- authtype: Author
+  name: Gentile D
+- authtype: Author
+  name: Atassi N
+- authtype: Author
+  name: Farran B
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Cuevas Villanueva V
+- authtype: Author
+  name: Nadiradze L
+- authtype: Author
+  name: Csanád M
+- authtype: Author
+  name: Baker AV
+epubdate: 2026 May 20
+fulljournalname: Frontiers in cognition
+issue: ''
+pages: '1806052'
+pmclivedate: 2026/06/23
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/05/20 00:00
+source: Front Cognit
+title: Psychophysiological effects of low-frequency sound mediated by room size, room
+  shape, and stimulus duration.
+uid: '13271129'
+volume: '5'

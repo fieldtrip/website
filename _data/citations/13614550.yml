@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42789550'
+- idtype: doi
+  value: 10.1371/journal.pone.0357956
+- idtype: pii
+  value: PONE-D-25-53196
+- idtype: pmcid
+  value: PMC13614550
+authors:
+- authtype: Author
+  name: Costa C
+- authtype: Author
+  name: Ward EK
+- authtype: Author
+  name: Pezzetta R
+- authtype: Author
+  name: Masina F
+- authtype: Author
+  name: Arcara G
+- authtype: Author
+  name: Press C
+- authtype: Author
+  name: Scarpazza C
+epubdate: 2026 Sep 25
+fulljournalname: PloS one
+issue: '9'
+pages: e0357956
+pmclivedate: 2026/09/26
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/25 00:00
+source: PLoS One
+title: Early electrophysiological responses reflect precision-weighted prediction
+  errors to face features.
+uid: '13614550'
+volume: '21'

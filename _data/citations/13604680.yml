@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42793382'
+- idtype: doi
+  value: 10.3390/brainsci16090957
+- idtype: pii
+  value: brainsci16090957
+- idtype: pmcid
+  value: PMC13604680
+authors:
+- authtype: Author
+  name: Santoro V
+- authtype: Author
+  name: Fong PY
+- authtype: Author
+  name: Biondi A
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Clark H
+- authtype: Author
+  name: Rocchi L
+- authtype: Author
+  name: Richardson MP
+epubdate: 2026 Sep 9
+fulljournalname: Brain sciences
+issue: '9'
+pages: ''
+pmclivedate: 2026/09/25
+printpubdate: ''
+pubdate: 2026 Sep 9
+sortdate: 2026/09/09 00:00
+source: Brain Sci
+title: Investigating Neuropharmacological Features of the Cortical Activity of Cannabidiol
+  GWP42003 P-A Phase 1 Clinical Trial.
+uid: '13604680'
+volume: '16'

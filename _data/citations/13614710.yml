@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42696421'
+- idtype: pmcid
+  value: PMC13614710
+- idtype: doi
+  value: 10.1093/scan/nsag075
+- idtype: pii
+  value: '8785892'
+authors:
+- authtype: Author
+  name: Christian P
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Kapetaniou GE
+- authtype: Author
+  name: Schütz-Bosbach S
+- authtype: Author
+  name: Soutschek A
+epubdate: ''
+fulljournalname: Social cognitive and affective neuroscience
+issue: '1'
+pages: ''
+pmclivedate: 2026/09/26
+printpubdate: 2026 Jan 21
+pubdate: 2026 Jan 21
+sortdate: 2026/01/21 00:00
+source: Soc Cogn Affect Neurosci
+title: Ventromedial prefrontal cortex attenuates the link between physiological heart
+  rate reactions to unfairness and value computations in normative decision making.
+uid: '13614710'
+volume: '21'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '41317239'
+- idtype: pmcid
+  value: PMC13601438
+- idtype: doi
+  value: 10.1007/s11357-025-02013-w
+- idtype: pii
+  value: 10.1007/s11357-025-02013-w
+authors:
+- authtype: Author
+  name: Aguiar PV
+- authtype: Author
+  name: Williams MR
+- authtype: Author
+  name: Paul BT
+epubdate: 2025 Nov 29
+fulljournalname: GeroScience
+issue: '5'
+pages: 6739-6756
+pmclivedate: 2026/09/25
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Geroscience
+title: Visual cortical responses in age-related hearing loss show evidence for compensatory
+  neuroplasticity.
+uid: '13601438'
+volume: '48'

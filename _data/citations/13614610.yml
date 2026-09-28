@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39159181'
+- idtype: pmcid
+  value: PMC13614610
+- idtype: doi
+  value: 10.1177/09567976241263002
+authors:
+- authtype: Author
+  name: Jones HM
+- authtype: Author
+  name: Diaz GK
+- authtype: Author
+  name: Ngiam WXQ
+- authtype: Author
+  name: Awh E
+epubdate: 2024 Aug 19
+fulljournalname: Psychological science
+issue: '10'
+pages: 1108-1138
+pmclivedate: 2026/09/26
+printpubdate: 2024 Oct
+pubdate: 2024 Oct
+sortdate: 2024/10/01 00:00
+source: Psychol Sci
+title: Electroencephalogram Decoding Reveals Distinct Processes for Directing Spatial
+  Attention and Encoding Into Working Memory.
+uid: '13614610'
+volume: '35'

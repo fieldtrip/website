@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '42780054'
+- idtype: pmcid
+  value: PMC13596501
+- idtype: doi
+  value: 10.64898/2026.09.14.26360893
+- idtype: pii
+  value: 2026.09.14.26360893
+authors:
+- authtype: Author
+  name: López-Larraz E
+- authtype: Author
+  name: Oriol D
+- authtype: Author
+  name: Fierro G
+- authtype: Author
+  name: Jubera-García E
+- authtype: Author
+  name: Klinzing JG
+- authtype: Author
+  name: Sierra-Torralba M
+- authtype: Author
+  name: Horna-Prat E
+- authtype: Author
+  name: Escolano C
+- authtype: Author
+  name: Sutil-Jiménez J
+- authtype: Author
+  name: Rojas F
+- authtype: Author
+  name: Montesano L
+- authtype: Author
+  name: Loscertales CM
+- authtype: Author
+  name: Piñol G
+- authtype: Author
+  name: Pascual-Leone A
+- authtype: Author
+  name: Moreno EM
+- authtype: Author
+  name: Muñoz-Farjas E
+- authtype: Author
+  name: Minguez J
+epubdate: 2026 Sep 17
+fulljournalname: 'medRxiv : the preprint server for health sciences'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/23
+printpubdate: ''
+pubdate: 2026 Sep 17
+sortdate: 2026/09/17 00:00
+source: medRxiv
+title: One night of closed-loop auditory stimulation during sleep enhances memory
+  consolidation in patients with Alzheimer's Disease.
+uid: '13596501'
+volume: ''

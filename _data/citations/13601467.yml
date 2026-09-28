@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '41379287'
+- idtype: pmcid
+  value: PMC13601467
+- idtype: doi
+  value: 10.1007/s11357-025-02039-0
+- idtype: pii
+  value: 10.1007/s11357-025-02039-0
+authors:
+- authtype: Author
+  name: Gaál ZA
+- authtype: Author
+  name: Kojouharova P
+- authtype: Author
+  name: Nagy B
+- authtype: Author
+  name: van der Wijk G
+- authtype: Author
+  name: Czigler I
+- authtype: Author
+  name: Protzner AB
+epubdate: 2025 Dec 11
+fulljournalname: GeroScience
+issue: '5'
+pages: 7095-7113
+pmclivedate: 2026/09/25
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Geroscience
+title: Cognitive training effects are shaped more by individual brain dynamics than
+  age-evidence from younger and older women.
+uid: '13601467'
+volume: '48'
