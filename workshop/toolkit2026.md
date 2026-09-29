@@ -33,7 +33,7 @@ Note that the tentative program below still might change a bit.
 ### Tuesday October 13, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:00-10:30 | MEG and OPM lab demonstrations |
+| 09:30-10:30 | MEG and OPM lab demonstrations |
 | 10:30-10:45 | Coffee Break |
 | 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/preproc/denoising_opm) |
 | 12:30-13:30 | Lunch |
