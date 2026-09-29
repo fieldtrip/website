@@ -23,16 +23,17 @@ Note that the tentative program below still might change a bit.
 | 09:30-10:00 | Welcome and personal introduction round |
 | 10:00-11:00 | Introduction to MEG/OPM and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | MEG and OPM lab demonstrations |
+| 11:15-12:30 | Pre-processing of MEG/OPM data - [hands-on](/tutorial/sensor/eventrelatedaveraging) and/or [hands-on](/tutorial/sensor/preprocessing_opm) |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Pre-processing of MEG/OPM data - [hands-on](/tutorial/sensor/eventrelatedaveraging) and/or [hands-on](/tutorial/sensor/preprocessing_opm) |
+| 13:30-14:30 | hands-on (continued) |
+| 14:30-15:45 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
 ### Tuesday October 13, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:00-10:30 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
+| 09:00-10:30 | MEG and OPM lab demonstrations |
 | 10:30-10:45 | Coffee Break |
 | 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/preproc/denoising_opm) |
 | 12:30-13:30 | Lunch |
@@ -61,7 +62,8 @@ Note that the tentative program below still might change a bit.
 | 11:15-12:30 | OPM helmet design - [hands-on](/tutorial/sensor/opm_helmet_design) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | Statistics using non-parametric randomization techniques - lecture by Jan Mathijs Schoffelen |
-| 14:30-17:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
+| 14:30-16:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
+| 16:30-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
 ### Friday October 16, 2026
 
