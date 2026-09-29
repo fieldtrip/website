@@ -31,14 +31,15 @@ Note that the tentative program below still might change a bit.
 
 ### Tuesday October 13, 2026
 
+| 09:00-09:30 | Morning chill or workout |
 | 09:00-10:30 | Denoising of OPM-MEG data - lecture by Jan-Mathijs Schoffelen |
 | 10:30-10:45 | Coffee Break |
 | 10:45-12:30 | Denoising of OPM-MEG data - [hands-on](/tutorial/preproc/denoising_opm) |
 | 12:30-13:30 | Lunch |
-| 13:30-14:30 | hands-on (continued) |
-| 14:30-15:45 | Coregistration of OPM-MEG data - lecture by Robert Oostenveld |
+| 13:30-14:45 | Coregistration of OPM-MEG data - lecture by Robert Oostenveld |
+| 14:45-15:45 | OPM coregistration - [hands-on](/tutorial/source/coregistration_opm) |
 | 15:45-16:00 | Tea Break |
-| 16:00-17:30 | OPM coregistration - [hands-on](/tutorial/source/coregistration_opm) |
+| 16:00-17:00 | hands-on (continued) |
 | 18:30-22:00 | Drinks & dinner, TBA |
 
 ### Wednesday October 14, 2026
@@ -46,7 +47,7 @@ Note that the tentative program below still might change a bit.
 | 09:00-09:30 | Morning chill or workout |
 | 09:30-11:00 | Special interest lecture - Developmental research using EEG and OPMs - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction of MEG data - lecture by Robert Oostenveld |
+| 11:15-12:30 | Source reconstruction of MEG data - lecture by Jan Mathijs Schoffelen |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Source reconstruction of MEG data - [hands-on](/tutorial/source/beamformer) |
 | 15:45-16:00 | Tea Break |
@@ -59,7 +60,7 @@ Note that the tentative program below still might change a bit.
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | OPM helmet design - [hands-on](/tutorial/sensor/opm_helmet_design) |
 | 12:30-13:30 | Lunch |
-| 13:30-14:30 | Statistics using non-parametric randomization techniques - lecture by Robert Oostenveld |
+| 13:30-14:30 | Statistics using non-parametric randomization techniques - lecture by Jan Mathijs Schoffelen |
 | 14:30-17:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
 
 ### Friday October 16, 2026
