@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42807787'
+- idtype: pmcid
+  value: PMC13617461
+- idtype: doi
+  value: 10.3389/fnins.2026.1925503
+authors:
+- authtype: Author
+  name: Zou X
+- authtype: Author
+  name: Jiang B
+- authtype: Author
+  name: Zhang C
+epubdate: 2026 Sep 14
+fulljournalname: Frontiers in neuroscience
+issue: ''
+pages: '1925503'
+pmclivedate: 2026/09/29
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/14 00:00
+source: Front Neurosci
+title: Multidimensional EEG mechanisms and explainable prediction of responsiveness
+  to posterior parietal HD-tDCS in chronic disorders of consciousness.
+uid: '13617461'
+volume: '20'

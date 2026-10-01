@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42779844'
+- idtype: pmcid
+  value: PMC13596300
+- idtype: doi
+  value: 10.64898/2026.09.12.750217
+- idtype: pii
+  value: 2026.09.12.750217
+authors:
+- authtype: Author
+  name: Landi SM
+- authtype: Author
+  name: Jutras MJ
+- authtype: Author
+  name: Bakotich ECS
+- authtype: Author
+  name: Buffalo EA
+epubdate: 2026 Sep 16
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/23
+printpubdate: ''
+pubdate: 2026 Sep 16
+sortdate: 2026/09/16 00:00
+source: bioRxiv
+title: Physiological landmarks reveal the laminar organization of the primate hippocampus.
+uid: '13596300'
+volume: ''

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '42801541'
+- idtype: pmcid
+  value: PMC13616317
+- idtype: doi
+  value: 10.1002/advs.77857
+authors:
+- authtype: Author
+  name: Andersen MH
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Quiroga-Martinez DR
+- authtype: Author
+  name: Rosso M
+- authtype: Author
+  name: Klarlund M
+- authtype: Author
+  name: Larsen KM
+- authtype: Author
+  name: Siebner HR
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Bonetti L
+epubdate: 2026 Sep 27
+fulljournalname: Advanced science (Weinheim, Baden-Wurttemberg, Germany)
+issue: ''
+pages: e77857
+pmclivedate: 2026/09/28
+printpubdate: ''
+pubdate: 2026 Sep 27
+sortdate: 2026/09/27 00:00
+source: Adv Sci (Weinh)
+title: Brain Network Dynamics of Local and Global Predictive Processing in Aging.
+uid: '13616317'
+volume: ''

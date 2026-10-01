@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42803645'
+- idtype: pmcid
+  value: PMC13617572
+- idtype: doi
+  value: 10.1093/cercor/bhag118
+- idtype: pii
+  value: '8841196'
+authors:
+- authtype: Author
+  name: Bedford O
+- authtype: Author
+  name: Ara A
+- authtype: Author
+  name: Ginzburg J
+- authtype: Author
+  name: Albouy P
+- authtype: Author
+  name: Zatorre RJ
+- authtype: Author
+  name: Penhune VB
+epubdate: ''
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '9'
+pages: ''
+printpubdate: 2026 Sep 1
+pubdate: 2026 Sep 1
+sortdate: 2026/09/01 00:00
+source: Cereb Cortex
+title: Mu suppression reveals auditory-motor predictions after short musical training.
+uid: '13617572'
+volume: '36'

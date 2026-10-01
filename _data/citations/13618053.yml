@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42340847'
+- idtype: MID
+  value: NIHMS2199670
+- idtype: pmcid
+  value: PMC13618053
+- idtype: doi
+  value: 10.1016/j.celrep.2026.117593
+- idtype: pii
+  value: S2211-1247(26)00671-6
+authors:
+- authtype: Author
+  name: Kaya U
+- authtype: Author
+  name: Alam MJ
+- authtype: Author
+  name: Giri B
+- authtype: Author
+  name: Havekes R
+- authtype: Author
+  name: Abel T
+- authtype: Author
+  name: Diba K
+epubdate: 2026 Jun 24
+fulljournalname: Cell reports
+issue: '7'
+pages: '117593'
+pmclivedate: 2026/09/29
+printpubdate: 2026 Jul 28
+pubdate: 2026 Jul 28
+sortdate: 2026/07/28 00:00
+source: Cell Rep
+title: Sleep lowers waking theta frequency in the rat hippocampus.
+uid: '13618053'
+volume: '45'

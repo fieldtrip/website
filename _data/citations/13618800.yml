@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42807684'
+- idtype: pmcid
+  value: PMC13618800
+- idtype: doi
+  value: 10.1093/pnasnexus/pgag311
+- idtype: pii
+  value: pgag311
+authors:
+- authtype: Author
+  name: Mitchell DJ
+- authtype: Author
+  name: Kadohisa M
+- authtype: Author
+  name: Kusunoki M
+- authtype: Author
+  name: Bhatia C
+- authtype: Author
+  name: Buckley MJ
+- authtype: Author
+  name: Duncan J
+epubdate: 2026 Sep 16
+fulljournalname: PNAS nexus
+issue: '9'
+pages: pgag311
+pmclivedate: 2026/09/29
+printpubdate: ''
+pubdate: 2026 Sep
+sortdate: 2026/09/16 00:00
+source: PNAS Nexus
+title: Attentional selection drives information convergence within macaque lateral
+  prefrontal cortex.
+uid: '13618800'
+volume: '5'

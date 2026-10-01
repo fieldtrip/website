@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '41207900'
+- idtype: pmcid
+  value: PMC13601162
+- idtype: doi
+  value: 10.1007/s00213-025-06963-z
+- idtype: pii
+  value: 10.1007/s00213-025-06963-z
+authors:
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: David J
+- authtype: Author
+  name: Berkovich-Ohana A
+epubdate: 2025 Nov 10
+fulljournalname: Psychopharmacology
+issue: '9'
+pages: 2165-2183
+pmclivedate: 2026/09/25
+printpubdate: 2026 Sep
+pubdate: 2026 Sep
+sortdate: 2026/09/01 00:00
+source: Psychopharmacology (Berl)
+title: Intact neurophysiological markers of death denial in long-term ayahuasca users.
+uid: '13601162'
+volume: '243'

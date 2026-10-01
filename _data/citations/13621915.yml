@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42812788'
+- idtype: pmcid
+  value: PMC13621915
+- idtype: doi
+  value: 10.1093/braincomms/fcag355
+- idtype: pii
+  value: fcag355
+authors:
+- authtype: Author
+  name: Zich C
+- authtype: Author
+  name: Mardell LC
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Bestmann S
+- authtype: Author
+  name: Ward NS
+epubdate: 2026 Sep 16
+fulljournalname: Brain communications
+issue: '5'
+pages: fcag355
+pmclivedate: 2026/09/30
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/16 00:00
+source: Brain Commun
+title: 'Stroke recovery beyond initial severity: the complementary roles of brain
+  structure and brain function in acute stroke.'
+uid: '13621915'
+volume: '8'

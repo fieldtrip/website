@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42806684'
+- idtype: doi
+  value: 10.1111/psyp.70407
+- idtype: pmcid
+  value: PMC13620440
+authors:
+- authtype: Author
+  name: Atia B
+- authtype: Author
+  name: Berson Y
+- authtype: Author
+  name: Goldstein A
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e70407
+pmclivedate: 2026/09/30
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Psychophysiology
+title: Delivery and Attitude Modulate Shared Neural Processing of Speech Through Distinct
+  Frequency Channels.
+uid: '13620440'
+volume: '63'
