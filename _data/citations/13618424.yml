@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42812176'
+- idtype: pmcid
+  value: PMC13618424
+- idtype: doi
+  value: 10.64898/2026.07.26.740747
+- idtype: pii
+  value: 2026.07.26.740747
+authors:
+- authtype: Author
+  name: She X
+- authtype: Author
+  name: Peony O
+- authtype: Author
+  name: Qi W
+- authtype: Author
+  name: Menchaca M
+- authtype: Author
+  name: Nix KC
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: He Z
+- authtype: Author
+  name: Baumer FM
+epubdate: 2026 Jul 28
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/29
+printpubdate: ''
+pubdate: 2026 Jul 28
+sortdate: 2026/07/28 00:00
+source: bioRxiv
+title: Language Dysfunction Associated with Pathological Brain Connectivity in Children
+  with Epilepsy.
+uid: '13618424'
+volume: ''

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42824013'
+- idtype: pmcid
+  value: PMC13627025
+- idtype: doi
+  value: 10.3389/fnetp.2026.1930617
+- idtype: pii
+  value: '1930617'
+authors:
+- authtype: Author
+  name: Hohmuth R
+- authtype: Author
+  name: Müller JJ
+- authtype: Author
+  name: Malberg H
+- authtype: Author
+  name: Schmidt M
+epubdate: 2026 Sep 17
+fulljournalname: Frontiers in network physiology
+issue: ''
+pages: '1930617'
+pmclivedate: 2026/10/02
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/17 00:00
+source: Front Netw Physiol
+title: Robust information transfer calculation reveals dynamic networks during sleep
+  arousal.
+uid: '13627025'
+volume: '6'

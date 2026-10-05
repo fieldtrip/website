@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42824227'
+- idtype: pmcid
+  value: PMC13627137
+- idtype: doi
+  value: 10.1016/j.isci.2026.117545
+- idtype: pii
+  value: S2589-0042(26)02924-X
+authors:
+- authtype: Author
+  name: Schlossmacher I
+- authtype: Author
+  name: Schlotmann A
+- authtype: Author
+  name: Schindler S
+- authtype: Author
+  name: Moeck R
+- authtype: Author
+  name: Straube T
+epubdate: 2026 Sep 18
+fulljournalname: iScience
+issue: '10'
+pages: '117545'
+pmclivedate: 2026/10/02
+printpubdate: ''
+pubdate: 2026 Oct 16
+sortdate: 2026/09/18 00:00
+source: iScience
+title: Evidence for early and late prediction error-associated ERP responses during
+  probabilistic cueing.
+uid: '13627137'
+volume: '29'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42766928'
+- idtype: pmcid
+  value: PMC13631656
+- idtype: doi
+  value: 10.1016/j.dcn.2026.101821
+- idtype: pii
+  value: S1878-9293(26)00163-5
+authors:
+- authtype: Author
+  name: Lucero B
+- authtype: Author
+  name: Lanfranco RC
+- authtype: Author
+  name: Muñoz-Quezada MT
+- authtype: Author
+  name: Saracini C
+- authtype: Author
+  name: Canales-Johnson A
+epubdate: 2026 Sep 17
+fulljournalname: Developmental cognitive neuroscience
+issue: ''
+pages: '101821'
+pmclivedate: 2026/10/03
+printpubdate: ''
+pubdate: 2026 Sep 17
+sortdate: 2026/09/17 00:00
+source: Dev Cogn Neurosci
+title: Reduced information sharing within the orienting network predicts intelligence
+  in late childhood.
+uid: '13631656'
+volume: '82'
