@@ -61,7 +61,9 @@ Note that the tentative program below still might change a bit.
 | 11:15-12:30 | OPM helmet design - [hands-on](/tutorial/sensor/opm_helmet_design) |
 | 12:30-13:30 | Lunch |
 | 13:30-14:30 | Statistics using non-parametric randomization techniques - lecture by Jan Mathijs Schoffelen |
-| 14:30-16:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
+| 14:30-15:30 | Statistics of OPM-MEG data - [hands-on](/tutorial/stats/cluster_permutation_timelock) |
+| 15:30-15:45 | Tea Break |
+| 15:45-16:30 | hands-on (continued) |
 | 16:30-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
 ### Friday October 16, 2026
