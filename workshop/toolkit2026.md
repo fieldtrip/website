@@ -56,7 +56,7 @@ Note that the tentative program below still might change a bit.
 ### Thursday October 15, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Custom helmet design for OPM-MEG data - lecture by Robert Oostenveld |
+| 09:30-11:00 | Custom helmet design for OPM-MEG data - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | OPM helmet design - [hands-on](/tutorial/sensor/opm_helmet_design) |
 | 12:30-13:30 | Lunch |
@@ -69,7 +69,7 @@ Note that the tentative program below still might change a bit.
 ### Friday October 16, 2026
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Open science and good practices - lecture by Robert Oostenveld |
+| 09:30-11:00 | Open science and good practices - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 12:30-13:30 | Lunch |
