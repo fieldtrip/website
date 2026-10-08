@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42840301'
+- idtype: pmcid
+  value: PMC13638793
+- idtype: doi
+  value: 10.1016/j.isci.2026.117679
+- idtype: pii
+  value: S2589-0042(26)03060-9
+authors:
+- authtype: Author
+  name: Mattavelli G
+- authtype: Author
+  name: Crottini F
+- authtype: Author
+  name: Gorrino I
+- authtype: Author
+  name: Arrigoni E
+- authtype: Author
+  name: Maiocchi C
+- authtype: Author
+  name: Pisoni A
+- authtype: Author
+  name: Bottini G
+- authtype: Author
+  name: Salvato G
+epubdate: 2026 Sep 26
+fulljournalname: iScience
+issue: '10'
+pages: '117679'
+pmclivedate: 2026/10/07
+printpubdate: ''
+pubdate: 2026 Oct 16
+sortdate: 2026/09/26 00:00
+source: iScience
+title: Oscillatory dynamics within fronto-insular-parietal networks integrate thermosensory
+  signals into body ownership.
+uid: '13638793'
+volume: '29'
