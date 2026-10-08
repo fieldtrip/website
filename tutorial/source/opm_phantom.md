@@ -95,7 +95,7 @@ The recording is typically 1-2 minutes long, during which all coils are active s
     data_all = ft_preprocessing(cfg);
 
     % for all subsequent calibrations to be consistent, we have to work with SI units
-    data_all.grad = ft_convert_units(data_all.grad, 'm');
+    grad = ft_convert_units(data_all.grad, 'm');
 
     %% select a clean segment, avoid edges where coils may not be fully active
     cfg         = [];
@@ -143,7 +143,8 @@ To verify that all 24 coils are active and producing signals at their expected f
     freq = ft_freqanalysis(cfg, data_segmented);
 
     figure
-    plot(freq.freq, log10(mean(freq.powspctrm)));
+    plot(freq.freq, log10(     freq.powspctrm) , 'Color', [0.8 0.8 0.8]); hold on
+    plot(freq.freq, log10(mean(freq.powspctrm)), 'Color', [0.0 0.0 0.0]);
     xlabel('frequency (Hz)');
     ylabel('log_10 power');
     title('phantom power spectrum');
@@ -161,6 +162,7 @@ The reason for the relatively small separation of 1/3 Hz between the coil freque
     %% define the coil frequencies (one per coil)
     coilfreq = 10 + (0:23)/3;
 
+    pca = cell(1,24);
     for i=1:24
         cfg = [];
         cfg.bpfilter = 'yes';
@@ -181,9 +183,7 @@ To ensure a consistent sign convention, we flip the polarity of any component wh
 
     figure
 
-    pca = cell(1,24);
     for i=1:24
-
         [m, j] = max(abs(pca{i}.topo));
         if pca{i}.topo(j)<0
             fprintf('flipping pca polarity %d\n', j);
@@ -234,7 +234,7 @@ The procedure for fitting a dipole to each coil is the same as the procedure use
     
     % the radius and origin of the sphere needs to be updated until you are happy with how the sphere fits inside the helmet
     figure
-    ft_plot_sens(data.grad, 'chantype', 'meggrad');
+    ft_plot_sens(grad, 'chantype', 'meggrad');
     ft_plot_headmodel(fake_headmodel, 'facecolor', 'lightskyblue'); % see https://www.rapidtables.com/web/color/html-color-codes.html
     ft_headlight
 
@@ -306,61 +306,61 @@ After fitting all dipoles, we want to see where they end up. The dipole orientat
 
 The known coil positions from the CAD model serve as ground truth. The localization error for each coil is the distance between the estimated and true position. However, the CAD model is expressed in its own coordinate system, and the fitted dipoles are expressed in the coordinate system of the MEG sensor definition (the "grad" structure). Furthermore, depending how the phantom sphere was placed in the helmet, the dipole positions would also be different. Hence there is an unknown translation and rotation between the two. We can use ft_electroderealign to automatically fit the position of the vertices of the CAD model to the dipole positions
 
-#### Align the CAD model with the fitted dipole positions
+#### Align the HPI positions from the CAD model with the fitted dipoles
 
-The **[ft_electroderealign](/reference/ft_electroderealign)** function can map a template description of electrode positions to a subset of electrodes. Using a Polhemus to localize  all electrode positions of a high-density (64 or more) EEG cap can be a lot of work; this functionality allows you to localize a subset of electrodes, for example only a few key electrode locations around the head (like FPz, Cz, Oz, T7 and T8) or the 21 electrodes from the 10-20 system, and match those to the corresponding template positions. Based on the spatial transformation of the template subset to the measured locations, all template electrode positions can be spatially transformed to the actually measured coordinate system.
+The **[ft_electroderealign](/reference/ft_electroderealign)** function can map a template description of electrode positions to a subset of electrodes. Using a Polhemus to localize all electrode positions of a high-density (64 or more) EEG cap can be a lot of work; this functionality allows you to localize a subset of electrodes, for example only a few key electrode locations around the head (like FPz, Cz, Oz, T7 and T8) or the 21 electrodes from the 10-20 system, and match those to the corresponding template positions. Based on the spatial transformation of the template subset to the measured locations, all template electrode positions can be spatially transformed to the actually measured coordinate system.
 
 Here we can use the same functionality to determine the spatial transformation from the (arbitrary) coordinate system in which the CAD design was expressed, to the MEG helmet coordinate system in which the dipole positions were fitted. We get the coil positions from the CAD model sphere with 60 mm radius (or 120 mm diameter) that was triangulated using 32 vertices. The 3-D printed coils themselves are 3.2 mm thick, which means that the position of the coils is 1.6 mm outward from the vertex positions. Hence we shift the vertex positions outward by dividing the positions by 60 and multiplying by 60+1.6.
 
-    load cad_mesh.mat
-    cad_mesh = ft_convert_units(cad_mesh, 'm');
-    cad_mesh.pos = cad_mesh.pos * (60+1.6)/60;
+    load cad_hpi.mat
+    cad_hpi = ft_convert_units(cad_hpi, 'm');
+    cad_hpi.pos = cad_hpi.pos * (60+1.6)/60;
 
-    % construct a set of EEG electrodes, one for each of the 24 vertices
-    model = [];
+    % construct a set of EEG electrodes from the 24 HPI coil positions
+    elec_hpi = [];
     for i=1:24
-        model.elecpos(i,:) = cad_mesh.pos(i,:);
-        model.elecori(i,:) = cad_mesh.pos(i,:) / norm(cad_mesh.pos(i,:));
-        model.label{i}     = num2str(i);
+        elec_hpi.elecpos(i,:) = cad_hpi.pos(i,:);
+        elec_hpi.elecori(i,:) = cad_hpi.pos(i,:) / norm(cad_hpi.pos(i,:));
+        elec_hpi.label{i}     = num2str(i);
     end
-    % coil 23 and 24 are not on vertex 23 and 24
-    model.elecpos(23,:) = cad_mesh.pos(28,:); % coil 23 is placed on vertex 28
-    model.elecpos(24,:) = cad_mesh.pos(30,:); % coil 24 is placed on vertex 30
-    model.unit = 'm';
+    % HPI coil 23 and 24 are not on vertex 23 and 24
+    elec_hpi.elecpos(23,:) = cad_hpi.pos(28,:); % coil 23 was placed on vertex 28
+    elec_hpi.elecpos(24,:) = cad_hpi.pos(30,:); % coil 24 was placed on vertex 30
+    elec_hpi.unit = 'm';
 
     figure
-    ft_plot_mesh(cad_mesh, 'facecolor', 'beige'); % see https://www.rapidtables.com/web/color/html-color-codes.html
-    ft_plot_sens(model, 'elec', true, 'axes', true, 'label', 'label', 'elecsize', 0.01, 'elecshape', 'disc')
+    ft_plot_mesh(cad_hpi, 'facecolor', 'beige'); % see https://www.rapidtables.com/web/color/html-color-codes.html
+    ft_plot_sens(elec_hpi, 'elec', true, 'axes', true, 'label', 'label', 'elecsize', 0.01, 'elecshape', 'disc')
     view(125, 30)
 
 {% include image src="/assets/img/tutorial/opm_phantom/figure8.png" width="600" %}
 
 The phantom is not symmetric along the front-back direction and the coils numbered 2, 12, and 22 are the "front" of the phantom and should be towards the usual nose direction, which is +x for the CTF system
 
-    cad_mesh = ft_transform_geometry([0 0 -90], cad_mesh, 'rotate');
-    model    = ft_transform_geometry([0 0 -90], model, 'rotate');
+    cad_hpi  = ft_transform_geometry([0 0 -90], cad_hpi, 'rotate');
+    elec_hpi = ft_transform_geometry([0 0 -90], elec_hpi, 'rotate');
 
 Following the rotation you repeat the figure to check that the orientation is more or less consistent.
 
 Similarly we describe the fitted magnetic dipole positions as if they were EEG electrodes.
 
     % construct a set of EEG electrodes, one for each fitted dipole
-    fitted = [];
+    dipfit_hpi = [];
     for i=1:24
-        fitted.elecpos(i,:) = est_pos(i,:);
-        fitted.elecori(i,:) = est_ori(i,:) * flip(i);
-        fitted.label{i} = num2str(i);
+        dipfit_hpi.elecpos(i,:) = est_pos(i,:);
+        dipfit_hpi.elecori(i,:) = est_ori(i,:) * flip(i);
+        dipfit_hpi.label{i} = num2str(i);
     end
-    fitted.unit = 'm';
-    fitted.coordsys = data.grad.coordsys;
+    dipfit_hpi.unit = 'm';
+    dipfit_hpi.coordsys = data.grad.coordsys;
 
-Subsequently we can take the positions from the CAD model and do a rigid body alignment to fit them to the fitted dipole positions.
+Subsequently we can take the HPI positions from the CAD model and do a rigid body alignment to fit them to the fitted dipole positions.
 
     cfg = [];
     cfg.method = 'template';
-    cfg.target = fitted;
+    cfg.target = dipfit_hpi;
     cfg.warp = 'rigidbody';
-    model_aligned = ft_electroderealign(cfg, model);
+    aligned_hpi = ft_electroderealign(cfg, elec_hpi);
 
 {% include markup/yellow %}
 The optimization of the rigidbody warp may not be optimal if the initial alignment is too far off, for example when it is rotated 90 degrees. You can "help" the optimization by providing a decent initial alignment. Alternatively, you can iteratively repeat the alignment, taking the previous output as the next input.
@@ -371,17 +371,17 @@ The optimization of the rigidbody warp may not be optimal if the initial alignme
 We can plot the positions together and compute the deviations.
 
     figure
-    ft_plot_sens(fitted,        'elec', false, 'axes', true, 'label', 'off', 'style', 'rx', 'elecsize', 10)
-    ft_plot_sens(model_aligned, 'elec', false, 'axes', true, 'label', 'off', 'style', 'bo', 'elecsize', 10)
+    ft_plot_sens(dipfit_hpi,  'elec', false, 'axes', true, 'label', 'off', 'style', 'rx', 'elecsize', 10)
+    ft_plot_sens(aligned_hpi, 'elec', false, 'axes', true, 'label', 'off', 'style', 'bo', 'elecsize', 10)
 
 {% include image src="/assets/img/tutorial/opm_phantom/figure9.png" width="600" %}
 
-    deviation = sqrt(sum((fitted.elecpos - model_aligned.elecpos).^2, 2));
+    deviation = sqrt(sum((dipfit_hpi.elecpos - aligned_hpi.elecpos).^2, 2));
     deviation = deviation * 1000; % in mm
 
     figure
     bar(deviation);
-    ylabel('coil number')
+    ylabel('HPI coil number')
     ylabel('deviation (mm)')
 
 {% include image src="/assets/img/tutorial/opm_phantom/figure10.png" width="600" %}
@@ -543,7 +543,7 @@ We could now use **[ft_apply_montage](/reference/utilities/ft_apply_montage)** t
 
 Alternatively, we could also use the **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)** or the **[ft_denoise_ssp](/reference/ft_denoise_ssp)** functions, since the CTF synthetic higher-order gradient implementation is also implemented as a montage, as is the signal-space projection method. Both methods require the montage to be part of the grad structure
 
-    data.grad.balance.correctgain = correctgain;
+    data_all.grad.balance.correctgain = correctgain;
 
     % apply the montage using ft_denoise_synthetic
     cfg = [];
