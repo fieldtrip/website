@@ -56,7 +56,7 @@ There are 90000 samples, which at 250 Hz sampling rate means that this data is 9
 Taking the baseline sedation EEG data of participant 22, we will use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut shorter trials out of the continuous data. Specifically, we will cut the data into non-overlapping segments of various lengths (1 sec, 2 secs and 4 secs) and we will compute the **_power spectrum_** of all data segments and average them.
 
 {% include markup/yellow %}
-You can also use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut the data into timewindows with some overlap (e.g.. 50%). This basically implements [Welsh's method](https://en.wikipedia.org/wiki/Welch%27s_method) for spectral estimation.
+You can also use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut the data into timewindows with some overlap (e.g.. 50%). This corresponds to [Welsh's method](https://en.wikipedia.org/wiki/Welch%27s_method) for spectral estimation.
 {% include markup/end %}
 
     cfg = [];
