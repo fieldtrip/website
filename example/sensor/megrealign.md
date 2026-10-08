@@ -1,5 +1,5 @@
 ---
-title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+title: Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign
 tags: [meg, ctf]
 category: example
 redirect_from:
@@ -20,6 +20,7 @@ redirect_from:
     % where the dipole layer for the interpolation will be located. The center
     % of the head is at [0 0 4], the radius is 12 cm, and the dipole layer that is
     % specified in ft_megrealign is 2.5 cm shifted inward from the head surface
+
     cfg = [];
     cfg.dip.pos = [0 0 13.5];  % 4 + 12 - 2.5
     cfg.dip.frequency = 1;
@@ -37,6 +38,7 @@ redirect_from:
     % vice versa, but also apply the ft_megrealign function from 151 to 151. In the
     % realignment the signal will be slightly distorted as a comparison of avg151_151
     % to avg151 would show.
+
     cfg = [];
     cfg.inwardshift = 3;
     cfg.headmodel = vol;
