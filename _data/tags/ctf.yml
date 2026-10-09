@@ -7,7 +7,7 @@
 - link: /example/preproc/fixing_a_missing_sensor
   title: Fixing a missing channel in a CTF dataset
 - link: /example/sensor/megrealign
-  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  title: Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign
 - link: /faq/experiment/ctf_changeheadloc
   title: How can I change the head localization in a CTF dataset?
 - link: /faq/other/anonymization_ctf

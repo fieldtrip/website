@@ -92,7 +92,7 @@
 - link: /example/sensor/headmovement_meg
   title: How to incorporate head movements in MEG analysis
 - link: /example/sensor/megrealign
-  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  title: Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign
 - link: /example/sensor/nirs_fingertapping
   title: Analyzing NIRS data recorded during unilateral finger- and foot-tapping
 - link: /example/sensor/nirs_speech

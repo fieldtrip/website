@@ -9,7 +9,7 @@
 - link: /example/sensor/headmovement_meg
   title: How to incorporate head movements in MEG analysis
 - link: /example/sensor/megrealign
-  title: Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  title: Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign
 - link: /example/source/beamformer_commonfilter
   title: Common filters in beamforming
 - link: /example/source/dipolefit_somatosensory_erf
