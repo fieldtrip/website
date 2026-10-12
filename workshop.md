@@ -15,6 +15,8 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
+- 2027, Shanghai, China
+- 2027, WIRED - Grenoble, France
 - 2026, [MEG/OPM toolkit](/workshop/toolkit2026) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
