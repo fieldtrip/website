@@ -1,0 +1,72 @@
+articleids:
+- idtype: pmid
+  value: '42717094'
+- idtype: pmcid
+  value: PMC13645642
+- idtype: doi
+  value: 10.1038/s41586-026-10876-y
+- idtype: pii
+  value: 10.1038/s41586-026-10876-y
+authors:
+- authtype: Author
+  name: Ratliff JM
+- authtype: Author
+  name: Terral G
+- authtype: Author
+  name: Vazquez A
+- authtype: Author
+  name: Lutzu S
+- authtype: Author
+  name: Manning A
+- authtype: Author
+  name: Perez-Catalan N
+- authtype: Author
+  name: Neubert da Silva G
+- authtype: Author
+  name: Kim S
+- authtype: Author
+  name: Mota J
+- authtype: Author
+  name: Mallory M
+- authtype: Author
+  name: Stith B
+- authtype: Author
+  name: Ramakrishnan C
+- authtype: Author
+  name: Mattessich G
+- authtype: Author
+  name: Fenno LE
+- authtype: Author
+  name: Daigle T
+- authtype: Author
+  name: Stafford DA
+- authtype: Author
+  name: Zeng H
+- authtype: Author
+  name: Tasic B
+- authtype: Author
+  name: Sorensen S
+- authtype: Author
+  name: Deisseroth K
+- authtype: Author
+  name: Ngai J
+- authtype: Author
+  name: Kilduff TS
+- authtype: Author
+  name: Sjulson L
+- authtype: Author
+  name: Rudolph S
+- authtype: Author
+  name: Batista-Brito R
+epubdate: 2026 Sep 9
+fulljournalname: Nature
+issue: '8135'
+pages: 442-453
+pmclivedate: 2026/10/09
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Nature
+title: Neocortical long-range inhibition promotes cortical synchrony and sleep.
+uid: '13645642'
+volume: '658'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42817975'
+- idtype: pmcid
+  value: PMC13621978
+- idtype: doi
+  value: 10.64898/2026.09.16.751848
+- idtype: pii
+  value: 2026.09.16.751848
+authors:
+- authtype: Author
+  name: Mankili A
+- authtype: Author
+  name: Ecevitoglu A
+- authtype: Author
+  name: Edelstein GA
+- authtype: Author
+  name: Ren N
+- authtype: Author
+  name: Rotolo RA
+- authtype: Author
+  name: Chrobak JJ
+- authtype: Author
+  name: Salamone JD
+- authtype: Author
+  name: Stevenson IH
+epubdate: 2026 Sep 22
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/30
+printpubdate: ''
+pubdate: 2026 Sep 22
+sortdate: 2026/09/22 00:00
+source: bioRxiv
+title: 'Decoding instrumental lever pressing from prefrontal, accumbens, and hippocampal
+  local field potentials: conservation across sex, task, and dopamine depletion.'
+uid: '13621978'
+volume: ''

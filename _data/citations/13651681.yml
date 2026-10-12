@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42810103'
+- idtype: pmcid
+  value: PMC13651681
+- idtype: doi
+  value: 10.1016/j.nicl.2026.104067
+- idtype: pii
+  value: S2213-1582(26)00127-0
+authors:
+- authtype: Author
+  name: Alyagon U
+- authtype: Author
+  name: Bokovza L
+- authtype: Author
+  name: Shalev H
+- authtype: Author
+  name: Ygael N
+- authtype: Author
+  name: Zangen A
+epubdate: 2026 Sep 24
+fulljournalname: NeuroImage. Clinical
+issue: ''
+pages: '104067'
+pmclivedate: 2026/10/10
+printpubdate: ''
+pubdate: 2026 Sep 24
+sortdate: 2026/09/24 00:00
+source: Neuroimage Clin
+title: 'Toward precision neuromodulation in ADHD: rTMS-evoked excitability as a biomarker
+  and ccPAS as an alternative protocol.'
+uid: '13651681'
+volume: '52'

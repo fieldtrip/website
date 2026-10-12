@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42847453'
+- idtype: pmcid
+  value: PMC13647488
+- idtype: doi
+  value: 10.1111/psyp.70421
+authors:
+- authtype: Author
+  name: Fornari L
+- authtype: Author
+  name: Janssen TWP
+- authtype: Author
+  name: Davidesco I
+- authtype: Author
+  name: Krabbendam L
+- authtype: Author
+  name: van Atteveldt NM
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e70421
+pmclivedate: 2026/10/09
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Psychophysiology
+title: 'Inducing Interpersonal Closeness: Effects on Inter-Brain Synchrony and Collaborative
+  Performance.'
+uid: '13647488'
+volume: '63'

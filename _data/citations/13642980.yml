@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42839330'
+- idtype: pmcid
+  value: PMC13642980
+- idtype: doi
+  value: 10.1002/brb3.71826
+authors:
+- authtype: Author
+  name: Sáringer S
+- authtype: Author
+  name: Benyhe A
+- authtype: Author
+  name: Kaposvári P
+epubdate: ''
+fulljournalname: Brain and behavior
+issue: '10'
+pages: e71826
+pmclivedate: 2026/10/08
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Brain Behav
+title: Recognizability Affects the Processing of Facial Gender Information.
+uid: '13642980'
+volume: '16'

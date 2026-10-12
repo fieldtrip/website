@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42426098'
+- idtype: pmcid
+  value: PMC13649582
+- idtype: doi
+  value: 10.1038/s41598-026-60559-x
+- idtype: pii
+  value: 10.1038/s41598-026-60559-x
+authors:
+- authtype: Author
+  name: Sánchez-León CA
+- authtype: Author
+  name: Cordones I
+- authtype: Author
+  name: Jiménez-Díaz A
+- authtype: Author
+  name: Cheron G
+- authtype: Author
+  name: Medina JF
+- authtype: Author
+  name: Márquez-Ruiz J
+epubdate: 2026 Jul 9
+fulljournalname: Scientific reports
+issue: ''
+pages: ''
+pmclivedate: 2026/10/10
+printpubdate: ''
+pubdate: 2026 Jul 9
+sortdate: 2026/07/09 00:00
+source: Sci Rep
+title: 'Polarity-dependent modulation of sensory circuits by cerebellar tDCS: local
+  and distant effects.'
+uid: '13649582'
+volume: '16'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42804642'
+- idtype: pmcid
+  value: PMC13643281
+- idtype: doi
+  value: 10.1073/pnas.2613077123
+authors:
+- authtype: Author
+  name: Mo S
+- authtype: Author
+  name: Alain C
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2026 Sep 28
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '40'
+pages: e2613077123
+pmclivedate: 2026/10/08
+printpubdate: 2026 Oct 6
+pubdate: 2026 Oct 6
+sortdate: 2026/10/06 00:00
+source: Proc Natl Acad Sci U S A
+title: Longitudinal adaptations in neural and behavioral systems following hearing
+  restoration using cochlear implants.
+uid: '13643281'
+volume: '123'

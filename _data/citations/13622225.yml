@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '42818294'
+- idtype: pmcid
+  value: PMC13622225
+- idtype: doi
+  value: 10.64898/2026.09.23.753872
+- idtype: pii
+  value: 2026.09.23.753872
+authors:
+- authtype: Author
+  name: Ack SE
+- authtype: Author
+  name: Gray SM
+- authtype: Author
+  name: Dede AJO
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Girgis F
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Braga RM
+- authtype: Author
+  name: Johnson EL
+epubdate: 2026 Sep 25
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/30
+printpubdate: ''
+pubdate: 2026 Sep 25
+sortdate: 2026/09/25 00:00
+source: bioRxiv
+title: Differential roles of frontoparietal regions in working memory and decision-making.
+uid: '13622225'
+volume: ''

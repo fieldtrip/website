@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42443758'
+- idtype: pmcid
+  value: PMC13644145
+- idtype: doi
+  value: 10.1186/s12871-026-04064-8
+- idtype: pii
+  value: 10.1186/s12871-026-04064-8
+authors:
+- authtype: Author
+  name: Dhanawansa V
+- authtype: Author
+  name: Sleigh J
+- authtype: Author
+  name: Gaskell A
+- authtype: Author
+  name: Razi A
+- authtype: Author
+  name: Kuhlmann L
+epubdate: 2026 Jul 13
+fulljournalname: BMC anesthesiology
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/08
+printpubdate: ''
+pubdate: 2026 Jul 13
+sortdate: 2026/07/13 00:00
+source: BMC Anesthesiol
+title: Exploratory study of electroencephalogram markers of responsiveness to surgical
+  noxious stimuli under propofol anaesthesia.
+uid: '13644145'
+volume: '26'

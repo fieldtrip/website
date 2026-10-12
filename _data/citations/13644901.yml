@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '42842340'
+- idtype: pmcid
+  value: PMC13644901
+- idtype: doi
+  value: 10.1111/psyp.70417
+authors:
+- authtype: Author
+  name: Stoffel N
+- authtype: Author
+  name: Mouthon M
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: von der Weid L
+- authtype: Author
+  name: Concetti C
+- authtype: Author
+  name: De Lucia M
+- authtype: Author
+  name: Aybek S
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e70417
+pmclivedate: 2026/10/08
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Psychophysiology
+title: Altered Interoceptive Predictive Coding in Functional Neurological Disorders.
+uid: '13644901'
+volume: '63'

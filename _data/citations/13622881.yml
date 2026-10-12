@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '42818547'
+- idtype: pmcid
+  value: PMC13622881
+- idtype: doi
+  value: 10.21203/rs.3.rs-9077807/v1
+- idtype: pii
+  value: rs.3.rs-9077807
+authors:
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: DeMauro S
+- authtype: Author
+  name: Merhar S
+- authtype: Author
+  name: Polking D
+- authtype: Author
+  name: Schmidt K
+- authtype: Author
+  name: Robinson C
+- authtype: Author
+  name: Green H
+- authtype: Author
+  name: Vannest J
+- authtype: Author
+  name: Ziolkowski K
+- authtype: Author
+  name: Barnes-Davis M
+epubdate: 2026 Sep 8
+fulljournalname: Research square
+issue: ''
+pages: ''
+pmclivedate: 2026/09/30
+printpubdate: ''
+pubdate: 2026 Sep 8
+sortdate: 2026/09/08 00:00
+source: Res Sq
+title: 'Tackling Acquisition of Language in Kids born Preterm (TALK-Preterm): protocol
+  of a prospective cohort study.'
+uid: '13622881'
+volume: ''
