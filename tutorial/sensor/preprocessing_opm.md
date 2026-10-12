@@ -301,7 +301,7 @@ Besides removing the artifacts from the data, we can also use the output of ft_b
 
 Return to the ft_databrowser section at the start of the tutorial, now adding the option:
 
-    cfg.artifact.badsegment.artifact = artifact;
+    cfg.artfctdef.badsegment.artifact = artifact;
 
 Scroll through the continuous data and find the segments that were identified as having a standard deviation above the threshold.
 {% include markup/end %}
