@@ -181,7 +181,8 @@ _Figure: OPM sensor locations are in register with the Polhemus headshape._
 
 If you rotate the image, the first thing to notice is that the nose is properly pointing towards the opening of the helmet where the face should be. Furthermore, careful inspection shows that there are now two sets of overlapping fiducials. Since we made sure previously that the fiducials are sorted from 1 to 8, we can compute the difference between the positions in the aligned helmet and the Polhemus measurement. The reason for the overlap not being perfect is that the Polhemus measurement has some inaccuracies, both in placing the stylus, and in the digitization process.
 
-    fieldlinebeta2_head.fid.pos - headshape.fid.pos
+    % the first 8 fiducials of the helmet are A1 up to A8 
+    fieldlinebeta2_head.fid.pos(1:8,:) - headshape.fid.pos
     ans =
         0.3611    0.2083   -0.0140
         4.8747    1.9590    1.6937
