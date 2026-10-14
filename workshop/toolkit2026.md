@@ -40,7 +40,7 @@ Note that the tentative program below still might change a bit.
 | 14:45-15:45 | OPM coregistration - [hands-on](/tutorial/source/coregistration_opm) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:00 | hands-on (continued) |
-| 18:30-22:00 | Drinks & dinner, TBA |
+| 18:30-22:00 | Drinks & dinner, restaurant [Mikmak](https://www.google.com/maps/place/Foodbar+MikMak/@51.8460869,5.8699119,19z/data=!3m1!4b1!4m6!3m5!1s0x47c709d807325da7:0x5e3033e79fa6ca0c!8m2!3d51.8460869!4d5.8705556!16s%2Fg%2F11fk4mn26c?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D)) |
 
 ### Wednesday October 14, 2026
 
