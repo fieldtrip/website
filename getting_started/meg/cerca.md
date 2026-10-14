@@ -15,10 +15,11 @@ The example data provided on the our [download server](https://download.fieldtri
 ## Read and visualize the continuous data
 
     % this starts with the fif data organized according to BIDS
-    filename = 'ses-001/meg/sub-004_ses-001_task-braille_run-001_meg.fif'; 
+    filename = 'bids/ses-001/meg/sub-004_ses-001_task-braille_run-001_meg.fif'; 
 
     cfg = [];
     cfg.dataset = filename;
+    cfg.coilaccuracy = 0; % to read the sensor positions properly
     data = ft_preprocessing(cfg);
 
     cfg = [];
@@ -109,55 +110,161 @@ The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)
 
 For topographic plotting, the channel names in `data.label` should be mapped to the corresponding locations on the head. To keep the script clean and reproducible, we will not go in the data structure and manually rename the channels, but use a montage as explained [here](/faq/preproc/datahandling/rename_channels).
 
-The `_HelmConfig.tsv` file specifies the channel names (based on the name of the hardware sensors) and their placements in the helmet. It also contains 2D projection coordinates of the helmet slot positions in `Layx` and `Layy` which can be used for 2D plotting. Using the `_HelmConfig.tsv` file, we can create a [layout](/tutorial/plotting/layout) for the topographic plotting.
+The `_HelmConfig.tsv` file specifies the channel names (based on the name of the hardware sensors) and their placements in the helmet. If we know which OPM sensor is in which slot, we can make a montage that allows for renaming the channels in the data, so that we can (consistently over participants) use the same helmet slot names and locatios for the plotting and for source reconstruction.
 
-    % Rename the channel labels using a montage
+    tsv = ft_read_tsv('11766_054_braille1/20240129_101236_cMEG_Data/20240129_101236_HelmConfig.tsv');
+    tsv = tsv(1:end-1,:); % drop the last line
+
+    helmetlab  = tsv{:,1};   % labels for the helmet slots
+    pos        = tsv{:,2:4};
+    ori        = tsv{:,5:7};
+    xy         = tsv{:,8:9};
+    channellab = tsv{:,10};  % labels for the OPM sensor channels
+
+    % remove spaces from the helmet slot and OPM channel names
+    for i=1:numel(lab)
+      lab{i}(isspace(lab{i})) = [];
+    end
+    for i=1:numel(chan)
+      chan{i}(isspace(chan{i})) = [];
+    end
+
+    % make a montage to rename the channels
     montage = [];
-    montage.labelold = data.label';
-    
-    % Read the channel mapping
-    HelmConfig = tdfread(‘Braille_example_data\11766_054_braille1\20240129_101236_cMEG_Data\ 20240129_101236_HelmConfig.tsv');
-    last_line_idx = strmatch('Helmet:',HelmConfig.Name);
-    field_names = fieldnames(HelmConfig);
-    for n = 1:size(field_names,1)
-        HelmConfig.(field_names{n})(last_line_idx,:) = [];
-        if max(strcmpi(field_names{n},{'Px';'Py';'Pz';'Ox';'Oy';'Oz';'Layx';'Layz'}))
-            try
-                HelmConfig.(field_names{n}) = str2num(HelmConfig.(field_names{n}));
-            end
-        end
-    end
-    HC_sensnames = strrep(cellstr(HelmConfig.Sensor),' ','');
-    HC_slotnames = strrep(cellstr(HelmConfig.Name),' ','');
-    sensor_slot_mapping = [];
-    for n = size(data.label,1):-1:1
-        sensor_slot_mapping(n) = find(strcmpi(HC_sensnames,data.label{n}));
-    end
-    
-    montage.labelnew = HC_slotnames(sensor_slot_mapping);
-    montage.tra = eye(size(data.label,1)); % the data is simply copied one-to-one
-    
-    % Create layout from the HelmConfig.tsv file
+    montage.labelold = helmetlab;
+    montage.labelnew = helmetlab;
+    montage.tra = eye(length(helmetlab));
+
+The `_HelmConfig.tsv` file also contains 2D projection coordinates of the helmet slot positions in `Layx` and `Layy` which can be used for 2D plotting. Using the `_HelmConfig.tsv` file, we can create a [layout](/tutorial/plotting/layout) for the topographic plotting.
+
+    % make a general purpose layout, we will refine it further down 
     layout = [];
-    layout.pos(:,1) = HelmConfig.Layx(sensor_slot_mapping);
-    layout.pos(:,2) = HelmConfig.Layy(sensor_slot_mapping);
-    layout.label    = HC_slotnames(sensor_slot_mapping);
-    layout.width    = repmat(0.02,size(layout.pos,1),1);
-    layout.height   = repmat(0.02,size(layout.pos,1),1);
-    
-    % rename the channels in the raw data (this could have been done earlier in the processing pipeline)
+    layout.label  = lab; % we could also use "chan" here
+    layout.pos    = xy;
+    layout.width  = ones(192,1) * 0.1;
+    layout.height = ones(192,1) * 0.05;
+
+    % add the location for the scale indicator in the upper right corner
+    layout.label{end+1}  = 'SCALE';
+    layout.pos(end+1,:)  = [0.5 0.5];
+    layout.width(end+1)  = 0.1;
+    layout.height(end+1) = 0.05;
+
+    % add the location for the comment field in the upper left corner
+    layout.label{end+1}  = 'COMNT';
+    layout.pos(end+1,:)  = [-0.5 0.5];
+    layout.width(end+1)  = 0.1;
+    layout.height(end+1) = 0.05;
+
+    % we can add an outline, which we reuse from the CTF helmet
+    cfg = [];
+    cfg.layout = 'CTF151_helmet';
+    ctf151_helmet = ft_prepare_layout(cfg);
+
+    layout.mask = ctf151_helmet.mask;
+    layout.outline = ctf151_helmet.outline;
+
+    % slightly increase the size of the outline and mask 
+    for i=1:numel(layout.mask)
+      layout.mask{i} = 1.1 * layout.mask{i};
+    end
+    for i=1:numel(layout.outline)
+      layout.outline{i} = 1.1 * layout.outline{i};
+    end
+
+    figure; ft_plot_layout(layout);
+
+The layout that we just created has the three (x, y, z) channels of each OPM sensor at the same position. Since we don't want to plot them on top of each other, we make a subset of the x, y, and z channels.  
+
+    selx = endsWith(layout.label, 'X') | strcmp(layout.label, 'SCALE') | strcmp(layout.label, 'COMNT');
+    sely = endsWith(layout.label, 'Y') | strcmp(layout.label, 'SCALE') | strcmp(layout.label, 'COMNT');
+    selz = endsWith(layout.label, 'Z') | strcmp(layout.label, 'SCALE') | strcmp(layout.label, 'COMNT');
+
+    cerca192x = [];
+    cerca192x.label   = layout.label(selx);
+    cerca192x.pos     = layout.pos(selx,:);
+    cerca192x.width   = layout.width(selx);
+    cerca192x.height  = layout.height(selx);
+    cerca192x.outline = layout.outline;
+    cerca192x.mask    = layout.mask;
+
+    cerca192y = [];
+    cerca192y.label   = layout.label(sely);
+    cerca192y.pos     = layout.pos(sely,:);
+    cerca192y.width   = layout.width(sely);
+    cerca192y.height  = layout.height(sely);
+    cerca192y.outline = layout.outline;
+    cerca192y.mask    = layout.mask;
+
+    cerca192z = [];
+    cerca192z.label   = layout.label(selz);
+    cerca192z.pos     = layout.pos(selz,:);
+    cerca192z.width   = layout.width(selz);
+    cerca192z.height  = layout.height(selz);
+    cerca192z.outline = layout.outline;
+    cerca192z.mask    = layout.mask;
+
+    % figure; ft_plot_layout(cerca192x);   % tangential component
+    % figure; ft_plot_layout(cerca192y);   % tangential component
+    figure; ft_plot_layout(cerca192z);   % radial component
+
+It can also be usefull to make a multiplot with the ERPs, power spectra, or TFRs for each of the channels with the three channels shown as a triplet next to each other.
+
+    selx = endsWith(layout.label, 'X');
+    sely = endsWith(layout.label, 'Y');
+    selz = endsWith(layout.label, 'Z');
+
+    cerca192all = layout;
+    cerca192all.pos(selx,2) = cerca192all.pos(selx,2) + 0.011; % move a little up
+    cerca192all.pos(sely,2) = cerca192all.pos(sely,2) + 0.011; % move a little up
+    cerca192all.pos(selz,2) = cerca192all.pos(selz,2) - 0.011; % move a little down
+
+    cerca192all.pos(selx,1) = cerca192all.pos(selx,1) - 0.0205; % move a little to the left
+    cerca192all.pos(sely,1) = cerca192all.pos(sely,1) + 0.0205; % move a little to the right
+
+    cerca192all.width(selx) = 0.035;
+    cerca192all.width(sely) = 0.035;
+    cerca192all.width(selz) = 0.035;
+
+    cerca192all.height(selx) = 0.02;
+    cerca192all.height(sely) = 0.02;
+    cerca192all.height(selz) = 0.02;
+
+    figure; ft_plot_layout(cerca192all)
+
+## Renaming the OPM channels to the corresponding helmet locations
+
+To use the layouts that we just created, we have to rename the channels in the data from their "OPM sensor" names to the "helmet slot" names using the montage. It is actually recommended to do this as the first step in the processing pipeline upon reading the raw data ft_preprocessing.
+
+    % rename the channels in the raw data
     cfg = [];
     cfg.montage = montage;
-    data_helmetpos = ft_preprocessing(cfg, data);
+    data_helmet = ft_preprocessing(cfg, data);
     
-    % and rename the channels in the timelocked ERF data (not needed if the raw data channels had been renamed earlier on)
-    timelock_helmetpos = ft_preprocessing(cfg, timelock);
+    % also rename the channels in the timelocked ERF data (not needed if the raw data channels had been renamed earlier on)
+    timelock_helmet = ft_preprocessing(cfg, timelock);
     
     % plot the ERFs on the corresponding position in the helmet
     cfg = [];
     cfg.layout = layout;
     cfg.showoutline = 'yes';
-    ft_multiplotER(cfg, timelock_helmetpos)
+    ft_multiplotER(cfg, timelock_helmet)
+
+## Construct the gradiometer definition
+
+The `_HelmConfig.tsv` file also contains the 3D positions and orientations which we can use to construct a gradiometer definition. This can be used for denoising using HFC or AMM, or for source reconstruction. This is an alternative to using the grad structure that you can read from the fif file using ft_preprocessing or ft_read_sens.
+
+    grad = [];
+    grad.label    = helmetlab;
+    grad.coilpos  = pos;
+    grad.coilori  = ori;
+    grad.tra      = eye(192);
+    grad.coordsys = 'RAS';
+    grad.unit     = 'm';
+
+    ft_plot_sens(grad, 'coil', true, 'orientation', true, 'axes', true)
+
+The grad structure is specific for the helmet, so you don't have to make it again and again for different recordings with that helmet, but you can just save it to disk and reuse it. In this specific recording the OPM sensors were placed in the purple adult large helmet supplied by Cerca. You would have to make separate grad structures for each of the Cerca helmet sizes that you use.
 
 ## Co-registration
 
