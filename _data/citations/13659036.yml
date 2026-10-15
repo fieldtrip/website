@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '42865087'
+- idtype: doi
+  value: 10.1111/ejn.70710
+- idtype: pmcid
+  value: PMC13659036
+authors:
+- authtype: Author
+  name: Themas L
+- authtype: Author
+  name: Schaadt G
+- authtype: Author
+  name: Lippus P
+- authtype: Author
+  name: Padrik M
+- authtype: Author
+  name: Kask L
+- authtype: Author
+  name: Vaher U
+- authtype: Author
+  name: Männamaa M
+- authtype: Author
+  name: Kreegipuu K
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: e70710
+pmclivedate: 2026/10/14
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Eur J Neurosci
+title: 'Mismatch Responses to Prosodic Changes in Children With Developmental Language
+  Disorder: A Longitudinal Approach.'
+uid: '13659036'
+volume: '64'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42865489'
+- idtype: pmcid
+  value: PMC13654781
+- idtype: doi
+  value: 10.3389/fstro.2026.1894659
+authors:
+- authtype: Author
+  name: Khalili-Ardali M
+- authtype: Author
+  name: Sharma V
+- authtype: Author
+  name: Mandahar TS
+- authtype: Author
+  name: Páscoa Dos Santos F
+- authtype: Author
+  name: Tiesinga P
+- authtype: Author
+  name: Ramsey N
+epubdate: 2026 Sep 28
+fulljournalname: Frontiers in stroke
+issue: ''
+pages: '1894659'
+pmclivedate: 2026/10/13
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/09/28 00:00
+source: Front Stroke
+title: 'Electrophysiological signature of stroke recovery: investigating EEG biomarkers
+  for prognostic insights.'
+uid: '13654781'
+volume: '5'

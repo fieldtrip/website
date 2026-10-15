@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42791667'
+- idtype: pmcid
+  value: PMC13657424
+- idtype: doi
+  value: 10.1093/scan/nsag080
+- idtype: pii
+  value: '8836425'
+authors:
+- authtype: Author
+  name: Wang W
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Chen R
+- authtype: Author
+  name: Zheng H
+- authtype: Author
+  name: Mai X
+epubdate: ''
+fulljournalname: Social cognitive and affective neuroscience
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/13
+printpubdate: 2026 Jan 21
+pubdate: 2026 Jan 21
+sortdate: 2026/01/21 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Empathic concern for violators modulates victims'' evaluation of third-party
+  punishment outcomes: behavioral and electroencephalography evidence.'
+uid: '13657424'
+volume: '21'

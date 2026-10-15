@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '42168232'
+- idtype: doi
+  value: 10.1038/s41597-026-07312-1
+- idtype: pii
+  value: 10.1038/s41597-026-07312-1
+- idtype: pmcid
+  value: PMC13658821
+authors:
+- authtype: Author
+  name: Novelli L
+- authtype: Author
+  name: Stoliker D
+- authtype: Author
+  name: Barta T
+- authtype: Author
+  name: Greaves MD
+- authtype: Author
+  name: Chopra S
+- authtype: Author
+  name: Jackson J
+- authtype: Author
+  name: Kwee J
+- authtype: Author
+  name: Pang JC
+- authtype: Author
+  name: Williams ML
+- authtype: Author
+  name: Razi A
+epubdate: 2026 May 21
+fulljournalname: Scientific data
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/14
+printpubdate: ''
+pubdate: 2026 May 21
+sortdate: 2026/05/21 00:00
+source: Sci Data
+title: 'PsiConnect: Multimodal Neuroimaging of Context-Dependent Brain and Behaviour
+  Dynamics under Psilocybin.'
+uid: '13658821'
+volume: '13'

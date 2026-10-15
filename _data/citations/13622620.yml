@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42818362'
+- idtype: pmcid
+  value: PMC13622620
+- idtype: doi
+  value: 10.64898/2026.09.09.750180
+- idtype: pii
+  value: 2026.09.09.750180
+authors:
+- authtype: Author
+  name: Smith SS
+- authtype: Author
+  name: Sugai JA
+- authtype: Author
+  name: Hancock KE
+- authtype: Author
+  name: Polley DB
+epubdate: 2026 Sep 12
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/09/30
+printpubdate: ''
+pubdate: 2026 Sep 12
+sortdate: 2026/09/12 00:00
+source: bioRxiv
+title: Neural and autonomic predictors of future listening errors.
+uid: '13622620'
+volume: ''
