@@ -1,2 +1,4 @@
+- link: /example/source/phantom_topographies
+  title: Plot the topographies of HPI coils and different MEG phantoms
 - link: /tutorial/source/opm_phantom
   title: Using a MEG phantom for validation and OPM calibration

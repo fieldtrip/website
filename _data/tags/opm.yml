@@ -5,6 +5,8 @@
   title: Designing 3D printed helmets for different OPM sensor types
 - link: /example/other/opm_straighthelmet
   title: Designing an OPM helmet with a straight opening at the bottom
+- link: /example/source/phantom_topographies
+  title: Plot the topographies of HPI coils and different MEG phantoms
 - link: /getting_started/meg/cerca
   title: Getting started with Cerca OPM data
 - link: /getting_started/meg/fieldline
