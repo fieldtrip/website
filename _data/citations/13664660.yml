@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42872944'
+- idtype: pmcid
+  value: PMC13664660
+- idtype: doi
+  value: 10.1111/psyp.70429
+authors:
+- authtype: Author
+  name: Weidner EM
+- authtype: Author
+  name: Götze M
+- authtype: Author
+  name: Taday A
+- authtype: Author
+  name: Kissler J
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e70429
+pmclivedate: 2026/10/15
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Psychophysiology
+title: Distinct Visual Pathways of Threat Retrieval in Fear-Conditioned Faces.
+uid: '13664660'
+volume: '63'

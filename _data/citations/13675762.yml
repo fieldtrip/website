@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '42470656'
+- idtype: doi
+  value: 10.1002/epi.70386
+- idtype: pmcid
+  value: PMC13675762
+authors:
+- authtype: Author
+  name: Strüber M
+- authtype: Author
+  name: Stöber TM
+- authtype: Author
+  name: Schütz V
+- authtype: Author
+  name: Costard L
+- authtype: Author
+  name: Neubert V
+- authtype: Author
+  name: Bauer S
+- authtype: Author
+  name: Gharavi P
+- authtype: Author
+  name: Pitsch J
+- authtype: Author
+  name: Melzer N
+- authtype: Author
+  name: Strzelczyk A
+- authtype: Author
+  name: Triesch J
+- authtype: Author
+  name: Siebenbrodt K
+- authtype: Author
+  name: Rosenow F
+- authtype: Author
+  name: Kienitz R
+epubdate: 2026 Jul 18
+fulljournalname: Epilepsia
+issue: '10'
+pages: 5501-5513
+pmclivedate: 2026/10/18
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Epilepsia
+title: Hippocampal network activity changes during early epileptogenesis predict subsequent
+  epilepsy.
+uid: '13675762'
+volume: '67'

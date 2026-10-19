@@ -1,0 +1,41 @@
+articleids:
+- idtype: doi
+  value: 10.3390/s26196046
+- idtype: pmcid
+  value: PMC13667437
+authors:
+- authtype: Author
+  name: Jafarova L
+- authtype: Author
+  name: Yeşilbaş D
+- authtype: Author
+  name: Kellinghaus C
+- authtype: Author
+  name: Möddel G
+- authtype: Author
+  name: Kovac S
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Czernochowski D
+- authtype: Author
+  name: Sager S
+- authtype: Author
+  name: Güven A
+- authtype: Author
+  name: Batbat T
+- authtype: Author
+  name: Wolters CH
+epubdate: 2026 Sep 24
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '19'
+pages: ''
+pmclivedate: 2026/10/15
+printpubdate: ''
+pubdate: 2026 Oct
+sortdate: 2026/09/24 00:00
+source: Sensors (Basel)
+title: 'Feature-Based Machine-Learning Spike Marking in Signal and Source Space EEG:
+  A Proof-of-Principle Case Study of Focal Epilepsy.'
+uid: '13667437'
+volume: '26'

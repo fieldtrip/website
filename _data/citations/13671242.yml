@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '42878691'
+- idtype: pmcid
+  value: PMC13671242
+- idtype: doi
+  value: 10.1111/ejn.70722
+authors:
+- authtype: Author
+  name: Santhana Gopalan PR
+- authtype: Author
+  name: Nokia MS
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '8'
+pages: e70722
+pmclivedate: 2026/10/17
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Eur J Neurosci
+title: Optimized Cardiorespiratory State at Tone Onset Enhances Sensory Responses
+  but Not Associative Learning in Healthy Adults.
+uid: '13671242'
+volume: '64'
