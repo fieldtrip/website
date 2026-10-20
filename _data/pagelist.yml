@@ -891,6 +891,9 @@
     - title: Make MEG leadfields using different headmodels
       link: /example/source/headmodel_various/
       nav_order: 0
+    - title: Plot the topographies of HPI coils and different MEG phantoms
+      link: /example/source/phantom_topographies/
+      nav_order: 0
     - title: Read Neuromag .fif mri and create a MNI-aligned single-shell head model
       link: /example/source/neuromag_aligned2mni/
       nav_order: 0

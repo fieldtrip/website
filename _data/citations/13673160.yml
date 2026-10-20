@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '42637559'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0415-26.2026
+- idtype: pii
+  value: JNEUROSCI.0415-26.2026
+- idtype: pmcid
+  value: PMC13673160
+authors:
+- authtype: Author
+  name: Marshall CR
+- authtype: Author
+  name: Wang M
+- authtype: Author
+  name: Lawrance EL
+- authtype: Author
+  name: Kolling N
+- authtype: Author
+  name: O'Reilly JX
+epubdate: 2026 Oct 14
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '41'
+pages: ''
+pmclivedate: 2026/10/17
+printpubdate: ''
+pubdate: 2026 Oct 14
+sortdate: 2026/10/14 00:00
+source: J Neurosci
+title: Beta Oscillations and Pupil-Linked Arousal Regulate the Updating of Cognitive
+  Models.
+uid: '13673160'
+volume: '46'

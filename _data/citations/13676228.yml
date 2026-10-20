@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42867319'
+- idtype: doi
+  value: 10.1167/jov.26.10.11
+- idtype: pii
+  value: '2818675'
+- idtype: pmcid
+  value: PMC13676228
+authors:
+- authtype: Author
+  name: Auerbach-Asch CR
+- authtype: Author
+  name: Vishne G
+- authtype: Author
+  name: Wertheimer O
+- authtype: Author
+  name: Deouell LY
+epubdate: ''
+fulljournalname: Journal of vision
+issue: '10'
+pages: '11'
+pmclivedate: 2026/10/18
+printpubdate: 2026 Oct 1
+pubdate: 2026 Oct 1
+sortdate: 2026/10/01 00:00
+source: J Vis
+title: Decoding object categories from electroencephalography during free viewing
+  reveals early information evolution compared to passive viewing.
+uid: '13676228'
+volume: '26'

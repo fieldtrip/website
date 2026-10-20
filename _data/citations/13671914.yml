@@ -1,0 +1,29 @@
+articleids:
+- idtype: doi
+  value: 10.1152/jn.00432.2025
+- idtype: pmcid
+  value: PMC13671914
+- idtype: MID
+  value: NIHMS2172578
+authors:
+- authtype: Author
+  name: Morris JR
+- authtype: Author
+  name: Cruz K
+- authtype: Author
+  name: Kainth R
+- authtype: Author
+  name: Ferris DP
+epubdate: 2026 Apr 30
+fulljournalname: Journal of neurophysiology
+issue: '1'
+pages: 165-79
+pmclivedate: 2026/10/17
+printpubdate: 2026 Jul 1
+pubdate: 2026 Jul 1
+sortdate: 2026/07/01 00:00
+source: J Neurophysiol
+title: Walking speed does not modulate electrocortical alpha response to intermittent
+  visual occlusions.
+uid: '13671914'
+volume: '136'

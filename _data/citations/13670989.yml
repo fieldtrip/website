@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42878409'
+- idtype: pmcid
+  value: PMC13670989
+- idtype: doi
+  value: 10.1111/nyas.70424
+authors:
+- authtype: Author
+  name: Pasqualetti M
+- authtype: Author
+  name: Schwenk JCB
+- authtype: Author
+  name: Alamia A
+epubdate: ''
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: e70424
+pmclivedate: 2026/10/17
+printpubdate: 2026 Oct
+pubdate: 2026 Oct
+sortdate: 2026/10/01 00:00
+source: Ann N Y Acad Sci
+title: Neural Oscillatory Signatures of Predictive Processing in Visual Statistical
+  Learning.
+uid: '13670989'
+volume: '1564'
