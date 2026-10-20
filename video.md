@@ -17,6 +17,12 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 {% include youtube id="CPj4jJACeIs" %}
 
+## OPMs at the Donders (October 2026)
+
+- [OPM sensor swap](https://youtube.com/shorts/vSnyVg1dTCs)
+- [SQUID to OPM lab conversion](https://youtu.be/gPf8Qt4Ru70)
+- [Baby OPM demonstration](https://youtube.com/shorts/GzKCD_juw_M) from the [Baby & Child Research Center](https://babyandchild.nl/en/)
+
 ## PracticalMEEG, Aix-en-Provence (October 2025)
 
 - [Get to know your data](https://www.youtube.com/watch?v=qt1CWUD128w) - Robert Oostenveld

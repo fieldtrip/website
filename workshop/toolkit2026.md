@@ -3,11 +3,15 @@ title: Advanced MEG/OPM toolkit at the Donders
 tags: [toolkit2026]
 ---
 
+{% include markup/green %}
+Following the toolkit course this page has been updated to include the [slides](#slides) and the [video recordings](#video-recordings) of the lectures.
+{% include markup/end %}
+
 From October 12-16 2026 we will host our annual MEG Tool-kit course in Nijmegen. This year will be the first time with a strong focus on OPMs. During the 5-day toolkit course we will teach you advanced MEG data analysis skills. Among others, pre-processing, source reconstruction and statistics will be covered. Furthermore, we will give special attention to new OPM-specific methods for denoising, coregistration, analysis, and for custom helmet design.
 
 The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of SQUID-MEG and OPM-MEG data using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own MEG data under supervision of experienced tutors.
 
-There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that we will **not cover EEG analysis** and that we will focus on MEG methods using both SQUID and OPM systems.  
+There is a limited number of places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn. We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction. Note that we will **not cover EEG analysis** and that we will focus on MEG methods using both SQUID and OPM systems.
 
 ## Registration
 
@@ -15,7 +19,7 @@ You can [pre-register here](https://www.ru.nl/en/donders-institute/agenda/donder
 
 ## Program
 
-Note that the tentative program below still might change a bit.
+A bit further down on this page you can find the [slides](#slides) and the [video recordings](#video-recordings) of each of the lectures.
 
 ### Monday October 12, 2026
 
@@ -77,6 +81,30 @@ Note that the tentative program below still might change a bit.
 | 15:30-15:45 | Tea Break |
 | 15:45-16:00 | Evaluation and testimonials |
 
+## Slides
+
+The complete list of slides that we presented throughout the lectures is here:
+
+- [01_welcome.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/01_welcome.pdf)
+- [02_introduction.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/02_introduction.pdf) - Introduction to MEG and OPM analysis
+with the FieldTrip toolbox
+- [03_denoising.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/03_denoising.pdf) - Denoising MEG and OPM data
+- [04_MEG_lab_procedures.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/04_MEG_lab_procedures.pdf) - MEG lab procedures
+  - [video - OPM sensor swap](https://youtube.com/shorts/vSnyVg1dTCs)
+  - [video - SQUID to OPM lab conversion](https://youtu.be/gPf8Qt4Ru70)
+- [05_coregistration.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/05_coregistration.pdf) - Coregistration of OPM-MEG data
+- [06_infant_EEG_and_OPM.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/06_infant_EEG_and_OPM.pdf) - Infant research with EEG and OPMs
+  - [video - Baby OPM demonstration](https://youtube.com/shorts/GzKCD_juw_M)
+- [07_source_reconstruction.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/07_source_reconstruction.pdf) - Forward and inverse modelling of MEG
+- [08_helmet_design.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/08_helmet_design.pdf) - Custom helmet design for OPM-MEG data
+- [09_statistics.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/09_statistics.pdf) - Non-parametric inferential statistical testing
+with permutation and clustering
+- [10_open_science.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/10_open_science.pdf) - Open Science and good practices
+
+## Video recordings
+
+We will upload the video recordings of the lectures as soon as possible.  
+
 ## Practicalities
 
 This will be an in-person event with no possibilities for hybrid or online attendance.
@@ -108,8 +136,8 @@ You can either 'click around' using web browsers and/or explorer windows to grab
 To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20260904), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window.
 
     % create a folder that will contain the code and the data, and change directory
-		mkdir('toolkit2026');
-		cd('toolkit2026');
+    mkdir('toolkit2026');
+    cd('toolkit2026');
 
     % download and unzip fieldtrip into the newly created folder
     url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
@@ -149,84 +177,84 @@ If you have downloaded and unzipped by hand, it could be that there's an 'extra 
 
 Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the `toolkit2026` folder, which you created in the previous step.
 
-		% download and unzip fieldtrip into the newly created folder
-		fprintf('downloading and unzipping fieldtrip\n');
-		url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
-		unzip(url_fieldtrip);
-		
-		% create a folder (within toolkit2026) that will contain the data, to keep a clean structure
-		fprintf('creating data folder\n');
-		datadir = fullfile(pwd, 'data');
-		mkdir(datadir);
-		cd(datadir);
-		
-		% then download and unzip the Subject01 dataset
-		fprintf('downloading data\n');
-		url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
-		unzip(url_subject01);
-		
-		% we also need to download some other data for the respective hands on sessions:
-		mkdir('preprocessing_opm');
-		cd('preprocessing_opm');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm';
-		fnames = {'MedianNerve_StimBreakStim2min_Pos1.fif' 'MedianNerve_StimBreakStim2min_Pos2.fif' 'MedianNerve_StimBreakStim2min_Pos3.fif'};
-		for k = 1:numel(fnames)
-		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-		end
-		cd(datadir);
-		
-		mkdir('denoising_opm');
-		cd('denoising_opm');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip';
-		unzip(url_tutorial);
-		cd(datadir);
-		
-		mkdir('coregistration_opm');
-		cd('coregistration_opm');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/coregistration_opm';
-		fnames = {'example1_head_markers.pos' 'example2_magneticphantom_HPIplusdipoleset6_raw.fif' 'example3_anatomical.nii' 'example3_face_helmet.obj' 'example3_face_helmet_aligned.mat' 'example3_mri_realigned.mat' 'fieldlinebeta2_helmet_rim.mat'};
-		for k = 1:numel(fnames)
-		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-		end
-		cd(datadir);
-		
-		mkdir('beamformer');
-		cd('beamformer');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
-		fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
-		for k = 1:numel(fnames)
-		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-		end
-		cd(datadir);
-		
-		mkdir('opm_helmet_design');
-		cd('opm_helmet_design');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design';
-		fnames = {'spherical-head.stl' 'spherical-helmet.stl' 'individual.nii' 'flattenedspherical-head.stl' 'flattenedspherical-helmet.stl' 'fieldline_sensor.stl' 'fieldline_padding.stl' 'fieldline_hole.stl' 'fieldline_holder.stl'};
-		for k = 1:numel(fnames)
-		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-		end
-		mkdir('population');
-		cd('population');
-		fnames = {};
-		for k = 1:10
-		  fnames{end+1} = sprintf('population/fiducial%03d.mat',k);
-		  fnames{end+1} = sprintf('population/subject%03d.nii',k);
-		end
-		for k = 1:numel(fnames)
-		  websave(strrep(fnames{k}, 'population/', ''), fullfile(url_tutorial, fnames{k}));
-		end
-		cd(datadir);
-		
-		mkdir('cluster_permutation_timelock');
-		cd('cluster_permutation_timelock');
-		url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
-		fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat'             'stat_ERF_planar_FICvsFC.mat'};
-		for k = 1:numel(fnames)
-		  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
-		end
-		cd(datadir);
-		cd('../');
+        % download and unzip fieldtrip into the newly created folder
+        fprintf('downloading and unzipping fieldtrip\n');
+        url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20260904.zip';
+        unzip(url_fieldtrip);
+        
+        % create a folder (within toolkit2026) that will contain the data, to keep a clean structure
+        fprintf('creating data folder\n');
+        datadir = fullfile(pwd, 'data');
+        mkdir(datadir);
+        cd(datadir);
+        
+        % then download and unzip the Subject01 dataset
+        fprintf('downloading data\n');
+        url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
+        unzip(url_subject01);
+        
+        % we also need to download some other data for the respective hands on sessions:
+        mkdir('preprocessing_opm');
+        cd('preprocessing_opm');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm';
+        fnames = {'MedianNerve_StimBreakStim2min_Pos1.fif' 'MedianNerve_StimBreakStim2min_Pos2.fif' 'MedianNerve_StimBreakStim2min_Pos3.fif'};
+        for k = 1:numel(fnames)
+          websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+        end
+        cd(datadir);
+        
+        mkdir('denoising_opm');
+        cd('denoising_opm');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip';
+        unzip(url_tutorial);
+        cd(datadir);
+        
+        mkdir('coregistration_opm');
+        cd('coregistration_opm');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/coregistration_opm';
+        fnames = {'example1_head_markers.pos' 'example2_magneticphantom_HPIplusdipoleset6_raw.fif' 'example3_anatomical.nii' 'example3_face_helmet.obj' 'example3_face_helmet_aligned.mat' 'example3_mri_realigned.mat' 'fieldlinebeta2_helmet_rim.mat'};
+        for k = 1:numel(fnames)
+          websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+        end
+        cd(datadir);
+        
+        mkdir('beamformer');
+        cd('beamformer');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
+        fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' 'sourcePre_con.mat' 'sourcemodel.mat'};
+        for k = 1:numel(fnames)
+          websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+        end
+        cd(datadir);
+        
+        mkdir('opm_helmet_design');
+        cd('opm_helmet_design');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/opm_helmet_design';
+        fnames = {'spherical-head.stl' 'spherical-helmet.stl' 'individual.nii' 'flattenedspherical-head.stl' 'flattenedspherical-helmet.stl' 'fieldline_sensor.stl' 'fieldline_padding.stl' 'fieldline_hole.stl' 'fieldline_holder.stl'};
+        for k = 1:numel(fnames)
+          websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+        end
+        mkdir('population');
+        cd('population');
+        fnames = {};
+        for k = 1:10
+          fnames{end+1} = sprintf('population/fiducial%03d.mat',k);
+          fnames{end+1} = sprintf('population/subject%03d.nii',k);
+        end
+        for k = 1:numel(fnames)
+          websave(strrep(fnames{k}, 'population/', ''), fullfile(url_tutorial, fnames{k}));
+        end
+        cd(datadir);
+        
+        mkdir('cluster_permutation_timelock');
+        cd('cluster_permutation_timelock');
+        url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
+        fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat'             'stat_ERF_planar_FICvsFC.mat'};
+        for k = 1:numel(fnames)
+          websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+        end
+        cd(datadir);
+        cd('../');
 
 At this stage, you ideally have a directory structure that looks like the following one:
 
