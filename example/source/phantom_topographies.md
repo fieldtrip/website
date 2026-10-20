@@ -184,7 +184,7 @@ At the DCCN we constructed an array with 24 HPI coils on a 120 mm diameter spher
 
 ### Adachi sphere
 
-Adashi and colleagues describe a spherical phantom in their 2023 paper ["A Spherical Coil Array for the Calibration of Whole-Head Magnetoencephalograph Systems"](https:/doi.org/10.1109/TIM.2023.3265750) that consists of large coils wrapped around a sphere. At the DCCN we constructed one based on a 3D-printed sphere with 120 mm diameter. This phantom can be described with the following geometry, where the center of each coil is teh same as the center of the sphere. 
+Adachi and colleagues describe a spherical phantom in their 2023 paper ["A Spherical Coil Array for the Calibration of Whole-Head Magnetoencephalograph Systems"](https://doi.org/10.1109/TIM.2023.3265750) that consists of large coils wrapped around a sphere. At the DCCN we constructed one based on a 3D-printed sphere with 120 mm diameter. This phantom can be described with the following geometry, where the center of each coil is teh same as the center of the sphere.
 
     phantom = [];
     phantom.unit = 'm';
