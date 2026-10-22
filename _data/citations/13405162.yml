@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42523363'
+- idtype: pmcid
+  value: PMC13405162
+- idtype: doi
+  value: 10.64898/2026.07.13.738249
+- idtype: pii
+  value: 2026.07.13.738249
+authors:
+- authtype: Author
+  name: Smith C
+- authtype: Author
+  name: Inchyna S
+- authtype: Author
+  name: Barrentine B
+- authtype: Author
+  name: Nelson M
+epubdate: 2026 Jul 15
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/07/28
+printpubdate: ''
+pubdate: 2026 Jul 15
+sortdate: 2026/07/15 00:00
+source: bioRxiv
+title: Decoding and Characterizing the Intracranial Representation of Semantic Information.
+uid: '13405162'
+volume: ''

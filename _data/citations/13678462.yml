@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '42898664'
+- idtype: pmcid
+  value: PMC13678462
+- idtype: doi
+  value: 10.3389/fpsyt.2026.1933800
+authors:
+- authtype: Author
+  name: Videtta G
+- authtype: Author
+  name: Bondi E
+- authtype: Author
+  name: Colli C
+- authtype: Author
+  name: Enrico G
+- authtype: Author
+  name: Sperti L
+- authtype: Author
+  name: Pallagrosi M
+- authtype: Author
+  name: Fonzi L
+- authtype: Author
+  name: Barone Y
+- authtype: Author
+  name: Schiena G
+- authtype: Author
+  name: Maggioni E
+- authtype: Author
+  name: Picardi A
+- authtype: Author
+  name: Brambilla P
+epubdate: 2026 Oct 5
+fulljournalname: Frontiers in psychiatry
+issue: ''
+pages: '1933800'
+pmclivedate: 2026/10/20
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/05 00:00
+source: Front Psychiatry
+title: 'EEG signature in psychiatrist''s subjective experience: a pilot study.'
+uid: '13678462'
+volume: '17'
