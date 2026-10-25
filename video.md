@@ -17,6 +17,20 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 {% include youtube id="CPj4jJACeIs" %}
 
+## Advanced MEG/OPM data analysis toolkit, Nijmegen (October 2026)
+
+More information, including the slides and links to the hands-on tutorials, can be found [here](/workshop/toolkit2026).
+
+- [Introduction in MEG and OPM analysis with the FieldTrip toolbox](https://www.youtube.com/watch?v=YFYj2d8q8BI)
+- [Denoising MEG and OPM data](https://www.youtube.com/watch?v=w7oDI1biSWE)
+- [DCCN MEG/OPM lab procedures (part of the lab demo)](https://www.youtube.com/watch?v=7tUVUpFyPRU)
+- [Coregistration of OPM-MEG data](https://www.youtube.com/watch?v=ReVk92SVihU)
+- [Infant research with EEG and OPMs](https://www.youtube.com/watch?v=bhBPIezYE0k)
+- [Forward and inverse modelling of MEG](https://www.youtube.com/watch?v=4bFjKJ4fTPc)
+- [Custom helmet design for OPM-MEG data](https://www.youtube.com/watch?v=DN4NjX8BHZI)
+- [Non-parametric inferential statistical testing with permutation and clustering](https://www.youtube.com/watch?v=6FHoAO1j-SY)
+- [Open Science and good practices](https://www.youtube.com/watch?v=8LwqTWepMA4)
+
 ## OPMs at the Donders (October 2026)
 
 - [OPM sensor swap](https://youtube.com/shorts/vSnyVg1dTCs)
@@ -33,6 +47,8 @@ Please use the menu below to get an overview and to navigate through the worksho
 - [AI use in M/EEG analyses: How to be a (good) practitioner in LLM era](https://www.youtube.com/watch?v=BR_fogPfl5k) - Sylvain Chevallier
 
 ## African Brain Data Network EEG workshop, Nigeria (June 2025)
+
+More information, including the slides and links to the hands-on tutorials, can be found [here](/workshop/nigeria2025).
 
 - [02 - EEG background - part 1](https://youtu.be/_Dar7Sd3Yh4) by Mikkel Vinding
 - [02 - EEG background - part 2](https://youtu.be/z1w7Nqj19W8) by Mikkel Vinding
@@ -57,7 +73,9 @@ Please use the menu below to get an overview and to navigate through the worksho
 - [Anatomical reconstruction of intracranial data](https://youtu.be/NdIqUSPPAeM) by Arjen Stolk
 - [Insights into human cognition from intracranial recordings](https://youtu.be/3SN9kR9s58o) by Bob Knight
 
-## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2018)
+## Advanced MEG/EEG data analysis toolkit, Nijmegen (April 2018)
+
+More information, including the slides and links to the hands-on tutorials, can be found [here](/workshop/toolkit2018).
 
 - [Introduction to EEG, MEG and analysis with the FieldTrip toolbox](https://www.youtube.com/watch?v=7B4rDZYwQLM) by Robert Oostenveld
 - [Fundamentals of neuronal oscillations and synchrony](https://www.youtube.com/watch?v=dHTuzMsjVJA) by Mats van Es
@@ -68,7 +86,9 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 Please note that the recording of the lecture on Sleep and continuous EEG by Martin Dresler failed due to technical reasons, so we cannot share that.
 
-## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2015)
+## Advanced MEG/EEG data analysis toolkit, Nijmegen (April 2015)
+
+More information, including the slides and links to the hands-on tutorials, can be found [here](/workshop/toolkit2015).
 
 - [Introduction to EEG/MEG and introduction to the FieldTrip toolbox](https://www.youtube.com/watch?v=eUVL_twWNdk) by Robert Oostenveld
 - [Fundamentals of neuronal oscillations and synchrony](https://www.youtube.com/watch?v=vwPpSglPJTE) by Nietzsche Lam
@@ -142,14 +162,14 @@ The SPM team at the [Wellcome Trust Centre for Neuroimaging](http://www.fil.ion.
 
 The EEGLAB team at the [Swartz Center for Computational Neuroscience](https://sccn.ucsd.edu) at the UCSD has recorded and published the [video lectures at one of their training workshops](http://thesciencenetwork.org/programs/12th-eeglab-workshop). This includes lectures on Mining event-related brain dynamics, independent component analysis, localizing sources, statistics, mobile and real-time EEG, etc.
 
-### Dr. Mike X Cohen's Lecture Series on Analyzing Neural Time Series Data
+### Mike X Cohen's Lecture Series on Analyzing Neural Time Series Data
 
-Includes a set of lecture series from Dr. Cohen from Donders Centre for Neuroscience (DCN), Radboud University, based on his book on [Analyzing Neural Time Series Data.](https://mitpress.mit.edu/books/analyzing-neural-time-series-data)
+Includes a set of lecture series from Mike X Cohen from the Donders Centre for Neuroscience (DCN), Radboud University, based on his book on [Analyzing Neural Time Series Data.](https://mitpress.mit.edu/books/analyzing-neural-time-series-data)
 
-* [Introduction to EEG Time Series](https://www.youtube.com/watch?v=ukjuFUghieg&list=PLn0OLiymPak0t1moK3sn4Sl1seXlEOPHT)
-* [Static Spectral Analysis](https://www.youtube.com/watch?v=fYtVHhk3xJ0&list=PLn0OLiymPak2jxGCbWrcgmXUtt9Lbjj_A)
-* [Time Frequency Analysis](https://www.youtube.com/watch?v=7ahrcB5HL0k&list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs)
-* [Synchronization](https://www.youtube.com/watch?v=ardi0hO6lOU&list=PLn0OLiymPak1wp4wMQ7tbYrtyFUatMVJs)
-* [Permutation Based Statistics](https://www.youtube.com/watch?v=7W11BOlM02I&list=PLn0OLiymPak1Ch2ce47MqwpIw0x3m6iZ7)
+- [Introduction to EEG Time Series](https://www.youtube.com/watch?v=ukjuFUghieg&list=PLn0OLiymPak0t1moK3sn4Sl1seXlEOPHT)
+- [Static Spectral Analysis](https://www.youtube.com/watch?v=fYtVHhk3xJ0&list=PLn0OLiymPak2jxGCbWrcgmXUtt9Lbjj_A)
+- [Time Frequency Analysis](https://www.youtube.com/watch?v=7ahrcB5HL0k&list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs)
+- [Synchronization](https://www.youtube.com/watch?v=ardi0hO6lOU&list=PLn0OLiymPak1wp4wMQ7tbYrtyFUatMVJs)
+- [Permutation Based Statistics](https://www.youtube.com/watch?v=7W11BOlM02I&list=PLn0OLiymPak1Ch2ce47MqwpIw0x3m6iZ7)
 
 You can also reach the older version of the lecture series from [here](https://www.youtube.com/channel/UCUR_LsXk7IYyueSnXcNextQ/playlists?view=50&sort=dd&shelf_id=2).

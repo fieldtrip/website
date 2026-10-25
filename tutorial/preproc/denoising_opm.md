@@ -1,7 +1,7 @@
 ---
 title: Denoising OPM data
+tags: [opm, artifact, meg, preprocessing]
 category: tutorial
-tags: [opm]
 weight: 56
 redirect_from:
     - /tutorial/denoising_opm/

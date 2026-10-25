@@ -7,7 +7,7 @@ tags: [toolkit2026]
 Following the toolkit course this page has been updated to include the [slides](#slides) and the [video recordings](#video-recordings) of the lectures.
 {% include markup/end %}
 
-From October 12-16 2026 we will host our annual MEG Tool-kit course in Nijmegen. This year will be the first time with a strong focus on OPMs. During the 5-day toolkit course we will teach you advanced MEG data analysis skills. Among others, pre-processing, source reconstruction and statistics will be covered. Furthermore, we will give special attention to new OPM-specific methods for denoising, coregistration, analysis, and for custom helmet design.
+From 12-16 October 2026 we will host our annual MEG Tool-kit course in Nijmegen. This year will be the first time with a strong focus on OPMs. During the 5-day toolkit course we will teach you advanced MEG data analysis skills. Among others, pre-processing, source reconstruction and statistics will be covered. Furthermore, we will give special attention to new OPM-specific methods for denoising, coregistration, analysis, and for custom helmet design.
 
 The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of SQUID-MEG and OPM-MEG data using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own MEG data under supervision of experienced tutors.
 
@@ -83,27 +83,36 @@ A bit further down on this page you can find the [slides](#slides) and the [vide
 
 ## Slides
 
-The complete list of slides that we presented throughout the lectures is here:
+The slides that we presented in the lectures are listed here:
 
-- [01_welcome.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/01_welcome.pdf)
-- [02_introduction.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/02_introduction.pdf) - Introduction to MEG and OPM analysis
+- [Welcome to the advanced MEG/OPM toolkit](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/01_welcome.pdf)
+- [Introduction in MEG and OPM analysis with the FieldTrip toolbox](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/02_introduction.pdf)
 with the FieldTrip toolbox
-- [03_denoising.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/03_denoising.pdf) - Denoising MEG and OPM data
-- [04_MEG_lab_procedures.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/04_MEG_lab_procedures.pdf) - MEG lab procedures
+- [Denoising MEG and OPM data](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/03_denoising.pdf)
+- [DCCN MEG/OPM lab procedures](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/04_MEG_lab_procedures.pdf)
   - [video - OPM sensor swap](https://youtube.com/shorts/vSnyVg1dTCs)
   - [video - SQUID to OPM lab conversion](https://youtu.be/gPf8Qt4Ru70)
-- [05_coregistration.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/05_coregistration.pdf) - Coregistration of OPM-MEG data
-- [06_infant_EEG_and_OPM.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/06_infant_EEG_and_OPM.pdf) - Infant research with EEG and OPMs
+- [Coregistration of OPM-MEG data](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/05_coregistration.pdf)
+- [Infant research with EEG and OPMs](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/06_infant_EEG_and_OPM.pdf)
   - [video - Baby OPM demonstration](https://youtube.com/shorts/GzKCD_juw_M)
-- [07_source_reconstruction.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/07_source_reconstruction.pdf) - Forward and inverse modelling of MEG
-- [08_helmet_design.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/08_helmet_design.pdf) - Custom helmet design for OPM-MEG data
-- [09_statistics.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/09_statistics.pdf) - Non-parametric inferential statistical testing
-with permutation and clustering
-- [10_open_science.pdf](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/10_open_science.pdf) - Open Science and good practices
+- [Forward and inverse modelling of MEG](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/07_source_reconstruction.pdf)
+- [Custom helmet design for OPM-MEG data](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/08_helmet_design.pdf)
+- [Non-parametric inferential statistical testing with permutation and clustering](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/09_statistics.pdf)
+- [Open Science and good practices](https://download.fieldtriptoolbox.org/workshop/toolkit2026/slides/10_open_science.pdf)
 
 ## Video recordings
 
-We will upload the video recordings of the lectures as soon as possible.  
+The video recordings of the lectures are shared on our [YouTube channel](https://youtube.com/playlist?list=PLXedHD1J1yYQ&si=GdtEI41OvRDhhvGk) and listed here:
+
+- [Introduction in MEG and OPM analysis with the FieldTrip toolbox](https://www.youtube.com/watch?v=YFYj2d8q8BI)
+- [Denoising MEG and OPM data](https://www.youtube.com/watch?v=w7oDI1biSWE)
+- [DCCN MEG/OPM lab procedures (part of the lab demo)](https://www.youtube.com/watch?v=7tUVUpFyPRU)
+- [Coregistration of OPM-MEG data](https://www.youtube.com/watch?v=ReVk92SVihU)
+- [Infant research with EEG and OPMs](https://www.youtube.com/watch?v=bhBPIezYE0k)
+- [Forward and inverse modelling of MEG](https://www.youtube.com/watch?v=4bFjKJ4fTPc)
+- [Custom helmet design for OPM-MEG data](https://www.youtube.com/watch?v=DN4NjX8BHZI)
+- [Non-parametric inferential statistical testing with permutation and clustering](https://www.youtube.com/watch?v=6FHoAO1j-SY)
+- [Open Science and good practices](https://www.youtube.com/watch?v=8LwqTWepMA4)
 
 ## Practicalities
 
