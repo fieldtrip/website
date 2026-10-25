@@ -4,18 +4,17 @@ title: FieldTrip Workshop in Marseille in November 2016
 
 Together with Jean-Michel Badier, Christian Benar ([MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page)), and Marie-Laure Olive (Inserm - Trainings office), we will run a FieldTrip workshop.
 
-- Who: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff
-- When: 21-22 November 2016
-- For whom: The number of places at this workshop is limited, and reserved for researchers associated with Inserm or CNRS. Inserm people can apply through [this link](https://www.sirene.inserm.fr). CNRS people need to fill in some paperwork. For more information, please contact: demat-form.dr-marseille@inserm.fr
-- Also see [this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
 - Where: GLM CNRS Joseph Aiguier - Marseille.
+- When: 21-22 November 2016
+- By whom: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff
+- For whom: The number of places at this workshop is limited, and reserved for researchers associated with Inserm or CNRS. Inserm people can apply through [this link](https://www.sirene.inserm.fr). CNRS people need to fill in some paperwork. For more information, please contact: <demat-form.dr-marseille@inserm.fr>
+- Also see [this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
 
 We will keep this page up to date and post new information here when available.
 
 ### Monday November 21
 
 - Session I
-
   - 09:30 – 09:45 Opening remarks
   - 09:45 - 10:45 Lecture: Connectivity basics, methods and issues. - [slides](https://download.fieldtriptoolbox.org/workshop/marseille2016b/slides/connectivity.pdf)
   - 10:45 – 11:00 Coffee break
@@ -35,7 +34,6 @@ We will keep this page up to date and post new information here when available.
 ### Tuesday November 22
 
 - Session III
-
   - 09:00 – 12:00 FieldTrip playground
   - 12:00 – 13:00 Lunch
 
@@ -56,9 +54,9 @@ For the hands-on sessions you have to start MATLAB. To ensure that everything ru
 
 If you work on your own laptop:
 
-1.  Copy the complete contents of the USB stick to your computer.
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Put Subject01.zip in a directory called 'tutorial'.
+1. Copy the complete contents of the USB stick to your computer.
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Put Subject01.zip in a directory called 'tutorial'.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.

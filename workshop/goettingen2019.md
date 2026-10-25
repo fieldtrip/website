@@ -6,15 +6,15 @@ tags: [goettingen2019]
 The Clinic for Clinical Neurophysiology (Georg-August University) in Göttingen Germany will be hosting a FieldTrip Course on MEG Analysis
 with Tzvetan Popov and Mats van Es from 4 to 6 of February 2019.
 
-### Where
-
-[Georg-August University Göttingen](https://www.uni-goettingen.de/en/1.html)
-
-### When
+## When
 
 Mon 4 Feb - Wed 6 Feb, 2019.
 
-### Who
+## Where
+
+[Georg-August University Göttingen](https://www.uni-goettingen.de/en/1.html)
+
+## Who
 
 Tzvetan Popov and Mats van Es.
 Local organizer: Daniel van de Velden.

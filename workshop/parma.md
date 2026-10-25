@@ -4,7 +4,7 @@ title: FieldTrip workshop in Parma
 
 ## Where
 
-Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parm
+Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parm  
 Via Volturno 39, Parma, Italia
 
 ## When
@@ -13,7 +13,7 @@ April 28-30 2014
 
 ## Who
 
-Diego Lozano-Soldevilla and Arjen Stolk will be lecturing and tutoring.
+Diego Lozano-Soldevilla and Arjen Stolk will be lecturing and tutoring.  
 Sebo Uithol is the host and local organizer
 
 ## Tentative Program

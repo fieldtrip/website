@@ -2,11 +2,13 @@
 title: FieldTrip workshop in Kiel, Germany
 ---
 
-We will keep this page up to date and post new information here when available.
-
-- Instructor: Cristiano Micheli
-- When: 25-27 April 2016
 - Where: Kiel, Germany
+- When: 25-27 April 2016
+- Instructor: Cristiano Micheli
+
+## Program
+
+We will keep this page up to date and post new information here when available.
 
 ### Monday April 25th
 
@@ -59,9 +61,9 @@ For the hands-on sessions you have to start MATLAB. To ensure that everything ru
 
 If you work on your own lapto
 
-1.  Copy the complete contents of the USB stick to your computer.
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Put Subject01.zip in a directory called 'tutorial'.
+1. Copy the complete contents of the USB stick to your computer.
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Put Subject01.zip in a directory called 'tutorial'.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.

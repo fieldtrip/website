@@ -4,10 +4,10 @@ title: FieldTrip workshop in Göttingen in 2014
 
 ## Where
 
-Room 2.122
-Georg-Elias-Müller-Institut für Psychologie
-Gosslerstrasse 14
-D-37073 Göttingen
+Room 2.122  
+Georg-Elias-Müller-Institut für Psychologie  
+Gosslerstrasse 14  
+D-37073 Göttingen  
 
 ## When
 
@@ -17,7 +17,7 @@ February 8-9, 2014
 
 Lilla Magyari and Nietzsche Lam
 
-The local organizers are Danai Theodosopoulou and Carsten Schmidt
+The local organizers are Danai Theodosopoulou and Carsten Schmidt.
 
 ## Course program
 

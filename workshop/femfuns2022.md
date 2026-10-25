@@ -4,9 +4,9 @@ tags: [femfuns2022]
 tweet: Upcoming workshop at the Donders! ECoG forward solution using FEMfuns, organized by @mcpiastra, @ThomOostendorp, Geertjan Huiskamp and @oostenvr. See https://www.fieldtriptoolbox.org/workshop/femfuns2022
 ---
 
-- By whom: Maria Carla Piastra, Thom Oostendorp, Geertjan Huiskamp, and Robert Oostenveld
 - When: 24 November 2022
 - Where: Donders Centre for Cognitive Neuroimaging (DCCN), Kapittelweg 29, Nijmegen, room 2.258
+- By whom: Maria Carla Piastra, Thom Oostendorp, Geertjan Huiskamp, and Robert Oostenveld
 - Audience: Researchers with previous knowledge of volume conduction modeling, source reconstruction, ECoG applications, MATLAB
 
 ## What is the workshop about?

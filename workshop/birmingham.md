@@ -4,15 +4,15 @@ title: MRC Partnership Grant FieldTrip workshop in Birmingham
 
 The official page for this workshop is hosted [here](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/fieldtrip-workshop-birmingham). Some details are copied here for reference and easier maintenance.
 
-### Where
+## Where
 
 The workshop is funded and organized by the MRC Partnership Grant and kindly hosted by Aston University, Birmingham. The course venue is in the Main Building, level4, MB432.
 
-### When
+## When
 
 Wed 17 - Fri 19 September 2014
 
-### Who
+## Who
 
 Lecturers: Robert Oostenveld, Johanna Zumer.
 

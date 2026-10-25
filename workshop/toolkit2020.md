@@ -13,27 +13,27 @@ Even though we host the toolkit course online, we can only host a limited number
 
 We're pleased to have the following colleagues from the Donders and from abroad as our lecturers and tutors:
 
--   [Ashley Lewis](https://www.ru.nl/english/people/lewis-a/) - Donders, Nijmegen
--   [Christoph Huber-Huber](http://christoph.huber-huber.at/) - Donders, Nijmegen
--   [Eleanor Huizeling](https://www.mpi.nl/people/huizeling-eleanor)
--   [Elie Rassi](https://www.ru.nl/english/people/el-rassi-e/) - Donders, Nijmegen
--   [Eric Maris](https://www.ru.nl/english/people/maris-e/) - Donders, Nijmegen
--   [Frederik Weber](https://www.ru.nl/english/people/weber-f/) - Donders, Nijmegen
--   [Hesham ElShafeh](https://twitter.com/heshamelshaf3i) - Donders, Nijmegen
--   [Jan-Mathijs Schoffelen](https://www.ru.nl/english/people/schoffelen-j/) - Donders, Nijmegen
--   [Joey Zhou](https://www.ru.nl/english/people/zhou-y/) - Donders, Nijmegen
--   [Johannes Algermissen](https://www.ru.nl/english/people/algermissen-j/) - Donders, Nijmegen
--   [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
--   [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
--   [Lau Moller Andersen](https://www.laumollerandersen.org/) - CFIN, Aarhus
--   [Martin Dresler](https://www.ru.nl/english/people/dresler-m/) - Donders, Nijmegen
--   [Mats van Es](https://www.ru.nl/english/people/es-m-van/) - Donders, Nijmegen
--   [Mikkel Vinding](https://natmeg.se/staff/mikkel%20vinding.html) - Karolinska, Stockholm
--   [Robert Oostenveld](https://robertoostenveld.nl/research/) - Donders, Nijmegen
--   [Sophie Arana](https://www.mpi.nl/people/arana-sophie) - MPI, Nijmegen
--   [Stephen Whitmarch](https://stephenwhitmarsh.com/) - ICM, Paris
--   [Vitoria Piai](http://vitoriapiai.ruhosting.nl/) - Donders, Nijmegen
--   [Xiaochen Zheng](https://www.ru.nl/english/people/zheng-x/) - Donders, Nijmegen
+- [Ashley Lewis](https://www.ru.nl/english/people/lewis-a/) - Donders, Nijmegen
+- [Christoph Huber-Huber](http://christoph.huber-huber.at/) - Donders, Nijmegen
+- [Eleanor Huizeling](https://www.mpi.nl/people/huizeling-eleanor)
+- [Elie Rassi](https://www.ru.nl/english/people/el-rassi-e/) - Donders, Nijmegen
+- [Eric Maris](https://www.ru.nl/english/people/maris-e/) - Donders, Nijmegen
+- [Frederik Weber](https://www.ru.nl/english/people/weber-f/) - Donders, Nijmegen
+- [Hesham ElShafeh](https://twitter.com/heshamelshaf3i) - Donders, Nijmegen
+- [Jan-Mathijs Schoffelen](https://www.ru.nl/english/people/schoffelen-j/) - Donders, Nijmegen
+- [Joey Zhou](https://www.ru.nl/english/people/zhou-y/) - Donders, Nijmegen
+- [Johannes Algermissen](https://www.ru.nl/english/people/algermissen-j/) - Donders, Nijmegen
+- [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
+- [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
+- [Lau Moller Andersen](https://www.laumollerandersen.org/) - CFIN, Aarhus
+- [Martin Dresler](https://www.ru.nl/english/people/dresler-m/) - Donders, Nijmegen
+- [Mats van Es](https://www.ru.nl/english/people/es-m-van/) - Donders, Nijmegen
+- [Mikkel Vinding](https://natmeg.se/staff/mikkel%20vinding.html) - Karolinska, Stockholm
+- [Robert Oostenveld](https://robertoostenveld.nl/research/) - Donders, Nijmegen
+- [Sophie Arana](https://www.mpi.nl/people/arana-sophie) - MPI, Nijmegen
+- [Stephen Whitmarch](https://stephenwhitmarsh.com/) - ICM, Paris
+- [Vitoria Piai](http://vitoriapiai.ruhosting.nl/) - Donders, Nijmegen
+- [Xiaochen Zheng](https://www.ru.nl/english/people/zheng-x/) - Donders, Nijmegen
 
 ## Program
 
@@ -101,11 +101,11 @@ All tutors and participants are made co-host, and at the start of a hands-on ses
 
 _Note that these links to the Zoom sessions are not valid any more._
 
--   [Monday](https://zoom.us/j/577983620?pwd=dWoxV1RVYURzbURDMklLQnF1K2tRdz09)
--   [Tuesday](https://zoom.us/j/457846707?pwd=ODltaXUxSGc2ZTQrN1FMTGdhM0c0UT09)
--   [Wednesday](https://zoom.us/j/930472973?pwd=aWYxQlcxNlJxYzhhZU00dUM4K2UvQT09)
--   [Thursday](https://zoom.us/j/101479890?pwd=OFF2eEtRbTF5Z240K0l0QzEvL2lBZz09)
--   [Friday](https://zoom.us/j/887848526?pwd=NkhTUkFDTUxTeFdVaWh2QWYramxtUT09)
+- [Monday](https://zoom.us/j/577983620?pwd=dWoxV1RVYURzbURDMklLQnF1K2tRdz09)
+- [Tuesday](https://zoom.us/j/457846707?pwd=ODltaXUxSGc2ZTQrN1FMTGdhM0c0UT09)
+- [Wednesday](https://zoom.us/j/930472973?pwd=aWYxQlcxNlJxYzhhZU00dUM4K2UvQT09)
+- [Thursday](https://zoom.us/j/101479890?pwd=OFF2eEtRbTF5Z240K0l0QzEvL2lBZz09)
+- [Friday](https://zoom.us/j/887848526?pwd=NkhTUkFDTUxTeFdVaWh2QWYramxtUT09)
 
 ### Lectures
 
@@ -119,14 +119,14 @@ You can find the links to the online lectures in the Google calendar. We will al
 
 #### Lecture links
 
--   [Intro](https://www.youtube.com/watch?v=7B4rDZYwQLM)
--   Lab demo [EEG-video](https://www.youtube.com/watch?v=0hG0MWlO0B4), [MEG-video](https://www.youtube.com/watch?v=9QLwmr3iUD4)
--   Sleep will be live and recorded for later online sharing (see below)
--   [Spectral analysis](https://www.youtube.com/watch?v=dHTuzMsjVJA)
--   [Forward and inverse](https://www.youtube.com/watch?v=86f5_x9SVQQ)
--   [Beamforming](https://www.youtube.com/watch?v=pE0WAKd_Ve4)
--   Statistics will be live and recorded for later online sharing (see below)
--   [Connectivity](https://youtu.be/I_lKIOIsAyo)
+- [Intro](https://www.youtube.com/watch?v=7B4rDZYwQLM)
+- Lab demo [EEG-video](https://www.youtube.com/watch?v=0hG0MWlO0B4), [MEG-video](https://www.youtube.com/watch?v=9QLwmr3iUD4)
+- Sleep will be live and recorded for later online sharing (see below)
+- [Spectral analysis](https://www.youtube.com/watch?v=dHTuzMsjVJA)
+- [Forward and inverse](https://www.youtube.com/watch?v=86f5_x9SVQQ)
+- [Beamforming](https://www.youtube.com/watch?v=pE0WAKd_Ve4)
+- Statistics will be live and recorded for later online sharing (see below)
+- [Connectivity](https://youtu.be/I_lKIOIsAyo)
 
 ### Q&A sessions
 
@@ -138,18 +138,18 @@ You can find the links to the shared Q&A documents in the Google calendar. We wi
 
 #### Links to shared Q&A documents
 
--   [Intro lecture](https://docs.google.com/document/d/1dbwgJFKb4ta4JBhFA1-YJlseJwSctkCrbzOFE22twB4/edit)
--   [Lab demo](https://docs.google.com/document/d/1rQLKSxvaP23NrKP5R6VPfIAdVCU6DnLPnzHkG97Qe6o/edit)
--   [ERF hands-on](https://docs.google.com/document/d/1PnnW0VkYRAgaGu2CBT_caX8w5hUFZ03bJXgNHMDgxHw/edit)
--   [Sleep lecture](https://docs.google.com/document/d/1qfKT4tlrl5lb2AQhw4jUTpgcuK5RFCG63XU4SeX4V3w/edit)
--   [Spectral analysis lecture](https://docs.google.com/document/d/1YxjdD7PTXNyUEhvGZCuQ-nGwKr7PmQUD_9tkUXt5EFQ/edit)
--   [TFR hands-on](https://docs.google.com/document/d/1DvW4ShbWQgW83q3cCBQq4tD1Q0RSnahzZnUM2w4Fknc/edit)
--   [Forward and inverse and Beamforming lecture](https://docs.google.com/document/d/1ROYFrPK6hYdV_lCri7Y52MAf0azKG-DTLklf4RJBT3c/edit)
--   [Beamforming hands-on](https://docs.google.com/document/d/1ikWjC9ySUyaqQGf7jVqi-LG8P7S0pGDnm1KI5v6aPGo/edit)
--   [Statistics lecture](https://docs.google.com/document/d/1hmCJubCvJzutx7gFgv-8iQqTWwy8HZxFidZ-rjQW1HU/edit)
--   [Statistics hands-on](https://docs.google.com/document/d/1xSVgj5TdnBGXAKU-bobQJSwWS_U6qjIoNjuUwoFyp0w/edit)
--   [Connectivity lecture](https://docs.google.com/document/d/14vxuGMf8DhIKcJqWiX-uWYb-i5g_kXmm53JMq3LfNtc/edit)
--   [Connectivity hands-on](https://docs.google.com/document/d/1555b5hNUa4HCwA-6A-ilMDwsACI6qgG1gT48eaCegYs/edit)
+- [Intro lecture](https://docs.google.com/document/d/1dbwgJFKb4ta4JBhFA1-YJlseJwSctkCrbzOFE22twB4/edit)
+- [Lab demo](https://docs.google.com/document/d/1rQLKSxvaP23NrKP5R6VPfIAdVCU6DnLPnzHkG97Qe6o/edit)
+- [ERF hands-on](https://docs.google.com/document/d/1PnnW0VkYRAgaGu2CBT_caX8w5hUFZ03bJXgNHMDgxHw/edit)
+- [Sleep lecture](https://docs.google.com/document/d/1qfKT4tlrl5lb2AQhw4jUTpgcuK5RFCG63XU4SeX4V3w/edit)
+- [Spectral analysis lecture](https://docs.google.com/document/d/1YxjdD7PTXNyUEhvGZCuQ-nGwKr7PmQUD_9tkUXt5EFQ/edit)
+- [TFR hands-on](https://docs.google.com/document/d/1DvW4ShbWQgW83q3cCBQq4tD1Q0RSnahzZnUM2w4Fknc/edit)
+- [Forward and inverse and Beamforming lecture](https://docs.google.com/document/d/1ROYFrPK6hYdV_lCri7Y52MAf0azKG-DTLklf4RJBT3c/edit)
+- [Beamforming hands-on](https://docs.google.com/document/d/1ikWjC9ySUyaqQGf7jVqi-LG8P7S0pGDnm1KI5v6aPGo/edit)
+- [Statistics lecture](https://docs.google.com/document/d/1hmCJubCvJzutx7gFgv-8iQqTWwy8HZxFidZ-rjQW1HU/edit)
+- [Statistics hands-on](https://docs.google.com/document/d/1xSVgj5TdnBGXAKU-bobQJSwWS_U6qjIoNjuUwoFyp0w/edit)
+- [Connectivity lecture](https://docs.google.com/document/d/14vxuGMf8DhIKcJqWiX-uWYb-i5g_kXmm53JMq3LfNtc/edit)
+- [Connectivity hands-on](https://docs.google.com/document/d/1555b5hNUa4HCwA-6A-ilMDwsACI6qgG1gT48eaCegYs/edit)
 
 ### Zoom recordings of lectures and Q&A sessions
 
@@ -157,32 +157,32 @@ _This section was edited and extended throughout the week. The links to the vide
 
 #### Monday
 
--   [intro lecture Q&A](https://youtu.be/Rk995ldKICg)
--   [data acquisition lab tour and Q&A](https://youtu.be/UJz1lbsh1Q4)
--   [ERF hands-on Q&A](https://youtu.be/T-FhPnBFUv0)
--   [sleep lecture and Q&A](https://youtu.be/Hap0VYKJUNE)
+- [intro lecture Q&A](https://youtu.be/Rk995ldKICg)
+- [data acquisition lab tour and Q&A](https://youtu.be/UJz1lbsh1Q4)
+- [ERF hands-on Q&A](https://youtu.be/T-FhPnBFUv0)
+- [sleep lecture and Q&A](https://youtu.be/Hap0VYKJUNE)
 
 #### Tuesday
 
--   [spectral analysis lecture Q&A](https://youtu.be/Z8cMoVbZGkE)
--   [TFR hands-on Q&A](https://youtu.be/w-eaiLjpEKQ)
--   [forward, inverse and beamforming lectures Q&A](https://youtu.be/hLQa6C8WJcE)
+- [spectral analysis lecture Q&A](https://youtu.be/Z8cMoVbZGkE)
+- [TFR hands-on Q&A](https://youtu.be/w-eaiLjpEKQ)
+- [forward, inverse and beamforming lectures Q&A](https://youtu.be/hLQa6C8WJcE)
 
 #### Wednesday
 
--   [beamforming handson Q&A](https://www.youtube.com/watch?v=Y8l_qaASTE0)
--   [statistics lecture](https://www.youtube.com/watch?v=e3UUuqvL5XI)
--   [statistics lecture Q&A](https://www.youtube.com/watch?v=VDaZMhnLnzc)
--   [statistics handson Q&A](https://www.youtube.com/watch?v=mTRv2OChorQ)
+- [beamforming handson Q&A](https://www.youtube.com/watch?v=Y8l_qaASTE0)
+- [statistics lecture](https://www.youtube.com/watch?v=e3UUuqvL5XI)
+- [statistics lecture Q&A](https://www.youtube.com/watch?v=VDaZMhnLnzc)
+- [statistics handson Q&A](https://www.youtube.com/watch?v=mTRv2OChorQ)
 
 #### Thursday
 
--   [connectivity lecture Q&A](https://youtu.be/pA_Z_GUCYpw)
--   [connectivity hands-on Q&A](https://youtu.be/18auSn42A1s)
+- [connectivity lecture Q&A](https://youtu.be/pA_Z_GUCYpw)
+- [connectivity hands-on Q&A](https://youtu.be/18auSn42A1s)
 
 #### Friday
 
--   There are no recordings on this day, only the playground.
+- There are no recordings on this day, only the playground.
 
 ### Approval for video recordings
 
@@ -204,52 +204,52 @@ For the hands-on sessions you should make sure you have taken the following prep
 
 For people that do not use a computer at the DCCN:
 
-1.  Install a working MATLAB version
-2.  Download the latest release version of the FieldTrip toolbox from here or from here. For those of you familiar with git, you can also clone directly from GitHub with
+1. Install a working MATLAB version
+2. Download the latest release version of the FieldTrip toolbox from here or from here. For those of you familiar with git, you can also clone directly from GitHub with
 
         git clone https://github.com/fieldtrip/fieldtrip.git
 
       Please note that the release version corresponds to the release branch, and the development version to the master branch (which might be a few steps ahead).
 
-3.  Add FieldTrip to the MATLAB path in your MATLAB session
+3. Add FieldTrip to the MATLAB path in your MATLAB session
 
         restoredefaultpath
         addpath <path_to_fieldtrip>
         ft_defaults
 
-4.  Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download Subject01.zip
+4. Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download Subject01.zip
 
     You should also download some pre-computed intermediate results for each tutorial:
 
-    -   <https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/>
-    -   <https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/>
-    -   <https://download.fieldtriptoolbox.org/tutorial/beamformer/>
-    -   <https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/>
-    -   <https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/>
+    - <https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/>
+    - <https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/>
+    - <https://download.fieldtriptoolbox.org/tutorial/beamformer/>
+    - <https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/>
+    - <https://download.fieldtriptoolbox.org/tutorial/connectivity_sensor_source/>
 
 Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
 
 For people that use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
 
-1.  Consider using a VNC session with MATLAB on the cluster, rather than using MATLAB through a remote desktop connection.
+1. Consider using a VNC session with MATLAB on the cluster, rather than using MATLAB through a remote desktop connection.
 
-2.  Use a MATLAB version > 2016b.
+2. Use a MATLAB version > 2016b.
 
-3.  FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
+3. FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
 
         restoredefaultpath
         addpath <path_to_fieldtrip>
         ft_defaults
 
-4.  The data needed for the tutorials are available on `/home/common` as well, so you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions of point 4 provided in the section above.
+4. The data needed for the tutorials are available on `/home/common` as well, so you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions of point 4 provided in the section above.
 
     The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
 
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/connectivity`
+    - `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
+    - `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
+    - `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
+    - `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
+    - `/home/common/matlab/fieldtrip/data/ftp/tutorial/connectivity`
 
 You can find the links to the tutorials in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document.
 

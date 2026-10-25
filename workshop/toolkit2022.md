@@ -3,7 +3,7 @@ title: Advanced MEG/EEG toolkit at the Donders
 tags: [toolkit2022]
 ---
 
-This 5-day toolkit course (May 9-13, 2022) will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox.
+This 5-day toolkit course (9-13 May 2022) will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox.
 
 We hope and expect that we will be able to teach this toolkit on site. Whether or not this will be possible depends on the covid restrictions imposed by the Dutch government. We will notify you in case we need to fall back to an online or hybrid option.
 

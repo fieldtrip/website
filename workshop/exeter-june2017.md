@@ -2,9 +2,9 @@
 title: FieldTrip Workshop in Exeter, UK
 ---
 
-- Workshop leaders: Eelke Spaak and Linda Drijvers
-- When: 6-7 June 2017
 - Where: University of Exeter
+- When: 6-7 June 2017
+- Workshop leaders: Eelke Spaak and Linda Drijvers
 
 We will keep this page up to date and post new information here when available.
 

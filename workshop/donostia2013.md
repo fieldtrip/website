@@ -2,17 +2,15 @@
 title: FieldTrip workshop Donostia
 ---
 
-## FieldTrip workshop Donostia
-
-### Where
+## Where
 
 BCBL, San Sebastian, Spain.
 
-### When
+## When
 
 Monday May 13 - Wednesday May 15.
 
-### Who
+## Who
 
 Nicola Molinaro is the host and local organizer. Jan-Mathijs Schoffelen, Diego Lozano-Soldevilla and Lilla Magyari (Donders, Nijmegen, NL) are the main tutors.
 
@@ -24,9 +22,9 @@ version of FieldTrip that is distributed on a USB stick, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
-1.  Copy the contents from the USB stick to your computer
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g., in a newly created directory called 'toolkit'.
+1. Copy the contents from the USB stick to your computer
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Unzip the "data.zip" file, you should place the contents in the same directory, e.g., in a newly created directory called 'toolkit'.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.

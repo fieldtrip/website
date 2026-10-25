@@ -5,8 +5,8 @@ tags: [fitng2023]
 
 FIT’NG is hosting a 10-day virtual workshop series covering basic and advanced methods in developmental EEG/ERP.
 
-- Where: online
 - When: 20 February - 3 March, 2023
+- Where: online
 - Organizers: Dr Lindsay Bowman and Dr Sam Wass
 - More information: <https://fitng.org/virtual-interactive-workshop/>
 

@@ -3,8 +3,8 @@ title: Toolkit of Cognitive Neuroscience - EEG/MEG
 tags: [toolkit2014]
 ---
 
-- Where: Donders Institute, Radboud University Nijmegen
 - When: 6-9 May 2014
+- Where: Donders Institute, Radboud University Nijmegen
 - Who: Robert Oostenveld, Jan-Mathijs Schoffelen, et al.
 
 ## Installing FieldTrip and Tutorial preparation

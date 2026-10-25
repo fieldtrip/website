@@ -6,15 +6,15 @@ The workshop is hosted by the Sociedad Española de Psicofisiología y Neurocien
 
 {% include image src="/assets/img/workshop/barcelona/campus_mundet.jpg" width="250" %}
 
-#### Where
+## Where
 
 In the Aula Master of the Llevant Building, at the Campus Mundet, near the Faculty of Psychology ([google maps](https://www.google.nl/maps/place/Edifici+Llevant,+08035+Barcelona,+Spanje/@41.4386094,2.1445684,18z/data=!3m1!4b1!4m5!1m2!2m1!1scampus+in+de+buurt+van+Mundet,+Barcelona,+Spanje!3m1!1s0x12a497e1d3cabe79/0x4383b1771095ab74)).
 
-#### When
+## When
 
 July 9th ­‐ 10th 2015
 
-#### Who
+## Who
 
 Diego Lozano-Soldevilla and Robert Oostenveld will be lecturing and tutoring. Josep Marco-Pallares is the host and local organiser.
 
@@ -31,7 +31,7 @@ Session I
 
 - 12:30 – 13:45 Lunch
 
-  Session II
+Session II
 
 - 13:45 – 14:45 Lecture: Fundamentals of neuronal oscillations and synchrony
 - 14:45 – 15:00 Coffee Break
@@ -63,9 +63,9 @@ Session IV
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that is distributed on a USB stick, rather than the version you might already have installed. (If you have a FieldTrip version dating from sometime in the last few weeks, that should be fine.) Importantly, the tutorial data does not have to be downloaded but will also be distributed on the USB stick.
 
-1.  Copy the complete contents of the USB stick to your computer.
-2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Put Subject01.zip in a directory called 'tutorial'.
+1. Copy the complete contents of the USB stick to your computer.
+2. Unzip the fieldtrip-xxxxxxxx.zip file.
+3. Put Subject01.zip in a directory called 'tutorial'.
 
 {% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.

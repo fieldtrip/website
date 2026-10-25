@@ -4,9 +4,9 @@ title: FieldTrip workshop in Salzburg, Austria
 
 There will be a FieldTrip training event linked to the first [Salzburg Mind-Brain Annual Meeting](https://samba.ccns.sbg.ac.at).
 
-- By whom: Robert Oostenveld and Jan-Mathijs Schoffelen
-- When: 11-12 July 2017
 - Where: Centre for Cognitive Neuroscience ([CCNS](https://ccns.sbg.ac.at/about/)) at the Paris Lodron University of Salzburg ([PLUS](https://www.uni-salzburg.at/)).
+- When: 11-12 July 2017
+- By whom: Robert Oostenveld and Jan-Mathijs Schoffelen
 - Local organization: Nathan Weisz and Thomas Hartmann.
 
 More details are provided by the local organizers [here](https://samba.ccns.sbg.ac.at/fieldtrip/).

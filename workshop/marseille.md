@@ -4,9 +4,9 @@ title: FieldTrip Workshop in Marseille in January 2016
 
 Together with Jean-Michel Badier and Christian Benar from the [MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page), we will run a FieldTrip workshop.
 
-- Who: Robert Oostenveld with help from local staff
 - When: 11-13 January 2016
-- Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact demat-form.dr-marseille@inserm.fr.
+- By whom: Robert Oostenveld with help from local staff
+- Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact <demat-form.dr-marseille@inserm.fr>
 
 We will keep this page up to date and post new information here when available.
 

@@ -7,11 +7,10 @@ The workshop highlights complementary analysis methods offered by FieldTrip and 
 
 ## Organizational details
 
-- When: Wednesday 7th January 2015 ([workshop](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015/workshop))
-- When: Thursday 8th and Friday 9th January 2015 ([meeting](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015))
-- Where: Aston University, Birmingham, UK.
-- Who: Klaus Kessler is the local organiser and host.
-- Faculty: Vladimir Litvak, Robert Oostenveld, Bernadette van Wijk, Gareth Barnes, Guillaume Flandin, Saskia Helbling, Ryszard Auksztulewicz, Johanna Zumer, Stephen Whitmarsh, Hongfang Wang.
+- Where: Aston University, Birmingham, UK
+- When: Wednesday 7th January 2015 ([workshop](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015/workshop)); Thursday 8th and Friday 9th January 2015 ([meeting](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015))
+- Who: Klaus Kessler is the local organiser and host
+- Faculty: Vladimir Litvak, Robert Oostenveld, Bernadette van Wijk, Gareth Barnes, Guillaume Flandin, Saskia Helbling, Ryszard Auksztulewicz, Johanna Zumer, Stephen Whitmarsh, Hongfang Wang
 
 ## How should participants prepare for the workshop?
 

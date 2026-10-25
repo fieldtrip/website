@@ -7,9 +7,9 @@ tags: [kenya2026]
 
 Preceding the [Institute for Human Development International Conference](https://www.aku.edu/ihd/Pages/ihd-conference.aspx), a pre-conference EEG/ERP  [workshop](https://www.aku.edu/ihd/Pages/pre-conference-workshops.aspx) was organized by [ALMA](https://almaafrica.org) where Robert Oostenveld presented.  
 
-When: 8 June 2026  
-Where: Pan Pacific Serviced Suites, Nairobi, Kenya  
-Who: Robert Oostenveld  
+- Where: Pan Pacific Serviced Suites, Nairobi, Kenya
+- When: 8 June 2026
+- Who: Robert Oostenveld
 
 This page lists all materials used/generated during that workshop for the attendees and others to review.
 

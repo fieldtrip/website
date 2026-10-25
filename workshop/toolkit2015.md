@@ -1,9 +1,10 @@
 ---
 title: Advanced analysis and source modeling of EEG and MEG data
+tags: [toolkit2015]
 ---
 
-- When: April 20-23, 2015
-- Where: Trainee room 01.160, Donders Centre for Cognitive Neuroimaging (DCCN), Kapittelweg 29, Nijmegen, The Netherlands.
+- Where: Donders Centre for Cognitive Neuroimaging (DCCN), Kapittelweg 29, Nijmegen, The Netherlands.
+- When: 20-23 April 2015
 - Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many DCCN colleagues.
 
 ## Lectures as video on YouTube

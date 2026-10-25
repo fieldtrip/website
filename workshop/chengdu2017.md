@@ -2,9 +2,9 @@
 title: Chengdu, China
 ---
 
-- By whom: Robert Oostenveld
 - When: 27-29 September 2017
 - Where: Room 133 (theoretical part) and Room 135 (practical part), Center for Information in Medicine, School of Life Science & Technology, University of Electronic Science & Technology of China (UESTC)
+- By whom: Robert Oostenveld
 - Local Organizer: Pedro Valdés-Sosa, Vincent (Qing Wang) and Eduardo.
 - Advice for the attendees: Bring a computer with a recent MATLAB version and FieldTrip.
 
@@ -12,7 +12,7 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 ## Program
 
-#### Wednesday morning
+### Wednesday morning
 
 - 1h - welcome and intro lecture - [slides](https://download.fieldtriptoolbox.org/workshop/chengdu2017/slides/introduction.pdf)
 - 2h - hands-on on preprocessing of [EEG](/tutorial/sensor/preprocessing_erp) data.

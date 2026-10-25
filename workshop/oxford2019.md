@@ -3,10 +3,10 @@ title: MEG/EEG analysis and FieldTrip Workshop in Oxford, UK
 tags: [oxford2019]
 ---
 
+- Where: Department of Experimental Psychology, Anna Watts building, Jericho, Oxford
+- When: 6-8 May 2019
 - Workshop leaders: Eelke Spaak and Nadine Dijkstra
 - Local organizer: Jasper Hajonides van der Meulen
-- When: 6-8 May 2019
-- Where: Department of Experimental Psychology, Anna Watts building, Jericho, Oxford
 
 ## Schedule
 

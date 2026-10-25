@@ -4,21 +4,21 @@ title: FieldTrip Workshop in Mannheim
 
 The Central Institute of Mental Health (CIMH) in Mannheim Germany will be hosting a FieldTrip Course on MEG Analysis with Tzvetan Popov and Gianpaolo Dimarchi from 10 to 12 of December 2018.
 
-### Where
+## Where
 
-[ZI Mannheim](https://www.zi-mannheim.de/en.html)
-Central Institute for Mental Health
-J 5
-68159 Mannheim
-Germany
+[ZI Mannheim](https://www.zi-mannheim.de/en.html)  
+Central Institute for Mental Health  
+J 5  
+68159 Mannheim  
+Germany  
 
 {% include image src="/assets/img/workshop/mannheim2018/zi-logo.png" width="304" link="https://www.zi-mannheim.de/en.html" %}
 
-### When
+## When
 
 Mon 10 Dec- Wed 12 Dec, 2018.
 
-### Who
+## Who
 
 Tzvetan Popov and Gianpaolo Dimarchi.
 

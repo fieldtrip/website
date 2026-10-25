@@ -5,9 +5,9 @@ tags: [cuttingeegx]
 
 CuttingEEG is turning 10 years old! This milestone calls for a special edition, looking back at the EEG and MEG fields of the past 10 years and looking ahead at the next 10 years and beyond! Alongside the [CuttingEEG X](https://cuttingeegx.org) conference we are organizing a number of local workshops that will take place in the morning. This specific page describes the content and practicalities for the FieldTrip OPM workshop, but there is also the MNE-Python workshop (presented by Britta Westner and Tilman Stephani) and the Git/GitHub workshop (presented by Julia Chauvet, Jan-Mathijs and Robert).
 
-- Who: Konstantinos Tsilimparis, Robert Oostenveld, Jan-Mathijs Schoffelen
 - When: 31 October 2024
 - Where: Nijmegen
+- Who: Konstantinos Tsilimparis, Robert Oostenveld, Jan-Mathijs Schoffelen
 - See <https://cuttingeegx.org/registration/#Nijmegen> for the timetable and more details
 
 ## The tutorial
