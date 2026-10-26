@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '42848840'
+- idtype: pmcid
+  value: PMC13686464
+- idtype: doi
+  value: 10.1371/journal.pbio.3004046
+- idtype: pii
+  value: PBIOLOGY-D-25-03745
+authors:
+- authtype: Author
+  name: Zhai Y
+- authtype: Author
+  name: Song P
+- authtype: Author
+  name: Lao-Rodríguez AB
+- authtype: Author
+  name: Du X
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Ye H
+- authtype: Author
+  name: Bao X
+- authtype: Author
+  name: Mehmood I
+- authtype: Author
+  name: Pandit NS
+- authtype: Author
+  name: Chang C
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Tu Z
+- authtype: Author
+  name: Chen P
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Pérez-González D
+- authtype: Author
+  name: Malmierca MS
+- authtype: Author
+  name: Yu X
+epubdate: 2026 Oct 8
+fulljournalname: PLoS biology
+issue: '10'
+pages: e3004046
+pmclivedate: 2026/10/22
+printpubdate: ''
+pubdate: 2026 Oct
+sortdate: 2026/10/08 00:00
+source: PLoS Biol
+title: Distinct millisecond-scale click-train patterns evoke discriminable behavioral
+  and neural responses in humans and rats.
+uid: '13686464'
+volume: '24'

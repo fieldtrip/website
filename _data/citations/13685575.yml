@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42909911'
+- idtype: MID
+  value: NIHMS2216527
+- idtype: pmcid
+  value: PMC13685575
+- idtype: doi
+  value: 10.32470/srbsjd0
+authors:
+- authtype: Author
+  name: Hicks JM
+- authtype: Author
+  name: Boebinger D
+- authtype: Author
+  name: Nourski KV
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Garcia CM
+- authtype: Author
+  name: Wychowski T
+- authtype: Author
+  name: Pilcher W
+- authtype: Author
+  name: Norman-Haignere SV
+epubdate: ''
+fulljournalname: Proceedings of the ... Conference on Cognitive Computational Neuroscience
+issue: ''
+pages: ''
+pmclivedate: 2026/10/22
+printpubdate: '2026'
+pubdate: '2026'
+sortdate: 2026/01/01 00:00
+source: Proc Conf Cogn Comput Neurosci
+title: 'Invariant correlation: a general and straightforward method to quantify invariance
+  in time-varying neural signals.'
+uid: '13685575'
+volume: '2026'

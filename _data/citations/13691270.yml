@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '42920890'
+- idtype: pmcid
+  value: PMC13691270
+- idtype: doi
+  value: 10.1016/j.isci.2026.117771
+- idtype: pii
+  value: S2589-0042(26)03152-4
+authors:
+- authtype: Author
+  name: Espino-Payá A
+- authtype: Author
+  name: Prantner S
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Pastor MC
+- authtype: Author
+  name: Fuentes-Sánchez N
+- authtype: Author
+  name: Junghöfer M
+epubdate: 2026 Oct 15
+fulljournalname: iScience
+issue: '11'
+pages: '117771'
+pmclivedate: 2026/10/24
+printpubdate: ''
+pubdate: 2026 Nov 20
+sortdate: 2026/10/15 00:00
+source: iScience
+title: 'Distinct neural oscillatory patterns underlying music-evoked emotions: Evidence
+  from MEG and subjective reports.'
+uid: '13691270'
+volume: '29'

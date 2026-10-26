@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '42912442'
+- idtype: pmcid
+  value: PMC13694098
+- idtype: doi
+  value: 10.7554/eLife.103530
+- idtype: pii
+  value: '103530'
+authors:
+- authtype: Author
+  name: Haast RAM
+- authtype: Author
+  name: Kai J
+- authtype: Author
+  name: Taha A
+- authtype: Author
+  name: Liu V
+- authtype: Author
+  name: Kasa LW
+- authtype: Author
+  name: Gilmore G
+- authtype: Author
+  name: Guye M
+- authtype: Author
+  name: Khan AR
+- authtype: Author
+  name: Lau JC
+epubdate: 2026 Oct 23
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/10/24
+printpubdate: ''
+pubdate: 2026 Oct 23
+sortdate: 2026/10/23 00:00
+source: Elife
+title: Mapping the topographic organization of the human zona incerta using diffusion
+  MRI.
+uid: '13694098'
+volume: '14'

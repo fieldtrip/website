@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42927217'
+- idtype: pmcid
+  value: PMC13694887
+- idtype: doi
+  value: 10.1016/j.isci.2026.117870
+- idtype: pii
+  value: S2589-0042(26)03253-0
+authors:
+- authtype: Author
+  name: Deodato M
+- authtype: Author
+  name: Melcher D
+epubdate: 2026 Oct 15
+fulljournalname: iScience
+issue: '11'
+pages: '117870'
+pmclivedate: 2026/10/25
+printpubdate: ''
+pubdate: 2026 Nov 20
+sortdate: 2026/10/15 00:00
+source: iScience
+title: Phase-dependent EEG decoding of continuous visual stimuli.
+uid: '13694887'
+volume: '29'

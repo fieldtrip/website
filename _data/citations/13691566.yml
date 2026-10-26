@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42920898'
+- idtype: pmcid
+  value: PMC13691566
+- idtype: doi
+  value: 10.1016/j.isci.2026.117853
+- idtype: pii
+  value: S2589-0042(26)03234-7
+authors:
+- authtype: Author
+  name: Hense A
+- authtype: Author
+  name: Peters A
+- authtype: Author
+  name: Dellert T
+- authtype: Author
+  name: Bruchmann M
+- authtype: Author
+  name: Straube T
+epubdate: 2026 Oct 15
+fulljournalname: iScience
+issue: '11'
+pages: '117853'
+pmclivedate: 2026/10/24
+printpubdate: ''
+pubdate: 2026 Nov 20
+sortdate: 2026/10/15 00:00
+source: iScience
+title: Distinct electrophysiological correlates of low- and high-level visual consciousness
+  with minimized post-perceptual processing.
+uid: '13691566'
+volume: '29'
