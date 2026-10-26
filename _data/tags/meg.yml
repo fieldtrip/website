@@ -93,6 +93,8 @@
   title: Introduction on dealing with artifacts
 - link: /tutorial/preproc/automatic_artifact_rejection
   title: Automatic artifact rejection
+- link: /tutorial/preproc/denoising_opm
+  title: Denoising OPM data
 - link: /tutorial/preproc/ica_artifact_cleaning
   title: Cleaning artifacts in MEG data using ICA
 - link: /tutorial/preproc/preprocessing

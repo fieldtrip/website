@@ -8,8 +8,8 @@
 - link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
 - link: /tutorial/sensor/preprocessing_opm
-  title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+  title: Preprocessing of OPM data
 - link: /tutorial/source/coregistration_opm
-  title: Coregistration of Optically Pumped Magnetometer (OPM) data
+  title: Coregistration of OPM data
 - link: /tutorial/source/sensitivity_maps
   title: Comparing MEG sensitivity maps for SQUID and OPM sensor arrays

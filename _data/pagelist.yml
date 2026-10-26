@@ -2684,7 +2684,7 @@
     - title: Preprocessing of EEG data and computing ERPs
       link: /tutorial/sensor/preprocessing_erp/
       nav_order: 0
-    - title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+    - title: Preprocessing of OPM data
       link: /tutorial/sensor/preprocessing_opm/
       nav_order: 0
     - title: Sensor-level ERF, TFR and connectivity analyses
@@ -2709,7 +2709,7 @@
     - title: Computation of virtual MEG channels in source-space
       link: /tutorial/source/virtual_sensors/
       nav_order: 0
-    - title: Coregistration of Optically Pumped Magnetometer (OPM) data
+    - title: Coregistration of OPM data
       link: /tutorial/source/coregistration_opm/
       nav_order: 0
     - title: Creating a BEM volume conduction model of the head for source reconstruction

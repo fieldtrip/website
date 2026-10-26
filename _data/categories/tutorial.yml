@@ -65,7 +65,7 @@
 - link: /tutorial/sensor/preprocessing_erp
   title: Preprocessing of EEG data and computing ERPs
 - link: /tutorial/sensor/preprocessing_opm
-  title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+  title: Preprocessing of OPM data
 - link: /tutorial/sensor/sensor_analysis
   title: Sensor-level ERF, TFR and connectivity analyses
 - link: /tutorial/sensor/sleep
@@ -81,7 +81,7 @@
 - link: /tutorial/source/beamformingextended
   title: Localizing visual gamma and cortico-muscular coherence using DICS
 - link: /tutorial/source/coregistration_opm
-  title: Coregistration of Optically Pumped Magnetometer (OPM) data
+  title: Coregistration of OPM data
 - link: /tutorial/source/dipolefitting
   title: Dipole fitting of combined MEG/EEG data
 - link: /tutorial/source/electrode

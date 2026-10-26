@@ -24,9 +24,9 @@
 - link: /tutorial/sensor/opm_helmet_design
   title: Designing a custom 3D printed OPM helmet
 - link: /tutorial/sensor/preprocessing_opm
-  title: Preprocessing of Optically Pumped Magnetometer (OPM) data
+  title: Preprocessing of OPM data
 - link: /tutorial/source/coregistration_opm
-  title: Coregistration of Optically Pumped Magnetometer (OPM) data
+  title: Coregistration of OPM data
 - link: /tutorial/source/opm_phantom
   title: Using a MEG phantom for validation and OPM calibration
 - link: /tutorial/source/sensitivity_maps

@@ -86,6 +86,8 @@
   title: Automatic artifact rejection
 - link: /tutorial/preproc/continuous
   title: Preprocessing - Reading continuous EEG and MEG data
+- link: /tutorial/preproc/denoising_opm
+  title: Denoising OPM data
 - link: /tutorial/preproc/ica_artifact_cleaning
   title: Cleaning artifacts in MEG data using ICA
 - link: /tutorial/preproc/preprocessing
