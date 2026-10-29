@@ -137,7 +137,6 @@ We will take the following steps
 The output of _ft_preprocessing(cfg)_ is _data_, which is a structure that has the following fields:
 
     data =
-
                hdr: [1x1 struct]
              label: {128x1 cell}
               time: {1x600 cell}
@@ -177,7 +176,7 @@ Let's have a closer look at the first entries in _time_ and _trial_:
 
 ### Cleaning data using visual summaries
 
-In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see the  [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection)).
+In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see the [automatic artifact rejection tutorial](/tutorial/preproc/automatic_artifact_rejection)).
 
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
