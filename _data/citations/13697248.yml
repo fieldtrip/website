@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42935845'
+- idtype: pmcid
+  value: PMC13697248
+- idtype: doi
+  value: 10.1162/IMAG.a.1404
+- idtype: pii
+  value: IMAG.a.1404
+authors:
+- authtype: Author
+  name: Raju V
+- authtype: Author
+  name: Ray S
+epubdate: 2026 Oct 22
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/10/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/22 00:00
+source: Imaging Neurosci (Camb)
+title: Differential burst dynamics of slow and fast gamma rhythms in macaque primary
+  visual cortex.
+uid: '13697248'
+volume: '4'

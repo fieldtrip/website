@@ -1,0 +1,78 @@
+articleids:
+- idtype: pmid
+  value: '42856331'
+- idtype: pmcid
+  value: PMC13648496
+- idtype: doi
+  value: 10.64898/2026.09.27.754757
+- idtype: pii
+  value: 2026.09.27.754757
+authors:
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Gray SM
+- authtype: Author
+  name: Dede AJO
+- authtype: Author
+  name: Rivera YM
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Vahidi P
+- authtype: Author
+  name: Rau EMB
+- authtype: Author
+  name: Cyr C
+- authtype: Author
+  name: Holubecki AM
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: McManus OK
+- authtype: Author
+  name: Sattar S
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Girgis F
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Weber PB
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Wu JY
+- authtype: Author
+  name: Lam SK
+- authtype: Author
+  name: Raskin JS
+- authtype: Author
+  name: Shaikhouni A
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Roland JL
+- authtype: Author
+  name: Braga RM
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Ofen N
+- authtype: Author
+  name: Johnson EL
+epubdate: 2026 Sep 28
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/10/09
+printpubdate: ''
+pubdate: 2026 Sep 28
+sortdate: 2026/09/28 00:00
+source: bioRxiv
+title: The development of slow and fast theta oscillations in the human brain.
+uid: '13648496'
+volume: ''

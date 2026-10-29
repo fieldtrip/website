@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42934280'
+- idtype: doi
+  value: 10.1038/s41467-026-78974-z
+- idtype: pii
+  value: 10.1038/s41467-026-78974-z
+- idtype: pmcid
+  value: PMC13710965
+authors:
+- authtype: Author
+  name: Schönemann N
+- authtype: Author
+  name: Merkel C
+- authtype: Author
+  name: Strumpf H
+- authtype: Author
+  name: Felßberg AM
+- authtype: Author
+  name: Bartsch MV
+- authtype: Author
+  name: Schoenfeld MA
+- authtype: Author
+  name: Hopf JM
+epubdate: 2026 Oct 26
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/28
+printpubdate: ''
+pubdate: 2026 Oct 26
+sortdate: 2026/10/26 00:00
+source: Nat Commun
+title: Neural limits of temporal feature binding in human visual cortex.
+uid: '13710965'
+volume: '17'

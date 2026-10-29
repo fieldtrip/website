@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42948274'
+- idtype: pmcid
+  value: PMC13711671
+- idtype: doi
+  value: 10.1093/braincomms/fcag397
+- idtype: pii
+  value: fcag397
+authors:
+- authtype: Author
+  name: Elmers J
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Ziemssen T
+- authtype: Author
+  name: Beste C
+epubdate: 2026 Oct 19
+fulljournalname: Brain communications
+issue: '5'
+pages: fcag397
+pmclivedate: 2026/10/28
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/19 00:00
+source: Brain Commun
+title: Altered network organization with shift to local processing during adaptive
+  behaviour in multiple sclerosis.
+uid: '13711671'
+volume: '8'

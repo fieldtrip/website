@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42931252'
+- idtype: pmcid
+  value: PMC13708481
+- idtype: doi
+  value: 10.3390/neurosci7050105
+- idtype: pii
+  value: neurosci7050105
+authors:
+- authtype: Author
+  name: White DR
+- authtype: Author
+  name: Parker KS
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2026 Sep 26
+fulljournalname: NeuroSci
+issue: '5'
+pages: ''
+pmclivedate: 2026/10/27
+printpubdate: ''
+pubdate: 2026 Sep 26
+sortdate: 2026/09/26 00:00
+source: NeuroSci
+title: 'Neurocognitive Indices of Long COVID: Dysregulated Engagement of Inhibitory
+  Control and Oscillatory Slowing.'
+uid: '13708481'
+volume: '7'

@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '42935830'
+- idtype: pmcid
+  value: PMC13697249
+- idtype: doi
+  value: 10.1162/IMAG.a.1405
+- idtype: pii
+  value: IMAG.a.1405
+authors:
+- authtype: Author
+  name: Gibson J
+- authtype: Author
+  name: Fildes J
+- authtype: Author
+  name: Kirby A
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Ison M
+- authtype: Author
+  name: Morris PG
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2026 Oct 22
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/10/27
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/22 00:00
+source: Imaging Neurosci (Camb)
+title: 'Beta-band dynamics during a naturalistic motor task: An OPM-MEG study.'
+uid: '13697249'
+volume: '4'
