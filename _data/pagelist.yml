@@ -1551,6 +1551,9 @@
     - title: SR5 - Source reconstruction
       link: /workshop/neuroimaging2-2526/sr5/
       nav_order: 0
+  - title: NeurotechEU hackathon - wearable neurotechnology with fNIRS and EEG
+    link: /workshop/neurotecheu/
+    nav_order: 0
   - title: PracticalMEEG workshop at ICM in Paris
     link: /workshop/paris2019/
     nav_order: 0

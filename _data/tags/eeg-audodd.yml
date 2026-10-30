@@ -1,5 +1,7 @@
 - link: /faq/other/datasets
   title: Which datasets are used in the documentation and where are they used?
+- link: /workshop/neurotecheu
+  title: NeurotechEU hackathon - wearable neurotechnology with fNIRS and EEG
 - link: /workshop/oslo2019
   title: FieldTrip workshop in Oslo
 - link: /workshop/oslo2019/forward_modeling
