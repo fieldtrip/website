@@ -141,7 +141,7 @@ cfg.continuous = 'yes';
 cfg.demean = 'yes'; % note that it does not go in cfg.preproc here
 data_raw = ft_preprocessing(cfg);
 
-cfg.lpfilter = 'no';
+cfg.lpfilter = 'yes';
 cfg.hpfilter = 'no';
 cfg.bpfilter = 'no';
 cfg.lpfreq = 30;
