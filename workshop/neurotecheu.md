@@ -211,12 +211,12 @@ event = ft_read_event('oddball1_mc_downsampled_eeg.eeg');
 
 % look at the relation between the eye blinks and the triggers
 
-cfg = [];
-cfg.event = event;
+cfg           = [];
+cfg.event     = event;
 cfg.blocksize = 60;
-cfg.ylim = [-2000 2000]*1e-6; % plusminus 2 mV
-cfg.layout = 'natmeg_customized_eeg1005.lay';
-cfg.channel = 'EOG*';
+cfg.ylim      = [-500 500]*1e-6; % plusminus 0.5 mV
+cfg.layout    = 'natmeg_customized_eeg1005.lay';
+cfg.channel   = 'EOG*';
 ft_databrowser(cfg, data_all);
 
 % what happens in the first 10 seconds?
@@ -228,19 +228,19 @@ hdr = ft_read_header('oddball1_mc_downsampled_eeg.eeg');
 
 begsample = 10*hdr.Fs;
 endsample = 930*hdr.Fs;
-offset = 0;
+offset    = 0;
 
-cfg = [];
+cfg         = [];
 cfg.dataset = 'oddball1_mc_downsampled_eeg.eeg';
-cfg.demean = 'yes';
-cfg.trl = [begsample endsample offset];
-data_exp = ft_preprocessing(cfg);
+cfg.demean  = 'yes';
+cfg.trl     = [begsample endsample offset];
+data_exp    = ft_preprocessing(cfg);
 
-cfg = [];
-cfg.event = event;
+cfg           = [];
+cfg.event     = event;
 cfg.blocksize = 60;
-cfg.ylim = [-100 100]*1e-6; % plusminus 100 uV
-cfg.layout = 'natmeg_customized_eeg1005.lay';
+cfg.ylim      = [-100 100]*1e-6; % plusminus 100 uV
+cfg.layout    = 'natmeg_customized_eeg1005.lay';
 ft_databrowser(cfg, data_exp);
 
 % the first sample in the data segment that we read in is now at time=0
@@ -256,9 +256,8 @@ cfg.trialdef.eventtype  = 'STI101'; % name of trigger channel
 cfg.trialdef.eventvalue = [1, 2]; % 1 is standard, 2 is deviant
 cfg.trialdef.prestim    = 0.200; % seconds
 cfg.trialdef.poststim   = 0.600; % seconds
-cfg.trialfun = 'ft_trialfun_general';
-
-cfg = ft_definetrial(cfg); %% note that a new cfg is created here
+cfg.trialfun            = 'ft_trialfun_general';
+cfg                     = ft_definetrial(cfg); % this creates a new cfg, including "trl"
 
 % and we add more stuff to it here
 
@@ -268,8 +267,7 @@ cfg.detrend             = 'no';     % we do not detrend
 cfg.demean              = 'yes';    % we demean (baseline correct) ...
 cfg.baselinewindow      = [-Inf 0]; % using the mean activity in this window
 cfg.dftfilter           = 'yes';    % a notch filter ...
-cfg.dftfreq             = [50 100]; % hitting the (European) power frequency
-% (and its first harmonic)
+cfg.dftfreq             = [50 100]; % hitting the (European) power frequency (and its first harmonic)
 cfg.channel             = 'EEG';
 
 cfg.reref               = 'yes';    % was recorded with left mastoid but is ...
@@ -279,12 +277,12 @@ data_auditory           = ft_preprocessing(cfg);
 
 %%
 
-cfg = [];
-cfg.continuous = 'yes';
-cfg.event = event;
-cfg.blocksize = 30;
-cfg.ylim = [-100 100]*1e-6; % plusminus 100 uV
-cfg.layout = 'natmeg_customized_eeg1005.lay';
+cfg             = [];
+cfg.continuous  = 'yes';
+cfg.event       = event;
+cfg.blocksize   = 30;
+cfg.ylim        = [-100 100]*1e-6; % plusminus 100 uV
+cfg.layout      = 'natmeg_customized_eeg1005.lay';
 ft_databrowser(cfg, data_auditory);
 
 %%
@@ -349,7 +347,6 @@ cfg        = [];
 cfg.layout = 'natmeg_customized_eeg1005.lay';
 cfg.figure = figure;
 ft_multiplotER(cfg, ERP_difference);
-
 ```
 
 ### Motor response
@@ -437,6 +434,7 @@ cfg.figure       = figure;
 
 ft_topoplotTFR(cfg, tfr_difference);
 title('Left vs right hand response');
+
 
 %%
 
