@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '42957703'
+- idtype: pmcid
+  value: PMC13720044
+- idtype: doi
+  value: 10.1038/s41467-026-77952-9
+- idtype: pii
+  value: 10.1038/s41467-026-77952-9
+authors:
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Pittaro GF
+- authtype: Author
+  name: Zareian B
+- authtype: Author
+  name: Aljishi A
+- authtype: Author
+  name: Toro AP
+- authtype: Author
+  name: Zibly Z
+- authtype: Author
+  name: Obaid S
+- authtype: Author
+  name: Sivaraju A
+- authtype: Author
+  name: Harpaz-Rotem I
+- authtype: Author
+  name: Kaye A
+- authtype: Author
+  name: Krystal J
+- authtype: Author
+  name: Sheth K
+- authtype: Author
+  name: Gu X
+- authtype: Author
+  name: Pittenger C
+- authtype: Author
+  name: Damisah EC
+epubdate: 2026 Oct 1
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/31
+printpubdate: ''
+pubdate: 2026 Oct 1
+sortdate: 2026/10/01 00:00
+source: Nat Commun
+title: Amygdala beta bursts modulate hippocampal neuronal dynamics during human emotional
+  processing.
+uid: '13720044'
+volume: '17'

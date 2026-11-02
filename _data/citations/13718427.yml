@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42955818'
+- idtype: pmcid
+  value: PMC13718427
+- idtype: doi
+  value: 10.1093/cercor/bhag184
+- idtype: pii
+  value: '9004622'
+authors:
+- authtype: Author
+  name: Bernier MF
+- authtype: Author
+  name: Hoyer RS
+- authtype: Author
+  name: Lecaignard F
+- authtype: Author
+  name: Nicolas A
+- authtype: Author
+  name: Bertrand O
+- authtype: Author
+  name: Albouy P
+- authtype: Author
+  name: Albouy G
+epubdate: ''
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '10'
+pages: ''
+pmclivedate: 2026/10/30
+printpubdate: 2026 Oct 5
+pubdate: 2026 Oct 5
+sortdate: 2026/10/05 00:00
+source: Cereb Cortex
+title: Sleep after motor learning enhances post-movement beta synchronization.
+uid: '13718427'
+volume: '36'

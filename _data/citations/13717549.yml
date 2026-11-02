@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '42785992'
+- idtype: pmcid
+  value: PMC13717549
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0782-26.2026
+- idtype: pii
+  value: JNEUROSCI.0782-26.2026
+authors:
+- authtype: Author
+  name: Bloem IM
+- authtype: Author
+  name: Li L
+- authtype: Author
+  name: Badde S
+- authtype: Author
+  name: Groen IIA
+- authtype: Author
+  name: Schellekens W
+- authtype: Author
+  name: Ramsey N
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Petridou N
+- authtype: Author
+  name: Landy MS
+- authtype: Author
+  name: Winawer J
+epubdate: 2026 Oct 28
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '43'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Oct 28
+sortdate: 2026/10/28 00:00
+source: J Neurosci
+title: Normalization Accounts for Temporal Dynamics in the Human Somatosensory Cortex.
+uid: '13717549'
+volume: '46'
