@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '42954337'
+- idtype: pmcid
+  value: PMC13717706
+- idtype: doi
+  value: 10.1111/nyas.70430
+- idtype: pii
+  value: e70430
+authors:
+- authtype: Author
+  name: Criscuolo A
+- authtype: Author
+  name: Schwartze M
+- authtype: Author
+  name: Schwarz J
+- authtype: Author
+  name: Strecker K
+- authtype: Author
+  name: Hesse S
+- authtype: Author
+  name: Kotz SA
+epubdate: ''
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: ''
+pmclivedate: 2026/10/30
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: Ann N Y Acad Sci
+title: Levodopa and Subthalamic Nucleus Deep Brain Stimulation Modulate Excitation/Inhibition
+  Balance and the Neural Encoding of Isochronous Sequences in Persons With Parkinson's
+  Disease.
+uid: '13717706'
+volume: '1565'
