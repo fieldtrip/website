@@ -10,7 +10,7 @@ As part of the NeurotechEU hackathon, we will do an online workshop on the proce
 
 This page provides the links to the documentation, datasets, and software for the parts presented by Robert Oostenveld.
 
-## Workshop offline EEG data processing
+## Offline EEG processing
 
 **Friday 30 Oct, 11:45-13:00**
 
@@ -19,7 +19,7 @@ In this hands-on workshop participants will learn how to do offline processing o
 - [Slides](https://download.fieldtriptoolbox.org/workshop/neurotecheu/slides/EEG_data_processing-offline.pdf)
 - [Hands-on instructions](/workshop/neurotecheu/offline)
 
-## Workshop realtime EEG data processing
+## Real-time EEG processing
 
 **Saturday 7 Nov, 9:00-10:30**
 
