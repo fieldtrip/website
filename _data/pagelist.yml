@@ -1554,6 +1554,13 @@
   - title: NeurotechEU hackathon - wearable neurotechnology with fNIRS and EEG
     link: /workshop/neurotecheu/
     nav_order: 0
+    pagelist:
+    - title: Offline EEG data processing
+      link: /workshop/neurotecheu/offline/
+      nav_order: 0
+    - title: Realtime EEG data processing
+      link: /workshop/neurotecheu/realtime/
+      nav_order: 0
   - title: PracticalMEEG workshop at ICM in Paris
     link: /workshop/paris2019/
     nav_order: 0

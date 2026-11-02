@@ -98,5 +98,9 @@
   title: Streaming realtime fMRI from Siemens scanners
 - link: /getting_started/realtime/headlocalizer
   title: Getting started with real-time head localization in MEG
+- link: /workshop/neurotecheu
+  title: NeurotechEU hackathon - wearable neurotechnology with fNIRS and EEG
+- link: /workshop/neurotecheu/realtime
+  title: Realtime EEG data processing
 - link: /workshop/realtime
   title: Realtime MEG BCI hands-on session in Nijmegen

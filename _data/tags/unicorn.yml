@@ -1,2 +1,6 @@
 - link: /development/realtime/unicorn
   title: Streaming realtime data from Unicorn Hybrid Black
+- link: /workshop/neurotecheu
+  title: NeurotechEU hackathon - wearable neurotechnology with fNIRS and EEG
+- link: /workshop/neurotecheu/realtime
+  title: Realtime EEG data processing
