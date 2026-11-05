@@ -1,0 +1,101 @@
+articleids:
+- idtype: pmid
+  value: '42926606'
+- idtype: pmcid
+  value: PMC13692550
+- idtype: doi
+  value: 10.64898/2026.10.05.26364665
+- idtype: pii
+  value: 2026.10.05.26364665
+authors:
+- authtype: Author
+  name: Nelson T
+- authtype: Author
+  name: Hsueh B
+- authtype: Author
+  name: Hadar P
+- authtype: Author
+  name: Das I
+- authtype: Author
+  name: Coughlin BF
+- authtype: Author
+  name: Mandal AS
+- authtype: Author
+  name: Wilson T
+- authtype: Author
+  name: Peng E
+- authtype: Author
+  name: Perley AS
+- authtype: Author
+  name: Rabbani H
+- authtype: Author
+  name: Ciordia R
+- authtype: Author
+  name: Zou J
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Ghaith H
+- authtype: Author
+  name: Cahill J
+- authtype: Author
+  name: Yang JC
+- authtype: Author
+  name: Muñoz W
+- authtype: Author
+  name: Torio E
+- authtype: Author
+  name: Glaser AC
+- authtype: Author
+  name: Bernstock JD
+- authtype: Author
+  name: Collins KL
+- authtype: Author
+  name: Cleary DR
+- authtype: Author
+  name: Tiwana HK
+- authtype: Author
+  name: Golby AJ
+- authtype: Author
+  name: Jones PS
+- authtype: Author
+  name: Choi BD
+- authtype: Author
+  name: Nahed BV
+- authtype: Author
+  name: Raslan AM
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Dayeh SA
+- authtype: Author
+  name: Nanda P
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Bi WL
+- authtype: Author
+  name: Tobochnik S
+- authtype: Author
+  name: Cahill DP
+- authtype: Author
+  name: Dunn GP
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Paulk AC
+epubdate: 2026 Oct 7
+fulljournalname: 'medRxiv : the preprint server for health sciences'
+issue: ''
+pages: ''
+pmclivedate: 2026/10/24
+printpubdate: ''
+pubdate: 2026 Oct 7
+sortdate: 2026/10/07 00:00
+source: medRxiv
+title: Spatial Neurophysiological Gradients at High Resolution Differentiate Tumor
+  Types in the Human Cortex at the Tumor-Brain Interface.
+uid: '13692550'
+volume: ''

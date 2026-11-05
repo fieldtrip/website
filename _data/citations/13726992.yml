@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '42595227'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2026.110883
+- idtype: pii
+  value: S0165-0270(26)00213-X
+- idtype: pmcid
+  value: PMC13726992
+- idtype: MID
+  value: NIHMS2219079
+authors:
+- authtype: Author
+  name: Morakabati NR
+- authtype: Author
+  name: Thiha AS
+- authtype: Author
+  name: Schechtman E
+epubdate: 2026 Aug 13
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '110883'
+pmclivedate: 2026/11/03
+printpubdate: 2026 Dec
+pubdate: 2026 Dec
+sortdate: 2026/12/01 00:00
+source: J Neurosci Methods
+title: EEG-based classification models reveal differential neural processing of words
+  and images.
+uid: '13726992'
+volume: '436'
