@@ -381,8 +381,8 @@ With MATLAB you can use [Psychtoolbox (PTB)](https://psychtoolbox.org) for stimu
 % this implements a very basic visual oddball task using Psychtoolbox-3
 % see https://en.wikipedia.org/wiki/Oddball_paradigm for more details
 
-clear;
-clc;
+clear
+clc
 
 % Configuration
 nTrials = 150;
@@ -393,7 +393,10 @@ initialFixationDuration = 2.0;
 
 % Initialize Psychtoolbox
 PsychDefaultSetup(2);
-Screen('Preference', 'SkipSyncTests', 0);
+
+% the sync tests are important for precise timing, but require all drivers and settings to be correct
+% we can skip the test to allow running this example on non-optimized laptops
+Screen('Preference', 'SkipSyncTests', 1);
 
 screens = Screen('Screens');
 screenNumber = max(screens);
@@ -484,6 +487,7 @@ for trial = 1:nTrials
     % Check for ESC
     [keyIsDown, ~, keyCode] = KbCheck;
     if keyIsDown && keyCode(escapeKey)
+        fprintf('Pressed ESC\n');
         break;
     end
 end
