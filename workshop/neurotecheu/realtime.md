@@ -553,7 +553,7 @@ core.wait(2)
 
 # present 10 trials of the oddball task
 # where 80% of the stimuli are standard and 20% are deviant
-for trial in range(150):
+for trial in range(10):
     # randomly choose a stimulus for each trial
     condition = random.choice(['s', 's', 's', 's', 'd'])  # 80% standard, 20% deviant
 
