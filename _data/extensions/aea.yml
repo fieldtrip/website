@@ -1,0 +1,8 @@
+name: AEA
+authors: Dengzhe Hou
+description: >-
+  An independently maintained library of EEG analysis skills and study recipes
+  for AI coding assistants. MNE-Python is the primary backend, with selected
+  FieldTrip ERP preprocessing templates and recorded cross-toolbox numerical
+  comparisons.
+url: https://github.com/dengzhe-hou/auto-eeg-analysis
