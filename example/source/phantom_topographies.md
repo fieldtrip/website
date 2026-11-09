@@ -68,6 +68,10 @@ To move or rotate either the OPM helmet or the phantom coil array, you can use *
 
 {% include image src="/assets/img/example/phantom_topographies/hpi.png" width=400 %}
 
+This is the image of the topographies for the HPI coils, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+
+{% include image src="/assets/img/example/phantom_topographies/hpi_topo.png" width=600 %}
+
 ### QuSpin HALO
 
 QuSpin has designed their HALO to calibrate the OPM sensor positions and orientations. It consists of a circular printed circuit board (PCB) with 16 electromagnetic coil positions arranged in three distinct concentric layouts. Each of the 16 coils has a diameter of approximately 22 mm. The flat circular board is mounted on a base that holds it roughly 5 cm directly above the participant's helmet or sensor array. It is described in the publication ["Determining sensor geometry and gain in a wearable MEG system"](https://doi.org/10.1162/imag_a_00535) by Hill et al. (2025).
@@ -102,6 +106,10 @@ QuSpin has designed their HALO to calibrate the OPM sensor positions and orienta
 
 {% include image src="/assets/img/example/phantom_topographies/halo.png" width=400 %}
 
+This is the image of the HALO coil topographies, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+
+{% include image src="/assets/img/example/phantom_topographies/halo_topo.png" width=600 %}
+
 ### Cerca "Squalo"
 
 Cerca has a PCB board with a 5x5 arrangement of magnetic dipole coils that I have seen in the MEG lab in Amsterdam. I don't know the exact dimensions, so this is just an approximation.
@@ -120,6 +128,10 @@ Cerca has a PCB board with a 5x5 arrangement of magnetic dipole coils that I hav
     phantom.label = arrayfun(@num2str, 1:size(phantom.coilpos,1), 'UniformOutput', false)';
 
 {% include image src="/assets/img/example/phantom_topographies/squalo.png" width=400 %}
+
+This is the image of the Squalo coil topographies, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+
+{% include image src="/assets/img/example/phantom_topographies/squalo_topo.png" width=600 %}
 
 ### Spherical HPI array
 
@@ -182,6 +194,10 @@ At the DCCN we constructed an array with 24 HPI coils on a 120 mm diameter spher
 
 {% include image src="/assets/img/example/phantom_topographies/spherical.png" width=400 %}
 
+This is the image of the topographies of the 24 coils in this spherical arrangement, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+
+{% include image src="/assets/img/example/phantom_topographies/spherical_topo.png" width=600 %}
+
 ### Adachi sphere
 
 Adachi and colleagues describe a spherical phantom in their 2023 paper ["A Spherical Coil Array for the Calibration of Whole-Head Magnetoencephalograph Systems"](https://doi.org/10.1109/TIM.2023.3265750) that consists of large coils wrapped around a sphere. At the DCCN we constructed one based on a 3D-printed sphere with 120 mm diameter. This phantom can be described with the following geometry, where the center of each coil is teh same as the center of the sphere.
@@ -222,9 +238,124 @@ To compute the leadfield matrix (i.e. the topography for a coil in the x, y, and
     headmodel.diameter = 0.12;
     headmodel.unit = 'm';
 
-## Visualize the phantom coils together with the OPM sensors
+This is the image of the topographies of the 24 coils in this spherical arrangement, more or less computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies) with the headmodel as specified above.
 
-The following code can be used with all `phantom` structures that we created above. The coil size that is plotted is not geometrically correct, but set to 10 mm to make it easier to see the coil and orientation. For the Adachi sphere the coil size should be specified as 120 mm.
+{% include image src="/assets/img/example/phantom_topographies/adachi_topo.png" width=600 %}
+
+### Neuromag dry phantom
+
+The Neuromag/Elekta/MEGIN system comes with a dry current-dipole phantom that is detailed on [this page](https://neuroimage.usc.edu/brainstorm/Tutorials/PhantomElekta) from the BrainStorm documentation.
+
+Since this does not use magnetic dipoles, but emulates equivalent current dipoles, we cannot work with the infinite homogenous medium but have to specify a spehere with a given radius and origin:
+
+    headmodel = [];
+    headmodel.type = 'singlesphere';
+    headmodel.unit = 'm';
+    headmodel.r = 0.12;
+    headmodel.o = [0 0 0];
+
+The coordinates below are in millimetres, relative to the phantom sphere centre, with +X toward the nasion, +Y toward the left ear, and +Z upward.
+
+    phantom = [];
+    phantom.coilpos = [
+       0    -59.7  22.9  % negative Y, so this should be close to the right ear
+       0    -48.6  23.5
+       0    -35.8  25.5
+       0    -24.8  23.1
+       0    -37.2  52
+       0    -27.5  46.4
+       0    -15.8  41
+       0    -7.9   33
+     -59.7   0     22.9
+     -48.6   0     23.5
+     -35.8   0     25.5
+     -24.8   0     23.1
+     -37.2   0     52
+     -27.5   0     46.4
+     -15.8   0     41
+      -7.9   0     33
+       0    46.1   44.4
+       0    41.9   34
+       0    38.3   21.6
+       0    31.5   12.7
+       0    13.9   62.4
+       0    16.2   51.5
+       0    20     39.1
+       0    19.3   27.9
+      46.1   0     44.4
+      41.9   0     34
+      38.3   0     21.6
+      31.5   0     12.7
+      13.9   0     62.4
+      16.2   0     51.5
+      20     0     39.1
+      19.3   0     27.9
+    ];
+
+    phantom.coilori = [
+         0.00  0.36  0.93
+         0.00  0.44  0.90
+         0.00  0.58  0.81
+         0.00  0.68  0.73
+         0.00  0.81  0.58
+         0.00  0.86  0.51
+         0.00  0.93  0.36
+         0.00  0.97  0.23
+         0.36  0.00  0.93
+         0.44  0.00  0.90
+         0.58  0.00  0.81
+         0.68  0.00  0.73
+         0.81  0.00  0.58
+         0.86  0.00  0.51
+         0.93  0.00  0.36
+         0.97  0.00  0.23
+         0.00 -0.69  0.72
+         0.00 -0.63  0.78
+         0.00 -0.49  0.87
+         0.00 -0.37  0.93
+         0.00 -0.98  0.22
+         0.00 -0.95  0.30
+         0.00 -0.89  0.46
+         0.00 -0.82  0.57
+        -0.69  0.00  0.72
+        -0.63  0.00  0.78
+        -0.49  0.00  0.87
+        -0.37  0.00  0.93
+        -0.98  0.00  0.22
+        -0.95  0.00  0.30
+        -0.89  0.00  0.46
+        -0.82  0.00  0.57
+    ];
+
+    phantom.label = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32'}';
+
+    % convert to meter
+    phantom.coilpos = phantom.coilpos/1000;
+
+    % the FieldLine helmet is defined in a coordinate system with +X to the right and +Y to the nose
+    % rotate the phantom so that the first dipole (with negative Y) is close to the right ear
+    phantom = ft_transform_geometry([0 0 90], phantom, 'rotate');
+
+Plotting these is also slightly different than plotting the HPI coils. We can use the following code:
+
+    figure
+    ft_plot_sens(fieldlinebeta2, 'axes', false, 'fiducial', false)
+    % ft_plot_sens(phantom, 'label', 'label')
+    ft_plot_dipole(phantom.coilpos, phantom.coilori', 'unit', 'm')
+
+{% include image src="/assets/img/example/phantom_topographies/neuromag.png" width=600 %}
+
+Computing and plotting the topographies of all ECD sources resuylts in the following figure.
+
+{% include image src="/assets/img/example/phantom_topographies/neuromag_topo.png" width=600 %}
+
+## Shared code
+
+### Visualize the phantom coils together with the OPM sensors
+
+The following code can be used with most of the `phantom` structures that we created above. The coil size that is plotted is not geometrically correct, but set to 10 mm to make it easier to see the coil and orientation.
+
+For the Adachi sphere the coil size should be specified as 120 mm. For the Neuromag dry phantom we should not plot the ECDs as coils, but only as dipoles.
 
     figure
     ft_plot_sens(fieldlinebeta2, 'axes', false, 'fiducial', false)
@@ -232,7 +363,7 @@ The following code can be used with all `phantom` structures that we created abo
     % ft_plot_sens(phantom, 'label', 'label')
     ft_plot_dipole(phantom.coilpos, phantom.coilori', 'unit', 'm')
 
-## Compute and plot the phantom coil topographies
+### Compute and plot the phantom coil topographies
 
 The following code (with some minor changes) can be used with all `phantom` structures that we created above.
 
@@ -270,9 +401,5 @@ The following code (with some minor changes) can be used with all `phantom` stru
 
     linkprop(ax, {'CameraPosition', 'CameraUpVector'});
     rotate3d on
-
-This is the image you get for the HPI coils on the anatomical landmarks.
-
-{% include image src="/assets/img/example/phantom_topographies/hpi_topographies.png" width=600 %}
 
 You should rotate the helmet topographies to get a correct 3D representation of the OPMs, the phantom coils, and their topographies. For the configurations with more phantoms coils this is difficult to capture in a screen shot, so please compute and plot them yourself.
