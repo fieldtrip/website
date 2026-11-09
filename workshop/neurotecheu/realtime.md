@@ -235,7 +235,7 @@ info = pylsl.StreamInfo(
     channel_count=1,
     nominal_srate=0, # should be zero for markers
     channel_format=pylsl.cf_string,
-    source_id=None,
+    source_id='',
 )
 
 # Create a new outlet
@@ -278,7 +278,7 @@ info = pylsl.StreamInfo(
     channel_count=nchan,
     nominal_srate=fsample,
     channel_format=pylsl.cf_float32,
-    source_id=None,
+    source_id='',
 )
 
 # Create a new outlet
@@ -532,7 +532,7 @@ info = pylsl.StreamInfo(
     channel_count=1,
     nominal_srate=0, # should be zero for markers
     channel_format='string',
-    source_id=None,
+    source_id='',
 )
 
 # Create a new outlet
