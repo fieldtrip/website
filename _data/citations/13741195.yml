@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '42044621'
+- idtype: MID
+  value: NIHMS2216007
+- idtype: pmcid
+  value: PMC13741195
+- idtype: doi
+  value: 10.1016/j.heares.2026.109637
+- idtype: pii
+  value: S0378-5955(26)00113-9
+authors:
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Herrero JL
+- authtype: Author
+  name: Espinal E
+- authtype: Author
+  name: Markowitz N
+- authtype: Author
+  name: Datta-Chaudhuri T
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Bickel S
+epubdate: 2026 Apr 16
+fulljournalname: Hearing research
+issue: ''
+pages: '109637'
+pmclivedate: 2026/11/07
+printpubdate: 2026 Jun
+pubdate: 2026 Jun
+sortdate: 2026/06/01 00:00
+source: Hear Res
+title: Dynamic, minimally invasive electrical brain stimulation improves speech perception.
+uid: '13741195'
+volume: '476'

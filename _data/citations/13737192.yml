@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42436348'
+- idtype: pmcid
+  value: PMC13737192
+- idtype: doi
+  value: 10.1038/s42003-026-10652-8
+- idtype: pii
+  value: 10.1038/s42003-026-10652-8
+authors:
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Hasegawa I
+- authtype: Author
+  name: Tanigawa H
+epubdate: 2026 Jul 11
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/06
+printpubdate: ''
+pubdate: 2026 Jul 11
+sortdate: 2026/07/11 00:00
+source: Commun Biol
+title: Gamma oscillations provide a stable geometric scaffold for color representation
+  in primate inferior temporal cortex.
+uid: '13737192'
+volume: '9'

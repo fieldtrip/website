@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '42387018'
+- idtype: pmcid
+  value: PMC13737124
+- idtype: doi
+  value: 10.1038/s41597-026-07745-8
+- idtype: pii
+  value: 10.1038/s41597-026-07745-8
+authors:
+- authtype: Author
+  name: Lobo-Alonso M
+- authtype: Author
+  name: Martín-Fernández I
+- authtype: Author
+  name: Oropesa I
+- authtype: Author
+  name: Barra-Chicote R
+- authtype: Author
+  name: Kontaxakis G
+- authtype: Author
+  name: San-Segundo R
+epubdate: 2026 Jul 1
+fulljournalname: Scientific data
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/06
+printpubdate: ''
+pubdate: 2026 Jul 1
+sortdate: 2026/07/01 00:00
+source: Sci Data
+title: A Dataset with Bilingual TV Commands for Silent Speech Interfaces Using Electroencephalographic
+  Signals.
+uid: '13737124'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42985626'
+- idtype: pmcid
+  value: PMC13733311
+- idtype: doi
+  value: 10.1016/j.isci.2026.118017
+- idtype: pii
+  value: S2589-0042(26)03400-0
+authors:
+- authtype: Author
+  name: Limburg R
+- authtype: Author
+  name: Beste C
+- authtype: Author
+  name: Prochnow A
+epubdate: 2026 Oct 27
+fulljournalname: iScience
+issue: '11'
+pages: '118017'
+pmclivedate: 2026/11/05
+printpubdate: ''
+pubdate: 2026 Nov 20
+sortdate: 2026/10/27 00:00
+source: iScience
+title: Working memory gating across sensory modalities reveals modality-specific maintenance
+  mechanisms.
+uid: '13733311'
+volume: '29'

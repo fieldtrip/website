@@ -1,0 +1,54 @@
+articleids:
+- idtype: pmid
+  value: '42490582'
+- idtype: doi
+  value: 10.1177/02698811261464991
+- idtype: pmcid
+  value: PMC13743730
+authors:
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Webb SL
+- authtype: Author
+  name: Fitzgibbon BM
+- authtype: Author
+  name: Denning NC
+- authtype: Author
+  name: Dowie T
+- authtype: Author
+  name: Schweickle MM
+- authtype: Author
+  name: Modak A
+- authtype: Author
+  name: Chan G
+- authtype: Author
+  name: Knight J
+- authtype: Author
+  name: Waldron M
+- authtype: Author
+  name: Gainsford K
+- authtype: Author
+  name: Hawkes H
+- authtype: Author
+  name: Zammit S
+- authtype: Author
+  name: Sutanto NC
+- authtype: Author
+  name: Godfrey K
+- authtype: Author
+  name: Fitzgerald PB
+epubdate: 2026 Jul 23
+fulljournalname: Journal of psychopharmacology (Oxford, England)
+issue: '11'
+pages: 1817-1838
+pmclivedate: 2026/11/08
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: J Psychopharmacol
+title: 'No evidence for deleterious effects of psilocybin and MDMA on working memory
+  or related neurophysiological activity in a non-clinical population: An uncontrolled
+  exploratory study.'
+uid: '13743730'
+volume: '40'

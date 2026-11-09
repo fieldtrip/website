@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '42991300'
+- idtype: pmcid
+  value: PMC13736801
+- idtype: doi
+  value: 10.1162/IMAG.a.1434
+- idtype: pii
+  value: IMAG.a.1434
+authors:
+- authtype: Author
+  name: Seghezzi S
+- authtype: Author
+  name: Parés-Pujolràs E
+- authtype: Author
+  name: Haggard P
+epubdate: 2026 Nov 4
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/11/06
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/11/04 00:00
+source: Imaging Neurosci (Camb)
+title: Distinct motor preparatory signals correlate with coarse vs fine control of
+  self-paced action timing.
+uid: '13736801'
+volume: '4'

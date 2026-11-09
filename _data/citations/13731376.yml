@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '42984646'
+- idtype: pmcid
+  value: PMC13731376
+- idtype: doi
+  value: 10.3389/fpsyg.2026.1959633
+authors:
+- authtype: Author
+  name: Theron-Grimaldi S
+- authtype: Author
+  name: Bozic M
+epubdate: 2026 Oct 21
+fulljournalname: Frontiers in psychology
+issue: ''
+pages: '1959633'
+pmclivedate: 2026/11/05
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/21 00:00
+source: Front Psychol
+title: Language usage shapes neural mechanisms of code-switching.
+uid: '13731376'
+volume: '17'

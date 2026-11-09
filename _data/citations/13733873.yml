@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '42990222'
+- idtype: pmcid
+  value: PMC13733873
+- idtype: doi
+  value: 10.64898/2026.10.26.761688
+- idtype: pii
+  value: 2026.10.26.761688
+authors:
+- authtype: Author
+  name: Nicklas PR
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2026 Oct 30
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/11/05
+printpubdate: ''
+pubdate: 2026 Oct 30
+sortdate: 2026/10/30 00:00
+source: bioRxiv
+title: Neural and Gait Adaptations to Dual-Task Demands Across Development.
+uid: '13733873'
+volume: ''

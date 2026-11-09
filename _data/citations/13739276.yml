@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42985990'
+- idtype: pmcid
+  value: PMC13739276
+- idtype: doi
+  value: 10.7554/eLife.112088
+- idtype: pii
+  value: '112088'
+authors:
+- authtype: Author
+  name: Barnett B
+- authtype: Author
+  name: Fleming SM
+epubdate: 2026 Nov 5
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/11/06
+printpubdate: ''
+pubdate: 2026 Nov 5
+sortdate: 2026/11/05 00:00
+source: Elife
+title: Distinct neural representations of perceptual and numerical absence in the
+  human brain.
+uid: '13739276'
+volume: '15'
