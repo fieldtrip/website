@@ -68,7 +68,7 @@ To move or rotate either the OPM helmet or the phantom coil array, you can use *
 
 {% include image src="/assets/img/example/phantom_topographies/hpi.png" width=400 %}
 
-This is the image of the topographies for the HPI coils, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+This is the image of the topographies for the HPI coils, computed and plotted with the [shared code](#shared-code) further down.
 
 {% include image src="/assets/img/example/phantom_topographies/hpi_topo.png" width=600 %}
 
@@ -106,7 +106,7 @@ QuSpin has designed their HALO to calibrate the OPM sensor positions and orienta
 
 {% include image src="/assets/img/example/phantom_topographies/halo.png" width=400 %}
 
-This is the image of the HALO coil topographies, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+This is the image of the HALO coil topographies, computed and plotted with the [shared code](#shared-code) further down.
 
 {% include image src="/assets/img/example/phantom_topographies/halo_topo.png" width=600 %}
 
@@ -129,7 +129,7 @@ Cerca has a PCB board with a 5x5 arrangement of magnetic dipole coils that I hav
 
 {% include image src="/assets/img/example/phantom_topographies/squalo.png" width=400 %}
 
-This is the image of the Squalo coil topographies, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+This is the image of the Squalo coil topographies, computed and plotted with the [shared code](#shared-code) further down.
 
 {% include image src="/assets/img/example/phantom_topographies/squalo_topo.png" width=600 %}
 
@@ -139,7 +139,7 @@ At the DCCN we constructed an array with 24 HPI coils on a 120 mm diameter spher
 
     phantomcoil.unit = 'mm';
     phantomcoil.coilpos = [
-              0         0   60.0000
+         0.0000    0.0000   60.0000
          0.0000   36.4237   47.6793
         34.6410   11.2555   47.6793
         21.4093  -29.4674   47.6793
@@ -165,7 +165,7 @@ At the DCCN we constructed an array with 24 HPI coils on a 120 mm diameter spher
        -34.6410  -11.2555  -47.6793
     ];
     phantomcoil.coilori = [
-              0         0    1.0000
+         0.0000    0.0000    1.0000
          0.0000    0.6071    0.7947
          0.5774    0.1876    0.7947
          0.3568   -0.4911    0.7947
@@ -194,7 +194,7 @@ At the DCCN we constructed an array with 24 HPI coils on a 120 mm diameter spher
 
 {% include image src="/assets/img/example/phantom_topographies/spherical.png" width=400 %}
 
-This is the image of the topographies of the 24 coils in this spherical arrangement, computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies).
+This is the image of the topographies of the 24 coils in this spherical arrangement, computed and plotted with the [shared code](#shared-code) further down.
 
 {% include image src="/assets/img/example/phantom_topographies/spherical_topo.png" width=600 %}
 
@@ -206,7 +206,7 @@ Adachi and colleagues describe a spherical phantom in their 2023 paper ["A Spher
     phantom.unit = 'm';
     phantom.coilpos = zeros(16,3);
     phantom.coilori = [
-              0         0    1.0000
+           0.00.0.0 0    1.0000
          0.8944         0    0.4472
          0.2764   -0.8507    0.4472
         -0.7236   -0.5257    0.4472
@@ -238,7 +238,7 @@ To compute the leadfield matrix (i.e. the topography for a coil in the x, y, and
     headmodel.diameter = 0.12;
     headmodel.unit = 'm';
 
-This is the image of the topographies of the 24 coils in this spherical arrangement, more or less computed and plotted with the shared [code further down](#compute-and-plot-the-phantom-coil-topographies) with the headmodel as specified above.
+This is the image of the topographies of the 24 coils in this spherical arrangement, more or less computed and plotted with the [shared code](#shared-code) further down with the headmodel as specified above.
 
 {% include image src="/assets/img/example/phantom_topographies/adachi_topo.png" width=600 %}
 
@@ -258,73 +258,73 @@ The coordinates below are in millimetres, relative to the phantom sphere centre,
 
     phantom = [];
     phantom.coilpos = [
-       0    -59.7  22.9  % negative Y, so this should be close to the right ear
-       0    -48.6  23.5
-       0    -35.8  25.5
-       0    -24.8  23.1
-       0    -37.2  52
-       0    -27.5  46.4
-       0    -15.8  41
-       0    -7.9   33
-     -59.7   0     22.9
-     -48.6   0     23.5
-     -35.8   0     25.5
-     -24.8   0     23.1
-     -37.2   0     52
-     -27.5   0     46.4
-     -15.8   0     41
-      -7.9   0     33
-       0    46.1   44.4
-       0    41.9   34
-       0    38.3   21.6
-       0    31.5   12.7
-       0    13.9   62.4
-       0    16.2   51.5
-       0    20     39.1
-       0    19.3   27.9
-      46.1   0     44.4
-      41.9   0     34
-      38.3   0     21.6
-      31.5   0     12.7
-      13.9   0     62.4
-      16.2   0     51.5
-      20     0     39.1
-      19.3   0     27.9
+         0.0  -59.7   22.9  % negative Y, so this should be close to the right ear
+         0.0  -48.6   23.5
+         0.0  -35.8   25.5
+         0.0  -24.8   23.1
+         0.0  -37.2   52.0
+         0.0  -27.5   46.4
+         0.0  -15.8   41.0
+         0.0   -7.9   33.0
+       -59.7    0.0   22.9
+       -48.6    0.0   23.5
+       -35.8    0.0   25.5
+       -24.8    0.0   23.1
+       -37.2    0.0   52.0
+       -27.5    0.0   46.4
+       -15.8    0.0   41.0
+        -7.9    0.0   33.0
+         0.0   46.1   44.4
+         0.0   41.9   34.0
+         0.0   38.3   21.6
+         0.0   31.5   12.7
+         0.0   13.9   62.4
+         0.0   16.2   51.5
+         0.0   20.0   39.1
+         0.0   19.3   27.9
+        46.1    0.0   44.4
+        41.9    0.0   34.0
+        38.3    0.0   21.6
+        31.5    0.0   12.7
+        13.9    0.0   62.4
+        16.2    0.0   51.5
+        20.0    0.0   39.1
+        19.3    0.0   27.9
     ];
 
     phantom.coilori = [
-         0.00  0.36  0.93
-         0.00  0.44  0.90
-         0.00  0.58  0.81
-         0.00  0.68  0.73
-         0.00  0.81  0.58
-         0.00  0.86  0.51
-         0.00  0.93  0.36
-         0.00  0.97  0.23
-         0.36  0.00  0.93
-         0.44  0.00  0.90
-         0.58  0.00  0.81
-         0.68  0.00  0.73
-         0.81  0.00  0.58
-         0.86  0.00  0.51
-         0.93  0.00  0.36
-         0.97  0.00  0.23
-         0.00 -0.69  0.72
-         0.00 -0.63  0.78
-         0.00 -0.49  0.87
-         0.00 -0.37  0.93
-         0.00 -0.98  0.22
-         0.00 -0.95  0.30
-         0.00 -0.89  0.46
-         0.00 -0.82  0.57
-        -0.69  0.00  0.72
-        -0.63  0.00  0.78
-        -0.49  0.00  0.87
-        -0.37  0.00  0.93
-        -0.98  0.00  0.22
-        -0.95  0.00  0.30
-        -0.89  0.00  0.46
-        -0.82  0.00  0.57
+         0.00   0.36   0.93
+         0.00   0.44   0.90
+         0.00   0.58   0.81
+         0.00   0.68   0.73
+         0.00   0.81   0.58
+         0.00   0.86   0.51
+         0.00   0.93   0.36
+         0.00   0.97   0.23
+         0.36   0.00   0.93
+         0.44   0.00   0.90
+         0.58   0.00   0.81
+         0.68   0.00   0.73
+         0.81   0.00   0.58
+         0.86   0.00   0.51
+         0.93   0.00   0.36
+         0.97   0.00   0.23
+         0.00  -0.69   0.72
+         0.00  -0.63   0.78
+         0.00  -0.49   0.87
+         0.00  -0.37   0.93
+         0.00  -0.98   0.22
+         0.00  -0.95   0.30
+         0.00  -0.89   0.46
+         0.00  -0.82   0.57
+        -0.69   0.00   0.72
+        -0.63   0.00   0.78
+        -0.49   0.00   0.87
+        -0.37   0.00   0.93
+        -0.98   0.00   0.22
+        -0.95   0.00   0.30
+        -0.89   0.00   0.46
+        -0.82   0.00   0.57
     ];
 
     phantom.label = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32'}';
