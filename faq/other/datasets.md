@@ -124,6 +124,15 @@ Documentation referring to this dataset:
 Documentation referring to this dataset:
 {% include seealso tag1="opm-mediannerve" %}
 
+## OPM-hxrelease
+
+- MEG recordings using a FieldLine v2 system with a smart helmet and about 130 sensors (radial orientation only)
+- Single participant dataset organised in the BIDS format with multiple runs, containing emptyroom, eyes-open/closed restingstate, and various basic visual and auditory stimulation protocols.
+- Download the dataset [here](https://download.fieldtriptoolbox.org/tutorial/denoising_opm/tutorialdata.zip)
+
+Documentation referring to this dataset:
+{% include seealso tag1="opm-hxrelease" %}
+
 ## mmfaces
 
 - EEG, MEG, structural MRI and fMRI data from 16 subjects, also used in SPM8 and SPM12 documentation
