@@ -1,6 +1,6 @@
 ---
 title: Denoising OPM data
-tags: [opm, artifact, meg, preprocessing]
+tags: [opm, artifact, meg, preprocessing, opm-hxrelease]
 category: tutorial
 weight: 56
 redirect_from:
