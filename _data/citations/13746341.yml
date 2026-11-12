@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '43005773'
+- idtype: pmcid
+  value: PMC13746341
+- idtype: doi
+  value: 10.1162/IMAG.a.1442
+- idtype: pii
+  value: IMAG.a.1442
+authors:
+- authtype: Author
+  name: Marsh DC
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Aquino KM
+- authtype: Author
+  name: Pakenham DO
+- authtype: Author
+  name: Wilson R
+- authtype: Author
+  name: Sanchez Panchuelo R
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Mayhew SD
+- authtype: Author
+  name: Francis ST
+- authtype: Author
+  name: Mullinger KJ
+epubdate: 2026 Nov 6
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/11/10
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/11/06 00:00
+source: Imaging Neurosci (Camb)
+title: 'Cortical depth EEG-fMRI at 7T: Experimental setup and analysis pipeline to
+  elucidate generating mechanisms of alpha oscillations.'
+uid: '13746341'
+volume: '4'

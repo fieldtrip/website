@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '41934257'
+- idtype: pmcid
+  value: PMC13730554
+- idtype: doi
+  value: 10.1093/brain/awag120
+- idtype: pii
+  value: '8586552'
+authors:
+- authtype: Author
+  name: Aiello G
+- authtype: Author
+  name: Elshahabi A
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Belvedere A
+- authtype: Author
+  name: Dubcek T
+- authtype: Author
+  name: Polania R
+- authtype: Author
+  name: Imbach L
+epubdate: ''
+fulljournalname: 'Brain : a journal of neurology'
+issue: '11'
+pages: 3806-3820
+pmclivedate: 2026/11/04
+printpubdate: 2026 Nov 4
+pubdate: 2026 Nov 4
+sortdate: 2026/11/04 00:00
+source: Brain
+title: 'Intracranial biomarkers for anterior thalamic deep brain stimulation in epilepsy:
+  a long-term observational study.'
+uid: '13730554'
+volume: '149'
