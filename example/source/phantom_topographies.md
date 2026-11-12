@@ -8,9 +8,9 @@ redirect_from:
 
 In this example we compute the spatial topographies of a variety of MEG phantoms: first for three magnetic dipole coils that are placed as head position indicators (HPIs) on the location of the nasion and left and right preauricular points (LPA and RPA). Subsequently, we compute and plot the topographies for different types of MEG phantoms.
 
-All computations below are done for 144 radial OPM channels placed in a FieldLine beta 2 helmet, but they could equally well be done for any other arragmenent of the MEG sensors, either for SQUID or for OPM sensors. You can also provide your own sensor definition, see this [FAQ](/faq/source/sensors_definition/#the-definition-of-meg-sensors) and the documentation in the **[ft_datatype_sens](/reference/ft_datatype_sens)** function.
+All computations below are done for 144 radial OPM channels placed in a FieldLine beta 2 helmet, but they could equally well be done for any other arrangement of the MEG sensors, either for SQUID or for OPM sensors. You can also provide your own sensor definition, see this [FAQ](/faq/source/sensors_definition/#the-definition-of-meg-sensors) and the documentation in the **[ft_datatype_sens](/reference/ft_datatype_sens)** function.
 
-When changing the MEG sensor array to another template or to your own, please consider that the sensor arrays can be expressed relative to different [head coordinaye systems](/faq/source/coordsys). The FieldLine beta 2 helmet used below follows the Neuromag convention and has the x-axis towards the right, the y-asix to the front, and the z-axis in the superior direction.
+When changing the MEG sensor array to another template or to your own, please consider that the sensor arrays can be expressed relative to different [head coordinate systems](/faq/source/coordsys). The FieldLine beta 2 helmet used below follows the Neuromag convention and has the x-axis towards the right, the y-axis to the front, and the z-axis in the superior direction.
 
     % The following templates are located in fieldtrip/template/gradiometer
 
@@ -200,7 +200,7 @@ This is the image of the topographies of the 24 coils in this spherical arrangem
 
 ### Adachi sphere
 
-Adachi and colleagues describe a spherical phantom in their 2023 paper ["A Spherical Coil Array for the Calibration of Whole-Head Magnetoencephalograph Systems"](https://doi.org/10.1109/TIM.2023.3265750) that consists of large coils wrapped around a sphere. At the DCCN we constructed one based on a 3D-printed sphere with 120 mm diameter. This phantom can be described with the following geometry, where the center of each coil is teh same as the center of the sphere.
+Adachi and colleagues describe a spherical phantom in their 2023 paper ["A Spherical Coil Array for the Calibration of Whole-Head Magnetoencephalograph Systems"](https://doi.org/10.1109/TIM.2023.3265750) that consists of large coils wrapped around a sphere. At the DCCN we constructed one based on a 3D-printed sphere with 120 mm diameter. This phantom can be described with the following geometry, where the center of each coil is the same as the center of the sphere.
 
     phantom = [];
     phantom.unit = 'm';
@@ -246,7 +246,7 @@ This is the image of the topographies of the 24 coils in this spherical arrangem
 
 The Neuromag/Elekta/MEGIN system comes with a dry current-dipole phantom that is detailed on [this page](https://neuroimage.usc.edu/brainstorm/Tutorials/PhantomElekta) from the BrainStorm documentation.
 
-Since this does not use magnetic dipoles, but emulates equivalent current dipoles, we cannot work with the infinite homogenous medium but have to specify a spehere with a given radius and origin:
+Since this does not use magnetic dipoles, but emulates equivalent current dipoles, we cannot work with the infinite homogenous medium but have to specify a sphere with a given radius and origin:
 
     headmodel = [];
     headmodel.type = 'singlesphere';
@@ -254,7 +254,7 @@ Since this does not use magnetic dipoles, but emulates equivalent current dipole
     headmodel.r = 0.12;
     headmodel.o = [0 0 0];
 
-The coordinates below are in millimetres, relative to the phantom sphere centre, with +X toward the nasion, +Y toward the left ear, and +Z upward.
+The coordinates below are in millimeters, relative to the phantom sphere centre, with +X toward the nasion, +Y toward the left ear, and +Z upward.
 
     phantom = [];
     phantom.coilpos = [
@@ -345,7 +345,7 @@ Plotting these is also slightly different than plotting the HPI coils. We can us
 
 {% include image src="/assets/img/example/phantom_topographies/neuromag.png" width=600 %}
 
-Computing and plotting the topographies of all ECD sources resuylts in the following figure.
+Computing and plotting the topographies of all ECD sources results in the following figure.
 
 {% include image src="/assets/img/example/phantom_topographies/neuromag_topo.png" width=600 %}
 

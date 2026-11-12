@@ -11,7 +11,7 @@ The [Unicorn Hybrid Black](https://www.gtec.at/product/unicorn-hybrid-black-bci-
 On the Unicorn Suite Hybrid Black [GitHub repository](https://github.com/unicorn-bi/Unicorn-Suite-Hybrid-Black/) you can find more documentation and instruction videos.  
 {% include markup/end %}
 
-The low-level serial-over-bluetooth Unicorn interface [protocol](https://download.fieldtriptoolbox.org/workshop/neurotecheu/UnicornBluetoothProtocol.pdf) is public, allowing for alternative implementations that are independent from the gtec software. [This page](https://robertoostenveld.nl/unicorn2lsl/) for example describes a native Python interface that also allows streaming data to LSL. [This page](https://github.com/robertoostenveld/unicorn2xx) contains a C/C++ applications for interfacing the Unicorn with a (virtual) audio device, allowing it to be used in Audacity, Ableton Live or Touchdesigner.
+The low-level serial-over-bluetooth Unicorn interface [protocol](https://download.fieldtriptoolbox.org/workshop/neurotecheu/UnicornBluetoothProtocol.pdf) is public, allowing for alternative implementations that are independent from the gtec software. [This page](https://robertoostenveld.nl/unicorn2lsl/) for example describes a native Python interface that also allows streaming data to LSL. [This page](https://github.com/robertoostenveld/unicorn2xx) contains a C/C++ applications for interfacing the Unicorn with a (virtual) audio device, allowing it to be used in Audacity, Ableton Live or TouchDesigner.
 
 {% include markup/yellow %}
 If you don't have a windows computer, please pair up during the hackathon with someone that does. The whole experience with the Unicorn Recorder application is just way better, you will get up and running much faster, and the realtime OSCAR cleaning algorithm is very useful.
@@ -29,7 +29,7 @@ After installation, you have to pair it with the Unicorn device over Bluetooth. 
 
 ### Pair device over bluetooth
 
-To pair your laptop with the Unicorn EEG system, you switch the Unicorn on by pressing the button a few seconds until it blinks, and then wait for it to appear in the right column. Subsequently, you click on it in the right column to pair it. A generic Windows pop-up will apear and you have to confirm. The Unicorn will then show up in the middle column.
+To pair your laptop with the Unicorn EEG system, you switch the Unicorn on by pressing the button a few seconds until it blinks, and then wait for it to appear in the right column. Subsequently, you click on it in the right column to pair it. A generic Windows pop-up will appear and you have to confirm. The Unicorn will then show up in the middle column.
 
 {% include image src="/assets/img/workshop/neurotecheu/unicorn_pairing.png" %}
 

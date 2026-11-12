@@ -208,7 +208,7 @@ The layout that we just created has the three (x, y, z) channels of each OPM sen
     % figure; ft_plot_layout(cerca192y);   % tangential component
     figure; ft_plot_layout(cerca192z);   % radial component
 
-It can also be usefull to make a multiplot with the ERPs, power spectra, or TFRs for each of the channels with the three channels shown as a triplet next to each other.
+It can also be useful to make a multiplot with the ERPs, power spectra, or TFRs for each of the channels with the three channels shown as a triplet next to each other.
 
     selx = endsWith(layout.label, 'X');
     sely = endsWith(layout.label, 'Y');
