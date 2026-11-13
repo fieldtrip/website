@@ -15,12 +15,12 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2027, [NeurotechEU hackathon](/workshop/neurotecheu) - Nijmegen and online
 - 2027, Shanghai, China
 - 2027, WIRED - Grenoble, France
 
 Previous FieldTrip workshops took place at
 
+- 2026, [NeurotechEU hackathon](/workshop/neurotecheu) - Nijmegen and online
 - 2026, [MEG/OPM toolkit](/workshop/toolkit2026) - Nijmegen, NL
 - 2026, [SDG summer school](/workshop/hangzhou2026) - Hangzhou, China
 - 2026, [ALMA pre-conference workshop](/workshop/kenya2026) - Nairobi, Kenya
