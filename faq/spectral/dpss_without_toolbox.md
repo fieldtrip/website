@@ -24,7 +24,7 @@ Set `cfg.taper = 'sine'` and specify `cfg.tapsmofrq` as you would for `'dpss'`. 
 
 ## The dpss_hack (not recommended)
 
-The directory `external/signal/dpss_hack` contains a `dpss` replacement that interpolates precomputed Slepian tapers. It was made for a workshop in 2013, is only an approximation for settings close to the precomputed ones, and it cannot be used with the `'mtmfft'` method at all, because that method also needs the taper concentrations that the hack does not return (see [issue 2614](https://github.com/fieldtrip/fieldtrip/issues/2614)). Prefer one of the two options above.
+The directory `external/signal/dpss_hack` contains a `dpss` replacement that interpolates precomputed Slepian tapers. It was made for a workshop in 2013, is only an approximation for settings close to the precomputed ones, and it does not return the correct taper concentration values, which are required when doing adaptive multitaper weighting (see [issue 2614](https://github.com/fieldtrip/fieldtrip/issues/2614)). Prefer one of the two options above.
 
 
 Under GNU Octave, the first two options are the ones that work; see also [Can I use Octave instead of MATLAB?](/faq/matlab/octave)
