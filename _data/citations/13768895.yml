@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42595733'
+- idtype: pmcid
+  value: PMC13768895
+- idtype: doi
+  value: 10.1002/epi.70425
+authors:
+- authtype: Author
+  name: Benedetto A
+- authtype: Author
+  name: Steinwurzel C
+- authtype: Author
+  name: Turco F
+- authtype: Author
+  name: Bonanni E
+- authtype: Author
+  name: Cantello R
+- authtype: Author
+  name: Strigaro G
+epubdate: 2026 Aug 13
+fulljournalname: Epilepsia
+issue: '11'
+pages: 5959-5972
+pmclivedate: 2026/11/15
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: Epilepsia
+title: Altered cortical synchronization in photosensitive idiopathic generalized epilepsy.
+uid: '13768895'
+volume: '67'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '43017608'
+- idtype: pmcid
+  value: PMC13754068
+- idtype: doi
+  value: 10.1162/IMAG.a.1449
+- idtype: pii
+  value: IMAG.a.1449
+authors:
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Kushki A
+- authtype: Author
+  name: Schachar R
+- authtype: Author
+  name: Kelley E
+- authtype: Author
+  name: Ayub M
+- authtype: Author
+  name: Nicolson R
+- authtype: Author
+  name: Trinari E
+- authtype: Author
+  name: Arnold PD
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Anagnostou E
+epubdate: 2026 Nov 10
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/11/12
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/11/10 00:00
+source: Imaging Neurosci (Camb)
+title: Transdiagnostic variation in age-related patterns of rich-club organization
+  across neurodevelopmental and related mental health conditions.
+uid: '13754068'
+volume: '4'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '43016435'
+- idtype: pmcid
+  value: PMC13751360
+- idtype: doi
+  value: 10.3389/fnins.2026.1995232
+authors:
+- authtype: Author
+  name: Li K
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Hu X
+- authtype: Author
+  name: Yan Z
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Jiang Y
+- authtype: Author
+  name: Feng F
+- authtype: Author
+  name: Gao K
+- authtype: Author
+  name: Sun X
+- authtype: Author
+  name: Yuan H
+epubdate: 2026 Oct 28
+fulljournalname: Frontiers in neuroscience
+issue: ''
+pages: '1995232'
+pmclivedate: 2026/11/12
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/10/28 00:00
+source: Front Neurosci
+title: Source-resolved electroencephalogram microstates reveal opposing prefrontal-posterior
+  dynamics and a candidate temporal-to-precuneus pathway in disorders of consciousness.
+uid: '13751360'
+volume: '20'

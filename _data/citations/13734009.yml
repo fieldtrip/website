@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42990504'
+- idtype: pmcid
+  value: PMC13734009
+- idtype: doi
+  value: 10.64898/2026.10.27.762195
+- idtype: pii
+  value: 2026.10.27.762195
+authors:
+- authtype: Author
+  name: Drevet J
+- authtype: Author
+  name: Benjamin L
+- authtype: Author
+  name: Rondot L
+- authtype: Author
+  name: Drugowitsch J
+- authtype: Author
+  name: Wyart V
+epubdate: 2026 Oct 28
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/11/05
+printpubdate: ''
+pubdate: 2026 Oct 28
+sortdate: 2026/10/28 00:00
+source: bioRxiv
+title: Flexible compression of sensory evidence makes human decisions more resilient
+  to noisy neural computations.
+uid: '13734009'
+volume: ''

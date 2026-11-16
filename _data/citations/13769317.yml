@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '43034647'
+- idtype: pmcid
+  value: PMC13769317
+- idtype: doi
+  value: 10.1016/j.ynirp.2026.100420
+- idtype: pii
+  value: S2666-9560(26)00103-0
+authors:
+- authtype: Author
+  name: Osnabruegge M
+- authtype: Author
+  name: Kanig C
+- authtype: Author
+  name: Mack W
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Schoisswohl S
+epubdate: 2026 Nov 5
+fulljournalname: Neuroimage. Reports
+issue: '4'
+pages: '100420'
+pmclivedate: 2026/11/15
+printpubdate: ''
+pubdate: 2026 Dec
+sortdate: 2026/11/05 00:00
+source: Neuroimage Rep
+title: Direction-specific effects of biphasic transcranial magnetic stimulation on
+  cortical and cortico-spinal excitability.
+uid: '13769317'
+volume: '6'

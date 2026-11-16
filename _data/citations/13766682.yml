@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '43032868'
+- idtype: pmcid
+  value: PMC13766682
+- idtype: doi
+  value: 10.1093/braincomms/fcag423
+- idtype: pii
+  value: fcag423
+authors:
+- authtype: Author
+  name: Wennberg R
+- authtype: Author
+  name: Potts A
+- authtype: Author
+  name: El-Rahimy Y
+- authtype: Author
+  name: Zumsteg D
+- authtype: Author
+  name: Tartaglia MC
+- authtype: Author
+  name: Tator CH
+- authtype: Author
+  name: Comper P
+- authtype: Author
+  name: Bayley M
+- authtype: Author
+  name: Garcia Dominguez L
+epubdate: 2026 Nov 4
+fulljournalname: Brain communications
+issue: '6'
+pages: fcag423
+pmclivedate: 2026/11/14
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/11/04 00:00
+source: Brain Commun
+title: Long-lasting somatosensory cortex dysfunction in some, but not all, individuals
+  after sport-related concussion.
+uid: '13766682'
+volume: '8'
