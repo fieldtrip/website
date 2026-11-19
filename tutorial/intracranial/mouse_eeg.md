@@ -13,6 +13,10 @@ This tutorial describes the processing of mouse EEG data. Although the mouse EEG
 
 This tutorial deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furthermore, it deals with reading and processing anatomical data, the coregistration with EEG electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
 
+{% include markup/green %}
+The methods desribed in this tutorial are the result of a collaboration of Robert Oostenveld with Chunki Lee, Jee Hyun Choi and colleagues. The work is described in more detail in a number of publications, including {% include badge doi="10.1371/journal.pone.0079442" %}, {% include badge doi="10.1109/EMBC.2013.6610248" %} and {% include badge doi="10.3791/2562-v" %}.
+{% include markup/end %}
+
 To learn how to process EEG data in more general, we suggest you check the tutorial on [EEG preprocessing and computing ERPs](/tutorial/sensor/preprocessing_erp). More information on the processing of human intracranial data, including the coregistration and electrode localization, can be found in the [human ECoG and sEEG](/tutorial/intracranial/human_ecog) tutorial.
 
 ## Background
