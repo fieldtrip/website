@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '40188765'
+- idtype: MID
+  value: NIHMS2201374
+- idtype: pmcid
+  value: PMC13769570
+- idtype: doi
+  value: 10.1016/j.clinph.2025.03.018
+- idtype: pii
+  value: S1388-2457(25)00434-1
+authors:
+- authtype: Author
+  name: Joshi P
+- authtype: Author
+  name: Shigo L
+- authtype: Author
+  name: Smith B
+- authtype: Author
+  name: Kilbane CW
+- authtype: Author
+  name: Guha A
+- authtype: Author
+  name: Loparo K
+- authtype: Author
+  name: Ridgel AL
+- authtype: Author
+  name: Shaikh AG
+epubdate: 2025 Mar 18
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 17-27
+pmclivedate: 2026/11/16
+printpubdate: 2025 Jun
+pubdate: 2025 Jun
+sortdate: 2025/06/01 00:00
+source: Clin Neurophysiol
+title: Electrophysiological correlates of dynamic cycling in Parkinson's disease.
+uid: '13769570'
+volume: '174'

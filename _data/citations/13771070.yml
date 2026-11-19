@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '43035555'
+- idtype: pmcid
+  value: PMC13771070
+- idtype: doi
+  value: 10.1038/s41531-026-01482-w
+- idtype: pii
+  value: 10.1038/s41531-026-01482-w
+authors:
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Zhu X
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Zhou L
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Luo N
+- authtype: Author
+  name: Yuan T
+- authtype: Author
+  name: Tan Y
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: Liu J
+epubdate: 2026 Jul 24
+fulljournalname: NPJ Parkinson's disease
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/17
+printpubdate: ''
+pubdate: 2026 Jul 24
+sortdate: 2026/07/24 00:00
+source: NPJ Parkinsons Dis
+title: Spectral power and functional connectivity alterations in multiple system atrophy
+  revealed by resting-state EEG.
+uid: '13771070'
+volume: '12'

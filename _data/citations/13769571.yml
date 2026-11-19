@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '41555537'
+- idtype: MID
+  value: NIHMS2201372
+- idtype: pmcid
+  value: PMC13769571
+- idtype: doi
+  value: 10.1111/ejn.70388
+authors:
+- authtype: Author
+  name: Joshi P
+- authtype: Author
+  name: Shigo L
+- authtype: Author
+  name: Smith B
+- authtype: Author
+  name: Kilbane CW
+- authtype: Author
+  name: Guha A
+- authtype: Author
+  name: Raina M
+- authtype: Author
+  name: Sinha AK
+- authtype: Author
+  name: Loparo KA
+- authtype: Author
+  name: Ridgel AL
+- authtype: Author
+  name: Shaikh AG
+epubdate: ''
+fulljournalname: The European journal of neuroscience
+issue: '2'
+pages: e70388
+pmclivedate: 2026/11/16
+printpubdate: 2026 Jan
+pubdate: 2026 Jan
+sortdate: 2026/01/01 00:00
+source: Eur J Neurosci
+title: Exercise-Induced Modulation of Subthalamic Activity and Intra-Nuclear Connectivity.
+uid: '13769571'
+volume: '63'

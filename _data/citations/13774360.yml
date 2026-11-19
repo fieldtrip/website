@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '43040564'
+- idtype: pmcid
+  value: PMC13774360
+- idtype: doi
+  value: 10.1111/psyp.70460
+- idtype: pii
+  value: e70460
+authors:
+- authtype: Author
+  name: Domínguez-Arriola ME
+- authtype: Author
+  name: Pérez A
+- authtype: Author
+  name: Pell MD
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '11'
+pages: ''
+pmclivedate: 2026/11/18
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: Psychophysiology
+title: Neural Tracking of Continuous Speech Is Sensitive to Socially "Engaging" Prosodic
+  Features of Conversational Anecdotes.
+uid: '13774360'
+volume: '63'

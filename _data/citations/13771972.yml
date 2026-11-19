@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '42910472'
+- idtype: pmcid
+  value: PMC13771972
+- idtype: doi
+  value: 10.1113/JP291568
+authors:
+- authtype: Author
+  name: Sitti G
+- authtype: Author
+  name: Pitti L
+- authtype: Author
+  name: Candia-Rivera D
+epubdate: 2026 Oct 22
+fulljournalname: The Journal of physiology
+issue: '22'
+pages: 9244-9266
+pmclivedate: 2026/11/17
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: J Physiol
+title: Infra-slow brain-heart-gut electrophysiological interactions reveal a co-ordinated
+  multisystem physiological network in humans.
+uid: '13771972'
+volume: '604'

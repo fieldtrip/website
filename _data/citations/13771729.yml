@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '43036877'
+- idtype: pmcid
+  value: PMC13771729
+- idtype: doi
+  value: 10.1111/psyp.70461
+- idtype: pii
+  value: e70461
+authors:
+- authtype: Author
+  name: Lidström A
+- authtype: Author
+  name: Bramão I
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '11'
+pages: ''
+pmclivedate: 2026/11/17
+printpubdate: 2026 Nov
+pubdate: 2026 Nov
+sortdate: 2026/11/01 00:00
+source: Psychophysiology
+title: Perceptual Uncertainty Drives Serial Dependence in Facial Identity Across Multiple
+  Perceptual and Memory Stages.
+uid: '13771729'
+volume: '63'

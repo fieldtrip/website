@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '43048715'
+- idtype: pmcid
+  value: PMC13776962
+- idtype: doi
+  value: 10.1162/IMAG.a.1416
+- idtype: pii
+  value: IMAG.a.1416
+authors:
+- authtype: Author
+  name: Peng X
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Li T
+- authtype: Author
+  name: Muhle-Karbe PS
+- authtype: Author
+  name: Xue G
+epubdate: 2026 Nov 16
+fulljournalname: Imaging neuroscience (Cambridge, Mass.)
+issue: ''
+pages: ''
+pmclivedate: 2026/11/18
+printpubdate: ''
+pubdate: '2026'
+sortdate: 2026/11/16 00:00
+source: Imaging Neurosci (Camb)
+title: Hierarchical coding of local and global positions in episodic memory for naturalistic
+  sequences.
+uid: '13776962'
+volume: '4'
