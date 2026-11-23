@@ -10,13 +10,13 @@ We also organize occasional FieldTrip workshops at conferences or upon invitatio
 We have [video lectures](/video) from previous FieldTrip training events. You can also use these to [organize your own](/faq/other/workshop) training events.
 
 {% include markup/red %}
-If there is no information listed for a potential workshop below, then we don't have that information yet. Please don't bother asking. We will update the information here once details are known.
+If there is no information listed for a potential workshop below, then we don't have that information yet. We will update the information here once details are known.
 {% include markup/end %}
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
 - 2027, Shanghai, China
-- 2027, WIRED - Grenoble, France
+- 2027, joint [WIRED](https://wired-icm.org)/[Micmac](https://micmac-workshop.org) workshop - Grenoble, France
 
 Previous FieldTrip workshops took place at
 
