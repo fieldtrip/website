@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '43045723'
+- idtype: pmcid
+  value: PMC13778236
+- idtype: doi
+  value: 10.1038/s41467-026-79403-x
+- idtype: pii
+  value: 10.1038/s41467-026-79403-x
+authors:
+- authtype: Author
+  name: Wu X
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Beilner T
+- authtype: Author
+  name: Fearns N
+- authtype: Author
+  name: Vollmar C
+- authtype: Author
+  name: Kaufmann E
+- authtype: Author
+  name: Remi J
+- authtype: Author
+  name: Staudigl T
+epubdate: 2026 Nov 17
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/19
+printpubdate: ''
+pubdate: 2026 Nov 17
+sortdate: 2026/11/17 00:00
+source: Nat Commun
+title: Posterior alpha/beta oscillations reflect oculomotor dynamics underlying subsequent
+  memory effects.
+uid: '13778236'
+volume: '17'

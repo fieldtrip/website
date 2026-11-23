@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '43061918'
+- idtype: pmcid
+  value: PMC13787865
+- idtype: doi
+  value: 10.7554/eLife.111304
+- idtype: pii
+  value: '111304'
+authors:
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: He X
+- authtype: Author
+  name: Yang C
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Xue G
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Cai Y
+epubdate: 2026 Nov 20
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/11/21
+printpubdate: ''
+pubdate: 2026 Nov 20
+sortdate: 2026/11/20 00:00
+source: Elife
+title: Ramping-up hippocampal ripples and their neocortical coupling support human
+  visual short-term memory.
+uid: '13787865'
+volume: '15'

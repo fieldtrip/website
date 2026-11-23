@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '42999264'
+- idtype: pmcid
+  value: PMC13742633
+- idtype: doi
+  value: 10.64898/2026.10.08.757789
+- idtype: pii
+  value: 2026.10.08.757789
+authors:
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Miller GA
+epubdate: 2026 Oct 15
+fulljournalname: 'bioRxiv : the preprint server for biology'
+issue: ''
+pages: ''
+pmclivedate: 2026/11/07
+printpubdate: ''
+pubdate: 2026 Oct 15
+sortdate: 2026/10/15 00:00
+source: bioRxiv
+title: Coupled neuro-fluid dynamics in human bioelectromagnetism.
+uid: '13742633'
+volume: ''

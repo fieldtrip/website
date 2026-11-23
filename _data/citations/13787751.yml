@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '43066475'
+- idtype: pmcid
+  value: PMC13787751
+- idtype: doi
+  value: 10.1097/PR9.0000000000001514
+- idtype: pii
+  value: PAINREPORTS-D-26-0086
+authors:
+- authtype: Author
+  name: Shah RS
+- authtype: Author
+  name: Nair AM
+- authtype: Author
+  name: Macdonald M
+- authtype: Author
+  name: Hart MG
+- authtype: Author
+  name: Pereira EAC
+epubdate: 2026 Nov 19
+fulljournalname: Pain reports
+issue: '6'
+pages: e1514
+pmclivedate: 2026/11/21
+printpubdate: ''
+pubdate: 2026 Dec
+sortdate: 2026/11/19 00:00
+source: Pain Rep
+title: Nociceptive stimulation modulates spinal beta oscillations in awake human epidural
+  recordings.
+uid: '13787751'
+volume: '11'

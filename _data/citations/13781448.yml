@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '43049510'
+- idtype: pmcid
+  value: PMC13781448
+- idtype: doi
+  value: 10.7554/eLife.107980
+- idtype: pii
+  value: '107980'
+authors:
+- authtype: Author
+  name: Parés-Pujolràs E
+- authtype: Author
+  name: Geuzebroek AC
+- authtype: Author
+  name: O'Connell RG
+- authtype: Author
+  name: Kelly SP
+epubdate: 2026 Nov 18
+fulljournalname: eLife
+issue: ''
+pages: ''
+pmclivedate: 2026/11/19
+printpubdate: ''
+pubdate: 2026 Nov 18
+sortdate: 2026/11/18 00:00
+source: Elife
+title: Perceptual glimpses are locally accumulated and globally maintained at distinct
+  processing levels.
+uid: '13781448'
+volume: '14'

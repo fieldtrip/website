@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '42914524'
+- idtype: pmcid
+  value: PMC13783513
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0843-26.2026
+- idtype: pii
+  value: JNEUROSCI.0843-26.2026
+authors:
+- authtype: Author
+  name: Hachisuka A
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Spector D
+- authtype: Author
+  name: Koenig L
+- authtype: Author
+  name: He BJ
+epubdate: 2026 Nov 18
+fulljournalname: 'The Journal of neuroscience : the official journal of the Society
+  for Neuroscience'
+issue: '46'
+pages: ''
+printpubdate: ''
+pubdate: 2026 Nov 18
+sortdate: 2026/11/18 00:00
+source: J Neurosci
+title: Probing the Neural Geometry of Conscious Object Perception in Time.
+uid: '13783513'
+volume: '46'
