@@ -2500,6 +2500,9 @@
     - title: Getting started with FieldLine OPM data
       link: /getting_started/meg/fieldline/
       nav_order: 0
+    - title: Getting started with MAG4Health OPM data
+      link: /getting_started/meg/mag4health/
+      nav_order: 0
     - title: Getting started with Neuromag/Elekta/Megin data
       link: /getting_started/meg/neuromag/
       nav_order: 0

@@ -67,6 +67,8 @@
   title: Getting started with CTF data
 - link: /getting_started/meg/fieldline
   title: Getting started with FieldLine OPM data
+- link: /getting_started/meg/mag4health
+  title: Getting started with MAG4Health OPM data
 - link: /getting_started/meg/neuromag
   title: Getting started with Neuromag/Elekta/Megin data
 - link: /getting_started/meg/opm_fil
