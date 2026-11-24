@@ -12,4 +12,4 @@ MAG4Health stores the data in the Neuromag fif format, which makes it directly a
 
 Channels are named according to the sensor position, with the starting letter L and R for left and right, and Z for central sensors. The second letter codes for the approximate position over the brain lobe as F, C, T, P, O, similar to the naming scheme of the EEG [10-20 system](https://en.wikipedia.org/wiki/10–20_system_(EEG)).
 
-Although the MAG4Health OPMs use one laser, allowing two orthogonal directions to be recorded with low noise, it also records the third (more noisy) direction. The radial direction is indicated by channels ending in `_r`, the first tangential direction is `_t` and the 2nd more noisy direction is `_t2`.
+Although the MAG4Health OPMs use a single laser, allowing the two orthogonal directions to be recorded with low noise, it also records the third (more noisy) direction. The radial direction is indicated by channels ending in `_r`, the first tangential direction is `_t` and the 2nd more noisy direction is `_t2`.
