@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '42565256'
+- idtype: pmcid
+  value: PMC13792696
+- idtype: doi
+  value: 10.1002/hbm.70618
+authors:
+- authtype: Author
+  name: Karhula J
+- authtype: Author
+  name: Ojanperä A
+- authtype: Author
+  name: Yılmaz E
+- authtype: Author
+  name: Merz S
+- authtype: Author
+  name: Kaski S
+- authtype: Author
+  name: Salmelin R
+epubdate: ''
+fulljournalname: Human brain mapping
+issue: '11'
+pages: e70618
+pmclivedate: 2026/11/24
+printpubdate: 2026 Aug 1
+pubdate: 2026 Aug 1
+sortdate: 2026/08/01 00:00
+source: Hum Brain Mapp
+title: Machine Learning on Magnetoencephalography Data Yields Generalizable Low-Dimensional
+  Neural Fingerprints That Distinguish Individuals Across Task Conditions.
+uid: '13792696'
+volume: '47'

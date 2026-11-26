@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '43073276'
+- idtype: pmcid
+  value: PMC13793607
+- idtype: doi
+  value: 10.1038/s41467-026-79003-9
+- idtype: pii
+  value: 10.1038/s41467-026-79003-9
+authors:
+- authtype: Author
+  name: Hauser MFA
+- authtype: Author
+  name: Coppi S
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Ehrsson HH
+epubdate: 2026 Nov 23
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/25
+printpubdate: ''
+pubdate: 2026 Nov 23
+sortdate: 2026/11/23 00:00
+source: Nat Commun
+title: Spatiotemporal brain dynamics of limb ownership perception.
+uid: '13793607'
+volume: '17'

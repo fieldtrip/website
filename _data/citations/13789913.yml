@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '43069277'
+- idtype: pmcid
+  value: PMC13789913
+- idtype: doi
+  value: 10.1038/s41467-026-78895-x
+- idtype: pii
+  value: 10.1038/s41467-026-78895-x
+authors:
+- authtype: Author
+  name: Santo-Angles A
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: Chu WKH
+- authtype: Author
+  name: Lindsay GW
+- authtype: Author
+  name: Sreenivasan KK
+epubdate: 2026 Oct 23
+fulljournalname: Nature communications
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/24
+printpubdate: ''
+pubdate: 2026 Oct 23
+sortdate: 2026/10/23 00:00
+source: Nat Commun
+title: Neural subspaces encode sequential working memory without detectable neural
+  sequences.
+uid: '13789913'
+volume: '17'

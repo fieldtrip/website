@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '43080302'
+- idtype: pmcid
+  value: PMC13793096
+- idtype: doi
+  value: 10.1177/15357597261506162
+- idtype: pii
+  value: '10.1177_15357597261506162'
+authors:
+- authtype: Author
+  name: Goodman JH
+- authtype: Author
+  name: Goswami S
+epubdate: 2026 Nov 23
+fulljournalname: Epilepsy currents
+issue: ''
+pages: '15357597261506162'
+pmclivedate: 2026/11/25
+printpubdate: ''
+pubdate: 2026 Nov 23
+sortdate: 2026/11/23 00:00
+source: Epilepsy Curr
+title: Is an Early Decrease in the E/I Ratio a Biomarker of Epileptogenesis?
+uid: '13793096'
+volume: ''

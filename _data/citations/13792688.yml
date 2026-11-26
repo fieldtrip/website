@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '42565289'
+- idtype: pmcid
+  value: PMC13792688
+- idtype: doi
+  value: 10.1002/hbm.70623
+authors:
+- authtype: Author
+  name: Guidali G
+- authtype: Author
+  name: Arrigoni E
+- authtype: Author
+  name: Maravita A
+- authtype: Author
+  name: Pisoni A
+- authtype: Author
+  name: Bolognini N
+epubdate: ''
+fulljournalname: Human brain mapping
+issue: '11'
+pages: e70623
+pmclivedate: 2026/11/24
+printpubdate: 2026 Aug 1
+pubdate: 2026 Aug 1
+sortdate: 2026/08/01 00:00
+source: Hum Brain Mapp
+title: Spatiotemporal Brain Dynamics of Transitive and Intransitive Action Observation.
+uid: '13792688'
+volume: '47'

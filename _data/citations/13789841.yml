@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '43069367'
+- idtype: pmcid
+  value: PMC13789841
+- idtype: doi
+  value: 10.1038/s42003-026-10746-3
+- idtype: pii
+  value: 10.1038/s42003-026-10746-3
+authors:
+- authtype: Author
+  name: Benedetto A
+- authtype: Author
+  name: Arrighi R
+- authtype: Author
+  name: Castaldi E
+epubdate: 2026 Aug 6
+fulljournalname: Communications biology
+issue: '1'
+pages: ''
+pmclivedate: 2026/11/24
+printpubdate: ''
+pubdate: 2026 Aug 6
+sortdate: 2026/08/06 00:00
+source: Commun Biol
+title: Late cortical dynamics mediate numerosity illusions induced by symmetry.
+uid: '13789841'
+volume: '9'

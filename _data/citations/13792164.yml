@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '43075497'
+- idtype: MID
+  value: NIHMS2224677
+- idtype: pmcid
+  value: PMC13792164
+- idtype: doi
+  value: 10.1038/s44220-023-00049-5
+authors:
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Naparstek S
+- authtype: Author
+  name: Gordon J
+- authtype: Author
+  name: Watts M
+- authtype: Author
+  name: Shpigel E
+- authtype: Author
+  name: El-Said D
+- authtype: Author
+  name: Badami FS
+- authtype: Author
+  name: Eisenberg ML
+- authtype: Author
+  name: Toll RT
+- authtype: Author
+  name: Gage A
+- authtype: Author
+  name: Goodkind MS
+- authtype: Author
+  name: Etkin A
+- authtype: Author
+  name: Wu W
+epubdate: 2023 Apr 18
+fulljournalname: Nature. Mental health
+issue: '4'
+pages: 284-294
+pmclivedate: 2026/11/24
+printpubdate: 2023 Apr
+pubdate: 2023 Apr
+sortdate: 2023/04/01 00:00
+source: Nat Ment Health
+title: Machine learning-based identification of a psychotherapy-predictive electroencephalographic
+  signature in PTSD.
+uid: '13792164'
+volume: '1'
